@@ -1,0 +1,1002 @@
+/*
+	Styleguide.folklife.si
+	Author: Visual Dialogue
+	URL:    http://visualdialogue.com
+	Created: Fall 2016
+*/
+
+/* Imports
+-------------------------------------------------- */
+  @import "fonts.scss";
+  @import "reset.scss";
+  // @import "../bower_components/csswizardry-grids/csswizardry-grids.scss";
+  @import "media-queries.scss";
+  @import "colors.scss"; // colors may be used in type.scss
+  @import "type.scss";
+  // @import "../bower_components/remodal/dist/remodal.scss";
+  // @import "../bower_components/remodal/dist/remodal-default-theme.scss";
+  @import "../../bower_components/slick-carousel/slick/slick.scss";
+  @import "../../bower_components/slick-carousel/slick/slick-theme.scss";
+
+/* Grid System
+-------------------------------------------------- */
+  // gutters
+  // $gutter: 1rem;
+  // $gutterx2: 2rem;
+  // $one-third-gutter: 0.3333rem;
+  // $half-gutter: 0.5rem;
+  // $two-thirds-gutter: 0.6667rem;
+  // $vgut: 1.5rem; // bottom gutter
+  
+  // $half: 50%;
+  // $four: 33.33333%;
+  // $six: 50%;
+  // $eight: 66.66667%;
+
+	// bootstrap gutter override
+	
+	$gutter-medium: 1.35%;
+	.row {
+		margin-left: -$gutter-medium;
+		margin-right: -$gutter-medium;
+		@include respond-to(fullwidth) {
+			margin-left: -20px;
+			margin-right: -20px;
+		}
+	}
+	[class^="col-"] {
+		padding-left: $gutter-medium;
+		padding-right: $gutter-medium;
+		@include respond-to(fullwidth) {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+
+/* Sizes
+-------------------------------------------------- */
+  // $headerWidth: 74rem; // 1420px + 30px + 30px = 1480px for design overhang
+  // $small-header: 48px;
+  // // $pageWidth: 72rem; // 1420px + 10px + 10px = 1440px for mobile gutters on both sides
+  // // $pageWidth: 73rem; // 1420px + 20px + 20px = 1460px for mobile gutters on both sides
+  $pageWidth: 92.5rem; // 1400px + 40px + 40px = 1480px for desktop gutters on both sides
+
+  // $twitter-height: 95px;
+  // $twitter-sidebar-height: 60px;
+
+/* Mixins
+-------------------------------------------------- */
+
+  // backgrounds
+  @mixin background($size, $image, $repeat: no-repeat) {
+	background-size: $size;
+	background-image: url($image);
+	background-repeat: $repeat;
+  }
+
+  // Font weights and styles
+  @mixin serif($weight, $style: normal) {
+	@if $weight == 300 {
+	  @if $style == "italic" {
+		font-family: "klinic_slab_lightit", $seriffallback;
+	  } @else {        
+		font-family: "klinic_slab_light", $seriffallback;
+	  }
+	} @else if $weight == 400 {
+	  @if $style == "italic" {
+		font-family: "klinic_slab_bookit", $seriffallback;
+	  } @else {        
+		font-family: "klinic_slab_book", $seriffallback;
+	  }
+	} @else if $weight == 500 {
+	  @if $style == "italic" {
+		font-family: "klinic_slab_mediumit", $seriffallback;
+	  } @else {        
+		font-family: "klinic_slab_medium", $seriffallback;
+	  }
+	} @else if $weight == 600 {
+	  @if $style == "italic"{
+		font-family: "klinic_slab_mediumit", $seriffallback;
+	  } @else {
+		font-family: "klinic_slab_medium", $seriffallback;
+	  }
+	// } @else if $weight == 700 {
+	//   @if $style == "italic"{
+	//     font-family: "klinic_slab_boldit";
+	//   } @else {
+	//     font-family: "klinic_slab_bold", $seriffallback;
+	//   }
+	}
+  }
+
+  // Fonts - Adobe Garamond Pro and Proxima Nova
+  @mixin program-category {
+  }
+
+
+  // lookup http://stackoverflow.com/questions/13545737/need-help-creating-a-percentage-based-sass-grid-system
+  // accepts number of columns a block should span
+  // returns a percentage width for that block
+
+  @mixin two-columns($gap, $columns: 2) {
+	-webkit-columns: $columns;
+	   -moz-columns: $columns;
+			columns: $columns;
+	-webkit-column-gap: $gap; /* Chrome, Safari, Opera */
+	   -moz-column-gap: $gap; /* Firefox */
+			column-gap: $gap;
+  }
+  @mixin break-inside($which) {
+	-webkit-column-break-inside: $which;
+			  page-break-inside: $which;
+				   break-inside: $which;
+  }
+
+  // vertical align
+  .vertically-align-grandparent {
+  	display: table;
+  	width: 100%;
+  }
+
+  .vertically-align-parent {
+	position: relative;
+	-webkit-transform-style : preserve-3d;
+	-moz-transform-style    : preserve-3d;
+	-ms-transform-style    : preserve-3d;
+	-o-transform-style    : preserve-3d;
+	transform-style         : preserve-3d;
+	
+	// for unknown heights
+	display: table-cell;
+	width: 100%;
+	height: 100%;
+  }
+ //  @mixin vertical-align($position: absolute) {
+	// position: $position;
+	// top: 50%;
+	// -webkit-transform: translateY(-50%);
+	// -moz-transform: translateY(-50%);
+	// -ms-transform: translateY(-50%);
+	// -o-transform: translateY(-50%);
+	// transform: translateY(-50%);
+	// width:100%;
+ //  }
+
+/* #Links
+-------------------------------------------------- */
+  .anchor {
+	position: relative;
+	top:-40px;
+  }
+
+/* Header styles
+-------------------------------------------------- */
+
+  // .page-header {
+		// @include respond-to(break2max) {
+  // 			overflow: scroll; // for mobile nav
+  // 		}
+  // }
+
+/* #Helpers
+-------------------------------------------------- */
+	// $navheightdelay: 0.3s;
+	$navheightdelay: 5s;
+
+  .sans {font-family:$sans;}
+  .cf:after {content: "";display: table;clear: both;}
+  .hidden {display:none;}
+  .no-mobile, .no-mobile-inline {display:none;}
+  .tablet-only {display:none;}
+  .desktop-only {display:none !important;}
+	.desktop-only-inline {display:none;}
+  // .no-tablet {display:block;}
+  .break-2-only-inline {display:none;}
+  @include respond-to(break1) {
+	.mobile-only {display:none;}
+	.no-mobile {display:block;}
+	.no-mobile-inline {display:inline-block;}
+	.no-tablet {display:none;}
+	.tablet-only {display:block;}
+  }
+  @include respond-to(break2) {
+	.break-2-only-inline {display:inline-block;}
+	.mobile-tablet-only {display:none;}
+	.no-tablet {display:block;}
+	.no-tablet-inline {display: inline-block;}
+	.tablet-only {display:none;}
+	.showroom-narrow {display:none;}
+	.manufacturer-narrow {display:none;}
+	.no-desktop {display:none !important;}
+	.desktop-only {display:block !important;}
+	.desktop-only-inline {display:inline-block !important;}
+  }
+  @include respond-to(break3) {
+  }
+  @include respond-to(break4) {
+  }
+  @include respond-to(fullwidth) {
+  }
+
+	// vertical align from http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/ 
+	// @mixin vertical-align($position: relative) {
+	@mixin vertically-align($position: absolute, $offset: 50%) {
+		position: $position;
+		top: $offset;
+		-webkit-transform: translateY(-$offset);
+		-ms-transform: translateY(-$offset);
+		transform: translateY(-$offset);
+	}
+	@mixin border($location: all, $width: 1px, $color: $darkbrown) {
+		@if $location == top {
+		  border-top: $width solid $color;
+		} @else if $location == bottom {
+		  border-bottom: $width solid $color;
+		} @else if $location == right {
+		  border-right: $width solid $color;
+		} @else if $location == left {
+		  border-left: $width solid $color;
+		} @else {
+		  border: $width solid $color;
+		}
+	}
+
+	// %section-padding {
+	// padding: 10px;
+	// padding: 4vw 3vw;
+	// @include respond-to(break1) {
+	// 	padding: 1.9vw;
+	// }
+	// @include respond-to(fullwidth) {
+	// 		padding: 20px 28px 30px; // less on top b/c of line height
+	// 	}
+	// }
+
+	// %section-padding--abs {
+	// 	top:10px;right:10px;bottom:10px;left:10px; // fallback older browsers
+	// 	top:3vw;right:3vw;bottom:3vw;left:3vw;
+	// 	@include respond-to(break1) {
+	// 		top:2vw;right:2vw;bottom:2vw;left:2vw;
+	// 	}
+	// 	@include respond-to(fullwidth) {
+	// 		top:28px;right:30px;bottom:30px;left:30px;
+	// 	}
+	// }
+
+/* Widths
+-------------------------------------------------- */
+
+
+	// .page-wrapper {
+	// 	max-width:$pageWidth;
+	// 	margin-left:auto;
+	// 	margin-right:auto;
+	// 	@include respond-to(break1) {
+	// 		max-width:$pageWidth;
+	// 		margin-left:auto;
+	// 		margin-right:auto;
+	// 		padding:0 $gutter;
+	// 	}
+	// 	@include respond-to(break2) {
+	// 		padding:0 $gutterx2;
+	// 	}
+	// }
+
+	// .header, .footer {
+	// 	.page-wrapper {
+	// 		padding: 0 $half-gutter;
+	// 		@include respond-to(break2) {
+	// 			padding:0 $gutterx2;
+	// 		}
+	// 	}
+	// }
+
+	.container {
+		width: 100%;
+		max-width: 1480px;
+		padding: 0 15px;
+		@include respond-to(break2) {
+			padding: 0 40px;
+		}
+	}
+
+	// $navbarHeight: 10vw;
+
+/* General
+-------------------------------------------------- */
+	.site--folklife .site-toggle__link--folklife {
+		color: $black60;
+	}
+	body {
+		// padding-top: 100px; // clear fixed header
+	}
+	.section__title {
+		@extend %section-header;
+	}
+	section li {
+		@include respond-to(break2max) {
+			margin-bottom: 2rem;
+		}
+	}
+
+/* Nav
+-------------------------------------------------- */
+	// bootstrap override
+	.navbar {
+		background-color: $navbar;		
+		z-index: 2;
+		margin-bottom: 0;
+		border: 0;
+		border-radius: 0;
+		position: absolute; // so make transition to fixed easier on content below
+		width: 100%;
+		@include respond-to(break2max) {
+			position: fixed;
+			width: 100%;
+		}
+		@include respond-to(break2) {
+			top: 72px;
+		}
+
+	}
+
+	// SITE TOGGLE BANNER
+	.navbar__site-toggle {
+		display: none;		
+		@include respond-to(break2) {
+			display: block;
+			position: absolute; // height 72px
+			width: 100%;
+			text-transform: uppercase;
+			background-color: white;
+			font-family: $sansNarrow;
+			letter-spacing: 0.5px;		
+			color: $tagline;
+			font-size: 2.7rem;
+			text-align:right;
+			font-weight: 600;
+		}
+	}
+	.tagline {
+		display: inline-block;
+		padding: 17px 0;
+	}
+	.site-toggle__link {
+		color: $sitelinks;
+		margin-left: 2.5rem;
+		&:hover {
+			color: $black80;
+			text-decoration: none;
+		}
+	}
+
+	// OUTSIDE NAVBAR CLICKING TO CLOSE
+	.navbar-outside {
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 9; // just below navbar
+		// background-color: rgba(red, 0.2);
+	}
+
+	.navbar-header {
+		// keep above outside click div
+		position: relative;
+		z-index: 10;
+		max-width: 1480px;
+		padding: 0 15px;
+		margin: 0 auto;
+		@extend .vertically-align-grandparent;
+		@include respond-to(break2) {
+			padding: 0 40px;
+		}
+	}
+	.navbar-header__inner {
+		@extend .vertically-align-parent;
+		position: relative;
+		z-index: 100;
+	}
+	.navspacer {
+		background-color: $black80;
+		height: 50px;
+		@include respond-to(break2) {
+			height: 185px !important;
+		}
+		&--taller {
+		}
+		&-open {
+			height: 132px !important;
+			-webkit-transition: all 0.3s ease;
+			-moz-transition: all 0.3s ease;
+			-ms-transition: all 0.3s ease;
+			-o-transition: all 0.3s ease;
+			transition: all 0.3s ease;
+		}
+	}
+	.navbar-brand {
+		font-size: 10px; // prevent gap to sunburst
+		padding: 10px 0 5px 0;
+		padding: 10px 0 0 0;
+		@include respond-to(break2) {
+			height: 115px;
+			padding: 23px 0 10px 0;
+		}
+
+		@include respond-to(fullwidth) {
+			padding: 23px 0 23px 0;
+			height: 120px; // from layout
+			// line up with left side
+			font-size: 25px; // back to normal
+		}
+	}
+	.logo-mask {
+		overflow: hidden; // hide logo when scrolls up
+		display: inline-block;
+	}
+	img.sunburst {
+		width: 4.5vw;
+		width: 15px;
+		display: inline-block;
+		vertical-align: top;
+		position: relative;
+		display: none;
+
+		@include respond-to(break2) {
+			display: inline-block;
+			// width: 35px;
+			width: 30px;
+		}
+	}
+	.logo__copy {
+		position: relative;
+		display: inline-block;
+	}
+	.logo__copy, img.logo--folklife, img.logo--center {
+		width: 193px;
+		height: 32px;
+		@include respond-to(break2) {
+			width: 420px;
+			height: 70px;
+		}
+		@include respond-to(fullwidth) {
+			width: 420px;
+			height: 70px;
+		}
+	}
+	img.logo--center, img.logo--folklife {
+		-webkit-transition: top 0.3s ease;
+		-moz-transition: top 0.3s ease;
+		-ms-transition: top 0.3s ease;
+		-o-transition: top 0.3s ease;
+		transition: top 0.3s ease;
+	}
+	img.logo--folklife, img.logo--center {
+		position: absolute;
+		top:0;
+		left: 0;
+	}
+	.smaller-header {
+		// switch to fixed
+		position: fixed;
+		top:0;
+		width: 100%;
+		.navbar-brand {
+			height: 50px;
+			@include respond-to(break2) {
+				padding: 17px 0;
+				height: 70px;
+				-webkit-transition: all 0.3s ease;
+				-moz-transition: all 0.3s ease;
+				-ms-transition: all 0.3s ease;
+				-o-transition: all 0.3s ease;
+				transition: all 0.3s ease;
+			}
+		}
+		img.sunburst { position: relative; top: 0.7rem; }
+		// img.logo--center { top: -5rem; }
+		img.logo--center { top: -100%; }
+		// img.logo--folklife { top: -0.8rem; }
+		img.logo--folklife { top: -25%; }
+
+		@include respond-to(break2) {
+			img.sunburst { top: 0.3rem; }
+			img.logo--center { top: -8rem; }
+			img.logo--center { top: -100%; }
+			// img.logo--folklife { top: -3.3rem; }
+			img.logo--folklife { top: -45%; }
+		}
+		& + .banner.container {
+			position: relative;
+			top: 142px; // add height of fixed header to next element when activated
+		}
+	}
+
+	.nav-icons {
+		right: 0;
+		text-align:right;
+		margin-top: 12px;
+		@include respond-to(break2) {
+			margin-top:0;
+			@include vertically-align();
+			width: 66.66667%;
+		}
+	}
+	.nav-icon {
+		display:inline-block;
+		vertical-align: top;
+		cursor: pointer;
+		float: right;
+		margin: 2px;
+		opacity: 1; // so bright white on mobile
+		@include respond-to(break2) {
+			margin: 5px;
+		}
+	}
+	.lighter-nav-icons {
+		opacity: 0.2;
+	}
+	.navbar-toggle {
+		position: relative;
+		z-index: 2;
+	}
+	.navbar-toggle .icon-bar {
+		color: white;
+		background-color: white;
+	}
+	.social-icons, .search-bar {
+		@include respond-to(break2max) {
+			height: 5rem;
+		}
+	}
+	.social-icon-link {
+		display: inline-block;
+		@include respond-to(break2max) {
+			padding: 10px;
+		}
+	}
+	.social-icons {
+		text-align: right;
+		&--mobile {
+			padding: 0;
+			// place above outside click
+			position: relative;
+			z-index: 10;
+			@include respond-to(break2) {
+				display: none !important; // override js hiding and showing
+			}
+		}
+		&--desktop {
+			@include respond-to(break2max) {
+				display: none !important; // override js hiding and showing
+			}
+			display: none; // initial hide
+		}
+		.social-icon {
+			// padding: 25px;
+		}
+		@include respond-to(break2max) {
+			display: none;
+			background-color: white;
+			width: 100%;
+			left: 0;
+			
+		}
+	}
+	.social-icon {
+		margin: 5px 2px;
+		@include respond-to(break2) {
+			margin: 4px 2px 0;
+		}
+	}
+
+	// SEARCH BAR
+	.search-bar {
+		display: none;
+		background-color: white;
+		width: 100%; // 3/4ish of col-8 to be half of page
+		float: right;
+		text-align: left;
+		color: $searchText;
+		padding: 0; // override bootstrap
+		@extend %small-sans-title;
+		@include respond-to(breaksearch) {
+			margin-top: 5px;
+			width: 70%; // 3/4ish of col-8 to be half of page
+		}
+		input {
+			width: 100%;
+			@include respond-to(breaksearch) {
+				padding: 0 15px;
+			}
+		}
+		&--desktop {
+			@include respond-to(breaksearchmax) {
+				display: none !important;
+			}
+
+		}
+		&--mobile {
+			padding: 5px 15px;
+			// border: 5px solid $black80;
+
+			// place above outside click
+			position: relative;
+			z-index: 11;
+			@include respond-to(breaksearch) {
+				display: none !important;
+			}
+		}
+	}
+
+
+	// NAVICONS
+	.nav-icon, .browsenav__inner {
+		background-size: 258px 355px !important; // override background: below from Illustrator
+		// vertical-align: top; // get rid of extra space below images
+	}
+
+	// vvvvvv copy below from Illustrator!!! vvvvvv
+
+
+	.search-icon:hover, .search-icon, .menu-icon, .menu-icon:hover, .share-icon, .twitter-icon:hover, .twitter-icon, .tumblr-icon:hover, .flickr-icon:hover, .instagram-icon:hover, .instagram-icon, .flickr-icon, .tumblr-icon, .facebook-icon, .facebook-icon:hover, .share-icon:hover { background: url(/assets/images/icons/navicons--mobile.png); }
+
+	.search-icon:hover, .search-icon { width: 22px; height: 20px; }
+
+	.menu-icon, .menu-icon:hover, .share-icon, .twitter-icon:hover, .twitter-icon, .tumblr-icon:hover, .flickr-icon:hover, .instagram-icon:hover, .instagram-icon, .flickr-icon, .tumblr-icon, .facebook-icon, .facebook-icon:hover, .share-icon:hover { width: 22px; height: 21px; }
+
+	.search-icon:hover { background-position: -130px -37px; }
+	.search-icon { background-position: -130px -17px; }
+	.menu-icon { background-position: -73px -17px; }
+	.menu-icon:hover { background-position: -73px -37px; }
+	.share-icon { background-position: -16px -17px; }
+	.twitter-icon:hover { background-position: -36px -78px; }
+	.twitter-icon { background-position: -36px -58px; }
+	.tumblr-icon:hover { background-position: -57px -78px; }
+	.flickr-icon:hover { background-position: -79px -78px; }
+	.instagram-icon:hover { background-position: -100px -78px; }
+	.instagram-icon { background-position: -100px -58px; }
+	.flickr-icon { background-position: -79px -58px; }
+	.tumblr-icon { background-position: -57px -58px; }
+	.facebook-icon { background-position: -16px -58px; }
+	.facebook-icon:hover { background-position: -16px -78px; }
+	.share-icon:hover { background-position: -16px -37px; }
+
+	// ^^^^^^ copy above from Illustrator!!! ^^^^^^
+
+
+	// hover specific for mobile revert to regular dimensions, otherwise focus would activate hover and not be white
+	.search-icon:hover { background-position: -130px -17px; }
+	.menu-icon:hover { background-position: -73px -17px;}
+	.share-icon:hover { background-position: -16px -17px; }
+
+
+	@include respond-to(break2) {
+		select, .slick-dots li button:before, .slick-dots li button:hover:before, .slick-next:hover::before, .slick-prev:hover::before, .slick-next::before, .slick-prev::before, .search-icon:hover, .search-icon, .share-icon, .twitter-icon:hover, .twitter-icon, .tumblr-icon:hover, .flickr-icon:hover, .instagram-icon:hover, .instagram-icon, .flickr-icon, .tumblr-icon, .facebook-icon, .facebook-icon:hover, .share-icon:hover, .menu-icon, .menu-icon:hover { background: url(/assets/images/icons/navicons--tablet.png); }
+
+		.slick-dots li button:before, .slick-dots li button:hover:before { height: 13px; }
+
+		.slick-next:hover::before, .slick-prev:hover::before, .slick-next::before, .slick-prev::before { width: 31px; height: 54px; }
+
+		.search-icon:hover, .search-icon, .share-icon, .facebook-icon, .facebook-icon:hover, .share-icon:hover, .menu-icon:hover { width: 41px; height: 39px; }
+
+		.twitter-icon:hover, .twitter-icon, .tumblr-icon:hover, .flickr-icon:hover, .instagram-icon:hover, .instagram-icon, .flickr-icon, .tumblr-icon, .menu-icon { width: 41px; height: 38px; }
+
+		select { background-position: -220px -199px; width: 25px; height: 14px; }
+		.slick-dots li button:before { background-position: -226px -144px; width: 13px; }
+		.slick-dots li button:hover:before { background-position: -226px -158px; width: 14px; }
+		.slick-next:hover::before { background-position: -166px -275px; }
+		.slick-prev:hover::before { background-position: -98px -275px; }
+		.slick-next::before { background-position: -132px -275px; }
+		.slick-prev::before { background-position: -64px -275px; }
+		.search-icon:hover { background-position: -217px -38px; }
+		.search-icon { background-position: -217px 0px; }
+		.share-icon { background-position: 0px 0px; }
+		.twitter-icon:hover { background-position: -40px -114px; }
+		.twitter-icon { background-position: -40px -76px; }
+		.tumblr-icon:hover { background-position: -80px -114px; }
+		.flickr-icon:hover { background-position: -120px -114px; }
+		.instagram-icon:hover { background-position: -160px -114px; }
+		.instagram-icon { background-position: -160px -76px; }
+		.flickr-icon { background-position: -120px -76px; }
+		.tumblr-icon { background-position: -80px -76px; }
+		.facebook-icon { background-position: 0px -75px; }
+		.facebook-icon:hover { background-position: 0px -113px; }
+		.share-icon:hover { background-position: 0px -38px; }
+		.menu-icon { background-position: -109px -1px; }
+		.menu-icon:hover { background-position: -109px -40px; }
+
+		// ^^^^^^ copy above from Illustrator!!! ^^^^^^
+
+		// custom placement for dropdown arrow
+		select { background-position: 65px -184px; width: 245px; height: 44px; }
+
+	}
+
+	@include respond-to(fullwidth) {
+		.slick-next:hover::before, .slick-prev:hover::before, .slick-next::before, .slick-prev::before { background: url(/assets/images/icons/navicons.png); }
+
+		.slick-next:hover::before, .slick-prev:hover::before, .slick-next::before { width: 42px; height: 77px; }
+
+		.slick-next:hover::before { background-position: -161px -118px; }
+		.slick-prev:hover::before { background-position: -62px -118px; }
+		.slick-next::before { background-position: -111px -118px; }
+		.slick-prev::before { background-position: -12px -118px; width: 43px; height: 77px; }
+	}
+
+	
+	// ^^^^^^ copy above from Illustrator!!! ^^^^^^
+
+	// MEGANAV
+	.meganav {
+		display: none; // inital hide
+		background-color: $black60;
+
+		// keep above outside click div
+		position: relative;
+		z-index: 10;
+
+		// padding: 1rem 0 0; // 40px above and below
+		padding: 0 0 0.5rem; // 40px above and below
+		@include respond-to(break2) {
+			padding: 3.6rem 0 2.6rem; // 40px above and below
+		}
+
+		&__main-item {
+		}
+		&__main-item {
+			&__title {
+				@extend %meganav-font;
+				color: white;
+				cursor: pointer;
+				padding: 10px 0 0;
+				&:hover {
+					color: $black20;
+				}
+				@include respond-to(break2) {
+					padding: 0;
+				}
+			}
+			&__list {
+				display: none;
+				@include respond-to(break2) {
+					display: inline-block;
+
+				}
+			}
+		}
+
+		&__sub-item {
+			@extend %link-font;
+			color: $black20;
+			font-weight: 400;	
+			// line-height: 1.44;
+			cursor: pointer;
+			&:hover {
+				color: white;
+			}
+		}
+	}
+	.nav-show-mobile {
+		display: inline-block;
+	}
+
+
+	// BROWSENAV
+	.browsenav {
+		display: none; // initial hide
+		background-color: $black40;
+		position: relative;
+		z-index: 10;
+		top: 1rem;
+		// padding: 3rem 0 1rem; // really 40 px with line-height
+		@include respond-to(break2) {
+			padding: 2.5rem 0 2rem; // really 40 px with line-height
+		}
+	}
+	select {
+
+		/* make arrow and background */
+		// background-color: white;
+		// idea from http://stackoverflow.com/a/28274325
+		// background-position: 100% 0;
+		  // calc(100% - 21px) calc(1em + 2px),
+		  // calc(100% - 16px) calc(1em + 2px),
+		  // 100% 0;
+		// background-size: 2.5em 2.5em;
+		  // 5px 5px,
+		  // 5px 5px,
+		  // 2.5em 2.5em;
+		background-repeat: no-repeat;
+
+		/* reset */
+		background: transparent;
+		border: 0;
+		border-radius: 0;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		cursor: pointer;
+
+		border-radius: 0;
+		padding: 10px;
+		width: 100%;
+		@extend %link-font;
+		line-height: 1;
+	}
+	.browsenav__title {
+		// font-family: $sansNarrow;
+		// font-weight: 700;
+		@extend %meganav-font;
+		margin-bottom: 1rem;
+	}
+	.browsenav__item {
+		margin-bottom: 2rem;
+	}
+	.browsenav__inner {
+		background: url(/assets/images/icons/navicons--tablet.png) no-repeat;
+		// background: url(/assets/images/icons/dropdown.png) no-repeat;
+		// background-position: right 0px center;
+		background-position: right 0px top -185px; 
+		// width: 25px; 
+		// height: 14px; 
+		background-color: white;
+	}
+
+/* Carousel - Slick
+-------------------------------------------------- */
+	.banner {
+		position: relative; // contain textbox
+		&__textbox {
+			display: none; // mobile hide
+			background-color: white;
+			// height: 41rem; // tall slide
+			@include respond-to(break2) {
+				display: block;
+				position: absolute;
+				bottom: 5%;
+				left: 2.8%;
+				width: 22.86%; // 320 px at fullwidth
+				min-height: 32rem;
+				min-height: 40%;
+				padding: 2rem 2.5rem 2rem 2rem;
+				padding: 1.8%;
+			}
+			@include respond-to(fullwidth) {
+				bottom: 4rem;
+				left: 4rem;
+				padding: 2rem 2.5rem 2rem 2rem;
+			}
+
+
+			&__category {
+				@extend %category;
+			}
+			&__copy {
+				font-family: $serif;
+				font-size: 2.7vw;
+				line-height: 1.2;
+				font-weight: 700;
+				margin-bottom: 2rem; // push above dots
+				@include respond-to(fullwidth) {
+					font-size: 4rem;
+				}
+			}
+			&__dots {
+				position: absolute;
+				bottom: 2%;
+				left: 5%;
+				@include respond-to(fullwidth) {
+					bottom: 1rem;
+					left: 1.5rem;
+				}
+			}
+		}
+	}
+	.banner__carousel {
+		// margin-left: -60px;
+		// margin-right: -60px;
+		iframe {
+			height: 802px;
+		}
+	}
+	.banner__slide {
+		position: relative; // hold banner textbox
+	}
+	.banner__slide:not(.slick-active) {
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;right: 0;bottom: 0;left: 0;
+			background-color: rgba(0,0,0,0.8);
+		}
+	}
+	.banner-img {
+		// max-width: 1400px;
+	}
+	.slick-list {
+		position: relative; // contain abs arrows
+	}
+	.slick-arrow {
+		display: none !important;
+		@include respond-to(break2) {
+			display: block !important;
+			width: 45px;
+			height: 78px;
+		}
+	}
+	.slick-prev::before, .slick-next::before {
+		content: '';
+		// background: url(/assets/images/icons/navicons.png); // set with AI sprite script export 
+		-webkit-transform: translateY(-49%);
+		-ms-transform: translateY(-49%);
+		transform: translateY(-49%);
+		position: absolute;
+	    opacity: 1;
+	}
+	.slick-prev {
+		left: 0px;
+		z-index: 1;
+  		@include respond-to(fullwidth) {
+  			left: auto;
+  			margin-left: -55px;
+		}
+	}
+	.slick-next {
+		right: 25px;
+		z-index: 1;
+		@include respond-to(fullwidth) {
+			right: calc((100vw - 1400px) / 2);
+			margin-right: -15px;
+		}
+	}
+	.slick-dots {
+		position: static;
+		text-align: left;
+	}
+	.slick-dots li button:before {
+		// background: url(/assets/images/icons/navicons.png); // set with AI sprite sheet script
+		content: '';
+		opacity: 1;
+		width: 14px; 
+		height: 14px;
+		display: block;
+	}
+
+	// nth slide, nth dot is active because default slick dot activation doesn't work with multiple dot instances
+	// .banner__slide[data-slick-index="1"] li:nth-of-type(1) {
+		.banner__slide[data-slick-index="0"] li:nth-of-type(1) button:before {background-position: -226px -158px;}
+		.banner__slide[data-slick-index="0"] li:nth-of-type(1):hover button:before {background-position: -226px -144px;}
+		.banner__slide[data-slick-index="1"] li:nth-of-type(2) button:before {background-position: -226px -158px;}
+		.banner__slide[data-slick-index="1"] li:nth-of-type(2):hover button:before {background-position: -226px -144px;}
+		.banner__slide[data-slick-index="2"] li:nth-of-type(3) button:before {background-position: -226px -158px;}
+		.banner__slide[data-slick-index="2"] li:nth-of-type(3):hover button:before {background-position: -226px -144px;}
+		.banner__slide[data-slick-index="3"] li:nth-of-type(4) button:before {background-position: -226px -158px;}
+		.banner__slide[data-slick-index="3"] li:nth-of-type(4):hover button:before {background-position: -226px -144px;}
+		.banner__slide[data-slick-index="4"] li:nth-of-type(5) button:before {background-position: -226px -158px;}
+		.banner__slide[data-slick-index="4"] li:nth-of-type(5):hover button:before {background-position: -226px -144px;}
+		.banner__slide[data-slick-index="5"] li:nth-of-type(6) button:before {background-position: -226px -158px;}
+		.banner__slide[data-slick-index="5"] li:nth-of-type(6):hover button:before {background-position: -226px -144px;}
+		.banner__slide[data-slick-index="6"] li:nth-of-type(7) button:before {background-position: -226px -158px;}
+		.banner__slide[data-slick-index="6"] li:nth-of-type(7):hover button:before {background-position: -226px -144px;}
+		.banner__slide[data-slick-index="7"] li:nth-of-type(8) button:before {background-position: -226px -158px;}
+		.banner__slide[data-slick-index="7"] li:nth-of-type(8):hover button:before {background-position: -226px -144px;}
+		.banner__slide[data-slick-index="8"] li:nth-of-type(9) button:before {background-position: -226px -158px;}
+		.banner__slide[data-slick-index="8"] li:nth-of-type(9):hover button:before {background-position: -226px -144px;}
+		.banner__slide[data-slick-index="9"] li:nth-of-type(10) button:before {background-position: -226px -158px;}
+		.banner__slide[data-slick-index="9"] li:nth-of-type(10):hover button:before {background-position: -226px -144px;}
+
+/* Watch
+-------------------------------------------------- */
+	.video__category {
+		@extend %category;
+	}
+	.video__title {
+		@extend %serif-title;
+	}
+
+
+/* Talkstory
+-------------------------------------------------- */
+	.talkstory__feature {
+		margin-bottom: 3rem;	
+	}

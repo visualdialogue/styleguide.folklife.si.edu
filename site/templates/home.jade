@@ -1,0 +1,47 @@
+- snippet('header')
+
+section.container
+	h2.section__title Watch
+	ul.row
+		- foreach ($page->video_data()->toStructure() as $video):
+			- if($src = $page->image($video->src())):
+				li.col-sm-4
+					img(src="<?= $src->url() ?>")
+					.video__category!= $video->category()
+					.video__title!= $video->title()
+			- endif
+		- endforeach
+
+section.container
+	h2.section__title Listen
+	ul.row
+		li: img.col-sm-3(src="/assets/images/placeholder/320x320.png")
+		li: img.col-sm-3(src="/assets/images/placeholder/320x320.png")
+		li: img.col-sm-3(src="/assets/images/placeholder/320x320.png")
+		li: img.col-sm-3(src="/assets/images/placeholder/320x320.png")
+
+section.container
+	h2.section__title Participate
+	ul.row
+		li: img.col-sm-3(src="/assets/images/placeholder/320x320.png")
+		li: img.col-sm-3(src="/assets/images/placeholder/320x320.png")
+		li: img.col-sm-3(src="/assets/images/placeholder/320x320.png")
+		li: img.col-sm-3(src="/assets/images/placeholder/320x320.png")
+
+section.container
+	h2.section__title Talkstory
+	.row
+		img.col-sm-8(src="/assets/images/placeholder/919x582.png")
+		ul.col-sm-4
+			li.talkstory__feature.row
+				img.col-sm-6(src="/assets/images/placeholder/220x165.png")
+				.col-sm-6.talkstory__feature__copy Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+			li.talkstory__feature.row
+				img.col-sm-6(src="/assets/images/placeholder/220x165.png")
+				.col-sm-6.talkstory__feature__copy Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+			li.talkstory__feature.row
+				img.col-sm-6(src="/assets/images/placeholder/220x165.png")
+				.col-sm-6.talkstory__feature__copy Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+
+- snippet('footer')

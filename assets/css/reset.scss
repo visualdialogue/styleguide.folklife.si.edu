@@ -1,0 +1,22 @@
+/* Reset
+ * from Kirby @ https://github.com/getkirby/starterkit/blob/master/assets/css/main.css
+-------------------------------------------------- */
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, nav, section, summary {
+  display: block;
+}
+
+
+// from me
+a { text-decoration: none; }
+a[href^="tel"] { border:none; } // remove links from telephone numbers
+img { display: block; width:100%; max-width: 100%; }
+li {list-style-type: none;}

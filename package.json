@@ -1,0 +1,35 @@
+{
+  "name": "code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukehatfield/folklife.si.edu.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lukehatfield/folklife.si.edu/issues"
+  },
+  "homepage": "https://github.com/lukehatfield/folklife.si.edu#readme",
+  "devDependencies": {
+    "browser-sync": "^2.16.0",
+    "critical": "^0.8.0",
+    "gulp": "^3.9.1",
+    "gulp-changed": "^1.3.2",
+    "gulp-closure-compiler": "^0.4.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-jade-php": "^2.0.0-0",
+    "gulp-less": "^3.1.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0"
+  }
+}
