@@ -1,1 +1,13 @@
 Title: Home
+
+----
+Video_data:
+- category: Folkways
+  title: The Jerusalem Program Goes GALACTIC
+  src: jerusalem-project.png
+- category: Folklife
+  title: "Honoring the Amazon: A Rainforest Craft Activity for Kids"
+  src: amazon.png
+- category: Festival
+  title: "Energetic Efficiency: Oil and Coal Workers at the 1978 Folklife Festival"
+  src: energetic-efficiency.png
