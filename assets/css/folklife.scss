@@ -631,20 +631,24 @@
 
 
 	// NAVICONS
-	.nav-icon, .browsenav__inner {
+	.nav-icon, .browsenav__inner, .slick-dots li button:before {
 		background-size: 258px 355px !important; // override background: below from Illustrator
 		// vertical-align: top; // get rid of extra space below images
 	}
 
-	// vvvvvv copy below from Illustrator!!! vvvvvv
+	// vvvvvv copy below from Illustrator!!! for /assets/images/icons/navicons--mobile.png vvvvvv
 
 
-	.search-icon:hover, .search-icon, .menu-icon, .menu-icon:hover, .share-icon, .twitter-icon:hover, .twitter-icon, .tumblr-icon:hover, .flickr-icon:hover, .instagram-icon:hover, .instagram-icon, .flickr-icon, .tumblr-icon, .facebook-icon, .facebook-icon:hover, .share-icon:hover { background: url(/assets/images/icons/navicons--mobile.png); }
+	.slick-dots li button:before, .slick-dots li button:hover:before, .search-icon:hover, .search-icon, .menu-icon, .menu-icon:hover, .share-icon, .twitter-icon:hover, .twitter-icon, .tumblr-icon:hover, .flickr-icon:hover, .instagram-icon:hover, .instagram-icon, .flickr-icon, .tumblr-icon, .facebook-icon, .facebook-icon:hover, .share-icon:hover { background: url(/assets/images/icons/navicons--mobile.png); }
+
+	.slick-dots li button:before, .slick-dots li button:hover:before { width: 13px; height: 13px; }
 
 	.search-icon:hover, .search-icon { width: 22px; height: 20px; }
 
 	.menu-icon, .menu-icon:hover, .share-icon, .twitter-icon:hover, .twitter-icon, .tumblr-icon:hover, .flickr-icon:hover, .instagram-icon:hover, .instagram-icon, .flickr-icon, .tumblr-icon, .facebook-icon, .facebook-icon:hover, .share-icon:hover { width: 22px; height: 21px; }
 
+	.slick-dots li button:before { background-position: -136px -72px; }
+	.slick-dots li button:hover:before { background-position: -136px -86px; }
 	.search-icon:hover { background-position: -130px -37px; }
 	.search-icon { background-position: -130px -17px; }
 	.menu-icon { background-position: -73px -17px; }
@@ -847,12 +851,12 @@
 	.banner {
 		position: relative; // contain textbox
 		&__textbox {
-			display: none; // mobile hide
 			background-color: white;
-			// height: 41rem; // tall slide
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			padding: 2vw 2vw 0;
 			@include respond-to(break2) {
-				display: block;
-				position: absolute;
 				bottom: 5%;
 				left: 2.8%;
 				width: 22.86%; // 320 px at fullwidth
@@ -867,24 +871,31 @@
 				padding: 2rem 2.5rem 2rem 2rem;
 			}
 
+			&--mobile {
+				// width: 100vw !important; // full width for text box on mobile
+			}
 
 			&__category {
 				@extend %category;
 			}
 			&__copy {
-				font-family: $serif;
-				font-size: 2.7vw;
-				line-height: 1.2;
-				font-weight: 700;
-				margin-bottom: 2rem; // push above dots
+				@extend %serif-title--large;
+				margin-bottom: 1rem;
+				@include respond-to(break2) {
+					margin-bottom: 2rem; // push above dots
+				}
 				@include respond-to(fullwidth) {
 					font-size: 4rem;
 				}
 			}
 			&__dots {
+				// display: none; // hide on mobile?
 				position: absolute;
 				bottom: 2%;
 				left: 5%;
+				@include respond-to(break2) {
+					display: block;
+				}
 				@include respond-to(fullwidth) {
 					bottom: 1rem;
 					left: 1.5rem;
@@ -899,19 +910,40 @@
 			height: 802px;
 		}
 	}
+	.banner__nav--mobile, .banner__dots--mobile {
+		@include respond-to(break2) {
+			display: none;
+		}
+	}
+	.banner__nav--mobile {
+		padding: 15px 15px 5px;
+	}
 	.banner__slide {
 		position: relative; // hold banner textbox
+		.banner__textbox {
+			@include respond-to(break2max) {
+				display: none; // hide on mobile because redoing below
+			}
+		}
 	}
 	.banner__slide:not(.slick-active) {
-		&:after {
-			content: '';
-			position: absolute;
-			top: 0;right: 0;bottom: 0;left: 0;
-			background-color: rgba(0,0,0,0.8);
+		@include respond-to(break2) {
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;right: 0;bottom: 0;left: 0;
+				background-color: rgba(0,0,0,0.8);
+			}
 		}
 	}
 	.banner-img {
 		// max-width: 1400px;
+	}
+	.slick-dotted.slick-slider {
+		margin-bottom: 0;
+		@include respond-to(break2) {
+			margin-bottom: 3rem;
+		}
 	}
 	.slick-list {
 		position: relative; // contain abs arrows
@@ -951,7 +983,9 @@
 	}
 	.slick-dots {
 		position: static;
-		text-align: left;
+		@include respond-to(break2) {
+			text-align: left;
+		}
 	}
 	.slick-dots li button:before {
 		// background: url(/assets/images/icons/navicons.png); // set with AI sprite sheet script
@@ -963,7 +997,13 @@
 	}
 
 	// nth slide, nth dot is active because default slick dot activation doesn't work with multiple dot instances
+	// mobile only
+	@include respond-to(break2max) {
+		li[aria-hidden="false"] button:before {background-position: -136px -86px;}
+	}
+
 	// .banner__slide[data-slick-index="1"] li:nth-of-type(1) {
+	@include respond-to(break2) {
 		.banner__slide[data-slick-index="0"] li:nth-of-type(1) button:before {background-position: -226px -158px;}
 		.banner__slide[data-slick-index="0"] li:nth-of-type(1):hover button:before {background-position: -226px -144px;}
 		.banner__slide[data-slick-index="1"] li:nth-of-type(2) button:before {background-position: -226px -158px;}
@@ -984,6 +1024,7 @@
 		.banner__slide[data-slick-index="8"] li:nth-of-type(9):hover button:before {background-position: -226px -144px;}
 		.banner__slide[data-slick-index="9"] li:nth-of-type(10) button:before {background-position: -226px -158px;}
 		.banner__slide[data-slick-index="9"] li:nth-of-type(10):hover button:before {background-position: -226px -144px;}
+	}
 
 /* Watch
 -------------------------------------------------- */
@@ -993,7 +1034,6 @@
 	.video__title {
 		@extend %serif-title;
 	}
-
 
 /* Talkstory
 -------------------------------------------------- */

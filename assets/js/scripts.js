@@ -12,10 +12,23 @@ $(document).ready(function () {
 		fullwidth = 1480; // break to 6 across
 
 	// set mobile flag
-	if(screenSize < break2) {
-		mobile = true;
+	function checkMobile() {
+		console.log('checkMobile()');
+		screenSize = $( window ).width();
+		if(screenSize < break2) {
+			mobile = true;
+			console.log('we are mobile');
+		} else {
+			console.log('we are desktop');
+			mobile = false;
+		}
 	}
 
+	checkMobile(); // initial
+	
+	// $(window).resize( $.throttle(125, function() {
+	// 	checkMobile();
+	// }));
 
 	/*********************
 	 * Mobile dropdown menu
@@ -229,55 +242,135 @@ $(document).ready(function () {
 	 	alert('We are looking into it...');
 	 });
 
-	 console.log($searchBar);
-
 	 /*********************
 	  * Hero Carousel
 	  * Uses slick.js from Ken Wheeler at http://kenwheeler.github.io/slick/
 	  *********************/
-	 $('.banner__carousel').slick({
-	   centerMode: true,
-	   dots: true,
-	   appendDots: '.banner__textbox__dots',
-	   // centerPadding: '15px',
-	   centerPadding: '15px',
-	   mobileFirst: 'true',
-	   centerPadding: '40px',
-	   // autoplay: true,
-	   autoplaySpeed: 4000,
-	   slidesToShow: 1,
+	var slickCreatedMobile = false; // flag to create and destroy when needed
+	var slickCreatedDesktop = false; // flag to create and destroy when needed
 
-	   responsive: [
-	     // {
-	     //   breakpoint: 768,
-	     //   settings: {
-	     //     arrows: false,
-	     //     centerMode: true,
-	     //     centerPadding: '20px',
-	     //     slidesToShow: 3
-	     //   }
-	     // },
-	     // {
-	     //   breakpoint: 480,
-	     //   settings: {
-	     //     arrows: false,
-	     //     centerMode: true,
-	     //     centerPadding: '30px',
-	     //     slidesToShow: 1
-	     //   }
-	     // },
-	     {
-	       breakpoint: 1480,
-	       settings: {
-	         // arrows: false,
-	         appendArrows: '.slick-list',
-	         centerMode: true,
-	         // centerPadding: '12%',
-	         centerPadding: 'calc((100vw - 1400px) / 2)',
-	         slidesToShow: 1
-	       }
-	     }
-	   ]
-	 });
+	function initiateSlickCarousel() {
+		
+		// if(slickCreated) {
+		// 	$('.banner__carousel').slick('unslick'); // clear the palette first
+		// }
+		// if(slickCreatedMobile) {
+		// 	$('.banner__nav--mobile').slick('unslick'); // clear the palette first
+		// }
+		if(mobile) {
+			console.log('mobile');
+			createBannerMobile();
+		} else {
+			console.log('desktop');
+			createBannerDesktop();
+		}
+	}
+
+	function createBannerMobile() {
+		console.log('creating mobile banner...');
+		 $('.banner__carousel').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: false,
+			asNavFor: '.banner__nav--mobile'
+		});
+		$('.banner__nav--mobile').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			asNavFor: '.banner__carousel',
+			dots: true,
+			appendDots: '.banner__dots--mobile',
+		  	focusOnSelect: true
+		});
+		slickCreatedDesktop = true; // so can destroy banner
+		slickCreatedMobile = true; // so can destroy pager
+	}
+
+
+	function createBannerDesktop() {
+		console.log('creating desktop banner...');
+		$('.banner__carousel').slick({
+			centerMode: true,
+			dots: true,
+			appendDots: '.banner__textbox__dots--mobile',
+			mobileFirst: 'true',
+			centerPadding: '0',
+			autoplaySpeed: 4000,
+			slidesToShow: 1,
+
+			responsive: [
+				{
+					breakpoint: 852,
+					settings: {
+						centerPadding: '40px',
+		   				appendDots: '.banner__textbox__dots',
+					}
+				},
+				{
+					breakpoint: 1480,
+						settings: {
+						// arrows: false,
+						appendArrows: '.slick-list',
+						centerMode: true,
+						// centerPadding: '12%',
+						centerPadding: 'calc((100vw - 1400px) / 2)',
+						slidesToShow: 1
+					}
+				}
+		   	]
+		});
+		
+		slickCreatedDesktop = true; // set so can destroy on page resize
+	}
+
+	// on page load
+	initiateSlickCarousel();
+
+	// $(window).resize( $.throttle(125, function() {
+	// 	// on resize
+	// 	slickCarousel();
+	// }));
+	function debounce(func, wait, immediate) {
+		var timeout;
+		return function() {
+			var context = this, args = arguments;
+			var later = function() {
+				timeout = null;
+				if (!immediate) func.apply(context, args);
+			};
+			var callNow = immediate && !timeout;
+			clearTimeout(timeout);
+			timeout = setTimeout(later, wait);
+			if (callNow) func.apply(context, args);
+		};
+	};
+
+	// var unslickifyDesktop = debounce(function() {
+	var unslickifyDesktop = function() {
+		 console.log('unslickifyDesktop');
+		$('.banner__carousel').slick('unslick');
+	};
+	// var unslickifyMobile = debounce(function() {
+	var unslickifyMobile = function() {
+		 console.log('unslickifyMobile');
+		$('.banner__carousel').slick('unslick');
+		$('.banner__nav--mobile').slick('unslick');
+	};
+
+	// $(window).on('breakpoint', function(event, _slick, breakpoint) {
+	$(window).resize( $.throttle(125, function() {
+		checkMobile();
+
+			if(mobile) {
+				if(slickCreatedMobile)
+					unslickifyMobile();
+				createBannerMobile();
+		 	} else {
+				if(slickCreatedDesktop)
+					unslickifyDesktop();
+				createBannerDesktop();
+		 	}
+
+	}));
 
 });

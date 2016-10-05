@@ -107,11 +107,22 @@ body {
   font-size: 2.8rem;
   line-height: 1.25; }
 
+.banner__textbox__copy {
+  font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: 700;
+  font-size: 5vw; }
+  @media only screen and (min-width: 53.25em) {
+    .banner__textbox__copy {
+      font-size: 2.7vw;
+      line-height: 1.2; } }
+
 .banner__textbox__category, .video__category {
-  font-size: 1.6rem;
   text-transform: uppercase;
   font-family: "ff-good-headline-web-pro-con", "Josefin Sans", Futura, "Century Gothic", CenturyGothic, Arial, sans-serif;
   color: #595959; }
+  @media only screen and (min-width: 53.25em) {
+    .banner__textbox__category, .video__category {
+      font-size: 1.6rem; } }
 
 /* Sans reference
 -------------------------------------------------- */
@@ -718,11 +729,15 @@ img.logo--folklife, img.logo--center {
       .search-bar--mobile {
         display: none !important; } }
 
-.nav-icon, .browsenav__inner {
+.nav-icon, .browsenav__inner, .slick-dots li button:before {
   background-size: 258px 355px !important; }
 
-.search-icon:hover, .search-icon, .menu-icon, .menu-icon:hover, .share-icon, .twitter-icon:hover, .twitter-icon, .tumblr-icon:hover, .flickr-icon:hover, .instagram-icon:hover, .instagram-icon, .flickr-icon, .tumblr-icon, .facebook-icon, .facebook-icon:hover, .share-icon:hover {
+.slick-dots li button:before, .slick-dots li button:hover:before, .search-icon:hover, .search-icon, .menu-icon, .menu-icon:hover, .share-icon, .twitter-icon:hover, .twitter-icon, .tumblr-icon:hover, .flickr-icon:hover, .instagram-icon:hover, .instagram-icon, .flickr-icon, .tumblr-icon, .facebook-icon, .facebook-icon:hover, .share-icon:hover {
   background: url(/assets/images/icons/navicons--mobile.png); }
+
+.slick-dots li button:before, .slick-dots li button:hover:before {
+  width: 13px;
+  height: 13px; }
 
 .search-icon:hover, .search-icon {
   width: 22px;
@@ -731,6 +746,12 @@ img.logo--folklife, img.logo--center {
 .menu-icon, .menu-icon:hover, .share-icon, .twitter-icon:hover, .twitter-icon, .tumblr-icon:hover, .flickr-icon:hover, .instagram-icon:hover, .instagram-icon, .flickr-icon, .tumblr-icon, .facebook-icon, .facebook-icon:hover, .share-icon:hover {
   width: 22px;
   height: 21px; }
+
+.slick-dots li button:before {
+  background-position: -136px -72px; }
+
+.slick-dots li button:hover:before {
+  background-position: -136px -86px; }
 
 .search-icon:hover {
   background-position: -130px -37px; }
@@ -949,12 +970,13 @@ select {
 .banner {
   position: relative; }
   .banner__textbox {
-    display: none;
-    background-color: white; }
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 2vw 2vw 0; }
     @media only screen and (min-width: 53.25em) {
       .banner__textbox {
-        display: block;
-        position: absolute;
         bottom: 5%;
         left: 2.8%;
         width: 22.86%;
@@ -968,11 +990,10 @@ select {
         left: 4rem;
         padding: 2rem 2.5rem 2rem 2rem; } }
     .banner__textbox__copy {
-      font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
-      font-size: 2.7vw;
-      line-height: 1.2;
-      font-weight: 700;
-      margin-bottom: 2rem; }
+      margin-bottom: 1rem; }
+      @media only screen and (min-width: 53.25em) {
+        .banner__textbox__copy {
+          margin-bottom: 2rem; } }
       @media only screen and (min-width: 1480px) {
         .banner__textbox__copy {
           font-size: 4rem; } }
@@ -980,6 +1001,9 @@ select {
       position: absolute;
       bottom: 2%;
       left: 5%; }
+      @media only screen and (min-width: 53.25em) {
+        .banner__textbox__dots {
+          display: block; } }
       @media only screen and (min-width: 1480px) {
         .banner__textbox__dots {
           bottom: 1rem;
@@ -988,17 +1012,34 @@ select {
 .banner__carousel iframe {
   height: 802px; }
 
+@media only screen and (min-width: 53.25em) {
+  .banner__nav--mobile, .banner__dots--mobile {
+    display: none; } }
+
+.banner__nav--mobile {
+  padding: 15px 15px 5px; }
+
 .banner__slide {
   position: relative; }
+  @media only screen and (max-width: 53.25em) {
+    .banner__slide .banner__textbox {
+      display: none; } }
 
-.banner__slide:not(.slick-active):after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.8); }
+@media only screen and (min-width: 53.25em) {
+  .banner__slide:not(.slick-active):after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8); } }
+
+.slick-dotted.slick-slider {
+  margin-bottom: 0; }
+  @media only screen and (min-width: 53.25em) {
+    .slick-dotted.slick-slider {
+      margin-bottom: 3rem; } }
 
 .slick-list {
   position: relative; }
@@ -1036,8 +1077,10 @@ select {
       margin-right: -15px; } }
 
 .slick-dots {
-  position: static;
-  text-align: left; }
+  position: static; }
+  @media only screen and (min-width: 53.25em) {
+    .slick-dots {
+      text-align: left; } }
 
 .slick-dots li button:before {
   content: '';
@@ -1046,65 +1089,51 @@ select {
   height: 14px;
   display: block; }
 
-.banner__slide[data-slick-index="0"] li:nth-of-type(1) button:before {
-  background-position: -226px -158px; }
+@media only screen and (max-width: 53.25em) {
+  li[aria-hidden="false"] button:before {
+    background-position: -136px -86px; } }
 
-.banner__slide[data-slick-index="0"] li:nth-of-type(1):hover button:before {
-  background-position: -226px -144px; }
-
-.banner__slide[data-slick-index="1"] li:nth-of-type(2) button:before {
-  background-position: -226px -158px; }
-
-.banner__slide[data-slick-index="1"] li:nth-of-type(2):hover button:before {
-  background-position: -226px -144px; }
-
-.banner__slide[data-slick-index="2"] li:nth-of-type(3) button:before {
-  background-position: -226px -158px; }
-
-.banner__slide[data-slick-index="2"] li:nth-of-type(3):hover button:before {
-  background-position: -226px -144px; }
-
-.banner__slide[data-slick-index="3"] li:nth-of-type(4) button:before {
-  background-position: -226px -158px; }
-
-.banner__slide[data-slick-index="3"] li:nth-of-type(4):hover button:before {
-  background-position: -226px -144px; }
-
-.banner__slide[data-slick-index="4"] li:nth-of-type(5) button:before {
-  background-position: -226px -158px; }
-
-.banner__slide[data-slick-index="4"] li:nth-of-type(5):hover button:before {
-  background-position: -226px -144px; }
-
-.banner__slide[data-slick-index="5"] li:nth-of-type(6) button:before {
-  background-position: -226px -158px; }
-
-.banner__slide[data-slick-index="5"] li:nth-of-type(6):hover button:before {
-  background-position: -226px -144px; }
-
-.banner__slide[data-slick-index="6"] li:nth-of-type(7) button:before {
-  background-position: -226px -158px; }
-
-.banner__slide[data-slick-index="6"] li:nth-of-type(7):hover button:before {
-  background-position: -226px -144px; }
-
-.banner__slide[data-slick-index="7"] li:nth-of-type(8) button:before {
-  background-position: -226px -158px; }
-
-.banner__slide[data-slick-index="7"] li:nth-of-type(8):hover button:before {
-  background-position: -226px -144px; }
-
-.banner__slide[data-slick-index="8"] li:nth-of-type(9) button:before {
-  background-position: -226px -158px; }
-
-.banner__slide[data-slick-index="8"] li:nth-of-type(9):hover button:before {
-  background-position: -226px -144px; }
-
-.banner__slide[data-slick-index="9"] li:nth-of-type(10) button:before {
-  background-position: -226px -158px; }
-
-.banner__slide[data-slick-index="9"] li:nth-of-type(10):hover button:before {
-  background-position: -226px -144px; }
+@media only screen and (min-width: 53.25em) {
+  .banner__slide[data-slick-index="0"] li:nth-of-type(1) button:before {
+    background-position: -226px -158px; }
+  .banner__slide[data-slick-index="0"] li:nth-of-type(1):hover button:before {
+    background-position: -226px -144px; }
+  .banner__slide[data-slick-index="1"] li:nth-of-type(2) button:before {
+    background-position: -226px -158px; }
+  .banner__slide[data-slick-index="1"] li:nth-of-type(2):hover button:before {
+    background-position: -226px -144px; }
+  .banner__slide[data-slick-index="2"] li:nth-of-type(3) button:before {
+    background-position: -226px -158px; }
+  .banner__slide[data-slick-index="2"] li:nth-of-type(3):hover button:before {
+    background-position: -226px -144px; }
+  .banner__slide[data-slick-index="3"] li:nth-of-type(4) button:before {
+    background-position: -226px -158px; }
+  .banner__slide[data-slick-index="3"] li:nth-of-type(4):hover button:before {
+    background-position: -226px -144px; }
+  .banner__slide[data-slick-index="4"] li:nth-of-type(5) button:before {
+    background-position: -226px -158px; }
+  .banner__slide[data-slick-index="4"] li:nth-of-type(5):hover button:before {
+    background-position: -226px -144px; }
+  .banner__slide[data-slick-index="5"] li:nth-of-type(6) button:before {
+    background-position: -226px -158px; }
+  .banner__slide[data-slick-index="5"] li:nth-of-type(6):hover button:before {
+    background-position: -226px -144px; }
+  .banner__slide[data-slick-index="6"] li:nth-of-type(7) button:before {
+    background-position: -226px -158px; }
+  .banner__slide[data-slick-index="6"] li:nth-of-type(7):hover button:before {
+    background-position: -226px -144px; }
+  .banner__slide[data-slick-index="7"] li:nth-of-type(8) button:before {
+    background-position: -226px -158px; }
+  .banner__slide[data-slick-index="7"] li:nth-of-type(8):hover button:before {
+    background-position: -226px -144px; }
+  .banner__slide[data-slick-index="8"] li:nth-of-type(9) button:before {
+    background-position: -226px -158px; }
+  .banner__slide[data-slick-index="8"] li:nth-of-type(9):hover button:before {
+    background-position: -226px -144px; }
+  .banner__slide[data-slick-index="9"] li:nth-of-type(10) button:before {
+    background-position: -226px -158px; }
+  .banner__slide[data-slick-index="9"] li:nth-of-type(10):hover button:before {
+    background-position: -226px -144px; } }
 
 /* Watch
 -------------------------------------------------- */

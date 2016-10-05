@@ -112,45 +112,7 @@ nav.navbar
 
 	<!-- Collect the nav links, forms, and other content for toggling -->
 	.collapse.navbar-collapse(id="bs-example-navbar-collapse-1")
-		//- ul.nav.navbar-nav
-			//- li.active: a(href="#") Link
-				span.sr-only (current)
-			//- li: a(href="#") Link
-			<li class="dropdown">
-			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-			<ul class="dropdown-menu">
-			<li><a href="#">Action</a></li>
-			<li><a href="#">Another action</a></li>
-			<li><a href="#">Something else here</a></li>
-			<li role="separator" class="divider"></li>
-			<li><a href="#">Separated link</a></li>
-			<li role="separator" class="divider"></li>
-			<li><a href="#">One more separated link</a></li>
-			</ul>
-			</li>
-		//- form.navbar-form.navbar-left
-			<div class="form-group">
-			<input type="text" class="form-control" placeholder="Search">
-			</div>
-			<button type="submit" class="btn btn-default">Submit</button>
-		//- ul.nav.navbar-nav.navbar-right
-			<li><a href="#">Link</a></li>
-			<li class="dropdown">
-			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-			<ul class="dropdown-menu">
-			<li><a href="#">Action</a></li>
-			<li><a href="#">Another action</a></li>
-			<li><a href="#">Something else here</a></li>
-			<li role="separator" class="divider"></li>
-			<li><a href="#">Separated link</a></li>
-			</ul>
-			</li>
 	.social-icons.social-icons--mobile.mobile-only
-		//- .instagram-icon.social-icon.social-icon--mobile.nav-icon(aria-hidden="true")
-		//- .flickr-icon.social-icon.social-icon--mobile.nav-icon(aria-hidden="true")
-		//- .tumblr-icon.social-icon.social-icon--mobile.nav-icon(aria-hidden="true")
-		//- .twitter-icon.social-icon.social-icon--mobile.nav-icon(aria-hidden="true")
-		//- .facebook-icon.social-icon.social-icon--mobile.nav-icon(aria-hidden="true")
 		a.social-icon-link(href="http://www.facebook.com/smithsonianfolklifefestival" target="_blank"): .facebook-icon.social-icon.social-icon--mobile.nav-icon(aria-hidden="true")
 		a.social-icon-link(href="https://twitter.com/smithsonianfolk" target="_blank"): .twitter-icon.social-icon.social-icon--mobile.nav-icon(aria-hidden="true")
 		a.social-icon-link(href="http://smithsonianfolklife.tumblr.com/" target="_blank"): .tumblr-icon.social-icon.social-icon--mobile.nav-icon(aria-hidden="true")
@@ -253,12 +215,6 @@ nav.navbar
 							option(value="") Paredon Records
 							option(value="") ...
 #navspacer.navspacer
-//- .social-icons.mobile-only
-//- 	.instagram-icon.social-icon.nav-icon(aria-hidden="true")
-//- 	.flickr-icon.social-icon.nav-icon(aria-hidden="true")
-//- 	.tumblr-icon.social-icon.nav-icon(aria-hidden="true")
-//- 	.twitter-icon.social-icon.nav-icon(aria-hidden="true")
-//- 	.facebook-icon.social-icon.nav-icon(aria-hidden="true")
 .banner
 	.banner__carousel#banner
 		.banner__slide
@@ -286,6 +242,21 @@ nav.navbar
 				.banner__textbox__copy Grand Opening of the National Museum <br />of African American History and Culture
 				.banner__textbox__dots
 		//- <iframe src="https://player.vimeo.com/video/100345550?title=0&byline=0&portrait=0" width="1400" height="788" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-	//- .banner__controls
-		img.arrow--prev
-		img.arrow--next
+	.banner__nav--mobile
+		.banner__textbox--mobile
+			.banner__textbox__category Folklife
+			.banner__textbox__copy Turquoise Mountain Showcases Cultural Sustainability
+			.banner__textbox__dots
+		.banner__textbox--mobile
+			.banner__textbox__category Festival
+			.banner__textbox__copy Circus Arts <br/>at the 2017 Folklife Festival
+			.banner__textbox__dots
+		.banner__textbox--mobile
+			.banner__textbox__category Folkways
+			.banner__textbox__copy Freedom Sounds from Smithsonian Folkways
+			.banner__textbox__dots
+		.banner__textbox--mobile
+			.banner__textbox__category Folklife
+			.banner__textbox__copy Grand Opening of the National Museum <br />of African American History and Culture
+			.banner__textbox__dots
+	.banner__dots--mobile

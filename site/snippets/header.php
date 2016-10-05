@@ -113,15 +113,13 @@
       </ul>
     </div>
   </div><!-- Collect the nav links, forms, and other content for toggling -->
-  <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
-  </div>
+  <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse"></div>
   <div class="social-icons social-icons--mobile mobile-only"><a href="http://www.facebook.com/smithsonianfolklifefestival" target="_blank" class="social-icon-link">
       <div aria-hidden="true" class="facebook-icon social-icon social-icon--mobile nav-icon"></div></a><a href="https://twitter.com/smithsonianfolk" target="_blank" class="social-icon-link">
       <div aria-hidden="true" class="twitter-icon social-icon social-icon--mobile nav-icon"></div></a><a href="http://smithsonianfolklife.tumblr.com/" target="_blank" class="social-icon-link">
       <div aria-hidden="true" class="tumblr-icon social-icon social-icon--mobile nav-icon"></div></a><a href="https://www.flickr.com/groups/2016folklifefestival" target="_blank" class="social-icon-link">
       <div aria-hidden="true" class="flickr-icon social-icon social-icon--mobile nav-icon"></div></a><a href="https://www.instagram.com/smithsonianfolklife/" target="_blank" class="social-icon-link">
-      <div aria-hidden="true" class="instagram-icon social-icon social-icon--mobile nav-icon"></div></a>
-  </div>
+      <div aria-hidden="true" class="instagram-icon social-icon social-icon--mobile nav-icon"></div></a></div>
   <form action="." class="search-bar search-bar--mobile mobile-only">
     <input placeholder="Search..." type="search"/>
   </form>
@@ -263,4 +261,27 @@
       </div>
     </div>
   </div>
+  <div class="banner__nav--mobile">
+    <div class="banner__textbox--mobile">
+      <div class="banner__textbox__category">Folklife</div>
+      <div class="banner__textbox__copy">Turquoise Mountain Showcases Cultural Sustainability</div>
+      <div class="banner__textbox__dots"></div>
+    </div>
+    <div class="banner__textbox--mobile">
+      <div class="banner__textbox__category">Festival</div>
+      <div class="banner__textbox__copy">Circus Arts <br/>at the 2017 Folklife Festival</div>
+      <div class="banner__textbox__dots"></div>
+    </div>
+    <div class="banner__textbox--mobile">
+      <div class="banner__textbox__category">Folkways</div>
+      <div class="banner__textbox__copy">Freedom Sounds from Smithsonian Folkways</div>
+      <div class="banner__textbox__dots"></div>
+    </div>
+    <div class="banner__textbox--mobile">
+      <div class="banner__textbox__category">Folklife</div>
+      <div class="banner__textbox__copy">Grand Opening of the National Museum <br />of African American History and Culture</div>
+      <div class="banner__textbox__dots"></div>
+    </div>
+  </div>
+  <div class="banner__dots--mobile"></div>
 </div>
