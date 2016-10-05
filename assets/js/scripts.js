@@ -6,9 +6,9 @@ $(document).ready(function () {
 	var screenSize = $( window ).width(),
 		$body = $('body'),
 		device, // specify size of screen
-		mobile = false,
+		isMobile = false,
 		break1 = 640, // first media query break
-		break2 = 768; // break to 6 across
+		break2 = 852; // break to 6 across
 		fullwidth = 1480; // break to 6 across
 
 	// set mobile flag
@@ -16,11 +16,11 @@ $(document).ready(function () {
 		console.log('checkMobile()');
 		screenSize = $( window ).width();
 		if(screenSize < break2) {
-			mobile = true;
-			console.log('we are mobile');
+			isMobile = true;
+			console.log('mobile');
 		} else {
-			console.log('we are desktop');
-			mobile = false;
+			console.log('desktop');
+			isMobile = false;
 		}
 	}
 
@@ -81,7 +81,7 @@ $(document).ready(function () {
 		if (($(this).scrollTop() > gapNavHeight) && (isNavOpen == false)) {  
 			$navBar.addClass("smaller-header");
 			isNavOpen = true;
-			if(!mobile) {
+			if(!isMobile) {
 				$navspacer.addClass("navspacer--taller"); // open right away
 				$navspacer.addClass("navspacer-open"); // open right away
 			}
@@ -93,13 +93,13 @@ $(document).ready(function () {
 		else if (($(this).scrollTop() <= gapNavHeight ) && (isNavOpen == true)) {
 			$navBar.removeClass("smaller-header"); // shrink
 			isNavOpen = false;
-			if(!mobile)
+			if(!isMobile)
 				$navspacer.removeClass("navspacer-open"); // gracefully cloase
 			
 		}
 
 		// // Close Nav if mobile on scroll
-		// if(mobile && (!shareClosed || !menuClosed || !searchClosed )) {
+		// if(isMobile && (!shareClosed || !menuClosed || !searchClosed )) {
 		// 	console.log('close it');
 		// 	navCloseAll(); // close anything else that's open
 		// }
@@ -225,7 +225,7 @@ $(document).ready(function () {
 	 *********************/
 	function navCloseAll() {
 		// close other icons
-		if (mobile)
+		if (isMobile)
 	 		$navLists.removeClass('nav-show-mobile'); // close all other open nav lists - mobile only
 		$allIcons.removeClass('lighter-nav-icons');
 		$megaNav.add($searchBar).add($browsenav).add($socialMediaIcons).hide(); // close auxiliaries
@@ -242,10 +242,10 @@ $(document).ready(function () {
 	 	alert('We are looking into it...');
 	 });
 
-	 /*********************
-	  * Hero Carousel
-	  * Uses slick.js from Ken Wheeler at http://kenwheeler.github.io/slick/
-	  *********************/
+	/*********************
+	 * Hero Carousel
+	 * Uses slick.js from Ken Wheeler at http://kenwheeler.github.io/slick/
+	 *********************/
 	var slickCreatedMobile = false; // flag to create and destroy when needed
 	var slickCreatedDesktop = false; // flag to create and destroy when needed
 
@@ -257,7 +257,7 @@ $(document).ready(function () {
 		// if(slickCreatedMobile) {
 		// 	$('.banner__nav--mobile').slick('unslick'); // clear the palette first
 		// }
-		if(mobile) {
+		if(isMobile) {
 			console.log('mobile');
 			createBannerMobile();
 		} else {
@@ -282,7 +282,7 @@ $(document).ready(function () {
 			appendDots: '.banner__dots--mobile',
 		  	focusOnSelect: true
 		});
-		slickCreatedDesktop = true; // so can destroy banner
+		// slickCreatedDesktop = true; // so can destroy banner
 		slickCreatedMobile = true; // so can destroy pager
 	}
 
@@ -346,31 +346,36 @@ $(document).ready(function () {
 	};
 
 	// var unslickifyDesktop = debounce(function() {
-	var unslickifyDesktop = function() {
-		 console.log('unslickifyDesktop');
-		$('.banner__carousel').slick('unslick');
-	};
-	// var unslickifyMobile = debounce(function() {
-	var unslickifyMobile = function() {
-		 console.log('unslickifyMobile');
-		$('.banner__carousel').slick('unslick');
-		$('.banner__nav--mobile').slick('unslick');
+	var unslickify = function() {
+		console.log('unslickify');
+		
+		// destroy desktop banner
+		if(slickCreatedDesktop) {
+			$('.banner__carousel').slick('unslick');
+			slickCreatedDesktop = false;
+		}
+		
+		// destroy mobile banner
+		if(slickCreatedMobile) {
+			$('.banner__carousel').slick('unslick');
+			$('.banner__nav--mobile').slick('unslick');
+			slickCreatedMobile = false;
+		}
 	};
 
 	// $(window).on('breakpoint', function(event, _slick, breakpoint) {
-	$(window).resize( $.throttle(125, function() {
+	// $(window).resize( $.throttle(125, function() {
+	$(window).on('resize', function() {
 		checkMobile();
 
-			if(mobile) {
-				if(slickCreatedMobile)
-					unslickifyMobile();
-				createBannerMobile();
-		 	} else {
-				if(slickCreatedDesktop)
-					unslickifyDesktop();
-				createBannerDesktop();
-		 	}
-
-	}));
+		// if getting smaller
+		if(isMobile && slickCreatedDesktop) {
+			unslickify(); // destroy
+			createBannerMobile();
+	 	} else if(!isMobile && slickCreatedMobile) {
+			unslickify(); // destroy
+			createBannerDesktop();
+		}
+	});
 
 });

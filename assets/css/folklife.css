@@ -119,7 +119,9 @@ body {
 .banner__textbox__category, .video__category {
   text-transform: uppercase;
   font-family: "ff-good-headline-web-pro-con", "Josefin Sans", Futura, "Century Gothic", CenturyGothic, Arial, sans-serif;
-  color: #595959; }
+  color: #595959;
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
   @media only screen and (min-width: 53.25em) {
     .banner__textbox__category, .video__category {
       font-size: 1.6rem; } }

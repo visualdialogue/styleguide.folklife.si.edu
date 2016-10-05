@@ -6,8 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title>Smithsonian Center for Folklife and Cultural Heritage | <?php echo $page->title()->html() ?></title><script src="https://use.typekit.net/roi1emx.js"></script>
-  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  <title>Smithsonian Center for Folklife and Cultural Heritage | <?php echo $page->title()->html() ?></title><script>//try{Typekit.load({ async: true });}catch(e){}</script>
   <!-- “Entypo pictograms by Daniel Bruce — www.entypo.com” -->
   <link href="assets/css/bootstrap.css" rel="stylesheet">
   <link href="assets/css/folklife.css?v=10.04" rel="stylesheet">
@@ -269,17 +268,17 @@
     </div>
     <div class="banner__textbox--mobile">
       <div class="banner__textbox__category">Festival</div>
-      <div class="banner__textbox__copy">Circus Arts <br/>at the 2017 Folklife Festival</div>
+      <div class="banner__textbox__copy">Circus Arts at the <br/>2017 Folklife Festival</div>
       <div class="banner__textbox__dots"></div>
     </div>
     <div class="banner__textbox--mobile">
       <div class="banner__textbox__category">Folkways</div>
-      <div class="banner__textbox__copy">Freedom Sounds from Smithsonian Folkways</div>
+      <div class="banner__textbox__copy">Freedom Sounds <br />from Smithsonian Folkways</div>
       <div class="banner__textbox__dots"></div>
     </div>
     <div class="banner__textbox--mobile">
       <div class="banner__textbox__category">Folklife</div>
-      <div class="banner__textbox__copy">Grand Opening of the National Museum <br />of African American History and Culture</div>
+      <div class="banner__textbox__copy">Grand Opening of the National Museum of African American History and Culture</div>
       <div class="banner__textbox__dots"></div>
     </div>
   </div>
