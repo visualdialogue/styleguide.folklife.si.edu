@@ -1,5 +1,4 @@
 Title: Home
-
 ----
 Video_data:
 - category: Folkways
@@ -11,3 +10,21 @@ Video_data:
 - category: Festival
   title: "Energetic Efficiency: Oil and Coal Workers at the 1978 Folklife Festival"
   src: energetic-efficiency.png
+----
+Audio_data:
+- category: Folkways
+  title: Folk Music of Ethiopia
+  album: Ethnic Folkways Library
+  src: folk-music-of-ethiopia.jpg
+- category: Festival
+  title: "Podcast: Biking in China"
+  album: 2014 Folklife Festival
+  src: podcast-biking-in-china.jpg
+- category: Folkways
+  title: Quelby!
+  album: Stanley and The Ten Sleepless Knights
+  src: quelbe.jpg
+- category: Folklife
+  title: Folklife Radio
+  album: Listen now!
+  src: folklife-radio.jpg

@@ -5,10 +5,10 @@
   <ul class="row">
     <?php foreach ($page->video_data()->toStructure() as $video): ?>
     <?php if($src = $page->image($video->src())): ?>
-    <li class="col-sm-4"><img src="<?= $src->url() ?>" class="video__image"/>
-      <div class="video__category">
+    <li class="col-sm-4"><img src="<?= $src->url() ?>" class="item__image"/>
+      <div class="item__category">
         <?php echo $video->category(); ?></div>
-      <div class="video__title">
+      <div class="item__title--serif">
         <?php echo $video->title(); ?></div>
     </li>
     <?php endif; ?>
@@ -21,10 +21,18 @@
 <section class="container">
   <h2 class="section__title">Listen</h2>
   <ul class="row">
-    <li><img src="/assets/images/placeholder/320x320.png" class="col-sm-3"/></li>
-    <li><img src="/assets/images/placeholder/320x320.png" class="col-sm-3"/></li>
-    <li><img src="/assets/images/placeholder/320x320.png" class="col-sm-3"/></li>
-    <li><img src="/assets/images/placeholder/320x320.png" class="col-sm-3"/></li>
+    <?php foreach ($page->audio_data()->toStructure() as $audio): ?>
+    <?php if($src = $page->image($audio->src())): ?>
+    <li class="col-sm-3"><img src="<?= $src->url() ?>" class="item__image"/>
+      <div class="item__category">
+        <?php echo $audio->category(); ?></div>
+      <div class="item__title--sans">
+        <?php echo $audio->title(); ?></div>
+      <div class="item__subtitle--sans">
+        <?php echo $audio->album(); ?></div>
+    </li>
+    <?php endif; ?>
+    <?php endforeach; ?>
   </ul>
 </section>
 <div class="container">

@@ -234,28 +234,28 @@
   <div id="banner" class="banner__carousel">
     <div class="banner__slide"><img src="assets/images/banner/banner-01.jpg" class="banner-img"/>
       <div class="banner__textbox">
-        <div class="banner__textbox__category">Folklife</div>
+        <div class="item__category">Folklife</div>
         <div class="banner__textbox__copy">Turquoise Mountain Showcases Cultural Sustainability</div>
         <div class="banner__textbox__dots"></div>
       </div>
     </div>
     <div class="banner__slide"><img src="assets/images/banner/banner-02.jpg" class="banner-img"/>
       <div class="banner__textbox">
-        <div class="banner__textbox__category">Festival</div>
+        <div class="item__category">Festival</div>
         <div class="banner__textbox__copy">Circus Arts <br/>at the 2017 Folklife Festival</div>
         <div class="banner__textbox__dots"></div>
       </div>
     </div>
     <div class="banner__slide"><img src="assets/images/banner/banner-03.jpg" class="banner-img"/>
       <div class="banner__textbox">
-        <div class="banner__textbox__category">Folkways</div>
+        <div class="item__category">Folkways</div>
         <div class="banner__textbox__copy">Freedom Sounds from Smithsonian Folkways</div>
         <div class="banner__textbox__dots"></div>
       </div>
     </div>
     <div class="banner__slide"><img src="assets/images/banner/banner-04.jpg" class="banner-img"/>
       <div class="banner__textbox">
-        <div class="banner__textbox__category">Folklife</div>
+        <div class="item__category">Folklife</div>
         <div class="banner__textbox__copy">Grand Opening of the National Museum <br />of African American History and Culture</div>
         <div class="banner__textbox__dots"></div>
       </div>
@@ -263,22 +263,22 @@
   </div>
   <div class="banner__nav--mobile">
     <div class="banner__textbox--mobile">
-      <div class="banner__textbox__category">Folklife</div>
+      <div class="item__category">Folklife</div>
       <div class="banner__textbox__copy">Turquoise Mountain Showcases Cultural Sustainability</div>
       <div class="banner__textbox__dots"></div>
     </div>
     <div class="banner__textbox--mobile">
-      <div class="banner__textbox__category">Festival</div>
+      <div class="item__category">Festival</div>
       <div class="banner__textbox__copy">Circus Arts at the <br/>2017 Folklife Festival</div>
       <div class="banner__textbox__dots"></div>
     </div>
     <div class="banner__textbox--mobile">
-      <div class="banner__textbox__category">Folkways</div>
+      <div class="item__category">Folkways</div>
       <div class="banner__textbox__copy">Freedom Sounds <br />from Smithsonian Folkways</div>
       <div class="banner__textbox__dots"></div>
     </div>
     <div class="banner__textbox--mobile">
-      <div class="banner__textbox__category">Folklife</div>
+      <div class="item__category">Folklife</div>
       <div class="banner__textbox__copy">Grand Opening of the National Museum of African American History and Culture</div>
       <div class="banner__textbox__dots"></div>
     </div>

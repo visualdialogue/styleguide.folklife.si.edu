@@ -83,7 +83,8 @@ body {
   letter-spacing: 0.5px;
   line-height: 0.65;
   margin-top: 0;
-  margin-bottom: 5vw; }
+  margin-bottom: 5vw;
+  color: #595959; }
   @media only screen and (min-width: 53.25em) {
     .section__title {
       font-size: 2.5rem;
@@ -102,22 +103,48 @@ body {
       font-size: 2rem;
       line-height: 1.5; } }
 
+.item__title--sans {
+  font-family: "acumin-pro", "Josefin Sans", Futura, "Century Gothic", CenturyGothic, Arial, sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  font-size: 6vw; }
+  @media only screen and (min-width: 53.25em) {
+    .item__title--sans {
+      font-size: 1.6vw;
+      margin-bottom: 0.4vw; } }
+  @media only screen and (min-width: 1480px) {
+    .item__title--sans {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem; } }
+
+.item__subtitle--sans {
+  font-family: "acumin-pro", "Josefin Sans", Futura, "Century Gothic", CenturyGothic, Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+  font-size: 5vw; }
+  @media only screen and (min-width: 53.25em) {
+    .item__subtitle--sans {
+      font-size: 1.35vw; } }
+  @media only screen and (min-width: 1480px) {
+    .item__subtitle--sans {
+      font-size: 2rem; } }
+
 .search-bar {
   font-family: "acumin-pro", "Josefin Sans", Futura, "Century Gothic", CenturyGothic, Arial, sans-serif;
   font-weight: 500;
   line-height: 1.7;
   font-size: 2.5rem; }
 
-.video__title {
+.item__title--serif {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1.2;
   font-size: 6vw; }
   @media only screen and (min-width: 53.25em) {
-    .video__title {
+    .item__title--serif {
       font-size: 1.9vw; } }
   @media only screen and (min-width: 1480px) {
-    .video__title {
+    .item__title--serif {
       font-size: 2.8rem; } }
 
 .banner__textbox__copy {
@@ -129,14 +156,18 @@ body {
       font-size: 2.7vw;
       line-height: 1.2; } }
 
-.banner__textbox__category, .video__category {
+.item__category {
   text-transform: uppercase;
   font-family: "ff-good-headline-web-pro-con", "Josefin Sans", Futura, "Century Gothic", CenturyGothic, Arial, sans-serif;
   color: #595959;
   line-height: 0.8;
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0.5rem;
+  font-size: 4.1vw; }
   @media only screen and (min-width: 53.25em) {
-    .banner__textbox__category, .video__category {
+    .item__category {
+      font-size: 1.2vw; } }
+  @media only screen and (min-width: 1480px) {
+    .item__category {
       font-size: 1.8rem; } }
 
 /* Sans reference
@@ -495,6 +526,15 @@ hr {
   @media only screen and (min-width: 1480px) {
     .hr--folklife {
       margin-bottom: 2rem; } }
+
+.item__image {
+  margin-bottom: 4vw; }
+  @media only screen and (min-width: 53.25em) {
+    .item__image {
+      margin-bottom: 2vw; } }
+  @media only screen and (min-width: 1480px) {
+    .item__image {
+      margin-bottom: 3rem; } }
 
 /* Nav
 -------------------------------------------------- */
@@ -1188,15 +1228,6 @@ select {
 
 /* Watch
 -------------------------------------------------- */
-.video__image {
-  margin-bottom: 4vw; }
-  @media only screen and (min-width: 53.25em) {
-    .video__image {
-      margin-bottom: 2vw; } }
-  @media only screen and (min-width: 1480px) {
-    .video__image {
-      margin-bottom: 3rem; } }
-
 /* Talkstory
 -------------------------------------------------- */
 .talkstory__feature {

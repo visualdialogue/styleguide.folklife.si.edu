@@ -347,6 +347,29 @@
 		}
 	}
 
+	// general item styles
+	.item__image {
+		margin-bottom: 4vw;
+		@include respond-to(break2) {
+			margin-bottom: 2vw;
+		}
+		@include respond-to(fullwidth) {
+			margin-bottom: 3rem;
+		}
+	}
+	.item__title--serif {
+		@extend %title--serif;
+	}
+	.item__title--sans {
+		@extend %title--sans;
+	}
+	.item__subtitle--sans {
+		@extend %subtitle--sans;
+	}
+	.item__category {
+		@extend %category;
+	}
+
 /* Nav
 -------------------------------------------------- */
 	// bootstrap override
@@ -902,11 +925,8 @@
 				// width: 100vw !important; // full width for text box on mobile
 			}
 
-			&__category {
-				@extend %category;
-			}
 			&__copy {
-				@extend %serif-title--large;
+				@extend %title--serif--large;
 				margin-bottom: 1rem;
 				@include respond-to(break2) {
 					margin-bottom: 3rem; // push above dots
@@ -1064,21 +1084,7 @@
 
 /* Watch
 -------------------------------------------------- */
-	.video__image {
-		margin-bottom: 4vw;
-		@include respond-to(break2) {
-			margin-bottom: 2vw;
-		}
-		@include respond-to(fullwidth) {
-			margin-bottom: 3rem;
-		}
-	}
-	.video__category {
-		@extend %category;
-	}
-	.video__title {
-		@extend %serif-title;
-	}
+
 
 /* Talkstory
 -------------------------------------------------- */

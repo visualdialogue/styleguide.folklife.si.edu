@@ -146,20 +146,16 @@ body {
 	line-height: 0.65; // so margins accurate
 	margin-top: 0; // bootstrap reset
 	margin-bottom: 5vw;
+	color: $black65;
 	@include respond-to(break2) {
 		font-size: 2.5rem;
 		font-size: 4rem;
-		// line-height: 1.2;
 		margin-bottom: 2.8vw;
 	}
 	@include respond-to(fullwidth) {
 		margin-bottom: 4rem;
-		// margin-bottom: 4rem;
 	}
 }
-
-/////////
-
 
 %link-font {
 	font-family: $sans;
@@ -172,6 +168,35 @@ body {
 	}
 }
 
+
+%title--sans {
+	font-family: $sans;
+	font-weight: 600; // semibold for acumin
+	line-height: 1.2;
+  	font-size: 6vw;
+	@include respond-to(break2) {
+  		font-size: 1.6vw;
+  		margin-bottom: 0.4vw;
+	}
+	@include respond-to(fullwidth) {
+  		font-size: 2.5rem;
+  		margin-bottom: 0.5rem;
+	}
+}
+%subtitle--sans {
+	font-family: $sans;
+	font-weight: 300; // light for acumin
+	line-height: 1.2;
+  	font-size: 5vw;
+	@include respond-to(break2) {
+  		font-size: 1.35vw;
+	}
+	@include respond-to(fullwidth) {
+  		font-size: 2rem;
+	}
+}
+
+// search bar
 %small-sans-title {
   font-family: $sans;
   font-weight: 500;
@@ -191,7 +216,7 @@ body {
   // }
 }
 
-%serif-title {
+%title--serif {
 	font-family: $serif;
 	font-weight: 700;
 	line-height: 1.2;
@@ -203,7 +228,7 @@ body {
   		font-size: 2.8rem;
 	}
 }
-%serif-title--large {
+%title--serif--large {
 	font-family: $serif;
 	font-weight: 700;
 	font-size: 5vw;
@@ -220,7 +245,11 @@ body {
 	// margin-top: 1rem;
 	line-height: 0.8; // so margins accurate
 	margin-bottom: 0.5rem;
+	font-size: 4.1vw;
 	@include respond-to(break2) {
+		font-size: 1.2vw;
+	}
+	@include respond-to(fullwidth) {
 		// margin-top: 0;
 	// font-size: 1.6rem;
 		font-size: 1.8rem;

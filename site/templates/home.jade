@@ -6,9 +6,9 @@ section.container
 		- foreach ($page->video_data()->toStructure() as $video):
 			- if($src = $page->image($video->src())):
 				li.col-sm-4
-					img.video__image(src="<?= $src->url() ?>")
-					.video__category!= $video->category()
-					.video__title!= $video->title()
+					img.item__image(src="<?= $src->url() ?>")
+					.item__category!= $video->category()
+					.item__title--serif!= $video->title()
 			- endif
 		- endforeach
 
@@ -18,10 +18,15 @@ section.container
 section.container
 	h2.section__title Listen
 	ul.row
-		li: img.col-sm-3(src="/assets/images/placeholder/320x320.png")
-		li: img.col-sm-3(src="/assets/images/placeholder/320x320.png")
-		li: img.col-sm-3(src="/assets/images/placeholder/320x320.png")
-		li: img.col-sm-3(src="/assets/images/placeholder/320x320.png")
+		- foreach ($page->audio_data()->toStructure() as $audio):
+			- if($src = $page->image($audio->src())):
+				li.col-sm-3
+					img.item__image(src="<?= $src->url() ?>")
+					.item__category!= $audio->category()
+					.item__title--sans!= $audio->title()
+					.item__subtitle--sans!= $audio->album()
+			- endif
+		- endforeach
 
 .container
 	hr.hr--folklife
