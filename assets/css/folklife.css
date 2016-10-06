@@ -79,12 +79,19 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 2.2rem;
-  letter-spacing: 0.5px; }
+  font-size: 10vw;
+  letter-spacing: 0.5px;
+  line-height: 0.65;
+  margin-top: 0;
+  margin-bottom: 5vw; }
   @media only screen and (min-width: 53.25em) {
     .section__title {
       font-size: 2.5rem;
       font-size: 4rem;
-      line-height: 1.2; } }
+      margin-bottom: 2.8vw; } }
+  @media only screen and (min-width: 1480px) {
+    .section__title {
+      margin-bottom: 4rem; } }
 
 .meganav__sub-item, select {
   font-family: "acumin-pro", "Josefin Sans", Futura, "Century Gothic", CenturyGothic, Arial, sans-serif;
@@ -103,9 +110,15 @@ body {
 
 .video__title {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
-  font-weight: 400;
-  font-size: 2.8rem;
-  line-height: 1.25; }
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: 6vw; }
+  @media only screen and (min-width: 53.25em) {
+    .video__title {
+      font-size: 1.9vw; } }
+  @media only screen and (min-width: 1480px) {
+    .video__title {
+      font-size: 2.8rem; } }
 
 .banner__textbox__copy {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
@@ -120,11 +133,11 @@ body {
   text-transform: uppercase;
   font-family: "ff-good-headline-web-pro-con", "Josefin Sans", Futura, "Century Gothic", CenturyGothic, Arial, sans-serif;
   color: #595959;
-  margin-top: 1rem;
+  line-height: 0.8;
   margin-bottom: 0.5rem; }
   @media only screen and (min-width: 53.25em) {
     .banner__textbox__category, .video__category {
-      font-size: 1.6rem; } }
+      font-size: 1.8rem; } }
 
 /* Sans reference
 -------------------------------------------------- */
@@ -453,9 +466,35 @@ body {
 .site--folklife .site-toggle__link--folklife {
   color: #666666; }
 
+@media only screen and (min-width: 53.25em) {
+  section {
+    margin-bottom: 2.4vw; } }
+
+@media only screen and (min-width: 1480px) {
+  section {
+    margin-bottom: 3.5rem; } }
+
 @media only screen and (max-width: 53.25em) {
   section li {
     margin-bottom: 2rem; } }
+
+hr {
+  margin: 0; }
+
+.hr--folklife {
+  display: block;
+  border: 0px;
+  height: 40px;
+  background-image: url(/assets/images/folklife-hr.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin-bottom: 5vw; }
+  @media only screen and (min-width: 53.25em) {
+    .hr--folklife {
+      margin-bottom: 1.3vw; } }
+  @media only screen and (min-width: 1480px) {
+    .hr--folklife {
+      margin-bottom: 2rem; } }
 
 /* Nav
 -------------------------------------------------- */
@@ -996,7 +1035,7 @@ select {
       margin-bottom: 1rem; }
       @media only screen and (min-width: 53.25em) {
         .banner__textbox__copy {
-          margin-bottom: 2rem; } }
+          margin-bottom: 3rem; } }
       @media only screen and (min-width: 1480px) {
         .banner__textbox__copy {
           font-size: 4rem; } }
@@ -1010,14 +1049,20 @@ select {
       @media only screen and (min-width: 1480px) {
         .banner__textbox__dots {
           bottom: 1rem;
-          left: 1.5rem; } }
+          left: 1.6rem; } }
+
+@media only screen and (max-width: 53.25em) {
+  .banner__carousel {
+    margin-bottom: 2vw; } }
 
 .banner__carousel iframe {
   height: 802px; }
 
-@media only screen and (min-width: 53.25em) {
-  .banner__nav--mobile, .banner__dots--mobile {
-    display: none; } }
+.banner__nav--mobile, .banner__dots--mobile {
+  margin-bottom: 6vw; }
+  @media only screen and (min-width: 53.25em) {
+    .banner__nav--mobile, .banner__dots--mobile {
+      display: none; } }
 
 .banner__nav--mobile {
   padding: 5px 15px 5px; }
@@ -1042,7 +1087,10 @@ select {
   margin-bottom: 0; }
   @media only screen and (min-width: 53.25em) {
     .slick-dotted.slick-slider {
-      margin-bottom: 3rem; } }
+      margin-bottom: 3.5vw; } }
+  @media only screen and (min-width: 1480px) {
+    .slick-dotted.slick-slider {
+      margin-bottom: 5rem; } }
 
 .slick-list {
   position: relative; }
@@ -1140,6 +1188,15 @@ select {
 
 /* Watch
 -------------------------------------------------- */
+.video__image {
+  margin-bottom: 4vw; }
+  @media only screen and (min-width: 53.25em) {
+    .video__image {
+      margin-bottom: 2vw; } }
+  @media only screen and (min-width: 1480px) {
+    .video__image {
+      margin-bottom: 3rem; } }
+
 /* Talkstory
 -------------------------------------------------- */
 .talkstory__feature {

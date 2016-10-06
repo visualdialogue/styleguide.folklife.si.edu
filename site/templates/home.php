@@ -5,7 +5,7 @@
   <ul class="row">
     <?php foreach ($page->video_data()->toStructure() as $video): ?>
     <?php if($src = $page->image($video->src())): ?>
-    <li class="col-sm-4"><img src="<?= $src->url() ?>"/>
+    <li class="col-sm-4"><img src="<?= $src->url() ?>" class="video__image"/>
       <div class="video__category">
         <?php echo $video->category(); ?></div>
       <div class="video__title">
@@ -15,6 +15,9 @@
     <?php endforeach; ?>
   </ul>
 </section>
+<div class="container">
+  <hr class="hr--folklife"/>
+</div>
 <section class="container">
   <h2 class="section__title">Listen</h2>
   <ul class="row">
@@ -24,6 +27,9 @@
     <li><img src="/assets/images/placeholder/320x320.png" class="col-sm-3"/></li>
   </ul>
 </section>
+<div class="container">
+  <hr class="hr--folklife"/>
+</div>
 <section class="container">
   <h2 class="section__title">Participate</h2>
   <ul class="row">

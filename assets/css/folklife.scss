@@ -313,8 +313,36 @@
 	.section__title {
 		@extend %section-header;
 	}
+	section {
+		// margin-bottom: 0;
+		@include respond-to(break2) {
+			margin-bottom: 2.4vw;
+		}
+		@include respond-to(fullwidth) {
+			margin-bottom: 3.5rem;
+		}
+	}
 	section li {
 		@include respond-to(break2max) {
+			margin-bottom: 2rem;
+		}
+	}
+	hr {
+		margin: 0; // bootstrap reset
+	}
+	.hr--folklife {
+		// from http://stackoverflow.com/a/24499695
+		display:block;
+		border:0px;
+		height:40px;
+		background-image:url(/assets/images/folklife-hr.png);
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		margin-bottom: 5vw;
+		@include respond-to(break2) {
+			margin-bottom: 1.3vw;
+		}
+		@include respond-to(fullwidth) {
 			margin-bottom: 2rem;
 		}
 	}
@@ -881,7 +909,7 @@
 				@extend %serif-title--large;
 				margin-bottom: 1rem;
 				@include respond-to(break2) {
-					margin-bottom: 2rem; // push above dots
+					margin-bottom: 3rem; // push above dots
 				}
 				@include respond-to(fullwidth) {
 					font-size: 4rem;
@@ -897,7 +925,7 @@
 				}
 				@include respond-to(fullwidth) {
 					bottom: 1rem;
-					left: 1.5rem;
+					left: 1.6rem;
 				}
 			}
 		}
@@ -905,11 +933,16 @@
 	.banner__carousel {
 		// margin-left: -60px;
 		// margin-right: -60px;
+		@include respond-to(break2max) {
+			margin-bottom: 2vw;
+		}
+
 		iframe {
 			height: 802px;
 		}
 	}
 	.banner__nav--mobile, .banner__dots--mobile {
+		margin-bottom: 6vw;
 		@include respond-to(break2) {
 			display: none;
 		}
@@ -942,7 +975,10 @@
 	.slick-dotted.slick-slider {
 		margin-bottom: 0;
 		@include respond-to(break2) {
-			margin-bottom: 3rem;
+			margin-bottom: 3.5vw;
+		}
+		@include respond-to(fullwidth) {
+			margin-bottom: 5rem;
 		}
 	}
 	.slick-list {
@@ -1028,6 +1064,15 @@
 
 /* Watch
 -------------------------------------------------- */
+	.video__image {
+		margin-bottom: 4vw;
+		@include respond-to(break2) {
+			margin-bottom: 2vw;
+		}
+		@include respond-to(fullwidth) {
+			margin-bottom: 3rem;
+		}
+	}
 	.video__category {
 		@extend %category;
 	}

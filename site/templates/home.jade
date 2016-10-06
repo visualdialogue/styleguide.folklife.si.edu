@@ -6,11 +6,14 @@ section.container
 		- foreach ($page->video_data()->toStructure() as $video):
 			- if($src = $page->image($video->src())):
 				li.col-sm-4
-					img(src="<?= $src->url() ?>")
+					img.video__image(src="<?= $src->url() ?>")
 					.video__category!= $video->category()
 					.video__title!= $video->title()
 			- endif
 		- endforeach
+
+.container
+	hr.hr--folklife
 
 section.container
 	h2.section__title Listen
@@ -19,6 +22,9 @@ section.container
 		li: img.col-sm-3(src="/assets/images/placeholder/320x320.png")
 		li: img.col-sm-3(src="/assets/images/placeholder/320x320.png")
 		li: img.col-sm-3(src="/assets/images/placeholder/320x320.png")
+
+.container
+	hr.hr--folklife
 
 section.container
 	h2.section__title Participate

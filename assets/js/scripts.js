@@ -312,6 +312,7 @@ $(document).ready(function () {
 						// arrows: false,
 						appendArrows: '.slick-list',
 						centerMode: true,
+		   				appendDots: '.banner__textbox__dots',
 						// centerPadding: '12%',
 						centerPadding: 'calc((100vw - 1400px) / 2)',
 						slidesToShow: 1
