@@ -121,7 +121,7 @@ body {
   font-family: "ff-good-headline-web-pro-con", "Josefin Sans", Futura, "Century Gothic", CenturyGothic, Arial, sans-serif;
   color: #595959;
   margin-top: 1rem;
-  margin-bottom: 1rem; }
+  margin-bottom: 0.5rem; }
   @media only screen and (min-width: 53.25em) {
     .banner__textbox__category, .video__category {
       font-size: 1.6rem; } }
@@ -738,7 +738,6 @@ img.logo--folklife, img.logo--center {
   background: url(/assets/images/icons/navicons--mobile.png); }
 
 .slick-dots li button:before, .slick-dots li button:hover:before {
-  width: 13px;
   height: 13px; }
 
 .search-icon:hover, .search-icon {
@@ -750,10 +749,12 @@ img.logo--folklife, img.logo--center {
   height: 21px; }
 
 .slick-dots li button:before {
-  background-position: -136px -72px; }
+  background-position: -136px -63px;
+  width: 13px; }
 
 .slick-dots li button:hover:before {
-  background-position: -136px -86px; }
+  background-position: -136px -86px;
+  width: 14px; }
 
 .search-icon:hover {
   background-position: -130px -37px; }
@@ -1019,7 +1020,7 @@ select {
     display: none; } }
 
 .banner__nav--mobile {
-  padding: 15px 15px 5px; }
+  padding: 5px 15px 5px; }
 
 .banner__slide {
   position: relative; }

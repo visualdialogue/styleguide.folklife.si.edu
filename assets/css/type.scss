@@ -203,7 +203,7 @@ body {
 	font-family: $sansNarrow;
 	color: $black65;
 	margin-top: 1rem;
-	margin-bottom: 1rem;
+	margin-bottom: 0.5rem;
 	@include respond-to(break2) {
 		// margin-top: 0;
 		font-size: 1.6rem;

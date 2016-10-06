@@ -636,19 +636,18 @@
 		// vertical-align: top; // get rid of extra space below images
 	}
 
-	// vvvvvv copy below from Illustrator!!! for /assets/images/icons/navicons--mobile.png vvvvvv
-
+	// vvvvvv copy navicons--mobile below from Illustrator!!! for /assets/images/icons/navicons--mobile.png vvvvvv
 
 	.slick-dots li button:before, .slick-dots li button:hover:before, .search-icon:hover, .search-icon, .menu-icon, .menu-icon:hover, .share-icon, .twitter-icon:hover, .twitter-icon, .tumblr-icon:hover, .flickr-icon:hover, .instagram-icon:hover, .instagram-icon, .flickr-icon, .tumblr-icon, .facebook-icon, .facebook-icon:hover, .share-icon:hover { background: url(/assets/images/icons/navicons--mobile.png); }
 
-	.slick-dots li button:before, .slick-dots li button:hover:before { width: 13px; height: 13px; }
+	.slick-dots li button:before, .slick-dots li button:hover:before { height: 13px; }
 
 	.search-icon:hover, .search-icon { width: 22px; height: 20px; }
 
 	.menu-icon, .menu-icon:hover, .share-icon, .twitter-icon:hover, .twitter-icon, .tumblr-icon:hover, .flickr-icon:hover, .instagram-icon:hover, .instagram-icon, .flickr-icon, .tumblr-icon, .facebook-icon, .facebook-icon:hover, .share-icon:hover { width: 22px; height: 21px; }
 
-	.slick-dots li button:before { background-position: -136px -72px; }
-	.slick-dots li button:hover:before { background-position: -136px -86px; }
+	.slick-dots li button:before { background-position: -136px -63px; width: 13px; }
+	.slick-dots li button:hover:before { background-position: -136px -86px; width: 14px; }
 	.search-icon:hover { background-position: -130px -37px; }
 	.search-icon { background-position: -130px -17px; }
 	.menu-icon { background-position: -73px -17px; }
@@ -666,7 +665,7 @@
 	.facebook-icon:hover { background-position: -16px -78px; }
 	.share-icon:hover { background-position: -16px -37px; }
 
-	// ^^^^^^ copy above from Illustrator!!! ^^^^^^
+	// ^^^^^^ copy navicons--mobile above from Illustrator!!! ^^^^^^
 
 
 	// hover specific for mobile revert to regular dimensions, otherwise focus would activate hover and not be white
@@ -916,7 +915,8 @@
 		}
 	}
 	.banner__nav--mobile {
-		padding: 15px 15px 5px;
+		// padding: 15px 15px 5px;
+		padding: 5px 15px 5px;
 	}
 	.banner__slide {
 		position: relative; // hold banner textbox
