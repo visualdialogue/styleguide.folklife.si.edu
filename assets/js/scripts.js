@@ -295,6 +295,7 @@ $(document).ready(function () {
 			appendDots: '.banner__textbox__dots--mobile',
 			mobileFirst: 'true',
 			centerPadding: '0',
+			autoplay: true,
 			autoplaySpeed: 4000,
 			slidesToShow: 1,
 
