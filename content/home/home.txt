@@ -16,15 +16,41 @@ Audio_data:
   title: Folk Music of Ethiopia
   album: Ethnic Folkways Library
   src: folk-music-of-ethiopia.jpg
+  length: "8:32"
 - category: Festival
   title: "Podcast: Biking in China"
   album: 2014 Folklife Festival
   src: podcast-biking-in-china.jpg
+  length: "5:42"
 - category: Folkways
   title: Quelby!
   album: Stanley and The Ten Sleepless Knights
   src: quelbe.jpg
+  length: "23:01"
 - category: Folklife
   title: Folklife Radio
   album: Listen now!
   src: folklife-radio.jpg
+  length: "65:11"
+----
+Events:
+- event_date: September 7
+  title: "Freedom Sounds: A Community Celebration"
+  src: freedom-sounds.jpg
+- event_date: August 4
+  title: "Artist Talk: Masters of Tibetan Bronze Work"
+  src: tibetan-artists.jpg
+- event_date: May 12
+  title: "Symposium: Cultural Sustainability in the Age of Globalization"
+  src: age-of-globalization.jpg
+- event_date: April 22
+  title: "Shidé Nyima: Tibetan Comedian, Poet, Actor, and Filmmaker"
+  src: shide-nyima.jpg
+----
+Talk_story_feature_image: tibet.jpg
+----
+Talk_story_feature_category: Artist Profile
+----
+Talk_story_feature_title: Tibetan Folklore in Film:
+----
+Talk_story_feature_subtitle: An Interview with Shidé Nyima

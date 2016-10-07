@@ -7,8 +7,9 @@ section.container
 			- if($src = $page->image($video->src())):
 				li.col-sm-4
 					img.item__image(src="<?= $src->url() ?>")
-					.item__category!= $video->category()
-					.item__title--serif!= $video->title()
+					.item__details
+						.item__category!= $video->category()
+						.item__title--serif!= $video->title()
 			- endif
 		- endforeach
 
@@ -20,11 +21,21 @@ section.container
 	ul.row
 		- foreach ($page->audio_data()->toStructure() as $audio):
 			- if($src = $page->image($audio->src())):
-				li.col-sm-3
-					img.item__image(src="<?= $src->url() ?>")
-					.item__category!= $audio->category()
-					.item__title--sans!= $audio->title()
-					.item__subtitle--sans!= $audio->album()
+				li.col-xs-6.col-sm-3
+					.audio__block
+						img.item__image(src="<?= $src->url() ?>")
+						.item__details.item__details--audio
+							.item__category!= $audio->category()
+							.item__title--sans!= $audio->title()
+							.item__subtitle--sans.album-title!= $audio->album()
+							.audio-player
+								.play-button
+								.audio-player__details
+									.audio-progress-bar
+									.audio-time
+										|0:00 &vert;
+										!= $audio->length()
+									.volume
 			- endif
 		- endforeach
 
@@ -34,15 +45,28 @@ section.container
 section.container
 	h2.section__title Participate
 	ul.row
-		li: img.col-sm-3(src="/assets/images/placeholder/320x320.png")
-		li: img.col-sm-3(src="/assets/images/placeholder/320x320.png")
-		li: img.col-sm-3(src="/assets/images/placeholder/320x320.png")
-		li: img.col-sm-3(src="/assets/images/placeholder/320x320.png")
+		- foreach ($page->events()->toStructure() as $event):
+			- if($src = $page->image($event->src())):
+				li.col-xs-6.col-sm-3
+					img.item__image(src="<?= $src->url() ?>")
+					.item__details
+						.item__date!= $event->event_date()
+						.item__title--sans--alt!= $event->title()
+			- endif
+		- endforeach
 
-section.container
-	h2.section__title Talkstory
+section.container.section--talk-story
+	h2.section__title Talk Story
 	.row
-		img.col-sm-8(src="/assets/images/placeholder/919x582.png")
+		.col-sm-8.talk-story__feature.clearfix
+			.talk-story__feature__inner
+				- if($src = $page->image($page->talk_story_feature_image())):
+					img(src="<?= $src->url() ?>")
+				- endif
+				.banner__textbox.talk-story__textbox
+					.item__category!= $page->talk_story_feature_category()
+					.talk-story__textbox__title!= $page->talk_story_feature_title()
+					.talk-story__textbox__subtitle!= $page->talk_story_feature_subtitle()
 		ul.col-sm-4
 			li.talkstory__feature.row
 				img.col-sm-6(src="/assets/images/placeholder/220x165.png")
@@ -53,6 +77,5 @@ section.container
 			li.talkstory__feature.row
 				img.col-sm-6(src="/assets/images/placeholder/220x165.png")
 				.col-sm-6.talkstory__feature__copy Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
 
 - snippet('footer')

@@ -348,17 +348,22 @@
 	}
 
 	// general item styles
-	.item__image {
-		margin-bottom: 4vw;
+	.item__details {
+		padding-top: 4vw;
+		min-height: 26vw; // for 3 line titles
 		@include respond-to(break2) {
-			margin-bottom: 2vw;
+			min-height: auto; // reset
+			padding-top: 2vw;
 		}
 		@include respond-to(fullwidth) {
-			margin-bottom: 3rem;
+			padding-top: 3rem;
 		}
 	}
 	.item__title--serif {
 		@extend %title--serif;
+	}
+	.item__title--sans--alt {
+		@extend %title--sans--alt;
 	}
 	.item__title--sans {
 		@extend %title--sans;
@@ -368,6 +373,9 @@
 	}
 	.item__category {
 		@extend %category;
+	}
+	.item__date {
+		@extend %type--date;
 	}
 
 /* Nav
@@ -682,23 +690,33 @@
 
 
 	// NAVICONS
-	.nav-icon, .browsenav__inner, .slick-dots li button:before {
+	.nav-icon, .browsenav__inner, .slick-dots li button:before, .play-button, .audio-progress-bar, .volume {
 		background-size: 258px 355px !important; // override background: below from Illustrator
 		// vertical-align: top; // get rid of extra space below images
 	}
 
 	// vvvvvv copy navicons--mobile below from Illustrator!!! for /assets/images/icons/navicons--mobile.png vvvvvv
 
-	.slick-dots li button:before, .slick-dots li button:hover:before, .search-icon:hover, .search-icon, .menu-icon, .menu-icon:hover, .share-icon, .twitter-icon:hover, .twitter-icon, .tumblr-icon:hover, .flickr-icon:hover, .instagram-icon:hover, .instagram-icon, .flickr-icon, .tumblr-icon, .facebook-icon, .facebook-icon:hover, .share-icon:hover { background: url(/assets/images/icons/navicons--mobile.png); }
+	.audio-progress-bar, .play-button:hover, .play-button:active, .play-button, .volume:hover, .volume, select, .slick-dots li button:before, .slick-dots li button:hover:before, .search-icon:hover, .search-icon, .menu-icon, .menu-icon:hover, .share-icon, .twitter-icon:hover, .twitter-icon, .tumblr-icon:hover, .flickr-icon:hover, .instagram-icon:hover, .instagram-icon, .flickr-icon, .tumblr-icon, .facebook-icon, .facebook-icon:hover, .share-icon:hover { background: url(/assets/images/icons/navicons--mobile.png); }
 
-	.slick-dots li button:before, .slick-dots li button:hover:before { height: 13px; }
+	.play-button:hover, .play-button:active, .play-button { width: 38px; height: 38px; }
+
+	.volume:hover, .volume { width: 27px; height: 23px; }
+
+	.slick-dots li button:before, .slick-dots li button:hover:before { width: 13px; height: 13px; }
 
 	.search-icon:hover, .search-icon { width: 22px; height: 20px; }
 
 	.menu-icon, .menu-icon:hover, .share-icon, .twitter-icon:hover, .twitter-icon, .tumblr-icon:hover, .flickr-icon:hover, .instagram-icon:hover, .instagram-icon, .flickr-icon, .tumblr-icon, .facebook-icon, .facebook-icon:hover, .share-icon:hover { width: 22px; height: 21px; }
 
-	.slick-dots li button:before { background-position: -136px -63px; width: 13px; }
-	.slick-dots li button:hover:before { background-position: -136px -86px; width: 14px; }
+	.audio-progress-bar { background-position: -20px -163px; width: 125px; height: 4px; }
+	.play-button:hover, .play-button:active { background-position: -67px -117px; }
+	.play-button { background-position: -19px -117px; }
+	.volume:hover { background-position: -175px -153px; }
+	.volume { background-position: -176px -118px; }
+	select { background-position: -229px -136px; width: 25px; height: 14px; }
+	.slick-dots li button:before { background-position: -136px -63px; }
+	.slick-dots li button:hover:before { background-position: -136px -86px; }
 	.search-icon:hover { background-position: -130px -37px; }
 	.search-icon { background-position: -130px -17px; }
 	.menu-icon { background-position: -73px -17px; }
@@ -726,9 +744,16 @@
 
 
 	@include respond-to(break2) {
-		select, .slick-dots li button:before, .slick-dots li button:hover:before, .slick-next:hover::before, .slick-prev:hover::before, .slick-next::before, .slick-prev::before, .search-icon:hover, .search-icon, .share-icon, .twitter-icon:hover, .twitter-icon, .tumblr-icon:hover, .flickr-icon:hover, .instagram-icon:hover, .instagram-icon, .flickr-icon, .tumblr-icon, .facebook-icon, .facebook-icon:hover, .share-icon:hover, .menu-icon, .menu-icon:hover { background: url(/assets/images/icons/navicons--tablet.png); }
+
+		// vvvvvv copy navicons--tablet below from Illustrator!!! for /assets/images/icons/navicons--tablet.png vvvvvv
+
+		.audio-progress-bar, .play-button:hover, .play-button, .volume:hover, .volume, select, .slick-dots li button:before, .slick-dots li button:hover:before, .slick-next:hover::before, .slick-prev:hover::before, .slick-next::before, .slick-prev::before, .search-icon:hover, .search-icon, .share-icon, .twitter-icon:hover, .twitter-icon, .tumblr-icon:hover, .flickr-icon:hover, .instagram-icon:hover, .instagram-icon, .flickr-icon, .tumblr-icon, .facebook-icon, .facebook-icon:hover, .share-icon:hover, .menu-icon, .menu-icon:hover { background: url(/assets/images/icons/navicons--tablet.png); }
 
 		.slick-dots li button:before, .slick-dots li button:hover:before { height: 13px; }
+
+		.play-button:hover, .play-button { width: 61px; height: 60px; }
+
+		.volume:hover, .volume { width: 27px; height: 23px; }
 
 		.slick-next:hover::before, .slick-prev:hover::before, .slick-next::before, .slick-prev::before { width: 31px; height: 54px; }
 
@@ -736,6 +761,11 @@
 
 		.twitter-icon:hover, .twitter-icon, .tumblr-icon:hover, .flickr-icon:hover, .instagram-icon:hover, .instagram-icon, .flickr-icon, .tumblr-icon, .menu-icon { width: 41px; height: 38px; }
 
+		.audio-progress-bar { background-position: -12px -256px; width: 201px; height: 3px; }
+		.play-button:hover { background-position: -87px -180px; }
+		.play-button { background-position: -10px -180px; }
+		.volume:hover { background-position: -166px -216px; }
+		.volume { background-position: -167px -181px; }
 		select { background-position: -220px -199px; width: 25px; height: 14px; }
 		.slick-dots li button:before { background-position: -226px -144px; width: 13px; }
 		.slick-dots li button:hover:before { background-position: -226px -158px; width: 14px; }
@@ -782,9 +812,7 @@
 	// ^^^^^^ copy above from Illustrator!!! ^^^^^^
 
 	// MEGANAV
-	.meganav {
-		display: none; // inital hide
-		background-color: $black60;
+	.meganav, .footer {
 
 		// keep above outside click div
 		position: relative;
@@ -796,8 +824,6 @@
 			padding: 3.6rem 0 2.6rem; // 40px above and below
 		}
 
-		&__main-item {
-		}
 		&__main-item {
 			&__title {
 				@extend %meganav-font;
@@ -830,6 +856,10 @@
 				color: white;
 			}
 		}
+	}
+	.meganav {
+		display: none;
+		background-color: $black60;
 	}
 	.nav-show-mobile {
 		display: inline-block;
@@ -930,9 +960,6 @@
 				margin-bottom: 1rem;
 				@include respond-to(break2) {
 					margin-bottom: 3rem; // push above dots
-				}
-				@include respond-to(fullwidth) {
-					font-size: 4rem;
 				}
 			}
 			&__dots {
@@ -1085,9 +1112,103 @@
 /* Watch
 -------------------------------------------------- */
 
+/* Listen
+-------------------------------------------------- */
+	.audio__block {
+	}
+	.item__details--audio {
+		padding: 3vw 2vw 2vw;
+		border: 2px solid $black15;		
+		@include respond-to(break2) {
+			padding: 2vw 1.3vw 1.3vw;
+		}
+		@include respond-to(fullwidth) {
+			padding: 3rem 2rem 2rem;
+		}
+	}
+	.album-title {
+		min-height: 10vw; // for 2 line album titles
+		@include respond-to(break2) {
+			min-height: 4.8rem;
+		}
+	}
+	.play-button, .audio-player__details, .audio-progress-bar, .audio-time, .volume {
+		display: inline-block;
+		vertical-align: bottom;
+	}
+	.audio-player {
+		// margin-top: 0rem;
+		@include respond-to(break2) {
+			margin-top: 2vw;
+		}
+		@include respond-to(fullwidth) {
+			margin-top: 2.8rem;
+		}
+	}
+	.audio-player__details {
+		@include respond-to(break2) {
+			width: 72.695%; // 205/282 = 
+		}
+		@include respond-to(fullwidth) {
+			margin-left: 1rem;
+		}
+	}
+	.audio-progress-bar {
+		margin-bottom: 4px;
+		max-width: 100%;
+	}
+	.volume {
+		float: right;
+		margin-right: 3px;
+	}
+
 
 /* Talkstory
 -------------------------------------------------- */
-	.talkstory__feature {
+	.section--talk-story {
+		background-color: $black30;
+		padding-top: 5vw;
+		padding-bottom: 5vw;
+		@include respond-to(fullwidth) {
+			padding-top: 4rem;
+			padding-bottom: 4rem;
+		}
+
+		.section__title {
+			color: white;
+		}
+	}
+	.talk-story__feature {
 		margin-bottom: 3rem;	
+		&__inner {
+			position: relative; // contain textbox
+		}
+	}
+	.talk-story__textbox {
+		min-height: auto;
+		position: static;
+		width: 100%;
+		padding-bottom: 3vw;
+		@include respond-to(break2) {
+			position: absolute;
+			width: 30.51%; // 281 / 921 = 30.51%
+			padding-bottom: 2vw;
+		}
+		@include respond-to(fullwidth) {
+			padding-bottom: 3rem;
+		}
+
+		&__title {
+			@extend %title--sans--large;
+		}
+		&__subtitle {
+			@extend %subtitle--sans--large;
+		}
+	}
+
+/* Footer
+-------------------------------------------------- */
+	.footer {
+		background-color: $black80;
+		color: white;
 	}

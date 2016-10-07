@@ -30,6 +30,9 @@ $(document).ready(function () {
 	// 	checkMobile();
 	// }));
 
+	// make active pseudo styles in mobile safari, from https://alxgbsn.co.uk/2011/10/17/enable-css-active-pseudo-styles-in-mobile-safari/
+	document.addEventListener("touchstart", function() {},false);
+
 	/*********************
 	 * Mobile dropdown menu
 	 *********************/
@@ -280,7 +283,8 @@ $(document).ready(function () {
 			asNavFor: '.banner__carousel',
 			dots: true,
 			appendDots: '.banner__dots--mobile',
-		  	focusOnSelect: true
+		  	focusOnSelect: true,
+			adaptiveHeight: true,
 		});
 		// slickCreatedDesktop = true; // so can destroy banner
 		slickCreatedMobile = true; // so can destroy pager

@@ -45,6 +45,9 @@ img {
 li {
   list-style-type: none; }
 
+html {
+  -webkit-tap-highlight-color: transparent; }
+
 /* #Media Queries
 -------------------------------------------------- */
 /* Colors
@@ -63,14 +66,14 @@ a:hover, .main-copy h2 a:hover {
 body {
   font-family: "acumin-pro", "Josefin Sans", Futura, "Century Gothic", CenturyGothic, Arial, sans-serif; }
 
-.meganav__main-item__title, .browsenav__title {
+.meganav__main-item__title, .footer__main-item__title, .browsenav__title {
   font-family: "ff-good-headline-web-pro-con", "Josefin Sans", Futura, "Century Gothic", CenturyGothic, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 2.2rem;
   letter-spacing: 0.5px; }
   @media only screen and (min-width: 53.25em) {
-    .meganav__main-item__title, .browsenav__title {
+    .meganav__main-item__title, .footer__main-item__title, .browsenav__title {
       font-size: 2.5rem;
       line-height: 1.2; } }
 
@@ -94,12 +97,12 @@ body {
     .section__title {
       margin-bottom: 4rem; } }
 
-.meganav__sub-item, select {
+.meganav__sub-item, .footer__sub-item, select {
   font-family: "acumin-pro", "Josefin Sans", Futura, "Century Gothic", CenturyGothic, Arial, sans-serif;
   font-size: 1.7rem;
   line-height: 2; }
   @media only screen and (min-width: 53.25em) {
-    .meganav__sub-item, select {
+    .meganav__sub-item, .footer__sub-item, select {
       font-size: 2rem;
       line-height: 1.5; } }
 
@@ -107,27 +110,65 @@ body {
   font-family: "acumin-pro", "Josefin Sans", Futura, "Century Gothic", CenturyGothic, Arial, sans-serif;
   font-weight: 600;
   line-height: 1.2;
-  font-size: 6vw; }
+  font-size: 5vw; }
   @media only screen and (min-width: 53.25em) {
     .item__title--sans {
       font-size: 1.6vw;
       margin-bottom: 0.4vw; } }
   @media only screen and (min-width: 1480px) {
     .item__title--sans {
-      font-size: 2.5rem;
+      font-size: 2.4rem;
+      margin-bottom: 0.5rem; } }
+
+.talk-story__textbox__title {
+  font-family: "acumin-pro", "Josefin Sans", Futura, "Century Gothic", CenturyGothic, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 5vw; }
+  @media only screen and (min-width: 53.25em) {
+    .talk-story__textbox__title {
+      font-size: 2vw;
+      line-height: 1.2; } }
+  @media only screen and (min-width: 1480px) {
+    .talk-story__textbox__title {
+      font-size: 3rem; } }
+
+.item__title--sans--alt {
+  font-family: "acumin-pro", "Josefin Sans", Futura, "Century Gothic", CenturyGothic, Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+  font-size: 5vw; }
+  @media only screen and (min-width: 53.25em) {
+    .item__title--sans--alt {
+      font-size: 2vw;
+      margin-bottom: 0.4vw; } }
+  @media only screen and (min-width: 1480px) {
+    .item__title--sans--alt {
+      font-size: 3rem;
       margin-bottom: 0.5rem; } }
 
 .item__subtitle--sans {
   font-family: "acumin-pro", "Josefin Sans", Futura, "Century Gothic", CenturyGothic, Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 5vw; }
+  font-size: 4vw; }
   @media only screen and (min-width: 53.25em) {
     .item__subtitle--sans {
       font-size: 1.35vw; } }
   @media only screen and (min-width: 1480px) {
     .item__subtitle--sans {
       font-size: 2rem; } }
+
+.talk-story__textbox__subtitle {
+  font-family: "acumin-pro", "Josefin Sans", Futura, "Century Gothic", CenturyGothic, Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+  font-size: 5vw; }
+  @media only screen and (min-width: 53.25em) {
+    .talk-story__textbox__subtitle {
+      font-size: 2vw; } }
+  @media only screen and (min-width: 1480px) {
+    .talk-story__textbox__subtitle {
+      font-size: 3rem; } }
 
 .search-bar {
   font-family: "acumin-pro", "Josefin Sans", Futura, "Century Gothic", CenturyGothic, Arial, sans-serif;
@@ -150,13 +191,16 @@ body {
 .banner__textbox__copy {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
-  font-size: 5vw; }
+  font-size: 6vw; }
   @media only screen and (min-width: 53.25em) {
     .banner__textbox__copy {
       font-size: 2.7vw;
       line-height: 1.2; } }
+  @media only screen and (min-width: 1480px) {
+    .banner__textbox__copy {
+      font-size: 4rem; } }
 
-.item__category {
+.item__date, .item__category {
   text-transform: uppercase;
   font-family: "ff-good-headline-web-pro-con", "Josefin Sans", Futura, "Century Gothic", CenturyGothic, Arial, sans-serif;
   color: #595959;
@@ -164,10 +208,10 @@ body {
   margin-bottom: 0.5rem;
   font-size: 4.1vw; }
   @media only screen and (min-width: 53.25em) {
-    .item__category {
+    .item__date, .item__category {
       font-size: 1.2vw; } }
   @media only screen and (min-width: 1480px) {
-    .item__category {
+    .item__date, .item__category {
       font-size: 1.8rem; } }
 
 /* Sans reference
@@ -527,14 +571,16 @@ hr {
     .hr--folklife {
       margin-bottom: 2rem; } }
 
-.item__image {
-  margin-bottom: 4vw; }
+.item__details {
+  padding-top: 4vw;
+  min-height: 26vw; }
   @media only screen and (min-width: 53.25em) {
-    .item__image {
-      margin-bottom: 2vw; } }
+    .item__details {
+      min-height: auto;
+      padding-top: 2vw; } }
   @media only screen and (min-width: 1480px) {
-    .item__image {
-      margin-bottom: 3rem; } }
+    .item__details {
+      padding-top: 3rem; } }
 
 /* Nav
 -------------------------------------------------- */
@@ -810,13 +856,22 @@ img.logo--folklife, img.logo--center {
       .search-bar--mobile {
         display: none !important; } }
 
-.nav-icon, .browsenav__inner, .slick-dots li button:before {
+.nav-icon, .browsenav__inner, .slick-dots li button:before, .play-button, .audio-progress-bar, .volume {
   background-size: 258px 355px !important; }
 
-.slick-dots li button:before, .slick-dots li button:hover:before, .search-icon:hover, .search-icon, .menu-icon, .menu-icon:hover, .share-icon, .twitter-icon:hover, .twitter-icon, .tumblr-icon:hover, .flickr-icon:hover, .instagram-icon:hover, .instagram-icon, .flickr-icon, .tumblr-icon, .facebook-icon, .facebook-icon:hover, .share-icon:hover {
+.audio-progress-bar, .play-button:hover, .play-button:active, .play-button, .volume:hover, .volume, select, .slick-dots li button:before, .slick-dots li button:hover:before, .search-icon:hover, .search-icon, .menu-icon, .menu-icon:hover, .share-icon, .twitter-icon:hover, .twitter-icon, .tumblr-icon:hover, .flickr-icon:hover, .instagram-icon:hover, .instagram-icon, .flickr-icon, .tumblr-icon, .facebook-icon, .facebook-icon:hover, .share-icon:hover {
   background: url(/assets/images/icons/navicons--mobile.png); }
 
+.play-button:hover, .play-button:active, .play-button {
+  width: 38px;
+  height: 38px; }
+
+.volume:hover, .volume {
+  width: 27px;
+  height: 23px; }
+
 .slick-dots li button:before, .slick-dots li button:hover:before {
+  width: 13px;
   height: 13px; }
 
 .search-icon:hover, .search-icon {
@@ -827,13 +882,33 @@ img.logo--folklife, img.logo--center {
   width: 22px;
   height: 21px; }
 
+.audio-progress-bar {
+  background-position: -20px -163px;
+  width: 125px;
+  height: 4px; }
+
+.play-button:hover, .play-button:active {
+  background-position: -67px -117px; }
+
+.play-button {
+  background-position: -19px -117px; }
+
+.volume:hover {
+  background-position: -175px -153px; }
+
+.volume {
+  background-position: -176px -118px; }
+
+select {
+  background-position: -229px -136px;
+  width: 25px;
+  height: 14px; }
+
 .slick-dots li button:before {
-  background-position: -136px -63px;
-  width: 13px; }
+  background-position: -136px -63px; }
 
 .slick-dots li button:hover:before {
-  background-position: -136px -86px;
-  width: 14px; }
+  background-position: -136px -86px; }
 
 .search-icon:hover {
   background-position: -130px -37px; }
@@ -893,10 +968,16 @@ img.logo--folklife, img.logo--center {
   background-position: -16px -17px; }
 
 @media only screen and (min-width: 53.25em) {
-  select, .slick-dots li button:before, .slick-dots li button:hover:before, .slick-next:hover::before, .slick-prev:hover::before, .slick-next::before, .slick-prev::before, .search-icon:hover, .search-icon, .share-icon, .twitter-icon:hover, .twitter-icon, .tumblr-icon:hover, .flickr-icon:hover, .instagram-icon:hover, .instagram-icon, .flickr-icon, .tumblr-icon, .facebook-icon, .facebook-icon:hover, .share-icon:hover, .menu-icon, .menu-icon:hover {
+  .audio-progress-bar, .play-button:hover, .play-button, .volume:hover, .volume, select, .slick-dots li button:before, .slick-dots li button:hover:before, .slick-next:hover::before, .slick-prev:hover::before, .slick-next::before, .slick-prev::before, .search-icon:hover, .search-icon, .share-icon, .twitter-icon:hover, .twitter-icon, .tumblr-icon:hover, .flickr-icon:hover, .instagram-icon:hover, .instagram-icon, .flickr-icon, .tumblr-icon, .facebook-icon, .facebook-icon:hover, .share-icon:hover, .menu-icon, .menu-icon:hover {
     background: url(/assets/images/icons/navicons--tablet.png); }
   .slick-dots li button:before, .slick-dots li button:hover:before {
     height: 13px; }
+  .play-button:hover, .play-button {
+    width: 61px;
+    height: 60px; }
+  .volume:hover, .volume {
+    width: 27px;
+    height: 23px; }
   .slick-next:hover::before, .slick-prev:hover::before, .slick-next::before, .slick-prev::before {
     width: 31px;
     height: 54px; }
@@ -906,6 +987,18 @@ img.logo--folklife, img.logo--center {
   .twitter-icon:hover, .twitter-icon, .tumblr-icon:hover, .flickr-icon:hover, .instagram-icon:hover, .instagram-icon, .flickr-icon, .tumblr-icon, .menu-icon {
     width: 41px;
     height: 38px; }
+  .audio-progress-bar {
+    background-position: -12px -256px;
+    width: 201px;
+    height: 3px; }
+  .play-button:hover {
+    background-position: -87px -180px; }
+  .play-button {
+    background-position: -10px -180px; }
+  .volume:hover {
+    background-position: -166px -216px; }
+  .volume {
+    background-position: -167px -181px; }
   select {
     background-position: -220px -199px;
     width: 25px;
@@ -978,35 +1071,37 @@ img.logo--folklife, img.logo--center {
     width: 43px;
     height: 77px; } }
 
-.meganav {
-  display: none;
-  background-color: #666666;
+.meganav, .footer {
   position: relative;
   z-index: 10;
   padding: 0 0 0.5rem; }
   @media only screen and (min-width: 53.25em) {
-    .meganav {
+    .meganav, .footer {
       padding: 3.6rem 0 2.6rem; } }
-  .meganav__main-item__title {
+  .meganav__main-item__title, .footer__main-item__title {
     color: white;
     cursor: pointer;
     padding: 10px 0 0; }
-    .meganav__main-item__title:hover {
+    .meganav__main-item__title:hover, .footer__main-item__title:hover {
       color: #cccccc; }
     @media only screen and (min-width: 53.25em) {
-      .meganav__main-item__title {
+      .meganav__main-item__title, .footer__main-item__title {
         padding: 0; } }
-  .meganav__main-item__list {
+  .meganav__main-item__list, .footer__main-item__list {
     display: none; }
     @media only screen and (min-width: 53.25em) {
-      .meganav__main-item__list {
+      .meganav__main-item__list, .footer__main-item__list {
         display: inline-block; } }
-  .meganav__sub-item {
+  .meganav__sub-item, .footer__sub-item {
     color: #cccccc;
     font-weight: 400;
     cursor: pointer; }
-    .meganav__sub-item:hover {
+    .meganav__sub-item:hover, .footer__sub-item:hover {
       color: white; }
+
+.meganav {
+  display: none;
+  background-color: #666666; }
 
 .nav-show-mobile {
   display: inline-block; }
@@ -1076,9 +1171,6 @@ select {
       @media only screen and (min-width: 53.25em) {
         .banner__textbox__copy {
           margin-bottom: 3rem; } }
-      @media only screen and (min-width: 1480px) {
-        .banner__textbox__copy {
-          font-size: 4rem; } }
     .banner__textbox__dots {
       position: absolute;
       bottom: 2%;
@@ -1228,7 +1320,86 @@ select {
 
 /* Watch
 -------------------------------------------------- */
+/* Listen
+-------------------------------------------------- */
+.item__details--audio {
+  padding: 3vw 2vw 2vw;
+  border: 2px solid #d9d9d9; }
+  @media only screen and (min-width: 53.25em) {
+    .item__details--audio {
+      padding: 2vw 1.3vw 1.3vw; } }
+  @media only screen and (min-width: 1480px) {
+    .item__details--audio {
+      padding: 3rem 2rem 2rem; } }
+
+.album-title {
+  min-height: 10vw; }
+  @media only screen and (min-width: 53.25em) {
+    .album-title {
+      min-height: 4.8rem; } }
+
+.play-button, .audio-player__details, .audio-progress-bar, .audio-time, .volume {
+  display: inline-block;
+  vertical-align: bottom; }
+
+@media only screen and (min-width: 53.25em) {
+  .audio-player {
+    margin-top: 2vw; } }
+
+@media only screen and (min-width: 1480px) {
+  .audio-player {
+    margin-top: 2.8rem; } }
+
+@media only screen and (min-width: 53.25em) {
+  .audio-player__details {
+    width: 72.695%; } }
+
+@media only screen and (min-width: 1480px) {
+  .audio-player__details {
+    margin-left: 1rem; } }
+
+.audio-progress-bar {
+  margin-bottom: 4px;
+  max-width: 100%; }
+
+.volume {
+  float: right;
+  margin-right: 3px; }
+
 /* Talkstory
 -------------------------------------------------- */
-.talkstory__feature {
+.section--talk-story {
+  background-color: #b3b3b3;
+  padding-top: 5vw;
+  padding-bottom: 5vw; }
+  @media only screen and (min-width: 1480px) {
+    .section--talk-story {
+      padding-top: 4rem;
+      padding-bottom: 4rem; } }
+  .section--talk-story .section__title {
+    color: white; }
+
+.talk-story__feature {
   margin-bottom: 3rem; }
+  .talk-story__feature__inner {
+    position: relative; }
+
+.talk-story__textbox {
+  min-height: auto;
+  position: static;
+  width: 100%;
+  padding-bottom: 3vw; }
+  @media only screen and (min-width: 53.25em) {
+    .talk-story__textbox {
+      position: absolute;
+      width: 30.51%;
+      padding-bottom: 2vw; } }
+  @media only screen and (min-width: 1480px) {
+    .talk-story__textbox {
+      padding-bottom: 3rem; } }
+
+/* Footer
+-------------------------------------------------- */
+.footer {
+  background-color: #333333;
+  color: white; }

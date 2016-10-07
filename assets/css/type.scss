@@ -173,13 +173,40 @@ body {
 	font-family: $sans;
 	font-weight: 600; // semibold for acumin
 	line-height: 1.2;
-  	font-size: 6vw;
+  	font-size: 5vw;
 	@include respond-to(break2) {
   		font-size: 1.6vw;
   		margin-bottom: 0.4vw;
 	}
 	@include respond-to(fullwidth) {
-  		font-size: 2.5rem;
+  		font-size: 2.4rem;
+  		margin-bottom: 0.5rem;
+	}
+}
+%title--sans--large {
+	font-family: $sans;
+	font-weight: 700;
+	// font-size: 5vw;
+	font-size: 5vw;
+	@include respond-to(break2) {
+		font-size: 2vw;
+		line-height: 1.2;
+	}
+	@include respond-to(fullwidth) {
+		font-size: 3rem;
+	}
+}
+%title--sans--alt {
+	font-family: $sans;
+	font-weight: 300;
+	line-height: 1.2;
+  	font-size: 5vw;
+	@include respond-to(break2) {
+  		font-size: 2vw;
+  		margin-bottom: 0.4vw;
+	}
+	@include respond-to(fullwidth) {
+  		font-size: 3rem;
   		margin-bottom: 0.5rem;
 	}
 }
@@ -187,12 +214,24 @@ body {
 	font-family: $sans;
 	font-weight: 300; // light for acumin
 	line-height: 1.2;
-  	font-size: 5vw;
+  	font-size: 4vw;
 	@include respond-to(break2) {
   		font-size: 1.35vw;
 	}
 	@include respond-to(fullwidth) {
   		font-size: 2rem;
+	}
+}
+%subtitle--sans--large {
+	font-family: $sans;
+	font-weight: 300; // light for acumin
+	line-height: 1.2;
+  	font-size: 5vw;
+	@include respond-to(break2) {
+  		font-size: 2vw;
+	}
+	@include respond-to(fullwidth) {
+  		font-size: 3rem;
 	}
 }
 
@@ -231,10 +270,14 @@ body {
 %title--serif--large {
 	font-family: $serif;
 	font-weight: 700;
-	font-size: 5vw;
+	// font-size: 5vw;
+	font-size: 6vw;
 	@include respond-to(break2) {
 		font-size: 2.7vw;
 		line-height: 1.2;
+	}
+	@include respond-to(fullwidth) {
+		font-size: 4rem;
 	}
 }
 
@@ -254,6 +297,11 @@ body {
 	// font-size: 1.6rem;
 		font-size: 1.8rem;
 	}
+}
+
+%type--date {
+	@extend %category;
+	// font-weight: 700;
 }
 
 
