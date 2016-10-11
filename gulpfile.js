@@ -121,7 +121,7 @@ gulp.task('jade', function() {
     .pipe(changed('./site', {extension: '.php'}))
     .pipe(plumber())
     .pipe(jadephp({
-      pretty: true,
+      // pretty: true,
       locals: {
         // title: 'OMG THIS IS THE TITLE'
       }

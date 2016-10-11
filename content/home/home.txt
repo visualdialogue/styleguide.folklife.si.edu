@@ -54,3 +54,17 @@ Talk_story_feature_category: Artist Profile
 Talk_story_feature_title: Tibetan Folklore in Film:
 ----
 Talk_story_feature_subtitle: An Interview with Shidé Nyima
+----
+Talk_story_featurettes:
+- category: How We Work
+  title: "Creating a Tapestry of Traditions:"
+  subtitle: The Third Annual Global Folklorist Challenge
+  src: tapestry.jpg
+- category: How We Work
+  title: "Object Oriented:"
+  subtitle: Searching for the Man behind the Mask
+  src: object.jpg
+- category: Foodways
+  title: "Homegrown Healing:"
+  subtitle: Lessons on Plants in Traditional Medicine
+  src: homegrown.jpg

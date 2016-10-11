@@ -67,15 +67,17 @@ section.container.section--talk-story
 					.item__category!= $page->talk_story_feature_category()
 					.talk-story__textbox__title!= $page->talk_story_feature_title()
 					.talk-story__textbox__subtitle!= $page->talk_story_feature_subtitle()
-		ul.col-sm-4
-			li.talkstory__feature.row
-				img.col-sm-6(src="/assets/images/placeholder/220x165.png")
-				.col-sm-6.talkstory__feature__copy Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-			li.talkstory__feature.row
-				img.col-sm-6(src="/assets/images/placeholder/220x165.png")
-				.col-sm-6.talkstory__feature__copy Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-			li.talkstory__feature.row
-				img.col-sm-6(src="/assets/images/placeholder/220x165.png")
-				.col-sm-6.talkstory__feature__copy Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+		ul.col-sm-4.talk-story__featurette-list
+			- foreach ($page->talk_story_featurettes()->toStructure() as $featurette):
+				- if($src = $page->image($featurette->src())):
+					li.talk-story__featurette
+						img.talk-story__featurette__image(src="<?= $src->url() ?>")
+						.talk-story__featurette__details
+							.talk-story__featurette__category.item__category= $featurette->category()
+							.talk-story__featurette__title= $featurette->title()
+							.talk-story__featurette__subtitle= $featurette->subtitle()
+				- endif
+			- endforeach
+				
 
 - snippet('footer')

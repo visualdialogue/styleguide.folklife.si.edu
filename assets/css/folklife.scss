@@ -408,10 +408,11 @@
 			width: 100%;
 			text-transform: uppercase;
 			background-color: white;
-			font-family: $sansNarrow;
-			letter-spacing: 0.5px;		
+			font-family: $knockoutNarrow;
+			// letter-spacing: 0.5px;		
 			color: $tagline;
-			font-size: 2.7rem;
+			font-size: 2.7rem; // ff-good
+			// font-size: 1.5rem;
 			text-align:right;
 			font-weight: 600;
 		}
@@ -709,11 +710,11 @@
 
 	.menu-icon, .menu-icon:hover, .share-icon, .twitter-icon:hover, .twitter-icon, .tumblr-icon:hover, .flickr-icon:hover, .instagram-icon:hover, .instagram-icon, .flickr-icon, .tumblr-icon, .facebook-icon, .facebook-icon:hover, .share-icon:hover { width: 22px; height: 21px; }
 
-	.audio-progress-bar { background-position: -20px -163px; width: 125px; height: 4px; }
-	.play-button:hover, .play-button:active { background-position: -67px -117px; }
-	.play-button { background-position: -19px -117px; }
-	.volume:hover { background-position: -175px -153px; }
-	.volume { background-position: -176px -118px; }
+	.audio-progress-bar { background-position: -20px -223px; width: 125px; height: 4px; }
+	.play-button:hover, .play-button:active { background-position: -67px -177px; }
+	.play-button { background-position: -19px -177px; }
+	.volume:hover { background-position: -175px -213px; }
+	.volume { background-position: -176px -178px; }
 	select { background-position: -229px -136px; width: 25px; height: 14px; }
 	.slick-dots li button:before { background-position: -136px -63px; }
 	.slick-dots li button:hover:before { background-position: -136px -86px; }
@@ -747,32 +748,32 @@
 
 		// vvvvvv copy navicons--tablet below from Illustrator!!! for /assets/images/icons/navicons--tablet.png vvvvvv
 
-		.audio-progress-bar, .play-button:hover, .play-button, .volume:hover, .volume, select, .slick-dots li button:before, .slick-dots li button:hover:before, .slick-next:hover::before, .slick-prev:hover::before, .slick-next::before, .slick-prev::before, .search-icon:hover, .search-icon, .share-icon, .twitter-icon:hover, .twitter-icon, .tumblr-icon:hover, .flickr-icon:hover, .instagram-icon:hover, .instagram-icon, .flickr-icon, .tumblr-icon, .facebook-icon, .facebook-icon:hover, .share-icon:hover, .menu-icon, .menu-icon:hover { background: url(/assets/images/icons/navicons--tablet.png); }
+		.slick-next:hover::before, .slick-next::before, .slick-prev:hover::before, .audio-progress-bar, .play-button:hover, .play-button, .volume:hover, .volume, select, .slick-dots li button:before, .slick-dots li button:hover:before, .slick-prev::before, .search-icon:hover, .search-icon, .share-icon, .twitter-icon:hover, .twitter-icon, .tumblr-icon:hover, .flickr-icon:hover, .instagram-icon:hover, .instagram-icon, .flickr-icon, .tumblr-icon, .facebook-icon, .facebook-icon:hover, .share-icon:hover, .menu-icon, .menu-icon:hover { background: url(/assets/images/icons/navicons--tablet.png); }
 
 		.slick-dots li button:before, .slick-dots li button:hover:before { height: 13px; }
 
+		.slick-next:hover::before, .slick-next::before, .slick-prev:hover::before { width: 28px; height: 54px; }
+
 		.play-button:hover, .play-button { width: 61px; height: 60px; }
 
-		.volume:hover, .volume { width: 27px; height: 23px; }
-
-		.slick-next:hover::before, .slick-prev:hover::before, .slick-next::before, .slick-prev::before { width: 31px; height: 54px; }
+		.volume:hover, .volume { width: 28px; height: 23px; }
 
 		.search-icon:hover, .search-icon, .share-icon, .facebook-icon, .facebook-icon:hover, .share-icon:hover, .menu-icon:hover { width: 41px; height: 39px; }
 
 		.twitter-icon:hover, .twitter-icon, .tumblr-icon:hover, .flickr-icon:hover, .instagram-icon:hover, .instagram-icon, .flickr-icon, .tumblr-icon, .menu-icon { width: 41px; height: 38px; }
 
-		.audio-progress-bar { background-position: -12px -256px; width: 201px; height: 3px; }
-		.play-button:hover { background-position: -87px -180px; }
-		.play-button { background-position: -10px -180px; }
-		.volume:hover { background-position: -166px -216px; }
-		.volume { background-position: -167px -181px; }
-		select { background-position: -220px -199px; width: 25px; height: 14px; }
-		.slick-dots li button:before { background-position: -226px -144px; width: 13px; }
-		.slick-dots li button:hover:before { background-position: -226px -158px; width: 14px; }
-		.slick-next:hover::before { background-position: -166px -275px; }
-		.slick-prev:hover::before { background-position: -98px -275px; }
-		.slick-next::before { background-position: -132px -275px; }
-		.slick-prev::before { background-position: -64px -275px; }
+		.slick-next:hover::before { background-position: -173px -297px; }
+		.slick-next::before { background-position: -137px -297px; }
+		.slick-prev:hover::before { background-position: -63px -297px; }
+		.audio-progress-bar { background-position: -12px -280px; width: 201px; height: 3px; }
+		.play-button:hover { background-position: -87px -205px; }
+		.play-button { background-position: -10px -205px; }
+		.volume:hover { background-position: -166px -241px; }
+		.volume { background-position: -167px -206px; }
+		select { background-position: -220px -169px; width: 25px; height: 14px; }
+		.slick-dots li button:before { background-position: -226px -118px; width: 13px; }
+		.slick-dots li button:hover:before { background-position: -226px -132px; width: 14px; }
+		.slick-prev::before { background-position: -98px -297px; width: 29px; height: 54px; }
 		.search-icon:hover { background-position: -217px -38px; }
 		.search-icon { background-position: -217px 0px; }
 		.share-icon { background-position: 0px 0px; }
@@ -792,20 +793,19 @@
 
 		// ^^^^^^ copy above from Illustrator!!! ^^^^^^
 
-		// custom placement for dropdown arrow
-		select { background-position: 65px -184px; width: 245px; height: 44px; }
+		// custom width for dropdown arrow
+		// select { background-position: -220px -169px; width: 245px; height: 44px; }
 
 	}
 
 	@include respond-to(fullwidth) {
-		.slick-next:hover::before, .slick-prev:hover::before, .slick-next::before, .slick-prev::before { background: url(/assets/images/icons/navicons.png); }
 
-		.slick-next:hover::before, .slick-prev:hover::before, .slick-next::before { width: 42px; height: 77px; }
+		.slick-next:hover::before, .slick-next::before, .slick-prev:hover::before, .slick-prev::before { width: 36px; height: 68px; background: url(/assets/images/icons/navicons.png); }
 
-		.slick-next:hover::before { background-position: -161px -118px; }
-		.slick-prev:hover::before { background-position: -62px -118px; }
-		.slick-next::before { background-position: -111px -118px; }
-		.slick-prev::before { background-position: -12px -118px; width: 43px; height: 77px; }
+		.slick-next:hover::before { background-position: -182px -270px; }
+		.slick-next::before { background-position: -135px -270px; }
+		.slick-prev:hover::before { background-position: -41px -270px; }
+		.slick-prev::before { background-position: -86px -270px; }
 	}
 
 	
@@ -878,6 +878,30 @@
 			padding: 2.5rem 0 2rem; // really 40 px with line-height
 		}
 	}
+	
+	.browsenav__title {
+		// font-family: $knockoutWide;
+		// font-weight: 700;
+		@extend %meganav-font;
+		margin-bottom: 1rem;
+	}
+	.browsenav__item {
+		margin-bottom: 2rem;
+	}
+	.browsenav__inner {
+		background: url(/assets/images/icons/navicons--tablet.png) no-repeat;
+		// background: url(/assets/images/icons/dropdown.png) no-repeat;
+		// background-position: right 0px center;
+		background-position: right 0px top -154px; 
+		// background-position: -220px -169px; 
+		// width: 25px; 
+		// height: 14px; 
+		background-color: white;
+	}
+
+
+	// browse bar
+
 	select {
 
 		/* make arrow and background */
@@ -906,25 +930,10 @@
 		width: 100%;
 		@extend %link-font;
 		line-height: 1;
+
+		
 	}
-	.browsenav__title {
-		// font-family: $sansNarrow;
-		// font-weight: 700;
-		@extend %meganav-font;
-		margin-bottom: 1rem;
-	}
-	.browsenav__item {
-		margin-bottom: 2rem;
-	}
-	.browsenav__inner {
-		background: url(/assets/images/icons/navicons--tablet.png) no-repeat;
-		// background: url(/assets/images/icons/dropdown.png) no-repeat;
-		// background-position: right 0px center;
-		background-position: right 0px top -185px; 
-		// width: 25px; 
-		// height: 14px; 
-		background-color: white;
-	}
+	select { width: 100%; height: 44px; }
 
 /* Carousel - Slick
 -------------------------------------------------- */
@@ -1012,7 +1021,8 @@
 				content: '';
 				position: absolute;
 				top: 0;right: 0;bottom: 0;left: 0;
-				background-color: rgba(0,0,0,0.8);
+				// background-color: rgba(0,0,0,0.8);
+				background-color: rgba(0,0,0,0.6);
 			}
 		}
 	}
@@ -1049,19 +1059,22 @@
 	    opacity: 1;
 	}
 	.slick-prev {
-		left: 0px;
+		// left: 0px;
+		left: -10px;
 		z-index: 1;
   		@include respond-to(fullwidth) {
   			left: auto;
-  			margin-left: -55px;
+  			margin-left: -57px;
+  			// margin-left: -50px;
 		}
 	}
 	.slick-next {
-		right: 25px;
+		right: 22px;
 		z-index: 1;
 		@include respond-to(fullwidth) {
 			right: calc((100vw - 1400px) / 2);
-			margin-right: -15px;
+			margin-right: -18px;
+			// margin-right: -15px;
 		}
 	}
 	.slick-dots {
@@ -1085,28 +1098,28 @@
 		li[aria-hidden="false"] button:before {background-position: -136px -86px;}
 	}
 
-	// .banner__slide[data-slick-index="1"] li:nth-of-type(1) {
+	// only need this for tablet and desktop because on mobile dots are separate script
 	@include respond-to(break2) {
-		.banner__slide[data-slick-index="0"] li:nth-of-type(1) button:before {background-position: -226px -158px;}
-		.banner__slide[data-slick-index="0"] li:nth-of-type(1):hover button:before {background-position: -226px -144px;}
-		.banner__slide[data-slick-index="1"] li:nth-of-type(2) button:before {background-position: -226px -158px;}
-		.banner__slide[data-slick-index="1"] li:nth-of-type(2):hover button:before {background-position: -226px -144px;}
-		.banner__slide[data-slick-index="2"] li:nth-of-type(3) button:before {background-position: -226px -158px;}
-		.banner__slide[data-slick-index="2"] li:nth-of-type(3):hover button:before {background-position: -226px -144px;}
-		.banner__slide[data-slick-index="3"] li:nth-of-type(4) button:before {background-position: -226px -158px;}
-		.banner__slide[data-slick-index="3"] li:nth-of-type(4):hover button:before {background-position: -226px -144px;}
-		.banner__slide[data-slick-index="4"] li:nth-of-type(5) button:before {background-position: -226px -158px;}
-		.banner__slide[data-slick-index="4"] li:nth-of-type(5):hover button:before {background-position: -226px -144px;}
-		.banner__slide[data-slick-index="5"] li:nth-of-type(6) button:before {background-position: -226px -158px;}
-		.banner__slide[data-slick-index="5"] li:nth-of-type(6):hover button:before {background-position: -226px -144px;}
-		.banner__slide[data-slick-index="6"] li:nth-of-type(7) button:before {background-position: -226px -158px;}
-		.banner__slide[data-slick-index="6"] li:nth-of-type(7):hover button:before {background-position: -226px -144px;}
-		.banner__slide[data-slick-index="7"] li:nth-of-type(8) button:before {background-position: -226px -158px;}
-		.banner__slide[data-slick-index="7"] li:nth-of-type(8):hover button:before {background-position: -226px -144px;}
-		.banner__slide[data-slick-index="8"] li:nth-of-type(9) button:before {background-position: -226px -158px;}
-		.banner__slide[data-slick-index="8"] li:nth-of-type(9):hover button:before {background-position: -226px -144px;}
-		.banner__slide[data-slick-index="9"] li:nth-of-type(10) button:before {background-position: -226px -158px;}
-		.banner__slide[data-slick-index="9"] li:nth-of-type(10):hover button:before {background-position: -226px -144px;}
+		.banner__slide[data-slick-index="0"] li:nth-of-type(1) button:before {background-position: -226px -132px;}
+		.banner__slide[data-slick-index="0"] li:nth-of-type(1):hover button:before {background-position: -226px -118px;}
+		.banner__slide[data-slick-index="1"] li:nth-of-type(2) button:before {background-position: -226px -132px;}
+		.banner__slide[data-slick-index="1"] li:nth-of-type(2):hover button:before {background-position: -226px -118px;}
+		.banner__slide[data-slick-index="2"] li:nth-of-type(3) button:before {background-position: -226px -132px;}
+		.banner__slide[data-slick-index="2"] li:nth-of-type(3):hover button:before {background-position: -226px -118px;}
+		.banner__slide[data-slick-index="3"] li:nth-of-type(4) button:before {background-position: -226px -132px;}
+		.banner__slide[data-slick-index="3"] li:nth-of-type(4):hover button:before {background-position: -226px -118px;}
+		.banner__slide[data-slick-index="4"] li:nth-of-type(5) button:before {background-position: -226px -132px;}
+		.banner__slide[data-slick-index="4"] li:nth-of-type(5):hover button:before {background-position: -226px -118px;}
+		.banner__slide[data-slick-index="5"] li:nth-of-type(6) button:before {background-position: -226px -132px;}
+		.banner__slide[data-slick-index="5"] li:nth-of-type(6):hover button:before {background-position: -226px -118px;}
+		.banner__slide[data-slick-index="6"] li:nth-of-type(7) button:before {background-position: -226px -132px;}
+		.banner__slide[data-slick-index="6"] li:nth-of-type(7):hover button:before {background-position: -226px -118px;}
+		.banner__slide[data-slick-index="7"] li:nth-of-type(8) button:before {background-position: -226px -132px;}
+		.banner__slide[data-slick-index="7"] li:nth-of-type(8):hover button:before {background-position: -226px -118px;}
+		.banner__slide[data-slick-index="8"] li:nth-of-type(9) button:before {background-position: -226px -132px;}
+		.banner__slide[data-slick-index="8"] li:nth-of-type(9):hover button:before {background-position: -226px -118px;}
+		.banner__slide[data-slick-index="9"] li:nth-of-type(10) button:before {background-position: -226px -132px;}
+		.banner__slide[data-slick-index="9"] li:nth-of-type(10):hover button:before {background-position: -226px -118px;}
 	}
 
 /* Watch
@@ -1146,10 +1159,14 @@
 		}
 	}
 	.audio-player__details {
+		max-width: 100%;
 		@include respond-to(break2) {
-			width: 72.695%; // 205/282 = 
+			// width: 72.695%; // 205/282 = 
+			width: 67%; // 205/282 = 
+			margin-left: 5%;
 		}
 		@include respond-to(fullwidth) {
+			width: 72.695%; // 205/282 = 
 			margin-left: 1rem;
 		}
 	}
@@ -1169,6 +1186,10 @@
 		background-color: $black30;
 		padding-top: 5vw;
 		padding-bottom: 5vw;
+		@include respond-to(break2) {
+			padding-top: 2.65vw;
+			padding-bottom: 2.65vw;
+		}
 		@include respond-to(fullwidth) {
 			padding-top: 4rem;
 			padding-bottom: 4rem;
@@ -1182,6 +1203,9 @@
 		margin-bottom: 3rem;	
 		&__inner {
 			position: relative; // contain textbox
+		}
+		@include respond-to(break2) {
+			margin-bottom: 0;
 		}
 	}
 	.talk-story__textbox {
@@ -1205,6 +1229,51 @@
 			@extend %subtitle--sans--large;
 		}
 	}
+	.talk-story__featurette-list {
+		margin-bottom:0;
+	}
+	.talk-story__featurette {
+		background-color: white;
+		margin-bottom: 3vw;
+		@include respond-to(break2) {
+			margin-bottom: 2vw;
+		}
+		@include respond-to(fullwidth) {
+			margin-bottom: 3rem;
+		}
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+		&__image, &__details {
+			display: inline-block;
+			vertical-align: top;
+		}
+		&__image {
+			width: 50%;
+		}
+		&__details {
+			width: 50%;
+			padding: 3vw 2vw 0;
+			@include respond-to(break2) {
+				padding: 1.35vw 1vw 0;
+			}
+			@include respond-to(fullwidth) {
+				padding: 2rem 1.8rem 0;
+			}
+		}
+		&__category {
+			@include respond-to(break2) {
+				margin-bottom: 0; // so can fit 5 lines of title in
+			}
+		}
+		&__title, &__subtitle {
+			@extend %subtitle--sans;
+		}
+		&__title {
+			font-weight: 700;
+		}
+	}
+
 
 /* Footer
 -------------------------------------------------- */

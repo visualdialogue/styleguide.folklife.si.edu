@@ -299,7 +299,7 @@ $(document).ready(function () {
 			appendDots: '.banner__textbox__dots--mobile',
 			mobileFirst: 'true',
 			centerPadding: '0',
-			autoplay: true,
+			// autoplay: true, // pause for testing
 			autoplaySpeed: 4000,
 			slidesToShow: 1,
 
