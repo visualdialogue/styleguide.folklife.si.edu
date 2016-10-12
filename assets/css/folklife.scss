@@ -42,6 +42,7 @@
 		@include respond-to(fullwidth) {
 			margin-left: -20px;
 			margin-right: -20px;
+			margin-bottom:0;
 		}
 	}
 	[class^="col-"] {
@@ -319,7 +320,10 @@
 			margin-bottom: 2.4vw;
 		}
 		@include respond-to(fullwidth) {
-			margin-bottom: 3.5rem;
+			// margin-bottom: 3.5rem;
+			margin-bottom: 5.5rem;
+			margin-bottom: 4rem;
+			margin-bottom: 7.3rem; // with line height this equals 80 below for most sections
 		}
 	}
 	section li {
@@ -334,8 +338,10 @@
 		// from http://stackoverflow.com/a/24499695
 		display:block;
 		border:0px;
-		height:40px;
-		background-image:url(/assets/images/folklife-hr.png);
+		// height:40px;
+		height:11px;
+		// background-image:url(/assets/images/folklife-hr.png);
+		background-image:url(/assets/images/folklife-hr-10.12.16.png);
 		background-size: 100% 100%;
 		background-repeat: no-repeat;
 		margin-bottom: 5vw;
@@ -343,7 +349,7 @@
 			margin-bottom: 1.3vw;
 		}
 		@include respond-to(fullwidth) {
-			margin-bottom: 2rem;
+			margin-bottom: 2.2rem;
 		}
 	}
 
@@ -880,7 +886,7 @@
 	}
 	
 	.browsenav__title {
-		// font-family: $knockoutWide;
+		// font-family: $slabExtraWide;
 		// font-weight: 700;
 		@extend %meganav-font;
 		margin-bottom: 1rem;
@@ -1125,8 +1131,11 @@
 /* Watch
 -------------------------------------------------- */
 
-/* Listen
+/* #Listen
 -------------------------------------------------- */
+	.row--listen {
+		margin-bottom: 0.6rem; // for 80px to hr
+	}
 	.audio__block {
 	}
 	.item__details--audio {
@@ -1179,8 +1188,7 @@
 		margin-right: 3px;
 	}
 
-
-/* Talkstory
+/* #Talkstory
 -------------------------------------------------- */
 	.section--talk-story {
 		background-color: $black30;
@@ -1263,7 +1271,7 @@
 		}
 		&__category {
 			@include respond-to(break2) {
-				margin-bottom: 0; // so can fit 5 lines of title in
+				// margin-bottom: 0; // so can fit 5 lines of title in
 			}
 		}
 		&__title, &__subtitle {
@@ -1273,7 +1281,6 @@
 			font-weight: 700;
 		}
 	}
-
 
 /* Footer
 -------------------------------------------------- */

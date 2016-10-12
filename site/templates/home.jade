@@ -4,13 +4,15 @@ section.container
 	h2.section__title Watch
 	ul.row
 		- foreach ($page->video_data()->toStructure() as $video):
-			- if($src = $page->image($video->src())):
-				li.col-sm-4
+			li.col-sm-4
+				- if($video->iframe()->isNotEmpty()):
+					= $video->iframe()
+				- elseif($src = $page->image($video->src())):
 					img.item__image(src="<?= $src->url() ?>")
-					.item__details
-						.item__category!= $video->category()
-						.item__title--serif!= $video->title()
-			- endif
+				- endif
+				.item__details
+					.item__category!= $video->category()
+					.item__title--serif!= $video->title()
 		- endforeach
 
 .container
@@ -18,7 +20,7 @@ section.container
 
 section.container
 	h2.section__title Listen
-	ul.row
+	ul.row.row--listen
 		- foreach ($page->audio_data()->toStructure() as $audio):
 			- if($src = $page->image($audio->src())):
 				li.col-xs-6.col-sm-3
