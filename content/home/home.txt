@@ -4,7 +4,7 @@ Video_data:
 - category: Folkways
   title: The Jerusalem Program Goes GALACTIC
   src: jerusalem-project.png
-  iframe: "<iframe src="https://player.vimeo.com/video/100345550?title=0&byline=0&portrait=0" width="440" height="248" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
+  iframe: "<iframe src="https://player.vimeo.com/video/183352542" width="440" height="248" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
 - category: Folklife
   title: "Honoring the Amazon: A Rainforest Craft Activity for Kids"
   src: amazon.png

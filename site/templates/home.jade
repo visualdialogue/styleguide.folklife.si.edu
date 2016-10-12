@@ -6,7 +6,7 @@ section.container
 		- foreach ($page->video_data()->toStructure() as $video):
 			li.col-sm-4
 				- if($video->iframe()->isNotEmpty()):
-					= $video->iframe()
+					!= $video->iframe()
 				- elseif($src = $page->image($video->src())):
 					img.item__image(src="<?= $src->url() ?>")
 				- endif
