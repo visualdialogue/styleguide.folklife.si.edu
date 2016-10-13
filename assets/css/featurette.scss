@@ -25,3 +25,48 @@ conversion: 				| mobile 	| tablet	| desktop
 										| 2.65vw	| 4rem
 
 */
+
+.featurette {
+	margin-bottom: 3vw;
+	@include respond-to(break2) {
+		margin-bottom: 2vw;
+	}
+	@include respond-to(fullwidth) {
+		margin-bottom: 3rem;
+	}
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+	&__image, &__details {
+		display: inline-block;
+		vertical-align: top;
+	}
+	&__image {
+		width: 50%;
+	}
+	&__details {
+		width: 50%;
+		padding: 3vw 2vw 0;
+		@include respond-to(break2) {
+			padding: 1.35vw 1vw 0;
+		}
+		@include respond-to(fullwidth) {
+			padding: 2rem 1.8rem 0;
+		}
+	}
+	&__category {
+		@include respond-to(break2) {
+			// margin-bottom: 0; // so can fit 5 lines of title in
+		}
+		@include respond-to(fullwidth) {
+			font-size: 1.5rem;
+			font-size: 0.5rem;
+		}
+	}
+	&__title, &__subtitle {
+		@extend %subtitle--sans;
+	}
+	&__title {
+		font-weight: 700;
+	}
+}

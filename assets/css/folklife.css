@@ -269,18 +269,18 @@ body {
       font-size: 3rem;
       margin-bottom: 0; } }
 
-.item__subtitle--sans, .talk-story__featurette__title, .talk-story__featurette__subtitle {
+.featurette__title, .featurette__subtitle, .item__subtitle--sans, .talk-story__featurette__title, .talk-story__featurette__subtitle {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
   line-height: 1.4;
   font-size: 4vw; }
   @media only screen and (min-width: 53.25em) {
-    .item__subtitle--sans, .talk-story__featurette__title, .talk-story__featurette__subtitle {
+    .featurette__title, .featurette__subtitle, .item__subtitle--sans, .talk-story__featurette__title, .talk-story__featurette__subtitle {
       font-size: 1.35vw;
       line-height: 1.25; } }
   @media only screen and (min-width: 1480px) {
-    .item__subtitle--sans, .talk-story__featurette__title, .talk-story__featurette__subtitle {
+    .featurette__title, .featurette__subtitle, .item__subtitle--sans, .talk-story__featurette__title, .talk-story__featurette__subtitle {
       line-height: 1.3;
       font-size: 2rem; } }
 
@@ -342,13 +342,71 @@ body {
       margin-bottom: 0.3rem; } }
   @media only screen and (min-width: 1480px) {
     .item__date, .item__category {
-      font-size: 1.5rem; } }
+      font-size: 1.6rem; } }
 
 .item__date {
   font-weight: 700; }
 
 /* Sans reference
 -------------------------------------------------- */
+/* 
+
+-----------------------------------------------------
+item: 						| mobile 	| tablet	| desktop
+-----------------------------------------------------
+%meganav-font 				| 10vw   	| 4rem		| 4rem
+%link-font 					| 1.7rem 	| 2rem   	|
+%title--sans 				| 5vw		| 1.6vw		| 2.4rem
+%title--sans--alt 			| 5vw		| 2vw		| 3rem
+%subtitle--sans  			| 4vw		| 1.35vw	| 2rem
+%category 					| 4.1vw		| 1.2vw		| 1.8rem
+%section-header				|			| 2vw		| 3rem
+-----------------------------------------------------
+%title--serif 				| 6vw		| 1.9vw		| 2.8rem
+%title--serif--large 		| 5vw		| 2.7vw		|
+-----------------------------------------------------
+.audio__details padding		| 2vw		| 2rem		|
+.item__details--audio padd: | 3vw		| 2vw		| 3rem
+.item__details--audio padd: | 2vw		| 1.3vw		| 2rem
+
+
+-----------------------------------------------------
+conversion: 				| mobile 	| tablet	| desktop
+-----------------------------------------------------
+										| 2.65vw	| 4rem
+
+*/
+.featurette {
+  margin-bottom: 3vw; }
+  @media only screen and (min-width: 53.25em) {
+    .featurette {
+      margin-bottom: 2vw; } }
+  @media only screen and (min-width: 1480px) {
+    .featurette {
+      margin-bottom: 3rem; } }
+  .featurette:last-of-type {
+    margin-bottom: 0; }
+  .featurette__image, .featurette__details {
+    display: inline-block;
+    vertical-align: top; }
+  .featurette__image {
+    width: 50%; }
+  .featurette__details {
+    width: 50%;
+    padding: 3vw 2vw 0; }
+    @media only screen and (min-width: 53.25em) {
+      .featurette__details {
+        padding: 1.35vw 1vw 0; } }
+    @media only screen and (min-width: 1480px) {
+      .featurette__details {
+        padding: 2rem 1.8rem 0; } }
+  @media only screen and (min-width: 1480px) {
+    .featurette__category {
+      font-size: 1.5rem;
+      font-size: 0.5rem; } }
+  .featurette__title {
+    font-weight: 700; }
+
 /* Slider */
 .slick-slider {
   position: relative;
@@ -1563,30 +1621,7 @@ select {
   margin-bottom: 0; }
 
 .talk-story__featurette {
-  background-color: white;
-  margin-bottom: 3vw; }
-  @media only screen and (min-width: 53.25em) {
-    .talk-story__featurette {
-      margin-bottom: 2vw; } }
-  @media only screen and (min-width: 1480px) {
-    .talk-story__featurette {
-      margin-bottom: 3rem; } }
-  .talk-story__featurette:last-of-type {
-    margin-bottom: 0; }
-  .talk-story__featurette__image, .talk-story__featurette__details {
-    display: inline-block;
-    vertical-align: top; }
-  .talk-story__featurette__image {
-    width: 50%; }
-  .talk-story__featurette__details {
-    width: 50%;
-    padding: 3vw 2vw 0; }
-    @media only screen and (min-width: 53.25em) {
-      .talk-story__featurette__details {
-        padding: 1.35vw 1vw 0; } }
-    @media only screen and (min-width: 1480px) {
-      .talk-story__featurette__details {
-        padding: 2rem 1.8rem 0; } }
+  background-color: white; }
   .talk-story__featurette__title {
     font-weight: 700; }
 
@@ -1595,6 +1630,18 @@ select {
 .dive-deep__textbox {
   width: auto; }
 
+@media only screen and (min-width: 1480px) {
+  .explore-collections__featurette, .teach__featurette {
+    height: 376px; } }
+
+.dive-deep__featurette-list {
+  margin-bottom: 0; }
+
+.dive-deep__featurette {
+  background-color: #ebebeb; }
+
+/* #Teach
+-------------------------------------------------- */
 /* Footer
 -------------------------------------------------- */
 .footer {

@@ -15,6 +15,7 @@
   @import "colors.scss"; // colors may be used in type.scss
   @import "icon-application.scss";
   @import "type.scss";
+  @import "featurette.scss";
   // @import "../bower_components/remodal/dist/remodal.scss";
   // @import "../bower_components/remodal/dist/remodal-default-theme.scss";
   @import "../../bower_components/slick-carousel/slick/slick.scss";
@@ -1266,38 +1267,7 @@
 	}
 	.talk-story__featurette {
 		background-color: white;
-		margin-bottom: 3vw;
-		@include respond-to(break2) {
-			margin-bottom: 2vw;
-		}
-		@include respond-to(fullwidth) {
-			margin-bottom: 3rem;
-		}
-		&:last-of-type {
-			margin-bottom: 0;
-		}
-		&__image, &__details {
-			display: inline-block;
-			vertical-align: top;
-		}
-		&__image {
-			width: 50%;
-		}
-		&__details {
-			width: 50%;
-			padding: 3vw 2vw 0;
-			@include respond-to(break2) {
-				padding: 1.35vw 1vw 0;
-			}
-			@include respond-to(fullwidth) {
-				padding: 2rem 1.8rem 0;
-			}
-		}
-		&__category {
-			@include respond-to(break2) {
-				// margin-bottom: 0; // so can fit 5 lines of title in
-			}
-		}
+		// @extend .featurette;
 		&__title, &__subtitle {
 			@extend %subtitle--sans;
 		}
@@ -1311,6 +1281,23 @@
 	.dive-deep__textbox {
 		width: auto;
 	}
+	.explore-collections__featurette, .teach__featurette {
+		@include respond-to(fullwidth) {
+			height: 376px;
+		}
+	}
+	.dive-deep__featurette-list {
+		margin-bottom:0;
+	}
+	.dive-deep__featurette {
+		background-color: $black08;
+		// @extend .featurette;
+	}
+
+/* #Teach
+-------------------------------------------------- */
+
+
 
 /* Footer
 -------------------------------------------------- */

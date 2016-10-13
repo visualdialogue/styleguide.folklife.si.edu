@@ -1,3 +1,16 @@
+.container
+	.row
+		hr.hr--folklife
+
+section.container.section--email-support
+	.row
+		.col-sm-6.email-support__newsletter.clearfix
+			.email-support__feature__inner
+				= $page->newsletter_text()
+		.col-sm-6.email-support__support.clearfix
+			= $page->support_text()
+			= $page->support_button_text()
+
 footer.footer#footer
 	.container
 		ul.footer__list.row

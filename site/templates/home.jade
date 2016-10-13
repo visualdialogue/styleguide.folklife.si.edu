@@ -76,9 +76,9 @@ section.container.section--talk-story
 			- foreach ($page->talk_story_featurettes()->toStructure() as $featurette):
 				- if($src = $page->image($featurette->src())):
 					li.talk-story__featurette
-						img.talk-story__featurette__image(src="<?= $src->url() ?>")
-						.talk-story__featurette__details
-							.talk-story__featurette__category.item__category= $featurette->category()
+						img(src="<?= $src->url() ?>")
+						.featurette__details
+							.item__category= $featurette->category()
 							.talk-story__featurette__title= $featurette->title()
 							.talk-story__featurette__subtitle= $featurette->subtitle()
 				- endif
@@ -87,22 +87,22 @@ section.container.section--talk-story
 section.container.section--dive-deep
 	h2.section__title Dive Deep
 	.row
-		.col-sm-8.dive-deep__feature.clearfix
+		.col-sm-6.dive-deep__feature.clearfix
 			.dive-deep__feature__inner
 				- if($src = $page->image($page->dive_deep_feature_image())):
 					img(src="<?= $src->url() ?>")
 				- endif
 				.banner__textbox.dive-deep__textbox
 					.item__category!= $page->dive_deep_feature_category()
-					.dive-deep__textbox__title!= $page->dive_deep_feature_title()
-		ul.col-sm-4.dive-deep__featurette-list
+					.dive-deep__textbox__title.banner__textbox__copy!= $page->dive_deep_feature_title()
+		ul.col-sm-6.dive-deep__featurette-list
 			- foreach ($page->dive_deep_featurettes()->toStructure() as $featurette):
 				- if($src = $page->image($featurette->src())):
-					li.dive-deep__featurette
-						img.dive-deep__featurette__image(src="<?= $src->url() ?>")
-						.dive-deep__featurette__details
-							.dive-deep__featurette__category.item__category= $featurette->category()
-							.dive-deep__featurette__title= $featurette->title()
+					li.featurette
+						img.featurette__image(src="<?= $src->url() ?>")
+						.featurette__details
+							.item__category= $featurette->category()
+							.dive-deep__featurette__title.featurette__title= $featurette->title()
 				- endif
 			- endforeach
 
@@ -126,18 +126,15 @@ section.container.section--dive-deep
 		section.col-sm-6.section--half.section--teach
 			h2.section__title Teach
 		
-			//- ul.row.teach__featurette-list
-				- foreach ($page->dive_deep_featurettes()->toStructure() as $featurette):
+			ul.row.teach__featurette-list
+				- foreach ($page->teach_featurettes()->toStructure() as $featurette):
 					- if($src = $page->image($featurette->src())):
-						li.col-sm-6.teach__featurette
+						li.col-sm-4.teach__featurette
 							img.teach__featurette__image(src="<?= $src->url() ?>")
 							.teach__featurette__details
 								.teach__featurette__category.item__category= $featurette->category()
 								.teach__featurette__title= $featurette->title()
 					- endif
 				- endforeach
-			
-.container
-	hr.hr--folklife
 
 - snippet('footer')
