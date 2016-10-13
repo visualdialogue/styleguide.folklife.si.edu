@@ -14,8 +14,67 @@
   font-weight: normal;
   font-style: normal; }
 
-/* Nicknames
--------------------------------------------------- */
+@font-face {
+  font-family: "vd-icons";
+  src: url("fonts/vd-icons.eot");
+  src: url("fonts/vd-icons.eot?#iefix") format("embedded-opentype"), url("fonts/vd-icons.woff") format("woff"), url("fonts/vd-icons.ttf") format("truetype"), url("fonts/vd-icons.svg#vd-icons") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+[data-icon]:before {
+  font-family: "vd-icons" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "vd-icons" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-circle:before {
+  content: "\61"; }
+
+.icon-play:before {
+  content: "\62"; }
+
+.icon-facebook:before {
+  content: "\63"; }
+
+.icon-flickr:before {
+  content: "\64"; }
+
+.icon-left-open-big:before {
+  content: "\65"; }
+
+.icon-right-open-big:before {
+  content: "\66"; }
+
+.icon-tumblr:before {
+  content: "\67"; }
+
+.icon-twitter:before {
+  content: "\68"; }
+
+.icon-search:before {
+  content: "\69"; }
+
+.icon-share:before {
+  content: "\6a"; }
+
 /* Reset
  * from Kirby @ https://github.com/getkirby/starterkit/blob/master/assets/css/main.css
 -------------------------------------------------- */
@@ -48,6 +107,22 @@ li {
 html {
   -webkit-tap-highlight-color: transparent; }
 
+.iframe-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden; }
+
+iframe {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  z-index: 2; }
+
 /* #Media Queries
 -------------------------------------------------- */
 /* Colors
@@ -63,21 +138,71 @@ a:hover, .main-copy h2 a:hover {
 .main-copy a {
   color: coral; }
 
+/* Icons
+-------------------------------------------------- */
+.icon-stack {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle; }
+  .icon-stack div {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center; }
+
+.icon-play-button .icon-circle {
+  color: #cccccc; }
+
+.icon-play-button .icon-play {
+  color: #333333; }
+
+[class^="icon-"],
+[class*=" icon-"] {
+  width: 10vw;
+  height: 10vw; }
+  @media only screen and (min-width: 53.25em) {
+    [class^="icon-"],
+    [class*=" icon-"] {
+      width: 4vw;
+      height: 4vw; } }
+  @media only screen and (min-width: 1480px) {
+    [class^="icon-"],
+    [class*=" icon-"] {
+      width: 6rem;
+      height: 6rem; } }
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-size: 10vw; }
+  @media only screen and (min-width: 53.25em) {
+    [class^="icon-"]:before,
+    [class*=" icon-"]:before {
+      font-size: 4vw; } }
+  @media only screen and (min-width: 1480px) {
+    [class^="icon-"]:before,
+    [class*=" icon-"]:before {
+      font-size: 6rem; } }
+
 body {
   font-family: "acumin-pro", Arial, sans-serif; }
 
-.meganav__main-item__title, .footer__main-item__title, .browsenav__title {
-  font-family: "unit-gothic-720", Arial, sans-serif;
+.meganav__main-item__title, .footer__main-item__title {
+  font-family: "balboa", Arial, sans-serif;
   text-transform: uppercase;
-  font-weight: 700;
-  font-size: 2.2rem;
-  letter-spacing: 0.5px; }
+  font-weight: 300;
+  font-size: 4vw; }
   @media only screen and (min-width: 53.25em) {
-    .meganav__main-item__title, .footer__main-item__title, .browsenav__title {
-      font-size: 2.5rem;
+    .meganav__main-item__title, .footer__main-item__title {
+      font-size: 1.5vw;
       line-height: 1.2; } }
+  @media only screen and (min-width: 1480px) {
+    .meganav__main-item__title, .footer__main-item__title {
+      font-size: 2.2rem; } }
 
-.section__title {
+.section__title, .browsenav__title {
   font-family: "unit-gothic-717", Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
@@ -88,12 +213,12 @@ body {
   margin-bottom: 5vw;
   color: #595959; }
   @media only screen and (min-width: 53.25em) {
-    .section__title {
-      font-size: 2.5rem;
-      font-size: 3rem;
+    .section__title, .browsenav__title {
+      font-size: 2vw;
       margin-bottom: 2.8vw; } }
   @media only screen and (min-width: 1480px) {
-    .section__title {
+    .section__title, .browsenav__title {
+      font-size: 3rem;
       margin-bottom: 4.2rem; } }
 
 .meganav__sub-item, .footer__sub-item, select {
@@ -149,12 +274,15 @@ body {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
+  line-height: 1.4;
   font-size: 4vw; }
   @media only screen and (min-width: 53.25em) {
     .item__subtitle--sans, .talk-story__featurette__title, .talk-story__featurette__subtitle {
-      font-size: 1.35vw; } }
+      font-size: 1.35vw;
+      line-height: 1.25; } }
   @media only screen and (min-width: 1480px) {
     .item__subtitle--sans, .talk-story__featurette__title, .talk-story__featurette__subtitle {
+      line-height: 1.3;
       font-size: 2rem; } }
 
 .talk-story__textbox__subtitle {
@@ -202,17 +330,20 @@ body {
 
 .item__date, .item__category {
   text-transform: uppercase;
-  font-family: "acumin-pro", Arial, sans-serif;
+  font-family: "acumin-pro-wide", Arial, sans-serif;
   color: #595959;
+  font-weight: 300;
+  letter-spacing: 1px;
   line-height: 0.8;
   margin-bottom: 0.5rem;
   font-size: 2.5vw; }
   @media only screen and (min-width: 53.25em) {
     .item__date, .item__category {
-      font-size: 1.2vw; } }
+      font-size: 1.2vw;
+      margin-bottom: 0.3rem; } }
   @media only screen and (min-width: 1480px) {
     .item__date, .item__category {
-      font-size: 1.6rem; } }
+      font-size: 1.5rem; } }
 
 .item__date {
   font-weight: 700; }
@@ -615,11 +746,11 @@ hr {
       width: 100%;
       text-transform: uppercase;
       background-color: white;
-      font-family: "unit-gothic-720", Arial, sans-serif;
+      font-family: "balboa", Arial, sans-serif;
       color: gray;
       font-size: 2.7rem;
       text-align: right;
-      font-weight: 600; } }
+      font-weight: 300; } }
 
 .tagline {
   display: inline-block;
@@ -1114,13 +1245,25 @@ select {
   top: 1rem; }
   @media only screen and (min-width: 53.25em) {
     .browsenav {
-      padding: 2.5rem 0 2rem; } }
+      padding: 2.8vw 0 2vw; } }
+  @media only screen and (min-width: 1480px) {
+    .browsenav {
+      padding: 4rem 0 4rem; } }
 
 .browsenav__title {
-  margin-bottom: 1rem; }
+  margin-bottom: 3rem; }
+  @media only screen and (min-width: 53.25em) {
+    .browsenav__title {
+      margin-bottom: 1.5vw; } }
+  @media only screen and (min-width: 1480px) {
+    .browsenav__title {
+      margin-bottom: 2.2rem; } }
 
 .browsenav__item {
   margin-bottom: 2rem; }
+  @media only screen and (min-width: 53.25em) {
+    .browsenav__item {
+      margin-bottom: 0; } }
 
 .browsenav__inner {
   background: url(/assets/images/icons/navicons--tablet.png) no-repeat;
@@ -1340,12 +1483,14 @@ select {
       padding: 3rem 2rem 2rem; } }
 
 .album-title {
-  min-height: 10vw; }
+  min-height: 12vw;
+  margin-bottom: 3vw; }
   @media only screen and (min-width: 53.25em) {
     .album-title {
-      min-height: 4.8rem; } }
+      min-height: 4.8rem;
+      margin-bottom: 0; } }
 
-.play-button, .audio-player__details, .audio-progress-bar, .audio-time, .volume {
+.audio-player__details, .audio-progress-bar, .audio-time, .volume {
   display: inline-block;
   vertical-align: bottom; }
 
@@ -1445,6 +1590,11 @@ select {
         padding: 2rem 1.8rem 0; } }
   .talk-story__featurette__title {
     font-weight: 700; }
+
+/* #Dive deep
+-------------------------------------------------- */
+.dive-deep__textbox {
+  width: auto; }
 
 /* Footer
 -------------------------------------------------- */

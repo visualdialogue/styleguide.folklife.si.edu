@@ -8,10 +8,12 @@
 /* Imports
 -------------------------------------------------- */
   @import "fonts.scss";
+  @import "vd-icons.scss";
   @import "reset.scss";
   // @import "../bower_components/csswizardry-grids/csswizardry-grids.scss";
   @import "media-queries.scss";
   @import "colors.scss"; // colors may be used in type.scss
+  @import "icon-application.scss";
   @import "type.scss";
   // @import "../bower_components/remodal/dist/remodal.scss";
   // @import "../bower_components/remodal/dist/remodal-default-theme.scss";
@@ -414,13 +416,13 @@
 			width: 100%;
 			text-transform: uppercase;
 			background-color: white;
-			font-family: $knockoutNarrow;
+			font-family: $slabLight;
 			// letter-spacing: 0.5px;		
 			color: $tagline;
 			font-size: 2.7rem; // ff-good
 			// font-size: 1.5rem;
 			text-align:right;
-			font-weight: 600;
+			font-weight: 300;
 		}
 	}
 	.tagline {
@@ -750,6 +752,8 @@
 	.share-icon:hover { background-position: -16px -17px; }
 
 
+
+
 	@include respond-to(break2) {
 
 		// vvvvvv copy navicons--tablet below from Illustrator!!! for /assets/images/icons/navicons--tablet.png vvvvvv
@@ -801,6 +805,11 @@
 
 		// custom width for dropdown arrow
 		// select { background-position: -220px -169px; width: 245px; height: 44px; }
+
+		// responsive sizes
+		.play-button {
+			// width: 22%;
+		}
 
 	}
 
@@ -881,18 +890,31 @@
 		top: 1rem;
 		// padding: 3rem 0 1rem; // really 40 px with line-height
 		@include respond-to(break2) {
-			padding: 2.5rem 0 2rem; // really 40 px with line-height
+			padding: 2.8vw 0 2vw; // really 40 px with line-height
+		}
+		@include respond-to(fullwidth) {
+			padding: 4rem 0 4rem;
 		}
 	}
 	
 	.browsenav__title {
 		// font-family: $slabExtraWide;
 		// font-weight: 700;
-		@extend %meganav-font;
-		margin-bottom: 1rem;
+		// @extend %meganav-font;
+		@extend %section-header;
+		margin-bottom: 3rem;
+		@include respond-to(break2) {
+			margin-bottom: 1.5vw;
+		}
+		@include respond-to(fullwidth) {
+			margin-bottom: 2.2rem;
+		}
 	}
 	.browsenav__item {
 		margin-bottom: 2rem;
+		@include respond-to(break2) {
+			margin-bottom: 0;
+		}
 	}
 	.browsenav__inner {
 		background: url(/assets/images/icons/navicons--tablet.png) no-repeat;
@@ -1149,12 +1171,14 @@
 		}
 	}
 	.album-title {
-		min-height: 10vw; // for 2 line album titles
+		min-height: 12vw; // for 2 line album titles
+		margin-bottom: 3vw;
 		@include respond-to(break2) {
 			min-height: 4.8rem;
+			margin-bottom: 0;
 		}
 	}
-	.play-button, .audio-player__details, .audio-progress-bar, .audio-time, .volume {
+	.audio-player__details, .audio-progress-bar, .audio-time, .volume {
 		display: inline-block;
 		vertical-align: bottom;
 	}
@@ -1280,6 +1304,12 @@
 		&__title {
 			font-weight: 700;
 		}
+	}
+
+/* #Dive deep
+-------------------------------------------------- */
+	.dive-deep__textbox {
+		width: auto;
 	}
 
 /* Footer

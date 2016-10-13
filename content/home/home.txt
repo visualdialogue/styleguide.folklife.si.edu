@@ -69,3 +69,37 @@ Talk_story_featurettes:
   title: "Homegrown Healing:"
   subtitle: Lessons on Plants in Traditional Medicine
   src: homegrown.jpg
+----
+Dive_deep_feature_image: ala-tu-voz.jpg
+----
+Dive_deep_feature_category: Folkways Magazine
+----
+Dive_deep_feature_title: Ala Tu Voz (Speak Out): From Picket Line to Radio
+----
+Dive_deep_featurettes:
+- category: Artist Spotlight
+  title: Discover the story behind Tiddish Song Smuggling
+  src: brothers-nazaroff.jpg
+- category: Online exhibit
+  title: Learn more about American Indian Powwows
+  src: powwow.jpg
+----
+Explore_collections_featurettes:
+- title: Moses and Frances Asch
+  src: moses-frances-asch.jpg
+- title: Diana Davies Photograph
+  src: diana-davies.jpg
+- title: Collector Records 
+  src: collector-records.jpg
+- title: Frederic Ramsey Jr. Tape
+  src: frederic-ramsey-jr.jpg
+----
+#- title: 
+#  src: .jpg
+#- title: 
+#  src: .jpg
+#- title: 
+#  src: .jpg
+#- title: 
+#  src: .jpg
+#

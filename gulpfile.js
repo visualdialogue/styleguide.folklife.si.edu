@@ -204,7 +204,7 @@ gulp.task('serve', ['jade', 'styles', 'js'], function() {
     gulp.watch('site/**/*.php').on('change', browserSync.reload);
     gulp.watch('assets/js/*.js').on('change', browserSync.reload);
     // gulp.watch("/bdc/**/*.html").on('change', browserSync.reload);
-    // gulp.watch("site/content/**/*.md").on('change', browserSync.reload);
+    gulp.watch("content/**/*.txt").on('change', browserSync.reload);
     gulp.watch("*.php").on('change', browserSync.reload);
     // gulp.watch("_add-ons/**/*.php").on('change', browserSync.reload);
     // gulp.watch('/bdc/js/*.js').on('change', browserSync.reload);
