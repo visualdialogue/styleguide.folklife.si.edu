@@ -358,7 +358,7 @@
 		padding-top: 4vw;
 		min-height: 26vw; // for 3 line titles
 		@include respond-to(break2) {
-			min-height: auto; // reset
+			min-height: initial; // reset
 			padding-top: 2vw;
 		}
 		@include respond-to(fullwidth) {

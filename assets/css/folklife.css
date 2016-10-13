@@ -582,7 +582,7 @@ hr {
   min-height: 26vw; }
   @media only screen and (min-width: 53.25em) {
     .item__details {
-      min-height: auto;
+      min-height: initial;
       padding-top: 2vw; } }
   @media only screen and (min-width: 1480px) {
     .item__details {
