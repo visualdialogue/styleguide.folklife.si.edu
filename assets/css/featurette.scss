@@ -26,6 +26,9 @@ conversion: 				| mobile 	| tablet	| desktop
 
 */
 
+.featurette-list {
+	margin-bottom:0;
+}
 .featurette {
 	margin-bottom: 3vw;
 	@include respond-to(break2) {
@@ -55,13 +58,6 @@ conversion: 				| mobile 	| tablet	| desktop
 		}
 	}
 	&__category {
-		@include respond-to(break2) {
-			// margin-bottom: 0; // so can fit 5 lines of title in
-		}
-		@include respond-to(fullwidth) {
-			font-size: 1.5rem;
-			font-size: 0.5rem;
-		}
 	}
 	&__title, &__subtitle {
 		@extend %subtitle--sans;

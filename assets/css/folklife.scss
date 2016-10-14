@@ -16,6 +16,7 @@
   @import "icon-application.scss";
   @import "type.scss";
   @import "featurette.scss";
+  @import "dimensions.scss";
   // @import "../bower_components/remodal/dist/remodal.scss";
   // @import "../bower_components/remodal/dist/remodal-default-theme.scss";
   @import "../../bower_components/slick-carousel/slick/slick.scss";
@@ -993,11 +994,13 @@
 				// width: 100vw !important; // full width for text box on mobile
 			}
 
-			&__copy {
+			&__title {
 				@extend %title--serif--large;
-				margin-bottom: 1rem;
-				@include respond-to(break2) {
-					margin-bottom: 3rem; // push above dots
+				&--hero {
+					margin-bottom: 1rem;
+					@include respond-to(break2) {
+						margin-bottom: 3rem; // push above dots
+					}
 				}
 			}
 			&__dots {
@@ -1241,31 +1244,29 @@
 			margin-bottom: 0;
 		}
 	}
-	.talk-story__textbox {
-		min-height: auto;
-		position: static;
-		width: 100%;
-		padding-bottom: 3vw;
-		@include respond-to(break2) {
-			position: absolute;
-			width: 30.51%; // 281 / 921 = 30.51%
-			padding-bottom: 2vw;
+	.banner__textbox {
+		&--talk-story {
+			min-height: auto;
+			position: static;
+			width: 100%;
+			padding-bottom: 3vw;
+			@include respond-to(break2) {
+				position: absolute;
+				width: 30.51%; // 281 / 921 = 30.51%
+				padding-bottom: 2vw;
+			}
+			@include respond-to(fullwidth) {
+				padding-bottom: 3rem;
+			}
 		}
-		@include respond-to(fullwidth) {
-			padding-bottom: 3rem;
+		&__title--talk-story {
+			@include title--sans--large();
 		}
-
-		&__title {
-			@extend %title--sans--large;
-		}
-		&__subtitle {
+		&__subtitle--talk-story {
 			@extend %subtitle--sans--large;
 		}
 	}
-	.talk-story__featurette-list {
-		margin-bottom:0;
-	}
-	.talk-story__featurette {
+	.featurette--talk-story {
 		background-color: white;
 		// @extend .featurette;
 		&__title, &__subtitle {
@@ -1275,23 +1276,34 @@
 			font-weight: 700;
 		}
 	}
+	.item__category--talk-story-featurette {
+		@include respond-to(fullwidth) {
+			font-size: 1.5rem;
+		}
+	}
 
 /* #Dive deep
 -------------------------------------------------- */
-	.dive-deep__textbox {
+	.banner__textbox--dive-deep, .featurette--dive-deep {
+		background-color: $black08;
+	}
+	.banner__textbox--dive-deep {
 		width: auto;
+		position: static;
+		&__title {
+			margin-bottom: 0;
+		}
 	}
 	.explore-collections__featurette, .teach__featurette {
 		@include respond-to(fullwidth) {
 			height: 376px;
 		}
 	}
-	.dive-deep__featurette-list {
-		margin-bottom:0;
+	.featurette__image--dive-deep {
+		width: 52.94%;	
 	}
-	.dive-deep__featurette {
-		background-color: $black08;
-		// @extend .featurette;
+	.featurette__details--dive-deep {
+		width: 47.06%;
 	}
 
 /* #Teach

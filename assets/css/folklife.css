@@ -243,18 +243,6 @@ body {
       font-size: 2.4rem;
       margin-bottom: 0.5rem; } }
 
-.talk-story__textbox__title {
-  font-family: "acumin-pro", Arial, sans-serif;
-  font-weight: 700;
-  font-size: 5vw; }
-  @media only screen and (min-width: 53.25em) {
-    .talk-story__textbox__title {
-      font-size: 2vw;
-      line-height: 1.2; } }
-  @media only screen and (min-width: 1480px) {
-    .talk-story__textbox__title {
-      font-size: 3rem; } }
-
 .item__title--sans--alt {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
@@ -269,31 +257,31 @@ body {
       font-size: 3rem;
       margin-bottom: 0; } }
 
-.featurette__title, .featurette__subtitle, .item__subtitle--sans, .talk-story__featurette__title, .talk-story__featurette__subtitle {
+.featurette__title, .featurette__subtitle, .item__subtitle--sans, .featurette--talk-story__title, .featurette--talk-story__subtitle {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
   line-height: 1.4;
   font-size: 4vw; }
   @media only screen and (min-width: 53.25em) {
-    .featurette__title, .featurette__subtitle, .item__subtitle--sans, .talk-story__featurette__title, .talk-story__featurette__subtitle {
+    .featurette__title, .featurette__subtitle, .item__subtitle--sans, .featurette--talk-story__title, .featurette--talk-story__subtitle {
       font-size: 1.35vw;
       line-height: 1.25; } }
   @media only screen and (min-width: 1480px) {
-    .featurette__title, .featurette__subtitle, .item__subtitle--sans, .talk-story__featurette__title, .talk-story__featurette__subtitle {
+    .featurette__title, .featurette__subtitle, .item__subtitle--sans, .featurette--talk-story__title, .featurette--talk-story__subtitle {
       line-height: 1.3;
       font-size: 2rem; } }
 
-.talk-story__textbox__subtitle {
+.banner__textbox__subtitle--talk-story {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
   font-size: 5vw; }
   @media only screen and (min-width: 53.25em) {
-    .talk-story__textbox__subtitle {
+    .banner__textbox__subtitle--talk-story {
       font-size: 2vw; } }
   @media only screen and (min-width: 1480px) {
-    .talk-story__textbox__subtitle {
+    .banner__textbox__subtitle--talk-story {
       font-size: 3rem; } }
 
 .search-bar {
@@ -314,17 +302,17 @@ body {
     .item__title--serif {
       font-size: 2.8rem; } }
 
-.banner__textbox__copy {
+.banner__textbox__title {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1.2;
   font-size: 6vw; }
   @media only screen and (min-width: 53.25em) {
-    .banner__textbox__copy {
+    .banner__textbox__title {
       font-size: 2.7vw;
       line-height: 1.2; } }
   @media only screen and (min-width: 1480px) {
-    .banner__textbox__copy {
+    .banner__textbox__title {
       font-size: 4rem; } }
 
 .item__date, .item__category {
@@ -376,6 +364,9 @@ conversion: 				| mobile 	| tablet	| desktop
 										| 2.65vw	| 4rem
 
 */
+.featurette-list {
+  margin-bottom: 0; }
+
 .featurette {
   margin-bottom: 3vw; }
   @media only screen and (min-width: 53.25em) {
@@ -400,13 +391,36 @@ conversion: 				| mobile 	| tablet	| desktop
     @media only screen and (min-width: 1480px) {
       .featurette__details {
         padding: 2rem 1.8rem 0; } }
-  @media only screen and (min-width: 1480px) {
-    .featurette__category {
-      font-size: 1.5rem;
-      font-size: 0.5rem; } }
   .featurette__title {
     font-weight: 700; }
 
+/* 
+
+-----------------------------------------------------
+item: 						| mobile 	| tablet	| desktop
+-----------------------------------------------------
+%meganav-font 				| 10vw   	| 4rem		| 4rem
+%link-font 					| 1.7rem 	| 2rem   	|
+%title--sans 				| 5vw		| 1.6vw		| 2.4rem
+%title--sans--alt 			| 5vw		| 2vw		| 3rem
+%subtitle--sans  			| 4vw		| 1.35vw	| 2rem
+%category 					| 4.1vw		| 1.2vw		| 1.8rem
+%section-header				|			| 2vw		| 3rem
+-----------------------------------------------------
+%title--serif 				| 6vw		| 1.9vw		| 2.8rem
+%title--serif--large 		| 5vw		| 2.7vw		|
+-----------------------------------------------------
+.audio__details padding		| 2vw		| 2rem		|
+.item__details--audio padd: | 3vw		| 2vw		| 3rem
+.item__details--audio padd: | 2vw		| 1.3vw		| 2rem
+
+
+-----------------------------------------------------
+conversion: 				| mobile 	| tablet	| desktop
+-----------------------------------------------------
+										| 2.65vw	| 4rem
+
+*/
 /* Slider */
 .slick-slider {
   position: relative;
@@ -1370,10 +1384,10 @@ select {
         bottom: 4rem;
         left: 4rem;
         padding: 2rem 2.5rem 2rem 2rem; } }
-    .banner__textbox__copy {
+    .banner__textbox__title--hero {
       margin-bottom: 1rem; }
       @media only screen and (min-width: 53.25em) {
-        .banner__textbox__copy {
+        .banner__textbox__title--hero {
           margin-bottom: 3rem; } }
     .banner__textbox__dots {
       position: absolute;
@@ -1603,42 +1617,61 @@ select {
     .talk-story__feature {
       margin-bottom: 0; } }
 
-.talk-story__textbox {
+.banner__textbox--talk-story {
   min-height: auto;
   position: static;
   width: 100%;
   padding-bottom: 3vw; }
   @media only screen and (min-width: 53.25em) {
-    .talk-story__textbox {
+    .banner__textbox--talk-story {
       position: absolute;
       width: 30.51%;
       padding-bottom: 2vw; } }
   @media only screen and (min-width: 1480px) {
-    .talk-story__textbox {
+    .banner__textbox--talk-story {
       padding-bottom: 3rem; } }
 
-.talk-story__featurette-list {
-  margin-bottom: 0; }
+.banner__textbox__title--talk-story {
+  font-family: "acumin-pro", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 5vw; }
+  @media only screen and (min-width: 53.25em) {
+    .banner__textbox__title--talk-story {
+      font-size: 2vw;
+      line-height: 1.2; } }
+  @media only screen and (min-width: 1480px) {
+    .banner__textbox__title--talk-story {
+      font-size: 3rem; } }
 
-.talk-story__featurette {
+.featurette--talk-story {
   background-color: white; }
-  .talk-story__featurette__title {
+  .featurette--talk-story__title {
     font-weight: 700; }
+
+@media only screen and (min-width: 1480px) {
+  .item__category--talk-story-featurette {
+    font-size: 1.5rem; } }
 
 /* #Dive deep
 -------------------------------------------------- */
-.dive-deep__textbox {
-  width: auto; }
+.banner__textbox--dive-deep, .featurette--dive-deep {
+  background-color: #ebebeb; }
+
+.banner__textbox--dive-deep {
+  width: auto;
+  position: static; }
+  .banner__textbox--dive-deep__title {
+    margin-bottom: 0; }
 
 @media only screen and (min-width: 1480px) {
   .explore-collections__featurette, .teach__featurette {
     height: 376px; } }
 
-.dive-deep__featurette-list {
-  margin-bottom: 0; }
+.featurette__image--dive-deep {
+  width: 52.94%; }
 
-.dive-deep__featurette {
-  background-color: #ebebeb; }
+.featurette__details--dive-deep {
+  width: 47.06%; }
 
 /* #Teach
 -------------------------------------------------- */

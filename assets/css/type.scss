@@ -75,7 +75,7 @@ body {
   		margin-bottom: 0.5rem;
 	}
 }
-%title--sans--large {
+@mixin title--sans--large {
 	font-family: $sans;
 	font-weight: 700;
 	// font-size: 5vw;

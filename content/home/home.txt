@@ -74,7 +74,7 @@ Dive_deep_feature_image: ala-tu-voz.jpg
 ----
 Dive_deep_feature_category: Folkways Magazine
 ----
-Dive_deep_feature_title: Ala Tu Voz (Speak Out): From Picket Line to Radio
+Dive_deep_feature_title: Alza Tu Voz (Speak Out): From Picket Line to Radio
 ----
 Dive_deep_featurettes:
 - category: Artist Spotlight

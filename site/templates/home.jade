@@ -1,5 +1,52 @@
 - snippet('header')
 
+#navspacer.navspacer
+.banner
+	.banner__carousel#banner
+		.banner__slide
+			img.banner-img(src="assets/images/banner/banner-01.jpg")
+			.banner__textbox
+				.item__category Folklife
+				.banner__textbox__title.banner__textbox__title--hero Turquoise Mountain Showcases Cultural Sustainability
+				.banner__textbox__dots
+		.banner__slide
+			img.banner-img(src="assets/images/banner/banner-02.jpg")
+			.banner__textbox
+				.item__category Festival
+				.banner__textbox__title.banner__textbox__title--hero Circus Arts <br/>at the 2017 Folklife Festival
+				.banner__textbox__dots
+		.banner__slide
+			img.banner-img(src="assets/images/banner/banner-03.jpg")
+			.banner__textbox
+				.item__category Folkways
+				.banner__textbox__title.banner__textbox__title--hero Freedom Sounds from Smithsonian Folkways
+				.banner__textbox__dots
+		.banner__slide
+			img.banner-img(src="assets/images/banner/banner-04.jpg")
+			.banner__textbox
+				.item__category Folklife
+				.banner__textbox__title.banner__textbox__title--hero Grand Opening of the National Museum <br />of African American History and Culture
+				.banner__textbox__dots
+		//- <iframe src="https://player.vimeo.com/video/100345550?title=0&byline=0&portrait=0" width="1400" height="788" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	.banner__nav--mobile
+		.banner__textbox--mobile
+			.item__category Folklife
+			.banner__textbox__title.banner__textbox__title--hero Turquoise Mountain Showcases Cultural Sustainability
+			.banner__textbox__dots
+		.banner__textbox--mobile
+			.item__category Festival
+			.banner__textbox__title.banner__textbox__title--hero Circus Arts at the <br/>2017 Folklife Festival
+			.banner__textbox__dots
+		.banner__textbox--mobile
+			.item__category Folkways
+			.banner__textbox__title.banner__textbox__title--hero Freedom Sounds <br />from Smithsonian Folkways
+			.banner__textbox__dots
+		.banner__textbox--mobile
+			.item__category Folklife
+			.banner__textbox__title.banner__textbox__title--hero Grand Opening of the National Museum of African American History and Culture
+			.banner__textbox__dots
+	.banner__dots--mobile
+
 section.container
 	h2.section__title Watch
 	ul.row
@@ -68,19 +115,19 @@ section.container.section--talk-story
 				- if($src = $page->image($page->talk_story_feature_image())):
 					img(src="<?= $src->url() ?>")
 				- endif
-				.banner__textbox.talk-story__textbox
+				.banner__textbox.banner__textbox--talk-story
 					.item__category!= $page->talk_story_feature_category()
-					.talk-story__textbox__title!= $page->talk_story_feature_title()
-					.talk-story__textbox__subtitle!= $page->talk_story_feature_subtitle()
-		ul.col-sm-4.talk-story__featurette-list
+					.banner__textbox__title.banner__textbox__title--talk-story!= $page->talk_story_feature_title()
+					.banner__textbox__subtitle.banner__textbox__subtitle--talk-story!= $page->talk_story_feature_subtitle()
+		ul.col-sm-4.talk-story__featurette-list.featurette-list
 			- foreach ($page->talk_story_featurettes()->toStructure() as $featurette):
 				- if($src = $page->image($featurette->src())):
-					li.talk-story__featurette
-						img(src="<?= $src->url() ?>")
+					li.featurette.featurette--talk-story
+						img.featurette__image(src="<?= $src->url() ?>")
 						.featurette__details
-							.item__category= $featurette->category()
-							.talk-story__featurette__title= $featurette->title()
-							.talk-story__featurette__subtitle= $featurette->subtitle()
+							.item__category.item__category--talk-story-featurette= $featurette->category()
+							.featurette--talk-story__title= $featurette->title()
+							.featurette--talk-story__subtitle= $featurette->subtitle()
 				- endif
 			- endforeach
 
@@ -92,15 +139,15 @@ section.container.section--dive-deep
 				- if($src = $page->image($page->dive_deep_feature_image())):
 					img(src="<?= $src->url() ?>")
 				- endif
-				.banner__textbox.dive-deep__textbox
+				.banner__textbox.banner__textbox--dive-deep
 					.item__category!= $page->dive_deep_feature_category()
-					.dive-deep__textbox__title.banner__textbox__copy!= $page->dive_deep_feature_title()
-		ul.col-sm-6.dive-deep__featurette-list
+					.dive-deep__textbox__title.banner__textbox__title!= $page->dive_deep_feature_title()
+		ul.col-sm-6.dive-deep__featurette-list.featurette-list
 			- foreach ($page->dive_deep_featurettes()->toStructure() as $featurette):
 				- if($src = $page->image($featurette->src())):
-					li.featurette
-						img.featurette__image(src="<?= $src->url() ?>")
-						.featurette__details
+					li.featurette.featurette--dive-deep
+						img.featurette__image.featurette__image--dive-deep(src="<?= $src->url() ?>")
+						.featurette__details.featurette__details--dive-deep
 							.item__category= $featurette->category()
 							.dive-deep__featurette__title.featurette__title= $featurette->title()
 				- endif
