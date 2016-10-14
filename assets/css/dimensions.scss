@@ -17,6 +17,7 @@ item: 						| mobile 	| tablet	| desktop
 .audio__details padding		| 2vw		| 2rem		|
 .item__details--audio padd: | 3vw		| 2vw		| 3rem
 .item__details--audio padd: | 2vw		| 1.3vw		| 2rem
+.details--banner			| 2vw		| 1.35vw	| 2rem
 
 
 -----------------------------------------------------
@@ -25,7 +26,3 @@ conversion: 				| mobile 	| tablet	| desktop
 										| 2.65vw	| 4rem
 
 */
-
-$detail-padding-phone: 30px 20px 10px;
-$detail-padding-tablet: 30px 20px 10px;
-$detail-padding-desktop: 30px 20px 10px;

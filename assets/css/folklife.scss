@@ -16,7 +16,7 @@
   @import "icon-application.scss";
   @import "type.scss";
   @import "featurette.scss";
-  @import "dimensions.scss";
+  @import "padding.scss";
   // @import "../bower_components/remodal/dist/remodal.scss";
   // @import "../bower_components/remodal/dist/remodal-default-theme.scss";
   @import "../../bower_components/slick-carousel/slick/slick.scss";
@@ -354,11 +354,12 @@
 		}
 		@include respond-to(fullwidth) {
 			margin-bottom: 2.2rem;
+			margin-bottom: 4rem;
 		}
 	}
 
-	// general item styles
-	.item__details {
+	// details only include top padding
+	.details {
 		padding-top: 4vw;
 		min-height: 26vw; // for 3 line titles
 		@include respond-to(break2) {
@@ -366,25 +367,41 @@
 			padding-top: 2vw;
 		}
 		@include respond-to(fullwidth) {
-			padding-top: 3rem;
+			padding-top: 2.5rem;
 		}
 	}
-	.item__title--serif {
+	// details inner includes left and right padding, and less top padding
+	.details--inset {
+		padding: 3vw 2vw 2vw;
+		@include respond-to(break2) {
+			padding: 2vw 1.3vw 1.3vw;
+		}
+		@include respond-to(fullwidth) {
+			padding: 2.5rem 2rem 2rem;
+		}
+	}
+	// smaller featurette details require less padding
+	.details--tight {
+		@include respond-to(break2) {
+			padding: 1.35vw 0.6vw 0 1.35vw;
+		}
+		@include respond-to(fullwidth) {
+			padding: 1.4rem 1.8rem 0 2rem;
+		}
+	}
+	.title--serif {
 		@extend %title--serif;
 	}
-	.item__title--sans--alt {
-		@extend %title--sans--alt;
-	}
-	.item__title--sans {
+	.title--sans {
 		@extend %title--sans;
 	}
-	.item__subtitle--sans {
+	.subtitle--sans {
 		@extend %subtitle--sans;
 	}
-	.item__category {
+	.category {
 		@extend %category;
 	}
-	.item__date {
+	.date {
 		@extend %type--date;
 	}
 
@@ -576,7 +593,7 @@
 			// img.logo--folklife { top: -3.3rem; }
 			img.logo--folklife { top: -45%; }
 		}
-		& + .banner.container {
+		& + .section--banner.container {
 			position: relative;
 			top: 142px; // add height of fixed header to next element when activated
 		}
@@ -903,13 +920,14 @@
 		// font-family: $slabExtraWide;
 		// font-weight: 700;
 		// @extend %meganav-font;
+		color: white;
 		@extend %section-header;
 		margin-bottom: 3rem;
 		@include respond-to(break2) {
 			margin-bottom: 1.5vw;
 		}
 		@include respond-to(fullwidth) {
-			margin-bottom: 2.2rem;
+			margin-bottom: 2rem;
 		}
 	}
 	.browsenav__item {
@@ -956,71 +974,65 @@
 		cursor: pointer;
 
 		border-radius: 0;
-		padding: 10px;
+		padding: 10px 15px 10px;
 		width: 100%;
 		@extend %link-font;
 		line-height: 1;
-
-		
+		font-weight: 600;
 	}
 	select { width: 100%; height: 44px; }
 
-/* Carousel - Slick
+/* #Banner
 -------------------------------------------------- */
-	.banner {
-		position: relative; // contain textbox
-		&__textbox {
-			background-color: white;
-			position: absolute;
-			bottom: 0;
-			width: 100%;
-			padding: 2vw 2vw 0;
+	.section--banner {
+		margin-bottom: 0;
+
+		// unusual case becuase title's exist within slide for desktop and out of slide for mobile
+		.title {
+			@extend %title--serif--large;
+			margin-bottom: 1rem;
 			@include respond-to(break2) {
-				bottom: 5%;
-				left: 2.8%;
-				width: 22.86%; // 320 px at fullwidth
-				min-height: 32rem;
-				min-height: 40%;
-				padding: 2rem 2.5rem 2rem 2rem;
-				padding: 1.8%;
-			}
-			@include respond-to(fullwidth) {
-				bottom: 4rem;
-				left: 4rem;
-				padding: 2rem 2.5rem 2rem 2rem;
-			}
-
-			&--mobile {
-				// width: 100vw !important; // full width for text box on mobile
-			}
-
-			&__title {
-				@extend %title--serif--large;
-				&--hero {
-					margin-bottom: 1rem;
-					@include respond-to(break2) {
-						margin-bottom: 3rem; // push above dots
-					}
-				}
-			}
-			&__dots {
-				// display: none; // hide on mobile?
-				position: absolute;
-				bottom: 2%;
-				left: 5%;
-				@include respond-to(break2) {
-					display: block;
-				}
-				@include respond-to(fullwidth) {
-					bottom: 1rem;
-					left: 1.6rem;
-				}
+				margin-bottom: 3rem; // push above dots
 			}
 		}
 	}
-	.banner__carousel {
-		// margin-left: -60px;
-		// margin-right: -60px;
+	.textbox {
+		background-color: white;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+
+		@include respond-to(break2) {
+			bottom: 5%;
+			left: 2.8%;
+			width: 22.86%; // 320 px at fullwidth
+			// min-height: 32rem;
+			min-height: 40%;
+
+		}
+		@include respond-to(fullwidth) {
+			bottom: 4rem;
+			left: 4rem;
+
+		}
+	}
+	.slide-title {
+
+	}
+	.dots {
+		// display: none; // hide on mobile?
+		position: absolute;
+		bottom: 2%;
+		left: 5%;
+		@include respond-to(break2) {
+			display: block;
+		}
+		@include respond-to(fullwidth) {
+			bottom: 1rem;
+			left: 1.6rem;
+		}
+	}
+	.banner-carousel {
 		@include respond-to(break2max) {
 			margin-bottom: 2vw;
 		}
@@ -1028,8 +1040,9 @@
 		iframe {
 			height: 802px;
 		}
+
 	}
-	.banner__nav--mobile, .banner__dots--mobile {
+	.banner__nav--mobile, .dots--mobile {
 		margin-bottom: 6vw;
 		@include respond-to(break2) {
 			display: none;
@@ -1039,15 +1052,25 @@
 		// padding: 15px 15px 5px;
 		padding: 5px 15px 5px;
 	}
-	.banner__slide {
+	.banner-slide {
 		position: relative; // hold banner textbox
-		.banner__textbox {
+		.textbox {
 			@include respond-to(break2max) {
 				display: none; // hide on mobile because redoing below
 			}
 		}
+		.details {
+			padding: 2vw 2vw 0;
+			@include respond-to(break2) {
+				// padding: 1.8%;
+				padding: 1.35vw 1.3vw 0;
+			}
+			@include respond-to(fullwidth) {
+				padding: 2rem 2.5rem 2rem 2rem;
+			}
+		}
 	}
-	.banner__slide:not(.slick-active) {
+	.banner-slide:not(.slick-active) {
 		@include respond-to(break2) {
 			&:after {
 				content: '';
@@ -1057,9 +1080,6 @@
 				background-color: rgba(0,0,0,0.6);
 			}
 		}
-	}
-	.banner-img {
-		// max-width: 1400px;
 	}
 	.slick-dotted.slick-slider {
 		margin-bottom: 0;
@@ -1132,55 +1152,64 @@
 
 	// only need this for tablet and desktop because on mobile dots are separate script
 	@include respond-to(break2) {
-		.banner__slide[data-slick-index="0"] li:nth-of-type(1) button:before {background-position: -226px -132px;}
-		.banner__slide[data-slick-index="0"] li:nth-of-type(1):hover button:before {background-position: -226px -118px;}
-		.banner__slide[data-slick-index="1"] li:nth-of-type(2) button:before {background-position: -226px -132px;}
-		.banner__slide[data-slick-index="1"] li:nth-of-type(2):hover button:before {background-position: -226px -118px;}
-		.banner__slide[data-slick-index="2"] li:nth-of-type(3) button:before {background-position: -226px -132px;}
-		.banner__slide[data-slick-index="2"] li:nth-of-type(3):hover button:before {background-position: -226px -118px;}
-		.banner__slide[data-slick-index="3"] li:nth-of-type(4) button:before {background-position: -226px -132px;}
-		.banner__slide[data-slick-index="3"] li:nth-of-type(4):hover button:before {background-position: -226px -118px;}
-		.banner__slide[data-slick-index="4"] li:nth-of-type(5) button:before {background-position: -226px -132px;}
-		.banner__slide[data-slick-index="4"] li:nth-of-type(5):hover button:before {background-position: -226px -118px;}
-		.banner__slide[data-slick-index="5"] li:nth-of-type(6) button:before {background-position: -226px -132px;}
-		.banner__slide[data-slick-index="5"] li:nth-of-type(6):hover button:before {background-position: -226px -118px;}
-		.banner__slide[data-slick-index="6"] li:nth-of-type(7) button:before {background-position: -226px -132px;}
-		.banner__slide[data-slick-index="6"] li:nth-of-type(7):hover button:before {background-position: -226px -118px;}
-		.banner__slide[data-slick-index="7"] li:nth-of-type(8) button:before {background-position: -226px -132px;}
-		.banner__slide[data-slick-index="7"] li:nth-of-type(8):hover button:before {background-position: -226px -118px;}
-		.banner__slide[data-slick-index="8"] li:nth-of-type(9) button:before {background-position: -226px -132px;}
-		.banner__slide[data-slick-index="8"] li:nth-of-type(9):hover button:before {background-position: -226px -118px;}
-		.banner__slide[data-slick-index="9"] li:nth-of-type(10) button:before {background-position: -226px -132px;}
-		.banner__slide[data-slick-index="9"] li:nth-of-type(10):hover button:before {background-position: -226px -118px;}
+		.banner-slide[data-slick-index="0"] li:nth-of-type(1) button:before {background-position: -226px -132px;}
+		.banner-slide[data-slick-index="0"] li:nth-of-type(1):hover button:before {background-position: -226px -118px;}
+		.banner-slide[data-slick-index="1"] li:nth-of-type(2) button:before {background-position: -226px -132px;}
+		.banner-slide[data-slick-index="1"] li:nth-of-type(2):hover button:before {background-position: -226px -118px;}
+		.banner-slide[data-slick-index="2"] li:nth-of-type(3) button:before {background-position: -226px -132px;}
+		.banner-slide[data-slick-index="2"] li:nth-of-type(3):hover button:before {background-position: -226px -118px;}
+		.banner-slide[data-slick-index="3"] li:nth-of-type(4) button:before {background-position: -226px -132px;}
+		.banner-slide[data-slick-index="3"] li:nth-of-type(4):hover button:before {background-position: -226px -118px;}
+		.banner-slide[data-slick-index="4"] li:nth-of-type(5) button:before {background-position: -226px -132px;}
+		.banner-slide[data-slick-index="4"] li:nth-of-type(5):hover button:before {background-position: -226px -118px;}
+		.banner-slide[data-slick-index="5"] li:nth-of-type(6) button:before {background-position: -226px -132px;}
+		.banner-slide[data-slick-index="5"] li:nth-of-type(6):hover button:before {background-position: -226px -118px;}
+		.banner-slide[data-slick-index="6"] li:nth-of-type(7) button:before {background-position: -226px -132px;}
+		.banner-slide[data-slick-index="6"] li:nth-of-type(7):hover button:before {background-position: -226px -118px;}
+		.banner-slide[data-slick-index="7"] li:nth-of-type(8) button:before {background-position: -226px -132px;}
+		.banner-slide[data-slick-index="7"] li:nth-of-type(8):hover button:before {background-position: -226px -118px;}
+		.banner-slide[data-slick-index="8"] li:nth-of-type(9) button:before {background-position: -226px -132px;}
+		.banner-slide[data-slick-index="8"] li:nth-of-type(9):hover button:before {background-position: -226px -118px;}
+		.banner-slide[data-slick-index="9"] li:nth-of-type(10) button:before {background-position: -226px -132px;}
+		.banner-slide[data-slick-index="9"] li:nth-of-type(10):hover button:before {background-position: -226px -118px;}
 	}
 
-/* Watch
+/* #video
 -------------------------------------------------- */
+	.section--video {
+		.title {
+			@extend %title--serif;
+		}
+	}
 
-/* #Listen
+/* #listen
 -------------------------------------------------- */
+	.section--audio {
+		.details {
+			border: 2px solid $black15;		
+		}
+		.title-wrapper {
+			min-height: 24vw; // for 2 line album titles
+			margin-bottom: 3vw;
+			@include respond-to(break2) {
+				// min-height: 4.8rem;
+				min-height: 5.5vw; // for 2 line album titles
+				margin-bottom: 3vw;
+			}
+			@include respond-to(fullwidth) {
+				min-height: 10rem;
+				margin-bottom: 0;
+			}
+		}
+		.title {
+			@extend %title--sans;
+		}
+		.subtitle {
+			@extend %subtitle--sans;
+		}
+	}
 	.row--listen {
 		margin-bottom: 0.6rem; // for 80px to hr
-	}
-	.audio__block {
-	}
-	.item__details--audio {
-		padding: 3vw 2vw 2vw;
-		border: 2px solid $black15;		
-		@include respond-to(break2) {
-			padding: 2vw 1.3vw 1.3vw;
-		}
-		@include respond-to(fullwidth) {
-			padding: 3rem 2rem 2rem;
-		}
-	}
-	.album-title {
-		min-height: 12vw; // for 2 line album titles
-		margin-bottom: 3vw;
-		@include respond-to(break2) {
-			min-height: 4.8rem;
-			margin-bottom: 0;
-		}
 	}
 	.audio-player__details, .audio-progress-bar, .audio-time, .volume {
 		display: inline-block;
@@ -1189,10 +1218,12 @@
 	.audio-player {
 		// margin-top: 0rem;
 		@include respond-to(break2) {
-			margin-top: 2vw;
+			// margin-top: 2vw;
+			margin-top: 0.8vw;
 		}
 		@include respond-to(fullwidth) {
-			margin-top: 2.8rem;
+			// margin-top: 2.8rem;
+			margin-top: 1.2rem;
 		}
 	}
 	.audio-player__details {
@@ -1216,13 +1247,32 @@
 		margin-right: 3px;
 	}
 
+/* #participate
+-------------------------------------------------- */
+	.section--participate {
+		.details {
+			min-height: 27vw;
+			@include respond-to(break2) {
+				min-height: initial;
+			}
+		}
+		.title {
+			@extend %title--sans--alt;
+		}
+	}
+
+
 /* #Talkstory
 -------------------------------------------------- */
 	.section--talk-story {
 		background-color: $black30;
 		padding-top: 5vw;
 		padding-bottom: 5vw;
+		@include respond-to(break2max) {
+			margin-bottom: 8vw;
+		}
 		@include respond-to(break2) {
+			// margin-bottom: 0;
 			padding-top: 2.65vw;
 			padding-bottom: 2.65vw;
 		}
@@ -1235,81 +1285,169 @@
 			color: white;
 		}
 	}
+	.feature__inner {
+		position: relative; // contain textbox
+	}
 	.talk-story__feature {
 		margin-bottom: 3rem;	
-		&__inner {
-			position: relative; // contain textbox
-		}
 		@include respond-to(break2) {
 			margin-bottom: 0;
 		}
-	}
-	.banner__textbox {
-		&--talk-story {
-			min-height: auto;
-			position: static;
-			width: 100%;
-			padding-bottom: 3vw;
-			@include respond-to(break2) {
-				position: absolute;
-				width: 30.51%; // 281 / 921 = 30.51%
-				padding-bottom: 2vw;
-			}
-			@include respond-to(fullwidth) {
-				padding-bottom: 3rem;
-			}
+
+		.title {
+			@include title--sans--large; // mixin so brings down to this line
 		}
-		&__title--talk-story {
-			@include title--sans--large();
-		}
-		&__subtitle--talk-story {
+		.subtitle {
 			@extend %subtitle--sans--large;
 		}
 	}
-	.featurette--talk-story {
+	.talk-story__featurette {
 		background-color: white;
-		// @extend .featurette;
-		&__title, &__subtitle {
+		.category {
+			margin-bottom: 0.5rem;
+			@include respond-to(break2) {
+				margin-bottom: 0.3rem;
+			}
+			@include respond-to(fullwidth) {
+				font-size: 1.5rem;
+				margin-bottom: 0.3rem;
+			}
+		}
+		.title, .subtitle {
 			@extend %subtitle--sans;
 		}
-		&__title {
+		.title {
 			font-weight: 700;
 		}
 	}
-	.item__category--talk-story-featurette {
+	.talk-story__textbox {
+		min-height: auto;
+		position: static;
+		width: 100%;
+		padding-bottom: 3vw;
+		@include respond-to(break2) {
+			position: absolute;
+			width: 30.51%; // 281 / 921 = 30.51%
+			padding-bottom: 2vw;
+		}
 		@include respond-to(fullwidth) {
-			font-size: 1.5rem;
+			padding-bottom: 3rem;
 		}
 	}
 
 /* #Dive deep
 -------------------------------------------------- */
-	.banner__textbox--dive-deep, .featurette--dive-deep {
-		background-color: $black08;
-	}
-	.banner__textbox--dive-deep {
-		width: auto;
-		position: static;
-		&__title {
-			margin-bottom: 0;
+	.section--dive-deep {
+		@include respond-to(break2max) {
+			margin-bottom: 5vw;
 		}
 	}
+	.dive-deep {
+		&__textbox, &__featurette {
+			background-color: $black08;
+		}
+		&__textbox {
+			width: auto;
+			position: static;
+			.title {
+				margin-bottom: 0;
+				@extend %title--serif--large;
+			}	
+		}
+		&__featurette {
+			.featurette__image {
+				width: 52.94%;	
+			}
+			.featurette__details {
+				width: 47.06%;
+			}
+			.title {
+				@extend %title--serif;
+				@include respond-to(break2max) {
+					font-size: 5vw;
+				}
+			}
+		}
+	}
+
+
+/* #Explore Collections
+-------------------------------------------------- */
+	$section--half-padding-mobile: 4rem;
+	$section--half-padding-tablet: 2.7%;
+	$section--half-padding-desktop: 4rem;
+
+	@include respond-to(break2) {
+		.section--half:nth-of-type(1) {
+			padding-right: $section--half-padding-mobile;
+			@include respond-to(break2) {
+				padding-right: $section--half-padding-tablet;
+			}
+			@include respond-to(fullwidth) {
+				padding-right: $section--half-padding-desktop;
+			}
+		}
+		.section--half:nth-of-type(2) {
+			padding-left: $section--half-padding-mobile;
+			@include respond-to(break2) {
+				padding-left: $section--half-padding-tablet;
+			}
+			@include respond-to(fullwidth) {
+				padding-left: $section--half-padding-desktop;
+			}
+		}
+	}
+	.vertical-rule {
+		display: none;
+		@include respond-to(break2) {
+			display: block;
+			position: absolute;
+			top: -1rem;
+			right: -4.5px;
+			height: 100%;
+			width: 9px;
+			// right border as image from http://stackoverflow.com/a/7948532
+			background-image: url(/assets/images/folklife-vr.png);
+			background-position: right;
+			background-repeat: no-repeat;
+			background-size: 9px 100%;
+			// margin-right: -1rem;
+		}
+	}
+
+	// #primaryNav a:link { 
+	//  background-image: url('image.jpg');
+	//  background-position: right;
+	//  background-repeat: no-repeat;
+	//  display: block; /* make the link background clickable */
+	// }
 	.explore-collections__featurette, .teach__featurette {
+		// height: 27vw;
+		@include respond-to(break2) {
+			height: 27vw;
+		}
 		@include respond-to(fullwidth) {
 			height: 376px;
 		}
 	}
-	.featurette__image--dive-deep {
-		width: 52.94%;	
+	.explore-collections {
+		&__details {
+			padding-left: 0;
+			@include respond-to(break2max) {
+				min-height: 17vw;
+			}
+
+		}
+		.title {
+			@extend %title--serif;
+			font-style: italic;
+		}
 	}
-	.featurette__details--dive-deep {
-		width: 47.06%;
-	}
+
+
 
 /* #Teach
 -------------------------------------------------- */
-
-
 
 /* Footer
 -------------------------------------------------- */

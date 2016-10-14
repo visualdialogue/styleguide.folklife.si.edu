@@ -204,7 +204,6 @@ body {
 .section__title, .browsenav__title {
   font-family: "unit-gothic-717", Arial, sans-serif;
   text-transform: uppercase;
-  font-weight: 700;
   font-size: 5vw;
   letter-spacing: 0.5px;
   line-height: 0.65;
@@ -229,59 +228,60 @@ body {
       font-size: 2rem;
       line-height: 1.5; } }
 
-.item__title--sans {
+.title--sans, .section--audio .title {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 600;
   line-height: 1.2;
   font-size: 5vw; }
   @media only screen and (min-width: 53.25em) {
-    .item__title--sans {
+    .title--sans, .section--audio .title {
       font-size: 1.6vw;
       margin-bottom: 0.4vw; } }
   @media only screen and (min-width: 1480px) {
-    .item__title--sans {
+    .title--sans, .section--audio .title {
       font-size: 2.4rem;
       margin-bottom: 0.5rem; } }
 
-.item__title--sans--alt {
+.section--participate .title {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
   font-size: 5vw; }
   @media only screen and (min-width: 53.25em) {
-    .item__title--sans--alt {
+    .section--participate .title {
       font-size: 2vw;
       margin-bottom: 0.4vw; } }
   @media only screen and (min-width: 1480px) {
-    .item__title--sans--alt {
+    .section--participate .title {
       font-size: 3rem;
+      line-height: 1.25;
       margin-bottom: 0; } }
 
-.featurette__title, .featurette__subtitle, .item__subtitle--sans, .featurette--talk-story__title, .featurette--talk-story__subtitle {
+.subtitle--sans, .section--audio .subtitle, .talk-story__featurette .title, .talk-story__featurette .subtitle {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
   line-height: 1.4;
   font-size: 4vw; }
   @media only screen and (min-width: 53.25em) {
-    .featurette__title, .featurette__subtitle, .item__subtitle--sans, .featurette--talk-story__title, .featurette--talk-story__subtitle {
+    .subtitle--sans, .section--audio .subtitle, .talk-story__featurette .title, .talk-story__featurette .subtitle {
       font-size: 1.35vw;
       line-height: 1.25; } }
   @media only screen and (min-width: 1480px) {
-    .featurette__title, .featurette__subtitle, .item__subtitle--sans, .featurette--talk-story__title, .featurette--talk-story__subtitle {
+    .subtitle--sans, .section--audio .subtitle, .talk-story__featurette .title, .talk-story__featurette .subtitle {
       line-height: 1.3;
       font-size: 2rem; } }
 
-.banner__textbox__subtitle--talk-story {
+.talk-story__feature .subtitle {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
   font-size: 5vw; }
   @media only screen and (min-width: 53.25em) {
-    .banner__textbox__subtitle--talk-story {
+    .talk-story__feature .subtitle {
       font-size: 2vw; } }
   @media only screen and (min-width: 1480px) {
-    .banner__textbox__subtitle--talk-story {
+    .talk-story__feature .subtitle {
       font-size: 3rem; } }
 
 .search-bar {
@@ -290,49 +290,49 @@ body {
   line-height: 1.7;
   font-size: 2.5rem; }
 
-.item__title--serif {
+.title--serif, .section--video .title, .dive-deep__featurette .title, .explore-collections .title {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1.2;
   font-size: 6vw; }
   @media only screen and (min-width: 53.25em) {
-    .item__title--serif {
+    .title--serif, .section--video .title, .dive-deep__featurette .title, .explore-collections .title {
       font-size: 1.9vw; } }
   @media only screen and (min-width: 1480px) {
-    .item__title--serif {
+    .title--serif, .section--video .title, .dive-deep__featurette .title, .explore-collections .title {
       font-size: 2.8rem; } }
 
-.banner__textbox__title {
+.section--banner .title, .dive-deep__textbox .title {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1.2;
   font-size: 6vw; }
   @media only screen and (min-width: 53.25em) {
-    .banner__textbox__title {
-      font-size: 2.7vw;
+    .section--banner .title, .dive-deep__textbox .title {
+      font-size: 2.8vw;
       line-height: 1.2; } }
   @media only screen and (min-width: 1480px) {
-    .banner__textbox__title {
-      font-size: 4rem; } }
+    .section--banner .title, .dive-deep__textbox .title {
+      font-size: 4.2rem; } }
 
-.item__date, .item__category {
+.date, .category {
   text-transform: uppercase;
   font-family: "acumin-pro-wide", Arial, sans-serif;
   color: #595959;
   font-weight: 300;
   letter-spacing: 1px;
-  line-height: 0.8;
   margin-bottom: 0.5rem;
   font-size: 2.5vw; }
   @media only screen and (min-width: 53.25em) {
-    .item__date, .item__category {
+    .date, .category {
       font-size: 1.2vw;
       margin-bottom: 0.3rem; } }
   @media only screen and (min-width: 1480px) {
-    .item__date, .item__category {
-      font-size: 1.6rem; } }
+    .date, .category {
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem; } }
 
-.item__date {
+.date {
   font-weight: 700; }
 
 /* Sans reference
@@ -377,50 +377,18 @@ conversion: 				| mobile 	| tablet	| desktop
       margin-bottom: 3rem; } }
   .featurette:last-of-type {
     margin-bottom: 0; }
-  .featurette__image, .featurette__details {
+  .featurette__details, .featurette__image {
     display: inline-block;
     vertical-align: top; }
-  .featurette__image {
-    width: 50%; }
   .featurette__details {
-    width: 50%;
-    padding: 3vw 2vw 0; }
-    @media only screen and (min-width: 53.25em) {
-      .featurette__details {
-        padding: 1.35vw 1vw 0; } }
-    @media only screen and (min-width: 1480px) {
-      .featurette__details {
-        padding: 2rem 1.8rem 0; } }
-  .featurette__title {
+    width: 50%; }
+  .featurette__image {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%; }
+  .featurette .title {
     font-weight: 700; }
 
-/* 
-
------------------------------------------------------
-item: 						| mobile 	| tablet	| desktop
------------------------------------------------------
-%meganav-font 				| 10vw   	| 4rem		| 4rem
-%link-font 					| 1.7rem 	| 2rem   	|
-%title--sans 				| 5vw		| 1.6vw		| 2.4rem
-%title--sans--alt 			| 5vw		| 2vw		| 3rem
-%subtitle--sans  			| 4vw		| 1.35vw	| 2rem
-%category 					| 4.1vw		| 1.2vw		| 1.8rem
-%section-header				|			| 2vw		| 3rem
------------------------------------------------------
-%title--serif 				| 6vw		| 1.9vw		| 2.8rem
-%title--serif--large 		| 5vw		| 2.7vw		|
------------------------------------------------------
-.audio__details padding		| 2vw		| 2rem		|
-.item__details--audio padd: | 3vw		| 2vw		| 3rem
-.item__details--audio padd: | 2vw		| 1.3vw		| 2rem
-
-
------------------------------------------------------
-conversion: 				| mobile 	| tablet	| desktop
------------------------------------------------------
-										| 2.65vw	| 4rem
-
-*/
 /* Slider */
 .slick-slider {
   position: relative;
@@ -777,18 +745,36 @@ hr {
       margin-bottom: 1.3vw; } }
   @media only screen and (min-width: 1480px) {
     .hr--folklife {
-      margin-bottom: 2.2rem; } }
+      margin-bottom: 2.2rem;
+      margin-bottom: 4rem; } }
 
-.item__details {
+.details {
   padding-top: 4vw;
   min-height: 26vw; }
   @media only screen and (min-width: 53.25em) {
-    .item__details {
+    .details {
       min-height: initial;
       padding-top: 2vw; } }
   @media only screen and (min-width: 1480px) {
-    .item__details {
-      padding-top: 3rem; } }
+    .details {
+      padding-top: 2.5rem; } }
+
+.details--inset {
+  padding: 3vw 2vw 2vw; }
+  @media only screen and (min-width: 53.25em) {
+    .details--inset {
+      padding: 2vw 1.3vw 1.3vw; } }
+  @media only screen and (min-width: 1480px) {
+    .details--inset {
+      padding: 2.5rem 2rem 2rem; } }
+
+@media only screen and (min-width: 53.25em) {
+  .details--tight {
+    padding: 1.35vw 0.6vw 0 1.35vw; } }
+
+@media only screen and (min-width: 1480px) {
+  .details--tight {
+    padding: 1.4rem 1.8rem 0 2rem; } }
 
 /* Nav
 -------------------------------------------------- */
@@ -958,7 +944,7 @@ img.logo--folklife, img.logo--center {
       top: -100%; }
     .smaller-header img.logo--folklife {
       top: -45%; } }
-  .smaller-header + .banner.container {
+  .smaller-header + .section--banner.container {
     position: relative;
     top: 142px; }
 
@@ -1322,13 +1308,14 @@ select {
       padding: 4rem 0 4rem; } }
 
 .browsenav__title {
+  color: white;
   margin-bottom: 3rem; }
   @media only screen and (min-width: 53.25em) {
     .browsenav__title {
       margin-bottom: 1.5vw; } }
   @media only screen and (min-width: 1480px) {
     .browsenav__title {
-      margin-bottom: 2.2rem; } }
+      margin-bottom: 2rem; } }
 
 .browsenav__item {
   margin-bottom: 2rem; }
@@ -1352,79 +1339,85 @@ select {
   -moz-appearance: none;
   cursor: pointer;
   border-radius: 0;
-  padding: 10px;
+  padding: 10px 15px 10px;
   width: 100%;
-  line-height: 1; }
+  line-height: 1;
+  font-weight: 600; }
 
 select {
   width: 100%;
   height: 44px; }
 
-/* Carousel - Slick
+/* #Banner
 -------------------------------------------------- */
-.banner {
-  position: relative; }
-  .banner__textbox {
-    background-color: white;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 2vw 2vw 0; }
+.section--banner {
+  margin-bottom: 0; }
+  .section--banner .title {
+    margin-bottom: 1rem; }
     @media only screen and (min-width: 53.25em) {
-      .banner__textbox {
-        bottom: 5%;
-        left: 2.8%;
-        width: 22.86%;
-        min-height: 32rem;
-        min-height: 40%;
-        padding: 2rem 2.5rem 2rem 2rem;
-        padding: 1.8%; } }
-    @media only screen and (min-width: 1480px) {
-      .banner__textbox {
-        bottom: 4rem;
-        left: 4rem;
-        padding: 2rem 2.5rem 2rem 2rem; } }
-    .banner__textbox__title--hero {
-      margin-bottom: 1rem; }
-      @media only screen and (min-width: 53.25em) {
-        .banner__textbox__title--hero {
-          margin-bottom: 3rem; } }
-    .banner__textbox__dots {
-      position: absolute;
-      bottom: 2%;
-      left: 5%; }
-      @media only screen and (min-width: 53.25em) {
-        .banner__textbox__dots {
-          display: block; } }
-      @media only screen and (min-width: 1480px) {
-        .banner__textbox__dots {
-          bottom: 1rem;
-          left: 1.6rem; } }
+      .section--banner .title {
+        margin-bottom: 3rem; } }
+
+.textbox {
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
+  @media only screen and (min-width: 53.25em) {
+    .textbox {
+      bottom: 5%;
+      left: 2.8%;
+      width: 22.86%;
+      min-height: 40%; } }
+  @media only screen and (min-width: 1480px) {
+    .textbox {
+      bottom: 4rem;
+      left: 4rem; } }
+
+.dots {
+  position: absolute;
+  bottom: 2%;
+  left: 5%; }
+  @media only screen and (min-width: 53.25em) {
+    .dots {
+      display: block; } }
+  @media only screen and (min-width: 1480px) {
+    .dots {
+      bottom: 1rem;
+      left: 1.6rem; } }
 
 @media only screen and (max-width: 53.25em) {
-  .banner__carousel {
+  .banner-carousel {
     margin-bottom: 2vw; } }
 
-.banner__carousel iframe {
+.banner-carousel iframe {
   height: 802px; }
 
-.banner__nav--mobile, .banner__dots--mobile {
+.banner__nav--mobile, .dots--mobile {
   margin-bottom: 6vw; }
   @media only screen and (min-width: 53.25em) {
-    .banner__nav--mobile, .banner__dots--mobile {
+    .banner__nav--mobile, .dots--mobile {
       display: none; } }
 
 .banner__nav--mobile {
   padding: 5px 15px 5px; }
 
-.banner__slide {
+.banner-slide {
   position: relative; }
   @media only screen and (max-width: 53.25em) {
-    .banner__slide .banner__textbox {
+    .banner-slide .textbox {
       display: none; } }
+  .banner-slide .details {
+    padding: 2vw 2vw 0; }
+    @media only screen and (min-width: 53.25em) {
+      .banner-slide .details {
+        padding: 1.35vw 1.3vw 0; } }
+    @media only screen and (min-width: 1480px) {
+      .banner-slide .details {
+        padding: 2rem 2.5rem 2rem 2rem; } }
 
 @media only screen and (min-width: 53.25em) {
-  .banner__slide:not(.slick-active):after {
+  .banner-slide:not(.slick-active):after {
     content: '';
     position: absolute;
     top: 0;
@@ -1495,71 +1488,68 @@ select {
     background-position: -136px -86px; } }
 
 @media only screen and (min-width: 53.25em) {
-  .banner__slide[data-slick-index="0"] li:nth-of-type(1) button:before {
+  .banner-slide[data-slick-index="0"] li:nth-of-type(1) button:before {
     background-position: -226px -132px; }
-  .banner__slide[data-slick-index="0"] li:nth-of-type(1):hover button:before {
+  .banner-slide[data-slick-index="0"] li:nth-of-type(1):hover button:before {
     background-position: -226px -118px; }
-  .banner__slide[data-slick-index="1"] li:nth-of-type(2) button:before {
+  .banner-slide[data-slick-index="1"] li:nth-of-type(2) button:before {
     background-position: -226px -132px; }
-  .banner__slide[data-slick-index="1"] li:nth-of-type(2):hover button:before {
+  .banner-slide[data-slick-index="1"] li:nth-of-type(2):hover button:before {
     background-position: -226px -118px; }
-  .banner__slide[data-slick-index="2"] li:nth-of-type(3) button:before {
+  .banner-slide[data-slick-index="2"] li:nth-of-type(3) button:before {
     background-position: -226px -132px; }
-  .banner__slide[data-slick-index="2"] li:nth-of-type(3):hover button:before {
+  .banner-slide[data-slick-index="2"] li:nth-of-type(3):hover button:before {
     background-position: -226px -118px; }
-  .banner__slide[data-slick-index="3"] li:nth-of-type(4) button:before {
+  .banner-slide[data-slick-index="3"] li:nth-of-type(4) button:before {
     background-position: -226px -132px; }
-  .banner__slide[data-slick-index="3"] li:nth-of-type(4):hover button:before {
+  .banner-slide[data-slick-index="3"] li:nth-of-type(4):hover button:before {
     background-position: -226px -118px; }
-  .banner__slide[data-slick-index="4"] li:nth-of-type(5) button:before {
+  .banner-slide[data-slick-index="4"] li:nth-of-type(5) button:before {
     background-position: -226px -132px; }
-  .banner__slide[data-slick-index="4"] li:nth-of-type(5):hover button:before {
+  .banner-slide[data-slick-index="4"] li:nth-of-type(5):hover button:before {
     background-position: -226px -118px; }
-  .banner__slide[data-slick-index="5"] li:nth-of-type(6) button:before {
+  .banner-slide[data-slick-index="5"] li:nth-of-type(6) button:before {
     background-position: -226px -132px; }
-  .banner__slide[data-slick-index="5"] li:nth-of-type(6):hover button:before {
+  .banner-slide[data-slick-index="5"] li:nth-of-type(6):hover button:before {
     background-position: -226px -118px; }
-  .banner__slide[data-slick-index="6"] li:nth-of-type(7) button:before {
+  .banner-slide[data-slick-index="6"] li:nth-of-type(7) button:before {
     background-position: -226px -132px; }
-  .banner__slide[data-slick-index="6"] li:nth-of-type(7):hover button:before {
+  .banner-slide[data-slick-index="6"] li:nth-of-type(7):hover button:before {
     background-position: -226px -118px; }
-  .banner__slide[data-slick-index="7"] li:nth-of-type(8) button:before {
+  .banner-slide[data-slick-index="7"] li:nth-of-type(8) button:before {
     background-position: -226px -132px; }
-  .banner__slide[data-slick-index="7"] li:nth-of-type(8):hover button:before {
+  .banner-slide[data-slick-index="7"] li:nth-of-type(8):hover button:before {
     background-position: -226px -118px; }
-  .banner__slide[data-slick-index="8"] li:nth-of-type(9) button:before {
+  .banner-slide[data-slick-index="8"] li:nth-of-type(9) button:before {
     background-position: -226px -132px; }
-  .banner__slide[data-slick-index="8"] li:nth-of-type(9):hover button:before {
+  .banner-slide[data-slick-index="8"] li:nth-of-type(9):hover button:before {
     background-position: -226px -118px; }
-  .banner__slide[data-slick-index="9"] li:nth-of-type(10) button:before {
+  .banner-slide[data-slick-index="9"] li:nth-of-type(10) button:before {
     background-position: -226px -132px; }
-  .banner__slide[data-slick-index="9"] li:nth-of-type(10):hover button:before {
+  .banner-slide[data-slick-index="9"] li:nth-of-type(10):hover button:before {
     background-position: -226px -118px; } }
 
-/* Watch
+/* #video
 -------------------------------------------------- */
-/* #Listen
+/* #listen
 -------------------------------------------------- */
-.row--listen {
-  margin-bottom: 0.6rem; }
-
-.item__details--audio {
-  padding: 3vw 2vw 2vw;
+.section--audio .details {
   border: 2px solid #d9d9d9; }
-  @media only screen and (min-width: 53.25em) {
-    .item__details--audio {
-      padding: 2vw 1.3vw 1.3vw; } }
-  @media only screen and (min-width: 1480px) {
-    .item__details--audio {
-      padding: 3rem 2rem 2rem; } }
 
-.album-title {
-  min-height: 12vw;
+.section--audio .title-wrapper {
+  min-height: 24vw;
   margin-bottom: 3vw; }
   @media only screen and (min-width: 53.25em) {
-    .album-title {
-      min-height: 4.8rem;
+    .section--audio .title-wrapper {
+      min-height: 5.5vw;
+      margin-bottom: 3vw; } }
+  @media only screen and (min-width: 1480px) {
+    .section--audio .title-wrapper {
+      min-height: 10rem;
       margin-bottom: 0; } }
+
+.row--listen {
+  margin-bottom: 0.6rem; }
 
 .audio-player__details, .audio-progress-bar, .audio-time, .volume {
   display: inline-block;
@@ -1567,11 +1557,11 @@ select {
 
 @media only screen and (min-width: 53.25em) {
   .audio-player {
-    margin-top: 2vw; } }
+    margin-top: 0.8vw; } }
 
 @media only screen and (min-width: 1480px) {
   .audio-player {
-    margin-top: 2.8rem; } }
+    margin-top: 1.2rem; } }
 
 .audio-player__details {
   max-width: 100%; }
@@ -1592,12 +1582,23 @@ select {
   float: right;
   margin-right: 3px; }
 
+/* #participate
+-------------------------------------------------- */
+.section--participate .details {
+  min-height: 27vw; }
+  @media only screen and (min-width: 53.25em) {
+    .section--participate .details {
+      min-height: initial; } }
+
 /* #Talkstory
 -------------------------------------------------- */
 .section--talk-story {
   background-color: #b3b3b3;
   padding-top: 5vw;
   padding-bottom: 5vw; }
+  @media only screen and (max-width: 53.25em) {
+    .section--talk-story {
+      margin-bottom: 8vw; } }
   @media only screen and (min-width: 53.25em) {
     .section--talk-story {
       padding-top: 2.65vw;
@@ -1609,69 +1610,132 @@ select {
   .section--talk-story .section__title {
     color: white; }
 
+.feature__inner {
+  position: relative; }
+
 .talk-story__feature {
   margin-bottom: 3rem; }
-  .talk-story__feature__inner {
-    position: relative; }
   @media only screen and (min-width: 53.25em) {
     .talk-story__feature {
       margin-bottom: 0; } }
+  .talk-story__feature .title {
+    font-family: "acumin-pro", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 5vw; }
+    @media only screen and (min-width: 53.25em) {
+      .talk-story__feature .title {
+        font-size: 2vw;
+        line-height: 1.2; } }
+    @media only screen and (min-width: 1480px) {
+      .talk-story__feature .title {
+        font-size: 3rem; } }
 
-.banner__textbox--talk-story {
+.talk-story__featurette {
+  background-color: white; }
+  .talk-story__featurette .category {
+    margin-bottom: 0.5rem; }
+    @media only screen and (min-width: 53.25em) {
+      .talk-story__featurette .category {
+        margin-bottom: 0.3rem; } }
+    @media only screen and (min-width: 1480px) {
+      .talk-story__featurette .category {
+        font-size: 1.5rem;
+        margin-bottom: 0.3rem; } }
+  .talk-story__featurette .title {
+    font-weight: 700; }
+
+.talk-story__textbox {
   min-height: auto;
   position: static;
   width: 100%;
   padding-bottom: 3vw; }
   @media only screen and (min-width: 53.25em) {
-    .banner__textbox--talk-story {
+    .talk-story__textbox {
       position: absolute;
       width: 30.51%;
       padding-bottom: 2vw; } }
   @media only screen and (min-width: 1480px) {
-    .banner__textbox--talk-story {
+    .talk-story__textbox {
       padding-bottom: 3rem; } }
-
-.banner__textbox__title--talk-story {
-  font-family: "acumin-pro", Arial, sans-serif;
-  font-weight: 700;
-  font-size: 5vw; }
-  @media only screen and (min-width: 53.25em) {
-    .banner__textbox__title--talk-story {
-      font-size: 2vw;
-      line-height: 1.2; } }
-  @media only screen and (min-width: 1480px) {
-    .banner__textbox__title--talk-story {
-      font-size: 3rem; } }
-
-.featurette--talk-story {
-  background-color: white; }
-  .featurette--talk-story__title {
-    font-weight: 700; }
-
-@media only screen and (min-width: 1480px) {
-  .item__category--talk-story-featurette {
-    font-size: 1.5rem; } }
 
 /* #Dive deep
 -------------------------------------------------- */
-.banner__textbox--dive-deep, .featurette--dive-deep {
+@media only screen and (max-width: 53.25em) {
+  .section--dive-deep {
+    margin-bottom: 5vw; } }
+
+.dive-deep__textbox, .dive-deep__featurette {
   background-color: #ebebeb; }
 
-.banner__textbox--dive-deep {
+.dive-deep__textbox {
   width: auto;
   position: static; }
-  .banner__textbox--dive-deep__title {
+  .dive-deep__textbox .title {
     margin-bottom: 0; }
+
+.dive-deep__featurette .featurette__image {
+  width: 52.94%; }
+
+.dive-deep__featurette .featurette__details {
+  width: 47.06%; }
+
+@media only screen and (max-width: 53.25em) {
+  .dive-deep__featurette .title {
+    font-size: 5vw; } }
+
+/* #Explore Collections
+-------------------------------------------------- */
+@media only screen and (min-width: 53.25em) {
+  .section--half:nth-of-type(1) {
+    padding-right: 4rem; } }
+  @media only screen and (min-width: 53.25em) and (min-width: 53.25em) {
+    .section--half:nth-of-type(1) {
+      padding-right: 2.7%; } }
+  @media only screen and (min-width: 53.25em) and (min-width: 1480px) {
+    .section--half:nth-of-type(1) {
+      padding-right: 4rem; } }
+
+@media only screen and (min-width: 53.25em) {
+  .section--half:nth-of-type(2) {
+    padding-left: 4rem; } }
+  @media only screen and (min-width: 53.25em) and (min-width: 53.25em) {
+    .section--half:nth-of-type(2) {
+      padding-left: 2.7%; } }
+  @media only screen and (min-width: 53.25em) and (min-width: 1480px) {
+    .section--half:nth-of-type(2) {
+      padding-left: 4rem; } }
+
+.vertical-rule {
+  display: none; }
+  @media only screen and (min-width: 53.25em) {
+    .vertical-rule {
+      display: block;
+      position: absolute;
+      top: -1rem;
+      right: -4.5px;
+      height: 100%;
+      width: 9px;
+      background-image: url(/assets/images/folklife-vr.png);
+      background-position: right;
+      background-repeat: no-repeat;
+      background-size: 9px 100%; } }
+
+@media only screen and (min-width: 53.25em) {
+  .explore-collections__featurette, .teach__featurette {
+    height: 27vw; } }
 
 @media only screen and (min-width: 1480px) {
   .explore-collections__featurette, .teach__featurette {
     height: 376px; } }
 
-.featurette__image--dive-deep {
-  width: 52.94%; }
+.explore-collections__details {
+  padding-left: 0; }
+  @media only screen and (max-width: 53.25em) {
+    .explore-collections__details {
+      min-height: 17vw; } }
 
-.featurette__details--dive-deep {
-  width: 47.06%; }
+.explore-collections .title {
+  font-style: italic; }
 
 /* #Teach
 -------------------------------------------------- */

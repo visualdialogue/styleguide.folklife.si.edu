@@ -85,13 +85,13 @@ Dive_deep_featurettes:
   src: powwow.jpg
 ----
 Explore_collections_featurettes:
-- title: Moses and Frances Asch
+- title: Moses and Frances Asch Collection
   src: moses-frances-asch.jpg
-- title: Diana Davies Photograph
+- title: Diana Davies Photograph Collection
   src: diana-davies.jpg
-- title: Collector Records 
+- title: Collector Records Collection
   src: collector-records.jpg
-- title: Frederic Ramsey Jr. Tape
+- title: Frederic Ramsey Jr. Tape Collection
   src: frederic-ramsey-jr.jpg
 ----
 Teach_featurettes:

@@ -255,7 +255,7 @@ $(document).ready(function () {
 	function initiateSlickCarousel() {
 		
 		// if(slickCreated) {
-		// 	$('.banner__carousel').slick('unslick'); // clear the palette first
+		// 	$('#banner-carousel').slick('unslick'); // clear the palette first
 		// }
 		// if(slickCreatedMobile) {
 		// 	$('.banner__nav--mobile').slick('unslick'); // clear the palette first
@@ -271,18 +271,20 @@ $(document).ready(function () {
 
 	function createBannerMobile() {
 		console.log('creating mobile banner...');
-		 $('.banner__carousel').slick({
+		 $('#banner-carousel').slick({
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			arrows: false,
-			asNavFor: '.banner__nav--mobile'
+			asNavFor: '.banner__nav--mobile',
+			autoplay: true, // pause for testing
+			autoplaySpeed: 4000,
 		});
 		$('.banner__nav--mobile').slick({
 			slidesToShow: 1,
 			slidesToScroll: 1,
-			asNavFor: '.banner__carousel',
+			asNavFor: '#banner-carousel',
 			dots: true,
-			appendDots: '.banner__dots--mobile',
+			appendDots: '.dots--mobile',
 		  	focusOnSelect: true,
 			adaptiveHeight: true,
 		});
@@ -293,34 +295,22 @@ $(document).ready(function () {
 
 	function createBannerDesktop() {
 		console.log('creating desktop banner...');
-		$('.banner__carousel').slick({
-			centerMode: true,
+		$('#banner-carousel').slick({
+			// centerMode: true,
+			// centerPadding: '0',
+			appendDots: '.dots',
 			dots: true,
-			appendDots: '.banner__textbox__dots--mobile',
 			mobileFirst: 'true',
-			centerPadding: '0',
+			appendArrows: '.slick-list',
 			// autoplay: true, // pause for testing
 			autoplaySpeed: 4000,
 			slidesToShow: 1,
-
 			responsive: [
 				{
-					breakpoint: 852,
-					settings: {
-						centerPadding: '40px',
-		   				appendDots: '.banner__textbox__dots',
-					}
-				},
-				{
 					breakpoint: 1480,
-						settings: {
-						// arrows: false,
-						appendArrows: '.slick-list',
+					settings: {
 						centerMode: true,
-		   				appendDots: '.banner__textbox__dots',
-						// centerPadding: '12%',
 						centerPadding: 'calc((100vw - 1400px) / 2)',
-						slidesToShow: 1
 					}
 				}
 		   	]
@@ -357,13 +347,13 @@ $(document).ready(function () {
 		
 		// destroy desktop banner
 		if(slickCreatedDesktop) {
-			$('.banner__carousel').slick('unslick');
+			$('#banner-carousel').slick('unslick');
 			slickCreatedDesktop = false;
 		}
 		
 		// destroy mobile banner
 		if(slickCreatedMobile) {
-			$('.banner__carousel').slick('unslick');
+			$('#banner-carousel').slick('unslick');
 			$('.banner__nav--mobile').slick('unslick');
 			slickCreatedMobile = false;
 		}

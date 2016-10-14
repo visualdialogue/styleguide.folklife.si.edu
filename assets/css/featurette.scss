@@ -40,29 +40,20 @@ conversion: 				| mobile 	| tablet	| desktop
 	&:last-of-type {
 		margin-bottom: 0;
 	}
-	&__image, &__details {
+	&__details, &__image {
 		display: inline-block;
-		vertical-align: top;
-	}
-	&__image {
-		width: 50%;
+		vertical-align: top;	
 	}
 	&__details {
 		width: 50%;
-		padding: 3vw 2vw 0;
-		@include respond-to(break2) {
-			padding: 1.35vw 1vw 0;
-		}
-		@include respond-to(fullwidth) {
-			padding: 2rem 1.8rem 0;
-		}
+		// padding: 3vw 2vw 0;
 	}
-	&__category {
+	&__image {
+		display: inline-block;
+		vertical-align: top;
+		width: 50%;
 	}
-	&__title, &__subtitle {
-		@extend %subtitle--sans;
-	}
-	&__title {
+	.title {
 		font-weight: 700;
 	}
 }
