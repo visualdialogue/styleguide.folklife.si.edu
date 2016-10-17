@@ -1370,8 +1370,7 @@
 		}
 	}
 
-
-/* #Explore Collections
+/* #half sections
 -------------------------------------------------- */
 	$section--half-padding-mobile: 4rem;
 	$section--half-padding-tablet: 2.7%;
@@ -1397,6 +1396,7 @@
 			}
 		}
 	}
+
 	.vertical-rule {
 		display: none;
 		@include respond-to(break2) {
@@ -1415,12 +1415,9 @@
 		}
 	}
 
-	// #primaryNav a:link { 
-	//  background-image: url('image.jpg');
-	//  background-position: right;
-	//  background-repeat: no-repeat;
-	//  display: block; /* make the link background clickable */
-	// }
+
+/* #Explore Collections
+-------------------------------------------------- */
 	.explore-collections__featurette, .teach__featurette {
 		// height: 27vw;
 		@include respond-to(break2) {
@@ -1442,12 +1439,44 @@
 			@extend %title--serif;
 			font-style: italic;
 		}
-	}
 
+	}
 
 
 /* #Teach
 -------------------------------------------------- */
+	.section--teach {
+		.details {
+			padding-left: 0;
+			@include respond-to(break2max) {
+				min-height: 17vw;
+			}
+
+		}
+		.title {
+			@extend %subtitle--sans;
+			font-weight: 400;
+		}
+	}
+
+/* #Newsletter Signup & Support
+-------------------------------------------------- */
+	.section--newsletter-signup {
+		margin-bottom: 2rem;
+	}
+	.newsletter-signup__copy {
+		background-color: $black10;
+		@extend %subtitle--sans;
+	}
+	.newsletter-signup-form {
+		width: 100%;
+	}
+	.newsletter__input {
+		background-color: $black20;
+		width: 100%;
+		@extend %email-newsletter;
+		height: 7.6rem;
+	}
 
 /* Footer
 -------------------------------------------------- */

@@ -1,15 +1,20 @@
 .container
-	.row
-		hr.hr--folklife
+	hr.hr--folklife
 
-section.container.section--email-support
+//- Newsletter signup and Support
+.container
 	.row
-		.col-sm-6.email-support__newsletter.clearfix
-			.email-support__feature__inner
-				= $page->newsletter_text()
-		.col-sm-6.email-support__support.clearfix
-			= $page->support_text()
-			= $page->support_button_text()
+		section.col-sm-6.section--half.section--newsletter-signup
+			.newsletter-signup.clearfix
+				.newsletter-signup__copy
+					.details.details--inset.details--tight
+						= $page->newsletter_text()
+				form(action="/").newsletter-signup-form.newsletter
+						input.newsletter__input.details.details--inset.details--tight(type="email" placeholder="Enter your email")
+		section.col-sm-6.section--half.section--newsletter-signup
+			.newsletter-support__support.clearfix
+				= $page->support_text()
+				= $page->support_button_text()
 
 footer.footer#footer
 	.container

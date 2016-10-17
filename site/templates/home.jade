@@ -169,7 +169,7 @@ section.container.section--dive-deep
 			ul.row.explore-collections__featurette-list
 				- foreach ($page->explore_collections_featurettes()->toStructure() as $featurette):
 					- if($src = $page->image($featurette->src())):
-						li.col-sm-6.explore-collections__featurette
+						li.col-xs-6.col-sm-6.explore-collections__featurette
 							img(src="<?= $src->url() ?>")
 							.explore-collections__details.details.details--tight
 								.title= $featurette->title()
@@ -179,15 +179,13 @@ section.container.section--dive-deep
 
 		section.col-sm-6.section--half.section--teach
 			h2.section__title Teach
-		
 			ul.row.teach__featurette-list
 				- foreach ($page->teach_featurettes()->toStructure() as $featurette):
 					- if($src = $page->image($featurette->src())):
-						li.col-sm-4.teach__featurette
-							img.teach__image--featurette(src="<?= $src->url() ?>")
-							.teach__featurette__details
-								.teach__featurette__category.category= $featurette->category()
-								.teach__featurette__title= $featurette->title()
+						li.col-xs-6.col-sm-4.teach__featurette
+							img(src="<?= $src->url() ?>")
+							.teach__featurette__details.details.details--tight
+								.title= $featurette->title()
 					- endif
 				- endforeach
 

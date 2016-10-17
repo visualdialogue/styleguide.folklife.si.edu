@@ -257,18 +257,18 @@ body {
       line-height: 1.25;
       margin-bottom: 0; } }
 
-.subtitle--sans, .section--audio .subtitle, .talk-story__featurette .title, .talk-story__featurette .subtitle {
+.subtitle--sans, .section--audio .subtitle, .talk-story__featurette .title, .talk-story__featurette .subtitle, .section--teach .title, .newsletter-signup__copy {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
   line-height: 1.4;
   font-size: 4vw; }
   @media only screen and (min-width: 53.25em) {
-    .subtitle--sans, .section--audio .subtitle, .talk-story__featurette .title, .talk-story__featurette .subtitle {
+    .subtitle--sans, .section--audio .subtitle, .talk-story__featurette .title, .talk-story__featurette .subtitle, .section--teach .title, .newsletter-signup__copy {
       font-size: 1.35vw;
       line-height: 1.25; } }
   @media only screen and (min-width: 1480px) {
-    .subtitle--sans, .section--audio .subtitle, .talk-story__featurette .title, .talk-story__featurette .subtitle {
+    .subtitle--sans, .section--audio .subtitle, .talk-story__featurette .title, .talk-story__featurette .subtitle, .section--teach .title, .newsletter-signup__copy {
       line-height: 1.3;
       font-size: 2rem; } }
 
@@ -334,6 +334,10 @@ body {
 
 .date {
   font-weight: 700; }
+
+.newsletter__input {
+  font-family: "acumin-pro", Arial, sans-serif;
+  font-size: 3.5rem; }
 
 /* Sans reference
 -------------------------------------------------- */
@@ -1683,7 +1687,7 @@ select {
   .dive-deep__featurette .title {
     font-size: 5vw; } }
 
-/* #Explore Collections
+/* #half sections
 -------------------------------------------------- */
 @media only screen and (min-width: 53.25em) {
   .section--half:nth-of-type(1) {
@@ -1720,6 +1724,8 @@ select {
       background-repeat: no-repeat;
       background-size: 9px 100%; } }
 
+/* #Explore Collections
+-------------------------------------------------- */
 @media only screen and (min-width: 53.25em) {
   .explore-collections__featurette, .teach__featurette {
     height: 27vw; } }
@@ -1739,6 +1745,31 @@ select {
 
 /* #Teach
 -------------------------------------------------- */
+.section--teach .details {
+  padding-left: 0; }
+  @media only screen and (max-width: 53.25em) {
+    .section--teach .details {
+      min-height: 17vw; } }
+
+.section--teach .title {
+  font-weight: 400; }
+
+/* #Newsletter Signup & Support
+-------------------------------------------------- */
+.section--newsletter-signup {
+  margin-bottom: 2rem; }
+
+.newsletter-signup__copy {
+  background-color: #e6e6e6; }
+
+.newsletter-signup-form {
+  width: 100%; }
+
+.newsletter__input {
+  background-color: #cccccc;
+  width: 100%;
+  height: 7.6rem; }
+
 /* Footer
 -------------------------------------------------- */
 .footer {
