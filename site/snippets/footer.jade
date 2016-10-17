@@ -4,23 +4,27 @@
 //- half sections must be wrapped in container to stay in middle and together
 .container
 	.row
-		section.col-sm-6.section--half.section--newsletter-signup
+		section.col-sm-6.section--newsletter-signup
 			.newsletter-signup.clearfix
 				.newsletter-signup__copy
 					.details.details--inset.details--tight.details--tight-bottom
 						.details__inner
-							= $page->newsletter_text()
 							.icon-mail
+							= $page->newsletter_text()
 				form(action="/").newsletter-signup-form.newsletter
-						input.newsletter__input.details.details--inset.details--tight(type="email" placeholder="Enter your email")
-		section.col-sm-6.section--half.section--support
-			.newsletter-support__support.clearfix
-				= $page->support_text()
-				= $page->support_button_text()
+						input.newsletter__input.details.details--inset(type="email" placeholder="Enter your email")
+		section.col-sm-6.section--support
+			.support
+				.details.details--inset.details--tight.details--tight-bottom.clearfix
+					.details__inner
+						= $page->support_text()
+				.support__button.button
+					.button__inner
+						= $page->support_button_text()
 
 footer.footer#footer
 	.container
-		ul.footer__list.row
+		ul.footer__list.footer__list--1.row
 			li.footer__main-item.col-sm-2 
 				.footer__main-item__title Research
 				ul.footer__main-item__list
@@ -68,7 +72,7 @@ footer.footer#footer
 					li.footer__sub-item Volunteer
 					li.footer__sub-item Donate
 		hr
-		ul.footer__list.row
+		ul.footer__list.footer__list--2.row
 			li.footer__main-item.col-sm-2 
 				| Smithsonian Center for Folklife and Cultural Heritage
 			li.footer__main-item.col-sm-2 

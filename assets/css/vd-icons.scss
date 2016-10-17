@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: "vd-icons";
-  src:url("fonts/vd-icons.eot");
-  src:url("fonts/vd-icons.eot?#iefix") format("embedded-opentype"),
-    url("fonts/vd-icons.woff") format("woff"),
-    url("fonts/vd-icons.ttf") format("truetype"),
-    url("fonts/vd-icons.svg#vd-icons") format("svg");
+  src:url("vd-icons/fonts/vd-icons.eot");
+  src:url("vd-icons/fonts/vd-icons.eot?#iefix") format("embedded-opentype"),
+    url("vd-icons/fonts/vd-icons.woff") format("woff"),
+    url("vd-icons/fonts/vd-icons.ttf") format("truetype"),
+    url("vd-icons/fonts/vd-icons.svg#vd-icons") format("svg");
   font-weight: normal;
   font-style: normal;
 
@@ -67,4 +67,10 @@
 }
 .icon-share:before {
   content: "\6a";
+}
+.icon-right-thin:before {
+  content: "\6b";
+}
+.icon-mail:before {
+  content: "\6c";
 }
