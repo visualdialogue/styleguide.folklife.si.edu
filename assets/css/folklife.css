@@ -75,6 +75,9 @@
 .icon-share:before {
   content: "\6a"; }
 
+.icon-right-thin:before {
+  content: "\6b"; }
+
 /* Reset
  * from Kirby @ https://github.com/getkirby/starterkit/blob/master/assets/css/main.css
 -------------------------------------------------- */
@@ -257,18 +260,18 @@ body {
       line-height: 1.25;
       margin-bottom: 0; } }
 
-.subtitle--sans, .section--audio .subtitle, .talk-story__featurette .title, .talk-story__featurette .subtitle, .section--teach .title, .newsletter-signup__copy {
+.more-link__text, .subtitle--sans, .section--audio .subtitle, .talk-story__featurette .title, .talk-story__featurette .subtitle, .section--teach .title, .section--newsletter-signup, .section--support, .newsletter-signup__copy {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
   line-height: 1.4;
   font-size: 4vw; }
   @media only screen and (min-width: 53.25em) {
-    .subtitle--sans, .section--audio .subtitle, .talk-story__featurette .title, .talk-story__featurette .subtitle, .section--teach .title, .newsletter-signup__copy {
+    .more-link__text, .subtitle--sans, .section--audio .subtitle, .talk-story__featurette .title, .talk-story__featurette .subtitle, .section--teach .title, .section--newsletter-signup, .section--support, .newsletter-signup__copy {
       font-size: 1.35vw;
       line-height: 1.25; } }
   @media only screen and (min-width: 1480px) {
-    .subtitle--sans, .section--audio .subtitle, .talk-story__featurette .title, .talk-story__featurette .subtitle, .section--teach .title, .newsletter-signup__copy {
+    .more-link__text, .subtitle--sans, .section--audio .subtitle, .talk-story__featurette .title, .talk-story__featurette .subtitle, .section--teach .title, .section--newsletter-signup, .section--support, .newsletter-signup__copy {
       line-height: 1.3;
       font-size: 2rem; } }
 
@@ -640,6 +643,12 @@ conversion: 				| mobile 	| tablet	| desktop
   position: relative;
   top: -40px; }
 
+a {
+  color: #595959; }
+
+a:hover {
+  color: #999999; }
+
 /* Header styles
 -------------------------------------------------- */
 /* #Helpers
@@ -714,20 +723,64 @@ conversion: 				| mobile 	| tablet	| desktop
     .container {
       padding: 0 40px; } }
 
-/* General
+/* Icons
+-------------------------------------------------- */
+.more-link {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  cursor: pointer;
+  line-height: 1; }
+  @media only screen and (min-width: 53.25em) {
+    .more-link {
+      right: 4rem; } }
+  .more-link__text {
+    display: inline-block;
+    margin-right: 2vw;
+    vertical-align: top;
+    line-height: 0.9; }
+    @media only screen and (min-width: 53.25em) {
+      .more-link__text {
+        margin-right: 1vw;
+        line-height: 1.2; } }
+    @media only screen and (min-width: 1480px) {
+      .more-link__text {
+        margin-right: 1rem; } }
+  .more-link__arrow {
+    display: inline-block;
+    vertical-align: top;
+    width: auto;
+    height: auto;
+    line-height: 0.8; }
+    .more-link__arrow:before {
+      font-size: 4vw; }
+      @media only screen and (min-width: 53.25em) {
+        .more-link__arrow:before {
+          font-size: 1.5vw;
+          line-height: 1.3; } }
+      @media only screen and (min-width: 1480px) {
+        .more-link__arrow:before {
+          font-size: 2rem;
+          line-height: 1.3; } }
+
+.section--half .more-link {
+  right: 2.7%; }
+
+/* General / Sections
 -------------------------------------------------- */
 .site--folklife .site-toggle__link--folklife {
   color: #666666; }
 
-@media only screen and (min-width: 53.25em) {
-  section {
-    margin-bottom: 2.4vw; } }
-
-@media only screen and (min-width: 1480px) {
-  section {
-    margin-bottom: 5.5rem;
-    margin-bottom: 4rem;
-    margin-bottom: 7.3rem; } }
+section {
+  position: relative; }
+  @media only screen and (min-width: 53.25em) {
+    section {
+      margin-bottom: 2.4vw; } }
+  @media only screen and (min-width: 1480px) {
+    section {
+      margin-bottom: 5.5rem;
+      margin-bottom: 4rem;
+      margin-bottom: 7.3rem; } }
 
 @media only screen and (max-width: 53.25em) {
   section li {
@@ -764,21 +817,32 @@ hr {
       padding-top: 2.5rem; } }
 
 .details--inset {
-  padding: 3vw 2vw 2vw; }
+  padding: 2vw 2.5vw 2vw; }
   @media only screen and (min-width: 53.25em) {
     .details--inset {
-      padding: 2vw 1.3vw 1.3vw; } }
+      padding: 1.6vw 1.3vw 1.3vw; } }
   @media only screen and (min-width: 1480px) {
     .details--inset {
       padding: 2.5rem 2rem 2rem; } }
 
 @media only screen and (min-width: 53.25em) {
   .details--tight {
-    padding: 1.35vw 0.6vw 0 1.35vw; } }
+    padding: 0.9vw 0.8vw 0 1.1vw; } }
 
 @media only screen and (min-width: 1480px) {
   .details--tight {
-    padding: 1.4rem 1.8rem 0 2rem; } }
+    padding: 1.4rem 1.8rem 0 1.6rem; } }
+
+@media only screen and (min-width: 53.25em) {
+  .details--tight-bottom {
+    padding-bottom: 1.35vw; } }
+
+@media only screen and (min-width: 1480px) {
+  .details--tight-bottom {
+    padding-bottom: 1.4rem; } }
+
+.details__inner {
+  margin-top: -3px; }
 
 /* Nav
 -------------------------------------------------- */
@@ -1734,10 +1798,10 @@ select {
   .explore-collections__featurette, .teach__featurette {
     height: 376px; } }
 
-.explore-collections__details {
+.explore-collections .details {
   padding-left: 0; }
   @media only screen and (max-width: 53.25em) {
-    .explore-collections__details {
+    .explore-collections .details {
       min-height: 17vw; } }
 
 .explore-collections .title {

@@ -1,17 +1,18 @@
 .container
 	hr.hr--folklife
 
-//- Newsletter signup and Support
+//- half sections must be wrapped in container to stay in middle and together
 .container
 	.row
 		section.col-sm-6.section--half.section--newsletter-signup
 			.newsletter-signup.clearfix
 				.newsletter-signup__copy
-					.details.details--inset.details--tight
-						= $page->newsletter_text()
+					.details.details--inset.details--tight.details--tight-bottom
+						.details__inner
+							= $page->newsletter_text()
 				form(action="/").newsletter-signup-form.newsletter
 						input.newsletter__input.details.details--inset.details--tight(type="email" placeholder="Enter your email")
-		section.col-sm-6.section--half.section--newsletter-signup
+		section.col-sm-6.section--half.section--support
 			.newsletter-support__support.clearfix
 				= $page->support_text()
 				= $page->support_button_text()
@@ -88,9 +89,6 @@ footer.footer#footer
 					li.footer__sub-item tumblr
 					li.footer__sub-item flickr
 					li.footer__sub-item instagram
-
-
-
 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
