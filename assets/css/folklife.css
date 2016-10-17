@@ -78,6 +78,9 @@
 .icon-right-thin:before {
   content: "\6b"; }
 
+.icon-mail:before {
+  content: "\6c"; }
+
 /* Reset
  * from Kirby @ https://github.com/getkirby/starterkit/blob/master/assets/css/main.css
 -------------------------------------------------- */
@@ -1805,7 +1808,8 @@ select {
       min-height: 17vw; } }
 
 .explore-collections .title {
-  font-style: italic; }
+  font-style: italic;
+  font-weight: 600; }
 
 /* #Teach
 -------------------------------------------------- */
