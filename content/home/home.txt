@@ -8,9 +8,11 @@ Video_data:
 - category: Folklife
   title: "Honoring the Amazon: A Rainforest Craft Activity for Kids"
   src: amazon.png
+  iframe: "<iframe src="https://player.vimeo.com/video/154769481" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
 - category: Festival
   title: "Energetic Efficiency: Oil and Coal Workers at the 1978 Folklife Festival"
   src: energetic-efficiency.png
+  iframe: "<iframe src="https://player.vimeo.com/video/55021212" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
 ----
 Audio_data:
 - category: Folkways
@@ -102,7 +104,7 @@ Teach_featurettes:
 - title: "Bermuda Connections: A Cultural Resource Guide"
   src: bermuda-connections.jpg
 - title: "Wisconsin Powwow/ Naamikaaged: Dancer for the People"
-  src: wisconsin-powwow.gif
+  src: wisconsin-powwow.jpg
 - title: "White House Workers: Traditions and Memories (DVD)"
   src: white-house-workers.jpg
 - title: "Smithsonian Folklife and Oral History Interviewing Guide"

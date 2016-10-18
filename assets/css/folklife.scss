@@ -8,6 +8,7 @@
 /* Imports
 -------------------------------------------------- */
   @import "fonts.scss";
+  // @import "vd-icons.scss";
   @import "vd-icons.scss";
   @import "reset.scss";
   // @import "../bower_components/csswizardry-grids/csswizardry-grids.scss";
@@ -139,12 +140,12 @@
   }
 
   // vertical align
-  .vertically-align-grandparent {
+  @mixin vertically-align-grandparent {
   	display: table;
   	width: 100%;
   }
 
-  .vertically-align-parent {
+  @mixin vertically-align-parent {
 	position: relative;
 	-webkit-transform-style : preserve-3d;
 	-moz-transform-style    : preserve-3d;
@@ -173,6 +174,12 @@
   .anchor {
 	position: relative;
 	top:-40px;
+  }
+  a {
+  	color: $black65;
+  }
+  a:hover {
+  	color: $black40;
   }
 
 /* Header styles
@@ -233,7 +240,7 @@
 		-ms-transform: translateY(-$offset);
 		transform: translateY(-$offset);
 	}
-	@mixin border($location: all, $width: 1px, $color: $darkbrown) {
+	@mixin border($location: all, $width: 1px, $color: $black40) {
 		@if $location == top {
 		  border-top: $width solid $color;
 		} @else if $location == bottom {
@@ -308,7 +315,78 @@
 
 	// $navbarHeight: 10vw;
 
-/* General
+/* Icons
+-------------------------------------------------- */
+	.more-link {
+		position: absolute;
+		top: 0;
+		right: 15px; // match outside margins
+		cursor: pointer;
+		line-height: 1;
+  		@include respond-to(break2) {
+			right: 4rem;
+  		}
+
+		&__text {
+			@extend %subtitle--sans;
+			display: inline-block;
+			margin-right: 2vw;
+			vertical-align: top;
+			line-height: 0.9; // match section header for alignment
+  			@include respond-to(break2) {
+				// vertical-align: middle;
+				margin-right: 1vw;
+				// vertical-align: middle;
+				line-height: 1.2; // match section header for alignment
+  			}
+  			@include respond-to(fullwidth) {
+				margin-right: 1rem;
+  			}
+		}
+		&__arrow {
+			display: inline-block;
+			vertical-align: top;
+			width: auto;
+			height: auto;
+			line-height: 0.8; // for vert alignment with more text
+  			@include respond-to(break2) {
+				// vertical-align: middle;
+				// line-height: 2.4;
+				// line-height: 2.4;
+  			}
+  			@include respond-to(fullwidth) {
+				// line-height: 2.5;
+				// height: 1.7rem;
+  			}
+			&:before {
+				font-size: 4vw;
+  				@include respond-to(break2) {
+					font-size: 1.5vw;
+					line-height: 1.3;
+  				}
+  				@include respond-to(fullwidth) {
+					font-size: 2rem;
+					line-height: 1.3;
+  				}
+			}
+		}
+	}
+	.section--vr .more-link {
+		right: 2.7%; // double that of parent padding as percent
+	}
+	.icon-mail {
+		color: $black40;
+		float: right;
+		margin-left: 3vw;
+		@include respond-to(break2) {
+			margin-left: 2vw;
+		}
+		@include respond-to(fullwidth) {
+			margin-left: 2rem;
+		}
+	}
+
+/* General / Sections
 -------------------------------------------------- */
 	.site--folklife .site-toggle__link--folklife {
 		color: $black60;
@@ -317,10 +395,11 @@
 		// padding-top: 100px; // clear fixed header
 	}
 	.section__title {
-		@extend %section-header;
+		@include section-header;
 	}
 	section {
 		// margin-bottom: 0;
+		position: relative; // contain more link
 		@include respond-to(break2) {
 			margin-bottom: 2.4vw;
 		}
@@ -373,9 +452,10 @@
 	}
 	// details inner includes left and right padding, and less top padding
 	.details--inset {
-		padding: 3vw 2vw 2vw;
+		// padding: 3vw 2vw 2vw;
+		padding: 2vw 2.5vw 2vw;
 		@include respond-to(break2) {
-			padding: 2vw 1.3vw 1.3vw;
+			padding: 1.6vw 1.3vw 1.3vw;
 		}
 		@include respond-to(fullwidth) {
 			padding: 2.5rem 2rem 2rem;
@@ -384,10 +464,31 @@
 	// smaller featurette details require less padding
 	.details--tight {
 		@include respond-to(break2) {
-			padding: 1.35vw 0.6vw 0 1.35vw;
+			// padding: 1.35vw 0.6vw 0 1.35vw;
+			padding: 0.9vw 0.8vw 0 1.1vw;
 		}
 		@include respond-to(fullwidth) {
-			padding: 1.4rem 1.8rem 0 2rem;
+			// padding: 1.4rem 1.8rem 0 2rem;
+			padding: 1.6rem 1.8rem 0 1.8rem;
+		}
+	}
+	// smaller featurette details require less padding
+	.details--tight-bottom {
+		@include respond-to(break2) {
+			padding-bottom: 1.35vw;
+		}
+		@include respond-to(fullwidth) {
+			padding-bottom: 1.5rem;
+		}
+	}
+	.details__inner {
+		// counteract line height of first line for padding
+		margin-top:0;
+		@include respond-to(break2) {
+			margin-top:-2px;
+		}
+		@include respond-to(fullwidth) {
+			margin-top:-3px;
 		}
 	}
 	.title--serif {
@@ -405,6 +506,7 @@
 	.date {
 		@extend %type--date;
 	}
+
 
 /* Nav
 -------------------------------------------------- */
@@ -475,13 +577,13 @@
 		max-width: 1480px;
 		padding: 0 15px;
 		margin: 0 auto;
-		@extend .vertically-align-grandparent;
+		@include vertically-align-grandparent;
 		@include respond-to(break2) {
 			padding: 0 40px;
 		}
 	}
 	.navbar-header__inner {
-		@extend .vertically-align-parent;
+		@include vertically-align-parent;
 		position: relative;
 		z-index: 100;
 	}
@@ -882,7 +984,7 @@
 		}
 
 		&__sub-item {
-			@extend %link-font;
+			@include link-font;
 			color: $black20;
 			font-weight: 400;	
 			// line-height: 1.44;
@@ -922,7 +1024,7 @@
 		// font-weight: 700;
 		// @extend %meganav-font;
 		color: white;
-		@extend %section-header;
+		@include section-header;
 		margin-bottom: 3rem;
 		@include respond-to(break2) {
 			margin-bottom: 1.5vw;
@@ -977,7 +1079,7 @@
 		border-radius: 0;
 		padding: 10px 15px 10px;
 		width: 100%;
-		@extend %link-font;
+		@include link-font;
 		line-height: 1;
 		font-weight: 600;
 	}
@@ -1262,7 +1364,6 @@
 		}
 	}
 
-
 /* #Talkstory
 -------------------------------------------------- */
 	.section--talk-story {
@@ -1312,6 +1413,7 @@
 			@include respond-to(fullwidth) {
 				font-size: 1.5rem;
 				margin-bottom: 0.3rem;
+				margin-bottom: 0.1rem;
 			}
 		}
 		.title, .subtitle {
@@ -1371,33 +1473,33 @@
 		}
 	}
 
-
-/* #Explore Collections
+/* #half sections
 -------------------------------------------------- */
-	$section--half-padding-mobile: 4rem;
-	$section--half-padding-tablet: 2.7%;
-	$section--half-padding-desktop: 4rem;
+	$section--vr-padding-mobile: 4rem;
+	$section--vr-padding-tablet: 2.7%;
+	$section--vr-padding-desktop: 4rem;
 
 	@include respond-to(break2) {
-		.section--half:nth-of-type(1) {
-			padding-right: $section--half-padding-mobile;
+		.section--vr:nth-of-type(1) {
+			padding-right: $section--vr-padding-mobile;
 			@include respond-to(break2) {
-				padding-right: $section--half-padding-tablet;
+				padding-right: $section--vr-padding-tablet;
 			}
 			@include respond-to(fullwidth) {
-				padding-right: $section--half-padding-desktop;
+				padding-right: $section--vr-padding-desktop;
 			}
 		}
-		.section--half:nth-of-type(2) {
-			padding-left: $section--half-padding-mobile;
+		.section--vr:nth-of-type(2) {
+			padding-left: $section--vr-padding-mobile;
 			@include respond-to(break2) {
-				padding-left: $section--half-padding-tablet;
+				padding-left: $section--vr-padding-tablet;
 			}
 			@include respond-to(fullwidth) {
-				padding-left: $section--half-padding-desktop;
+				padding-left: $section--vr-padding-desktop;
 			}
 		}
 	}
+
 	.vertical-rule {
 		display: none;
 		@include respond-to(break2) {
@@ -1416,12 +1518,8 @@
 		}
 	}
 
-	// #primaryNav a:link { 
-	//  background-image: url('image.jpg');
-	//  background-position: right;
-	//  background-repeat: no-repeat;
-	//  display: block; /* make the link background clickable */
-	// }
+/* #Explore Collections
+-------------------------------------------------- */
 	.explore-collections__featurette, .teach__featurette {
 		// height: 27vw;
 		@include respond-to(break2) {
@@ -1432,7 +1530,7 @@
 		}
 	}
 	.explore-collections {
-		&__details {
+		.details {
 			padding-left: 0;
 			@include respond-to(break2max) {
 				min-height: 17vw;
@@ -1442,13 +1540,119 @@
 		.title {
 			@extend %title--serif;
 			font-style: italic;
+			font-weight: 600;
 		}
+
 	}
-
-
 
 /* #Teach
 -------------------------------------------------- */
+	.section--teach {
+		.details {
+			padding-left: 0;
+			@include respond-to(break2max) {
+				min-height: 17vw;
+			}
+
+		}
+		.title {
+			@extend %subtitle--sans;
+			font-weight: 400;
+		}
+	}
+
+/* #Newsletter Signup
+-------------------------------------------------- */
+	.section--newsletter-signup, .section--support {
+		@extend %subtitle--sans;
+		margin-bottom: 4rem;
+	}
+	.section--newsletter-signup {
+		// margin-bottom: 2rem;
+		.details {
+			min-height: initial;
+			padding-top: 1vw;
+			@include respond-to(break2) {
+				padding-top: 1.2vw;
+			}
+			@include respond-to(fullwidth) {
+				padding-top: 1.5rem;
+			}
+		}
+	}
+	.newsletter-signup__copy {
+		background-color: $black10;
+		@extend %subtitle--sans;
+		// height: 15vw;
+		@include respond-to(break2) {
+			height: 5.3vw;
+		}
+		@include respond-to(fullwidth) {
+			height: 8.1rem;
+		}
+	}
+	.newsletter-signup-form {
+		width: 100%;
+	}
+	.newsletter__input {
+		background-color: $black20;
+		width: 100%;
+		@include email-newsletter;
+		height: 12vw;
+		@include respond-to(break2) {
+			height: 5.4vw;
+		}
+		@include respond-to(fullwidth) {
+			height: 7.6rem;
+		}
+	}
+
+/* #Support
+-------------------------------------------------- */
+	.section--support {
+		// @include vertically-align-grandparent;
+	}
+	.support {
+		@include border(all, 2px, $black40);
+		position: relative; // contain support button
+		.details, &__button {
+			@include respond-to(break2) {
+				display: inline-block;
+				vertical-align: top;
+			}
+		}
+		.details {
+			@include respond-to(break2) {
+				width: 46.45%; // 314px / 676px
+				line-height: 1.25;
+			}
+		}
+		&__button {
+			background-color: $black40;
+			@include section-header;
+			margin-bottom:0;
+			padding: 3vw;
+			color: white;
+			text-align: center;
+			@include respond-to(break2) {
+				padding: 0;
+				@include vertically-align-parent;
+				width: 53.55%; // 100 - 46.45%
+				// height: 100%;
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+			}
+		}
+	}
+	.button__inner {
+		line-height: 1.5;
+		@include respond-to(break2) {
+			@include vertically-align;
+			line-height: 1.1;
+		}
+	}
 
 /* #footer
 -------------------------------------------------- */
@@ -1457,5 +1661,20 @@
 		color: white;
 		&__logo {
 			@include type--logo;
+		}
+		&__list--1 {
+			margin-bottom: 1rem;
+			@include respond-to(break2) {
+				margin-bottom: 3.4rem;
+			}
+		}
+		&__list--2 {
+			margin-top: 4vw;
+			@include respond-to(break2) {
+				margin-top: 1.7vw;
+			}
+			@include respond-to(fullwidth) {
+				margin-top: 2.5rem; // 30 px
+			}
 		}
 	}
