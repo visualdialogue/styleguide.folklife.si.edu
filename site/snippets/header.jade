@@ -17,6 +17,7 @@ head
 	//- <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow:400,700" rel="stylesheet"> 
 
 	<!-- “Entypo pictograms by Daniel Bruce — www.entypo.com” -->
+	<!-- Font Awesome icons by Dave Gandy -->
 
 	<link href="assets/css/bootstrap.css" rel="stylesheet">
 
@@ -48,15 +49,23 @@ nav.navbar
 						img.logo--folklife(src="assets/images/logo/folklife.png")
 						img.logo--center(src="assets/images/logo/center.png")
 			.nav-icons											
-				.search-icon.nav-icon#search-icon(aria-hidden="true")
-				.menu-icon.nav-icon#menu-icon(aria-hidden="true")
-				.share-icon.nav-icon#share-icon(aria-hidden="true")
+				//- .search-icon.nav-icon.nav-icon--main#search-icon(aria-hidden="true")
+				.icon-search.nav-icon.nav-icon--main#search-icon(aria-hidden="true")
+				//- .menu-icon.nav-icon.nav-icon--main#menu-icon(aria-hidden="true")
+				.icon-menu.nav-icon.nav-icon--main#menu-icon(aria-hidden="true")
+				//- .share-icon.nav-icon(aria-hidden="true")
+				.icon-share.nav-icon.nav-icon--main#share-icon(aria-hidden="true")
 				.social-icons.social-icons--desktop
-					a.social-icon-link(href="http://www.facebook.com/smithsonianfolklifefestival" target="_blank"): .facebook-icon.social-icon.social-icon--desktop.nav-icon(aria-hidden="true")
-					a.social-icon-link(href="https://twitter.com/smithsonianfolk" target="_blank"): .twitter-icon.social-icon.social-icon--desktop.nav-icon(aria-hidden="true")
-					a.social-icon-link(href="http://smithsonianfolklife.tumblr.com/" target="_blank"): .tumblr-icon.social-icon.social-icon--desktop.nav-icon(aria-hidden="true")
-					a.social-icon-link(href="https://www.flickr.com/groups/2016folklifefestival" target="_blank"): .flickr-icon.social-icon.social-icon--desktop.nav-icon(aria-hidden="true")
-					a.social-icon-link(href="https://www.instagram.com/smithsonianfolklife/" target="_blank"): .instagram-icon.social-icon.social-icon--desktop.nav-icon(aria-hidden="true")
+					//- a.social-icon-link(href="http://www.facebook.com/smithsonianfolklifefestival" target="_blank"): .facebook-icon.social-icon.nav-icon(aria-hidden="true")
+					a.social-icon-link(href="http://www.facebook.com/smithsonianfolklifefestival" target="_blank"): .icon-facebook.social-icon.nav-icon(aria-hidden="true")
+					//- a.social-icon-link(href="https://twitter.com/smithsonianfolk" target="_blank"): .twitter-icon.social-icon.nav-icon(aria-hidden="true")
+					a.social-icon-link(href="https://twitter.com/smithsonianfolk" target="_blank"): .icon-twitter.social-icon.nav-icon(aria-hidden="true")
+					//- a.social-icon-link(href="http://smithsonianfolklife.tumblr.com/" target="_blank"): .tumblr-icon.social-icon.nav-icon(aria-hidden="true")
+					a.social-icon-link(href="http://smithsonianfolklife.tumblr.com/" target="_blank"): .icon-tumblr.social-icon.nav-icon(aria-hidden="true")
+					//- a.social-icon-link(href="https://www.flickr.com/groups/2016folklifefestival" target="_blank"): .flickr-icon.social-icon.nav-icon(aria-hidden="true")
+					a.social-icon-link(href="https://www.flickr.com/groups/2016folklifefestival" target="_blank"): .icon-flickr.social-icon.nav-icon(aria-hidden="true")
+					//- a.social-icon-link(href="https://www.instagram.com/smithsonianfolklife/" target="_blank"): .instagram-icon.social-icon.nav-icon(aria-hidden="true")
+					a.social-icon-link(href="https://www.instagram.com/smithsonianfolklife/" target="_blank"): .icon-instagrem.social-icon.nav-icon(aria-hidden="true")
 
 				// Search Bar
 				form.search-bar.search-bar--desktop.no-mobile.form(action=".")
@@ -116,11 +125,16 @@ nav.navbar
 	<!-- Collect the nav links, forms, and other content for toggling -->
 	.collapse.navbar-collapse(id="bs-example-navbar-collapse-1")
 	.social-icons.social-icons--mobile.mobile-only
-		a.social-icon-link(href="http://www.facebook.com/smithsonianfolklifefestival" target="_blank"): .facebook-icon.social-icon.social-icon--mobile.nav-icon(aria-hidden="true")
-		a.social-icon-link(href="https://twitter.com/smithsonianfolk" target="_blank"): .twitter-icon.social-icon.social-icon--mobile.nav-icon(aria-hidden="true")
-		a.social-icon-link(href="http://smithsonianfolklife.tumblr.com/" target="_blank"): .tumblr-icon.social-icon.social-icon--mobile.nav-icon(aria-hidden="true")
-		a.social-icon-link(href="https://www.flickr.com/groups/2016folklifefestival" target="_blank"): .flickr-icon.social-icon.social-icon--mobile.nav-icon(aria-hidden="true")
-		a.social-icon-link(href="https://www.instagram.com/smithsonianfolklife/" target="_blank"): .instagram-icon.social-icon.social-icon--mobile.nav-icon(aria-hidden="true")
+		//- a.social-icon-link(href="http://www.facebook.com/smithsonianfolklifefestival" target="_blank"): .facebook-icon.social-icon.social-icon--mobile.nav-icon(aria-hidden="true")
+		a.social-icon-link(href="http://www.facebook.com/smithsonianfolklifefestival" target="_blank"): .icon-facebook.social-icon.social-icon--mobile.nav-icon(aria-hidden="true")
+		//- a.social-icon-link(href="https://twitter.com/smithsonianfolk" target="_blank"): .twitter-icon.social-icon.social-icon--mobile.nav-icon.nav-icon(aria-hidden="true")
+		a.social-icon-link(href="https://twitter.com/smithsonianfolk" target="_blank"): .icon-twitter.social-icon.social-icon--mobile.nav-icon(aria-hidden="true")
+		//- a.social-icon-link(href="http://smithsonianfolklife.tumblr.com/" target="_blank"): .tumblr-icon.social-icon.social-icon--mobile.nav-icon.nav-icon(aria-hidden="true")
+		a.social-icon-link(href="http://smithsonianfolklife.tumblr.com/" target="_blank"): .icon-tumblr.social-icon.social-icon--mobile.nav-icon(aria-hidden="true")
+		//- a.social-icon-link(href="https://www.flickr.com/groups/2016folklifefestival" target="_blank"): .flickr-icon.social-icon.social-icon--mobile.nav-icon.nav-icon(aria-hidden="true")
+		a.social-icon-link(href="https://www.flickr.com/groups/2016folklifefestival" target="_blank"): .icon-flickr.social-icon.social-icon--mobile.nav-icon(aria-hidden="true")
+		//- a.social-icon-link(href="https://www.instagram.com/smithsonianfolklife/" target="_blank"): .instagram-icon.social-icon.social-icon--mobile.nav-icon.nav-icon(aria-hidden="true")
+		a.social-icon-link(href="https://www.instagram.com/smithsonianfolklife/" target="_blank"): .icon-instagrem.social-icon.social-icon--mobile.nav-icon(aria-hidden="true")
 	form.search-bar.search-bar--mobile.mobile-only(action=".")
 		input(placeholder="Search..." type="search")
 	.browsenav#browsenav

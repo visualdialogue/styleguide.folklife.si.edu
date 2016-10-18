@@ -14,7 +14,7 @@
   // @import "../bower_components/csswizardry-grids/csswizardry-grids.scss";
   @import "media-queries.scss";
   @import "colors.scss"; // colors may be used in type.scss
-  @import "icon-application.scss";
+  @import "icons.scss";
   @import "type.scss";
   @import "featurette.scss";
   @import "padding.scss";
@@ -707,21 +707,23 @@
 		right: 0;
 		text-align:right;
 		margin-top: 12px;
+		margin-right: -10px;
 		@include respond-to(break2) {
 			margin-top:0;
+			margin-right: 0;
 			@include vertically-align();
 			width: 66.66667%;
 		}
 	}
 	.nav-icon {
 		display:inline-block;
-		vertical-align: top;
+		// vertical-align: top;
 		cursor: pointer;
 		float: right;
-		margin: 2px;
+		// margin: 2px;
 		opacity: 1; // so bright white on mobile
 		@include respond-to(break2) {
-			margin: 5px;
+			// margin: 5px;
 		}
 	}
 	.lighter-nav-icons {
@@ -738,48 +740,17 @@
 	.social-icons, .search-bar {
 		@include respond-to(break2max) {
 			height: 5rem;
+			// height: 15vw; // responsive with responsive social icons
 		}
 	}
 	.social-icon-link {
 		display: inline-block;
 		@include respond-to(break2max) {
 			padding: 10px;
+			// padding: 2vw; // responsive with responsive icon font
 		}
 	}
-	.social-icons {
-		text-align: right;
-		&--mobile {
-			padding: 0;
-			// place above outside click
-			position: relative;
-			z-index: 10;
-			@include respond-to(break2) {
-				display: none !important; // override js hiding and showing
-			}
-		}
-		&--desktop {
-			@include respond-to(break2max) {
-				display: none !important; // override js hiding and showing
-			}
-			display: none; // initial hide
-		}
-		.social-icon {
-			// padding: 25px;
-		}
-		@include respond-to(break2max) {
-			display: none;
-			background-color: white;
-			width: 100%;
-			left: 0;
-			
-		}
-	}
-	.social-icon {
-		margin: 5px 2px;
-		@include respond-to(break2) {
-			margin: 4px 2px 0;
-		}
-	}
+	
 
 	// SEARCH BAR
 	.search-bar {
@@ -1009,7 +980,7 @@
 		background-color: $black40;
 		position: relative;
 		z-index: 10;
-		top: 1rem;
+		top: 3rem;
 		// padding: 3rem 0 1rem; // really 40 px with line-height
 		@include respond-to(break2) {
 			padding: 2.8vw 0 2vw; // really 40 px with line-height

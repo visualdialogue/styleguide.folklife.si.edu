@@ -84,6 +84,9 @@
 .icon-instagrem:before {
   content: "\6d"; }
 
+.icon-menu:before {
+  content: "\6e"; }
+
 /* Reset
  * from Kirby @ https://github.com/getkirby/starterkit/blob/master/assets/css/main.css
 -------------------------------------------------- */
@@ -151,6 +154,10 @@ a:hover, .main-copy h2 a:hover {
 
 /* Icons
 -------------------------------------------------- */
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  vertical-align: middle; }
+
 .icon-stack {
   position: relative;
   display: inline-block;
@@ -163,6 +170,62 @@ a:hover, .main-copy h2 a:hover {
     left: 0;
     width: 100%;
     text-align: center; }
+
+/* Navbar
+-------------------------------------------------- */
+.nav-icon {
+  color: white;
+  font-size: 2.3rem;
+  line-height: 0.9; }
+  @media only screen and (min-width: 53.25em) {
+    .nav-icon {
+      font-size: 3.8rem;
+      margin: 5px;
+      line-height: 0.7; } }
+  @media only screen and (min-width: 1480px) {
+    .nav-icon {
+      font-size: 3.8rem; } }
+  @media only screen and (max-width: 53.25em) {
+    .nav-icon--main {
+      margin: 1.5vw; } }
+  .nav-icon--main:hover {
+    color: #999999; }
+
+.social-icons {
+  text-align: right; }
+  .social-icons--mobile {
+    padding: 0;
+    position: relative;
+    z-index: 10; }
+    @media only screen and (min-width: 53.25em) {
+      .social-icons--mobile {
+        display: none !important; } }
+  .social-icons--desktop {
+    display: none; }
+    @media only screen and (max-width: 53.25em) {
+      .social-icons--desktop {
+        display: none !important; } }
+  @media only screen and (max-width: 53.25em) {
+    .social-icons {
+      display: none;
+      background-color: white;
+      width: 100%;
+      left: 0; } }
+
+.social-icon-link {
+  vertical-align: middle; }
+
+.social-icon-link:hover, .social-icon-link:focus {
+  text-decoration: none; }
+
+.social-icon {
+  color: #999999; }
+  .social-icon:hover {
+    color: white;
+    text-decoration: none; }
+  @media only screen and (max-width: 53.25em) {
+    .social-icon--mobile {
+      margin: 4px; } }
 
 .icon-play-button .icon-circle {
   color: #cccccc; }
@@ -211,6 +274,8 @@ body {
   font-family: "balboa", Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 300;
+  font-weight: 700;
+  letter-spacing: 1px;
   font-size: 4vw; }
   @media only screen and (min-width: 53.25em) {
     .meganav__title, .footer__title {
@@ -1035,10 +1100,12 @@ img.logo--folklife, img.logo--center {
 .nav-icons {
   right: 0;
   text-align: right;
-  margin-top: 12px; }
+  margin-top: 12px;
+  margin-right: -10px; }
   @media only screen and (min-width: 53.25em) {
     .nav-icons {
       margin-top: 0;
+      margin-right: 0;
       position: absolute;
       top: 50%;
       -webkit-transform: translateY(-50%);
@@ -1048,14 +1115,9 @@ img.logo--folklife, img.logo--center {
 
 .nav-icon {
   display: inline-block;
-  vertical-align: top;
   cursor: pointer;
   float: right;
-  margin: 2px;
   opacity: 1; }
-  @media only screen and (min-width: 53.25em) {
-    .nav-icon {
-      margin: 5px; } }
 
 .lighter-nav-icons {
   opacity: 0.2; }
@@ -1077,33 +1139,6 @@ img.logo--folklife, img.logo--center {
   @media only screen and (max-width: 53.25em) {
     .social-icon-link {
       padding: 10px; } }
-
-.social-icons {
-  text-align: right; }
-  .social-icons--mobile {
-    padding: 0;
-    position: relative;
-    z-index: 10; }
-    @media only screen and (min-width: 53.25em) {
-      .social-icons--mobile {
-        display: none !important; } }
-  .social-icons--desktop {
-    display: none; }
-    @media only screen and (max-width: 53.25em) {
-      .social-icons--desktop {
-        display: none !important; } }
-  @media only screen and (max-width: 53.25em) {
-    .social-icons {
-      display: none;
-      background-color: white;
-      width: 100%;
-      left: 0; } }
-
-.social-icon {
-  margin: 5px 2px; }
-  @media only screen and (min-width: 53.25em) {
-    .social-icon {
-      margin: 4px 2px 0; } }
 
 .search-bar {
   display: none;
@@ -1395,7 +1430,7 @@ select {
   background-color: #999999;
   position: relative;
   z-index: 10;
-  top: 1rem; }
+  top: 3rem; }
   @media only screen and (min-width: 53.25em) {
     .browsenav {
       padding: 2.8vw 0 2vw; } }
