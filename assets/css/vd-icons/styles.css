@@ -71,3 +71,9 @@
 .icon-right-thin:before {
   content: "\6b";
 }
+.icon-mail:before {
+  content: "\6c";
+}
+.icon-instagrem:before {
+  content: "\6d";
+}

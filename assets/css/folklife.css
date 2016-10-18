@@ -81,6 +81,9 @@
 .icon-mail:before {
   content: "\6c"; }
 
+.icon-instagrem:before {
+  content: "\6d"; }
+
 /* Reset
  * from Kirby @ https://github.com/getkirby/starterkit/blob/master/assets/css/main.css
 -------------------------------------------------- */
@@ -164,47 +167,41 @@ a:hover, .main-copy h2 a:hover {
 .icon-play-button .icon-play {
   color: #333333; }
 
-[class^="icon-"],
-[class*=" icon-"] {
+.icon-play-button, .icon-circle, .icon-play {
   width: 10vw;
   height: 10vw; }
   @media only screen and (min-width: 53.25em) {
-    [class^="icon-"],
-    [class*=" icon-"] {
+    .icon-play-button, .icon-circle, .icon-play {
       width: 4vw;
       height: 4vw; } }
   @media only screen and (min-width: 1480px) {
-    [class^="icon-"],
-    [class*=" icon-"] {
+    .icon-play-button, .icon-circle, .icon-play {
       width: 6rem;
       height: 6rem; } }
 
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
+.icon-circle:before, .icon-play:before {
   font-size: 10vw; }
   @media only screen and (min-width: 53.25em) {
-    [class^="icon-"]:before,
-    [class*=" icon-"]:before {
+    .icon-circle:before, .icon-play:before {
       font-size: 4vw; } }
   @media only screen and (min-width: 1480px) {
-    [class^="icon-"]:before,
-    [class*=" icon-"]:before {
+    .icon-circle:before, .icon-play:before {
       font-size: 6rem; } }
 
 body {
   font-family: "acumin-pro", Arial, sans-serif; }
 
-.meganav__main-item__title, .footer__main-item__title {
+.meganav__title, .footer__title {
   font-family: "balboa", Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 300;
   font-size: 4vw; }
   @media only screen and (min-width: 53.25em) {
-    .meganav__main-item__title, .footer__main-item__title {
+    .meganav__title, .footer__title {
       font-size: 1.5vw;
       line-height: 1.2; } }
   @media only screen and (min-width: 1480px) {
-    .meganav__main-item__title, .footer__main-item__title {
+    .meganav__title, .footer__title {
       font-size: 2.2rem; } }
 
 .title--sans, .section--audio .title {
@@ -944,7 +941,7 @@ hr {
   overflow: hidden;
   display: inline-block; }
 
-img.sunburst {
+img.sunsplash {
   width: 4.5vw;
   width: 15px;
   display: inline-block;
@@ -952,7 +949,7 @@ img.sunburst {
   position: relative;
   display: none; }
   @media only screen and (min-width: 53.25em) {
-    img.sunburst {
+    img.sunsplash {
       display: inline-block;
       width: 30px; } }
 
@@ -999,7 +996,7 @@ img.logo--folklife, img.logo--center {
         -ms-transition: all 0.3s ease;
         -o-transition: all 0.3s ease;
         transition: all 0.3s ease; } }
-  .smaller-header img.sunburst {
+  .smaller-header img.sunsplash {
     position: relative;
     top: 0.7rem; }
   .smaller-header img.logo--center {
@@ -1007,7 +1004,7 @@ img.logo--folklife, img.logo--center {
   .smaller-header img.logo--folklife {
     top: -25%; }
   @media only screen and (min-width: 53.25em) {
-    .smaller-header img.sunburst {
+    .smaller-header img.sunsplash {
       top: 0.3rem; }
     .smaller-header img.logo--center {
       top: -8rem; }
@@ -1336,20 +1333,21 @@ select {
   padding: 0 0 0.5rem; }
   @media only screen and (min-width: 53.25em) {
     .meganav, .footer {
-      padding: 3.6rem 0 2.6rem; } }
-  .meganav__main-item__title, .footer__main-item__title {
+      padding: 3.6rem 0 2.6rem;
+      padding: 4rem 0 2.6rem; } }
+  .meganav__title, .footer__title {
     color: white;
     cursor: pointer;
     padding: 10px 0 0; }
-    .meganav__main-item__title:hover, .footer__main-item__title:hover {
+    .meganav__title:hover, .footer__title:hover {
       color: #cccccc; }
     @media only screen and (min-width: 53.25em) {
-      .meganav__main-item__title, .footer__main-item__title {
+      .meganav__title, .footer__title {
         padding: 0; } }
-  .meganav__main-item__list, .footer__main-item__list {
+  .meganav__list, .footer__list {
     display: none; }
     @media only screen and (min-width: 53.25em) {
-      .meganav__main-item__list, .footer__main-item__list {
+      .meganav__list, .footer__list {
         display: inline-block; } }
   .meganav__sub-item, .footer__sub-item {
     font-family: "acumin-pro", Arial, sans-serif;
@@ -1359,6 +1357,10 @@ select {
     font-weight: 400;
     cursor: pointer; }
     @media only screen and (min-width: 53.25em) {
+      .meganav__sub-item, .footer__sub-item {
+        font-size: 1.35vw;
+        line-height: 1.45; } }
+    @media only screen and (min-width: 1480px) {
       .meganav__sub-item, .footer__sub-item {
         font-size: 2rem;
         line-height: 1.4; } }
@@ -1441,6 +1443,10 @@ select {
   line-height: 1;
   font-weight: 600; }
   @media only screen and (min-width: 53.25em) {
+    select {
+      font-size: 1.35vw;
+      line-height: 1.45; } }
+  @media only screen and (min-width: 1480px) {
     select {
       font-size: 2rem;
       line-height: 1.4; } }
@@ -1971,17 +1977,96 @@ select {
   background-color: #333333;
   color: white; }
   .footer__logo {
-    font-family: "balboa", Arial, sans-serif; }
-  .footer__list--1 {
+    font-family: "balboa", Arial, sans-serif;
+    line-height: 1.15;
+    font-size: 3.3rem;
+    color: #b3b3b3; }
+    @media only screen and (min-width: 53.25em) {
+      .footer__logo {
+        font-size: 2.2vw; } }
+    @media only screen and (min-width: 1480px) {
+      .footer__logo {
+        font-size: 3.3rem;
+        line-height: 1.15; } }
+    .footer__logo--active {
+      color: white; }
+  .footer__row--1 {
     margin-bottom: 1rem; }
     @media only screen and (min-width: 53.25em) {
-      .footer__list--1 {
+      .footer__row--1 {
         margin-bottom: 3.4rem; } }
-  .footer__list--2 {
+  .footer__row--2 {
     margin-top: 4vw; }
     @media only screen and (min-width: 53.25em) {
-      .footer__list--2 {
+      .footer__row--2 {
         margin-top: 1.7vw; } }
     @media only screen and (min-width: 1480px) {
-      .footer__list--2 {
+      .footer__row--2 {
         margin-top: 2.5rem; } }
+  .footer__list {
+    margin-bottom: 2rem; }
+    @media only screen and (min-width: 53.25em) {
+      .footer__list {
+        margin-bottom: 2vw; } }
+    @media only screen and (min-width: 1480px) {
+      .footer__list {
+        margin-bottom: 0; } }
+  @media only screen and (min-width: 53.25em) {
+    .footer .sunsplash {
+      margin-left: -2.4vw;
+      margin-right: 0.25vw; } }
+  @media only screen and (min-width: 1480px) {
+    .footer .sunsplash {
+      margin-left: -3.5rem;
+      margin-right: 0.5rem; } }
+
+.copyright-list, .footer__title {
+  margin-top: -3px; }
+
+.copyright-list, .social-media .footer__list {
+  display: block; }
+
+.copyright-list__item {
+  font-family: "acumin-pro", Arial, sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.7; }
+  @media only screen and (min-width: 53.25em) {
+    .copyright-list__item {
+      font-size: 1vw;
+      line-height: 1.45; } }
+  @media only screen and (min-width: 1480px) {
+    .copyright-list__item {
+      font-size: 1.5rem;
+      line-height: 1.5; } }
+
+.social-media__title {
+  font-family: "acumin-pro", Arial, sans-serif;
+  font-size: 1.7rem;
+  line-height: 2;
+  margin-top: -4px; }
+  @media only screen and (min-width: 53.25em) {
+    .social-media__title {
+      font-size: 1.35vw;
+      line-height: 1.45; } }
+  @media only screen and (min-width: 1480px) {
+    .social-media__title {
+      font-size: 2rem;
+      line-height: 1.4; } }
+
+.social-media__icon {
+  display: inline-block;
+  font-size: 8vw;
+  margin-right: 3vw; }
+  @media only screen and (min-width: 53.25em) {
+    .social-media__icon {
+      font-size: 2vw;
+      margin-right: 0.6vw; } }
+  @media only screen and (min-width: 1480px) {
+    .social-media__icon {
+      font-size: 3rem;
+      margin-right: 1rem; } }
+  .social-media__icon a {
+    color: #cccccc; }
+    .social-media__icon a:hover {
+      color: white;
+      text-decoration: none; }

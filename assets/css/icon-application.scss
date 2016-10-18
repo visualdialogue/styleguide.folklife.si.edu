@@ -24,8 +24,7 @@
 		color: $black80;
 	}
 }
-[class^="icon-"],
-[class*=" icon-"] {
+.icon-play-button, .icon-circle, .icon-play {
 	width: 10vw;
 	height: 10vw;
 	@include respond-to(break2) {
@@ -37,8 +36,7 @@
 		height: 6rem;
 	}
 }
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
+.icon-circle:before, .icon-play:before {
 	// font sizes for all icons
 	font-size: 10vw;
 	@include respond-to(break2) {

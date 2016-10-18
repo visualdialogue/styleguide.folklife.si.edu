@@ -73,10 +73,29 @@ body {
   font-size: 1.7rem;
   line-height: 2;
 	@include respond-to(break2) {
+		font-size: 1.35vw;
+		line-height: 1.45;
+	}
+	@include respond-to(fullwidth) {
 		font-size: 2rem;
 		// line-height: 1.5;
 		line-height: 1.4;
 	}
+}
+
+@mixin link-font--small {
+	font-family: $sans;
+  // font-size: 1.5rem;
+  font-size: 1.3rem;
+  line-height: 1.7;
+  @include respond-to(break2) {
+  	font-size: 1vw;
+  	line-height: 1.45;
+  }
+  @include respond-to(fullwidth) {
+  	font-size: 1.5rem;
+  	line-height: 1.5;
+  }
 }
 
 
@@ -228,6 +247,17 @@ body {
 
 @mixin type--logo {
 	font-family: $slabLight;
+	line-height: 1.15;
+	font-size: 3.3rem;
+	@include respond-to(break2) {
+		font-size: 2.2vw;
+	}
+	@include respond-to(fullwidth) {
+		font-size: 3.3rem;
+		line-height: 1.15;
+	}
+
+
 }
 @mixin email-newsletter {
 	font-family: $sans;
