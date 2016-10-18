@@ -272,6 +272,18 @@ body {
 	}
 }
 
+@mixin smithsonian-institution-logo {
+	font-family: $serif;
+	font-size: 5vw;
+	@include respond-to(break2) {
+		font-size: 2.3vw;
+	}
+	@include respond-to(fullwidth) {
+		font-size: 3.5rem;
+	}
+}
+
+
 
 /* Sans reference
 -------------------------------------------------- */

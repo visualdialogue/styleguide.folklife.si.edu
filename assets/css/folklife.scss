@@ -18,6 +18,7 @@
   @import "type.scss";
   @import "featurette.scss";
   @import "padding.scss";
+  @import "helpers.scss";
   // @import "../bower_components/remodal/dist/remodal.scss";
   // @import "../bower_components/remodal/dist/remodal-default-theme.scss";
   @import "../../bower_components/slick-carousel/slick/slick.scss";
@@ -1674,13 +1675,14 @@
 		}
 		&__row--2 {
 			margin-top: 4vw;
-			@include respond-to(break2) {
-				margin-top: 1.7vw;
-			}
-			@include respond-to(fullwidth) {
-				margin-top: 2.5rem; // 30 px
-				// margin-top: 1.9rem; // 20 px
-			}
+			@include respond-to(break2) { margin-top: 1.7vw; }
+			@include respond-to(fullwidth) { margin-top: 2.5rem; }
+		}
+		&__row--3 {
+			color: $black20;
+			margin-top: 8vw;
+			@include respond-to(break2) { margin-top: 2.4vw; }
+			@include respond-to(fullwidth) { margin-top: 5rem; }
 		}
 		&__list {
 			margin-bottom: 2rem;
@@ -1724,4 +1726,9 @@
 				text-decoration: none;
 			}
 		}
+	}
+	.copyright {
+		padding-top: 2vw;
+		@include respond-to(break2) {padding-top:0;}
+		@include respond-to(fullwidth) {padding-top:1px;}
 	}

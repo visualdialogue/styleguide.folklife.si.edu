@@ -2003,6 +2003,15 @@ select {
     @media only screen and (min-width: 1480px) {
       .footer__row--2 {
         margin-top: 2.5rem; } }
+  .footer__row--3 {
+    color: #cccccc;
+    margin-top: 8vw; }
+    @media only screen and (min-width: 53.25em) {
+      .footer__row--3 {
+        margin-top: 2.4vw; } }
+    @media only screen and (min-width: 1480px) {
+      .footer__row--3 {
+        margin-top: 5rem; } }
   .footer__list {
     margin-bottom: 2rem; }
     @media only screen and (min-width: 53.25em) {
@@ -2070,3 +2079,12 @@ select {
     .social-media__icon a:hover {
       color: white;
       text-decoration: none; }
+
+.copyright {
+  padding-top: 2vw; }
+  @media only screen and (min-width: 53.25em) {
+    .copyright {
+      padding-top: 0; } }
+  @media only screen and (min-width: 1480px) {
+    .copyright {
+      padding-top: 1px; } }
