@@ -1406,7 +1406,8 @@
 	.talk-story__featurette {
 		background-color: white;
 		.category {
-			margin-bottom: 0.5rem;
+			// margin-bottom: 0.5rem;
+			margin-bottom: 0;
 			@include respond-to(break2) {
 				margin-bottom: 0.3rem;
 			}

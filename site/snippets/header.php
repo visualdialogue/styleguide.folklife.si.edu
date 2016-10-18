@@ -4,7 +4,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 <title>Smithsonian Center for Folklife and Cultural Heritage | <?php echo $page->title()->html() ?></title><script src="https://use.typekit.net/roi1emx.js"></script>
-<script>try{Typekit.load({ async: true });}catch(e){}</script>
+<script>//try{Typekit.load({ async: true });}catch(e){}</script>
+<script>try{Typekit.load();}catch(e){}</script>
 <!-- “Entypo pictograms by Daniel Bruce — www.entypo.com” -->
 <link href="assets/css/bootstrap.css" rel="stylesheet"><link href="assets/css/folklife.css?v=<?= time() ?>" rel="stylesheet">
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->

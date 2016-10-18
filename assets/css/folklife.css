@@ -113,6 +113,9 @@ img {
 li {
   list-style-type: none; }
 
+input {
+  border-radius: 0; }
+
 html {
   -webkit-tap-highlight-color: transparent; }
 
@@ -1740,7 +1743,7 @@ select {
 .talk-story__featurette {
   background-color: white; }
   .talk-story__featurette .category {
-    margin-bottom: 0.5rem; }
+    margin-bottom: 0; }
     @media only screen and (min-width: 53.25em) {
       .talk-story__featurette .category {
         margin-bottom: 0.3rem; } }

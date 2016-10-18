@@ -20,7 +20,7 @@ a { text-decoration: none; }
 a[href^="tel"] { border:none; } // remove links from telephone numbers
 img { display: block; width:100%; max-width: 100%; }
 li {list-style-type: none;}
-
+input { border-radius: 0;} // remove ios rounded corners, http://stackoverflow.com/a/2918716
 
 // afer making pseudo classes active in mobile, disable default color, from https://alxgbsn.co.uk/2011/10/17/enable-css-active-pseudo-styles-in-mobile-safari/
 html {
