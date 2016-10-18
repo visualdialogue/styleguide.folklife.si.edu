@@ -603,11 +603,11 @@ conversion: 				| mobile 	| tablet	| desktop
       margin-right: -20px;
       margin-bottom: 0; } }
 
-[class^="col-"] {
+[class*="col-"] {
   padding-left: 1.35%;
   padding-right: 1.35%; }
   @media only screen and (min-width: 1480px) {
-    [class^="col-"] {
+    [class*="col-"] {
       padding-left: 20px;
       padding-right: 20px; } }
 
@@ -1739,8 +1739,10 @@ select {
 
 /* #Teach
 -------------------------------------------------- */
-/* Footer
+/* #footer
 -------------------------------------------------- */
 .footer {
   background-color: #333333;
   color: white; }
+  .footer__logo {
+    font-family: "balboa", Arial, sans-serif; }

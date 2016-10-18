@@ -206,6 +206,9 @@ body {
 	font-weight: 700;
 }
 
+@mixin type--logo {
+	font-family: $slabLight;
+}
 
 
 /* Sans reference

@@ -49,7 +49,8 @@
 			margin-bottom:0;
 		}
 	}
-	[class^="col-"] {
+	// [class^="col-"] {
+	[class*="col-"] {
 		padding-left: $gutter-medium;
 		padding-right: $gutter-medium;
 		@include respond-to(fullwidth) {
@@ -1449,9 +1450,12 @@
 /* #Teach
 -------------------------------------------------- */
 
-/* Footer
+/* #footer
 -------------------------------------------------- */
 	.footer {
 		background-color: $black80;
 		color: white;
+		&__logo {
+			@include type--logo;
+		}
 	}
