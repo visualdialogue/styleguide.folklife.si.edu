@@ -1872,7 +1872,7 @@ select {
   position: relative; }
 
 .talk-story__feature {
-  margin-bottom: 3rem; }
+  margin-bottom: 1.5rem; }
   @media only screen and (min-width: 53.25em) {
     .talk-story__feature {
       margin-bottom: 0; } }
