@@ -36,8 +36,10 @@ $(document).ready(function () {
 	/*********************
 	 * Mobile dropdown menu
 	 *********************/
-	 var $navItem = $('.meganav__main-item');
-	 var $navLists = $('.meganav__main-item__list');
+	 // var $navItem = $('.meganav__main-item');
+	 var $navItem = $('.meganav__main-item').add($('.footer__main-item'));
+	 // var $footerNavItem = $('.footer__main-item');
+	 var $navLists = $('.meganav__list').add($('.footer__list'));
 
 	 // when click a main list item
 	 $navItem.on('click', function() {
@@ -112,7 +114,7 @@ $(document).ready(function () {
 
 
 	/***************************
-	 * NAVBARRRR
+	 * NAVBAR
 	***************************/
 
 	// CLICK OUTSIDE MENU
@@ -373,5 +375,61 @@ $(document).ready(function () {
 			createBannerDesktop();
 		}
 	});
+
+	/* Past Events
+	 * dependencies: remodal.js, froogaloop.js
+	-------------------------------------------------- */
+	  var $remodal = $('.remodal');
+	  var $remodalIframe = $('.remodal__iframe');
+	  var $remodalTitle = $('.remodal__title');
+	  var $remodalDescription = $('.remodal__description');
+	  var $remodalClose = $('.remodal-close');
+	  // var $remodalOverlay = $('.remodal-overlay');
+	  var player; // global for playing, pausing
+	  var playerLoaded = false;
+
+	  // on playing a video in the gallery...
+	  $('.video').on('click', function() {
+	  	console.log('click');
+		$video_id = $(this).data('video-id');
+		// set title
+		$title = $(this).data('title');
+		$remodalTitle.html($title);
+
+		// set description
+		$description = $(this).data('description');
+		$remodalDescription.html($description);
+
+		// show close button
+		$remodalClose.removeClass('visually-hidden');
+
+		// if first time loading a video...
+		if(!playerLoaded) {
+		  var options = {
+			  id: $video_id,
+			  width: 640,
+			  autoplay: true,
+		  }
+
+		  player = new Vimeo.Player('remodal__iframe', options);
+		
+		  if(player)
+			playerLoaded = true;
+		}
+		// else just reload the player
+		else {
+		  player.loadVideo($video_id).then(function(id) {
+			// auto play
+			player.play();
+		  });
+		}
+
+	  })
+
+	  // listen for closing, from https://github.com/VodkaBears/Remodal
+	  $(document).on('closing', '.remodal', function (e) {
+		player.pause();
+	  });
+
 
 });

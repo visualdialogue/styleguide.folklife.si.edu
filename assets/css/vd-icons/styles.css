@@ -77,9 +77,9 @@
 .icon-instagrem:before {
   content: "\6d";
 }
-.icon-bars:before {
-  content: "\71";
-}
 .icon-menu:before {
   content: "\6e";
+}
+.icon-sort-desc:before {
+  content: "\6f";
 }

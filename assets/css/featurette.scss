@@ -30,7 +30,8 @@ conversion: 				| mobile 	| tablet	| desktop
 	margin-bottom:0;
 }
 .featurette {
-	margin-bottom: 3vw;
+	// margin-bottom: 3.5vw;
+	margin-bottom: 1.5rem;
 	@include respond-to(break2) {
 		margin-bottom: 2vw;
 	}

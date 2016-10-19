@@ -16,6 +16,7 @@ body {
 	letter-spacing: 1px;
 	// font-size: 2.2rem;
 	font-size: 4vw;
+	font-size: 5vw;
 	// letter-spacing: 0.5px;
 	@include respond-to(break2) {
 		// font-size: 2.5rem;
@@ -227,6 +228,7 @@ body {
 	letter-spacing: 1px;
 	// line-height: 0.8; // so margins accurate
 	margin-bottom: 0.5rem;
+	margin-bottom: 0;
 	font-size: 2.5vw;
 	@include respond-to(break2) {
 		font-size: 1.2vw;

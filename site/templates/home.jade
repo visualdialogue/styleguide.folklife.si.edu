@@ -58,17 +58,30 @@ section.section--video.container
 	h2.section__title Watch
 	ul.row
 		- foreach ($page->video_data()->toStructure() as $video):
-			li.col-sm-4
-				- if($video->iframe()->isNotEmpty()):
-					.iframe-wrapper
-						!= $video->iframe()
-				- elseif($src = $page->image($video->src())):
-					img.image(src="<?= $src->url() ?>")
+			:php
+				//- replace double with single quotes for use in jade below
+				$iframe = str_replace('"', "'", $video->iframe()) 
+			li.col-sm-4(class="video" data-iframe='<?= $iframe ?>' data-video-id='<?= $video->id() ?>' data-title='<?= $video->title() ?>' data-description='')
+				//- - if($video->iframe()->isNotEmpty()):
+				//- 	.iframe-wrapper
+				//- 		!= $video->iframe()
+				//- - elseif($src = $page->image($video->src())):
+				- if($src = $page->image($video->src())):
+					a(data-remodal-target='modal')
+						img.image(src="<?= $src->url() ?>")
 				- endif
 				.details
 					.category!= $video->category()
 					.title!= $video->title()
 		- endforeach
+	button(data-remodal-action="close" class="remodal-close visually-hidden")
+	.remodal(data-remodal-id="modal")
+		.remodal__iframe#remodal__iframe
+		.remodal__copy
+			h3.remodal__title
+			.remodal__description
+				p
+
 
 .container: hr.hr--folklife
 
@@ -174,7 +187,7 @@ section.container.section--dive-deep
 .container
 	.row
 		section.col-sm-6.section--vr.section--explore-collections.explore-collections
-			h2.section__title Explore Collections		
+			h2.section__title Collections		
 			- snippet('more-link')
 			ul.row.explore-collections__featurette-list
 				- foreach ($page->explore_collections_featurettes()->toStructure() as $featurette):
@@ -186,6 +199,8 @@ section.container.section--dive-deep
 					- endif
 				- endforeach
 			.vertical-rule
+
+		hr.hr--folklife.mobile-only
 
 		section.col-sm-6.section--vr.section--teach
 			h2.section__title Teach

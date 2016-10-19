@@ -74,21 +74,21 @@ footer.footer#footer
 		hr
 		ul.footer__row.footer__row--2.row
 			li.footer__main-item.col-sm-2
-				.footer__logo.footer__logo--active
+				.footer-logo.footer-logo--active
 					a
-						img(src="assets/images/logo/CFCH-f3xcro0.png") 
+						img.footer-logo__img.cfch-logo(src="assets/images/logo/CFCH-f3xcro0.png") 
 						//- img.sunsplash(src="assets/images/logo/sunsplash.png")
 						//- | Smithsonian Center for Folklife and Cultural Heritage
 			li.footer__main-item.col-sm-2 
-				.footer__logo
+				.footer-logo
 					a
-						img(src="assets/images/logo/SFR-f3xcro0.png") 
+						img.footer-logo__img.sfr-logo(src="assets/images/logo/SFR-f3xcro0.png") 
 						//- img.sunsplash(src="assets/images/logo/sunsplash.png")
 						//- | Smithsonian Folkways
 			li.footer__main-item.col-sm-2 
-				.footer__logo
+				.footer-logo
 					a
-						img(src="assets/images/logo/FF-f3xcro0.png") 
+						img.footer-logo__img.ff-logo(src="assets/images/logo/FF-f3xcro0.png") 
 						//- img.sunsplash(src="assets/images/logo/sunsplash.png")
 						//- | Smithsonian Folklife Festival
 			li.footer__main-item.col-sm-2 
@@ -119,6 +119,7 @@ footer.footer#footer
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="bower_components/slick-carousel/slick/slick.min.js"></script>
-<script src="assets/js/scripts.js?v=10.07"></script>
+<script src="assets/js/vendor.js?v=<?= time() ?>"></script>
+<script src="assets/js/scripts.js?v=<?= time() ?>"></script>
 </body>
 </html>

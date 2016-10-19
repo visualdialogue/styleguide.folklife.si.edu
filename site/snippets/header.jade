@@ -142,7 +142,8 @@ nav.navbar
 			.browsenav__title Browse
 			ul.browsenav__categories.row
 				li.browsenav__item.col-sm-3
-					.browsenav__inner
+					//- label so bg image will open select box. Otherwise select elements cannot have :after elements
+					label.select 
 						select
 							// first option jade-php complie bug so in html. Selected and disabled from http://stackoverflow.com/a/18180032
 							<option selected disabled>GENRE</option>
@@ -191,7 +192,7 @@ nav.navbar
 							option(value="/search?query=World") World
 							option(value="/search?query=World%20History") World History
 				li.browsenav__item.col-sm-3
-					.browsenav__inner
+					label.select 
 						select
 							<option selected disabled>LOCATION</option>
 							option(value="") North America
@@ -201,7 +202,7 @@ nav.navbar
 							option(value="") Asia
 							option(value="") Australia
 				li.browsenav__item.col-sm-3
-					.browsenav__inner
+					label.select
 						select
 							<option selected disabled>ARTISTS</option>
 							option(value="") Bobby Susser
@@ -219,7 +220,7 @@ nav.navbar
 							option(value="") Woodie Guthrie
 							option(value="") ...
 				li.browsenav__item.col-sm-3
-					.browsenav__inner
+					label.select
 						select
 							<option selected disabled>LABEL</option>
 							option(value="") Arhoolie Records

@@ -4,15 +4,15 @@ Video_data:
 - category: Folkways
   title: The Jerusalem Program Goes GALACTIC
   src: jerusalem-project.png
-  iframe: "<iframe src="https://player.vimeo.com/video/183352542" width="440" height="248" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
+  id: 100345550
 - category: Folklife
   title: "Honoring the Amazon: A Rainforest Craft Activity for Kids"
   src: amazon.png
-  iframe: "<iframe src="https://player.vimeo.com/video/154769481" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
+  id: 154769481
 - category: Festival
   title: "Energetic Efficiency: Oil and Coal Workers at the 1978 Folklife Festival"
   src: energetic-efficiency.png
-  iframe: "<iframe src="https://player.vimeo.com/video/55021212" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
+  id: 55021212
 ----
 Audio_data:
 - category: Folkways

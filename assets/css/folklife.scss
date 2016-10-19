@@ -19,8 +19,8 @@
   @import "featurette.scss";
   @import "padding.scss";
   @import "helpers.scss";
-  // @import "../bower_components/remodal/dist/remodal.scss";
-  // @import "../bower_components/remodal/dist/remodal-default-theme.scss";
+  @import "../../bower_components/remodal/dist/remodal.css";
+  @import "../../bower_components/remodal/dist/remodal-default-theme.css";
   @import "../../bower_components/slick-carousel/slick/slick.scss";
   @import "../../bower_components/slick-carousel/slick/slick-theme.scss";
 
@@ -41,7 +41,8 @@
 
 	// bootstrap gutter override
 	
-	$gutter-medium: 1.35%;
+	// $gutter-medium: 1.35%;
+	$gutter-medium: 1.9%;
 	.row {
 		margin-left: -$gutter-medium;
 		margin-right: -$gutter-medium;
@@ -427,6 +428,7 @@
 		height:11px;
 		// background-image:url(/assets/images/folklife-hr.png);
 		background-image:url(/assets/images/folklife-hr-10.12.16.png);
+		background-image:url(/assets/images/hr.jpg);
 		background-size: 100% 100%;
 		background-repeat: no-repeat;
 		margin-bottom: 5vw;
@@ -441,7 +443,8 @@
 
 	// details only include top padding
 	.details {
-		padding-top: 4vw;
+		// padding-top: 4vw;
+		padding-top: 12px;
 		min-height: 26vw; // for 3 line titles
 		@include respond-to(break2) {
 			min-height: initial; // reset
@@ -525,7 +528,7 @@
 			width: 100%;
 		}
 		@include respond-to(break2) {
-			top: 72px;
+			top: 60px;
 		}
 
 	}
@@ -550,7 +553,7 @@
 	}
 	.tagline {
 		display: inline-block;
-		padding: 17px 0;
+		padding: 11px 0;
 	}
 	.site-toggle__link {
 		color: $sitelinks;
@@ -592,7 +595,8 @@
 		background-color: $black80;
 		height: 50px;
 		@include respond-to(break2) {
-			height: 185px !important;
+			// height: 185px !important;
+			height: 178px !important;
 		}
 		&--taller {
 		}
@@ -615,8 +619,8 @@
 		}
 
 		@include respond-to(fullwidth) {
-			padding: 23px 0 23px 0;
-			height: 120px; // from layout
+			padding: 23px 0 18px 0;
+			height: 118px; // from layout
 			// line up with left side
 			font-size: 25px; // back to normal
 		}
@@ -707,6 +711,7 @@
 		right: 0;
 		text-align:right;
 		margin-top: 12px;
+		margin-top: 7px;
 		margin-right: -10px;
 		@include respond-to(break2) {
 			margin-top:0;
@@ -925,7 +930,6 @@
 
 		// keep above outside click div
 		position: relative;
-		z-index: 10;
 
 		// padding: 1rem 0 0; // 40px above and below
 		padding: 0 0 0.5rem; // 40px above and below
@@ -968,6 +972,7 @@
 	.meganav {
 		display: none;
 		background-color: $black60;
+		z-index: 10;
 	}
 	.nav-show-mobile {
 		display: inline-block;
@@ -977,13 +982,16 @@
 	// BROWSENAV
 	.browsenav {
 		display: none; // initial hide
-		background-color: $black40;
+		// background-color: $black40;
+		background-color: $black50;
 		position: relative;
 		z-index: 10;
 		top: 3rem;
+		// color: white;
 		// padding: 3rem 0 1rem; // really 40 px with line-height
 		@include respond-to(break2) {
 			padding: 2.8vw 0 2vw; // really 40 px with line-height
+			top: 0;
 		}
 		@include respond-to(fullwidth) {
 			padding: 4rem 0 4rem;
@@ -994,8 +1002,8 @@
 		// font-family: $slabExtraWide;
 		// font-weight: 700;
 		// @extend %meganav-font;
-		color: white;
 		@include section-header;
+		color: white;
 		margin-bottom: 3rem;
 		@include respond-to(break2) {
 			margin-bottom: 1.5vw;
@@ -1011,14 +1019,15 @@
 		}
 	}
 	.browsenav__inner {
-		background: url(/assets/images/icons/navicons--tablet.png) no-repeat;
+		// background: url(/assets/images/icons/navicons--tablet.png) no-repeat;
 		// background: url(/assets/images/icons/dropdown.png) no-repeat;
 		// background-position: right 0px center;
-		background-position: right 0px top -154px; 
+		// background-position: right 0px top -154px; 
 		// background-position: -220px -169px; 
 		// width: 25px; 
 		// height: 14px; 
-		background-color: white;
+		// background-color: white;
+		// background-color: $black20;
 	}
 
 
@@ -1046,15 +1055,50 @@
 		-webkit-appearance: none;
 		-moz-appearance: none;
 		cursor: pointer;
+		outline: none;
 
 		border-radius: 0;
 		padding: 10px 15px 10px;
 		width: 100%;
 		@include link-font;
-		line-height: 1;
+		line-height: 1 !important;
 		font-weight: 600;
+		width: 100%; 
+		height: 44px;
+		// from http://stackoverflow.com/a/30783140
+		// overflow:hidden;
+		// position: relative;
+		// display: block;
+
 	}
-	select { width: 100%; height: 44px; }
+	// icon font as selet dropdown arrow, from http://stackoverflow.com/questions/30782605/customize-a-select-with-font-awesome
+	.select {
+		width: 100%;
+		margin-bottom:0;
+		background-color: $black20;
+
+		&:after {
+			content: "\6f";
+			font-family: "vd-icons";
+			font-size: 3rem;
+			vertical-align: top;
+			color: $black50;
+			position: absolute;
+			right: 2rem; // clear padding right
+			top: 0;
+			background: $black20;
+			// z-index: 1;
+			line-height: 1.1;
+			text-align: center;
+			width: 10%;
+			height: 100%;      
+			pointer-events: none;
+			box-sizing: border-box; 
+		}
+		&:hover:after {
+			color: white;
+		}
+	}
 
 /* #Banner
 -------------------------------------------------- */
@@ -1255,6 +1299,76 @@
 			@extend %title--serif;
 		}
 	}
+	.video {
+		&:hover .title {
+			background-color: $black20;
+		}
+	}
+
+	// modal
+	.remodal {
+	  padding:2px 2px 20px;
+	  text-align: left;
+	  // trade gpu acceleration for correct placement of close button
+	  -webkit-transform: none;
+	  -moz-transform: none;
+	  -ms-transform: none;
+	  -o-transform: none;
+	  transform: none;
+	  @include respond-to(break1) {
+		max-width: 70%;
+	  }
+	  @include respond-to(fullwidth) {
+		max-width: 1080px;
+	  }
+	}
+	.remodal-overlay {
+	  // background: rgba(43, 46, 56, 0.9) none repeat scroll 0% 0%; // original
+	  background: rgba(0, 0, 0, 0.8) none repeat scroll 0% 0%;
+	}
+	.remodal-close {
+	  position: fixed;
+	  top:0;
+	  right:10px;
+	  left:auto;
+	  display: block;
+	  z-index: 10001;
+	  color:white;
+	  width:50px;
+	  height:50px;
+	  // pointer:cursor;
+	}
+	.remodal-close:hover {
+	  color: $black20;
+	}
+	.remodal-close::before {
+	  font-size:40px;
+	  width:50px;
+	  height:50px;
+	  line-height: 50px;
+	}
+	.remodal__iframe {
+	  position: relative;
+	  padding-bottom: 56.25%;
+	  height: 0;
+	  overflow: hidden;
+	}
+	.remodal__iframe iframe {
+	  position: absolute;
+	  top:0;
+	  left:0;
+	  max-width: 100%;
+	  width:100%;
+	  height:100%;
+	  z-index: 2;
+	}
+	.remodal__copy {
+	  padding:10px 20px;
+	}
+	.remodal__title {
+	  font-size:1.4rem; // 28px
+	  margin-bottom:10px;
+	}
 
 /* #listen
 -------------------------------------------------- */
@@ -1340,9 +1454,10 @@
 	.section--talk-story {
 		background-color: $black30;
 		padding-top: 5vw;
-		padding-bottom: 5vw;
+		// padding-bottom: 3.6vw;
+		padding-bottom: 1.5rem;
 		@include respond-to(break2max) {
-			margin-bottom: 8vw;
+			margin-bottom: 7.5vw;
 		}
 		@include respond-to(break2) {
 			// margin-bottom: 0;
@@ -1428,6 +1543,11 @@
 				margin-bottom: 0;
 				@extend %title--serif--large;
 			}	
+		}
+		&__feature {
+			@include respond-to(break2max) {
+				margin-bottom: 15px;
+			}
 		}
 		&__featurette {
 			.featurette__image {
@@ -1631,12 +1751,22 @@
 	.footer {
 		background-color: $black80;
 		color: white;
-		&__logo {
+		z-index: 1;
+		@include respond-to(break2max) { padding-top:2rem; }
+
+		&-logo {
 			@include type--logo;
 			color: $black30;
+			margin-bottom: 1vw;
 			&--active {
 				color: white;
 			}
+			&__img {
+				height: 10vw;
+				width: auto;
+				@include respond-to(break2) {height: 2rem;}
+			}
+
 		}
 		&__row--1 {
 			margin-bottom: 1rem;
@@ -1672,6 +1802,14 @@
 			}
 		}
 	}
+	.cfch-logo {
+		height: 13.4vw; // match height of other sunsplashes
+		@include respond-to(break2) {height:2.8rem;}
+	}
+	.sfr-logo {
+		margin-bottom: 3vw;
+	}
+	.ff-logo {}
 	.copyright-list, .footer__title {
 		margin-top: -3px;
 	}
@@ -1703,4 +1841,36 @@
 		padding-top: 2vw;
 		@include respond-to(break2) {padding-top:0;}
 		@include respond-to(fullwidth) {padding-top:1px;}
+	}
+
+
+/* Helpers II
+-------------------------------------------------- */
+	.visually-hidden {display:none;}
+	.hidden {display:none;}
+	.no-mobile, .no-mobile-inline {display:none;}
+	.tablet-only {display:none;}
+	.desktop-only {display:none !important;}
+	.desktop-only-inline {display:none;}
+	.break-2-only-inline {display:none;}
+	@include respond-to(break1) {
+		.mobile-only {display:none;}
+		.no-mobile {display:block;}
+		.no-mobile-inline {display:inline-block;}
+		.no-tablet {display:none;}
+		.tablet-only {display:block;}
+	}
+	@include respond-to(break2) {
+		.break-2-only-inline {display:inline-block;}
+		.mobile-tablet-only {display:none;}
+		.no-tablet {display:block;}
+		.no-tablet-inline {display: inline-block;}
+		.tablet-only {display:none;}
+		.showroom-narrow {display:none;}
+		.manufacturer-narrow {display:none;}
+		.no-desktop {display:none !important;}
+		.desktop-only {display:block !important;}
+		.desktop-only-inline {display:inline-block !important;}
+	}
+	@include respond-to(fullwidth) {
 	}
