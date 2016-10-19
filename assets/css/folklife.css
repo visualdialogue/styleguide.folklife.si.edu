@@ -661,8 +661,12 @@ conversion: 				| mobile 	| tablet	| desktop
 /* Grid System
 -------------------------------------------------- */
 .row {
-  margin-left: -1.9%;
-  margin-right: -1.9%; }
+  margin-left: -7.5px;
+  margin-right: -7.5px; }
+  @media only screen and (min-width: 53.25em) {
+    .row {
+      margin-left: -1.9%;
+      margin-right: -1.9%; } }
   @media only screen and (min-width: 1480px) {
     .row {
       margin-left: -20px;
@@ -670,8 +674,12 @@ conversion: 				| mobile 	| tablet	| desktop
       margin-bottom: 0; } }
 
 [class*="col-"] {
-  padding-left: 1.9%;
-  padding-right: 1.9%; }
+  padding-left: 7.5px;
+  padding-right: 7.5px; }
+  @media only screen and (min-width: 53.25em) {
+    [class*="col-"] {
+      padding-left: 1.9%;
+      padding-right: 1.9%; } }
   @media only screen and (min-width: 1480px) {
     [class*="col-"] {
       padding-left: 20px;

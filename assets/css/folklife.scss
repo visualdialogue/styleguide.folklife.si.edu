@@ -42,10 +42,15 @@
 	// bootstrap gutter override
 	
 	// $gutter-medium: 1.35%;
+	$gutter-small: 7.5px;
 	$gutter-medium: 1.9%;
 	.row {
-		margin-left: -$gutter-medium;
-		margin-right: -$gutter-medium;
+		margin-left: -$gutter-small;
+		margin-right: -$gutter-small;
+		@include respond-to(break2) {
+			margin-left: -$gutter-medium;
+			margin-right: -$gutter-medium;
+		}
 		@include respond-to(fullwidth) {
 			margin-left: -20px;
 			margin-right: -20px;
@@ -54,8 +59,12 @@
 	}
 	// [class^="col-"] {
 	[class*="col-"] {
-		padding-left: $gutter-medium;
-		padding-right: $gutter-medium;
+		padding-left: $gutter-small;
+		padding-right: $gutter-small;
+		@include respond-to(break2) {
+			padding-left: $gutter-medium;
+			padding-right: $gutter-medium;
+		}
 		@include respond-to(fullwidth) {
 			padding-left: 20px;
 			padding-right: 20px;
