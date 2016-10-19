@@ -1609,7 +1609,7 @@ select {
         padding: 1.35vw 1.3vw 0; } }
     @media only screen and (min-width: 1480px) {
       .banner-slide .details {
-        padding: 2rem 2.5rem 2rem 2rem; } }
+        padding: 2rem 1.7rem 2rem 2rem; } }
 
 @media only screen and (min-width: 53.25em) {
   .banner-slide:not(.slick-active):after {

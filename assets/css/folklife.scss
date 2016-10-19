@@ -1193,7 +1193,8 @@
 				padding: 1.35vw 1.3vw 0;
 			}
 			@include respond-to(fullwidth) {
-				padding: 2rem 2.5rem 2rem 2rem;
+				// padding: 2rem 2.5rem 2rem 2rem;
+				padding: 2rem 1.7rem 2rem 2rem;
 			}
 		}
 	}
