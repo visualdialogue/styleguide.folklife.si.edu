@@ -20,6 +20,8 @@ gulp.task('vendor', function() {
     // '/bower_components/jquery/dist/jquery.min.js',
     // '/bower_components/jquery.scrollTo/jquery.scrollTo.min.js',
     // '/bower_components/jquery.localScroll/jquery.localScroll.min.js',
+    './bower_components/bootstrap/dist/js/bootstrap.min.js',
+    './bower_components/slick-carousel/slick/slick.min.js',
     './bower_components/remodal/dist/remodal.js',
     './bower_components/vimeo-player-js/dist/player.min.js',
     // '/bower_components/bxslider-4/jquery3-patch/jquery.bxslider.js',

@@ -6,8 +6,7 @@
 <script>//try{Typekit.load({ async: true });}catch(e){}</script>
 <script>try{Typekit.load();}catch(e){}</script>
 <!-- “Entypo pictograms by Daniel Bruce — www.entypo.com” -->
-<!-- Font Awesome icons by Dave Gandy -->
-<link href="assets/css/bootstrap.css" rel="stylesheet"><link href="assets/css/folklife.css?v=<?= time() ?>" rel="stylesheet">
+<!-- Font Awesome icons by Dave Gandy --><link href="assets/css/folklife.css?v=<?= time() ?>" rel="stylesheet">
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
