@@ -148,7 +148,7 @@ gulp.task('styles', function() {
         .pipe(plumber())
         .pipe(sass({
             errLogToConsole: true,
-            // outputStyle: 'compressed'
+            outputStyle: 'compressed'
         }))
         .pipe(rename('folklife.css'))
         .pipe(gulp.dest('assets/css/'))
@@ -174,7 +174,7 @@ gulp.task('js', function() {
     ])
     .pipe(concat('scripts.js'))
     // .pipe(concat('../../../../bower_components/jquery/dist/jquery.js'))
-    // .pipe(uglify())
+    .pipe(uglify())
     .pipe(rename('scripts.js'))
     .pipe(gulp.dest('assets/js/'));
     // gulp.watch('/js/scripts.js',['scripts']);
