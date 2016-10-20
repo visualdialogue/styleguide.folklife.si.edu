@@ -69,7 +69,7 @@ section.section--video.container
 				.video__thumbnail
 					.center-box
 						- if($src = $page->image($video->src())):
-							a(data-remodal-target='modal')
+							a.modal-trigger
 								img.image(src="<?= $src->url() ?>")
 						- endif
 							.icon-play-button.icon-stack

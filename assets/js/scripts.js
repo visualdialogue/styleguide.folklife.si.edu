@@ -374,10 +374,10 @@ Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-crea
 * dependencies: remodal.js, vimeo-player-js
 *********************/
 	// initialize here
-	$('[data-remodal-id=modal]').remodal();
+	var remodalInstance = $('[data-remodal-id=modal]').remodal();
 
 
-	  var $remodal = $('.remodal');
+	  // var $remodal = $('.remodal');
 	  var $remodalIframe = $('.remodal__iframe');
 	  var $remodalTitle = $('.remodal__title');
 	  var $remodalDescription = $('.remodal__description');
@@ -388,8 +388,10 @@ Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-crea
 
 	  // on playing a video in the gallery...
 	  $('.video').on('click', function() {
-	  	console.log('click');
-
+	  	// console.log('click');
+	  	// manually open remodal beacuse sometimes just doesn't do it--\/--
+	  	remodalInstance.open();
+	  	console.log('opened remodal');
 
 
 		$video_id = $(this).data('video-id');
@@ -423,35 +425,39 @@ Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-crea
 			console.log('NOT first time play');
 		  	// player = new Vimeo.Player('remodal__iframe', options);
 
-		  	player.loadVideo($video_id);
-		  // 	player.loadVideo($video_id).then(function(id) {
-				// // auto play
-				// player.play();
-		  // 	});
-		  	player.loadVideo($video_id).then(function(id) {
-		  	    // the video successfully loaded
-		  	    console.log('the video successfully loaded');
-		  	}).catch(function(error) {
-		  	    switch (error.name) {
-		  	        case 'TypeError':
-		  	            // the id was not a number
-		  	            break;
+		  	player.unload().then(function() {
+		  		  	    console.log('the video successfully UNloaded');
+		  		  	    console.log('this: ', this);
+		  		  	player.loadVideo($video_id).then(function() {
+		  		  	    // the video successfully loaded
+		  		  	    console.log('the video successfully loaded');
+		  		  	    player.ready().then(function() {
+		  		  	        // the player is ready
+		  					player.play();
+		  		  	    });
+		  		  	}).catch(function(error) {
+		  		  	    switch (error.name) {
+		  		  	        case 'TypeError':
+		  		  	            // the id was not a number
+		  		  	            break;
 
-		  	        case 'PasswordError':
-		  	            // the video is password-protected and the viewer needs to enter the
-		  	            // password first
-		  	            break;
+		  		  	        case 'PasswordError':
+		  		  	            // the video is password-protected and the viewer needs to enter the
+		  		  	            // password first
+		  		  	            break;
 
-		  	        case 'PrivacyError':
-		  	            // the video is password-protected or private
-		  	            break;
+		  		  	        case 'PrivacyError':
+		  		  	            // the video is password-protected or private
+		  		  	            break;
 
-		  	        default:
-		  	        	console.log('some other error occurred');
-		  	            // some other error occurred
-		  	            break;
-		  	    }
-		  	});
+		  		  	        default:
+		  		  	        	console.log('some other error occurred');
+		  		  	            // some other error occurred
+		  		  	            break;
+		  		  	    }
+		  		  	});
+		  	})	
+		  	
 		}
 
 	  })
