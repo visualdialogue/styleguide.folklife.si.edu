@@ -374,7 +374,11 @@ Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-crea
 * dependencies: remodal.js, vimeo-player-js
 *********************/
 	// initialize here
-	var remodalInstance = $('[data-remodal-id=modal]').remodal();
+
+	var remodalInstanceOptions = {
+		hashTracking: true
+	}
+	var remodalInstance = $('[data-remodal-id=modal]').remodal(remodalInstanceOptions);
 
 
 	  // var $remodal = $('.remodal');
@@ -389,7 +393,7 @@ Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-crea
 	  // on playing a video in the gallery...
 	  $('.video').on('click', function() {
 	  	// console.log('click');
-	  	// manually open remodal beacuse sometimes just doesn't do it--\/--
+	  	// manually open remodal because sometimes just doesn't do it--\/--
 	  	remodalInstance.open();
 	  	console.log('opened remodal');
 
@@ -440,6 +444,11 @@ Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-crea
 	  	$remodalClose.addClass('visually-hidden');
 		// player.pause();
 	  });
+
+	// close remodal with X
+	$remodalClose.on('click', function() {
+		remodalInstance.close();
+	});
 
 
 });
