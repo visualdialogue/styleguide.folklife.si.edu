@@ -407,7 +407,7 @@
 
 /* General / Sections
 -------------------------------------------------- */
-	.site--folklife .site-toggle__link--folklife {
+	.site-toggle__link.active {
 		color: $black60;
 	}
 	body {
@@ -1740,10 +1740,10 @@
 		@include email-newsletter;
 		height: 12vw;
 		@include respond-to(break2) {
-			height: 5.4vw;
+			height: 5.1vw;
 		}
 		@include respond-to(fullwidth) {
-			height: 7.6rem;
+			height: 6.1rem;
 		}
 	}
 

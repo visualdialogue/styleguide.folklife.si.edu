@@ -4,6 +4,7 @@ head
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	meta(robots="none")
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	<title>Smithsonian Center for Folklife and Cultural Heritage | <?php echo $page->title()->html() ?></title>
 	
@@ -34,8 +35,8 @@ head
 .navbar__site-toggle
 	.container
 		.tagline Championing Culture for, by, and of the People
-		a.site-toggle__link.site-toggle__link--folklife(href="/") Folklife
-		a.site-toggle__link.site-toggle__link--folkways(href="http://folkways.si.edu") Folkways
+		a.site-toggle__link.site-toggle__link--folklife.active(href="/") Folklife
+		a.site-toggle__link.site-toggle__link--folkways(href="http://folkways.lukehatfield.com") Folkways
 		a.site-toggle__link.site-toggle__link--festival(href="http://festival.si.edu") Festival
 //- nav.navbar.navbar-fixed-top
 nav.navbar

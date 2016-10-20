@@ -874,7 +874,7 @@ a:hover {
 
 /* General / Sections
 -------------------------------------------------- */
-.site--folklife .site-toggle__link--folklife {
+.site-toggle__link.active {
   color: #666666; }
 
 .section__title {
@@ -2142,10 +2142,10 @@ select {
       padding-top: 1.5rem; } }
   @media only screen and (min-width: 53.25em) {
     .newsletter__input {
-      height: 5.4vw; } }
+      height: 5.1vw; } }
   @media only screen and (min-width: 1480px) {
     .newsletter__input {
-      height: 7.6rem; } }
+      height: 6.1rem; } }
 
 /* #Support
 -------------------------------------------------- */
