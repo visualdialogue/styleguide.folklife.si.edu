@@ -415,7 +415,7 @@ Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-crea
 		else {
 			console.log('NOT first time play');
 		  	// player = new Vimeo.Player('remodal__iframe', options);
-		  	
+
 		  	player.loadVideo($video_id);
 		  // 	player.loadVideo($video_id).then(function(id) {
 				// // auto play
@@ -427,6 +427,7 @@ Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-crea
 
 	  // listen for closing, from https://github.com/VodkaBears/Remodal
 	  $(document).on('closing', '.remodal', function (e) {
+	  	$remodalClose.addClass('visually-hidden');
 		player.pause();
 	  });
 
