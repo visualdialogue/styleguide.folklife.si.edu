@@ -935,7 +935,7 @@ hr {
   min-height: 26vw; }
   @media only screen and (min-width: 53.25em) {
     .details {
-      min-height: initial;
+      min-height: auto;
       padding-top: 2vw; } }
   @media only screen and (min-width: 1480px) {
     .details {
@@ -1931,7 +1931,7 @@ select {
   min-height: 27vw; }
   @media only screen and (min-width: 53.25em) {
     .section--participate .details {
-      min-height: initial; } }
+      min-height: auto; } }
 
 /* #Talkstory
 -------------------------------------------------- */
@@ -2105,7 +2105,7 @@ select {
   margin-bottom: 4rem; }
 
 .section--newsletter-signup .details {
-  min-height: initial;
+  min-height: auto;
   padding-top: 1vw; }
   @media only screen and (min-width: 53.25em) {
     .section--newsletter-signup .details {

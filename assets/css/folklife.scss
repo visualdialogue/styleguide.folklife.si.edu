@@ -464,7 +464,7 @@
 		padding-top: 12px;
 		min-height: 26vw; // for 3 line titles
 		@include respond-to(break2) {
-			min-height: initial; // reset
+			min-height: auto; // reset
 			padding-top: 2vw;
 		}
 		@include respond-to(fullwidth) {
@@ -1489,7 +1489,7 @@
 		.details {
 			min-height: 27vw;
 			@include respond-to(break2) {
-				min-height: initial;
+				min-height: auto;
 			}
 		}
 		.title {
@@ -1710,7 +1710,7 @@
 	.section--newsletter-signup {
 		// margin-bottom: 2rem;
 		.details {
-			min-height: initial;
+			min-height: auto;
 			padding-top: 1vw;
 			@include respond-to(break2) {
 				padding-top: 1.2vw;
