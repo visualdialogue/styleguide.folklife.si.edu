@@ -373,6 +373,10 @@ Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-crea
 * Video
 * dependencies: remodal.js, vimeo-player-js
 *********************/
+	// initialize here
+	$('[data-remodal-id=modal]').remodal();
+
+
 	  var $remodal = $('.remodal');
 	  var $remodalIframe = $('.remodal__iframe');
 	  var $remodalTitle = $('.remodal__title');
@@ -385,6 +389,9 @@ Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-crea
 	  // on playing a video in the gallery...
 	  $('.video').on('click', function() {
 	  	console.log('click');
+
+
+
 		$video_id = $(this).data('video-id');
 		// set title
 		$title = $(this).data('title');
