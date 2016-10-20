@@ -425,47 +425,20 @@ Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-crea
 			console.log('NOT first time play');
 		  	// player = new Vimeo.Player('remodal__iframe', options);
 
-		  	player.unload().then(function() {
-		  		  	    console.log('the video successfully UNloaded');
-		  		  	    console.log('this: ', this);
-		  		  	player.loadVideo($video_id).then(function() {
-		  		  	    // the video successfully loaded
-		  		  	    console.log('the video successfully loaded');
-		  		  	    player.ready().then(function() {
-		  		  	        // the player is ready
-		  					player.play();
-		  		  	    });
-		  		  	}).catch(function(error) {
-		  		  	    switch (error.name) {
-		  		  	        case 'TypeError':
-		  		  	            // the id was not a number
-		  		  	            break;
-
-		  		  	        case 'PasswordError':
-		  		  	            // the video is password-protected and the viewer needs to enter the
-		  		  	            // password first
-		  		  	            break;
-
-		  		  	        case 'PrivacyError':
-		  		  	            // the video is password-protected or private
-		  		  	            break;
-
-		  		  	        default:
-		  		  	        	console.log('some other error occurred');
-		  		  	            // some other error occurred
-		  		  	            break;
-		  		  	    }
-		  		  	});
-		  	})	
-		  	
+	  		player.loadVideo($video_id).then(function() {
+	  			player.play();
+	  		});
 		}
 
 	  })
 
 	  // listen for closing, from https://github.com/VodkaBears/Remodal
 	  $(document).on('closing', '.remodal', function (e) {
+	  	player.unload().then( function() {
+	  		console.log('unloaded video');
+	  	}); // reset iframe
 	  	$remodalClose.addClass('visually-hidden');
-		player.pause();
+		// player.pause();
 	  });
 
 
