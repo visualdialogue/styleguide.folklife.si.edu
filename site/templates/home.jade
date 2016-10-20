@@ -192,8 +192,8 @@ section.container.section--dive-deep
 .container
 	.row
 		section.col-sm-6.section--vr.section--explore-collections.explore-collections
-			h2.section__title.mobile-only Collections		
-			h2.section__title.no-mobile Explore Collections		
+			h2.section__title.hidden-md Collections		
+			h2.section__title.visible-md Explore Collections		
 			- snippet('more-link')
 			ul.row.explore-collections__featurette-list
 				- foreach ($page->explore_collections_featurettes()->toStructure() as $featurette):
@@ -206,8 +206,7 @@ section.container.section--dive-deep
 				- endforeach
 			.vertical-rule
 
-		hr.hr--folklife.mobile-only
-
+		hr.hr--folklife.hidden-md
 		section.col-sm-6.section--vr.section--teach
 			h2.section__title Teach
 			- snippet('more-link')

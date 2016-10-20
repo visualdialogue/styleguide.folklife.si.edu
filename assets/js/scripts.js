@@ -2,8 +2,8 @@
 $(document).ready(function () {
 
 /***************************
- * General
- ***************************/
+* General
+***************************/
 	var screenSize = $( window ).width(),
 		$body = $('body'),
 		device, // specify size of screen
@@ -35,8 +35,8 @@ $(document).ready(function () {
 	document.addEventListener("touchstart", function() {},false);
 
 /*********************
- * Mobile dropdown menu
- *********************/
+* Mobile dropdown menu
+*********************/
 	 // var $navItem = $('.meganav__main-item');
 	 var $navItem = $('.meganav__main-item').add($('.footer__main-item'));
 	 // var $footerNavItem = $('.footer__main-item');
@@ -70,7 +70,6 @@ $(document).ready(function () {
 	 		$thisUl.addClass('nav-show-mobile'); // show child nav list
 	 	}
 	 });
-
 
 /***************************
 Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-create-an-animated-sticky-header-with-css3-and-jquery/
@@ -115,11 +114,9 @@ Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-crea
 
 	});
 
-
-
 /***************************
- * NAVBAR
-***************************/
+* NAVBAR
+**************************/
 
 	// CLICK OUTSIDE MENU
 	// activate outside navbar div
@@ -132,10 +129,9 @@ Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-crea
 		$menuIcon.add($shareIcon).add($searchIcon).show(); // show just the main icons again
 	});
 
-
 /*********************
- * Social Media Icons
- *********************/
+* Social Media Icons
+*********************/
 	var $socialMediaIconDivMobile = $('.social-icons--mobile');
 	var $socialMediaIconsMobile = $('.social-icon--mobile');
 	var $socialMediaIconsDesktop = $('.social-icons--desktop');
@@ -161,8 +157,8 @@ Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-crea
 	});
 
 /*********************
- * Search 
- *********************/
+* Search 
+*********************/
 	var $searchBar = $('.search-bar');
 	var $searchIcon = $('#search-icon');
 	var $browsenav = $('#browsenav');
@@ -175,7 +171,7 @@ Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-crea
 			$navbarOutside.css('position', 'fixed'); // activate navbarOutside
 			navCloseAll(); // close anything else that's open
 			$notSearchIcon.addClass('lighter-nav-icons'); // grey out other icons
-			$searchBar.add($browsenav).css('display', 'block'); // show social media icons
+			$searchBar.add($browsenav).show(); // show social media icons
 			searchClosed = false; // flag for closing	
 		}
 		// else is open already so JUST CLOSE IT
@@ -185,8 +181,8 @@ Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-crea
 	});
 
 /*********************
- * Menu
- *********************/
+* Menu
+*********************/
 	var $megaNav = $('#meganav');
 	var $menuIcon = $('#menu-icon');
 	var menuClosed = true;
@@ -230,8 +226,8 @@ Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-crea
 	var $notSearchIcon = $allIcons.not($searchIcon);
 
 /*********************
- * close nav
- *********************/
+* close nav
+*********************/
 	function navCloseAll() {
 		// close other icons
 		if (isMobile)
@@ -245,16 +241,16 @@ Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-crea
 
 
 /*********************
- * search
- *********************/
-	 $searchBar.on('submit', function() {
-	 	alert('We are looking into it...');
-	 });
+* search
+*********************/
+	$searchBar.on('submit', function() {
+		alert('We are looking into it...');
+	});
 
 /*********************
- * Hero Carousel
- * Uses slick.js from Ken Wheeler at http://kenwheeler.github.io/slick/
- *********************/
+* Hero Carousel
+ Uses slick.js from Ken Wheeler at http://kenwheeler.github.io/slick/
+*********************/
 	var slickCreatedMobile = false; // flag to create and destroy when needed
 	var slickCreatedDesktop = false; // flag to create and destroy when needed
 
@@ -373,9 +369,10 @@ Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-crea
 		}
 	});
 
-	/* Past Events
-	 * dependencies: remodal.js, froogaloop.js
-	-------------------------------------------------- */
+/*********************
+* Video
+* dependencies: remodal.js, vimeo-player-js
+*********************/
 	  var $remodal = $('.remodal');
 	  var $remodalIframe = $('.remodal__iframe');
 	  var $remodalTitle = $('.remodal__title');
@@ -402,6 +399,7 @@ Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-crea
 
 		// if first time loading a video...
 		if(!playerLoaded) {
+			console.log('first time play');
 		  var options = {
 			  id: $video_id,
 			  width: 640,
@@ -415,10 +413,14 @@ Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-crea
 		}
 		// else just reload the player
 		else {
-		  player.loadVideo($video_id).then(function(id) {
-			// auto play
-			player.play();
-		  });
+			console.log('NOT first time play');
+		  	// player = new Vimeo.Player('remodal__iframe', options);
+		  	
+		  	player.loadVideo($video_id);
+		  // 	player.loadVideo($video_id).then(function(id) {
+				// // auto play
+				// player.play();
+		  // 	});
 		}
 
 	  })

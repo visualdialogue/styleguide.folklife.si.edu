@@ -43,7 +43,7 @@
 	
 	// $gutter-medium: 1.35%;
 	$gutter-small: 7.5px;
-	$gutter-medium: 1.9%;
+	$gutter-medium: 1.35%;
 	.row {
 		margin-left: -$gutter-small;
 		margin-right: -$gutter-small;
@@ -218,7 +218,7 @@
 
   .sans {font-family:$sans;}
   .cf:after {content: "";display: table;clear: both;}
-  .no-mobile, .no-mobile-inline {display:none;}
+  // .no-mobile, .no-mobile-inline {display:none;}  // use bootstrap instead
   .tablet-only {display:none;}
   .desktop-only {display:none !important;}
 	.desktop-only-inline {display:none;}
@@ -226,8 +226,8 @@
   .break-2-only-inline {display:none;}
   @include respond-to(break1) {
 	.mobile-only {display:none;}
-	.no-mobile {display:block;}
-	.no-mobile-inline {display:inline-block;}
+	// .no-mobile {display:block;} // use bootstrap instead
+	// .no-mobile-inline {display:inline-block;}  // use bootstrap instead
 	.no-tablet {display:none;}
 	.tablet-only {display:block;}
   }
@@ -431,7 +431,7 @@
 	}
 	section li {
 		@include respond-to(break2max) {
-			margin-bottom: 2rem;
+			margin-bottom: 1.5rem;
 		}
 	}
 	hr {
@@ -788,7 +788,7 @@
 		padding: 0; // override bootstrap
 		@extend %small-sans-title;
 		@include respond-to(breaksearch) {
-			margin-top: 5px;
+			margin-top: 12px;
 			width: 70%; // 3/4ish of col-8 to be half of page
 		}
 		input {
@@ -1018,6 +1018,9 @@
 		// padding: 3rem 0 1rem; // really 40 px with line-height
 		@include respond-to(break2) {
 			padding: 2.8vw 0 2vw; // really 40 px with line-height
+			top: 3rem;
+		}
+		@include respond-to(breaksearch) {
 			top: 0;
 		}
 		@include respond-to(fullwidth) {
@@ -1903,5 +1906,6 @@
 /* Helpers II
 -------------------------------------------------- */
 	.visually-hidden {display:none;}
+	// .displayBlockImportant {display: block !important;} // because jQuery doesn't understand important
 	// .hidden {display:none;} // in bootstrap with !important
 	
