@@ -187,11 +187,20 @@
 	top:-40px;
   }
   a {
-  	color: $black65;
+  	color: $body;
   }
   a:hover {
-  	color: $black40;
+  	color: $body;
+	background: #b4e7f8;
+	text-decoration: none;
   }
+  
+  // ::-moz-selection {
+  //   background-color: red;
+  // }
+  // ::selection {
+  //   background-color: red;
+  // } 
 
 /* Header styles
 -------------------------------------------------- */
@@ -504,6 +513,9 @@
 			margin-top:-3px;
 		}
 	}
+	.title {
+
+	}
 	.title--serif {
 		@extend %title--serif;
 	}
@@ -768,7 +780,7 @@
 
 	// SEARCH BAR
 	.search-bar {
-		display: none;
+		display: none !important;
 		background-color: white;
 		width: 100%; // 3/4ish of col-8 to be half of page
 		float: right;
@@ -1307,11 +1319,6 @@
 	.section--video {
 		.title {
 			@extend %title--serif;
-		}
-	}
-	.video {
-		&:hover .title {
-			background-color: $black20;
 		}
 	}
 

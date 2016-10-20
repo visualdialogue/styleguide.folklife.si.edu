@@ -37,7 +37,7 @@ section.section--banner
 	.banner__nav--mobile
 		.textbox--mobile
 			.category Folklife
-			.title Turquoise Mountain Showcases Cultural Sustainability
+			.title: a Turquoise Mountain Showcases Cultural Sustainability
 			.dots
 		.textbox--mobile
 			.category Festival
@@ -72,7 +72,7 @@ section.section--video.container
 				- endif
 				.details
 					.category!= $video->category()
-					.title!= $video->title()
+					.title: a!= $video->title()
 		- endforeach
 	button(data-remodal-action="close" class="remodal-close visually-hidden")
 	.remodal(data-remodal-id="modal")
@@ -96,7 +96,7 @@ section.section--audio.container
 					.details.details--inset
 						.category!= $audio->category()
 						.title-wrapper
-							.title!= $audio->title()
+							.title: a!= $audio->title()
 							.subtitle!= $audio->album()
 						.audio-player
 							.icon-play-button.icon-stack
@@ -124,7 +124,7 @@ section.section--participate.container
 					img(src="<?= $src->url() ?>")
 					.details.details--participate
 						.date!= $event->event_date()
-						.title!= $event->title()
+						.title: a!= $event->title()
 			- endif
 		- endforeach
 
@@ -141,7 +141,7 @@ section.container.section--talk-story
 					.details.details--inset.details--tight
 						.details__inner
 							.category!= $page->talk_story_feature_category()
-							.title!= $page->talk_story_feature_title()
+							.title: a!= $page->talk_story_feature_title()
 							.subtitle!= $page->talk_story_feature_subtitle()
 		ul.col-sm-4.talk-story__featurette-list.featurette-list
 			- foreach ($page->talk_story_featurettes()->toStructure() as $featurette):
@@ -151,7 +151,7 @@ section.container.section--talk-story
 						.featurette__details.details.details--inset.details--tight
 							.details__inner
 								.category= $featurette->category()
-								.title= $featurette->title()
+								.title: a= $featurette->title()
 								.subtitle= $featurette->subtitle()
 				- endif
 			- endforeach
@@ -169,7 +169,7 @@ section.container.section--dive-deep
 				.textbox.dive-deep__textbox
 					.details.details--inset
 						.category!= $page->dive_deep_feature_category()
-						.title!= $page->dive_deep_feature_title()
+						.title: a!= $page->dive_deep_feature_title()
 		ul.col-sm-6.dive-deep__featurette-list.featurette-list
 			- foreach ($page->dive_deep_featurettes()->toStructure() as $featurette):
 				- if($src = $page->image($featurette->src())):
@@ -177,7 +177,7 @@ section.container.section--dive-deep
 						img.featurette__image(src="<?= $src->url() ?>")
 						.featurette__details.details.details--inset
 							.category= $featurette->category()
-							.title= $featurette->title()
+							.title: a= $featurette->title()
 				- endif
 			- endforeach
 
@@ -187,7 +187,8 @@ section.container.section--dive-deep
 .container
 	.row
 		section.col-sm-6.section--vr.section--explore-collections.explore-collections
-			h2.section__title Collections		
+			h2.section__title.mobile-only Collections		
+			h2.section__title.no-mobile Explore Collections		
 			- snippet('more-link')
 			ul.row.explore-collections__featurette-list
 				- foreach ($page->explore_collections_featurettes()->toStructure() as $featurette):
@@ -195,7 +196,7 @@ section.container.section--dive-deep
 						li.col-xs-6.col-sm-6.explore-collections__featurette
 							img(src="<?= $src->url() ?>")
 							.details.details--tight
-								.title= $featurette->title()
+								.title: a= $featurette->title()
 					- endif
 				- endforeach
 			.vertical-rule
@@ -211,7 +212,7 @@ section.container.section--dive-deep
 						li.col-xs-6.col-sm-4.teach__featurette
 							img(src="<?= $src->url() ?>")
 							.details.details--tight
-								.title= $featurette->title()
+								.title: a= $featurette->title()
 					- endif
 				- endforeach
 

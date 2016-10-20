@@ -305,7 +305,7 @@ $(document).ready(function () {
 			dots: true,
 			mobileFirst: 'true',
 			appendArrows: '.slick-list',
-			// autoplay: true, // pause for testing
+			autoplay: true, // pause for testing
 			autoplaySpeed: 4000,
 			slidesToShow: 1,
 			responsive: [

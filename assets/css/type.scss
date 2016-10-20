@@ -9,10 +9,12 @@ body {
 %meganav-font {
 // font-family: $knockoutNarrow;
 	font-family: $slabLight;
+	font-family: $sans;
 	text-transform: uppercase;
 	// font-weight: 700; 
-	font-weight: 300; 
-	font-weight: 700; 
+	// font-weight: 300; 
+	// font-weight: 700; $slabLight
+	font-weight: 800;
 	letter-spacing: 1px;
 	// font-size: 2.2rem;
 	font-size: 4vw;
@@ -157,7 +159,8 @@ body {
 	}
 	@include respond-to(fullwidth) {
 		line-height: 1.3;
-  		font-size: 2rem;
+  		// font-size: 2rem;
+  		font-size: 1.8rem; // oct 19 for fritz
 	}
 }
 %subtitle--sans--large {
