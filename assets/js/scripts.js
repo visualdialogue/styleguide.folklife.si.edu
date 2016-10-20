@@ -428,6 +428,30 @@ Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-crea
 				// // auto play
 				// player.play();
 		  // 	});
+		  	player.loadVideo($video_id).then(function(id) {
+		  	    // the video successfully loaded
+		  	    console.log('the video successfully loaded');
+		  	}).catch(function(error) {
+		  	    switch (error.name) {
+		  	        case 'TypeError':
+		  	            // the id was not a number
+		  	            break;
+
+		  	        case 'PasswordError':
+		  	            // the video is password-protected and the viewer needs to enter the
+		  	            // password first
+		  	            break;
+
+		  	        case 'PrivacyError':
+		  	            // the video is password-protected or private
+		  	            break;
+
+		  	        default:
+		  	        	console.log('some other error occurred');
+		  	            // some other error occurred
+		  	            break;
+		  	    }
+		  	});
 		}
 
 	  })
