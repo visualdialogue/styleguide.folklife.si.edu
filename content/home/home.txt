@@ -1,13 +1,14 @@
 Title: Home
 ----
 Video_data:
-- category: Festival
+- category: Folkways
   title: Smithsonian Folklife Festival - ONE Village
-  #src: jerusalem-project.png
+  src: jerusalem-project.png
   #src: one-village.jpg
   #src: china.jpg
-  src: clay.jpg
-  id: 100345550
+  #src: clay.jpg
+  #id: 100345550
+  id: 183352542
   description: 'With the Smithsonian Folklife Festival 2014 recently completed, we have so much to share from the wonderful two weeks spent with Kenya and China. From the people to the food to the performances, there was so many rich cultural exhibitions for all to see and learn from. Above all the amazing festivities, what is to be most valued from an unique event like this, is the cultural, worldly and human connections created. I had the pleasure and honor of interviewing Kenyan, master artist, Elkana Ong'esa who shared his beautiful thoughts regarding what it means to be "human" and what this festival means to him. This film is a tribute to all the volunteers, staff, participants and visitors who brought this cultural experience to life and contributed in so many ways with their work, talents, curiosity and passion. I hope to have done justice in conveying the sheer excitement, energy and essence of the festival in this piece. No matter who we are or what nationality we represent, the more we have the opportunity to hear each other's stories and the more we are together, the more we will see that we are, simply,"One Village".'
 - category: Folklife
   title: "Honoring the Amazon: A Rainforest Craft Activity for Kids"
