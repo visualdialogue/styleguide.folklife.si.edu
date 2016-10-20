@@ -61,15 +61,20 @@ section.section--video.container
 			:php
 				//- replace double with single quotes for use in jade below
 				$iframe = str_replace('"', "'", $video->iframe()) 
-			li.col-sm-4(class="video" data-iframe='<?= $iframe ?>' data-video-id='<?= $video->id() ?>' data-title='<?= $video->title() ?>' data-description='')
+			li.col-sm-4(class="video" data-iframe='<?= $iframe ?>' data-video-id='<?= $video->id() ?>' data-title='<?= $video->title() ?>' data-description='<?= $video->description() ?>')
 				//- - if($video->iframe()->isNotEmpty()):
 				//- 	.iframe-wrapper
 				//- 		!= $video->iframe()
 				//- - elseif($src = $page->image($video->src())):
-				- if($src = $page->image($video->src())):
-					a(data-remodal-target='modal')
-						img.image(src="<?= $src->url() ?>")
-				- endif
+				.video__thumbnail
+					.center-box
+						- if($src = $page->image($video->src())):
+							a(data-remodal-target='modal')
+								img.image(src="<?= $src->url() ?>")
+						- endif
+							.icon-play-button.icon-stack
+								.icon-circle
+								.icon-play
 				.details
 					.category!= $video->category()
 					.title: a!= $video->title()

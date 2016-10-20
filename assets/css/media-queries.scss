@@ -43,3 +43,34 @@
       @media only screen and (min-width: $fullWidth) { @content; }
     }
   }
+
+
+/* Class helpers
+-------------------------------------------------- */
+
+.no-mobile, .no-mobile-inline {display:none;}
+.tablet-only {display:none;}
+.desktop-only {display:none !important;}
+.desktop-only-inline {display:none;}
+.break-2-only-inline {display:none;}
+@include respond-to(break1) {
+  .mobile-only {display:none;}
+  .no-mobile {display:block;}
+  .no-mobile-inline {display:inline-block;}
+  .no-tablet {display:none;}
+  .tablet-only {display:block;}
+}
+@include respond-to(break2) {
+  .break-2-only-inline {display:inline-block;}
+  .mobile-tablet-only {display:none;}
+  .no-tablet {display:block;}
+  .no-tablet-inline {display: inline-block;}
+  .tablet-only {display:none;}
+  .showroom-narrow {display:none;}
+  .manufacturer-narrow {display:none;}
+  .no-desktop {display:none !important;}
+  .desktop-only {display:block !important;}
+  .desktop-only-inline {display:inline-block !important;}
+}
+@include respond-to(fullwidth) {
+}

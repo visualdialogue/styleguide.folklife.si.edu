@@ -16,11 +16,14 @@ $black15: hsl(0, 0, 85);
 $black10: hsl(0, 0, 90);
 $black08: hsl(0, 0, 92);
 
+$lightblue: #b4e7f8;
+
 /* Color Application
 -------------------------------------------------- */
 $links: red;
 $copylinks: coral;
-$hover: blue;
+$hover: $lightblue;
+// $hover: purple;
 $navbar: $black80;
 $tagline: $black50;
 $sitelinks: $black30;
