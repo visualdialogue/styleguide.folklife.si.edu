@@ -3,8 +3,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta robots="none"/><!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 <title>Smithsonian Center for Folklife and Cultural Heritage | <?php echo $page->title()->html() ?></title><script src="https://use.typekit.net/roi1emx.js"></script>
-<script>//try{Typekit.load({ async: true });}catch(e){}</script>
-<script>try{Typekit.load();}catch(e){}</script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+<script>//try{Typekit.load();}catch(e){}</script>
 <!-- “Entypo pictograms by Daniel Bruce — www.entypo.com” -->
 <!-- Font Awesome icons by Dave Gandy --><style><?php include './assets/css/critical.css'; ?></style><link rel="preload" href="assets/css/folklife.css?v=<?= time() ?>" as="style" onload="this.rel='stylesheet'"><noscript><link href="assets/css/folklife.css?v=<?= time() ?>" rel="stylesheet"></noscript>
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
