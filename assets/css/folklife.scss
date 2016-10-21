@@ -10,10 +10,13 @@
   @charset "UTF-8";
   @import "fonts.scss";
   @import "../../bower_components/bootstrap/dist/css/bootstrap.min.scss";
-  // @import "vd-icons.scss";
+  @import "../../bower_components/remodal/dist/remodal.scss";
+  @import "../../bower_components/remodal/dist/remodal-default-theme.scss";
+  @import "../../bower_components/slick-carousel/slick/slick.scss";
+  @import "../../bower_components/slick-carousel/slick/slick-theme.scss";
+  // @import "../bower_components/csswizardry-grids/csswizardry-grids.scss";
   @import "vd-icons.scss";
   @import "reset.scss";
-  // @import "../bower_components/csswizardry-grids/csswizardry-grids.scss";
   @import "media-queries.scss";
   @import "colors.scss"; // colors may be used in type.scss
   @import "icons.scss";
@@ -21,10 +24,9 @@
   @import "featurette.scss";
   @import "padding.scss";
   @import "helpers.scss";
-  @import "../../bower_components/remodal/dist/remodal.scss";
-  @import "../../bower_components/remodal/dist/remodal-default-theme.scss";
-  @import "../../bower_components/slick-carousel/slick/slick.scss";
-  @import "../../bower_components/slick-carousel/slick/slick-theme.scss";
+  @import "archives.scss";
+
+  
 
 /* Grid System
 -------------------------------------------------- */
@@ -252,6 +254,17 @@
   @include respond-to(fullwidth) {
   }
 
+	// bootstrap override
+	.container {
+		width: 100%;
+		max-width: 1480px;
+		padding: 0 15px;
+		@include respond-to(break2) {
+			padding: 0 40px;
+		}
+	}
+
+
 	// vertical align from http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/ 
 	// @mixin vertical-align($position: relative) {
 	@mixin vertically-align($position: absolute, $offset: 50%) {
@@ -325,14 +338,7 @@
 	// 	}
 	// }
 
-	.container {
-		width: 100%;
-		max-width: 1480px;
-		padding: 0 15px;
-		@include respond-to(break2) {
-			padding: 0 40px;
-		}
-	}
+
 
 	// $navbarHeight: 10vw;
 
@@ -430,33 +436,48 @@
 			margin-bottom: 4rem;
 			margin-bottom: 7.3rem; // with line height this equals 80 below for most sections
 		}
+
 	}
 	section li {
 		@include respond-to(break2max) {
 			margin-bottom: 1.5rem;
 		}
 	}
+	.section {
+		&--first {
+			padding-top: 4rem;
+		}
+	}
 	hr {
 		margin: 0; // bootstrap reset
+		border: none;
 	}
-	.hr--folklife {
+	.hr {
 		// from http://stackoverflow.com/a/24499695
 		display:block;
 		border:0px;
-		// height:40px;
-		height:11px;
-		// background-image:url(/assets/images/folklife-hr.png);
-		background-image:url(/assets/images/folklife-hr-10.12.16.png);
-		background-image:url(/assets/images/hr.jpg);
 		background-size: 100% 100%;
 		background-repeat: no-repeat;
-		margin-bottom: 5vw;
-		@include respond-to(break2) {
-			margin-bottom: 1.3vw;
+
+		&--folklife {
+			height:11px;
+			background-image:url(/assets/images/hr.jpg);
+			margin-bottom: 5vw;
+			@include respond-to(break2) {
+				margin-bottom: 1.3vw;
+			}
+			@include respond-to(fullwidth) {
+				margin-bottom: 2.2rem;
+				margin-bottom: 4rem;
+			}
 		}
-		@include respond-to(fullwidth) {
-			margin-bottom: 2.2rem;
-			margin-bottom: 4rem;
+		&--thin {
+			height:8px;
+			background-image:url(/assets/images/hr--thin.png);
+			margin-top: 1vw;
+			@include respond-to(break2) {margin-top:2vw;}
+			@include respond-to(fullwidth) {margin-top:0.8rem;}
+
 		}
 	}
 
@@ -533,7 +554,6 @@
 	.date {
 		@extend %type--date;
 	}
-
 
 /* Nav
 -------------------------------------------------- */
@@ -1870,14 +1890,9 @@
 			}
 		}
 	}
-	.cfch-logo {
-		height: 13.4vw; // match height of other sunsplashes
-		@include respond-to(break2) {height:2.8rem;}
+	.footer-logo__img--folklife {
+		@include respond-to(break2max) {margin-bottom: 3vw;}
 	}
-	.sfr-logo {
-		margin-bottom: 3vw;
-	}
-	.ff-logo {}
 	.copyright-list, .footer__title {
 		@include respond-to(break2) {margin-top: -3px;}
 	}
@@ -1913,7 +1928,6 @@
 		@include respond-to(break2) {padding-top:0;}
 		@include respond-to(fullwidth) {padding-top:1px;}
 	}
-
 
 /* Helpers II
 -------------------------------------------------- */

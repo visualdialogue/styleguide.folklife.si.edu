@@ -1,0 +1,200 @@
+- snippet('header')
+
+#navspacer.navspacer
+
+
+//- Banner
+section.section--banner-1-2.section--first.container
+	h1.section__title
+		=$page->title()
+
+		hr.hr--thin
+
+		.hero__inner
+			.row
+				.col-sm-7.hero__image.clearfix
+					- if($src = $page->image($page->hero_image())):
+						img(src="<?= $src->url() ?>")
+					- endif
+				ul.col-sm-4.talk-story__featurette-list.featurette-list
+					- foreach ($page->talk_story_featurettes()->toStructure() as $featurette):
+						- if($src = $page->image($featurette->src())):
+							li.talk-story__featurette.featurette
+								img.featurette__image(src="<?= $src->url() ?>")
+								.featurette__details.details.details--inset.details--tight
+									.details__inner
+										.category= $featurette->category()
+										.title: a= $featurette->title()
+										.subtitle= $featurette->subtitle()
+						- endif
+					- endforeach
+
+
+//- Watch
+section.section--video.container
+	h2.section__title Watch
+	ul.row
+		- foreach ($page->video_data()->toStructure() as $video):
+			:php
+				//- replace double with single quotes for use in jade below
+				$iframe = str_replace('"', "'", $video->iframe()) 
+			li.col-sm-4(class="video" data-iframe='<?= $iframe ?>' data-video-id='<?= $video->id() ?>' data-title='<?= $video->title() ?>' data-description='<?= $video->description() ?>')
+				//- - if($video->iframe()->isNotEmpty()):
+				//- 	.iframe-wrapper
+				//- 		!= $video->iframe()
+				//- - elseif($src = $page->image($video->src())):
+				.video__thumbnail
+					.center-box
+						- if($src = $page->image($video->src())):
+							a.modal-trigger
+								img.image(src="<?= $src->url() ?>")
+						- endif
+							.icon-play-button.icon-stack
+								.icon-circle
+								.icon-play
+				.details
+					.category!= $video->category()
+					.title: a!= $video->title()
+		- endforeach
+
+.container: hr.hr--folklife
+
+//- Listen
+section.section--audio.container
+	h2.section__title Listen
+	ul.row.row--listen
+		- foreach ($page->audio_data()->toStructure() as $audio):
+			- if($src = $page->image($audio->src())):
+				li.col-xs-6.col-sm-3
+					img(src="<?= $src->url() ?>")
+					.details.details--inset
+						.category!= $audio->category()
+						.title-wrapper
+							.title: a!= $audio->title()
+							.subtitle!= $audio->album()
+						.audio-player
+							.icon-play-button.icon-stack
+								.icon-circle
+								.icon-play
+							.audio-player__details
+								.audio-progress-bar
+								.audio-time
+									|0:00 &vert;
+									!= $audio->length()
+								.volume
+			- endif
+		- endforeach
+
+.container: hr.hr--folklife
+
+//- Participate
+section.section--participate.container
+	h2.section__title Participate
+	- snippet('more-link')
+	ul.row
+		- foreach ($page->events()->toStructure() as $event):
+			- if($src = $page->image($event->src())):
+				li.col-xs-6.col-sm-3
+					img(src="<?= $src->url() ?>")
+					.details.details--participate
+						.date!= $event->event_date()
+						.title: a!= $event->title()
+			- endif
+		- endforeach
+
+//- Talk Story
+section.container.section--talk-story
+	h2.section__title Talk Story
+	.row
+		.col-sm-8.talk-story__feature.clearfix
+			.feature__inner
+				- if($src = $page->image($page->talk_story_feature_image())):
+					img(src="<?= $src->url() ?>")
+				- endif
+				.textbox.talk-story__textbox
+					.details.details--inset.details--tight
+						.details__inner
+							.category!= $page->talk_story_feature_category()
+							.title: a!= $page->talk_story_feature_title()
+							.subtitle!= $page->talk_story_feature_subtitle()
+		ul.col-sm-4.talk-story__featurette-list.featurette-list
+			- foreach ($page->talk_story_featurettes()->toStructure() as $featurette):
+				- if($src = $page->image($featurette->src())):
+					li.talk-story__featurette.featurette
+						img.featurette__image(src="<?= $src->url() ?>")
+						.featurette__details.details.details--inset.details--tight
+							.details__inner
+								.category= $featurette->category()
+								.title: a= $featurette->title()
+								.subtitle= $featurette->subtitle()
+				- endif
+			- endforeach
+
+//- Dive Deep
+section.container.section--dive-deep
+	h2.section__title Dive Deep
+	- snippet('more-link')
+	.row
+		.col-sm-6.dive-deep__feature.clearfix
+			.feature__inner
+				- if($src = $page->image($page->dive_deep_feature_image())):
+					img(src="<?= $src->url() ?>")
+				- endif
+				.textbox.dive-deep__textbox
+					.details.details--inset
+						.category!= $page->dive_deep_feature_category()
+						.title: a!= $page->dive_deep_feature_title()
+		ul.col-sm-6.dive-deep__featurette-list.featurette-list
+			- foreach ($page->dive_deep_featurettes()->toStructure() as $featurette):
+				- if($src = $page->image($featurette->src())):
+					li.dive-deep__featurette.featurette
+						img.featurette__image(src="<?= $src->url() ?>")
+						.featurette__details.details.details--inset
+							.category= $featurette->category()
+							.title: a= $featurette->title()
+				- endif
+			- endforeach
+
+.container: hr.hr--folklife
+
+//- half sections - Explore Collections and Teach
+.container
+	.row
+		section.col-sm-6.section--vr.section--explore-collections.explore-collections
+			h2.section__title.hidden-md Collections		
+			h2.section__title.visible-md Explore Collections		
+			- snippet('more-link')
+			ul.row.explore-collections__featurette-list
+				- foreach ($page->explore_collections_featurettes()->toStructure() as $featurette):
+					- if($src = $page->image($featurette->src())):
+						li.col-xs-6.col-sm-6.explore-collections__featurette
+							img(src="<?= $src->url() ?>")
+							.details.details--tight
+								.title: a= $featurette->title()
+					- endif
+				- endforeach
+			.vertical-rule
+
+		hr.hr--folklife.hidden-md.hidden-lg
+		section.col-sm-6.section--vr.section--teach
+			h2.section__title Teach
+			- snippet('more-link')
+			ul.row.teach__featurette-list
+				- foreach ($page->teach_featurettes()->toStructure() as $featurette):
+					- if($src = $page->image($featurette->src())):
+						li.col-xs-6.col-sm-4.teach__featurette
+							img(src="<?= $src->url() ?>")
+							.details.details--tight
+								.title: a= $featurette->title()
+					- endif
+				- endforeach
+
+button(data-remodal-action="close" class="remodal-close visually-hidden")
+div(data-remodal-id="modal")
+	.remodal__iframe#remodal__iframe
+	.remodal__copy
+		h3.remodal__title
+		.remodal__description
+			p
+
+- snippet('footer')

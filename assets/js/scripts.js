@@ -297,7 +297,7 @@ Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-crea
 			mobileFirst: 'true',
 			appendArrows: '.slick-list',
 			autoplay: true, // pause for testing
-			autoplaySpeed: 4000,
+			autoplaySpeed: 6000,
 			slidesToShow: 1,
 			responsive: [
 				{
