@@ -18,7 +18,11 @@ footer, header, hgroup, main, nav, section, summary {
 // from me
 a { text-decoration: none; }
 a[href^="tel"] { border:none; } // remove links from telephone numbers
-img { display: block; width:100%; max-width: 100%; }
+img { 
+	display: block; 
+	max-width: 100%; // order matters!!!
+	width:100%; // order matters!!! otherwise will see full-width image before it get's max-width applied
+}
 li {list-style-type: none;}
 input { border-radius: 0;} // remove ios rounded corners, http://stackoverflow.com/a/2918716
 

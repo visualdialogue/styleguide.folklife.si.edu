@@ -88,12 +88,13 @@ gulp.task('critical', function () {
     critical.generate({
       base: './',
       src: 'http://folklife.lukehatfield.com',
+      // src: 'http://folklife.lukehatfield.com/archives',
       css: ['./assets/css/folklife.css'],
       // inline: 'true',
       // styleTarget: 'main.css',
       // htmlTarget: '../../..//snippets/header.php',
       // htmlTarget: '../../../_resources/testing/harvard.loc.html',
-      minify: true,
+      // minify: true,
       dimensions: [{
         width: 320,
         height: 480

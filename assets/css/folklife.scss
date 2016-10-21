@@ -1256,6 +1256,13 @@
 			}
 		}
 	}
+	// show banner when loaded, from https://github.com/kenwheeler/slick/issues/158#issuecomment-40960041
+	.banner-carousel {
+		visibility: hidden;
+	}
+	.slick-initialized {
+		visibility: visible;
+	}
 	.slick-dotted.slick-slider {
 		margin-bottom: 0;
 		@include respond-to(break2) {
