@@ -1,10 +1,8 @@
 
 /* #Media Queries
 -------------------------------------------------- */
-  $break-medium: 40em; // 640 px
-  // $break-large: 64em; // 1024 px
-  // $break-large: 48em; // 768 px
-  $break-large: 53.25em; // 852 px
+  $break1: 40em; // 640 px
+  $break2: 53.25em; // 852 px
   $break-25: 72em; // 1152 px
   $breaksearch: 74.25em; // 1188px for search bar
   $break-3: 80em; // 1350 px feature descriptions
@@ -13,16 +11,16 @@
 
   @mixin respond-to($media) {
     @if $media == break1 {
-      @media only screen and (min-width: $break-medium) { @content; }
+      @media only screen and (min-width: $break1) { @content; }
     }
     @if $media == break1max {
-      @media only screen and (max-width: $break-medium) { @content; }
+      @media only screen and (max-width: $break1) { @content; }
     }
     @else if $media == break2 {
-      @media only screen and (min-width: $break-large) { @content; }
+      @media only screen and (min-width: $break2) { @content; }
     }
     @else if $media == break2max {
-      @media only screen and (max-width: $break-large) { @content; }
+      @media only screen and (max-width: $break2) { @content; }
     }
     @else if $media == break25 {
       @media only screen and (min-width: $break-25) { @content; }
