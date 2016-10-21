@@ -466,7 +466,8 @@
 		padding-top: 12px;
 		min-height: 26vw; // for 3 line titles
 		@include respond-to(break2) {
-			min-height: initial; // reset
+			min-height: initial; // reset // for ios
+			min-height: auto; // for windows
 			padding-top: 2vw;
 		}
 		@include respond-to(fullwidth) {
@@ -1494,7 +1495,8 @@
 		.details {
 			min-height: 27vw;
 			@include respond-to(break2) {
-				min-height: initial;
+				min-height: initial; // for ios
+				min-height: auto; // for windows
 			}
 		}
 		.title {
@@ -1564,7 +1566,8 @@
 		}
 	}
 	.talk-story__textbox {
-		min-height: initial;
+		min-height: initial; // for ios
+		min-height: auto; // for windows
 		position: static;
 		width: 100%;
 		padding-bottom: 3vw;
@@ -1718,7 +1721,8 @@
 	.section--newsletter-signup {
 		// margin-bottom: 2rem;
 		.details {
-			min-height: initial;
+			min-height: initial; // for ios
+			min-height: auto; // for windows
 			padding-top: 1vw;
 			@include respond-to(break2) {
 				padding-top: 1.2vw;
