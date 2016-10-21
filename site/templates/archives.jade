@@ -8,31 +8,34 @@ section.section--banner-1-2.section--first.container
 	h1.section__title
 		=$page->title()
 
-		hr.hr--thin
+	hr.hr--thin
 
-		.hero__inner
-			.row
-				.col-sm-7.hero__image.clearfix
-					- if($src = $page->image($page->hero_image())):
-						img(src="<?= $src->url() ?>")
+	.hero__inner
+		.row
+			.col-sm-7.hero__image.clearfix
+				- if($src = $page->image($page->hero_image())):
+					img(src="<?= $src->url() ?>")
+				- endif
+			ul.col-sm-4.talk-story__featurette-list.featurette-list
+				- foreach ($page->talk_story_featurettes()->toStructure() as $featurette):
+					- if($src = $page->image($featurette->src())):
+						li.talk-story__featurette.featurette
+							img.featurette__image(src="<?= $src->url() ?>")
+							.featurette__details.details.details--inset.details--tight
+								.details__inner
+									.category= $featurette->category()
+									.title: a= $featurette->title()
+									.subtitle= $featurette->subtitle()
 					- endif
-				ul.col-sm-4.talk-story__featurette-list.featurette-list
-					- foreach ($page->talk_story_featurettes()->toStructure() as $featurette):
-						- if($src = $page->image($featurette->src())):
-							li.talk-story__featurette.featurette
-								img.featurette__image(src="<?= $src->url() ?>")
-								.featurette__details.details.details--inset.details--tight
-									.details__inner
-										.category= $featurette->category()
-										.title: a= $featurette->title()
-										.subtitle= $featurette->subtitle()
-						- endif
-					- endforeach
+				- endforeach
 
+.container: hr.hr--folklife
+
+.container: hr.hr--folklife
 
 //- Watch
-section.section--video.container
-	h2.section__title Watch
+section.section--using-the-archives.container
+	h2.section__title Using the Archives
 	ul.row
 		- foreach ($page->video_data()->toStructure() as $video):
 			:php
@@ -57,10 +60,10 @@ section.section--video.container
 					.title: a!= $video->title()
 		- endforeach
 
-.container: hr.hr--folklife
+//- .container: hr.hr--folklife
 
 //- Listen
-section.section--audio.container
+//- section.section--audio.container
 	h2.section__title Listen
 	ul.row.row--listen
 		- foreach ($page->audio_data()->toStructure() as $audio):
@@ -85,10 +88,10 @@ section.section--audio.container
 			- endif
 		- endforeach
 
-.container: hr.hr--folklife
+//- .container: hr.hr--folklife
 
 //- Participate
-section.section--participate.container
+//- section.section--participate.container
 	h2.section__title Participate
 	- snippet('more-link')
 	ul.row
@@ -103,7 +106,7 @@ section.section--participate.container
 		- endforeach
 
 //- Talk Story
-section.container.section--talk-story
+//- section.container.section--talk-story
 	h2.section__title Talk Story
 	.row
 		.col-sm-8.talk-story__feature.clearfix
@@ -131,7 +134,7 @@ section.container.section--talk-story
 			- endforeach
 
 //- Dive Deep
-section.container.section--dive-deep
+//- section.container.section--dive-deep
 	h2.section__title Dive Deep
 	- snippet('more-link')
 	.row
@@ -155,10 +158,10 @@ section.container.section--dive-deep
 				- endif
 			- endforeach
 
-.container: hr.hr--folklife
+//- .container: hr.hr--folklife
 
 //- half sections - Explore Collections and Teach
-.container
+//- .container
 	.row
 		section.col-sm-6.section--vr.section--explore-collections.explore-collections
 			h2.section__title.hidden-md Collections		
@@ -189,8 +192,8 @@ section.container.section--dive-deep
 					- endif
 				- endforeach
 
-button(data-remodal-action="close" class="remodal-close visually-hidden")
-div(data-remodal-id="modal")
+//- button(data-remodal-action="close" class="remodal-close visually-hidden")
+//- div(data-remodal-id="modal")
 	.remodal__iframe#remodal__iframe
 	.remodal__copy
 		h3.remodal__title

@@ -10,17 +10,17 @@
 					.details.details--inset.details--tight.details--tight-bottom
 						.details__inner
 							.icon-mail
-							= $page->newsletter_text()
+							= $site->newsletter_text()
 				form(action="/").newsletter-signup-form.newsletter
 						input.newsletter__input.details.details--inset(type="email" placeholder="Enter your email")
 		section.col-sm-6.section--support
 			.support
 				.details.details--inset.details--tight.details--tight-bottom.clearfix
 					.details__inner
-						= $page->support_text()
+						= $site->support_text()
 				.support__button.button
 					.button__inner
-						= $page->support_button_text()
+						= $site->support_button_text()
 
 footer.footer#footer
 	.container

@@ -111,7 +111,13 @@ gulp.task('critical', function () {
       dest: './assets/css/critical.css',
       extract: false,
       ignore: [/^\.remodal/],
-      include: [/^\.slick/,/^\.col-/,/^\.section--first/,/^\.hero/]
+      include: [
+        /^\.slick/,
+        /^\.col-/,
+        /^\.section--first/,
+        /^\.hero/,
+        /^\.hr/
+      ]
     });
     // critical.generateInline({
     //   base: 'test/',

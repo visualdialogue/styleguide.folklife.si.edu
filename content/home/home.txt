@@ -115,8 +115,3 @@ Teach_featurettes:
 - title: "Smithsonian Folklife and Oral History Interviewing Guide"
   src: interviewing-guide.jpg
 ----
-Newsletter_text: Join our email list for the latest news from Smithsonian Center for Folklife and Cultural Heritage
-----
-Support_text: Support the Center and our important work, including the Folklife Festival, Folkways Recordings, exhibitions, films, and educational materials.
-----
-Support_button_text: Support Folklife. Donate Now.
