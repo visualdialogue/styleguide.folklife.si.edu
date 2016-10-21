@@ -183,14 +183,14 @@ gulp.task('less', function () {
 gulp.task('js', function() {
   // return gulp.src('/bdc/js/scripts.js')
   return gulp.src([
-      'assets/js/vendor.js',
-      'assets/js/scripts.js'
+      './assets/js/vendor.js',
+      './assets/js/scripts.js'
     ])
     .pipe(concat('scripts.js'))
     // .pipe(concat('../../../../bower_components/jquery/dist/jquery.js'))
     .pipe(uglify())
     .pipe(rename('scripts-min.js'))
-    .pipe(gulp.dest('assets/js/'));
+    .pipe(gulp.dest('./assets/js/'));
     // gulp.watch('/js/scripts.js',['scripts']);
 });
 // create a task that ensures the `templates` and `js` tasks are completed before
@@ -214,10 +214,10 @@ gulp.task('serve', ['jade', 'styles', 'js'], function() {
     gulp.watch('site/**/*.jade',['jade-watch']);
     gulp.watch('bower_components/bootstrap/less/*.less',['less']);
     gulp.watch('assets/css/*.scss',['styles']);
-    // gulp.watch('js/*.js',['js-watch']);
+    gulp.watch('assets/js/scripts.js',['js-watch']);
     gulp.watch('*.html').on('change', browserSync.reload);
     gulp.watch('site/**/*.php').on('change', browserSync.reload);
-    gulp.watch('assets/js/*.js').on('change', browserSync.reload);
+    gulp.watch('assets/js/scripts-min.js').on('change', browserSync.reload);
     // gulp.watch("/bdc/**/*.html").on('change', browserSync.reload);
     gulp.watch("content/**/*.txt").on('change', browserSync.reload);
     gulp.watch("*.php").on('change', browserSync.reload);
