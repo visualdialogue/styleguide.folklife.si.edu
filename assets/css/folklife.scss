@@ -466,7 +466,7 @@
 		padding-top: 12px;
 		min-height: 26vw; // for 3 line titles
 		@include respond-to(break2) {
-			min-height: auto; // reset
+			min-height: initial; // reset
 			padding-top: 2vw;
 		}
 		@include respond-to(fullwidth) {
@@ -1494,7 +1494,7 @@
 		.details {
 			min-height: 27vw;
 			@include respond-to(break2) {
-				min-height: auto;
+				min-height: initial;
 			}
 		}
 		.title {
@@ -1564,7 +1564,7 @@
 		}
 	}
 	.talk-story__textbox {
-		min-height: auto;
+		min-height: initial;
 		position: static;
 		width: 100%;
 		padding-bottom: 3vw;
@@ -1710,12 +1710,15 @@
 -------------------------------------------------- */
 	.section--newsletter-signup, .section--support {
 		@extend %subtitle--sans;
-		margin-bottom: 4rem;
+		margin-bottom: 2rem;
+		@include respond-to(break2) {
+			margin-bottom: 4rem;
+		}
 	}
 	.section--newsletter-signup {
 		// margin-bottom: 2rem;
 		.details {
-			min-height: auto;
+			min-height: initial;
 			padding-top: 1vw;
 			@include respond-to(break2) {
 				padding-top: 1.2vw;
@@ -1743,9 +1746,9 @@
 		background-color: $black20;
 		width: 100%;
 		@include email-newsletter;
-		height: 12vw;
+		height: 18vw;
 		@include respond-to(break2) {
-			height: 5.1vw;
+			height: 5.25vw;
 		}
 		@include respond-to(fullwidth) {
 			height: 6.1rem;
