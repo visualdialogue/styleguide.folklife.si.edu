@@ -119,5 +119,7 @@ footer.footer#footer
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="assets/js/vendor.js?v=<?= time() ?>"></script>
 <script src="assets/js/scripts.js?v=<?= time() ?>"></script>
+//- js fallback for async css if browser doesn't preload css
+<script>loadCSS( "assets/css/folklife.css?v=<?= time() ?>" );</script>
 </body>
 </html>

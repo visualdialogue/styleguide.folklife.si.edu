@@ -7,8 +7,8 @@ var  browserSync = require('browser-sync').create(),
           rename = require('gulp-rename'),
           uglify = require('gulp-uglify'),
          plumber = require('gulp-plumber'),
-           // uncss = require('gulp-uncss'),
-        // critical = require('critical'),
+           uncss = require('gulp-uncss'),
+        critical = require('critical'),
             jade = require('gulp-jade'),
          jadephp = require('gulp-jade-php'),
          changed = require('gulp-changed'),
@@ -24,6 +24,7 @@ gulp.task('vendor', function() {
     './bower_components/slick-carousel/slick/slick.min.js',
     './bower_components/remodal/dist/remodal.js',
     './bower_components/vimeo-player-js/dist/player.min.js',
+    './bower_components/loadcss/src/loadCSS.js',
     // '/bower_components/bxslider-4/jquery3-patch/jquery.bxslider.js',
     // './assets/js/throttle.js',
     // '/js/modernizr-custom.js',
@@ -34,38 +35,25 @@ gulp.task('vendor', function() {
 });
 
 gulp.task('usedCSS', function() {
-    return gulp.src('/css/main.css')
+    return gulp.src('./assets/css/folklife.css')
         .pipe(uncss({
             // get representative pages
             html: [
               // '_resources/testing/harvard.loc.html',
-              'http://harvard.loc/',
-              'http://harvard.loc/international-students',
-              'http://harvard.loc/international-students/argentina',
-              'http://harvard.loc/us-students',
-              'http://harvard.loc/traveling-fellowships',
-              'http://harvard.loc/traveling-fellowships/traveling-fellowships-to-france',              
-              'http://harvard.loc/undergraduates',
-              'http://harvard.loc/other-programs',
-              'http://harvard.loc/other-programs/john-h-coatsworth-latin-american-history-fellowship',
-              'http://harvard.loc/about',
-              'http://harvard.loc/faqs',
-              'http://harvard.loc/resources',
-              'http://harvard.loc/contact',
-              'http://harvard.loc/deadlines',
-              'http://harvard.loc/search?q=argentina',
+              'http://folklife.loc:3000/',
             ],
             ignore: [
-              '.view-by-filter .usgrad-active circle',
-              '.view-by-filter .usgrad-active line',
-              '.view-by-filter .usgrad-active  path',
-              '.view-by-filter .usgrad-active  polygon',
-              '.view-by-filter .usgrad-active  polyline',
-              '.view-by-filter .usgrad-active rect',
-              '.view-by-filter ul li.usgrad-active',
+              // '.icon-share',
+              // '.view-by-filter .usgrad-active line',
+              // '.view-by-filter .usgrad-active  path',
+              // '.view-by-filter .usgrad-active  polygon',
+              // '.view-by-filter .usgrad-active  polyline',
+              // '.view-by-filter .usgrad-active rect',
+              // '.view-by-filter ul li.usgrad-active',
             ]
         }))
-        .pipe(gulp.dest('/css/opt'));
+        .pipe(rename('folklife-opt.css'))
+        .pipe(gulp.dest('./assets/css'));
 });
 // gulp.task('imagemin', function () {
 //     return gulp.src('/images/*')
@@ -98,13 +86,31 @@ gulp.task('critical', function () {
     // 'copystyles' above
 
     critical.generate({
-      base: 'test/',
-      src: 'index.html',
-      dest: 'critical.css',
+      base: './',
+      src: 'http://folklife.lukehatfield.com',
+      css: ['./assets/css/folklife.css'],
+      // inline: 'true',
       // styleTarget: 'main.css',
       // htmlTarget: '../../..//snippets/header.php',
       // htmlTarget: '../../../_resources/testing/harvard.loc.html',
-      minify: true
+      minify: true,
+      dimensions: [{
+        width: 320,
+        height: 480
+      },{
+        width: 768,
+        height: 1024
+      },{
+        width: 1280,
+        height: 960
+      },{
+        width: 1481,
+        height: 3300
+      }],
+      dest: './assets/css/critical.css',
+      extract: false,
+      ignore: [/^\.remodal/],
+      include: [/^\.slick/]
     });
     // critical.generateInline({
     //   base: 'test/',
@@ -150,8 +156,14 @@ gulp.task('styles', function() {
         .pipe(plumber())
         .pipe(sass({
             errLogToConsole: true,
-            outputStyle: 'compressed'
+            // outputStyle: 'compressed'
         }))
+        // .pipe(uncss({
+        //     // get representative pages
+        //     html: [
+        //       'http://folklife.loc:3000/',
+        //     ],
+        // }))
         .pipe(rename('folklife.css'))
         .pipe(gulp.dest('assets/css/'))
         .pipe(browserSync.stream());
