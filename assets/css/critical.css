@@ -7,11 +7,6 @@
   clear: both;
 }
 
-.slick-loading .slick-slide,
-.slick-loading .slick-track {
-  visibility: hidden;
-}
-
 img,
 label {
   max-width: 100%;
@@ -24,6 +19,12 @@ img {
 
 a {
   text-decoration: none;
+}
+
+.banner-carousel,
+.slick-loading .slick-slide,
+.slick-loading .slick-track {
+  visibility: hidden;
 }
 
 @font-face {
@@ -1655,6 +1656,10 @@ select {
   .banner-slide .details {
     padding: 2rem 1.7rem 2rem 2rem;
   }
+}
+
+.slick-initialized {
+  visibility: visible;
 }
 
 .slick-dotted.slick-slider {
