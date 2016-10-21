@@ -2,7 +2,14 @@
 <html lang="en")><head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta robots="none"/><!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-<title>Smithsonian Center for Folklife and Cultural Heritage | <?php echo $page->title()->html() ?></title><script>(function(d) {var config = {kitId: 'roi1emx',scriptTimeout: 3000,async: true},h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)})(document);</script>
+<title>Smithsonian Center for Folklife and Cultural Heritage | <?php echo $page->title()->html() ?></title><script>(function(d) {var config = {kitId: 'roi1emx',scriptTimeout: 3000,async: true},h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)})(document);</script><style>.wf-loading .tagline,
+.wf-loading .site-toggle__link,
+.wf-loading .title,
+.wf-loading .section__title {
+	/* Hide the blog title and post titles while web fonts are loading */
+	visibility: hidden;
+}
+</style>
 <!-- “Entypo pictograms by Daniel Bruce — www.entypo.com” -->
 <!-- Font Awesome icons by Dave Gandy --><style><?php include './assets/css/critical.css'; ?></style><link rel="preload" href="assets/css/folklife.css?v=<?= time() ?>" as="style" onload="this.rel='stylesheet'"><noscript><link href="assets/css/folklife.css?v=<?= time() ?>" rel="stylesheet"></noscript>
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
