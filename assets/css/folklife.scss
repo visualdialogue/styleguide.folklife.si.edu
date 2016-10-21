@@ -198,6 +198,13 @@
 	background: $hover;
 	text-decoration: none;
   }
+
+  // prevent the above
+  .meganav__title, .footer__title, .logo-mask, .site-toggle__link {
+  	&:hover {
+  		background-color: transparent; // prevent highlighting color
+  	}
+  }
   
   // ::-moz-selection {
   //   background-color: red;
@@ -445,7 +452,7 @@
 	}
 	.section {
 		&--first {
-			padding-top: 4rem;
+			padding-top: 5rem;
 		}
 	}
 	hr {
