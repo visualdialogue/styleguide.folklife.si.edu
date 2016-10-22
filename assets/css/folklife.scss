@@ -16,7 +16,7 @@
   // @import "../bower_components/csswizardry-grids/csswizardry-grids.scss";
   @import "bootstrap.scss"; // get custom bootstrap built with less
   @import "vd-icons.scss";
-  @import "reset.scss";
+  @import "../common/css/reset.scss";
   @import "media-queries.scss";
   @import "colors.scss"; // colors may be used in type.scss
   @import "icons.scss";
@@ -25,8 +25,6 @@
   @import "padding.scss";
   @import "helpers.scss";
   @import "archives.scss";
-
-  
 
 /* Grid System
 -------------------------------------------------- */
