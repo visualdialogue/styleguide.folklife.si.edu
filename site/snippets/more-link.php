@@ -1,1 +1,1 @@
-<a class="more-link"> <div class="more-link__text">more</div><div class="more-link__arrow icon-right-thin"></div></a>
+<a class="more-link <? if(isset($class)) echo $class ?>"><div class="more-link__text">more</div><div class="more-link__arrow icon-right-thin"></div></a>

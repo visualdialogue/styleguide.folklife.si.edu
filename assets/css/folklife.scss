@@ -271,6 +271,26 @@
 		}
 	}
 
+	// so more arrow parent can be height 100% of image
+	// from http://stackoverflow.com/a/2715397
+	@include respond-to(break2) {
+		
+		.table {
+			display: table;
+			height: 100%;
+		}
+		.table-row {
+			// allow make table cells to be same height
+			display: table-row;
+		}
+		.table-cell {
+			// allow more arrow to be at bottom of div, no matter how long inner content is
+			display: table-cell;
+			height: 100%;	
+		}	
+	}
+
+
 
 	// vertical align from http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/ 
 	// @mixin vertical-align($position: relative) {
@@ -362,7 +382,7 @@
   		}
 
 		&__text {
-			@extend %subtitle--sans;
+			@include subtitle--sans;
 			display: inline-block;
 			margin-right: 2vw;
 			vertical-align: top;
@@ -427,6 +447,10 @@
 	}
 	body {
 		// padding-top: 100px; // clear fixed header
+		@include body-text;
+	}
+	h3 {
+		@include h3;
 	}
 	.section__title {
 		@include section-header;
@@ -452,7 +476,44 @@
 	}
 	.section {
 		&--first {
-			padding-top: 4.8rem;
+			padding-top:1.5rem;
+			@include respond-to(break2) {padding-top:2.7vw;}
+			@include respond-to(fullwidth) {padding-top:4rem;}
+		}
+	}
+	.sidebar {
+		&__title {
+			@include title--sans--alt;
+			color: $black50;
+			margin-bottom:1.5rem;
+			@include respond-to(break2) {margin-bottom:1vw;}
+			@include respond-to(fullwidth) {margin-bottom:1.5rem;}
+		}
+		&__item {
+			border-top: 1px solid $black50;
+			margin-bottom:0.5rem;
+			@include respond-to(break2) {margin-bottom:0.5vw;}
+			@include respond-to(fullwidth) {margin-bottom:0.8rem;}
+		}
+		&__subtitle {
+			@include sidebar-subtitle;
+			letter-spacing: 0;
+			// line-height:1.5;
+			margin-top: 0.5rem;
+			@include respond-to(break2) {
+				// line-height:1.5;
+				// margin-bottom:
+				margin-top: 0.6vw;
+				margin-bottom: 0.1vw;
+			}
+			@include respond-to(fullwidth) {
+				// line-height:0.9;
+				margin-top: 0.9rem; // 15px
+				margin-bottom: 0rem;
+			}
+		}
+		&__copy {
+			@include sidebar-copy;
 		}
 	}
 	hr {
@@ -482,7 +543,7 @@
 			height:8px;
 			background-image:url(/assets/images/hr--thin.png);
 			margin-top: 1vw;
-			@include respond-to(break2) {margin-top:2vw;}
+			@include respond-to(break2) {margin-top:0.6vw;}
 			@include respond-to(fullwidth) {margin-top:0.8rem;}
 
 		}
@@ -512,6 +573,9 @@
 		@include respond-to(fullwidth) {
 			padding: 2.5rem 2rem 2rem;
 		}
+	}
+	.details--notop {
+		@include respond-to(break2) {padding-top: 0 !important;}
 	}
 	// smaller featurette details require less padding
 	.details--tight {
@@ -547,16 +611,16 @@
 
 	}
 	.title--serif {
-		@extend %title--serif;
+		@include title--serif;
 	}
 	.title--sans {
 		@extend %title--sans;
 	}
 	.subtitle--sans {
-		@extend %subtitle--sans;
+		@include subtitle--sans;
 	}
 	.category {
-		@extend %category;
+		@include category;
 	}
 	.date {
 		@extend %type--date;
@@ -1011,11 +1075,14 @@
 		&__list {
 			display: none;
 			@include respond-to(break2) {
-				display: inline-block;
+				display: block;
 
 			}
 		}
 
+		&__main-item a {
+			display: inline-block;
+		}
 		&__sub-item {
 			@include link-font;
 			color: white;
@@ -1367,7 +1434,7 @@
 -------------------------------------------------- */
 	.section--video {
 		.title {
-			@extend %title--serif;
+			@include title--serif;
 		}
 		.icon-play-button {
 			@include vertically-align;
@@ -1455,10 +1522,10 @@
 	.remodal__title {
 		// font-size:1.4rem; // 28px
 		margin-bottom:10px;
-		@extend %subtitle--sans;
+		@include subtitle--sans;
 	}
 
-/* #listen
+/* #audio
 -------------------------------------------------- */
 	.section--audio {
 		.details {
@@ -1481,7 +1548,7 @@
 			@extend %title--sans;
 		}
 		.subtitle {
-			@extend %subtitle--sans;
+			@include subtitle--sans;
 		}
 	}
 	.row--listen {
@@ -1534,7 +1601,7 @@
 			}
 		}
 		.title {
-			@extend %title--sans--alt;
+			@include title--sans--alt;
 		}
 	}
 
@@ -1575,7 +1642,7 @@
 			@include title--sans--large; // mixin so brings down to this line
 		}
 		.subtitle {
-			@extend %subtitle--sans--large;
+			@include subtitle--sans--large;
 		}
 	}
 	.talk-story__featurette {
@@ -1593,7 +1660,7 @@
 			}
 		}
 		.title, .subtitle {
-			@extend %subtitle--sans;
+			@include subtitle--sans;
 		}
 		.title {
 			font-weight: 700;
@@ -1647,7 +1714,7 @@
 				width: 47.06%;
 			}
 			.title {
-				@extend %title--serif;
+				@include title--serif;
 				@include respond-to(break2max) {
 					font-size: 5vw;
 				}
@@ -1720,7 +1787,7 @@
 
 		}
 		.title {
-			@extend %title--serif;
+			@include title--serif;
 			font-style: italic;
 			font-weight: 600;
 		}
@@ -1738,7 +1805,7 @@
 
 		}
 		.title {
-			@extend %subtitle--sans;
+			@include subtitle--sans;
 			font-weight: 400;
 		}
 	}
@@ -1746,7 +1813,7 @@
 /* #Newsletter Signup
 -------------------------------------------------- */
 	.section--newsletter-signup, .section--support {
-		@extend %subtitle--sans;
+		@include subtitle--sans;
 		margin-bottom: 2rem;
 		@include respond-to(break2) {
 			margin-bottom: 4rem;
@@ -1768,7 +1835,7 @@
 	}
 	.newsletter-signup__copy {
 		background-color: $black10;
-		@extend %subtitle--sans;
+		@include subtitle--sans;
 		// height: 15vw;
 		@include respond-to(break2) {
 			height: 5.3vw;

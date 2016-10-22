@@ -1,0 +1,41 @@
+Title: Archives Staff
+
+----
+
+Section-entries: 
+
+- 
+  title: Stephanie Smith
+  copy: |
+    Archives Director
+    (202) 633-6439, SmithSDL@si.edu
+- 
+  title: Jeff Place
+  copy: |
+    Archivist and Curator
+    (202) 633-6438, PlaceJ1@si.edu
+- 
+  title: Greg Adams
+  copy: |
+    Assistant Archivist
+    (202) 633-6512, AdamsG@si.edu
+- 
+  title: Cecilia Peterson
+  copy: |
+    Digital Projects Archivist
+    (202) 633-7931, PetersonC@si.edu
+- 
+  title: Nichole Procopenko
+  copy: |
+    Records Management Specialist Contractor
+    (202) 633 7487, ProcopenkoN@si.edu
+- 
+  title: Dave Walker
+  copy: |
+    Audio Digitization Specialist Contractor
+    (202) 633-0663, WalkerDM@si.edu
+- 
+  title: Josh Weilepp
+  copy: |
+    Digital Imaging Specialist Contractor
+    WeileppJ@si.edu

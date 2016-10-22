@@ -1,0 +1,18 @@
+Title: Schedule an Appointment
+
+----
+
+section-entries: 
+
+- 
+  title: Phone
+  copy: (202) 633-7322
+- 
+  title: Email
+  copy: RinzlerArchives@si.edu
+- 
+  title: Address
+  copy: |
+    Center for Folklife and Cultural Heritage
+    600 Maryland Avenue SW, Suite 2001
+    Washington, DC 20024-2520

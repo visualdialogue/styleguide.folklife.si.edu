@@ -1,0 +1,14 @@
+title: Collection
+pages: true
+files: true
+fields:
+  title:
+    label: Title
+    type:  text
+  description:
+    label: Text
+    type:  textarea
+  # src:
+    # label: Image
+    # type: select
+    # options: images

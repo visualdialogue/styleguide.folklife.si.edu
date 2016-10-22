@@ -1,0 +1,7 @@
+title: Collections
+pages: collection
+files: true
+fields:
+  title:
+    label: Title
+    type:  text
