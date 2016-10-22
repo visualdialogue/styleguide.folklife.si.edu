@@ -215,8 +215,15 @@ body {
 @mixin h3 {
 	font-weight: 600;
 	font-size:6vw;
-	@include respond-to(break2) {font-size:1.9vw;}
-	@include respond-to(fullwidth) {font-size:2.8rem;}
+	margin-bottom: 1rem;
+	@include respond-to(break2) {
+		font-size:1.9vw;
+		margin-bottom: 1vw; 
+	}
+	@include respond-to(fullwidth) {
+		font-size:2.8rem;
+		margin-bottom: 1.5rem; // 30px
+	}
 }
 @mixin title--serif {
 	font-family: $serif;

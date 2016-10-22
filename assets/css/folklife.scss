@@ -481,6 +481,18 @@
 			@include respond-to(fullwidth) {padding-top:4rem;}
 		}
 	}
+	.main--copy {
+		.section__title {
+			margin-bottom:2.2rem;
+			@include respond-to(break2) {margin-bottom:1.4vw;}
+			@include respond-to(fullwidth) {margin-bottom:2.2rem;} // 30 px
+		}
+		p {
+			margin-bottom:0.5rem;
+			@include respond-to(break2) {margin-bottom:1.6vw;}
+			@include respond-to(fullwidth) {margin-bottom:2.5rem;} // 40 px
+		}
+	}
 	.sidebar {
 		&__title {
 			@include title--sans--alt;
@@ -532,7 +544,7 @@
 			background-image:url(/assets/images/hr.jpg);
 			margin-bottom: 5vw;
 			@include respond-to(break2) {
-				margin-bottom: 1.3vw;
+				margin-bottom: 2.7vw;
 			}
 			@include respond-to(fullwidth) {
 				margin-bottom: 2.2rem;
@@ -1081,7 +1093,8 @@
 		}
 
 		&__main-item a {
-			display: inline-block;
+			// display: inline-block; // still left invisible padding
+			display: block;
 		}
 		&__sub-item {
 			@include link-font;
