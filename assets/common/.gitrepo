@@ -1,0 +1,11 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = git@github.com:visualdialogue/cfch-common
+	branch = master
+	commit = c25c7ec06305fcafe26d69283d571e61b94b4c0e
+	parent = 0dd4d5fb5388c821508565ce3668a9a524482d0d
+	cmdver = 0.3.0
