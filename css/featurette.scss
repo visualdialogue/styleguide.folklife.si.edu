@@ -1,0 +1,60 @@
+/* 
+
+-----------------------------------------------------
+item: 						| mobile 	| tablet	| desktop
+-----------------------------------------------------
+%meganav-font 				| 10vw   	| 4rem		| 4rem
+%link-font 					| 1.7rem 	| 2rem   	|
+%title--sans 				| 5vw		| 1.6vw		| 2.4rem
+%title--sans--alt 			| 5vw		| 2vw		| 3rem
+%subtitle--sans  			| 4vw		| 1.35vw	| 2rem
+%category 					| 4.1vw		| 1.2vw		| 1.8rem
+%section-header				|			| 2vw		| 3rem
+-----------------------------------------------------
+%title--serif 				| 6vw		| 1.9vw		| 2.8rem
+%title--serif--large 		| 5vw		| 2.7vw		|
+-----------------------------------------------------
+.audio__details padding		| 2vw		| 2rem		|
+.item__details--audio padd: | 3vw		| 2vw		| 3rem
+.item__details--audio padd: | 2vw		| 1.3vw		| 2rem
+
+
+-----------------------------------------------------
+conversion: 				| mobile 	| tablet	| desktop
+-----------------------------------------------------
+										| 2.65vw	| 4rem
+
+*/
+
+.featurette-list {
+	margin-bottom:0;
+}
+.featurette {
+	// margin-bottom: 3.5vw;
+	margin-bottom: 1.5rem;
+	@include respond-to(break2) {
+		margin-bottom: 2vw;
+	}
+	@include respond-to(fullwidth) {
+		margin-bottom: 3rem;
+	}
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+	&__details, &__image {
+		display: inline-block;
+		vertical-align: top;	
+	}
+	&__details {
+		width: 50%;
+		// padding: 3vw 2vw 0;
+	}
+	&__image {
+		display: inline-block;
+		vertical-align: top;
+		width: 50%;
+	}
+	.title {
+		font-weight: 700;
+	}
+}
