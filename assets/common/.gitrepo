@@ -6,6 +6,6 @@
 [subrepo]
 	remote = git@github.com:visualdialogue/cfch-common
 	branch = master
-	commit = 34f1de0ecd4808e8c23574d08e70e29daaae5181
-	parent = 0ac8181896641c1704c3f55166894d4fafa70e7f
+	commit = dd63131c8ac5a9699b535e5ee8e9ef6146e5bb5c
+	parent = 1c3f531228a349b3d072b176ed46a82de73e77c7
 	cmdver = 0.3.0

@@ -1,0 +1,146 @@
+
+/* Icons
+-------------------------------------------------- */
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+	vertical-align: middle;
+}
+.icon-stack {
+	// from font-awesome stacking, http://www.w3schools.com/icons/tryit.asp?filename=tryicons_awesome_intro_stack
+	position: relative;
+	display: inline-block;
+	width: 2em;
+	height: 2em;
+	line-height: 2em;
+	vertical-align: middle;
+	div {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		text-align: center;
+	}
+}
+
+
+/* Navbar
+-------------------------------------------------- */
+.nav-icon {
+	color: white;
+	// font-size: 7vw;
+	font-size: 2.3rem;
+	// margin: 5px 2px;
+	line-height: 0.9; // for center alignment
+	@include respond-to(break2) {
+		// font-size: 2.6vw; // 38px
+		font-size: 3.8rem; // 38px
+		// margin: 4px 2px 0;
+		// margin: 10px;
+		margin: 5px;
+		margin: 14px;
+		line-height: 0.7; // for center alignment
+	}
+	@include respond-to(fullwidth) {
+		font-size: 3.8rem;
+		// line-height: 1.2; // for center alignment
+	}
+
+	&--main {
+		@include respond-to(break2max) {
+			margin: 1.5vw;
+		}
+		&:hover {
+			color: $black40;
+		}
+	}
+}
+.social-icons {
+	text-align: right;
+	&--mobile {
+		padding: 0;
+		// place above outside click
+		position: relative;
+		z-index: 10;
+		@include respond-to(break2) {
+			display: none !important; // override js hiding and showing
+		}
+	}
+	&--desktop {
+		@include respond-to(break2max) {
+			display: none !important; // override js hiding and showing
+		}
+		display: none; // initial hide
+	}
+	@include respond-to(break2max) {
+		display: none;
+		background-color: white;
+		background-color: $black10;
+		width: 100%;
+		left: 0;
+		
+	}
+}
+.social-icon-link {
+	vertical-align: middle;
+}
+
+.social-icon-link:hover, .social-icon-link:focus {
+	text-decoration: none;
+}
+.social-icon {
+	color:$black40;
+
+
+	&:hover {
+		color: white;
+		text-decoration: none;
+	}
+
+	&--mobile {
+		@include respond-to(break2max) {
+			// line-height: 1.5;
+			// margin: 2vw;
+			margin: 4px;
+		}
+	}
+}
+
+
+
+
+
+.icon-play-button {
+	.icon-circle {
+		color: $black20;
+	}
+	.icon-play {
+		color: $black80;
+	}
+}
+.icon-play-button, .icon-circle, .icon-play {
+	width: 10vw;
+	height: 10vw;
+	@include respond-to(break2) {
+		width: 4vw;
+		height: 4vw;
+	}
+	@include respond-to(fullwidth) {
+		width: 6rem;
+		height: 6rem;
+	}
+}
+.icon-circle:before, .icon-play:before {
+	// font sizes for all icons
+	font-size: 10vw;
+	@include respond-to(break2) {
+		font-size: 4vw;
+	}
+	@include respond-to(fullwidth) {
+		font-size: 6rem;
+	}
+}
+
+.icon-mail:before {
+	font-size: 10vw;
+	@include respond-to(break2) { font-size: 4vw; padding-right: 0.2vw; line-height: 0.8;}
+	@include respond-to(fullwidth) { font-size: 5.2rem; padding-right: 2px; line-height: 1;}
+}
