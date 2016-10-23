@@ -38,9 +38,9 @@ body {
 	// font-size: 10vw;
 	font-size: 5vw;
 	letter-spacing: 0.5px;
-	line-height: 0.65; // so margins accurate
+	line-height: 0.7; // so margins accurate
 	margin-top: 0; // bootstrap reset
-	margin-bottom: 5vw;
+	margin-bottom: 1.5rem;
 	color: $black65;
 	@include respond-to(break2) {
 		// font-size: 4rem; // ff-good
@@ -132,7 +132,7 @@ body {
 		font-size: 3rem;
 	}
 }
-%title--sans--alt {
+@mixin title--sans--alt {
 	font-family: $sans;
 	font-weight: 300;
 	line-height: 1.2;
@@ -148,7 +148,7 @@ body {
   		margin-bottom: 0;
 	}
 }
-%subtitle--sans {
+@mixin subtitle--sans {
 	font-family: $sans;
 	font-weight: 300; // light for acumin
 	line-height: 1.2;
@@ -164,7 +164,7 @@ body {
   		font-size: 1.8rem; // oct 19 for fritz
 	}
 }
-%subtitle--sans--large {
+@mixin subtitle--sans--large {
 	font-family: $sans;
 	font-weight: 300; // light for acumin
 	line-height: 1.2;
@@ -174,6 +174,7 @@ body {
 	}
 	@include respond-to(fullwidth) {
   		font-size: 3rem;
+		line-height: 1.3;
 	}
 }
 
@@ -197,7 +198,34 @@ body {
   // }
 }
 
-%title--serif {
+
+/******************
+ * Serif
+ *
+ ******************/
+
+// Body
+@mixin body-text {
+	font-family: $serif;
+	font-size:5vw;
+	color: black;
+	@include respond-to(break2) {font-size:1.6vw;}
+	@include respond-to(fullwidth) {font-size:2.4rem;}
+}
+@mixin h3 {
+	font-weight: 600;
+	font-size:6vw;
+	margin-bottom: 1rem;
+	@include respond-to(break2) {
+		font-size:1.9vw;
+		margin-bottom: 1vw; 
+	}
+	@include respond-to(fullwidth) {
+		font-size:2.8rem;
+		margin-bottom: 1.5rem; // 30px
+	}
+}
+@mixin title--serif {
 	font-family: $serif;
 	font-weight: 700;
 	line-height: 1.2;
@@ -223,8 +251,25 @@ body {
 		font-size: 4.2rem;
 	}
 }
+@mixin title--serif--xlarge {
+	font-family: $serif;
+	font-weight: 700;
+	line-height: 1.1;
+	font-size: 8vw;
+	@include respond-to(break2) {
+		font-size: 4.2vw;
+		// line-height: 1.1;
+		margin-top: -1rem;
+	}
+	@include respond-to(fullwidth) {
+		font-size: 6.2rem;
+		// line-height: 1.1;
+		margin-top: -1rem;
+	}
+}
 
-%category {
+
+@mixin category {
 	text-transform: uppercase;
 	font-family: $sansWide;
 	color: $black65;
@@ -235,7 +280,7 @@ body {
 	margin-bottom: 0;
 	font-size: 2.5vw;
 	@include respond-to(break2) {
-		font-size: 1.2vw;
+		font-size: 1.05vw;
 		margin-bottom: 0.3rem;
 	}
 	@include respond-to(fullwidth) {
@@ -248,10 +293,7 @@ body {
 	}
 }
 
-%type--date {
-	@extend %category;
-	font-weight: 700;
-}
+
 
 @mixin type--logo {
 	font-family: $slabLight;
@@ -291,6 +333,41 @@ body {
 	}
 }
 
+// FONTS
+@mixin sans-semibold {
+	font-family: $sans;
+	font-weight: 600;
+}
+// SCALES
+@mixin fs-18 {
+	font-size: 4.1vw;
+	@include respond-to(break2) {font-size: 1.2vw;}
+	@include respond-to(fullwidth) {font-size: 1.8rem;}
+}
+
+
+%type--date {
+	@include category;
+	font-weight: 700;
+}
+
+@mixin sidebar-subtitle {
+	@include category;
+	font-family: $sans;
+}
+@mixin sidebar-copy {
+	font-family: $sans;
+	@include fs-18;
+	letter-spacing: 0;
+	font-weight: 600;
+	text-transform: none;
+	color: $black70;
+	line-height: 1.33333;
+	p {
+		margin-bottom:0;
+	}
+
+}
 
 
 /* Sans reference
@@ -306,3 +383,4 @@ body {
 // Bold 				 	700 	 	
 // Black 				 	800 	 	
 // Ultra Black 				900 	 	
+
