@@ -18,11 +18,11 @@
   @import "../common/css/reset.scss";
   @import "../common/css/media-queries.scss";
   @import "colors.scss"; // colors may be used in type.scss
-  @import "icons.scss";
-  @import "type.scss";
+  @import "../common/css/icons.scss";
+  @import "../common/css/type.scss";
   @import "featurette.scss";
-  @import "padding.scss";
-  @import "helpers.scss";
+  @import "../common/css/padding.scss";
+  @import "../common/css/helpers.scss";
   @import "archives.scss";
 
 /* Grid System

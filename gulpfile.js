@@ -221,6 +221,7 @@ gulp.task('serve', ['jade', 'styles', 'js'], function() {
     gulp.watch('site/**/*.jade',['jade-watch']);
     gulp.watch('bower_components/bootstrap/less/*.less',['less']);
     gulp.watch('assets/css/*.scss',['styles']);
+    gulp.watch('assets/common/*.scss',['styles']);
     gulp.watch('assets/js/scripts.js',['js-watch']);
     gulp.watch('*.html').on('change', browserSync.reload);
     gulp.watch('site/**/*.php').on('change', browserSync.reload);
