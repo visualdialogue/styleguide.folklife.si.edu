@@ -299,6 +299,8 @@ Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-crea
 			autoplay: true, // pause for testing
 			autoplaySpeed: 5000,
 			slidesToShow: 1,
+			centerMode: true,
+			centerPadding: '80px',
 			responsive: [
 				{
 					breakpoint: 1480,
