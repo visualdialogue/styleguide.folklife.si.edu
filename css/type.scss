@@ -17,12 +17,12 @@ body {
 	font-weight: 800;
 	letter-spacing: 1px;
 	// font-size: 2.2rem;
-	font-size: 4vw;
+	// font-size: 4vw;
 	font-size: 5vw;
 	// letter-spacing: 0.5px;
 	@include respond-to(break2) {
 		// font-size: 2.5rem;
-		font-size: 1.5vw;
+		font-size: 1.4vw;
 		line-height: 1.2;
 	}
 	@include respond-to(fullwidth) {
@@ -45,8 +45,8 @@ body {
 	@include respond-to(break2) {
 		// font-size: 4rem; // ff-good
 		// font-size: 2.5rem;
-		font-size: 2vw;
-		margin-bottom: 2.8vw;
+		font-size: 1.9vw;
+		margin-bottom: 2.7vw;
 	}
 	@include respond-to(fullwidth) {
 		font-size: 3rem;
@@ -63,7 +63,7 @@ body {
 	@include respond-to(break2) {
 		// font-size: 4rem; // ff-good
 		// font-size: 2.5rem;
-		font-size: 2.5vw;
+		font-size: 2.4vw;
 		// margin-bottom: 2.8vw;
 		margin-bottom: 0;
 	}
@@ -79,7 +79,7 @@ body {
   font-size: 1.7rem;
   line-height: 2;
 	@include respond-to(break2) {
-		font-size: 1.35vw;
+		font-size: 1.25vw;
 		line-height: 1.45;
 	}
 	@include respond-to(fullwidth) {
@@ -96,7 +96,7 @@ body {
   line-height: 1.7;
   @include respond-to(break2) {
   	font-size: 1vw;
-  	line-height: 1.45;
+  	line-height: 1.35;
   }
   @include respond-to(fullwidth) {
   	font-size: 1.5rem;
@@ -111,8 +111,8 @@ body {
 	line-height: 1.2;
   	font-size: 5vw;
 	@include respond-to(break2) {
-  		font-size: 1.6vw;
-  		margin-bottom: 0.4vw;
+  		font-size: 1.5vw;
+  		margin-bottom: 0.3vw;
 	}
 	@include respond-to(fullwidth) {
   		font-size: 2.4rem;
@@ -125,7 +125,7 @@ body {
 	// font-size: 5vw;
 	font-size: 5vw;
 	@include respond-to(break2) {
-		font-size: 2vw;
+		font-size: 1.9vw;
 		line-height: 1.2;
 	}
 	@include respond-to(fullwidth) {
@@ -138,8 +138,8 @@ body {
 	line-height: 1.2;
   	font-size: 5vw;
 	@include respond-to(break2) {
-  		font-size: 2vw;
-  		margin-bottom: 0.4vw;
+  		font-size: 1.9vw;
+  		margin-bottom: 0.3vw;
 	}
 	@include respond-to(fullwidth) {
   		font-size: 3rem;
@@ -155,7 +155,7 @@ body {
 	line-height: 1.4;
   	font-size: 4vw;
 	@include respond-to(break2) {
-  		font-size: 1.35vw;
+  		font-size: 1.25vw;
 		line-height: 1.25;
 	}
 	@include respond-to(fullwidth) {
@@ -170,7 +170,7 @@ body {
 	line-height: 1.2;
   	font-size: 5vw;
 	@include respond-to(break2) {
-  		font-size: 2vw;
+  		font-size: 1.9vw;
 	}
 	@include respond-to(fullwidth) {
   		font-size: 3rem;
@@ -209,7 +209,7 @@ body {
 	font-family: $serif;
 	font-size:5vw;
 	color: black;
-	@include respond-to(break2) {font-size:1.6vw;}
+	@include respond-to(break2) {font-size:1.5vw;}
 	@include respond-to(fullwidth) {font-size:2.4rem;}
 }
 @mixin h3 {
@@ -217,8 +217,8 @@ body {
 	font-size:6vw;
 	margin-bottom: 1rem;
 	@include respond-to(break2) {
-		font-size:1.9vw;
-		margin-bottom: 1vw; 
+		font-size:1.8vw;
+		margin-bottom: 0.9vw; 
 	}
 	@include respond-to(fullwidth) {
 		font-size:2.8rem;
@@ -231,7 +231,7 @@ body {
 	line-height: 1.2;
   	font-size: 6vw;
 	@include respond-to(break2) {
-  		font-size: 1.9vw;
+  		font-size: 1.7vw;
 	}
 	@include respond-to(fullwidth) {
   		font-size: 2.8rem;
@@ -243,7 +243,7 @@ body {
 	line-height: 1.2;
 	font-size: 6vw;
 	@include respond-to(break2) {
-		font-size: 2.8vw;
+		font-size: 2.7vw;
 		line-height: 1.2;
 	}
 	@include respond-to(fullwidth) {
@@ -257,7 +257,7 @@ body {
 	line-height: 1.1;
 	font-size: 8vw;
 	@include respond-to(break2) {
-		font-size: 4.2vw;
+		font-size: 4.1vw;
 		// line-height: 1.1;
 		margin-top: -1rem;
 	}
@@ -280,7 +280,7 @@ body {
 	margin-bottom: 0;
 	font-size: 2.5vw;
 	@include respond-to(break2) {
-		font-size: 1.05vw;
+		font-size: 0.95vw;
 		margin-bottom: 0.3rem;
 	}
 	@include respond-to(fullwidth) {
@@ -300,7 +300,7 @@ body {
 	line-height: 1.15;
 	font-size: 3.3rem;
 	@include respond-to(break2) {
-		font-size: 2.2vw;
+		font-size: 2.1vw;
 	}
 	@include respond-to(fullwidth) {
 		font-size: 3.3rem;
@@ -313,8 +313,8 @@ body {
 	font-family: $sans;
 	font-size: 5vw;
 	@include respond-to(break2) {
-		padding-top: 1vw;
-		font-size: 2.3vw;
+		padding-top: 0.9vw;
+		font-size: 2.2vw;
 	}
 	@include respond-to(fullwidth) {
 		font-size: 3.5rem;
@@ -326,7 +326,7 @@ body {
 	font-family: $serif;
 	font-size: 5vw;
 	@include respond-to(break2) {
-		font-size: 2.3vw;
+		font-size: 2.2vw;
 	}
 	@include respond-to(fullwidth) {
 		font-size: 3.5rem;
@@ -341,7 +341,7 @@ body {
 // SCALES
 @mixin fs-18 {
 	font-size: 4.1vw;
-	@include respond-to(break2) {font-size: 1.2vw;}
+	@include respond-to(break2) {font-size: 1.1vw;}
 	@include respond-to(fullwidth) {font-size: 1.8rem;}
 }
 
