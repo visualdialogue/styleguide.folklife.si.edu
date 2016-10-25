@@ -16,6 +16,7 @@
   @import "../../bower_components/slick-carousel/slick/slick-theme.scss";
   @import "bootstrap.scss"; // get custom bootstrap built with less
   @import "../common/css/reset.scss";
+  @import "../common/css/dimensions.scss";
   @import "../common/css/media-queries.scss";
   @import "colors.scss"; // colors may be used in type.scss
   @import "../common/css/icons.scss";
@@ -72,16 +73,7 @@
 		}
 	}
 
-/* Sizes
--------------------------------------------------- */
-  // $headerWidth: 74rem; // 1420px + 30px + 30px = 1480px for design overhang
-  // $small-header: 48px;
-  // // $pageWidth: 72rem; // 1420px + 10px + 10px = 1440px for mobile gutters on both sides
-  // // $pageWidth: 73rem; // 1420px + 20px + 20px = 1460px for mobile gutters on both sides
-  $pageWidth: 92.5rem; // 1400px + 40px + 40px = 1480px for desktop gutters on both sides
 
-  // $twitter-height: 95px;
-  // $twitter-sidebar-height: 60px;
 
 /* Mixins
 -------------------------------------------------- */
@@ -261,10 +253,11 @@
 	// bootstrap override
 	.container {
 		width: 100%;
-		max-width: 1480px;
+		max-width: $pageWidth;
 		padding: 0 15px;
 		@include respond-to(break2) {
-			padding: 0 40px;
+			// padding: 0 40px;
+			padding: 0 80px;
 		}
 	}
 
@@ -702,13 +695,14 @@
 		// keep above outside click div
 		position: relative;
 		z-index: 10;
-		max-width: 1480px;
+		max-width: $pageWidth;
 		padding: 0 15px;
 		margin: 0 auto;
 		float:none; // bootstrap override
 		@include vertically-align-grandparent;
 		@include respond-to(break2) {
-			padding: 0 40px;
+			// padding: 0 40px;
+			padding: 0 80px;
 		}
 	}
 	.navbar-header__inner {

@@ -27,3 +27,14 @@ conversion: 				| mobile 	| tablet	| desktop
 										| 2.65vw	| 4rem
 
 */
+
+/* Sizes
+-------------------------------------------------- */
+  // $headerWidth: 74rem; // 1420px + 30px + 30px = 1480px for design overhang
+  // $small-header: 48px;
+  // // $pageWidth: 72rem; // 1420px + 10px + 10px = 1440px for mobile gutters on both sides
+  // // $pageWidth: 73rem; // 1420px + 20px + 20px = 1460px for mobile gutters on both sides
+  $pageWidth: 156rem; // 1400px + 80px + 80px = 1560px for desktop gutters on both sides
+
+  // $twitter-height: 95px;
+  // $twitter-sidebar-height: 60px;
