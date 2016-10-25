@@ -7,7 +7,7 @@
   $breaksearch: 74.25em; // 1188px for search bar
   $break-3: 80em; // 1350 px feature descriptions
   $break-4: 89.375em; // 1430 px for showrooms page only
-  $fullWidth: 1480px; // use em for correct media query calculation
+  $fullWidth: $pageWidth; // use em for correct media query calculation
 
   @mixin respond-to($media) {
     @if $media == break1 {
