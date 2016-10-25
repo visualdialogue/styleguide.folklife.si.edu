@@ -163,7 +163,7 @@ gulp.task('styles', function() {
         .pipe(plumber())
         .pipe(sass({
             errLogToConsole: true,
-            outputStyle: 'compressed'
+            // outputStyle: 'compressed'
         }))
         // .pipe(uncss({
         //     // get representative pages
