@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 .container:after,
 .navbar-collapse:after,
 .navbar-header:after,
@@ -33,40 +35,8 @@ img {
 
 @font-face {
   font-family: vd-icons;
-  src: url(/assets/css/vd-icons/fonts/vd-icons.eot);
-  src: url(/assets/css/vd-icons/fonts/vd-icons.eot?#iefix) format("embedded-opentype"),url(/assets/css/vd-icons/fonts/vd-icons.woff) format("woff"),url(/assets/css/vd-icons/fonts/vd-icons.ttf) format("truetype"),url(/assets/css/vd-icons/fonts/vd-icons.svg#vd-icons) format("svg");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: slick;
-  src: url(/assets/css/fonts/slick.eot);
-  src: url(/assets/css/fonts/slick.eot?#iefix) format("embedded-opentype"),url(/assets/css/fonts/slick.woff) format("woff"),url(/assets/css/fonts/slick.ttf) format("truetype"),url(/assets/css/fonts/slick.svg#slick) format("svg");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@-ms-viewport {
-  width: device-width;
-}
-
-nav {
-  display: block;
-}
-
-@font-face {
-  font-family: slick;
-  src: url(/assets/css/fonts/slick.eot);
-  src: url(/assets/css/fonts/slick.eot?#iefix) format("embedded-opentype"),url(/assets/bower_components/slick-carousel/slick/fonts/slick.woff) format("woff"),url(/assets/bower_components/slick-carousel/slick/fonts/slick.ttf) format("truetype"),url(/assets/bower_components/slick-carousel/slick/fonts/slick.svg#slick) format("svg");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: vd-icons;
-  src: url(/assets/css/vd-icons/fonts/vd-icons.eot);
-  src: url(/assets/css/vd-icons/fonts/vd-icons.eot?#iefix) format("embedded-opentype"),url(/assets/css/vd-icons/fonts/vd-icons.woff) format("woff"),url(/assets/css/vd-icons/fonts/vd-icons.ttf) format("truetype"),url(/assets/css/vd-icons/fonts/vd-icons.svg#vd-icons) format("svg");
+  src: url(/assets/common/css/vd-icons/fonts/vd-icons.eot);
+  src: url(/assets/common/css/vd-icons/fonts/vd-icons.eot?#iefix) format("embedded-opentype"),url(/assets/common/css/vd-icons/fonts/vd-icons.woff) format("woff"),url(/assets/common/css/vd-icons/fonts/vd-icons.ttf) format("truetype"),url(/assets/common/css/vd-icons/fonts/vd-icons.svg#vd-icons) format("svg");
   font-weight: 400;
   font-style: normal;
 }
@@ -93,8 +63,8 @@ nav {
 
 @font-face {
   font-family: vd-icons;
-  src: url(/assets/css/vd-icons/fonts/vd-icons.eot);
-  src: url(/assets/css/vd-icons/fonts/vd-icons.eot?#iefix) format("embedded-opentype"),url(/assets/css/vd-icons/fonts/vd-icons.woff) format("woff"),url(/assets/css/vd-icons/fonts/vd-icons.ttf) format("truetype"),url(/assets/css/vd-icons/fonts/vd-icons.svg#vd-icons) format("svg");
+  src: url(/assets/common/css/vd-icons/fonts/vd-icons.eot);
+  src: url(/assets/common/css/vd-icons/fonts/vd-icons.eot?#iefix) format("embedded-opentype"),url(/assets/common/css/vd-icons/fonts/vd-icons.woff) format("woff"),url(/assets/common/css/vd-icons/fonts/vd-icons.ttf) format("truetype"),url(/assets/common/css/vd-icons/fonts/vd-icons.svg#vd-icons) format("svg");
   font-weight: 400;
   font-style: normal;
 }
@@ -111,12 +81,32 @@ nav {
   width: device-width;
 }
 
-.slick-dots li button:before,
-.slick-next:before,
-.slick-prev:before {
+@font-face {
   font-family: slick;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  src: url(/assets/css/fonts/slick.eot);
+  src: url(/assets/css/fonts/slick.eot?#iefix) format("embedded-opentype"),url(/assets/bower_components/slick-carousel/slick/fonts/slick.woff) format("woff"),url(/assets/bower_components/slick-carousel/slick/fonts/slick.ttf) format("truetype"),url(/assets/bower_components/slick-carousel/slick/fonts/slick.svg#slick) format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: vd-icons;
+  src: url(/assets/common/css/vd-icons/fonts/vd-icons.eot);
+  src: url(/assets/common/css/vd-icons/fonts/vd-icons.eot?#iefix) format("embedded-opentype"),url(/assets/common/css/vd-icons/fonts/vd-icons.woff) format("woff"),url(/assets/common/css/vd-icons/fonts/vd-icons.ttf) format("truetype"),url(/assets/common/css/vd-icons/fonts/vd-icons.svg#vd-icons) format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: slick;
+  src: url(/assets/css/fonts/slick.eot);
+  src: url(/assets/css/fonts/slick.eot?#iefix) format("embedded-opentype"),url(/assets/css/fonts/slick.woff) format("woff"),url(/assets/css/fonts/slick.ttf) format("truetype"),url(/assets/css/fonts/slick.svg#slick) format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@-ms-viewport {
+  width: device-width;
 }
 
 .slick-slider,
@@ -135,10 +125,63 @@ nav {
 
 @font-face {
   font-family: vd-icons;
-  src: url(/assets/css/vd-icons/fonts/vd-icons.eot);
-  src: url(/assets/css/vd-icons/fonts/vd-icons.eot?#iefix) format("embedded-opentype"),url(/assets/css/vd-icons/fonts/vd-icons.woff) format("woff"),url(/assets/css/vd-icons/fonts/vd-icons.ttf) format("truetype"),url(/assets/css/vd-icons/fonts/vd-icons.svg#vd-icons) format("svg");
+  src: url(/assets/common/css/vd-icons/fonts/vd-icons.eot);
+  src: url(/assets/common/css/vd-icons/fonts/vd-icons.eot?#iefix) format("embedded-opentype"),url(/assets/common/css/vd-icons/fonts/vd-icons.woff) format("woff"),url(/assets/common/css/vd-icons/fonts/vd-icons.ttf) format("truetype"),url(/assets/common/css/vd-icons/fonts/vd-icons.svg#vd-icons) format("svg");
   font-weight: 400;
   font-style: normal;
+}
+
+[class^=icon-]:before {
+  font-family: vd-icons!important;
+  font-style: normal!important;
+  font-weight: 400!important;
+  font-variant: normal!important;
+  text-transform: none!important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: middle;
+}
+
+.slick-dots li button:before,
+.slick-next:before,
+.slick-prev:before {
+  font-family: slick;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-facebook:before {
+  content: "\63";
+}
+
+.icon-flickr:before {
+  content: "\64";
+}
+
+.icon-tumblr:before {
+  content: "\67";
+}
+
+.icon-twitter:before {
+  content: "\68";
+}
+
+.icon-search:before {
+  content: "\69";
+}
+
+.icon-share:before {
+  content: "\6a";
+}
+
+.icon-instagrem:before {
+  content: "\6d";
+}
+
+.icon-menu:before {
+  content: "\6e";
 }
 
 .slick-slider {
@@ -361,6 +404,12 @@ select {
 
 select {
   text-transform: none;
+}
+
+.browsenav__title,
+.category,
+.meganav__title {
+  text-transform: uppercase;
 }
 
 input::-moz-focus-inner {
@@ -1218,57 +1267,6 @@ section {
   width: device-width;
 }
 
-[class^=icon-]:before {
-  font-family: vd-icons!important;
-  font-style: normal!important;
-  font-weight: 400!important;
-  font-variant: normal!important;
-  text-transform: none!important;
-  speak: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  vertical-align: middle;
-}
-
-.browsenav__title,
-.category,
-.meganav__title {
-  text-transform: uppercase;
-}
-
-.icon-facebook:before {
-  content: "\63";
-}
-
-.icon-flickr:before {
-  content: "\64";
-}
-
-.icon-tumblr:before {
-  content: "\67";
-}
-
-.icon-twitter:before {
-  content: "\68";
-}
-
-.icon-search:before {
-  content: "\69";
-}
-
-.icon-share:before {
-  content: "\6a";
-}
-
-.icon-instagrem:before {
-  content: "\6d";
-}
-
-.icon-menu:before {
-  content: "\6e";
-}
-
 *,
 :after,
 :before {
@@ -1286,7 +1284,7 @@ img {
 
 .container,
 .navbar-header {
-  max-width: 1480px;
+  max-width: 1560px;
   width: 100%;
 }
 
@@ -1313,12 +1311,6 @@ input {
 
   .social-icons--mobile {
     display: none!important;
-  }
-}
-
-@media only screen and (min-width:1480px) {
-  .nav-icon {
-    font-size: 3.8rem;
   }
 }
 
@@ -1362,20 +1354,13 @@ input {
   font-family: acumin-pro,Arial,sans-serif;
   font-weight: 800;
   letter-spacing: 1px;
-  font-size: 4vw;
   font-size: 5vw;
 }
 
 @media only screen and (min-width:53.25em) {
   .meganav__title {
-    font-size: 1.5vw;
+    font-size: 1.4vw;
     line-height: 1.2;
-  }
-}
-
-@media only screen and (min-width:1480px) {
-  .meganav__title {
-    font-size: 2rem;
   }
 }
 
@@ -1393,30 +1378,18 @@ input {
   font-size: 6vw;
 }
 
-@media only screen and (min-width:53.25em) {
-  .section--banner .title {
-    font-size: 2.8vw;
-    line-height: 1.2;
-  }
-}
-
 .hero__inner {
   margin-top: 1.2rem;
 }
 
 @media only screen and (min-width:53.25em) {
+  .section--banner .title {
+    font-size: 2.7vw;
+    line-height: 1.2;
+  }
+
   .hero__inner {
     margin-top: 2.5vw;
-  }
-}
-
-@media only screen and (min-width:1480px) {
-  .section--banner .title {
-    font-size: 4.2rem;
-  }
-
-  .hero__inner {
-    margin-top: 3.8rem;
   }
 }
 
@@ -1429,14 +1402,7 @@ input {
 
 @media only screen and (min-width:53.25em) {
   .hero__description {
-    font-size: 2vw;
-  }
-}
-
-@media only screen and (min-width:1480px) {
-  .hero__description {
-    font-size: 3rem;
-    line-height: 1.3;
+    font-size: 1.9vw;
   }
 }
 
@@ -1450,14 +1416,7 @@ input {
 
 @media only screen and (min-width:53.25em) {
   .hero .title {
-    font-size: 4.2vw;
-    margin-top: -1rem;
-  }
-}
-
-@media only screen and (min-width:1480px) {
-  .hero .title {
-    font-size: 6.2rem;
+    font-size: 4.1vw;
     margin-top: -1rem;
   }
 }
@@ -1472,23 +1431,12 @@ input {
 
 @media only screen and (min-width:53.25em) {
   .hero .title .description {
-    font-size: 1.35vw;
+    font-size: 1.25vw;
     line-height: 1.25;
   }
 
   .hero .title {
     margin-bottom: 1.3vw;
-  }
-}
-
-@media only screen and (min-width:1480px) {
-  .hero .title .description {
-    line-height: 1.3;
-    font-size: 1.8rem;
-  }
-
-  .hero .title {
-    margin-bottom: 1.8rem;
   }
 }
 
@@ -1514,39 +1462,20 @@ input {
   margin-right: -7.5px;
 }
 
-@media only screen and (min-width:53.25em) {
-  .row {
-    margin-left: -1.35%;
-    margin-right: -1.35%;
-  }
-}
-
 [class*=col-] {
   padding-left: 7.5px;
   padding-right: 7.5px;
 }
 
 @media only screen and (min-width:53.25em) {
+  .row {
+    margin-left: -1.35%;
+    margin-right: -1.35%;
+  }
+
   [class*=col-] {
     padding-left: 1.35%;
     padding-right: 1.35%;
-  }
-}
-
-@media only screen and (min-width:1480px) {
-  .hero .more-link {
-    left: 2rem;
-  }
-
-  .row {
-    margin-left: -20px;
-    margin-right: -20px;
-    margin-bottom: 0;
-  }
-
-  [class*=col-] {
-    padding-left: 20px;
-    padding-right: 20px;
   }
 }
 
@@ -1575,46 +1504,26 @@ body {
   color: #000;
 }
 
-@media only screen and (min-width:53.25em) {
-  .container {
-    padding: 0 40px;
-  }
-
-  body {
-    font-size: 1.6vw;
-  }
-
-  section {
-    margin-bottom: 2.4vw;
-  }
-}
-
 section {
   position: relative;
 }
 
-.section--first {
-  padding-top: 1.5rem;
-}
-
 @media only screen and (min-width:53.25em) {
-  .section--first {
-    padding-top: 2.7vw;
+  .container {
+    padding: 0 80px;
   }
-}
 
-@media only screen and (min-width:1480px) {
   body {
-    font-size: 2.4rem;
+    font-size: 1.5vw;
   }
 
   section {
-    margin-bottom: 7.3rem;
+    margin-bottom: 2.3vw;
   }
+}
 
-  .section--first {
-    padding-top: 4rem;
-  }
+.section--first {
+  padding-top: 1.5rem;
 }
 
 .hr {
@@ -1630,12 +1539,6 @@ section {
   margin-bottom: 5vw;
 }
 
-@media only screen and (min-width:53.25em) {
-  .hr--folklife {
-    margin-bottom: 1.3vw;
-  }
-}
-
 .hr--thin {
   height: 8px;
   background-image: url(/assets/images/hr--thin.png);
@@ -1643,8 +1546,16 @@ section {
 }
 
 @media only screen and (min-width:53.25em) {
+  .section--first {
+    padding-top: 2.6vw;
+  }
+
+  .hr--folklife {
+    margin-bottom: 2.6vw;
+  }
+
   .hr--thin {
-    margin-top: .6vw;
+    margin-top: .5vw;
   }
 }
 
@@ -1657,32 +1568,12 @@ section {
   .details {
     min-height: initial;
     min-height: auto;
-    padding-top: 2vw;
-  }
-}
-
-@media only screen and (min-width:1480px) {
-  .hr--folklife {
-    margin-bottom: 4rem;
-  }
-
-  .hr--thin {
-    margin-top: .8rem;
-  }
-
-  .details {
-    padding-top: 2.5rem;
+    padding-top: 1.9vw;
   }
 }
 
 .details--inset {
   padding: 2vw 2.5vw;
-}
-
-@media only screen and (min-width:53.25em) {
-  .details--inset {
-    padding: 1.6vw 1.3vw 1.3vw;
-  }
 }
 
 .category {
@@ -1695,24 +1586,17 @@ section {
 }
 
 @media only screen and (min-width:53.25em) {
+  .details--inset {
+    padding: 1.5vw 1.2vw 1.2vw;
+  }
+
   .category {
-    font-size: 1.05vw;
+    font-size: .95vw;
     margin-bottom: .3rem;
   }
 
   .navbar {
     top: 60px;
-  }
-}
-
-@media only screen and (min-width:1480px) {
-  .details--inset {
-    padding: 2.5rem 2rem 2rem;
-  }
-
-  .category {
-    font-size: 1.6rem;
-    margin-bottom: .5rem;
   }
 }
 
@@ -1804,7 +1688,7 @@ img.sunsplash {
 
 @media only screen and (min-width:53.25em) {
   .navbar-header {
-    padding: 0 40px;
+    padding: 0 80px;
   }
 
   .navspacer {
@@ -1815,21 +1699,6 @@ img.sunsplash {
 .navbar-brand {
   font-size: 10px;
   padding: 10px 0 0;
-}
-
-@media only screen and (min-width:53.25em) {
-  .navbar-brand {
-    height: 115px;
-    padding: 23px 0 10px;
-  }
-}
-
-@media only screen and (min-width:1480px) {
-  .navbar-brand {
-    padding: 23px 0 18px;
-    height: 118px;
-    font-size: 25px;
-  }
 }
 
 .logo-mask {
@@ -1851,6 +1720,11 @@ img.sunsplash {
 }
 
 @media only screen and (min-width:53.25em) {
+  .navbar-brand {
+    height: 115px;
+    padding: 23px 0 10px;
+  }
+
   img.sunsplash {
     display: inline-block;
     width: 30px;
@@ -1862,15 +1736,6 @@ img.logo--center,
 img.logo--folklife {
   width: 193px;
   height: 32px;
-}
-
-@media only screen and (min-width:1480px) {
-  .logo__copy,
-  img.logo--center,
-  img.logo--folklife {
-    width: 420px;
-    height: 70px;
-  }
 }
 
 img.logo--center,
@@ -2000,6 +1865,11 @@ select {
   background-position: -136px -86px;
 }
 
+.meganav {
+  position: relative;
+  padding: 0 0 .5rem;
+}
+
 @media only screen and (min-width:53.25em) {
   .slick-dots li button:before,
   .slick-dots li button:hover:before,
@@ -2056,14 +1926,7 @@ select {
     width: 29px;
     height: 54px;
   }
-}
 
-.meganav {
-  position: relative;
-  padding: 0 0 .5rem;
-}
-
-@media only screen and (min-width:53.25em) {
   .meganav {
     padding: 4rem 0 2.6rem;
   }
@@ -2078,19 +1941,8 @@ select {
   display: none;
 }
 
-@media only screen and (min-width:53.25em) {
-  .meganav__title {
-    padding: 0;
-    color: #fff;
-  }
-
-  .meganav__list {
-    display: block;
-  }
-}
-
 .meganav__main-item a {
-  display: inline-block;
+  display: block;
 }
 
 .meganav__sub-item {
@@ -2099,46 +1951,6 @@ select {
   line-height: 2;
   color: #fff;
   font-weight: 400;
-}
-
-@media only screen and (min-width:53.25em) {
-  .meganav__sub-item {
-    font-size: 1.35vw;
-    line-height: 1.45;
-    color: #ccc;
-  }
-}
-
-@media only screen and (min-width:1480px) {
-  .slick-next::before,
-  .slick-next:hover::before,
-  .slick-prev::before,
-  .slick-prev:hover::before {
-    width: 36px;
-    height: 68px;
-    background: url(/assets/images/icons/navicons.png);
-  }
-
-  .slick-next:hover::before {
-    background-position: -182px -270px;
-  }
-
-  .slick-next::before {
-    background-position: -135px -270px;
-  }
-
-  .slick-prev:hover::before {
-    background-position: -41px -270px;
-  }
-
-  .slick-prev::before {
-    background-position: -86px -270px;
-  }
-
-  .meganav__sub-item {
-    font-size: 2rem;
-    line-height: 1.4;
-  }
 }
 
 .meganav {
@@ -2159,8 +1971,23 @@ select {
 }
 
 @media only screen and (min-width:53.25em) {
+  .meganav__title {
+    padding: 0;
+    color: #fff;
+  }
+
+  .meganav__list {
+    display: block;
+  }
+
+  .meganav__sub-item {
+    font-size: 1.25vw;
+    line-height: 1.45;
+    color: #ccc;
+  }
+
   .browsenav {
-    padding: 2.8vw 0 2vw;
+    padding: 2.7vw 0 1.9vw;
     top: 3rem;
   }
 }
@@ -2183,31 +2010,8 @@ select {
 
 @media only screen and (min-width:53.25em) {
   .browsenav__title {
-    font-size: 2vw;
-    margin-bottom: 2.8vw;
-  }
-}
-
-@media only screen and (min-width:1480px) {
-  .browsenav {
-    padding: 4rem 0;
-  }
-
-  .browsenav__title {
-    font-size: 3rem;
-    margin-bottom: 4.2rem;
-  }
-}
-
-@media only screen and (min-width:53.25em) {
-  .browsenav__title {
-    margin-bottom: 1.5vw;
-  }
-}
-
-@media only screen and (min-width:1480px) {
-  .browsenav__title {
-    margin-bottom: 2rem;
+    font-size: 1.9vw;
+    margin-bottom: 1.4vw;
   }
 }
 
@@ -2243,15 +2047,8 @@ select {
   }
 
   select {
-    font-size: 1.35vw;
+    font-size: 1.25vw;
     line-height: 1.45;
-  }
-}
-
-@media only screen and (min-width:1480px) {
-  select {
-    font-size: 2rem;
-    line-height: 1.4;
   }
 }
 
@@ -2303,27 +2100,9 @@ select {
   }
 }
 
-@media only screen and (min-width:1480px) {
-  .textbox {
-    bottom: 4rem;
-    left: 4rem;
-  }
-}
-
 .dots {
   bottom: 2%;
   left: 5%;
-}
-
-@media only screen and (min-width:1480px) {
-  .dots {
-    bottom: 1rem;
-    left: 1.6rem;
-  }
-}
-
-.banner-slide {
-  position: relative;
 }
 
 @media only screen and (max-width:53.25em) {
@@ -2336,24 +2115,17 @@ select {
   }
 }
 
-.banner-slide .details {
-  padding: 2vw 2vw 0;
+.banner__nav--mobile {
+  margin-bottom: 6vw;
+  padding: 5px 15px;
 }
 
-@media only screen and (min-width:53.25em) {
-  .banner-slide .details {
-    padding: 1.35vw 1.3vw 0;
-  }
+.banner-slide {
+  position: relative;
+}
 
-  .banner-slide:not(.slick-active):after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(0,0,0,.6);
-  }
+.banner-slide .details {
+  padding: 2vw 2vw 0;
 }
 
 .slick-initialized {
@@ -2365,8 +2137,26 @@ select {
 }
 
 @media only screen and (min-width:53.25em) {
+  .banner__nav--mobile {
+    display: none;
+  }
+
+  .banner-slide .details {
+    padding: 1.25vw 1.2vw 0;
+  }
+
+  .banner-slide:not(.slick-active):after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.6);
+  }
+
   .slick-dotted.slick-slider {
-    margin-bottom: 3.5vw;
+    margin-bottom: 3.4vw;
   }
 }
 
@@ -2396,26 +2186,6 @@ select {
 .slick-next {
   right: 22px;
   z-index: 1;
-}
-
-@media only screen and (min-width:1480px) {
-  .banner-slide .details {
-    padding: 2rem 1.7rem 2rem 2rem;
-  }
-
-  .slick-dotted.slick-slider {
-    margin-bottom: 5rem;
-  }
-
-  .slick-prev {
-    left: auto;
-    margin-left: -57px;
-  }
-
-  .slick-next {
-    right: calc((100vw - 1400px)/ 2);
-    margin-right: -18px;
-  }
 }
 
 .slick-dots {

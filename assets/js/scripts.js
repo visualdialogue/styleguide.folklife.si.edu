@@ -303,7 +303,7 @@ Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-crea
 			centerPadding: '80px',
 			responsive: [
 				{
-					breakpoint: 1480,
+					breakpoint: 1560,
 					settings: {
 						centerMode: true,
 						centerPadding: 'calc((100vw - 1400px) / 2)',

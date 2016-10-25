@@ -7263,11 +7263,10 @@ body {
   text-transform: uppercase;
   font-weight: 800;
   letter-spacing: 1px;
-  font-size: 4vw;
   font-size: 5vw; }
   @media only screen and (min-width: 53.25em) {
     .meganav__title, .footer__title {
-      font-size: 1.5vw;
+      font-size: 1.4vw;
       line-height: 1.2; } }
   @media only screen and (min-width: 1560px) {
     .meganav__title, .footer__title {
@@ -7280,8 +7279,8 @@ body {
   font-size: 5vw; }
   @media only screen and (min-width: 53.25em) {
     .title--sans, .section--audio .title {
-      font-size: 1.6vw;
-      margin-bottom: 0.4vw; } }
+      font-size: 1.5vw;
+      margin-bottom: 0.3vw; } }
   @media only screen and (min-width: 1560px) {
     .title--sans, .section--audio .title {
       font-size: 2.4rem;
@@ -7304,7 +7303,7 @@ body {
   font-size: 6vw; }
   @media only screen and (min-width: 53.25em) {
     .section--banner .title, .dive-deep__textbox .title {
-      font-size: 2.8vw;
+      font-size: 2.7vw;
       line-height: 1.2; } }
   @media only screen and (min-width: 1560px) {
     .section--banner .title, .dive-deep__textbox .title {
@@ -7322,7 +7321,7 @@ body {
   font-weight: 700; }
   @media only screen and (min-width: 53.25em) {
     .date {
-      font-size: 1.05vw;
+      font-size: 0.95vw;
       margin-bottom: 0.3rem; } }
   @media only screen and (min-width: 1560px) {
     .date {
@@ -7404,7 +7403,7 @@ conversion: 				| mobile 	| tablet	| desktop
   font-size: 5vw; }
   @media only screen and (min-width: 53.25em) {
     .hero__description {
-      font-size: 2vw; } }
+      font-size: 1.9vw; } }
   @media only screen and (min-width: 1560px) {
     .hero__description {
       font-size: 3rem;
@@ -7418,7 +7417,7 @@ conversion: 				| mobile 	| tablet	| desktop
   margin-bottom: 1rem; }
   @media only screen and (min-width: 53.25em) {
     .hero .title {
-      font-size: 4.2vw;
+      font-size: 4.1vw;
       margin-top: -1rem; } }
   @media only screen and (min-width: 1560px) {
     .hero .title {
@@ -7437,7 +7436,7 @@ conversion: 				| mobile 	| tablet	| desktop
     font-size: 4vw; }
     @media only screen and (min-width: 53.25em) {
       .hero .title .description {
-        font-size: 1.35vw;
+        font-size: 1.25vw;
         line-height: 1.25; } }
     @media only screen and (min-width: 1560px) {
       .hero .title .description {
@@ -7445,7 +7444,7 @@ conversion: 				| mobile 	| tablet	| desktop
         font-size: 1.8rem; } }
     @media only screen and (min-width: 53.25em) {
       .hero .title .description {
-        font-size: 1.35vw;
+        font-size: 1.25vw;
         line-height: 1.25; } }
     @media only screen and (min-width: 1560px) {
       .hero .title .description {
@@ -7491,7 +7490,7 @@ conversion: 				| mobile 	| tablet	| desktop
     margin-bottom: 1.5rem; }
     @media only screen and (min-width: 53.25em) {
       .archive-collection .title {
-        font-size: 1.9vw; } }
+        font-size: 1.7vw; } }
     @media only screen and (min-width: 1560px) {
       .archive-collection .title {
         font-size: 2.8rem; } }
@@ -7509,7 +7508,7 @@ conversion: 				| mobile 	| tablet	| desktop
     font-size: 4vw; }
     @media only screen and (min-width: 53.25em) {
       .archive-collection .description {
-        font-size: 1.35vw;
+        font-size: 1.25vw;
         line-height: 1.25; } }
     @media only screen and (min-width: 1560px) {
       .archive-collection .description {
@@ -7652,7 +7651,7 @@ a:hover {
   line-height: 1; }
   @media only screen and (min-width: 53.25em) {
     .more-link {
-      right: 4rem; } }
+      right: 8rem; } }
   .more-link__text {
     font-family: "acumin-pro", Arial, sans-serif;
     font-weight: 300;
@@ -7665,7 +7664,7 @@ a:hover {
     line-height: 0.9; }
     @media only screen and (min-width: 53.25em) {
       .more-link__text {
-        font-size: 1.35vw;
+        font-size: 1.25vw;
         line-height: 1.25; } }
     @media only screen and (min-width: 1560px) {
       .more-link__text {
@@ -7673,7 +7672,7 @@ a:hover {
         font-size: 1.8rem; } }
     @media only screen and (min-width: 53.25em) {
       .more-link__text {
-        margin-right: 1vw;
+        margin-right: 0.9vw;
         line-height: 1.2; } }
     @media only screen and (min-width: 1560px) {
       .more-link__text {
@@ -7688,7 +7687,7 @@ a:hover {
       font-size: 4vw; }
       @media only screen and (min-width: 53.25em) {
         .more-link__arrow:before {
-          font-size: 1.5vw;
+          font-size: 1.4vw;
           line-height: 1.3; } }
       @media only screen and (min-width: 1560px) {
         .more-link__arrow:before {
@@ -7704,7 +7703,7 @@ a:hover {
   margin-left: 3vw; }
   @media only screen and (min-width: 53.25em) {
     .icon-mail {
-      margin-left: 2vw; } }
+      margin-left: 1.9vw; } }
   @media only screen and (min-width: 1560px) {
     .icon-mail {
       margin-left: 2rem; } }
@@ -7720,7 +7719,7 @@ body {
   color: black; }
   @media only screen and (min-width: 53.25em) {
     body {
-      font-size: 1.6vw; } }
+      font-size: 1.5vw; } }
   @media only screen and (min-width: 1560px) {
     body {
       font-size: 2.4rem; } }
@@ -7731,8 +7730,8 @@ h3 {
   margin-bottom: 1rem; }
   @media only screen and (min-width: 53.25em) {
     h3 {
-      font-size: 1.9vw;
-      margin-bottom: 1vw; } }
+      font-size: 1.8vw;
+      margin-bottom: 0.9vw; } }
   @media only screen and (min-width: 1560px) {
     h3 {
       font-size: 2.8rem;
@@ -7749,8 +7748,8 @@ h3 {
   color: #595959; }
   @media only screen and (min-width: 53.25em) {
     .section__title {
-      font-size: 2vw;
-      margin-bottom: 2.8vw; } }
+      font-size: 1.9vw;
+      margin-bottom: 2.7vw; } }
   @media only screen and (min-width: 1560px) {
     .section__title {
       font-size: 3rem;
@@ -7760,7 +7759,7 @@ section {
   position: relative; }
   @media only screen and (min-width: 53.25em) {
     section {
-      margin-bottom: 2.4vw; } }
+      margin-bottom: 2.3vw; } }
   @media only screen and (min-width: 1560px) {
     section {
       margin-bottom: 5.5rem;
@@ -7775,7 +7774,7 @@ section {
   padding-top: 1.5rem; }
   @media only screen and (min-width: 53.25em) {
     .section--first {
-      padding-top: 2.7vw; } }
+      padding-top: 2.6vw; } }
   @media only screen and (min-width: 1560px) {
     .section--first {
       padding-top: 4rem; } }
@@ -7784,7 +7783,7 @@ section {
   margin-bottom: 2.2rem; }
   @media only screen and (min-width: 53.25em) {
     .main--copy .section__title {
-      margin-bottom: 1.4vw; } }
+      margin-bottom: 1.3vw; } }
   @media only screen and (min-width: 1560px) {
     .main--copy .section__title {
       margin-bottom: 2.2rem; } }
@@ -7793,7 +7792,7 @@ section {
   margin-bottom: 0.5rem; }
   @media only screen and (min-width: 53.25em) {
     .main--copy p {
-      margin-bottom: 1.6vw; } }
+      margin-bottom: 1.5vw; } }
   @media only screen and (min-width: 1560px) {
     .main--copy p {
       margin-bottom: 2.5rem; } }
@@ -7807,8 +7806,8 @@ section {
   margin-bottom: 1.5rem; }
   @media only screen and (min-width: 53.25em) {
     .sidebar__title {
-      font-size: 2vw;
-      margin-bottom: 0.4vw; } }
+      font-size: 1.9vw;
+      margin-bottom: 0.3vw; } }
   @media only screen and (min-width: 1560px) {
     .sidebar__title {
       font-size: 3rem;
@@ -7816,7 +7815,7 @@ section {
       margin-bottom: 0; } }
   @media only screen and (min-width: 53.25em) {
     .sidebar__title {
-      margin-bottom: 1vw; } }
+      margin-bottom: 0.9vw; } }
   @media only screen and (min-width: 1560px) {
     .sidebar__title {
       margin-bottom: 1.5rem; } }
@@ -7826,7 +7825,7 @@ section {
   margin-bottom: 0.5rem; }
   @media only screen and (min-width: 53.25em) {
     .sidebar__item {
-      margin-bottom: 0.5vw; } }
+      margin-bottom: 0.4vw; } }
   @media only screen and (min-width: 1560px) {
     .sidebar__item {
       margin-bottom: 0.8rem; } }
@@ -7845,7 +7844,7 @@ section {
   margin-top: 0.5rem; }
   @media only screen and (min-width: 53.25em) {
     .sidebar__subtitle {
-      font-size: 1.05vw;
+      font-size: 0.95vw;
       margin-bottom: 0.3rem; } }
   @media only screen and (min-width: 1560px) {
     .sidebar__subtitle {
@@ -7853,7 +7852,7 @@ section {
       margin-bottom: 0.5rem; } }
   @media only screen and (min-width: 53.25em) {
     .sidebar__subtitle {
-      margin-top: 0.6vw;
+      margin-top: 0.5vw;
       margin-bottom: 0.1vw; } }
   @media only screen and (min-width: 1560px) {
     .sidebar__subtitle {
@@ -7870,7 +7869,7 @@ section {
   line-height: 1.33333; }
   @media only screen and (min-width: 53.25em) {
     .sidebar__copy {
-      font-size: 1.2vw; } }
+      font-size: 1.1vw; } }
   @media only screen and (min-width: 1560px) {
     .sidebar__copy {
       font-size: 1.8rem; } }
@@ -7892,7 +7891,7 @@ hr {
     margin-bottom: 5vw; }
     @media only screen and (min-width: 53.25em) {
       .hr--folklife {
-        margin-bottom: 2.7vw; } }
+        margin-bottom: 2.6vw; } }
     @media only screen and (min-width: 1560px) {
       .hr--folklife {
         margin-bottom: 2.2rem;
@@ -7903,7 +7902,7 @@ hr {
     margin-top: 1vw; }
     @media only screen and (min-width: 53.25em) {
       .hr--thin {
-        margin-top: 0.6vw; } }
+        margin-top: 0.5vw; } }
     @media only screen and (min-width: 1560px) {
       .hr--thin {
         margin-top: 0.8rem; } }
@@ -7915,7 +7914,7 @@ hr {
     .details {
       min-height: initial;
       min-height: auto;
-      padding-top: 2vw; } }
+      padding-top: 1.9vw; } }
   @media only screen and (min-width: 1560px) {
     .details {
       padding-top: 2.5rem; } }
@@ -7924,7 +7923,7 @@ hr {
   padding: 2vw 2.5vw 2vw; }
   @media only screen and (min-width: 53.25em) {
     .details--inset {
-      padding: 1.6vw 1.3vw 1.3vw; } }
+      padding: 1.5vw 1.2vw 1.2vw; } }
   @media only screen and (min-width: 1560px) {
     .details--inset {
       padding: 2.5rem 2rem 2rem; } }
@@ -7935,7 +7934,7 @@ hr {
 
 @media only screen and (min-width: 53.25em) {
   .details--tight {
-    padding: 0.9vw 0.8vw 0 1.1vw; } }
+    padding: 0.8vw 0.7vw 0 1.0vw; } }
 
 @media only screen and (min-width: 1560px) {
   .details--tight {
@@ -7943,7 +7942,7 @@ hr {
 
 @media only screen and (min-width: 53.25em) {
   .details--tight-bottom {
-    padding-bottom: 1.35vw; } }
+    padding-bottom: 1.25vw; } }
 
 @media only screen and (min-width: 1560px) {
   .details--tight-bottom {
@@ -7965,7 +7964,7 @@ hr {
   font-size: 6vw; }
   @media only screen and (min-width: 53.25em) {
     .title--serif {
-      font-size: 1.9vw; } }
+      font-size: 1.7vw; } }
   @media only screen and (min-width: 1560px) {
     .title--serif {
       font-size: 2.8rem; } }
@@ -7978,7 +7977,7 @@ hr {
   font-size: 4vw; }
   @media only screen and (min-width: 53.25em) {
     .subtitle--sans {
-      font-size: 1.35vw;
+      font-size: 1.25vw;
       line-height: 1.25; } }
   @media only screen and (min-width: 1560px) {
     .subtitle--sans {
@@ -7996,7 +7995,7 @@ hr {
   font-size: 2.5vw; }
   @media only screen and (min-width: 53.25em) {
     .category {
-      font-size: 1.05vw;
+      font-size: 0.95vw;
       margin-bottom: 0.3rem; } }
   @media only screen and (min-width: 1560px) {
     .category {
@@ -8511,7 +8510,7 @@ select {
     cursor: pointer; }
     @media only screen and (min-width: 53.25em) {
       .meganav__sub-item, .footer__sub-item {
-        font-size: 1.35vw;
+        font-size: 1.25vw;
         line-height: 1.45; } }
     @media only screen and (min-width: 1560px) {
       .meganav__sub-item, .footer__sub-item {
@@ -8539,7 +8538,7 @@ select {
   top: 3rem; }
   @media only screen and (min-width: 53.25em) {
     .browsenav {
-      padding: 2.8vw 0 2vw;
+      padding: 2.7vw 0 1.9vw;
       top: 3rem; } }
   @media only screen and (min-width: 74.25em) {
     .browsenav {
@@ -8561,15 +8560,15 @@ select {
   margin-bottom: 3rem; }
   @media only screen and (min-width: 53.25em) {
     .browsenav__title {
-      font-size: 2vw;
-      margin-bottom: 2.8vw; } }
+      font-size: 1.9vw;
+      margin-bottom: 2.7vw; } }
   @media only screen and (min-width: 1560px) {
     .browsenav__title {
       font-size: 3rem;
       margin-bottom: 4.2rem; } }
   @media only screen and (min-width: 53.25em) {
     .browsenav__title {
-      margin-bottom: 1.5vw; } }
+      margin-bottom: 1.4vw; } }
   @media only screen and (min-width: 1560px) {
     .browsenav__title {
       margin-bottom: 2rem; } }
@@ -8603,7 +8602,7 @@ select {
   height: 44px; }
   @media only screen and (min-width: 53.25em) {
     select {
-      font-size: 1.35vw;
+      font-size: 1.25vw;
       line-height: 1.45; } }
   @media only screen and (min-width: 1560px) {
     select {
@@ -8696,7 +8695,7 @@ select {
     padding: 2vw 2vw 0; }
     @media only screen and (min-width: 53.25em) {
       .banner-slide .details {
-        padding: 1.35vw 1.3vw 0; } }
+        padding: 1.25vw 1.2vw 0; } }
     @media only screen and (min-width: 1560px) {
       .banner-slide .details {
         padding: 2rem 1.7rem 2rem 2rem; } }
@@ -8721,7 +8720,7 @@ select {
   margin-bottom: 0; }
   @media only screen and (min-width: 53.25em) {
     .slick-dotted.slick-slider {
-      margin-bottom: 3.5vw; } }
+      margin-bottom: 3.4vw; } }
   @media only screen and (min-width: 1560px) {
     .slick-dotted.slick-slider {
       margin-bottom: 5rem; } }
@@ -8829,7 +8828,7 @@ select {
   font-size: 6vw; }
   @media only screen and (min-width: 53.25em) {
     .section--video .title {
-      font-size: 1.9vw; } }
+      font-size: 1.7vw; } }
   @media only screen and (min-width: 1560px) {
     .section--video .title {
       font-size: 2.8rem; } }
@@ -8929,7 +8928,7 @@ select {
   font-size: 4vw; }
   @media only screen and (min-width: 53.25em) {
     .remodal__title {
-      font-size: 1.35vw;
+      font-size: 1.25vw;
       line-height: 1.25; } }
   @media only screen and (min-width: 1560px) {
     .remodal__title {
@@ -8946,8 +8945,8 @@ select {
   margin-bottom: 3vw; }
   @media only screen and (min-width: 53.25em) {
     .section--audio .title-wrapper {
-      min-height: 5.5vw;
-      margin-bottom: 3vw; } }
+      min-height: 5.4vw;
+      margin-bottom: 2.9vw; } }
   @media only screen and (min-width: 1560px) {
     .section--audio .title-wrapper {
       min-height: 10rem;
@@ -8961,7 +8960,7 @@ select {
   font-size: 4vw; }
   @media only screen and (min-width: 53.25em) {
     .section--audio .subtitle {
-      font-size: 1.35vw;
+      font-size: 1.25vw;
       line-height: 1.25; } }
   @media only screen and (min-width: 1560px) {
     .section--audio .subtitle {
@@ -8977,7 +8976,7 @@ select {
 
 @media only screen and (min-width: 53.25em) {
   .audio-player {
-    margin-top: 0.8vw; } }
+    margin-top: 0.7vw; } }
 
 @media only screen and (min-width: 1560px) {
   .audio-player {
@@ -9018,8 +9017,8 @@ select {
   font-size: 5vw; }
   @media only screen and (min-width: 53.25em) {
     .section--participate .title {
-      font-size: 2vw;
-      margin-bottom: 0.4vw; } }
+      font-size: 1.9vw;
+      margin-bottom: 0.3vw; } }
   @media only screen and (min-width: 1560px) {
     .section--participate .title {
       font-size: 3rem;
@@ -9037,8 +9036,8 @@ select {
       margin-bottom: 7.5vw; } }
   @media only screen and (min-width: 53.25em) {
     .section--talk-story {
-      padding-top: 2.65vw;
-      padding-bottom: 2.65vw; } }
+      padding-top: 2.55vw;
+      padding-bottom: 2.55vw; } }
   @media only screen and (min-width: 1560px) {
     .section--talk-story {
       padding-top: 4rem;
@@ -9060,7 +9059,7 @@ select {
     font-size: 5vw; }
     @media only screen and (min-width: 53.25em) {
       .talk-story__feature .title {
-        font-size: 2vw;
+        font-size: 1.9vw;
         line-height: 1.2; } }
     @media only screen and (min-width: 1560px) {
       .talk-story__feature .title {
@@ -9072,7 +9071,7 @@ select {
     font-size: 5vw; }
     @media only screen and (min-width: 53.25em) {
       .talk-story__feature .subtitle {
-        font-size: 2vw; } }
+        font-size: 1.9vw; } }
     @media only screen and (min-width: 1560px) {
       .talk-story__feature .subtitle {
         font-size: 3rem;
@@ -9098,7 +9097,7 @@ select {
     font-size: 4vw; }
     @media only screen and (min-width: 53.25em) {
       .talk-story__featurette .title, .talk-story__featurette .subtitle {
-        font-size: 1.35vw;
+        font-size: 1.25vw;
         line-height: 1.25; } }
     @media only screen and (min-width: 1560px) {
       .talk-story__featurette .title, .talk-story__featurette .subtitle {
@@ -9117,7 +9116,7 @@ select {
     .talk-story__textbox {
       position: absolute;
       width: 30.51%;
-      padding-bottom: 2vw; } }
+      padding-bottom: 1.9vw; } }
   @media only screen and (min-width: 1560px) {
     .talk-story__textbox {
       padding-bottom: 3rem; } }
@@ -9154,7 +9153,7 @@ select {
   font-size: 6vw; }
   @media only screen and (min-width: 53.25em) {
     .dive-deep__featurette .title {
-      font-size: 1.9vw; } }
+      font-size: 1.7vw; } }
   @media only screen and (min-width: 1560px) {
     .dive-deep__featurette .title {
       font-size: 2.8rem; } }
@@ -9203,7 +9202,7 @@ select {
 -------------------------------------------------- */
 @media only screen and (min-width: 53.25em) {
   .explore-collections__featurette, .teach__featurette {
-    height: 27vw; } }
+    height: 26.9vw; } }
 
 @media only screen and (min-width: 1560px) {
   .explore-collections__featurette, .teach__featurette {
@@ -9224,7 +9223,7 @@ select {
   font-weight: 600; }
   @media only screen and (min-width: 53.25em) {
     .explore-collections .title {
-      font-size: 1.9vw; } }
+      font-size: 1.7vw; } }
   @media only screen and (min-width: 1560px) {
     .explore-collections .title {
       font-size: 2.8rem; } }
@@ -9246,7 +9245,7 @@ select {
   font-weight: 400; }
   @media only screen and (min-width: 53.25em) {
     .section--teach .title {
-      font-size: 1.35vw;
+      font-size: 1.25vw;
       line-height: 1.25; } }
   @media only screen and (min-width: 1560px) {
     .section--teach .title {
@@ -9264,7 +9263,7 @@ select {
   margin-bottom: 2rem; }
   @media only screen and (min-width: 53.25em) {
     .section--newsletter-signup, .section--support {
-      font-size: 1.35vw;
+      font-size: 1.25vw;
       line-height: 1.25; } }
   @media only screen and (min-width: 1560px) {
     .section--newsletter-signup, .section--support {
@@ -9280,7 +9279,7 @@ select {
   padding-top: 1vw; }
   @media only screen and (min-width: 53.25em) {
     .section--newsletter-signup .details {
-      padding-top: 1.2vw; } }
+      padding-top: 1.1vw; } }
   @media only screen and (min-width: 1560px) {
     .section--newsletter-signup .details {
       padding-top: 1.5rem; } }
@@ -9294,7 +9293,7 @@ select {
   font-size: 4vw; }
   @media only screen and (min-width: 53.25em) {
     .newsletter-signup__copy {
-      font-size: 1.35vw;
+      font-size: 1.25vw;
       line-height: 1.25; } }
   @media only screen and (min-width: 1560px) {
     .newsletter-signup__copy {
@@ -9302,7 +9301,7 @@ select {
       font-size: 1.8rem; } }
   @media only screen and (min-width: 53.25em) {
     .newsletter-signup__copy {
-      height: 5.3vw; } }
+      height: 5.2vw; } }
   @media only screen and (min-width: 1560px) {
     .newsletter-signup__copy {
       height: 8.1rem; } }
@@ -9318,15 +9317,15 @@ select {
   height: 18vw; }
   @media only screen and (min-width: 53.25em) {
     .newsletter__input {
-      padding-top: 1vw;
-      font-size: 2.3vw; } }
+      padding-top: 0.9vw;
+      font-size: 2.2vw; } }
   @media only screen and (min-width: 1560px) {
     .newsletter__input {
       font-size: 3.5rem;
       padding-top: 1.5rem; } }
   @media only screen and (min-width: 53.25em) {
     .newsletter__input {
-      height: 5.25vw; } }
+      height: 5.15vw; } }
   @media only screen and (min-width: 1560px) {
     .newsletter__input {
       height: 6.1rem; } }
@@ -9360,8 +9359,8 @@ select {
     text-align: center; }
     @media only screen and (min-width: 53.25em) {
       .support__button {
-        font-size: 2vw;
-        margin-bottom: 2.8vw; } }
+        font-size: 1.9vw;
+        margin-bottom: 2.7vw; } }
     @media only screen and (min-width: 1560px) {
       .support__button {
         font-size: 3rem;
@@ -9412,7 +9411,7 @@ select {
     margin-bottom: 1vw; }
     @media only screen and (min-width: 53.25em) {
       .footer-logo {
-        font-size: 2.2vw; } }
+        font-size: 2.1vw; } }
     @media only screen and (min-width: 1560px) {
       .footer-logo {
         font-size: 3.3rem;
@@ -9428,7 +9427,7 @@ select {
     margin-top: 4vw; }
     @media only screen and (min-width: 53.25em) {
       .footer__row--2 {
-        margin-top: 1.7vw; } }
+        margin-top: 1.6vw; } }
     @media only screen and (min-width: 1560px) {
       .footer__row--2 {
         margin-top: 2.5rem; } }
@@ -9437,7 +9436,7 @@ select {
     margin-top: 8vw; }
     @media only screen and (min-width: 53.25em) {
       .footer__row--3 {
-        margin-top: 2.4vw; } }
+        margin-top: 2.3vw; } }
     @media only screen and (min-width: 1560px) {
       .footer__row--3 {
         margin-top: 5rem; } }
@@ -9445,7 +9444,7 @@ select {
     margin-bottom: 0rem; }
     @media only screen and (min-width: 53.25em) {
       .footer__list {
-        margin-bottom: 2vw; } }
+        margin-bottom: 1.9vw; } }
     @media only screen and (min-width: 1560px) {
       .footer__list {
         margin-bottom: 0; } }
@@ -9454,8 +9453,8 @@ select {
       color: #999999; } }
   @media only screen and (min-width: 53.25em) {
     .footer .sunsplash {
-      margin-left: -2.4vw;
-      margin-right: 0.25vw; } }
+      margin-left: -2.3vw;
+      margin-right: 0.15vw; } }
   @media only screen and (min-width: 1560px) {
     .footer .sunsplash {
       margin-left: -3.5rem;
@@ -9483,7 +9482,7 @@ select {
   @media only screen and (min-width: 53.25em) {
     .copyright-list__item {
       font-size: 1vw;
-      line-height: 1.45; } }
+      line-height: 1.35; } }
   @media only screen and (min-width: 1560px) {
     .copyright-list__item {
       font-size: 1.5rem;
@@ -9496,7 +9495,7 @@ select {
   margin-top: -4px; }
   @media only screen and (min-width: 53.25em) {
     .social-media__title {
-      font-size: 1.35vw;
+      font-size: 1.25vw;
       line-height: 1.45; } }
   @media only screen and (min-width: 1560px) {
     .social-media__title {
@@ -9509,8 +9508,8 @@ select {
   margin-right: 3vw; }
   @media only screen and (min-width: 53.25em) {
     .social-media__icon {
-      font-size: 2vw;
-      margin-right: 0.6vw; } }
+      font-size: 1.9vw;
+      margin-right: 0.5vw; } }
   @media only screen and (min-width: 1560px) {
     .social-media__icon {
       font-size: 3rem;
