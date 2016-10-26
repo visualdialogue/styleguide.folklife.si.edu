@@ -1,0 +1,10 @@
+// bootstrap override
+.container {
+	width: 100%;
+	max-width: $pageWidth;
+	padding: 0 15px;
+	@include respond-to(break2) {
+		// padding: 0 40px;
+		padding: 0 80px;
+	}
+}
