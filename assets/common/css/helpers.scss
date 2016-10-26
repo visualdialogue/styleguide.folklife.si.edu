@@ -43,6 +43,26 @@
   @include respond-to(fullwidth) {
   }
 
+  // so more arrow parent can be height 100% of image
+  // from http://stackoverflow.com/a/2715397
+  @include respond-to(break2) {
+  	
+  	.table {
+  		display: table;
+  		height: 100%;
+  	}
+  	.table-row {
+  		// allow make table cells to be same height
+  		display: table-row;
+  	}
+  	.table-cell {
+  		// allow more arrow to be at bottom of div, no matter how long inner content is
+  		display: table-cell;
+  		height: 100%;	
+  	}	
+  }
+
+
 	// vertical align from http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/ 
 	// @mixin vertical-align($position: relative) {
 	@mixin vertically-align($position: absolute, $offset: 50%) {

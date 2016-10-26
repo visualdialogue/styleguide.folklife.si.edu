@@ -7417,6 +7417,70 @@ conversion: 				| mobile 	| tablet	| desktop
   .featurette .title {
     font-weight: 700; }
 
+/* #Helpers
+-------------------------------------------------- */
+.sans {
+  font-family: "acumin-pro", Arial, sans-serif; }
+
+.cf:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.tablet-only {
+  display: none; }
+
+.desktop-only {
+  display: none !important; }
+
+.desktop-only-inline {
+  display: none; }
+
+.break-2-only-inline {
+  display: none; }
+
+@media only screen and (min-width: 40em) {
+  .mobile-only {
+    display: none; }
+  .no-tablet {
+    display: none; }
+  .tablet-only {
+    display: block; } }
+
+@media only screen and (min-width: 53.25em) {
+  .break-2-only-inline {
+    display: inline-block; }
+  .mobile-tablet-only {
+    display: none; }
+  .no-tablet {
+    display: block; }
+  .no-tablet-inline {
+    display: inline-block; }
+  .tablet-only {
+    display: none; }
+  .showroom-narrow {
+    display: none; }
+  .manufacturer-narrow {
+    display: none; }
+  .no-desktop {
+    display: none !important; }
+  .desktop-only {
+    display: block !important; }
+  .desktop-only-inline {
+    display: inline-block !important; } }
+
+@media only screen and (min-width: 53.25em) {
+  .table {
+    display: table;
+    height: 100%; }
+  .table-row {
+    display: table-row; }
+  .table-cell {
+    display: table-cell;
+    height: 100%; } }
+
+/* Mixins
+-------------------------------------------------- */
 /* Hero
 -------------------------------------------------- */
 .archives-page .hero__title {
@@ -7556,8 +7620,6 @@ conversion: 				| mobile 	| tablet	| desktop
     .archive-collection {
       margin-bottom: 4rem; } }
 
-/* Mixins
--------------------------------------------------- */
 /* #Links
 -------------------------------------------------- */
 .anchor {
@@ -7575,72 +7637,6 @@ a:hover {
 .meganav__title:hover, .footer__title:hover, .logo-mask:hover, .site-toggle__link:hover {
   background-color: transparent; }
 
-/* Header styles
--------------------------------------------------- */
-/* #Helpers
--------------------------------------------------- */
-.sans {
-  font-family: "acumin-pro", Arial, sans-serif; }
-
-.cf:after {
-  content: "";
-  display: table;
-  clear: both; }
-
-.tablet-only {
-  display: none; }
-
-.desktop-only {
-  display: none !important; }
-
-.desktop-only-inline {
-  display: none; }
-
-.break-2-only-inline {
-  display: none; }
-
-@media only screen and (min-width: 40em) {
-  .mobile-only {
-    display: none; }
-  .no-tablet {
-    display: none; }
-  .tablet-only {
-    display: block; } }
-
-@media only screen and (min-width: 53.25em) {
-  .break-2-only-inline {
-    display: inline-block; }
-  .mobile-tablet-only {
-    display: none; }
-  .no-tablet {
-    display: block; }
-  .no-tablet-inline {
-    display: inline-block; }
-  .tablet-only {
-    display: none; }
-  .showroom-narrow {
-    display: none; }
-  .manufacturer-narrow {
-    display: none; }
-  .no-desktop {
-    display: none !important; }
-  .desktop-only {
-    display: block !important; }
-  .desktop-only-inline {
-    display: inline-block !important; } }
-
-@media only screen and (min-width: 53.25em) {
-  .table {
-    display: table;
-    height: 100%; }
-  .table-row {
-    display: table-row; }
-  .table-cell {
-    display: table-cell;
-    height: 100%; } }
-
-/* Widths
--------------------------------------------------- */
 /* Icons
 -------------------------------------------------- */
 .more-link {
