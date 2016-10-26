@@ -160,7 +160,7 @@ Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-crea
 *********************/
 	var $searchBar = $('.search-bar');
 	var $searchIcon = $('#search-icon');
-	var $browsenav = $('#browsenav');
+	var $browsenav = $('#browsenav'); // will only exist on folkways, otherwise hidden with php
 	var searchClosed = true;
 
 	// when click share icon
@@ -253,6 +253,21 @@ Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-crea
 	var slickCreatedMobile = false; // flag to create and destroy when needed
 	var slickCreatedDesktop = false; // flag to create and destroy when needed
 
+	// after banner created...
+	$('#banner-carousel').on('init', function() {
+
+		console.log('banner init');
+
+		// cache arrows for selecting
+		var $slickArrow = $('.slick-arrow');
+
+		// add event handler to arrows to pause slider when clicked
+		$slickArrow.on('click', function() {
+			$('#banner-carousel').slick('slickPause');
+			console.log('banner paused');
+		});
+	});
+
 	function initiateSlickCarousel() {
 		if(isMobile) {
 			console.log('mobile');
@@ -265,13 +280,15 @@ Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-crea
 
 	function createBannerMobile() {
 		console.log('creating mobile banner...');
-		 $('#banner-carousel').slick({
+		$('#banner-carousel').slick({
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			arrows: false,
 			asNavFor: '.banner__nav--mobile',
 			autoplay: true, // pause for testing
 			autoplaySpeed: 4000,
+		}).on('init', function() {
+			console.log('slider created');
 		});
 		$('.banner__nav--mobile').slick({
 			slidesToShow: 1,
@@ -290,8 +307,6 @@ Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-crea
 	function createBannerDesktop() {
 		console.log('creating desktop banner...');
 		$('#banner-carousel').slick({
-			// centerMode: true,
-			// centerPadding: '0',
 			appendDots: '.dots',
 			dots: true,
 			mobileFirst: 'true',
@@ -301,6 +316,8 @@ Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-crea
 			slidesToShow: 1,
 			centerMode: true,
 			centerPadding: '80px',
+			// pauseOnFocus: true,
+			pauseOnHover: false,
 			responsive: [
 				{
 					breakpoint: 1560,

@@ -8181,7 +8181,7 @@ img.logo--folklife, img.logo--center {
     .smaller-header img.logo--center {
       top: -100%; }
     .smaller-header img.logo--folklife {
-      top: -45%; } }
+      top: -46%; } }
   .smaller-header + .section--banner.container {
     position: relative;
     top: 142px; }
@@ -8521,6 +8521,13 @@ select {
         color: #cccccc; } }
     .meganav__sub-item:hover, .footer__sub-item:hover {
       color: white; }
+    .meganav__sub-item a, .footer__sub-item a {
+      background: transparent; }
+      @media only screen and (min-width: 53.25em) {
+        .meganav__sub-item a, .footer__sub-item a {
+          color: #cccccc; }
+          .meganav__sub-item a:hover, .footer__sub-item a:hover {
+            color: white; } }
 
 .meganav {
   display: none;
@@ -9525,10 +9532,21 @@ select {
     margin-top: 2vw; } }
 
 .copyright {
+  font-family: "acumin-pro", Arial, sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.7;
   padding-top: 2vw; }
   @media only screen and (min-width: 53.25em) {
     .copyright {
-      padding-top: 0; } }
+      font-size: 1vw;
+      line-height: 1.35; } }
+  @media only screen and (min-width: 1560px) {
+    .copyright {
+      font-size: 1.5rem;
+      line-height: 1.5; } }
+  @media only screen and (min-width: 53.25em) {
+    .copyright {
+      padding-top: 0.4vw; } }
   @media only screen and (min-width: 1560px) {
     .copyright {
       padding-top: 1px; } }

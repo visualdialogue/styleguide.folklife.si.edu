@@ -2,9 +2,8 @@
 
 #navspacer.navspacer
 
-
 //- Banner
-section.section--banner-1-2.section--first.container.hero
+section.section--banner-1-2.section--first.container.hero#about-the-archives
 	h1.section__title.hero__title
 		=$page->title()
 
@@ -25,7 +24,7 @@ section.section--banner-1-2.section--first.container.hero
 .container: hr.hr--folklife
 
 //- Collections
-section.section--collections.container
+section.section--collections.container#collections
 	ul.row
 		- foreach ($page->children()->find('collections')->children() as $collection):
 			//- =$collection->description()
@@ -40,8 +39,8 @@ section.section--collections.container
 
 .container: hr.hr--folklife
 
-//- Watch
-section.section--using-the-archives.container
+//- Using the Archives
+section.section--using-the-archives.container#using-the-archives
 	.row
 		main.main--copy.col-sm-7
 			h2.section__title Using the Archives
