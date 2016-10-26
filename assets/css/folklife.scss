@@ -14,14 +14,15 @@
   @import "../../bower_components/remodal/dist/remodal-default-theme.scss";
   @import "../../bower_components/slick-carousel/slick/slick.scss";
   @import "../../bower_components/slick-carousel/slick/slick-theme.scss";
-  @import "bootstrap.scss"; // get custom bootstrap built with less
+  @import "../common/css/bootstrap.scss"; // get custom bootstrap built with less
   @import "../common/css/reset.scss";
   @import "../common/css/dimensions.scss";
   @import "../common/css/media-queries.scss";
-  @import "colors.scss"; // colors may be used in type.scss
+  @import "../common/css/general.scss";
+  @import "../common/css/colors.scss"; // colors may be used in type.scss
   @import "../common/css/icons.scss";
   @import "../common/css/type.scss";
-  @import "featurette.scss";
+  @import "../common/css/featurette.scss";
   @import "../common/css/padding.scss";
   @import "../common/css/helpers.scss";
   @import "archives.scss";
@@ -250,16 +251,7 @@
   @include respond-to(fullwidth) {
   }
 
-	// bootstrap override
-	.container {
-		width: 100%;
-		max-width: $pageWidth;
-		padding: 0 15px;
-		@include respond-to(break2) {
-			// padding: 0 40px;
-			padding: 0 80px;
-		}
-	}
+
 
 	// so more arrow parent can be height 100% of image
 	// from http://stackoverflow.com/a/2715397
@@ -921,124 +913,6 @@
 		// vertical-align: top; // get rid of extra space below images
 	}
 
-	// vvvvvv copy navicons--mobile below from Illustrator!!! for /assets/images/icons/navicons--mobile.png vvvvvv
-
-	.audio-progress-bar, .play-button:hover, .play-button:active, .play-button, .volume:hover, .volume, select, .slick-dots li button:before, .slick-dots li button:hover:before, .search-icon:hover, .search-icon, .menu-icon, .menu-icon:hover, .share-icon, .twitter-icon:hover, .twitter-icon, .tumblr-icon:hover, .flickr-icon:hover, .instagram-icon:hover, .instagram-icon, .flickr-icon, .tumblr-icon, .facebook-icon, .facebook-icon:hover, .share-icon:hover { background: url(/assets/images/icons/navicons--mobile.png); }
-
-	.play-button:hover, .play-button:active, .play-button { width: 38px; height: 38px; }
-
-	.volume:hover, .volume { width: 27px; height: 23px; }
-
-	.slick-dots li button:before, .slick-dots li button:hover:before { width: 13px; height: 13px; }
-
-	.search-icon:hover, .search-icon { width: 22px; height: 20px; }
-
-	.menu-icon, .menu-icon:hover, .share-icon, .twitter-icon:hover, .twitter-icon, .tumblr-icon:hover, .flickr-icon:hover, .instagram-icon:hover, .instagram-icon, .flickr-icon, .tumblr-icon, .facebook-icon, .facebook-icon:hover, .share-icon:hover { width: 22px; height: 21px; }
-
-	.audio-progress-bar { background-position: -20px -223px; width: 125px; height: 4px; }
-	.play-button:hover, .play-button:active { background-position: -67px -177px; }
-	.play-button { background-position: -19px -177px; }
-	.volume:hover { background-position: -175px -213px; }
-	.volume { background-position: -176px -178px; }
-	select { background-position: -229px -136px; width: 25px; height: 14px; }
-	.slick-dots li button:before { background-position: -136px -63px; }
-	.slick-dots li button:hover:before { background-position: -136px -86px; }
-	.search-icon:hover { background-position: -130px -37px; }
-	.search-icon { background-position: -130px -17px; }
-	.menu-icon { background-position: -73px -17px; }
-	.menu-icon:hover { background-position: -73px -37px; }
-	.share-icon { background-position: -16px -17px; }
-	.twitter-icon:hover { background-position: -36px -78px; }
-	.twitter-icon { background-position: -36px -58px; }
-	.tumblr-icon:hover { background-position: -57px -78px; }
-	.flickr-icon:hover { background-position: -79px -78px; }
-	.instagram-icon:hover { background-position: -100px -78px; }
-	.instagram-icon { background-position: -100px -58px; }
-	.flickr-icon { background-position: -79px -58px; }
-	.tumblr-icon { background-position: -57px -58px; }
-	.facebook-icon { background-position: -16px -58px; }
-	.facebook-icon:hover { background-position: -16px -78px; }
-	.share-icon:hover { background-position: -16px -37px; }
-
-	// ^^^^^^ copy navicons--mobile above from Illustrator!!! ^^^^^^
-
-
-	// hover specific for mobile revert to regular dimensions, otherwise focus would activate hover and not be white
-	.search-icon:hover { background-position: -130px -17px; }
-	.menu-icon:hover { background-position: -73px -17px;}
-	.share-icon:hover { background-position: -16px -17px; }
-
-
-
-
-	@include respond-to(break2) {
-
-		// vvvvvv copy navicons--tablet below from Illustrator!!! for /assets/images/icons/navicons--tablet.png vvvvvv
-
-		.slick-next:hover::before, .slick-next::before, .slick-prev:hover::before, .audio-progress-bar, .play-button:hover, .play-button, .volume:hover, .volume, select, .slick-dots li button:before, .slick-dots li button:hover:before, .slick-prev::before, .search-icon:hover, .search-icon, .share-icon, .twitter-icon:hover, .twitter-icon, .tumblr-icon:hover, .flickr-icon:hover, .instagram-icon:hover, .instagram-icon, .flickr-icon, .tumblr-icon, .facebook-icon, .facebook-icon:hover, .share-icon:hover, .menu-icon, .menu-icon:hover { background: url(/assets/images/icons/navicons--tablet.png); }
-
-		.slick-dots li button:before, .slick-dots li button:hover:before { height: 13px; }
-
-		.slick-next:hover::before, .slick-next::before, .slick-prev:hover::before { width: 28px; height: 54px; }
-
-		.play-button:hover, .play-button { width: 61px; height: 60px; }
-
-		.volume:hover, .volume { width: 28px; height: 23px; }
-
-		.search-icon:hover, .search-icon, .share-icon, .facebook-icon, .facebook-icon:hover, .share-icon:hover, .menu-icon:hover { width: 41px; height: 39px; }
-
-		.twitter-icon:hover, .twitter-icon, .tumblr-icon:hover, .flickr-icon:hover, .instagram-icon:hover, .instagram-icon, .flickr-icon, .tumblr-icon, .menu-icon { width: 41px; height: 38px; }
-
-		.slick-next:hover::before { background-position: -173px -297px; }
-		.slick-next::before { background-position: -137px -297px; }
-		.slick-prev:hover::before { background-position: -63px -297px; }
-		.audio-progress-bar { background-position: -12px -280px; width: 201px; height: 3px; }
-		.play-button:hover { background-position: -87px -205px; }
-		.play-button { background-position: -10px -205px; }
-		.volume:hover { background-position: -166px -241px; }
-		.volume { background-position: -167px -206px; }
-		select { background-position: -220px -169px; width: 25px; height: 14px; }
-		.slick-dots li button:before { background-position: -226px -118px; width: 13px; }
-		.slick-dots li button:hover:before { background-position: -226px -132px; width: 14px; }
-		.slick-prev::before { background-position: -98px -297px; width: 29px; height: 54px; }
-		.search-icon:hover { background-position: -217px -38px; }
-		.search-icon { background-position: -217px 0px; }
-		.share-icon { background-position: 0px 0px; }
-		.twitter-icon:hover { background-position: -40px -114px; }
-		.twitter-icon { background-position: -40px -76px; }
-		.tumblr-icon:hover { background-position: -80px -114px; }
-		.flickr-icon:hover { background-position: -120px -114px; }
-		.instagram-icon:hover { background-position: -160px -114px; }
-		.instagram-icon { background-position: -160px -76px; }
-		.flickr-icon { background-position: -120px -76px; }
-		.tumblr-icon { background-position: -80px -76px; }
-		.facebook-icon { background-position: 0px -75px; }
-		.facebook-icon:hover { background-position: 0px -113px; }
-		.share-icon:hover { background-position: 0px -38px; }
-		.menu-icon { background-position: -109px -1px; }
-		.menu-icon:hover { background-position: -109px -40px; }
-
-		// ^^^^^^ copy above from Illustrator!!! ^^^^^^
-
-		// custom width for dropdown arrow
-		// select { background-position: -220px -169px; width: 245px; height: 44px; }
-
-		// responsive sizes
-		.play-button {
-			// width: 22%;
-		}
-
-	}
-
-	@include respond-to(fullwidth) {
-
-		.slick-next:hover::before, .slick-next::before, .slick-prev:hover::before, .slick-prev::before { width: 36px; height: 68px; background: url(/assets/images/icons/navicons.png); }
-
-		.slick-next:hover::before { background-position: -182px -270px; }
-		.slick-next::before { background-position: -135px -270px; }
-		.slick-prev:hover::before { background-position: -41px -270px; }
-		.slick-prev::before { background-position: -86px -270px; }
-	}
 
 	
 	// ^^^^^^ copy above from Illustrator!!! ^^^^^^
