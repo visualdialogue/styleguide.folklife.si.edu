@@ -3,10 +3,11 @@
 -------------------------------------------------- */
   $break1: 40em; // 640 px
   $break2: 53.25em; // 852 px
-  $break-25: 72em; // 1152 px
+  // $break-25: 72em; // 1152 px
+  $breakTagline: 62.5em; // 1000px
   $breaksearch: 74.25em; // 1188px for search bar
-  $break-3: 80em; // 1350 px feature descriptions
-  $break-4: 89.375em; // 1430 px for showrooms page only
+  // $break-3: 80em; // 1350 px feature descriptions
+  // $break-4: 89.375em; // 1430 px for showrooms page only
   $fullWidth: $pageWidth; // use em for correct media query calculation
 
   @mixin respond-to($media) {
@@ -22,8 +23,8 @@
     @else if $media == break2max {
       @media only screen and (max-width: $break2) { @content; }
     }
-    @else if $media == break25 {
-      @media only screen and (min-width: $break-25) { @content; }
+    @else if $media == breakTagline {
+      @media only screen and (min-width: $breakTagline) { @content; }
     }
     @else if $media == breaksearch {
       @media only screen and (min-width: $breaksearch) { @content; }
@@ -31,12 +32,12 @@
     @else if $media == breaksearchmax {
       @media only screen and (max-width: $breaksearch) { @content; }
     }
-    @else if $media == break3 {
-      @media only screen and (min-width: $break-3) { @content; }
-    }
-    @else if $media == break4 {
-      @media only screen and (min-width: $break-4) { @content; }
-    }
+    // @else if $media == break3 {
+    //   @media only screen and (min-width: $break-3) { @content; }
+    // }
+    // @else if $media == break4 {
+    //   @media only screen and (min-width: $break-4) { @content; }
+    // }
     @else if $media == fullwidth {
       @media only screen and (min-width: $fullWidth) { @content; }
     }
