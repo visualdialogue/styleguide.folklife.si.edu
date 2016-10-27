@@ -1,3 +1,4 @@
+
 [data-icon]:before {
   font-family: "vd-icons" !important;
   content: attr(data-icon);
@@ -68,4 +69,7 @@
 }
 .icon-sort-desc:before {
   content: "\6f";
+}
+.icon-audio-progress-bar:before {
+  content: "\70";
 }
