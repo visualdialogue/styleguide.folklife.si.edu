@@ -1,0 +1,65 @@
+.section--audio {
+	.details {
+		border: 2px solid $black15;		
+	}
+	.title-wrapper {
+		min-height: 24vw; // for 2 line album titles
+		margin-bottom: 3vw;
+		@include respond-to(break2) {
+			// min-height: 4.8rem;
+			min-height: 5.4vw; // for 2 line album titles
+			margin-bottom: 2.9vw;
+		}
+		@include respond-to(fullwidth) {
+			min-height: 10rem;
+			margin-bottom: 0;
+		}
+	}
+	.title {
+		@extend %title--sans;
+	}
+	.subtitle {
+		@include sans-sm;
+	}
+}
+.row--listen {
+	margin-bottom: 0.6rem; // for 80px to hr
+}
+.audio-player__details, .audio-progress-bar, .audio-time, .volume {
+	display: inline-block;
+	vertical-align: bottom;
+}
+.audio-player {
+	// margin-top: 0rem;
+	@include respond-to(break2) {
+		// margin-top: 2vw;
+		margin-top: 0.7vw;
+	}
+	@include respond-to(fullwidth) {
+		// margin-top: 2.8rem;
+		margin-top: 1.2rem;
+	}
+}
+.audio-player__details {
+	max-width: 100%;
+	@include respond-to(break2) {
+		// width: 72.695%; // 205/282 = 
+		width: 67%; // 205/282 = 
+		margin-left: 5%;
+	}
+	@include respond-to(fullwidth) {
+		width: 72.695%; // 205/282 = 
+		margin-left: 1rem;
+	}
+}
+.audio-progress-bar {
+	margin-bottom: 4px;
+	max-width: 100%;
+}
+.volume {
+	float: right;
+	margin-right: 3px;
+}
+.audio-time {
+	@include slab-xs;
+}
