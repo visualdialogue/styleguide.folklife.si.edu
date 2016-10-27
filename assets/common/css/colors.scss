@@ -21,18 +21,11 @@ $lightblue: #b4e7f8;
 
 /* Color Application
 -------------------------------------------------- */
-$links: red;
+$link: $black80;
 $copylinks: coral;
 $hover: $lightblue;
-// $hover: purple;
 $navbar: $black80;
 $tagline: $black50;
 $sitelinks: $black30;
 
 $searchText: $black40;
-
-a {
-  color: $links;
-}
-a:hover, .main-copy h2 a:hover  { color: $hover; }
-.main-copy a { color: $copylinks; }

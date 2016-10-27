@@ -148,14 +148,15 @@ body {
   		margin-bottom: 0;
 	}
 }
-@mixin subtitle--sans {
+// @mixin subtitle--sans {
+@mixin sans-sm {
 	font-family: $sans;
 	font-weight: 300; // light for acumin
 	line-height: 1.2;
 	line-height: 1.4;
   	font-size: 4vw;
 	@include respond-to(break2) {
-  		font-size: 1.25vw;
+  		font-size: 1.15vw;
 		line-height: 1.25;
 	}
 	@include respond-to(fullwidth) {
@@ -251,18 +252,35 @@ body {
 		font-size: 4.2rem;
 	}
 }
-@mixin title--serif--xlarge {
+// @mixin title--serif--xlarge {
+@mixin serif-xl {
 	font-family: $serif;
 	font-weight: 700;
 	line-height: 1.1;
 	font-size: 8vw;
 	@include respond-to(break2) {
-		font-size: 4.1vw;
+		font-size: 4vw;
 		// line-height: 1.1;
 		margin-top: -1rem;
 	}
 	@include respond-to(fullwidth) {
 		font-size: 6.2rem;
+		// line-height: 1.1;
+		margin-top: -1rem;
+	}
+}
+@mixin serif-xxl {
+	font-family: $serif;
+	font-weight: 700;
+	line-height: 1.1;
+	font-size: 8vw;
+	@include respond-to(break2) {
+		font-size: 4vw;
+		// line-height: 1.1;
+		margin-top: -1rem;
+	}
+	@include respond-to(fullwidth) {
+		font-size: 13rem;
 		// line-height: 1.1;
 		margin-top: -1rem;
 	}

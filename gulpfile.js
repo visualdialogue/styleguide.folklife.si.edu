@@ -210,7 +210,7 @@ gulp.task('js-watch', ['js'], browserSync.reload);
 gulp.task('serve', ['jade', 'styles', 'js'], function() {
 
   browserSync.init({
-      proxy     : "folklife.loc:3000",
+      proxy     : "styleguide.folklife.loc:3000",
       // port      : 3000,
       open      : false,
       notify    : false,

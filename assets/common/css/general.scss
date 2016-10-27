@@ -54,3 +54,203 @@
 			padding-right: 20px;
 		}
 	}
+
+
+	/* General / Sections
+	-------------------------------------------------- */
+		.site-toggle__link.active {
+			color: $black70;
+		}
+		body {
+			// padding-top: 100px; // clear fixed header
+			@include body-text;
+		}
+		h3 {
+			@include h3;
+		}
+		.section__title {
+			@include section-header;
+		}
+		section {
+			// margin-bottom: 0;
+			position: relative; // contain more link
+			@include respond-to(break2) {
+				margin-bottom: 2.3vw;
+				margin-bottom: 4.6vw;
+			}
+			@include respond-to(fullwidth) {
+				// margin-bottom: 3.5rem;
+				// margin-bottom: 5.5rem;
+				// margin-bottom: 4rem;
+				margin-bottom: 7.3rem; // with line height this equals 80 below for most sections
+			}
+
+		}
+		section li {
+			@include respond-to(break2max) {
+				margin-bottom: 1.5rem;
+			}
+		}
+		.section {
+			&--first {
+				padding-top:1.5rem;
+				@include respond-to(break2) {padding-top:2.6vw;}
+				@include respond-to(fullwidth) {padding-top:4rem;}
+			}
+		}
+		.main--copy {
+			.section__title {
+				margin-bottom:2.2rem;
+				@include respond-to(break2) {margin-bottom:1.3vw;}
+				@include respond-to(fullwidth) {margin-bottom:2.2rem;} // 30 px
+			}
+			p {
+				margin-bottom:0.5rem;
+				@include respond-to(break2) {margin-bottom:1.5vw;}
+				@include respond-to(fullwidth) {margin-bottom:2.5rem;} // 40 px
+			}
+		}
+		.sidebar {
+			&__title {
+				@include title--sans--alt;
+				color: $black50;
+				margin-bottom:1.5rem;
+				@include respond-to(break2) {margin-bottom:0.9vw;}
+				@include respond-to(fullwidth) {margin-bottom:1.5rem;}
+			}
+			&__item {
+				border-top: 1px solid $black50;
+				margin-bottom:0.5rem;
+				@include respond-to(break2) {margin-bottom:0.4vw;}
+				@include respond-to(fullwidth) {margin-bottom:0.8rem;}
+			}
+			&__subtitle {
+				@include sidebar-subtitle;
+				letter-spacing: 0;
+				// line-height:1.5;
+				margin-top: 0.5rem;
+				@include respond-to(break2) {
+					// line-height:1.5;
+					// margin-bottom:
+					margin-top: 0.5vw;
+					margin-bottom: 0.1vw;
+				}
+				@include respond-to(fullwidth) {
+					// line-height:0.9;
+					margin-top: 0.9rem; // 15px
+					margin-bottom: 0rem;
+				}
+			}
+			&__copy {
+				@include sidebar-copy;
+			}
+		}
+		hr {
+			margin: 0; // bootstrap reset
+			border: none;
+		}
+		.hr {
+			// from http://stackoverflow.com/a/24499695
+			display:block;
+			border:0px;
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+
+			&--folklife {
+				height:11px;
+				background-image:url(/assets/images/hr.jpg);
+				margin-bottom: 5vw;
+				@include respond-to(break2) {
+					margin-bottom: 2.6vw;
+				}
+				@include respond-to(fullwidth) {
+					margin-bottom: 2.2rem;
+					margin-bottom: 4rem;
+				}
+			}
+			&--thin {
+				height:8px;
+				background-image:url(/assets/images/hr--thin.png);
+				margin-top: 1vw;
+				@include respond-to(break2) {margin-top:0.5vw;}
+				@include respond-to(fullwidth) {margin-top:0.8rem;}
+
+			}
+		}
+
+		// details only include top padding
+		.details {
+			// padding-top: 4vw;
+			padding-top: 12px;
+			min-height: 26vw; // for 3 line titles
+			@include respond-to(break2) {
+				min-height: initial; // reset // for ios
+				min-height: auto; // for windows
+				padding-top: 1.9vw;
+			}
+			@include respond-to(fullwidth) {
+				padding-top: 2.5rem;
+			}
+		}
+		// details inner includes left and right padding, and less top padding
+		.details--inset {
+			// padding: 3vw 2vw 2vw;
+			padding: 2vw 2.5vw 2vw;
+			@include respond-to(break2) {
+				padding: 1.5vw 1.2vw 1.2vw;
+			}
+			@include respond-to(fullwidth) {
+				padding: 2.5rem 2rem 2rem;
+			}
+		}
+		.details--notop {
+			@include respond-to(break2) {padding-top: 0 !important;}
+		}
+		// smaller featurette details require less padding
+		.details--tight {
+			@include respond-to(break2) {
+				// padding: 1.35vw 0.6vw 0 1.35vw;
+				padding: 0.8vw 0.7vw 0 1.0vw;
+			}
+			@include respond-to(fullwidth) {
+				// padding: 1.4rem 1.8rem 0 2rem;
+				padding: 1.6rem 1.8rem 0 1.8rem;
+			}
+		}
+		// smaller featurette details require less padding
+		.details--tight-bottom {
+			@include respond-to(break2) {
+				padding-bottom: 1.25vw;
+			}
+			@include respond-to(fullwidth) {
+				padding-bottom: 1.5rem;
+			}
+		}
+		.details__inner {
+			// counteract line height of first line for padding
+			margin-top:0;
+			@include respond-to(break2) {
+				margin-top:-2px;
+			}
+			@include respond-to(fullwidth) {
+				margin-top:-3px;
+			}
+		}
+		.title {
+
+		}
+		.title--serif {
+			@include title--serif;
+		}
+		.title--sans {
+			@extend %title--sans;
+		}
+		.subtitle--sans {
+			@include sans-sm;
+		}
+		.category {
+			@include category;
+		}
+		.date {
+			@extend %type--date;
+		}

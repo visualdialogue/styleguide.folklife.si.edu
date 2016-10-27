@@ -18,7 +18,7 @@
 			
 		}
 		.title {
-			@include title--serif--xlarge;
+			@include serif-xlarge;
 			margin-bottom:1rem;
 			.description {
 			@include subtitle--sans;
