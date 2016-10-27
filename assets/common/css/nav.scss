@@ -332,7 +332,13 @@
 			@include link-font;
 			color: white;
 			color:$black20;
-			a {color: white;display: block;}
+			a {
+				color: $black20;
+				display: block;
+				&:hover {
+					color: white;
+				}
+			}
 			@include respond-to(break2) {color:$black20;}
 			font-weight: 400;	
 			// line-height: 1.44;

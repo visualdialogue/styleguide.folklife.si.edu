@@ -53,24 +53,24 @@ body {
 		margin-bottom: 4.2rem;
 	}
 }
-@mixin slab-xs {
-	font-family: $knockoutNarrow;
-	// color: $black65;
-	// font-weight: 300;
-	// letter-spacing: 1px;
-	// line-height: 0.8; // so margins accurate
-	// margin-bottom: 0.5rem;
-	// margin-bottom: 0;
-	font-size: 2.5vw;
-	@include respond-to(break2) {
-		font-size: 0.95vw;
-		margin-bottom: 0.3rem;
-	}
-	@include respond-to(fullwidth) {
-		font-size: 1.6rem;
-		margin-bottom: 0.5rem;
-	}
-}
+// @mixin slab-xs {
+// 	font-family: $knockoutNarrow;
+// 	// color: $black65;
+// 	// font-weight: 300;
+// 	// letter-spacing: 1px;
+// 	// line-height: 0.8; // so margins accurate
+// 	// margin-bottom: 0.5rem;
+// 	// margin-bottom: 0;
+// 	font-size: 2.5vw;
+// 	@include respond-to(break2) {
+// 		font-size: 0.95vw;
+// 		margin-bottom: 0.3rem;
+// 	}
+// 	@include respond-to(fullwidth) {
+// 		font-size: 1.6rem;
+// 		margin-bottom: 0.5rem;
+// 	}
+// }
 @mixin slab--largest {
 	font-family: $slabWide;
 	text-transform: uppercase;
