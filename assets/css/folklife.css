@@ -16,8 +16,8 @@
 
 @font-face {
   font-family: "vd-icons";
-  src: url("../common/css/vd-icons/fonts/vd-icons.eot");
-  src: url("../common/css/vd-icons/fonts/vd-icons.eot?#iefix") format("embedded-opentype"), url("../common/css/vd-icons/fonts/vd-icons.woff") format("woff"), url("../common/css/vd-icons/fonts/vd-icons.ttf") format("truetype"), url("../common/css/vd-icons/fonts/vd-icons.svg#vd-icons") format("svg");
+  src: url("../fonts/vd-icons.eot");
+  src: url("../fonts/vd-icons.eot?#iefix") format("embedded-opentype"), url("../fonts/vd-icons.woff") format("woff"), url("../fonts/vd-icons.ttf") format("truetype"), url("../fonts/vd-icons.svg#vd-icons") format("svg");
   font-weight: normal;
   font-style: normal; }
 

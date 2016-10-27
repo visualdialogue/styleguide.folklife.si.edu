@@ -4,7 +4,6 @@
 	// bootstrap override
 	.navbar {
 		background-color: $navbar;		
-		z-index: 2;
 		margin-bottom: 0;
 		border: 0;
 		border-radius: 0;
@@ -13,9 +12,12 @@
 		@include respond-to(break2max) {
 			position: fixed;
 			width: 100%;
+			z-index: 10;
 		}
 		@include respond-to(break2) {
 			top: 60px;
+			z-index: 2;
+			z-index: 10;
 		}
 
 	}
@@ -31,7 +33,6 @@
 			background-color: white;
 			font-family: $slabLight;
 			// letter-spacing: 0.5px;		
-			color: $tagline;
 			font-size: 2.7rem; // ff-good
 			// font-size: 1.5rem;
 			text-align:right;
@@ -41,6 +42,7 @@
 	.tagline {
 		display: inline-block;
 		padding: 11px 0;
+		color: $tagline;
 	}
 	.site-toggle__link {
 		color: $sitelinks;
@@ -146,14 +148,14 @@
 			height: 70px;
 		}
 	}
-	img.logo--center, img.logo--folklife {
-		-webkit-transition: top 0.3s ease;
-		-moz-transition: top 0.3s ease;
-		-ms-transition: top 0.3s ease;
-		-o-transition: top 0.3s ease;
-		transition: top 0.3s ease;
+	img.logo--center, img.logo--folklife, img.logo--festival {
+		-webkit-transition: top 0.1s ease;
+		-moz-transition: top 0.1s ease;
+		-ms-transition: top 0.1s ease;
+		-o-transition: top 0.1s ease;
+		transition: top 0.1s ease;
 	}
-	img.logo--folklife, img.logo--center {
+	img.logo--folklife, img.logo--center, img.logo--festival {
 		position: absolute;
 		top:0;
 		left: 0;
@@ -305,6 +307,8 @@
 			padding: 10px 0 0;
 			// color: $black20;
 			color: $black20;
+			display: block; // for mobile
+
 			@include respond-to(break2) {color: white;}
 			&:hover {
 				color: white;
@@ -324,8 +328,11 @@
 		}
 
 		&__sub-item {
+			display: block;
 			@include link-font;
 			color: white;
+			color:$black20;
+			a {color: white;display: block;}
 			@include respond-to(break2) {color:$black20;}
 			font-weight: 400;	
 			// line-height: 1.44;
@@ -341,7 +348,8 @@
 		z-index: 10;
 	}
 	.nav-show-mobile {
-		display: inline-block;
+		// display: inline-block;
+		display: block;
 	}
 
 
