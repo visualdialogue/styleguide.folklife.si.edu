@@ -1,6 +1,6 @@
 # Bower Components
 Bower is a package manager that will download the newest versions of css frameworks and javascript libraries with a single command line action. 
-\<https://bower.io/\>
+https://bower.io/
 [https://bower.io/][1]
 
 
