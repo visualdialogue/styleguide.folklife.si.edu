@@ -6,3 +6,5 @@
 node_modules
 .htaccess
 package.json
+.Ulysses-favorites.plist
+.Ulysses-Group.plist
