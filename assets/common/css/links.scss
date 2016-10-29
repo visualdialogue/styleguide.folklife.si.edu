@@ -7,7 +7,7 @@
 	.main-copy a { color: $copylinks; }
 
 	a:hover {
-		color: red;
+		color: $hover;
 		// background: $hover;
 		text-decoration: none;
 	}

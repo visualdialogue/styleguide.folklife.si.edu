@@ -35,7 +35,7 @@ gulp.task('vendor', function() {
 });
 
 gulp.task('usedCSS', function() {
-    return gulp.src('./assets/css/folklife.css')
+    return gulp.src('./assets/css/styleguide.css')
         .pipe(uncss({
             // get representative pages
             html: [
@@ -89,7 +89,7 @@ gulp.task('critical', function () {
       base: './',
       src: 'http://folklife.lukehatfield.com',
       // src: 'http://folklife.lukehatfield.com/archives',
-      css: ['./assets/css/folklife.css'],
+      css: ['./assets/css/styleguide.css'],
       // inline: 'true',
       // styleTarget: 'main.css',
       // htmlTarget: '../../..//snippets/header.php',
@@ -158,7 +158,7 @@ gulp.task('jade', function() {
 // sass
 gulp.task('styles', function() {
     gulp.src([
-          'assets/css/folklife.scss',
+          'assets/css/styleguide.scss',
         ])
         .pipe(plumber())
         .pipe(sass({
@@ -171,7 +171,7 @@ gulp.task('styles', function() {
         //       'http://folklife.loc:3000/',
         //     ],
         // }))
-        .pipe(rename('folklife.css'))
+        .pipe(rename('styleguide.css'))
         .pipe(gulp.dest('assets/css/'))
         .pipe(browserSync.stream());
 });
