@@ -10,23 +10,23 @@
   @charset "UTF-8";
   @import "../common/css/fonts.scss";
   @import "../common/css/vd-icons.scss";
-  @import "../../bower_components/remodal/dist/remodal.scss";
-  @import "../../bower_components/remodal/dist/remodal-default-theme.scss";
-  @import "../../bower_components/slick-carousel/slick/slick.scss";
-  @import "../../bower_components/slick-carousel/slick/slick-theme.scss";
+  @import "../common/bower_components/remodal/dist/remodal.scss";
+  @import "../common/bower_components/remodal/dist/remodal-default-theme.scss";
+  @import "../common/bower_components/slick-carousel/slick/slick.scss";
+  @import "../common/bower_components/slick-carousel/slick/slick-theme.scss";
   @import "../common/css/bootstrap.scss"; // get custom bootstrap built with less
   @import "../common/css/reset.scss";
   @import "../common/css/dimensions.scss";
   @import "../common/css/media-queries.scss";
-  @import "../common/css/general.scss";
   @import "../common/css/colors.scss"; // colors may be used in type.scss
   @import "../common/css/type.scss";
   @import "../common/css/icons.scss";
+  @import "../common/css/general.scss";
   @import "../common/css/featurette.scss";
   @import "../common/css/padding.scss";
   @import "../common/css/helpers.scss";
   @import "../common/css/mixins.scss";
-  @import "archives.scss";
+  // @import "archives.scss";
 
 /* #Links
 -------------------------------------------------- */
@@ -62,7 +62,7 @@
 			right: 8rem;
   		}
 		&__text {
-			@include subtitle--sans;
+			@include sans-sm;
 			display: inline-block;
 			margin-right: 2vw;
 			vertical-align: top;
@@ -412,7 +412,7 @@
 	.remodal__title {
 		// font-size:1.4rem; // 28px
 		margin-bottom:10px;
-		@include subtitle--sans;
+		@include sans-sm;
 	}
 
 /* #audio
@@ -438,7 +438,7 @@
 			@extend %title--sans;
 		}
 		.subtitle {
-			@include subtitle--sans;
+			@include sans-sm;
 		}
 	}
 	.row--listen {
@@ -529,10 +529,10 @@
 		}
 
 		.title {
-			@include title--sans--large; // mixin so brings down to this line
+			@include sans-lg; // mixin so brings down to this line
 		}
 		.subtitle {
-			@include subtitle--sans--large;
+			@include sans-md;
 		}
 	}
 	.talk-story__featurette {
@@ -550,7 +550,7 @@
 			}
 		}
 		.title, .subtitle {
-			@include subtitle--sans;
+			@include sans-sm;
 		}
 		.title {
 			font-weight: 700;
@@ -695,7 +695,7 @@
 
 		}
 		.title {
-			@include subtitle--sans;
+			@include sans-sm;
 			font-weight: 400;
 		}
 	}
@@ -703,7 +703,7 @@
 /* #Newsletter Signup
 -------------------------------------------------- */
 	.section--newsletter-signup, .section--support {
-		@include subtitle--sans;
+		@include sans-sm;
 		margin-bottom: 2rem;
 		@include respond-to(break2) {
 			margin-bottom: 4rem;
@@ -725,7 +725,7 @@
 	}
 	.newsletter-signup__copy {
 		background-color: $black10;
-		@include subtitle--sans;
+		@include sans-sm;
 		// height: 15vw;
 		@include respond-to(break2) {
 			height: 5.2vw;

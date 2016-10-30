@@ -5,28 +5,22 @@ body {
 	font-family: $sans;
 }
 
-// KNOCKOUT
+/******************
+ * Slab
+ * Knockout
+ ******************/
 %meganav-font {
-// font-family: $knockoutNarrow;
 	font-family: $slabLight;
 	font-family: $sans;
 	text-transform: uppercase;
-	// font-weight: 700; 
-	// font-weight: 300; 
-	// font-weight: 700; $slabLight
 	font-weight: 800;
 	letter-spacing: 1px;
-	// font-size: 2.2rem;
-	// font-size: 4vw;
 	font-size: 5vw;
-	// letter-spacing: 0.5px;
 	@include respond-to(break2) {
-		// font-size: 2.5rem;
 		font-size: 1.4vw;
 		line-height: 1.2;
 	}
 	@include respond-to(fullwidth) {
-		// font-size: 2.2rem;
 		font-size: 2rem;
 	}
 }
@@ -34,8 +28,6 @@ body {
 @mixin section-header {
 	font-family: $slabWide;
 	text-transform: uppercase;
-	// font-size: 2.2rem;
-	// font-size: 10vw;
 	font-size: 5vw;
 	letter-spacing: 0.5px;
 	line-height: 0.7; // so margins accurate
@@ -43,8 +35,6 @@ body {
 	margin-bottom: 1.5rem;
 	color: $black65;
 	@include respond-to(break2) {
-		// font-size: 4rem; // ff-good
-		// font-size: 2.5rem;
 		font-size: 1.9vw;
 		margin-bottom: 2.7vw;
 	}
@@ -71,7 +61,7 @@ body {
 // 		margin-bottom: 0.5rem;
 // 	}
 // }
-@mixin slab--largest {
+@mixin slab-lg {
 	font-family: $slabWide;
 	text-transform: uppercase;
 	font-size: 6vw;
@@ -90,6 +80,44 @@ body {
 		// margin-bottom: 4.2rem;
 	}
 }
+@mixin slab-xl {
+	font-family: $slabWide;
+	text-transform: uppercase;
+	// font-size: 6vw;
+	// letter-spacing: 0.5px;
+	// margin-top: 0; // bootstrap reset
+	// margin-bottom: 5vw;
+	@include respond-to(break2) {
+		// font-size: 2.4vw;
+		// margin-bottom: 0;
+	}
+	@include respond-to(fullwidth) {
+		font-size: 4.5rem;
+		line-height: 1;
+	}
+}
+@mixin slab-xxl {
+	font-family: $slabWide;
+	text-transform: uppercase;
+	// font-size: 6vw;
+	// letter-spacing: 0.5px;
+	// margin-top: 0; // bootstrap reset
+	// margin-bottom: 5vw;
+	@include respond-to(break2) {
+		// font-size: 2.4vw;
+		// margin-bottom: 0;
+	}
+	@include respond-to(fullwidth) {
+		font-size: 5rem;
+		line-height: 1.3;
+	}
+}
+
+
+/******************
+ * Sans
+ * Acumin
+ ******************/
 
 @mixin link-font {
 	font-family: $sans;
@@ -102,7 +130,6 @@ body {
 	}
 	@include respond-to(fullwidth) {
 		font-size: 2rem;
-		// line-height: 1.5;
 		line-height: 1.4;
 	}
 }
@@ -135,19 +162,6 @@ body {
 	@include respond-to(fullwidth) {
   		font-size: 2.4rem;
   		margin-bottom: 0.5rem;
-	}
-}
-@mixin title--sans--large {
-	font-family: $sans;
-	font-weight: 700;
-	// font-size: 5vw;
-	font-size: 5vw;
-	@include respond-to(break2) {
-		font-size: 1.9vw;
-		line-height: 1.2;
-	}
-	@include respond-to(fullwidth) {
-		font-size: 3rem;
 	}
 }
 @mixin title--sans--alt {
@@ -183,7 +197,8 @@ body {
   		font-size: 1.8rem; // oct 19 for fritz
 	}
 }
-@mixin subtitle--sans--large {
+// @mixin subtitle--sans--large {
+@mixin sans-md {
 	font-family: $sans;
 	font-weight: 300; // light for acumin
 	line-height: 1.2;
@@ -196,6 +211,33 @@ body {
 		line-height: 1.3;
 	}
 }
+@mixin sans-lg {
+	font-family: $sans;
+	font-weight: 700;
+	// font-size: 5vw;
+	font-size: 5vw;
+	@include respond-to(break2) {
+		font-size: 1.9vw;
+		line-height: 1.2;
+	}
+	@include respond-to(fullwidth) {
+		font-size: 3rem;
+	}
+}
+// @mixin sans-xl {
+// 	font-family: $sans;
+// 	font-weight: 700;
+// 	// font-size: 5vw;
+// 	font-size: 5vw;
+// 	@include respond-to(break2) {
+// 		font-size: 1.9vw;
+// 		line-height: 1.2;
+// 	}
+// 	@include respond-to(fullwidth) {
+// 		// font-size: 6rem;
+// 		// line-height: 1.67;
+// 	}
+// }
 
 // search bar
 %small-sans-title {
@@ -270,7 +312,6 @@ body {
 		font-size: 4.2rem;
 	}
 }
-// @mixin title--serif--xlarge {
 @mixin serif-xl {
 	font-family: $serif;
 	font-weight: 700;
@@ -294,13 +335,12 @@ body {
 	font-size: 8vw;
 	@include respond-to(break2) {
 		font-size: 4vw;
-		// line-height: 1.1;
 		margin-top: -1rem;
 	}
 	@include respond-to(fullwidth) {
 		font-size: 13rem;
-		// line-height: 1.1;
 		margin-top: -1rem;
+		line-height: 0.7;
 	}
 }
 
@@ -311,7 +351,6 @@ body {
 	color: $black65;
 	font-weight: 300;
 	letter-spacing: 1px;
-	// line-height: 0.8; // so margins accurate
 	margin-bottom: 0.5rem;
 	margin-bottom: 0;
 	font-size: 2.5vw;
@@ -320,12 +359,8 @@ body {
 		margin-bottom: 0.3rem;
 	}
 	@include respond-to(fullwidth) {
-		// margin-top: 0;
-	// font-size: 1.6rem;
-		// font-size: 1.8rem; // ff good
 		font-size: 1.6rem; // acumin pro
 		margin-bottom: 0.5rem;
-		// font-size: 1.5rem; // acumin pro wide
 	}
 }
 
