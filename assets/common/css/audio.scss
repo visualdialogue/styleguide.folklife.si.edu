@@ -19,7 +19,7 @@
 		@extend %title--sans;
 	}
 	.subtitle {
-		@include sans-sm;
+		@include sans-xxs;
 	}
 }
 .row--listen {
@@ -61,5 +61,5 @@
 	margin-right: 3px;
 }
 .audio-time {
-	@include sans-sm;
+	@include sans-xxs;
 }

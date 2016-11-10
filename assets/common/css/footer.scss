@@ -1,7 +1,7 @@
 /* #Newsletter Signup
 -------------------------------------------------- */
 	.section--newsletter-signup, .section--support {
-		@include sans-sm;
+		@include sans-xxs;
 		margin-bottom: 2rem;
 		@include respond-to(break2) {
 			margin-bottom: 4rem;
@@ -23,7 +23,7 @@
 	}
 	.newsletter-signup__copy {
 		background-color: $black10;
-		@include sans-sm;
+		@include sans-xxs;
 		// height: 15vw;
 		@include respond-to(break2) {
 			height: 5.2vw;

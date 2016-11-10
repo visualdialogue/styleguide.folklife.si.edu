@@ -110,6 +110,7 @@
 
 /* General / Sections
 -------------------------------------------------- */
+
 	.site-toggle__link.active {
 		color: $black70;
 	}
@@ -148,6 +149,13 @@
 			padding-top:1.5rem;
 			@include respond-to(break2) {padding-top:2.6vw;}
 			@include respond-to(fullwidth) {padding-top:4rem;}
+		}
+		&--blank {
+			height: 50vh;
+			padding-top: 20vh;
+			text-align: center;
+			@include section-header;
+			color: $black50;
 		}
 	}
 	.main--copy {
@@ -212,13 +220,19 @@
 			height:11px;
 			background-image:url(/assets/images/hr.jpg);
 			margin-bottom: 5vw;
+			margin-top: 10vw;
 			@include respond-to(break2) {
 				margin-bottom: 2.6vw;
+				margin-top:0;
 			}
 			@include respond-to(fullwidth) {
-				margin-bottom: 2.2rem;
 				margin-bottom: 4rem;
 			}
+		}
+		&--half {
+			margin-bottom:2.5vw;
+			@include respond-to(break2) {margin-bottom:1.3vw;}
+			@include respond-to(fullwidth) {margin-bottom:2rem;}
 		}
 		&--thin {
 			height:8px;
@@ -262,7 +276,7 @@
 	.details--tight {
 		@include respond-to(break2) {
 			// padding: 1.35vw 0.6vw 0 1.35vw;
-			padding: 0.8vw 0.7vw 0 1.0vw;
+			padding: 0.9vw 0.7vw 0 1.0vw;
 		}
 		@include respond-to(fullwidth) {
 			// padding: 1.4rem 1.8rem 0 2rem;
@@ -289,20 +303,111 @@
 		}
 	}
 	.title {
-
 	}
 	.title--serif {
-		@include title--serif;
+		@include serif-md;
 	}
 	.title--sans {
 		@extend %title--sans;
 	}
 	.subtitle--sans {
-		@include sans-sm;
+		@include sans-xxs;
 	}
 	.category {
 		@include category;
 	}
 	.date {
-		@extend %type--date;
+		@include date;
+	}
+
+/* #video
+-------------------------------------------------- */
+
+	.video {
+		position: relative;
+		&__thumbnail {
+			@include vertically-align-grandparent;
+			&:hover .icon-circle:before {
+				color: $hover;
+			}
+			&:hover .icon-play:before {
+				color: $black80;
+			}
+		}
+	}
+	.modal-trigger {
+		cursor: pointer;
+	}
+	.icon-play-button--video {
+		@include vertically-align;
+		left: 50%;
+		margin-left: -3rem;
+	}
+	.center-box {
+		@include vertically-align-parent;
+	}
+	// modal
+	.remodal {
+	  padding:2px 2px 20px;
+	  text-align: left;
+	  // trade gpu acceleration for correct placement of close button
+	  -webkit-transform: none;
+	  -moz-transform: none;
+	  -ms-transform: none;
+	  -o-transform: none;
+	  transform: none;
+	  @include respond-to(break1) {
+		max-width: 70%;
+	  }
+	  @include respond-to(fullwidth) {
+		max-width: 1080px;
+	  }
+	}
+	.remodal-overlay {
+	  // background: rgba(43, 46, 56, 0.9) none repeat scroll 0% 0%; // original
+	  background: rgba(0, 0, 0, 0.8) none repeat scroll 0% 0%;
+	}
+	.remodal-close {
+	  position: fixed;
+	  top:0;
+	  right:10px;
+	  left:auto;
+	  display: block;
+	  z-index: 10001;
+	  color:white;
+	  width:50px;
+	  height:50px;
+	  // pointer:cursor;
+	}
+	.remodal-close:hover {
+	  color: $black20;
+	}
+	.remodal-close::before {
+	  font-size:40px;
+	  width:50px;
+	  height:50px;
+	  line-height: 50px;
+	}
+	.remodal__iframe {
+	  position: relative;
+	  padding-bottom: 56.25%;
+	  height: 0;
+	  overflow: hidden;
+	}
+	.remodal__iframe iframe {
+	  position: absolute;
+	  top:0;
+	  left:0;
+	  max-width: 100%;
+	  width:100%;
+	  height:100%;
+	  z-index: 2;
+	}
+	.remodal__copy {
+	  padding:10px 20px;
+	}
+	.remodal__title {
+		// font-size:1.4rem; // 28px
+		margin-bottom:10px;
+		@include sans-xxs;
 	}
