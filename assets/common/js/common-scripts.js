@@ -21,7 +21,7 @@ $(document).ready(function () {
 	  var playerLoaded = false;
 
 	  // on playing a video in the gallery...
-	  $('.video').on('click', function() {
+	  $('.video__thumbnail').on('click', function() {
 	  	// console.log('click');
 	  	// manually open remodal because sometimes just doesn't do it--\/--
 	  	remodalInstance.open();

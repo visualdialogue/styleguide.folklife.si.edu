@@ -1,7 +1,7 @@
 //- Video Card with video, popup, and play button
 -  if ($card->type() == 'video'):
-	li.card.video.col-xs-6.col-sm-3(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= $card->description() ?>')
-		.video__thumbnail
+	li.card.col-xs-6.col-sm-3
+		.video__thumbnail(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= $card->description() ?>')
 			.center-box
 				- if($src = $card->image($card->img())):
 					a.modal-trigger
@@ -73,11 +73,46 @@
 		.card__details.details(class="")
 			.date!= $card->date('F jS')
 			.time!= $card->time()
-			.title.card__title: a!= $card->title()
-		.card__image-wrapper
-			- if($src = $card->image($card->img())):
-				img.card__image(src="<?= $src->url() ?>")
+			.title.card__title: a(href="<?= $card->url() ?>")!= $card->title()
+			- if ($video_id != ''):
+				
+			- endif 
+
+		//- if video is set, add data to card tag for video remodal
+		- if($video_id != ''):
+			.video__thumbnail(data-video-id="<?= $card->video_id() ?>" data-title="<?= $card->title() ?>" data-description="<?= $card->description() ?>")
+				.center-box
+					- if($src = $card->image($card->img())):
+						a.modal-trigger
+							img.card__image(src="<?= $src->url() ?>")
+					- endif
+						.icon-play-button.icon-play-button--video.icon-stack
+							.icon-circle
+							.icon-play
+		- else:
+			.card__image-wrapper
+				- if($src = $card->image($card->img())):
+					a(href="<?= $card->url() ?>")
+						img.card__image(src="<?= $src->url() ?>")
+				- endif
+		- endif
+
+
+//- festival home page special event entry
+//- Audio card with play feature
+- elseif ((isset($type)) && ($type == 'special-event')):
+	li.col-sm-6.special-event.clearfix
+		.border
+		.special-event__image
+			- if($src = $page->image($card->src())):
+				img(src="<?= $src->url() ?>")
 			- endif
+		.textbox.special-event__textbox
+			.details.details--tight
+				.date!= $card->date('F jS')
+				.time!= $card->time()
+				.title: a!= $card->title()
+				.description: != excerpt($card->description(), 20, 'words')
 
 //- Regular text card with image
 - else:

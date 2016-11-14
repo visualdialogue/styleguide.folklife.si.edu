@@ -3,6 +3,10 @@ section.container.section--blog.blog
 	- snippet('more-link')
 	.row
 		- foreach ($pages->find('blog')->children()->visible()->limit(4) as $entry):
+			//- get video if it exists
+			:php
+				$video_id = $entry->video_id()
 			//- get card for current content item
-			- snippet('card', array('card' => $entry, 'type' => 'blog-article', 'orientation' => 'vertical'))
+			//- if video doesn't exist, will pass as blank
+			- snippet('card', array('card' => $entry, 'type' => 'blog-article', 'orientation' => 'vertical', 'video_id' => $video_id ))
 		- endforeach

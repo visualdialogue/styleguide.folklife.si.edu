@@ -365,9 +365,7 @@
 /* #video
 -------------------------------------------------- */
 
-	.video {
-		position: relative;
-		&__thumbnail {
+	.video__thumbnail {
 			@include vertically-align-grandparent;
 			&:hover .icon-circle:before {
 				color: $hover;
@@ -376,7 +374,6 @@
 				color: $black80;
 			}
 		}
-	}
 	.modal-trigger {
 		cursor: pointer;
 	}
