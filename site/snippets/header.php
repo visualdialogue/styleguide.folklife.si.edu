@@ -11,7 +11,10 @@
 }
 </style>
 <!-- “Entypo pictograms by Daniel Bruce — www.entypo.com” -->
-<!-- Font Awesome icons by Dave Gandy --><style><?php include './assets/css/critical.css'; ?></style><link rel="preload" href="assets/css/folklife.css?v=<?= time() ?>" as="style" onload="this.rel='stylesheet'"><noscript><link href="assets/css/folklife.css?v=<?= time() ?>" rel="stylesheet"></noscript>
+<!-- Font Awesome icons by Dave Gandy --><style>
+/*- include './assets/css/critical.css'*/
+</style>
+<link href="/assets/css/styleguide.css?v=<?= time() ?>" type="text/css" rel="stylesheet">
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>

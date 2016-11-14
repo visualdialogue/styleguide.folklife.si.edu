@@ -3,59 +3,11 @@
 #navspacer.navspacer
 
 //- Banner
-section.section--banner
-	#banner-carousel.banner-carousel
-		.banner-slide
-			img(src="assets/images/banner/banner-01_10.19.16.jpg")
-			.textbox
-				.details.details--inset
-					.category Folklife
-					.title Turquoise Mountain Showcases Cultural Sustainability
-					.dots
-		.banner-slide
-			img(src="assets/images/banner/banner-02_10.19.16.jpg")
-			.textbox
-				.details.details--inset
-					.category Festival
-					.title Circus Arts <br/>at the 2017 Folklife Festival
-					.dots
-		.banner-slide
-			img(src="assets/images/banner/banner-03_10.19.16.jpg")
-			.textbox
-				.details.details--inset
-					.category Folkways
-					.title Freedom Sounds from Smithsonian Folkways
-					.dots
-		.banner-slide
-			img(src="assets/images/banner/banner-04_10.19.16.jpg")
-			.textbox
-				.details.details--inset
-					.category Folklife
-					.title Grand Opening of&nbsp;the National Museum of&nbsp;African American History and Culture
-					.dots
-		//- <iframe src="https://player.vimeo.com/video/100345550?title=0&byline=0&portrait=0" width="1400" height="788" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-	.banner__nav--mobile
-		.textbox--mobile
-			.category Folklife
-			.title: a Turquoise Mountain Showcases Cultural Sustainability
-			.dots
-		.textbox--mobile
-			.category Festival
-			.title Circus Arts at the <br/>2017 Folklife Festival
-			.dots
-		.textbox--mobile
-			.category Folkways
-			.title Freedom Sounds <br />from Smithsonian Folkways
-			.dots
-		.textbox--mobile
-			.category Folklife
-			.title Grand Opening of the National Museum of African American History and Culture
-			.dots
-	.dots--mobile
+
 
 //- Watch
-section.section--video.container
-	h2.section__title Watch
+section.section--video.container.section--first
+	h2.section__title Videos
 	ul.row
 		- foreach ($page->video_data()->toStructure() as $video):
 			:php
@@ -84,7 +36,7 @@ section.section--video.container
 
 //- Listen
 section.section--audio.container
-	h2.section__title Listen
+	h2.section__title Audio
 	ul.row.row--listen
 		- foreach ($page->audio_data()->toStructure() as $audio):
 			- if($src = $page->image($audio->src())):

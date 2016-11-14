@@ -1,45 +1,39 @@
 Title: Home
 ----
 Video_data:
-- category: Folkways
-  title: Smithsonian Folklife Festival - ONE Village
-  src: jerusalem-project.png
-  #src: one-village.jpg
-  #src: china.jpg
-  #src: clay.jpg
-  #id: 100345550
+- category: Category
+  title: Video title goes here
+  src: 440x292.png
   id: 183352542
-  description: 'With the Smithsonian Folklife Festival 2014 recently completed, we have so much to share from the wonderful two weeks spent with Kenya and China. From the people to the food to the performances, there was so many rich cultural exhibitions for all to see and learn from. Above all the amazing festivities, what is to be most valued from an unique event like this, is the cultural, worldly and human connections created. I had the pleasure and honor of interviewing Kenyan, master artist, Elkana Ong'esa who shared his beautiful thoughts regarding what it means to be "human" and what this festival means to him. This film is a tribute to all the volunteers, staff, participants and visitors who brought this cultural experience to life and contributed in so many ways with their work, talents, curiosity and passion. I hope to have done justice in conveying the sheer excitement, energy and essence of the festival in this piece. No matter who we are or what nationality we represent, the more we have the opportunity to hear each other's stories and the more we are together, the more we will see that we are, simply,"One Village".'
-- category: Folklife
-  title: "Honoring the Amazon: A Rainforest Craft Activity for Kids"
-  src: honoring-the-amazon.png
-  id: 154769481
-- category: Festival
-  title: "Energetic Efficiency: Oil and Coal Workers at the 1978 Folklife Festival"
-  src: energetic-efficiency.png
-  id: 55021212
+- category: Category
+  title: Video title goes here
+  src: 440x292.png
+- category: Category
+  title: Video title goes here
+  src: 440x292.png
 ----
 Audio_data:
-- category: Folkways
-  title: Folk Music of Ethiopia
-  album: Ethnic Folkways Library
+- category: Category
+  title: Album/Podcast Title
+  album: Band/Source
   src: folk-music-of-ethiopia.jpg
-  length: "8:32"
-- category: Festival
-  title: "Podcast: Biking in China"
-  album: 2014 Folklife Festival
-  src: podcast-biking-in-china.jpg
-  length: "5:42"
-- category: Folkways
-  title: Quelby!
-  album: Stanley and The Ten Sleepless Knights
-  src: quelbe.jpg
-  length: "23:01"
-- category: Folklife
-  title: Folklife Radio
-  album: Listen now!
-  src: folklife-radio.jpg
-  length: "65:11"
+  length: " length"
+  src: 320x320.png
+- category: Category
+  title: Album/Podcast Title
+  album: Band/Source
+  length: " length"
+  src: 320x320.png
+- category: Category
+  title: Album/Podcast Title
+  album: Band/Source
+  length: " length"
+  src: 320x320.png
+- category: Category
+  title: Album/Podcast Title
+  album: Band/Source
+  length: " length"
+  src: 320x320.png
 ----
 Events:
 - event_date: September 7
@@ -57,37 +51,37 @@ Events:
 ----
 Talk_story_feature_image: tibet.jpg
 ----
-Talk_story_feature_category: Artist Profile
+Talk_story_feature_category: Category
 ----
 Talk_story_feature_title: Tibetan Folklore in Film:
 ----
 Talk_story_feature_subtitle: An Interview with Shidé Nyima
 ----
 Talk_story_featurettes:
-- category: How We Work
+- category: Category
   title: "Creating a Tapestry of Traditions:"
   subtitle: The Third Annual Global Folklorist Challenge
   src: tapestry.jpg
-- category: How We Work
+- category: Category
   title: "Object Oriented:"
   subtitle: Searching for the Man behind the Mask
   src: object.jpg
-- category: Foodways
+- category: Category
   title: "Homegrown Healing:"
   subtitle: Lessons on Plants in Traditional Medicine
   src: homegrown.jpg
 ----
 Dive_deep_feature_image: ala-tu-voz.jpg
 ----
-Dive_deep_feature_category: Folkways Magazine
+Dive_deep_feature_category: Category
 ----
 Dive_deep_feature_title: Alza Tu Voz (Speak Out): From Picket Line to Radio
 ----
 Dive_deep_featurettes:
-- category: Artist Spotlight
+- category: Category
   title: Discover the story behind Tiddish Song Smuggling
   src: brothers-nazaroff.jpg
-- category: Online exhibit
+- category: Category
   title: Learn more about American Indian Powwows
   src: powwow.jpg
 ----

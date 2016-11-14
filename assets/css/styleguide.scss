@@ -21,11 +21,16 @@
   @import "../common/css/colors.scss"; // colors may be used in type.scss
   @import "../common/css/type.scss";
   @import "../common/css/icons.scss";
-  @import "../common/css/general.scss";
   @import "../common/css/features.scss";
   @import "../common/css/padding.scss";
+  @import "../common/css/links.scss";
   @import "../common/css/helpers.scss";
   @import "../common/css/mixins.scss";
+  @import "../common/css/nav.scss";
+  @import "../common/css/general.scss";
+  @import "../common/css/audio.scss";
+  @import "../common/css/footer.scss";
+  @import "../../../../folklife.si.edu/code/assets/css/archives.scss";
   // @import "archives.scss";
 
 /* #Links
@@ -127,7 +132,7 @@
 
 		// unusual case becuase title's exist within slide for desktop and out of slide for mobile
 		.title {
-			@extend %serif-md--large;
+			@include serif-lg;
 			margin-bottom: 1rem;
 			@include respond-to(break2) {
 				margin-bottom: 3rem; // push above dots
@@ -588,7 +593,7 @@
 			position: static;
 			.title {
 				margin-bottom: 0;
-				@extend %serif-md--large;
+				@include serif-lg;
 			}	
 		}
 		&__feature {

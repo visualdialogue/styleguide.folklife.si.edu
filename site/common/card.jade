@@ -40,8 +40,8 @@
 
 //- horizontal blog entry
 //- Audio card with play feature
-- elseif ((isset($type)) && ($type == 'blog-entry') && ($orientation == 'horizontal')):
-	li.card.col-sm-12.blog-entry.clearfix
+- elseif ((isset($type)) && ($type == 'blog-article') && ($orientation == 'horizontal')):
+	li.card.col-sm-12.blog-article.clearfix
 		.row
 			.border.border--inset
 			.card__image-wrapper.col-sm-6.clearfix(class="")
@@ -52,7 +52,7 @@
 				.time!= $card->time()
 				.category
 					!= $card->festival(), ', ', $card->program();
-				.title.card__title= $card->title()
+				.title.card__title: a(href="<?= $card->url() ?>")= $card->title()
 				//- show card author if it isn't blank
 				.date.date-sm!= $card->date('F jS, Y'), e('' != $card->author(), ' | ' . $card->author()), ' | 0 comments'
 				
@@ -62,13 +62,13 @@
 					.description.card__description.link-underline
 						p!= excerpt($card->description()->kt(), $excerpt, 'words')
 				- else:
-					.description.blog-entry__description.link-underline!= $card->description()->kt()
+					.description.blog-article__description.link-underline!= $card->description()->kt()
 				- endif
 
 //- vertical blog entry
 //- Audio card with play feature
-- elseif ((isset($type)) && ($type == 'blog-entry') && ($orientation == 'vertical')):
-	li.card.col-sm-3.blog-entry.blog-entry--vertical.clearfix
+- elseif ((isset($type)) && ($type == 'blog-article') && ($orientation == 'vertical')):
+	li.card.col-sm-3.blog-article.blog-article--vertical.clearfix
 		.border
 		.card__details.details(class="")
 			.date!= $card->date('F jS')

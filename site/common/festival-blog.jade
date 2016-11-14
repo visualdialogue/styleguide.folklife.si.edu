@@ -4,5 +4,5 @@ section.container.section--blog.blog
 	.row
 		- foreach ($pages->find('blog')->children()->visible()->limit(4) as $entry):
 			//- get card for current content item
-			- snippet('card', array('card' => $entry, 'type' => 'blog-entry', 'orientation' => 'vertical'))
+			- snippet('card', array('card' => $entry, 'type' => 'blog-article', 'orientation' => 'vertical'))
 		- endforeach
