@@ -7,7 +7,7 @@
 			margin-bottom: 4rem;
 		}
 	}
-	.section--newsletter-signup {
+	.newsletter-signup__copy {
 		// margin-bottom: 2rem;
 		.details {
 			min-height: initial; // for ios
@@ -15,9 +15,11 @@
 			padding-top: 1vw;
 			@include respond-to(break2) {
 				padding-top: 1.1vw;
+				// padding-top:0;
 			}
 			@include respond-to(fullwidth) {
-				padding-top: 1.5rem;
+				padding-top: 1.9rem;
+				// padding-top:0;
 			}
 		}
 	}
@@ -38,6 +40,7 @@
 	.newsletter__input {
 		background-color: $black20;
 		width: 100%;
+		padding-top:0;
 		@include email-newsletter;
 		height: 18vw;
 		@include respond-to(break2) {

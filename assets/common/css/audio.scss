@@ -1,4 +1,5 @@
-.section--audio {
+// .section--audio {
+.audio {
 	.details {
 		border: 2px solid $black15;		
 	}
@@ -9,6 +10,7 @@
 			// min-height: 4.8rem;
 			min-height: 5.4vw; // for 2 line album titles
 			margin-bottom: 2.9vw;
+			margin-bottom: 0;
 		}
 		@include respond-to(fullwidth) {
 			min-height: 10rem;
@@ -48,7 +50,8 @@
 		margin-left: 5%;
 	}
 	@include respond-to(fullwidth) {
-		width: 72.695%; // 205/282 = 
+		// width: 72.695%; // 205/282 = 
+		width: 72%; // 205/282 = 
 		margin-left: 1rem;
 	}
 }

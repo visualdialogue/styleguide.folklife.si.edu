@@ -1,0 +1,9 @@
+.page-title
+	.container
+		.vertically-align-grandparent
+			.vertically-align-parent
+				- if (isset($title)):
+					h1.page-title__h1= $title
+				- else:
+					h1.page-title__h1= $page->title()
+				- endif

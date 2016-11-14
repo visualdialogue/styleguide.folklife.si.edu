@@ -1,0 +1,101 @@
+//- Video Card with video, popup, and play button
+-  if ($card->type() == 'video'):
+	li.card.video.col-xs-6.col-sm-3(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= $card->description() ?>')
+		.video__thumbnail
+			.center-box
+				- if($src = $card->image($card->img())):
+					a.modal-trigger
+						img.image(src="<?= $src->url() ?>")
+				- endif
+					.icon-play-button.icon-play-button--video.icon-stack
+						.icon-circle
+						.icon-play
+		.details.card__details.details--inset
+			.category!= $card->category()
+			.title.card__title: a!= $card->title()
+			.description.card__description: a!= $card->description()
+
+//- Audio card with play feature
+- elseif ($card->type() == 'audio'):
+	li.card.audio.col-xs-6.col-sm-3
+		- if($src = $card->image($card->img())):
+			img(src="<?= $src->url() ?>")
+		- endif
+		.details.card__details.details--inset
+			.category.card__category!= $card->category() 
+			.title-wrapper.card__title-wrapper
+				.title: a!= $card->title()
+				.subtitle!= $card->audio_album()
+			.audio-player
+				.icon-play-button.icon-stack
+					.icon-circle
+					.icon-play
+				.audio-player__details
+					.audio-progress-bar
+						img(src="/assets/images/icons/audio-progress-bar.png")
+					.audio-time
+						|0:00 &vert;&nbsp;
+						!= $card->audio_length()
+					.volume
+
+//- horizontal blog entry
+//- Audio card with play feature
+- elseif ((isset($type)) && ($type == 'blog-entry') && ($orientation == 'horizontal')):
+	li.card.col-sm-12.blog-entry.clearfix
+		.row
+			.border.border--inset
+			.card__image-wrapper.col-sm-6.clearfix(class="")
+				- if($src = $card->image($card->img())):
+					img.card__image(src="<?= $src->url() ?>")
+				- endif
+			.card__details.details.col-sm-6.details--inset.details--tight(class="")
+				.time!= $card->time()
+				.category
+					!= $card->festival(), ', ', $card->program();
+				.title.card__title= $card->title()
+				//- show card author if it isn't blank
+				.date.date-sm!= $card->date('F jS, Y'), e('' != $card->author(), ' | ' . $card->author()), ' | 0 comments'
+				
+				.description.card__description.link-underline!= $card->blurb()->kt()
+				
+				- if (isset($excerpt)):
+					.description.card__description.link-underline
+						p!= excerpt($card->description()->kt(), $excerpt, 'words')
+				- else:
+					.description.blog-entry__description.link-underline!= $card->description()->kt()
+				- endif
+
+//- vertical blog entry
+//- Audio card with play feature
+- elseif ((isset($type)) && ($type == 'blog-entry') && ($orientation == 'vertical')):
+	li.card.col-sm-3.blog-entry.blog-entry--vertical.clearfix
+		.border
+		.card__details.details(class="")
+			.date!= $card->date('F jS')
+			.time!= $card->time()
+			.title.card__title: a!= $card->title()
+		.card__image-wrapper
+			- if($src = $card->image($card->img())):
+				img.card__image(src="<?= $src->url() ?>")
+			- endif
+
+//- Regular text card with image
+- else:
+	li.card.col-xs-6.col-sm-3
+		.card__image-wrapper.clearfix(class="")
+			- if($src = $card->image($card->img())):
+				img.card__image(src="<?= $src->url() ?>")
+			- endif
+		.card__details.details.details--inset(class="")
+			.title.card__title= $card->title()
+			
+			.description.card__description.link-underline!= $card->blurb()->kt()
+			
+			- if (isset($excerpt)):
+				.description.card__description.link-underline
+					p!= excerpt($card->description()->kt(), $excerpt, 'words')
+			- else:
+				.description.card__description.link-underline!= $card->description()->kt()
+			- endif
+
+- endif

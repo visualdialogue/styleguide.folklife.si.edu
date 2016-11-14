@@ -1,3 +1,4 @@
 [submodule "site/plugins/submodules/autopublish"]
 	path = site/plugins/submodules/autopublish
 	url = git@github.com:groenewege/kirby-auto-publish.git
+	ignore = dirty

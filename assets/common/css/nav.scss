@@ -295,6 +295,11 @@
 	}
 
 
+	// testing
+	// a.meganav__title, a.meganav__title + .meganav__list a {color: pink;}
+	a.meganav__title, .meganav__list a, a.footer__title, .footer__list a {
+		color: pink !important;
+	}
 	// MEGANAV
 	.meganav, .footer {
 

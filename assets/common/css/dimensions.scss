@@ -39,3 +39,9 @@ conversion: 				| mobile 	| tablet	| desktop
 
   // $twitter-height: 95px;
   // $twitter-sidebar-height: 60px;
+  $halfGutter: 1.35%;
+
+  @mixin col {
+  	display: inline-block;
+  	vertical-align: top;
+  }

@@ -1,0 +1,8 @@
+section.container.section--blog.blog
+	h2.section__title Festival Blog
+	- snippet('more-link')
+	.row
+		- foreach ($pages->find('blog')->children()->visible()->limit(4) as $entry):
+			//- get card for current content item
+			- snippet('card', array('card' => $entry, 'type' => 'blog-entry', 'orientation' => 'vertical'))
+		- endforeach

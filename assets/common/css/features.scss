@@ -26,6 +26,38 @@ conversion: 				| mobile 	| tablet	| desktop
 
 */
 
+.feature--full {
+	// margin-top: 1.2rem;
+	// @include respond-to(break2) {margin-top: 2.5vw;}
+	// @include respond-to(fullwidth) {margin-top: 3.8rem;}
+	.details {
+		
+	}
+	.title {
+		@include serif-xl;
+		margin-bottom:1rem;
+		// .description {
+			// @include sans-xxs;
+		// }
+		@include respond-to(break2) {margin-bottom:1.15vw;}
+		@include respond-to(fullwidth) {margin-bottom:1.8rem;}
+	}
+	.description {
+		@include sans-md;
+	}
+	.more-link {
+		position: static;
+		float: right;
+		margin: 2rem 0 2rem 2rem;
+		@include respond-to(break2) {
+			margin: 0;
+			float: none;
+			margin-top: 2vw;
+			display: block;
+		}
+	}
+}
+
 .featurette-list {
 	margin-bottom:0;
 }

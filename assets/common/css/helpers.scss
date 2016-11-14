@@ -63,15 +63,6 @@
   }
 
 
-	// vertical align from http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/ 
-	// @mixin vertical-align($position: relative) {
-	@mixin vertically-align($position: absolute, $offset: 50%) {
-		position: $position;
-		top: $offset;
-		-webkit-transform: translateY(-$offset);
-		-ms-transform: translateY(-$offset);
-		transform: translateY(-$offset);
-	}
 	@mixin border($location: all, $width: 1px, $color: $black40) {
 		@if $location == top {
 		  border-top: $width solid $color;
