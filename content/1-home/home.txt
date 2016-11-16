@@ -113,3 +113,5 @@ Type usage:
   Acumin Pro:
     Light - Festival Program Main Image Caption
     Light Italic - Festival Program Main Image Caption
+  Balboa:
+    Light - Site tagline (.navbar__site-toggle)
