@@ -235,8 +235,11 @@
 			@include respond-to(fullwidth) {margin-bottom:2rem;}
 		}
 		&--thin {
-			height:8px;
+			height:4px;
 			background-image:url(/assets/images/hr--thin.png);
+			// background-image:url(/assets/images/hr--thin4.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
 			margin-top: 1vw;
 			margin-bottom: 3vw;
 			@include respond-to(break2) {
@@ -252,25 +255,34 @@
 	}
 
 	// sub pages
-	.page-title {
-		@include slab-xl;
-		height:66px;
-		@include respond-to(break2) {height:66px;}
-		@include respond-to(fullwidth) {height:66px;}
-		.container {
-			height: 100%; // so vertically center works
+	.title-bar {
+		// bootstrap reset
+		padding: 0;
+		margin: 0;
+		border: none;
+		.title-height {
+			height:66px;
+			@include respond-to(break2) {height:66px;}
+			@include respond-to(fullwidth) {height:66px;}	
 		}
-		&__h1 {
-			margin: 0;
-			@include vertically-align;
-		}
+		// .container {
+			// height: 100%; // so vertically center works
+		// }
 		&__hr {
 			margin-top: -1.6rem;
 		}
 	}
+	.page-title {
+		@include slab-xl;
+		margin: 0;
+		@include vertically-align;
+	}
+	.page-subtitle {
+		@include vertically-align;
+	}
 
 	.border {
-		border-top: 2px solid $black65;
+		border-top: 1px solid $black65;
 		&--inset {
 			margin-left:2rem;
 			margin-right:2rem;

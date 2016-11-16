@@ -200,6 +200,19 @@
 		}
 	}
 }
+.feature--full, .card__details {
+	.more-link {
+		position: static;
+		float: right;
+		margin: 2rem 0 2rem 2rem;
+		@include respond-to(break2) {
+			margin: 0;
+			float: none;
+			margin-top: 2vw;
+			display: block;
+		}
+	}
+}
 .section--vr .more-link {
 	right: 2.7%; // double that of parent padding as percent
 }

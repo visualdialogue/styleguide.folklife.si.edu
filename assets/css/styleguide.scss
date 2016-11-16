@@ -811,7 +811,6 @@
 		@include respond-to(break2max) { padding-top:2rem; }
 
 		&-logo {
-			@include type--logo;
 			color: $black30;
 			margin-bottom: 1vw;
 			&--active {

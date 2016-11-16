@@ -43,6 +43,10 @@
   @include respond-to(fullwidth) {
   }
 
+  .no-margin {
+  	margin: 0 !important;
+  }
+
   // so more arrow parent can be height 100% of image
   // from http://stackoverflow.com/a/2715397
   @include respond-to(break2) {

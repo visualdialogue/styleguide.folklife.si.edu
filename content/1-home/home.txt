@@ -109,3 +109,7 @@ Teach_featurettes:
 - title: "Smithsonian Folklife and Oral History Interviewing Guide"
   src: interviewing-guide.jpg
 ----
+Type usage:
+  Acumin Pro:
+    Light - Festival Program Main Image Caption
+    Light Italic - Festival Program Main Image Caption

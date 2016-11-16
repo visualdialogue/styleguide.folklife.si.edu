@@ -38,6 +38,44 @@
 						!= $card->audio_length()
 					.volume
 
+//- Feature blog entry on festival/blog
+- elseif ((isset($type)) && ($type == 'blog-feature')):
+	.card.blog-article.blog-article--feature.blog-article--vertical.clearfix
+
+		//- if video is set, add data to card tag for video remodal
+		- if((isset($video_id)) && ($video_id != '')):
+			.video__thumbnail(data-video-id="<?= $card->video_id() ?>" data-title="<?= $card->title() ?>" data-description="<?= $card->description() ?>")
+				.center-box
+					- if($src = $card->image($card->img())):
+						a.modal-trigger
+							img.card__image(src="<?= $src->url() ?>")
+					- endif
+						.icon-play-button.icon-play-button--video.icon-stack
+							.icon-circle
+							.icon-play
+		- else:
+			.card__image-wrapper
+				- if($src = $card->image($card->img())):
+					a(href="<?= $card->url() ?>")
+						img.card__image(src="<?= $src->url() ?>")
+				- endif
+		- endif
+
+		.card__details.details(class="")
+			.category
+				!= $card->festival(), ', ', $card->program();
+			//- show card author if it isn't blank
+			.title.card__title: a(href="<?= $card->url() ?>")!= $card->title()
+			.date.date-sm!= $card->date('F jS, Y'), e('' != $card->author(), ' | ' . $card->author()), ' | 0 comments'
+			- if (isset($excerpt)):
+				.description.card__description.link-underline
+					p!= excerpt($card->description()->kt(), $excerpt, 'words')
+			- else:
+				.description.blog-article__description.link-underline!= $card->description()->kt()
+			- endif
+
+			- snippet('more-link')
+
 //- horizontal blog entry
 //- Audio card with play feature
 - elseif ((isset($type)) && ($type == 'blog-article') && ($orientation == 'horizontal')):
@@ -53,6 +91,7 @@
 				.category
 					!= $card->festival(), ', ', $card->program();
 				.title.card__title: a(href="<?= $card->url() ?>")= $card->title()
+
 				//- show card author if it isn't blank
 				.date.date-sm!= $card->date('F jS, Y'), e('' != $card->author(), ' | ' . $card->author()), ' | 0 comments'
 				
@@ -65,6 +104,9 @@
 					.description.blog-article__description.link-underline!= $card->description()->kt()
 				- endif
 
+				- snippet('more-link')
+
+
 //- vertical blog entry
 //- Audio card with play feature
 - elseif ((isset($type)) && ($type == 'blog-article') && ($orientation == 'vertical')):
@@ -74,9 +116,6 @@
 			.date!= $card->date('F jS')
 			.time!= $card->time()
 			.title.card__title: a(href="<?= $card->url() ?>")!= $card->title()
-			- if ($video_id != ''):
-				
-			- endif 
 
 		//- if video is set, add data to card tag for video remodal
 		- if($video_id != ''):

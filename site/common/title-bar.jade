@@ -1,0 +1,16 @@
+.title-bar
+	.container.title-height
+		.vertically-align-grandparent
+			.vertically-align-parent
+				- if (isset($title)):
+					h1.page-title= $title
+				- else:
+					h1.page-title= $page->title()
+				- endif
+	- if (isset($subtitle)):
+	hr.hr--thin
+	.container.subtitle-height
+		.vertically-align-grandparent
+			.vertically-align-parent
+				.page-subtitle= $subtitle
+	- endif
