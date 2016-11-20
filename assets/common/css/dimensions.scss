@@ -67,6 +67,12 @@ conversion: 				| mobile 	| tablet	| desktop
     @include respond-to(fullwidth) {padding-bottom:#{$padding}rem;} // eg 4rem
   }
 
+  @mixin padding-left($padding) {
+    padding-left:#{$padding * 1.25}vw; // eg. 5rem
+    @include respond-to(break2) {padding-left:#{$padding * 0.625}vw;} // eg 2.5vw
+    @include respond-to(fullwidth) {padding-left:#{$padding}rem;} // eg 4rem
+  }
+
   @mixin col {
   	display: inline-block;
   	vertical-align: top;
