@@ -55,6 +55,12 @@ conversion: 				| mobile 	| tablet	| desktop
     @include respond-to(fullwidth) {margin-bottom:#{$margin}rem;} // eg 4rem
   }
 
+  @mixin padding-top($padding) {
+    padding-top:#{$padding * 1.25}vw; // eg. 5rem
+    @include respond-to(break2) {padding-top:#{$padding * 0.625}vw;} // eg 2.5vw
+    @include respond-to(fullwidth) {padding-top:#{$padding}rem;} // eg 4rem
+  }
+
   @mixin padding-bottom($padding) {
     padding-bottom:#{$padding * 1.25}vw; // eg. 5rem
     @include respond-to(break2) {padding-bottom:#{$padding * 0.625}vw;} // eg 2.5vw
