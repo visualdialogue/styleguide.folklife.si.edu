@@ -99,9 +99,9 @@
 				
 				- if (isset($excerpt)):
 					.description.card__description.link-underline
-						p!= excerpt($card->description()->kt(), $excerpt, 'words')
+						p!= excerpt($card->copy()->kt(), $excerpt, 'words')
 				- else:
-					.description.blog-article__description.link-underline!= $card->description()->kt()
+					.description.blog-article__description.link-underline!= $card->copy()->kt()
 				- endif
 
 				- snippet('more-link')
