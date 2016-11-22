@@ -202,6 +202,7 @@
 	.copyright {
 		@include link-font--small;
 		padding-top: 2vw;
+		font-weight: 300;
 		@include respond-to(break2) {padding-top:0.4vw;}
 		@include respond-to(fullwidth) {padding-top:1px;}
 	}
