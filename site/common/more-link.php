@@ -1,0 +1,1 @@
+<a class="more-link <? if(isset($class)) echo $class ?>"><?php if(isset($text)): ?><div class="more-link__text"><?php echo $text; ?></div><?php else: ?><div class="more-link__text">more</div><?php endif; ?><div class="more-link__arrow icon-right-thin"></div></a>
