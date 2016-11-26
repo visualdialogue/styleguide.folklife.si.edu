@@ -153,23 +153,61 @@
 				.title: a!= $card->title()
 				.description: != excerpt($card->description(), 20, 'words')
 
+//- folkways new release
+- elseif ((isset($type)) && ($type == 'new-release')):
+	- if($src = $card->image($card->img())):
+		li.col-xs-6.col-sm-2.new-release
+			img(src="<?= $src->url() ?>")
+			.details.details--participate
+				.title: a!= $card->title()
+				.artist: a!= $card->artist()
+	- endif
+
+//- news item
+- elseif ((isset($type)) && ($type == 'news')):
+	- if($src = $card->image($card->img())):
+		li.col-xs-6.col-sm-3
+			img(src="<?= $src->url() ?>")
+			.details.details--participate
+				.date!= $card->date('n.j.y')
+				.title: a!= $card->title()
+	- endif
+
 //- Regular text card with image
 - else:
-	li.card.col-xs-6.col-sm-3
-		.card__image-wrapper.clearfix(class="")
-			- if($src = $card->image($card->img())):
-				img.card__image(src="<?= $src->url() ?>")
-			- endif
-		.card__details.details.details--inset(class="")
-			.title.card__title= $card->title()
-			
+	- if(isset($col_xs)):
+		- if(isset($col_sm)):
+			li.card(class="col-xs-<?= $col_xs ?> col-sm-<?= $col_sm ?>")
+		- else:
+			li.card(class="col-xs-<?= $col_xs ?>")
+		- endif
+	- elseif(isset($col_sm)):
+		li.card(class="col-xs-<?= $col_sm ?>")
+	- endif
+	
+	.card__image-wrapper.clearfix(class="")
+		- if($src = $card->image($card->img())):
+			img.card__image(src="<?= $src->url() ?>")
+		- endif
+	.card__details.details(class="")
+
+		//- category
+		- if('' != $card->category()):	
+			.category!= $card->category()
+		- endif
+
+		.title.card__title= $card->title()
+
+		//- blurb
+		- if('' != $card->blurb()):	
 			.description.card__description.link-underline!= $card->blurb()->kt()
-			
-			- if (isset($excerpt)):
-				.description.card__description.link-underline
-					p!= excerpt($card->description()->kt(), $excerpt, 'words')
-			- else:
-				.description.card__description.link-underline!= $card->description()->kt()
-			- endif
+		- endif
+		
+		- if (isset($excerpt)):
+			.description.card__description.link-underline
+				p!= excerpt($card->description()->kt(), $excerpt, 'words')
+		- elseif('' != $card->description()):
+			.description.card__description.link-underline!= $card->description()->kt()
+		- endif
 
 - endif
