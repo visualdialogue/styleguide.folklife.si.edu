@@ -191,6 +191,7 @@ gulp.task('js', function() {
   // return gulp.src('/bdc/js/scripts.js')
   return gulp.src([
       './assets/js/vendor.js',
+      './assets/common/js/common-scripts.js',
       './assets/js/scripts.js'
     ])
     .pipe(concat('scripts.js'))

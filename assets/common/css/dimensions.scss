@@ -80,6 +80,11 @@ conversion: 				| mobile 	| tablet	| desktop
     @include respond-to(break2) {top:#{$top * 0.625}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {top:#{$top}rem;} // eg 4rem
   }
+  @mixin min-height($height) {
+    min-height:#{$height * 1.25}vw; // eg. 5rem
+    @include respond-to(break2) {min-height:#{$height * 0.625}vw;} // eg 2.5vw
+    @include respond-to(fullwidth) {min-height:#{$height}rem;} // eg 4rem
+  }
   @mixin col {
   	display: inline-block;
   	vertical-align: top;

@@ -1,6 +1,34 @@
+// globals, for use in common and unique script documents
+// from http://stackoverflow.com/a/7048295
+var site = {};
+
+site.screenSize = $( window ).width();
+site.$body = $('body');
+site.isMobile = false;
+site.break1 = 640; // first media query break
+site.break2 = 852; // break to 6 across
+site.fullwidth = 1480; // break to 6 across
+
 $(document).ready(function () {
 
-	
+/***************************
+* General
+***************************/
+	// set mobile flag
+	function checkMobile() {
+		console.log('checkMobile()');
+		site.screenSize = $( window ).width();
+		if(site.screenSize < site.break2) {
+			site.isMobile = true;
+			console.log('mobile');
+		} else {
+			console.log('desktop');
+			site.isMobile = false;
+		}
+	}
+
+	checkMobile(); // initial
+
 	// $(window).resize( $.throttle(125, function() {
 	// 	checkMobile();
 	// }));
@@ -11,39 +39,46 @@ $(document).ready(function () {
 /*********************
 * Mobile dropdown menu
 *********************/
-	 // var $navItem = $('.meganav__main-item');
-	 var $navItem = $('.meganav__main-item').add($('.footer__main-item'));
-	 // var $footerNavItem = $('.footer__main-item');
-	 var $navLists = $('.meganav__list').add($('.footer__list'));
+	// var $navItem = $('.meganav__main-item');
+	 var $navItem = $('.meganav__title').add($('.footer__title'));
+	// var $footerNavItem = $('.footer__main-item');
+	var $navLists = $('.meganav__list').add($('.footer__list'));
 
-	 // when click a main list item
-	 $navItem.on('click', function() {
-	 	var $this = $(this);
+	// when click a main list item
+	 $navItem.on('click', function(e) {
 
-	 	var $thisUl = $this.children('ul');
-	 	console.log('$thisUl: ', $thisUl);
-	 	console.log('$thisUl.hasClass("nav-show-mobile"): ', $thisUl.hasClass("nav-show-mobile"));
-
-	 	// var thisNavOpen = ; // check to see you are already open
-
-	 	// console.log('thisNavOpen: ', thisNavOpen);
-
-	 	// if you are already open, close all
-	 	if($thisUl.hasClass('nav-show-mobile')) {
-	 		$navLists.removeClass('nav-show-mobile'); // close all other open nav lists
-	 		$navItem.removeClass('active'); // remove all active titles
-	 		
-	 		// BUGBUGBUGBUG - show child, otherwise in loop
-	 		// $thisUl.addClass('nav-show-mobile'); // show child nav list BUG
+	 	// don't follow click on mobile, so can show dropdown sections
+	 	if(site.isMobile) {
+	 		console.log('dont follow link mobile');
+			e.preventDefault ? e.preventDefault() : e.returnValue = false; // for windows too, from http://stackoverflow.com/a/1000606
 	 	}
-	 	// else close all and open yourself
-	 	else {
-	 		$navItem.removeClass('active'); // remove all active titles
-	 		$navLists.removeClass('nav-show-mobile'); // close all other open nav lists
-	 		$this.addClass('active'); // add css styles to title
-	 		$thisUl.addClass('nav-show-mobile'); // show child nav list
-	 	}
-	 });
+
+		var $this = $(this);
+
+	 	var $thisUl = $this.next('ul');
+	 	// console.log('$thisUl: ', $thisUl);
+	 	// console.log('$thisUl.hasClass("nav-show-mobile"): ', $thisUl.hasClass("nav-show-mobile"));
+
+		// var thisNavOpen = ; // check to see you are already open
+
+		// console.log('thisNavOpen: ', thisNavOpen);
+
+		// if you are already open, close all
+		if($thisUl.hasClass('nav-show-mobile')) {
+			$navLists.removeClass('nav-show-mobile'); // close all other open nav lists
+			$navItem.removeClass('active'); // remove all active titles
+			
+			// BUGBUGBUGBUG - show child, otherwise in loop
+			// $thisUl.addClass('nav-show-mobile'); // show child nav list BUG
+		}
+		// else close all and open yourself
+		else {
+			$navItem.removeClass('active'); // remove all active titles
+			$navLists.removeClass('nav-show-mobile'); // close all other open nav lists
+			$this.addClass('active'); // add css styles to title
+			$thisUl.addClass('nav-show-mobile'); // show child nav list
+		}
+	});
 
 /***************************
 Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-create-an-animated-sticky-header-with-css3-and-jquery/
@@ -63,7 +98,7 @@ Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-crea
 		if (($(this).scrollTop() > gapNavHeight) && (isNavOpen == false)) {  
 			$navBar.addClass("smaller-header");
 			isNavOpen = true;
-			if(!isMobile) {
+			if(!site.isMobile) {
 				$navspacer.addClass("navspacer--taller"); // open right away
 				$navspacer.addClass("navspacer-open"); // open right away
 			}
@@ -75,13 +110,13 @@ Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-crea
 		else if (($(this).scrollTop() <= gapNavHeight ) && (isNavOpen == true)) {
 			$navBar.removeClass("smaller-header"); // shrink
 			isNavOpen = false;
-			if(!isMobile)
+			if(!site.isMobile)
 				$navspacer.removeClass("navspacer-open"); // gracefully cloase
 			
 		}
 
 		// // Close Nav if mobile on scroll
-		// if(isMobile && (!shareClosed || !menuClosed || !searchClosed )) {
+		// if(site.isMobile && (!shareClosed || !menuClosed || !searchClosed )) {
 		// 	console.log('close it');
 		// 	navCloseAll(); // close anything else that's open
 		// }
@@ -135,7 +170,7 @@ Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-crea
 *********************/
 	var $searchBar = $('.search-bar');
 	var $searchIcon = $('#search-icon');
-	var $browsenav = $('#browsenav');
+	var $browsenav = $('#browsenav'); // will only exist on folkways, otherwise hidden with php
 	var searchClosed = true;
 
 	// when click share icon
@@ -158,6 +193,7 @@ Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-crea
 * Menu
 *********************/
 	var $megaNav = $('#meganav');
+	var $megaNavItem = $('.meganav__sub-item');
 	var $menuIcon = $('#menu-icon');
 	var menuClosed = true;
 
@@ -177,6 +213,12 @@ Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-crea
 			navCloseAll();
 		}
 		
+	});
+
+	// hide menu when go to internal anchor link
+	$megaNavItem.on('click', function() {
+		console.log('meganavitem clicked');
+		navCloseAll();
 	});
 
 
@@ -204,7 +246,7 @@ Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-crea
 *********************/
 	function navCloseAll() {
 		// close other icons
-		if (isMobile)
+		if (site.isMobile)
 	 		$navLists.removeClass('nav-show-mobile'); // close all other open nav lists - mobile only
 		$allIcons.removeClass('lighter-nav-icons');
 		$megaNav.add($searchBar).add($browsenav).add($socialMediaIcons).hide(); // close auxiliaries

@@ -301,16 +301,16 @@
 	// details only include top padding
 	.details {
 		// padding-top: 4vw;
-		padding-top: 12px;
+		// padding-top: 12px;
+		@include padding-top(2);
 		min-height: 26vw; // for 3 line titles
 		@include respond-to(break2) {
 			min-height: initial; // reset // for ios
 			min-height: auto; // for windows
-			padding-top: 1.9vw;
-			padding-top: 1.6vw;
+			// padding-top: 1.6vw;
 		}
 		@include respond-to(fullwidth) {
-			padding-top: 2.5rem;
+			// padding-top: 2.5rem;
 		}
 	}
 	// details inner includes left and right padding, and less top padding
@@ -324,6 +324,7 @@
 		@include respond-to(fullwidth) {
 			padding: 2.5rem 2rem 2rem;
 		}
+		@include padding-top(2);
 	}
 	.details--notop {
 		@include respond-to(break2) {padding-top: 0 !important;}

@@ -175,39 +175,65 @@
 
 //- Regular text card with image
 - else:
+	//- separate logic from template, from http://stackoverflow.com/a/14415569
+	//- start columns as non-existent because not set
+	- $xs = null;
+	- $sm = null;
+	- $custom_class = null;
+	- $details = null;
+
+	//- if column widths are set, make into appropriate size class name for display later
 	- if(isset($col_xs)):
-		- if(isset($col_sm)):
-			li.card(class="col-xs-<?= $col_xs ?> col-sm-<?= $col_sm ?>")
-		- else:
-			li.card(class="col-xs-<?= $col_xs ?>")
-		- endif
-	- elseif(isset($col_sm)):
-		li.card(class="col-xs-<?= $col_sm ?>")
+		- $xs = 'col-xs-'.$col_xs;
 	- endif
+	- if(isset($col_sm)):
+		- $sm = 'col-sm-'.$col_sm;
+	- endif
+	- if(isset($classname)):
+		- $custom_class = $classname;
+	- endif
+
+	- if ((isset($type)) && ($type == 'album')):
+		- $xs = 'col-xs-6'
+		- $sm = 'col-sm-2'
+		- $custom_class = 'album'
+	- endif
+
+	- if ((isset($type)) && (($type == 'feature') || ($type == 'featurette'))):
+		- $details = 'details--inset'
+	- endif
+
+	li.card(class="<?= $xs ?> <?= $sm ?> <?= $custom_class ?>")
 	
-	.card__image-wrapper.clearfix(class="")
-		- if($src = $card->image($card->img())):
-			img.card__image(src="<?= $src->url() ?>")
-		- endif
-	.card__details.details(class="")
+		.card__inner
+			.card__image-wrapper.clearfix(class="")
+				- if($src = $card->image($card->img())):
+					img.card__image(src="<?= $src->url() ?>")
+				- endif
+			.card__details.details(class="<?= $details ?>")
 
-		//- category
-		- if('' != $card->category()):	
-			.category!= $card->category()
-		- endif
+				//- category
+				- if('' != $card->category()):	
+					.category!= $card->category()
+				- endif
 
-		.title.card__title= $card->title()
+				.title.card__title= $card->title()
 
-		//- blurb
-		- if('' != $card->blurb()):	
-			.description.card__description.link-underline!= $card->blurb()->kt()
-		- endif
-		
-		- if (isset($excerpt)):
-			.description.card__description.link-underline
-				p!= excerpt($card->description()->kt(), $excerpt, 'words')
-		- elseif('' != $card->description()):
-			.description.card__description.link-underline!= $card->description()->kt()
-		- endif
+				//- artist
+				- if('' != $card->artist()):	
+					.artist!= $card->artist()->kt()
+				- endif
+
+				//- blurb
+				- if('' != $card->blurb()):	
+					.description.card__description.link-underline!= $card->blurb()->kt()
+				- endif
+				
+				- if (isset($excerpt)):
+					.description.card__description.link-underline
+						p!= excerpt($card->description()->kt(), $excerpt, 'words')
+				- elseif('' != $card->description()):
+					.description.card__description.link-underline!= $card->description()->kt()
+				- endif
 
 - endif
