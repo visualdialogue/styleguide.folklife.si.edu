@@ -15,6 +15,12 @@
 	}
 }
 
+.container--last {
+	section {
+		margin-bottom: 2.5rem;
+	}
+}
+
 /* Grid System
 -------------------------------------------------- */
   // gutters
@@ -107,6 +113,36 @@
 		}
 	}
 
+/* Special Event - on.festival / Learn - folkways
+-------------------------------------------------- */
+	.special-event {
+		@include respond-to(break2max) {
+			margin-bottom: 5vw;
+		}
+	}
+	.special-event__image {
+		@include col;
+		width: 53%; // 361px/682px
+	}
+	.special-event__textbox {
+		@include col;
+		width: 47%; // 281/682				
+		// border-top: 2px solid $black65;
+		padding-left:3vw;
+		@include respond-to(break2) {padding-left:1.3vw;}
+		@include respond-to(fullwidth) {padding-left:2rem;}
+		.time {
+			@include date;
+		}
+		.title {
+			@include sans-sm;
+			font-weight: 600;
+		}
+		.description {
+			@include sans-xs;
+			font-weight: 400;
+		}
+	}
 
 /* General / Sections
 -------------------------------------------------- */
@@ -129,13 +165,14 @@
 		position: relative; // contain more link
 		@include respond-to(break2) {
 			margin-bottom: 2.3vw;
-			margin-bottom: 4.6vw;
+			// margin-bottom: 4.6vw;
 		}
 		@include respond-to(fullwidth) {
 			// margin-bottom: 3.5rem;
 			// margin-bottom: 5.5rem;
 			// margin-bottom: 4rem;
 			margin-bottom: 7.3rem; // with line height this equals 80 below for most sections
+			// margin-bottom: 6rem; // with line height this equals 80 below for most sections
 		}
 
 	}

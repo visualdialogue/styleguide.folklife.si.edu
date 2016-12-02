@@ -2,26 +2,36 @@
 .audio {
 	.details {
 		border: 2px solid $black15;		
+		@include padding-bottom(2);
+		// min-height: 60vw !important;
+		@include min-height(24);
 	}
 	.title-wrapper {
-		min-height: 24vw; // for 2 line album titles
-		margin-bottom: 3vw;
+		@include respond-to(break2max) {
+			min-height: 24vw; // for 2 line album titles
+		}
+		// margin-bottom: 3vw;
 		@include respond-to(break2) {
 			// min-height: 4.8rem;
-			min-height: 5.4vw; // for 2 line album titles
-			margin-bottom: 2.9vw;
-			margin-bottom: 0;
+			// min-height: 5.4vw; // for 2 line album titles
+			// margin-bottom: 2.9vw;
+			// margin-bottom: 0;
 		}
 		@include respond-to(fullwidth) {
-			min-height: 10rem;
-			margin-bottom: 0;
+			// min-height: 10rem;
+			// margin-bottom: 0;
 		}
 	}
 	.title {
 		@extend %title--sans;
 	}
-	.subtitle {
+	.subtitle, .artist {
 		@include sans-xxs;
+	}
+}
+.album {
+	.description {
+		display: none; // hide copy on cards
 	}
 }
 .row--listen {
@@ -33,14 +43,22 @@
 }
 .audio-player {
 	// margin-top: 0rem;
+	@include margin-top(2);
 	@include respond-to(break2) {
 		// margin-top: 2vw;
 		margin-top: 0.7vw;
+		// move to bottom 
+		position: absolute;
+		width: 77%;
 	}
 	@include respond-to(fullwidth) {
 		// margin-top: 2.8rem;
 		margin-top: 1.2rem;
 	}
+
+
+	// bottom: 2.2rem;
+	@include bottom(2.2);
 }
 .audio-player__details {
 	max-width: 100%;
@@ -58,6 +76,7 @@
 .audio-progress-bar {
 	margin-bottom: 4px;
 	max-width: 100%;
+	// width: 72%;
 }
 .volume {
 	float: right;

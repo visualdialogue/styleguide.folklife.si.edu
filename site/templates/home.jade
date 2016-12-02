@@ -13,7 +13,7 @@ section.section--video.container.section--first
 			:php
 				//- replace double with single quotes for use in jade below
 				$iframe = str_replace('"', "'", $video->iframe()) 
-			li.col-sm-4(class="video" data-iframe='<?= $iframe ?>' data-video-id='<?= $video->id() ?>' data-title='<?= $video->title() ?>' data-description='<?= $video->description() ?>')
+			li.col-sm-4(class="video" data-iframe='<?= $iframe ?>' data-video-id='<?= $video->id() ?>' data-title='<?= $video->title() ?>' data-description='<?= $video->copy() ?>')
 				//- - if($video->iframe()->isNotEmpty()):
 				//- 	.iframe-wrapper
 				//- 		!= $video->iframe()

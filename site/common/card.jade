@@ -1,50 +1,36 @@
 //- Video Card with video, popup, and play button
--  if ($card->type() == 'video'):
-	li.card.col-xs-6.col-sm-3
-		.video__thumbnail(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= $card->description() ?>')
-			.center-box
-				- if($src = $card->image($card->img())):
-					a.modal-trigger
-						img.image(src="<?= $src->url() ?>")
-				- endif
-					.icon-play-button.icon-play-button--video.icon-stack
-						.icon-circle
-						.icon-play
-		.details.card__details.details--inset
-			.category!= $card->category()
-			.title.card__title: a!= $card->title()
-			.description.card__description: a!= $card->description()
+//- -  if ($card->type() == 'video'):
+//- 	li.card.col-xs-6.col-sm-3
+//- 		.video__thumbnail(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= $card->copy() ?>')
+//- 			.center-box
+//- 				- if($src = $card->image($card->img())):
+//- 					a.modal-trigger
+//- 						img.image(src="<?= $src->url() ?>")
+//- 				- endif
+//- 					.icon-play-button.icon-play-button--video.icon-stack
+//- 						.icon-circle
+//- 						.icon-play
+//- 		.details.card__details.details--inset
+//- 			.category!= $card->category()
+//- 			.title.card__title: a!= $card->title()
+//- 			.description.card__description: a!= $card->copy()
 
-//- Audio card with play feature
-- elseif ($card->type() == 'audio'):
-	li.card.audio.col-xs-6.col-sm-3
-		- if($src = $card->image($card->img())):
-			img(src="<?= $src->url() ?>")
-		- endif
-		.details.card__details.details--inset
-			.category.card__category!= $card->category() 
-			.title-wrapper.card__title-wrapper
-				.title: a!= $card->title()
-				.subtitle!= $card->audio_album()
-			.audio-player
-				.icon-play-button.icon-stack
-					.icon-circle
-					.icon-play
-				.audio-player__details
-					.audio-progress-bar
-						img(src="/assets/images/icons/audio-progress-bar.png")
-					.audio-time
-						|0:00 &vert;&nbsp;
-						!= $card->audio_length()
-					.volume
+//-----------
+	prevent php error if empty var
+	------------//
+- if(!isset($excerpt)):
+- $excerpt = '';
+- endif
+
+
 
 //- Feature blog entry on festival/blog
-- elseif ((isset($type)) && ($type == 'blog-feature')):
+- if ((isset($type)) && ($type == 'blog-feature')):
 	.card.blog-article.blog-article--feature.blog-article--vertical.clearfix
 
 		//- if video is set, add data to card tag for video remodal
 		- if((isset($video_id)) && ($video_id != '')):
-			.video__thumbnail(data-video-id="<?= $card->video_id() ?>" data-title="<?= $card->title() ?>" data-description="<?= $card->description() ?>")
+			.video__thumbnail(data-video-id="<?= $card->video_id() ?>" data-title="<?= $card->title() ?>" data-description="<?= $card->copy() ?>")
 				.center-box
 					- if($src = $card->image($card->img())):
 						a.modal-trigger
@@ -69,9 +55,9 @@
 			.date.date-sm!= $card->date('F jS, Y'), e('' != $card->author(), ' | ' . $card->author()), ' | 0 comments'
 			- if (isset($excerpt)):
 				.description.card__description.link-underline
-					p!= excerpt($card->description()->kt(), $excerpt, 'words')
+					p!= excerpt($card->copy()->kt(), $excerpt, 'words')
 			- else:
-				.description.blog-article__description.link-underline!= $card->description()->kt()
+				.description.blog-article__description.link-underline!= $card->copy()->kt()
 			- endif
 
 			- snippet('more-link')
@@ -119,7 +105,7 @@
 
 		//- if video is set, add data to card tag for video remodal
 		- if($video_id != ''):
-			.video__thumbnail(data-video-id="<?= $card->video_id() ?>" data-title="<?= $card->title() ?>" data-description="<?= $card->description() ?>")
+			.video__thumbnail(data-video-id="<?= $card->video_id() ?>" data-title="<?= $card->title() ?>" data-description="<?= $card->copy() ?>")
 				.center-box
 					- if($src = $card->image($card->img())):
 						a.modal-trigger
@@ -140,10 +126,30 @@
 //- festival home page special event entry
 //- Audio card with play feature
 - elseif ((isset($type)) && ($type == 'special-event')):
-	li.col-sm-6.special-event.clearfix
+
+	//- separate logic from template, from http://stackoverflow.com/a/14415569
+	//- start columns as non-existent because not set
+	- $xs = null;
+	- $sm = null;
+	- $custom_class = null;
+	- $details = null;
+
+	//- if column widths are set, make into appropriate size class name for display later
+	- if(isset($col_xs)):
+		- $xs = 'col-xs-'.$col_xs;
+	- endif
+	- if(isset($col_sm)):
+		- $sm = 'col-sm-'.$col_sm;
+	- endif
+	- if(isset($classname)):
+		- $custom_class = $classname;
+	- endif
+
+
+	li.special-event.clearfix.card(class="<?= $xs ?> <?= $sm ?> <?= $custom_class ?>")
 		.border
 		.special-event__image
-			- if($src = $page->image($card->src())):
+			- if($src = $card->image($card->img())):
 				img(src="<?= $src->url() ?>")
 			- endif
 		.textbox.special-event__textbox
@@ -151,7 +157,7 @@
 				.date!= $card->date('F jS')
 				.time!= $card->time()
 				.title: a!= $card->title()
-				.description: != excerpt($card->description(), 20, 'words')
+				.description: != excerpt($card->copy(), 20, 'words')
 
 //- folkways new release
 - elseif ((isset($type)) && ($type == 'new-release')):
@@ -181,6 +187,12 @@
 	- $sm = null;
 	- $custom_class = null;
 	- $details = null;
+		
+	//- details for video card
+	//- .details.card__details.details--inset
+	//- 	.category!= $card->category()
+	//- 	.title.card__title: a!= $card->title()
+	//- 	.description.card__description: a!= $card->copy()
 
 	//- if column widths are set, make into appropriate size class name for display later
 	- if(isset($col_xs)):
@@ -205,35 +217,77 @@
 
 	li.card(class="<?= $xs ?> <?= $sm ?> <?= $custom_class ?>")
 	
-		.card__inner
+		.border
+		a.card__inner(href="<?= $card->url() ?>")
+
+			- if ($card->type() == 'video'):
+			.video__thumbnail(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= $card->copy() ?>')
+				.center-box
+					- if($src = $card->image($card->img())):
+						a.modal-trigger
+							img.image(src="<?= $src->url() ?>")
+					- endif
+						.icon-play-button.icon-play-button--video.icon-stack
+							.icon-circle
+							.icon-play
+			- snippet('card-details', array('card' => $card, 'details' => $details, 'excerpt' => $excerpt ))
+			//- for switching folklife homepage to video card someday...
+			//- 	//- - if($video->iframe()->isNotEmpty()):
+			//- 	//- 	.iframe-wrapper
+			//- 	//- 		!= $video->iframe()
+			//- 	//- - elseif($src = $page->image($video->src())):
+			//- 	.video__thumbnail(data-video-id='<?= $video->id() ?>' data-title='<?= $video->title() ?>' data-description='<?= $video->copy() ?>')
+			//- 		.center-box
+			//- 			- if($src = $page->image($video->src())):
+			//- 				a.modal-trigger
+			//- 					img.image(src="<?= $src->url() ?>")
+			//- 			- endif
+			//- 				.icon-play-button.icon-play-button--video.icon-stack
+			//- 					.icon-circle
+			//- 					.icon-play
+			//- 	.details
+			//- 		.category!= $video->category()
+			//- 		.title: a(href="<?= $video->url() ?>")!= $video->title()
+			//- Audio card with play feature
+			- elseif ($card->type() == 'audio' || ((isset($type)) && ($type == 'audio'))):
+			.audio
+				.card__image-wrapper.clearfix(class="")
+					- if($src = $card->image($card->img())):
+						img.card__image(src="<?= $src->url() ?>")
+					- endif
+				.details.card__details.details--inset
+					.category.card__category!= $card->category() 
+					.title-wrapper.card__title-wrapper
+						.title: a!= $card->title()
+						- if('' != $card->audio_album()):
+							.subtitle!= $card->audio_album()
+						- endif
+						.artist!= $card->artist()->kt()
+					.audio-player
+						.icon-play-button.icon-stack
+							.icon-circle
+							.icon-play
+						.audio-player__details
+							.audio-progress-bar
+								img(src="/assets/images/icons/audio-progress-bar.png")
+							.audio-time
+								|0:00 &vert;&nbsp;
+								!= $card->audio_length()
+							.volume
+			- elseif((isset($orientation)) && $orientation == 'horizontal'):
+			ul.row
+				li.col-sm-6.card__image-wrapper.clearfix(class="")
+					- if($src = $card->image($card->img())):
+						img.card__image(src="<?= $src->url() ?>")
+					- endif
+				li.col-sm-6
+					- snippet('card-details', array('card' => $card, 'details' => $details, 'excerpt' => $excerpt ))
+			- else:
 			.card__image-wrapper.clearfix(class="")
 				- if($src = $card->image($card->img())):
 					img.card__image(src="<?= $src->url() ?>")
 				- endif
-			.card__details.details(class="<?= $details ?>")
-
-				//- category
-				- if('' != $card->category()):	
-					.category!= $card->category()
-				- endif
-
-				.title.card__title= $card->title()
-
-				//- artist
-				- if('' != $card->artist()):	
-					.artist!= $card->artist()->kt()
-				- endif
-
-				//- blurb
-				- if('' != $card->blurb()):	
-					.description.card__description.link-underline!= $card->blurb()->kt()
-				- endif
-				
-				- if (isset($excerpt)):
-					.description.card__description.link-underline
-						p!= excerpt($card->description()->kt(), $excerpt, 'words')
-				- elseif('' != $card->description()):
-					.description.card__description.link-underline!= $card->description()->kt()
-				- endif
+			- snippet('card-details', array('card' => $card, 'details' => $details, 'excerpt' => $excerpt ))
+			- endif
 
 - endif

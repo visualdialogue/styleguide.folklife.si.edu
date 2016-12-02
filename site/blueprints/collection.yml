@@ -5,8 +5,8 @@ fields:
   title:
     label: Title
     type:  text
-  description:
-    label: Text
+  copy:
+    label: Content
     type:  textarea
   # src:
     # label: Image

@@ -18,7 +18,7 @@ section.section--banner-1-2.section--first.container.hero#about-the-archives
 					- endif
 				.col-sm-5.hero__details.details.details--inset.details--notop.table-cell
 					.title= $page->hero_title()
-					.description.hero__description= $page->hero_description()
+					.description.hero__description= $page->hero_copy()
 					- snippet('more-link')
 
 .container: hr.hr--folklife
@@ -27,13 +27,13 @@ section.section--banner-1-2.section--first.container.hero#about-the-archives
 section.section--collections.container#collections
 	ul.row
 		- foreach ($page->children()->find('collections')->children() as $collection):
-			//- =$collection->description()
+			//- =$collection->copy()
 			- if($src = $collection->image()):
 				li.col-xs-6.col-sm-3.archive-collection
 					img(src="<?= $src->url() ?>")
 					.details.details--participate
 						.title: a= $collection->title()
-						.description= excerpt($collection->description(), 7, 'words')
+						.description= excerpt($collection->copy(), 7, 'words')
 			- endif
 		- endforeach
 

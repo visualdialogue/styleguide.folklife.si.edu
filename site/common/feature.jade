@@ -11,9 +11,9 @@
 			
 			- if (isset($excerpt)):
 				.description.feature__description.link-underline
-					p!= excerpt($feature->description()->kt(), $excerpt, 'words')
+					p!= excerpt($feature->copy()->kt(), $excerpt, 'words')
 			- else:
-				.description.feature__description.link-underline!= $feature->description()->kt()
+				.description.feature__description.link-underline!= $feature->copy()->kt()
 			- endif
 
 			- snippet('more-link')

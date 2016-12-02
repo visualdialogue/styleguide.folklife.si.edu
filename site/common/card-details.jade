@@ -1,0 +1,25 @@
+.card__details.details(class="<?= $details ?>")
+
+	//- category
+	- if('' != $card->category()):
+		.category!= $card->category()
+	- endif
+
+	.title.card__title= $card->title()
+
+	//- artist
+	- if('' != $card->artist()):	
+		.artist!= $card->artist()
+	- endif
+
+	//- blurb
+	- if('' != $card->blurb()):	
+		.description.card__description.link-underline!= $card->blurb()->kt()
+	- endif
+	
+	- if (isset($excerpt)):
+		.description.card__description.link-underline
+			p!= excerpt($card->copy()->kt(), $excerpt, 'words')
+	- elseif('' != $card->copy() && $card->type() != 'video'):
+		.description.card__description.link-underline!= $card->copy()->kt()
+	- endif

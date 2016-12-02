@@ -43,16 +43,35 @@ conversion: 				| mobile 	| tablet	| desktop
   /*******
   * set margins with scales
   *******/
+  @mixin right($distance) {
+    right:#{$distance * 1.25}vw; // eg. 5rem
+    @include respond-to(break2) {right:#{$distance * 0.625}vw;} // eg 2.5vw
+    @include respond-to(fullwidth) {right:#{$distance}rem;} // eg 4rem
+  }
+  @mixin left($distance) {
+    left:#{$distance * 1.25}vw; // eg. 5rem
+    @include respond-to(break2) {left:#{$distance * 0.625}vw;} // eg 2.5vw
+    @include respond-to(fullwidth) {left:#{$distance}rem;} // eg 4rem
+  }
   @mixin margin-top($margin) {
     margin-top:#{$margin * 1.25}vw; // eg. 5rem
     @include respond-to(break2) {margin-top:#{$margin * 0.625}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {margin-top:#{$margin}rem;} // eg 4rem
   }
-
+  @mixin margin-right($margin) {
+    margin-right:#{$margin * 1.25}vw; // eg. 5rem
+    @include respond-to(break2) {margin-right:#{$margin * 0.625}vw;} // eg 2.5vw
+    @include respond-to(fullwidth) {margin-right:#{$margin}rem;} // eg 4rem
+  }
   @mixin margin-bottom($margin) {
     margin-bottom:#{$margin * 1.25}vw; // eg. 5rem
     @include respond-to(break2) {margin-bottom:#{$margin * 0.625}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {margin-bottom:#{$margin}rem;} // eg 4rem
+  }
+  @mixin margin-left($margin) {
+    margin-left:#{$margin * 1.25}vw; // eg. 5rem
+    @include respond-to(break2) {margin-left:#{$margin * 0.625}vw;} // eg 2.5vw
+    @include respond-to(fullwidth) {margin-left:#{$margin}rem;} // eg 4rem
   }
 
   @mixin padding-top($padding) {
@@ -80,8 +99,20 @@ conversion: 				| mobile 	| tablet	| desktop
     @include respond-to(break2) {top:#{$top * 0.625}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {top:#{$top}rem;} // eg 4rem
   }
+  @mixin bottom($bottom) {
+    bottom:#{$bottom * 1.25}vw; // eg. 5rem
+    @include respond-to(break2) {bottom:#{$bottom * 0.625}vw;} // eg 2.5vw
+    @include respond-to(fullwidth) {bottom:#{$bottom}rem;} // eg 4rem
+  }
+  @mixin height($height) {
+    height:#{$height * 1.25}vw; // eg. 5rem
+    // height:#{$height * 2.5}vw; // eg. 5rem
+    @include respond-to(break2) {height:#{$height * 0.625}vw;} // eg 2.5vw
+    @include respond-to(fullwidth) {height:#{$height}rem;} // eg 4rem
+  }
   @mixin min-height($height) {
     min-height:#{$height * 1.25}vw; // eg. 5rem
+    // min-height:#{$height * 2.5}vw; // eg. 5rem
     @include respond-to(break2) {min-height:#{$height * 0.625}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {min-height:#{$height}rem;} // eg 4rem
   }
