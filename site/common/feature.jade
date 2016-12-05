@@ -1,3 +1,20 @@
+//-----------
+	prevent php error if empty var
+	------------//
+- $excerptData = null;
+
+- if(isset($excerpt)):
+	- $excerptData = $excerpt;
+- endif
+
+//- passed vars
+- if(isset($showCategory) && $showCategory === true):
+	- $showCategory = true;
+- else:
+	- $showCategory = false;
+- endif 
+
+
 .feature--full
 	.row
 		.feature__image-wrapper.clearfix(class="col-sm-<? if(isset($img_width)) echo $img_width ?>")
@@ -5,15 +22,25 @@
 				img(src="<?= $src->url() ?>")
 			- endif
 		.feature__details.details.details--inset.details--notop(class="col-sm-<? if(isset($copy_width)) echo $copy_width ?>")
-			.title= $feature->title()
-			
-			.description.feature__description.link-underline!= $feature->blurb()->kt()
-			
-			- if (isset($excerpt)):
-				.description.feature__description.link-underline
-					p!= excerpt($feature->copy()->kt(), $excerpt, 'words')
+			//- category, dont' show category on albums
+			- if($showCategory):
+				.category!= $feature->category()
+			- endif
+			- if('' != $feature->full_title()):
+				.title= $feature->full_title()
 			- else:
-				.description.feature__description.link-underline!= $feature->copy()->kt()
+				.title= $feature->title()
+			- endif
+			
+			- if('' != $feature->blurb()):
+				.description.feature__description.link-underline!= $feature->blurb()->kt()
+			- endif
+			
+			- if (isset($excerptData)):
+				.description.feature__description.link-underline
+					p!= excerpt($feature->copy()->kt(), $excerptData, 'words')
+			- else:
+				//- .description.feature__description.link-underline!= $feature->copy()->kt()
 			- endif
 
 			- snippet('more-link')

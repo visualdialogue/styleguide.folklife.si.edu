@@ -30,7 +30,7 @@
 			position: absolute; // height 72px
 			width: 100%;
 			text-transform: uppercase;
-			background-color: white;
+			// background-color: white;
 			font-family: $slabLight;
 			// letter-spacing: 0.5px;		
 			font-size: 2.7rem; // ff-good
@@ -84,6 +84,9 @@
 		@include vertically-align-parent;
 		position: relative;
 		z-index: 100;
+
+		// new header
+
 	}
 	.navspacer {
 		background-color: $black80;
@@ -91,6 +94,8 @@
 		@include respond-to(break2) {
 			// height: 185px !important;
 			height: 178px !important;
+			// new header
+			height: 160px !important;
 		}
 		&--taller {
 		}
@@ -114,9 +119,12 @@
 
 		@include respond-to(fullwidth) {
 			padding: 23px 0 18px 0;
-			height: 118px; // from layout
 			// line up with left side
 			font-size: 25px; // back to normal
+
+			// height: 118px; // from layout
+			// new header
+			height: 100px; // from layout
 		}
 	}
 	.logo-mask {
@@ -141,7 +149,7 @@
 		position: relative;
 		display: inline-block;
 	}
-	.logo__copy, img.logo--folklife, img.logo--center {
+	.logo__copy, img.logo--folklife, img.logo--center, img.logo--folkways {
 		width: 193px;
 		height: 32px;
 		@include respond-to(break2) {
@@ -153,19 +161,38 @@
 			height: 70px;
 		}
 	}
-	img.logo--center, img.logo--folklife, img.logo--festival {
-		-webkit-transition: top 0.1s ease;
-		-moz-transition: top 0.1s ease;
-		-ms-transition: top 0.1s ease;
-		-o-transition: top 0.1s ease;
-		transition: top 0.1s ease;
+	// new logo
+	img.logo--folklife, .site--folklife .logo__copy {
+		@include width(15);
+		@include height(15);
 	}
-	img.logo--folklife, img.logo--center, img.logo--festival {
+	img.logo--folklife {
+		padding: 15px;
+	}
+	.site--folklife {
+		.navbar-brand {
+			@include padding-top(4);
+		}
+		.logo-mask {
+			position: relative;
+			@include left(2);
+		}
+	}
+	img.logo--center, img.logo--folklife, img.logo--festival, img.logo--folkways {
+		// -webkit-transition: top 0.1s ease;
+		// -moz-transition: top 0.1s ease;
+		// -ms-transition: top 0.1s ease;
+		// -o-transition: top 0.1s ease;
+		// transition: top 0.1s ease;
+	}
+	img.logo--folklife, img.logo--center, img.logo--festival, img.logo--folkways {
 		position: absolute;
 		top:0;
 		left: 0;
 	}
 	.smaller-header {
+		// new logo
+		background-color: #333;
 		// switch to fixed
 		position: fixed;
 		top:0;
@@ -175,25 +202,33 @@
 			@include respond-to(break2) {
 				padding: 17px 0;
 				height: 70px;
-				-webkit-transition: all 0.3s ease;
-				-moz-transition: all 0.3s ease;
-				-ms-transition: all 0.3s ease;
-				-o-transition: all 0.3s ease;
-				transition: all 0.3s ease;
+				// -webkit-transition: all 0.3s ease;
+				// -moz-transition: all 0.3s ease;
+				// -ms-transition: all 0.3s ease;
+				// -o-transition: all 0.3s ease;
+				// transition: all 0.3s ease;
 			}
 		}
 		img.sunsplash { position: relative; top: 0.7rem; }
 		// img.logo--center { top: -5rem; }
 		img.logo--center { top: -100%; }
 		// img.logo--folklife { top: -0.8rem; }
-		img.logo--folklife { top: -25%; }
+		img.logo--folklife, img.logo--festival, img.logo--folkways { top: -25%; }
 
 		@include respond-to(break2) {
 			img.sunsplash { top: 0.3rem; }
 			img.logo--center { top: -8rem; }
 			img.logo--center { top: -100%; }
 			// img.logo--folklife { top: -3.3rem; }
-			img.logo--folklife { top: -45%; }
+			img.logo--folklife, img.logo--festival, img.logo--folkways { top: -45%; }
+			// new header
+			img.logo--folklife { top: -115%; }
+			// img.logo__bg { position: relative; top: -60%; }
+			// new header II
+			img.logo__bg { display: none; }
+			.logo__copy {
+				@include height(4.5);
+			}
 		}
 		& + .section--banner.container {
 			position: relative;

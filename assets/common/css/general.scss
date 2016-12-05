@@ -148,7 +148,8 @@
 -------------------------------------------------- */
 
 	.site-toggle__link.active {
-		color: $black70;
+		// color: $black70;
+		color: $black20;
 	}
 	body {
 		// padding-top: 100px; // clear fixed header
@@ -253,7 +254,8 @@
 		background-size: 100% 100%;
 		background-repeat: no-repeat;
 
-		&--folklife {
+		// &--folklife {
+		&--thick {
 			height:11px;
 			background-image:url(/assets/images/hr.jpg);
 			margin-bottom: 5vw;

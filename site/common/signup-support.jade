@@ -1,0 +1,22 @@
+.container: hr.hr--thick
+
+//- half sections must be wrapped in container to stay in middle and together
+.container
+	.row
+		section.col-sm-6.section--newsletter-signup
+			.newsletter-signup.clearfix
+				.newsletter-signup__copy
+					.details.details--inset.details--tight.details--tight-bottom
+						.details__inner
+							.icon-mail
+							= $site->newsletter_text()
+				form(action="/").newsletter-signup-form.newsletter
+						input.newsletter__input.details.details--inset(type="email" placeholder="Enter your email")
+		section.col-sm-6.section--support
+			.support
+				.details.details--inset.details--tight.details--tight-bottom.clearfix
+					.details__inner
+						= $site->support_text()
+				.support__button.button
+					.button__inner
+						= $site->support_button_text()

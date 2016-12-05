@@ -18,10 +18,19 @@
 //-----------
 	prevent php error if empty var
 	------------//
-- if(!isset($excerpt)):
-- $excerpt = '';
+- $excerptData = null;
+
+- if(isset($excerpt)):
+	- $excerptData = $excerpt;
 - endif
 
+
+//- passed vars
+- if(isset($showCategory) && $showCategory === true):
+	- $showCategory = true;
+- else:
+	- $showCategory = false;
+- endif 
 
 
 //- Feature blog entry on festival/blog
@@ -53,9 +62,9 @@
 			//- show card author if it isn't blank
 			.title.card__title: a(href="<?= $card->url() ?>")!= $card->title()
 			.date.date-sm!= $card->date('F jS, Y'), e('' != $card->author(), ' | ' . $card->author()), ' | 0 comments'
-			- if (isset($excerpt)):
+			- if (isset($excerptData)):
 				.description.card__description.link-underline
-					p!= excerpt($card->copy()->kt(), $excerpt, 'words')
+					p!= excerpt($card->copy()->kt(), $excerptData, 'words')
 			- else:
 				.description.blog-article__description.link-underline!= $card->copy()->kt()
 			- endif
@@ -83,9 +92,9 @@
 				
 				.description.card__description.link-underline!= $card->blurb()->kt()
 				
-				- if (isset($excerpt)):
+				- if (isset($excerptData)):
 					.description.card__description.link-underline
-						p!= excerpt($card->copy()->kt(), $excerpt, 'words')
+						p!= excerpt($card->copy()->kt(), $excerptData, 'words')
 				- else:
 					.description.blog-article__description.link-underline!= $card->copy()->kt()
 				- endif
@@ -194,6 +203,13 @@
 	//- 	.title.card__title: a!= $card->title()
 	//- 	.description.card__description: a!= $card->copy()
 
+	//- Default for album, although widths can still be overwritten
+	- if ((isset($type)) && ($type == 'album')):
+		- $xs = 'col-xs-6'
+		- $sm = 'col-sm-2'
+		- $custom_class = 'album'
+	- endif
+
 	//- if column widths are set, make into appropriate size class name for display later
 	- if(isset($col_xs)):
 		- $xs = 'col-xs-'.$col_xs;
@@ -204,12 +220,10 @@
 	- if(isset($classname)):
 		- $custom_class = $classname;
 	- endif
-
-	- if ((isset($type)) && ($type == 'album')):
-		- $xs = 'col-xs-6'
-		- $sm = 'col-sm-2'
-		- $custom_class = 'album'
-	- endif
+	//- if excerpt comes through, use it! If not, it's not set anyway
+	//- - if(isset($excerpt)):
+		//- - $excerptData = $excerpt;
+	//- - endif
 
 	- if ((isset($type)) && (($type == 'feature') || ($type == 'featurette'))):
 		- $details = 'details--inset'
@@ -217,7 +231,9 @@
 
 	li.card(class="<?= $xs ?> <?= $sm ?> <?= $custom_class ?>")
 	
-		.border
+		- if ((isset($border)) && $border === true):
+			.border
+		- endif
 		a.card__inner(href="<?= $card->url() ?>")
 
 			- if ($card->type() == 'video'):
@@ -230,7 +246,7 @@
 						.icon-play-button.icon-play-button--video.icon-stack
 							.icon-circle
 							.icon-play
-			- snippet('card-details', array('card' => $card, 'details' => $details, 'excerpt' => $excerpt ))
+			- snippet('card-details', array('card' => $card, 'details' => $details, 'excerpt' => $excerptData, 'showCategory' => $showCategory ))
 			//- for switching folklife homepage to video card someday...
 			//- 	//- - if($video->iframe()->isNotEmpty()):
 			//- 	//- 	.iframe-wrapper
@@ -281,13 +297,13 @@
 						img.card__image(src="<?= $src->url() ?>")
 					- endif
 				li.col-sm-6
-					- snippet('card-details', array('card' => $card, 'details' => $details, 'excerpt' => $excerpt ))
+					- snippet('card-details', array('card' => $card, 'details' => $details, 'excerpt' => $excerptData, 'showCategory' => $showCategory ))
 			- else:
 			.card__image-wrapper.clearfix(class="")
 				- if($src = $card->image($card->img())):
 					img.card__image(src="<?= $src->url() ?>")
 				- endif
-			- snippet('card-details', array('card' => $card, 'details' => $details, 'excerpt' => $excerpt ))
+			- snippet('card-details', array('card' => $card, 'details' => $details, 'excerpt' => $excerptData, 'showCategory' => $showCategory ))
 			- endif
 
 - endif

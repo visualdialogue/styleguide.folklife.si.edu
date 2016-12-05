@@ -1,7 +1,8 @@
 .card__details.details(class="<?= $details ?>")
 
 	//- category
-	- if('' != $card->category()):
+	- if($showCategory):
+		//- dont' show category on albums
 		.category!= $card->category()
 	- endif
 
@@ -12,6 +13,16 @@
 		.artist!= $card->artist()
 	- endif
 
+	//- author
+	- if('' != $card->author()):	
+		.author!= $card->author()
+	- endif
+
+	//- price
+	- if('' != $card->price()):	
+		.price!= '$', $card->price()
+	- endif
+
 	//- blurb
 	- if('' != $card->blurb()):	
 		.description.card__description.link-underline!= $card->blurb()->kt()
@@ -20,6 +31,6 @@
 	- if (isset($excerpt)):
 		.description.card__description.link-underline
 			p!= excerpt($card->copy()->kt(), $excerpt, 'words')
-	- elseif('' != $card->copy() && $card->type() != 'video'):
+	//- - elseif('' != $card->copy() && $card->type() != 'video'):
 		.description.card__description.link-underline!= $card->copy()->kt()
 	- endif

@@ -99,6 +99,12 @@
 .icon-volume-off:before {
   content: "\72"; }
 
+.icon-right-open-mini:before {
+  content: "\74"; }
+
+.icon-down-open-mini:before {
+  content: "\75"; }
+
 /*
  *  Remodal - v1.1.0
  *  Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin with declarative configuration and hash tracking.
@@ -7614,7 +7620,7 @@ a:hover {
 /* Nav
 -------------------------------------------------- */
 .navbar {
-  background-color: #333333;
+  background-color: white;
   margin-bottom: 0;
   border: 0;
   border-radius: 0;
@@ -7639,7 +7645,6 @@ a:hover {
       position: absolute;
       width: 100%;
       text-transform: uppercase;
-      background-color: white;
       font-family: "balboa", Arial, sans-serif;
       font-size: 2.7rem;
       text-align: right;
@@ -7655,7 +7660,7 @@ a:hover {
       display: inline-block; } }
 
 .site-toggle__link {
-  color: #b3b3b3;
+  color: #999999;
   margin-left: 2.5rem; }
   .site-toggle__link:hover {
     color: #333333;
@@ -7741,26 +7746,57 @@ img.sunsplash {
   position: relative;
   display: inline-block; }
 
-.logo__copy, img.logo--folklife, img.logo--center {
+.logo__copy, img.logo--folklife, img.logo--center, img.logo--folkways {
   width: 193px;
   height: 32px; }
   @media only screen and (min-width: 53.25em) {
-    .logo__copy, img.logo--folklife, img.logo--center {
+    .logo__copy, img.logo--folklife, img.logo--center, img.logo--folkways {
       width: 420px;
       height: 70px; } }
   @media only screen and (min-width: 1560px) {
-    .logo__copy, img.logo--folklife, img.logo--center {
+    .logo__copy, img.logo--folklife, img.logo--center, img.logo--folkways {
       width: 420px;
       height: 70px; } }
 
-img.logo--center, img.logo--folklife, img.logo--festival {
-  -webkit-transition: top 0.1s ease;
-  -moz-transition: top 0.1s ease;
-  -ms-transition: top 0.1s ease;
-  -o-transition: top 0.1s ease;
-  transition: top 0.1s ease; }
+img.logo--folklife, .site--folklife .logo__copy {
+  width: 25vw;
+  height: 25vw; }
+  @media only screen and (min-width: 53.25em) {
+    img.logo--folklife, .site--folklife .logo__copy {
+      width: 12.5vw; } }
+  @media only screen and (min-width: 1560px) {
+    img.logo--folklife, .site--folklife .logo__copy {
+      width: 20rem; } }
+  @media only screen and (min-width: 53.25em) {
+    img.logo--folklife, .site--folklife .logo__copy {
+      height: 12.5vw; } }
+  @media only screen and (min-width: 1560px) {
+    img.logo--folklife, .site--folklife .logo__copy {
+      height: 20rem; } }
 
-img.logo--folklife, img.logo--center, img.logo--festival {
+img.logo--folklife {
+  padding: 15px; }
+
+.site--folklife .navbar-brand {
+  padding-top: 5vw; }
+  @media only screen and (min-width: 53.25em) {
+    .site--folklife .navbar-brand {
+      padding-top: 2.5vw; } }
+  @media only screen and (min-width: 1560px) {
+    .site--folklife .navbar-brand {
+      padding-top: 4rem; } }
+
+.site--folklife .logo-mask {
+  position: relative;
+  left: 5vw; }
+  @media only screen and (min-width: 53.25em) {
+    .site--folklife .logo-mask {
+      left: 2.5vw; } }
+  @media only screen and (min-width: 1560px) {
+    .site--folklife .logo-mask {
+      left: 4rem; } }
+
+img.logo--folklife, img.logo--center, img.logo--festival, img.logo--folkways {
   position: absolute;
   top: 0;
   left: 0; }
@@ -7774,18 +7810,13 @@ img.logo--folklife, img.logo--center, img.logo--festival {
     @media only screen and (min-width: 53.25em) {
       .smaller-header .navbar-brand {
         padding: 17px 0;
-        height: 70px;
-        -webkit-transition: all 0.3s ease;
-        -moz-transition: all 0.3s ease;
-        -ms-transition: all 0.3s ease;
-        -o-transition: all 0.3s ease;
-        transition: all 0.3s ease; } }
+        height: 70px; } }
   .smaller-header img.sunsplash {
     position: relative;
     top: 0.7rem; }
   .smaller-header img.logo--center {
     top: -100%; }
-  .smaller-header img.logo--folklife {
+  .smaller-header img.logo--folklife, .smaller-header img.logo--festival, .smaller-header img.logo--folkways {
     top: -25%; }
   @media only screen and (min-width: 53.25em) {
     .smaller-header img.sunsplash {
@@ -7794,8 +7825,21 @@ img.logo--folklife, img.logo--center, img.logo--festival {
       top: -8rem; }
     .smaller-header img.logo--center {
       top: -100%; }
+    .smaller-header img.logo--folklife, .smaller-header img.logo--festival, .smaller-header img.logo--folkways {
+      top: -45%; }
     .smaller-header img.logo--folklife {
-      top: -45%; } }
+      top: -87%; }
+    .smaller-header img.logo__bg {
+      position: relative;
+      top: -60%; }
+    .smaller-header .logo__copy {
+      height: 8.75vw; } }
+  @media only screen and (min-width: 53.25em) and (min-width: 53.25em) {
+    .smaller-header .logo__copy {
+      height: 4.375vw; } }
+  @media only screen and (min-width: 53.25em) and (min-width: 1560px) {
+    .smaller-header .logo__copy {
+      height: 7rem; } }
   .smaller-header + .section--banner.container {
     position: relative;
     top: 142px; }
@@ -8174,7 +8218,7 @@ select {
     font-family: "acumin-pro", Arial, sans-serif;
     font-weight: 300;
     line-height: 1.2;
-    font-size: 5vw;
+    font-size: 4vw;
     font-weight: 600; }
     @media only screen and (min-width: 53.25em) {
       .special-event__textbox .title {
@@ -8202,7 +8246,7 @@ select {
 /* General / Sections
 -------------------------------------------------- */
 .site-toggle__link.active {
-  color: #4d4d4d; }
+  color: #cccccc; }
 
 body {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
@@ -8398,17 +8442,17 @@ hr {
   border: 0px;
   background-size: 100% 100%;
   background-repeat: no-repeat; }
-  .hr--folklife {
+  .hr--thick {
     height: 11px;
     background-image: url(/assets/images/hr.jpg);
     margin-bottom: 5vw;
     margin-top: 10vw; }
     @media only screen and (min-width: 53.25em) {
-      .hr--folklife {
+      .hr--thick {
         margin-bottom: 2.6vw;
         margin-top: 0; } }
     @media only screen and (min-width: 1560px) {
-      .hr--folklife {
+      .hr--thick {
         margin-bottom: 4rem; } }
   .hr--half {
     margin-bottom: 2.5vw; }
@@ -8771,20 +8815,23 @@ hr {
   .audio .title-wrapper {
     min-height: 24vw; } }
 
-.audio .subtitle {
+.audio .subtitle, .audio .artist {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
   line-height: 1.4;
   font-size: 4vw; }
   @media only screen and (min-width: 53.25em) {
-    .audio .subtitle {
+    .audio .subtitle, .audio .artist {
       font-size: 1.15vw;
       line-height: 1.3; } }
   @media only screen and (min-width: 1560px) {
-    .audio .subtitle {
+    .audio .subtitle, .audio .artist {
       line-height: 1.3;
       font-size: 1.8rem; } }
+
+.album .description {
+  display: none; }
 
 .row--listen {
   margin-bottom: 0.6rem; }

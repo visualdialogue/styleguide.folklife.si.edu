@@ -1,0 +1,75 @@
+title: Card
+pages: false
+files: true
+fields:
+  title:
+    label: Title
+    type:  text
+  type:
+    label: Card Type
+    type: radio
+    default: standard
+    options:
+      standard: Standard
+      video: Video
+      audio: Audio
+  category:
+    label: Category
+    type: text
+    width: 1/2
+  date:
+    label: Date
+    type: date
+    width: 1/2
+  img:
+    label: Image
+    type: select
+    options: images
+    width: 1/2
+  banner_img:
+    label: Banner Image
+    type: select
+    options: images
+    width: 1/2
+  copy:
+    label: Text
+    type:  textarea
+  tags:
+    label: Tags
+    type: tags
+  
+  articlesection:
+    label: Article / Book
+    type: headline
+  author:
+    label: Author
+    type: text
+    width: 1/2
+
+  audiosection:
+    label: Audio
+    type: headline
+  artist:
+    label: Artist
+    type: text
+    width: 1/2
+  audio_length:
+    label: Audio Length
+    type: text
+    width: 1/2
+
+  videosection:
+    label: Video
+    type: headline
+  video_id:
+    label: Video ID
+    type: text
+    width: 1/2
+
+  merchandisesection:
+    label: Merchandise
+    type: headline
+  price:
+    label: Price
+    type: text
+    width: 1/2
