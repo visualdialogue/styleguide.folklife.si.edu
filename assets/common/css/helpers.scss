@@ -102,3 +102,7 @@
 	// 		top:28px;right:30px;bottom:30px;left:30px;
 	// 	}
 	// }
+
+	// Overlap fix for background color highlighting text. Use span.no-highlight inside titles to prevent overlap. From http://stackoverflow.com/a/31440811
+	.no-overlap {position: relative;}
+
