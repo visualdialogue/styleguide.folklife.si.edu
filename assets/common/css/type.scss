@@ -342,6 +342,7 @@ body {
 	}
 	@include respond-to(fullwidth) {
   		font-size: 2.8rem;
+		// line-height: 1.25;
 	}
 }
 @mixin serif-lg {
@@ -356,6 +357,7 @@ body {
 	@include respond-to(fullwidth) {
 		// font-size: 4rem;
 		font-size: 4.2rem;
+		line-height: 1.1;
 	}
 }
 @mixin serif-xl {

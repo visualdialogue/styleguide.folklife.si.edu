@@ -291,12 +291,21 @@
 								!= $card->audio_length()
 							.volume
 			- elseif((isset($orientation)) && $orientation == 'horizontal'):
+
+			//- set image width if not passed as variable
+			- if (!isset($img_col)):
+				- $img_col = '6';
+			- endif;
+			//- set text width if not passed as variable
+			- if (!isset($text_col)):
+				- $text_col = '6';
+			- endif;
 			ul.row
-				li.col-sm-6.card__image-wrapper.clearfix(class="")
+				li.card__image-wrapper.clearfix(class="col-sm-<?= $img_col ?>")
 					- if($src = $card->image($card->img())):
 						img.card__image(src="<?= $src->url() ?>")
 					- endif
-				li.col-sm-6
+				li(class="col-sm-<?= $text_col ?>")
 					- snippet('card-details', array('card' => $card, 'details' => $details, 'excerpt' => $excerptData, 'showCategory' => $showCategory ))
 			- else:
 			.card__image-wrapper.clearfix(class="")
