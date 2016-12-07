@@ -3,6 +3,45 @@
 #navspacer.navspacer
 
 //- Banner
+//- Introduction Section
+section.container
+	.row
+		.col-sm-7.ms-introduction
+			h2.section__title Typography
+			.ms-introduction__blurb
+				!= $page->blurb()
+			.ms-introduction__copy
+				!= $page->introduction()->kt()
+			.ms-introduction__credits
+				!= $page->credits()->kt()
+			h2.section__title Video
+		div.col-sm-1.spacer
+		aside.col-sm-4.ms-sidebar
+			- if($src = $page->image($page->logo())):
+				img(src="<?= $src->url() ?>")
+			- endif
+			//- get all program categories
+			ul
+				li.ms-sidebar__section-title.active: a(href="#typography") Typography
+				li.ms-sidebar__section-title.active: a(href="#video") Video
+				
+				li.ms-sidebar__section-title.small: a(href="#credits") Small Title
+			//- h2.blog-sidebar__header Related Content
+			//- ul.ms-related-content
+				- foreach($pages->find('blog')->children()->visible()->filterBy('tags','basque',',')->limit(5) as $entry):
+					li.clearfix
+						.border
+						.image-wrapper.clearfix(class="")
+							- if($src = $entry->image($entry->img())):
+								img.card__image(src="<?= $src->url() ?>")
+							- endif
+						.details(class="")
+							.title.card__title: a(href="<?= $entry->url() ?>")= $entry->title()
+
+							.description.card__description.link-underline
+								p!= excerpt($entry->copy()->kt(), '25', 'words')
+
+				- endforeach
 
 
 //- Watch
