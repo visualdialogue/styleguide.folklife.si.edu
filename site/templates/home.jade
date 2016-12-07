@@ -7,14 +7,41 @@
 section.container
 	.row
 		.col-sm-7.ms-introduction
+			// Typography
 			h2.section__title Typography
-			.ms-introduction__blurb
-				!= $page->blurb()
-			.ms-introduction__copy
-				!= $page->introduction()->kt()
-			.ms-introduction__credits
-				!= $page->credits()->kt()
+			a.anchor-link#typography
+			h1 h1
+			h2 h2
+			h3 h3
+			h4 h4
+			h5 h5
+			h6 h6
+			.section__title .section__title
+
+			// Video
+			hr.hr--thick
 			h2.section__title Video
+			a.anchor-link#video
+			ul.row.cards
+				- foreach($pages->find('videos')->children()->visible()->limit(1) as $video):
+					- snippet('card', array('card' => $video, 'type' => 'video', 'col_sm' => 6, 'showCategory' => true ))
+				- endforeach
+
+			// Horizontal Video
+			hr.hr--thick
+			h2.section__title.section--horizontal-cards Horizontal Video
+			a.anchor-link#video
+			ul.row.cards
+				- foreach($pages->find('videos')->children()->visible()->limit(1) as $video):
+					- snippet('card', array('card' => $video, 'type' => 'video', 'col_sm' => 12, 'orientation' => 'horizontal', 'showCategory' => true ))
+				- endforeach
+
+			// Audio
+			hr.hr--thick
+			h2.section__title Audio
+			a.anchor-link#audio
+
+
 		div.col-sm-1.spacer
 		aside.col-sm-4.ms-sidebar
 			- if($src = $page->image($page->logo())):
@@ -24,6 +51,7 @@ section.container
 			ul
 				li.ms-sidebar__section-title.active: a(href="#typography") Typography
 				li.ms-sidebar__section-title.active: a(href="#video") Video
+				li.ms-sidebar__section-title.active: a(href="#audio") Audio
 				
 				li.ms-sidebar__section-title.small: a(href="#credits") Small Title
 			//- h2.blog-sidebar__header Related Content

@@ -1,0 +1,25 @@
+Title: Video Title
+
+----
+
+Date: 
+
+----
+
+Copy: 
+
+----
+
+Img: bernat-vidal.png
+
+----
+
+Year: 2016
+
+----
+
+Program: Folklife program
+
+----
+
+Subtitle: Video subtitle

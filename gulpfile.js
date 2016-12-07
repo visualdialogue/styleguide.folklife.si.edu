@@ -144,6 +144,21 @@ gulp.task('jade', function() {
      .pipe(gulp.dest('./site'));
 });
 
+// common html
+gulp.task('jade-common', function() {
+  gulp.src('./site/common/*.jade')
+  // gulp.src('./site/**/*.jade')
+    .pipe(changed('./site/common', {extension: '.php'}))
+    .pipe(plumber())
+    .pipe(jadephp({
+      // pretty: true,
+      locals: {
+        // title: 'OMG THIS IS THE TITLE'
+      }
+     }))
+     .pipe(gulp.dest('./site/snippets'));
+});
+
 // php
 // gulp.task('templates', function() {
 //   gulp.src('./views/**/*.jade')
@@ -220,6 +235,7 @@ gulp.task('serve', ['jade', 'styles', 'js'], function() {
   });
 
     gulp.watch('site/**/*.jade',['jade-watch']);
+    gulp.watch('site/common/*.jade',['jade-common']);
     gulp.watch('bower_components/bootstrap/less/*.less',['less']);
     gulp.watch('assets/css/*.scss',['styles']);
     gulp.watch('assets/common/*.scss',['styles']);
