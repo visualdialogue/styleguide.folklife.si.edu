@@ -107,15 +107,13 @@
 	}
 
 
-
-
-
 	.icon-play-button {
 		.icon-circle {
 			color: $black20;
 		}
 		.icon-play {
 			color: $black80;
+			cursor: pointer;
 		}
 	}
 	.icon-play-button, .icon-circle, .icon-play {

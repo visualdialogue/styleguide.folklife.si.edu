@@ -241,14 +241,13 @@
 		- if ((isset($border)) && $border === true):
 			.border
 		- endif
-		a.card__inner(href="<?= $card->url() ?>")
 
 			- if ($card->type() == 'video' || ((isset($type)) && ($type == 'video'))):
 				-if ($cardType == 'standard'):
 					.video__thumbnail(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= $card->copy() ?>')
 						.center-box
 							- if($src = $card->image($card->img())):
-								a.modal-trigger
+								.modal-trigger
 									img.image(src="<?= $src->url() ?>")
 							- endif
 								.icon-play-button.icon-play-button--video.icon-stack
@@ -341,19 +340,21 @@
 				- if (!isset($text_col)):
 					- $text_col = '6';
 				- endif;
-				ul.row
-					li.card__image-wrapper.clearfix(class="col-sm-<?= $img_col ?>")
-						- if($src = $card->image($card->img())):
-							img.card__image(src="<?= $src->url() ?>")
-						- endif
-					li(class="col-sm-<?= $text_col ?>")
-						- snippet('card-details', array('card' => $card, 'details' => $details, 'excerpt' => $excerptData, 'showCategory' => $showCategory ))
+				
+				a.card__inner(href="<?= $card->url() ?>")
+					ul.row
+						li.card__image-wrapper.clearfix(class="col-sm-<?= $img_col ?>")
+							- if($src = $card->image($card->img())):
+								img.card__image(src="<?= $src->url() ?>")
+							- endif
+						li(class="col-sm-<?= $text_col ?>")
+							- snippet('card-details', array('card' => $card, 'details' => $details, 'excerpt' => $excerptData, 'showCategory' => $showCategory ))
 			- else:
-			.card__image-wrapper.clearfix(class="")
-				- if($src = $card->image($card->img())):
-					img.card__image(src="<?= $src->url() ?>")
-				- endif
-			- snippet('card-details', array('card' => $card, 'details' => $details, 'excerpt' => $excerptData, 'showCategory' => $showCategory ))
+				a.card__inner(href="<?= $card->url() ?>")
+				.card__image-wrapper.clearfix(class="")
+					- if($src = $card->image($card->img())):
+						img.card__image(src="<?= $src->url() ?>")
+					- endif
+				- snippet('card-details', array('card' => $card, 'details' => $details, 'excerpt' => $excerptData, 'showCategory' => $showCategory ))
 			- endif
-
 - endif

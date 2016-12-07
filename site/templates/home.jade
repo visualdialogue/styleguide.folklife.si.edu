@@ -27,6 +27,24 @@ section.container
 					- snippet('card', array('card' => $video, 'type' => 'video', 'col_sm' => 6, 'showCategory' => true ))
 				- endforeach
 
+			pre: code
+				&lt;li class="col-sm-{{ column width }}"&gt;
+				&lt;div data-video-id="{{ video id }}" data-title="{{ video title }}" data-description="" class="video__thumbnail"&gt;
+				&lt;div class="center-box"&gt;
+				&lt;a class="modal-trigger"&gt;&lt;img src="{{ video thumbnail image }}" class="image"&gt;&lt;/a&gt;
+				&lt;div class="icon-play-button icon-play-button--video icon-stack"&gt;
+				&lt;div class="icon-circle"&gt;&lt;/div&gt;
+				&lt;div class="icon-play"&gt;&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;div class="details"&gt;
+				&lt;div class="category"&gt;{{ video category }}&lt;/div&gt;
+				&lt;div class="title"&gt;&lt;a href=""&gt;&lt;span class="no-overlap"&gt;{{ video title }}&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;/li&gt;
+
+
 			// Horizontal Video
 			hr.hr--thick
 			h2.section__title.section--horizontal-cards Horizontal Video

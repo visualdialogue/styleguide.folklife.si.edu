@@ -50,12 +50,12 @@ fields:
   author:
     label: Author
     type: text
-  publisher1:
-    label: Publisher Button 1
+  order1:
+    label: Order Button 1
     type: text
     width: 1/2
-  publisher2:
-    label: Publisher Button 2
+  order2:
+    label: Order Button 2
     type: text
     width: 1/2
 

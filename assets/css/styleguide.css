@@ -7021,7 +7021,8 @@ footer, header, hgroup, main, nav, section, summary {
 
 a, a:focus {
   text-decoration: none;
-  color: inherit; }
+  color: inherit;
+  outline: none; }
 
 a[href^="tel"] {
   border: none; }
@@ -7287,7 +7288,8 @@ body {
   color: #cccccc; }
 
 .icon-play-button .icon-play {
-  color: #333333; }
+  color: #333333;
+  cursor: pointer; }
 
 .icon-play-button, .icon-circle, .icon-play {
   width: 10vw;

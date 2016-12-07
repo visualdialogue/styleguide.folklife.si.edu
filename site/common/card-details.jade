@@ -50,3 +50,15 @@
 	//- - elseif('' != $card->copy() && $card->type() != 'video'):
 		.description.card__description.link-underline!= $card->copy()->kt()
 	- endif
+
+	//- order1
+	- if('' != $card->order1()):	
+		//- text, non-breaking space, right arrow
+		.buy-now-button!= $card->order1(), '&nbsp;&#x2192';
+	- endif
+
+	//- order2
+	- if('' != $card->order2()):	
+		//- text, non-breaking space, right arrow
+		.buy-now-button!= $card->order2(), '&nbsp;&#x2192';
+	- endif
