@@ -10,4 +10,4 @@ An inventory and finding aid are in preparation.
 
 ----
 
-Src: collector.png
+Img: collector.png

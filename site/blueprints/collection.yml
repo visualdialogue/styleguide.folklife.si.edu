@@ -8,7 +8,7 @@ fields:
   copy:
     label: Content
     type:  textarea
-  # src:
+  # img:
     # label: Image
     # type: select
     # options: images

@@ -50,6 +50,13 @@ fields:
   author:
     label: Author
     type: text
+  publisher1:
+    label: Publisher Button 1
+    type: text
+    width: 1/2
+  publisher2:
+    label: Publisher Button 2
+    type: text
     width: 1/2
 
   audiosection:

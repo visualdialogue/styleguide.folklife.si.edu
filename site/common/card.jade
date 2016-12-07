@@ -32,6 +32,13 @@
 	- $showCategory = false;
 - endif 
 
+//- horizontal card
+- if(isset($orientation) && $orientation == 'horizontal'):
+	- $cardType = 'horizontal';
+- else:
+	- $cardType = 'standard';
+- endif 
+
 
 //- Feature blog entry on festival/blog
 - if ((isset($type)) && ($type == 'blog-feature')):
@@ -229,32 +236,66 @@
 		- $details = 'details--inset'
 	- endif
 
-	li.card(class="<?= $xs ?> <?= $sm ?> <?= $custom_class ?>")
+	li.card(class="<?= $xs ?> <?= $sm ?> <?= $custom_class ?> card--<?= $cardType ?>")
 	
 		- if ((isset($border)) && $border === true):
 			.border
 		- endif
 		a.card__inner(href="<?= $card->url() ?>")
 
-			- if ($card->type() == 'video'):
-			.video__thumbnail(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= $card->copy() ?>')
-				.center-box
-					- if($src = $card->image($card->img())):
-						a.modal-trigger
-							img.image(src="<?= $src->url() ?>")
-					- endif
-						.icon-play-button.icon-play-button--video.icon-stack
-							.icon-circle
-							.icon-play
-			- snippet('card-details', array('card' => $card, 'details' => $details, 'excerpt' => $excerptData, 'showCategory' => $showCategory ))
+			- if ($card->type() == 'video' || ((isset($type)) && ($type == 'video'))):
+				-if ($cardType == 'standard'):
+					.video__thumbnail(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= $card->copy() ?>')
+						.center-box
+							- if($src = $card->image($card->img())):
+								a.modal-trigger
+									img.image(src="<?= $src->url() ?>")
+							- endif
+								.icon-play-button.icon-play-button--video.icon-stack
+									.icon-circle
+									.icon-play
+					- snippet('card-details', array('card' => $card, 'details' => $details, 'excerpt' => $excerptData, 'showCategory' => $showCategory ))
+				- elseif ($cardType == 'horizontal'):
+					//- from festival videos
+					//- .col-sm-6.festival-video.clearfix
+						.row
+							.col-sm-6
+								.video__thumbnail.festival-video__image(data-video-id='<?= $page->intro_video_id() ?>' data-title='<?= $video->title() ?>' data-description='<?= $page->intro_video_copy() ?>')
+									.center-box
+										- if($src = $video->image($video->img())):
+											a.modal-trigger
+												img.image(src="<?= $src->url() ?>")
+										- endif
+											.icon-play-button.icon-play-button--video.icon-stack
+												.icon-circle
+												.icon-play
+							.textbox.festival-video__textbox.col-sm-6
+								.details
+									.category!= 'Festival, ', $video->year(), ', ', $video->program()
+									.title: a!= $video->title(), ': ', $video->subtitle()
+					.festival-video.clearfix
+						.row
+							.col-sm-6
+								.video__thumbnail(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= $card->copy() ?>')
+									.center-box
+										- if($src = $card->image($card->img())):
+											a.modal-trigger
+												img.image(src="<?= $src->url() ?>")
+										- endif
+											.icon-play-button.icon-play-button--video.icon-stack
+												.icon-circle
+												.icon-play
+							.textbox.festival-video__textbox.col-sm-6
+								- snippet('card-details', array('card' => $card, 'details' => $details, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'video' => true ))
+				- endif
 			//- for switching folklife homepage to video card someday...
 			//- 	//- - if($video->iframe()->isNotEmpty()):
 			//- 	//- 	.iframe-wrapper
 			//- 	//- 		!= $video->iframe()
-			//- 	//- - elseif($src = $page->image($video->src())):
+			//- 	//- - elseif($src = $page->image($video->img())):
 			//- 	.video__thumbnail(data-video-id='<?= $video->id() ?>' data-title='<?= $video->title() ?>' data-description='<?= $video->copy() ?>')
 			//- 		.center-box
-			//- 			- if($src = $page->image($video->src())):
+			//- 			- if($src = $page->image($video->img())):
 			//- 				a.modal-trigger
 			//- 					img.image(src="<?= $src->url() ?>")
 			//- 			- endif
@@ -290,23 +331,22 @@
 								|0:00 &vert;&nbsp;
 								!= $card->audio_length()
 							.volume
-			- elseif((isset($orientation)) && $orientation == 'horizontal'):
-
-			//- set image width if not passed as variable
-			- if (!isset($img_col)):
-				- $img_col = '6';
-			- endif;
-			//- set text width if not passed as variable
-			- if (!isset($text_col)):
-				- $text_col = '6';
-			- endif;
-			ul.row
-				li.card__image-wrapper.clearfix(class="col-sm-<?= $img_col ?>")
-					- if($src = $card->image($card->img())):
-						img.card__image(src="<?= $src->url() ?>")
-					- endif
-				li(class="col-sm-<?= $text_col ?>")
-					- snippet('card-details', array('card' => $card, 'details' => $details, 'excerpt' => $excerptData, 'showCategory' => $showCategory ))
+			- elseif($cardType == 'horizontal'):
+				//- set image width if not passed as variable
+				- if (!isset($img_col)):
+					- $img_col = '6';
+				- endif;
+				//- set text width if not passed as variable
+				- if (!isset($text_col)):
+					- $text_col = '6';
+				- endif;
+				ul.row
+					li.card__image-wrapper.clearfix(class="col-sm-<?= $img_col ?>")
+						- if($src = $card->image($card->img())):
+							img.card__image(src="<?= $src->url() ?>")
+						- endif
+					li(class="col-sm-<?= $text_col ?>")
+						- snippet('card-details', array('card' => $card, 'details' => $details, 'excerpt' => $excerptData, 'showCategory' => $showCategory ))
 			- else:
 			.card__image-wrapper.clearfix(class="")
 				- if($src = $card->image($card->img())):

@@ -6,4 +6,4 @@ Copy: Robert C. Malone donated a small collection of prints, negatives, and cont
 
 ----
 
-Src: malone.jpg
+Img: malone.jpg

@@ -1,0 +1,8 @@
+.section--horizontal-cards {
+	// remove extra margin from last row
+	// @include margin-bottom(-1);
+	margin-bottom: 0;;
+}
+.card--horizontal {
+	@include margin-bottom(4);
+}

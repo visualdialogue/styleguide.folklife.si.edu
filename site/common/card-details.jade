@@ -1,9 +1,15 @@
 .card__details.details(class="<?= $details ?>")
 
 	//- category
+	//- dont' show category on albums
 	- if($showCategory):
-		//- dont' show category on albums
-		.category!= $card->category()
+		//- show special date if video card
+		- if(isset($video) && $video === true):
+			.category!= 'Festival, ', $card->year(), ', ', $card->program()
+		- else:
+			.category!= $card->category()
+		- endif
+
 	- endif
 
 	//- date
