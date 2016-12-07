@@ -5,6 +5,9 @@ fields:
   title:
     label: Title
     type:  text
+  subtitle:
+    label: Subtitle
+    type:  text
   type:
     label: Card Type
     type: radio
@@ -31,6 +34,9 @@ fields:
     type: select
     options: images
     width: 1/2
+  blurb:
+    label: Blurb for card
+    type: textarea
   copy:
     label: Text
     type:  textarea

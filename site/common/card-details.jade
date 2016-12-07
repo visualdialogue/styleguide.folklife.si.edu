@@ -6,7 +6,17 @@
 		.category!= $card->category()
 	- endif
 
+	//- date
+	- if('' != $card->date()):
+		.date!= $card->date('M d, Y')
+	- endif
+
 	.title.card__title= $card->title()
+
+	//- subtitle
+	- if('' != $card->subtitle()):	
+		.subtitle!= $card->subtitle()
+	- endif
 
 	//- artist
 	- if('' != $card->artist()):	
@@ -25,7 +35,7 @@
 
 	//- blurb
 	- if('' != $card->blurb()):	
-		.description.card__description.link-underline!= $card->blurb()->kt()
+		.description.card__description.link-underline.blurb!= $card->blurb()->kt()
 	- endif
 	
 	- if (isset($excerpt)):
