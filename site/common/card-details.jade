@@ -40,7 +40,8 @@
 	- endif
 
 	//- blurb
-	- if('' != $card->blurb()):	
+	//- - if('' != $card->blurb()):	
+	- if (isset($blurb)):
 		.description.card__description.link-underline.blurb!= $card->blurb()->kt()
 	- endif
 	

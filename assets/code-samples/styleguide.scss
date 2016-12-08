@@ -1,6 +1,10 @@
-// This Example
-.section--video {
-	.title {
-		@include sans-md;
+
+	// This Example
+	.section--video {
+		.title {
+			@include serif-lg;
+		}
+		.subtitle {
+			@include sans-sm;
+		}
 	}
-}

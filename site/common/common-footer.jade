@@ -1,0 +1,44 @@
+hr
+ul.footer__row.footer__row--2.row
+	li.footer__main-item.col-sm-3
+		.footer-logo.footer-logo--active
+			- if (c::get('isDev')):
+			a(href="http://localhost:3003"): img.footer-logo__img.footer-logo__img--folklife(src="/assets/images/logo/smithsonian_center_for_folklife_and_cultural_heritage.png?v=2016.10.21") 
+			- else:
+			a(href="http://folklife.lukehatfield.com"): img.footer-logo__img.footer-logo__img--folklife(src="/assets/images/logo/smithsonian_center_for_folklife_and_cultural_heritage.png?v=2016.10.21")
+			- endif
+	li.footer__main-item.col-sm-3 
+		.footer-logo
+			- if (c::get('isDev')):
+			a(href="http://localhost:3009"): img.footer-logo__img(src="/assets/images/logo/smithsonian_folkways_recordings.png?v=2016.10.21") 
+			- else:
+			a(href="http://folkways.lukehatfield.com"): img.footer-logo__img(src="/assets/images/logo/smithsonian_folkways_recordings.png?v=2016.10.21") 
+			- endif
+	li.footer__main-item.col-sm-3 
+		.footer-logo
+			- if (c::get('isDev')):
+			a(href="http://localhost:3005"): img.footer-logo__img(src="/assets/images/logo/smithsonian_folklife_festival.png?v=2016.10.21") 
+			- else:
+			a(href="http://on.festival.lukehatfield.com"): img.footer-logo__img(src="/assets/images/logo/smithsonian_folklife_festival.png?v=2016.10.21") 
+			- endif
+	li.footer__main-item.col-sm-1 
+		ul.footer__list.copyright-list
+			li.footer__sub-item.copyright-list__item Copyright
+			li.footer__sub-item.copyright-list__item Contact
+			li.footer__sub-item.copyright-list__item Privacy
+			li.footer__sub-item.copyright-list__item Credits
+	li.footer__main-item.col-sm-2.social-media
+		.footer__sub-item.social-media__title Connect with us
+		ul.footer__list
+			li.social-media__icon: a(href="https://www.facebook.com/smithsonianfolklifefestival" target="_blank").icon-facebook
+			li.social-media__icon: a(href="https://twitter.com/smithsonianfolk" target="_blank").icon-twitter
+			li.social-media__icon: a(href="http://smithsonianfolklife.tumblr.com/" target="_blank").icon-tumblr
+			li.social-media__icon: a(href="https://www.flickr.com/groups/2016folklifefestival" target="_blank").icon-flickr
+			li.social-media__icon: a(href="https://www.instagram.com/smithsonianfolklife/" target="_blank").icon-instagrem
+ul.footer__row.footer__row--3.row
+	li.footer__main-item.col-sm-3
+		.smithsonian-institution-logo
+			img(src="/assets/images/logo/smithsonian_institution.png") 
+	li.footer__main-item.col-sm-4
+		.copyright
+			&copy; 2016 Smithsonian Institution

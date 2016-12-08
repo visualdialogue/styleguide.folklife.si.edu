@@ -3,6 +3,10 @@
 <?php if(isset($excerpt)): ?>
 <?php $excerptData = $excerpt; ?>
 <?php endif; ?>
+<?php $blurbData = null; ?>
+<?php if(isset($blurb)): ?>
+<?php $blurbData = $blurb; ?>
+<?php endif; ?>
 <?php $cardTypeData = null; ?>
 <?php if(isset($type)): ?>
 <?php $cardTypeData = $type; ?>
@@ -282,7 +286,7 @@
         <?php endif; ?>
       </li>
       <li class="col-sm-<?= $text_col ?>">
-        <?php snippet('card-details', array('card' => $card, 'details' => $details, 'excerpt' => $excerptData, 'showCategory' => $showCategory )); ?>
+        <?php snippet('card-details', array('card' => $card, 'details' => $details, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory )); ?>
       </li>
     </ul></a>
   <?php else: ?><a href="<?= $card->url() ?>" class="card__inner">

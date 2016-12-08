@@ -43,6 +43,7 @@
 		padding-top:0;
 		@include email-newsletter;
 		height: 18vw;
+		min-height: 18vw; // override details
 		@include respond-to(break2) {
 			// height: 5.15vw;
 			height: 3.95vw;
