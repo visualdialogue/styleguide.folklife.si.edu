@@ -1,0 +1,10 @@
+title: Cards
+pages: card
+files: true
+fields:
+  title:
+    label: Title
+    type:  text
+  copy:
+    label: Content
+    type:  textarea

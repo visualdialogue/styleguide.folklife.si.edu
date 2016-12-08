@@ -136,7 +136,7 @@ gulp.task('jade', function() {
     .pipe(changed('./site', {extension: '.php'}))
     .pipe(plumber())
     .pipe(jadephp({
-      // pretty: true,
+      pretty: true,
       locals: {
         // title: 'OMG THIS IS THE TITLE'
       }
@@ -157,6 +157,12 @@ gulp.task('jade-common', function() {
       }
      }))
      .pipe(gulp.dest('./site/snippets'));
+});
+
+// copy for keeping blueprint files similar
+gulp.task('copy', function() {
+    gulp.src('../../styleguide.folklife.si.edu/code/site/common/blueprints/card.yml')
+      .pipe(gulp.dest('./site/blueprints/'))
 });
 
 // php
@@ -237,6 +243,7 @@ gulp.task('serve', ['jade', 'styles', 'js'], function() {
     gulp.watch('site/**/*.jade',['jade-watch']);
     gulp.watch('site/common/*.jade',['jade-common']);
     gulp.watch('bower_components/bootstrap/less/*.less',['less']);
+    gulp.watch('site/common/blueprints/*.yml',['copy']);
     gulp.watch('assets/css/*.scss',['styles']);
     gulp.watch('assets/common/css/*.scss',['styles']);
     gulp.watch('assets/common/*.scss',['styles']);

@@ -24,6 +24,11 @@
 	- $excerptData = $excerpt;
 - endif
 
+//- store cardtype if exists, make null if not so other functions will complete
+- $cardTypeData = null;
+- if(isset($type)):
+	- $cardTypeData = $type;
+- endif
 
 //- passed vars
 - if(isset($showCategory) && $showCategory === true):
@@ -34,9 +39,9 @@
 
 //- horizontal card
 - if(isset($orientation) && $orientation == 'horizontal'):
-	- $cardType = 'horizontal';
+	- $cardOrientation = 'horizontal';
 - else:
-	- $cardType = 'standard';
+	- $cardOrientation = 'standard';
 - endif 
 
 
@@ -236,14 +241,14 @@
 		- $details = 'details--inset'
 	- endif
 
-	li.card(class="<?= $xs ?> <?= $sm ?> <?= $custom_class ?> card--<?= $cardType ?>")
+	li.card(class="<?= $xs ?> <?= $sm ?> <?= $custom_class ?> card--<?= $cardTypeData ?> card--<?= $cardOrientation ?>")
 	
 		- if ((isset($border)) && $border === true):
 			.border
 		- endif
 
 			- if ($card->type() == 'video' || ((isset($type)) && ($type == 'video'))):
-				-if ($cardType == 'standard'):
+				-if ($cardOrientation == 'standard'):
 					.video__thumbnail(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= $card->copy() ?>')
 						.center-box
 							- if($src = $card->image($card->img())):
@@ -254,7 +259,7 @@
 									.icon-circle
 									.icon-play
 					- snippet('card-details', array('card' => $card, 'details' => $details, 'excerpt' => $excerptData, 'showCategory' => $showCategory ))
-				- elseif ($cardType == 'horizontal'):
+				- elseif ($cardOrientation == 'horizontal'):
 					//- from festival videos
 					//- .col-sm-6.festival-video.clearfix
 						.row
@@ -331,7 +336,7 @@
 								|0:00 &vert;&nbsp;
 								!= $card->audio_length()
 							.volume
-			- elseif($cardType == 'horizontal'):
+			- elseif($cardOrientation == 'horizontal'):
 				//- set image width if not passed as variable
 				- if (!isset($img_col)):
 					- $img_col = '6';
