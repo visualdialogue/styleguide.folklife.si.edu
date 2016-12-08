@@ -39,10 +39,10 @@ $(document).ready(function () {
 /*********************
 * Mobile dropdown menu
 *********************/
-	// var $navItem = $('.meganav__main-item');
-	 var $navItem = $('.meganav__title').add($('.footer__title'));
+	// var $navItem = $('.header-nav__main-item');
+	 var $navItem = $('.header-nav__title').add($('.footer__title'));
 	// var $footerNavItem = $('.footer__main-item');
-	var $navLists = $('.meganav__list').add($('.footer__list'));
+	var $navLists = $('.header-nav__list').add($('.footer__list'));
 
 	// when click a main list item
 	 $navItem.on('click', function(e) {
@@ -192,8 +192,8 @@ Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-crea
 /*********************
 * Menu
 *********************/
-	var $megaNav = $('#meganav');
-	var $megaNavItem = $('.meganav__sub-item');
+	var $megaNav = $('#header-nav');
+	var $megaNavItem = $('.header-nav__sub-item');
 	var $menuIcon = $('#menu-icon');
 	var menuClosed = true;
 
@@ -217,7 +217,7 @@ Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-crea
 
 	// hide menu when go to internal anchor link
 	$megaNavItem.on('click', function() {
-		console.log('meganavitem clicked');
+		console.log('header-navitem clicked');
 		navCloseAll();
 	});
 

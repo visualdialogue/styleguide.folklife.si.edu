@@ -326,27 +326,26 @@
 
 
 	// testing
-	// a.meganav__title, a.meganav__title + .meganav__list a {color: pink;}
-	a.meganav__title, .meganav__list a, a.footer__title, .footer__list a {
+	// a.header-nav__title, a.header-nav__title + .header-nav__list a {color: pink;}
+	a.header-nav__title, .header-nav__list a, a.footer-nav__title, .footer-nav__list a {
 		color: pink !important;
 	}
-	// MEGANAV
-	.meganav, .footer {
+
+	.header-nav, .footer {
+		@include padding-top(4);
+		@include padding-bottom(2.6);
+	}
+
+	.header-nav, .footer-nav {
 
 		// keep above outside click div
 		position: relative;
 
-		// padding: 1rem 0 0; // 40px above and below
-		padding: 0 0 0.5rem; // 40px above and below
-		@include respond-to(break2) {
-			padding: 3.6rem 0 2.6rem; // 40px above and below
-			padding: 4rem 0 2.6rem; // 40px above and below
-		}
 		.active &__title {
 			@include respond-to(break2max) {color: white;}
 		}
 		&__title {
-			@extend %meganav-font;
+			@extend %header-nav-font;
 			cursor: pointer;
 			padding: 10px 0 0;
 			// color: $black20;
@@ -392,7 +391,7 @@
 			}
 		}
 	}
-	.meganav {
+	.header-nav {
 		display: none;
 		background-color: $black60;
 		z-index: 10;
@@ -428,7 +427,7 @@
 	.browsenav__title {
 		// font-family: $slabExtraWide;
 		// font-weight: 700;
-		// @extend %meganav-font;
+		// @extend %header-nav-font;
 		@include section-title;
 		color: white;
 		margin-bottom: 3rem;

@@ -144,6 +144,8 @@
 			@include respond-to(break2) {margin-bottom:1.9vw;}
 			@include respond-to(fullwidth) {margin-bottom:0;}
 		}
+	}
+	.footer-nav {
 		&__sub-item {
 		}
 		&__title {

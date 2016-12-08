@@ -8,3 +8,7 @@ fields:
   text:
     label: Text
     type:  textarea
+  img:
+    label: Homepage image
+    type: select
+    options: images

@@ -248,6 +248,7 @@ gulp.task('serve', ['jade', 'styles', 'js'], function() {
     gulp.watch('assets/common/css/*.scss',['styles']);
     gulp.watch('assets/common/*.scss',['styles']);
     gulp.watch('assets/js/scripts.js',['js-watch']);
+    gulp.watch('assets/common/js/common-scripts.js',['js-watch']);
     gulp.watch('*.html').on('change', browserSync.reload);
     gulp.watch('site/**/*.php').on('change', browserSync.reload);
     gulp.watch('assets/js/scripts-min.js').on('change', browserSync.reload);

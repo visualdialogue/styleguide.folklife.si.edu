@@ -1,66 +1,45 @@
-.container
-	hr.hr--thick
-
-//- half sections must be wrapped in container to stay in middle and together
-.container
-	.row
-		section.col-sm-6.section--newsletter-signup
-			.newsletter-signup.clearfix
-				.newsletter-signup__copy
-					.details.details--inset.details--tight.details--tight-bottom
-						.details__inner
-							.icon-mail
-							= $site->newsletter_text()
-				form(action="/").newsletter-signup-form.newsletter
-						input.newsletter__input.details.details--inset(type="email" placeholder="Enter your email")
-		section.col-sm-6.section--support
-			.support
-				.details.details--inset.details--tight.details--tight-bottom.clearfix
-					.details__inner
-						= $site->support_text()
-				.support__button.button
-					.button__inner
-						= $site->support_button_text()
-
 footer.footer#footer
 	.container
 		ul.footer__row.footer__row--1.row
-			li.footer__main-item.col-sm-3.col-md-2 
-				.footer__title .footer__title
-				ul.footer__list
-					li.footer__sub-item: a(href="#") .footer__sub-item
-					li.footer__sub-item: a(href="#") .footer__sub-item
-					li.footer__sub-item: a(href="#") .footer__sub-item
-			li.footer__main-item.col-sm-3.col-md-2 
-				.footer__title .footer__title
-				ul.footer__list
-					li.footer__sub-item: a(href="#") .footer__sub-item
-					li.footer__sub-item: a(href="#") .footer__sub-item
-					li.footer__sub-item: a(href="#") .footer__sub-item
-			li.footer__main-item.col-sm-3.col-md-2 
-				.footer__title .footer__title
-				ul.footer__list
-					li.footer__sub-item: a(href="#") .footer__sub-item
-					li.footer__sub-item: a(href="#") .footer__sub-item
-					li.footer__sub-item: a(href="#") .footer__sub-item
-			li.footer__main-item.col-sm-3.col-md-2 
-				.footer__title .footer__title
-				ul.footer__list
-					li.footer__sub-item: a(href="#") .footer__sub-item
-					li.footer__sub-item: a(href="#") .footer__sub-item
-					li.footer__sub-item: a(href="#") .footer__sub-item
-			li.footer__main-item.col-sm-3.col-md-2 
-				.footer__title .footer__title
-				ul.footer__list
-					li.footer__sub-item: a(href="#") .footer__sub-item
-					li.footer__sub-item: a(href="#") .footer__sub-item
-					li.footer__sub-item: a(href="#") .footer__sub-item
-			li.footer__main-item.col-sm-3.col-md-2 
-				.footer__title .footer__title
-				ul.footer__list
-					li.footer__sub-item: a(href="#") .footer__sub-item
-					li.footer__sub-item: a(href="#") .footer__sub-item
-					li.footer__sub-item: a(href="#") .footer__sub-item
+			li.footer-nav__main-item.col-sm-2 
+				a.footer-nav__title(href="/colors") Colors
+				ul.footer-nav__list
+					li.footer-nav__sub-item: a(href="/colors#folklife") Folklife
+					li.footer-nav__sub-item: a(href="/colors#festival") Festival
+					li.footer-nav__sub-item: a(href="/colors#folkways") Folkways
+					li.footer-nav__sub-item: a(href="/colors#shades-of-black") Shades of Black
+			li.footer-nav__main-item.col-sm-2 
+				a.footer-nav__title(href="/typography") Typography
+				ul.footer-nav__list
+					li.footer-nav__sub-item Serif
+					li.footer-nav__sub-item Sans Serif
+					li.footer-nav__sub-item Slab Serif
+			li.footer-nav__main-item.col-sm-2 
+				a.footer-nav__title(href="/cards") Cards
+				ul.footer-nav__list
+					li.footer-nav__sub-item Video Standard
+					li.footer-nav__sub-item Video Horizontal
+					li.footer-nav__sub-item Audio
+					li.footer-nav__sub-item Card Vertical
+					li.footer-nav__sub-item Card Horizontal
+			li.footer-nav__main-item.col-sm-2 
+				a.footer-nav__title(href="/specials") Specials
+				ul.footer-nav__list
+					li.footer-nav__sub-item: a(href="/specials#email-signup") Email Signup
+					li.footer-nav__sub-item: a(href="/specials#become-a-member") Become a Member
+					li.footer-nav__sub-item: a(href="/specials#support") Support
+			li.footer-nav__main-item.col-sm-2 
+				a.footer-nav__title(href="/framework") Framework
+				ul.footer-nav__list
+					li.footer-nav__sub-item: a(href="/framework#sections") Sections
+					li.footer-nav__sub-item: a(href="/framework#half-sections") Half Sections
+					li.footer-nav__sub-item: a(href="/framework#margins") Margins
+					li.footer-nav__sub-item: a(href="/framework#padding") Padding
+			li.footer-nav__main-item.col-sm-2 
+				a.footer-nav__title(href="/libraries") Libraries
+				ul.footer-nav__list
+					li.footer-nav__sub-item: a(href="/libraries#bootstrap") Bootstrap
+					li.footer-nav__sub-item: a(href="/libraries#sass") SASS
 			
 		hr
 		ul.footer__row.footer__row--2.row

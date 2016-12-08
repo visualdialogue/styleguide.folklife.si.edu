@@ -76,185 +76,50 @@ nav.navbar
 						img.logo--folklife(src="assets/images/logo/folklife.png")
 						img.logo--center(src="assets/images/logo/center.png")
 			.nav-icons											
-				//- .search-icon.nav-icon.nav-icon--main#search-icon(aria-hidden="true")
-				.icon-search.nav-icon.nav-icon--main#search-icon(aria-hidden="true")
-				//- .menu-icon.nav-icon.nav-icon--main#menu-icon(aria-hidden="true")
 				.icon-menu.nav-icon.nav-icon--main#menu-icon(aria-hidden="true")
-				//- .share-icon.nav-icon(aria-hidden="true")
-				.icon-share.nav-icon.nav-icon--main#share-icon(aria-hidden="true")
-				.social-icons.social-icons--desktop
-					//- a.social-icon-link(href="http://www.facebook.com/smithsonianfolklifefestival" target="_blank"): .facebook-icon.social-icon.nav-icon(aria-hidden="true")
-					a.social-icon-link(href="http://www.facebook.com/smithsonianfolklifefestival" target="_blank"): .icon-facebook.social-icon.nav-icon(aria-hidden="true")
-					//- a.social-icon-link(href="https://twitter.com/smithsonianfolk" target="_blank"): .twitter-icon.social-icon.nav-icon(aria-hidden="true")
-					a.social-icon-link(href="https://twitter.com/smithsonianfolk" target="_blank"): .icon-twitter.social-icon.nav-icon(aria-hidden="true")
-					//- a.social-icon-link(href="http://smithsonianfolklife.tumblr.com/" target="_blank"): .tumblr-icon.social-icon.nav-icon(aria-hidden="true")
-					a.social-icon-link(href="http://smithsonianfolklife.tumblr.com/" target="_blank"): .icon-tumblr.social-icon.nav-icon(aria-hidden="true")
-					//- a.social-icon-link(href="https://www.flickr.com/groups/2016folklifefestival" target="_blank"): .flickr-icon.social-icon.nav-icon(aria-hidden="true")
-					a.social-icon-link(href="https://www.flickr.com/groups/2016folklifefestival" target="_blank"): .icon-flickr.social-icon.nav-icon(aria-hidden="true")
-					//- a.social-icon-link(href="https://www.instagram.com/smithsonianfolklife/" target="_blank"): .instagram-icon.social-icon.nav-icon(aria-hidden="true")
-					a.social-icon-link(href="https://www.instagram.com/smithsonianfolklife/" target="_blank"): .icon-instagrem.social-icon.nav-icon(aria-hidden="true")
 
-				// Search Bar
-				form.search-bar.search-bar--desktop.form(action=".")
-					input(placeholder="Search..." type="search")
-
-	.meganav#meganav
+	.header-nav#header-nav
 		.container
-			ul.meganav__row.row
-				li.meganav__main-item.col-sm-2 
-					.meganav__title Typography
-					ul.meganav__list
-						li.meganav__sub-item Serif
-						li.meganav__sub-item Sans Serif
-						li.meganav__sub-item Slab Serif
-				li.meganav__main-item.col-sm-2 
-					.meganav__title Cultural Sustainability
-					ul.meganav__list
-						li.meganav__sub-item My Armenia
-						li.meganav__sub-item SMILE
-						li.meganav__sub-item Heritage Policy
-				li.meganav__main-item.col-sm-2 
-					.meganav__title Education
-					ul.meganav__list
-						li.meganav__sub-item Cultural Education
-						li.meganav__sub-item Resources
-						li.meganav__sub-item Exhibits
-				li.meganav__main-item.col-sm-2 
-					a.meganav__title(href="/archives") Archives
-					ul.meganav__list
-						li.meganav__sub-item: a(href="/archives#about-the-archives") About the Archives
-						li.meganav__sub-item: a(href="/archives#collections") Collections
-						li.meganav__sub-item: a(href="/archives#collections") Using The Archives
-				li.meganav__main-item.col-sm-2 
-					.meganav__title About Us
-					ul.meganav__list
-						li.meganav__sub-item Mission
-						li.meganav__sub-item Staff
-						li.meganav__sub-item Press
-						li.meganav__sub-item Contact
-						li.meganav__sub-item Legacy Honorees
-						li.meganav__sub-item Talk Story
-						li.meganav__sub-item News &amp; Events
-						li.meganav__sub-item Donors &amp; Supporters
-				li.meganav__main-item.col-sm-2 
-					.meganav__title Get Involved
-					ul.meganav__list
-						li.meganav__sub-item Employment
-						li.meganav__sub-item Fellowships
-						li.meganav__sub-item Internships
-						li.meganav__sub-item Volunteer
-						li.meganav__sub-item Donate
-
+			ul.header-nav__row.row
+				li.header-nav__main-item.col-sm-2 
+					a.header-nav__title(href="/colors") Colors
+					ul.header-nav__list
+						li.header-nav__sub-item: a(href="/colors#folklife") Folklife
+						li.header-nav__sub-item: a(href="/colors#festival") Festival
+						li.header-nav__sub-item: a(href="/colors#folkways") Folkways
+						li.header-nav__sub-item: a(href="/colors#shades-of-black") Shades of Black
+				li.header-nav__main-item.col-sm-2 
+					a.header-nav__title(href="/typography") Typography
+					ul.header-nav__list
+						li.header-nav__sub-item: a(href="/typography#serif") Serif
+						li.header-nav__sub-item: a(href="/typography#sans") Sans
+						li.header-nav__sub-item: a(href="/typography#slab-serif") Slab Serif
+				li.header-nav__main-item.col-sm-2 
+					a.header-nav__title(href="/cards") Cards
+					ul.header-nav__list
+						li.header-nav__sub-item Video Standard
+						li.header-nav__sub-item Video Horizontal
+						li.header-nav__sub-item Audio
+						li.header-nav__sub-item Card Vertical
+						li.header-nav__sub-item Card Horizontal				
+				li.header-nav__main-item.col-sm-2 
+					a.header-nav__title(href="/specials") Specials
+					ul.header-nav__list
+						li.header-nav__sub-item: a(href="/specials#email-signup") Email Signup
+						li.header-nav__sub-item: a(href="/specials#become-a-member") Become a Member
+						li.header-nav__sub-item: a(href="/specials#support") Support
+				li.header-nav__main-item.col-sm-2 
+					a.header-nav__title(href="/framework") Framework
+					ul.header-nav__list
+						li.header-nav__sub-item: a(href="/framework#sections") Sections
+						li.header-nav__sub-item: a(href="/framework#half-sections") Half Sections
+						li.header-nav__sub-item: a(href="/framework#margins") Margins
+						li.header-nav__sub-item: a(href="/framework#padding") Padding
+				li.header-nav__main-item.col-sm-2 
+					a.header-nav__title(href="/libraries") Libraries
+					ul.header-nav__list
+						li.header-nav__sub-item: a(href="/libraries#bootstrap") Bootstrap
+						li.header-nav__sub-item: a(href="/libraries#sass") SASS
 
 	<!-- Collect the nav links, forms, and other content for toggling -->
 	.collapse.navbar-collapse(id="bs-example-navbar-collapse-1")
-	.social-icons.social-icons--mobile.mobile-only
-		//- a.social-icon-link(href="http://www.facebook.com/smithsonianfolklifefestival" target="_blank"): .facebook-icon.social-icon.social-icon--mobile.nav-icon(aria-hidden="true")
-		a.social-icon-link(href="http://www.facebook.com/smithsonianfolklifefestival" target="_blank"): .icon-facebook.social-icon.social-icon--mobile.nav-icon(aria-hidden="true")
-		//- a.social-icon-link(href="https://twitter.com/smithsonianfolk" target="_blank"): .twitter-icon.social-icon.social-icon--mobile.nav-icon.nav-icon(aria-hidden="true")
-		a.social-icon-link(href="https://twitter.com/smithsonianfolk" target="_blank"): .icon-twitter.social-icon.social-icon--mobile.nav-icon(aria-hidden="true")
-		//- a.social-icon-link(href="http://smithsonianfolklife.tumblr.com/" target="_blank"): .tumblr-icon.social-icon.social-icon--mobile.nav-icon.nav-icon(aria-hidden="true")
-		a.social-icon-link(href="http://smithsonianfolklife.tumblr.com/" target="_blank"): .icon-tumblr.social-icon.social-icon--mobile.nav-icon(aria-hidden="true")
-		//- a.social-icon-link(href="https://www.flickr.com/groups/2016folklifefestival" target="_blank"): .flickr-icon.social-icon.social-icon--mobile.nav-icon.nav-icon(aria-hidden="true")
-		a.social-icon-link(href="https://www.flickr.com/groups/2016folklifefestival" target="_blank"): .icon-flickr.social-icon.social-icon--mobile.nav-icon(aria-hidden="true")
-		//- a.social-icon-link(href="https://www.instagram.com/smithsonianfolklife/" target="_blank"): .instagram-icon.social-icon.social-icon--mobile.nav-icon.nav-icon(aria-hidden="true")
-		a.social-icon-link(href="https://www.instagram.com/smithsonianfolklife/" target="_blank"): .icon-instagrem.social-icon.social-icon--mobile.nav-icon(aria-hidden="true")
-	form.search-bar.search-bar--mobile.mobile-only(action=".")
-		input(placeholder="Search..." type="search")
-	- if (c::get('site') == 'folkways'): 
-		.browsenav#browsenav
-			.container
-				.browsenav__title Browse
-				ul.browsenav__categories.row
-					li.browsenav__item.col-sm-3
-						//- label so bg image will open select box. Otherwise select elements cannot have :after elements
-						label.select 
-							select
-								// first option jade-php complie bug so in html. Selected and disabled from http://stackoverflow.com/a/18180032
-								<option selected disabled>GENRE</option>
-								option(value="/search?query=African%20American%20Music") African American Music
-								option(value="/search?query=African%20American%20Spoken") African American Spoken
-								option(value="/search?query=American%20Folk") American Folk
-								option(value="/search?query=American%20History") American History
-								option(value="/search?query=American%20Indian") American Indian
-								option(value="/search?query=American%20Popular") American Popular
-								option(value="/search?query=Bluegrass") Bluegrass
-								option(value="/search?query=Blues") Blues
-								option(value="/search?query=Cajun") Cajun
-								option(value="/search?query=Caribbean") Caribbean
-								option(value="/search?query=Celtic") Celtic
-								option(value="/search?query=Central%20Asia") Central Asia
-								option(value="/search?query=Children's") Children's
-								option(value="/search?query=Classical") Classical
-								option(value="/search?query=Contemporary") Contemporary &amp; Electronic
-								option(value="/search?query=Country") Country
-								option(value="/search?query=Documentary") Documentary
-								option(value="/search?query=Drama") Drama
-								option(value="/search?query=Gospel") Gospel
-								option(value="/search?query=Hawai'i") Hawai'i
-								option(value="/search?query=Historical%20Song") Historical Song
-								option(value="/search?query=Holiday") Holiday
-								option(value="/search?query=Humor") Humor
-								option(value="/search?query=India") India
-								option(value="/search?query=Islamica") Islamica
-								option(value="/search?query=Jazz") Jazz &amp; Ragtime
-								option(value="/search?query=Judaica") Judaica
-								option(value="/search?query=Language%20Instruction") Language Instruction
-								option(value="/search?query=Latin") Latin
-								option(value="/search?query=Miscellany") Miscellany
-								option(value="/search?query=Music%20Instruction") Music Instruction
-								option(value="/search?query=Old%20Time") Old Time
-								option(value="/search?query=Oral%20History") Oral History &amp; Biography
-								option(value="/search?query=Poetry") Poetry
-								option(value="/search?query=Prose") Prose
-								option(value="/search?query=Psychology") Psychology &amp; Health
-								option(value="/search?query=Sacred") Sacred
-								option(value="/search?query=Science") Science &amp; Nature
-								option(value="/search?query=Sounds") Sounds
-								option(value="/search?query=Soundtracks") Soundtracks &amp; Musicals
-								option(value="/search?query=Spoken%20Word") Spoken Word
-								option(value="/search?query=Struggle") Struggle &amp; Protest
-								option(value="/search?query=World") World
-								option(value="/search?query=World%20History") World History
-					li.browsenav__item.col-sm-3
-						label.select 
-							select
-								<option selected disabled>LOCATION</option>
-								option(value="") North America
-								option(value="") South America
-								option(value="") Europe
-								option(value="") Africa
-								option(value="") Asia
-								option(value="") Australia
-					li.browsenav__item.col-sm-3
-						label.select
-							select
-								<option selected disabled>ARTISTS</option>
-								option(value="") Bobby Susser
-								option(value="") Ensemble Hilka
-								option(value="") Fannie Lou Hamer
-								option(value="") Guillermo Velázquez y Los Leones de la Sierra de Xichú
-								option(value="") Josh White
-								option(value="") José-Luis Orozco
-								option(value="") Koishimaru Izutsuya
-								option(value="") Mariachi Los Camperos de Nati Cano
-								option(value="") Ophie &amp; Da Websites, Bo Hog &amp; Da Rooters
-								option(value="") Pete Seeger
-								option(value="") Stanley and the Ten Sleepless Knights
-								option(value="") The Brothers Nazaroff
-								option(value="") Woodie Guthrie
-								option(value="") ...
-					li.browsenav__item.col-sm-3
-						label.select
-							select
-								<option selected disabled>LABEL</option>
-								option(value="") Arhoolie Records
-								option(value="") Cook Records
-								option(value="") Fast Folk
-								option(value="") Fast Folk Records
-								option(value="") Folkways Records
-								option(value="") M.O.R.E.
-								option(value="") Monitor Records
-								option(value="") Paredon Records
-								option(value="") ...
-	- endif
