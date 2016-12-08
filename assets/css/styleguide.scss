@@ -26,7 +26,8 @@
   @import "../common/css/links.scss";
   @import "../common/css/helpers.scss";
   @import "../common/css/mixins.scss";
-  @import "../common/css/nav.scss";
+  // @import "../common/css/nav.scss";
+  @import "../common/css/nav-old.scss";
   @import "../common/css/general.scss";
   @import "../common/css/audio.scss";
   @import "../common/css/footer.scss";
@@ -521,7 +522,7 @@
 			padding-bottom: 4rem;
 		}
 
-		.section__title {
+		.section-title {
 			color: white;
 		}
 	}
@@ -778,7 +779,7 @@
 		}
 		&__button {
 			background-color: $black40;
-			@include section-header;
+			@include section-title;
 			margin-bottom:0;
 			padding: 3vw;
 			color: white;
@@ -907,6 +908,72 @@
 		padding-top: 2vw;
 		@include respond-to(break2) {padding-top:0.4vw;}
 		@include respond-to(fullwidth) {padding-top:1px;}
+	}
+
+/* #code
+-------------------------------------------------- */
+	.code_gutter {
+		display:none;
+	}
+	section {
+		// background-color: #272822;
+	}
+	pre {
+		background-color: #272822;
+		font-size:16px;
+		// @include margin-top(0);
+		border-radius: initial;
+		// @include margin-bottom(8);
+		// @include margin-left(-2);
+		@include padding-top(3);
+		@include padding-right(2);
+		@include padding-bottom(3);
+		@include padding-left(0);
+		border-color: #272822;
+	}
+	.section--typography pre  {
+		@include margin-bottom(8);
+	}
+	.section-subtitle {
+		@include serif-lg;
+		color: $black50;
+		@include margin-top(3);
+		@include margin-bottom(2);
+	}
+	.section__description {
+		@include margin-bottom(4);
+	}
+
+/* #color
+-------------------------------------------------- */
+	.color {@include margin-bottom(4)}
+	.color__block {@include height(32)}
+	// Festival
+	.festival-color-list {
+		.color:nth-of-type(1) .color__block {background-color:$fs-purple;}
+		.color:nth-of-type(2) .color__block {background-color:$fs-orange;}
+		.color:nth-of-type(3) .color__block {background-color:$fs-blue;}
+	}
+	// Folkways
+	.folkways-color-list {
+		.color:nth-of-type(1) .color__block {background-color:$fw-green;}
+		.color:nth-of-type(2) .color__block {background-color:$fw-red;}
+		.color:nth-of-type(3) .color__block {background-color:$fw-purple;}
+		.color:nth-of-type(4) .color__block {background-color:$fw-lightGreen;}
+	}
+	// Shades of Gray
+	.gray-color-list {
+		.color:nth-of-type(1) .color__block {background-color: $black80}
+		.color:nth-of-type(2) .color__block {background-color: $black70}
+		.color:nth-of-type(3) .color__block {background-color: $black65}
+		.color:nth-of-type(4) .color__block {background-color: $black60}
+		.color:nth-of-type(5) .color__block {background-color: $black50}
+		.color:nth-of-type(6) .color__block {background-color: $black40}
+		.color:nth-of-type(7) .color__block {background-color: $black30}
+		.color:nth-of-type(8) .color__block {background-color: $black20}
+		.color:nth-of-type(9) .color__block {background-color: $black15}
+		.color:nth-of-type(10) .color__block {background-color: $black10}
+		.color:nth-of-type(11) .color__block {background-color: $black08}
 	}
 
 /* Helpers II

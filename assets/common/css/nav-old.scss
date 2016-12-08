@@ -429,7 +429,7 @@
 		// font-family: $slabExtraWide;
 		// font-weight: 700;
 		// @extend %meganav-font;
-		@include section-header;
+		@include section-title;
 		color: white;
 		margin-bottom: 3rem;
 		@include respond-to(break2) {

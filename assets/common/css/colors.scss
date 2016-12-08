@@ -1,8 +1,28 @@
+/* Styleguide example
+-------------------------------------------------- */
+	// Colors are stored as SASS variables for easily application and updates. For example:
+
+	// SASS variable for Folkways green
+	$fw-green: #939f93;
+
+	// SASS implementation
+	.learn-page {
+		.title-bar {background-color: $fw-green}
+	}
+
 /* Festival
 -------------------------------------------------- */
-$fs-purple: #6f498c; // 10-29
-$fs-orange: #e69f57; // 10-29
-$fs-blue: #4967a3; // 10-29
+
+	$fs-purple: #6f498c;
+	$fs-orange: #e69f57;
+	$fs-blue: #4967a3;
+
+/* Folkways
+-------------------------------------------------- */
+	$fw-green: #939f93;
+	$fw-red: #ec8279;
+	$fw-purple: #a499bb;
+	$fw-lightGreen: #c1e0b7;
 
 /* Colors
 -------------------------------------------------- */
@@ -11,18 +31,19 @@ $fs-blue: #4967a3; // 10-29
 $body: #333333; 
 $copy: $body; 
 
-// $black50: rgba(black, 0.5);
-$black80: hsl(0, 0, 20);
-$black70: hsl(0, 0, 30);
-$black65: hsl(0, 0, 35);
-$black60: hsl(0, 0, 40);
-$black50: hsl(0, 0, 50);
-$black40: hsl(0, 0, 60);
-$black30: hsl(0, 0, 70);
-$black20: hsl(0, 0, 80);
-$black15: hsl(0, 0, 85);
-$black10: hsl(0, 0, 90);
-$black08: hsl(0, 0, 92);
+/* Blacks
+-------------------------------------------------- */
+	$black80: hsl(0, 0, 20);
+	$black70: hsl(0, 0, 30);
+	$black65: hsl(0, 0, 35);
+	$black60: hsl(0, 0, 40);
+	$black50: hsl(0, 0, 50);
+	$black40: hsl(0, 0, 60);
+	$black30: hsl(0, 0, 70);
+	$black20: hsl(0, 0, 80);
+	$black15: hsl(0, 0, 85);
+	$black10: hsl(0, 0, 90);
+	$black08: hsl(0, 0, 92);
 
 $lightblue: #b4e7f8;
 

@@ -351,10 +351,10 @@
 							- snippet('card-details', array('card' => $card, 'details' => $details, 'excerpt' => $excerptData, 'showCategory' => $showCategory ))
 			- else:
 				a.card__inner(href="<?= $card->url() ?>")
-				.card__image-wrapper.clearfix(class="")
-					- if($src = $card->image($card->img())):
-						img.card__image(src="<?= $src->url() ?>")
-					- endif
-				- snippet('card-details', array('card' => $card, 'details' => $details, 'excerpt' => $excerptData, 'showCategory' => $showCategory ))
+					.card__image-wrapper.clearfix(class="")
+						- if($src = $card->image($card->img())):
+							img.card__image(src="<?= $src->url() ?>")
+						- endif
+					- snippet('card-details', array('card' => $card, 'details' => $details, 'excerpt' => $excerptData, 'showCategory' => $showCategory ))
 			- endif
 - endif

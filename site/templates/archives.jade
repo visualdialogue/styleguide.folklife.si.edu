@@ -4,7 +4,7 @@
 
 //- Banner
 section.section--banner-1-2.section--first.container.hero#about-the-archives
-	h1.section__title.hero__title
+	h1.section-title.hero__title
 		=$page->title()
 
 	hr.hr--thin
@@ -43,7 +43,7 @@ section.section--collections.container#collections
 section.section--using-the-archives.container#using-the-archives
 	.row
 		main.main--copy.col-sm-7
-			h2.section__title Using the Archives
+			h2.section-title Using the Archives
 			!= $page->copy()->kt()
 		
 		sidebar.sidebar.sidebar--info.col-sm-4.col-sm-offset-1
@@ -64,7 +64,7 @@ section.section--using-the-archives.container#using-the-archives
 
 //- Listen
 //- section.section--audio.container
-	h2.section__title Listen
+	h2.section-title Listen
 	ul.row.row--listen
 		- foreach ($page->audio_data()->toStructure() as $audio):
 			- if($src = $page->image($audio->img())):
@@ -92,7 +92,7 @@ section.section--using-the-archives.container#using-the-archives
 
 //- Participate
 //- section.section--participate.container
-	h2.section__title Participate
+	h2.section-title Participate
 	- snippet('more-link')
 	ul.row
 		- foreach ($page->events()->toStructure() as $event):
@@ -107,7 +107,7 @@ section.section--using-the-archives.container#using-the-archives
 
 //- Talk Story
 //- section.container.section--talk-story
-	h2.section__title Talk Story
+	h2.section-title Talk Story
 	.row
 		.col-sm-8.talk-story__feature.clearfix
 			.feature__inner
@@ -135,7 +135,7 @@ section.section--using-the-archives.container#using-the-archives
 
 //- Dive Deep
 //- section.container.section--dive-deep
-	h2.section__title Dive Deep
+	h2.section-title Dive Deep
 	- snippet('more-link')
 	.row
 		.col-sm-6.dive-deep__feature.clearfix
@@ -164,8 +164,8 @@ section.section--using-the-archives.container#using-the-archives
 //- .container
 	.row
 		section.col-sm-6.section--vr.section--explore-collections.explore-collections
-			h2.section__title.hidden-md Collections		
-			h2.section__title.visible-md Explore Collections		
+			h2.section-title.hidden-md Collections		
+			h2.section-title.visible-md Explore Collections		
 			- snippet('more-link')
 			ul.row.explore-collections__featurette-list
 				- foreach ($page->explore_collections_featurettes()->toStructure() as $featurette):
@@ -180,7 +180,7 @@ section.section--using-the-archives.container#using-the-archives
 
 		hr.hr--thick.hidden-md.hidden-lg
 		section.col-sm-6.section--vr.section--teach
-			h2.section__title Teach
+			h2.section-title Teach
 			- snippet('more-link')
 			ul.row.teach__featurette-list
 				- foreach ($page->teach_featurettes()->toStructure() as $featurette):

@@ -158,9 +158,6 @@
 	h3 {
 		@include h3;
 	}
-	.section__title {
-		@include section-header;
-	}
 	section {
 		// margin-bottom: 0;
 		position: relative; // contain more link
@@ -192,12 +189,12 @@
 			height: 50vh;
 			padding-top: 20vh;
 			text-align: center;
-			@include section-header;
+			@include section-title;
 			color: $black50;
 		}
 	}
 	.main--copy {
-		.section__title {
+		.section-title {
 			margin-bottom:2.2rem;
 			@include respond-to(break2) {margin-bottom:1.3vw;}
 			@include respond-to(fullwidth) {margin-bottom:2.2rem;} // 30 px

@@ -1,5 +1,5 @@
 section.container.section--blog.blog
-	h2.section__title Festival Blog
+	h2.section-title Festival Blog
 	- snippet('more-link')
 	.row
 		- foreach ($pages->find('blog')->children()->visible()->limit(4) as $entry):

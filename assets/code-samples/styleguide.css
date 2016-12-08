@@ -1,0 +1,87 @@
+/* CSS */
+
+.sans-xl {
+    font-family: "acumin-pro", Arial, sans-serif;
+    font-size: 5vw;
+}
+
+@media only screen and (min-width: 53.25em) {
+    .sans-xl {
+        font-size: 2.5vw;
+        line-height: 1.2;
+    }
+}
+
+@media only screen and (min-width: 1560px) {
+    .sans-xl {
+        font-size: 4rem;
+    }
+}
+
+
+/* CSS */
+
+.sans-lg {
+    font-family: "acumin-pro", Arial, sans-serif;
+    font-weight: 300;
+    font-size: 5vw;
+}
+
+@media only screen and (min-width: 53.25em) {
+    .sans-lg {
+        font-size: 1.9vw;
+        line-height: 1.2;
+    }
+}
+
+@media only screen and (min-width: 1560px) {
+    .sans-lg {
+        font-size: 3.5rem;
+    }
+}
+
+
+/* CSS */
+.sans-md {
+    font-family: "acumin-pro", Arial, sans-serif;
+    font-weight: 300;
+    line-height: 1.2;
+    font-size: 5vw;
+}
+
+@media only screen and (min-width: 53.25em) {
+    .sans-md {
+        font-size: 1.92vw;
+        line-height: 1.28;
+    }
+}
+
+@media only screen and (min-width: 1560px) {
+    .sans-md {
+        font-size: 3rem;
+    }
+}
+
+
+/* CSS */
+
+.sans-sm {
+    font-family: "acumin-pro", Arial, sans-serif;
+    font-weight: 300;
+    line-height: 1.2;
+    font-size: 4vw;
+}
+
+@media only screen and (min-width: 53.25em) {
+    .sans-sm {
+        font-size: 1.6vw;
+        line-height: 1.3;
+    }
+}
+
+@media only screen and (min-width: 1560px) {
+    .sans-sm {
+        font-size: 2.5rem;
+        line-height: 1.3;
+    }
+}

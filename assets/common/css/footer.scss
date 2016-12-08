@@ -74,7 +74,7 @@
 		}
 		&__button {
 			background-color: $black40;
-			@include section-header;
+			@include section-title;
 			margin-bottom:0;
 			padding: 3vw;
 			color: white;

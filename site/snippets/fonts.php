@@ -4,7 +4,7 @@
 <!-- Font Awesome icons by Dave Gandy --><style>.wf-loading .tagline,
 .wf-loading .site-toggle__link,
 .wf-loading .title,
-.wf-loading .section__title {
+.wf-loading .section-title {
 	/* Hide the blog title and post titles while web fonts are loading */
 	visibility: hidden;
 }</style>
