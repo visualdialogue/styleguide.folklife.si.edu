@@ -18,10 +18,16 @@
 //-----------
 	prevent php error if empty var
 	------------//
+//- excerpt
 - $excerptData = null;
-
 - if(isset($excerpt)):
 	- $excerptData = $excerpt;
+- endif
+
+//- blurb
+- $blurbData = null;
+- if(isset($blurb)):
+	- $blurbData = $blurb;
 - endif
 
 //- store cardtype if exists, make null if not so other functions will complete
@@ -353,7 +359,7 @@
 								img.card__image(src="<?= $src->url() ?>")
 							- endif
 						li(class="col-sm-<?= $text_col ?>")
-							- snippet('card-details', array('card' => $card, 'details' => $details, 'excerpt' => $excerptData, 'showCategory' => $showCategory ))
+							- snippet('card-details', array('card' => $card, 'details' => $details, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory ))
 			- else:
 				a.card__inner(href="<?= $card->url() ?>")
 					.card__image-wrapper.clearfix(class="")

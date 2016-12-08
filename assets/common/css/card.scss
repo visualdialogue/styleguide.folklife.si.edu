@@ -6,3 +6,98 @@
 .card--horizontal {
 	@include margin-bottom(4);
 }
+
+
+.border {
+	border-top: 1px solid $black65;
+	&--inset {
+		margin-left:2rem;
+		margin-right:2rem;
+		@include respond-to(break2) {
+			margin-left:2rem;
+			margin-right:2rem;
+		}
+		@include respond-to(fullwidth) {
+			margin-left:2rem;
+			margin-right:2rem;
+		}
+	}
+}
+
+// details only include top padding
+.details {
+	// padding-top: 4vw;
+	// padding-top: 12px;
+	@include padding-top(2);
+	// min-height: 26vw; // for 3 line titles
+	@include respond-to(break2) {
+		min-height: initial; // reset // for ios
+		min-height: auto; // for windows
+		// padding-top: 1.6vw;
+	}
+	@include respond-to(fullwidth) {
+		// padding-top: 2.5rem;
+	}
+}
+// details inner includes left and right padding, and less top padding
+.details--inset {
+	// padding: 3vw 2vw 2vw;
+	padding: 2vw 2.5vw 2vw;
+	@include respond-to(break2) {
+		// padding: 1.5vw 1.25vw 1.2vw;
+		padding: 1.5vw 1.25vw 0vw;
+	}
+	@include respond-to(fullwidth) {
+		padding: 2.5rem 2rem 2rem;
+	}
+	@include padding-top(2);
+}
+.details--notop {
+	@include respond-to(break2) {padding-top: 0 !important;}
+}
+// smaller featurette details require less padding
+.details--tight {
+	@include respond-to(break2) {
+		// padding: 1.35vw 0.6vw 0 1.35vw;
+		padding: 0.9vw 0.7vw 0 1.0vw;
+	}
+	@include respond-to(fullwidth) {
+		// padding: 1.4rem 1.8rem 0 2rem;
+		padding: 1.6rem 1.8rem 0 1.8rem;
+	}
+}
+// smaller featurette details require less padding
+.details--tight-bottom {
+	@include respond-to(break2) {
+		padding-bottom: 1.25vw;
+	}
+	@include respond-to(fullwidth) {
+		padding-bottom: 1.5rem;
+	}
+}
+.details__inner {
+	// counteract line height of first line for padding
+	margin-top:0;
+	@include respond-to(break2) {
+		margin-top:-2px;
+	}
+	@include respond-to(fullwidth) {
+		margin-top:-3px;
+	}
+}
+.title {
+}
+.title--serif {
+	@include serif-md;
+}
+.title--sans {
+	@extend %title--sans;
+}
+.subtitle--sans {
+	@include sans-xxs;
+}
+.category {
+	@include category;
+}
+.date {@include date;}
+.date-sm {@include date-sm;}

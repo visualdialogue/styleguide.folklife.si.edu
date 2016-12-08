@@ -47,8 +47,18 @@ $(document).ready(function () {
 	// when click a main list item
 	 $navItem.on('click', function(e) {
 
-	 	// don't follow click on mobile, so can show dropdown sections
-	 	if(site.isMobile) {
+	 	// check if this nav item has as ul as next sibling, from http://stackoverflow.com/a/7678513
+	 	if($(this).next('ul').length) {
+	 		var hasChildren = true;
+	 		console.log('link has children');
+	 	}
+	 	else {
+	 		console.log('link has NO children');
+	 		var hasChildren = false;
+	 	}
+
+	 	// if have children, don't follow click on mobile, so can show dropdown sections
+	 	if(site.isMobile && hasChildren) {
 	 		console.log('dont follow link mobile');
 			e.preventDefault ? e.preventDefault() : e.returnValue = false; // for windows too, from http://stackoverflow.com/a/1000606
 	 	}

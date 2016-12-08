@@ -7204,17 +7204,17 @@ body {
 
 /* Sans Acumin
  ******************/
-.title--sans, .audio .title {
+.audio .title, .title--sans {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 600;
   line-height: 1.2;
   font-size: 5vw; }
   @media only screen and (min-width: 53.25em) {
-    .title--sans, .audio .title {
+    .audio .title, .title--sans {
       font-size: 1.5vw;
       margin-bottom: 0.3vw; } }
   @media only screen and (min-width: 1560px) {
-    .title--sans, .audio .title {
+    .audio .title, .title--sans {
       font-size: 2.4rem;
       margin-bottom: 0.5rem; } }
 
@@ -8899,176 +8899,6 @@ hr {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%); }
 
-.border {
-  border-top: 1px solid #595959; }
-  .border--inset {
-    margin-left: 2rem;
-    margin-right: 2rem; }
-    @media only screen and (min-width: 53.25em) {
-      .border--inset {
-        margin-left: 2rem;
-        margin-right: 2rem; } }
-    @media only screen and (min-width: 1560px) {
-      .border--inset {
-        margin-left: 2rem;
-        margin-right: 2rem; } }
-
-.details {
-  padding-top: 2.5vw;
-  min-height: 26vw; }
-  @media only screen and (min-width: 53.25em) {
-    .details {
-      padding-top: 1.25vw; } }
-  @media only screen and (min-width: 1560px) {
-    .details {
-      padding-top: 2rem; } }
-  @media only screen and (min-width: 53.25em) {
-    .details {
-      min-height: initial;
-      min-height: auto; } }
-
-.details--inset {
-  padding: 2vw 2.5vw 2vw;
-  padding-top: 2.5vw; }
-  @media only screen and (min-width: 53.25em) {
-    .details--inset {
-      padding: 1.5vw 1.25vw 0vw; } }
-  @media only screen and (min-width: 1560px) {
-    .details--inset {
-      padding: 2.5rem 2rem 2rem; } }
-  @media only screen and (min-width: 53.25em) {
-    .details--inset {
-      padding-top: 1.25vw; } }
-  @media only screen and (min-width: 1560px) {
-    .details--inset {
-      padding-top: 2rem; } }
-
-@media only screen and (min-width: 53.25em) {
-  .details--notop {
-    padding-top: 0 !important; } }
-
-@media only screen and (min-width: 53.25em) {
-  .details--tight {
-    padding: 0.9vw 0.7vw 0 1.0vw; } }
-
-@media only screen and (min-width: 1560px) {
-  .details--tight {
-    padding: 1.6rem 1.8rem 0 1.8rem; } }
-
-@media only screen and (min-width: 53.25em) {
-  .details--tight-bottom {
-    padding-bottom: 1.25vw; } }
-
-@media only screen and (min-width: 1560px) {
-  .details--tight-bottom {
-    padding-bottom: 1.5rem; } }
-
-.details__inner {
-  margin-top: 0; }
-  @media only screen and (min-width: 53.25em) {
-    .details__inner {
-      margin-top: -2px; } }
-  @media only screen and (min-width: 1560px) {
-    .details__inner {
-      margin-top: -3px; } }
-
-.title--serif {
-  font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
-  font-weight: 700;
-  line-height: 1.2;
-  font-size: 6vw; }
-  @media only screen and (min-width: 53.25em) {
-    .title--serif {
-      font-size: 1.8vw; } }
-  @media only screen and (min-width: 1560px) {
-    .title--serif {
-      font-size: 2.8rem; } }
-
-.subtitle--sans {
-  font-family: "acumin-pro", Arial, sans-serif;
-  font-weight: 300;
-  line-height: 1.2;
-  line-height: 1.4;
-  font-size: 4vw; }
-  @media only screen and (min-width: 53.25em) {
-    .subtitle--sans {
-      font-size: 1.15vw;
-      line-height: 1.3; } }
-  @media only screen and (min-width: 1560px) {
-    .subtitle--sans {
-      line-height: 1.3;
-      font-size: 1.8rem; } }
-
-.category {
-  text-transform: uppercase;
-  font-family: "acumin-pro-wide", Arial, sans-serif;
-  color: #595959;
-  font-weight: 300;
-  letter-spacing: 1px;
-  margin-bottom: 0.5rem;
-  margin-bottom: 0;
-  font-size: 2.5vw; }
-  @media only screen and (min-width: 53.25em) {
-    .category {
-      font-size: 0.95vw;
-      font-size: 1vw;
-      margin-bottom: 0.4vw; } }
-  @media only screen and (min-width: 1560px) {
-    .category {
-      font-size: 1.6rem;
-      margin-bottom: 0.5rem;
-      line-height: 1; } }
-
-.date {
-  text-transform: uppercase;
-  font-family: "acumin-pro-wide", Arial, sans-serif;
-  color: #595959;
-  font-weight: 300;
-  letter-spacing: 1px;
-  margin-bottom: 0.5rem;
-  margin-bottom: 0;
-  font-size: 2.5vw;
-  font-weight: 700; }
-  @media only screen and (min-width: 53.25em) {
-    .date {
-      font-size: 0.95vw;
-      font-size: 1vw;
-      margin-bottom: 0.4vw; } }
-  @media only screen and (min-width: 1560px) {
-    .date {
-      font-size: 1.6rem;
-      margin-bottom: 0.5rem;
-      line-height: 1; } }
-
-.date-sm {
-  text-transform: uppercase;
-  font-family: "acumin-pro-wide", Arial, sans-serif;
-  color: #595959;
-  font-weight: 300;
-  letter-spacing: 1px;
-  margin-bottom: 0.5rem;
-  margin-bottom: 0;
-  font-size: 2.5vw;
-  letter-spacing: normal;
-  text-transform: initial;
-  margin-top: 1rem; }
-  @media only screen and (min-width: 53.25em) {
-    .date-sm {
-      font-size: 0.95vw;
-      font-size: 1vw;
-      margin-bottom: 0.4vw; } }
-  @media only screen and (min-width: 1560px) {
-    .date-sm {
-      font-size: 1.6rem;
-      margin-bottom: 0.5rem;
-      line-height: 1; } }
-  @media only screen and (min-width: 53.25em) {
-    .date-sm {
-      margin-top: 1rem; } }
-  @media only screen and (min-width: 1560px) {
-    .date-sm {
-      margin-top: 1rem; } }
-
 /* #video
 -------------------------------------------------- */
 .video__thumbnail {
@@ -9341,7 +9171,8 @@ hr {
   padding-top: 0;
   font-family: "acumin-pro", Arial, sans-serif;
   font-size: 5vw;
-  height: 18vw; }
+  height: 18vw;
+  min-height: 18vw; }
   @media only screen and (min-width: 53.25em) {
     .newsletter__input {
       font-size: 2.2vw; } }
@@ -9581,6 +9412,175 @@ hr {
   @media only screen and (min-width: 1560px) {
     .card--horizontal {
       margin-bottom: 4rem; } }
+
+.border {
+  border-top: 1px solid #595959; }
+  .border--inset {
+    margin-left: 2rem;
+    margin-right: 2rem; }
+    @media only screen and (min-width: 53.25em) {
+      .border--inset {
+        margin-left: 2rem;
+        margin-right: 2rem; } }
+    @media only screen and (min-width: 1560px) {
+      .border--inset {
+        margin-left: 2rem;
+        margin-right: 2rem; } }
+
+.details {
+  padding-top: 2.5vw; }
+  @media only screen and (min-width: 53.25em) {
+    .details {
+      padding-top: 1.25vw; } }
+  @media only screen and (min-width: 1560px) {
+    .details {
+      padding-top: 2rem; } }
+  @media only screen and (min-width: 53.25em) {
+    .details {
+      min-height: initial;
+      min-height: auto; } }
+
+.details--inset {
+  padding: 2vw 2.5vw 2vw;
+  padding-top: 2.5vw; }
+  @media only screen and (min-width: 53.25em) {
+    .details--inset {
+      padding: 1.5vw 1.25vw 0vw; } }
+  @media only screen and (min-width: 1560px) {
+    .details--inset {
+      padding: 2.5rem 2rem 2rem; } }
+  @media only screen and (min-width: 53.25em) {
+    .details--inset {
+      padding-top: 1.25vw; } }
+  @media only screen and (min-width: 1560px) {
+    .details--inset {
+      padding-top: 2rem; } }
+
+@media only screen and (min-width: 53.25em) {
+  .details--notop {
+    padding-top: 0 !important; } }
+
+@media only screen and (min-width: 53.25em) {
+  .details--tight {
+    padding: 0.9vw 0.7vw 0 1.0vw; } }
+
+@media only screen and (min-width: 1560px) {
+  .details--tight {
+    padding: 1.6rem 1.8rem 0 1.8rem; } }
+
+@media only screen and (min-width: 53.25em) {
+  .details--tight-bottom {
+    padding-bottom: 1.25vw; } }
+
+@media only screen and (min-width: 1560px) {
+  .details--tight-bottom {
+    padding-bottom: 1.5rem; } }
+
+.details__inner {
+  margin-top: 0; }
+  @media only screen and (min-width: 53.25em) {
+    .details__inner {
+      margin-top: -2px; } }
+  @media only screen and (min-width: 1560px) {
+    .details__inner {
+      margin-top: -3px; } }
+
+.title--serif {
+  font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: 6vw; }
+  @media only screen and (min-width: 53.25em) {
+    .title--serif {
+      font-size: 1.8vw; } }
+  @media only screen and (min-width: 1560px) {
+    .title--serif {
+      font-size: 2.8rem; } }
+
+.subtitle--sans {
+  font-family: "acumin-pro", Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+  line-height: 1.4;
+  font-size: 4vw; }
+  @media only screen and (min-width: 53.25em) {
+    .subtitle--sans {
+      font-size: 1.15vw;
+      line-height: 1.3; } }
+  @media only screen and (min-width: 1560px) {
+    .subtitle--sans {
+      line-height: 1.3;
+      font-size: 1.8rem; } }
+
+.category {
+  text-transform: uppercase;
+  font-family: "acumin-pro-wide", Arial, sans-serif;
+  color: #595959;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  margin-bottom: 0;
+  font-size: 2.5vw; }
+  @media only screen and (min-width: 53.25em) {
+    .category {
+      font-size: 0.95vw;
+      font-size: 1vw;
+      margin-bottom: 0.4vw; } }
+  @media only screen and (min-width: 1560px) {
+    .category {
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+      line-height: 1; } }
+
+.date {
+  text-transform: uppercase;
+  font-family: "acumin-pro-wide", Arial, sans-serif;
+  color: #595959;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  margin-bottom: 0;
+  font-size: 2.5vw;
+  font-weight: 700; }
+  @media only screen and (min-width: 53.25em) {
+    .date {
+      font-size: 0.95vw;
+      font-size: 1vw;
+      margin-bottom: 0.4vw; } }
+  @media only screen and (min-width: 1560px) {
+    .date {
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+      line-height: 1; } }
+
+.date-sm {
+  text-transform: uppercase;
+  font-family: "acumin-pro-wide", Arial, sans-serif;
+  color: #595959;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  margin-bottom: 0;
+  font-size: 2.5vw;
+  letter-spacing: normal;
+  text-transform: initial;
+  margin-top: 1rem; }
+  @media only screen and (min-width: 53.25em) {
+    .date-sm {
+      font-size: 0.95vw;
+      font-size: 1vw;
+      margin-bottom: 0.4vw; } }
+  @media only screen and (min-width: 1560px) {
+    .date-sm {
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+      line-height: 1; } }
+  @media only screen and (min-width: 53.25em) {
+    .date-sm {
+      margin-top: 1rem; } }
+  @media only screen and (min-width: 1560px) {
+    .date-sm {
+      margin-top: 1rem; } }
 
 /* Feature
 -------------------------------------------------- */
