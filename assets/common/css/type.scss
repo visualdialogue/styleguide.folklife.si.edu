@@ -371,7 +371,6 @@ body {
 		}
 		@include respond-to(fullwidth) {
 	  		font-size: 2.8rem;
-			// line-height: 1.25;
 		}
 	}
 	.serif-md {@include serif-md;}
@@ -386,7 +385,6 @@ body {
 			line-height: 1.2;
 		}
 		@include respond-to(fullwidth) {
-			// font-size: 4rem;
 			font-size: 4.2rem;
 			line-height: 1.1;
 		}
@@ -399,15 +397,11 @@ body {
 		line-height: 1.1;
 		font-size: 8vw;
 		@include respond-to(break2) {
-			// font-size: 4vw;
 			font-size: 3.8vw;
-			// line-height: 1.1;
 			margin-top: -1rem;
 		}
 		@include respond-to(fullwidth) {
-			// font-size: 6.2rem;
 			font-size: 6rem;
-			// line-height: 1.1;
 			margin-top: -1rem;
 		}
 	}
