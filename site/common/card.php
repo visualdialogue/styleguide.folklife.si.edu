@@ -126,7 +126,7 @@
 <?php $xs = null; ?>
 <?php $sm = null; ?>
 <?php $custom_class = null; ?>
-<?php $details = null; ?>
+<?php $detailsData = null; ?>
 <?php if(isset($col_xs)): ?>
 <?php $xs = 'col-xs-'.$col_xs; ?>
 <?php endif; ?>
@@ -135,6 +135,9 @@
 <?php endif; ?>
 <?php if(isset($classname)): ?>
 <?php $custom_class = $classname; ?>
+<?php endif; ?>
+<?php if(isset($details)): ?>
+<?php $detailsData = $details; ?>
 <?php endif; ?>
 <li class="special-event clearfix card <?= $xs ?> <?= $sm ?> <?= $custom_class ?>">
   <div class="border"></div>
@@ -182,7 +185,7 @@
 <?php $xs = null; ?>
 <?php $sm = null; ?>
 <?php $custom_class = null; ?>
-<?php $details = null; ?>
+<?php $detailsData = null; ?>
 <?php if ((isset($type)) && ($type == 'album')): ?>
 <?php $xs = 'col-xs-6'; ?>
 <?php $sm = 'col-sm-2'; ?>
@@ -197,8 +200,11 @@
 <?php if(isset($classname)): ?>
 <?php $custom_class = $classname; ?>
 <?php endif; ?>
+<?php if(isset($details)): ?>
+<?php $detailsData = $details; ?>
+<?php endif; ?>
 <?php if ((isset($type)) && (($type == 'feature') || ($type == 'featurette'))): ?>
-<?php $details = 'details--inset'; ?>
+<?php $detailsData = 'details--inset'; ?>
 <?php endif; ?>
 <li class="card <?= $xs ?> <?= $sm ?> <?= $custom_class ?> card--<?= $cardTypeData ?> card--<?= $cardOrientation ?>">
   <?php if ((isset($border)) && $border === true): ?>
@@ -217,7 +223,7 @@
       </div>
     </div>
   </div>
-  <?php snippet('card-details', array('card' => $card, 'details' => $details, 'excerpt' => $excerptData, 'showCategory' => $showCategory )); ?>
+  <?php snippet('card-details', array('card' => $card, 'details' => $detailsData, 'excerpt' => $excerptData, 'showCategory' => $showCategory )); ?>
   <?php elseif ($cardOrientation == 'horizontal'): ?>
   <div class="festival-video clearfix">
     <div class="row">
@@ -234,7 +240,7 @@
         </div>
       </div>
       <div class="festival-video__textbox col-sm-6">
-        <?php snippet('card-details', array('card' => $card, 'details' => $details, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'video' => true )); ?>
+        <?php snippet('card-details', array('card' => $card, 'details' => $detailsData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'video' => true )); ?>
       </div>
     </div>
   </div>
@@ -279,22 +285,24 @@
   <?php endif; ?>
   <?php if (!isset($text_col)): ?>
   <?php $text_col = '6'; ?>
-  <?php endif; ?><a href="<?= $card->url() ?>" class="card__inner">
+  <?php endif; ?>
+  <div class="card__inner">
     <ul class="row">
-      <li class="card__image-wrapper clearfix col-sm-<?= $img_col ?>">
-        <?php if($src = $card->image($card->img())): ?><img src="<?= $src->url() ?>" class="card__image"/>
+      <li class="high card__image-wrapper clearfix col-sm-<?= $img_col ?>">
+        <?php if($src = $card->image($card->img())): ?><a href="<?= $card->url() ?>"><img src="<?= $src->url() ?>" class="card__image"/></a>
         <?php endif; ?>
       </li>
-      <li class="col-sm-<?= $text_col ?>">
-        <?php snippet('card-details', array('card' => $card, 'details' => $details, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory )); ?>
+      <li class="high col-sm-<?= $text_col ?>">
+        <?php snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory )); ?>
       </li>
-    </ul></a>
-  <?php else: ?><a href="<?= $card->url() ?>" class="card__inner">
+    </ul>
+  </div>
+  <?php else: ?><a href="<?= $card->url() ?>" class="high card__inner">
     <div class="card__image-wrapper clearfix">
       <?php if($src = $card->image($card->img())): ?><img src="<?= $src->url() ?>" class="card__image"/>
       <?php endif; ?>
     </div>
-    <?php snippet('card-details', array('card' => $card, 'details' => $details, 'excerpt' => $excerptData, 'showCategory' => $showCategory )); ?></a>
+    <?php snippet('card-details', array('card' => $card, 'details' => $detailsData, 'excerpt' => $excerptData, 'showCategory' => $showCategory )); ?></a>
   <?php endif; ?>
 </li>
 <?php endif; ?>

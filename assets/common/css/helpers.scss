@@ -80,29 +80,3 @@
 		  border: $width solid $color;
 		}
 	}
-
-	// %section-padding {
-	// padding: 10px;
-	// padding: 4vw 3vw;
-	// @include respond-to(break1) {
-	// 	padding: 1.9vw;
-	// }
-	// @include respond-to(fullwidth) {
-	// 		padding: 20px 28px 30px; // less on top b/c of line height
-	// 	}
-	// }
-
-	// %section-padding--abs {
-	// 	top:10px;right:10px;bottom:10px;left:10px; // fallback older browsers
-	// 	top:3vw;right:3vw;bottom:3vw;left:3vw;
-	// 	@include respond-to(break1) {
-	// 		top:2vw;right:2vw;bottom:2vw;left:2vw;
-	// 	}
-	// 	@include respond-to(fullwidth) {
-	// 		top:28px;right:30px;bottom:30px;left:30px;
-	// 	}
-	// }
-
-	// Overlap fix for background color highlighting text. Use span.no-highlight inside titles to prevent overlap. From http://stackoverflow.com/a/31440811
-	.no-overlap {position: relative;}
-

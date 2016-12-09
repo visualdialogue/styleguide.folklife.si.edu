@@ -125,9 +125,9 @@ body {
 
 	@mixin link-font {
 		font-family: $sans;
-	  // font-size: 1.5rem;
-	  font-size: 1.7rem;
-	  line-height: 2;
+		font-size: 1.7rem;
+		line-height: 2;
+		font-weight: 300;
 		@include respond-to(break2) {
 			font-size: 1.25vw;
 			line-height: 1.45;
@@ -138,19 +138,33 @@ body {
 		}
 	}
 
-	@mixin link-font--small {
+	@mixin link-font-sm {
 		font-family: $sans;
-	  // font-size: 1.3rem;
-	  font-size: 1.5rem;
-	  line-height: 1.7;
-	  @include respond-to(break2) {
-	  	font-size: 1vw;
-	  	line-height: 1.35;
-	  }
-	  @include respond-to(fullwidth) {
-	  	font-size: 1.5rem;
-	  	line-height: 1.5;
-	  }
+		font-size: 1.6rem;
+		line-height: 1.7;
+		font-weight: 300;
+		@include respond-to(break2) {
+			font-size: 1.15vw;
+			line-height: 1.35;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 1.8rem;
+			line-height: 1.5;
+		}
+	}
+
+	@mixin link-font-xs {
+		font-family: $sans;
+		font-size: 1.5rem;
+		line-height: 1.7;
+		@include respond-to(break2) {
+			font-size: 1vw;
+			line-height: 1.35;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 1.5rem;
+			line-height: 1.5;
+		}
 	}
 
 

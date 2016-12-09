@@ -10,7 +10,7 @@
   </li>
   <li class="footer__main-item col-sm-3"> 
     <div class="footer-logo">
-      <?php if (c::get('isDev')): ?><a href="http://localhost:3009"><img src="/assets/images/logo/smithsonian_folkways_recordings.png?v=2016.10.21" class="footer-logo__img"/></a>
+      <?php if (c::get('isDev')): ?><a href="http://localhost:3007"><img src="/assets/images/logo/smithsonian_folkways_recordings.png?v=2016.10.21" class="footer-logo__img"/></a>
       <?php else: ?><a href="http://folkways.lukehatfield.com"><img src="/assets/images/logo/smithsonian_folkways_recordings.png?v=2016.10.21" class="footer-logo__img"/></a>
       <?php endif; ?>
     </div>

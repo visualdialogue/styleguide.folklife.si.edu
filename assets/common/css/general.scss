@@ -6,7 +6,25 @@
 	@include respond-to(break2) {
 		padding: 0 80px;
 	}
+	&--highlight {
+		width: 100%;
+		max-width: $pageWidth;
+		padding: 0;
+		@include respond-to(break2) {
+			// keep inner bg color smaller
+			padding: 0 40px;
+		}
+		.highlight__inner {
+			// show highlight on mobile
+			padding: 15px;
+			@include respond-to(break2) {
+				// show highlight color around box
+				padding: 40px 40px;
+			}
+		}
+	}
 }
+
 
 .container--xl {
 	// max-width: $pageWidth + 80;
@@ -193,7 +211,8 @@
 			color: $black50;
 		}
 	}
-	.main--copy {
+	// .main--copy {
+	.main {
 		.section-title {
 			margin-bottom:2.2rem;
 			@include respond-to(break2) {margin-bottom:1.3vw;}
@@ -323,16 +342,16 @@
 -------------------------------------------------- */
 
 	.video__thumbnail {
-			@include vertically-align-grandparent;
-			&:hover .icon-circle:before {
-				color: $hover;
-			}
-			&:hover .icon-play:before {
-				color: $black80;
-			}
+		@include vertically-align-grandparent;
+		&:hover .icon-circle:before {
+			color: $hover;
 		}
+		&:hover .icon-play:before {
+			color: $black80;
+		}
+	}
 	.modal-trigger {
-		cursor: pointer;
+		// cursor: pointer; // set in links
 	}
 	.icon-play-button--video {
 		@include vertically-align;

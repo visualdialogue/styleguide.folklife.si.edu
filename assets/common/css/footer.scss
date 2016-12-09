@@ -179,7 +179,7 @@
 		@include respond-to(break2max) {margin-top: 1rem;}
 	}
 	.copyright-list__item {
-		@include link-font--small;
+		@include link-font-xs;
 	}
 	.social-media__title {
 		@include link-font;
@@ -203,7 +203,7 @@
 		@include respond-to(break2max) {margin-top: 2vw;}
 	}
 	.copyright {
-		@include link-font--small;
+		@include link-font-xs;
 		padding-top: 2vw;
 		font-weight: 300;
 		@include respond-to(break2) {padding-top:0.4vw;}

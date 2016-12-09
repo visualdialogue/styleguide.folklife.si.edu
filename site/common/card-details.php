@@ -13,8 +13,8 @@
   <div class="date">
     <?php echo $card->date('M d, Y'); ?></div>
   <?php endif; ?>
-  <div class="title card__title">
-    <?php echo htmlspecialchars($card->title(), ENT_QUOTES, 'UTF-8'); ?></div>
+  <div class="title card__title"><span class="light"><span class="er">
+        <?php echo htmlspecialchars($card->title(), ENT_QUOTES, 'UTF-8'); ?></span></span></div>
   <?php if('' != $card->subtitle()):	 ?>
   <div class="subtitle">
     <?php echo $card->subtitle(); ?></div>

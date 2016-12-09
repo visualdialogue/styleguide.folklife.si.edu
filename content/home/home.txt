@@ -3,51 +3,51 @@ Title: Home
 Video_data:
 - category: Category
   title: Video title goes here
-  src: 440x292.png
+  img: 440x292.png
   id: 183352542
 - category: Category
   title: Video title goes here
-  src: 440x292.png
+  img: 440x292.png
 - category: Category
   title: Video title goes here
-  src: 440x292.png
+  img: 440x292.png
 ----
 Audio_data:
 - category: Category
   title: Album/Podcast Title
   album: Band/Source
-  src: folk-music-of-ethiopia.jpg
+  img: folk-music-of-ethiopia.jpg
   length: " length"
-  src: 320x320.png
+  img: 320x320.png
 - category: Category
   title: Album/Podcast Title
   album: Band/Source
   length: " length"
-  src: 320x320.png
+  img: 320x320.png
 - category: Category
   title: Album/Podcast Title
   album: Band/Source
   length: " length"
-  src: 320x320.png
+  img: 320x320.png
 - category: Category
   title: Album/Podcast Title
   album: Band/Source
   length: " length"
-  src: 320x320.png
+  img: 320x320.png
 ----
 Events:
 - event_date: September 7
   title: "Freedom Sounds: A Community Celebration"
-  src: freedom-sounds.jpg
+  img: freedom-sounds.jpg
 - event_date: August 4
   title: "Artist Talk: Masters of Tibetan Bronze Work"
-  src: tibetan-artists.jpg
+  img: tibetan-artists.jpg
 - event_date: May 12
   title: "Symposium: Cultural Sustainability in the Age of Globalization"
-  src: age-of-globalization.jpg
+  img: age-of-globalization.jpg
 - event_date: April 22
   title: "Shidé Nyima: Tibetan Comedian, Poet, Actor, and Filmmaker"
-  src: shide-nyima.jpg
+  img: shide-nyima.jpg
 ----
 Talk_story_feature_image: tibet.jpg
 ----
@@ -61,15 +61,15 @@ Talk_story_featurettes:
 - category: Category
   title: "Creating a Tapestry of Traditions:"
   subtitle: The Third Annual Global Folklorist Challenge
-  src: tapestry.jpg
+  img: tapestry.jpg
 - category: Category
   title: "Object Oriented:"
   subtitle: Searching for the Man behind the Mask
-  src: object.jpg
+  img: object.jpg
 - category: Category
   title: "Homegrown Healing:"
   subtitle: Lessons on Plants in Traditional Medicine
-  src: homegrown.jpg
+  img: homegrown.jpg
 ----
 Dive_deep_feature_image: ala-tu-voz.jpg
 ----
@@ -80,34 +80,34 @@ Dive_deep_feature_title: Alza Tu Voz (Speak Out): From Picket Line to Radio
 Dive_deep_featurettes:
 - category: Category
   title: Discover the story behind Tiddish Song Smuggling
-  src: brothers-nazaroff.jpg
+  img: brothers-nazaroff.jpg
 - category: Category
   title: Learn more about American Indian Powwows
-  src: powwow.jpg
+  img: powwow.jpg
 ----
 Explore_collections_featurettes:
 - title: Moses and Frances Asch Collection
-  src: moses-frances-asch.jpg
+  img: moses-frances-asch.jpg
 - title: Diana Davies Photograph Collection
-  src: diana-davies.jpg
+  img: diana-davies.jpg
 - title: Collector Records Collection
-  src: collector-records.jpg
+  img: collector-records.jpg
 - title: Frederic Ramsey Jr. Tape Collection
-  src: frederic-ramsey-jr.jpg
+  img: frederic-ramsey-jr.jpg
 ----
 Teach_featurettes:
 - title: "Borders and Identity: Identidad y Frontera"
-  src: borders-and-identity.jpg
+  img: borders-and-identity.jpg
 - title: "Learning About Folklife: The U.S. Virgin Islands & Senegal"
-  src: learning-about-folklife.jpg
+  img: learning-about-folklife.jpg
 - title: "Bermuda Connections: A Cultural Resource Guide"
-  src: bermuda-connections.jpg
+  img: bermuda-connections.jpg
 - title: "Wisconsin Powwow/ Naamikaaged: Dancer for the People"
-  src: wisconsin-powwow.jpg
+  img: wisconsin-powwow.jpg
 - title: "White House Workers: Traditions and Memories (DVD)"
-  src: white-house-workers.jpg
+  img: white-house-workers.jpg
 - title: "Smithsonian Folklife and Oral History Interviewing Guide"
-  src: interviewing-guide.jpg
+  img: interviewing-guide.jpg
 ----
 Type usage:
   Acumin Pro:

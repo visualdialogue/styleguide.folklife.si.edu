@@ -152,9 +152,9 @@
 		right: 15px; // match outside margins
 		cursor: pointer;
 		line-height: 1;
-			@include respond-to(break2) {
+		@include respond-to(break2) {
 			right: 8rem;
-			}
+		}
 		&__text {
 			@include sans-xxs;
 			display: inline-block;
@@ -188,7 +188,7 @@
 				@include respond-to(fullwidth) {
 				// line-height: 2.5;
 				// height: 1.7rem;
-					line-height: 0.9; // for vert alignment with more text
+					line-height: 0.95; // for vert alignment with more text
 				}
 			&:before {
 				font-size: 4vw;

@@ -159,7 +159,7 @@
 	- $xs = null;
 	- $sm = null;
 	- $custom_class = null;
-	- $details = null;
+	- $detailsData = null;
 
 	//- if column widths are set, make into appropriate size class name for display later
 	- if(isset($col_xs)):
@@ -170,6 +170,9 @@
 	- endif
 	- if(isset($classname)):
 		- $custom_class = $classname;
+	- endif
+	- if(isset($details)):
+		- $detailsData = $details;
 	- endif
 
 
@@ -213,7 +216,7 @@
 	- $xs = null;
 	- $sm = null;
 	- $custom_class = null;
-	- $details = null;
+	- $detailsData = null;
 		
 	//- details for video card
 	//- .details.card__details.details--inset
@@ -238,13 +241,16 @@
 	- if(isset($classname)):
 		- $custom_class = $classname;
 	- endif
+	- if(isset($details)):
+		- $detailsData = $details;
+	- endif
 	//- if excerpt comes through, use it! If not, it's not set anyway
 	//- - if(isset($excerpt)):
 		//- - $excerptData = $excerpt;
 	//- - endif
 
 	- if ((isset($type)) && (($type == 'feature') || ($type == 'featurette'))):
-		- $details = 'details--inset'
+		- $detailsData = 'details--inset'
 	- endif
 
 	li.card(class="<?= $xs ?> <?= $sm ?> <?= $custom_class ?> card--<?= $cardTypeData ?> card--<?= $cardOrientation ?>")
@@ -264,7 +270,7 @@
 								.icon-play-button.icon-play-button--video.icon-stack
 									.icon-circle
 									.icon-play
-					- snippet('card-details', array('card' => $card, 'details' => $details, 'excerpt' => $excerptData, 'showCategory' => $showCategory ))
+					- snippet('card-details', array('card' => $card, 'details' => $detailsData, 'excerpt' => $excerptData, 'showCategory' => $showCategory ))
 				- elseif ($cardOrientation == 'horizontal'):
 					//- from festival videos
 					//- .col-sm-6.festival-video.clearfix
@@ -297,7 +303,7 @@
 												.icon-play
 							//- .textbox.festival-video__textbox.col-sm-6
 							.festival-video__textbox.col-sm-6
-								- snippet('card-details', array('card' => $card, 'details' => $details, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'video' => true ))
+								- snippet('card-details', array('card' => $card, 'details' => $detailsData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'video' => true ))
 				- endif
 			//- for switching folklife homepage to video card someday...
 			//- 	//- - if($video->iframe()->isNotEmpty()):
@@ -352,20 +358,21 @@
 					- $text_col = '6';
 				- endif;
 				
-				a.card__inner(href="<?= $card->url() ?>")
+				.card__inner
 					ul.row
-						li.card__image-wrapper.clearfix(class="col-sm-<?= $img_col ?>")
+						li.high.card__image-wrapper.clearfix(class="col-sm-<?= $img_col ?>")
 							- if($src = $card->image($card->img())):
-								img.card__image(src="<?= $src->url() ?>")
+								a(href="<?= $card->url() ?>")
+									img.card__image(src="<?= $src->url() ?>")
 							- endif
-						li(class="col-sm-<?= $text_col ?>")
-							- snippet('card-details', array('card' => $card, 'details' => $details, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory ))
+						li.high(class="col-sm-<?= $text_col ?>")
+							- snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory ))
 			- else:
-				a.card__inner(href="<?= $card->url() ?>")
+				a.high.card__inner(href="<?= $card->url() ?>")
 					.card__image-wrapper.clearfix(class="")
 						- if($src = $card->image($card->img())):
 							img.card__image(src="<?= $src->url() ?>")
 						- endif
-					- snippet('card-details', array('card' => $card, 'details' => $details, 'excerpt' => $excerptData, 'showCategory' => $showCategory ))
+					- snippet('card-details', array('card' => $card, 'details' => $detailsData, 'excerpt' => $excerptData, 'showCategory' => $showCategory ))
 			- endif
 - endif
