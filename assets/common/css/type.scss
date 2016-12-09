@@ -198,21 +198,40 @@ body {
 	  		margin-bottom: 0;
 		}
 	}
-	@mixin sans-xxxs {
+
+	// Extra Large Sans
+	@mixin sans-xl {
 		font-family: $sans;
-		font-weight: 300; // light for acumin
-		line-height: 1.4;
-	  	font-size: 3.8vw;
+		font-size: 5vw;
 		@include respond-to(break2) {
-	  		font-size: 1vw;
-			line-height: 1.3;
+			font-size: 2.5vw;
+			line-height: 1.2;
 		}
 		@include respond-to(fullwidth) {
-			line-height: 1.3;
-	  		font-size: 1.6rem; // oct 19 for fritz
+			font-size: 4rem;
 		}
 	}
-	.sans-xxxs {@include sans-xxxs;}
+
+	// SASS Implementation
+	.sans-xl {@include sans-xl}
+
+	// Large Sans	
+	@mixin sans-lg {
+		font-family: $sans;
+		font-weight: 300;
+		font-size: 5vw;
+		@include respond-to(break2) {
+			font-size: 1.9vw;
+			line-height: 1.2;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 3.5rem;
+		}
+	}
+
+	// SASS Implementation
+	.sans-lg {@include sans-lg;}
+
 
 	@mixin sans-xxs {
 		font-family: $sans;
@@ -280,38 +299,28 @@ body {
 	// SASS Implementation
 	.sans-md {@include sans-md;}
 
-	
-	@mixin sans-lg {
+	// Extra Extra Extra Small Sans
+	@mixin sans-xxxs {
 		font-family: $sans;
-		font-weight: 300;
-		font-size: 5vw;
+		font-weight: 300; // light for acumin
+		line-height: 1.4;
+	  	font-size: 3.8vw;
 		@include respond-to(break2) {
-			font-size: 1.9vw;
-			line-height: 1.2;
+	  		font-size: 1vw;
+			line-height: 1.3;
 		}
 		@include respond-to(fullwidth) {
-			font-size: 3.5rem;
+			line-height: 1.3;
+	  		font-size: 1.6rem; // oct 19 for fritz
 		}
 	}
-
 	// SASS Implementation
-	.sans-lg {@include sans-lg;}
+	.sans-xxxs {@include sans-xxxs;}
 
-	
-	@mixin sans-xl {
-		font-family: $sans;
-		font-size: 5vw;
-		@include respond-to(break2) {
-			font-size: 2.5vw;
-			line-height: 1.2;
-		}
-		@include respond-to(fullwidth) {
-			font-size: 4rem;
-		}
-	}
 
-	// SASS Implementation
-	.sans-xl {@include sans-xl}
+
+
+
 
 	// search bar
 	%small-sans-title {
@@ -360,6 +369,61 @@ body {
 			margin-bottom: 1.5rem; // 30px
 		}
 	}
+
+
+	// Extra Extra Large Serif
+	@mixin serif-xxl {
+		font-family: $serif;
+		font-weight: 700;
+		line-height: 1.1;
+		font-size: 8vw;
+		@include respond-to(break2) {
+			font-size: 8.2vw;
+			line-height: 0.7;
+			margin-top: -1rem;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 13rem;
+			margin-top: -1rem;
+			line-height: 0.7;
+		}
+	}
+	.serif-xxl {@include serif-xxl;}
+
+	// Extra Large Serif
+	@mixin serif-xl {
+		font-family: $serif;
+		font-weight: 700;
+		line-height: 1;
+		font-size: 8vw;
+		@include respond-to(break2) {
+			font-size: 3.8vw;
+			margin-top: -1rem;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 6rem;
+			margin-top: -1rem;
+		}
+	}
+	.serif-xl {@include serif-xl;}
+
+	// Large Serif
+	@mixin serif-lg {
+		font-family: $serif;
+		font-weight: 700;
+		line-height: 1.2;
+		font-size: 6vw;
+		@include respond-to(break2) {
+			font-size: 2.7vw;
+			line-height: 1.2;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 4.2rem;
+			line-height: 1.1;
+		}
+	}
+	.serif-lg {@include serif-lg;}
+
 	@mixin serif-sm {
 		font-family: $serif;
 		font-weight: 400;
@@ -370,7 +434,7 @@ body {
 		}
 		@include respond-to(fullwidth) {
 	  		font-size: 2.4rem;
-			// line-height: 1.25;
+			line-height: 1.4;
 		}
 	}
 	.serif-sm {@include serif-sm;}
@@ -389,55 +453,7 @@ body {
 	}
 	.serif-md {@include serif-md;}
 
-	@mixin serif-lg {
-		font-family: $serif;
-		font-weight: 700;
-		line-height: 1.2;
-		font-size: 6vw;
-		@include respond-to(break2) {
-			font-size: 2.7vw;
-			line-height: 1.2;
-		}
-		@include respond-to(fullwidth) {
-			font-size: 4.2rem;
-			line-height: 1.1;
-		}
-	}
-	.serif-lg {@include serif-lg;}
 
-	@mixin serif-xl {
-		font-family: $serif;
-		font-weight: 700;
-		line-height: 1.1;
-		font-size: 8vw;
-		@include respond-to(break2) {
-			font-size: 3.8vw;
-			margin-top: -1rem;
-		}
-		@include respond-to(fullwidth) {
-			font-size: 6rem;
-			margin-top: -1rem;
-		}
-	}
-	.serif-xl {@include serif-xl;}
-
-	@mixin serif-xxl {
-		font-family: $serif;
-		font-weight: 700;
-		line-height: 1.1;
-		font-size: 8vw;
-		@include respond-to(break2) {
-			font-size: 8.2vw;
-			line-height: 0.7;
-			margin-top: -1rem;
-		}
-		@include respond-to(fullwidth) {
-			font-size: 13rem;
-			margin-top: -1rem;
-			line-height: 0.7;
-		}
-	}
-	.serif-xxl {@include serif-xxl;}
 
 
 	@mixin category {
@@ -555,14 +571,17 @@ body {
 }
 
 @mixin sidebar-subtitle {
-	@include category;
-	font-family: $sans;
+	// @include category;
+	// font-family: $sans;
+	// @include sans-xxs;
+	// color: $black70;
 }
 @mixin sidebar-copy {
 	font-family: $sans;
 	@include fs-18;
 	letter-spacing: 0;
-	font-weight: 600;
+	// font-weight: 600;
+	// font-weight: 500;
 	text-transform: none;
 	color: $black70;
 	line-height: 1.33333;
@@ -571,6 +590,32 @@ body {
 	}
 
 }
+
+
+/* CSS type helper classes
+-------------------------------------------------- */
+	.copy {
+		h3 {
+			@include serif-lg;
+		}
+		h4 {
+			@include serif-md;
+			@include margin-bottom(2);
+		}
+		h5 {
+			@include sans-xs;
+			font-weight: 500;
+			@include margin-bottom(0.5);
+		}
+		p {
+			// @include sans-xs;
+			@include serif-sm;
+			// font-style: italic;
+			// @include margin-bottom(2);
+			@include padding-bottom(2); // not margin because then when using columns, the margin carries over!!!, from http://stackoverflow.com/a/12503808
+			font-weight: 200;
+		}
+	}
 
 
 

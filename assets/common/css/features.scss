@@ -26,6 +26,12 @@ conversion: 				| mobile 	| tablet	| desktop
 
 */
 
+.feature {
+	.textbox {
+		@include padding-top(1);
+	}
+}
+
 .feature--full {
 	// margin-top: 1.2rem;
 	// @include respond-to(break2) {margin-top: 2.5vw;}

@@ -250,7 +250,7 @@
 	//- - endif
 
 	- if ((isset($type)) && (($type == 'feature') || ($type == 'featurette'))):
-		- $detailsData = 'details--inset'
+		//- - $detailsData = 'details--inset'
 	- endif
 
 	li.card(class="<?= $xs ?> <?= $sm ?> <?= $custom_class ?> card--<?= $cardTypeData ?> card--<?= $cardOrientation ?>")
@@ -272,23 +272,6 @@
 									.icon-play
 					- snippet('card-details', array('card' => $card, 'details' => $detailsData, 'excerpt' => $excerptData, 'showCategory' => $showCategory ))
 				- elseif ($cardOrientation == 'horizontal'):
-					//- from festival videos
-					//- .col-sm-6.festival-video.clearfix
-						.row
-							.col-sm-6
-								.video__thumbnail.festival-video__image(data-video-id='<?= $page->intro_video_id() ?>' data-title='<?= $video->title() ?>' data-description='<?= $page->intro_video_copy() ?>')
-									.center-box
-										- if($src = $video->image($video->img())):
-											a.modal-trigger
-												img.image(src="<?= $src->url() ?>")
-										- endif
-											.icon-play-button.icon-play-button--video.icon-stack
-												.icon-circle
-												.icon-play
-							.textbox.festival-video__textbox.col-sm-6
-								.details
-									.category!= 'Festival, ', $video->year(), ', ', $video->program()
-									.title: a!= $video->title(), ': ', $video->subtitle()
 					.festival-video.clearfix
 						.row
 							.col-sm-6
@@ -357,6 +340,10 @@
 				- if (!isset($text_col)):
 					- $text_col = '6';
 				- endif;
+
+				- if (!isset($more_link)):
+					- $more_link = false;
+				- endif;
 				
 				.card__inner
 					ul.row
@@ -366,13 +353,13 @@
 									img.card__image(src="<?= $src->url() ?>")
 							- endif
 						li.high(class="col-sm-<?= $text_col ?>")
-							- snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory ))
+							- snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link ))
 			- else:
 				a.high.card__inner(href="<?= $card->url() ?>")
-					.card__image-wrapper.clearfix(class="")
-						- if($src = $card->image($card->img())):
+					- if($src = $card->image($card->img())):
+						.card__image-wrapper.clearfix(class="")
 							img.card__image(src="<?= $src->url() ?>")
-						- endif
-					- snippet('card-details', array('card' => $card, 'details' => $detailsData, 'excerpt' => $excerptData, 'showCategory' => $showCategory ))
+					- endif
+					- snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory ))
 			- endif
 - endif

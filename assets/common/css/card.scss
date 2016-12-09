@@ -5,6 +5,9 @@
 }
 .card--horizontal {
 	@include margin-bottom(4);
+	.details {
+		@include margin-top(1); // add margin back in b/c no title above in horizontal layout
+	}
 }
 
 
@@ -24,12 +27,14 @@
 	}
 }
 
+.card__image-wrapper {
+	@include padding-bottom(2);
+}
+
 // details only include top padding
 .details {
-	// padding-top: 4vw;
-	// padding-top: 12px;
-	@include padding-top(2);
-	// min-height: 26vw; // for 3 line titles
+	// @include padding-top(2);
+
 	@include respond-to(break2) {
 		min-height: initial; // reset // for ios
 		min-height: auto; // for windows
@@ -104,3 +109,93 @@ a.details {
 }
 .date {@include date;}
 .date-sm {@include date-sm;}
+
+/* #video
+-------------------------------------------------- */
+
+	.video__thumbnail {
+		@include vertically-align-grandparent;
+		&:hover .icon-circle:before {
+			color: $hover;
+		}
+		&:hover .icon-play:before {
+			color: $black80;
+		}
+	}
+	.modal-trigger {
+		// cursor: pointer; // set in links
+	}
+	.icon-play-button--video {
+		@include vertically-align;
+		left: 50%;
+		margin-left: -3rem;
+	}
+	.center-box {
+		@include vertically-align-parent;
+		@include padding-bottom(2);
+	}
+	// modal
+	.remodal {
+	  padding:2px 2px 20px;
+	  text-align: left;
+	  // trade gpu acceleration for correct placement of close button
+	  -webkit-transform: none;
+	  -moz-transform: none;
+	  -ms-transform: none;
+	  -o-transform: none;
+	  transform: none;
+	  @include respond-to(break1) {
+		max-width: 70%;
+	  }
+	  @include respond-to(fullwidth) {
+		max-width: 1080px;
+	  }
+	}
+	.remodal-overlay {
+	  // background: rgba(43, 46, 56, 0.9) none repeat scroll 0% 0%; // original
+	  background: rgba(0, 0, 0, 0.8) none repeat scroll 0% 0%;
+	}
+	.remodal-close {
+	  position: fixed;
+	  top:0;
+	  right:10px;
+	  left:auto;
+	  display: block;
+	  z-index: 10001;
+	  color:white;
+	  width:50px;
+	  height:50px;
+	  // pointer:cursor;
+	}
+	.remodal-close:hover {
+	  color: $black20;
+	}
+	.remodal-close::before {
+	  font-size:40px;
+	  width:50px;
+	  height:50px;
+	  line-height: 50px;
+	}
+	.remodal__iframe {
+	  position: relative;
+	  padding-bottom: 56.25%;
+	  height: 0;
+	  overflow: hidden;
+	}
+	.remodal__iframe iframe {
+	  position: absolute;
+	  top:0;
+	  left:0;
+	  max-width: 100%;
+	  width:100%;
+	  height:100%;
+	  z-index: 2;
+	}
+	.remodal__copy {
+	  padding:10px 20px;
+	}
+	.remodal__title {
+		// font-size:1.4rem; // 28px
+		margin-bottom:10px;
+		@include sans-xxs;
+	}

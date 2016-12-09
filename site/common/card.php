@@ -204,7 +204,6 @@
 <?php $detailsData = $details; ?>
 <?php endif; ?>
 <?php if ((isset($type)) && (($type == 'feature') || ($type == 'featurette'))): ?>
-<?php $detailsData = 'details--inset'; ?>
 <?php endif; ?>
 <li class="card <?= $xs ?> <?= $sm ?> <?= $custom_class ?> card--<?= $cardTypeData ?> card--<?= $cardOrientation ?>">
   <?php if ((isset($border)) && $border === true): ?>
@@ -286,6 +285,9 @@
   <?php if (!isset($text_col)): ?>
   <?php $text_col = '6'; ?>
   <?php endif; ?>
+  <?php if (!isset($more_link)): ?>
+  <?php $more_link = false; ?>
+  <?php endif; ?>
   <div class="card__inner">
     <ul class="row">
       <li class="high card__image-wrapper clearfix col-sm-<?= $img_col ?>">
@@ -293,16 +295,15 @@
         <?php endif; ?>
       </li>
       <li class="high col-sm-<?= $text_col ?>">
-        <?php snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory )); ?>
+        <?php snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link )); ?>
       </li>
     </ul>
   </div>
   <?php else: ?><a href="<?= $card->url() ?>" class="high card__inner">
-    <div class="card__image-wrapper clearfix">
-      <?php if($src = $card->image($card->img())): ?><img src="<?= $src->url() ?>" class="card__image"/>
-      <?php endif; ?>
-    </div>
-    <?php snippet('card-details', array('card' => $card, 'details' => $detailsData, 'excerpt' => $excerptData, 'showCategory' => $showCategory )); ?></a>
+    <?php if($src = $card->image($card->img())): ?>
+    <div class="card__image-wrapper clearfix"><img src="<?= $src->url() ?>" class="card__image"/></div>
+    <?php endif; ?>
+    <?php snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory )); ?></a>
   <?php endif; ?>
 </li>
 <?php endif; ?>

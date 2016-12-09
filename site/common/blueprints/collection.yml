@@ -1,0 +1,12 @@
+title: Collection
+pages: 
+  template: collection
+  template: card
+files: true
+fields:
+  title:
+    label: Title
+    type:  text
+  copy:
+    label: Introduction
+    type: textarea

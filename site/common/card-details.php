@@ -49,4 +49,7 @@
   <div class="buy-now-button">
     <?php echo $card->order2(), '&nbsp;&#x2192'; ?></div>
   <?php endif; ?>
+  <?php if(isset($more_link)): ?>
+  <?php snippet('more-link'); ?>
+  <?php endif; ?>
 </div>

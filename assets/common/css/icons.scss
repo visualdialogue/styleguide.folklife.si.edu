@@ -193,12 +193,12 @@
 			&:before {
 				font-size: 4vw;
 					@include respond-to(break2) {
-					font-size: 1.4vw;
-					line-height: 1.3;
+						font-size: 1.4vw;
+						line-height: 1.3;
 					}
 					@include respond-to(fullwidth) {
-					font-size: 2rem;
-					line-height: 1.3;
+						font-size: 2rem;
+						line-height: 1.3;
 					}
 			}
 		}
@@ -212,7 +212,7 @@
 				margin: 0;
 				float: none;
 				margin-top: 2vw;
-				display: block;
+				display: inline-block;
 			}
 		}
 	}

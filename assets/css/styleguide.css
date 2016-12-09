@@ -7220,19 +7220,28 @@ body {
       font-size: 2.4rem;
       margin-bottom: 0.5rem; } }
 
-.sans-xxxs {
+.sans-xl {
+  font-family: "acumin-pro", Arial, sans-serif;
+  font-size: 5vw; }
+  @media only screen and (min-width: 53.25em) {
+    .sans-xl {
+      font-size: 2.5vw;
+      line-height: 1.2; } }
+  @media only screen and (min-width: 1560px) {
+    .sans-xl {
+      font-size: 4rem; } }
+
+.sans-lg {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
-  line-height: 1.4;
-  font-size: 3.8vw; }
+  font-size: 5vw; }
   @media only screen and (min-width: 53.25em) {
-    .sans-xxxs {
-      font-size: 1vw;
-      line-height: 1.3; } }
+    .sans-lg {
+      font-size: 1.9vw;
+      line-height: 1.2; } }
   @media only screen and (min-width: 1560px) {
-    .sans-xxxs {
-      line-height: 1.3;
-      font-size: 1.6rem; } }
+    .sans-lg {
+      font-size: 3.5rem; } }
 
 .sans-xxs {
   font-family: "acumin-pro", Arial, sans-serif;
@@ -7290,28 +7299,19 @@ body {
     .sans-md {
       font-size: 3rem; } }
 
-.sans-lg {
+.sans-xxxs {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
-  font-size: 5vw; }
+  line-height: 1.4;
+  font-size: 3.8vw; }
   @media only screen and (min-width: 53.25em) {
-    .sans-lg {
-      font-size: 1.9vw;
-      line-height: 1.2; } }
+    .sans-xxxs {
+      font-size: 1vw;
+      line-height: 1.3; } }
   @media only screen and (min-width: 1560px) {
-    .sans-lg {
-      font-size: 3.5rem; } }
-
-.sans-xl {
-  font-family: "acumin-pro", Arial, sans-serif;
-  font-size: 5vw; }
-  @media only screen and (min-width: 53.25em) {
-    .sans-xl {
-      font-size: 2.5vw;
-      line-height: 1.2; } }
-  @media only screen and (min-width: 1560px) {
-    .sans-xl {
-      font-size: 4rem; } }
+    .sans-xxxs {
+      line-height: 1.3;
+      font-size: 1.6rem; } }
 
 .search-bar {
   font-family: "acumin-pro", Arial, sans-serif;
@@ -7323,58 +7323,6 @@ body {
  * Serif
  *
  ******************/
-.serif-sm {
-  font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
-  font-weight: 400;
-  line-height: 1.2;
-  font-size: 5vw; }
-  @media only screen and (min-width: 53.25em) {
-    .serif-sm {
-      font-size: 1.4vw; } }
-  @media only screen and (min-width: 1560px) {
-    .serif-sm {
-      font-size: 2.4rem; } }
-
-.serif-md {
-  font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
-  font-weight: 700;
-  line-height: 1.2;
-  font-size: 6vw; }
-  @media only screen and (min-width: 53.25em) {
-    .serif-md {
-      font-size: 1.8vw; } }
-  @media only screen and (min-width: 1560px) {
-    .serif-md {
-      font-size: 2.8rem; } }
-
-.serif-lg {
-  font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
-  font-weight: 700;
-  line-height: 1.2;
-  font-size: 6vw; }
-  @media only screen and (min-width: 53.25em) {
-    .serif-lg {
-      font-size: 2.7vw;
-      line-height: 1.2; } }
-  @media only screen and (min-width: 1560px) {
-    .serif-lg {
-      font-size: 4.2rem;
-      line-height: 1.1; } }
-
-.serif-xl {
-  font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
-  font-weight: 700;
-  line-height: 1.1;
-  font-size: 8vw; }
-  @media only screen and (min-width: 53.25em) {
-    .serif-xl {
-      font-size: 3.8vw;
-      margin-top: -1rem; } }
-  @media only screen and (min-width: 1560px) {
-    .serif-xl {
-      font-size: 6rem;
-      margin-top: -1rem; } }
-
 .serif-xxl {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
@@ -7390,6 +7338,59 @@ body {
       font-size: 13rem;
       margin-top: -1rem;
       line-height: 0.7; } }
+
+.serif-xl {
+  font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: 700;
+  line-height: 1;
+  font-size: 8vw; }
+  @media only screen and (min-width: 53.25em) {
+    .serif-xl {
+      font-size: 3.8vw;
+      margin-top: -1rem; } }
+  @media only screen and (min-width: 1560px) {
+    .serif-xl {
+      font-size: 6rem;
+      margin-top: -1rem; } }
+
+.serif-lg {
+  font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: 6vw; }
+  @media only screen and (min-width: 53.25em) {
+    .serif-lg {
+      font-size: 2.7vw;
+      line-height: 1.2; } }
+  @media only screen and (min-width: 1560px) {
+    .serif-lg {
+      font-size: 4.2rem;
+      line-height: 1.1; } }
+
+.serif-sm {
+  font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: 400;
+  line-height: 1.2;
+  font-size: 5vw; }
+  @media only screen and (min-width: 53.25em) {
+    .serif-sm {
+      font-size: 1.4vw; } }
+  @media only screen and (min-width: 1560px) {
+    .serif-sm {
+      font-size: 2.4rem;
+      line-height: 1.4; } }
+
+.serif-md {
+  font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: 6vw; }
+  @media only screen and (min-width: 53.25em) {
+    .serif-md {
+      font-size: 1.8vw; } }
+  @media only screen and (min-width: 1560px) {
+    .serif-md {
+      font-size: 2.8rem; } }
 
 .category {
   text-transform: uppercase;
@@ -7410,6 +7411,84 @@ body {
       font-size: 1.6rem;
       margin-bottom: 0.5rem;
       line-height: 1; } }
+
+/* CSS type helper classes
+-------------------------------------------------- */
+.copy h3 {
+  font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: 6vw; }
+  @media only screen and (min-width: 53.25em) {
+    .copy h3 {
+      font-size: 2.7vw;
+      line-height: 1.2; } }
+  @media only screen and (min-width: 1560px) {
+    .copy h3 {
+      font-size: 4.2rem;
+      line-height: 1.1; } }
+
+.copy h4 {
+  font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: 6vw;
+  margin-bottom: 2.5vw; }
+  @media only screen and (min-width: 53.25em) {
+    .copy h4 {
+      font-size: 1.8vw; } }
+  @media only screen and (min-width: 1560px) {
+    .copy h4 {
+      font-size: 2.8rem; } }
+  @media only screen and (min-width: 53.25em) {
+    .copy h4 {
+      margin-bottom: 1.25vw; } }
+  @media only screen and (min-width: 1560px) {
+    .copy h4 {
+      margin-bottom: 2rem; } }
+
+.copy h5 {
+  font-family: "acumin-pro", Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+  font-size: 3.5vw;
+  font-weight: 500;
+  margin-bottom: 0.625vw; }
+  @media only screen and (min-width: 53.25em) {
+    .copy h5 {
+      font-size: 1.3vw;
+      line-height: 1.3; } }
+  @media only screen and (min-width: 1560px) {
+    .copy h5 {
+      font-size: 2rem;
+      line-height: 1.3; } }
+  @media only screen and (min-width: 53.25em) {
+    .copy h5 {
+      margin-bottom: 0.3125vw; } }
+  @media only screen and (min-width: 1560px) {
+    .copy h5 {
+      margin-bottom: 0.5rem; } }
+
+.copy p {
+  font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: 400;
+  line-height: 1.2;
+  font-size: 5vw;
+  padding-bottom: 2.5vw;
+  font-weight: 200; }
+  @media only screen and (min-width: 53.25em) {
+    .copy p {
+      font-size: 1.4vw; } }
+  @media only screen and (min-width: 1560px) {
+    .copy p {
+      font-size: 2.4rem;
+      line-height: 1.4; } }
+  @media only screen and (min-width: 53.25em) {
+    .copy p {
+      padding-bottom: 1.25vw; } }
+  @media only screen and (min-width: 1560px) {
+    .copy p {
+      padding-bottom: 2rem; } }
 
 /* Sans reference
 -------------------------------------------------- */
@@ -7631,7 +7710,7 @@ body {
       margin: 0;
       float: none;
       margin-top: 2vw;
-      display: block; } }
+      display: inline-block; } }
 
 .section--vr .more-link {
   right: 5vw; }
@@ -7853,10 +7932,19 @@ conversion: 				| mobile 	| tablet	| desktop
 										| 2.65vw	| 4rem
 
 */
+.feature .textbox {
+  padding-top: 1.25vw; }
+  @media only screen and (min-width: 53.25em) {
+    .feature .textbox {
+      padding-top: 0.625vw; } }
+  @media only screen and (min-width: 1560px) {
+    .feature .textbox {
+      padding-top: 1rem; } }
+
 .feature--full .title {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 1;
   font-size: 8vw;
   margin-bottom: 1rem; }
   @media only screen and (min-width: 53.25em) {
@@ -8804,27 +8892,8 @@ section {
       margin-bottom: 0.8rem; } }
 
 .sidebar__subtitle {
-  text-transform: uppercase;
-  font-family: "acumin-pro-wide", Arial, sans-serif;
-  color: #595959;
-  font-weight: 300;
-  letter-spacing: 1px;
-  margin-bottom: 0.5rem;
-  margin-bottom: 0;
-  font-size: 2.5vw;
-  font-family: "acumin-pro", Arial, sans-serif;
   letter-spacing: 0;
   margin-top: 0.5rem; }
-  @media only screen and (min-width: 53.25em) {
-    .sidebar__subtitle {
-      font-size: 0.95vw;
-      font-size: 1vw;
-      margin-bottom: 0.4vw; } }
-  @media only screen and (min-width: 1560px) {
-    .sidebar__subtitle {
-      font-size: 1.6rem;
-      margin-bottom: 0.5rem;
-      line-height: 1; } }
   @media only screen and (min-width: 53.25em) {
     .sidebar__subtitle {
       margin-top: 0.5vw;
@@ -8838,7 +8907,6 @@ section {
   font-family: "acumin-pro", Arial, sans-serif;
   font-size: 4.1vw;
   letter-spacing: 0;
-  font-weight: 600;
   text-transform: none;
   color: #4d4d4d;
   line-height: 1.33333; }
@@ -8937,107 +9005,28 @@ hr {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%); }
 
-/* #video
--------------------------------------------------- */
-.video__thumbnail {
-  display: table;
-  width: 100%; }
-  .video__thumbnail:hover .icon-circle:before {
-    color: #fceec3; }
-  .video__thumbnail:hover .icon-play:before {
-    color: #333333; }
+.copy-columns {
+  -webkit-column-count: 2;
+  /* Chrome, Safari, Opera */
+  -moz-column-count: 2;
+  /* Firefox */
+  column-count: 2;
+  -webkit-column-gap: 40px;
+  /* Chrome, Safari, Opera */
+  -moz-column-gap: 40px;
+  /* Firefox */
+  column-gap: 40px; }
+  .copy-columns .card {
+    break-inside: avoid; }
 
-.icon-play-button--video {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  left: 50%;
-  margin-left: -3rem; }
-
-.center-box {
-  position: relative;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  display: table-cell;
-  width: 100%;
-  height: 100%; }
-
-.remodal {
-  padding: 2px 2px 20px;
-  text-align: left;
-  -webkit-transform: none;
-  -moz-transform: none;
-  -ms-transform: none;
-  -o-transform: none;
-  transform: none; }
-  @media only screen and (min-width: 40em) {
-    .remodal {
-      max-width: 70%; } }
-  @media only screen and (min-width: 1560px) {
-    .remodal {
-      max-width: 1080px; } }
-
-.remodal-overlay {
-  background: rgba(0, 0, 0, 0.8) none repeat scroll 0% 0%; }
-
-.remodal-close {
-  position: fixed;
-  top: 0;
-  right: 10px;
-  left: auto;
-  display: block;
-  z-index: 10001;
-  color: white;
-  width: 50px;
-  height: 50px; }
-
-.remodal-close:hover {
-  color: #cccccc; }
-
-.remodal-close::before {
-  font-size: 40px;
-  width: 50px;
-  height: 50px;
-  line-height: 50px; }
-
-.remodal__iframe {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden; }
-
-.remodal__iframe iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  max-width: 100%;
-  width: 100%;
-  height: 100%;
-  z-index: 2; }
-
-.remodal__copy {
-  padding: 10px 20px; }
-
-.remodal__title {
-  margin-bottom: 10px;
-  font-family: "acumin-pro", Arial, sans-serif;
-  font-weight: 300;
-  line-height: 1.2;
-  line-height: 1.4;
-  font-size: 4vw; }
+.subcollection {
+  padding-bottom: 1.875vw; }
   @media only screen and (min-width: 53.25em) {
-    .remodal__title {
-      font-size: 1.15vw;
-      line-height: 1.3; } }
+    .subcollection {
+      padding-bottom: 0.9375vw; } }
   @media only screen and (min-width: 1560px) {
-    .remodal__title {
-      line-height: 1.3;
-      font-size: 1.8rem; } }
+    .subcollection {
+      padding-bottom: 1.5rem; } }
 
 .audio .details {
   border: 2px solid #d9d9d9;
@@ -9448,6 +9437,14 @@ hr {
   @media only screen and (min-width: 1560px) {
     .card--horizontal {
       margin-bottom: 4rem; } }
+  .card--horizontal .details {
+    margin-top: 1.25vw; }
+    @media only screen and (min-width: 53.25em) {
+      .card--horizontal .details {
+        margin-top: 0.625vw; } }
+    @media only screen and (min-width: 1560px) {
+      .card--horizontal .details {
+        margin-top: 1rem; } }
 
 .border {
   border-top: 1px solid #595959; }
@@ -9463,18 +9460,19 @@ hr {
         margin-left: 2rem;
         margin-right: 2rem; } }
 
-.details {
-  padding-top: 2.5vw; }
+.card__image-wrapper {
+  padding-bottom: 2.5vw; }
   @media only screen and (min-width: 53.25em) {
-    .details {
-      padding-top: 1.25vw; } }
+    .card__image-wrapper {
+      padding-bottom: 1.25vw; } }
   @media only screen and (min-width: 1560px) {
-    .details {
-      padding-top: 2rem; } }
-  @media only screen and (min-width: 53.25em) {
-    .details {
-      min-height: initial;
-      min-height: auto; } }
+    .card__image-wrapper {
+      padding-bottom: 2rem; } }
+
+@media only screen and (min-width: 53.25em) {
+  .details {
+    min-height: initial;
+    min-height: auto; } }
 
 a.details {
   display: inline-block; }
@@ -9621,12 +9619,121 @@ a.details {
     .date-sm {
       margin-top: 1rem; } }
 
+/* #video
+-------------------------------------------------- */
+.video__thumbnail {
+  display: table;
+  width: 100%; }
+  .video__thumbnail:hover .icon-circle:before {
+    color: #fceec3; }
+  .video__thumbnail:hover .icon-play:before {
+    color: #333333; }
+
+.icon-play-button--video {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 50%;
+  margin-left: -3rem; }
+
+.center-box {
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  display: table-cell;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 2.5vw; }
+  @media only screen and (min-width: 53.25em) {
+    .center-box {
+      padding-bottom: 1.25vw; } }
+  @media only screen and (min-width: 1560px) {
+    .center-box {
+      padding-bottom: 2rem; } }
+
+.remodal {
+  padding: 2px 2px 20px;
+  text-align: left;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none; }
+  @media only screen and (min-width: 40em) {
+    .remodal {
+      max-width: 70%; } }
+  @media only screen and (min-width: 1560px) {
+    .remodal {
+      max-width: 1080px; } }
+
+.remodal-overlay {
+  background: rgba(0, 0, 0, 0.8) none repeat scroll 0% 0%; }
+
+.remodal-close {
+  position: fixed;
+  top: 0;
+  right: 10px;
+  left: auto;
+  display: block;
+  z-index: 10001;
+  color: white;
+  width: 50px;
+  height: 50px; }
+
+.remodal-close:hover {
+  color: #cccccc; }
+
+.remodal-close::before {
+  font-size: 40px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px; }
+
+.remodal__iframe {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden; }
+
+.remodal__iframe iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  z-index: 2; }
+
+.remodal__copy {
+  padding: 10px 20px; }
+
+.remodal__title {
+  margin-bottom: 10px;
+  font-family: "acumin-pro", Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+  line-height: 1.4;
+  font-size: 4vw; }
+  @media only screen and (min-width: 53.25em) {
+    .remodal__title {
+      font-size: 1.15vw;
+      line-height: 1.3; } }
+  @media only screen and (min-width: 1560px) {
+    .remodal__title {
+      line-height: 1.3;
+      font-size: 1.8rem; } }
+
 /* #styleguide
 -------------------------------------------------- */
 .section--styleguide .title {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 1;
   font-size: 8vw; }
   @media only screen and (min-width: 53.25em) {
     .section--styleguide .title {
