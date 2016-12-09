@@ -6,7 +6,45 @@
   <h2 class="section-title">Typography</h2><a id="typography" class="anchor-link"></a>
   <div class="section__description">
     <pre>
-    	<code class="css">
+    	<code class="scss">
+    	// Fonts are stored as SASS mixins so they can be used anywhere in
+    	// the .scss file without concern of being overwritten by the cascade. 
+    	// Read more here: https://sass-guidelin.es/#mixins
+    	
+    	   
+    	/* Implement the mixin by targeting a specific .title class like so: */
+    	.archives-page {
+    		.title {
+    			@include sans-xl;
+    		}
+    	}
+    	   
+    	/* or, if you must, use a class with the same name of the font style and size
+    	* although it doesn't seem as clean as the previous method */
+    	.sans-xl {@include sans-xl;}	
+    	</code>
+    </pre>
+    
+    <pre>
+    	<code data-language="css">
+    		// Rainbow.js!!!
+    		/* Fonts are stored as SASS mixins so they can be used anywhere in
+    		*  the .scss file without concern of being overwritten by the cascade. 
+    		*  Read more here: https://sass-guidelin.es/#mixins
+    		
+    		   
+    		/* Implement the mixin by targeting a specific .title class like so: */
+    		.archives-page .title {
+    		    	@include sans-xl;
+    		}
+    		   
+    		/* or, if you must, use a class with the same name of the font style and size
+    		* although it doesn't seem as clean as the previous method */
+    		.sans-xl {@include sans-xl}	
+    	</code>
+    </pre>
+    
+    <script type="syntaxhighlighter" class="brush: css, sass"><![CDATA[
     	/* Fonts are stored as SASS mixins so they can be used anywhere in
     	*  the .scss file without concern of being overwritten by the cascade. 
     	*  Read more here: https://sass-guidelin.es/#mixins
@@ -14,14 +52,15 @@
     	   
     	/* Implement the mixin by targeting a specific .title class like so: */
     	.archives-page .title {
-    	    	@include sans-xl 
+    	    	@include sans-xl;
     	}
     	   
     	/* or, if you must, use a class with the same name of the font style and size
     	* although it doesn't seem as clean as the previous method */
     	.sans-xl {@include sans-xl}	
-    	</code>
-    </pre>
+    
+    
+    ]]></script>
     
     
     <pre class="code_page"><table cellspacing="0" cellpadding="0" class="code_page"><tbody><tr><td><table cellspacing="0" cellpadding="0" class="code_page"><tbody><tr><td valign="top" id="L_0_6" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;&nbsp;6&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_6"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp; </span><span class=" real_text" style="background-color: #272822; color: #75715E;">// Fonts are stored as SASS mixins so they can be used anywhere in</span>

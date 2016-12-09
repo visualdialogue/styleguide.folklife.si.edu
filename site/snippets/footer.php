@@ -87,6 +87,8 @@
       </li>
     </ul>
   </div>
-</footer><!-- jQuery (necessary for Bootstrap's JavaScript plugins) --><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><script src="/assets/js/scripts-min.js?v=<?= time() ?>"></script><script>loadCSS( "/assets/css/folklife.css?v=<?= time() ?>" );</script><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/monokai-sublime.min.css"><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+</footer><!-- jQuery (necessary for Bootstrap's JavaScript plugins) --><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><script src="/assets/js/scripts-min.js?v=<?= time() ?>"></script><script>loadCSS( "/assets/css/folklife.css?v=<?= time() ?>" );</script>
+<!-- highlightjs.org for code syntax highlighting--><script>loadCSS("/assets/css/highlight/styles/monokai-sublime.css");</script>
+<script src="/assets/js/highlight.pack.js"></script>
 </body>
 </html>
