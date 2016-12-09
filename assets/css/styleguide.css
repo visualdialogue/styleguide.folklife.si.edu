@@ -9654,7 +9654,48 @@ a.details {
 pre {
   font-size: 16px;
   border-radius: initial;
-  padding: 0; }
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  white-space: initial;
+  margin-bottom: 5vw; }
+  @media only screen and (min-width: 53.25em) {
+    pre {
+      margin-bottom: 2.5vw; } }
+  @media only screen and (min-width: 1560px) {
+    pre {
+      margin-bottom: 4rem; } }
+
+code.hjls {
+  padding-top: 3.75vw;
+  padding-right: 0vw;
+  padding-bottom: 1.25vw;
+  padding-left: 0vw; }
+  @media only screen and (min-width: 53.25em) {
+    code.hjls {
+      padding-top: 1.875vw; } }
+  @media only screen and (min-width: 1560px) {
+    code.hjls {
+      padding-top: 3rem; } }
+  @media only screen and (min-width: 53.25em) {
+    code.hjls {
+      padding-right: 0vw; } }
+  @media only screen and (min-width: 1560px) {
+    code.hjls {
+      padding-right: 0rem; } }
+  @media only screen and (min-width: 53.25em) {
+    code.hjls {
+      padding-bottom: 0.625vw; } }
+  @media only screen and (min-width: 1560px) {
+    code.hjls {
+      padding-bottom: 1rem; } }
+  @media only screen and (min-width: 53.25em) {
+    code.hjls {
+      padding-left: 0vw; } }
+  @media only screen and (min-width: 1560px) {
+    code.hjls {
+      padding-left: 0rem; } }
 
 .section--typography pre {
   margin-bottom: 10vw; }

@@ -67,8 +67,20 @@
 		// @include padding-bottom(3);
 		// @include padding-left(0);
 		padding: 0;
+		margin: 0;
+		border: none;
+		background-color: transparent;
+		white-space: initial;
 		// border-color: #272822;
 		// line-height: 0.7;
+		@include margin-bottom(4);
+	}
+	// highlight.js code block
+	code.hjls {
+		@include padding-top(3);
+		@include padding-right(0);
+		@include padding-bottom(1);
+		@include padding-left(0);
 	}
 	.section--typography pre  {
 		@include margin-bottom(8);

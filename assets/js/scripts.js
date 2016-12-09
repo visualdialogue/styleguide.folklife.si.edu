@@ -230,5 +230,6 @@ $(document).ready(function () {
 /* Syntax Highlighting
  * from highlightjs.org */
  	// start highlighter on page load
-	hljs.initHighlightingOnLoad();
+	hljs.configure({tabReplace: ' '});
+	hljs.initHighlighting();
 });
