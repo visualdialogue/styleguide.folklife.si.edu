@@ -133,7 +133,7 @@ $(document).ready(function () {
 	// $(window).on('breakpoint', function(event, _slick, breakpoint) {
 	// $(window).resize( $.throttle(125, function() {
 	$(window).on('resize', function() {
-		checkMobile();
+		// checkMobile();
 
 		// if getting smaller
 		if(site.isMobile && slickCreatedDesktop) {
@@ -227,4 +227,8 @@ $(document).ready(function () {
 	});
 
 
+/* Syntax Highlighting
+ * from highlightjs.org */
+ 	// start highlighter on page load
+	hljs.initHighlightingOnLoad();
 });
