@@ -352,13 +352,14 @@
 								a(href="<?= $card->url() ?>")
 									img.card__image(src="<?= $src->url() ?>")
 							- endif
-						li.high(class="col-sm-<?= $text_col ?>")
+						li(class="col-sm-<?= $text_col ?>")
 							- snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link ))
 			- else:
-				a.high.card__inner(href="<?= $card->url() ?>")
+				.card__inner
 					- if($src = $card->image($card->img())):
 						.card__image-wrapper.clearfix(class="")
-							img.card__image(src="<?= $src->url() ?>")
+							a(href="<?= $card->url() ?>")
+								img.card__image(src="<?= $src->url() ?>")
 					- endif
 					- snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory ))
 			- endif

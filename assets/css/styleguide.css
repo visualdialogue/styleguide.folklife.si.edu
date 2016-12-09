@@ -7370,7 +7370,7 @@ body {
 .serif-sm {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.4;
   font-size: 5vw; }
   @media only screen and (min-width: 53.25em) {
     .serif-sm {
@@ -7472,7 +7472,7 @@ body {
 .copy p {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.4;
   font-size: 5vw;
   padding-bottom: 2.5vw;
   font-weight: 200; }
@@ -8029,10 +8029,10 @@ a.high, .high, .video__thumbnail {
   -webkit-transition: background 0.15s cubic-bezier(0.33, 0.66, 0.66, 1);
   transition: background 0.15s cubic-bezier(0.33, 0.66, 0.66, 1);
   cursor: pointer; }
-  a.high:hover .light, a.high:hover + .details .light, a.high:hover + .high .light, .high:hover .light, .high:hover + .details .light, .high:hover + .high .light, .video__thumbnail:hover .light, .video__thumbnail:hover + .details .light, .video__thumbnail:hover + .high .light {
+  a.high:hover .light, .high:hover .light, .video__thumbnail:hover .light {
     background: #fceec3;
     color: #333333; }
-    a.high:hover .light .er, a.high:hover + .details .light .er, a.high:hover + .high .light .er, .high:hover .light .er, .high:hover + .details .light .er, .high:hover + .high .light .er, .video__thumbnail:hover .light .er, .video__thumbnail:hover + .details .light .er, .video__thumbnail:hover + .high .light .er {
+    a.high:hover .light .er, .high:hover .light .er, .video__thumbnail:hover .light .er {
       position: relative; }
 
 .more-link .er {
@@ -9005,19 +9005,20 @@ hr {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%); }
 
-.copy-columns {
-  -webkit-column-count: 2;
-  /* Chrome, Safari, Opera */
-  -moz-column-count: 2;
-  /* Firefox */
-  column-count: 2;
-  -webkit-column-gap: 40px;
-  /* Chrome, Safari, Opera */
-  -moz-column-gap: 40px;
-  /* Firefox */
-  column-gap: 40px; }
-  .copy-columns .card {
-    break-inside: avoid; }
+@media only screen and (min-width: 53.25em) {
+  .copy-columns {
+    -webkit-column-count: 2;
+    /* Chrome, Safari, Opera */
+    -moz-column-count: 2;
+    /* Firefox */
+    column-count: 2;
+    -webkit-column-gap: 40px;
+    /* Chrome, Safari, Opera */
+    -moz-column-gap: 40px;
+    /* Firefox */
+    column-gap: 40px; }
+    .copy-columns .card {
+      break-inside: avoid; } }
 
 .subcollection {
   padding-bottom: 1.875vw; }

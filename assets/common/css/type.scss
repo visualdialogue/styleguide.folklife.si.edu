@@ -427,7 +427,7 @@ body {
 	@mixin serif-sm {
 		font-family: $serif;
 		font-weight: 400;
-		line-height: 1.2;
+		line-height: 1.4;
 	  	font-size: 5vw;
 		@include respond-to(break2) {
 	  		font-size: 1.4vw;

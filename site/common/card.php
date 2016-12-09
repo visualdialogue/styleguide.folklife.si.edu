@@ -294,16 +294,18 @@
         <?php if($src = $card->image($card->img())): ?><a href="<?= $card->url() ?>"><img src="<?= $src->url() ?>" class="card__image"/></a>
         <?php endif; ?>
       </li>
-      <li class="high col-sm-<?= $text_col ?>">
+      <li class="col-sm-<?= $text_col ?>">
         <?php snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link )); ?>
       </li>
     </ul>
   </div>
-  <?php else: ?><a href="<?= $card->url() ?>" class="high card__inner">
+  <?php else: ?>
+  <div class="card__inner">
     <?php if($src = $card->image($card->img())): ?>
-    <div class="card__image-wrapper clearfix"><img src="<?= $src->url() ?>" class="card__image"/></div>
+    <div class="card__image-wrapper clearfix"><a href="<?= $card->url() ?>"><img src="<?= $src->url() ?>" class="card__image"/></a></div>
     <?php endif; ?>
-    <?php snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory )); ?></a>
+    <?php snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory )); ?>
+  </div>
   <?php endif; ?>
 </li>
 <?php endif; ?>

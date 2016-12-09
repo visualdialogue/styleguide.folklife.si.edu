@@ -17,7 +17,7 @@
 		.date!= $card->date('M d, Y')
 	- endif
 
-	.title.card__title: span.light: span.er= $card->title()
+	a.high(href="<?= $card->url() ?>").title.card__title: span.light: span.er= $card->title()
 
 	//- subtitle
 	- if('' != $card->subtitle()):	
