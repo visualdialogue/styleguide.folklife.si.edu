@@ -5,10 +5,15 @@
 }
 .card--horizontal {
 	@include margin-bottom(4);
-	.details {
-		@include margin-top(1); // add margin back in b/c no title above in horizontal layout
+	.center-box, .card__image-wrapper {
+		padding-bottom:0;
+	}
+	.details.hasborder {
+		@include margin-top(1); // add margin back if have border b/c no title above in horizontal layout
 	}
 }
+
+// for all 1/2 width columns on the phone, break every 2nd one starting at 3!!!
 .card.col-xs-6 {
 	@include respond-to(break2max) {
 		// line 'em up!!!
@@ -130,6 +135,28 @@ a.details {
 }
 .date {@include date;}
 .date-sm {@include date-sm;}
+
+
+/* #textbox
+-------------------------------------------------- */
+	@mixin textbox {
+		background-color: white;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+
+		@include respond-to(break2) {
+			left: 2.8%;
+			width: 22.86%; // 320 px at fullwidth
+			min-height: 40%;
+
+		}
+		@include respond-to(fullwidth) {
+			left: 4rem;
+
+		}
+		@include bottom(4);
+	}
 
 /* #vertical
 -------------------------------------------------- */

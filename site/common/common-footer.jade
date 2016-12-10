@@ -2,25 +2,25 @@ hr
 ul.footer__row.footer__row--2.row
 	li.footer__main-item.col-sm-3
 		.footer-logo.footer-logo--active
-			- if (c::get('isDev')):
+			-if (c::get('isDev')):
 			a(href="http://localhost:3003"): img.footer-logo__img.footer-logo__img--folklife(src="/assets/images/logo/smithsonian_center_for_folklife_and_cultural_heritage.png?v=2016.10.21") 
 			- else:
 			a(href="http://folklife.lukehatfield.com"): img.footer-logo__img.footer-logo__img--folklife(src="/assets/images/logo/smithsonian_center_for_folklife_and_cultural_heritage.png?v=2016.10.21")
-			- endif
+			-endif
 	li.footer__main-item.col-sm-3 
 		.footer-logo
-			- if (c::get('isDev')):
+			-if (c::get('isDev')):
 			a(href="http://localhost:3007"): img.footer-logo__img(src="/assets/images/logo/smithsonian_folkways_recordings.png?v=2016.10.21") 
 			- else:
 			a(href="http://folkways.lukehatfield.com"): img.footer-logo__img(src="/assets/images/logo/smithsonian_folkways_recordings.png?v=2016.10.21") 
-			- endif
+			-endif
 	li.footer__main-item.col-sm-3 
 		.footer-logo
-			- if (c::get('isDev')):
+			-if (c::get('isDev')):
 			a(href="http://localhost:3005"): img.footer-logo__img(src="/assets/images/logo/smithsonian_folklife_festival.png?v=2016.10.21") 
 			- else:
 			a(href="http://on.festival.lukehatfield.com"): img.footer-logo__img(src="/assets/images/logo/smithsonian_folklife_festival.png?v=2016.10.21") 
-			- endif
+			-endif
 	li.footer__main-item.col-sm-1 
 		ul.footer__list.copyright-list
 			li.footer__sub-item.copyright-list__item Copyright

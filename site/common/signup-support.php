@@ -7,15 +7,11 @@
     <section class="col-sm-6 section--newsletter-signup">
       <div class="newsletter-signup clearfix">
         <div class="newsletter-signup__copy">
-          <div class="details details--inset details--tight details--tight-bottom">
-            <div class="details__inner">
-              <div class="icon-mail"></div>
-              <?php echo htmlspecialchars($site->newsletter_text(), ENT_QUOTES, 'UTF-8'); ?>
-            </div>
-          </div>
+          <div class="icon-mail"></div>
+          <?php echo htmlspecialchars($site->newsletter_text(), ENT_QUOTES, 'UTF-8'); ?>
         </div>
         <form action="/" class="newsletter-signup-form newsletter">
-          <input type="email" placeholder="Enter your email" class="newsletter__input details details--inset"/>
+          <input type="email" placeholder="Enter your email" class="newsletter__input"/>
         </form>
       </div>
     </section>

@@ -16,7 +16,7 @@
 <?php else: ?>
 <?php $showCategory = false; ?>
 <?php endif ; ?>
-<?php if(isset($titlePosition) && $titlePosition == 'top'): ?>
+<?php if(isset($titleTop) && $titleTop === true): ?>
 <?php $titlePositionTop = true; ?>
 <?php else: ?>
 <?php $titlePositionTop = false; ?>

@@ -3,85 +3,85 @@
 	------------//
 //- excerpt
 - $excerptData = null;
-- if(isset($excerpt)):
+-if(isset($excerpt)):
 	- $excerptData = $excerpt;
-- endif
+-endif
 
 //- blurb
 - $blurbData = null;
-- if(isset($blurb)):
+-if(isset($blurb)):
 	- $blurbData = $blurb;
-- endif
+-endif
 
 //- store cardtype if exists, make null if not so other functions will complete
 - $cardTypeData = null;
-- if(isset($type)):
+-if(isset($type)):
 	- $cardTypeData = $type;
-- endif
+-endif
 
 //- passed vars
-- if(isset($showCategory) && $showCategory === true):
+-if(isset($showCategory) && $showCategory === true):
 	- $showCategory = true;
 - else:
 	- $showCategory = false;
-- endif 
+-endif 
 
 //- passed vars
-- if(isset($titlePosition) && $titlePosition == 'top'):
+-if(isset($titleTop) && $titleTop === true):
 	- $titlePositionTop = true;
 - else:
 	- $titlePositionTop = false;
-- endif 
+-endif 
 
 //- more link
-- if (!isset($more_link)):
+-if (!isset($more_link)):
 	- $more_link = false;
-- endif;
+-endif;
 
 //- horizontal card
-- if(isset($orientation)):
-	- if($orientation == 'horizontal'):
+-if(isset($orientation)):
+	-if($orientation == 'horizontal'):
 		- $cardOrientation = 'horizontal'
-	- elseif($orientation == 'vertical'):
+	-elseif($orientation == 'vertical'):
 		- $cardOrientation = 'vertical'
-	- endif 
+	-endif 
 - else:
 	- $cardOrientation = 'standard'
-- endif 
+-endif 
 
 //- audio card
-- if (('' != $card->type()) && ($card->type() == 'audio') || ((isset($type)) && ($type == 'audio'))):
+-if (('' != $card->type()) && ($card->type() == 'audio') || ((isset($type)) && ($type == 'audio'))):
 	//- set flag for card type
 	- $audioCard = true;
 	//- make classname for card
 	- $cardTypeData = 'audio';
 - else:
 	- $audioCard = false;
-- endif
+-endif
 
 
 //- Feature blog entry on festival/blog
-- if ((isset($type)) && ($type == 'blog-feature')):
+-if ((isset($type)) && ($type == 'blog-feature')):
 	.card.blog-article.blog-article--feature.blog-article--vertical.clearfix
 
-		//- if video is set, add data to card tag for video remodal
-		- if((isset($video_id)) && ($video_id != '')):
+		//-if video is set, add data to card tag for video remodal
+		-if((isset($video_id)) && ($video_id != '')):
 			.video__thumbnail(data-video-id="<?= $card->video_id() ?>" data-title="<?= $card->title() ?>" data-description="<?= $card->copy() ?>")
 				.center-box
-					- if($src = $card->image()):
+					-if($src = $card->image()):
 						a.modal-trigger
 							img.card__image(src="<?= $src->url() ?>")
-					- endif
+					-endif
 						.icon-play-button.icon-play-button--video.icon-stack
 							.icon-circle
 							.icon-play
 		- else:
 			.card__image-wrapper
-				- if($src = $card->image()):
+				-if($src = $card->image()):
 					a(href="<?= $card->url() ?>")
 						img.card__image(src="<?= $src->url() ?>")
-				- endif
-		- endif
+				-endif
+		-endif
 
 		.card__details.details(class="")
 			.category
@@ -89,25 +89,25 @@
 			//- show card author if it isn't blank
 			.title.card__title: a(href="<?= $card->url() ?>")!= $card->title()
 			.date.date-sm!= $card->date('F jS, Y'), e('' != $card->author(), ' | ' . $card->author()), ' | 0 comments'
-			- if (isset($excerptData)):
+			-if (isset($excerptData)):
 				.description.card__description.link-underline
 					p!= excerpt($card->copy()->kt(), $excerptData, 'words')
 			- else:
 				.description.blog-article__description.link-underline!= $card->copy()->kt()
-			- endif
+			-endif
 
-			- snippet('more-link')
+			-snippet('more-link')
 
 //- horizontal blog entry
 //- Audio card with play feature
-- elseif ((isset($type)) && ($type == 'blog-article') && ($orientation == 'horizontal')):
+-elseif ((isset($type)) && ($type == 'blog-article') && ($orientation == 'horizontal')):
 	li.card.col-sm-12.blog-article.clearfix
 		.row
 			.border.border--inset
 			.card__image-wrapper.col-sm-6.clearfix(class="")
-				- if($src = $card->image()):
+				-if($src = $card->image()):
 					img.card__image(src="<?= $src->url() ?>")
-				- endif
+				-endif
 			.card__details.details.col-sm-6.details--inset.details--tight(class="")
 				.time!= $card->time()
 				.category
@@ -119,19 +119,19 @@
 				
 				.description.card__description.link-underline!= $card->blurb()->kt()
 				
-				- if (isset($excerptData)):
+				-if (isset($excerptData)):
 					.description.card__description.link-underline
 						p!= excerpt($card->copy()->kt(), $excerptData, 'words')
 				- else:
 					.description.blog-article__description.link-underline!= $card->copy()->kt()
-				- endif
+				-endif
 
-				- snippet('more-link')
+				-snippet('more-link')
 
 
 //- vertical blog entry
 //- Audio card with play feature
-- elseif ((isset($type)) && ($type == 'blog-article') && ($orientation == 'vertical')):
+-elseif ((isset($type)) && ($type == 'blog-article') && ($orientation == 'vertical')):
 	li.card.col-sm-3.blog-article.blog-article--vertical.clearfix
 		.border
 		.card__details.details(class="")
@@ -139,44 +139,44 @@
 			.time!= $card->time()
 			.title.card__title: a(href="<?= $card->url() ?>")!= $card->title()
 
-		//- if video is set, add data to card tag for video remodal
-		- if($video_id != ''):
+		//-if video is set, add data to card tag for video remodal
+		-if($video_id != ''):
 			.video__thumbnail(data-video-id="<?= $card->video_id() ?>" data-title="<?= $card->title() ?>" data-description="<?= $card->copy() ?>")
 				.center-box
-					- if($src = $card->image()):
+					-if($src = $card->image()):
 						a.modal-trigger
 							img.card__image(src="<?= $src->url() ?>")
-					- endif
+					-endif
 						.icon-play-button.icon-play-button--video.icon-stack
 							.icon-circle
 							.icon-play
 		- else:
 			.card__image-wrapper
-				- if($src = $card->image()):
+				-if($src = $card->image()):
 					a(href="<?= $card->url() ?>")
 						img.card__image(src="<?= $src->url() ?>")
-				- endif
-		- endif
+				-endif
+		-endif
 
 //- folkways new release
-- elseif ((isset($type)) && ($type == 'new-release')):
-	- if($src = $card->image()):
+-elseif ((isset($type)) && ($type == 'new-release')):
+	-if($src = $card->image()):
 		li.col-xs-6.col-sm-2.new-release
 			img(src="<?= $src->url() ?>")
 			.details.details--participate
 				.title: a!= $card->title()
 				.artist: a!= $card->artist()
-	- endif
+	-endif
 
 //- news item
-- elseif ((isset($type)) && ($type == 'news')):
-	- if($src = $card->image()):
+-elseif ((isset($type)) && ($type == 'news')):
+	-if($src = $card->image()):
 		li.col-xs-6.col-sm-3
 			img(src="<?= $src->url() ?>")
 			.details.details--participate
 				.date!= $card->date('n.j.y')
 				.title: a!= $card->title()
-	- endif
+	-endif
 
 //- Regular text card with image
 - else:
@@ -188,37 +188,37 @@
 	- $detailsData = null;
 		
 	//- Default for album, although widths can still be overwritten
-	- if ((isset($type)) && ($type == 'album')):
+	-if ((isset($type)) && ($type == 'album')):
 		- $xs = 'col-xs-6'
 		- $sm = 'col-sm-2'
 		- $custom_class = 'album'
-	- endif
+	-endif
 
-	//- if column widths are set, make into appropriate size class name for display later
-	- if(isset($col_xs)):
+	//-if column widths are set, make into appropriate size class name for display later
+	-if(isset($col_xs)):
 		- $xs = 'col-xs-'.$col_xs;
-	- endif
-	- if(isset($col_sm)):
+	-endif
+	-if(isset($col_sm)):
 		- $sm = 'col-sm-'.$col_sm;
-	- endif
-	- if(isset($classname)):
+	-endif
+	-if(isset($classname)):
 		- $custom_class = $classname;
-	- endif
-	- if(isset($details)):
+	-endif
+	-if(isset($details)):
 		- $detailsData = $details;
-	- endif
+	-endif
 
-	//- - if ((isset($type)) && (($type == 'feature') || ($type == 'featurette'))):
+	//- -if ((isset($type)) && (($type == 'feature') || ($type == 'featurette'))):
 		//- - $detailsData = 'details--inset'
-	//- - endif
+	//- -endif
 
 	li.card(class="<?= $xs ?> <?= $sm ?> <?= $custom_class ?> card--<?= $cardTypeData ?> card--<?= $cardOrientation ?>")
 	
-		- if ((isset($border)) && $border === true):
+		-if ((isset($border)) && $border === true):
 			.border
-		- endif
+		-endif
 
-			- if ($card->type() == 'video' || ((isset($type)) && ($type == 'video'))):
+			-if ($card->type() == 'video' || ((isset($type)) && ($type == 'video'))):
 
 				//- horizontal video card
 				-if ($cardOrientation == 'horizontal'):
@@ -227,47 +227,47 @@
 							.col-sm-6
 								.video__thumbnail(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= $card->copy() ?>')
 									.center-box
-										- if($src = $card->image()):
+										-if($src = $card->image()):
 											a.modal-trigger
 												img.image(src="<?= $src->url() ?>")
-										- endif
+										-endif
 											.icon-play-button.icon-play-button--video.icon-stack
 												.icon-circle
 												.icon-play
 							//- .textbox.festival-video__textbox.col-sm-6
 							.festival-video__textbox.col-sm-6
-								- snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'video' => true, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop ))
+								-snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'video' => true, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop ))
 
 				//- vertical video card
 				-else:
 					.video__thumbnail(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= $card->copy() ?>')
 						.center-box
-							- if($src = $card->image()):
+							-if($src = $card->image()):
 								.modal-trigger
 									img.image(src="<?= $src->url() ?>")
-							- endif
+							-endif
 								.icon-play-button.icon-play-button--video.icon-stack
 									.icon-circle
 									.icon-play
 					-snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop ))
 
 
-				- endif
+				-endif
 			//- Audio card with play feature
-			- elseif($audioCard):
+			-elseif($audioCard):
 			.audio
-				- if($src = $card->image()):
+				-if($src = $card->image()):
 					.card__image-wrapper.clearfix(class="")
 						a(href="<?= $card->url() ?>")
 							img.card__image(src="<?= $src->url() ?>")
-				- endif
+				-endif
 				.details.card__details.details--inset
 					.category.card__category!= $card->category() 
 					.title-wrapper.card__title-wrapper
 						a.high.title(href="<?= $card->url() ?>"): span.light: span.er= $card->title()
-						- if('' != $card->audio_album()):
+						-if('' != $card->audio_album()):
 							.subtitle!= $card->audio_album()
-						- endif
+						-endif
 						.artist!= $card->artist()->kt()
 					.audio-player
 						.icon-play-button.icon-stack
@@ -280,37 +280,37 @@
 								|0:00 &vert;&nbsp;
 								!= $card->audio_length()
 							.volume
-			- elseif($cardOrientation == 'horizontal'):
+			-elseif($cardOrientation == 'horizontal'):
 				//- set image width if not passed as variable
-				- if (!isset($img_col)):
+				-if (!isset($img_col)):
 					- $img_col = '6';
-				- endif;
+				-endif;
 				//- set text width if not passed as variable
-				- if (!isset($text_col)):
+				-if (!isset($text_col)):
 					- $text_col = '6';
-				- endif;
+				-endif;
 				
 				.card__inner
 					.row
 						.high.card__image-wrapper.clearfix(class="col-sm-<?= $img_col ?>")
-							- if($src = $card->image()):
+							-if($src = $card->image()):
 								a(href="<?= $card->url() ?>")
 									img.card__image(src="<?= $src->url() ?>")
-							- endif
+							-endif
 						div(class="col-sm-<?= $text_col ?>")
-							- snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop ))
+							-snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop ))
 			- else:
 				.card__inner
 					//- put title above image if set to top
-					- if($titlePositionTop):
+					-if($titlePositionTop):
 						a.high(href="<?= $card->url() ?>").title.card__title: span.light: span.er= $card->title()
-					- endif
+					-endif
 
-					- if($src = $card->image()):
+					-if($src = $card->image()):
 						.card__image-wrapper.clearfix(class="")
 							a(href="<?= $card->url() ?>")
 								img.card__image(src="<?= $src->url() ?>")
-					- endif
-					- snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop ))
-			- endif
-- endif
+					-endif
+					-snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop ))
+			-endif
+-endif

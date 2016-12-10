@@ -1,4 +1,4 @@
-- snippet('header')
+-snippet('header')
 
 #navspacer.navspacer
 
@@ -7,9 +7,9 @@ section.container.section--first.section--styleguide
 	h2.section-title Styleguide
 
 	ul.row.cards
-		- foreach($pages->visible() as $card):
+		-foreach($pages->visible() as $card):
 			//- get card for current content item
-			- snippet('card', array('card' => $card, 'col_sm' => 4 ))
-		- endforeach
+			-snippet('card', array('card' => $card, 'col_sm' => 4 ))
+		-endforeach
 
-- snippet('footer')
+-snippet('footer')

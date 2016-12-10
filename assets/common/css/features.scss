@@ -30,6 +30,9 @@ conversion: 				| mobile 	| tablet	| desktop
 	.textbox {
 		@include padding-top(1);
 	}
+	.card__image-wrapper {
+		padding-bottom:0;
+	}
 }
 
 .feature--full {

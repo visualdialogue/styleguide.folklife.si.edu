@@ -2,10 +2,10 @@ a.high.more-link(class="<? if(isset($class)) echo $class ?>")
 	.light
 		.er
 			//- for custom text like festival/program
-			- if(isset($text)):
+			-if(isset($text)):
 				.more-link__text!= $text
 			- else:
 				.more-link__text more
-			- endif
+			-endif
 			//- .more-link__arrow.icon-right-thin
 			.more-link__arrow &#x2192;

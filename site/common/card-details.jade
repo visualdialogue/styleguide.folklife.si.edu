@@ -2,71 +2,73 @@
 
 	//- category
 	//- dont' show category on albums
-	- if($showCategory):
+	-if($showCategory):
 		//- show special date if video card
-		- if(isset($video) && $video === true):
+		-if(isset($video) && $video === true):
 			.category!= 'Festival, ', $card->year(), ', ', $card->program()
-		- else:
+		-else:
 			.category!= $card->category()
-		- endif
+		-endif
 
-	- endif
+	-endif
 
 	//- date
-	- if('' != $card->date()):
+	-if('' != $card->date()):
 		.date!= $card->date('M d, Y')
-	- endif
+	-endif
 
 	//- put title below image by default
-	- if(!$titlePositionTop):
-		a.high(href="<?= $card->url() ?>").title.card__title: span.light: span.er= $card->title()
-	- endif
-
-	//- subtitle
-	- if('' != $card->subtitle()):	
-		.subtitle!= $card->subtitle()
-	- endif
+	-if(!$titlePositionTop):
+		//- if subtitle, group with title for correct highlighting
+		-if('' != $card->subtitle()):	
+			a.high(href="<?= $card->url() ?>")
+				.title.card__title: span.light: span.er= $card->title()
+				.subtitle: span.light: span.er= $card->subtitle()
+		-else:
+			a.high(href="<?= $card->url() ?>").title.card__title: span.light: span.er= $card->title()
+		-endif
+	-endif
 
 	//- artist
-	- if('' != $card->artist()):	
+	-if('' != $card->artist()):	
 		.artist!= $card->artist()
-	- endif
+	-endif
 
 	//- author
-	- if('' != $card->author()):	
+	-if('' != $card->author()):	
 		.author!= $card->author()
-	- endif
+	-endif
 
 	//- price
-	- if('' != $card->price()):	
+	-if('' != $card->price()):	
 		.price!= '$', $card->price()
-	- endif
+	-endif
 
 	//- blurb
-	//- - if('' != $card->blurb()):	
-	- if (isset($blurb)):
+	//- -if('' != $card->blurb()):	
+	-if (isset($blurb)):
 		.description.card__description.link-underline.blurb!= $card->blurb()->kt()
-	- endif
+	-endif
 	
-	- if (isset($excerpt)):
+	-if (isset($excerpt)):
 		.description.card__description.link-underline
 			p!= excerpt($card->copy()->kt(), $excerpt, 'words')
-	//- - elseif('' != $card->copy() && $card->type() != 'video'):
+	//- -elseif('' != $card->copy() && $card->type() != 'video'):
 		.description.card__description.link-underline!= $card->copy()->kt()
-	- endif
+	-endif
 
 	//- order1
-	- if('' != $card->order1()):	
+	-if('' != $card->order1()):	
 		//- text, non-breaking space, right arrow
 		.buy-now-button!= $card->order1(), '&nbsp;&#x2192';
-	- endif
+	-endif
 
 	//- order2
-	- if('' != $card->order2()):	
+	-if('' != $card->order2()):	
 		//- text, non-breaking space, right arrow
 		.buy-now-button!= $card->order2(), '&nbsp;&#x2192';
-	- endif
+	-endif
 
-	- if($more_link):
-		- snippet('more-link')
-	- endif
+	-if($more_link):
+		-snippet('more-link')
+	-endif

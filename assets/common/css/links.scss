@@ -41,6 +41,7 @@
 		cursor: pointer;
 		// highlight siblings with links as children for images
 		// &:hover .light, &:hover + .details .light, &:hover + .high .light {
+		// if subtitle or title, highlight each other
 		&:hover .light {
 			background: $hover;
 			color: $copy;

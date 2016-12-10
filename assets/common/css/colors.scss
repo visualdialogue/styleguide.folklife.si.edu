@@ -28,11 +28,13 @@
 	$fs-tan: #d5bf8f;
 	$fs-aqua: #3ea6ad;
 	$fs-yellow: #ffdf69;
-	$fs-orange: #eda456;
+	// $fs-orange: #eda456;
+	$fs-orange: #eea556; // ???
 	$fs-red: #dd3f48;
 
 	$basque-red: $fs-red;
 	$basque-green: $fs-green;
+
 
 
 /* Folkways
@@ -80,3 +82,8 @@ $sitelinks: $black30;
 $sitelinks: $black40;
 
 $searchText: $black40;
+
+
+/* Helper classes
+-------------------------------------------------- */
+.black {color: black;}

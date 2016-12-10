@@ -39,7 +39,29 @@
 	}
 }
 
+// folklife - talk story
+.col-sm-625 {
+	float: left;
+	width: 51%;
+	@include respond-to(fullwidth) {
+		width: 54%;
+	}
+}
+.col-sm-575 {
+	float: left;
+	width: 49%;
+	@include respond-to(fullwidth) {
+		width: 46%;
+		padding-left: 0 !important; // fit the layout alt-grid
+	}
+}
+
+
 // folklife - dive deep
+.col-sm-65 {
+	float: left;
+	width: 56%;
+}
 .col-sm-55 {
 	float: left;
 	width: 44%;
@@ -47,10 +69,7 @@
 		padding-left: 0 !important; // fit the layout alt-grid
 	}
 }
-.col-sm-65 {
-	float: left;
-	width: 56%;
-}
+
 
 /* Grid System
 -------------------------------------------------- */
@@ -67,11 +86,13 @@
   // $six: 50%;
   // $eight: 66.66667%;
 
-	// bootstrap gutter override
+	// bootstrap gutter override!!!
 	
 	// $gutter-medium: 1.35%;
 	$gutter-small: 7.5px;
 	$gutter-medium: 1.35%;
+	$gutter-medium: 1.36%;
+	// $gutter-medium: %;
 	.row {
 		margin-left: -$gutter-small;
 		margin-right: -$gutter-small;

@@ -6,12 +6,10 @@
 		section.col-sm-6.section--newsletter-signup
 			.newsletter-signup.clearfix
 				.newsletter-signup__copy
-					.details.details--inset.details--tight.details--tight-bottom
-						.details__inner
-							.icon-mail
-							= $site->newsletter_text()
+					.icon-mail
+					= $site->newsletter_text()
 				form(action="/").newsletter-signup-form.newsletter
-						input.newsletter__input.details.details--inset(type="email" placeholder="Enter your email")
+						input.newsletter__input(type="email" placeholder="Enter your email")
 		section.col-sm-6.section--support
 			.support
 				.details.details--inset.details--tight.details--tight-bottom.clearfix
