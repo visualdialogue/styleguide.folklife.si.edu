@@ -151,7 +151,7 @@ gulp.task('jade-common', function() {
     .pipe(changed('./site/common', {extension: '.php'}))
     .pipe(plumber())
     .pipe(jadephp({
-      // pretty: true,
+      pretty: true,
       locals: {
         // title: 'OMG THIS IS THE TITLE'
       }
@@ -161,7 +161,7 @@ gulp.task('jade-common', function() {
 
 // copy for keeping blueprint files similar
 gulp.task('copy', function() {
-    gulp.src('../../styleguide.folklife.si.edu/code/site/common/blueprints/card.yml')
+    gulp.src('../../styleguide.folklife.si.edu/code/site/common/blueprints/*.yml')
       .pipe(gulp.dest('./site/blueprints/'))
 });
 

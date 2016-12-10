@@ -39,6 +39,19 @@
 	}
 }
 
+// folklife - dive deep
+.col-sm-55 {
+	float: left;
+	width: 44%;
+	@include respond-to(fullwidth) {
+		padding-left: 0 !important; // fit the layout alt-grid
+	}
+}
+.col-sm-65 {
+	float: left;
+	width: 56%;
+}
+
 /* Grid System
 -------------------------------------------------- */
   // gutters

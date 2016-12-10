@@ -10,7 +10,6 @@
 	}
 }
 
-
 .border {
 	border-top: 1px solid $black65;
 	&--inset {
@@ -24,6 +23,15 @@
 			margin-left:2rem;
 			margin-right:2rem;
 		}
+	}
+}
+
+.border-full {
+	.card__image-wrapper, .center-box {
+		padding-bottom: 0;
+	}
+	.details {
+		border: 2px solid $black15;
 	}
 }
 
@@ -50,15 +58,17 @@ a.details {
 // details inner includes left and right padding, and less top padding
 .details--inset {
 	// padding: 3vw 2vw 2vw;
-	padding: 2vw 2.5vw 2vw;
-	@include respond-to(break2) {
-		// padding: 1.5vw 1.25vw 1.2vw;
-		padding: 1.5vw 1.25vw 0vw;
-	}
-	@include respond-to(fullwidth) {
-		padding: 2.5rem 2rem 2rem;
-	}
-	@include padding-top(2);
+	// padding: 2vw 2.5vw 2vw;
+	// @include respond-to(break2) {
+	// 	// padding: 1.5vw 1.25vw 1.2vw;
+	// 	padding: 1.5vw 1.25vw 0vw;
+	// }
+	// @include respond-to(fullwidth) {
+	// 	padding: 2.5rem 2rem 2rem;
+	// }
+	@include padding-top(2.5);
+	@include padding-right(2);
+	@include padding-left(2);
 }
 .details--notop {
 	@include respond-to(break2) {padding-top: 0 !important;}
@@ -94,6 +104,7 @@ a.details {
 	}
 }
 .title {
+	display: inline-block; // so a tag doesn't get rid of margins
 }
 .title--serif {
 	@include serif-md;
@@ -109,6 +120,33 @@ a.details {
 }
 .date {@include date;}
 .date-sm {@include date-sm;}
+
+/* #vertical
+-------------------------------------------------- */
+.card--vertical {
+	.title {
+		@include serif-md;
+	}
+}
+
+
+
+/* #audio
+-------------------------------------------------- */
+	.card--audio {
+		.card__image-wrapper {
+			padding-bottom:0; // prevent making gap in outline
+		}
+		.title {
+			@include sans-sm;
+			font-weight: 500;
+			margin-bottom:0;
+		}
+		.details {
+			@include min-height(30);
+		}
+	}
+
 
 /* #video
 -------------------------------------------------- */

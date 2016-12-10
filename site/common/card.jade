@@ -1,22 +1,5 @@
-//- Video Card with video, popup, and play button
-//- -  if ($card->type() == 'video'):
-//- 	li.card.col-xs-6.col-sm-3
-//- 		.video__thumbnail(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= $card->copy() ?>')
-//- 			.center-box
-//- 				- if($src = $card->image($card->img())):
-//- 					a.modal-trigger
-//- 						img.image(src="<?= $src->url() ?>")
-//- 				- endif
-//- 					.icon-play-button.icon-play-button--video.icon-stack
-//- 						.icon-circle
-//- 						.icon-play
-//- 		.details.card__details.details--inset
-//- 			.category!= $card->category()
-//- 			.title.card__title: a!= $card->title()
-//- 			.description.card__description: a!= $card->copy()
-
 //-----------
-	prevent php error if empty var
+	prevent php error if empty vars
 	------------//
 //- excerpt
 - $excerptData = null;
@@ -43,12 +26,31 @@
 	- $showCategory = false;
 - endif 
 
+//- more link
+- if (!isset($more_link)):
+	- $more_link = false;
+- endif;
+
 //- horizontal card
-- if(isset($orientation) && $orientation == 'horizontal'):
-	- $cardOrientation = 'horizontal';
+- if(isset($orientation)):
+	- if($orientation == 'horizontal'):
+		- $cardOrientation = 'horizontal'
+	- elseif($orientation == 'vertical'):
+		- $cardOrientation = 'vertical'
+	- endif 
 - else:
-	- $cardOrientation = 'standard';
+	- $cardOrientation = 'standard'
 - endif 
+
+//- audio card
+- if ($card->type() == 'audio' || ((isset($type)) && ($type == 'audio'))):
+	//- set flag for card type
+	- $audioCard = true;
+	//- make classname for card
+	- $cardTypeData = 'audio';
+- else:
+	- $audioCard = false;
+- endif
 
 
 //- Feature blog entry on festival/blog
@@ -59,7 +61,7 @@
 		- if((isset($video_id)) && ($video_id != '')):
 			.video__thumbnail(data-video-id="<?= $card->video_id() ?>" data-title="<?= $card->title() ?>" data-description="<?= $card->copy() ?>")
 				.center-box
-					- if($src = $card->image($card->img())):
+					- if($src = $card->image()):
 						a.modal-trigger
 							img.card__image(src="<?= $src->url() ?>")
 					- endif
@@ -68,7 +70,7 @@
 							.icon-play
 		- else:
 			.card__image-wrapper
-				- if($src = $card->image($card->img())):
+				- if($src = $card->image()):
 					a(href="<?= $card->url() ?>")
 						img.card__image(src="<?= $src->url() ?>")
 				- endif
@@ -96,7 +98,7 @@
 		.row
 			.border.border--inset
 			.card__image-wrapper.col-sm-6.clearfix(class="")
-				- if($src = $card->image($card->img())):
+				- if($src = $card->image()):
 					img.card__image(src="<?= $src->url() ?>")
 				- endif
 			.card__details.details.col-sm-6.details--inset.details--tight(class="")
@@ -134,7 +136,7 @@
 		- if($video_id != ''):
 			.video__thumbnail(data-video-id="<?= $card->video_id() ?>" data-title="<?= $card->title() ?>" data-description="<?= $card->copy() ?>")
 				.center-box
-					- if($src = $card->image($card->img())):
+					- if($src = $card->image()):
 						a.modal-trigger
 							img.card__image(src="<?= $src->url() ?>")
 					- endif
@@ -143,7 +145,7 @@
 							.icon-play
 		- else:
 			.card__image-wrapper
-				- if($src = $card->image($card->img())):
+				- if($src = $card->image()):
 					a(href="<?= $card->url() ?>")
 						img.card__image(src="<?= $src->url() ?>")
 				- endif
@@ -179,7 +181,7 @@
 	li.special-event.clearfix.card(class="<?= $xs ?> <?= $sm ?> <?= $custom_class ?>")
 		.border
 		.special-event__image
-			- if($src = $card->image($card->img())):
+			- if($src = $card->image()):
 				img(src="<?= $src->url() ?>")
 			- endif
 		.textbox.special-event__textbox
@@ -191,7 +193,7 @@
 
 //- folkways new release
 - elseif ((isset($type)) && ($type == 'new-release')):
-	- if($src = $card->image($card->img())):
+	- if($src = $card->image()):
 		li.col-xs-6.col-sm-2.new-release
 			img(src="<?= $src->url() ?>")
 			.details.details--participate
@@ -201,7 +203,7 @@
 
 //- news item
 - elseif ((isset($type)) && ($type == 'news')):
-	- if($src = $card->image($card->img())):
+	- if($src = $card->image()):
 		li.col-xs-6.col-sm-3
 			img(src="<?= $src->url() ?>")
 			.details.details--participate
@@ -218,12 +220,6 @@
 	- $custom_class = null;
 	- $detailsData = null;
 		
-	//- details for video card
-	//- .details.card__details.details--inset
-	//- 	.category!= $card->category()
-	//- 	.title.card__title: a!= $card->title()
-	//- 	.description.card__description: a!= $card->copy()
-
 	//- Default for album, although widths can still be overwritten
 	- if ((isset($type)) && ($type == 'album')):
 		- $xs = 'col-xs-6'
@@ -244,14 +240,10 @@
 	- if(isset($details)):
 		- $detailsData = $details;
 	- endif
-	//- if excerpt comes through, use it! If not, it's not set anyway
-	//- - if(isset($excerpt)):
-		//- - $excerptData = $excerpt;
-	//- - endif
 
-	- if ((isset($type)) && (($type == 'feature') || ($type == 'featurette'))):
+	//- - if ((isset($type)) && (($type == 'feature') || ($type == 'featurette'))):
 		//- - $detailsData = 'details--inset'
-	- endif
+	//- - endif
 
 	li.card(class="<?= $xs ?> <?= $sm ?> <?= $custom_class ?> card--<?= $cardTypeData ?> card--<?= $cardOrientation ?>")
 	
@@ -260,24 +252,28 @@
 		- endif
 
 			- if ($card->type() == 'video' || ((isset($type)) && ($type == 'video'))):
-				-if ($cardOrientation == 'standard'):
+
+				//- vertical video card
+				-if ($cardOrientation == 'vertical'):
 					.video__thumbnail(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= $card->copy() ?>')
 						.center-box
-							- if($src = $card->image($card->img())):
+							- if($src = $card->image()):
 								.modal-trigger
 									img.image(src="<?= $src->url() ?>")
 							- endif
 								.icon-play-button.icon-play-button--video.icon-stack
 									.icon-circle
 									.icon-play
-					- snippet('card-details', array('card' => $card, 'details' => $detailsData, 'excerpt' => $excerptData, 'showCategory' => $showCategory ))
+					- snippet('card-details', array('card' => $card, 'details' => $detailsData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link ))
+
+				//- horizontal video card
 				- elseif ($cardOrientation == 'horizontal'):
 					.festival-video.clearfix
 						.row
 							.col-sm-6
 								.video__thumbnail(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= $card->copy() ?>')
 									.center-box
-										- if($src = $card->image($card->img())):
+										- if($src = $card->image()):
 											a.modal-trigger
 												img.image(src="<?= $src->url() ?>")
 										- endif
@@ -286,36 +282,20 @@
 												.icon-play
 							//- .textbox.festival-video__textbox.col-sm-6
 							.festival-video__textbox.col-sm-6
-								- snippet('card-details', array('card' => $card, 'details' => $detailsData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'video' => true ))
+								- snippet('card-details', array('card' => $card, 'details' => $detailsData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'video' => true, 'more_link' => $more_link ))
 				- endif
-			//- for switching folklife homepage to video card someday...
-			//- 	//- - if($video->iframe()->isNotEmpty()):
-			//- 	//- 	.iframe-wrapper
-			//- 	//- 		!= $video->iframe()
-			//- 	//- - elseif($src = $page->image($video->img())):
-			//- 	.video__thumbnail(data-video-id='<?= $video->id() ?>' data-title='<?= $video->title() ?>' data-description='<?= $video->copy() ?>')
-			//- 		.center-box
-			//- 			- if($src = $page->image($video->img())):
-			//- 				a.modal-trigger
-			//- 					img.image(src="<?= $src->url() ?>")
-			//- 			- endif
-			//- 				.icon-play-button.icon-play-button--video.icon-stack
-			//- 					.icon-circle
-			//- 					.icon-play
-			//- 	.details
-			//- 		.category!= $video->category()
-			//- 		.title: a(href="<?= $video->url() ?>")!= $video->title()
 			//- Audio card with play feature
-			- elseif ($card->type() == 'audio' || ((isset($type)) && ($type == 'audio'))):
+			- elseif($audioCard):
 			.audio
-				.card__image-wrapper.clearfix(class="")
-					- if($src = $card->image($card->img())):
-						img.card__image(src="<?= $src->url() ?>")
-					- endif
+				- if($src = $card->image()):
+					.card__image-wrapper.clearfix(class="")
+						a(href="<?= $card->url() ?>")
+							img.card__image(src="<?= $src->url() ?>")
+				- endif
 				.details.card__details.details--inset
 					.category.card__category!= $card->category() 
 					.title-wrapper.card__title-wrapper
-						.title: a!= $card->title()
+						a.high.title(href="<?= $card->url() ?>"): span.light: span.er= $card->title()
 						- if('' != $card->audio_album()):
 							.subtitle!= $card->audio_album()
 						- endif
@@ -340,27 +320,23 @@
 				- if (!isset($text_col)):
 					- $text_col = '6';
 				- endif;
-
-				- if (!isset($more_link)):
-					- $more_link = false;
-				- endif;
 				
 				.card__inner
-					ul.row
-						li.high.card__image-wrapper.clearfix(class="col-sm-<?= $img_col ?>")
-							- if($src = $card->image($card->img())):
+					.row
+						.high.card__image-wrapper.clearfix(class="col-sm-<?= $img_col ?>")
+							- if($src = $card->image()):
 								a(href="<?= $card->url() ?>")
 									img.card__image(src="<?= $src->url() ?>")
 							- endif
-						li(class="col-sm-<?= $text_col ?>")
+						div(class="col-sm-<?= $text_col ?>")
 							- snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link ))
 			- else:
 				.card__inner
-					- if($src = $card->image($card->img())):
+					- if($src = $card->image()):
 						.card__image-wrapper.clearfix(class="")
 							a(href="<?= $card->url() ?>")
 								img.card__image(src="<?= $src->url() ?>")
 					- endif
-					- snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory ))
+					- snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link ))
 			- endif
 - endif

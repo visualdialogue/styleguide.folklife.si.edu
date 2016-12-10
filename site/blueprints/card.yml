@@ -20,6 +20,7 @@ fields:
     label: Category
     type: text
     width: 1/2
+    icon: cab
   date:
     label: Date
     type: date
@@ -29,11 +30,13 @@ fields:
     type: select
     options: images
     width: 1/2
+    icon: image
   banner_img:
     label: Banner Image
     type: select
     options: images
     width: 1/2
+    icon: image
   blurb:
     label: Blurb for card
     type: textarea
@@ -54,10 +57,12 @@ fields:
     label: Order Button 1
     type: text
     width: 1/2
+    icon: external-link
   order2:
     label: Order Button 2
     type: text
     width: 1/2
+    icon: external-link
 
   audiosection:
     label: Audio
@@ -66,18 +71,21 @@ fields:
     label: Artist
     type: text
     width: 1/2
+    icon: music
   audio_length:
     label: Audio Length
     type: text
     width: 1/2
+    icon: clock-o
 
   videosection:
     label: Video
     type: headline
   video_id:
-    label: Video ID
+    label: Vimeo Video ID
     type: text
     width: 1/2
+    icon: film
 
   merchandisesection:
     label: Merchandise
@@ -86,3 +94,4 @@ fields:
     label: Price
     type: text
     width: 1/2
+    icon: dollar

@@ -236,8 +236,8 @@ body {
 	@mixin sans-xxs {
 		font-family: $sans;
 		font-weight: 300; // light for acumin
+		// line-height: 1.4;
 		line-height: 1.2;
-		line-height: 1.4;
 	  	font-size: 4vw;
 		@include respond-to(break2) {
 	  		font-size: 1.15vw;
@@ -245,6 +245,7 @@ body {
 		}
 		@include respond-to(fullwidth) {
 			line-height: 1.3;
+			line-height: 1.2;
 	  		font-size: 1.8rem; // oct 19 for fritz
 		}
 	}
@@ -442,7 +443,7 @@ body {
 	@mixin serif-md {
 		font-family: $serif;
 		font-weight: 700;
-		line-height: 1.2;
+		line-height: 1.1;
 	  	font-size: 6vw;
 		@include respond-to(break2) {
 	  		font-size: 1.8vw;
@@ -450,6 +451,7 @@ body {
 		@include respond-to(fullwidth) {
 	  		font-size: 2.8rem;
 		}
+		@include margin-bottom(1);
 	}
 	.serif-md {@include serif-md;}
 
@@ -465,6 +467,7 @@ body {
 		margin-bottom: 0.5rem;
 		margin-bottom: 0;
 		font-size: 2.5vw;
+		position: relative; // keep from being hidden under highlighted title
 		@include respond-to(break2) {
 			font-size: 0.95vw;
 			font-size: 1vw;
@@ -472,7 +475,8 @@ body {
 		}
 		@include respond-to(fullwidth) {
 			font-size: 1.6rem; // acumin pro
-			margin-bottom: 0.5rem;
+			// margin-bottom: 0.5rem;
+			margin-bottom: 0;
 			line-height: 1;
 		}
 	}

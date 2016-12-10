@@ -74,6 +74,10 @@
 		// border-color: #272822;
 		// line-height: 0.7;
 		@include margin-bottom(4);
+
+		-moz-tab-size: 4; /* Code for Firefox */
+		-o-tab-size: 4; /* Code for Opera 10.6-12.1 */
+		tab-size: 4;
 	}
 	// highlight.js code block
 	code.hjls {

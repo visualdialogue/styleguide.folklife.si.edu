@@ -64,6 +64,6 @@
 		.buy-now-button!= $card->order2(), '&nbsp;&#x2192';
 	- endif
 
-	- if(isset($more_link)):
+	- if($more_link):
 		- snippet('more-link')
 	- endif

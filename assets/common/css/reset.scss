@@ -16,6 +16,7 @@ footer, header, hgroup, main, nav, section, summary {
 
 
 // from me
+* {outline:none;}
 a, a:focus { text-decoration: none; color:inherit; outline:none;} // browser and bootstrap reset
 a[href^="tel"] { border:none; } // remove links from telephone numbers
 img { 

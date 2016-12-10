@@ -1,14 +1,12 @@
 title: Collection
-pages: true
+pages: 
+  template: collection
+  template: card
 files: true
 fields:
   title:
     label: Title
     type:  text
   copy:
-    label: Content
-    type:  textarea
-  # img:
-    # label: Image
-    # type: select
-    # options: images
+    label: Introduction
+    type: textarea
