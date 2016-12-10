@@ -33,7 +33,7 @@
           <li class="footer-nav__sub-item"><a href="/specials#support">Support</a></li>
         </ul>
       </li>
-      <li class="footer-nav__main-item col-sm-2"> <a href="/framework" class="footer-nav__title">Framework</a>
+      <li class="footer-nav__main-item col-sm-2"> <a href="/structure" class="footer-nav__title">Structure</a>
         <ul class="footer-nav__list">
           <li class="footer-nav__sub-item"><a href="/framework#sections">Sections</a></li>
           <li class="footer-nav__sub-item"><a href="/framework#half-sections">Half Sections</a></li>
@@ -88,7 +88,5 @@
     </ul>
   </div>
 </footer><!-- jQuery (necessary for Bootstrap's JavaScript plugins) --><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><script src="/assets/js/scripts-min.js?v=<?= time() ?>"></script><script>loadCSS( "/assets/css/folklife.css?v=<?= time() ?>" );</script>
-<!-- highlightjs.org for code syntax highlighting--><script>loadCSS("/assets/css/highlight/styles/monokai-sublime.css");</script>
-<script src="/assets/js/highlight.pack.js"></script>
 </body>
 </html>

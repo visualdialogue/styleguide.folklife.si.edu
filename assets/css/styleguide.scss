@@ -80,11 +80,12 @@
 		tab-size: 4;
 	}
 	// highlight.js code block
-	code.hjls {
-		@include padding-top(3);
-		@include padding-right(0);
-		@include padding-bottom(1);
-		@include padding-left(0);
+	code.hljs {
+		// @include padding-top(3);
+		// @include padding-right(0);
+		// @include padding-bottom(3);
+		// @include padding-left(3);
+		@include padding(3);
 	}
 	.section--typography pre  {
 		@include margin-bottom(8);
@@ -140,6 +141,15 @@
 		}
 		.subtitle {
 			@include sans-sm;
+		}
+	}
+
+/* #structure page
+-------------------------------------------------- */
+	.structure-page {
+		.title-bar {
+			color: white;
+			background-color: $fs-blue;
 		}
 	}
 

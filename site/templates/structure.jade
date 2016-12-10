@@ -2,27 +2,14 @@
 
 #navspacer.navspacer
 
+- snippet('title-bar')
+
 // Typography
 section.container.section--typography.section--first
-	h2.section-title Typography
-	a.anchor-link#typography
+	a.anchor-link#top
 	.section__description
-		pre: code.
-			// Fonts are stored as SASS mixins so they can be used anywhere in
-			// the .scss file without concern of being overwritten by the cascade. 
-			// Read more here: https://sass-guidelin.es/#mixins
-			
-			   
-			/* Implement the mixin by targeting a specific .title class like so: */
-			.archives-page {
-				.title {
-					@include sans-xl;
-				}
-			}
-			   
-			/* or, if you must, use a class with the same name of the font style and size
-			* although it doesn't seem as clean as the previous method */
-			.sans-xl {@include sans-xl;}	
+		//- pre: code=
+			code= '<div></div>'
 
 	//- h1 h1
 	//- h2 h2
@@ -56,33 +43,35 @@ section.container.section--typography.section--first
 						margin-bottom: 4.2rem;
 					}
 				}
+
 		.col-md-6
 	.row
 		.col-md-4
 			.category Category or Tag
-		.col-md-7
-			pre: code.
-				// Category or Tag
-				@mixin category {
-					text-transform: uppercase;
-					font-family: $sansWide;
-					color: $black65;
-					font-weight: 300;
-					letter-spacing: 1px;
-					margin-bottom: 0.5rem;
-					margin-bottom: 0;
-					font-size: 2.5vw;
-					@include respond-to(break2) {
-						font-size: 0.95vw;
-						font-size: 1vw;
-						margin-bottom: 0.4vw;
-					}
-					@include respond-to(fullwidth) {
-						font-size: 1.6rem; // acumin pro
-						margin-bottom: 0.5rem;
-						line-height: 1;
-					}
+		.col-md-7.
+			<pre><code class="scss">
+			// Category or Tag
+			@mixin category {
+				text-transform: uppercase;
+				font-family: $sansWide;
+				color: $black65;
+				font-weight: 300;
+				letter-spacing: 1px;
+				margin-bottom: 0.5rem;
+				margin-bottom: 0;
+				font-size: 2.5vw;
+				@include respond-to(break2) {
+					font-size: 0.95vw;
+					font-size: 1vw;
+					margin-bottom: 0.4vw;
 				}
+				@include respond-to(fullwidth) {
+					font-size: 1.6rem; // acumin pro
+					margin-bottom: 0.5rem;
+					line-height: 1;
+				}
+			}
+			</code></pre>
 		.col-md-6
 
 // Sans
@@ -92,120 +81,126 @@ section.container
 	.row
 		.col-md-4
 			.sans-xl Extra Large Sans
-		.col-md-7
-			pre: code.
-				// Extra Large Sans
-				@mixin sans-xl {
-					font-family: $sans;
-					font-size: 5vw;
-					@include respond-to(break2) {
-						font-size: 2.5vw;
-						line-height: 1.2;
-					}
-					@include respond-to(fullwidth) {
-						font-size: 4rem;
-					}
+		.col-md-7.
+			<pre><code class="scss">
+			// Extra Large Sans
+			@mixin sans-xl {
+				font-family: $sans;
+				font-size: 5vw;
+				@include respond-to(break2) {
+					font-size: 2.5vw;
+					line-height: 1.2;
 				}
+				@include respond-to(fullwidth) {
+					font-size: 4rem;
+				}
+			}
+			</code></pre>
 	.row
 		.col-md-4
 			.sans-lg Large Sans
-		.col-md-7
-			pre: code.
-				// Large Sans
-				@mixin sans-lg {
-					font-family: $sans;
-					font-weight: 300;
-					font-size: 5vw;
-					@include respond-to(break2) {
-						font-size: 1.9vw;
-						line-height: 1.2;
-					}
-					@include respond-to(fullwidth) {
-						font-size: 3.5rem;
-					}
+		.col-md-7.
+			<pre><code class="scss">
+			// Large Sans
+			@mixin sans-lg {
+				font-family: $sans;
+				font-weight: 300;
+				font-size: 5vw;
+				@include respond-to(break2) {
+					font-size: 1.9vw;
+					line-height: 1.2;
 				}
+				@include respond-to(fullwidth) {
+					font-size: 3.5rem;
+				}
+			}
+			</code></pre>
 			
 	.row
 		.col-md-4
 			.sans-md Medium Sans
-		.col-md-7
-			pre: code.
-				// Medium Sans
-				@mixin sans-md {
-					font-family: $sans;
-					font-weight: 300; // light for acumin
-					line-height: 1.2;
-					font-size: 5vw;
-					@include respond-to(break2) {
-						font-size: 1.92vw;
-						line-height: 1.28;
-					}
-					@include respond-to(fullwidth) {
-						font-size: 3rem;
-					}
+		.col-md-7.
+			<pre><code class="scss">
+			// Medium Sans
+			@mixin sans-md {
+				font-family: $sans;
+				font-weight: 300; // light for acumin
+				line-height: 1.2;
+				font-size: 5vw;
+				@include respond-to(break2) {
+					font-size: 1.92vw;
+					line-height: 1.28;
 				}
+				@include respond-to(fullwidth) {
+					font-size: 3rem;
+				}
+			}
+			</code></pre>
 	.row
 		.col-md-4
 			.sans-sm Small Sans
-		.col-md-7
-			pre: code.
-				// Small Sans
-				@mixin sans-sm {
-					font-family: $sans;
-					font-weight: 300; // light for acumin
-					line-height: 1.2;
-					font-size: 4vw;
-					@include respond-to(break2) {
-						font-size: 1.6vw;
-						line-height: 1.3;
-					}
-					@include respond-to(fullwidth) {
-						font-size: 2.5rem;
-						line-height: 1.3;
-					}
+		.col-md-7.
+			<pre><code class="scss">
+			// Small Sans
+			@mixin sans-sm {
+				font-family: $sans;
+				font-weight: 300; // light for acumin
+				line-height: 1.2;
+				font-size: 4vw;
+				@include respond-to(break2) {
+					font-size: 1.6vw;
+					line-height: 1.3;
 				}
+				@include respond-to(fullwidth) {
+					font-size: 2.5rem;
+					line-height: 1.3;
+				}
+			}
+			</code></pre>
 	.row
 		.col-md-4
 			.sans-xs Extra Small Sans
-		.col-md-7
-			pre: code.
-				// Extra Small Sans
-				@mixin sans-xs {
-					font-family: $sans;
-					font-weight: 300; // light for acumin
-					line-height: 1.2;
-					font-size: 3.5vw;
-					@include respond-to(break2) {
-						font-size: 1.3vw;
-						line-height: 1.3;
-					}
-					@include respond-to(fullwidth) {
-						font-size: 2rem;
-						line-height: 1.3;
-					}
+		.col-md-7.
+			<pre><code class="scss">
+			// Extra Small Sans
+			@mixin sans-xs {
+				font-family: $sans;
+				font-weight: 300; // light for acumin
+				line-height: 1.2;
+				font-size: 3.5vw;
+				@include respond-to(break2) {
+					font-size: 1.3vw;
+					line-height: 1.3;
 				}
+				@include respond-to(fullwidth) {
+					font-size: 2rem;
+					line-height: 1.3;
+				}
+			}
+			</code></pre>
 
 	.row
 		.col-md-4
 			.sans-xxs Extra Extra Small Sans
-		.col-md-7
-			pre: code.
-				// Extra Extra Small Sans
-				@mixin sans-xxs {
-					font-family: $sans;
-					font-weight: 300; // light for acumin
-					line-height: 1.2;
-					line-height: 1.4;
-					font-size: 4vw;
-					@include respond-to(break2) {
-						font-size: 1.15vw;
-						line-height: 1.3;
-					}
-					@include respond-to(fullwidth) {
-						line-height: 1.3;
-						font-size: 1.8rem; // oct 19 for fritz
-					}
+		.col-md-7.
+			<pre><code class="scss">
+			// Extra Extra Small Sans
+			@mixin sans-xxs {
+				font-family: $sans;
+				font-weight: 300; // light for acumin
+				line-height: 1.2;
+				line-height: 1.4;
+				font-size: 4vw;
+				@include respond-to(break2) {
+					font-size: 1.15vw;
+					line-height: 1.3;
 				}
+				@include respond-to(fullwidth) {
+					line-height: 1.3;
+					font-size: 1.8rem; // oct 19 for fritz
+				}
+			}
+			</code></pre>
 	
 // Serif
 section.container
@@ -214,9 +209,8 @@ section.container
 	.row
 		.col-md-4
 			.serif-xxl Extra Extra Large Serif
-		.col-md-7
-			pre: code.
-			
+		.col-md-7.
+			<pre><code class="scss">
 			
 
 
@@ -239,9 +233,8 @@ section.container
 	.row
 		.col-md-4
 			.serif-xl Extra Large Serif
-		.col-md-7
-			pre: code.
-			
+		.col-md-7.
+			<pre><code class="scss">
 			
 
 
@@ -262,9 +255,8 @@ section.container
 	.row
 		.col-md-4
 			.serif-lg Large Serif
-		.col-md-7
-			pre: code.
-			
+		.col-md-7.
+			<pre><code class="scss">
 			
 
 
@@ -285,9 +277,8 @@ section.container
 	.row
 		.col-md-4
 			.serif-md Medium Serif
-		.col-md-7
-			pre: code.
-			
+		.col-md-7.
+			<pre><code class="scss">
 			
 
 

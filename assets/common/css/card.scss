@@ -9,9 +9,18 @@
 		@include margin-top(1); // add margin back in b/c no title above in horizontal layout
 	}
 }
+.card.col-xs-6 {
+	@include respond-to(break2max) {
+		// line 'em up!!!
+		&:nth-of-type(2n + 1) {
+			clear:left;
+		}
+	}
+}
 
 .border {
-	border-top: 1px solid $black65;
+	// border-top: 1px solid $black65;
+	border-top: 2px solid $black65;
 	&--inset {
 		margin-left:2rem;
 		margin-right:2rem;
@@ -105,6 +114,7 @@ a.details {
 }
 .title {
 	display: inline-block; // so a tag doesn't get rid of margins
+	width: 100%; // text align center does exactly that
 }
 .title--serif {
 	@include serif-md;

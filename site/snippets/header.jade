@@ -46,7 +46,15 @@ head
 	//- <link rel="preload" href="assets/css/folklife.css?v=<?= time() ?>" as="style" onload="this.rel='stylesheet'">
 	//- no js fallback for rest of css
 	//- <noscript><link href="assets/css/folklife.css?v=<?= time() ?>" rel="stylesheet"></noscript>
-
+	
+	//- syntax highlighting, from highlightjs.org
+	//- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/solarized-dark.min.css">
+	//- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/monokai-sublime.min.css">
+	//- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
+	// highlightjs.org for code syntax highlighting
+	<link href="/assets/css/highlight/styles/monokai-sublime.css" type="text/css" rel="stylesheet">
+	//- <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+	<script src="/assets/js/highlight.pack.js"></script>
 
 	//- out for firefox and safri, debug later
 	<link href="/assets/css/styleguide.css?v=<?= time() ?>" type="text/css" rel="stylesheet">
@@ -109,7 +117,7 @@ nav.navbar
 						li.header-nav__sub-item: a(href="/specials#become-a-member") Become a Member
 						li.header-nav__sub-item: a(href="/specials#support") Support
 				li.header-nav__main-item.col-sm-2 
-					a.header-nav__title(href="/framework") Framework
+					a.header-nav__title(href="/structure") Structure
 					ul.header-nav__list
 						li.header-nav__sub-item: a(href="/framework#sections") Sections
 						li.header-nav__sub-item: a(href="/framework#half-sections") Half Sections

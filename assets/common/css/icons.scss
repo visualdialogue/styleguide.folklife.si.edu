@@ -188,7 +188,8 @@
 				@include respond-to(fullwidth) {
 				// line-height: 2.5;
 				// height: 1.7rem;
-					line-height: 0.95; // for vert alignment with more text
+					// line-height: 0.95; // for vert alignment with more text
+					line-height: 0.75; // for vert alignment with more text
 				}
 			&:before {
 				font-size: 4vw;

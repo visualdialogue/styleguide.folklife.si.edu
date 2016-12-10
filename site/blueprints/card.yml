@@ -25,6 +25,11 @@ fields:
     label: Date
     type: date
     width: 1/2
+  time:
+    label: Time
+    type: time
+    width: 1/2
+    interval: 30
   img:
     label: Image
     type: select

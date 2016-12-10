@@ -17,7 +17,10 @@
 		.date!= $card->date('M d, Y')
 	- endif
 
-	a.high(href="<?= $card->url() ?>").title.card__title: span.light: span.er= $card->title()
+	//- put title below image by default
+	- if(!$titlePositionTop):
+		a.high(href="<?= $card->url() ?>").title.card__title: span.light: span.er= $card->title()
+	- endif
 
 	//- subtitle
 	- if('' != $card->subtitle()):	

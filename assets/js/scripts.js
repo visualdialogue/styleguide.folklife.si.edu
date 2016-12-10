@@ -230,6 +230,7 @@ $(document).ready(function () {
 /* Syntax Highlighting
  * from highlightjs.org */
  	// start highlighter on page load
-	hljs.configure({tabReplace: ' '});
-	hljs.initHighlighting();
+	// hljs.configure({tabReplace: ' '});
+	hljs.initHighlightingOnLoad();
+	console.log(hljs.listLanguages());
 });

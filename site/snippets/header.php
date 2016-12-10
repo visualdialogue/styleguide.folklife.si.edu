@@ -21,7 +21,7 @@
   <!-- Font Awesome icons by Dave Gandy --><style>
   /*- include './assets/css/critical.css'*/
   </style>
-  <link href="/assets/css/styleguide.css?v=<?= time() ?>" type="text/css" rel="stylesheet">
+  <!-- highlightjs.org for code syntax highlighting--><link href="/assets/css/highlight/styles/monokai-sublime.css" type="text/css" rel="stylesheet"><script src="/assets/js/highlight.pack.js"></script><link href="/assets/css/styleguide.css?v=<?= time() ?>" type="text/css" rel="stylesheet">
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -79,7 +79,7 @@
             <li class="header-nav__sub-item"><a href="/specials#support">Support</a></li>
           </ul>
         </li>
-        <li class="header-nav__main-item col-sm-2"> <a href="/framework" class="header-nav__title">Framework</a>
+        <li class="header-nav__main-item col-sm-2"> <a href="/structure" class="header-nav__title">Structure</a>
           <ul class="header-nav__list">
             <li class="header-nav__sub-item"><a href="/framework#sections">Sections</a></li>
             <li class="header-nav__sub-item"><a href="/framework#half-sections">Half Sections</a></li>

@@ -26,6 +26,13 @@
 	- $showCategory = false;
 - endif 
 
+//- passed vars
+- if(isset($titlePosition) && $titlePosition == 'top'):
+	- $titlePositionTop = true;
+- else:
+	- $titlePositionTop = false;
+- endif 
+
 //- more link
 - if (!isset($more_link)):
 	- $more_link = false;
@@ -43,7 +50,7 @@
 - endif 
 
 //- audio card
-- if ($card->type() == 'audio' || ((isset($type)) && ($type == 'audio'))):
+- if (('' != $card->type()) && ($card->type() == 'audio') || ((isset($type)) && ($type == 'audio'))):
 	//- set flag for card type
 	- $audioCard = true;
 	//- make classname for card
@@ -151,46 +158,6 @@
 				- endif
 		- endif
 
-
-//- festival home page special event entry
-//- Audio card with play feature
-- elseif ((isset($type)) && ($type == 'special-event')):
-
-	//- separate logic from template, from http://stackoverflow.com/a/14415569
-	//- start columns as non-existent because not set
-	- $xs = null;
-	- $sm = null;
-	- $custom_class = null;
-	- $detailsData = null;
-
-	//- if column widths are set, make into appropriate size class name for display later
-	- if(isset($col_xs)):
-		- $xs = 'col-xs-'.$col_xs;
-	- endif
-	- if(isset($col_sm)):
-		- $sm = 'col-sm-'.$col_sm;
-	- endif
-	- if(isset($classname)):
-		- $custom_class = $classname;
-	- endif
-	- if(isset($details)):
-		- $detailsData = $details;
-	- endif
-
-
-	li.special-event.clearfix.card(class="<?= $xs ?> <?= $sm ?> <?= $custom_class ?>")
-		.border
-		.special-event__image
-			- if($src = $card->image()):
-				img(src="<?= $src->url() ?>")
-			- endif
-		.textbox.special-event__textbox
-			.details.details--tight
-				.date!= $card->date('F jS')
-				.time!= $card->time()
-				.title: a!= $card->title()
-				.description: != excerpt($card->copy(), 20, 'words')
-
 //- folkways new release
 - elseif ((isset($type)) && ($type == 'new-release')):
 	- if($src = $card->image()):
@@ -253,21 +220,8 @@
 
 			- if ($card->type() == 'video' || ((isset($type)) && ($type == 'video'))):
 
-				//- vertical video card
-				-if ($cardOrientation == 'vertical'):
-					.video__thumbnail(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= $card->copy() ?>')
-						.center-box
-							- if($src = $card->image()):
-								.modal-trigger
-									img.image(src="<?= $src->url() ?>")
-							- endif
-								.icon-play-button.icon-play-button--video.icon-stack
-									.icon-circle
-									.icon-play
-					- snippet('card-details', array('card' => $card, 'details' => $detailsData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link ))
-
 				//- horizontal video card
-				- elseif ($cardOrientation == 'horizontal'):
+				-if ($cardOrientation == 'horizontal'):
 					.festival-video.clearfix
 						.row
 							.col-sm-6
@@ -282,7 +236,22 @@
 												.icon-play
 							//- .textbox.festival-video__textbox.col-sm-6
 							.festival-video__textbox.col-sm-6
-								- snippet('card-details', array('card' => $card, 'details' => $detailsData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'video' => true, 'more_link' => $more_link ))
+								- snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'video' => true, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop ))
+
+				//- vertical video card
+				-else:
+					.video__thumbnail(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= $card->copy() ?>')
+						.center-box
+							- if($src = $card->image()):
+								.modal-trigger
+									img.image(src="<?= $src->url() ?>")
+							- endif
+								.icon-play-button.icon-play-button--video.icon-stack
+									.icon-circle
+									.icon-play
+					-snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop ))
+
+
 				- endif
 			//- Audio card with play feature
 			- elseif($audioCard):
@@ -329,14 +298,19 @@
 									img.card__image(src="<?= $src->url() ?>")
 							- endif
 						div(class="col-sm-<?= $text_col ?>")
-							- snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link ))
+							- snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop ))
 			- else:
 				.card__inner
+					//- put title above image if set to top
+					- if($titlePositionTop):
+						a.high(href="<?= $card->url() ?>").title.card__title: span.light: span.er= $card->title()
+					- endif
+
 					- if($src = $card->image()):
 						.card__image-wrapper.clearfix(class="")
 							a(href="<?= $card->url() ?>")
 								img.card__image(src="<?= $src->url() ?>")
 					- endif
-					- snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link ))
+					- snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop ))
 			- endif
 - endif
