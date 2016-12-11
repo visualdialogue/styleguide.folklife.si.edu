@@ -373,15 +373,22 @@
 
 	.copy-columns {
 		@include respond-to(break2) {
-			-webkit-column-count: 2; /* Chrome, Safari, Opera */
-			-moz-column-count: 2; /* Firefox */
+			-webkit-column-count: 2; // Chrome, Safari, Opera
+			-moz-column-count: 2; // Firefox
 			column-count: 2;
+
 
 			-webkit-column-gap: 40px; /* Chrome, Safari, Opera */
 			-moz-column-gap: 40px; /* Firefox */
 			column-gap: 40px;
 			
 			.card {
+				-webkit-column-break-inside: avoid;
+				-moz-column-break-inside: avoid;
+				column-break-inside: avoid;
+				
+				-webkit-break-inside: avoid;
+				-moz-break-inside: avoid;
 				break-inside: avoid;
 			}
 		}
@@ -389,5 +396,6 @@
 
 	.subcollection {
 		@include padding-bottom(1.5); // not margin b/c margin carries over on column breaks
+		display: inline-block; // prevent column overhang
 	}
 

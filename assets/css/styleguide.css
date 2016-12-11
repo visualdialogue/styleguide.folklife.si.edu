@@ -9074,9 +9074,7 @@ hr {
 @media only screen and (min-width: 53.25em) {
   .copy-columns {
     -webkit-column-count: 2;
-    /* Chrome, Safari, Opera */
     -moz-column-count: 2;
-    /* Firefox */
     column-count: 2;
     -webkit-column-gap: 40px;
     /* Chrome, Safari, Opera */
@@ -9084,10 +9082,16 @@ hr {
     /* Firefox */
     column-gap: 40px; }
     .copy-columns .card {
+      -webkit-column-break-inside: avoid;
+      -moz-column-break-inside: avoid;
+      column-break-inside: avoid;
+      -webkit-break-inside: avoid;
+      -moz-break-inside: avoid;
       break-inside: avoid; } }
 
 .subcollection {
-  padding-bottom: 1.875vw; }
+  padding-bottom: 1.875vw;
+  display: inline-block; }
   @media only screen and (min-width: 53.25em) {
     .subcollection {
       padding-bottom: 0.9375vw; } }
