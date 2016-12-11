@@ -163,6 +163,8 @@ gulp.task('jade-common', function() {
 gulp.task('copy', function() {
     gulp.src('../../styleguide.folklife.si.edu/code/site/common/blueprints/*.yml')
       .pipe(gulp.dest('./site/blueprints/'))
+    gulp.src('../../styleguide.folklife.si.edu/code/site/common/**/*.php')
+      .pipe(gulp.dest('./site'));
 });
 
 // php
@@ -241,9 +243,10 @@ gulp.task('serve', ['jade', 'styles', 'js'], function() {
   });
 
     gulp.watch('site/**/*.jade',['jade-watch']);
-    gulp.watch('site/common/*.jade',['jade-common']);
+    // gulp.watch('site/common/*.jade',['jade-common']);
     gulp.watch('bower_components/bootstrap/less/*.less',['less']);
     gulp.watch('site/common/blueprints/*.yml',['copy']);
+    gulp.watch('site/common/**/*.php',['copy']);
     gulp.watch('assets/css/*.scss',['styles']);
     gulp.watch('assets/common/css/*.scss',['styles']);
     gulp.watch('assets/common/*.scss',['styles']);
