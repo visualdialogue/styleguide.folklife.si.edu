@@ -53,12 +53,16 @@
 			@include respond-to(break2) {
 				width: 46.45%; // 314px / 676px
 				line-height: 1.25;
+				height: 9.6vw;
 			}
 			@include padding-top(1.6);
 			@include padding-right(2);
 			@include padding-bottom(2);
 			@include padding-left(2);
-			@include height(14);
+			@include respond-to(fullwidth) {
+				height: 14rem;
+			}
+
 		}
 		&__button {
 			background-color: $black40;

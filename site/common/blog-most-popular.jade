@@ -1,0 +1,8 @@
+h2.blog-sidebar__header Most Popular
+//- get all articles marked popular
+- $n=0;
+-foreach($pages->find('blog')->children()->visible()->filterBy('tags', 'popular', ',') as $entry): $n++
+	div.blog-sidebar__feature
+		a.high.title(data-number="<?= $n ?>" href="<?= $entry->url() ?>")
+			span.light: span.er= $entry->title()
+-endforeach

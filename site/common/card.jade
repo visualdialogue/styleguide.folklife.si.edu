@@ -20,6 +20,13 @@
 	- $date = true;
 -endif
 
+//- author
+-if(isset($author) && $author === false):
+	- $author = false;
+- else:
+	- $author = true;
+-endif
+
 //- store cardtype if exists, make null if not so other functions will complete
 - $cardTypeData = null;
 -if(isset($type)):
@@ -68,41 +75,41 @@
 
 //- Feature blog entry on festival/blog
 -if ((isset($type)) && ($type == 'blog-features')):
-	.card.blog-article.blog-article--feature.blog-article--vertical.clearfix
+	//- .card.blog-article.blog-article--feature.blog-article--vertical.clearfix
 
-		//-if video is set, add data to card tag for video remodal
-		-if((isset($video_id)) && ($video_id != '')):
-			.video__thumbnail(data-video-id="<?= $card->video_id() ?>" data-title="<?= $card->title() ?>" data-description="<?= $card->copy() ?>")
-				.center-box
-					-if($src = $card->image()):
-						a.modal-trigger
-							img.card__image(src="<?= $src->url() ?>")
-					-endif
-						.icon-play-button.icon-play-button--video.icon-stack
-							.icon-circle
-							.icon-play
-		//- - else:
-			.card__image-wrapper
-				-if($src = $card->image()):
-					a(href="<?= $card->url() ?>")
-						img.card__image(src="<?= $src->url() ?>")
-				-endif
-		-endif
+	//- 	//-if video is set, add data to card tag for video remodal
+	//- 	-if((isset($video_id)) && ($video_id != '')):
+	//- 		.video__thumbnail(data-video-id="<?= $card->video_id() ?>" data-title="<?= $card->title() ?>" data-description="<?= $card->copy() ?>")
+	//- 			.center-box
+	//- 				-if($src = $card->image()):
+	//- 					a.modal-trigger
+	//- 						img.card__image(src="<?= $src->url() ?>")
+	//- 				-endif
+	//- 					.icon-play-button.icon-play-button--video.icon-stack
+	//- 						.icon-circle
+	//- 						.icon-play
+	//- 	//- - else:
+	//- 		.card__image-wrapper
+	//- 			-if($src = $card->image()):
+	//- 				a(href="<?= $card->url() ?>")
+	//- 					img.card__image(src="<?= $src->url() ?>")
+	//- 			-endif
+	//- 	-endif
 
-		.card__details.details(class="")
-			.category
-				!= $card->festival(), ', ', $card->program();
-			//- show card author if it isn't blank
-			.title.card__title: a(href="<?= $card->url() ?>")!= $card->title()
-			.date.date-sm!= $card->date('F jS, Y'), e('' != $card->author(), ' | ' . $card->author()), ' | 0 comments'
-			-if (isset($excerptData)):
-				.description.card__description.link-underline
-					p!= excerpt($card->copy()->kt(), $excerptData, 'words')
-			- else:
-				.description.blog-article__description.link-underline!= $card->copy()->kt()
-			-endif
+	//- 	.card__details.details(class="")
+	//- 		.category
+	//- 			!= $card->festival(), ', ', $card->program();
+	//- 		//- show card author if it isn't blank
+	//- 		.title.card__title: a(href="<?= $card->url() ?>")!= $card->title()
+	//- 		.date.date-sm!= $card->date('F jS, Y'), e('' != $card->author(), ' | ' . $card->author()), ' | 0 comments'
+	//- 		-if (isset($excerptData)):
+	//- 			.description.card__description.link-underline
+	//- 				p!= excerpt($card->copy()->kt(), $excerptData, 'words')
+	//- 		- else:
+	//- 			.description.blog-article__description.link-underline!= $card->copy()->kt()
+	//- 		-endif
 
-			-snippet('more-link')
+	//- 		-snippet('more-link')
 
 //- horizontal blog entry
 //- Audio card with play feature
@@ -241,21 +248,33 @@
 												.icon-circle
 												.icon-play
 							//- .textbox.festival-video__textbox.col-sm-6
-							.festival-video__textbox.col-sm-6
-								-snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'video' => true, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop, 'type' => $cardTypeData, 'date' => $date ))
+
+							//- horizontal wrapper for festival programs page sidebar
+							.festival-video__textbox.horizontal-details-wrapper.col-sm-6
+								-snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'video' => true, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop, 'type' => $cardTypeData, 'date' => $date, 'author' => $author ))
 
 				//- vertical video card
 				-else:
-					.video__thumbnail(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= $card->copy() ?>')
-						.center-box
-							-if($src = $card->image()):
-								.modal-trigger
-									img.image(src="<?= $src->url() ?>")
-							-endif
-								.icon-play-button.icon-play-button--video.icon-stack
-									.icon-circle
-									.icon-play
-					-snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop, 'type' => $cardTypeData, 'date' => $date ))
+
+					//- put title above image if set to top
+					-if($titlePositionTop):
+						//- date
+						-if('' != $card->date() && $cardTypeData != 'blog' && $date):
+							.date!= $card->date('M d, Y')
+						-endif
+						a.high(href="<?= $card->url() ?>").title.card__title: span.light: span.er= $card->title()
+					-endif
+
+						.video__thumbnail(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= $card->copy() ?>')
+							.center-box
+								-if($src = $card->image()):
+									.modal-trigger
+										img.image(src="<?= $src->url() ?>")
+								-endif
+									.icon-play-button.icon-play-button--video.icon-stack
+										.icon-circle
+										.icon-play
+						-snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop, 'type' => $cardTypeData, 'date' => $date, 'author' => $author ))
 
 
 				-endif
@@ -316,11 +335,15 @@
 							-endif
 						//- class name below for sidebar of programs page
 						.horizontal-details-wrapper(class="col-sm-<?= $text_col ?>")
-							-snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop, 'type' => $cardTypeData, 'date' => $date ))
+							-snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop, 'type' => $cardTypeData, 'date' => $date, 'author' => $author ))
 			- else:
 				.card__inner
 					//- put title above image if set to top
 					-if($titlePositionTop):
+						//- date
+						-if('' != $card->date() && $cardTypeData != 'blog' && $date):
+							.date!= $card->date('M d, Y')
+						-endif
 						a.high(href="<?= $card->url() ?>").title.card__title: span.light: span.er= $card->title()
 					-endif
 
@@ -329,6 +352,6 @@
 							a(href="<?= $card->url() ?>")
 								img.card__image(src="<?= $src->url() ?>")
 					-endif
-					-snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop, 'type' => $cardTypeData, 'date' => $date ))
+					-snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop, 'type' => $cardTypeData, 'date' => $date, 'author' => $author ))
 			-endif
 -endif
