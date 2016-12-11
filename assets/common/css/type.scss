@@ -604,7 +604,7 @@ body {
 
 /* CSS type helper classes
 -------------------------------------------------- */
-	.copy {
+	.content {
 		h3 {
 			@include serif-lg;
 		}
@@ -623,7 +623,7 @@ body {
 			// font-style: italic;
 			// @include margin-bottom(2);
 			@include padding-bottom(2); // not margin because then when using columns, the margin carries over!!!, from http://stackoverflow.com/a/12503808
-			font-weight: 200;
+			// font-weight: 200;
 		}
 	}
 

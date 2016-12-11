@@ -1,0 +1,297 @@
+/* Festival Program page
+-------------------------------------------------- */
+	.basque-americans-page {
+		.section-title {
+			color: $fs-red;
+		}
+	}
+	.program-category-page {
+		.title {
+			@include serif-lg;
+		}
+		.subtitle {
+			display: none;
+		}
+		.byline {
+			@include sans-sm;
+			font-weight: 600;
+			@include margin-bottom(4);
+		}
+		.description p {
+			@include sans-md;
+		}
+
+		.program-feature {
+			figure {
+				margin: 0;
+			}
+		}
+		figure {
+			@include margin-top(4);
+			@include margin-bottom(4);
+		}
+		figcaption {
+			color: $black60;
+			@include sans-xxs;
+			@include margin-top(2);
+		}
+	}
+	.program-page, .program-category-page {
+
+		figure {
+			position: relative; // contain figcaption
+		}
+		figcaption {
+			position: absolute;
+			@include padding-top(1.5);
+			@include padding-right(1);
+			@include padding-bottom(1.5);
+			@include padding-left(2);
+			bottom: 0;
+			left: 0;
+			color: white;
+			background-color: $black50;
+			@include sans-xxs;
+			width: 100%;
+
+			cursor: pointer;
+
+			visibility: hidden; // initial hide
+			// @include width(2); // only show enough for plus sign
+			// @include height(2); // only show enough for plus sign
+			// display: none; // initial hide
+			// plus sign
+			@include respond-to(break2max) {
+				min-height: 4rem;
+			}
+			&:after {
+				display: block;
+				content: "+";
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				background-color: $black50;
+				color: white;
+				// @include padding-top(0);
+				@include padding-right(0.5);
+				@include padding-bottom(0.8);
+				@include padding-left(0.5);
+				@include margin-top(-5);
+				@include sans-xl;
+				line-height: 0.8 !important;
+				visibility: visible; // initial show, from http://stackoverflow.com/a/4912823/4504073
+				@include respond-to(break2max) {
+					width: 4rem;
+					height: 4rem;
+					font-size: 3rem;
+					text-align: center;
+					padding-top: 0.5rem;
+				}
+			}
+			// minus sign. Need to use other pseudo element b/c chrome not updating content from :after
+			&.minus-sign:after {
+				display: none;
+			}
+			&.minus-sign:before {
+				content: "–";
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				@include right(0.5);
+				// background-color: $black50;
+				color: white;
+				// @include padding-top(0);
+				@include padding-right(0.2);
+				@include padding-bottom(0.8);
+				@include padding-left(0.5);
+				@include margin-top(-5);
+				@include sans-xl;
+				line-height: 0.8 !important;
+				visibility: visible; // initial show, counteracts parent visiblity hidden. From http://stackoverflow.com/a/4912823/4504073
+				@include respond-to(break2max) {
+					width: 4rem;
+					height: 4rem;
+					font-size: 3rem;
+					text-align: center;
+					padding-top: 0.5rem;
+				}
+			}
+		}
+	}
+
+	.ms-header {
+		@include margin-bottom(4);
+		.title-bar {
+			// height:195px;
+			// @include respond-to(break2) {height:17vw;}
+			// @include respond-to(fullwidth) {height:19.5rem;}
+		}
+		.title-height {
+			height:6rem;
+			@include respond-to(break2) {height:8.7vw;}
+			@include respond-to(fullwidth) {height:13.7rem;}
+		}
+		.page-title {
+			color: white;
+		}
+		.hr--thin {
+			margin: 0;
+			background-image:url(/assets/images/hr--thin4.png);
+			// width: 50%;
+		}
+		.subtitle-height {
+			height:5rem;
+			@include respond-to(break2) {height:3.2vw;}
+			@include respond-to(fullwidth) {height:4.9rem;}
+		}
+		.page-subtitle {
+			@include sans-md;
+			font-weight: 600;
+			color: $basque-green;
+			text-transform: uppercase;
+			margin-top: -1px; // eyeball center
+		}
+		.basque {
+			background-color: $basque-red;
+		}
+		&__image {
+			@include margin-top(4);
+		}
+		&__inner {
+			position: relative; // contain caption
+			figcaption {
+				@include padding-top(2);
+				@include padding-right(2);
+				@include padding-bottom(1);
+				@include padding-left(2);
+				background-color: rgba($black70, 0.9);
+			}
+		}
+	}
+	.ms-introduction {
+		@include margin-bottom(3);
+		.section-title {
+			color: $basque-red;
+			@include margin-bottom(3.1);
+		}
+		&__blurb {
+			@include sans-md;
+			@include margin-bottom(2);
+		}
+		&__credits {
+			@include sans-xxs;
+			color: $black50;
+			@include margin-top(5);
+		}
+		img {
+			@include margin-top(2.7);
+			@include margin-bottom(3.3);
+		}
+		p {
+			// @include margin-bottom(1.4);
+		}
+	}
+	.ms-sidebar {
+		&__logo {
+			@include margin-bottom(4.2);
+		}
+		&__nav {
+			@include margin-bottom(4);
+		}
+		.ms-sidebar__section-title {
+			@include sidebarBorderTop;
+			@include sans-sm;
+			color: $black70;
+			border-color: $fs-green;
+			&.active, &:hover {
+				background-color: $black10;
+			}
+			&.small {
+				@include sans-xxs;
+				color: $black50;
+				text-transform: uppercase;
+			}
+			&:last-of-type {
+				@include sidebarBorderBottom;
+				border-color: $fs-green;
+			}
+			a {
+				display: block;
+				@include padding-top(0.8);
+				@include padding-bottom(0.8);
+				@include padding-left(1.6);
+			}
+			a:hover {
+				color: $black70;
+
+			}
+		}
+	}
+	.related-content {
+		.blog-sidebar__header {
+			margin-left: 0;
+		}
+		li {
+			@include margin-bottom(4);
+		}
+		.title {
+			@include sans-xxs;
+			font-weight: 700;
+		}
+		.image-wrapper {
+			@include col;
+			width: 46%;
+		}
+		.details-wrapper--horizontal {
+			@include padding-left(0);
+		}
+		.details {
+			@include sans-xxs;
+			// @include col;
+			// width: 51%;
+			@include padding-top(1);
+			// @include padding-left(1.4);
+		}
+
+	}
+	.ms-section {
+		@include margin-bottom(4);
+		&__copy {
+			@include margin-top(-0.5);	
+		}
+		.section-title {
+			color: $basque-red;
+		}
+		.title {
+			display: none; // duplication
+		}
+		.subtitle {
+			@include serif-lg;
+			color: black;
+			// @include margin-bottom(2);
+		}
+		.byline {
+			@include sans-sm;
+			font-weight: 600;
+			@include margin-bottom(4);
+		}
+		.blurb {
+			@include sans-md;
+		}
+		.anchor-link {
+			@include top(-5);
+		}
+		.card__image-wrapper {
+			cursor: initial;
+		}
+
+	}
+	.section--participants {
+		h3 {
+			@include serif-md;
+			@include margin-top(0.5);
+		}
+		.blurb {
+			@include sans-xxs;
+		}
+	}

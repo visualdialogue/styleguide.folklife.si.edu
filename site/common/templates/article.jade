@@ -1,0 +1,28 @@
+-snippet('header')
+
+#navspacer.navspacer
+
+-snippet('title-bar', array('title' => 'Festival Blog', 'link' => $page->parent()->url()))
+
+.container
+	.row
+		section.section--first.section--article.col-sm-8
+			article.article
+				// use card for correct video/image header
+				.blog-feature
+					-snippet('card', array('card' => $page, 'type' => 'blog', 'showCategory' => true, 'caption' => true, 'link' => false))
+
+				.content
+					!= $page->copy()->kt()
+
+				
+		div.col-sm-1.spacer
+		aside.col-sm-3.blog-sidebar
+
+			-snippet('blog-related-content', array('orientation' => 'vertical', 'limit' => 3))
+
+			-snippet('blog-most-popular')
+			
+			-snippet('blog-categories')
+
+-snippet('footer')

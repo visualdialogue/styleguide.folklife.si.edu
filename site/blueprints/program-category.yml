@@ -12,6 +12,10 @@ fields:
   subtitle:
     label: Subtitle
     type:  text
+  byline:
+    label: Byline (for Festival Programs)
+    type: text
+    width: 1/2
   type:
     label: Card Type
     type: radio
@@ -46,14 +50,14 @@ fields:
     options: images
     width: 1/2
     icon: image
-  first_img_caption:
-    label: First image caption
-    type: text
+  # first_img_caption:
+    # label: First image caption
+    # type: textarea
   blurb:
     label: Blurb for card
     type: textarea
-  copy:
-    label: Text
+  contents:
+    label: Content
     type:  textarea
   tags:
     label: Tags
@@ -107,3 +111,12 @@ fields:
     type: text
     width: 1/2
     icon: dollar
+
+  sidebar_listing_heading:
+    label: Programs pages
+    type: headline
+  sidebar_listing:
+    label: Sidebar Listing
+    type: checkbox
+    text: Smaller font?
+    width: 1/2

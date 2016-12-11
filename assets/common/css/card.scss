@@ -5,7 +5,7 @@
 }
 .card--horizontal {
 	@include margin-bottom(4);
-	.center-box, .card__image-wrapper {
+	.video__thumbnail, .card__image-wrapper {
 		padding-bottom:0;
 	}
 	.details.hasborder {
@@ -41,7 +41,7 @@
 }
 
 .border-full {
-	.card__image-wrapper, .center-box {
+	.card__image-wrapper, .video__thumbnail {
 		padding-bottom: 0;
 	}
 	.details {
@@ -196,6 +196,7 @@ a.details {
 		&:hover .icon-play:before {
 			color: $black80;
 		}
+		@include padding-bottom(2);
 	}
 	.modal-trigger {
 		// cursor: pointer; // set in links
@@ -207,7 +208,6 @@ a.details {
 	}
 	.center-box {
 		@include vertically-align-parent;
-		@include padding-bottom(2);
 	}
 	// modal
 	.remodal {

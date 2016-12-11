@@ -1,4 +1,11 @@
 
+<?php if ('' != $card->banner_img()): ?>
+<?php $image = $card->image($card->banner_img()); ?>
+<?php elseif($src = $card->image()): ?>
+<?php $image = $src; ?>
+<?php else: ?>
+<?php $image = false; ?>
+<?php endif; ?>
 <?php $excerptData = null; ?>
 <?php if(isset($excerpt)): ?>
 <?php $excerptData = $excerpt; ?>
@@ -16,6 +23,16 @@
 <?php $author = false; ?>
 <?php else: ?>
 <?php $author = true; ?>
+<?php endif; ?>
+<?php if(isset($link) && $link === false): ?>
+<?php $link = false; ?>
+<?php else: ?>
+<?php $link = true; ?>
+<?php endif; ?>
+<?php if(isset($caption) && $caption === true): ?>
+<?php $caption = true; ?>
+<?php else: ?>
+<?php $caption = false; ?>
 <?php endif; ?>
 <?php $cardTypeData = null; ?>
 <?php if(isset($type)): ?>
@@ -49,13 +66,18 @@
 <?php else: ?>
 <?php $audioCard = false; ?>
 <?php endif; ?>
-<?php if ((isset($type)) && ($type == 'blog-features')): ?>
-<?php elseif ((isset($type)) && ($type == 'blog-article') && ($orientation == 'horizontal')): ?>
-<li class="card col-sm-12 blog-article clearfix">
+<?php if (!isset($img_col)): ?>
+<?php $img_col = '12'; ?>
+<?php endif; ?>
+<?php if (!isset($text_col)): ?>
+<?php $text_col = '12'; ?>
+<?php endif; ?>
+<?php if ((isset($type)) && ($type == 'article') && ($orientation == 'horizontal')): ?>
+<li class="card col-sm-12 article clearfix">
   <div class="row">
     <div class="border border--inset"></div>
     <div class="card__image-wrapper col-sm-6 clearfix">
-      <?php if($src = $card->image()): ?><img src="<?= $src->url() ?>" class="card__image"/>
+      <?php if($image): ?><img src="<?= $image->url() ?>" class="card__image"/>
       <?php endif; ?>
     </div>
     <div class="card__details details col-sm-6 details--inset details--tight">
@@ -63,9 +85,8 @@
         <?php echo $card->time(); ?></div>
       <div class="category">
         <?php echo $card->festival(), ', ', $card->program(); ?>
-      </div>
-      <div class="title card__title"><a href="<?= $card->url() ?>">
-          <?php echo htmlspecialchars($card->title(), ENT_QUOTES, 'UTF-8'); ?></a></div>
+      </div><a href="<?= $card->url() ?>" class="high title card__title"><span class="light"><span class="er">
+            <?php echo htmlspecialchars($card->title(), ENT_QUOTES, 'UTF-8'); ?></span></span></a>
       <div class="date date-sm">
         <?php echo $card->date('F jS, Y'), e('' != $card->author(), ' | ' . $card->author()), ' | 0 comments'; ?></div>
       <div class="description card__description link-underline">
@@ -76,45 +97,47 @@
           <?php echo excerpt($card->copy()->kt(), $excerptData, 'words'); ?></p>
       </div>
       <?php else: ?>
-      <div class="description blog-article__description link-underline">
+      <div class="description article__description link-underline">
         <?php echo $card->copy()->kt(); ?></div>
       <?php endif; ?>
-      <?php snippet('more-link'); ?>
+      <?php snippet('more-link', array('link' => $card->url())); ?>
     </div>
   </div>
 </li>
-<?php elseif ((isset($type)) && ($type == 'blog-article') && ($orientation == 'vertical')): ?>
-<li class="card col-sm-3 blog-article blog-article--vertical clearfix">
+<?php elseif ((isset($type)) && ($type == 'article') && ($orientation == 'vertical')): ?>
+<li class="card col-sm-3 article article--vertical clearfix">
   <div class="border"></div>
-  <div class="card__details details">
-    <div class="date">
-      <?php echo $card->date('F jS'); ?></div>
-    <div class="time">
-      <?php echo $card->time(); ?></div>
-    <div class="title card__title"><a href="<?= $card->url() ?>">
-        <?php echo $card->title(); ?></a></div>
-  </div>
-  <?php if($video_id != ''): ?>
-  <div data-video-id="<?= $card->video_id() ?>" data-title="<?= $card->title() ?>" data-description="<?= $card->copy() ?>" class="video__thumbnail">
-    <div class="center-box">
-      <?php if($src = $card->image()): ?><a class="modal-trigger"><img src="<?= $src->url() ?>" class="card__image"/></a>
-      <?php endif; ?>
-      <div class="icon-play-button icon-play-button--video icon-stack">
-        <div class="icon-circle"></div>
-        <div class="icon-play"></div>
+  <div class="row">
+    <div class="card__details details">
+      <div class="date">
+        <?php echo $card->date('F jS'); ?></div>
+      <div class="time">
+        <?php echo $card->time(); ?></div>
+      <div class="title card__title"><a href="<?= $card->url() ?>">
+          <?php echo $card->title(); ?></a></div>
+    </div>
+    <?php if($video_id != ''): ?>
+    <div data-video-id="<?= $card->video_id() ?>" data-title="<?= $card->title() ?>" data-description="<?= $card->copy() ?>" class="video__thumbnail">
+      <div class="center-box">
+        <?php if($image): ?><a class="modal-trigger"><img src="<?= $image->url() ?>" class="card__image"/></a>
+        <?php endif; ?>
+        <div class="icon-play-button icon-play-button--video icon-stack">
+          <div class="icon-circle"></div>
+          <div class="icon-play"></div>
+        </div>
       </div>
     </div>
-  </div>
-  <?php else: ?>
-  <div class="card__image-wrapper">
-    <?php if($src = $card->image()): ?><a href="<?= $card->url() ?>"><img src="<?= $src->url() ?>" class="card__image"/></a>
+    <?php else: ?>
+    <div class="card__image-wrapper">
+      <?php if($image): ?><a href="<?= $card->url() ?>"><img src="<?= $image->url() ?>" class="card__image"/></a>
+      <?php endif; ?>
+    </div>
     <?php endif; ?>
   </div>
-  <?php endif; ?>
 </li>
 <?php elseif ((isset($type)) && ($type == 'new-release')): ?>
-<?php if($src = $card->image()): ?>
-<li class="col-xs-6 col-sm-2 new-release"><img src="<?= $src->url() ?>"/>
+<?php if($image): ?>
+<li class="col-xs-6 col-sm-2 new-release"><img src="<?= $image->url() ?>"/>
   <div class="details details--participate">
     <div class="title"><a>
         <?php echo $card->title(); ?></a></div>
@@ -124,8 +147,8 @@
 </li>
 <?php endif; ?>
 <?php elseif ((isset($type)) && ($type == 'news')): ?>
-<?php if($src = $card->image()): ?>
-<li class="col-xs-6 col-sm-3"><img src="<?= $src->url() ?>"/>
+<?php if($image): ?>
+<li class="col-xs-6 col-sm-3"><img src="<?= $image->url() ?>"/>
   <div class="details details--participate">
     <div class="date">
       <?php echo $card->date('n.j.y'); ?></div>
@@ -160,14 +183,15 @@
   <?php if ((isset($border)) && $border === true): ?>
   <div class="border"></div>
   <?php endif; ?>
-  <?php if ($card->type() == 'video' || ((isset($type)) && ($type == 'video'))): ?>
-  <?php if ($cardOrientation == 'horizontal'): ?>
-  <div class="festival-video clearfix">
-    <div class="row">
+  <!-- contain various image and text widths-->
+  <div class="row">
+    <?php if ($card->type() == 'video' || ((isset($type)) && ($type == 'video'))): ?>
+    <?php if ($cardOrientation == 'horizontal'): ?>
+    <div class="festival-video clearfix">
       <div class="col-sm-6">
         <div data-video-id="<?= $card->video_id() ?>" data-title="<?= $card->title() ?>" data-description="<?= $card->copy() ?>" class="video__thumbnail">
           <div class="center-box">
-            <?php if($src = $card->image()): ?><a class="modal-trigger"><img src="<?= $src->url() ?>" class="image"/></a>
+            <?php if($image): ?><a class="modal-trigger"><img src="<?= $image->url() ?>" class="card__image"/></a>
             <?php endif; ?>
             <div class="icon-play-button icon-play-button--video icon-stack">
               <div class="icon-circle"></div>
@@ -176,105 +200,112 @@
           </div>
         </div>
       </div>
-      <div class="festival-video__textbox horizontal-details-wrapper col-sm-6">
-        <?php snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'video' => true, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop, 'type' => $cardTypeData, 'date' => $date, 'author' => $author )); ?>
+      <div class="festival-video__textbox details-wrapper details-wrapper--horizontal col-sm-6">
+        <?php snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'video' => true, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop, 'type' => $cardTypeData, 'date' => $date, 'author' => $author, 'link' => $link )); ?>
       </div>
     </div>
-  </div>
-  <?php else: ?>
-  <?php if($titlePositionTop): ?>
-  <?php if('' != $card->date() && $cardTypeData != 'blog' && $date): ?>
-  <div class="date">
-    <?php echo $card->date('M d, Y'); ?></div>
-  <?php endif; ?><a href="<?= $card->url() ?>" class="high title card__title"><span class="light"><span class="er">
-        <?php echo htmlspecialchars($card->title(), ENT_QUOTES, 'UTF-8'); ?></span></span></a>
-  <?php endif; ?>
-  <div data-video-id="<?= $card->video_id() ?>" data-title="<?= $card->title() ?>" data-description="<?= $card->copy() ?>" class="video__thumbnail">
-    <div class="center-box">
-      <?php if($src = $card->image()): ?>
-      <div class="modal-trigger"><img src="<?= $src->url() ?>" class="image"/></div>
+    <?php else: ?>
+    <div class="col-sm-<?= $img_col ?>">
+      <?php if($titlePositionTop): ?>
+      <?php if('' != $card->date() && $cardTypeData != 'blog' && $date): ?>
+      <div class="date">
+        <?php echo $card->date('M d, Y'); ?></div>
+      <?php endif; ?><a href="<?= $card->url() ?>" class="high title card__title"><span class="light"><span class="er">
+            <?php echo htmlspecialchars($card->title(), ENT_QUOTES, 'UTF-8'); ?></span></span></a>
       <?php endif; ?>
-      <div class="icon-play-button icon-play-button--video icon-stack">
-        <div class="icon-circle"></div>
-        <div class="icon-play"></div>
-      </div>
-    </div>
-  </div>
-  <?php snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop, 'type' => $cardTypeData, 'date' => $date, 'author' => $author )); ?>
-  <?php endif; ?>
-  <?php elseif($audioCard): ?>
-  <div class="audio">
-    <?php if($src = $card->image()): ?>
-    <div class="card__image-wrapper clearfix"><a href="<?= $card->url() ?>"><img src="<?= $src->url() ?>" class="card__image"/></a></div>
-    <?php endif; ?>
-    <div class="details card__details details--inset">
-      <div class="category card__category">
-        <?php echo $card->category() ; ?></div>
-      <div class="title-wrapper card__title-wrapper"><a href="<?= $card->url() ?>" class="high title"><span class="light"><span class="er">
-              <?php echo htmlspecialchars($card->title(), ENT_QUOTES, 'UTF-8'); ?></span></span></a>
-        <?php if('' != $card->audio_album()): ?>
-        <div class="subtitle">
-          <?php echo $card->audio_album(); ?></div>
-        <?php endif; ?>
-        <div class="artist">
-          <?php echo $card->artist()->kt(); ?></div>
-      </div>
-      <div class="audio-player">
-        <div class="icon-play-button icon-stack">
-          <div class="icon-circle"></div>
-          <div class="icon-play"></div>
-        </div>
-        <div class="audio-player__details">
-          <div class="audio-progress-bar"><img src="/assets/images/icons/audio-progress-bar.png"/></div>
-          <div class="audio-time">0:00 &vert;&nbsp;
-            <?php echo $card->audio_length(); ?>
+      <div data-video-id="<?= $card->video_id() ?>" data-title="<?= $card->title() ?>" data-description="<?= $card->copy() ?>" class="video__thumbnail">
+        <div class="center-box">
+          <div class="modal-trigger"><img src="<?= $image->url() ?>" class="card__image"/></div>
+          <div class="icon-play-button icon-play-button--video icon-stack">
+            <div class="icon-circle"></div>
+            <div class="icon-play"></div>
           </div>
-          <div class="volume"></div>
+        </div>
+      </div>
+      <?php snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop, 'type' => $cardTypeData, 'date' => $date, 'author' => $author, 'link' => $link )); ?>
+    </div>
+    <?php endif; ?>
+    <?php elseif($audioCard): ?>
+    <div class="audio col-sm-<?= $img_col ?>">
+      <?php if($image): ?>
+      <div class="card__image-wrapper clearfix"><a href="<?= $card->url() ?>"><img src="<?= $image->url() ?>" class="card__image"/></a></div>
+      <?php endif; ?>
+      <div class="details card__details details--inset">
+        <div class="category card__category">
+          <?php echo $card->category() ; ?></div>
+        <div class="title-wrapper card__title-wrapper"><a href="<?= $card->url() ?>" class="high title"><span class="light"><span class="er">
+                <?php echo htmlspecialchars($card->title(), ENT_QUOTES, 'UTF-8'); ?></span></span></a>
+          <?php if('' != $card->audio_album()): ?>
+          <div class="subtitle">
+            <?php echo $card->audio_album(); ?></div>
+          <?php endif; ?>
+          <div class="artist">
+            <?php echo $card->artist()->kt(); ?></div>
+        </div>
+        <div class="audio-player">
+          <div class="icon-play-button icon-stack">
+            <div class="icon-circle"></div>
+            <div class="icon-play"></div>
+          </div>
+          <div class="audio-player__details">
+            <div class="audio-progress-bar"><img src="/assets/images/icons/audio-progress-bar.png"/></div>
+            <div class="audio-time">0:00 &vert;&nbsp;
+              <?php echo $card->audio_length(); ?>
+            </div>
+            <div class="volume"></div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <?php elseif($cardOrientation == 'horizontal'): ?>
-  <?php if (!isset($img_col)): ?>
-  <?php $img_col = '6'; ?>
-  <?php endif; ?>
-  <?php if (!isset($text_col)): ?>
-  <?php $text_col = '6'; ?>
-  <?php endif; ?>
-  <div class="card__inner">
-    <div class="row">
+    <?php elseif($cardOrientation == 'horizontal'):				 ?>
+    <div class="card__inner">
       <div class="high card__image-wrapper clearfix col-sm-<?= $img_col ?>">
         <?php if($cardTypeData == 'program'): ?>
-        <?php if($src = $card->image()): ?>
-        <figure><img src="<?= $src->url() ?>"/>
-          <?php if($src->caption()->isNotEmpty()): ?>
+        <?php if($image): ?>
+        <figure><img src="<?= $image->url() ?>"/>
+          <?php if($image->caption()->isNotEmpty()): ?>
           <figcaption>
-            <?php echo $src->caption(); ?></figcaption>
+            <?php echo $image->caption(); ?></figcaption>
           <?php endif; ?>
         </figure>
         <?php endif; ?>
-        <?php elseif($src = $card->image()): ?><a href="<?= $card->url() ?>"><img src="<?= $src->url() ?>" class="card__image"/></a>
+        <?php elseif($image): ?><a href="<?= $card->url() ?>"><img src="<?= $image->url() ?>" class="card__image"/></a>
         <?php endif; ?>
       </div>
-      <div class="horizontal-details-wrapper col-sm-<?= $text_col ?>">
-        <?php snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop, 'type' => $cardTypeData, 'date' => $date, 'author' => $author )); ?>
+      <div class="details-wrapper--horizontal col-sm-<?= $text_col ?>">
+        <?php snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop, 'type' => $cardTypeData, 'date' => $date, 'author' => $author, 'link' => $link )); ?>
       </div>
     </div>
-  </div>
-  <?php else: ?>
-  <div class="card__inner">
-    <?php if($titlePositionTop): ?>
-    <?php if('' != $card->date() && $cardTypeData != 'blog' && $date): ?>
-    <div class="date">
-      <?php echo $card->date('M d, Y'); ?></div>
-    <?php endif; ?><a href="<?= $card->url() ?>" class="high title card__title"><span class="light"><span class="er">
-          <?php echo htmlspecialchars($card->title(), ENT_QUOTES, 'UTF-8'); ?></span></span></a>
+    <?php else: ?>
+    <div class="card__inner">
+      <?php if($titlePositionTop): ?>
+      <div class="col-sm-<?= $img_col ?>">
+        <?php if('' != $card->date() && $cardTypeData != 'blog' && $date): ?>
+        <div class="date">
+          <?php echo $card->date('M d, Y'); ?></div>
+        <?php endif; ?><a href="<?= $card->url() ?>" class="high title card__title"><span class="light"><span class="er">
+              <?php echo htmlspecialchars($card->title(), ENT_QUOTES, 'UTF-8'); ?></span></span></a>
+      </div>
+      <?php endif; ?>
+      <?php if($image): ?>
+      <?php if($caption): ?>
+      <div class="card__image-wrapper clearfix col-sm-<?= $img_col ?>">
+        <figure><img src="<?= $image->url() ?>"/>
+          <?php if($image->caption()->isNotEmpty()): ?>
+          <figcaption>
+            <?php echo $image->caption(); ?></figcaption>
+          <?php endif; ?>
+        </figure>
+      </div>
+      <?php else: ?>
+      <div class="card__image-wrapper clearfix col-sm-<?= $img_col ?>"><a href="<?= $card->url() ?>"><img src="<?= $image->url() ?>" class="card__image"/></a></div>
+      <?php endif; ?>
+      <?php endif; ?>
+      <div class="details-wrapper col-sm-<?= $text_col ?>">
+        <?php snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop, 'type' => $cardTypeData, 'date' => $date, 'author' => $author, 'link' => $link )); ?>
+      </div>
+    </div>
     <?php endif; ?>
-    <?php if($src = $card->image()): ?>
-    <div class="card__image-wrapper clearfix"><a href="<?= $card->url() ?>"><img src="<?= $src->url() ?>" class="card__image"/></a></div>
-    <?php endif; ?>
-    <?php snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop, 'type' => $cardTypeData, 'date' => $date, 'author' => $author )); ?>
   </div>
-  <?php endif; ?>
 </li>
 <?php endif; ?>

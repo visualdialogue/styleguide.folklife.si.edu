@@ -109,3 +109,7 @@
 	// transform: translateY(-50%);
 	// width:100%;
  //  }
+
+
+ @mixin sidebarBorderTop { border-top: 1px solid $black50; }
+ @mixin sidebarBorderBottom { border-bottom: 1px solid $black50; }

@@ -1,0 +1,16 @@
+.related-content
+	h2.blog-sidebar__header Related Content
+	ul
+		//- blog article sidebar
+		-if($page->template() == 'article'):
+			-foreach($page->siblings(false)->visible()->filterBy('tags','basque',',')->limit($limit) as $entry):
+				-snippet('card', array('card' => $entry, 'orientation' => $orientation, 'img_col' => 75, 'border' => true, 'date' => false, 'author' => false ))
+			-endforeach
+		//- program sidebar
+		-else:
+			-foreach($pages->find('blog')->children()->visible()->filterBy('tags','basque',',')->limit($limit) as $entry):
+				-snippet('card', array('card' => $entry, 'img_col' => 6, 'orientation' => $orientation, 'text_col' => 6, 'border' => true, 'excerpt' => 12, 'date' => false, 'author' => false ))
+			-endforeach
+		-endif
+
+		

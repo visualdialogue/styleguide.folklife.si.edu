@@ -1,6 +1,10 @@
 title: Card
 pages: false
 files: true
+  fields:
+    caption:
+      label: Caption
+      type: textarea
 fields:
   title:
     label: Title
@@ -42,6 +46,9 @@ fields:
     options: images
     width: 1/2
     icon: image
+  first_img_caption:
+    label: First image caption
+    type: text
   blurb:
     label: Blurb for card
     type: textarea

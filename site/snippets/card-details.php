@@ -17,11 +17,18 @@
   <div class="date">
     <?php echo $card->date('M d, Y'); ?></div>
   <?php endif; ?>
-  <?php if('' != $card->subtitle()):	 ?><a href="<?= $card->url() ?>" class="high">
+  <?php if('' != $card->subtitle()):	 ?>
+  <?php if(!$link): ?>
+  <div class="title card__title"><span class="light"><span class="er">
+        <?php echo htmlspecialchars($card->title(), ENT_QUOTES, 'UTF-8'); ?></span></span></div>
+  <div class="subtitle"><span class="light"><span class="er">
+        <?php echo htmlspecialchars($card->subtitle(), ENT_QUOTES, 'UTF-8'); ?></span></span></div>
+  <?php else: ?><a href="<?= $card->url() ?>" class="high">
     <div class="title card__title"><span class="light"><span class="er">
           <?php echo htmlspecialchars($card->title(), ENT_QUOTES, 'UTF-8'); ?></span></span></div>
     <div class="subtitle"><span class="light"><span class="er">
           <?php echo htmlspecialchars($card->subtitle(), ENT_QUOTES, 'UTF-8'); ?></span></span></div></a>
+  <?php endif; ?>
   <?php else: ?><a href="<?= $card->url() ?>" class="high title card__title"><span class="light"><span class="er">
         <?php echo htmlspecialchars($card->title(), ENT_QUOTES, 'UTF-8'); ?></span></span></a>
   <?php endif; ?>

@@ -25,6 +25,8 @@
 	}
 }
 
+p {margin: 0;}
+
 
 .container--xl {
 	// max-width: $pageWidth + 80;
@@ -56,6 +58,11 @@
 	}
 }
 
+// festival blog article related content sidebar
+.col-sm-75 {
+	float: left;
+	width: 63%;
+}
 
 // folklife - dive deep
 .col-sm-65 {
@@ -90,7 +97,7 @@
 	
 	// $gutter-medium: 1.35%;
 	$gutter-small: 7.5px;
-	$gutter-medium: 1.35%;
+	// $gutter-medium: 1.35%;
 	$gutter-medium: 1.36%;
 	// $gutter-medium: %;
 	.row {
@@ -252,11 +259,11 @@
 			@include respond-to(break2) {margin-bottom:1.3vw;}
 			@include respond-to(fullwidth) {margin-bottom:2.2rem;} // 30 px
 		}
-		p {
-			margin-bottom:0.5rem;
-			@include respond-to(break2) {margin-bottom:1.5vw;}
-			@include respond-to(fullwidth) {margin-bottom:2.5rem;} // 40 px
-		}
+		// p {
+		// 	margin-bottom:0.5rem;
+		// 	@include respond-to(break2) {margin-bottom:1.5vw;}
+		// 	@include respond-to(fullwidth) {margin-bottom:2.5rem;} // 40 px
+		// }
 	}
 	.sidebar {
 		&__title {
@@ -366,6 +373,9 @@
 		@include slab-xl;
 		margin: 0;
 		@include vertically-align;
+	}
+	a .page-title {
+		color: white; // override a color
 	}
 	.page-subtitle {
 		@include vertically-align;

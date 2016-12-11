@@ -66,8 +66,7 @@
   	}	
   }
 
-
-	@mixin border($location: all, $width: 1px, $color: $black40) {
+	@mixin border($location: all, $width: 1px, $color: $black50) {
 		@if $location == top {
 		  border-top: $width solid $color;
 		} @else if $location == bottom {

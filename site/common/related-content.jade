@@ -1,6 +1,0 @@
-.related-content
-	h2.blog-sidebar__header Related Content
-	ul
-		-foreach($pages->find('blog')->children()->visible()->filterBy('tags','basque',',')->limit($limit) as $entry):
-			-snippet('card', array('card' => $entry, 'orientation' => $orientation, 'excerpt' => '10', 'border' => true, 'date' => false ))
-		-endforeach
