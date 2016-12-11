@@ -31,7 +31,16 @@
 </head><body class="site--folklife <?= str::lower($page->title()) ?>-page">
 <div class="navbar__site-toggle">
   <div class="container">
-    <div class="tagline">Championing Culture for, by, and of the People</div><a href="/" class="site-toggle__link site-toggle__link--folklife active">Folklife</a><a href="http://folkways.lukehatfield.com" class="site-toggle__link site-toggle__link--folkways">Folkways</a><a href="http://festival.si.edu" class="site-toggle__link site-toggle__link--festival">Festival</a>
+    <div class="tagline">Championing Culture for, by, and of the People</div>
+    <?php if (c::get('isDev')): ?><a href="http://localhost:3003" class="site-toggle__link site-toggle__link--folklife active">Folklife</a>
+    <?php else: ?><a href="http://folklife.lukehatfield.com" class="site-toggle__link site-toggle__link--folkways">Folkways</a>
+    <?php endif; ?>
+    <?php if (c::get('isDev')): ?><a href="http://localhost:3009" class="site-toggle__link site-toggle__link--festival">Folkways</a>
+    <?php else: ?><a href="http://folkways.lukehatfield.com" class="site-toggle__link site-toggle__link--folkways">Folkways</a>
+    <?php endif; ?>
+    <?php if (c::get('isDev')): ?><a href="http://localhost:3005" class="site-toggle__link site-toggle__link--folklife">Festival</a>
+    <?php else: ?><a href="http://on.festival.lukehatfield.com" class="site-toggle__link site-toggle__link--festival">Festival</a>
+    <?php endif; ?>
   </div>
 </div>
 <div class="navbar-outside"></div>

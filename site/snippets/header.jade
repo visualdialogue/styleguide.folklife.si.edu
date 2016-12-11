@@ -69,9 +69,21 @@ head
 .navbar__site-toggle
 	.container
 		.tagline Championing Culture for, by, and of the People
-		a.site-toggle__link.site-toggle__link--folklife.active(href="/") Folklife
-		a.site-toggle__link.site-toggle__link--folkways(href="http://folkways.lukehatfield.com") Folkways
-		a.site-toggle__link.site-toggle__link--festival(href="http://festival.si.edu") Festival
+		-if (c::get('isDev')):
+			a.site-toggle__link.site-toggle__link--folklife.active(href="http://localhost:3003") Folklife
+		- else:
+			a.site-toggle__link.site-toggle__link--folkways(href="http://folklife.lukehatfield.com") Folkways
+		-endif
+		-if (c::get('isDev')):
+			a.site-toggle__link.site-toggle__link--festival(href="http://localhost:3009") Folkways
+		- else:
+			a.site-toggle__link.site-toggle__link--folkways(href="http://folkways.lukehatfield.com") Folkways
+		-endif
+		-if (c::get('isDev')):
+			a.site-toggle__link.site-toggle__link--folklife(href="http://localhost:3005") Festival
+		- else:
+			a.site-toggle__link.site-toggle__link--festival(href="http://on.festival.lukehatfield.com") Festival
+		-endif
 //- nav.navbar.navbar-fixed-top
 .navbar-outside
 nav.navbar
