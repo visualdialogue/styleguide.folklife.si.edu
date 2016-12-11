@@ -6,6 +6,8 @@
 		//- show special date if video card
 		-if(isset($video) && $video === true):
 			.category!= 'Festival, ', $card->year(), ', ', $card->program()
+		-elseif($type == 'blog'):
+			.category!= $card->festival(), ', ', $card->program();
 		-else:
 			.category!= $card->category()
 		-endif
@@ -13,7 +15,7 @@
 	-endif
 
 	//- date
-	-if('' != $card->date()):
+	-if('' != $card->date() && $type != 'blog' && $date):
 		.date!= $card->date('M d, Y')
 	-endif
 
@@ -29,13 +31,21 @@
 		-endif
 	-endif
 
+	//- byline
+	-if($type == 'program' && '' != $card->byline()):
+		.byline!= $card->byline()
+	-endif
+
 	//- artist
 	-if('' != $card->artist()):	
 		.artist!= $card->artist()
 	-endif
 
-	//- author
-	-if('' != $card->author()):	
+	//- blog post show second category and author on same line
+	-if($type == 'blog'):
+		.date!= $card->date('F jS, Y'), e('' != $card->author(), ' | ' . $card->author()), ' | 0 comments'
+	//- only show author if exist and not blog article
+	-elseif('' != $card->author()):	
 		.author!= $card->author()
 	-endif
 
@@ -45,7 +55,6 @@
 	-endif
 
 	//- blurb
-	//- -if('' != $card->blurb()):	
 	-if (isset($blurb)):
 		.description.card__description.link-underline.blurb!= $card->blurb()->kt()
 	-endif
@@ -70,5 +79,5 @@
 	-endif
 
 	-if($more_link):
-		-snippet('more-link')
+		-snippet('more-link', array('link' => $card->url()))
 	-endif

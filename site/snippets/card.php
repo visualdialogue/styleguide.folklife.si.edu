@@ -7,6 +7,11 @@
 <?php if(isset($blurb)): ?>
 <?php $blurbData = $blurb; ?>
 <?php endif; ?>
+<?php if(isset($date) && $date === false): ?>
+<?php $date = false; ?>
+<?php else: ?>
+<?php $date = true; ?>
+<?php endif; ?>
 <?php $cardTypeData = null; ?>
 <?php if(isset($type)): ?>
 <?php $cardTypeData = $type; ?>
@@ -39,7 +44,7 @@
 <?php else: ?>
 <?php $audioCard = false; ?>
 <?php endif; ?>
-<?php if ((isset($type)) && ($type == 'blog-feature')): ?>
+<?php if ((isset($type)) && ($type == 'blog-features')): ?>
 <div class="card blog-article blog-article--feature blog-article--vertical clearfix">
   <?php if((isset($video_id)) && ($video_id != '')): ?>
   <div data-video-id="<?= $card->video_id() ?>" data-title="<?= $card->title() ?>" data-description="<?= $card->copy() ?>" class="video__thumbnail">
@@ -51,11 +56,6 @@
         <div class="icon-play"></div>
       </div>
     </div>
-  </div>
-  <?php else: ?>
-  <div class="card__image-wrapper">
-    <?php if($src = $card->image()): ?><a href="<?= $card->url() ?>"><img src="<?= $src->url() ?>" class="card__image"/></a>
-    <?php endif; ?>
   </div>
   <?php endif; ?>
   <div class="card__details details">
@@ -205,7 +205,7 @@
         </div>
       </div>
       <div class="festival-video__textbox col-sm-6">
-        <?php snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'video' => true, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop )); ?>
+        <?php snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'video' => true, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop, 'type' => $cardTypeData, 'date' => $date )); ?>
       </div>
     </div>
   </div>
@@ -221,7 +221,7 @@
       </div>
     </div>
   </div>
-  <?php snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop )); ?>
+  <?php snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop, 'type' => $cardTypeData, 'date' => $date )); ?>
   <?php endif; ?>
   <?php elseif($audioCard): ?>
   <div class="audio">
@@ -265,11 +265,20 @@
   <div class="card__inner">
     <div class="row">
       <div class="high card__image-wrapper clearfix col-sm-<?= $img_col ?>">
-        <?php if($src = $card->image()): ?><a href="<?= $card->url() ?>"><img src="<?= $src->url() ?>" class="card__image"/></a>
+        <?php if($cardTypeData == 'program'): ?>
+        <?php if($src = $card->image()): ?>
+        <figure><img src="<?= $src->url() ?>"/>
+          <?php if($src->caption()->isNotEmpty()): ?>
+          <figcaption>
+            <?php echo $src->caption(); ?></figcaption>
+          <?php endif; ?>
+        </figure>
+        <?php endif; ?>
+        <?php elseif($src = $card->image()): ?><a href="<?= $card->url() ?>"><img src="<?= $src->url() ?>" class="card__image"/></a>
         <?php endif; ?>
       </div>
-      <div class="col-sm-<?= $text_col ?>">
-        <?php snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop )); ?>
+      <div class="horizontal-details-wrapper col-sm-<?= $text_col ?>">
+        <?php snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop, 'type' => $cardTypeData, 'date' => $date )); ?>
       </div>
     </div>
   </div>
@@ -281,7 +290,7 @@
     <?php if($src = $card->image()): ?>
     <div class="card__image-wrapper clearfix"><a href="<?= $card->url() ?>"><img src="<?= $src->url() ?>" class="card__image"/></a></div>
     <?php endif; ?>
-    <?php snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop )); ?>
+    <?php snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop, 'type' => $cardTypeData, 'date' => $date )); ?>
   </div>
   <?php endif; ?>
 </li>

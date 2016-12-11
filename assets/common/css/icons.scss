@@ -240,16 +240,18 @@
 	}
 	figcaption {
 		position: absolute;
-		@include padding-top(1);
+		@include padding-top(1.5);
 		@include padding-right(1);
-		@include padding-bottom(1);
-		@include padding-left(1);
+		@include padding-bottom(1.5);
+		@include padding-left(2);
 		bottom: 0;
 		left: 0;
 		color: white;
 		background-color: $black50;
 		@include sans-xxs;
 		width: 100%;
+
+		cursor: pointer;
 
 		visibility: hidden; // initial hide
 		// @include width(2); // only show enough for plus sign

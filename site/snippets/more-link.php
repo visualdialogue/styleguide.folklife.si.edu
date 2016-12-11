@@ -1,4 +1,4 @@
-<a class="high more-link <? if(isset($class)) echo $class ?>">
+<a href="<? if(isset($link)) echo $link) ?>" class="high more-link <? if(isset($class)) echo $class ?>">
   <div class="light">
     <div class="er">
       <?php if(isset($text)): ?>

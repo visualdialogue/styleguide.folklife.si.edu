@@ -7772,10 +7772,10 @@ figure {
 
 figcaption {
   position: absolute;
-  padding-top: 1.25vw;
+  padding-top: 1.875vw;
   padding-right: 1.25vw;
-  padding-bottom: 1.25vw;
-  padding-left: 1.25vw;
+  padding-bottom: 1.875vw;
+  padding-left: 2.5vw;
   bottom: 0;
   left: 0;
   color: white;
@@ -7785,13 +7785,14 @@ figcaption {
   line-height: 1.2;
   font-size: 4vw;
   width: 100%;
+  cursor: pointer;
   visibility: hidden; }
   @media only screen and (min-width: 53.25em) {
     figcaption {
-      padding-top: 0.625vw; } }
+      padding-top: 0.9375vw; } }
   @media only screen and (min-width: 1560px) {
     figcaption {
-      padding-top: 1rem; } }
+      padding-top: 1.5rem; } }
   @media only screen and (min-width: 53.25em) {
     figcaption {
       padding-right: 0.625vw; } }
@@ -7800,16 +7801,16 @@ figcaption {
       padding-right: 1rem; } }
   @media only screen and (min-width: 53.25em) {
     figcaption {
-      padding-bottom: 0.625vw; } }
+      padding-bottom: 0.9375vw; } }
   @media only screen and (min-width: 1560px) {
     figcaption {
-      padding-bottom: 1rem; } }
+      padding-bottom: 1.5rem; } }
   @media only screen and (min-width: 53.25em) {
     figcaption {
-      padding-left: 0.625vw; } }
+      padding-left: 1.25vw; } }
   @media only screen and (min-width: 1560px) {
     figcaption {
-      padding-left: 1rem; } }
+      padding-left: 2rem; } }
   @media only screen and (min-width: 53.25em) {
     figcaption {
       font-size: 1.15vw;

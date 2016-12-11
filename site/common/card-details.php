@@ -4,12 +4,15 @@
   <?php if(isset($video) && $video === true): ?>
   <div class="category">
     <?php echo 'Festival, ', $card->year(), ', ', $card->program(); ?></div>
+  <?php elseif($type == 'blog'): ?>
+  <div class="category">
+    <?php echo $card->festival(), ', ', $card->program(); ?></div>
   <?php else: ?>
   <div class="category">
     <?php echo $card->category(); ?></div>
   <?php endif; ?>
   <?php endif; ?>
-  <?php if('' != $card->date()): ?>
+  <?php if('' != $card->date() && $type != 'blog' && $date): ?>
   <div class="date">
     <?php echo $card->date('M d, Y'); ?></div>
   <?php endif; ?>
@@ -23,11 +26,18 @@
         <?php echo htmlspecialchars($card->title(), ENT_QUOTES, 'UTF-8'); ?></span></span></a>
   <?php endif; ?>
   <?php endif; ?>
+  <?php if($type == 'program' && '' != $card->byline()): ?>
+  <div class="byline">
+    <?php echo $card->byline(); ?></div>
+  <?php endif; ?>
   <?php if('' != $card->artist()):	 ?>
   <div class="artist">
     <?php echo $card->artist(); ?></div>
   <?php endif; ?>
-  <?php if('' != $card->author()):	 ?>
+  <?php if($type == 'blog'): ?>
+  <div class="date">
+    <?php echo $card->date('F jS, Y'), e('' != $card->author(), ' | ' . $card->author()), ' | 0 comments'; ?></div>
+  <?php elseif('' != $card->author()):	 ?>
   <div class="author">
     <?php echo $card->author(); ?></div>
   <?php endif; ?>
@@ -54,6 +64,6 @@
     <?php echo $card->order2(), '&nbsp;&#x2192'; ?></div>
   <?php endif; ?>
   <?php if($more_link): ?>
-  <?php snippet('more-link'); ?>
+  <?php snippet('more-link', array('link' => $card->url())); ?>
   <?php endif; ?>
 </div>

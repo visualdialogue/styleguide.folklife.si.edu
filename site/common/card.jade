@@ -13,6 +13,13 @@
 	- $blurbData = $blurb;
 -endif
 
+//- date
+-if(isset($date) && $date === false):
+	- $date = false;
+- else:
+	- $date = true;
+-endif
+
 //- store cardtype if exists, make null if not so other functions will complete
 - $cardTypeData = null;
 -if(isset($type)):
@@ -59,9 +66,8 @@
 	- $audioCard = false;
 -endif
 
-
 //- Feature blog entry on festival/blog
--if ((isset($type)) && ($type == 'blog-feature')):
+-if ((isset($type)) && ($type == 'blog-features')):
 	.card.blog-article.blog-article--feature.blog-article--vertical.clearfix
 
 		//-if video is set, add data to card tag for video remodal
@@ -75,7 +81,7 @@
 						.icon-play-button.icon-play-button--video.icon-stack
 							.icon-circle
 							.icon-play
-		- else:
+		//- - else:
 			.card__image-wrapper
 				-if($src = $card->image()):
 					a(href="<?= $card->url() ?>")
@@ -236,7 +242,7 @@
 												.icon-play
 							//- .textbox.festival-video__textbox.col-sm-6
 							.festival-video__textbox.col-sm-6
-								-snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'video' => true, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop ))
+								-snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'video' => true, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop, 'type' => $cardTypeData, 'date' => $date ))
 
 				//- vertical video card
 				-else:
@@ -249,7 +255,7 @@
 								.icon-play-button.icon-play-button--video.icon-stack
 									.icon-circle
 									.icon-play
-					-snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop ))
+					-snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop, 'type' => $cardTypeData, 'date' => $date ))
 
 
 				-endif
@@ -293,12 +299,24 @@
 				.card__inner
 					.row
 						.high.card__image-wrapper.clearfix(class="col-sm-<?= $img_col ?>")
-							-if($src = $card->image()):
+
+							//- put image in figure and add figcaption button if program section
+							-if($cardTypeData == 'program'):
+								-if($src = $card->image()):
+									figure
+										img(src="<?= $src->url() ?>")
+										//- show caption if it exists
+										-if($src->caption()->isNotEmpty()):
+											figcaption!= $src->caption()
+										-endif
+								-endif
+							-elseif($src = $card->image()):
 								a(href="<?= $card->url() ?>")
 									img.card__image(src="<?= $src->url() ?>")
 							-endif
-						div(class="col-sm-<?= $text_col ?>")
-							-snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop ))
+						//- class name below for sidebar of programs page
+						.horizontal-details-wrapper(class="col-sm-<?= $text_col ?>")
+							-snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop, 'type' => $cardTypeData, 'date' => $date ))
 			- else:
 				.card__inner
 					//- put title above image if set to top
@@ -311,6 +329,6 @@
 							a(href="<?= $card->url() ?>")
 								img.card__image(src="<?= $src->url() ?>")
 					-endif
-					-snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop ))
+					-snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop, 'type' => $cardTypeData, 'date' => $date ))
 			-endif
 -endif
