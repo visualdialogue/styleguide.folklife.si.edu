@@ -17,7 +17,7 @@
     </section>
     <section class="col-sm-6 section--support">
       <div class="support">
-        <div class="details details--inset details--tight details--tight-bottom clearfix">
+        <div class="support__copy clearfix">
           <div class="details__inner">
             <?php echo htmlspecialchars($site->support_text(), ENT_QUOTES, 'UTF-8'); ?>
           </div>

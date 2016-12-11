@@ -43,17 +43,22 @@
 	.support {
 		@include border(all, 2px, $black40);
 		position: relative; // contain support button
-		.details, &__button {
+		&__copy, &__button {
 			@include respond-to(break2) {
 				display: inline-block;
 				vertical-align: top;
 			}
 		}
-		.details {
+		&__copy {
 			@include respond-to(break2) {
 				width: 46.45%; // 314px / 676px
 				line-height: 1.25;
 			}
+			@include padding-top(1.6);
+			@include padding-right(2);
+			@include padding-bottom(2);
+			@include padding-left(2);
+			@include height(14);
 		}
 		&__button {
 			background-color: $black40;

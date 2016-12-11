@@ -9308,13 +9308,49 @@ hr {
   border: 2px solid #999999;
   position: relative; }
   @media only screen and (min-width: 53.25em) {
-    .support .details, .support__button {
+    .support__copy, .support__button {
       display: inline-block;
       vertical-align: top; } }
-  @media only screen and (min-width: 53.25em) {
-    .support .details {
-      width: 46.45%;
-      line-height: 1.25; } }
+  .support__copy {
+    padding-top: 2vw;
+    padding-right: 2.5vw;
+    padding-bottom: 2.5vw;
+    padding-left: 2.5vw;
+    height: 17.5vw; }
+    @media only screen and (min-width: 53.25em) {
+      .support__copy {
+        width: 46.45%;
+        line-height: 1.25; } }
+    @media only screen and (min-width: 53.25em) {
+      .support__copy {
+        padding-top: 1vw; } }
+    @media only screen and (min-width: 1560px) {
+      .support__copy {
+        padding-top: 1.6rem; } }
+    @media only screen and (min-width: 53.25em) {
+      .support__copy {
+        padding-right: 1.25vw; } }
+    @media only screen and (min-width: 1560px) {
+      .support__copy {
+        padding-right: 2rem; } }
+    @media only screen and (min-width: 53.25em) {
+      .support__copy {
+        padding-bottom: 1.25vw; } }
+    @media only screen and (min-width: 1560px) {
+      .support__copy {
+        padding-bottom: 2rem; } }
+    @media only screen and (min-width: 53.25em) {
+      .support__copy {
+        padding-left: 1.25vw; } }
+    @media only screen and (min-width: 1560px) {
+      .support__copy {
+        padding-left: 2rem; } }
+    @media only screen and (min-width: 53.25em) {
+      .support__copy {
+        height: 8.75vw; } }
+    @media only screen and (min-width: 1560px) {
+      .support__copy {
+        height: 14rem; } }
   .support__button {
     background-color: #999999;
     font-family: "unit-gothic-717", Arial, sans-serif;
