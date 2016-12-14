@@ -4,7 +4,7 @@
 		//- blog article sidebar
 		-if($page->template() == 'article'):
 			-foreach($page->siblings(false)->visible()->filterBy('tags','basque',',')->limit($limit) as $entry):
-				-snippet('card', array('card' => $entry, 'orientation' => $orientation, 'img_col' => 75, 'border' => true, 'date' => false, 'author' => false ))
+				-snippet('card', array('card' => $entry, 'orientation' => $orientation, 'date' => false, 'author' => false ))
 			-endforeach
 		//- program sidebar
 		-else:

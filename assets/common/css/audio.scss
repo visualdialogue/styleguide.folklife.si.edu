@@ -6,6 +6,9 @@
 		// min-height: 60vw !important;
 		@include min-height(24);
 	}
+	.icon-play-button {
+		// @include respond-to(break2) {width: 33%;}
+	}
 	.title-wrapper {
 		@include respond-to(break2max) {
 			min-height: 24vw; // for 2 line album titles
@@ -49,10 +52,11 @@
 		margin-top: 0.7vw;
 		// move to bottom 
 		position: absolute;
-		width: 77%;
+		width: 17vw;
 	}
 	@include respond-to(fullwidth) {
 		// margin-top: 2.8rem;
+		width: 77%;
 		margin-top: 1.2rem;
 	}
 
@@ -63,15 +67,13 @@
 .audio-player__details {
 	max-width: 100%;
 	@include respond-to(break2) {
-		// width: 72.695%; // 205/282 = 
 		width: 67%; // 205/282 = 
-		margin-left: 5%;
+		width: 12vw;
 	}
 	@include respond-to(fullwidth) {
-		// width: 72.695%; // 205/282 = 
 		width: 72%; // 205/282 = 
-		margin-left: 1rem;
 	}
+	@include padding-left(1);
 }
 .audio-progress-bar {
 	margin-bottom: 4px;

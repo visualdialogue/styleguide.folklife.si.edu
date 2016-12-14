@@ -15,7 +15,8 @@
 			z-index: 10;
 		}
 		@include respond-to(break2) {
-			top: 60px;
+			// top: 60px;
+			top: 3.4rem;
 			z-index: 2;
 			z-index: 10;
 		}
@@ -24,22 +25,29 @@
 
 	// SITE TOGGLE BANNER
 	.navbar__site-toggle {
+		// new
 		display: none;		
 		@include respond-to(break2) {
 			display: block;
 			position: absolute; // height 72px
 			width: 100%;
 			text-transform: uppercase;
-			background-color: white;
+			// background-color: white;
+			background-color: $black80; // new
 			font-family: $slabLight;
 			// letter-spacing: 0.5px;		
 			font-size: 2.7rem; // ff-good
 			// font-size: 1.5rem;
 			text-align:right;
 			font-weight: 300;
-
-			height: 60px; // hold even without tagline
 			padding: 13px 0 0;
+
+			// height: 60px; // hold even without tagline
+			height: 20px; // hold even without tagline
+			@include sans-xxxs;
+			line-height:2vw;
+			@include respond-to(break2) {line-height:0.2vw;}
+			@include respond-to(fullwidth) {line-height:0.5rem;}
 		}
 	}
 	.tagline {
@@ -53,8 +61,12 @@
 		color: $sitelinks;
 		margin-left: 2.5rem;
 		&:hover {
-			color: $black80;
+			// color: $black80;
+			color: white;
 			text-decoration: none;
+		}
+		&.active {
+			color: $black20;
 		}
 	}
 
@@ -93,9 +105,15 @@
 		height: 50px;
 		@include respond-to(break2) {
 			// height: 185px !important;
-			height: 178px !important;
+			// height: 178px !important;
 			// new header
 			// height: 160px !important;
+			// height: 113px !important; // n
+			height: 5.1vw !important; // new
+
+		}
+		@include respond-to(fullwidth) {
+			height: 11.3rem !important; // new
 		}
 		&--taller {
 		}
@@ -113,16 +131,26 @@
 		padding: 10px 0 5px 0;
 		padding: 10px 0 0 0;
 		@include respond-to(break2) {
-			height: 115px;
+			height: 115px; // old
+			height: 5.1vw; // new
 			padding: 23px 0 10px 0;
+			width: 14.2857%; // 200 / 1400
 		}
 
 		@include respond-to(fullwidth) {
-			padding: 23px 0 18px 0;
+			// padding: 23px 0 18px 0;
+			padding: 20px 0 18px 0;
 			// line up with left side
 			font-size: 25px; // back to normal
 
-			height: 118px; // from layout
+			// height: 118px; // from layout
+			// new header
+			height: 80px; // from new layout
+
+			// new
+			// padding-left:0; // align with left side instead of col
+			// folkways
+			width: 14.2857%; // 200 / 1400
 		}
 	}
 	.logo-mask {
@@ -153,36 +181,41 @@
 		@include respond-to(break2) {
 			width: 420px;
 			height: 70px;
+			// width: 
 		}
 		@include respond-to(fullwidth) {
-			width: 420px;
-			height: 70px;
+			// width: 420px;
+			// height: 70px;
+			// width: 159px;
+			// height: 160px;
 		}
+		@include width(15.9);
+		@include height(16);
 	}
 	// new logo
 	img.logo--folklife, .site--folklife .logo__copy {
-		// @include width(15);
-		// @include height(15);
+		@include width(15);
+		@include height(15);
 	}
-	img.logo--folklife {
+	img.logo--folklife, img.logo--festival, img.logo--folkways {
 		// padding: 15px;
+		@include padding(1.5);
 	}
-	// new nav
-	// .site--folklife {
-	// 	.navbar-brand {
-	// 		@include padding-top(4);
-	// 	}
-	// 	.logo-mask {
-	// 		position: relative;
-	// 		@include left(2);
-	// 	}
-	// }
+	.site--folklife {
+		.navbar-brand {
+			@include padding-top(4);
+		}
+		.logo-mask {
+			position: relative;
+			@include left(2);
+		}
+	}
 	img.logo--center, img.logo--folklife, img.logo--festival, img.logo--folkways {
-		-webkit-transition: top 0.1s ease;
-		-moz-transition: top 0.1s ease;
-		-ms-transition: top 0.1s ease;
-		-o-transition: top 0.1s ease;
-		transition: top 0.1s ease;
+		// -webkit-transition: top 0.1s ease;
+		// -moz-transition: top 0.1s ease;
+		// -ms-transition: top 0.1s ease;
+		// -o-transition: top 0.1s ease;
+		// transition: top 0.1s ease;
 	}
 	img.logo--folklife, img.logo--center, img.logo--festival, img.logo--folkways {
 		position: absolute;
@@ -191,7 +224,7 @@
 	}
 	.smaller-header {
 		// new logo
-		background-color: #333;
+		// background-color: #333;
 		// switch to fixed
 		position: fixed;
 		top:0;
@@ -201,11 +234,14 @@
 			@include respond-to(break2) {
 				padding: 17px 0;
 				height: 70px;
-				-webkit-transition: all 0.3s ease;
-				-moz-transition: all 0.3s ease;
-				-ms-transition: all 0.3s ease;
-				-o-transition: all 0.3s ease;
-				transition: all 0.3s ease;
+				// -webkit-transition: all 0.3s ease;
+				// -moz-transition: all 0.3s ease;
+				// -ms-transition: all 0.3s ease;
+				// -o-transition: all 0.3s ease;
+				// transition: all 0.3s ease;
+			}
+			@include respond-to(fullwidth) {
+				padding: 0;
 			}
 		}
 		img.sunsplash { position: relative; top: 0.7rem; }
@@ -214,15 +250,26 @@
 		// img.logo--folklife { top: -0.8rem; }
 		img.logo--folklife, img.logo--festival, img.logo--folkways { top: -25%; }
 
+		// img.logo__bg { display: none; }
+		.logo__copy {
+			img.logo--folkways { top: -35%; }
+			@include height(10);
+			overflow: hidden;
+		}
 		@include respond-to(break2) {
 			img.sunsplash { top: 0.3rem; }
 			img.logo--center { top: -8rem; }
 			img.logo--center { top: -100%; }
 			// img.logo--folklife { top: -3.3rem; }
 			img.logo--folklife, img.logo--festival, img.logo--folkways { top: -45%; }
-			// new nav
+			img.logo--folkways { top: -35%; }
+			// img.logo__bg { position: absolute; top: -100%; }
+			// new header
+			img.logo--folklife { top: -115%; }
+			// new header II
+			// img.logo__bg { display: none; }
 			.logo__copy {
-				// @include height(4.5);
+				@include height(9.8);
 			}
 		}
 		& + .section--banner.container {
@@ -382,7 +429,10 @@
 					color: white;
 				}
 			}
-			@include respond-to(break2) {color:$black20;}
+			@include respond-to(break2) {
+				// color:$black20;
+				color:$black60; // 12.12
+			}
 			cursor: pointer;
 			&:hover {
 				color: white;
@@ -391,7 +441,8 @@
 	}
 	.header-nav {
 		display: none;
-		background-color: $black60;
+		// background-color: $black60;
+		background-color: $black30;
 		z-index: 10;
 	}
 	.footer-nav__sub-item {
@@ -408,6 +459,7 @@
 		display: none; // initial hide
 		// background-color: $black40;
 		background-color: $black50;
+		background-color: $black30; // 12.12
 		position: relative;
 		z-index: 10;
 		top: 3rem;
@@ -429,6 +481,7 @@
 		// font-family: $slabExtraWide;
 		// font-weight: 700;
 		// @extend %header-nav-font;
+		text-align: right;
 		@include section-title;
 		color: white;
 		margin-bottom: 3rem;
@@ -437,6 +490,14 @@
 		}
 		@include respond-to(fullwidth) {
 			margin-bottom: 2rem;
+		}
+		// vertically align
+		.vertically-align-grandparent {
+			// @include height(3.4);
+			height: 34px;
+		}
+		.vertically-align {
+			right: 0;
 		}
 	}
 	.browsenav__item {
@@ -485,13 +546,19 @@
 		outline: none;
 
 		border-radius: 0;
-		padding: 10px 15px 10px;
+		// padding: 10px 15px 10px;
+		@include padding-top(0);
+		@include padding-right(1.5);
+		@include padding-bottom(0.5);
+		@include padding-left(1.5);
+		// padding: 5px 15px 5px;
 		width: 100%;
 		@include link-font;
 		line-height: 1 !important;
 		font-weight: 600;
 		width: 100%; 
-		height: 44px;
+		// height: 44px;
+		height: 34px;
 		// from http://stackoverflow.com/a/30783140
 		// overflow:hidden;
 		// position: relative;
@@ -502,27 +569,37 @@
 	.select {
 		width: 100%;
 		margin-bottom:0;
-		background-color: $black20;
+		// background-color: $black20;
+		background-color: white;
+		color: $black60;
 
 		&:after {
 			content: "\6f";
 			font-family: "vd-icons";
 			font-size: 3rem;
 			vertical-align: top;
-			color: $black50;
+			// color: $black50;
+			color: $black60;
 			position: absolute;
-			right: 2rem; // clear padding right
+			// right: 2rem; // clear padding right
+			right: 3rem; // clear padding right // 12.12
 			top: 0;
-			background: $black20;
+			// background: $black20;
 			// z-index: 1;
-			line-height: 1.1;
+			// line-height: 1.1;
+			line-height:5vw;
+			@include respond-to(break2) {line-height:2.5rem;}
+			@include respond-to(fullwidth) {line-height:0.7;}
 			text-align: center;
 			width: 10%;
 			height: 100%;      
 			pointer-events: none;
 			box-sizing: border-box; 
+			font-size:3rem;
+			@include respond-to(break2) {font-size:2.5vw;}
+			@include respond-to(fullwidth) {font-size:3rem;}
 		}
 		&:hover:after {
-			color: white;
+			color: $fw-link;
 		}
 	}

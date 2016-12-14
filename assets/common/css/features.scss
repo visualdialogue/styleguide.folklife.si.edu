@@ -26,6 +26,26 @@ conversion: 				| mobile 	| tablet	| desktop
 
 */
 
+@mixin feature {
+	background-color: $black08;
+	.details {
+		@include padding-top(2);
+		@include padding-right(1);
+		@include padding-bottom(3);
+		@include padding-left(2);
+	}
+	.category {
+		// @include margin-top(1.2);
+		@include margin-top(1);
+		@include margin-bottom(1);
+	}
+	.title {
+		@include serif-lg;
+		@include margin-bottom(0.5);
+	}
+}
+
+
 .feature {
 	.textbox {
 		@include padding-top(1);
@@ -60,32 +80,48 @@ conversion: 				| mobile 	| tablet	| desktop
 .featurette-list {
 	margin-bottom:0;
 }
-.featurette {
-	// margin-bottom: 3.5vw;
-	margin-bottom: 1.5rem;
-	@include respond-to(break2) {
-		margin-bottom: 2vw;
+@mixin featurette {
+	@include margin-bottom(3);
+	background-color: $black08;
+	.card__image-wrapper {
+		padding-bottom: 0;
 	}
-	@include respond-to(fullwidth) {
-		margin-bottom: 3rem;
+	.details {
+		@include margin-top(2.5); // add margin back in b/c no title above in horizontal layout
 	}
-	&:last-of-type {
-		margin-bottom: 0;
-	}
-	&__details, &__image {
-		display: inline-block;
-		vertical-align: top;	
-	}
-	&__details {
-		width: 50%;
-		// padding: 3vw 2vw 0;
-	}
-	&__image {
-		display: inline-block;
-		vertical-align: top;
-		width: 50%;
+	.category {
+		@include margin-bottom(0.5);
 	}
 	.title {
-		font-weight: 700;
+		@include serif-md;
 	}
+
+	// OLD
+	// // margin-bottom: 3.5vw;
+	// margin-bottom: 1.5rem;
+	// @include respond-to(break2) {
+	// 	margin-bottom: 2vw;
+	// }
+	// @include respond-to(fullwidth) {
+	// 	margin-bottom: 3rem;
+	// }
+	// &:last-of-type {
+	// 	margin-bottom: 0;
+	// }
+	// &__details, &__image {
+	// 	display: inline-block;
+	// 	vertical-align: top;	
+	// }
+	// &__details {
+	// 	width: 50%;
+	// 	// padding: 3vw 2vw 0;
+	// }
+	// &__image {
+	// 	display: inline-block;
+	// 	vertical-align: top;
+	// 	width: 50%;
+	// }
+	// .title {
+	// 	font-weight: 700;
+	// }
 }

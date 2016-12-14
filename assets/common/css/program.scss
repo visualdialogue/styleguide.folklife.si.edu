@@ -15,7 +15,7 @@
 		.byline {
 			@include sans-sm;
 			font-weight: 600;
-			@include margin-bottom(4);
+			@include margin-bottom(2);
 		}
 		.description p {
 			@include sans-md;
@@ -27,8 +27,8 @@
 			}
 		}
 		figure {
-			@include margin-top(4);
-			@include margin-bottom(4);
+			@include margin-top(2);
+			@include margin-bottom(2);
 		}
 		figcaption {
 			color: $black60;
@@ -228,9 +228,6 @@
 		}
 	}
 	.related-content {
-		.blog-sidebar__header {
-			margin-left: 0;
-		}
 		li {
 			@include margin-bottom(4);
 		}
@@ -242,9 +239,6 @@
 			@include col;
 			width: 46%;
 		}
-		.details-wrapper--horizontal {
-			@include padding-left(0);
-		}
 		.details {
 			@include sans-xxs;
 			// @include col;
@@ -253,6 +247,13 @@
 			// @include padding-left(1.4);
 		}
 
+	}
+	.program-page .related-content {
+		.details-wrapper--horizontal {
+			padding-left:0;
+			@include respond-to(break2) {padding-left:$gutter-full;}
+			@include respond-to(fullwidth) {padding-left:0;}
+		}
 	}
 	.ms-section {
 		@include margin-bottom(4);

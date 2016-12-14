@@ -244,8 +244,8 @@ body {
 			line-height: 1.3;
 		}
 		@include respond-to(fullwidth) {
-			line-height: 1.3;
-			line-height: 1.2;
+			// line-height: 1.2; 
+			line-height: 1.3; // dec 14 for blog sidebar
 	  		font-size: 1.8rem; // oct 19 for fritz
 		}
 	}
@@ -296,6 +296,7 @@ body {
 			line-height: 1.28;
 		}
 		@include respond-to(fullwidth) {
+			line-height: 1.1; // tighter for festival/learn page
 	  		font-size: 3rem;
 		}
 	}
@@ -423,7 +424,9 @@ body {
 		}
 		@include respond-to(fullwidth) {
 			font-size: 4.2rem;
-			line-height: 1.1;
+			// line-height: 1.1;
+			line-height: 1; // smaller for folkways banner titles
+			// line-height: 0.95; // smaller for folkways banner titles, but too small for festival blog
 		}
 	}
 	.serif-lg {@include serif-lg;}
@@ -457,6 +460,7 @@ body {
 		@include respond-to(fullwidth) {
 	  		font-size: 2.4rem;
 			line-height: 1.4;
+			line-height: 1.2; // 12.12
 		}
 	}
 	.serif-sm {@include serif-sm;}

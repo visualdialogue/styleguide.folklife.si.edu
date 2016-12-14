@@ -140,6 +140,7 @@ Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-crea
 	// CLICK OUTSIDE MENU
 	// activate outside navbar div
 	var $navbarOutside = $('.navbar-outside');
+	var $folkwaysNav = $('.folkways-nav');
 
 	// close nav if clicked
 	$navbarOutside.on('click', function() {
@@ -167,6 +168,7 @@ Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-crea
 			$notShareIcon.addClass('lighter-nav-icons'); // grey out other icons
 			shareClosed = false; // flag for closing	
 			$socialMediaIcons.show();
+			$folkwaysNav.hide(); // hide folkways nav
 		}
 		// else is open already so JUST CLOSE IT
 		else {
@@ -192,6 +194,7 @@ Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-crea
 			$notSearchIcon.addClass('lighter-nav-icons'); // grey out other icons
 			$searchBar.add($browsenav).show(); // show social media icons
 			searchClosed = false; // flag for closing	
+			$folkwaysNav.hide(); // hide folkways nav
 		}
 		// else is open already so JUST CLOSE IT
 		else {
@@ -217,6 +220,7 @@ Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-crea
 			$megaNav.css('display', 'block'); // show social media icons
 			// $navBarHeader.css('z-index', '0'); // make navbar clickable to close
 			menuClosed = false; // flag for closing	
+			$folkwaysNav.hide(); // hide folkways nav
 		}
 		// else is open already so JUST CLOSE IT
 		else {
@@ -260,6 +264,7 @@ Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-crea
 	 		$navLists.removeClass('nav-show-mobile'); // close all other open nav lists - mobile only
 		$allIcons.removeClass('lighter-nav-icons');
 		$megaNav.add($searchBar).add($browsenav).add($socialMediaIcons).hide(); // close auxiliaries
+		$folkwaysNav.show(); // reset folkways nav
 		menuClosed = true;
 		searchClosed = true;
 		shareClosed = true;

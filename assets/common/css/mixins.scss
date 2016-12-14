@@ -85,6 +85,8 @@
 	display: table-cell;
 	width: 100%;
 	height: 100%;
+	
+	// position: absolute; // for ie
   }
   // vertical align from http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/ 
   // @mixin vertical-align($position: relative) {
@@ -97,7 +99,9 @@
   }
 
   .vertically-align-grandparent {@include vertically-align-grandparent;height: 100%;}
+	.vertically-align-uncle{display: table-row;}
   .vertically-align-parent {@include vertically-align-parent;}
+  .vertically-align {@include vertically-align;}
 
  //  @mixin vertical-align($position: absolute) {
 	// position: $position;

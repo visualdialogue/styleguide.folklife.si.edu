@@ -1,6 +1,17 @@
 //-----------
 	prevent php error if empty vars
 	------------//
+
+//- thumbnail image option
+-if ('' != $card->thumbnail_img()):
+	//- set banner image as main image if it's set in panel
+	-$thumbnail = $card->image($card->thumbnail_img())
+- elseif($src = $card->image()):
+	-$thumbnail = $src
+-else:
+	-$thumbnail = false;
+-endif
+
 //- banner image option
 -if ('' != $card->banner_img()):
 	//- set banner image as main image if it's set in panel
@@ -180,14 +191,14 @@
 	-endif
 
 //- news item
--elseif ((isset($type)) && ($type == 'news')):
-	-if($image):
-		li.col-xs-6.col-sm-3
-			img(src="<?= $image->url() ?>")
-			.details.details--participate
-				.date!= $card->date('n.j.y')
-				.title: a!= $card->title()
-	-endif
+//- -elseif ((isset($type)) && ($type == 'news')):
+//- 	-if($image):
+//- 		li.col-xs-6.col-sm-3
+//- 			img(src="<?= $image->url() ?>")
+//- 			.details.details--participate
+//- 				.date!= $card->date('n.j.y')
+//- 				.title: a!= $card->title()
+//- 	-endif
 
 //- Regular text card with image
 - else:
@@ -337,7 +348,7 @@
 							a.high(href="<?= $card->url() ?>").title.card__title: span.light: span.er= $card->title()
 					-endif
 
-					-if($image):
+					-if($thumbnail || $image):
 						//- if want to show main image caption
 						-if($caption):
 							.card__image-wrapper.clearfix(class="col-sm-<?= $img_col ?>")
@@ -347,6 +358,10 @@
 									-if($image->caption()->isNotEmpty()):
 										figcaption!= $image->caption()
 									-endif
+						-elseif($thumbnail):
+							.card__image-wrapper.clearfix(class="col-sm-<?= $img_col ?>")
+								a(href="<?= $card->url() ?>")
+									img.card__image(src="<?= $thumbnail->url() ?>")
 						-else:
 							.card__image-wrapper.clearfix(class="col-sm-<?= $img_col ?>")
 								a(href="<?= $card->url() ?>")

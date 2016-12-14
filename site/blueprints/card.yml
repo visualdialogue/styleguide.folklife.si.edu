@@ -44,6 +44,12 @@ fields:
     options: images
     width: 1/2
     icon: image
+  thumbnail_img:
+    label: Thumbnail Image
+    type: select
+    options: images
+    width: 1/2
+    icon: image
   banner_img:
     label: Banner Image
     type: select

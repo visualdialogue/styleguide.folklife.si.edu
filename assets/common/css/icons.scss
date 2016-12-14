@@ -25,14 +25,17 @@
 /* Navbar
 -------------------------------------------------- */
 	.nav-icon {
-		color: white;
+		// color: white; // old
+		color: $black60; // new
+		// color: $black30; // new off state
 		// font-size: 7vw;
 		font-size: 2.3rem;
 		// margin: 5px 2px;
 		line-height: 0.9; // for center alignment
 		@include respond-to(break2) {
 			// font-size: 2.6vw; // 38px
-			font-size: 3.8rem; // 38px
+			font-size: 3.8rem; // 38px, old
+			font-size: 2.1vw; // new
 			// margin: 4px 2px 0;
 			// margin: 10px;
 			margin: 5px;
@@ -40,7 +43,8 @@
 			line-height: 0.7; // for center alignment
 		}
 		@include respond-to(fullwidth) {
-			font-size: 3.8rem;
+			// font-size: 3.8rem;
+			font-size: 3.4rem; // new
 			// line-height: 1.2; // for center alignment
 		}
 
@@ -50,7 +54,8 @@
 			}
 			&:hover {
 				@include respond-to(break2) {
-				color: $black40;
+				// color: $black40;
+				color: $black30; // new
 				}
 			}
 		}
@@ -146,14 +151,18 @@
 		@include respond-to(fullwidth) { font-size: 5.2rem; padding-right: 2px; line-height: 1;}
 	}
 
+	.more-link-wrapper {
+		position: relative;
+	}
 	.more-link {
 		position: absolute;
 		top: 0;
-		right: 15px; // match outside margins
+		right: 0;
+		// right: 15px; // match outside margins
 		cursor: pointer;
 		line-height: 1;
 		@include respond-to(break2) {
-			right: 8rem;
+			// right: 8rem;
 		}
 		&__text {
 			@include sans-xxs;

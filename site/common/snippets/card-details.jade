@@ -18,8 +18,12 @@
 	-if(!$titlePositionTop):
 
 		//- date
-		-if('' != $card->date() && $type != 'blog' && $date):
-			.date!= $card->date('M d, Y')
+		-if('' != $card->date() && $date && $type != 'blog' ):
+			-if($type == 'news'):
+				.date!= $card->date('n.j.Y')
+			-else:
+				.date!= $card->date('M d, Y')
+			-endif
 		-endif
 
 		//- if subtitle, group with title for correct highlighting

@@ -4,7 +4,7 @@
   <ul>
     <?php if($page->template() == 'article'): ?>
     <?php foreach($page->siblings(false)->visible()->filterBy('tags','basque',',')->limit($limit) as $entry): ?>
-    <?php snippet('card', array('card' => $entry, 'orientation' => $orientation, 'img_col' => 75, 'border' => true, 'date' => false, 'author' => false )); ?>
+    <?php snippet('card', array('card' => $entry, 'orientation' => $orientation, 'date' => false, 'author' => false )); ?>
     <?php endforeach; ?>
     <?php else: ?>
     <?php foreach($pages->find('blog')->children()->visible()->filterBy('tags','basque',',')->limit($limit) as $entry): ?>

@@ -13,9 +13,14 @@
   <?php endif; ?>
   <?php endif; ?>
   <?php if(!$titlePositionTop): ?>
-  <?php if('' != $card->date() && $type != 'blog' && $date): ?>
+  <?php if('' != $card->date() && $date && $type != 'blog' ): ?>
+  <?php if($type == 'news'): ?>
+  <div class="date">
+    <?php echo $card->date('n.j.Y'); ?></div>
+  <?php else: ?>
   <div class="date">
     <?php echo $card->date('M d, Y'); ?></div>
+  <?php endif; ?>
   <?php endif; ?>
   <?php if('' != $card->subtitle()):	 ?>
   <?php if(!$link): ?>

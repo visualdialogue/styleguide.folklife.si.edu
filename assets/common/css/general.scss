@@ -15,6 +15,7 @@
 			padding: 0 40px;
 		}
 		.highlight__inner {
+			background-color: $black30;
 			// show highlight on mobile
 			padding: 15px;
 			@include respond-to(break2) {
@@ -54,7 +55,7 @@ p {margin: 0;}
 	width: 49%;
 	@include respond-to(fullwidth) {
 		width: 46%;
-		padding-left: 0 !important; // fit the layout alt-grid
+		// padding-left: 0 !important; // fit the layout alt-grid
 	}
 }
 
@@ -63,6 +64,7 @@ p {margin: 0;}
 	float: left;
 	width: 63%;
 }
+
 
 // folklife - dive deep
 .col-sm-65 {
@@ -73,7 +75,7 @@ p {margin: 0;}
 	float: left;
 	width: 44%;
 	@include respond-to(fullwidth) {
-		padding-left: 0 !important; // fit the layout alt-grid
+		// padding-left: 0 !important; // fit the layout alt-grid
 	}
 }
 
@@ -99,6 +101,8 @@ p {margin: 0;}
 	$gutter-small: 7.5px;
 	// $gutter-medium: 1.35%;
 	$gutter-medium: 1.36%;
+	
+	$gutter-full: 2.72%;
 	// $gutter-medium: %;
 	.row {
 		margin-left: -$gutter-small;
@@ -163,7 +167,7 @@ p {margin: 0;}
 			right: -4.5px;
 			height: 100%;
 			width: 9px;
-			// right border as image from http://stackoverflow.com/a/7948532
+		// right border as image from http://stackoverflow.com/a/7948532
 			background-image: url(/assets/images/folklife-vr.png);
 			background-position: right;
 			background-repeat: no-repeat;
@@ -206,10 +210,6 @@ p {margin: 0;}
 /* General / Sections
 -------------------------------------------------- */
 
-	.site-toggle__link.active {
-		// color: $black70;
-		color: $black20;
-	}
 	body {
 		// padding-top: 100px; // clear fixed header
 		@include body-text;
@@ -229,7 +229,7 @@ p {margin: 0;}
 			// margin-bottom: 5.5rem;
 			// margin-bottom: 4rem;
 			margin-bottom: 7.3rem; // with line height this equals 80 below for most sections
-			// margin-bottom: 6rem; // with line height this equals 80 below for most sections
+			margin-bottom: 6rem; // tighten up for shop banner
 		}
 
 	}

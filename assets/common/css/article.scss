@@ -23,9 +23,11 @@
 		@include margin-top(2);
 	}
 	.related-content {
-		@include border(bottom);
 		li {
 			@include margin-bottom(0.8);
+		}
+		h2 {
+			@include border(bottom);
 		}
 		.border {
 			border-top-width: 1px;
@@ -35,7 +37,7 @@
 			@include padding-bottom(1.5);
 		}
 		.card__image,  {
-			@include padding-left(1);
+			// @include padding-left(1);
 		}
 		.details {
 			padding-top:0
@@ -43,8 +45,8 @@
 		.title {
 			// @include padding-left(1.5);
 			@include sans-xxs;
-			font-weight: 500;
-			@include padding-left(1);
+			font-weight: 600;
+			// @include padding-left(1);
 		}
 		.author {
 			display:none;
@@ -66,5 +68,14 @@
 		@include sans-xxs;
 		font-weight: 300;
 		@include margin-bottom(2);
+	}
+}
+
+/* Sidebar
+-------------------------------------------------- */
+.blog-sidebar {
+	color: $black70;
+	a {
+		color: $black70;
 	}
 }

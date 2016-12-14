@@ -6,6 +6,9 @@ fields:
   title:
     label: Title
     type:  text
+  subtitle:
+    label: Subtitle
+    type: text
   full_title:
     label: Full Title
     type: text

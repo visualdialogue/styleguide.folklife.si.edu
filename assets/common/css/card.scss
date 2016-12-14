@@ -26,6 +26,7 @@
 .border {
 	// border-top: 1px solid $black65;
 	border-top: 2px solid $black65;
+	border-top: 1px solid $black30;
 	&--inset {
 		margin-left:2rem;
 		margin-right:2rem;
@@ -117,6 +118,18 @@ a.details {
 		margin-top:-3px;
 	}
 }
+.details-wrapper--horizontal {
+	@include padding-right(3);
+	padding-left:1rem;
+	@include respond-to(break2) {padding-left:$gutter-full;}
+	@include respond-to(fullwidth) {padding-left:2rem;}
+	.category {
+		@include margin-bottom(0.5);
+	}
+}
+
+
+// TITLE
 .title {
 	display: inline-block; // so a tag doesn't get rid of margins
 	width: 100%; // text align center does exactly that
@@ -180,7 +193,10 @@ a.details {
 			margin-bottom:0;
 		}
 		.details {
-			@include min-height(30);
+			// @include min-height(30);
+			min-height:63.5vw; // height of Quelbe!
+			@include respond-to(break2) {min-height:19vw;}
+			@include respond-to(fullwidth) {min-height:27rem;}
 		}
 	}
 

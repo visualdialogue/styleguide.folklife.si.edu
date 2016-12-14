@@ -1,4 +1,11 @@
 
+<?php if ('' != $card->thumbnail_img()): ?>
+<?php $thumbnail = $card->image($card->thumbnail_img()); ?>
+<?php elseif($src = $card->image()): ?>
+<?php $thumbnail = $src; ?>
+<?php else: ?>
+<?php $thumbnail = false; ?>
+<?php endif; ?>
 <?php if ('' != $card->banner_img()): ?>
 <?php $image = $card->image($card->banner_img()); ?>
 <?php elseif($src = $card->image()): ?>
@@ -146,17 +153,6 @@
   </div>
 </li>
 <?php endif; ?>
-<?php elseif ((isset($type)) && ($type == 'news')): ?>
-<?php if($image): ?>
-<li class="col-xs-6 col-sm-3"><img src="<?= $image->url() ?>"/>
-  <div class="details details--participate">
-    <div class="date">
-      <?php echo $card->date('n.j.y'); ?></div>
-    <div class="title"><a>
-        <?php echo $card->title(); ?></a></div>
-  </div>
-</li>
-<?php endif; ?>
 <?php else: ?>
 <?php $xs = null; ?>
 <?php $sm = null; ?>
@@ -287,7 +283,7 @@
               <?php echo htmlspecialchars($card->title(), ENT_QUOTES, 'UTF-8'); ?></span></span></a>
       </div>
       <?php endif; ?>
-      <?php if($image): ?>
+      <?php if($thumbnail || $image): ?>
       <?php if($caption): ?>
       <div class="card__image-wrapper clearfix col-sm-<?= $img_col ?>">
         <figure><img src="<?= $image->url() ?>"/>
@@ -297,6 +293,8 @@
           <?php endif; ?>
         </figure>
       </div>
+      <?php elseif($thumbnail): ?>
+      <div class="card__image-wrapper clearfix col-sm-<?= $img_col ?>"><a href="<?= $card->url() ?>"><img src="<?= $thumbnail->url() ?>" class="card__image"/></a></div>
       <?php else: ?>
       <div class="card__image-wrapper clearfix col-sm-<?= $img_col ?>"><a href="<?= $card->url() ?>"><img src="<?= $image->url() ?>" class="card__image"/></a></div>
       <?php endif; ?>

@@ -35,6 +35,9 @@
 	$basque-red: $fs-red;
 	$basque-green: $fs-green;
 
+	// application
+	.basque-child-page .section-title {color: $basque-red;}
+
 
 
 /* Folkways
@@ -75,11 +78,11 @@ $link: $black80;
 $copylinks: coral;
 $hover: $lightblue;
 $hover: $lightorange;
-$navbar: $black80;
-// $navbar: white; // new banner
+// $navbar: $black80; // old banner
+$navbar: white; // new banner
 $tagline: $black50;
-$sitelinks: $black30;
-$sitelinks: $black40;
+// $sitelinks: $black30;
+$sitelinks: $black40; // new
 
 $searchText: $black40;
 

@@ -7160,6 +7160,9 @@ conversion: 				| mobile 	| tablet	| desktop
 -------------------------------------------------- */
 /* Festival
 -------------------------------------------------- */
+.basque-child-page .section-title {
+  color: #dd3f48; }
+
 /* Folkways
 -------------------------------------------------- */
 /* Colors
@@ -7263,7 +7266,6 @@ body {
   @media only screen and (min-width: 1560px) {
     .sans-xxs {
       line-height: 1.3;
-      line-height: 1.2;
       font-size: 1.8rem; } }
 
 .sans-xs {
@@ -7307,6 +7309,7 @@ body {
       line-height: 1.28; } }
   @media only screen and (min-width: 1560px) {
     .sans-md {
+      line-height: 1.1;
       font-size: 3rem; } }
 
 .sans-xxxs {
@@ -7376,7 +7379,7 @@ body {
   @media only screen and (min-width: 1560px) {
     .serif-lg {
       font-size: 4.2rem;
-      line-height: 1.1; } }
+      line-height: 1; } }
 
 .serif-md {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
@@ -7410,7 +7413,8 @@ body {
   @media only screen and (min-width: 1560px) {
     .serif-sm {
       font-size: 2.4rem;
-      line-height: 1.4; } }
+      line-height: 1.4;
+      line-height: 1.2; } }
 
 .category {
   text-transform: uppercase;
@@ -7448,7 +7452,7 @@ body {
   @media only screen and (min-width: 1560px) {
     .content h3 {
       font-size: 4.2rem;
-      line-height: 1.1; } }
+      line-height: 1; } }
 
 .content h4 {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
@@ -7514,7 +7518,8 @@ body {
   @media only screen and (min-width: 1560px) {
     .content p {
       font-size: 2.4rem;
-      line-height: 1.4; } }
+      line-height: 1.4;
+      line-height: 1.2; } }
   @media only screen and (min-width: 53.25em) {
     .content p {
       padding-bottom: 1.25vw; } }
@@ -7537,6 +7542,7 @@ body {
       line-height: 1.28; } }
   @media only screen and (min-width: 1560px) {
     .archives-page .title {
+      line-height: 1.1;
       font-size: 3rem; } }
 
 .sans-md {
@@ -7550,6 +7556,7 @@ body {
       line-height: 1.28; } }
   @media only screen and (min-width: 1560px) {
     .sans-md {
+      line-height: 1.1;
       font-size: 3rem; } }
 
 /* Icons
@@ -7574,24 +7581,25 @@ body {
 /* Navbar
 -------------------------------------------------- */
 .nav-icon {
-  color: white;
+  color: #666666;
   font-size: 2.3rem;
   line-height: 0.9; }
   @media only screen and (min-width: 53.25em) {
     .nav-icon {
       font-size: 3.8rem;
+      font-size: 2.1vw;
       margin: 5px;
       margin: 14px;
       line-height: 0.7; } }
   @media only screen and (min-width: 1560px) {
     .nav-icon {
-      font-size: 3.8rem; } }
+      font-size: 3.4rem; } }
   @media only screen and (max-width: 53.25em) {
     .nav-icon--main {
       margin: 1.5vw; } }
   @media only screen and (min-width: 53.25em) {
     .nav-icon--main:hover {
-      color: #999999; } }
+      color: #b3b3b3; } }
 
 .social-icons {
   text-align: right; }
@@ -7671,15 +7679,15 @@ body {
       padding-right: 2px;
       line-height: 1; } }
 
+.more-link-wrapper {
+  position: relative; }
+
 .more-link {
   position: absolute;
   top: 0;
-  right: 15px;
+  right: 0;
   cursor: pointer;
   line-height: 1; }
-  @media only screen and (min-width: 53.25em) {
-    .more-link {
-      right: 8rem; } }
   .more-link__text {
     font-family: "acumin-pro", Arial, sans-serif;
     font-weight: 300;
@@ -7696,7 +7704,6 @@ body {
     @media only screen and (min-width: 1560px) {
       .more-link__text {
         line-height: 1.3;
-        line-height: 1.2;
         font-size: 1.8rem; } }
     @media only screen and (min-width: 53.25em) {
       .more-link__text {
@@ -7835,32 +7842,11 @@ conversion: 				| mobile 	| tablet	| desktop
       line-height: 1.28; } }
   @media only screen and (min-width: 1560px) {
     .feature--full .description {
+      line-height: 1.1;
       font-size: 3rem; } }
 
 .featurette-list {
   margin-bottom: 0; }
-
-.featurette {
-  margin-bottom: 1.5rem; }
-  @media only screen and (min-width: 53.25em) {
-    .featurette {
-      margin-bottom: 2vw; } }
-  @media only screen and (min-width: 1560px) {
-    .featurette {
-      margin-bottom: 3rem; } }
-  .featurette:last-of-type {
-    margin-bottom: 0; }
-  .featurette__details, .featurette__image {
-    display: inline-block;
-    vertical-align: top; }
-  .featurette__details {
-    width: 50%; }
-  .featurette__image {
-    display: inline-block;
-    vertical-align: top;
-    width: 50%; }
-  .featurette .title {
-    font-weight: 700; }
 
 /* #Links
 -------------------------------------------------- */
@@ -7990,6 +7976,9 @@ a.high, .high, .video__thumbnail {
   width: 100%;
   height: 100%; }
 
+.vertically-align-uncle {
+  display: table-row; }
+
 .vertically-align-parent {
   position: relative;
   -webkit-transform-style: preserve-3d;
@@ -8001,10 +7990,17 @@ a.high, .high, .video__thumbnail {
   width: 100%;
   height: 100%; }
 
+.vertically-align {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
 /* Nav
 -------------------------------------------------- */
 .navbar {
-  background-color: #333333;
+  background-color: white;
   margin-bottom: 0;
   border: 0;
   border-radius: 0;
@@ -8017,7 +8013,7 @@ a.high, .high, .video__thumbnail {
       z-index: 10; } }
   @media only screen and (min-width: 53.25em) {
     .navbar {
-      top: 60px;
+      top: 3.4rem;
       z-index: 2;
       z-index: 10; } }
 
@@ -8029,13 +8025,32 @@ a.high, .high, .video__thumbnail {
       position: absolute;
       width: 100%;
       text-transform: uppercase;
-      background-color: white;
+      background-color: #333333;
       font-family: "balboa", Arial, sans-serif;
       font-size: 2.7rem;
       text-align: right;
       font-weight: 300;
-      height: 60px;
-      padding: 13px 0 0; } }
+      padding: 13px 0 0;
+      height: 20px;
+      font-family: "acumin-pro", Arial, sans-serif;
+      font-weight: 300;
+      line-height: 1.4;
+      font-size: 3.8vw;
+      line-height: 2vw; } }
+  @media only screen and (min-width: 53.25em) and (min-width: 53.25em) {
+    .navbar__site-toggle {
+      font-size: 1vw;
+      line-height: 1.3; } }
+  @media only screen and (min-width: 53.25em) and (min-width: 1560px) {
+    .navbar__site-toggle {
+      line-height: 1.3;
+      font-size: 1.6rem; } }
+  @media only screen and (min-width: 53.25em) and (min-width: 53.25em) {
+    .navbar__site-toggle {
+      line-height: 0.2vw; } }
+  @media only screen and (min-width: 53.25em) and (min-width: 1560px) {
+    .navbar__site-toggle {
+      line-height: 0.5rem; } }
 
 .tagline {
   display: none;
@@ -8048,8 +8063,10 @@ a.high, .high, .video__thumbnail {
   color: #999999;
   margin-left: 2.5rem; }
   .site-toggle__link:hover {
-    color: #333333;
+    color: white;
     text-decoration: none; }
+  .site-toggle__link.active {
+    color: #cccccc; }
 
 .navbar-outside {
   top: 0;
@@ -8088,7 +8105,10 @@ a.high, .high, .video__thumbnail {
   height: 50px; }
   @media only screen and (min-width: 53.25em) {
     .navspacer {
-      height: 178px !important; } }
+      height: 5.1vw !important; } }
+  @media only screen and (min-width: 1560px) {
+    .navspacer {
+      height: 11.3rem !important; } }
   .navspacer-open {
     height: 132px !important;
     -webkit-transition: all 0.3s ease;
@@ -8104,12 +8124,15 @@ a.high, .high, .video__thumbnail {
   @media only screen and (min-width: 53.25em) {
     .navbar-brand {
       height: 115px;
-      padding: 23px 0 10px 0; } }
+      height: 5.1vw;
+      padding: 23px 0 10px 0;
+      width: 14.2857%; } }
   @media only screen and (min-width: 1560px) {
     .navbar-brand {
-      padding: 23px 0 18px 0;
+      padding: 20px 0 18px 0;
       font-size: 25px;
-      height: 118px; } }
+      height: 80px;
+      width: 14.2857%; } }
 
 .logo-mask {
   overflow: hidden;
@@ -8133,22 +8156,69 @@ img.sunsplash {
 
 .logo__copy, img.logo--folklife, img.logo--center, img.logo--folkways {
   width: 193px;
-  height: 32px; }
+  height: 32px;
+  width: 19.875vw;
+  height: 20vw; }
   @media only screen and (min-width: 53.25em) {
     .logo__copy, img.logo--folklife, img.logo--center, img.logo--folkways {
       width: 420px;
       height: 70px; } }
+  @media only screen and (min-width: 53.25em) {
+    .logo__copy, img.logo--folklife, img.logo--center, img.logo--folkways {
+      width: 9.9375vw; } }
   @media only screen and (min-width: 1560px) {
     .logo__copy, img.logo--folklife, img.logo--center, img.logo--folkways {
-      width: 420px;
-      height: 70px; } }
+      width: 15.9rem; } }
+  @media only screen and (min-width: 53.25em) {
+    .logo__copy, img.logo--folklife, img.logo--center, img.logo--folkways {
+      height: 10vw; } }
+  @media only screen and (min-width: 1560px) {
+    .logo__copy, img.logo--folklife, img.logo--center, img.logo--folkways {
+      height: 16rem; } }
 
-img.logo--center, img.logo--folklife, img.logo--festival, img.logo--folkways {
-  -webkit-transition: top 0.1s ease;
-  -moz-transition: top 0.1s ease;
-  -ms-transition: top 0.1s ease;
-  -o-transition: top 0.1s ease;
-  transition: top 0.1s ease; }
+img.logo--folklife, .site--folklife .logo__copy {
+  width: 18.75vw;
+  height: 18.75vw; }
+  @media only screen and (min-width: 53.25em) {
+    img.logo--folklife, .site--folklife .logo__copy {
+      width: 9.375vw; } }
+  @media only screen and (min-width: 1560px) {
+    img.logo--folklife, .site--folklife .logo__copy {
+      width: 15rem; } }
+  @media only screen and (min-width: 53.25em) {
+    img.logo--folklife, .site--folklife .logo__copy {
+      height: 9.375vw; } }
+  @media only screen and (min-width: 1560px) {
+    img.logo--folklife, .site--folklife .logo__copy {
+      height: 15rem; } }
+
+img.logo--folklife, img.logo--festival, img.logo--folkways {
+  padding: 1.875vw; }
+  @media only screen and (min-width: 53.25em) {
+    img.logo--folklife, img.logo--festival, img.logo--folkways {
+      padding: 0.9375vw; } }
+  @media only screen and (min-width: 1560px) {
+    img.logo--folklife, img.logo--festival, img.logo--folkways {
+      padding: 1.5rem; } }
+
+.site--folklife .navbar-brand {
+  padding-top: 5vw; }
+  @media only screen and (min-width: 53.25em) {
+    .site--folklife .navbar-brand {
+      padding-top: 2.5vw; } }
+  @media only screen and (min-width: 1560px) {
+    .site--folklife .navbar-brand {
+      padding-top: 4rem; } }
+
+.site--folklife .logo-mask {
+  position: relative;
+  left: 2.5vw; }
+  @media only screen and (min-width: 53.25em) {
+    .site--folklife .logo-mask {
+      left: 1.25vw; } }
+  @media only screen and (min-width: 1560px) {
+    .site--folklife .logo-mask {
+      left: 2rem; } }
 
 img.logo--folklife, img.logo--center, img.logo--festival, img.logo--folkways {
   position: absolute;
@@ -8156,7 +8226,6 @@ img.logo--folklife, img.logo--center, img.logo--festival, img.logo--folkways {
   left: 0; }
 
 .smaller-header {
-  background-color: #333;
   position: fixed;
   top: 0;
   width: 100%; }
@@ -8165,12 +8234,10 @@ img.logo--folklife, img.logo--center, img.logo--festival, img.logo--folkways {
     @media only screen and (min-width: 53.25em) {
       .smaller-header .navbar-brand {
         padding: 17px 0;
-        height: 70px;
-        -webkit-transition: all 0.3s ease;
-        -moz-transition: all 0.3s ease;
-        -ms-transition: all 0.3s ease;
-        -o-transition: all 0.3s ease;
-        transition: all 0.3s ease; } }
+        height: 70px; } }
+    @media only screen and (min-width: 1560px) {
+      .smaller-header .navbar-brand {
+        padding: 0; } }
   .smaller-header img.sunsplash {
     position: relative;
     top: 0.7rem; }
@@ -8178,6 +8245,17 @@ img.logo--folklife, img.logo--center, img.logo--festival, img.logo--folkways {
     top: -100%; }
   .smaller-header img.logo--folklife, .smaller-header img.logo--festival, .smaller-header img.logo--folkways {
     top: -25%; }
+  .smaller-header .logo__copy {
+    height: 12.5vw;
+    overflow: hidden; }
+    .smaller-header .logo__copy img.logo--folkways {
+      top: -35%; }
+    @media only screen and (min-width: 53.25em) {
+      .smaller-header .logo__copy {
+        height: 6.25vw; } }
+    @media only screen and (min-width: 1560px) {
+      .smaller-header .logo__copy {
+        height: 10rem; } }
   @media only screen and (min-width: 53.25em) {
     .smaller-header img.sunsplash {
       top: 0.3rem; }
@@ -8186,7 +8264,19 @@ img.logo--folklife, img.logo--center, img.logo--festival, img.logo--folkways {
     .smaller-header img.logo--center {
       top: -100%; }
     .smaller-header img.logo--folklife, .smaller-header img.logo--festival, .smaller-header img.logo--folkways {
-      top: -45%; } }
+      top: -45%; }
+    .smaller-header img.logo--folkways {
+      top: -35%; }
+    .smaller-header img.logo--folklife {
+      top: -115%; }
+    .smaller-header .logo__copy {
+      height: 12.25vw; } }
+  @media only screen and (min-width: 53.25em) and (min-width: 53.25em) {
+    .smaller-header .logo__copy {
+      height: 6.125vw; } }
+  @media only screen and (min-width: 53.25em) and (min-width: 1560px) {
+    .smaller-header .logo__copy {
+      height: 9.8rem; } }
   .smaller-header + .section--banner.container {
     position: relative;
     top: 142px; }
@@ -8336,13 +8426,13 @@ a.header-nav__title, .header-nav__list a, a.footer-nav__title, .footer-nav__list
         color: white; }
     @media only screen and (min-width: 53.25em) {
       .header-nav__sub-item, .footer-nav__sub-item {
-        color: #cccccc; } }
+        color: #666666; } }
     .header-nav__sub-item:hover, .footer-nav__sub-item:hover {
       color: white; }
 
 .header-nav {
   display: none;
-  background-color: #666666;
+  background-color: #b3b3b3;
   z-index: 10; }
 
 .footer-nav__sub-item {
@@ -8365,6 +8455,7 @@ a.header-nav__title, .header-nav__list a, a.footer-nav__title, .footer-nav__list
 .browsenav {
   display: none;
   background-color: gray;
+  background-color: #b3b3b3;
   position: relative;
   z-index: 10;
   top: 3rem; }
@@ -8380,6 +8471,7 @@ a.header-nav__title, .header-nav__list a, a.footer-nav__title, .footer-nav__list
       padding: 4rem 0 4rem; } }
 
 .browsenav__title {
+  text-align: right;
   font-family: "unit-gothic-717", Arial, sans-serif;
   text-transform: uppercase;
   font-size: 5vw;
@@ -8405,6 +8497,10 @@ a.header-nav__title, .header-nav__list a, a.footer-nav__title, .footer-nav__list
   @media only screen and (min-width: 1560px) {
     .browsenav__title {
       margin-bottom: 2rem; } }
+  .browsenav__title .vertically-align-grandparent {
+    height: 34px; }
+  .browsenav__title .vertically-align {
+    right: 0; }
 
 .browsenav__item {
   margin-bottom: 2rem; }
@@ -8424,7 +8520,10 @@ select {
   cursor: pointer;
   outline: none;
   border-radius: 0;
-  padding: 10px 15px 10px;
+  padding-top: 0vw;
+  padding-right: 1.875vw;
+  padding-bottom: 0.625vw;
+  padding-left: 1.875vw;
   width: 100%;
   font-family: "acumin-pro", Arial, sans-serif;
   font-size: 1.7rem;
@@ -8433,7 +8532,31 @@ select {
   line-height: 1 !important;
   font-weight: 600;
   width: 100%;
-  height: 44px; }
+  height: 34px; }
+  @media only screen and (min-width: 53.25em) {
+    select {
+      padding-top: 0vw; } }
+  @media only screen and (min-width: 1560px) {
+    select {
+      padding-top: 0rem; } }
+  @media only screen and (min-width: 53.25em) {
+    select {
+      padding-right: 0.9375vw; } }
+  @media only screen and (min-width: 1560px) {
+    select {
+      padding-right: 1.5rem; } }
+  @media only screen and (min-width: 53.25em) {
+    select {
+      padding-bottom: 0.3125vw; } }
+  @media only screen and (min-width: 1560px) {
+    select {
+      padding-bottom: 0.5rem; } }
+  @media only screen and (min-width: 53.25em) {
+    select {
+      padding-left: 0.9375vw; } }
+  @media only screen and (min-width: 1560px) {
+    select {
+      padding-left: 1.5rem; } }
   @media only screen and (min-width: 53.25em) {
     select {
       font-size: 1.25vw;
@@ -8446,25 +8569,38 @@ select {
 .select {
   width: 100%;
   margin-bottom: 0;
-  background-color: #cccccc; }
+  background-color: white;
+  color: #666666; }
   .select:after {
     content: "\6f";
     font-family: "vd-icons";
     font-size: 3rem;
     vertical-align: top;
-    color: gray;
+    color: #666666;
     position: absolute;
-    right: 2rem;
+    right: 3rem;
     top: 0;
-    background: #cccccc;
-    line-height: 1.1;
+    line-height: 5vw;
     text-align: center;
     width: 10%;
     height: 100%;
     pointer-events: none;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    font-size: 3rem; }
+    @media only screen and (min-width: 53.25em) {
+      .select:after {
+        line-height: 2.5rem; } }
+    @media only screen and (min-width: 1560px) {
+      .select:after {
+        line-height: 0.7; } }
+    @media only screen and (min-width: 53.25em) {
+      .select:after {
+        font-size: 2.5vw; } }
+    @media only screen and (min-width: 1560px) {
+      .select:after {
+        font-size: 3rem; } }
   .select:hover:after {
-    color: white; }
+    color: #cad9e7; }
 
 .container {
   width: 100%;
@@ -8481,6 +8617,7 @@ select {
       .container--highlight {
         padding: 0 40px; } }
     .container--highlight .highlight__inner {
+      background-color: #b3b3b3;
       padding: 15px; }
       @media only screen and (min-width: 53.25em) {
         .container--highlight .highlight__inner {
@@ -8508,8 +8645,7 @@ p {
   width: 49%; }
   @media only screen and (min-width: 1560px) {
     .col-sm-575 {
-      width: 46%;
-      padding-left: 0 !important; } }
+      width: 46%; } }
 
 .col-sm-75 {
   float: left;
@@ -8522,9 +8658,6 @@ p {
 .col-sm-55 {
   float: left;
   width: 44%; }
-  @media only screen and (min-width: 1560px) {
-    .col-sm-55 {
-      padding-left: 0 !important; } }
 
 /* Grid System
 -------------------------------------------------- */
@@ -8666,9 +8799,6 @@ p {
 
 /* General / Sections
 -------------------------------------------------- */
-.site-toggle__link.active {
-  color: #cccccc; }
-
 body {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-size: 5vw;
@@ -8700,7 +8830,8 @@ section {
       margin-bottom: 2.3vw; } }
   @media only screen and (min-width: 1560px) {
     section {
-      margin-bottom: 7.3rem; } }
+      margin-bottom: 7.3rem;
+      margin-bottom: 6rem; } }
 
 @media only screen and (max-width: 53.25em) {
   section li {
@@ -8958,7 +9089,6 @@ a .page-title {
   @media only screen and (min-width: 1560px) {
     .audio .subtitle, .audio .artist {
       line-height: 1.3;
-      line-height: 1.2;
       font-size: 1.8rem; } }
 
 .album .description {
@@ -8984,9 +9114,10 @@ a .page-title {
     .audio-player {
       margin-top: 0.7vw;
       position: absolute;
-      width: 77%; } }
+      width: 17vw; } }
   @media only screen and (min-width: 1560px) {
     .audio-player {
+      width: 77%;
       margin-top: 1.2rem; } }
   @media only screen and (min-width: 53.25em) {
     .audio-player {
@@ -8996,15 +9127,21 @@ a .page-title {
       bottom: 2.2rem; } }
 
 .audio-player__details {
-  max-width: 100%; }
+  max-width: 100%;
+  padding-left: 1.25vw; }
   @media only screen and (min-width: 53.25em) {
     .audio-player__details {
       width: 67%;
-      margin-left: 5%; } }
+      width: 12vw; } }
   @media only screen and (min-width: 1560px) {
     .audio-player__details {
-      width: 72%;
-      margin-left: 1rem; } }
+      width: 72%; } }
+  @media only screen and (min-width: 53.25em) {
+    .audio-player__details {
+      padding-left: 0.625vw; } }
+  @media only screen and (min-width: 1560px) {
+    .audio-player__details {
+      padding-left: 1rem; } }
 
 .audio-progress-bar {
   margin-bottom: 4px;
@@ -9026,7 +9163,6 @@ a .page-title {
   @media only screen and (min-width: 1560px) {
     .audio-time {
       line-height: 1.3;
-      line-height: 1.2;
       font-size: 1.8rem; } }
 
 /* #Newsletter Signup
@@ -9044,7 +9180,6 @@ a .page-title {
   @media only screen and (min-width: 1560px) {
     .section--newsletter-signup, .section--support {
       line-height: 1.3;
-      line-height: 1.2;
       font-size: 1.8rem; } }
   @media only screen and (min-width: 53.25em) {
     .section--newsletter-signup, .section--support {
@@ -9091,7 +9226,6 @@ a .page-title {
   @media only screen and (min-width: 1560px) {
     .newsletter-signup__copy {
       line-height: 1.3;
-      line-height: 1.2;
       font-size: 1.8rem; } }
 
 .newsletter-signup-form {
@@ -9421,7 +9555,6 @@ a .page-title {
   @media only screen and (min-width: 1560px) {
     .article-page figcaption {
       line-height: 1.3;
-      line-height: 1.2;
       font-size: 1.8rem; } }
   @media only screen and (min-width: 53.25em) {
     .article-page figcaption {
@@ -9430,67 +9563,57 @@ a .page-title {
     .article-page figcaption {
       margin-top: 2rem; } }
 
-.article-page .related-content {
+.article-page .related-content li {
+  margin-bottom: 1vw; }
+  @media only screen and (min-width: 53.25em) {
+    .article-page .related-content li {
+      margin-bottom: 0.5vw; } }
+  @media only screen and (min-width: 1560px) {
+    .article-page .related-content li {
+      margin-bottom: 0.8rem; } }
+
+.article-page .related-content h2 {
   border-bottom: 1px solid gray; }
-  .article-page .related-content li {
-    margin-bottom: 1vw; }
-    @media only screen and (min-width: 53.25em) {
-      .article-page .related-content li {
-        margin-bottom: 0.5vw; } }
-    @media only screen and (min-width: 1560px) {
-      .article-page .related-content li {
-        margin-bottom: 0.8rem; } }
-  .article-page .related-content .border {
-    border-top-width: 1px; }
-  .article-page .related-content .card__image-wrapper, .article-page .related-content .video__thumbnail {
-    padding-top: 2.5vw;
-    padding-bottom: 1.875vw; }
-    @media only screen and (min-width: 53.25em) {
-      .article-page .related-content .card__image-wrapper, .article-page .related-content .video__thumbnail {
-        padding-top: 1.25vw; } }
-    @media only screen and (min-width: 1560px) {
-      .article-page .related-content .card__image-wrapper, .article-page .related-content .video__thumbnail {
-        padding-top: 2rem; } }
-    @media only screen and (min-width: 53.25em) {
-      .article-page .related-content .card__image-wrapper, .article-page .related-content .video__thumbnail {
-        padding-bottom: 0.9375vw; } }
-    @media only screen and (min-width: 1560px) {
-      .article-page .related-content .card__image-wrapper, .article-page .related-content .video__thumbnail {
-        padding-bottom: 1.5rem; } }
-  .article-page .related-content .card__image {
-    padding-left: 1.25vw; }
-    @media only screen and (min-width: 53.25em) {
-      .article-page .related-content .card__image {
-        padding-left: 0.625vw; } }
-    @media only screen and (min-width: 1560px) {
-      .article-page .related-content .card__image {
-        padding-left: 1rem; } }
-  .article-page .related-content .details {
-    padding-top: 0; }
-  .article-page .related-content .title {
-    font-family: "acumin-pro", Arial, sans-serif;
-    font-weight: 300;
-    line-height: 1.2;
-    font-size: 4vw;
-    font-weight: 500;
-    padding-left: 1.25vw; }
-    @media only screen and (min-width: 53.25em) {
-      .article-page .related-content .title {
-        font-size: 1.15vw;
-        line-height: 1.3; } }
-    @media only screen and (min-width: 1560px) {
-      .article-page .related-content .title {
-        line-height: 1.3;
-        line-height: 1.2;
-        font-size: 1.8rem; } }
-    @media only screen and (min-width: 53.25em) {
-      .article-page .related-content .title {
-        padding-left: 0.625vw; } }
-    @media only screen and (min-width: 1560px) {
-      .article-page .related-content .title {
-        padding-left: 1rem; } }
-  .article-page .related-content .author {
-    display: none; }
+
+.article-page .related-content .border {
+  border-top-width: 1px; }
+
+.article-page .related-content .card__image-wrapper, .article-page .related-content .video__thumbnail {
+  padding-top: 2.5vw;
+  padding-bottom: 1.875vw; }
+  @media only screen and (min-width: 53.25em) {
+    .article-page .related-content .card__image-wrapper, .article-page .related-content .video__thumbnail {
+      padding-top: 1.25vw; } }
+  @media only screen and (min-width: 1560px) {
+    .article-page .related-content .card__image-wrapper, .article-page .related-content .video__thumbnail {
+      padding-top: 2rem; } }
+  @media only screen and (min-width: 53.25em) {
+    .article-page .related-content .card__image-wrapper, .article-page .related-content .video__thumbnail {
+      padding-bottom: 0.9375vw; } }
+  @media only screen and (min-width: 1560px) {
+    .article-page .related-content .card__image-wrapper, .article-page .related-content .video__thumbnail {
+      padding-bottom: 1.5rem; } }
+
+.article-page .related-content .details {
+  padding-top: 0; }
+
+.article-page .related-content .title {
+  font-family: "acumin-pro", Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+  font-size: 4vw;
+  font-weight: 600; }
+  @media only screen and (min-width: 53.25em) {
+    .article-page .related-content .title {
+      font-size: 1.15vw;
+      line-height: 1.3; } }
+  @media only screen and (min-width: 1560px) {
+    .article-page .related-content .title {
+      line-height: 1.3;
+      font-size: 1.8rem; } }
+
+.article-page .related-content .author {
+  display: none; }
 
 .blog-feature .card__image-wrapper {
   margin-bottom: 2.5vw; }
@@ -9545,7 +9668,6 @@ a .page-title {
   @media only screen and (min-width: 1560px) {
     .blog-feature .date {
       line-height: 1.3;
-      line-height: 1.2;
       font-size: 1.8rem; } }
   @media only screen and (min-width: 53.25em) {
     .blog-feature .date {
@@ -9553,6 +9675,13 @@ a .page-title {
   @media only screen and (min-width: 1560px) {
     .blog-feature .date {
       margin-bottom: 2rem; } }
+
+/* Sidebar
+-------------------------------------------------- */
+.blog-sidebar {
+  color: #4d4d4d; }
+  .blog-sidebar a {
+    color: #4d4d4d; }
 
 .section--horizontal-cards {
   margin-bottom: 0; }
@@ -9581,7 +9710,8 @@ a .page-title {
     clear: left; } }
 
 .border {
-  border-top: 2px solid #595959; }
+  border-top: 2px solid #595959;
+  border-top: 1px solid #b3b3b3; }
   .border--inset {
     margin-left: 2rem;
     margin-right: 2rem; }
@@ -9669,6 +9799,30 @@ a.details {
     .details__inner {
       margin-top: -3px; } }
 
+.details-wrapper--horizontal {
+  padding-right: 3.75vw;
+  padding-left: 1rem; }
+  @media only screen and (min-width: 53.25em) {
+    .details-wrapper--horizontal {
+      padding-right: 1.875vw; } }
+  @media only screen and (min-width: 1560px) {
+    .details-wrapper--horizontal {
+      padding-right: 3rem; } }
+  @media only screen and (min-width: 53.25em) {
+    .details-wrapper--horizontal {
+      padding-left: 2.72%; } }
+  @media only screen and (min-width: 1560px) {
+    .details-wrapper--horizontal {
+      padding-left: 2rem; } }
+  .details-wrapper--horizontal .category {
+    margin-bottom: 0.625vw; }
+    @media only screen and (min-width: 53.25em) {
+      .details-wrapper--horizontal .category {
+        margin-bottom: 0.3125vw; } }
+    @media only screen and (min-width: 1560px) {
+      .details-wrapper--horizontal .category {
+        margin-bottom: 0.5rem; } }
+
 .title {
   display: inline-block;
   width: 100%; }
@@ -9706,7 +9860,6 @@ a.details {
   @media only screen and (min-width: 1560px) {
     .subtitle--sans {
       line-height: 1.3;
-      line-height: 1.2;
       font-size: 1.8rem; } }
 
 .category {
@@ -9829,13 +9982,13 @@ a.details {
       line-height: 1.3; } }
 
 .card--audio .details {
-  min-height: 37.5vw; }
+  min-height: 63.5vw; }
   @media only screen and (min-width: 53.25em) {
     .card--audio .details {
-      min-height: 18.75vw; } }
+      min-height: 19vw; } }
   @media only screen and (min-width: 1560px) {
     .card--audio .details {
-      min-height: 30rem; } }
+      min-height: 27rem; } }
 
 /* #video
 -------------------------------------------------- */
@@ -9943,7 +10096,6 @@ a.details {
   @media only screen and (min-width: 1560px) {
     .remodal__title {
       line-height: 1.3;
-      line-height: 1.2;
       font-size: 1.8rem; } }
 
 /* #styleguide
@@ -10031,7 +10183,7 @@ code.hljs {
   @media only screen and (min-width: 1560px) {
     .section-subtitle {
       font-size: 4.2rem;
-      line-height: 1.1; } }
+      line-height: 1; } }
   @media only screen and (min-width: 53.25em) {
     .section-subtitle {
       margin-top: 1.875vw; } }
@@ -10143,7 +10295,7 @@ code.hljs {
   @media only screen and (min-width: 1560px) {
     .section--video .title {
       font-size: 4.2rem;
-      line-height: 1.1; } }
+      line-height: 1; } }
 
 .section--video .subtitle {
   font-family: "acumin-pro", Arial, sans-serif;
