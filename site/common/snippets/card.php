@@ -31,6 +31,11 @@
 <?php else: ?>
 <?php $author = true; ?>
 <?php endif; ?>
+<?php if(isset($subtitle) && $subtitle === false): ?>
+<?php $subtitle = false; ?>
+<?php else: ?>
+<?php $subtitle = true; ?>
+<?php endif; ?>
 <?php if(isset($link) && $link === false): ?>
 <?php $link = false; ?>
 <?php else: ?>
@@ -197,7 +202,7 @@
         </div>
       </div>
       <div class="festival-video__textbox details-wrapper details-wrapper--horizontal col-sm-6">
-        <?php snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'video' => true, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop, 'type' => $cardTypeData, 'date' => $date, 'author' => $author, 'link' => $link )); ?>
+        <?php snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'video' => true, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop, 'type' => $cardTypeData, 'date' => $date, 'author' => $author, 'link' => $link, 'subtitle' => $subtitle )); ?>
       </div>
     </div>
     <?php else: ?>
@@ -218,7 +223,7 @@
           </div>
         </div>
       </div>
-      <?php snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop, 'type' => $cardTypeData, 'date' => $date, 'author' => $author, 'link' => $link )); ?>
+      <?php snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop, 'type' => $cardTypeData, 'date' => $date, 'author' => $author, 'link' => $link, 'subtitle' => $subtitle )); ?>
     </div>
     <?php endif; ?>
     <?php elseif($audioCard): ?>
@@ -269,7 +274,7 @@
         <?php endif; ?>
       </div>
       <div class="details-wrapper--horizontal col-sm-<?= $text_col ?>">
-        <?php snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop, 'type' => $cardTypeData, 'date' => $date, 'author' => $author, 'link' => $link )); ?>
+        <?php snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop, 'type' => $cardTypeData, 'date' => $date, 'author' => $author, 'link' => $link, 'subtitle' => $subtitle )); ?>
       </div>
     </div>
     <?php else: ?>
@@ -300,7 +305,7 @@
       <?php endif; ?>
       <?php endif; ?>
       <div class="details-wrapper col-sm-<?= $text_col ?>">
-        <?php snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop, 'type' => $cardTypeData, 'date' => $date, 'author' => $author, 'link' => $link )); ?>
+        <?php snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop, 'type' => $cardTypeData, 'date' => $date, 'author' => $author, 'link' => $link, 'subtitle' => $subtitle )); ?>
       </div>
     </div>
     <?php endif; ?>

@@ -7,6 +7,6 @@
       <?php else: ?>
       <div class="more-link__text">more</div>
       <?php endif; ?>
-      <div class="more-link__arrow">&#x2192;</div>
+      <div class="more-link__arrow icon-arrow2"></div>
     </div>
   </div></a>

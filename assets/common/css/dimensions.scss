@@ -37,9 +37,81 @@ conversion: 				| mobile 	| tablet	| desktop
   // // $pageWidth: 73rem; // 1420px + 20px + 20px = 1460px for mobile gutters on both sides
   $pageWidth: 1560px; // 1400px + 80px + 80px = 1560px for desktop gutters on both sides
 
-  // $twitter-height: 95px;
-  // $twitter-sidebar-height: 60px;
-  // $halfGutter: 1.35%;
+  /**********
+  * Calculate height of full screen banner
+  * Accomplished by taking full height and subtracting height of navbar
+  **********/
+  // height of site toggle area on tablet and desktop
+  $navbarSiteToggle--tablet: 2.5vw;
+  $navbarSiteToggle--desktop: 36px;
+
+  // height of navbar on tablet and desktop
+  $navbarHeight--home--mobile: 11vw;
+  $navbarHeight--subpage--mobile: 12vw;
+  $navbarHeight--subpage--mobile--smaller: 12vw;
+  $navbarHeight--home--tablet: 5.1vw;
+  $navbarHeight--subpage--tablet: 15.1vw;
+  $navbarHeight--subpage--tablet--smaller: 5.1vw;
+  $navbarHeight--desktop: 80px;
+
+  // spacer for logo
+  $logoSpacer--mobile:5px;
+  $logoSpacer--tablet:0px;
+  $logoSpacer--desktop:153px; // from layout
+
+  // height of toggle, navbar, and spacer
+  $headerHeight--home--mobile: 7.4vw; // temp for mobile
+  $headerHeight--subpage--mobile: 30vw; // temp for mobile
+  $headerHeight--home--tablet:#{$navbarHeight--home--tablet} + #{$navbarSiteToggle--tablet};
+  $headerHeight--subpage--tablet:#{$navbarHeight--subpage--tablet} + #{$navbarSiteToggle--tablet} + #{$logoSpacer--tablet};
+  $headerHeight--home--desktop:#{$navbarHeight--desktop} + #{$navbarSiteToggle--desktop};
+  $headerHeight--subpage--desktop:#{$navbarHeight--desktop} + #{$navbarSiteToggle--desktop} + #{$logoSpacer--desktop};
+
+
+
+  // tab heights for Folkways banner title tabs
+  $tabHeightMobile:200px;
+  $tabHeightTablet:6.5vw;
+  $tabHeightDesktop:94px;
+
+  // toggle nav and navbar height for navspacer
+  @mixin navbarHeight--home {
+    height: $navbarHeight--home--mobile;
+    @include respond-to(break2) {height: $navbarHeight--home--tablet;}
+    @include respond-to(fullwidth) {height: $navbarHeight--desktop;}
+
+  }
+  @mixin navbarHeight--subpage {
+    height: $navbarHeight--subpage--mobile;
+    @include respond-to(break2) {height: $navbarHeight--subpage--tablet;}
+    @include respond-to(fullwidth) {height: $navbarHeight--desktop;}
+
+  }
+  @mixin navbarHeight--subpage--smaller {
+    height: $navbarHeight--subpage--mobile--smaller;
+    @include respond-to(break2) {height: $navbarHeight--subpage--tablet--smaller;}
+    @include respond-to(fullwidth) {height: $navbarHeight--desktop;}
+
+  }
+  @mixin headerHeight--home {
+    height:$headerHeight--home--mobile;
+    @include respond-to(break2) {height:calc(#{$headerHeight--home--tablet});}
+    @include respond-to(fullwidth) {height:calc(#{$headerHeight--home--desktop});}
+  }
+
+  @mixin headerHeight--subpage {
+    height:$headerHeight--subpage--mobile;
+    @include respond-to(break2) {height:calc(#{$headerHeight--subpage--tablet});}
+    @include respond-to(fullwidth) {height:calc(#{$headerHeight--subpage--desktop});}
+  }
+
+  // calculate full height minus height of header, grouping media queries in mixin
+  @mixin bannerHeight {
+    height: calc(100vh - (#{$headerHeight--home--mobile}));
+    @include respond-to(break2) {height:calc(100vh - (#{$headerHeight--home--tablet});}
+    @include respond-to(fullwidth) {height:calc(100vh - (#{$headerHeight--home--desktop});}
+  }
+
   /*******
   * set margins with scales
   *******/

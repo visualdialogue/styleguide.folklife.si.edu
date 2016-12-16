@@ -105,6 +105,15 @@
 .icon-down-open-mini:before {
   content: "\75"; }
 
+.icon-basket:before {
+  content: "\73"; }
+
+.icon-user:before {
+  content: "\76"; }
+
+.icon-arrow2:before {
+  content: "\78"; }
+
 /*
  *  Remodal - v1.1.0
  *  Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin with declarative configuration and hash tracking.
@@ -7095,6 +7104,10 @@ conversion: 				| mobile 	| tablet	| desktop
 */
 /* Sizes
 -------------------------------------------------- */
+/**********
+  * Calculate height of full screen banner
+  * Accomplished by taking full height and subtracting height of navbar
+  **********/
 /*******
   * set margins with scales
   *******/
@@ -7161,7 +7174,7 @@ conversion: 				| mobile 	| tablet	| desktop
 /* Festival
 -------------------------------------------------- */
 .basque-child-page .section-title {
-  color: #dd3f48; }
+  color: #cd181f; }
 
 /* Folkways
 -------------------------------------------------- */
@@ -7375,7 +7388,7 @@ body {
     .serif-lg {
       font-size: 2.7vw;
       font-size: 2.3vw;
-      line-height: 1.2; } }
+      line-height: 1; } }
   @media only screen and (min-width: 1560px) {
     .serif-lg {
       font-size: 4.2rem;
@@ -7405,7 +7418,7 @@ body {
 .serif-sm {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.2;
   font-size: 5vw; }
   @media only screen and (min-width: 53.25em) {
     .serif-sm {
@@ -7413,8 +7426,8 @@ body {
   @media only screen and (min-width: 1560px) {
     .serif-sm {
       font-size: 2.4rem;
-      line-height: 1.4;
-      line-height: 1.2; } }
+      line-height: 1.2;
+      line-height: 1.333333; } }
 
 .category {
   text-transform: uppercase;
@@ -7448,7 +7461,7 @@ body {
     .content h3 {
       font-size: 2.7vw;
       font-size: 2.3vw;
-      line-height: 1.2; } }
+      line-height: 1; } }
   @media only screen and (min-width: 1560px) {
     .content h3 {
       font-size: 4.2rem;
@@ -7509,7 +7522,7 @@ body {
 .content p {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.2;
   font-size: 5vw;
   padding-bottom: 2.5vw; }
   @media only screen and (min-width: 53.25em) {
@@ -7518,8 +7531,8 @@ body {
   @media only screen and (min-width: 1560px) {
     .content p {
       font-size: 2.4rem;
-      line-height: 1.4;
-      line-height: 1.2; } }
+      line-height: 1.2;
+      line-height: 1.333333; } }
   @media only screen and (min-width: 53.25em) {
     .content p {
       padding-bottom: 1.25vw; } }
@@ -7695,8 +7708,7 @@ body {
     font-size: 4vw;
     display: inline-block;
     vertical-align: top;
-    line-height: 1.1;
-    margin-right: 0.625vw; }
+    line-height: 1.1; }
     @media only screen and (min-width: 53.25em) {
       .more-link__text {
         font-size: 1.15vw;
@@ -7708,15 +7720,6 @@ body {
     @media only screen and (min-width: 53.25em) {
       .more-link__text {
         line-height: 1.2; } }
-    @media only screen and (min-width: 1560px) {
-      .more-link__text {
-        margin-right: 1rem; } }
-    @media only screen and (min-width: 53.25em) {
-      .more-link__text {
-        margin-right: 0.3125vw; } }
-    @media only screen and (min-width: 1560px) {
-      .more-link__text {
-        margin-right: 0.5rem; } }
   .more-link__arrow {
     display: inline-block;
     vertical-align: top;
@@ -8005,7 +8008,12 @@ a.high, .high, .video__thumbnail {
   border: 0;
   border-radius: 0;
   position: absolute;
-  width: 100%; }
+  width: 100%;
+  min-height: initial;
+  min-height: auto;
+  -webkit-box-shadow: 0px 17px 41px -8px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 17px 41px -8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 17px 41px -8px rgba(0, 0, 0, 0.2); }
   @media only screen and (max-width: 53.25em) {
     .navbar {
       position: fixed;
@@ -8013,49 +8021,50 @@ a.high, .high, .video__thumbnail {
       z-index: 10; } }
   @media only screen and (min-width: 53.25em) {
     .navbar {
-      top: 3.4rem;
+      top: 2.5vw;
       z-index: 2;
       z-index: 10; } }
+  @media only screen and (min-width: 1560px) {
+    .navbar {
+      top: 36px; } }
 
-.navbar__site-toggle {
-  display: none; }
+.site-toggle {
+  display: none;
+  background-color: #333333;
+  text-align: right;
+  line-height: 2vw;
+  font-family: "acumin-pro", Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.4;
+  font-size: 3.8vw;
+  font-weight: 500;
+  line-height: 1; }
   @media only screen and (min-width: 53.25em) {
-    .navbar__site-toggle {
+    .site-toggle {
+      font-size: 1vw;
+      line-height: 1.3; } }
+  @media only screen and (min-width: 1560px) {
+    .site-toggle {
+      line-height: 1.3;
+      font-size: 1.6rem; } }
+  @media only screen and (min-width: 53.25em) {
+    .site-toggle {
       display: block;
       position: absolute;
       width: 100%;
       text-transform: uppercase;
-      background-color: #333333;
-      font-family: "balboa", Arial, sans-serif;
-      font-size: 2.7rem;
-      text-align: right;
-      font-weight: 300;
-      padding: 13px 0 0;
-      height: 20px;
-      font-family: "acumin-pro", Arial, sans-serif;
-      font-weight: 300;
-      line-height: 1.4;
-      font-size: 3.8vw;
-      line-height: 2vw; } }
-  @media only screen and (min-width: 53.25em) and (min-width: 53.25em) {
-    .navbar__site-toggle {
-      font-size: 1vw;
-      line-height: 1.3; } }
-  @media only screen and (min-width: 53.25em) and (min-width: 1560px) {
-    .navbar__site-toggle {
-      line-height: 1.3;
-      font-size: 1.6rem; } }
-  @media only screen and (min-width: 53.25em) and (min-width: 53.25em) {
-    .navbar__site-toggle {
-      line-height: 0.2vw; } }
-  @media only screen and (min-width: 53.25em) and (min-width: 1560px) {
-    .navbar__site-toggle {
-      line-height: 0.5rem; } }
+      padding-top: 0.8rem;
+      height: 2.5vw; } }
+  @media only screen and (min-width: 1560px) {
+    .site-toggle {
+      line-height: 3.5rem !important;
+      padding: 0;
+      height: 36px; } }
 
 .tagline {
   display: none;
   color: gray; }
-  @media only screen and (min-width: 62.5em) {
+  @media only screen and (min-width: 53.25em) {
     .tagline {
       display: inline-block; } }
 
@@ -8100,186 +8109,145 @@ a.high, .high, .video__thumbnail {
   position: relative;
   z-index: 100; }
 
+.navbar-brand {
+  margin-left: 0 !important;
+  font-size: 10px;
+  padding: 10px 0 0 0;
+  height: 12vw; }
+  @media only screen and (min-width: 53.25em) {
+    .navbar-brand {
+      height: 15.1vw; } }
+  @media only screen and (min-width: 1560px) {
+    .navbar-brand {
+      height: 80px; } }
+  @media only screen and (min-width: 53.25em) {
+    .navbar-brand {
+      padding: 1.4vw 0 10px 0;
+      width: 14.2857%; } }
+  @media only screen and (min-width: 1560px) {
+    .navbar-brand {
+      padding: 20px 0 18px 0;
+      font-size: 25px;
+      width: 14.2857%; } }
+
+.home-page .navbar-brand {
+  height: 11vw; }
+  @media only screen and (min-width: 53.25em) {
+    .home-page .navbar-brand {
+      height: 5.1vw; } }
+  @media only screen and (min-width: 1560px) {
+    .home-page .navbar-brand {
+      height: 80px; } }
+
 .navspacer {
-  background-color: #333333;
-  height: 50px; }
+  height: 30vw; }
   @media only screen and (min-width: 53.25em) {
     .navspacer {
-      height: 5.1vw !important; } }
+      height: calc(15.1vw + 2.5vw + 0px); } }
   @media only screen and (min-width: 1560px) {
     .navspacer {
-      height: 11.3rem !important; } }
+      height: calc(80px + 36px + 153px); } }
   .navspacer-open {
-    height: 132px !important;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease; }
 
-.navbar-brand {
-  font-size: 10px;
-  padding: 10px 0 5px 0;
-  padding: 10px 0 0 0; }
+.home-page .navspacer {
+  height: 7.4vw; }
   @media only screen and (min-width: 53.25em) {
-    .navbar-brand {
-      height: 115px;
-      height: 5.1vw;
-      padding: 23px 0 10px 0;
-      width: 14.2857%; } }
+    .home-page .navspacer {
+      height: calc(5.1vw + 2.5vw); } }
   @media only screen and (min-width: 1560px) {
-    .navbar-brand {
-      padding: 20px 0 18px 0;
-      font-size: 25px;
-      height: 80px;
-      width: 14.2857%; } }
+    .home-page .navspacer {
+      height: calc(80px + 36px); } }
 
 .logo-mask {
   overflow: hidden;
   display: inline-block; }
 
-img.sunsplash {
-  width: 4.5vw;
-  width: 15px;
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  display: none; }
-  @media only screen and (min-width: 53.25em) {
-    img.sunsplash {
-      display: inline-block;
-      width: 30px; } }
-
-.logo__copy {
+.logo {
   position: relative;
   display: inline-block; }
 
-.logo__copy, img.logo--folklife, img.logo--center, img.logo--folkways {
-  width: 193px;
-  height: 32px;
-  width: 19.875vw;
-  height: 20vw; }
+.logo__bg, .logo--block {
+  width: 25vw;
+  height: 25vw; }
   @media only screen and (min-width: 53.25em) {
-    .logo__copy, img.logo--folklife, img.logo--center, img.logo--folkways {
-      width: 420px;
-      height: 70px; } }
-  @media only screen and (min-width: 53.25em) {
-    .logo__copy, img.logo--folklife, img.logo--center, img.logo--folkways {
-      width: 9.9375vw; } }
+    .logo__bg, .logo--block {
+      width: 11vw;
+      height: 11vw; } }
   @media only screen and (min-width: 1560px) {
-    .logo__copy, img.logo--folklife, img.logo--center, img.logo--folkways {
-      width: 15.9rem; } }
-  @media only screen and (min-width: 53.25em) {
-    .logo__copy, img.logo--folklife, img.logo--center, img.logo--folkways {
-      height: 10vw; } }
-  @media only screen and (min-width: 1560px) {
-    .logo__copy, img.logo--folklife, img.logo--center, img.logo--folkways {
-      height: 16rem; } }
+    .logo__bg, .logo--block {
+      width: 175px;
+      height: 175px; } }
 
-img.logo--folklife, .site--folklife .logo__copy {
-  width: 18.75vw;
-  height: 18.75vw; }
-  @media only screen and (min-width: 53.25em) {
-    img.logo--folklife, .site--folklife .logo__copy {
-      width: 9.375vw; } }
-  @media only screen and (min-width: 1560px) {
-    img.logo--folklife, .site--folklife .logo__copy {
-      width: 15rem; } }
-  @media only screen and (min-width: 53.25em) {
-    img.logo--folklife, .site--folklife .logo__copy {
-      height: 9.375vw; } }
-  @media only screen and (min-width: 1560px) {
-    img.logo--folklife, .site--folklife .logo__copy {
-      height: 15rem; } }
-
-img.logo--folklife, img.logo--festival, img.logo--folkways {
-  padding: 1.875vw; }
-  @media only screen and (min-width: 53.25em) {
-    img.logo--folklife, img.logo--festival, img.logo--folkways {
-      padding: 0.9375vw; } }
-  @media only screen and (min-width: 1560px) {
-    img.logo--folklife, img.logo--festival, img.logo--folkways {
-      padding: 1.5rem; } }
-
-.site--folklife .navbar-brand {
-  padding-top: 5vw; }
-  @media only screen and (min-width: 53.25em) {
-    .site--folklife .navbar-brand {
-      padding-top: 2.5vw; } }
-  @media only screen and (min-width: 1560px) {
-    .site--folklife .navbar-brand {
-      padding-top: 4rem; } }
-
-.site--folklife .logo-mask {
-  position: relative;
-  left: 2.5vw; }
-  @media only screen and (min-width: 53.25em) {
-    .site--folklife .logo-mask {
-      left: 1.25vw; } }
-  @media only screen and (min-width: 1560px) {
-    .site--folklife .logo-mask {
-      left: 2rem; } }
-
-img.logo--folklife, img.logo--center, img.logo--festival, img.logo--folkways {
+.logo--block {
+  padding: 1.25vw;
   position: absolute;
   top: 0;
   left: 0; }
+  @media only screen and (min-width: 53.25em) {
+    .logo--block {
+      padding: 0.625vw; } }
+  @media only screen and (min-width: 1560px) {
+    .logo--block {
+      padding: 1rem; } }
+
+.logo--one-line {
+  width: 25vw;
+  display: none; }
+  @media only screen and (min-width: 53.25em) {
+    .logo--one-line {
+      width: 11vw; } }
+  @media only screen and (min-width: 1560px) {
+    .logo--one-line {
+      width: 160px; } }
 
 .smaller-header {
   position: fixed;
   top: 0;
   width: 100%; }
-  .smaller-header .navbar-brand {
-    height: 50px; }
-    @media only screen and (min-width: 53.25em) {
-      .smaller-header .navbar-brand {
-        padding: 17px 0;
-        height: 70px; } }
-    @media only screen and (min-width: 1560px) {
-      .smaller-header .navbar-brand {
-        padding: 0; } }
-  .smaller-header img.sunsplash {
-    position: relative;
-    top: 0.7rem; }
-  .smaller-header img.logo--center {
-    top: -100%; }
-  .smaller-header img.logo--folklife, .smaller-header img.logo--festival, .smaller-header img.logo--folkways {
-    top: -25%; }
-  .smaller-header .logo__copy {
-    height: 12.5vw;
-    overflow: hidden; }
-    .smaller-header .logo__copy img.logo--folkways {
-      top: -35%; }
-    @media only screen and (min-width: 53.25em) {
-      .smaller-header .logo__copy {
-        height: 6.25vw; } }
-    @media only screen and (min-width: 1560px) {
-      .smaller-header .logo__copy {
-        height: 10rem; } }
+  .smaller-header.navbar {
+    -webkit-box-shadow: initial;
+    -moz-box-shadow: initial;
+    box-shadow: initial; }
   @media only screen and (min-width: 53.25em) {
-    .smaller-header img.sunsplash {
-      top: 0.3rem; }
-    .smaller-header img.logo--center {
-      top: -8rem; }
-    .smaller-header img.logo--center {
-      top: -100%; }
-    .smaller-header img.logo--folklife, .smaller-header img.logo--festival, .smaller-header img.logo--folkways {
-      top: -45%; }
-    .smaller-header img.logo--folkways {
+    .smaller-header .navbar-brand {
+      padding: 17px 0; } }
+  @media only screen and (min-width: 1560px) {
+    .smaller-header .navbar-brand {
+      padding-top: 2rem; } }
+  .smaller-header .logo--block {
+    top: -25%; }
+  .smaller-header .logo {
+    overflow: hidden; }
+    .smaller-header .logo .folkways-logo {
       top: -35%; }
-    .smaller-header img.logo--folklife {
-      top: -115%; }
-    .smaller-header .logo__copy {
-      height: 12.25vw; } }
-  @media only screen and (min-width: 53.25em) and (min-width: 53.25em) {
-    .smaller-header .logo__copy {
-      height: 6.125vw; } }
-  @media only screen and (min-width: 53.25em) and (min-width: 1560px) {
-    .smaller-header .logo__copy {
-      height: 9.8rem; } }
+  .smaller-header .logo__bg, .smaller-header .logo--block {
+    display: none; }
+  .smaller-header .logo--one-line {
+    display: block; }
+  @media only screen and (min-width: 53.25em) {
+    .smaller-header .logo--block {
+      top: -45%; }
+    .smaller-header .folkways-logo {
+      top: -35%; }
+    .smaller-header .logo--block {
+      top: -115%; } }
   .smaller-header + .section--banner.container {
     position: relative;
     top: 142px; }
+
+body:not(.home-page) .smaller-header .navbar-brand {
+  height: 12vw; }
+  @media only screen and (min-width: 53.25em) {
+    body:not(.home-page) .smaller-header .navbar-brand {
+      height: 5.1vw; } }
+  @media only screen and (min-width: 1560px) {
+    body:not(.home-page) .smaller-header .navbar-brand {
+      height: 80px; } }
 
 .nav-icons {
   right: 0;
@@ -8289,15 +8257,10 @@ img.logo--folklife, img.logo--center, img.logo--festival, img.logo--folkways {
   margin-right: -10px; }
   @media only screen and (min-width: 53.25em) {
     .nav-icons {
-      margin-top: 0;
+      margin-top: 1.1rem;
       margin-right: 0;
-      position: absolute;
-      top: 50%;
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
-      width: 66.66667%;
-      right: 0; } }
+      float: right;
+      width: 58.33333%; } }
   @media only screen and (min-width: 1560px) {
     .nav-icons {
       right: 0; } }
@@ -9473,11 +9436,11 @@ a .page-title {
   @media only screen and (min-width: 53.25em) {
     .social-media__icon {
       font-size: 1.9vw;
-      margin-right: 0.5vw; } }
+      margin-right: 0.2vw; } }
   @media only screen and (min-width: 1560px) {
     .social-media__icon {
       font-size: 3rem;
-      margin-right: 1rem; } }
+      margin-right: 0.5rem; } }
   .social-media__icon a {
     color: #cccccc; }
     .social-media__icon a:hover {
@@ -9749,7 +9712,6 @@ a.details {
 
 .details--inset {
   padding-top: 3.125vw;
-  padding-right: 2.5vw;
   padding-left: 2.5vw; }
   @media only screen and (min-width: 53.25em) {
     .details--inset {
@@ -9757,12 +9719,6 @@ a.details {
   @media only screen and (min-width: 1560px) {
     .details--inset {
       padding-top: 2.5rem; } }
-  @media only screen and (min-width: 53.25em) {
-    .details--inset {
-      padding-right: 1.25vw; } }
-  @media only screen and (min-width: 1560px) {
-    .details--inset {
-      padding-right: 2rem; } }
   @media only screen and (min-width: 53.25em) {
     .details--inset {
       padding-left: 1.25vw; } }
@@ -9800,14 +9756,7 @@ a.details {
       margin-top: -3px; } }
 
 .details-wrapper--horizontal {
-  padding-right: 3.75vw;
   padding-left: 1rem; }
-  @media only screen and (min-width: 53.25em) {
-    .details-wrapper--horizontal {
-      padding-right: 1.875vw; } }
-  @media only screen and (min-width: 1560px) {
-    .details-wrapper--horizontal {
-      padding-right: 3rem; } }
   @media only screen and (min-width: 53.25em) {
     .details-wrapper--horizontal {
       padding-left: 2.72%; } }
@@ -10179,7 +10128,7 @@ code.hljs {
     .section-subtitle {
       font-size: 2.7vw;
       font-size: 2.3vw;
-      line-height: 1.2; } }
+      line-height: 1; } }
   @media only screen and (min-width: 1560px) {
     .section-subtitle {
       font-size: 4.2rem;
@@ -10291,7 +10240,7 @@ code.hljs {
     .section--video .title {
       font-size: 2.7vw;
       font-size: 2.3vw;
-      line-height: 1.2; } }
+      line-height: 1; } }
   @media only screen and (min-width: 1560px) {
     .section--video .title {
       font-size: 4.2rem;

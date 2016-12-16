@@ -177,10 +177,10 @@
 				line-height: 1.2; // match section header for alignment
 				}
 				@include respond-to(fullwidth) {
-				margin-right: 1rem;
+				// margin-right: 0rem;
 				// margin-right: rem;
 				}
-			@include margin-right(0.5);
+			// @include margin-right(0.5);
 		}
 		&__arrow {
 			display: inline-block;

@@ -82,7 +82,7 @@ a.details {
 	// 	padding: 2.5rem 2rem 2rem;
 	// }
 	@include padding-top(2.5);
-	@include padding-right(2);
+	// @include padding-right(2);
 	@include padding-left(2);
 }
 .details--notop {
@@ -119,7 +119,7 @@ a.details {
 	}
 }
 .details-wrapper--horizontal {
-	@include padding-right(3);
+	// @include padding-right(13);
 	padding-left:1rem;
 	@include respond-to(break2) {padding-left:$gutter-full;}
 	@include respond-to(fullwidth) {padding-left:2rem;}

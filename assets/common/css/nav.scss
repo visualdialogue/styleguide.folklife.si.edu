@@ -23,7 +23,7 @@
 	}
 
 	// SITE TOGGLE BANNER
-	.navbar__site-toggle {
+	. {
 		display: none;		
 		@include respond-to(break2) {
 			display: block;

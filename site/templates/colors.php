@@ -21,11 +21,14 @@
   <h2 class="section-title">Folklife</h2><a id="folklife" class="anchor-link"></a>
   <ul class="row festival-color-list">
     <li class="col-sm-4 color">
+      $hover: #e2f0d8
+      226, 240, 216
     </li>
   </ul>
 </section>
 <section class="container">
-  <h2 class="section-title">Festival</h2><a id="festival" class="anchor-link"></a>
+  <h2 class="section-title">Festival</h2><a id="festival" class="anchor-link"></a>$hover: #fcdc6b
+  252, 221, 107
   <ul class="row festival-color-list">
     <li class="col-sm-4 color">
       <div class="color__block"></div>
@@ -51,7 +54,8 @@
   </ul>
 </section>
 <section class="container">
-  <h2 class="section-title">Folkways</h2><a id="folkways" class="anchor-link"></a>
+  <h2 class="section-title">Folkways</h2><a id="folkways" class="anchor-link"></a>$hover: #cad9e7
+  202, 217, 231
   <ul class="row folkways-color-list">
     <li class="col-sm-4 color">
       <div class="color__block"></div>
@@ -164,5 +168,16 @@
       </div>
     </li>
   </ul>
+  <div class="basque">
+    Basque
+    		Red:
+    		#cd181f
+    		205, 24, 31
+    
+    		Green:
+    		#79b93e
+    		121, 185, 62
+    
+  </div>
 </section>
 <?php snippet('footer'); ?>

@@ -22,7 +22,7 @@
     <?php echo $card->date('M d, Y'); ?></div>
   <?php endif; ?>
   <?php endif; ?>
-  <?php if('' != $card->subtitle()):	 ?>
+  <?php if($subtitle):	 ?>
   <?php if(!$link): ?>
   <div class="title card__title"><span class="light"><span class="er">
         <?php echo htmlspecialchars($card->title(), ENT_QUOTES, 'UTF-8'); ?></span></span></div>

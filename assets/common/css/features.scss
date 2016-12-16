@@ -27,10 +27,10 @@ conversion: 				| mobile 	| tablet	| desktop
 */
 
 @mixin feature {
-	background-color: $black08;
+	// background-color: $black08;
 	.details {
 		@include padding-top(2);
-		@include padding-right(1);
+		// @include padding-right(1);
 		@include padding-bottom(3);
 		@include padding-left(2);
 	}
@@ -41,7 +41,7 @@ conversion: 				| mobile 	| tablet	| desktop
 	}
 	.title {
 		@include serif-lg;
-		@include margin-bottom(0.5);
+		// @include margin-bottom(0.5);
 	}
 }
 
@@ -56,18 +56,9 @@ conversion: 				| mobile 	| tablet	| desktop
 }
 
 .feature--full {
-	// margin-top: 1.2rem;
-	// @include respond-to(break2) {margin-top: 2.5vw;}
-	// @include respond-to(fullwidth) {margin-top: 3.8rem;}
-	.details {
-		
-	}
 	.title {
 		@include serif-xl;
 		margin-bottom:1rem;
-		// .description {
-			// @include sans-xxs;
-		// }
 		@include respond-to(break2) {margin-bottom:1.15vw;}
 		@include respond-to(fullwidth) {margin-bottom:1.8rem;}
 	}
@@ -95,33 +86,4 @@ conversion: 				| mobile 	| tablet	| desktop
 	.title {
 		@include serif-md;
 	}
-
-	// OLD
-	// // margin-bottom: 3.5vw;
-	// margin-bottom: 1.5rem;
-	// @include respond-to(break2) {
-	// 	margin-bottom: 2vw;
-	// }
-	// @include respond-to(fullwidth) {
-	// 	margin-bottom: 3rem;
-	// }
-	// &:last-of-type {
-	// 	margin-bottom: 0;
-	// }
-	// &__details, &__image {
-	// 	display: inline-block;
-	// 	vertical-align: top;	
-	// }
-	// &__details {
-	// 	width: 50%;
-	// 	// padding: 3vw 2vw 0;
-	// }
-	// &__image {
-	// 	display: inline-block;
-	// 	vertical-align: top;
-	// 	width: 50%;
-	// }
-	// .title {
-	// 	font-weight: 700;
-	// }
 }

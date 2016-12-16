@@ -9,6 +9,8 @@
 		border-radius: 0;
 		position: absolute; // so make transition to fixed easier on content below
 		width: 100%;
+		min-height: initial;
+		min-height: auto;
 		@include respond-to(break2max) {
 			position: fixed;
 			width: 100%;
@@ -16,44 +18,52 @@
 		}
 		@include respond-to(break2) {
 			// top: 60px;
-			top: 3.4rem;
+			top: $navbarSiteToggle--tablet;
 			z-index: 2;
 			z-index: 10;
 		}
+		@include respond-to(fullwidth) {
+			top: $navbarSiteToggle--desktop;
+		}
+
+		// shadow
+		-webkit-box-shadow: 0px 17px 41px -8px rgba(0,0,0,0.20);
+		-moz-box-shadow: 0px 17px 41px -8px rgba(0,0,0,0.20);
+		box-shadow: 0px 17px 41px -8px rgba(0,0,0,0.20);
 
 	}
 
 	// SITE TOGGLE BANNER
-	.navbar__site-toggle {
+
+	.site-toggle {
 		// new
 		display: none;		
+		background-color: $black80; // new
+		text-align:right;
+		line-height:2vw;
+		@include sans-xxxs;
+		// font-family: $slabLight;
+		font-weight: 500;
+		line-height: 1;
 		@include respond-to(break2) {
 			display: block;
 			position: absolute; // height 72px
 			width: 100%;
 			text-transform: uppercase;
-			// background-color: white;
-			background-color: $black80; // new
-			font-family: $slabLight;
-			// letter-spacing: 0.5px;		
-			font-size: 2.7rem; // ff-good
-			// font-size: 1.5rem;
-			text-align:right;
-			font-weight: 300;
-			padding: 13px 0 0;
-
-			// height: 60px; // hold even without tagline
-			height: 20px; // hold even without tagline
-			@include sans-xxxs;
-			line-height:2vw;
-			@include respond-to(break2) {line-height:0.2vw;}
-			@include respond-to(fullwidth) {line-height:0.5rem;}
+			padding-top: 0.8rem;
+			height: $navbarSiteToggle--tablet;
+		}
+		@include respond-to(fullwidth) {
+			line-height:3.5rem !important;
+			padding: 0;
+			height: $navbarSiteToggle--desktop;
 		}
 	}
 	.tagline {
 		display: none;
 		color: $tagline;
-		@include respond-to(breakTagline) {
+		// @include respond-to(breakTagline) {
+		@include respond-to(break2) {
 			display: inline-block;
 		}
 	}
@@ -61,7 +71,6 @@
 		color: $sitelinks;
 		margin-left: 2.5rem;
 		&:hover {
-			// color: $black80;
 			color: white;
 			text-decoration: none;
 		}
@@ -98,42 +107,18 @@
 		z-index: 100;
 
 		// new header
-
 	}
-	.navspacer {
-		background-color: $black80;
-		height: 50px;
-		@include respond-to(break2) {
-			// height: 185px !important;
-			// height: 178px !important;
-			// new header
-			// height: 160px !important;
-			// height: 113px !important; // n
-			height: 5.1vw !important; // new
+	
 
-		}
-		@include respond-to(fullwidth) {
-			height: 11.3rem !important; // new
-		}
-		&--taller {
-		}
-		&-open {
-			height: 132px !important;
-			-webkit-transition: all 0.3s ease;
-			-moz-transition: all 0.3s ease;
-			-ms-transition: all 0.3s ease;
-			-o-transition: all 0.3s ease;
-			transition: all 0.3s ease;
-		}
-	}
 	.navbar-brand {
+		margin-left: 0 !important; // bootstrap override
 		font-size: 10px; // prevent gap to sunsplash
-		padding: 10px 0 5px 0;
 		padding: 10px 0 0 0;
+		@include navbarHeight--subpage;
 		@include respond-to(break2) {
-			height: 115px; // old
-			height: 5.1vw; // new
-			padding: 23px 0 10px 0;
+			// height: 115px; // old
+			// height: $navbarHeight--home--tablet; // new
+			padding: 1.4vw 0 10px 0;
 			width: 14.2857%; // 200 / 1400
 		}
 
@@ -145,7 +130,7 @@
 
 			// height: 118px; // from layout
 			// new header
-			height: 80px; // from new layout
+			// height: $navbarHeight--home--desktop; // from new layout
 
 			// new
 			// padding-left:0; // align with left side instead of col
@@ -153,74 +138,70 @@
 			width: 14.2857%; // 200 / 1400
 		}
 	}
+	.home-page {
+		.navbar-brand {
+			@include navbarHeight--home;
+		}
+	}
+	.navspacer {
+		@include headerHeight--subpage;
+		// background-color: $black80;
+		&-open {
+			// height: 132px !important;
+			-webkit-transition: all 0.3s ease;
+			-moz-transition: all 0.3s ease;
+			-ms-transition: all 0.3s ease;
+			-o-transition: all 0.3s ease;
+			transition: all 0.3s ease;
+		}
+	}
+	.home-page {
+		.navspacer {
+			@include headerHeight--home;
+		}
+	}
 	.logo-mask {
 		overflow: hidden; // hide logo when scrolls up
 		display: inline-block;
 	}
-	img.sunsplash {
-		width: 4.5vw;
-		width: 15px;
-		display: inline-block;
-		vertical-align: top;
-		position: relative;
-		display: none;
-
-		@include respond-to(break2) {
-			display: inline-block;
-			// width: 35px;
-			width: 30px;
-		}
-	}
-	.logo__copy {
+	.logo {
 		position: relative;
 		display: inline-block;
 	}
-	.logo__copy, img.logo--folklife, img.logo--center, img.logo--folkways {
-		width: 193px;
-		height: 32px;
+	.logo__bg, .logo--block {
+		// width: 193px;
+		// height: 32px;
+		width: 25vw;
+		height: 25vw;
 		@include respond-to(break2) {
-			width: 420px;
-			height: 70px;
-			// width: 
+			// width: 420px;
+			// height: 70px;
+			width: 11vw;
+			height: 11vw;
 		}
 		@include respond-to(fullwidth) {
 			// width: 420px;
 			// height: 70px;
-			// width: 159px;
-			// height: 160px;
-		}
-		@include width(15.9);
-		@include height(16);
-	}
-	// new logo
-	img.logo--folklife, .site--folklife .logo__copy {
-		@include width(15);
-		@include height(15);
-	}
-	img.logo--folklife, img.logo--festival, img.logo--folkways {
-		// padding: 15px;
-		@include padding(1.5);
-	}
-	.site--folklife {
-		.navbar-brand {
-			@include padding-top(4);
-		}
-		.logo-mask {
-			position: relative;
-			@include left(2);
+			width: 175px;
+			height: 175px;
 		}
 	}
-	img.logo--center, img.logo--folklife, img.logo--festival, img.logo--folkways {
+	.logo--block {
+		@include padding(1);
 		// -webkit-transition: top 0.1s ease;
 		// -moz-transition: top 0.1s ease;
 		// -ms-transition: top 0.1s ease;
 		// -o-transition: top 0.1s ease;
 		// transition: top 0.1s ease;
-	}
-	img.logo--folklife, img.logo--center, img.logo--festival, img.logo--folkways {
 		position: absolute;
 		top:0;
 		left: 0;
+	}
+	.logo--one-line {
+		width:25vw;
+		@include respond-to(break2) {width:11vw;}
+		@include respond-to(fullwidth) {width:160px;}
+		display: none;
 	}
 	.smaller-header {
 		// new logo
@@ -229,11 +210,16 @@
 		position: fixed;
 		top:0;
 		width: 100%;
+		&.navbar {
+			// no gradient
+			-webkit-box-shadow: initial;
+			-moz-box-shadow: initial;
+			box-shadow: initial;
+		}
 		.navbar-brand {
-			height: 50px;
 			@include respond-to(break2) {
 				padding: 17px 0;
-				height: 70px;
+				// height: 70px;
 				// -webkit-transition: all 0.3s ease;
 				// -moz-transition: all 0.3s ease;
 				// -ms-transition: all 0.3s ease;
@@ -241,40 +227,46 @@
 				// transition: all 0.3s ease;
 			}
 			@include respond-to(fullwidth) {
-				padding: 0;
+				// padding: 0;
+				padding-top: 2rem;
 			}
+
 		}
-		img.sunsplash { position: relative; top: 0.7rem; }
-		// img.logo--center { top: -5rem; }
-		img.logo--center { top: -100%; }
-		// img.logo--folklife { top: -0.8rem; }
-		img.logo--folklife, img.logo--festival, img.logo--folkways { top: -25%; }
+		.logo--block { top: -25%; }
 
 		// img.logo__bg { display: none; }
-		.logo__copy {
-			img.logo--folkways { top: -35%; }
-			@include height(10);
+		.logo {
+			.folkways-logo { top: -35%; }
+			// @include height(8);
 			overflow: hidden;
 		}
+		.logo__bg, .logo--block {
+			display: none;
+		}
+		.logo--one-line {
+			display: block;
+		}
 		@include respond-to(break2) {
-			img.sunsplash { top: 0.3rem; }
-			img.logo--center { top: -8rem; }
-			img.logo--center { top: -100%; }
-			// img.logo--folklife { top: -3.3rem; }
-			img.logo--folklife, img.logo--festival, img.logo--folkways { top: -45%; }
-			img.logo--folkways { top: -35%; }
+			// .logo--block { top: -3.3rem; }
+			.logo--block { top: -45%; }
+			.folkways-logo { top: -35%; }
 			// img.logo__bg { position: absolute; top: -100%; }
 			// new header
-			img.logo--folklife { top: -115%; }
+			.logo--block { top: -115%; }
 			// new header II
 			// img.logo__bg { display: none; }
-			.logo__copy {
-				@include height(9.8);
-			}
 		}
 		& + .section--banner.container {
 			position: relative;
 			top: 142px; // add height of fixed header to next element when activated
+		}
+	}
+	// Only on subpages, navbar gets smaller on scroll
+	body:not(.home-page) {
+		.smaller-header {
+			.navbar-brand {
+				@include navbarHeight--subpage--smaller;
+			}
 		}
 	}
 
@@ -285,11 +277,15 @@
 		margin-top: 7px;
 		margin-right: -10px;
 		@include respond-to(break2) {
-			margin-top:0;
+			// margin-top:2.1rem;
+			margin-top:1.1rem;
 			margin-right: 0;
-			@include vertically-align();
-			width: 66.66667%;
-			right: 0;
+			// @include vertically-align();
+			float: right;
+			// width: 66.66667%;
+			width: 58.33333%;
+			// right: 0;
+
 		}
 		@include respond-to(fullwidth) {
 			right: 0;

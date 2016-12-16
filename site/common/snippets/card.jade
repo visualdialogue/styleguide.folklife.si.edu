@@ -48,6 +48,13 @@
 	- $author = true;
 -endif
 
+//- subtitle
+-if(isset($subtitle) && $subtitle === false):
+	- $subtitle = false;
+- else:
+	- $subtitle = true;
+-endif
+
 //- link
 -if(isset($link) && $link === false):
 	- $link = false;
@@ -262,7 +269,7 @@
 
 						//- horizontal wrapper for festival programs page sidebar
 						.festival-video__textbox.details-wrapper.details-wrapper--horizontal.col-sm-6
-							-snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'video' => true, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop, 'type' => $cardTypeData, 'date' => $date, 'author' => $author, 'link' => $link ))
+							-snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'video' => true, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop, 'type' => $cardTypeData, 'date' => $date, 'author' => $author, 'link' => $link, 'subtitle' => $subtitle ))
 
 				//- vertical video card
 				-else:
@@ -284,7 +291,7 @@
 									.icon-play-button.icon-play-button--video.icon-stack
 										.icon-circle
 										.icon-play
-							-snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop, 'type' => $cardTypeData, 'date' => $date, 'author' => $author, 'link' => $link ))
+							-snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop, 'type' => $cardTypeData, 'date' => $date, 'author' => $author, 'link' => $link, 'subtitle' => $subtitle ))
 
 
 				-endif
@@ -335,7 +342,7 @@
 						-endif
 					//- class name below for sidebar of programs page
 					.details-wrapper--horizontal(class="col-sm-<?= $text_col ?>")
-						-snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop, 'type' => $cardTypeData, 'date' => $date, 'author' => $author, 'link' => $link ))
+						-snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop, 'type' => $cardTypeData, 'date' => $date, 'author' => $author, 'link' => $link, 'subtitle' => $subtitle ))
 			- else:
 				.card__inner
 					//- put title above image if set to top
@@ -369,6 +376,6 @@
 						-endif
 					-endif
 					.details-wrapper(class="col-sm-<?= $text_col ?>")
-						-snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop, 'type' => $cardTypeData, 'date' => $date, 'author' => $author, 'link' => $link ))
+						-snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'more_link' => $more_link, 'titlePositionTop' => $titlePositionTop, 'type' => $cardTypeData, 'date' => $date, 'author' => $author, 'link' => $link, 'subtitle' => $subtitle ))
 			-endif
 -endif

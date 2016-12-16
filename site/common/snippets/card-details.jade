@@ -27,7 +27,7 @@
 		-endif
 
 		//- if subtitle, group with title for correct highlighting
-		-if('' != $card->subtitle()):	
+		-if($subtitle):	
 			-if(!$link):
 				.title.card__title: span.light: span.er= $card->title()
 				.subtitle: span.light: span.er= $card->subtitle()
