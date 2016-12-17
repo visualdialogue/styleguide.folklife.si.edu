@@ -14,10 +14,10 @@ body {
 		font-family: $slabNarrow;
 		text-transform: uppercase;
 		font-weight: 800;
-		letter-spacing: 1px;
+		// letter-spacing: 1px;
 		font-size: 5vw;
 		@include respond-to(break2) {
-			font-size: 1.4vw;
+			font-size: 1.15vw;
 			line-height: 1.2;
 		}
 		@include respond-to(fullwidth) {
@@ -135,7 +135,7 @@ body {
 		// font-weight: 300;
 		font-weight: 400;
 		@include respond-to(break2) {
-			font-size: 1.25vw;
+			font-size: 1.1vw;
 			line-height: 1.45;
 		}
 		@include respond-to(fullwidth) {
@@ -150,13 +150,13 @@ body {
 		font-family: $sans;
 		font-size: 1.6rem;
 		line-height: 1.7;
-		font-weight: 300;
+		// font-weight: 300;
 		@include respond-to(break2) {
-			font-size: 1.15vw;
-			line-height: 1.35;
+			font-size: 1.1vw;
+			line-height: 1.8;
 		}
 		@include respond-to(fullwidth) {
-			font-size: 1.8rem;
+			font-size: 1.6rem;
 			line-height: 1.5;
 		}
 	}

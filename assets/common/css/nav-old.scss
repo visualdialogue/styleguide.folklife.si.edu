@@ -389,6 +389,7 @@
 			@include respond-to(break2) {
 				padding: 0;
 			}
+			@include padding-bottom(0.5);
 		}
 		&__list {
 			display: none;

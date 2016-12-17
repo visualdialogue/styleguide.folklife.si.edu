@@ -29,7 +29,7 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head><body class="site--folklife <?= str::lower($page->title()) ?>-page">
-<div class="navbar__site-toggle">
+<div id="site-toggle" class="site-toggle">
   <div class="container">
     <div class="tagline">Championing Culture for, by, and of the People</div>
     <?php if (c::get('isDev')): ?><a href="http://localhost:3003" class="site-toggle__link site-toggle__link--folklife active">Folklife</a>
@@ -44,7 +44,7 @@
   </div>
 </div>
 <div class="navbar-outside"></div>
-<nav class="navbar">
+<nav id="navbar" class="navbar">
   <div class="navbar-header">
     <div class="navbar-header__inner">
       <div href="#" class="navbar-brand"><img src="assets/images/logo/sunsplash.png" class="sunsplash"/><a href="/" class="logo-mask">

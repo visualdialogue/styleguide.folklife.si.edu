@@ -66,7 +66,7 @@ head
 	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 <body class="site--folklife <?= str::lower($page->title()) ?>-page">
-.
+#site-toggle.site-toggle
 	.container
 		.tagline Championing Culture for, by, and of the People
 		-if (c::get('isDev')):
@@ -86,7 +86,7 @@ head
 		-endif
 //- nav.navbar.navbar-fixed-top
 .navbar-outside
-nav.navbar
+nav.navbar#navbar
 	.navbar-header
 		.navbar-header__inner
 			.navbar-brand(href="#")

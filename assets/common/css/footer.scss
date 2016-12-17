@@ -95,32 +95,22 @@
 -------------------------------------------------- */
 	.footer {
 		background-color: $black80;
-		// color: white;
-		// color:$black60;
 		color: $black20;
 
 		z-index: 1;
 		@include respond-to(break2max) { padding-top:2rem; }
 
 		&-logo {
-			// @include type--logo;
 			color: $black30;
 			margin-bottom: 1vw;
 			&--active {
 				color: white;
 			}
-			&__img {
-				// height: 10vw;
-				// width: auto;
-				// @include respond-to(break2) {height: 2rem;}
-			}
-
 		}
 		&__row--1 {
 			margin-bottom: 1rem;
 			@include respond-to(break2) {
 				margin-bottom: 3.4rem;
-				// margin-bottom: 1.4rem;
 			}
 		}
 		&__row--2 {
@@ -136,7 +126,6 @@
 		}
 		&__list {
 			margin-bottom: 0rem;
-			@include respond-to(break2) {margin-bottom:1.9vw;}
 			@include respond-to(fullwidth) {margin-bottom:0;}
 		}
 	}
@@ -144,9 +133,6 @@
 		
 		&__title {
 			@include respond-to(break2max) {color:$black40;}
-			&:hover {
-				// color: white;
-			}
 		}
 		&__sub-item {
 			a:hover {
