@@ -8264,10 +8264,6 @@ a.high, .high, .video__thumbnail {
     overflow: hidden; }
     .smaller-header .logo .folkways-logo {
       top: -35%; }
-  .smaller-header .logo__bg, .smaller-header .logo--block {
-    display: none; }
-  .smaller-header .logo--one-line {
-    display: block; }
   @media only screen and (min-width: 53.25em) {
     .smaller-header .logo--block {
       top: -45%; }

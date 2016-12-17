@@ -99,6 +99,12 @@
 	var $navBar = $('#navbar');
 	var $navBarHeader = $('.navbar-header');
 	var $navspacer = $('#navspacer');
+	
+	var $logo = $('#logo');
+	var $logoWrapper = $('#logo-wrapper');
+	var $blockLogo = $('#block-logo').add('#logo-bg');
+	var $onelineLogo = $('#one-line-logo');
+	var logoIsBlock = true; // start with block logo
 
 	// var gapNavHeight = 62;
 	var gapNavHeight = $siteToggle.outerHeight();
@@ -114,6 +120,8 @@
 
 		// when user scrolls past height of site toggle, make smaller
 		if (($(this).scrollTop() > gapNavHeight) && (isNavOpen == false)) {  
+			$blockLogo.fadeOut();
+			$onelineLogo.fadeIn();
 			$navBar.addClass("smaller-header navbar--open");
 			isNavOpen = true;
 			if(!site.isMobile) {
@@ -134,6 +142,19 @@
 		// 	console.log('close it');
 		// 	navCloseAll(); // close anything else that's open
 		// }
+
+		// Logo Swap
+		// switches logos by fading out, changing source, then fading back in
+		// from from http://stackoverflow.com/a/1977582
+		function logoSwap() {
+			if(logoIsBlock) {
+				$logoWrapper.fadeOut(function() { 
+				  $(this).load(function() { $(this).fadeIn(); }); 
+				  $(this).attr("src", "http://sstatic.net/su/img/logo.png"); 
+				}); 	
+			}
+			
+		}
 
 	});
 
