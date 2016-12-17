@@ -71,11 +71,16 @@ conversion: 				| mobile 	| tablet	| desktop
   $headerHeight--subpage--desktop:#{$navbarHeight--desktop} + #{$navbarSiteToggle--desktop} + #{$logoSpacer--desktop};
 
 
+  // tab heights for Festival on homepage so can peek from bottom
+  $tabHeight--mobile:4.6rem;
+  // $tabHeight--tablet:6.5vw;
+  $tabHeight--tablet:4.8vw;
+  $tabHeight--desktop:94px;
 
   // tab heights for Folkways banner title tabs
-  $tabHeightMobile:200px;
-  $tabHeightTablet:6.5vw;
-  $tabHeightDesktop:94px;
+  // $tabHeight--mobile:200px;
+  // $tabHeight--tablet:6.5vw;
+  // $tabHeight--desktop:94px;
 
   // toggle nav and navbar height for navspacer
   @mixin navbarHeight--home {
@@ -113,6 +118,13 @@ conversion: 				| mobile 	| tablet	| desktop
     height: calc(100vh - (#{$headerHeight--home--mobile}));
     @include respond-to(break2) {height:calc(100vh - (#{$headerHeight--home--tablet});}
     @include respond-to(fullwidth) {height:calc(100vh - (#{$headerHeight--home--desktop});}
+  }
+  // tab top margin for on.festival homepage
+  // gets full screen height minus header height, minus tab height
+  @mixin marginTopBanner {
+    margin-top: calc(100vh - (#{$headerHeight--home--mobile} + #{$tabHeight--mobile}));
+    @include respond-to(break2) {margin-top:calc(100vh - (#{$headerHeight--home--tablet} + #{$tabHeight--tablet});}
+    @include respond-to(fullwidth) {margin-top:calc(100vh - (#{$headerHeight--home--desktop} + #{$tabHeight--desktop});}
   }
 
   /*******
