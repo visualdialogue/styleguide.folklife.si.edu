@@ -358,8 +358,8 @@ p {margin: 0;}
 		margin: 0;
 		border: none;
 		.title-height {
-			height:66px;
-			@include respond-to(break2) {height:66px;}
+			height:12vw;
+			@include respond-to(break2) {height:4.2vw;}
 			@include respond-to(fullwidth) {height:66px;}	
 		}
 		// .container {
@@ -370,9 +370,13 @@ p {margin: 0;}
 		}
 	}
 	.page-title {
+		color: white;
 		@include slab-xl;
-		margin: 0;
-		@include vertically-align;
+		margin-top:1.4vw;
+		@include respond-to(break2) {margin-top:0.6vw;}
+		@include respond-to(fullwidth) {margin-top:0.9rem;}
+
+		// @include vertically-align;
 	}
 	a .page-title {
 		color: white; // override a color

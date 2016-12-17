@@ -60,6 +60,12 @@
 			position: relative;
 			visibility:hidden;
 			top:-28vw;
-			@include respond-to(break2) {top:-13vw;}
-			@include respond-to(fullwidth) {top:-18rem;}
+			// @include respond-to(break2) {top:-13vw;}
+			@include respond-to(break2) {top:-10vw;}
+			// @include respond-to(fullwidth) {top:-18rem;}
+			@include respond-to(fullwidth) {top:-17rem;}
+		&--first {
+			// take above the page top so can see top of page when go to first link and not get some cut-off
+			top:-20rem;
+		}
 	}

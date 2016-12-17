@@ -1,24 +1,46 @@
 .title-bar
 	.container.title-height
-		.vertically-align-grandparent
-			.vertically-align-parent
-				//- if custom title passed
-				-if (isset($title)):
-					//- if link passed
-					-if (isset($link)):
-						a.high(href="<?= $link ?>"): h1.page-title: span.light: span.er= $title
-					//- no link passed
-					-else:
-						h1.page-title= $title
-					-endif
-				//- if no title passed
-				- else:
-					h1.page-title= $page->title()
-				-endif
+		//- if custom title passed
+		-if (isset($title)):
+			//- if link passed
+			-if (isset($link)):
+				a.high(href="<?= $link ?>"): h1.page-title: span.light: span.er= $title
+			//- no link passed
+			-else:
+				h1.page-title= $title
+			-endif
+		//- if no title passed
+		- else:
+			h1.page-title= $page->title()
+		-endif
 	-if (isset($subtitle)):
 	hr.hr--thin
 	.container.subtitle-height
-		.vertically-align-grandparent
-			.vertically-align-parent
-				.page-subtitle= $subtitle
+		.page-subtitle= $subtitle
 	-endif
+
+//- IE wouldn't vertically center
+//- .title-bar
+//- 	.container.title-height
+//- 		.vertically-align-grandparent
+//- 			.vertically-align-parent
+//- 				//- if custom title passed
+//- 				-if (isset($title)):
+//- 					//- if link passed
+//- 					-if (isset($link)):
+//- 						a.high(href="<?= $link ?>"): h1.page-title: span.light: span.er= $title
+//- 					//- no link passed
+//- 					-else:
+//- 						h1.page-title= $title
+//- 					-endif
+//- 				//- if no title passed
+//- 				- else:
+//- 					h1.page-title= $page->title()
+//- 				-endif
+//- 	-if (isset($subtitle)):
+//- 	hr.hr--thin
+//- 	.container.subtitle-height
+//- 		.vertically-align-grandparent
+//- 			.vertically-align-parent
+//- 				.page-subtitle= $subtitle
+//- 	-endif

@@ -51,20 +51,22 @@ conversion: 				| mobile 	| tablet	| desktop
   $navbarHeight--subpage--mobile: 12vw;
   $navbarHeight--subpage--mobile--smaller: 12vw;
   $navbarHeight--home--tablet: 5.1vw;
+  // $navbarHeight--home--tablet: 6.29vw;
   $navbarHeight--subpage--tablet: 15.1vw;
-  $navbarHeight--subpage--tablet: 15.1vw;
+  $navbarHeight--subpage--tablet: 5.1vw;
   $navbarHeight--subpage--tablet--smaller: 5.1vw;
   $navbarHeight--desktop: 80px;
 
   // spacer for logo
   $logoSpacer--mobile:5px;
-  $logoSpacer--tablet:0px;
+  $logoSpacer--tablet:10vw;
   $logoSpacer--desktop:153px; // from layout
 
   // height of toggle, navbar, and spacer
   // $headerHeight--home--mobile: 7.4vw; // temp for mobile
   $headerHeight--home--mobile: 5.5rem; // temp for mobile
-  $headerHeight--subpage--mobile: 30vw; // temp for mobile
+  // $headerHeight--home--mobile: 7rem; // temp for mobile
+  $headerHeight--subpage--mobile: 34vw; // temp for mobile
   $headerHeight--home--tablet:#{$navbarHeight--home--tablet} + #{$navbarSiteToggle--tablet};
   $headerHeight--subpage--tablet:#{$navbarHeight--subpage--tablet} + #{$navbarSiteToggle--tablet} + #{$logoSpacer--tablet};
   $headerHeight--home--desktop:#{$navbarHeight--desktop} + #{$navbarSiteToggle--desktop};
@@ -72,9 +74,9 @@ conversion: 				| mobile 	| tablet	| desktop
 
 
   // tab heights for Festival on homepage so can peek from bottom
-  $tabHeight--mobile:4.6rem;
+  $tabHeight--mobile:16vw;
   // $tabHeight--tablet:6.5vw;
-  $tabHeight--tablet:4.8vw;
+  $tabHeight--tablet:4.7vw;
   $tabHeight--desktop:94px;
 
   // tab heights for Folkways banner title tabs

@@ -3,7 +3,6 @@
 -------------------------------------------------- */
 	// bootstrap override
 	.navbar {
-		background-color: $navbar;		
 		margin-bottom: 0;
 		border: 0;
 		border-radius: 0;
@@ -12,7 +11,7 @@
 		min-height: initial;
 		min-height: auto;
 		@include respond-to(break2max) {
-			position: fixed;
+			// position: fixed;
 			width: 100%;
 			z-index: 10;
 		}
@@ -26,6 +25,15 @@
 			top: $navbarSiteToggle--desktop;
 		}
 
+		// if open, go light
+		&--open {
+			background-color: $navbar; // only go less opacity here otherwise folklife banner movement will show below
+			height: auto !important; // so will expand with menu when needed
+		}
+
+		// set height to match with navbar
+		// @include headerHeight--subpage;
+
 		// shadow, from 
 		box-shadow: 0px 17px 41px -8px rgba(0,0,0,0.20);
 		-webkit-box-shadow: 0px 17px 41px -8px rgba(0,0,0,0.20);
@@ -36,6 +44,13 @@
 		-moz-box-shadow: 0px 10px 41px -8px rgba(0,0,0,0.08);
 
 	}
+	.home-page {
+		.navbar {
+			// set height to match with navbar
+			@include headerHeight--home;
+		}
+	}
+
 
 
 	// SITE TOGGLE BANNER
@@ -242,6 +257,7 @@
 		position: fixed;
 		top:0;
 		width: 100%;
+		background-color: $navbar; // duplicate from navbar--open because sometimes close navbar when smaller header and need to keep the opacity
 		.logo--block { top: -25%; }
 		.logo {
 			.folkways-logo { top: -35%; }
@@ -324,41 +340,41 @@
 	// SEARCH BAR
 	.search-bar {
 		display: none;
-		// background-color: red;
-		// float: right;
 		text-align: left;
 		color: $searchText;
 		padding: 0; // override bootstrap
 		@extend %small-sans-title;
+		line-height:1.28; // 32 px at full
 		@include respond-to(break2max) {
 			width: 100%; // 3/4ish of col-8 to be half of page
 		}
-		@include respond-to(breaksearch) {
-			margin-top: 12px;
-			// width: 70%; // 3/4ish of col-8 to be half of page
+		@include respond-to(break2) {
+			// margin-top: 12px;
+			margin-top: 1.2vw;
+		}
+		@include respond-to(fullwidth) {
+			margin-top: 2.4rem;
 		}
 		input {
 			width: 100%;
 			background-color: transparent; // override user agent
 			border-bottom: 1px solid black;
-			@include respond-to(breaksearch) {
+			@include respond-to(break2) {
 				padding: 0 15px;
 			}
 		}
 		&--desktop {
-			@include respond-to(breaksearchmax) {
+			@include respond-to(break2max) {
 				display: none !important;
 			}
 
 		}
 		&--mobile {
 			padding: 5px 15px;
-			// border: 5px solid $black80;
-
 			// place above outside click
 			position: relative;
 			z-index: 11;
-			@include respond-to(breaksearch) {
+			@include respond-to(break2) {
 				display: none !important;
 			}
 		}
@@ -389,14 +405,17 @@
 			@include respond-to(break2) {
 				padding: 0;
 			}
-			@include padding-bottom(0.5);
+			@include padding-bottom(0.4);
 		}
 		&__list {
 			display: none;
 			@include respond-to(break2) {
 				display: inline-block;
+				margin-bottom: 15vw;
 			}
-			@include margin-bottom(12);
+			@include respond-to(fullwidth) {
+				margin-bottom: 12rem;
+			}
 		}
 
 		&__sub-item {
@@ -434,7 +453,7 @@
 		}
 	}
 	.footer-nav__sub-item {
-		@include link-font-sm;
+		// @include link-font-sm;
 	}
 	.nav-show-mobile {
 		// display: inline-block;
@@ -452,12 +471,13 @@
 		position: relative;
 		// z-index: 10;
 		z-index: 9; // just below logo
-		top: 3rem;
+		top: 1rem;
 		// color: white;
 		// padding: 3rem 0 1rem; // really 40 px with line-height
 		@include respond-to(break2) {
 			padding: 2.8vw 0 2vw; // really 40 px with line-height
-			top: 3rem;
+			// top: 3rem;
+			top: 0;
 		}
 		@include respond-to(breaksearch) {
 			top: 0;
@@ -471,13 +491,13 @@
 		// font-family: $slabExtraWide;
 		// font-weight: 700;
 		// @extend %header-nav-font;
-		text-align: right;
 		// @include section-title;
 		@extend %header-nav-font;
 		font-family: $slabNarrow;
 		color: $black60;
-		margin-bottom: 3rem;
+		margin-bottom: 2vw;
 		@include respond-to(break2) {
+			text-align: right;
 			margin-bottom: 1.5vw;
 		}
 		@include respond-to(fullwidth) {
@@ -486,10 +506,18 @@
 		// vertically align
 		.vertically-align-grandparent {
 			// @include height(3.4);
-			height: 34px;
+			height: 7vw;
+			@include respond-to(break2) {
+				height: 34px;
+			}
 		}
 		.vertically-align {
-			right: 0;
+			top: 5vw;
+			left: 0;
+			@include respond-to(break2) {
+				top: 50%;
+				right: 0;
+			}
 		}
 	}
 	.browsenav__item {

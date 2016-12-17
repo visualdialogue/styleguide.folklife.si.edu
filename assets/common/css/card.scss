@@ -6,7 +6,9 @@
 .card--horizontal {
 	@include margin-bottom(4);
 	.video__thumbnail, .card__image-wrapper {
-		padding-bottom:0;
+		@include respond-to(break2) {
+			padding-bottom:0;
+		}
 	}
 	.details.hasborder {
 		@include margin-top(1); // add margin back if have border b/c no title above in horizontal layout
@@ -120,7 +122,7 @@ a.details {
 }
 .details-wrapper--horizontal {
 	// @include padding-right(13);
-	padding-left:1rem;
+	// padding-left:1rem;
 	@include respond-to(break2) {padding-left:$gutter-full;}
 	@include respond-to(fullwidth) {padding-left:2rem;}
 	.category {
