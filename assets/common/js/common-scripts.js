@@ -14,6 +14,9 @@ $(document).ready(function () {
 	/***************************
 	* General
 	***************************/
+		site.$navbar = $('#navbar'); // logo switching for nav
+
+
 		// set mobile flag
 		function checkMobile() {
 			console.log('checkMobile()');
@@ -26,6 +29,7 @@ $(document).ready(function () {
 				site.isMobile = false;
 			}
 		}
+
 
 		checkMobile(); // initial
 
@@ -91,7 +95,7 @@ $(document).ready(function () {
 		});
 
 	/***************************
-	Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-create-an-animated-sticky-header-with-css3-and-jquery/
+	* Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-create-an-animated-sticky-header-with-css3-and-jquery/
 	***************************/
 		var isNavOpen = false;
 		var $siteToggle = $('#site-toggle');
@@ -191,6 +195,9 @@ $(document).ready(function () {
 		$searchIcon.on('click', function() {
 			// if not yet open
 			if(searchClosed) {
+				// one-line logo on mobile
+				site.$navbar.addClass('one-line-logo'); // switch to one-line logo
+				
 				$navbarOutside.css('position', 'fixed'); // activate navbarOutside
 				navCloseAll(); // close anything else that's open
 				$notSearchIcon.addClass('lighter-nav-icons'); // grey out other icons
@@ -214,10 +221,12 @@ $(document).ready(function () {
 
 		// when click share icon
 		$menuIcon.on('click', function() {
+
 			// if not yet open
 			if(menuClosed) {
 				$navbarOutside.css('position', 'fixed'); // activate navbarOutside
 				navCloseAll(); // close anything else that's open
+				site.$navbar.addClass('one-line-logo'); // switch to one-line logo
 				$notMenuIcon.addClass('lighter-nav-icons'); // grey out other icons
 				$megaNav.css('display', 'block'); // show social media icons
 				// $navBarHeader.css('z-index', '0'); // make navbar clickable to close
@@ -264,12 +273,16 @@ $(document).ready(function () {
 			// close other icons
 			if (site.isMobile)
 		 		$navLists.removeClass('nav-show-mobile'); // close all other open nav lists - mobile only
+		 	else
+				$folkwaysNav.show(); // reset folkways nav, but not on mobile
+		 		
 			$allIcons.removeClass('lighter-nav-icons');
 			$megaNav.add($searchBar).add($browsenav).add($socialMediaIcons).hide(); // close auxiliaries
-			$folkwaysNav.show(); // reset folkways nav
 			menuClosed = true;
 			searchClosed = true;
 			shareClosed = true;
+
+			site.$navbar.removeClass('one-line-logo'); // switch back to block logo
 		}
 
 

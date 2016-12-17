@@ -194,9 +194,7 @@ a.details {
 		}
 		.details {
 			// @include min-height(30);
-			min-height:63.5vw; // height of Quelbe!
-			@include respond-to(break2) {min-height:19vw;}
-			@include respond-to(fullwidth) {min-height:27rem;}
+
 		}
 	}
 

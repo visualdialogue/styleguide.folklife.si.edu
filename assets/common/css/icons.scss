@@ -24,6 +24,7 @@
 
 /* Navbar
 -------------------------------------------------- */
+
 	.nav-icon {
 		// color: white; // old
 		color: $black60; // new
@@ -34,23 +35,27 @@
 		line-height: 0.9; // for center alignment
 		@include respond-to(break2) {
 			// font-size: 2.6vw; // 38px
-			font-size: 3.8rem; // 38px, old
-			font-size: 2.1vw; // new
+			// font-size: 3.8rem; // 38px, old
+			// font-size: 2.1vw; // new
+			font-size: 2.3rem; // new, not responsive
 			// margin: 4px 2px 0;
 			// margin: 10px;
-			margin: 5px;
-			margin: 14px;
+			// margin: 5px;
+			margin: 0;
+			padding: 14px;
 			line-height: 0.7; // for center alignment
 		}
 		@include respond-to(fullwidth) {
 			// font-size: 3.8rem;
-			font-size: 3.4rem; // new
+			// font-size: 3.4rem; // new
+			font-size: 2.5rem; // new
 			// line-height: 1.2; // for center alignment
 		}
 
 		&--main {
 			@include respond-to(break2max) {
-				margin: 1.5vw;
+				// margin: 1.5vw;
+				margin: 1rem; // 12.16 to match with new hamburger nav
 			}
 			&:hover {
 				@include respond-to(break2) {
@@ -60,7 +65,24 @@
 			}
 		}
 	}
+	.icon-menu-1 {
+		font-size:3rem;
+		// margin: 5px;
+		@include respond-to(break2) {
+			// font-size:3vw;
+			font-size:3.2rem;
+			// margin: 10px;
+			padding: 1rem;
+		}
+		@include respond-to(fullwidth) {
+			font-size:3.5rem;
+			// font-size:3rem;
+			padding: 1rem;
+		}
+		// @include padding(1);
+	}
 	.social-icons {
+		display: none; // initial hide
 		text-align: right;
 		&--mobile {
 			padding: 0;
@@ -68,7 +90,7 @@
 			position: relative;
 			z-index: 10;
 			@include respond-to(break2) {
-				display: none !important; // override js hiding and showing
+				// display: none !important; // override js hiding and showing
 			}
 		}
 		&--desktop {
@@ -94,11 +116,10 @@
 		text-decoration: none;
 	}
 	.social-icon {
-		color:$black40;
-
-
+		color:$black60;
 		&:hover {
-			color: white;
+			// color: white;
+			color: $black30; // new
 			text-decoration: none;
 		}
 
@@ -106,9 +127,10 @@
 			@include respond-to(break2max) {
 				// line-height: 1.5;
 				// margin: 2vw;
-				margin: 4px;
+				// margin: 4px;
 			}
 		}
+		@include padding(1);
 	}
 
 

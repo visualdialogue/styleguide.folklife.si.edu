@@ -46,10 +46,12 @@ conversion: 				| mobile 	| tablet	| desktop
   $navbarSiteToggle--desktop: 36px;
 
   // height of navbar on tablet and desktop
-  $navbarHeight--home--mobile: 11vw;
+  // $navbarHeight--home--mobile: 11vw;
+  $navbarHeight--home--mobile: 9vw; // new hamburger nav
   $navbarHeight--subpage--mobile: 12vw;
   $navbarHeight--subpage--mobile--smaller: 12vw;
   $navbarHeight--home--tablet: 5.1vw;
+  $navbarHeight--subpage--tablet: 15.1vw;
   $navbarHeight--subpage--tablet: 15.1vw;
   $navbarHeight--subpage--tablet--smaller: 5.1vw;
   $navbarHeight--desktop: 80px;
@@ -60,7 +62,8 @@ conversion: 				| mobile 	| tablet	| desktop
   $logoSpacer--desktop:153px; // from layout
 
   // height of toggle, navbar, and spacer
-  $headerHeight--home--mobile: 7.4vw; // temp for mobile
+  // $headerHeight--home--mobile: 7.4vw; // temp for mobile
+  $headerHeight--home--mobile: 5.5rem; // temp for mobile
   $headerHeight--subpage--mobile: 30vw; // temp for mobile
   $headerHeight--home--tablet:#{$navbarHeight--home--tablet} + #{$navbarSiteToggle--tablet};
   $headerHeight--subpage--tablet:#{$navbarHeight--subpage--tablet} + #{$navbarSiteToggle--tablet} + #{$logoSpacer--tablet};
@@ -124,6 +127,11 @@ conversion: 				| mobile 	| tablet	| desktop
     left:#{$distance * 1.25}vw; // eg. 5rem
     @include respond-to(break2) {left:#{$distance * 0.625}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {left:#{$distance}rem;} // eg 4rem
+  }
+  @mixin margin($margin) {
+    margin:#{$margin * 1.25}vw; // eg. 5rem
+    @include respond-to(break2) {margin:#{$margin * 0.625}vw;} // eg 2.5vw
+    @include respond-to(fullwidth) {margin:#{$margin}rem;} // eg 4rem
   }
   @mixin margin-top($margin) {
     margin-top:#{$margin * 1.25}vw; // eg. 5rem

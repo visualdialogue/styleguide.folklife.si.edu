@@ -24,7 +24,7 @@
   </li>
   <li class="footer__main-item col-sm-1"> 
     <ul class="footer__list copyright-list">
-      <li class="footer__sub-item copyright-list__item">Copyright</li>
+      <li class="footer__sub-item copyright-list__item"><a href="#">Copyright</a></li>
       <li class="footer__sub-item copyright-list__item">Contact</li>
       <li class="footer__sub-item copyright-list__item">Privacy</li>
       <li class="footer__sub-item copyright-list__item">Credits</li>

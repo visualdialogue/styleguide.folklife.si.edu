@@ -95,7 +95,10 @@
 -------------------------------------------------- */
 	.footer {
 		background-color: $black80;
-		color: white;
+		// color: white;
+		// color:$black60;
+		color: $black20;
+
 		z-index: 1;
 		@include respond-to(break2max) { padding-top:2rem; }
 
@@ -138,12 +141,16 @@
 		}
 	}
 	.footer-nav {
-		&__sub-item {
-		}
+		
 		&__title {
 			@include respond-to(break2max) {color:$black40;}
 			&:hover {
 				// color: white;
+			}
+		}
+		&__sub-item {
+			a:hover {
+				color: $black20;
 			}
 		}
 		.sunsplash {
@@ -180,13 +187,12 @@
 		display: inline-block;
 		font-size: 8vw; margin-right: 3vw;
 		@include respond-to(break2) { font-size: 1.9vw; margin-right: 0.2vw; }
-		// @include respond-to(fullwidth) { font-size: 3rem; margin-right: 1rem; }
 		@include respond-to(fullwidth) { font-size: 3rem; margin-right: 0.5rem; }
 
 		a {
 			color:$black20;
 			&:hover {
-				color: white;
+				color: $black60;
 				text-decoration: none;
 			}
 		}

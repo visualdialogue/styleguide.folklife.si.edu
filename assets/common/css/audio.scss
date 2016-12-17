@@ -2,9 +2,13 @@
 .audio {
 	.details {
 		border: 2px solid $black15;		
-		@include padding-bottom(2);
+		// @include padding-bottom(2);
 		// min-height: 60vw !important;
-		@include min-height(24);
+		// @include min-height(24);
+
+		min-height:45vw; // height of Quelbe!
+		@include respond-to(break2) {min-height:19vw;}
+		@include respond-to(fullwidth) {min-height:27rem;}
 	}
 	.icon-play-button {
 		// @include respond-to(break2) {width: 33%;}
@@ -46,26 +50,31 @@
 }
 .audio-player {
 	// margin-top: 0rem;
-	@include margin-top(2);
+	// @include margin-top(2);
+	position: absolute;
+	bottom: 1.3rem;
 	@include respond-to(break2) {
 		// margin-top: 2vw;
-		margin-top: 0.7vw;
+		// margin-top: 0.7vw;
 		// move to bottom 
 		position: absolute;
 		width: 17vw;
+		bottom: 1.5vw;
 	}
 	@include respond-to(fullwidth) {
 		// margin-top: 2.8rem;
 		width: 77%;
-		margin-top: 1.2rem;
+		bottom: 2.2rem;
+		// margin-top: 1.2rem;
 	}
 
 
 	// bottom: 2.2rem;
-	@include bottom(2.2);
+	// @include bottom(2.5);
 }
 .audio-player__details {
-	max-width: 100%;
+	// max-width: 100%;
+	width: 67%;
 	@include respond-to(break2) {
 		width: 67%; // 205/282 = 
 		width: 12vw;
@@ -81,8 +90,13 @@
 	// width: 72%;
 }
 .volume {
+	display: none;
 	float: right;
 	margin-right: 3px;
+	color: $black80;
+	@include respond-to(break2) {
+		display: block;
+	}
 }
 .audio-time {
 	@include sans-xxs;

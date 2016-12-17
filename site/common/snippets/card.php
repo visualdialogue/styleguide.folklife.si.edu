@@ -253,7 +253,7 @@
             <div class="audio-time">0:00 &vert;&nbsp;
               <?php echo $card->audio_length(); ?>
             </div>
-            <div class="volume"></div>
+            <div class="volume icon-volume-up"></div>
           </div>
         </div>
       </div>

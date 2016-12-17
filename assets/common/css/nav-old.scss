@@ -26,12 +26,17 @@
 			top: $navbarSiteToggle--desktop;
 		}
 
-		// shadow
+		// shadow, from 
+		box-shadow: 0px 17px 41px -8px rgba(0,0,0,0.20);
 		-webkit-box-shadow: 0px 17px 41px -8px rgba(0,0,0,0.20);
 		-moz-box-shadow: 0px 17px 41px -8px rgba(0,0,0,0.20);
-		box-shadow: 0px 17px 41px -8px rgba(0,0,0,0.20);
+
+		box-shadow: 0px 10px 41px -8px rgba(0,0,0,0.08);
+		-webkit-box-shadow: 0px 10px 41px -8px rgba(0,0,0,0.08);
+		-moz-box-shadow: 0px 10px 41px -8px rgba(0,0,0,0.08);
 
 	}
+
 
 	// SITE TOGGLE BANNER
 
@@ -42,7 +47,6 @@
 		text-align:right;
 		line-height:2vw;
 		@include sans-xxxs;
-		// font-family: $slabLight;
 		font-weight: 500;
 		line-height: 1;
 		@include respond-to(break2) {
@@ -102,7 +106,7 @@
 		}
 	}
 	.navbar-header__inner {
-		@include vertically-align-parent;
+		// @include vertically-align-parent;
 		position: relative;
 		z-index: 100;
 
@@ -118,13 +122,13 @@
 		@include respond-to(break2) {
 			// height: 115px; // old
 			// height: $navbarHeight--home--tablet; // new
-			padding: 1.4vw 0 10px 0;
-			width: 14.2857%; // 200 / 1400
+			// padding: 1.4vw 0 10px 0;
+			// width: 14.2857%; // 200 / 1400
 		}
 
 		@include respond-to(fullwidth) {
 			// padding: 23px 0 18px 0;
-			padding: 20px 0 18px 0;
+			// padding: 20px 0 18px 0;
 			// line up with left side
 			font-size: 25px; // back to normal
 
@@ -135,7 +139,7 @@
 			// new
 			// padding-left:0; // align with left side instead of col
 			// folkways
-			width: 14.2857%; // 200 / 1400
+			// width: 14.2857%; // 200 / 1400
 		}
 	}
 	.home-page {
@@ -163,6 +167,11 @@
 	.logo-mask {
 		overflow: hidden; // hide logo when scrolls up
 		display: inline-block;
+	}
+	.navbar.one-line-logo {
+		.navbar-brand {
+			
+		}
 	}
 	.logo {
 		position: relative;
@@ -197,29 +206,24 @@
 		top:0;
 		left: 0;
 	}
+	.one-line-logo{
+		.logo__bg, .logo--block {
+			display: none;
+		}
+		.logo--one-line {
+			display: block;
+		}
+	}
 	.logo--one-line {
+		display: none;
 		width:25vw;
 		@include respond-to(break2) {width:11vw;}
 		@include respond-to(fullwidth) {width:160px;}
-		display: none;
 	}
-	.smaller-header {
-		// new logo
-		// background-color: #333;
-		// switch to fixed
-		position: fixed;
-		top:0;
-		width: 100%;
-		&.navbar {
-			// no gradient
-			-webkit-box-shadow: initial;
-			-moz-box-shadow: initial;
-			box-shadow: initial;
-		}
+	.smaller-header, .one-line-logo {
 		.navbar-brand {
 			@include respond-to(break2) {
-				padding: 17px 0;
-				// height: 70px;
+				// padding: 17px 0;
 				// -webkit-transition: all 0.3s ease;
 				// -moz-transition: all 0.3s ease;
 				// -ms-transition: all 0.3s ease;
@@ -227,17 +231,20 @@
 				// transition: all 0.3s ease;
 			}
 			@include respond-to(fullwidth) {
-				// padding: 0;
 				padding-top: 2rem;
 			}
 
 		}
+	}
+	.smaller-header {
+		// new logo
+		// switch to fixed
+		position: fixed;
+		top:0;
+		width: 100%;
 		.logo--block { top: -25%; }
-
-		// img.logo__bg { display: none; }
 		.logo {
 			.folkways-logo { top: -35%; }
-			// @include height(8);
 			overflow: hidden;
 		}
 		.logo__bg, .logo--block {
@@ -247,14 +254,9 @@
 			display: block;
 		}
 		@include respond-to(break2) {
-			// .logo--block { top: -3.3rem; }
 			.logo--block { top: -45%; }
 			.folkways-logo { top: -35%; }
-			// img.logo__bg { position: absolute; top: -100%; }
-			// new header
 			.logo--block { top: -115%; }
-			// new header II
-			// img.logo__bg { display: none; }
 		}
 		& + .section--banner.container {
 			position: relative;
@@ -273,34 +275,25 @@
 	.nav-icons {
 		right: 0;
 		text-align:right;
-		margin-top: 12px;
-		margin-top: 7px;
+		margin-top: 2vw; // 12.16 to help with new hamburger nav
 		margin-right: -10px;
 		@include respond-to(break2) {
-			// margin-top:2.1rem;
-			margin-top:1.1rem;
+			margin-top:0.5vw; // 12.16
 			margin-right: 0;
-			// @include vertically-align();
 			float: right;
-			// width: 66.66667%;
-			width: 58.33333%;
-			// right: 0;
-
+			// width: 58.33333%;
+			// width: 75%;
 		}
 		@include respond-to(fullwidth) {
+			margin-top:1.3rem;
 			right: 0;
 		}
 	}
 	.nav-icon {
 		display:inline-block;
-		// vertical-align: top;
 		cursor: pointer;
 		float: right;
-		// margin: 2px;
 		opacity: 1; // so bright white on mobile
-		@include respond-to(break2) {
-			// margin: 5px;
-		}
 	}
 	.lighter-nav-icons {
 		opacity: 0.2;
@@ -331,19 +324,23 @@
 	// SEARCH BAR
 	.search-bar {
 		display: none;
-		background-color: white;
-		width: 100%; // 3/4ish of col-8 to be half of page
-		float: right;
+		// background-color: red;
+		// float: right;
 		text-align: left;
 		color: $searchText;
 		padding: 0; // override bootstrap
 		@extend %small-sans-title;
+		@include respond-to(break2max) {
+			width: 100%; // 3/4ish of col-8 to be half of page
+		}
 		@include respond-to(breaksearch) {
 			margin-top: 12px;
-			width: 70%; // 3/4ish of col-8 to be half of page
+			// width: 70%; // 3/4ish of col-8 to be half of page
 		}
 		input {
 			width: 100%;
+			background-color: transparent; // override user agent
+			border-bottom: 1px solid black;
 			@include respond-to(breaksearch) {
 				padding: 0 15px;
 			}
@@ -368,14 +365,8 @@
 	}
 
 
-	// testing
-	// a.header-nav__title, a.header-nav__title + .header-nav__list a {color: pink;}
-	a.header-nav__title, .header-nav__list a, a.footer-nav__title, .footer-nav__list a {
-		color: pink !important;
-	}
-
 	.header-nav, .footer {
-		@include padding-top(4);
+		@include padding-top(3.4);
 		@include padding-bottom(2.6);
 	}
 
@@ -391,55 +382,55 @@
 			@extend %header-nav-font;
 			cursor: pointer;
 			padding: 10px 0 0;
-			// color: $black20;
-			color: $black20;
 			display: block; // for mobile
-
-			@include respond-to(break2) {color: white;}
 			&:hover {
-				color: white;
-				@include respond-to(break2) {color: $black20;}
+				color: $black60;
 			}
 			@include respond-to(break2) {
 				padding: 0;
-				color: white;
 			}
 		}
 		&__list {
 			display: none;
 			@include respond-to(break2) {
 				display: inline-block;
-
 			}
+			@include margin-bottom(12);
 		}
 
 		&__sub-item {
 			display: block;
 			@include link-font;
-			// color: white;
-			color:$black20;
+			color:$black60; // 12.12
 			a {
-				color: $black20;
+				color: $black60;
 				display: block;
 				&:hover {
-					color: white;
+					color: black;
 				}
-			}
-			@include respond-to(break2) {
-				// color:$black20;
-				color:$black60; // 12.12
 			}
 			cursor: pointer;
 			&:hover {
-				color: white;
+				color: black;
 			}
 		}
 	}
 	.header-nav {
 		display: none;
 		// background-color: $black60;
-		background-color: $black30;
+		// background-color: $black30;
+		// background-color: rgba(white, 0.95);
 		z-index: 10;
+	}
+	.footer-nav {
+		&__title {
+			color: $black20;
+		}
+		&__sub-item {
+			&:hover {
+				color: $black20;
+			}
+		}
 	}
 	.footer-nav__sub-item {
 		@include link-font-sm;
@@ -454,10 +445,12 @@
 	.browsenav {
 		display: none; // initial hide
 		// background-color: $black40;
-		background-color: $black50;
-		background-color: $black30; // 12.12
+		// background-color: $black50;
+		// background-color: $black30; // 12.12
+		background-color: $black10; // 12.16
 		position: relative;
-		z-index: 10;
+		// z-index: 10;
+		z-index: 9; // just below logo
 		top: 3rem;
 		// color: white;
 		// padding: 3rem 0 1rem; // really 40 px with line-height
@@ -469,7 +462,7 @@
 			top: 0;
 		}
 		@include respond-to(fullwidth) {
-			padding: 4rem 0 4rem;
+			padding: 5rem 0 2rem;
 		}
 	}
 	
@@ -478,8 +471,10 @@
 		// font-weight: 700;
 		// @extend %header-nav-font;
 		text-align: right;
-		@include section-title;
-		color: white;
+		// @include section-title;
+		@extend %header-nav-font;
+		font-family: $slabNarrow;
+		color: $black60;
 		margin-bottom: 3rem;
 		@include respond-to(break2) {
 			margin-bottom: 1.5vw;

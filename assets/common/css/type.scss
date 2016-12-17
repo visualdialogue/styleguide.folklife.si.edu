@@ -8,8 +8,10 @@ body {
 /* Slab Knockout
  ******************/
 	%header-nav-font {
-		font-family: $slabLight;
-		font-family: $sans;
+		// font-family: $slabLight;
+		// font-family: $sans;
+		// font-family: $slabWide;
+		font-family: $slabNarrow;
 		text-transform: uppercase;
 		font-weight: 800;
 		letter-spacing: 1px;
@@ -19,7 +21,10 @@ body {
 			line-height: 1.2;
 		}
 		@include respond-to(fullwidth) {
-			font-size: 2rem;
+			// font-size: 2rem;
+			// line-height: 1.6;
+			line-height: 1.2353; // 21px
+			font-size: 1.7rem;
 		}
 	}
 
@@ -127,14 +132,17 @@ body {
 		font-family: $sans;
 		font-size: 1.7rem;
 		line-height: 2;
-		font-weight: 300;
+		// font-weight: 300;
+		font-weight: 400;
 		@include respond-to(break2) {
 			font-size: 1.25vw;
 			line-height: 1.45;
 		}
 		@include respond-to(fullwidth) {
-			font-size: 2rem;
-			line-height: 1.4;
+			// font-size: 2rem;
+			font-size: 1.6rem;
+			// line-height: 1.25;
+			line-height: 1.8; // 16 px
 		}
 	}
 
@@ -418,8 +426,9 @@ body {
 		line-height: 1.2;
 		font-size: 6vw;
 		@include respond-to(break2) {
-			font-size: 2.7vw;
-			font-size: 2.3vw;
+			// font-size: 2.7vw;
+			// font-size: 2.3vw;
+			font-size: 2.6vw;
 			// line-height: 1.2;
 			line-height: 1; // smaller for folkways banner titles
 		}
@@ -651,6 +660,13 @@ body {
 			// @include margin-bottom(2);
 			@include padding-bottom(2); // not margin because then when using columns, the margin carries over!!!, from http://stackoverflow.com/a/12503808
 			// font-weight: 200;
+		}
+		.title {
+			@include sans-xs;
+			@include margin-bottom(0.3);
+			width: initial;
+			width: auto;
+			font-weight: 600;
 		}
 	}
 

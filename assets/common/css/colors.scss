@@ -80,7 +80,9 @@ $copylinks: coral;
 $hover: $lightblue;
 $hover: $lightorange;
 // $navbar: $black80; // old banner
-$navbar: white; // new banner
+// $navbar: white; // new banner
+$navbar: rgba(white, 0.95);
+$navbar: rgba(white, 0.97);
 $tagline: $black50;
 // $sitelinks: $black30;
 $sitelinks: $black40; // new
