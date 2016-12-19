@@ -1,0 +1,17 @@
+//- use thumbnail if it’s set in panel
+-if ('' != $card->thumbnail_img()):
+	-$image = $card->image($card->thumbnail_img())
+- elseif($src = $card->image()):
+	-$image = $src
+-endif
+
+li.card.col-xs-12
+	.image
+		a(href="<?= $card->url() ?>")
+			img.card__image(src="<?= $image->url() ?>")
+	.details
+		.details__inner
+			.title!= $card->title()
+			.byline!= $card->byline()
+			
+			.description.card__description.link-underline.blurb!= $card->blurb()->kt()

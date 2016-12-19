@@ -55,7 +55,7 @@
     <sidebar class="sidebar sidebar--info col-sm-4 col-sm-offset-1">
       <?php foreach ($page->children()->find('sidebar')->children()->visible() as $sidebar): ?>
       <ul>
-        <h2 class="sidebar__title">
+        <h2 class="sidebar__section-title">
           <?php echo htmlspecialchars($sidebar->title(), ENT_QUOTES, 'UTF-8'); ?></h2>
         <?php foreach ($sidebar->section_entries()->toStructure() as $sidebar_section): ?>
         <li class="sidebar__item">

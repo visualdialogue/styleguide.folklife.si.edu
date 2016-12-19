@@ -47,7 +47,8 @@
 	.home-page {
 		.navbar {
 			// set height to match with navbar
-			@include headerHeight--home;
+			// @include headerHeight--home;
+			@include navbarHeight--home;
 		}
 	}
 
@@ -130,6 +131,7 @@
 	
 
 	.navbar-brand {
+		padding-left:0 !important; // bootstrap override
 		margin-left: 0 !important; // bootstrap override
 		font-size: 10px; // prevent gap to sunsplash
 		padding: 10px 0 0 0;
@@ -211,13 +213,13 @@
 		}
 	}
 	.logo--block {
-		@include padding(1);
+		// @include padding(1);
 		// -webkit-transition: top 0.1s ease;
 		// -moz-transition: top 0.1s ease;
 		// -ms-transition: top 0.1s ease;
 		// -o-transition: top 0.1s ease;
 		// transition: top 0.1s ease;
-		position: absolute;
+		// position: absolute;
 		top:0;
 		left: 0;
 	}
@@ -381,7 +383,7 @@
 	}
 
 
-	.header-nav, .footer {
+	.header-nav {
 		@include padding-top(3.4);
 		@include padding-bottom(2.6);
 	}
@@ -411,11 +413,12 @@
 			display: none;
 			@include respond-to(break2) {
 				display: inline-block;
-				margin-bottom: 15vw;
+				// margin-bottom: 15vw;
 			}
-			@include respond-to(fullwidth) {
-				margin-bottom: 12rem;
-			}
+			// @include respond-to(fullwidth) {
+				// margin-bottom: 12rem;
+			// }
+			@include margin-bottom(2.2);
 		}
 
 		&__sub-item {

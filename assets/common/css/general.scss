@@ -15,18 +15,28 @@
 			padding: 0 40px;
 		}
 		.highlight__inner {
+
 			background-color: $black30;
 			// show highlight on mobile
 			padding: 15px;
+
+			// go below card colors
+			position: relative;
+			z-index: 0;
+			
 			@include respond-to(break2) {
 				// show highlight color around box
 				padding: 40px 40px;
 			}
 		}
+		.section-title {
+			@include margin-bottom(4);
+		}
 	}
 }
 
 p {margin: 0;}
+ul {margin: 0;}
 
 
 .container--xl {
@@ -43,35 +53,28 @@ p {margin: 0;}
 }
 
 // folklife - talk story
-.col-sm-625 {
+.col-xs-half-image {
 	float: left;
-	width: 51%;
-	@include respond-to(fullwidth) {
-		width: 54%;
-	}
+	width: 54%;
 }
-.col-sm-575 {
+.col-xs-half-details {
 	float: left;
-	width: 49%;
-	@include respond-to(fullwidth) {
-		width: 46%;
-		// padding-left: 0 !important; // fit the layout alt-grid
-	}
+	width: 46%;
 }
 
 // festival blog article related content sidebar
-.col-sm-75 {
+.col-xs-75 {
 	float: left;
 	width: 63%;
 }
 
 
 // folklife - dive deep
-.col-sm-65 {
+.col-xs-56 {
 	float: left;
 	width: 56%;
 }
-.col-sm-55 {
+.col-xs-44 {
 	float: left;
 	width: 44%;
 	@include respond-to(fullwidth) {
@@ -97,19 +100,19 @@ p {margin: 0;}
 
 	// bootstrap gutter override!!!
 	
-	// $gutter-medium: 1.35%;
-	$gutter-small: 7.5px;
-	// $gutter-medium: 1.35%;
-	$gutter-medium: 1.36%;
+	// $gutter--medium: 1.35%;
+	$gutter--small: 7.5px;
+	// $gutter--medium: 1.35%;
+	$gutter--medium: 1.36%;
 	
-	$gutter-full: 2.72%;
-	// $gutter-medium: %;
+	$gutter--full: 2.72%;
+	// $gutter--medium: %;
 	.row {
-		margin-left: -$gutter-small;
-		margin-right: -$gutter-small;
+		margin-left: -$gutter--small;
+		margin-right: -$gutter--small;
 		@include respond-to(break2) {
-			margin-left: -$gutter-medium;
-			margin-right: -$gutter-medium;
+			margin-left: -$gutter--medium;
+			margin-right: -$gutter--medium;
 		}
 		@include respond-to(fullwidth) {
 			margin-left: -20px;
@@ -117,13 +120,15 @@ p {margin: 0;}
 			margin-bottom:0;
 		}
 	}
-	// [class^="col-"] {
+	// bootstrap override default padding. Make it more responsive. Be specific enough to apply to our card system with 2 selectors
+	// 3 selectors to win specificity war
+	// [class*="col-"], .cards .card, .cards .image, .cards .details {
 	[class*="col-"] {
-		padding-left: $gutter-small;
-		padding-right: $gutter-small;
+		padding-left: $gutter--small;
+		padding-right: $gutter--small;
 		@include respond-to(break2) {
-			padding-left: $gutter-medium;
-			padding-right: $gutter-medium;
+			padding-left: $gutter--medium;
+			padding-right: $gutter--medium;
 		}
 		@include respond-to(fullwidth) {
 			padding-left: 20px;
@@ -133,27 +138,33 @@ p {margin: 0;}
 
 /* #half sections
 -------------------------------------------------- */
-	$section--vr-padding-mobile: 4rem;
-	$section--vr-padding-tablet: 2.7%;
-	$section--vr-padding-desktop: 4rem;
+	$section--half-padding-mobile: 4rem;
+	$section--half-padding-tablet: 2.7%;
+	$section--half-padding-desktop: 4rem;
+
+	.section--half .details {
+		// @include padding-top(1.4); // smaller padding for smaller sections
+		
+	}
 
 	@include respond-to(break2) {
-		.section--vr:nth-of-type(1) {
-			padding-right: $section--vr-padding-mobile;
+
+		.section--half:nth-of-type(1) {
+			padding-right: $section--half-padding-mobile;
 			@include respond-to(break2) {
-				padding-right: $section--vr-padding-tablet;
+				padding-right: $section--half-padding-tablet;
 			}
 			@include respond-to(fullwidth) {
-				padding-right: $section--vr-padding-desktop;
+				padding-right: $section--half-padding-desktop;
 			}
 		}
-		.section--vr:nth-of-type(2) {
-			padding-left: $section--vr-padding-mobile;
+		.section--half:nth-of-type(2) {
+			padding-left: $section--half-padding-mobile;
 			@include respond-to(break2) {
-				padding-left: $section--vr-padding-tablet;
+				padding-left: $section--half-padding-tablet;
 			}
 			@include respond-to(fullwidth) {
-				padding-left: $section--vr-padding-desktop;
+				padding-left: $section--half-padding-desktop;
 			}
 		}
 	}
@@ -266,18 +277,29 @@ p {margin: 0;}
 		// }
 	}
 	.sidebar {
-		&__title {
-			@include title--sans--alt;
+		color: $black70;	
+		@include margin-bottom(6); // keep from footer
+		h3, &__section-title {
+			@include sans-md;
 			color: $black50;
-			margin-bottom:1.5rem;
-			@include respond-to(break2) {margin-bottom:0.9vw;}
-			@include respond-to(fullwidth) {margin-bottom:1.5rem;}
+			@include padding-bottom(1);
+			@include margin-top(4);
+			@include padding-bottom(0);
+			@include margin-bottom(1.1);
+		}
+		h4, &__item-title {
+			@include sans-xxxs;
+			@include margin-top(0.6);
+			color: $black50;
+			text-transform: uppercase;
+			margin: 0;
 		}
 		&__item {
 			border-top: 1px solid $black50;
-			margin-bottom:0.5rem;
-			@include respond-to(break2) {margin-bottom:0.4vw;}
-			@include respond-to(fullwidth) {margin-bottom:0.8rem;}
+			// margin-bottom:0.5rem;
+			// @include respond-to(break2) {margin-bottom:0.4vw;}
+			// @include respond-to(fullwidth) {margin-bottom:0.8rem;}
+			@include padding-bottom(1);
 		}
 		&__subtitle {
 			@include sidebar-subtitle;
@@ -299,6 +321,15 @@ p {margin: 0;}
 		&__copy {
 			@include sidebar-copy;
 		}
+		.sidebar-highlight {
+			&.active, &:hover {
+				background-color: $black10;
+			}
+			// text stays same
+			a:hover {
+				color: $black70;
+			}
+		}
 	}
 	hr {
 		margin: 0; // bootstrap reset
@@ -315,15 +346,17 @@ p {margin: 0;}
 		&--thick {
 			height:11px;
 			background-image:url(/assets/images/hr.jpg);
-			margin-bottom: 5vw;
+			// margin-bottom: 5vw;
 			margin-top: 10vw;
 			@include respond-to(break2) {
-				margin-bottom: 2.6vw;
+				// margin-bottom: 2.6vw;
 				margin-top:0;
 			}
-			@include respond-to(fullwidth) {
-				margin-bottom: 4rem;
-			}
+			// @include respond-to(fullwidth) {
+			// 	margin-bottom: 4rem;
+			// 	margin-bottom: 4rem;
+			// }
+			@include margin-bottom(5.2);
 		}
 		&--half {
 			margin-bottom:2.5vw;
@@ -331,7 +364,6 @@ p {margin: 0;}
 			@include respond-to(fullwidth) {margin-bottom:2rem;}
 		}
 		&--thin {
-			height:4px;
 			height:5px;
 			background-image:url(/assets/images/hr--thin.png);
 			// background-image:url(/assets/images/hr--thin4.png);
@@ -381,9 +413,6 @@ p {margin: 0;}
 	a .page-title {
 		color: white; // override a color
 	}
-	.page-subtitle {
-		@include vertically-align;
-	}
 
 	.copy-columns {
 		@include respond-to(break2) {
@@ -413,3 +442,192 @@ p {margin: 0;}
 		display: inline-block; // prevent column overhang
 	}
 
+/* #remodal
+-------------------------------------------------- */
+	.remodal__description {
+		@include sans-sm;
+	}
+
+/* #Become a Member
+-------------------------------------------------- */
+	// as seen on folkways homepage for becoming a member and support
+	.highlight-bar {
+		background-color: $black20;
+		@include padding-top(4);
+		@include padding-bottom(4);
+		@include margin-bottom(7.2); // 80px
+	}
+	.become-a-member {
+		position: relative; // so absolute .copy can be correct width
+		@include respond-to(break2max) {
+			position: static !important;
+			margin-bottom:5vw;
+		}
+		&__inner {
+			position: relative;
+		}
+		.image, .copy {
+			float: left;
+			width: 50%;
+		}
+		.image {
+			position: relative; // contain vert child
+			@include section-title;
+			@include margin-bottom(0);
+			color: white;
+			text-align: center;
+		}
+		.copy {
+			background-color: white;
+			@include sans-md;
+			left: 50%;
+			text-align: center;
+			&__inner {
+				@include respond-to(break2max) {
+					width: 100%;
+				}
+				// make up for line-height
+				@include respond-to(break2) {
+					width: 100%;
+					margin-top:-0.1vw;
+				}
+				@include respond-to(fullwidth) {margin-top:-0.6rem;}
+			}
+		}
+	}
+
+/* #Support Us
+-------------------------------------------------- */
+	.support-folkways {
+		.support {
+			border: none;
+		}
+	}
+	.section--support {
+		// @include vertically-align-grandparent;
+	}
+	.support {
+		background-color: white;
+		@include border(all, 2px, $black40);
+		position: relative; // contain support button
+		&__copy, &__button {
+			@include respond-to(break2) {
+				display: inline-block;
+				vertical-align: top;
+			}
+		}
+		&__copy {
+			@include respond-to(break2) {
+				width: 46.45%; // 314px / 676px
+				line-height: 1.25;
+				height: 9.6vw;
+			}
+			@include padding-top(1.6);
+			@include padding-right(2);
+			@include padding-bottom(2);
+			@include padding-left(2);
+			@include respond-to(fullwidth) {
+				height: 14rem;
+			}
+
+		}
+		&__button {
+			background-color: $black40;
+			@include section-title;
+			margin-bottom:0;
+			padding: 3vw;
+			color: white;
+			text-align: center;
+			@include respond-to(break2) {
+				padding: 0;
+				@include vertically-align-parent;
+				width: 53.55%; // 100 - 46.45%
+				// height: 100%;
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+			}
+		}
+	}
+	.button__inner {
+		line-height: 1.5;
+		@include respond-to(break2) {
+			@include vertically-align;
+			line-height: 1.1;
+		}
+	}
+
+/* #Newsletter Signup
+-------------------------------------------------- */
+	.section--newsletter-signup, .section--support, .support-folkways {
+		@include sans-xxs;
+	}
+	.section--newsletter-signup, .section--support {
+		margin-bottom: 2rem;
+		@include respond-to(break2) {
+			margin-bottom: 4rem;
+		}
+	}
+	.newsletter-signup__copy {
+		background-color: $black10;
+		@include padding-top(1.9);
+		@include padding-right(2);
+		@include padding-left(2);
+		@include padding-bottom(2);
+		@include sans-xxs;
+	}
+	.newsletter-signup-form {
+		width: 100%;
+	}
+	.newsletter__input {
+		background-color: $black20;
+		width: 100%;
+		@include padding-right(2);
+		@include padding-left(2);
+		@include email-newsletter;
+		height: 18vw;
+		@include respond-to(break2) {
+			// height: 3.95vw;
+			height: 4.5vw;
+		}
+		@include respond-to(fullwidth) {
+			height: 6.1rem;
+			padding-bottom: 2rem;
+		}
+	}
+
+	// Short version 12.18
+	.newsletter-signup-wrapper {
+		@include margin-bottom(4);
+	}
+	.newsletter-signup--short {
+		float:left;
+		// @include height(8);
+		width: 100%;
+		// height: 14vw;
+		@include respond-to(break2) {
+			width: 50%;
+			height: 5vw;
+		}
+		@include respond-to(fullwidth) {
+			height: 8rem;
+		}
+		form, input {
+			height: 7rem;
+		}
+		.newsletter-signup, .newsletter-signup__copy, form, input {
+			@include respond-to(break2) {
+				height: 100%;
+			}
+		}
+
+		.newsletter-signup__copy {
+			@include sans-xs;
+			@include padding-top(1.5);
+			@include padding-bottom(2);
+			@include respond-to(break2) {
+				@include padding-bottom(1);
+			}
+		}
+	}

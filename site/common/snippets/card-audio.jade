@@ -1,0 +1,31 @@
+-if ('' != $card->thumbnail_img()):
+	//- set thumbnail as image if it's set in panel
+	-$image = $card->image($card->thumbnail_img())
+- elseif($src = $card->image()):
+	-$image = $src
+-endif
+
+li.card.card-audio
+		.image
+			a(href="<?= $card->url() ?>")
+				img(src="<?= $image->url() ?>")
+		.details
+			.details__inner
+				.category.card__category!= $card->category() 
+				.title-wrapper.card__title-wrapper
+					a.high.title(href="<?= $card->url() ?>"): span.light: span.er= $card->title()
+					-if('' != $card->audio_album()):
+						.subtitle!= $card->audio_album()
+					-endif
+					.artist!= $card->artist()->kt()
+				.audio-player
+					.icon-play-button.icon-stack
+						.icon-circle
+						.icon-play
+					.audio-player__details
+						.audio-progress-bar
+							img(src="/assets/images/icons/audio-progress-bar.png")
+						.audio-time
+							|0:00 &vert;&nbsp;
+							!= $card->audio_length()
+						.volume.icon-volume-up

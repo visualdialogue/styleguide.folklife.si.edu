@@ -47,7 +47,9 @@ conversion: 				| mobile 	| tablet	| desktop
 
   // height of navbar on tablet and desktop
   // $navbarHeight--home--mobile: 11vw;
-  $navbarHeight--home--mobile: 9vw; // new hamburger nav
+  // $navbarHeight--home--mobile: 9vw; // new hamburger nav
+  $navbarHeight--home--mobile: 12vw; // new hamburger nav
+  $navbarHeight--home--mobile: 5.5rem; // new hamburger nav
   $navbarHeight--subpage--mobile: 12vw;
   $navbarHeight--subpage--mobile--smaller: 12vw;
   $navbarHeight--home--tablet: 5.1vw;
@@ -159,6 +161,7 @@ conversion: 				| mobile 	| tablet	| desktop
   }
   @mixin margin-bottom($margin) {
     margin-bottom:#{$margin * 1.25}vw; // eg. 5rem
+    margin-bottom:#{$margin / 2}rem; // eg. 5rem
     @include respond-to(break2) {margin-bottom:#{$margin * 0.625}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {margin-bottom:#{$margin}rem;} // eg 4rem
   }

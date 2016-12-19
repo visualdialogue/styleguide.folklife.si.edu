@@ -1,0 +1,13 @@
+.container: hr.hr--thick
+
+//- half sections must be wrapped in container to stay in middle and together
+.newsletter-signup-wrapper.container
+	.newsletter-signup--short
+		.newsletter-signup.clearfix
+			.newsletter-signup__copy
+				.icon-mail
+				= $site->newsletter_text()
+			
+	.newsletter-signup--short
+		form(action="/").newsletter-signup-form.newsletter
+			input.newsletter__input(type="email" placeholder="Enter your email")

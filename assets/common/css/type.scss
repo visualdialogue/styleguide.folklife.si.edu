@@ -3,6 +3,7 @@
 
 body {
 	font-family: $sans;
+	line-height: 1.333333; // 24/32
 }
 
 /* Slab Knockout
@@ -38,13 +39,14 @@ body {
 		color: $black65;
 		line-height: 1.2;
 		@include respond-to(break2) {
-			line-height: 0.7; // so margins accurate
+			// line-height: 0.7; // so margins accurate
+			// line-height: 1.1;
 			font-size: 1.9vw;
-			margin-bottom: 2.7vw;
+			margin-bottom: 2.6vw;
 		}
 		@include respond-to(fullwidth) {
 			font-size: 3rem;
-			margin-bottom: 4.2rem;
+			margin-bottom: 3.3rem; // 40px
 		}
 	}
 
@@ -162,19 +164,19 @@ body {
 		}
 	}
 
-	@mixin link-font-xs {
-		font-family: $sans;
-		font-size: 1.5rem;
-		line-height: 1.7;
-		@include respond-to(break2) {
-			font-size: 1vw;
-			line-height: 1.35;
-		}
-		@include respond-to(fullwidth) {
-			font-size: 1.5rem;
-			line-height: 1.5;
-		}
-	}
+	// @mixin link-font-xs {
+	// 	font-family: $sans;
+	// 	font-size: 1.5rem;
+	// 	line-height: 1.7;
+	// 	@include respond-to(break2) {
+	// 		font-size: 1vw;
+	// 		line-height: 1.35;
+	// 	}
+	// 	@include respond-to(fullwidth) {
+	// 		font-size: 1.5rem;
+	// 		line-height: 1.5;
+	// 	}
+	// }
 
 
 	%title--sans {
@@ -191,22 +193,22 @@ body {
 	  		margin-bottom: 0.5rem;
 		}
 	}
-	@mixin title--sans--alt {
-		font-family: $sans;
-		font-weight: 300;
-		line-height: 1.2;
-	  	font-size: 5vw;
-		@include respond-to(break2) {
-	  		font-size: 1.9vw;
-	  		margin-bottom: 0.3vw;
-		}
-		@include respond-to(fullwidth) {
-	  		font-size: 3rem;
-			line-height: 1.25;
-	  		// margin-bottom: 0.5rem;
-	  		margin-bottom: 0;
-		}
-	}
+	// @mixin title--sans--alt {
+	// 	font-family: $sans;
+	// 	font-weight: 300;
+	// 	line-height: 1.2;
+	//   	font-size: 5vw;
+	// 	@include respond-to(break2) {
+	//   		font-size: 1.9vw;
+	//   		margin-bottom: 0.3vw;
+	// 	}
+	// 	@include respond-to(fullwidth) {
+	//   		font-size: 3rem;
+	// 		line-height: 1.25;
+	//   		// margin-bottom: 0.5rem;
+	//   		margin-bottom: 0;
+	// 	}
+	// }
 
 	// Extra Large Sans
 	@mixin sans-xl {
@@ -240,6 +242,24 @@ body {
 
 	// SASS Implementation
 	.sans-lg {@include sans-lg;}
+
+	@mixin sans-md {
+		font-family: $sans;
+		font-weight: 300; // light for acumin
+		line-height: 1.2;
+	  	font-size: 5vw;
+		@include respond-to(break2) {
+	  		font-size: 1.92vw;
+			line-height: 1.28;
+		}
+		@include respond-to(fullwidth) {
+			// line-height: 1.1; // tighter for festival/learn page
+			line-height: 1.166667; // tighter for festival/learn page // 35px
+	  		font-size: 3rem;
+		}
+	}
+	// SASS Implementation
+	.sans-md {@include sans-md;}
 
 
 	@mixin sans-xxs {
@@ -288,29 +308,13 @@ body {
 			line-height: 1.3;
 		}
 		@include respond-to(fullwidth) {
-	  		font-size: 2.5rem;
+	  		// font-size: 2.5rem;
+	  		font-size: 2.4rem; // 12.18
 			line-height: 1.3;
 		}
 	}
 	// SASS Implementation
 	.sans-sm {@include sans-sm;}
-
-	@mixin sans-md {
-		font-family: $sans;
-		font-weight: 300; // light for acumin
-		line-height: 1.2;
-	  	font-size: 5vw;
-		@include respond-to(break2) {
-	  		font-size: 1.92vw;
-			line-height: 1.28;
-		}
-		@include respond-to(fullwidth) {
-			line-height: 1.1; // tighter for festival/learn page
-	  		font-size: 3rem;
-		}
-	}
-	// SASS Implementation
-	.sans-md {@include sans-md;}
 
 	// Extra Extra Extra Small Sans
 	@mixin sans-xxxs {
@@ -324,9 +328,11 @@ body {
 		}
 		@include respond-to(fullwidth) {
 			line-height: 1.3;
+			// line-height: 1.6;
 	  		font-size: 1.6rem; // oct 19 for fritz
 		}
 	}
+	
 	// SASS Implementation
 	.sans-xxxs {@include sans-xxxs;}
 
@@ -410,12 +416,10 @@ body {
 		line-height: 1;
 		font-size: 8vw;
 		@include respond-to(break2) {
-			font-size: 3.8vw;
-			margin-top: -1rem;
+			font-size: 3.8vw;			
 		}
 		@include respond-to(fullwidth) {
 			font-size: 6rem;
-			margin-top: -1rem;
 		}
 	}
 	.serif-xl {@include serif-xl;}
@@ -424,7 +428,8 @@ body {
 	@mixin serif-lg {
 		font-family: $serif;
 		font-weight: 700;
-		line-height: 1.2;
+		// line-height: 1.2;
+		line-height: 1;
 		font-size: 6vw;
 		@include respond-to(break2) {
 			// font-size: 2.7vw;
@@ -445,12 +450,12 @@ body {
 	@mixin serif-md {
 		font-family: $serif;
 		font-weight: 700;
-		line-height: 1.1;
-		line-height: 1.2;
+		line-height: 1;
 		// line-height: 1; // tighter line height for festival blog on 12.10
 	  	font-size: 6vw;
 	  	font-size: 5vw;
 		@include respond-to(break2) {
+			line-height: 1.143; // 28/32
 	  		font-size: 1.8vw;
 		}
 		@include respond-to(fullwidth) {
@@ -500,7 +505,8 @@ body {
 			font-size: 1.6rem; // acumin pro
 			// margin-bottom: 0.5rem;
 			margin-bottom: 0;
-			line-height: 1;
+			// line-height: 1.3;
+			line-height: 1.4;
 		}
 	}
 	
@@ -523,7 +529,7 @@ body {
 	@include respond-to(fullwidth) {
 		font-size: 1.8rem; // acumin pro
 		margin-bottom: 0.5rem;
-		line-height: 1;
+		line-height: 1.4;
 	}
 }
 
@@ -534,14 +540,19 @@ body {
 	// margin-bottom: 0.5rem;
 	// margin-bottom: 0;
 	line-height: 1;
-	font-size: 6.5vw;
+	line-height: 1.095237; // 46px desktop
+	// font-size: 6.5vw; 
+	font-size: 5.2vw;
+	font-size: 4.5vw;
 	@include respond-to(break2) {
 		// font-size: 0.95vw;
-		font-size: 2.7vw;
+		// font-size: 2.7vw;
+		font-size: 2.3vw;
 		// margin-bottom: 0.4vw;
 	}
 	@include respond-to(fullwidth) {
 		font-size: 4.2rem; // acumin pro
+		// font-size: 3.6rem; // acumin pro
 		// margin-bottom: 0.5rem;
 		// line-height: 1;
 	}
@@ -609,12 +620,13 @@ body {
 	// font-weight: 300;
 	letter-spacing: normal;
 	text-transform: initial;
-	margin-top:1rem;
-	@include respond-to(break2) {margin-top:1rem;}
-	@include respond-to(fullwidth) {
-		margin-top:1rem;
+	@include margin-top(0.5);
+	// margin-top:rem;
+	// @include respond-to(break2) {margin-top:0.2vw;}
+	// @include respond-to(fullwidth) {
+		// margin-top:0.5rem;
 		// margin-bottom:5rem;
-	}
+	// }
 }
 
 @mixin sidebar-subtitle {
@@ -661,6 +673,9 @@ body {
 			// @include margin-bottom(2);
 			@include padding-bottom(2); // not margin because then when using columns, the margin carries over!!!, from http://stackoverflow.com/a/12503808
 			// font-weight: 200;
+		}
+		ul {
+			@include margin-bottom(1);
 		}
 		.title {
 			@include sans-xs;

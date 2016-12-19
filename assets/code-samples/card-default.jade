@@ -1,0 +1,235 @@
+	li.card(class="<?= $custom_class ?> card--<?= $cardTypeData ?>")
+	
+		-if ((isset($border)) && $border === true):
+			.border
+		-endif
+
+		// contain various image and text widths
+		.row
+
+			-if ($card->type() == 'video' || ((isset($type)) && ($type == 'video'))):
+
+				//- horizontal video card
+				-if ($cardOrientation == 'horizontal'):
+					.festival-video.clearfix
+						.col-sm-6
+							.video(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= $card->copy() ?>')
+								.center-box
+									-if($image):
+										a.modal-trigger
+											img.card__image(src="<?= $image->url() ?>")
+									-endif
+										.icon-play-button.icon-play-button--video.icon-stack
+											.icon-circle
+											.icon-play
+						//- .textbox.festival-video__textbox.col-sm-6
+
+						//- horizontal wrapper for festival programs page sidebar
+						.festival-video__textbox.details.details--horizontal.col-sm-6
+							-snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'video' => true, 'type' => $cardTypeData, 'date' => $date, 'author' => $author, 'link' => $link, 'subtitle' => $subtitle ))
+
+				//- vertical video card
+				-else:
+					//- div(class="col-sm-<?= $img_col ?>")
+					div
+						//- put title above image if set to top
+						//- -if($titlePositionTop):
+						//- 	//- date
+						//- 	-if('' != $card->date() && $cardTypeData != 'blog' && $date):
+						//- 		.date!= $card->date('M d, Y')
+						//- 	-endif
+						//- 	a.high(href="<?= $card->url() ?>").title.card__title: span.light: span.er= $card->title()
+						//- -endif
+
+						.image.video(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= $card->copy() ?>')
+							.center-box
+								.modal-trigger
+									img.card__image(src="<?= $image->url() ?>")
+								.icon-play-button.icon-play-button--video.icon-stack
+									.icon-circle
+									.icon-play
+						.details
+							-snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'type' => $cardTypeData, 'date' => $date, 'author' => $author, 'link' => $link, 'subtitle' => $subtitle ))
+
+
+				-endif
+			//- Audio card with play feature
+			-elseif($audioCard):
+			.audio
+				-if($image):
+					.image.clearfix(class="")
+						a(href="<?= $card->url() ?>")
+							img.card__image(src="<?= $image->url() ?>")
+				-endif
+				.details
+					.details__inner
+						.category.card__category!= $card->category() 
+						.title-wrapper.card__title-wrapper
+							a.high.title(href="<?= $card->url() ?>"): span.light: span.er= $card->title()
+							-if('' != $card->audio_album()):
+								.subtitle!= $card->audio_album()
+							-endif
+							.artist!= $card->artist()->kt()
+						.audio-player
+							.icon-play-button.icon-stack
+								.icon-circle
+								.icon-play
+							.audio-player__details
+								.audio-progress-bar
+									img(src="/assets/images/icons/audio-progress-bar.png")
+								.audio-time
+									|0:00 &vert;&nbsp;
+									!= $card->audio_length()
+								.volume.icon-volume-up
+			-elseif($cardOrientation == 'horizontal'):				
+				.card__inner
+					.image.clearfix(class="col-sm-<?= $img_col ?>")
+
+						//- put image in figure and add figcaption button if program section
+						-if($cardTypeData == 'program'):
+							-if($image):
+								figure
+									img(src="<?= $image->url() ?>")
+									//- show caption if it exists
+									-if($image->caption()->isNotEmpty()):
+										figcaption!= $image->caption()
+									-endif
+							-endif
+						-elseif($image):
+							a(href="<?= $card->url() ?>")
+								img.card__image(src="<?= $image->url() ?>")
+						-endif
+					//- class name below for sidebar of programs page
+					//- .details--horizontal(class="col-sm-<?= $text_col ?>")
+					.details
+						-snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'type' => $cardTypeData, 'date' => $date, 'author' => $author, 'link' => $link, 'subtitle' => $subtitle ))
+			- else:
+				.card__inner
+					//- put title above image if set to top
+					//- -if($titlePositionTop):
+					//- 	div(class="col-sm-<?= $img_col ?>")
+					//- 		//- date
+					//- 		-if('' != $card->date() && $cardTypeData != 'blog' && $date):
+					//- 			.date!= $card->date('M d, Y')
+					//- 		-endif
+					//- 		a.high(href="<?= $card->url() ?>").title.card__title: span.light: span.er= $card->title()
+					//- -endif
+
+					-if($thumbnail || $image):
+						//- if want to show main image caption
+						-if($caption):
+							//- .image.clearfix(class="col-sm-<?= $img_col ?>")
+							.image
+								figure
+									img(src="<?= $image->url() ?>")
+									//- show caption if it exists
+									-if($image->caption()->isNotEmpty()):
+										figcaption!= $image->caption()
+									-endif
+						-elseif($thumbnail):
+							//- .image.clearfix(class="col-sm-<?= $img_col ?>")
+							.image
+								a(href="<?= $card->url() ?>")
+									img.card__image(src="<?= $thumbnail->url() ?>")
+						-else:
+							.image.clearfix(class="col-sm-<?= $img_col ?>")
+								a(href="<?= $card->url() ?>")
+									img.card__image(src="<?= $image->url() ?>")
+						-endif
+					-endif
+					//- .details(class="col-sm-<?= $text_col ?>")
+					.details
+						.details__inner(class="<?= $details ?>")
+
+							//- category
+							//- dont' show category on albums
+							-if($showCategory):
+								//- show special date if video card
+								-if(isset($video) && $video === true):
+									.category!= 'Festival, ', $card->year(), ', ', $card->program()
+								-elseif($type == 'blog'):
+									.category!= $card->festival(), ', ', $card->program();
+								-else:
+									.category!= $card->category()
+								-endif
+
+							-endif
+
+							//- put date and title below image by default
+							//- -if(!$titlePositionTop):
+
+							//- date
+							-if('' != $card->date() && $date && $type != 'blog' ):
+								-if($type == 'news'):
+									.date!= $card->date('n.j.Y')
+								-else:
+									.date!= $card->date('M d, Y')
+								-endif
+							-endif
+
+							//- if subtitle, group with title for correct highlighting
+							-if($subtitle):	
+								-if(!$link):
+									.title.card__title: span.light: span.er= $card->title()
+									.subtitle: span.light: span.er= $card->subtitle()
+								-else:
+									a.high(href="<?= $card->url() ?>")
+										.title.card__title: span.light: span.er= $card->title()
+										.subtitle: span.light: span.er= $card->subtitle()
+								-endif
+							-else:
+								a.high(href="<?= $card->url() ?>").title.card__title: span.light: span.er= $card->title()
+							-endif
+							//- -endif
+
+							//- byline
+							-if($type == 'program' && '' != $card->byline()):
+								.byline!= $card->byline()
+							-endif
+
+							//- artist
+							-if('' != $card->artist()):	
+								.artist!= $card->artist()
+							-endif
+
+							//- blog post show second category and author on same line
+							-if($type == 'blog'):
+								.date!= $card->date('F jS, Y'), e('' != $card->author(), ' | ' . $card->author()), ' | 0 comments'
+							//- only show author if exist and not blog article
+							-elseif($author):	
+								.author!= $card->author()
+							-endif
+
+							//- price
+							-if('' != $card->price()):	
+								.price!= '$', $card->price()
+							-endif
+
+							//- blurb
+							-if (isset($blurb)):
+								.description.card__description.link-underline.blurb!= $card->blurb()->kt()
+							-endif
+							
+							-if (isset($excerpt)):
+								.description.card__description.link-underline
+									p!= excerpt($card->copy()->kt(), $excerpt, 'words')
+							//- -elseif('' != $card->copy() && $card->type() != 'video'):
+								.description.card__description.link-underline!= $card->copy()->kt()
+							-endif
+
+							//- order1
+							-if('' != $card->order1()):	
+								//- text, non-breaking space, right arrow
+								a.high.buy-now-button(href="#"): span.light: span.er!= $card->order1(), '&nbsp;&#x2192';
+							-endif
+
+							//- order2
+							-if('' != $card->order2()):	
+								//- text, non-breaking space, right arrow
+								.buy-now-button(href="#"): span.light: span.er!= $card->order2(), '&nbsp;&#x2192';
+							-endif
+
+							//- on by default, hide for off
+							-snippet('more-link', array('link' => $card->url()))
+
+			-endif

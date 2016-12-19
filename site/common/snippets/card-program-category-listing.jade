@@ -1,0 +1,20 @@
+-if ('' != $card->thumbnail_img()):
+	//- set thumbnail as image if it's set in panel
+	-$image = $card->image($card->thumbnail_img())
+- elseif($src = $card->image()):
+	-$image = $src
+-endif
+
+li.card.card-horizontal.col-xs-12
+	.row
+		.image.col-sm-7
+			a(href="<?= $card->url() ?>")
+				img.card__image(src="<?= $image->url() ?>")
+		.details.col-sm-5
+			.details__inner
+				a.high(href="<?= $card->url() ?>").subtitle: span.light: span.er= $card->subtitle()
+				.byline!= $card->byline()
+				
+				.description.card__description.link-underline.blurb!= $card->blurb()->kt()
+
+				-snippet('more-link', array('link' => $card->url()))

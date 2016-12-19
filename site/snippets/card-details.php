@@ -1,5 +1,5 @@
 
-<div class="card__details details <?= $details ?>">
+<div class="details__inner <?= $details ?>">
   <?php if($showCategory): ?>
   <?php if(isset($video) && $video === true): ?>
   <div class="category">
@@ -12,7 +12,6 @@
     <?php echo $card->category(); ?></div>
   <?php endif; ?>
   <?php endif; ?>
-  <?php if(!$titlePositionTop): ?>
   <?php if('' != $card->date() && $date && $type != 'blog' ): ?>
   <?php if($type == 'news'): ?>
   <div class="date">
@@ -36,7 +35,6 @@
   <?php endif; ?>
   <?php else: ?><a href="<?= $card->url() ?>" class="high title card__title"><span class="light"><span class="er">
         <?php echo htmlspecialchars($card->title(), ENT_QUOTES, 'UTF-8'); ?></span></span></a>
-  <?php endif; ?>
   <?php endif; ?>
   <?php if($type == 'program' && '' != $card->byline()): ?>
   <div class="byline">
@@ -74,7 +72,5 @@
   <div href="#" class="buy-now-button"><span class="light"><span class="er">
         <?php echo $card->order2(), '&nbsp;&#x2192'; ?></span></span></div>
   <?php endif; ?>
-  <?php if($more_link): ?>
   <?php snippet('more-link', array('link' => $card->url())); ?>
-  <?php endif; ?>
 </div>

@@ -1,0 +1,21 @@
+// Member | Support
+.highlight-bar
+	.container
+		.row.equal-height-parent
+			.col-sm-6.become-a-member.equal-height-child
+				.become-a-member__inner.clearfix
+					.image
+						img(src="/assets/images/become-a-member.jpg")
+						.vertically-align Become a member
+					.copy.equal-height-child 
+						.copy__inner.vertically-align
+							|Free downloads <br />
+							|Cover art prints  <br />
+							|Exclusive events
+			.col-sm-6.col-sm-push-6.support-folkways
+				.support
+					.support__copy.clearfix
+						= $site->support_text()
+					.support__button.button
+						.button__inner
+							= $site->support_button_text()

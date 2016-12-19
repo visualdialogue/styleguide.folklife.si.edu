@@ -23,46 +23,22 @@
 		@include margin-top(2);
 	}
 	.related-content {
-		li {
-			@include margin-bottom(0.8);
-		}
 		h2 {
 			@include border(bottom);
-		}
-		.border {
-			border-top-width: 1px;
-		}
-		.card__image-wrapper, .video__thumbnail {
-			@include padding-top(2);
-			@include padding-bottom(1.5);
-		}
-		.card__image,  {
-			// @include padding-left(1);
-		}
-		.details {
-			padding-top:0
-		}
-		.title {
-			// @include padding-left(1.5);
-			@include sans-xxs;
-			font-weight: 600;
-			// @include padding-left(1);
-		}
-		.author {
-			display:none;
+			@include margin-bottom(2);
 		}
 	}
 }
-.blog-feature {
-	.card__image-wrapper {
+.blog-article {
+	.image {
 		@include margin-bottom(2);
 	}
 	.category {
-		@include margin-bottom(1);
+		// @include margin-bottom(1);
 	}
 	.title {
 		@include serif-xl;
-		@include margin-bottom(1);
+		@include margin-bottom(0.5);
 	}
 	.date {
 		@include sans-xxs;

@@ -36,7 +36,7 @@
 			color: $copy;
 		}
 	}
-	a.high, .high, .video__thumbnail {
+	a.high, .high, .video {
 		-webkit-transition: background .15s cubic-bezier(.33,.66,.66,1);
 		transition: background .15s cubic-bezier(.33,.66,.66,1);
 		cursor: pointer;

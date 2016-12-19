@@ -1,7 +1,8 @@
 title: Collection
 pages: 
-  template: collection
-  template: card
+  template: 
+    - collection
+    - card
 files: true
 fields:
   title:

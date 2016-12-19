@@ -1,0 +1,948 @@
+.border {
+	border-top: 1px solid $black30;
+	&--inset {
+		margin-left:2rem;
+		margin-right:2rem;
+		@include respond-to(break2) {
+			margin-left:2rem;
+			margin-right:2rem;
+		}
+		@include respond-to(fullwidth) {
+			margin-left:2rem;
+			margin-right:2rem;
+		}
+	}
+}
+
+// details only include top padding
+.details__inner {
+	// @include padding-top(2);
+
+	@include respond-to(break2) {
+		min-height: initial; // reset // for ios
+		min-height: auto; // for windows
+	}
+	// @include padding-top(3);
+	@include padding-top(2);
+	@include padding-right(1);
+}
+a.details {
+	display: inline-block; // for anchor tags that are .details
+}
+.details--notop {
+	@include respond-to(break2) {padding-top: 0 !important;}
+}
+// smaller featurette details require less padding
+.details--tight {
+	@include respond-to(break2) {
+		// padding: 1.35vw 0.6vw 0 1.35vw;
+		// padding: 0.9vw 0.7vw 0 1.0vw;
+	}
+	@include respond-to(fullwidth) {
+		// padding: 1.4rem 1.8rem 0 2rem;
+		// padding: 1.6rem 1.8rem 0 1.8rem;
+	}
+}
+// smaller featurette details require less padding
+.details--tight-bottom {
+	@include respond-to(break2) {
+		padding-bottom: 1.25vw;
+	}
+	@include respond-to(fullwidth) {
+		padding-bottom: 1.5rem;
+	}
+}
+
+.details-wrapper--horizontal {
+	// @include padding-right(13);
+	// padding-left:1rem;
+	@include respond-to(break2) {padding-left:$gutter--full;}
+	@include respond-to(fullwidth) {padding-left:2rem;}
+	.category {
+		@include margin-bottom(0.5);
+	}
+}
+
+
+// TITLE
+.title {
+	display: inline-block; // so a tag doesn't get rid of margins
+	width: 100%; // text align center does exactly that
+}
+.title--serif {
+	@include serif-md;
+}
+.title--sans {
+	@extend %title--sans;
+}
+.subtitle--sans {
+	@include sans-xxs;
+}
+.category {
+	@include category;
+}
+.date, .tag {@include date;}
+.date-sm {@include date-sm;}
+
+
+/* #textbox
+-------------------------------------------------- */
+	@mixin textbox {
+		background-color: white;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+
+		@include respond-to(break2) {
+			left: 2.8%;
+			width: 22.86%; // 320 px at fullwidth
+			min-height: 40%;
+
+		}
+		@include respond-to(fullwidth) {
+			left: 4rem;
+
+		}
+		@include bottom(4);
+	}
+
+/* #vertical
+-------------------------------------------------- */
+.card-vertical {
+	.title {
+		@include serif-md;
+	}
+}
+
+/* #program highlight (on.festival/learn 1/4 card)
+* before audio card because audio title needs to override
+-------------------------------------------------- */
+	.card-program {
+		.title {
+			@include serif-md;
+		}
+		.description {
+
+		}
+		.details__inner {
+			// min-height:46vw;
+			@include respond-to(break2max) {
+				min-height:55vw !important; // override audio card
+			}
+			@include respond-to(break2) {min-height:19vw;}
+			@include respond-to(fullwidth) {min-height:27rem;}
+		}
+	}
+
+
+/* #audio
+-------------------------------------------------- */
+	.card-audio {
+		.image {
+			padding-bottom:0; // prevent making gap in outline
+		}
+		.title {
+			@include sans-sm;
+			font-weight: 500;
+			margin-bottom:0;
+		}
+		.details__inner {
+			position: relative; // hold player
+			min-height:46vw;
+			@include respond-to(break2) {min-height:19vw;}
+			@include respond-to(fullwidth) {min-height:27rem;}
+		}
+	}
+
+
+/* #video
+-------------------------------------------------- */
+	// onlye show video if video card. card-video class dynamically from server, eg festival blog post listing with video on on.festival homepage
+	.video {
+		display: none;
+	}
+	.card-video {
+		.video {
+			// vert align grandparent includes display: table
+			@include vertically-align-grandparent;
+		}
+		.image {
+			display: none;
+		}
+	}
+
+	.video {
+		&:hover .icon-circle:before {
+			color: $hover;
+		}
+		&:hover .icon-play:before {
+			color: $black80;
+		}
+		// @include padding-bottom(2);
+	}
+	.modal-trigger {
+		// cursor: pointer; // set in links
+	}
+	.icon-play-button--video {
+		@include vertically-align;
+		left: 50%;
+		margin-left: -3rem;
+	}
+	.center-box {
+		@include vertically-align-parent;
+	}
+	// modal
+	.remodal {
+	  padding:2px 2px 20px;
+	  text-align: left;
+	  // trade gpu acceleration for correct placement of close button
+	  -webkit-transform: none;
+	  -moz-transform: none;
+	  -ms-transform: none;
+	  -o-transform: none;
+	  transform: none;
+	  @include respond-to(break1) {
+		max-width: 70%;
+	  }
+	  @include respond-to(fullwidth) {
+		max-width: 1080px;
+	  }
+	}
+	.remodal-overlay {
+	  // background: rgba(43, 46, 56, 0.9) none repeat scroll 0% 0%; // original
+	  background: rgba(0, 0, 0, 0.8) none repeat scroll 0% 0%;
+	}
+	.remodal-close {
+	  position: fixed;
+	  top:0;
+	  right:10px;
+	  left:auto;
+	  display: block;
+	  z-index: 10001;
+	  color:white;
+	  width:50px;
+	  height:50px;
+	  // pointer:cursor;
+	}
+	.remodal-close:hover {
+	  color: $black20;
+	}
+	.remodal-close::before {
+	  font-size:40px;
+	  width:50px;
+	  height:50px;
+	  line-height: 50px;
+	}
+	.remodal__iframe {
+	  position: relative;
+	  padding-bottom: 56.25%;
+	  height: 0;
+	  overflow: hidden;
+	}
+	.remodal__iframe iframe {
+	  position: absolute;
+	  top:0;
+	  left:0;
+	  max-width: 100%;
+	  width:100%;
+	  height:100%;
+	  z-index: 2;
+	}
+	.remodal__copy {
+	  padding:10px 20px;
+	}
+	.remodal__title {
+		// font-size:1.4rem; // 28px
+		margin-bottom:10px;
+		@include sans-xxs;
+	}
+
+
+/* #background
+* the following rules apply a background color to the :after element
+* if color was applied to the card itself, it would show through the padding on the edges
+-------------------------------------------------- */
+
+	// horizontal backgrounds
+	.cards--background.cards--horizontal {
+		.card {
+			position: relative;
+			z-index: 1;
+			&:after {
+				background-color: white;
+				content:"";
+				position: absolute;
+				top:0;
+				bottom:0;
+				z-index:-1;
+				left:$gutter--small;
+				right:$gutter--small;
+				@include respond-to(break2) {
+					left:$gutter--medium;
+					right:$gutter--medium;
+				}
+				@include respond-to(fullwidth) {
+					left:2rem;
+					right:2rem;
+				}
+			}
+		}
+		.image {
+			margin-left: -1px; // cover white line that shows sometimes. From rounding error?
+		}
+	}
+	// vertical backgrounds
+	.cards--background:not(.cards--horizontal) {
+		// .details__inner {
+		.card {
+			// position: absolute;
+			// position: relative;
+			// z-index: 1;
+			// top:0;
+			// bottom:0;
+			
+			&:after {
+				background-color: white;
+				content:"";
+				position: absolute;
+				top:0;
+				bottom:0;
+				z-index:-1; // put behind image and details
+				// left:0;
+				// right:0;
+				left:$gutter--small;
+				right:$gutter--small;
+				bottom: 3.75vw; // 3rem responsive at mobile
+				@include respond-to(break2) {
+					left:$gutter--full;
+					right:$gutter--full;
+					bottom: 0; // back to horizontal
+				}
+				@include respond-to(fullwidth) {
+					left:2rem;
+					right:2rem;
+				}
+			}
+		}
+	}
+
+
+
+	.feature--full, .details, .ms-section__copy {
+		.more-link {
+			position: static;
+			float: right;
+			@include margin-top(2);
+			@include margin-bottom(2);
+			@include margin-left(2);
+			@include respond-to(break2) {
+				margin: 0;
+				float: none;
+				margin-top: 2vw;
+				display: inline-block;
+			}
+		}
+	}
+	// .card {
+		// .more-link {
+			// off in card by default
+			// display: none;
+		// }
+	// }
+	.cards--more-link {
+		.more-link {
+			display: inline-block;
+		}
+	}
+	.section--half .more-link {
+		// right: 2.7%; // double that of parent padding as percent
+		@include right(4);
+	}
+
+/* #category
+-------------------------------------------------- */
+	.category {
+		// counteract line height of first line for padding
+		@include margin-top(-0.5); // due to line height. to make spacing accurate with padding above
+	}
+
+
+/* #horizontal
+-------------------------------------------------- */
+	.section--horizontal-cards {
+		@include respond-to(break2) {margin-bottom:2.5vw;}
+		// @include respond-to(fullwidth) {margin-bottom:4rem;}
+		@include respond-to(fullwidth) {margin-bottom:6rem;}
+	}
+	.section--horizontal-cards:not(.section--banner) {
+		// remove extra margin from last row
+		// @include margin-bottom(-1);
+		// margin-bottom: 0;;
+	}
+	.card-horizontal {
+		@include margin-bottom(4);
+		.details__inner {
+			padding-left:$gutter--small;
+			@include respond-to(break2) {padding-left:$gutter--full;}
+			@include respond-to(fullwidth) {padding-left:0;}
+		}
+	}
+	.cards--horizontal {
+		// featurette list
+		li:last-of-type {
+			margin-bottom: 0 !important;
+		}
+		.video, .image {
+			@include respond-to(break2) {
+				padding-bottom:0;
+			}
+		}
+		.details.hasborder {
+			@include margin-top(1); // add margin back if have border b/c no title above in horizontal layout
+		}
+		.details__inner {
+			// padding-left: 0;
+			@include padding(0); // start with no padding, need media queries to win specificity 
+			@include padding-top(2);
+			@include padding-right(1);
+		}
+
+	}
+
+
+/* #Cards modifiers
+-------------------------------------------------- */
+	.cards--inset .details__inner {
+		@include padding-left(2);
+	}
+	.cards--no-padding .details__inner { 
+		padding: 0; 
+	}
+	.cards--left-align .details__inner {
+		padding-left: 0;
+	}
+	.cards--padding-top-2 .details__inner { 
+		// padding: 0; 
+		@include padding-top(2);
+	}
+	.cards--padding-top-3 .details__inner { 
+		// padding: 0; 
+		@include padding-top(3);
+	}
+	.cards--padding-top-4 .details__inner { 
+		// padding: 0; 
+		@include padding-top(4);
+	}
+
+/* Cards on the grid
+-------------------------------------------------- */
+
+	// default
+	.cards {
+		.card__inner {
+			// @extend .col-md-12;
+		}
+		.image, .video, .details {
+			// @extend .col-xs-12;
+		}
+	}
+	.cards--xs-6 .card {
+		@extend .col-xs-6;
+		// clear left on every odd card
+		&:nth-of-type(2n + 1) {
+			clear:left;
+		}
+		// reset for sm
+		@include respond-to(break2) {
+			&:nth-of-type(2n + 1) {
+				clear: none;
+			}
+		}
+	}
+	.cards--sm-12 .card {
+		@extend .col-sm-12;
+	}
+	.cards--sm-2 .card {
+		@extend .col-xs-6;
+		@extend .col-sm-2;
+		// break every 2 cards on mobile
+		&:nth-of-type(2n + 1) {
+			clear:left;
+		}
+		@include respond-to(break2) {
+			// clear mobile style
+			&:nth-of-type(2n + 1) {
+				clear: none;
+			}
+			// break every 5 cards so cards don't get hung
+			&:nth-of-type(6n + 1) {
+				clear:left;
+			}
+		}
+	}
+	.cards--sm-3 .card {
+		// @extend .col-xs-6;
+		@extend .col-sm-3;
+		
+	}
+	.cards--sm-4 .card {
+		@extend .col-sm-4;
+	}
+	.cards--sm-6 .card {
+		@extend .col-sm-6;
+	}
+
+	.cards--image-xs-4 {
+		// add card for more specificity to override other default @extends
+		// risky business here
+		// .card {
+			.image {
+				@extend .col-xs-4;
+			}
+			.details {
+				@extend .col-xs-8;
+			}			
+		// }
+	}
+	// festival learn page
+	.cards--image-sm-4 {
+		// add card for more specificity to override other default @extends
+		// risky business here
+		// .card {
+			.image {
+				@extend .col-sm-4;
+			}
+			.details {
+				@extend .col-sm-8;
+			}			
+		// }
+	}
+	.card-sm-image-6 {
+		// add card for more specificity to override other default @extends
+		// risky business here
+		// .card {
+			.image {
+				@extend .col-sm-6;
+			}
+			.details {
+				@extend .col-sm-6;
+			}			
+		// }
+	}
+	// folklife education page
+	.cards--image-sm-7 {
+		// add card for more specificity to override other default @extends
+		// risky business here
+		// .card {
+			.image {
+				@extend .col-sm-7;
+			}
+			.details {
+				@extend .col-sm-5;
+			}			
+		// }
+	}
+	// festival OFF homepage
+	.cards--image-sm-8 {
+		// add card for more specificity to override other default @extends
+		// risky business here
+		// .card {
+			.image {
+				@extend .col-sm-8;
+			}
+			.details {
+				@extend .col-sm-4;
+			}			
+		// }
+	}
+
+	// folklife collections
+	.cards--half {
+		.card {
+			width: 50%;
+			float: left;
+			&:nth-of-type(2n + 1) {
+				padding-right:$gutter--small;
+				@include respond-to(break2) {padding-right:$gutter--medium;}
+			}
+			&:nth-of-type(2n) {
+				padding-left:$gutter--small;
+				@include respond-to(break2) {padding-left:$gutter--medium;}
+			}
+			// break every 2 cards so cards don't get hung
+			&:nth-of-type(2n + 1) {
+				clear:left;
+			}
+		}
+	}
+
+	// folklife teach
+	.cards--thirds {
+		.card {
+			width: 33.33333%;
+			float: left;
+			&:nth-of-type(3n + 1) {
+				padding-right:$gutter--small;
+				@include respond-to(break2) {padding-right:$gutter--medium;}
+			}
+			&:nth-of-type(3n + 2) {
+				padding-left:$gutter--small;
+				padding-right:$gutter--small;
+				@include respond-to(break2) {padding-left:$gutter--medium;}
+				@include respond-to(break2) {padding-right:$gutter--medium;}
+			}
+			&:nth-of-type(3n + 3) {
+				padding-left:$gutter--small;
+				@include respond-to(break2) {padding-left:$gutter--medium;}
+			}
+			// break every 3 cards so cards don't get hung
+			&:nth-of-type(3n + 1) {
+				clear:left;
+			}
+		}
+	}
+
+
+
+/* Audio cards
+-------------------------------------------------- */
+	.cards--audio-player {
+		.card {
+			@extend .col-xs-6;
+			@extend .col-sm-3;
+
+			// for all 1/2 width columns on the phone, break every 2nd one starting at 3!!!
+			@include respond-to(break2max) {
+				// line 'em up!!!
+				&:nth-of-type(2n + 1) {
+					clear:left;
+				}
+			}
+		}
+		.details__inner {
+			@include padding-top(3);
+		}
+	}
+
+/* Full feature cards
+-------------------------------------------------- */
+	.full-feature {
+		@include margin-bottom(0);
+		.category {
+			display: none;
+		}
+		.image {
+			@include respond-to(break2max) {
+				padding-bottom: 2.5vw;
+			}
+		}
+		.title {
+			@include serif-xl;
+			margin-bottom:1rem;
+			@include respond-to(break2) {margin-bottom:1.15vw;}
+			@include respond-to(fullwidth) {margin-bottom:1.8rem;}
+		}
+		.details__inner {
+			@include padding-top(0);
+			@include respond-to(break2max) {
+				padding-left:0; // for full width detail copy
+			}
+		}
+		.description {
+			@include sans-md;
+		}
+	}
+
+/* Sidebar cards
+-------------------------------------------------- */
+	.cards--sidebar {
+		// @include border(top);
+		@include respond-to(break2max) {
+			padding-top: 2vw;
+		}
+		.card {
+			@include margin-bottom(4);
+		}
+		.image  {
+			padding-bottom:0;
+		}
+		.details {
+			@include sans-xxs;
+		}
+		
+		.author, .date {
+			display: none;
+		}
+		.title {
+			font-weight: 600;
+			@include margin-top(-0.5); // for true 20px padding top
+		}
+		&.cards--horizontal {
+			.details {
+				@include respond-to(break2) {padding-left:0.8vw;}
+				@include respond-to(fullwidth) {padding-left:0;}
+			}
+		}
+	}
+
+
+/* Titles on top
+-------------------------------------------------- */
+	.cards--title-top {
+		.image {
+			@include respond-to(break2max) {
+				padding-top: 11vw
+			}
+			@include padding-top(8);
+			@include padding-bottom(2);
+		}
+		.details {
+			position: static; // so title can go up higher
+		}
+		.title {
+			position: absolute;
+			top: 0;
+		}
+	}
+	.cards--date-title-top {
+		.card {
+			@include respond-to(break2max) {
+				@include margin-bottom(4);
+			}	
+		}
+		.image {
+			@include respond-to(break2max) {
+				padding-top: 0;
+			}
+			@include padding-top(17);
+		}
+		.details {
+			@include respond-to(break2) {
+				position: absolute;
+				top: 0;
+			}
+		}
+	}
+
+/* Albums & Vinyl
+-------------------------------------------------- */
+	.cards--albums, .cards--vinyl {
+		
+		.details__inner {
+			padding:0;
+			@include padding-top(2);
+		}
+		.category {
+			// display: none;
+		}
+		.description {
+			display: none; // hide copy on cards
+		}
+		.title {
+			@include sans-xxs;
+			font-weight: 700;
+			line-height: 1;
+
+			// @include margin-bottom(2);
+		}
+		.artist {
+			@include sans-xxs;
+			// @include margin-top(-0.2); // close the gap a bit
+		}
+		@include respond-to(break2) {
+			@include margin-bottom(2.4); //- 40px
+		}
+
+	}
+	.cards--albums {
+		.card {
+			@extend .col-xs-6;
+			@extend .col-sm-2;
+			&:nth-of-type(2n + 1) {
+				@include respond-to(break2max) {
+					clear:left;
+				}
+			}
+			&:nth-of-type(6n + 1) {
+				@include respond-to(break2) {
+					clear:left;
+				}
+			}
+		}
+	}
+	.cards--vinyl {
+		.card {
+			@extend .col-xs-6;
+			@extend .col-sm-3;
+			&:nth-of-type(2n + 1) {
+				@include respond-to(break2max) {
+					clear:left;
+				}
+			}
+			&:nth-of-type(4n + 1) {
+				@include respond-to(break2) {
+					clear:left;
+				}
+			}
+		}
+	}
+
+/* Merchandise
+-------------------------------------------------- */
+
+	.cards--merchandise {
+		.card {
+			@extend .col-xs-6;
+			@extend .col-sm-2;
+			&:nth-of-type(2n + 1) {
+				@include respond-to(break2max) {
+					clear:left;
+				}
+			}
+			&:nth-of-type(6n + 1) {
+				@include respond-to(break2) {
+					clear:left;
+				}
+			}
+		}
+		.title {
+			@include sans-xxs;
+			color: white;
+			font-weight: bold;
+			text-align: center;
+			@include margin-bottom(0.5);
+		}
+		.price {
+			@include sans-xxs;
+			color: $black70;
+			text-align: center;
+		}
+	}
+
+/* Cards with borders
+-------------------------------------------------- */
+	.border-top {
+		&:before {
+			content: '';
+			border-top: 1px solid $black30;
+			// border-top: 1px solid blue;
+			width: 100%;
+			display: block;
+		}
+		.image {
+			// margin-top: -1px; // cover part of line that goes above image // toby doesn't like it
+		}
+	}
+
+	.border-full {
+		.image, .video {
+			padding-bottom: 0;
+		}
+		.details__inner {
+			border: 2px solid $black15;
+			@include padding-left(2); // padding on left by default
+			@include padding-bottom(2); // padding on left by default
+		}
+	}
+
+	// .cards--border-top {
+	// 	.card {
+	// 		&:before {
+	// 			content: '';
+	// 			border-top: 1px solid $black30;
+	// 			// border-top: 1px solid blue;
+	// 			width: 100%;
+	// 			display: block;
+	// 		}
+	// 	}
+	// 	.image {
+	// 		margin-top: -1px; // cover part of line that goes above image
+	// 	}
+		
+	// }
+
+	.cards--full-border {
+		.details {
+			&:before {
+				content: '';
+				border: 1px solid $black30;
+				// border-top: 1px solid blue;
+				// width: 100%;
+				display: block;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left:$gutter--small;
+				right:$gutter--small;
+				@include respond-to(break2) {
+					left:$gutter--medium;
+					right:$gutter--medium;
+				}
+				@include respond-to(fullwidth) {
+					left:2rem;
+					right:2rem;
+				}
+			}
+		}
+	}
+
+
+/* Blog article
+-------------------------------------------------- */
+	.cards--blog.article {
+
+	}
+
+/* Helpers
+-------------------------------------------------- */
+	.cards--sm-break-none {
+		.card {
+			@include respond-to(break2) {
+				clear: none !important;
+			}
+		}
+	}
+	.card-xs-break-2 {
+		&:nth-of-type(2n + 1) {
+			clear:left;
+		}
+		@include respond-to(break2) {
+			&:nth-of-type(2n + 1) {
+				clear:none;
+			}
+		}
+	}
+
+	.cards--sm-break-2 {
+		.card {			
+			@include respond-to(break2) {
+				&:nth-of-type(2n + 1) {
+					clear:left;
+				}
+			}
+		}
+	}
+	.card-sm-break-6 {
+		@include respond-to(break2) {
+			&:nth-of-type(2n + 1) {
+				clear:none;
+			}
+			&:nth-of-type(6n + 1) {
+				clear:left;
+			}
+		}
+	}
+	.cards--break-3 {
+		@include respond-to(break2) {
+			// clear mobile style
+			&:nth-of-type(2n + 1) {
+				clear: none;
+			}
+			// break every 5 cards so cards don't get hung
+			&:nth-of-type(4n + 1) {
+				clear:left;
+			}
+		}
+	}
+
+

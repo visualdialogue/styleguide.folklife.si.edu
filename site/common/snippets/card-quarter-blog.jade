@@ -1,0 +1,25 @@
+-if ('' != $card->thumbnail_img()):
+	//- set thumbnail as image if it's set in panel
+	-$image = $card->image($card->thumbnail_img())
+- elseif($src = $card->image()):
+	-$image = $src
+-endif
+
+li.card.col-sm-3.border-top(class="<? if ($card->type() == 'video' || ((isset($type)) && ($type == 'video'))) echo 'card-video'?>")
+	.card__inner
+		.details
+			.details__inner
+				.date!= $card->date('M d, Y')
+				a.high(href="<?= $card->url() ?>").title.card__title: span.light: span.er= $card->title()
+
+		.video(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= $card->copy() ?>')
+			.center-box
+				.modal-trigger
+					img.card__image(src="<?= $image->url() ?>")
+				.icon-play-button.icon-play-button--video.icon-stack
+					.icon-circle
+					.icon-play
+
+		.image
+			a(href="<?= $card->url() ?>")
+				img.card__image(src="<?= $image->url() ?>")

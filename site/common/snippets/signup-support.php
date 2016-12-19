@@ -18,9 +18,7 @@
     <section class="col-sm-6 section--support">
       <div class="support">
         <div class="support__copy clearfix">
-          <div class="details__inner">
-            <?php echo htmlspecialchars($site->support_text(), ENT_QUOTES, 'UTF-8'); ?>
-          </div>
+          <?php echo htmlspecialchars($site->support_text(), ENT_QUOTES, 'UTF-8'); ?>
         </div>
         <div class="support__button button">
           <div class="button__inner">

@@ -7,16 +7,16 @@
     <section class="section--first section--article col-sm-8">
       <article class="article">
         <!-- use card for correct video/image header-->
-        <div class="blog-feature">
-          <?php snippet('card', array('card' => $page, 'type' => 'blog', 'showCategory' => true, 'caption' => true, 'link' => false)); ?>
-        </div>
+        <ul class="row cards blog-feature">
+          <?php snippet('card-blog-article', array('card' => $page, 'type' => 'blog', 'caption' => true, 'link' => false)); ?>
+        </ul>
         <div class="content">
           <?php echo $page->copy()->kt(); ?>
         </div>
       </article>
     </section>
     <div class="col-sm-1 spacer"></div>
-    <aside class="col-sm-3 blog-sidebar">
+    <aside class="sidebar col-sm-3 blog-sidebar">
       <?php snippet('blog-related-content', array('orientation' => 'vertical', 'limit' => 3)); ?>
       <?php snippet('blog-most-popular'); ?>
       <?php snippet('blog-categories'); ?>

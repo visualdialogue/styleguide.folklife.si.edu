@@ -1,32 +1,37 @@
-hr
+hr.hr--footer
 ul.footer__row.footer__row--2.row
 	li.footer__main-item.col-sm-3
 		.footer-logo.footer-logo--active
-			-if (c::get('isDev')):
-			a(href="http://localhost:3001"): img.footer-logo__img.footer-logo__img--folklife(src="/assets/images/logo/smithsonian_center_for_folklife_and_cultural_heritage.png?v=2016.10.21") 
-			- else:
-			a(href="http://folklife.lukehatfield.com"): img.footer-logo__img.footer-logo__img--folklife(src="/assets/images/logo/smithsonian_center_for_folklife_and_cultural_heritage.png?v=2016.10.21")
+			//- show appropriate link depending on what the current site is and if its on Dev or Live servers
+			-if (c::get('isFolklife')):
+				a(href="<? if (c::get('isDev')) echo 'http://localhost:3001'; else echo 'http://folklife.lukehatfield.com' ?>"): img.footer-logo__img.footer-logo__img--folklife(src="/assets/images/logo/smithsonian_center_for_folklife_and_cultural_heritage.png?v=2016.10.21") 
+			-elseif (c::get('isFestival')):
+				a(href="<? if (c::get('isDev')) echo 'http://localhost:3003'; else echo 'http://on.festival.lukehatfield.com' ?>"): img.footer-logo__img(src="/assets/images/logo/smithsonian_folklife_festival.png?v=2016.10.21") 
+			-elseif (c::get('isFolkways')):
+				a(href="<? if (c::get('isDev')) echo 'http://localhost:3005'; else echo 'http://folkways.lukehatfield.com' ?>"): img.footer-logo__img(src="/assets/images/logo/smithsonian_folkways_recordings.png?v=2016.10.21") 
 			-endif
 	li.footer__main-item.col-sm-3 
 		.footer-logo
-			-if (c::get('isDev')):
-			a(href="http://localhost:3005"): img.footer-logo__img(src="/assets/images/logo/smithsonian_folkways_recordings.png?v=2016.10.21") 
-			- else:
-			a(href="http://folkways.lukehatfield.com"): img.footer-logo__img(src="/assets/images/logo/smithsonian_folkways_recordings.png?v=2016.10.21") 
+			//- show appropriate link depending on what the current site is and if its on Dev or Live servers
+			-if (c::get('isFolklife')):
+				a(href="<? if (c::get('isDev')) echo 'http://localhost:3005'; else echo 'http://folkways.lukehatfield.com' ?>"): img.footer-logo__img(src="/assets/images/logo/smithsonian_folkways_recordings.png?v=2016.10.21") 
+			-elseif (c::get('isFestival') || c::get('isFolkways')):
+				a(href="<? if (c::get('isDev')) echo 'http://localhost:3001'; else echo 'http://folklife.lukehatfield.com' ?>"): img.footer-logo__img.footer-logo__img--folklife(src="/assets/images/logo/smithsonian_center_for_folklife_and_cultural_heritage.png?v=2016.10.21") 
 			-endif
 	li.footer__main-item.col-sm-3 
 		.footer-logo
-			-if (c::get('isDev')):
-			a(href="http://localhost:3003"): img.footer-logo__img(src="/assets/images/logo/smithsonian_folklife_festival.png?v=2016.10.21") 
-			- else:
-			a(href="http://on.festival.lukehatfield.com"): img.footer-logo__img(src="/assets/images/logo/smithsonian_folklife_festival.png?v=2016.10.21") 
+			//- show appropriate link depending on what the current site is and if its on Dev or Live servers
+			-if (c::get('isFolklife') || c::get('isFolkways')):
+				a(href="<? if (c::get('isDev')) echo 'http://localhost:3003'; else echo 'http://on.festival.lukehatfield.com' ?>"): img.footer-logo__img(src="/assets/images/logo/smithsonian_folklife_festival.png?v=2016.10.21") 
+			-elseif (c::get('isFestival')):
+				a(href="<? if (c::get('isDev')) echo 'http://localhost:3005'; else echo 'http://folkways.lukehatfield.com' ?>"): img.footer-logo__img(src="/assets/images/logo/smithsonian_folkways_recordings.png?v=2016.10.21") 
 			-endif
 	li.footer__main-item.col-sm-1 
 		ul.footer__list.copyright-list
-			li.footer__sub-item.copyright-list__item: a(href) Copyright
-			li.footer__sub-item.copyright-list__item Contact
-			li.footer__sub-item.copyright-list__item Privacy
-			li.footer__sub-item.copyright-list__item Credits
+			li.footer__sub-item.copyright-list__item: a(href="#") Copyright
+			li.footer__sub-item.copyright-list__item: a(href="#") Contact
+			li.footer__sub-item.copyright-list__item: a(href="#") Privacy
+			li.footer__sub-item.copyright-list__item: a(href="#") Credits
 	li.footer__main-item.col-sm-2.social-media
 		.footer__sub-item.social-media__title Connect with us
 		ul.footer__list

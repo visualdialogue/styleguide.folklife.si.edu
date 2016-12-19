@@ -1,16 +1,17 @@
 .related-content
-	h2.blog-sidebar__header Related Content
-	ul
-		//- blog article sidebar
-		-if($page->template() == 'article'):
-			-foreach($page->siblings(false)->visible()->filterBy('tags','basque',',')->limit($limit) as $entry):
-				-snippet('card', array('card' => $entry, 'orientation' => $orientation, 'date' => false, 'author' => false ))
+	h2.sidebar__section-title Related Content
+	-if($page->template() == 'article'):
+		// blog article sidebar
+		ul.row.cards.cards--sidebar
+			-foreach($page->siblings(false)->visible()->filterBy('tags','basque',',')->limit($limit) as $card):
+				-snippet('card', array('card' => $card, 'card_classes' => 'col-xs-12' ))
 			-endforeach
-		//- program sidebar
-		-else:
-			-foreach($pages->find('blog')->children()->visible()->filterBy('tags','basque',',')->limit($limit) as $entry):
-				-snippet('card', array('card' => $entry, 'img_col' => 6, 'orientation' => $orientation, 'text_col' => 6, 'border' => true, 'excerpt' => 12, 'date' => false, 'author' => false ))
+	-else:
+		// program sidebar
+		ul.row.cards.cards--horizontal.cards--border-top.cards--sidebar.cards--image-xs-6
+			-foreach($pages->find('blog')->children()->visible()->filterBy('tags','basque',',')->limit($limit) as $card):
+				-snippet('card-horizontal', array('card' => $card, 'card_classes' => 'col-xs-12 border-top', 'image_col' => 'col-xs-6', 'details_col' => 'col-xs-6', 'excerpt' => 12 ))
 			-endforeach
-		-endif
+	-endif
 
-		
+	

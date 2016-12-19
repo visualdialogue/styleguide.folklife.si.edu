@@ -1,7 +1,7 @@
 
-<h2 class="blog-sidebar__header">Multimedia</h2>
+<h2 class="sidebar__section-title">Multimedia</h2>
 <ul class="multimedia-sections">
-  <li><a class="high"><span class="light"><span class="er">Photo Galleries</span></span></a></li>
-  <li><a class="high"><span class="light"><span class="er">Festival Video</span></span></a></li>
-  <li><a class="high"><span class="light"><span class="er">Festival Audio</span></span></a></li>
+  <li class="sidebar-highlight"><a>Photo Galleries</a></li>
+  <li class="sidebar-highlight"><a>Festival Video</a></li>
+  <li class="sidebar-highlight"><a>Festival Audio</a></li>
 </ul>

@@ -4,3 +4,35 @@
 	// .displayBlockImportant {display: block !important;} // because jQuery doesn't understand important
 	// .hidden {display:none;} // in bootstrap with !important
 	
+
+  // same height one div as the other
+  // from http://stackoverflow.com/a/18945385 and http://jsfiddle.net/chopper/LF3Un/2/
+	.equal-height-parent {
+		@include respond-to(break2) {
+			position: relative;
+			overflow: hidden; // no scroll bar!!!	
+		}
+	}
+	// .equal-height-dynamic {
+	// 	// position: relative;
+	// 	background-color: yellow;
+	// }
+
+	.equal-height-child {
+		position: absolute;
+		top:0;
+		bottom:0;
+		.cards {
+			height: 100%;
+		}
+	}
+	.equal-height-child-sm {
+		@include respond-to(break2) {
+			position: absolute;
+			top:0;
+			bottom:0;
+			.cards {
+				height: 100%;
+			}
+		}
+	}

@@ -1,0 +1,31 @@
+//- use thumbnail if it’s set in panel
+-if ('' != $card->thumbnail_img()):
+	-$image = $card->image($card->thumbnail_img())
+- elseif($src = $card->image()):
+	-$image = $src
+-endif
+
+li.card.card-horizontal.col-xs-12.border-top
+	.row
+		.image.col-sm-6
+			a(href="<?= $card->url() ?>")
+				img.card__image(src="<?= $image->url() ?>")
+		.video(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= $card->copy() ?>')
+			.center-box
+				.modal-trigger
+					img.card__image(src="<?= $image->url() ?>")
+				.icon-play-button.icon-play-button--video.icon-stack
+					.icon-circle
+					.icon-play
+		.details.col-sm-6
+			.details__inner
+				.category!= $card->festival(), ', ', $card->program();
+
+				a.high(href="<?= $card->url() ?>").title.card__title: span.light: span.er= $card->title()
+
+				.date!= $card->date('F jS, Y'), e('' != $card->author(), ' | ' . $card->author()), ' | 0 comments'
+				
+				.description.card__description.link-underline
+					p!= excerpt($card->copy()->kt(), 25, 'words')
+
+				-snippet('more-link', array('link' => $card->url()))

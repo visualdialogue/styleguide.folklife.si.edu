@@ -5,7 +5,16 @@
 			color: $fs-red;
 		}
 	}
+	.program-page {
+		.section-title {
+			@include margin-bottom(2);
+		}
+	}
 	.program-category-page {
+		.section-title {
+			@include margin-top(2);
+			@include margin-bottom(4);
+		}
 		.title {
 			@include serif-lg;
 		}
@@ -15,7 +24,7 @@
 		.byline {
 			@include sans-sm;
 			font-weight: 600;
-			@include margin-bottom(2);
+			@include margin-bottom(3);
 		}
 		.description p {
 			@include sans-md;
@@ -35,8 +44,26 @@
 			@include sans-xxs;
 			@include margin-top(2);
 		}
+		.program-resources {
+			// @include margin-top(12.7);
+			.title {
+				@include sans-sm;
+				font-weight: 600;
+				line-height: 1 !important;
+				@include padding-bottom(1);
+			}
+			.blog-sidebar__feature {
+				min-height: initial;
+				min-height: auto;
+			}
+		}
 	}
 	.program-page, .program-category-page {
+
+		.page-title {
+			@include padding-top(2);
+			padding-top: 0.5vw;
+		}
 
 		figure {
 			position: relative; // contain figcaption
@@ -50,7 +77,8 @@
 			bottom: 0;
 			left: 0;
 			color: white;
-			background-color: $black50;
+			// background-color: $black50;
+			background-color: rgba($black70, 0.9);
 			@include sans-xxs;
 			width: 100%;
 
@@ -127,7 +155,8 @@
 			// @include respond-to(fullwidth) {height:19.5rem;}
 		}
 		.title-height {
-			height:6rem;
+			// height:6rem;
+			height: auto;
 			@include respond-to(break2) {height:8.7vw;}
 			@include respond-to(fullwidth) {height:13.7rem;}
 		}
@@ -140,16 +169,23 @@
 			// width: 50%;
 		}
 		.subtitle-height {
-			height:5rem;
-			@include respond-to(break2) {height:3.2vw;}
-			@include respond-to(fullwidth) {height:4.9rem;}
+			// height:5rem;
+			// @include respond-to(break2) {height:3.2vw;}
+			// @include respond-to(fullwidth) {height:5rem;}
+			@include height(5);
+			height: auto;
 		}
 		.page-subtitle {
 			@include sans-md;
 			font-weight: 600;
 			color: $basque-green;
 			text-transform: uppercase;
-			margin-top: -1px; // eyeball center
+			// margin-top: -1px; // eyeball center
+			@include margin-top(0.5);
+			@include padding-bottom(2);
+			margin-top:1vw;
+			@include respond-to(break2) {margin-top:0.2vw;}
+			@include respond-to(fullwidth) {margin-top:0.5rem;}
 		}
 		.basque {
 			background-color: $basque-red;
@@ -164,7 +200,7 @@
 				@include padding-right(2);
 				@include padding-bottom(1);
 				@include padding-left(2);
-				background-color: rgba($black70, 0.9);
+				// background-color: rgba($black70, 0.9);
 			}
 		}
 	}
@@ -203,9 +239,7 @@
 			@include sans-sm;
 			color: $black70;
 			border-color: $fs-green;
-			&.active, &:hover {
-				background-color: $black10;
-			}
+			font-weight: 600;
 			&.small {
 				@include sans-xxs;
 				color: $black50;
@@ -219,41 +253,16 @@
 				display: block;
 				@include padding-top(0.8);
 				@include padding-bottom(0.8);
-				@include padding-left(1.6);
-			}
-			a:hover {
-				color: $black70;
-
+				@include padding-left(1.5);
 			}
 		}
 	}
 	.related-content {
-		li {
-			@include margin-bottom(4);
-		}
-		.title {
-			@include sans-xxs;
-			font-weight: 700;
-		}
-		.image-wrapper {
-			@include col;
-			width: 46%;
-		}
-		.details {
-			@include sans-xxs;
-			// @include col;
-			// width: 51%;
-			@include padding-top(1);
-			// @include padding-left(1.4);
-		}
+		
+		// li {
+		// 	@include margin-bottom(4);
+		// }
 
-	}
-	.program-page .related-content {
-		.details-wrapper--horizontal {
-			padding-left:0;
-			@include respond-to(break2) {padding-left:$gutter-full;}
-			@include respond-to(fullwidth) {padding-left:0;}
-		}
 	}
 	.ms-section {
 		@include margin-bottom(4);
@@ -263,13 +272,10 @@
 		.section-title {
 			color: $basque-red;
 		}
-		.title {
-			display: none; // duplication
-		}
 		.subtitle {
 			@include serif-lg;
 			color: black;
-			// @include margin-bottom(2);
+			@include margin-bottom(0.5);
 		}
 		.byline {
 			@include sans-sm;
@@ -282,7 +288,7 @@
 		.anchor-link {
 			@include top(-5);
 		}
-		.card__image-wrapper {
+		.image {
 			cursor: initial;
 		}
 

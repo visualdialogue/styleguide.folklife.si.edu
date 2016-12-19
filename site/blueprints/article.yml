@@ -25,6 +25,10 @@ fields:
     type: text
     width: 1/2
     icon: cab
+  program:
+    label: Program
+    type: text
+    width: 1/2
   date:
     label: Date
     type: date

@@ -1,15 +1,18 @@
 // .section--audio {
-.audio {
-	.details {
+.cards--audio-player {
+	.details__inner {
 		position: relative; // contain player
 		border: 2px solid $black15;		
 		// @include padding-bottom(2);
 		// min-height: 60vw !important;
 		// @include min-height(24);
 
-		min-height:48vw; // height of Quelbe!
+		min-height:46vw; // height of Quelbe!
+		// min-height:56vw; // height of Quelbe!
 		@include respond-to(break2) {min-height:19vw;}
 		@include respond-to(fullwidth) {min-height:27rem;}
+
+		@include padding-left(2); // inset by default
 	}
 	.icon-play-button {
 		// @include respond-to(break2) {width: 33%;}
@@ -37,12 +40,7 @@
 		@include sans-xxs;
 	}
 }
-.album {
-	.description {
-		display: none; // hide copy on cards
-	}
-}
-.row--listen {
+.cards--listen {
 	margin-bottom: 0.6rem; // for 80px to hr
 }
 .audio-player__details, .audio-progress-bar, .audio-time, .volume {
@@ -80,15 +78,9 @@
 	// @include bottom(2.5);
 }
 .audio-player__details {
-	// max-width: 100%;
-	width: 67%;
-	// @include respond-to(break2) {
-	// 	width: 67%; // 205/282 = 
-	// 	width: 12vw;
-	// }
-	// @include respond-to(fullwidth) {
-	// 	width: 72%; // 205/282 = 
-	// }
+	width:67%;
+	@include respond-to(break2) {width:73%;}
+	@include respond-to(fullwidth) {width:75%;}
 	@include padding-left(1);
 }
 .audio-progress-bar {

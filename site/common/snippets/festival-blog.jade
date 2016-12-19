@@ -1,11 +1,9 @@
+.container: hr.hr--thick
 section.container.section--festival-blog.blog
 	.more-link-wrapper
 		h2.section-title Festival Blog
 		-snippet('more-link')
-		.row
-			-foreach ($pages->find('blog')->children()->visible()->limit(4) as $entry):
-				//- get card for current content item
-				//-if video doesn't exist, will pass as blank
-				//- -snippet('card', array('card' => $entry, 'type' => 'blog-article', 'orientation' => 'vertical', 'video_id' => $entry->video_id() ))
-				-snippet('card', array('card' => $entry, 'col_sm' => 3, 'orientation' => 'vertical', 'video_id' => $entry->video_id(), 'border' => true, 'titleTop' => true, 'author' => false ))
+		ul.row.cards
+			-foreach ($pages->find('blog')->children()->visible()->limit(4) as $card):
+				-snippet('card-quarter-blog', array('card' => $card, 'video_id' => $card->video_id() ))
 			-endforeach

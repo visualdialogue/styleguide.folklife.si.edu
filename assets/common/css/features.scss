@@ -28,21 +28,21 @@ conversion: 				| mobile 	| tablet	| desktop
 
 @mixin feature {
 	// background-color: $black08;
-	.details {
-		@include padding-top(2);
-		// @include padding-right(1);
-		@include padding-bottom(3);
-		@include padding-left(2);
-	}
-	.category {
-		// @include margin-top(1.2);
-		@include margin-top(1);
-		@include margin-bottom(1);
-	}
-	.title {
-		@include serif-lg;
-		// @include margin-bottom(0.5);
-	}
+	// .details__inner {
+	// 	@include padding-top(2);
+	// 	// @include padding-right(1);
+	// 	@include padding-bottom(2);
+	// 	@include padding-left(2);
+	// }
+	// .category {
+	// 	// @include margin-top(1.2);
+	// 	// @include margin-top(1);
+	// 	// @include margin-bottom(1);
+	// }
+	// .title {
+	// 	@include serif-lg;
+	// 	// @include margin-bottom(0.5);
+	// }
 }
 
 
@@ -50,40 +50,31 @@ conversion: 				| mobile 	| tablet	| desktop
 	.textbox {
 		@include padding-top(1);
 	}
-	.card__image-wrapper {
+	.image {
 		padding-bottom:0;
 	}
 }
 
-.feature--full {
-	.title {
-		@include serif-xl;
-		margin-bottom:1rem;
-		@include respond-to(break2) {margin-bottom:1.15vw;}
-		@include respond-to(fullwidth) {margin-bottom:1.8rem;}
-	}
-	.description {
-		@include sans-md;
-	}
-}
 
 
-.featurette-list {
-	margin-bottom:0;
-}
+
+// .featurette-list {
+	// margin-bottom:0;
+// }
 @mixin featurette {
-	@include margin-bottom(3);
-	background-color: $black08;
-	.card__image-wrapper {
-		padding-bottom: 0;
+
+	// background-color: $black08;
+	// @include margin-bottom(3);
+	.image {
+		// padding-bottom: 0;
 	}
 	.details {
-		@include margin-top(2.5); // add margin back in b/c no title above in horizontal layout
+		// @include margin-top(2.5); // add margin back in b/c no title above in horizontal layout
 	}
 	.category {
-		@include margin-bottom(0.5);
+		// @include margin-bottom(0.5);
 	}
 	.title {
-		@include serif-md;
+		// @include serif-md;
 	}
 }

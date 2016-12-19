@@ -1,0 +1,22 @@
+-if ('' != $card->thumbnail_img()):
+	//- set thumbnail as image if it's set in panel
+	-$image = $card->image($card->thumbnail_img())
+- elseif($src = $card->image()):
+	-$image = $src
+-endif
+
+li.card.card-video(class="<?= $card_classes ?>")
+	.row
+		.video(class="<?= $video_col ?>" data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= $card->copy() ?>')
+			.center-box
+				.modal-trigger
+					img.card__image(src="<?= $image->url() ?>")
+				.icon-play-button.icon-play-button--video.icon-stack
+					.icon-circle
+					.icon-play
+		.details(class="<?= $details_col ?>")
+			.details__inner
+				.category!= $card->category()
+				a.high(href="<?= $card->url() ?>").title.card__title: span.light: span.er= $card->title()
+				.description.card__description.link-underline
+					p!= excerpt($card->copy()->kt(), '20', 'words')

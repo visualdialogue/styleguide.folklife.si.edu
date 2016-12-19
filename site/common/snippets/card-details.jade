@@ -1,4 +1,4 @@
-.card__details.details(class="<?= $details ?>")
+.details__inner(class="<?= $details ?>")
 
 	//- category
 	//- dont' show category on albums
@@ -15,31 +15,31 @@
 	-endif
 
 	//- put date and title below image by default
-	-if(!$titlePositionTop):
+	//- -if(!$titlePositionTop):
 
-		//- date
-		-if('' != $card->date() && $date && $type != 'blog' ):
-			-if($type == 'news'):
-				.date!= $card->date('n.j.Y')
-			-else:
-				.date!= $card->date('M d, Y')
-			-endif
-		-endif
-
-		//- if subtitle, group with title for correct highlighting
-		-if($subtitle):	
-			-if(!$link):
-				.title.card__title: span.light: span.er= $card->title()
-				.subtitle: span.light: span.er= $card->subtitle()
-			-else:
-				a.high(href="<?= $card->url() ?>")
-					.title.card__title: span.light: span.er= $card->title()
-					.subtitle: span.light: span.er= $card->subtitle()
-			-endif
+	//- date
+	-if('' != $card->date() && $date && $type != 'blog' ):
+		-if($type == 'news'):
+			.date!= $card->date('n.j.Y')
 		-else:
-			a.high(href="<?= $card->url() ?>").title.card__title: span.light: span.er= $card->title()
+			.date!= $card->date('M d, Y')
 		-endif
 	-endif
+
+	//- if subtitle, group with title for correct highlighting
+	-if($subtitle):	
+		-if(!$link):
+			.title.card__title: span.light: span.er= $card->title()
+			.subtitle: span.light: span.er= $card->subtitle()
+		-else:
+			a.high(href="<?= $card->url() ?>")
+				.title.card__title: span.light: span.er= $card->title()
+				.subtitle: span.light: span.er= $card->subtitle()
+		-endif
+	-else:
+		a.high(href="<?= $card->url() ?>").title.card__title: span.light: span.er= $card->title()
+	-endif
+	//- -endif
 
 	//- byline
 	-if($type == 'program' && '' != $card->byline()):
@@ -88,6 +88,5 @@
 		.buy-now-button(href="#"): span.light: span.er!= $card->order2(), '&nbsp;&#x2192';
 	-endif
 
-	-if($more_link):
-		-snippet('more-link', array('link' => $card->url()))
-	-endif
+	//- on by default, hide for off
+	-snippet('more-link', array('link' => $card->url()))

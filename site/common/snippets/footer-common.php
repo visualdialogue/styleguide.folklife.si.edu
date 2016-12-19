@@ -1,33 +1,34 @@
 
-<hr/>
+<hr class="hr--footer"/>
 <ul class="footer__row footer__row--2 row">
   <li class="footer__main-item col-sm-3">
     <div class="footer-logo footer-logo--active">
-      <?php if (c::get('isDev')): ?><a href="http://localhost:3001"><img src="/assets/images/logo/smithsonian_center_for_folklife_and_cultural_heritage.png?v=2016.10.21" class="footer-logo__img footer-logo__img--folklife"/></a>
-      <?php else: ?><a href="http://folklife.lukehatfield.com"><img src="/assets/images/logo/smithsonian_center_for_folklife_and_cultural_heritage.png?v=2016.10.21" class="footer-logo__img footer-logo__img--folklife"/></a>
+      <?php if (c::get('isFolklife')): ?><a href="<? if (c::get('isDev')) echo 'http://localhost:3001'; else echo 'http://folklife.lukehatfield.com' ?>"><img src="/assets/images/logo/smithsonian_center_for_folklife_and_cultural_heritage.png?v=2016.10.21" class="footer-logo__img footer-logo__img--folklife"/></a>
+      <?php elseif (c::get('isFestival')): ?><a href="<? if (c::get('isDev')) echo 'http://localhost:3003'; else echo 'http://on.festival.lukehatfield.com' ?>"><img src="/assets/images/logo/smithsonian_folklife_festival.png?v=2016.10.21" class="footer-logo__img"/></a>
+      <?php elseif (c::get('isFolkways')): ?><a href="<? if (c::get('isDev')) echo 'http://localhost:3005'; else echo 'http://folkways.lukehatfield.com' ?>"><img src="/assets/images/logo/smithsonian_folkways_recordings.png?v=2016.10.21" class="footer-logo__img"/></a>
       <?php endif; ?>
     </div>
   </li>
   <li class="footer__main-item col-sm-3"> 
     <div class="footer-logo">
-      <?php if (c::get('isDev')): ?><a href="http://localhost:3005"><img src="/assets/images/logo/smithsonian_folkways_recordings.png?v=2016.10.21" class="footer-logo__img"/></a>
-      <?php else: ?><a href="http://folkways.lukehatfield.com"><img src="/assets/images/logo/smithsonian_folkways_recordings.png?v=2016.10.21" class="footer-logo__img"/></a>
+      <?php if (c::get('isFolklife')): ?><a href="<? if (c::get('isDev')) echo 'http://localhost:3005'; else echo 'http://folkways.lukehatfield.com' ?>"><img src="/assets/images/logo/smithsonian_folkways_recordings.png?v=2016.10.21" class="footer-logo__img"/></a>
+      <?php elseif (c::get('isFestival') || c::get('isFolkways')): ?><a href="<? if (c::get('isDev')) echo 'http://localhost:3001'; else echo 'http://folklife.lukehatfield.com' ?>"><img src="/assets/images/logo/smithsonian_center_for_folklife_and_cultural_heritage.png?v=2016.10.21" class="footer-logo__img footer-logo__img--folklife"/></a>
       <?php endif; ?>
     </div>
   </li>
   <li class="footer__main-item col-sm-3"> 
     <div class="footer-logo">
-      <?php if (c::get('isDev')): ?><a href="http://localhost:3003"><img src="/assets/images/logo/smithsonian_folklife_festival.png?v=2016.10.21" class="footer-logo__img"/></a>
-      <?php else: ?><a href="http://on.festival.lukehatfield.com"><img src="/assets/images/logo/smithsonian_folklife_festival.png?v=2016.10.21" class="footer-logo__img"/></a>
+      <?php if (c::get('isFolklife') || c::get('isFolkways')): ?><a href="<? if (c::get('isDev')) echo 'http://localhost:3003'; else echo 'http://on.festival.lukehatfield.com' ?>"><img src="/assets/images/logo/smithsonian_folklife_festival.png?v=2016.10.21" class="footer-logo__img"/></a>
+      <?php elseif (c::get('isFestival')): ?><a href="<? if (c::get('isDev')) echo 'http://localhost:3005'; else echo 'http://folkways.lukehatfield.com' ?>"><img src="/assets/images/logo/smithsonian_folkways_recordings.png?v=2016.10.21" class="footer-logo__img"/></a>
       <?php endif; ?>
     </div>
   </li>
   <li class="footer__main-item col-sm-1"> 
     <ul class="footer__list copyright-list">
       <li class="footer__sub-item copyright-list__item"><a href="#">Copyright</a></li>
-      <li class="footer__sub-item copyright-list__item">Contact</li>
-      <li class="footer__sub-item copyright-list__item">Privacy</li>
-      <li class="footer__sub-item copyright-list__item">Credits</li>
+      <li class="footer__sub-item copyright-list__item"><a href="#">Contact</a></li>
+      <li class="footer__sub-item copyright-list__item"><a href="#">Privacy</a></li>
+      <li class="footer__sub-item copyright-list__item"><a href="#">Credits</a></li>
     </ul>
   </li>
   <li class="footer__main-item col-sm-2 social-media">

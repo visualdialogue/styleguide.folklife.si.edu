@@ -1,99 +1,11 @@
-/* #Newsletter Signup
--------------------------------------------------- */
-	.section--newsletter-signup, .section--support {
-		@include sans-xxs;
-		margin-bottom: 2rem;
-		@include respond-to(break2) {
-			margin-bottom: 4rem;
-		}
-	}
-	.newsletter-signup__copy {
-		background-color: $black10;
-		@include padding-top(1.9);
-		@include padding-right(2);
-		@include padding-left(2);
-		@include padding-bottom(2);
-		@include sans-xxs;
-	}
-	.newsletter-signup-form {
-		width: 100%;
-	}
-	.newsletter__input {
-		background-color: $black20;
-		width: 100%;
-		@include padding-right(2);
-		@include padding-left(2);
-		@include email-newsletter;
-		height: 18vw;
-		@include respond-to(break2) {
-			// height: 3.95vw;
-			height: 4.5vw;
-		}
-		@include respond-to(fullwidth) {
-			height: 6.1rem;
-			padding-bottom: 2rem;
-		}
-	}
 
-/* #Support
--------------------------------------------------- */
-	.section--support {
-		// @include vertically-align-grandparent;
-	}
-	.support {
-		@include border(all, 2px, $black40);
-		position: relative; // contain support button
-		&__copy, &__button {
-			@include respond-to(break2) {
-				display: inline-block;
-				vertical-align: top;
-			}
-		}
-		&__copy {
-			@include respond-to(break2) {
-				width: 46.45%; // 314px / 676px
-				line-height: 1.25;
-				height: 9.6vw;
-			}
-			@include padding-top(1.6);
-			@include padding-right(2);
-			@include padding-bottom(2);
-			@include padding-left(2);
-			@include respond-to(fullwidth) {
-				height: 14rem;
-			}
 
-		}
-		&__button {
-			background-color: $black40;
-			@include section-title;
-			margin-bottom:0;
-			padding: 3vw;
-			color: white;
-			text-align: center;
-			@include respond-to(break2) {
-				padding: 0;
-				@include vertically-align-parent;
-				width: 53.55%; // 100 - 46.45%
-				// height: 100%;
-				position: absolute;
-				top: 0;
-				right: 0;
-				bottom: 0;
-			}
-		}
-	}
-	.button__inner {
-		line-height: 1.5;
-		@include respond-to(break2) {
-			@include vertically-align;
-			line-height: 1.1;
-		}
-	}
 
 /* #footer
 -------------------------------------------------- */
 	.footer {
+		@include padding-top(2.6);
+		@include padding-bottom(1.9);
 		background-color: $black80;
 		color: $black20;
 
@@ -108,21 +20,23 @@
 			}
 		}
 		&__row--1 {
-			margin-bottom: 1rem;
-			@include respond-to(break2) {
-				margin-bottom: 3.4rem;
+			@include respond-to(break2max) {
+				margin-bottom: 4rem;
+				// margin-bottom: 3.4rem;
 			}
 		}
 		&__row--2 {
-			margin-top: 4vw;
-			@include respond-to(break2) { margin-top: 1.6vw; }
-			@include respond-to(fullwidth) { margin-top: 2.5rem; }
+			// margin-top: 4vw;
+			// @include respond-to(break2) { margin-top: 1.6vw; }
+			// @include respond-to(fullwidth) { margin-top: 2.5rem; }
+			@include margin-top(3);
 		}
 		&__row--3 {
 			color: $black20;
-			margin-top: 8vw;
-			@include respond-to(break2) { margin-top: 2.3vw; }
-			@include respond-to(fullwidth) { margin-top: 5rem; }
+			// margin-top: 8vw;
+			// @include respond-to(break2) { margin-top: 2.3vw; }
+			// @include respond-to(fullwidth) { margin-top: 5rem; }
+			@include margin-top(3.8);
 		}
 		&__list {
 			margin-bottom: 0rem;
@@ -130,7 +44,9 @@
 		}
 	}
 	.footer-nav {
-		
+		&--news {
+			@include margin-top(1.1);
+		}
 		&__title {
 			@include respond-to(break2max) {color:$black40;}
 		}
@@ -150,6 +66,10 @@
 			}
 		}
 	}
+	.hr--footer {
+		@include border(top, 1px, $black20);
+
+	}
 	.footer-logo__img--folklife {
 		@include respond-to(break2max) {margin-bottom: 3vw;}
 	}
@@ -163,11 +83,24 @@
 		@include respond-to(break2max) {margin-top: 1rem;}
 	}
 	.copyright-list__item {
-		@include link-font-xs;
+		// @include link-font-xs;
+		@include link-font;
+		// line-height: 1.9 !important;
+		a {
+			color: $black60;
+			&:hover {
+				color: $black20;
+			}
+		}
 	}
 	.social-media__title {
 		@include link-font;
-		margin-top: -4px;
+		font-weight: 400;
+		text-transform: uppercase;
+		color: $black60;
+		// @include margin-top(-0.4); // align sibling menu list
+		@include margin-bottom(0.6); // align sibling menu list
+		@include margin-left(0.3); // align with facebook icon
 	}
 	.social-media__icon {
 		display: inline-block;
@@ -176,9 +109,9 @@
 		@include respond-to(fullwidth) { font-size: 3rem; margin-right: 0.5rem; }
 
 		a {
-			color:$black20;
+			color:$black60;
 			&:hover {
-				color: $black60;
+				color: $black20;
 				text-decoration: none;
 			}
 		}
@@ -187,7 +120,8 @@
 		@include respond-to(break2max) {margin-top: 2vw;}
 	}
 	.copyright {
-		@include link-font-xs;
+		@include link-font;
+		color: $black60;
 		padding-top: 2vw;
 		font-weight: 300;
 		@include respond-to(break2) {padding-top:0.4vw;}

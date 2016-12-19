@@ -1,0 +1,44 @@
+-if ('' != $card->thumbnail_img()):
+	//- set thumbnail as image if it's set in panel
+	-$image = $card->image($card->thumbnail_img())
+- elseif($src = $card->image()):
+	-$image = $src
+-endif
+
+li.card.card-horizontal(class="<?= $card_classes ?>")
+	.row
+		.image(class="<?= $image_col ?>")
+			a(href="<?= $card->url() ?>")
+				img.card__image(src="<?= $image->url() ?>")
+		.video(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= $card->copy() ?>')
+			.center-box
+				.modal-trigger
+					img.card__image(src="<?= $image->url() ?>")
+				.icon-play-button.icon-play-button--video.icon-stack
+					.icon-circle
+					.icon-play
+		.details(class="<?= $details_col ?>")
+			.details__inner
+				.category!= $card->category()
+				
+				-if (isset($date) && isset($time)):
+					.tag!= $card->date('M d, Y'), '<br />', $card->time()
+				-elseif (isset($date)):
+					.tag!= $card->date()
+				-endif
+
+				a.high(href="<?= $card->url() ?>").title.card__title: span.light: span.er= $card->title()
+				
+				//- blurb
+				-if (isset($blurb)):
+					.description.card__description.link-underline.blurb!= $card->blurb()->kt()
+				-endif
+				
+				-if (isset($excerpt)):
+					.description.card__description.link-underline
+						p!= excerpt($card->copy()->kt(), $excerpt, 'words')
+				-endif
+
+				-if (isset($more_link)):
+					-snippet('more-link', array('link' => $card->url()))
+				-endif

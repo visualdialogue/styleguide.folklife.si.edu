@@ -9,15 +9,15 @@
 		section.section--first.section--article.col-sm-8
 			article.article
 				// use card for correct video/image header
-				.blog-feature
-					-snippet('card', array('card' => $page, 'type' => 'blog', 'showCategory' => true, 'caption' => true, 'link' => false))
+				ul.row.cards.blog-feature
+					-snippet('card-blog-article', array('card' => $page, 'type' => 'blog', 'caption' => true, 'link' => false))
 
 				.content
 					!= $page->copy()->kt()
 
 				
 		div.col-sm-1.spacer
-		aside.col-sm-3.blog-sidebar
+		aside.sidebar.col-sm-3.blog-sidebar
 
 			-snippet('blog-related-content', array('orientation' => 'vertical', 'limit' => 3))
 
