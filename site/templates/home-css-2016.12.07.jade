@@ -37,7 +37,7 @@ section.container.section--first
 
 // Sans Serif
 section.container
-	hr.hr--thick
+	hr.thick-hr
 	h2.section-title Sans Serif
 
 	.row
@@ -200,7 +200,7 @@ section.container
 
 	.row
 			// Video
-			hr.hr--thick
+			hr.thick-hr
 			h2.section-title Standard Video Card
 			a.anchor-link#video
 			ul.row.cards
@@ -227,7 +227,7 @@ section.container
 			</div></td></tr></tbody></table></td></tr></tbody></table></pre>
 
 			// Horizontal Video
-			hr.hr--thick
+			hr.thick-hr
 			h2.section-title.section--horizontal-cards Horizontal Video
 			a.anchor-link#video
 			ul.row.cards
@@ -236,7 +236,7 @@ section.container
 				-endforeach
 
 			// Audio
-			hr.hr--thick
+			hr.thick-hr
 			h2.section-title Audio
 			a.anchor-link#audio
 
@@ -299,14 +299,14 @@ section.section--video.container.section--first
 		-endforeach
 
 //- Cards
-.container: hr.hr--thick
+.container: hr.thick-hr
 section.container
 	h2.section-title Cards
 	h3 Horizontal Cards
 	p A class of .section--horizontal-cards must be added to the section tag with horizontal cards as children. Horizontal cards have an extra margin below each card, and the last few cards would push the next section down too far. This class takes the extra spacing into account and removes the bottom margin from the section.
 
 //- Listen
-.container: hr.hr--thick
+.container: hr.thick-hr
 section.section--audio.container
 	h2.section-title Audio
 	ul.row.row--listen
@@ -332,7 +332,7 @@ section.section--audio.container
 			-endif
 		-endforeach
 
-.container: hr.hr--thick
+.container: hr.thick-hr
 
 //- Participate
 section.section--participate.container
@@ -402,7 +402,7 @@ section.container.section--dive-deep
 				-endif
 			-endforeach
 
-.container: hr.hr--thick
+.container: hr.thick-hr
 
 //- half sections - Explore Collections and Teach
 .container
@@ -422,7 +422,7 @@ section.container.section--dive-deep
 				-endforeach
 			.vertical-rule
 
-		hr.hr--thick.hidden-sm.hidden-md.hidden-lg
+		hr.thick-hr.hidden-sm.hidden-md.hidden-lg
 		section.col-sm-6.section--half.section--teach
 			h2.section-title Teach
 			-snippet('more-link')

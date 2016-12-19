@@ -1,6 +1,6 @@
 
 <div class="container">
-  <hr class="hr--thick"/>
+  <hr class="thick-hr"/>
 </div>
 <section class="container section--festival-blog blog">
   <div class="more-link-wrapper">

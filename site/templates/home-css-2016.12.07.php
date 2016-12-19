@@ -41,7 +41,7 @@
 </section>
 <!-- Sans Serif-->
 <section class="container">
-  <hr class="hr--thick"/>
+  <hr class="thick-hr"/>
   <h2 class="section-title">Sans Serif</h2>
   <div class="row">
     <div class="col-md-12">
@@ -179,7 +179,7 @@
   </div>
   <div class="row">
     <!-- Video-->
-    <hr class="hr--thick"/>
+    <hr class="thick-hr"/>
     <h2 class="section-title">Standard Video Card</h2><a id="video" class="anchor-link"></a>
     <ul class="row cards">
       <?php foreach($pages->find('videos')->children()->visible()->limit(1) as $video): ?>
@@ -202,7 +202,7 @@
     </div></td></tr><tr><td valign="top" id="L_0_15" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;15&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_15"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;"></span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&lt;/</span><span class=" real_text" style="background-color: #272822; color: #F92672;">li</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&gt;</span>
     </div></td></tr></tbody></table></td></tr></tbody></table></pre>
     <!-- Horizontal Video-->
-    <hr class="hr--thick"/>
+    <hr class="thick-hr"/>
     <h2 class="section-title section--horizontal-cards">Horizontal Video</h2><a id="video" class="anchor-link"></a>
     <ul class="row cards">
       <?php foreach($pages->find('videos')->children()->visible()->limit(1) as $video): ?>
@@ -210,7 +210,7 @@
       <?php endforeach; ?>
     </ul>
     <!-- Audio-->
-    <hr class="hr--thick"/>
+    <hr class="thick-hr"/>
     <h2 class="section-title">Audio</h2><a id="audio" class="anchor-link"></a>
   </div>
 </section>
@@ -241,7 +241,7 @@ $iframe = str_replace('"', "'", $video->iframe()) ?>
   </ul>
 </section>
 <div class="container">
-  <hr class="hr--thick"/>
+  <hr class="thick-hr"/>
 </div>
 <section class="container">
   <h2 class="section-title">Cards</h2>
@@ -249,7 +249,7 @@ $iframe = str_replace('"', "'", $video->iframe()) ?>
   <p>A class of .section--horizontal-cards must be added to the section tag with horizontal cards as children. Horizontal cards have an extra margin below each card, and the last few cards would push the next section down too far. This class takes the extra spacing into account and removes the bottom margin from the section.</p>
 </section>
 <div class="container">
-  <hr class="hr--thick"/>
+  <hr class="thick-hr"/>
 </div>
 <section class="section--audio container">
   <h2 class="section-title">Audio</h2>
@@ -286,7 +286,7 @@ $iframe = str_replace('"', "'", $video->iframe()) ?>
   </ul>
 </section>
 <div class="container">
-  <hr class="hr--thick"/>
+  <hr class="thick-hr"/>
 </div>
 <section class="section--participate container">
   <h2 class="section-title">Participate</h2>
@@ -382,7 +382,7 @@ $iframe = str_replace('"', "'", $video->iframe()) ?>
   </div>
 </section>
 <div class="container">
-  <hr class="hr--thick"/>
+  <hr class="thick-hr"/>
 </div>
 <div class="container">
   <div class="row">
@@ -404,7 +404,7 @@ $iframe = str_replace('"', "'", $video->iframe()) ?>
       </ul>
       <div class="vertical-rule"></div>
     </section>
-    <hr class="hr--thick hidden-sm hidden-md hidden-lg"/>
+    <hr class="thick-hr hidden-sm hidden-md hidden-lg"/>
     <section class="col-sm-6 section--half section--teach">
       <h2 class="section-title">Teach</h2>
       <?php snippet('more-link'); ?>

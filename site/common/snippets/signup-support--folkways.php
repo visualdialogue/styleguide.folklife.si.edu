@@ -1,6 +1,6 @@
 
 <div class="container">
-  <hr class="hr--thick"/>
+  <hr class="thick-hr"/>
 </div>
 <div class="newsletter-signup-wrapper container">
   <div class="newsletter-signup--short">

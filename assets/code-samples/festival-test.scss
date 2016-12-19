@@ -1,0 +1,889 @@
+/*
+	festival.si.edu
+	Author: Visual Dialogue
+	URL:    http://visualdialogue.com
+	Created: Fall 2016
+*/
+
+/* Imports
+-------------------------------------------------- */
+	@charset "UTF-8";
+	@import "../../../../styleguide.folklife.si.edu/code/assets/common/css/fonts.scss";
+	@import "../../../../styleguide.folklife.si.edu/code/assets/common/css/vd-icons.scss";
+	@import "../../../../styleguide.folklife.si.edu/code/assets/common/bower_components/remodal/dist/remodal.scss";
+	@import "../../../../styleguide.folklife.si.edu/code/assets/common/bower_components/remodal/dist/remodal-default-theme.scss";
+	@import "../../../../styleguide.folklife.si.edu/code/assets/common/bower_components/slick-carousel/slick/slick.scss";
+	@import "../../../../styleguide.folklife.si.edu/code/assets/common/bower_components/slick-carousel/slick/slick-theme.scss";
+	@import "../../../../styleguide.folklife.si.edu/code/assets/common/css/bootstrap.scss"; // get custom bootstrap built with less
+	@import "../../../../styleguide.folklife.si.edu/code/assets/common/css/reset.scss";
+	@import "../../../../styleguide.folklife.si.edu/code/assets/common/css/dimensions.scss";
+	@import "../../../../styleguide.folklife.si.edu/code/assets/common/css/media-queries.scss";
+	
+	// colors may be used in type.scss
+	@import "../../../../styleguide.folklife.si.edu/code/assets/common/css/colors.scss";
+	$hover: #fcdc6b;
+
+	@import "../../../../styleguide.folklife.si.edu/code/assets/common/css/type.scss";
+	@import "../../../../styleguide.folklife.si.edu/code/assets/common/css/icons.scss";
+	@import "../../../../styleguide.folklife.si.edu/code/assets/common/css/features.scss";
+	@import "../../../../styleguide.folklife.si.edu/code/assets/common/css/padding.scss";
+	@import "../../../../styleguide.folklife.si.edu/code/assets/common/css/links.scss";
+	@import "../../../../styleguide.folklife.si.edu/code/assets/common/css/helpers.scss";
+	@import "../../../../styleguide.folklife.si.edu/code/assets/common/css/mixins.scss";
+	// @import "../../../../styleguide.folklife.si.edu/code/assets/common/css/nav.scss";
+	@import "../../../../styleguide.folklife.si.edu/code/assets/common/css/nav-old.scss";
+	@import "../../../../styleguide.folklife.si.edu/code/assets/common/css/general.scss";
+	@import "../../../../styleguide.folklife.si.edu/code/assets/common/css/audio.scss";
+	@import "../../../../styleguide.folklife.si.edu/code/assets/common/css/footer.scss";
+  	@import "../../../../styleguide.folklife.si.edu/code/assets/common/css/article.scss";
+  	@import "../../../../styleguide.folklife.si.edu/code/assets/common/css/program.scss";
+  	@import "../../../../styleguide.folklife.si.edu/code/assets/common/css/cards.scss";
+
+/* #Color Application
+-------------------------------------------------- */
+	// Circus Arts page
+	.circus-arts-page {
+		.title-bar {
+			color: white;
+			background-color: $fs-blue;
+		}
+	}
+	.festival-at-50-page {
+		.title-bar {
+			color: white;
+			background-color: $fs-purple;
+		}
+	}
+	.american-folk-page {
+		.title-bar {
+			color: white;
+			background-color: $fs-orange;
+		}
+	}
+
+/* #Logo
+-------------------------------------------------- */
+	// festival header logo
+	.smaller-header, .one-line-logo {
+		.navbar-brand {
+			@include padding-top(1.2);
+		}	
+	}
+	.festival-logo--one-line {
+		@include width(13);
+	}
+
+/* #Banner ON state
+-------------------------------------------------- */
+	.on-site {
+		&.home-page {
+			.section--banner-carousel {
+				margin-bottom: 0;
+				position: absolute; // so content can be pushed down by intro section
+				@include respond-to(fullwidth) {
+					left: calc((100vw - 1560px) / 2);
+				}
+			}
+			.banner-details {
+				@include vertically-align;
+				left:0; right: 0; // text align center without need width:100%
+				color: white;
+				text-align:center;
+
+				// unusual case becuase title's exist within slide for desktop and out of slide for mobile
+				.title {
+					@include serif-xxl;
+					margin-bottom: 1rem;
+					@include respond-to(break2) {
+						margin-bottom: 3rem; // push above dots
+					}
+				}
+				.subtitle {
+					@include slab-xxl;
+				}
+			}
+			.banner-logo {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-top: -210px; // half of height
+				margin-top: -210px; // half of height
+				margin-left: -188px; // half of width
+				@include width(46.6);
+				margin-top:-35vw;
+				margin-left:-29.5vw;
+				margin-left:-27vw;
+				@include respond-to(break2) {
+					margin-top:-20vw;
+					margin-left:-14vw;
+				}
+				@include respond-to(fullwidth) {
+					margin-top:-32.8rem;
+					margin-left:-22.8rem;
+				}
+			}
+			.banner-carousel {
+				// height of window
+				// height: 100vh;
+				@include headerHeight--home;
+				&:after {
+					content:'';
+					position: absolute;
+					top:0;right:0;bottom:0;left:0;
+					background-color: black;
+					opacity: 0.1;
+				}
+				@include bannerHeight;
+
+			}
+			.banner-carousel {
+				visibility: hidden;
+			}
+			.slick-initialized {
+				visibility: visible;
+			}
+			.slick-list, .slick-track {
+				height: 100%;
+			}
+			.banner-slide {
+				height: 100%;
+				// width: 100%;
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+
+				// animation from MECA site: https://www.meca.edu/
+				// ease in sine motion from https://matthewlein.com/ceaser/ because can't start zoom until transition occurs b/c same property
+				// animate all caused jumpiness in safari
+				// before dec 10
+				// -ms-transition: 5s cubic-bezier(0.525, 0.175, 0.770, 0.680) transform;
+				// -webkit-transition: 5s cubic-bezier(0.525, 0.175, 0.770, 0.680) transform;
+				// transition: 5s cubic-bezier(0.525, 0.175, 0.770, 0.680) transform;
+
+				// -ms-transform: scale(1.04);
+				// -webkit-transform: scale(1.04);
+				// transform: scale(1.04);
+
+				// after dec 10
+				-ms-transition: 5s cubic-bezier(0.21, 0.05, 0.8, 0.95) transform;
+				-webkit-transition: 5s cubic-bezier(0.21, 0.05, 0.8, 0.95) transform;
+				transition: 5s cubic-bezier(0.21, 0.05, 0.8, 0.95) transform;
+
+				-ms-transform: scale(1.06);
+				-webkit-transform: scale(1.06);
+				transform: scale(1.06);
+
+
+				// prevent flickr in webkit / safari
+				// from http://stackoverflow.com/a/3921870
+				// force hardware acceleration, from http://stackoverflow.com/a/7907755
+				-webkit-backface-visibility: hidden;
+				// -webkit-transform:translateZ(0);
+				-webkit-transform-style: preserve-3d;
+			}
+
+			.section--banner-carousel {
+				left: 0;
+				width: 100%;
+			}
+			.banner-carousel {
+				width: 100%;
+			}
+		}
+	}
+
+/* #Banner OFF state
+-------------------------------------------------- */
+	.banner-video-section {
+		position: absolute; // so content can be pushed down by intro section
+		width: 100%;
+	}
+	.banner-video {
+		width: 100%;
+		@include bannerHeight;
+		height: calc(100vh);
+	}
+
+	.mute-button {
+		display: none;
+		@include respond-to(break1) {
+		}
+		@include respond-to(break2) {
+			display: block;
+			font-size: 4rem;
+			color: $fs-orange;
+			position:absolute;
+			top: 20px;
+			right: 80px;
+			z-index:5;
+			width: 50px;
+			height: 50px;
+			cursor:pointer;
+			// background:url(/assets/images/icons/sound-off.png) no-repeat;
+		}
+		@include respond-to(fullwidth) {
+			right: calc((100vw - 1400px) / 2); // screen width, minus width of center area, divided by 2 because just one side
+		}
+	  	
+	  	&:hover {background-position:0 -50px;}
+	  	&:before {
+			position: absolute;
+			top:0;
+			left:5px;
+	  	}
+	}
+	.icon-volume-off {
+		&:before {
+			top: 0;
+			left: -5px;
+		}
+	}
+	// .error .mute-button {display:none;}
+
+/* #intro
+-------------------------------------------------- */
+	.section--intro {
+		// // margin-top: $introTopMargin;
+		// margin-top: calc(100vh - #{$introTopMargin});
+		@include marginTopBanner;
+		// margin-top: 100vh;
+		position: relative;
+		color: white;
+		@include respond-to(fullwidth) {margin-bottom: 4rem;}
+		a {
+			color: white;
+			&:hover {
+				color: black; // 12.15
+			}
+		}
+		.title {
+			@include slab-xl;
+		}
+		.subtitle {
+			@include sans-md;
+		}
+	}
+	.intro-box__inner {
+		padding:4vw;
+		@include respond-to(break2) {padding:1.3vw;}
+		@include respond-to(fullwidth) {padding:2.1rem 2.2rem 3rem;}
+		height: 100%; // color height of siblings
+	}
+	.intro-row {
+		// math, strings, and lengths, from http://stackoverflow.com/questions/8254941/math-with-interpolated-variables
+		// interpolation just looks like a number, but its a string
+		// $introTopMargin: -($header-height + 70 * 1px);
+		// margin-top: $introTopMargin;
+	}
+
+	// ON State
+	.intro-box__1 .intro-box__inner {background-color: $fs-blue;}
+	.intro-box__2 .intro-box__inner {background-color: $fs-orange;}
+	.intro-box__3 .intro-box__inner {background-color: $fs-aqua;}
+
+	// OFF State
+	.off-site {
+		.section--intro {
+			color: $body;
+			.title {
+				
+			}
+		}
+		.intro-box__1 {
+			.intro-box__inner {
+				background-color: $fs-lightblue;
+			}
+			.title {
+				@include slab-md;
+				// color: $black65;
+				color: white;
+				// margin-bottom:8rem;
+				@include respond-to(break2) {margin-bottom:2.6vw;}
+				@include respond-to(fullwidth) {margin-bottom:4rem;}
+			}
+			.subtitle {
+				color: black;
+				@include sans-sm;
+				font-weight: 600;
+			}
+		}
+		.intro-box__2 {
+			.intro-box__inner {
+				background-color: $fs-tan;
+			}
+			.title {
+				color:white;
+				@include sans-md;
+				text-transform: initial;
+				// font-weight: 400;
+				strong {
+					@include slab-lg;
+					text-transform: initial;
+				}
+			}
+			.subtitle {
+				@include sans-sm;
+				margin-top: 0.5rem;
+			}
+		}
+		.intro-box__3 {
+			.intro-box__inner {
+				background-color: $fs-orange;
+			}
+			.subtitle {
+				@include sans-xs;
+				font-weight: 500;
+			}
+			input {
+				@include sans-sm;
+				font-weight: 500;
+				// color: $black50;
+				color: white;
+				margin-top: 1rem;
+				margin-bottom: 2rem;
+				// border-bottom: 2px solid $black40;
+				border-bottom: 2px solid white;
+				width: 100%; // don't overflow form
+				background-color: $fs-orange;
+			}
+			.social-media {
+				@include sans-xxs;
+				font-weight: 500;
+			}
+			.social-icon {
+				color: white;
+				&:hover {
+					color: $black60;
+				}
+			}
+
+			// placeholder text color, from http://stackoverflow.com/a/2610741
+			::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+			    color:    white;
+			}
+			:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+			   color:    white;
+			   opacity:  1;
+			}
+			::-moz-placeholder { /* Mozilla Firefox 19+ */
+			   color:    white;
+			   opacity:  1;
+			}
+			:-ms-input-placeholder { /* Internet Explorer 10-11 */
+			   color:    white;
+			}
+		}
+	}
+
+	.intro-icon {
+		font-size:8.5vw;
+		@include respond-to(break2) {font-size:2vw;}
+		@include respond-to(fullwidth) {font-size:3.5rem;}
+	}
+
+/* #video
+-------------------------------------------------- */
+	.section--festival-101 {
+		.title {
+			// @include serif-md;
+			@include serif-lg;
+		}
+		.card__img {
+			width: 100%;
+		}
+
+	}
+
+/* #schedule
+-------------------------------------------------- */
+
+/* #looking ahead - OFF
+-------------------------------------------------- */
+
+	.looking-ahead {
+		.title {
+			@include serif-lg;
+		}
+		.description {
+			@include sans-xs;
+			@include margin-bottom(2);
+			font-weight: 400;
+		}
+	}
+
+/* #festivals
+-------------------------------------------------- */
+	.section--festivals {
+		.image {
+			padding-bottom: 0;
+		}
+		// .details {
+		// 	min-height: 27vw;
+		// 	@include respond-to(break2) {
+		// 		min-height: initial; // for ios
+		// 		min-height: auto; // for windows
+		// 	}
+		// }
+		.title {
+			@include serif-xl;
+			line-height: 0.7;
+			@include margin-top(1.8);
+			@include margin-bottom(2);
+		}
+		.description {
+			@include sans-xs;
+		}
+	}
+	.section--festival-101 {
+		.category {
+			@include margin-bottom(1);
+		}
+		.title {
+			@include margin-bottom(1);
+		}
+		.blurb {
+			@include sans-xs;
+		}
+	}
+	.section--next-up {
+		.section-title {
+			@include margin-bottom(1);
+		}
+		hr {
+			@include margin-bottom(1);
+		}
+		.date {
+			@include sans-sm;
+			font-weight: 500;
+			text-transform: initial;
+		}
+
+	}
+	.next-up-table {
+		table-layout: fixed;
+		@include sans-xs;
+		color: $black65;
+		width: 100%;
+		// font-weight: 500;
+	}
+	.next-up__row:nth-child(odd) {
+		background-color: $black08;
+	}
+	.next-up__row:nth-child(even) {
+		// background-color: red;
+	}
+	.next-up-td {
+		padding: 6px 0;
+	}
+	.next-up__time {
+		width: 8.5rem;
+		padding-left: 0.4rem;
+	}
+	.next-up__title {
+		padding-left: 4rem;
+	}
+
+	.section-special-events {
+		.tag {
+			font-weight: 400;
+			@include margin-bottom(0.5);
+		}
+		.title {
+			@include sans-sm;
+			font-weight: 500;
+		}
+		.description {
+			@include sans-xs;
+		}
+	}
+
+	// home page festival blog
+	.section--festival-blog {
+		.author {
+			display: none;
+		}
+		.date {
+			@include margin-top(-0.5);
+			@include margin-bottom(0.2);
+			font-weight: normal; // for homepage
+		}
+		.title {
+			@include serif-md;
+			// line-height: 1.1;
+			line-height: 1;
+			@include min-height(13);
+			@include respond-to(break2max) {
+				// margin-top:5vw;
+				min-height: initial; // ios // not 2x2 on mobile so no matter details height
+				min-height: auto; // windows
+			}
+		}
+	}
+
+	// home page past festivals
+	.section--past-festivals {
+		.title {
+			@include serif-lg;
+			@include min-height(12);
+		}
+		.category {
+			@include margin-bottom(0.5);
+		}
+		.description {
+			@include sans-xs;
+		}
+		.card {
+			@include respond-to(break2max) {
+				margin-bottom: 3.5rem;
+			}
+		}
+	}
+
+/* festival videos
+-------------------------------------------------- */
+	.section--festival-videos {
+		.category {
+			@include margin-bottom(0.5);
+			@include respond-to(break2max) {
+				margin-top: 2vw;
+			}
+		}
+		.title {
+			@include serif-lg;
+		}
+		.details {
+			@include padding-left(0);
+		}
+	}
+	.festival-video {
+		@include respond-to(break2max) {
+			margin-bottom: 0;
+		}
+	}
+
+/* #Participants
+-------------------------------------------------- */
+	.section--participants {
+		.title {
+			@include sans-xxs;
+			font-weight: 700;
+			text-align: center;
+		}
+	}
+
+/* #Past Festivals
+-------------------------------------------------- */
+	.past-festival {
+		.title {
+			@include serif-lg;
+			// font-weight: 700;
+			// min height for 2 rows of titles above image
+			// min-height:rem;
+			margin-bottom: 1rem;
+			@include respond-to(break2) {min-height:7vw;margin-bottom:0;}
+			@include respond-to(fullwidth) {min-height:11rem;}
+		}
+		.details {
+			// padding-top:2vw;
+			// @include respond-to(break2) {padding-top:1vw;}
+			// @include respond-to(fullwidth) {padding-top:1rem;}
+			min-height: auto;
+		}
+		.description {
+			@include sans-xs;
+			font-weight: 400;
+			margin-bottom: 5vw;
+			@include respond-to(break2) {margin-bottom:0;}
+		}
+	}
+
+/* #Learn Page
+-------------------------------------------------- */
+	.learn-page {
+		.title-bar {
+			color: white;
+			background-color: $fs-aqua;
+		}
+		.section--banner {
+			@include margin-bottom(4);
+		}
+		// .feature--full {
+		// 	margin-bottom:4rem;
+		// 	@include respond-to(break2) {margin-bottom:2.55vw;}
+		// 	@include respond-to(fullwidth) {margin-bottom:4rem;}
+		// }
+		.cards--full-feature {
+			.title {
+				@include serif-xl;
+			}
+			.description {
+				@include sans-md;
+			}
+		}
+		.card {
+			.border {
+				display: none;
+			}
+			.title {
+			}
+			.details {
+				@include respond-to(break2max) {
+					// padding-top:2vw;
+					// padding-bottom:2vw;
+				}
+				// @include respond-to(fullwidth) {
+					// min-height: 25rem;
+				// }
+			}
+		}
+		.card__title-wrapper {
+			// overwrite folklife homepage spacing
+			min-height: 9rem;
+			@include respond-to(break2) {min-height: 5.5vw;}
+			@include respond-to(fullwidth) {min-height: 8.2rem;}
+		}
+		.card__title {
+			@include margin-bottom(1);
+		}
+		.card__description {
+			@include sans-xxs;
+		}
+	}
+
+/* #Blog Page
+-------------------------------------------------- */
+	// indent sidebar section titles only on select pages (from layout)
+	.blog-page, .program-page, .program-category-page {
+		.sidebar__section-title {
+			@include padding-left(1.3);
+		}
+	}
+	.blog-page {
+		.page-title {
+			// color: $black65;
+			// margin-top:0;
+			// @include respond-to(break2) {margin-top:1.3vw;}
+			// @include respond-to(fullwidth) {margin-top:2rem;}
+		}
+		.title-bar {
+			color: white;
+			background-color: $fs-purple;
+		}
+		.card {
+			@include margin-bottom(4);
+			margin-bottom:8vw;
+		}
+		.category {
+			font-weight: 400;
+			@include margin-bottom(0.5);
+		}			
+		.section--blog-articles {
+			.title {
+				@include serif-lg;
+			}
+			.date {
+				@include date-sm;
+				// @include margin-bottom(0.5);
+				@include margin-bottom(1);
+			}
+			.more-link {
+				@include margin-top(0.5);
+			}
+		}
+		.blog-feature {
+			.category {
+				@include margin-top(0.5);
+				// @include margin-bottom(2.3);
+			}
+			.title {
+				@include serif-xl;
+				@include margin-bottom(0);
+			}	
+			.date {
+				// @include margin-bottom(4.1);
+				@include sans-xxs;
+				text-transform: initial;
+				@include margin-bottom(2);
+			}
+			.description {
+				// font-weight: 400; // TK not allowing 500 right now
+				@include sans-sm;
+				font-weight: 300;
+				@include margin-top(1);
+			}
+			.more-link {
+				@include margin-top(1.5);
+			}
+			// account for more link on mobile
+			@include respond-to(break2max) {
+				padding-bottom: 4rem;
+			}
+
+		}
+	}
+	// BANNER
+	.blog-banner .row { position: relative; } // contain border
+	.blog-banner__carousel, .blog-banner__copy {
+		@include col;
+	}
+	.blog-banner__copy {
+		width: 31.5%;
+		padding:0;
+		@include respond-to(break2) {padding:0;}
+		@include respond-to(fullwidth) {padding:3rem;}
+	}
+	.blog-banner__carousel {
+		width: 68.5%;
+	}
+	.banner--full:after {
+		content: '';
+		border: 1px solid $black50;		
+		position: absolute;
+		top: 0;
+		right: 65.2%;
+		bottom: 0;
+		left: 0;
+		// margin: 0 20px;
+		// outline: 1px solid orange;
+		@include respond-to(break2) {
+			left: $gutter--medium;
+			right: 68%;
+		}
+	}
+	
+
+	.blog-sidebar {
+		&__header {
+			color: $black50;
+			line-height: 0.8; // for alignment
+			@include margin-top(3.1);
+			@include margin-bottom(1.4);
+			@include margin-bottom(0);
+			// @include margin-left(1.4);
+			
+			// @include border(bottom);
+			@include padding-bottom(1);
+
+		}
+		&__feature {
+			// @include sidebarBorderTop;
+			@include border(top);
+			padding-top: 0.2rem;
+			@include respond-to(fullwidth) {
+				padding-top: 0.5rem;
+			}
+			@include padding-bottom(0);
+
+			@include min-height(6.4);
+			// @include respond-to(break2max) {
+				// min-height: initial; //ios
+				// min-height: auto; //windows
+			// }
+			.number {
+				float: left;
+				padding: 0.5rem;
+				@include sans-md;
+				color: $black50;
+			}
+			.title {
+				// margin-left: 1.4rem;
+				@include padding-left(1.5);
+				@include sans-xxs;
+				// @include sans-sm;
+				font-weight: 600;
+				// color: $black70;
+
+				// use css :before (single for IE8) to add numbers to sidebar articles
+				position: relative;
+				display: block;
+				@include padding-top(0.2);
+				// &:before {
+				// 	content: attr(data-number);
+				// 	position: absolute;
+				// 	@include top(-0.3);
+				// 	@include left(0.6);
+				// 	// font-weight: 500;
+				// 	@include sans-sm;
+				// 	color: $black50;
+				// 	line-height: 10;
+				// 	display: block;
+				// }
+			}
+		}
+		&__number {
+			@include sans-sm;
+			position: absolute;
+			@include padding-left(0.5);
+		}
+		// first of class only...
+		// &__feature {
+		// 	@include margin-top(1.5);
+		// }
+		// &__feature ~ &__feature {
+		// 	margin-top: 0;
+		// }
+
+	}
+	.blog-most-popular {
+		.title {
+			@include padding-left(2.75);
+		}
+	}
+	.blog-categories li, .multimedia-sections li {
+		// @include sidebarBorderTop;
+		@include border(top);
+		@include sans-xxs;
+		color: $black70;
+		font-weight: 600;
+		@include padding-top(0.8);
+		@include padding-bottom(0.8);
+		@include padding-left(1.3);
+	}
+
+/* #Explore Collections
+-------------------------------------------------- */
+	.explore-collections__featurette, .teach__featurette {
+		// height: 27vw;
+		@include respond-to(break2) {
+			height: 26.9vw;
+		}
+		@include respond-to(fullwidth) {
+			height: 376px;
+		}
+	}
+	.explore-collections {
+		.details {
+			padding-left: 0;
+			@include respond-to(break2max) {
+				min-height: 17vw;
+			}
+
+		}
+		.title {
+			@include serif-md;
+			font-style: italic;
+			font-weight: 600;
+		}
+
+	}
+
+/* #Teach
+-------------------------------------------------- */
+	.section--teach {
+		.details {
+			padding-left: 0;
+			@include respond-to(break2max) {
+				min-height: 17vw;
+			}
+
+		}
+		.title {
+			@include sans-xxs;
+			font-weight: 400;
+		}
+	}
+
+/* Helpers II
+-------------------------------------------------- */
+	// another import
+	@import "../../../../styleguide.folklife.si.edu/code/assets/common/css/helpers2.scss";
