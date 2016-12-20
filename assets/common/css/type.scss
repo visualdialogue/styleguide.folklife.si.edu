@@ -9,7 +9,7 @@ body {
 }
 
 /* Slab Knockout
- ******************/
+-------------------------------------------------- */
 	%header-nav-font {
 		font-family: $slabNarrow;
 		text-transform: uppercase;
@@ -122,9 +122,8 @@ body {
 		}
 	}
 
-
 /* Sans Acumin
- ******************/
+-------------------------------------------------- */
 
 	@mixin link-font {
 		font-family: $sans;
@@ -159,20 +158,20 @@ body {
 		}
 	}
 
-	%title--sans {
-		font-family: $sans;
-		font-weight: 600; // semibold for acumin
-		line-height: 1.2;
-	  	font-size: 5vw;
-		@include respond-to(break2) {
-	  		font-size: 1.5vw;
-	  		margin-bottom: 0.3vw;
-		}
-		@include respond-to(fullwidth) {
-	  		font-size: 2.4rem;
-	  		margin-bottom: 0.5rem;
-		}
-	}
+	// %title--sans {
+	// 	font-family: $sans;
+	// 	font-weight: 600; // semibold for acumin
+	// 	line-height: 1.2;
+	//   	font-size: 5vw;
+	// 	@include respond-to(break2) {
+	//   		font-size: 1.5vw;
+	//   		margin-bottom: 0.3vw;
+	// 	}
+	// 	@include respond-to(fullwidth) {
+	//   		font-size: 2.4rem;
+	//   		margin-bottom: 0.5rem;
+	// 	}
+	// }
 
 	// Plus icon
 	@mixin sans-plus-icon {
@@ -187,6 +186,7 @@ body {
 		}
 	}
 	.sans-xl {@include sans-plus-icon}
+
 
 	// Extra Large Sans (Folkways)
 	@mixin sans-xl {
@@ -204,6 +204,7 @@ body {
 
 	// HTML Implementation
 	.sans-xl {@include sans-xl;}
+
 
 	// Large Sans +
 	@mixin sans-lg {
@@ -244,6 +245,7 @@ body {
 	// HTML Implementation
 	.sans-md {@include sans-md;}
 
+
 	// Small Sans +
 	@mixin sans-sm {
 		font-family: $sans;
@@ -257,47 +259,76 @@ body {
 	  		font-size: 2.107rem;
 		}
 	}
+	// HTML Implementation
 	.sans-sm {@include sans-sm;}
 
-	@mixin sans-xxs {
+	// Sans Caption
+	@mixin sans-caption {
 		font-family: $sans;
 		font-weight: 300; // light for acumin
 	  	// font-size: 4vw;
-	  	font-size: 1.422rem;
+	  	font-size: 1.48rem;
 		@include respond-to(break2) {
 	  		// font-size: 1.15vw;
 	  		// font-size: 1.15vw;
-	  		font-size: 1.6rem;
+	  		font-size: 1.665rem;
 		}
 		@include respond-to(fullwidth) {
-	  		font-size: 1.8rem; // oct 19 for fritz
+	  		// font-size: 1.8rem; // oct 19 for fritz
+	  		font-size: 1.873rem; // dec 19 for mod scale - major second
 		}
 	}
-	.sans-xxs {@include sans-xxs;}
+	.sans-caption {@include sans-caption;}
 
-	// Extra Extra Extra Small Sans
-	@mixin sans-xxxs {
+	// Tag
+	@mixin sans-mini {
 		font-family: $sans;
 		font-weight: 300; // light for acumin
 		line-height: 1.4;
-	  	font-size: 3.8vw;
+	  	// font-size: 3.8vw;
+	  	text-transform: uppercase;
 		@include respond-to(break2) {
-	  		font-size: 1vw;
+	  		// font-size: 1vw;
 			line-height: 1.3;
+	  		font-size: 1.316rem;
 		}
 		@include respond-to(fullwidth) {
-			line-height: 1.3;
+			// line-height: 1.3;
 			// line-height: 1.6;
 	  		font-size: 1.6rem; // oct 19 for fritz
+	  		// font-size: 1.48rem;
+	  		// font-size: 1.665rem;
 		}
 	}
 	
 	// HTML Implementation
-	.sans-xxxs {@include sans-xxxs;}
+	.sans-mini {@include sans-mini;}
 
-
-
-
+	@mixin sans-tag {
+		text-transform: uppercase;
+		font-family: $sansWide;
+		color: $black65;
+		font-weight: 300;
+		letter-spacing: 1px;
+		margin-bottom: 0.5rem;
+		margin-bottom: 0;
+		font-size: 1.2rem;
+		position: relative; // keep from being hidden under highlighted title
+		line-height: 1.4;
+		@include respond-to(break2) {
+			font-size: 1.4rem;
+			margin-bottom: 0.4vw;
+		}
+		@include respond-to(fullwidth) {
+			// font-size: 1.4rem; // acumin pro
+			font-size: 1.665rem; // acumin pro
+			margin-bottom: 0;
+			line-height: 1.4;
+		}
+	}
+	
+	// HTML Implementation
+	.tag {@include sans-tag}
 
 
 	// search bar
@@ -320,11 +351,8 @@ body {
 	  // }
 	}
 
-
-/******************
- * Serif
- *
- ******************/
+/* Serif
+-------------------------------------------------- */
 
 	// Body
 	@mixin body-text {
@@ -348,11 +376,11 @@ body {
 		}
 	}
 
-	// Large Serif Title +
+	// Extra Large Serif Title +
 	@mixin serif-xl {
 		font-family: $serif;
 		font-weight: 700;
-		line-height: 1;
+		line-height: 1.1;
 		font-size: 4.865rem;
 		@include respond-to(break2) {
 			font-size: 5.474rem;			
@@ -363,22 +391,25 @@ body {
 	}
 	.serif-xl {@include serif-xl;}
 
+	// Large Serif Title +
 	@mixin serif-lg {
 		font-family: $serif;
 		font-weight: 700;
-		line-height: 1;
-		font-size: 6vw;
+		line-height: 1; // smaller for folkways banner titles
+		// font-size: 6vw;
+		font-size: 3.417rem;
 		@include respond-to(break2) {
-			font-size: 2.6vw;
-			line-height: 1; // smaller for folkways banner titles
+			// font-size: 2.6vw;
+			font-size: 3.844rem;
 		}
 		@include respond-to(fullwidth) {
-			font-size: 4.2rem;
-			line-height: 1; // smaller for folkways banner titles
+			// font-size: 4.2rem;
+			font-size: 4.325rem;
 		}
 	}
 	.serif-lg {@include serif-lg;}
 
+	// Medium Serif Title
 	@mixin serif-md {
 		font-family: $serif;
 		font-weight: 700;
@@ -398,6 +429,7 @@ body {
 		@include serif-md;
 	}
 
+	// Small Serif Title +
 	@mixin serif-sm {
 		font-family: $serif;
 		font-weight: 400;
@@ -413,29 +445,7 @@ body {
 	.serif-sm {@include serif-sm;}
 
 
-	@mixin tag {
-		text-transform: uppercase;
-		font-family: $sansWide;
-		color: $black65;
-		font-weight: 300;
-		letter-spacing: 1px;
-		margin-bottom: 0.5rem;
-		margin-bottom: 0;
-		font-size: 1.2rem;
-		position: relative; // keep from being hidden under highlighted title
-		@include respond-to(break2) {
-			font-size: 1.4rem;
-			margin-bottom: 0.4vw;
-		}
-		@include respond-to(fullwidth) {
-			font-size: 1.4rem; // acumin pro
-			margin-bottom: 0;
-			line-height: 1.4;
-		}
-	}
-	
-	// HTML Implementation
-	.tag {@include tag}
+
 
 @mixin buybutton {
 	text-transform: uppercase;
@@ -460,18 +470,14 @@ body {
 @mixin magazinetitle {
 	font-family: $sansWide;
 	font-weight: 800;
-	// letter-spacing: 1px;
-	// margin-bottom: 0.5rem;
-	// margin-bottom: 0;
-	line-height: 1;
 	line-height: 1.095237; // 46px desktop
-	// font-size: 6.5vw; 
-	font-size: 5.2vw;
-	font-size: 4.5vw;
+	// font-size: 4.5vw;
+	font-size: 3.319rem;
 	@include respond-to(break2) {
 		// font-size: 0.95vw;
 		// font-size: 2.7vw;
-		font-size: 2.3vw;
+		// font-size: 2.3vw;
+		font-size: 3.733rem;
 		// margin-bottom: 0.4vw;
 	}
 	@include respond-to(fullwidth) {
@@ -482,22 +488,6 @@ body {
 	}
 }
 
-
-
-// @mixin type--logo {
-// 	font-family: $slabLight;
-// 	line-height: 1.15;
-// 	font-size: 3.3rem;
-// 	@include respond-to(break2) {
-// 		font-size: 2.1vw;
-// 	}
-// 	@include respond-to(fullwidth) {
-// 		font-size: 3.3rem;
-// 		line-height: 1.15;
-// 	}
-
-
-// }
 @mixin email-newsletter {
 	font-family: $sans;
 	font-size: 5vw;
@@ -536,11 +526,11 @@ body {
 
 
 @mixin date {
-	@include tag;
+	@include sans-tag;
 	font-weight: 700;
 }
 @mixin date-sm {
-	@include tag;
+	@include sans-tag;
 	// font-weight: 300;
 	letter-spacing: normal;
 	text-transform: initial;
@@ -553,26 +543,26 @@ body {
 	// }
 }
 
-@mixin sidebar-subtitle {
-	// @include tag;
-	// font-family: $sans;
-	// @include sans-xxs;
-	// color: $black70;
-}
-@mixin sidebar-copy {
-	font-family: $sans;
-	@include fs-18;
-	letter-spacing: 0;
-	// font-weight: 600;
-	// font-weight: 500;
-	text-transform: none;
-	color: $black70;
-	line-height: 1.33333;
-	p {
-		margin-bottom:0;
-	}
+// @mixin sidebar-subtitle {
+// 	// @include sans-tag;
+// 	// font-family: $sans;
+// 	// @include sans-caption;
+// 	// color: $black70;
+// }
+// @mixin sidebar-copy {
+// 	font-family: $sans;
+// 	@include fs-18;
+// 	letter-spacing: 0;
+// 	// font-weight: 600;
+// 	// font-weight: 500;
+// 	text-transform: none;
+// 	color: $black70;
+// 	line-height: 1.33333;
+// 	p {
+// 		margin-bottom:0;
+// 	}
 
-}
+// }
 
 
 /* CSS type helper classes

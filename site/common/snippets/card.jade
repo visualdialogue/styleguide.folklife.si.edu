@@ -5,7 +5,7 @@
 	-$image = $src
 -endif
 
-li.card.card-horizontal(class="<? if (isset($card_classes)) echo $card_classes ?> <? if ($card->type() == 'audio') echo 'audio-card' ?>")
+li.card(class="<? if (isset($card_classes)) echo $card_classes ?> <? if ($card->type() == 'audio') echo 'audio-card' ?>")
 	.image
 		a(href="<?= $card->url() ?>")
 			img(src="<?= $image->url() ?>")
@@ -28,6 +28,11 @@ li.card.card-horizontal(class="<? if (isset($card_classes)) echo $card_classes ?
 
 			a.high(href="<?= $card->url() ?>").title: span.light: span.er= $card->title()
 			
+			//- album name
+			-if('' != $card->audio_album()):
+				.subtitle!= $card->audio_album()
+			-endif
+
 			//- blurb
 			-if (isset($blurb)):
 				.description.link-underline.blurb!= $card->blurb()->kt()

@@ -14,7 +14,7 @@
 /***************************
 * General
 ***************************/
-	site.$navbar = $('#navbar'); // logo switching for nav
+	site.navbar = $('#navbar'); // logo switching for nav
 
 
 	// set mobile flag
@@ -41,9 +41,9 @@
 * Mobile dropdown menu
 *********************/
 	// var $navItem = $('.header-nav-main-item');
-	 var $navItem = $('.header-nav-title').add($('.footer-title'));
+	 var $navItem = $('.header-nav-title').add($('.footer-nav-title'));
 	// var $footerNavItem = $('.footer-main-item');
-	var $navLists = $('.header-nav-list').add($('.footer-list'));
+	var $navLists = $('.header-nav-list').add($('.footer-nav-list'));
 
 	// when click a main list item
 	 $navItem.on('click', function(e) {
@@ -96,7 +96,6 @@
 ***************************/
 	var isNavOpen = false;
 	var $siteToggle = $('#site-toggle');
-	var $navBar = $('#navbar');
 	var $navBarHeader = $('.navbar-header');
 	var $navspacer = $('#navspacer');
 
@@ -114,7 +113,7 @@
 
 		// when user scrolls past height of site toggle, make smaller
 		if (($(this).scrollTop() > gapNavHeight) && (isNavOpen == false)) {  
-			$navBar.addClass("smaller-header navbar--open");
+			site.navbar.addClass("smaller-header navbar--open");
 			isNavOpen = true;
 			if(!site.isMobile) {
 				$navspacer.addClass("navspacer--taller"); // open right away
@@ -122,7 +121,7 @@
 			}
 		}
 		else if (($(this).scrollTop() <= gapNavHeight ) && (isNavOpen == true)) {
-			$navBar.removeClass("smaller-header"); // shrink
+			site.navbar.removeClass("smaller-header"); // shrink
 			isNavOpen = false;
 			if(!site.isMobile)
 				$navspacer.removeClass("navspacer-open"); // gracefully cloase
@@ -170,9 +169,9 @@
 		// if not yet open
 		if(shareClosed) {
 			navCloseAll(); // close anything else that's open by default, only after we've determined that share is Closed
-			$navBar.addClass('navbar--open');
+			site.navbar.addClass('navbar--open');
 			if(site.isMobile) // switch to one-line logo in mobile view
-				site.$navbar.addClass('logo-swap'); 
+				site.navbar.addClass('logo-swap'); 
 			$navbarOutside.css('position', 'fixed'); // activate navbarOutside			
 			$notShareIcon.addClass('lighter-nav-icons'); // grey out other icons
 			shareClosed = false; // flag for closing	
@@ -199,8 +198,8 @@
 		if(searchClosed) {
 			navCloseAll(); // after we've determined that search is closed, close anything else that's open by default
 			if(site.isMobile) // switch to one-line logo in mobile view
-				site.$navbar.addClass('logo-swap'); 
-			$navBar.addClass('navbar--open');
+				site.navbar.addClass('logo-swap'); 
+			site.navbar.addClass('navbar--open');
 			$navbarOutside.css('position', 'fixed'); // activate navbarOutside
 			$notSearchIcon.addClass('lighter-nav-icons'); // grey out other icons
 			$searchBar.add($browsenav).show(); // show social media icons
@@ -226,8 +225,8 @@
 		// if not yet open
 		if(menuClosed) {
 			navCloseAll(); // after we've determined that menu is closed, close anything else that's open by default
-			$navBar.addClass('navbar--open');
-			site.$navbar.addClass('logo-swap'); // switch to one-line logo
+			site.navbar.addClass('navbar--open');
+			site.navbar.addClass('logo-swap'); // switch to one-line logo
 			$navbarOutside.css('position', 'fixed'); // activate navbarOutside
 			console.log('one line logo');				
 			$notMenuIcon.addClass('lighter-nav-icons'); // grey out other icons
@@ -278,7 +277,7 @@
 	 	else
 			$folkwaysNav.show(); // reset folkways nav, but not on mobile
 	 		
-		$navBar.removeClass('navbar--open');
+		site.navbar.removeClass('navbar--open');
 		$allIcons.removeClass('lighter-nav-icons');
 		$megaNav.add($searchBar).add($browsenav).add($socialMediaIcons).hide(); // close auxiliaries
 		console.log('all closed');
@@ -286,7 +285,7 @@
 		searchClosed = true;
 		shareClosed = true;
 
-		site.$navbar.removeClass('logo-swap'); // switch back to block logo
+		site.navbar.removeClass('logo-swap'); // switch back to block logo
 	}
 
 

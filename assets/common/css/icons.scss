@@ -159,7 +159,7 @@
 		cursor: pointer;
 		line-height: 1;
 		&-text {
-			@include sans-xxs;
+			@include sans-caption;
 			display: inline-block;
 			vertical-align: top;
 			line-height: 1.1; // match section header for alignment

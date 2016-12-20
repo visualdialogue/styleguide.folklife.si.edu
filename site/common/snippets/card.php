@@ -4,7 +4,7 @@
 <?php elseif($src = $card->image()): ?>
 <?php $image = $src; ?>
 <?php endif; ?>
-<li class="card card-horizontal <? if (isset($card_classes)) echo $card_classes ?> <? if ($card->type() == 'audio') echo 'audio-card' ?>">
+<li class="card <? if (isset($card_classes)) echo $card_classes ?> <? if ($card->type() == 'audio') echo 'audio-card' ?>">
   <div class="image"><a href="<?= $card->url() ?>"><img src="<?= $image->url() ?>"/></a></div>
   <div data-video-id="<?= $card->video_id() ?>" data-title="<?= $card->title() ?>" data-description="<?= $card->copy() ?>" class="video">
     <div class="center-box">
@@ -27,6 +27,10 @@
         <?php echo $card->date(); ?></div>
       <?php endif; ?><a href="<?= $card->url() ?>" class="high title"><span class="light"><span class="er">
             <?php echo htmlspecialchars($card->title(), ENT_QUOTES, 'UTF-8'); ?></span></span></a>
+      <?php if('' != $card->audio_album()): ?>
+      <div class="subtitle">
+        <?php echo $card->audio_album(); ?></div>
+      <?php endif; ?>
       <?php if (isset($blurb)): ?>
       <div class="description link-underline blurb">
         <?php echo $card->blurb()->kt(); ?></div>

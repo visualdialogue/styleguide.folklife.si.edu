@@ -62,14 +62,14 @@
 		background-color: $black80; // new
 		text-align:right;
 		line-height:2vw;
-		@include sans-xxxs;
+		// line-height:2rem;
+		@include sans-mini;
 		font-weight: 500;
 		line-height: 1;
 		@include respond-to(break2) {
 			display: block;
 			position: absolute; // height 72px
 			width: 100%;
-			text-transform: uppercase;
 			padding-top: 0.8rem;
 			height: $navbarSiteToggle--tablet;
 		}
@@ -82,8 +82,8 @@
 	.tagline {
 		display: none;
 		color: $tagline;
-		// @include respond-to(breakTagline) {
-		@include respond-to(break2) {
+		@include respond-to(breakTagline) {
+		// @include respond-to(break2) {
 			display: inline-block;
 		}
 	}
@@ -131,11 +131,13 @@
 	
 
 	.navbar-brand {
+		height: auto; // bootstrap override
 		padding-left:0 !important; // bootstrap override
 		margin-left: 0 !important; // bootstrap override
 		font-size: 10px; // prevent gap to sunsplash
-		padding: 10px 0 0 0;
-		@include navbarHeight--subpage;
+		// padding: 10px 0 0 0;
+		// padding: 0 !important ;
+		// @include navbarHeight--subpage;
 		@include respond-to(break2) {
 			// height: 115px; // old
 			// height: $navbarHeight--home--tablet; // new
@@ -147,6 +149,7 @@
 			// padding: 23px 0 18px 0;
 			// padding: 20px 0 18px 0;
 			// line up with left side
+			padding-top: 10px !important; // bootstrap override
 			font-size: 25px; // back to normal
 
 			// height: 118px; // from layout
@@ -219,6 +222,9 @@
 		left: 0;
 	}
 	.navbar.logo-swap {
+		.navbar-brand {
+			padding: 0 !important; // bootstrap override
+		}
 		.block-logo {
 			display: none;
 		}
@@ -229,6 +235,10 @@
 	.one-line-logo {
 		display: none;
 		width:25vw;
+		// width:5rem;
+		@include respond-to(break2max) {
+			margin-top: 0.2rem;
+		}
 		@include respond-to(break2) {width:11vw;}
 		@include respond-to(fullwidth) {width:160px;}
 	}
@@ -289,6 +299,7 @@
 		right: 0;
 		text-align:right;
 		margin-top: 2vw; // 12.16 to help with new hamburger nav
+		margin-top: 0.5rem; // 12.19
 		margin-right: -10px;
 		@include respond-to(break2) {
 			margin-top:0.5vw; // 12.16
@@ -406,14 +417,13 @@
 		}
 		&-list {
 			display: none;
+			@include margin-bottom(2.2);
+			@include respond-to(break2max) {
+				margin-bottom: 0;
+			}
 			@include respond-to(break2) {
 				display: inline-block;
-				// margin-bottom: 15vw;
 			}
-			// @include respond-to(fullwidth) {
-				// margin-bottom: 12rem;
-			// }
-			@include margin-bottom(2.2);
 		}
 
 		&-sub-item {

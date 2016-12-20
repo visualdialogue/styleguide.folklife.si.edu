@@ -5,7 +5,7 @@
 	-$image = $src
 -endif
 
-li.card.col-sm-3.border-top(class="<? if ($card->type() == 'video' || ((isset($type)) && ($type == 'video'))) echo 'card-video'?>")
+li.card.col-sm-3.border-top.blog-card(class="<? if ($card->type() == 'video' || ((isset($type)) && ($type == 'video'))) echo 'card-video'?>")
 	.card-inner
 		.details
 			.details-inner

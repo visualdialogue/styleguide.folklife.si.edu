@@ -42,16 +42,18 @@ conversion: 				| mobile 	| tablet	| desktop
   * Accomplished by taking full height and subtracting height of navbar
   **********/
   // height of site toggle area on tablet and desktop
-  $navbarSiteToggle--tablet: 2.5vw;
+  // $navbarSiteToggle--tablet: 2.5vw;
+  $navbarSiteToggle--mobile: 0px;
+  $navbarSiteToggle--tablet: 3.5rem;
   $navbarSiteToggle--desktop: 36px;
 
   // height of navbar on tablet and desktop
   // $navbarHeight--home--mobile: 11vw;
   // $navbarHeight--home--mobile: 9vw; // new hamburger nav
-  $navbarHeight--home--mobile: 12vw; // new hamburger nav
   $navbarHeight--home--mobile: 5.5rem; // new hamburger nav
-  $navbarHeight--subpage--mobile: 12vw;
-  $navbarHeight--subpage--mobile--smaller: 12vw;
+  $navbarHeight--subpage--mobile: 6.2rem;
+  // $navbarHeight--subpage--mobile--smaller: 12vw;
+  $navbarHeight--subpage--mobile--smaller: 5rem;
   $navbarHeight--home--tablet: 5.1vw;
   // $navbarHeight--home--tablet: 6.29vw;
   $navbarHeight--subpage--tablet: 15.1vw;
@@ -60,15 +62,18 @@ conversion: 				| mobile 	| tablet	| desktop
   $navbarHeight--desktop: 80px;
 
   // spacer for logo
-  $logoSpacer--mobile:5px;
-  $logoSpacer--tablet:10vw;
-  $logoSpacer--desktop:153px; // from layout
+  $logoSpacer--mobile:20vw;
+  $logoSpacer--tablet:9vw;
+  // $logoSpacer--desktop:153px; // from layout
+  $logoSpacer--desktop:125px; // from layout
 
   // height of toggle, navbar, and spacer
   // $headerHeight--home--mobile: 7.4vw; // temp for mobile
   $headerHeight--home--mobile: 5.5rem; // temp for mobile
   // $headerHeight--home--mobile: 7rem; // temp for mobile
-  $headerHeight--subpage--mobile: 34vw; // temp for mobile
+  // $headerHeight--subpage--mobile: 34vw; // temp for mobile
+  // $headerHeight--subpage--mobile: 16rem; // temp for mobile
+  $headerHeight--subpage--mobile:#{$navbarHeight--subpage--mobile} + #{$navbarSiteToggle--mobile} + #{$logoSpacer--mobile};
   $headerHeight--home--tablet:#{$navbarHeight--home--tablet} + #{$navbarSiteToggle--tablet};
   $headerHeight--subpage--tablet:#{$navbarHeight--subpage--tablet} + #{$navbarSiteToggle--tablet} + #{$logoSpacer--tablet};
   $headerHeight--home--desktop:#{$navbarHeight--desktop} + #{$navbarSiteToggle--desktop};
@@ -76,7 +81,7 @@ conversion: 				| mobile 	| tablet	| desktop
 
 
   // tab heights for Festival on homepage so can peek from bottom
-  $tabHeight--mobile:16vw;
+  $tabHeight--mobile:12rem;
   // $tabHeight--tablet:6.5vw;
   $tabHeight--tablet:4.7vw;
   $tabHeight--desktop:94px;
@@ -112,7 +117,7 @@ conversion: 				| mobile 	| tablet	| desktop
   }
 
   @mixin headerHeight--subpage {
-    height:$headerHeight--subpage--mobile;
+    height:calc(#{$headerHeight--subpage--mobile});
     @include respond-to(break2) {height:calc(#{$headerHeight--subpage--tablet});}
     @include respond-to(fullwidth) {height:calc(#{$headerHeight--subpage--desktop});}
   }
@@ -134,94 +139,97 @@ conversion: 				| mobile 	| tablet	| desktop
   /*******
   * set margins with scales
   *******/
+  // $scale: 0.625;
+  $scale: 0.5625; // major 2nd / 2 
+  $mobile-scale: 0.64; // major 2nd / major 2nd
   @mixin right($distance) {
-    right:#{$distance * 1.25}vw; // eg. 5rem
-    @include respond-to(break2) {right:#{$distance * 0.625}vw;} // eg 2.5vw
+    right:#{$distance / $mobile-scale }vw; // eg. 5rem
+    @include respond-to(break2) {right:#{$distance * $scale}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {right:#{$distance}rem;} // eg 4rem
   }
   @mixin left($distance) {
-    left:#{$distance * 1.25}vw; // eg. 5rem
-    @include respond-to(break2) {left:#{$distance * 0.625}vw;} // eg 2.5vw
+    left:#{$distance / $mobile-scale }vw; // eg. 5rem
+    @include respond-to(break2) {left:#{$distance * $scale}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {left:#{$distance}rem;} // eg 4rem
   }
   @mixin margin($margin) {
-    margin:#{$margin * 1.25}vw; // eg. 5rem
-    @include respond-to(break2) {margin:#{$margin * 0.625}vw;} // eg 2.5vw
+    margin:#{$margin / $mobile-scale }vw; // eg. 5rem
+    @include respond-to(break2) {margin:#{$margin * $scale}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {margin:#{$margin}rem;} // eg 4rem
   }
   @mixin margin-top($margin) {
-    margin-top:#{$margin * 1.25}vw; // eg. 5rem
-    @include respond-to(break2) {margin-top:#{$margin * 0.625}vw;} // eg 2.5vw
+    margin-top:#{$margin / $mobile-scale }vw; // eg. 5rem
+    @include respond-to(break2) {margin-top:#{$margin * $scale}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {margin-top:#{$margin}rem;} // eg 4rem
   }
   @mixin margin-right($margin) {
-    margin-right:#{$margin * 1.25}vw; // eg. 5rem
-    @include respond-to(break2) {margin-right:#{$margin * 0.625}vw;} // eg 2.5vw
+    margin-right:#{$margin / $mobile-scale }vw; // eg. 5rem
+    @include respond-to(break2) {margin-right:#{$margin * $scale}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {margin-right:#{$margin}rem;} // eg 4rem
   }
   @mixin margin-bottom($margin) {
-    margin-bottom:#{$margin * 1.25}vw; // eg. 5rem
-    margin-bottom:#{$margin / 2}rem; // eg. 5rem
-    @include respond-to(break2) {margin-bottom:#{$margin * 0.625}vw;} // eg 2.5vw
+    // margin-bottom:#{$margin / $mobile-scale }vw; // eg. 5rem
+    margin-bottom:#{$margin / 1.125}rem; // eg. 5rem
+    @include respond-to(break2) {margin-bottom:#{$margin * $scale}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {margin-bottom:#{$margin}rem;} // eg 4rem
   }
   @mixin margin-left($margin) {
-    margin-left:#{$margin * 1.25}vw; // eg. 5rem
-    @include respond-to(break2) {margin-left:#{$margin * 0.625}vw;} // eg 2.5vw
+    margin-left:#{$margin / $mobile-scale }vw; // eg. 5rem
+    @include respond-to(break2) {margin-left:#{$margin * $scale}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {margin-left:#{$margin}rem;} // eg 4rem
   }
 
   @mixin padding($padding) {
-    padding:#{$padding * 1.25}vw; // eg. 5rem
-    @include respond-to(break2) {padding:#{$padding * 0.625}vw;} // eg 2.5vw
+    padding:#{$padding / $mobile-scale }vw; // eg. 5rem
+    @include respond-to(break2) {padding:#{$padding * $scale}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {padding:#{$padding}rem;} // eg 4rem
   }
   @mixin padding-top($padding) {
-    padding-top:#{$padding * 1.25}vw; // eg. 5rem
-    @include respond-to(break2) {padding-top:#{$padding * 0.625}vw;} // eg 2.5vw
+    padding-top:#{$padding / $mobile-scale }vw; // eg. 5rem
+    @include respond-to(break2) {padding-top:#{$padding * $scale}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {padding-top:#{$padding}rem;} // eg 4rem
   }
   @mixin padding-right($padding) {
-    padding-right:#{$padding * 1.25}vw; // eg. 5rem
-    @include respond-to(break2) {padding-right:#{$padding * 0.625}vw;} // eg 2.5vw
+    padding-right:#{$padding / $mobile-scale }vw; // eg. 5rem
+    @include respond-to(break2) {padding-right:#{$padding * $scale}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {padding-right:#{$padding}rem;} // eg 4rem
   }
   @mixin padding-bottom($padding) {
-    padding-bottom:#{$padding * 1.25}vw; // eg. 5rem
-    @include respond-to(break2) {padding-bottom:#{$padding * 0.625}vw;} // eg 2.5vw
+    padding-bottom:#{$padding / $mobile-scale }vw; // eg. 5rem
+    @include respond-to(break2) {padding-bottom:#{$padding * $scale}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {padding-bottom:#{$padding}rem;} // eg 4rem
   }
   @mixin padding-left($padding) {
-    padding-left:#{$padding * 1.25}vw; // eg. 5rem
-    @include respond-to(break2) {padding-left:#{$padding * 0.625}vw;} // eg 2.5vw
+    padding-left:#{$padding / $mobile-scale }vw; // eg. 5rem
+    @include respond-to(break2) {padding-left:#{$padding * $scale}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {padding-left:#{$padding}rem;} // eg 4rem
   }
   @mixin top($top) {
-    top:#{$top * 1.25}vw; // eg. 5rem
-    @include respond-to(break2) {top:#{$top * 0.625}vw;} // eg 2.5vw
+    top:#{$top / $mobile-scale }vw; // eg. 5rem
+    @include respond-to(break2) {top:#{$top * $scale}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {top:#{$top}rem;} // eg 4rem
   }
   @mixin bottom($bottom) {
-    bottom:#{$bottom * 1.25}vw; // eg. 5rem
-    @include respond-to(break2) {bottom:#{$bottom * 0.625}vw;} // eg 2.5vw
+    bottom:#{$bottom / $mobile-scale }vw; // eg. 5rem
+    @include respond-to(break2) {bottom:#{$bottom * $scale}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {bottom:#{$bottom}rem;} // eg 4rem
   }
   @mixin width($width) {
-    width:#{$width * 1.25}vw; // eg. 5rem
+    width:#{$width / $mobile-scale }vw; // eg. 5rem
     // width:#{$width * 2.5}vw; // eg. 5rem
-    @include respond-to(break2) {width:#{$width * 0.625}vw;} // eg 2.5vw
+    @include respond-to(break2) {width:#{$width * $scale}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {width:#{$width}rem;} // eg 4rem
   }
   @mixin height($height) {
-    height:#{$height * 1.25}vw; // eg. 5rem
+    height:#{$height / $mobile-scale }vw; // eg. 5rem
     // height:#{$height * 2.5}vw; // eg. 5rem
-    @include respond-to(break2) {height:#{$height * 0.625}vw;} // eg 2.5vw
+    @include respond-to(break2) {height:#{$height * $scale}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {height:#{$height}rem;} // eg 4rem
   }
   @mixin min-height($height) {
-    min-height:#{$height * 1.25}vw; // eg. 5rem
+    min-height:#{$height / $mobile-scale }vw; // eg. 5rem
     // min-height:#{$height * 2.5}vw; // eg. 5rem
-    @include respond-to(break2) {min-height:#{$height * 0.625}vw;} // eg 2.5vw
+    @include respond-to(break2) {min-height:#{$height * $scale}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {min-height:#{$height}rem;} // eg 4rem
   }
   @mixin col {

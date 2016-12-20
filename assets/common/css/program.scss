@@ -41,7 +41,7 @@
 		}
 		figcaption {
 			color: $black60;
-			@include sans-xxs;
+			@include sans-caption;
 			@include margin-top(2);
 		}
 		.program-resources {
@@ -79,7 +79,7 @@
 			color: white;
 			// background-color: $black50;
 			background-color: rgba($black70, 0.9);
-			@include sans-xxs;
+			@include sans-caption;
 			width: 100%;
 
 			cursor: pointer;
@@ -215,7 +215,7 @@
 			@include margin-bottom(2);
 		}
 		&-credits {
-			@include sans-xxs;
+			@include sans-caption;
 			color: $black50;
 			@include margin-top(5);
 		}
@@ -244,7 +244,7 @@
 			border-color: $fs-green;
 			font-weight: 600;
 			&.small {
-				@include sans-xxs;
+				@include sans-caption;
 				color: $black50;
 				text-transform: uppercase;
 			}
@@ -302,6 +302,6 @@
 			@include margin-top(0.5);
 		}
 		.blurb {
-			@include sans-xxs;
+			@include sans-caption;
 		}
 	}

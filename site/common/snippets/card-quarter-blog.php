@@ -4,7 +4,7 @@
 <?php elseif($src = $card->image()): ?>
 <?php $image = $src; ?>
 <?php endif; ?>
-<li class="card col-sm-3 border-top <? if ($card->type() == 'video' || ((isset($type)) && ($type == 'video'))) echo 'card-video'?>">
+<li class="card col-sm-3 border-top blog-card <? if ($card->type() == 'video' || ((isset($type)) && ($type == 'video'))) echo 'card-video'?>">
   <div class="card-inner">
     <div class="details">
       <div class="details-inner">

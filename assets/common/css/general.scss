@@ -231,18 +231,14 @@ ul {margin: 0;}
 	section {
 		// margin-bottom: 0;
 		position: relative; // contain more link
-		@include respond-to(break2) {
-			margin-bottom: 2.3vw;
-			// margin-bottom: 4.6vw;
-		}
-		@include respond-to(fullwidth) {
-			// margin-bottom: 3.5rem;
-			// margin-bottom: 5.5rem;
-			// margin-bottom: 4rem;
-			// margin-bottom: 7.3rem; // with line height this equals 80 below for most sections
-			// margin-bottom: 6rem; // tighten up for shop banner
-			margin-bottom: 2rem; // less because rely on content above to have own padding
-		}
+		// @include respond-to(break2) {
+		// 	margin-bottom: 2.3vw;
+		// 	// margin-bottom: 4.6vw;
+		// }
+		// @include respond-to(fullwidth) {
+		// 	margin-bottom: 2rem; // less because rely on content above to have own padding
+		// }
+		@include margin-bottom(2);
 
 	}
 	section li {
@@ -275,10 +271,9 @@ ul {margin: 0;}
 			@include margin-bottom(1.1);
 		}
 		h4, &-item-title {
-			@include sans-xxxs;
+			@include sans-mini;
 			@include margin-top(0.6);
 			color: $black50;
-			text-transform: uppercase;
 			margin: 0;
 		}
 		&-item {
@@ -305,9 +300,9 @@ ul {margin: 0;}
 				margin-bottom: 0rem;
 			}
 		}
-		&-copy {
-			@include sidebar-copy;
-		}
+		// &-copy {
+		// 	@include sidebar-copy;
+		// }
 		.sidebar-highlight {
 			&.active, &:hover {
 				background-color: $black10;
@@ -333,7 +328,7 @@ ul {margin: 0;}
 		height:11px;
 		background-image:url(/assets/images/hr.jpg);
 		// margin-bottom: 5vw;
-		margin-top: 10vw;
+		// margin-top: 10vw;
 		@include respond-to(break2) {
 			// margin-bottom: 2.6vw;
 			margin-top:0;
@@ -361,6 +356,9 @@ ul {margin: 0;}
 			margin-top:0.8rem;
 			margin-bottom:3.75rem;
 		}
+	}
+	.mobile-only-hr {
+		margin-bottom: 1rem;
 	}
 
 	// sub pages
@@ -541,7 +539,7 @@ ul {margin: 0;}
 /* #Newsletter Signup
 -------------------------------------------------- */
 	.newsletter-signup-section, .support-section, .support-folkways {
-		@include sans-xxs;
+		@include sans-caption;
 	}
 	.newsletter-signup-section, .support-section {
 		margin-bottom: 2rem;
@@ -555,7 +553,7 @@ ul {margin: 0;}
 		@include padding-right(2);
 		@include padding-left(2);
 		@include padding-bottom(2);
-		@include sans-xxs;
+		@include sans-caption;
 	}
 	.newsletter-signup-form {
 		width: 100%;

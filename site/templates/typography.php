@@ -191,11 +191,11 @@
   </div>
   <div class="row">
     <div class="col-md-4">
-      <div class="sans-xxs">Extra Extra Small Sans</div>
+      <div class="sans-caption">Extra Extra Small Sans</div>
     </div>
     <div class="col-md-7">
       <pre><code>// Extra Extra Small Sans
-@mixin sans-xxs {
+@mixin sans-caption {
 	font-family: $sans;
 	font-weight: 300; // light for acumin
 	line-height: 1.2;

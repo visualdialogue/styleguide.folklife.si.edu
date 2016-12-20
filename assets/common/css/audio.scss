@@ -1,48 +1,37 @@
 // .audio-section {
 .cards--audio-player {
-	.details-inner {
-		position: relative; // contain player
-		border: 2px solid $black15;		
-		// @include padding-bottom(2);
-		// min-height: 60vw !important;
-		// @include min-height(24);
+	// .details-inner {
+	// 	position: relative; // contain player
+	// 	border: 2px solid $black15;		
+	// 	// @include padding-bottom(2);
+	// 	// min-height: 60vw !important;
+	// 	// @include min-height(24);
 
-		min-height:46vw; // height of Quelbe!
-		// min-height:56vw; // height of Quelbe!
-		@include respond-to(break2) {min-height:19vw;}
-		@include respond-to(fullwidth) {min-height:27rem;}
+	// 	min-height:46vw; // height of Quelbe!
+	// 	// min-height:56vw; // height of Quelbe!
+	// 	@include respond-to(break2) {min-height:19vw;}
+	// 	@include respond-to(fullwidth) {min-height:27rem;}
 
-		@include padding-left(2); // inset by default
-	}
-	.icon-play-button {
-		// @include respond-to(break2) {width: 33%;}
-	}
-	.title-wrapper {
-		@include respond-to(break2max) {
-			min-height: 24vw; // for 2 line album titles
-		}
-		// margin-bottom: 3vw;
-		@include respond-to(break2) {
-			// min-height: 4.8rem;
-			// min-height: 5.4vw; // for 2 line album titles
-			// margin-bottom: 2.9vw;
-			// margin-bottom: 0;
-		}
-		@include respond-to(fullwidth) {
-			// min-height: 10rem;
-			// margin-bottom: 0;
-		}
-	}
-	.title {
-		@extend %title--sans;
-	}
-	.subtitle, .artist {
-		@include sans-xxs;
-	}
+	// 	@include padding-left(2); // inset by default
+	// }
+	// .icon-play-button {
+	// 	// @include respond-to(break2) {width: 33%;}
+	// }
+	// .title-wrapper {
+	// 	@include respond-to(break2max) {
+	// 		min-height: 24vw; // for 2 line album titles
+	// 	}
+	// }
+	// .title {
+	// 	@extend %title--sans;
+	// }
+	// .subtitle, .artist {
+	// 	@include sans-caption;
+	// }
 }
-.cards--listen {
-	margin-bottom: 0.6rem; // for 80px to hr
-}
+// .cards--listen {
+// 	margin-bottom: 0.6rem; // for 80px to hr
+// }
 .audio-player__details, .audio-progress-bar, .audio-time, .volume {
 	display: inline-block;
 	vertical-align: bottom;
@@ -58,24 +47,6 @@
 	width: 100%;
 	right: 0;
 	@include padding(2);
-	@include respond-to(break2) {
-		// margin-top: 2vw;
-		// margin-top: 0.7vw;
-		// move to bottom 
-		// position: absolute;
-		// width: 17vw;
-		// bottom: 1.5vw;
-	}
-	@include respond-to(fullwidth) {
-		// margin-top: 2.8rem;
-		// width: 77%;
-		// bottom: 2.2rem;
-		// margin-top: 1.2rem;
-	}
-
-
-	// bottom: 2.2rem;
-	// @include bottom(2.5);
 }
 .audio-player__details {
 	width:67%;
@@ -86,8 +57,6 @@
 .audio-progress-bar {
 	margin-bottom: 4px;
 	max-width: 100%;
-	// max-width: 90%;
-	// width: 72%;
 }
 .volume {
 	display: none;
@@ -99,5 +68,5 @@
 	}
 }
 .audio-time {
-	@include sans-xxs;
+	@include sans-caption;
 }

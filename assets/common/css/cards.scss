@@ -1,6 +1,12 @@
 .card {
 	// for consistency with rows of cards and next sections
 	@include margin-bottom(4);
+	@include respond-to(break2max) {
+		.image, .video {
+			// margin-bottom: 1rem;
+		}	
+	}
+	
 }
 
 
@@ -72,17 +78,8 @@ a.details {
 	display: inline-block; // so a tag doesn't get rid of margins
 	width: 100%; // text align center does exactly that
 }
-.title--serif {
-	@include serif-md;
-}
-.title--sans {
-	@extend %title--sans;
-}
-.subtitle--sans {
-	@include sans-xxs;
-}
 .tag {
-	@include tag;
+	@include sans-tag;
 }
 .date {@include date;}
 .date-sm {@include date-sm;}
@@ -132,11 +129,19 @@ a.details {
 			@include respond-to(break2max) {
 				min-height:55vw !important; // override audio card
 			}
-			@include respond-to(break2) {min-height:17vw;}
+			@include respond-to(break2) {min-height:20vw;}
 			@include respond-to(fullwidth) {min-height:25rem;}
 		}
 	}
 
+
+/* #blog on festival on and off pages
+-------------------------------------------------- */
+	.blog-card {
+		@include respond-to(break2max) {
+			margin-bottom: 4rem;
+		}
+	}
 
 /* #audio
 -------------------------------------------------- */
@@ -149,10 +154,13 @@ a.details {
 			font-weight: 500;
 			margin-bottom:0;
 		}
+		.subtitle, .artist {
+			@include sans-caption;
+		}
 		.details-inner {
 			position: relative; // hold player
 			min-height:46vw;
-			@include respond-to(break2) {min-height:17vw;}
+			@include respond-to(break2) {min-height:20vw;}
 			@include respond-to(fullwidth) {min-height:25rem;}
 		}
 	}
@@ -257,7 +265,7 @@ a.details {
 	.remodal-title {
 		// font-size:1.4rem; // 28px
 		margin-bottom:10px;
-		@include sans-xxs;
+		@include sans-caption;
 	}
 
 
@@ -637,7 +645,7 @@ a.details {
 			padding-bottom:0;
 		}
 		.details {
-			@include sans-xxs;
+			@include sans-caption;
 			padding-left:0;
 		}
 		
@@ -710,14 +718,14 @@ a.details {
 			display: none; // hide copy on cards
 		}
 		.title {
-			@include sans-xxs;
+			@include sans-caption;
 			font-weight: 700;
 			line-height: 1;
 
 			// @include margin-bottom(2);
 		}
 		.artist {
-			@include sans-xxs;
+			@include sans-caption;
 			// @include margin-top(-0.2); // close the gap a bit
 		}
 		@include respond-to(break2) {
@@ -777,14 +785,14 @@ a.details {
 			}
 		}
 		.title {
-			@include sans-xxs;
+			@include sans-caption;
 			color: white;
 			font-weight: bold;
 			text-align: center;
 			@include margin-bottom(0.5);
 		}
 		.price {
-			@include sans-xxs;
+			@include sans-caption;
 			color: $black70;
 			text-align: center;
 		}
