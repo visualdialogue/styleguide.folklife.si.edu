@@ -8,41 +8,20 @@ head
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	<title>Smithsonian Center for Folklife and Cultural Heritage | <?php echo $page->title()->html() ?></title>
 	
-	//- Typekit async
-	<script>(function(d) {var config = {kitId: 'roi1emx',scriptTimeout: 3000,async: true},h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)})(document);</script>
-	//- hide text until loaded, like render blocking but just invisible, from http://blog.typekit.com/2010/10/29/font-events-controlling-the-fout/
-	style.
-		.wf-loading .tagline,
-		.wf-loading .site-toggle-link,
-		.wf-loading .title,
-		.wf-loading .section-title {
-			/* Hide the blog title and post titles while web fonts are loading */
-			visibility: hidden;
-		}
+	-snippet('header-fonts')
 
-	//- <script src="https://use.typekit.net/roi1emx.js"></script>
-	//- <script>try{Typekit.load({ async: true });}catch(e){}</script>
+	-snippet('header-shim')
 
-	//- Google Fonts - Archivo Narrow substitute for Knockout
-	//- LOADING 400 AND 700 RIGHT NOW
-	//- <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow:400,700" rel="stylesheet"> 
-
-	<!-- “Entypo pictograms by Daniel Bruce — www.entypo.com” -->
-	<!-- Font Awesome icons by Dave Gandy -->
-
-	//- <link href="assets/css/bootstrap.css" rel="stylesheet"> // moved to @import in scss file
-	
-
+	-snippet('header-favicons')
 
 	//- never cache css in development because echoing php time stamp
 	//- <link href="assets/css/folklife.css?v=<?= time() ?>" rel="stylesheet">
 	//- from https://github.com/filamentgroup/loadCSS
 
 	//- critical css
-	<style>
-	/*- include './assets/css/critical.css'*/
-	</style>
+	<style>/*- include './assets/css/critical.css'*/</style>
 	//- async rest of css
+	!= css('assets/css/folklife.css')
 	//- <link rel="preload" href="assets/css/folklife.css?v=<?= time() ?>" as="style" onload="this.rel='stylesheet'">
 	//- no js fallback for rest of css
 	//- <noscript><link href="assets/css/folklife.css?v=<?= time() ?>" rel="stylesheet"></noscript>
@@ -69,34 +48,29 @@ head
 #site-toggle.site-toggle
 	.container
 		.tagline Championing Culture for, by, and of the People
+		a.site-toggle-link.folklife-site-toggle-link.active(href="/") Folklife
 		-if (c::get('isDev')):
-			a.site-toggle-link.folklife-site-toggle-link.active(href="http://localhost:3003") Folklife
-		- else:
-			a.site-toggle-link.folkways-site-toggle-link(href="http://folklife.lukehatfield.com") Folkways
-		-endif
-		-if (c::get('isDev')):
-			a.site-toggle-link.festival-site-toggle-link(href="http://localhost:3009") Folkways
+			a.site-toggle-link.festival-site-toggle-link(href="http://localhost:3005") Folkways
 		- else:
 			a.site-toggle-link.folkways-site-toggle-link(href="http://folkways.lukehatfield.com") Folkways
 		-endif
 		-if (c::get('isDev')):
-			a.site-toggle-link.folklife-site-toggle-link(href="http://localhost:3005") Festival
+			a.site-toggle-link.folklife-site-toggle-link(href="http://localhost:3003") Festival
 		- else:
 			a.site-toggle-link.festival-site-toggle-link(href="http://on.festival.lukehatfield.com") Festival
 		-endif
 //- nav.navbar.navbar-fixed-top
 .navbar-outside
 nav.navbar#navbar
-	.navbar-header
-		.navbar-header-inner
-			.navbar-brand(href="#")
-				img.sunsplash(src="assets/images/logo/sunsplash.png")
-				a.logo-mask(href="/")
-					.logo__copy
-						img.logo--folklife(src="assets/images/logo/folklife.png")
-						img.logo--center(src="assets/images/logo/center.png")
-			.nav-icons											
-				.icon-menu.nav-icon.main-nav-icon#menu-icon(aria-hidden="true")
+	.navbar-header.container
+		.navbar-header-inner.row
+			.navbar-brand.col-sm-2
+				.logo
+					a(href="/")
+						img#block-logo.block-logo.folkways-block-logo(src="/assets/images/logo/folklife-block-logo_2016.12.17.png")
+						img#one-line-logo.one-line-logo.folklife-one-line-logo(src="/assets/images/logo/folklife-one-line-logo_2016.12.15.png")
+			-snippet('nav-icons-search')
+
 
 	.header-nav#header-nav
 		.container

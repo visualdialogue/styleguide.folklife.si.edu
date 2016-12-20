@@ -41,54 +41,15 @@ footer.footer#footer
 					li.footer-nav-sub-item: a(href="/libraries#bootstrap") Bootstrap
 					li.footer-nav-sub-item: a(href="/libraries#sass") SASS
 			
-		hr
-		ul.footer-row.footer-row-2.row
-			li.footer-main-item.col-sm-3
-				.footer-logo.active-footer-logo
-					a
-						img.footer-logo-img.folklife-footer-logo-img(src="/assets/images/logo/smithsonian_center_for_folklife_and_cultural_heritage.png?v=2016.10.21") 
-						//- img.sunsplash(src="/assets/images/logo/sunsplash.png")
-						//- | Smithsonian Center for Folklife and Cultural Heritage
-			li.footer-main-item.col-sm-3 
-				.footer-logo
-					a
-						img.footer-logo-img(src="/assets/images/logo/smithsonian_folkways_recordings.png?v=2016.10.21") 
-						//- img.sunsplash(src="/assets/images/logo/sunsplash.png")
-						//- | Smithsonian Folkways
-			li.footer-main-item.col-sm-3 
-				.footer-logo
-					a
-						img.footer-logo-img(src="/assets/images/logo/smithsonian_folklife_festival.png?v=2016.10.21") 
-						//- img.sunsplash(src="/assets/images/logo/sunsplash.png")
-						//- | Smithsonian Folklife Festival
-			//- li.footer-main-item.col-sm-2 
-			li.footer-main-item.col-sm-1 
-				ul.footer-list.copyright-list
-					li.footer-sub-item.copyright-list-item Copyright
-					li.footer-sub-item.copyright-list-item Contact
-					li.footer-sub-item.copyright-list-item Privacy
-					li.footer-sub-item.copyright-list-item Credits
-			li.footer-main-item.col-sm-2.social-media
-				.footer-sub-item.social-media-title Connect with us
-				ul.footer-list
-					li.social-media-icon: a(href="https://www.facebook.com/smithsonianfolklifefestival" target="_blank").icon-facebook
-					li.social-media-icon: a(href="https://twitter.com/smithsonianfolk" target="_blank").icon-twitter
-					li.social-media-icon: a(href="http://smithsonianfolklife.tumblr.com/" target="_blank").icon-tumblr
-					li.social-media-icon: a(href="https://www.flickr.com/groups/2016folklifefestival" target="_blank").icon-flickr
-					li.social-media-icon: a(href="https://www.instagram.com/smithsonianfolklife/" target="_blank").icon-instagrem
-		ul.footer-row.footer-row-3.row
-			li.footer-main-item.col-sm-3
-				.smithsonian-institution-logo
-					img(src="/assets/images/logo/smithsonian_institution.png?v=2016.10.21") 
-			li.footer-main-item.col-sm-4.copyright-wrapper
-				.copyright
-					&copy; 2016 Smithsonian Institution
+		-snippet('footer-common')
+
+-snippet('footer-remodal')
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 //- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-//- <script src="/assets/js/vendor.js?v=<?= time() ?>"></script>
-<script src="/assets/js/scripts-min.js?v=<?= time() ?>"></script>
+//- <script src="assets/js/vendor.js?v=<?= time() ?>"></script>
+<script src="assets/js/scripts-min.js?v=<?= time() ?>"></script>
 //- js fallback for async css if browser doesn't preload css
 <script>loadCSS( "/assets/css/folklife.css?v=<?= time() ?>" );</script>
 

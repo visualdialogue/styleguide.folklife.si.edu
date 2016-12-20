@@ -124,13 +124,16 @@ a.details {
 		.description {
 
 		}
-		.details-inner {
-			// min-height:46vw;
-			@include respond-to(break2max) {
-				min-height:55vw !important; // override audio card
+		&, &.audio-card {
+			.details-inner {
+				// min-height:46vw;
+				@include respond-to(break2max) {
+					// min-height:55vw !important; // override audio card
+					min-height: 25rem;
+				}
+				@include respond-to(break2) {min-height:20vw;}
+				@include respond-to(fullwidth) {min-height:25rem;}
 			}
-			@include respond-to(break2) {min-height:20vw;}
-			@include respond-to(fullwidth) {min-height:25rem;}
 		}
 	}
 

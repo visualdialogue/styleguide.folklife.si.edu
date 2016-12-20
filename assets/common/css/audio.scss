@@ -49,14 +49,20 @@
 	@include padding(2);
 }
 .audio-player-details {
+	line-height: 1;
 	width:67%;
 	@include respond-to(break2) {width:73%;}
-	@include respond-to(fullwidth) {width:75%;}
+	@include respond-to(fullwidth) {
+		width:75%;
+		// line-height: 1.3333;
+	}
 	@include padding-left(1);
 }
 .audio-progress-bar {
-	margin-bottom: 4px;
 	max-width: 100%;
+	@include respond-to(break2) {
+		margin-bottom: 4px;
+	}
 }
 .volume {
 	display: none;
@@ -69,4 +75,7 @@
 }
 .audio-time {
 	@include sans-caption;
+	@include respond-to(break2full) {
+		font-size: 1.5vw;
+	}
 }

@@ -6,21 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta robots="none"/><!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title>Smithsonian Center for Folklife and Cultural Heritage | <?php echo $page->title()->html() ?></title><script>(function(d) {var config = {kitId: 'roi1emx',scriptTimeout: 3000,async: true},h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)})(document);</script>
-  <style>
-    .wf-loading .tagline,
-    .wf-loading .site-toggle-link,
-    .wf-loading .title,
-    .wf-loading .section-title {
-    	/* Hide the blog title and post titles while web fonts are loading */
-    	visibility: hidden;
-    }
-    
-  </style>
-  <!-- “Entypo pictograms by Daniel Bruce — www.entypo.com” -->
-  <!-- Font Awesome icons by Dave Gandy --><style>
-  /*- include './assets/css/critical.css'*/
-  </style>
+  <title>Smithsonian Center for Folklife and Cultural Heritage | <?php echo $page->title()->html() ?></title>
+  <?php snippet('header-fonts'); ?>
+  <?php snippet('header-shim'); ?>
+  <?php snippet('header-favicons'); ?><style>/*- include './assets/css/critical.css'*/</style>
+  <?php echo css('assets/css/folklife.css'); ?>
   <!-- highlightjs.org for code syntax highlighting--><link href="/assets/css/highlight/styles/monokai-sublime.css" type="text/css" rel="stylesheet"><script src="/assets/js/highlight.pack.js"></script><link href="/assets/css/styleguide.css?v=<?= time() ?>" type="text/css" rel="stylesheet">
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -31,27 +21,23 @@
 </head><body class="site--folklife <?= str::lower($page->title()) ?>-page">
 <div id="site-toggle" class="site-toggle">
   <div class="container">
-    <div class="tagline">Championing Culture for, by, and of the People</div>
-    <?php if (c::get('isDev')): ?><a href="http://localhost:3003" class="site-toggle-link folklife-site-toggle-link active">Folklife</a>
-    <?php else: ?><a href="http://folklife.lukehatfield.com" class="site-toggle-link folkways-site-toggle-link">Folkways</a>
-    <?php endif; ?>
-    <?php if (c::get('isDev')): ?><a href="http://localhost:3009" class="site-toggle-link festival-site-toggle-link">Folkways</a>
+    <div class="tagline">Championing Culture for, by, and of the People</div><a href="/" class="site-toggle-link folklife-site-toggle-link active">Folklife</a>
+    <?php if (c::get('isDev')): ?><a href="http://localhost:3005" class="site-toggle-link festival-site-toggle-link">Folkways</a>
     <?php else: ?><a href="http://folkways.lukehatfield.com" class="site-toggle-link folkways-site-toggle-link">Folkways</a>
     <?php endif; ?>
-    <?php if (c::get('isDev')): ?><a href="http://localhost:3005" class="site-toggle-link folklife-site-toggle-link">Festival</a>
+    <?php if (c::get('isDev')): ?><a href="http://localhost:3003" class="site-toggle-link folklife-site-toggle-link">Festival</a>
     <?php else: ?><a href="http://on.festival.lukehatfield.com" class="site-toggle-link festival-site-toggle-link">Festival</a>
     <?php endif; ?>
   </div>
 </div>
 <div class="navbar-outside"></div>
 <nav id="navbar" class="navbar">
-  <div class="navbar-header">
-    <div class="navbar-header-inner">
-      <div href="#" class="navbar-brand"><img src="assets/images/logo/sunsplash.png" class="sunsplash"/><a href="/" class="logo-mask">
-          <div class="logo__copy"><img src="assets/images/logo/folklife.png" class="logo--folklife"/><img src="assets/images/logo/center.png" class="logo--center"/></div></a></div>
-      <div class="nav-icons">											
-        <div id="menu-icon" aria-hidden="true" class="icon-menu nav-icon main-nav-icon"></div>
+  <div class="navbar-header container">
+    <div class="navbar-header-inner row">
+      <div class="navbar-brand col-sm-2">
+        <div class="logo"><a href="/"><img id="block-logo" src="/assets/images/logo/folklife-block-logo_2016.12.17.png" class="block-logo folkways-block-logo"/><img id="one-line-logo" src="/assets/images/logo/folklife-one-line-logo_2016.12.15.png" class="one-line-logo folklife-one-line-logo"/></a></div>
       </div>
+      <?php snippet('nav-icons-search'); ?>
     </div>
   </div>
   <div id="header-nav" class="header-nav">

@@ -8032,7 +8032,6 @@ a:hover {
 
 .navbar-brand {
   height: auto;
-  padding-left: 0 !important;
   margin-left: 0 !important;
   font-size: 10px; }
   @media only screen and (min-width: 1560px) {
@@ -9351,6 +9350,7 @@ a .page-title {
       padding: 2rem; } }
 
 .audio-player-details {
+  line-height: 1;
   width: 67%;
   padding-left: 1.5625vw; }
   @media only screen and (min-width: 53.25em) {
@@ -9367,8 +9367,10 @@ a .page-title {
       padding-left: 1rem; } }
 
 .audio-progress-bar {
-  margin-bottom: 4px;
   max-width: 100%; }
+  @media only screen and (min-width: 53.25em) {
+    .audio-progress-bar {
+      margin-bottom: 4px; } }
 
 .volume {
   display: none;
@@ -9389,6 +9391,9 @@ a .page-title {
   @media only screen and (min-width: 1560px) {
     .audio-time {
       font-size: 1.873rem; } }
+  @media only screen and (min-width: 53.25em) and (max-width: 1560px) {
+    .audio-time {
+      font-size: 1.5vw; } }
 
 /* #footer
 -------------------------------------------------- */
@@ -9893,15 +9898,15 @@ a.details {
       margin-bottom: 1rem; } }
 
 @media only screen and (max-width: 53.25em) {
-  .card-program .details-inner {
-    min-height: 55vw !important; } }
+  .card-program .details-inner, .card-program.audio-card .details-inner {
+    min-height: 25rem; } }
 
 @media only screen and (min-width: 53.25em) {
-  .card-program .details-inner {
+  .card-program .details-inner, .card-program.audio-card .details-inner {
     min-height: 20vw; } }
 
 @media only screen and (min-width: 1560px) {
-  .card-program .details-inner {
+  .card-program .details-inner, .card-program.audio-card .details-inner {
     min-height: 25rem; } }
 
 /* #blog on festival on and off pages
