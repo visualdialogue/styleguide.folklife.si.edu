@@ -1,4 +1,9 @@
-// bootstrap override
+/* Bootstrap overrides
+-------------------------------------------------*/
+
+.navbar-header {
+	float: none;
+}
 .container {
 	width: 100%;
 	max-width: $pageWidth;

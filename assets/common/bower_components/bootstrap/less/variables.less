@@ -76,7 +76,7 @@
 //## Specify custom location and filename of the included Glyphicons icon font. Useful for those including Bootstrap via Bower.
 
 //** Load fonts from this directory.
-@icon-font-path:          "../fonts/";
+@icon-font-path:          "/bower_components/bootstrap/fonts/";
 //** File name for all font files.
 @icon-font-name:          "glyphicons-halflings-regular";
 //** Element ID within SVG icon file.
@@ -292,7 +292,8 @@
 
 // Small screen / tablet
 //** Deprecated `@screen-sm` as of v3.0.1
-@screen-sm:                  768px;
+// @screen-sm:                  768px;
+@screen-sm:                  852px;
 @screen-sm-min:              @screen-sm;
 //** Deprecated `@screen-tablet` as of v3.0.1
 @screen-tablet:              @screen-sm-min;
@@ -306,7 +307,8 @@
 
 // Large screen / wide desktop
 //** Deprecated `@screen-lg` as of v3.0.1
-@screen-lg:                  1200px;
+// @screen-lg:                  1410px;
+@screen-lg:                  1490px;
 @screen-lg-min:              @screen-lg;
 //** Deprecated `@screen-lg-desktop` as of v3.0.1
 @screen-lg-desktop:          @screen-lg-min;
@@ -324,7 +326,10 @@
 //** Number of columns in the grid.
 @grid-columns:              12;
 //** Padding between columns. Gets divided in half for the left and right.
-@grid-gutter-width:         30px;
+// @grid-gutter-width:         30px;
+@grid-gutter-width:         40px;
+// @grid-gutter-width:         80px;
+// @grid-gutter-width:         60px;
 // Navbar collapse
 //** Point at which the navbar becomes uncollapsed.
 @grid-float-breakpoint:     @screen-sm-min;
@@ -347,7 +352,8 @@
 @container-md:                 @container-desktop;
 
 // Large screen / wide desktop
-@container-large-desktop:      (1140px + @grid-gutter-width);
+// @container-large-desktop:      (1140px + @grid-gutter-width);
+@container-large-desktop:      (1400px + @grid-gutter-width);
 //** For `@screen-lg-min` and up.
 @container-lg:                 @container-large-desktop;
 
