@@ -24,9 +24,16 @@
         <?php echo $card->date('M d, Y'), '<br />', $card->time(); ?></div>
       <?php elseif (isset($date)): ?>
       <div class="tag">
-        <?php echo $card->date(); ?></div>
-      <?php endif; ?><a href="<?= $card->url() ?>" class="high title"><span class="light"><span class="er">
+        <?php echo $card->date('F j'); ?></div>
+      <?php endif; ?>
+      <?php if('' != $card->subtitle()):	 ?><a href="<?= $card->url() ?>" class="high">
+        <div class="title"><span class="light"><span class="er">
+              <?php echo htmlspecialchars($card->title(), ENT_QUOTES, 'UTF-8'); ?></span></span></div>
+        <div class="subtitle"><span class="light"><span class="er">
+              <?php echo htmlspecialchars($card->subtitle(), ENT_QUOTES, 'UTF-8'); ?></span></span></div></a>
+      <?php else: ?><a href="<?= $card->url() ?>" class="high title"><span class="light"><span class="er">
             <?php echo htmlspecialchars($card->title(), ENT_QUOTES, 'UTF-8'); ?></span></span></a>
+      <?php endif; ?>
       <?php if('' != $card->audio_album()): ?>
       <div class="subtitle">
         <?php echo $card->audio_album(); ?></div>

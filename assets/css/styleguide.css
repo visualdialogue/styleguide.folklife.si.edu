@@ -7319,7 +7319,6 @@ body {
   color: #595959;
   font-weight: 300;
   letter-spacing: 1px;
-  margin-bottom: 0.5rem;
   margin-bottom: 0;
   font-size: 1.2rem;
   position: relative;
@@ -8620,7 +8619,6 @@ ul {
     color: #595959;
     font-weight: 300;
     letter-spacing: 1px;
-    margin-bottom: 0.5rem;
     margin-bottom: 0;
     font-size: 1.2rem;
     position: relative;
@@ -8798,32 +8796,6 @@ section {
     @media only screen and (min-width: 1560px) {
       .sidebar-item {
         padding-bottom: 1rem; } }
-  .sidebar-subtitle {
-    letter-spacing: 0;
-    margin-top: 0.5rem; }
-    @media only screen and (min-width: 53.25em) {
-      .sidebar-subtitle {
-        margin-top: 0.5vw;
-        margin-bottom: 0.1vw; } }
-    @media only screen and (min-width: 1560px) {
-      .sidebar-subtitle {
-        margin-top: 0.9rem;
-        margin-bottom: 0rem; } }
-  .sidebar-copy {
-    font-family: "acumin-pro", Arial, sans-serif;
-    font-size: 4.1vw;
-    letter-spacing: 0;
-    text-transform: none;
-    color: #4d4d4d;
-    line-height: 1.33333; }
-    @media only screen and (min-width: 53.25em) {
-      .sidebar-copy {
-        font-size: 1.1vw; } }
-    @media only screen and (min-width: 1560px) {
-      .sidebar-copy {
-        font-size: 1.8rem; } }
-    .sidebar-copy p {
-      margin-bottom: 0; }
   .sidebar .sidebar-highlight.active, .sidebar .sidebar-highlight:hover {
     background-color: #e6e6e6; }
   .sidebar .sidebar-highlight a:hover {
@@ -9756,7 +9728,6 @@ a.details {
   color: #595959;
   font-weight: 300;
   letter-spacing: 1px;
-  margin-bottom: 0.5rem;
   margin-bottom: 0;
   font-size: 1.2rem;
   position: relative;
@@ -9777,7 +9748,6 @@ a.details {
   color: #595959;
   font-weight: 300;
   letter-spacing: 1px;
-  margin-bottom: 0.5rem;
   margin-bottom: 0;
   font-size: 1.2rem;
   position: relative;
@@ -9799,7 +9769,6 @@ a.details {
   color: #595959;
   font-weight: 300;
   letter-spacing: 1px;
-  margin-bottom: 0.5rem;
   margin-bottom: 0;
   font-size: 1.2rem;
   position: relative;
@@ -9900,7 +9869,7 @@ a.details {
   font-weight: 300;
   line-height: 1.2;
   font-size: 1.873rem;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 0; }
   @media only screen and (min-width: 53.25em) {
     .audio-card .title {
@@ -10046,6 +10015,7 @@ a.details {
   .background-card:after, .horizontal-card:after {
     background-color: white;
     content: "";
+    display: block;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -10064,6 +10034,7 @@ a.details {
 .background-card:not(.horizontal-card):after {
   background-color: white;
   content: "";
+  display: block;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -10142,13 +10113,13 @@ a.details {
   .horizontal-cards-section {
     margin-bottom: 6rem; } }
 
-.card-horizontal .details-inner {
+.horizontal-card .details-inner {
   padding-left: 7.5px; }
   @media only screen and (min-width: 53.25em) {
-    .card-horizontal .details-inner {
+    .horizontal-card .details-inner {
       padding-left: 2.72%; } }
   @media only screen and (min-width: 1560px) {
-    .card-horizontal .details-inner {
+    .horizontal-card .details-inner {
       padding-left: 0; } }
 
 .cards--horizontal li:last-of-type {
@@ -10574,43 +10545,25 @@ a.details {
   width: 100%;
   display: block; }
 
-.border-full .image, .border-full .video {
+.full-border .image, .full-border .video {
   padding-bottom: 0; }
 
-.border-full .details-inner {
+.full-border .details-inner {
   border: 2px solid #d9d9d9;
   padding-left: 3.125vw;
   padding-bottom: 3.125vw; }
   @media only screen and (min-width: 53.25em) {
-    .border-full .details-inner {
+    .full-border .details-inner {
       padding-left: 1.125vw; } }
   @media only screen and (min-width: 1560px) {
-    .border-full .details-inner {
+    .full-border .details-inner {
       padding-left: 2rem; } }
   @media only screen and (min-width: 53.25em) {
-    .border-full .details-inner {
+    .full-border .details-inner {
       padding-bottom: 1.125vw; } }
   @media only screen and (min-width: 1560px) {
-    .border-full .details-inner {
+    .full-border .details-inner {
       padding-bottom: 2rem; } }
-
-.cards--full-border .details:before {
-  content: '';
-  border: 1px solid #b3b3b3;
-  display: block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 7.5px;
-  right: 7.5px; }
-  @media only screen and (min-width: 53.25em) {
-    .cards--full-border .details:before {
-      left: 1.36%;
-      right: 1.36%; } }
-  @media only screen and (min-width: 1560px) {
-    .cards--full-border .details:before {
-      left: 2rem;
-      right: 2rem; } }
 
 /* Blog article
 -------------------------------------------------- */

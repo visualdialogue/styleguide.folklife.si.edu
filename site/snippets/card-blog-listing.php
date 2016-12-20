@@ -4,7 +4,7 @@
 <?php elseif($src = $card->image()): ?>
 <?php $image = $src; ?>
 <?php endif; ?>
-<li class="card card-horizontal col-xs-12 border-top">
+<li class="card horizontal-card col-xs-12 border-top">
   <div class="row">
     <div class="image col-sm-6"><a href="<?= $card->url() ?>"><img src="<?= $image->url() ?>"/></a></div>
     <div data-video-id="<?= $card->video_id() ?>" data-title="<?= $card->title() ?>" data-description="<?= $card->copy() ?>" class="video">

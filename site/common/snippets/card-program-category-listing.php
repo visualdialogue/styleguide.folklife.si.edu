@@ -4,7 +4,7 @@
 <?php elseif($src = $card->image()): ?>
 <?php $image = $src; ?>
 <?php endif; ?>
-<li class="card card-horizontal col-xs-12">
+<li class="card horizontal-card col-xs-12">
   <div class="row">
     <div class="image col-sm-7">
       <figure><img src="<?= $src->url() ?>" class="ms-header-image"/>

@@ -23,10 +23,17 @@ li.card(class="<? if (isset($card_classes)) echo $card_classes ?> <? if ($card->
 			-if (isset($date) && isset($time)):
 				.tag!= $card->date('M d, Y'), '<br />', $card->time()
 			-elseif (isset($date)):
-				.tag!= $card->date()
+				.tag!= $card->date('F j')
 			-endif
 
-			a.high(href="<?= $card->url() ?>").title: span.light: span.er= $card->title()
+			//- if subtitle, group with title for correct highlighting
+			-if('' != $card->subtitle()):	
+				a.high(href="<?= $card->url() ?>")
+					.title: span.light: span.er= $card->title()
+					.subtitle: span.light: span.er= $card->subtitle()
+			-else:
+				a.high(href="<?= $card->url() ?>").title: span.light: span.er= $card->title()
+			-endif
 			
 			//- album name
 			-if('' != $card->audio_album()):

@@ -151,7 +151,8 @@ a.details {
 		}
 		.title {
 			@include sans-md;
-			font-weight: 500;
+			// font-weight: 500;
+			font-weight: 600;
 			margin-bottom:0;
 		}
 		.subtitle, .artist {
@@ -281,6 +282,7 @@ a.details {
 			&:after {
 				background-color: white;
 				content:"";
+				display: block;
 				position: absolute;
 				top:0;
 				bottom:0;
@@ -305,6 +307,7 @@ a.details {
 		&:after {
 			background-color: white;
 			content:"";
+			display: block;
 			position: absolute;
 			top:0;
 			bottom:0;
@@ -368,7 +371,7 @@ a.details {
 		// @include margin-bottom(-1);
 		// margin-bottom: 0;;
 	}
-	.card-horizontal {
+	.horizontal-card {
 		.details-inner {
 			padding-left:$gutter--small;
 			@include respond-to(break2) {padding-left:$gutter--full;}
@@ -813,7 +816,7 @@ a.details {
 		}
 	}
 
-	.border-full {
+	.full-border {
 		.image, .video {
 			padding-bottom: 0;
 		}
@@ -840,30 +843,30 @@ a.details {
 		
 	// }
 
-	.cards--full-border {
-		.details {
-			&:before {
-				content: '';
-				border: 1px solid $black30;
-				// border-top: 1px solid blue;
-				// width: 100%;
-				display: block;
-				position: absolute;
-				top: 0;
-				bottom: 0;
-				left:$gutter--small;
-				right:$gutter--small;
-				@include respond-to(break2) {
-					left:$gutter--medium;
-					right:$gutter--medium;
-				}
-				@include respond-to(fullwidth) {
-					left:2rem;
-					right:2rem;
-				}
-			}
-		}
-	}
+	// .full-border {
+	// 	.details {
+	// 		&:before {
+	// 			content: '';
+	// 			border: 1px solid $black30;
+	// 			// border-top: 1px solid blue;
+	// 			// width: 100%;
+	// 			display: block;
+	// 			position: absolute;
+	// 			top: 0;
+	// 			bottom: 0;
+	// 			left:$gutter--small;
+	// 			right:$gutter--small;
+	// 			@include respond-to(break2) {
+	// 				left:$gutter--medium;
+	// 				right:$gutter--medium;
+	// 			}
+	// 			@include respond-to(fullwidth) {
+	// 				left:2rem;
+	// 				right:2rem;
+	// 			}
+	// 		}
+	// 	}
+	// }
 
 
 /* Blog article

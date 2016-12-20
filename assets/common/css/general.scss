@@ -283,26 +283,6 @@ ul {margin: 0;}
 			// @include respond-to(fullwidth) {margin-bottom:0.8rem;}
 			@include padding-bottom(1);
 		}
-		&-subtitle {
-			@include sidebar-subtitle;
-			letter-spacing: 0;
-			// line-height:1.5;
-			margin-top: 0.5rem;
-			@include respond-to(break2) {
-				// line-height:1.5;
-				// margin-bottom:
-				margin-top: 0.5vw;
-				margin-bottom: 0.1vw;
-			}
-			@include respond-to(fullwidth) {
-				// line-height:0.9;
-				margin-top: 0.9rem; // 15px
-				margin-bottom: 0rem;
-			}
-		}
-		// &-copy {
-		// 	@include sidebar-copy;
-		// }
 		.sidebar-highlight {
 			&.active, &:hover {
 				background-color: $black10;
