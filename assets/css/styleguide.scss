@@ -26,8 +26,7 @@
   @import "../common/css/links.scss";
   @import "../common/css/helpers.scss";
   @import "../common/css/mixins.scss";
-  // @import "../common/css/nav.scss";
-  @import "../common/css/nav-old.scss";
+  @import "../common/css/nav.scss";
   @import "../common/css/general.scss";
   @import "../common/css/audio.scss";
   @import "../common/css/footer.scss";
@@ -48,6 +47,10 @@
 
 /* #code
 -------------------------------------------------- */
+	.title-bar {
+		color: white;
+		background-color: $fs-aqua;
+	}
 	.code_gutter {
 		display:none;
 	}

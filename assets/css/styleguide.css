@@ -7,6 +7,16 @@
 */
 /* Imports
 -------------------------------------------------- */
+/*
+
+
+  __|              |         
+ |     _ \   __ \   __|   __| 
+ __|  (   |  |   |  |   \__ \ 
+_|   \___/  _|  _| \__| ____/
+
+
+*/
 @font-face {
   font-family: "slick";
   src: url("../fonts/slick.eot");
@@ -21,6 +31,15 @@
   font-weight: normal;
   font-style: normal; }
 
+/*
+
+\ \     /  __ \        _ _|                           
+ \ \   /   |   |         |    __|   _ \   __ \    __| 
+  \ \ /    |   | _____|  |   (     (   |  |   | \__ \ 
+   \_/    ____/        ___| \___| \___/  _|  _| ____/ 
+                                                      
+
+*/
 [data-icon]:before {
   font-family: "vd-icons" !important;
   content: attr(data-icon);
@@ -115,6 +134,16 @@
   content: "\65"; }
 
 /*
+
+
+    _ \                               |         |     _ | 
+   |   |   _ \  __ `__ \    _ \    _` |   _` |  |       | 
+   __ <    __/  |   |   |  (   |  (   |  (   |  |       | 
+  _| \_\ \___| _|  _|  _| \___/  \__,_| \__,_| _|      _|                                                           
+                                                
+
+*/
+/*
  *  Remodal - v1.1.0
  *  Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin with declarative configuration and hash tracking.
  *  http://vodkabears.github.io/remodal/
@@ -183,6 +212,15 @@ html.remodal-is-locked {
   /* Disable Anti-FOUC */
   display: inline-block; }
 
+/*
+
+  _ \                               |         |     ___ \  
+ |   |   _ \  __ `__ \    _ \    _` |   _` |  |        ) | 
+ __ <    __/  |   |   |  (   |  (   |  (   |  |       __/  
+_| \_\ \___| _|  _|  _| \___/  \__,_| \__,_| _|     _____| 
+                                                           
+
+*/
 /*
  *  Remodal - v1.1.0
  *  Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin with declarative configuration and hash tracking.
@@ -411,7 +449,17 @@ html.remodal-is-locked {
 .lt-ie9 .remodal {
   width: 700px; }
 
-/* Slider */
+/*
+
+
+  ___|   | _)        |          ___|   | _)      |                 _ | 
+\___ \   |  |   __|  |  /     \___ \   |  |   _` |   _ \   __|       | 
+      |  |  |  (       <            |  |  |  (   |   __/  |          | 
+_____/  _| _| \___| _|\_\     _____/  _| _| \__,_| \___| _|         _| 
+                                                                       
+
+
+*/
 .slick-slider {
   position: relative;
   display: block;
@@ -484,6 +532,17 @@ html.remodal-is-locked {
 .slick-arrow.slick-hidden {
   display: none; }
 
+/*
+
+
+  ___|   | _)        |          ___|   | _)      |                 ___ \  
+\___ \   |  |   __|  |  /     \___ \   |  |   _` |   _ \   __|        ) | 
+      |  |  |  (       <            |  |  |  (   |   __/  |          __/  
+_____/  _| _| \___| _|\_\     _____/  _| _| \__,_| \___| _|        _____| 
+                                                                          
+
+
+*/
 /* Slider */
 .slick-loading .slick-list {
   background: #fff url("./ajax-loader.gif") center center no-repeat; }
@@ -614,6 +673,17 @@ html.remodal-is-locked {
       color: black;
       opacity: 0.75; }
 
+/* 
+
+
+ __ )                 |          |                      
+ __ \    _ \    _ \   __|   __|  __|   __|  _` |  __ \  
+ |   |  (   |  (   |  |   \__ \  |    |    (   |  |   | 
+____/  \___/  \___/  \__| ____/ \__| _|   \__,_|  .__/  
+                                                 _|     
+                                    
+
+*/
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -7166,11 +7236,17 @@ conversion: 				| mobile 	| tablet	| desktop
   .desktop-only-inline {
     display: inline-block !important; } }
 
-/* Styleguide example
--------------------------------------------------- */
-.learn-page .title-bar {
-  background-color: #939f93; }
+/* 
 
+
+	  ___|         |                   
+	 |       _ \   |   _ \    __|  __| 
+	 |      (   |  |  (   |  |   \__ \ 
+	\____| \___/  _| \___/  _|   ____/ 
+	                                   
+
+
+*/
 /* Folklife
 -------------------------------------------------- */
 /* Festival
@@ -10649,6 +10725,10 @@ a.details {
 
 /* #code
 -------------------------------------------------- */
+.title-bar {
+  color: white;
+  background-color: #3ea6ad; }
+
 .code_gutter {
   display: none; }
 

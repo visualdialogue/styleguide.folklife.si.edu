@@ -3,49 +3,90 @@
 -------------------------------------------------- */
 	// bootstrap override
 	.navbar {
-		background-color: $navbar;		
 		margin-bottom: 0;
 		border: 0;
 		border-radius: 0;
 		position: absolute; // so make transition to fixed easier on content below
 		width: 100%;
+		min-height: initial;
+		min-height: auto;
 		@include respond-to(break2max) {
-			position: fixed;
+			// position: fixed;
 			width: 100%;
 			z-index: 10;
+			height: $navbarHeight--subpage--mobile;
 		}
 		@include respond-to(break2) {
-			top: 60px;
+			// top: 60px;
+			top: $navbarSiteToggle--tablet;
 			z-index: 2;
 			z-index: 10;
+			height: $navbarHeight--subpage--tablet;
+		}
+		@include respond-to(fullwidth) {
+			top: $navbarSiteToggle--desktop;
+			height: $navbarHeight--desktop;
 		}
 
+		// if open, go light
+		&--open {
+			background-color: $navbar; // only go less opacity here otherwise folklife banner movement will show below
+			height: auto !important; // so will expand with menu when needed
+		}
+
+		// set height to match with navbar
+		// @include headerHeight--subpage;
+
+		// shadow, from 
+		box-shadow: 0px 17px 41px -8px rgba(0,0,0,0.20);
+		-webkit-box-shadow: 0px 17px 41px -8px rgba(0,0,0,0.20);
+		-moz-box-shadow: 0px 17px 41px -8px rgba(0,0,0,0.20);
+
+		box-shadow: 0px 10px 41px -8px rgba(0,0,0,0.08);
+		-webkit-box-shadow: 0px 10px 41px -8px rgba(0,0,0,0.08);
+		-moz-box-shadow: 0px 10px 41px -8px rgba(0,0,0,0.08);
+
+	}
+	.home-page {
+		.navbar {
+			// set height to match with navbar
+			// @include headerHeight--home;
+			@include navbarHeight--home;
+		}
 	}
 
+
+
 	// SITE TOGGLE BANNER
-	. {
+
+	.site-toggle {
+		// new
 		display: none;		
+		background-color: $black80; // new
+		text-align:right;
+		line-height:2vw;
+		// line-height:2rem;
+		@include sans-mini;
+		font-weight: 500;
+		line-height: 1;
 		@include respond-to(break2) {
 			display: block;
 			position: absolute; // height 72px
 			width: 100%;
-			text-transform: uppercase;
-			// background-color: white;
-			font-family: $slabLight;
-			// letter-spacing: 0.5px;		
-			font-size: 2.7rem; // ff-good
-			// font-size: 1.5rem;
-			text-align:right;
-			font-weight: 300;
-
-			height: 60px; // hold even without tagline
-			padding: 13px 0 0;
+			padding-top: 0.8rem;
+			height: $navbarSiteToggle--tablet;
+		}
+		@include respond-to(fullwidth) {
+			line-height:3.5rem !important;
+			padding: 0;
+			height: $navbarSiteToggle--desktop;
 		}
 	}
 	.tagline {
 		display: none;
 		color: $tagline;
 		@include respond-to(breakTagline) {
+		// @include respond-to(break2) {
 			display: inline-block;
 		}
 	}
@@ -53,8 +94,11 @@
 		color: $sitelinks;
 		margin-left: 2.5rem;
 		&:hover {
-			color: $black80;
+			color: white;
 			text-decoration: none;
+		}
+		&.active {
+			color: $black20;
 		}
 	}
 
@@ -81,26 +125,56 @@
 		}
 	}
 	.navbar-header-inner {
-		@include vertically-align-parent;
+		// @include vertically-align-parent;
 		position: relative;
 		z-index: 100;
 
 		// new header
+	}
+	
 
+	.navbar-brand {
+		height: auto; // bootstrap override
+		// padding-left:0 !important; // bootstrap override
+		margin-left: 0 !important; // bootstrap override
+		font-size: 10px; // prevent gap to sunsplash
+		// padding: 10px 0 0 0;
+		// padding: 0 !important ;
+		// @include navbarHeight--subpage;
+		@include respond-to(break2) {
+			// height: 115px; // old
+			// height: $navbarHeight--home--tablet; // new
+			// padding: 1.4vw 0 10px 0;
+			// width: 14.2857%; // 200 / 1400
+		}
+
+		@include respond-to(fullwidth) {
+			// padding: 23px 0 18px 0;
+			// padding: 20px 0 18px 0;
+			// line up with left side
+			padding-top: 10px !important; // bootstrap override
+			font-size: 25px; // back to normal
+
+			// height: 118px; // from layout
+			// new header
+			// height: $navbarHeight--home--desktop; // from new layout
+
+			// new
+			// padding-left:0; // align with left side instead of col
+			// folkways
+			// width: 14.2857%; // 200 / 1400
+		}
+	}
+	.home-page {
+		.navbar-brand {
+			@include navbarHeight--home;
+		}
 	}
 	.navspacer {
-		background-color: $black80;
-		height: 50px;
-		@include respond-to(break2) {
-			// height: 185px !important;
-			height: 178px !important;
-			// new header
-			height: 160px !important;
-		}
-		&--taller {
-		}
+		@include headerHeight--subpage;
+		// background-color: $black80;
 		&-open {
-			height: 132px !important;
+			// height: 132px !important;
 			-webkit-transition: all 0.3s ease;
 			-moz-transition: all 0.3s ease;
 			-ms-transition: all 0.3s ease;
@@ -108,161 +182,153 @@
 			transition: all 0.3s ease;
 		}
 	}
-	.navbar-brand {
-		font-size: 10px; // prevent gap to sunsplash
-		padding: 10px 0 5px 0;
-		padding: 10px 0 0 0;
-		@include respond-to(break2) {
-			height: 115px;
-			padding: 23px 0 10px 0;
-		}
-
-		@include respond-to(fullwidth) {
-			padding: 23px 0 18px 0;
-			// line up with left side
-			font-size: 25px; // back to normal
-
-			// height: 118px; // from layout
-			// new header
-			height: 100px; // from layout
+	.home-page {
+		.navspacer {
+			@include headerHeight--home;
 		}
 	}
 	.logo-mask {
 		overflow: hidden; // hide logo when scrolls up
 		display: inline-block;
 	}
-	img.sunsplash {
-		width: 4.5vw;
-		width: 15px;
+	.logo {
+		// position: relative;
+		position: absolute; // for menu dropdown height not to be effected
 		display: inline-block;
-		vertical-align: top;
-		position: relative;
-		display: none;
-
-		@include respond-to(break2) {
-			display: inline-block;
-			// width: 35px;
-			width: 30px;
+		a {
+			display: block;
 		}
 	}
-	.logo__copy {
-		position: relative;
-		display: inline-block;
-	}
-	.logo__copy, img.logo--folklife, img.logo--center, img.logo--folkways {
-		width: 193px;
-		height: 32px;
+	.block-logo {
+		max-width: initial; // otherwise will shrink to a tag above when absolutely positioned
+		// width: 193px;
+		// height: 32px;
+		width: 25vw;
+		height: 25vw;
 		@include respond-to(break2) {
-			width: 420px;
-			height: 70px;
+			// width: 420px;
+			// height: 70px;
+			width: 11vw;
+			height: 11vw;
 		}
 		@include respond-to(fullwidth) {
-			width: 420px;
-			height: 70px;
+			// width: 420px;
+			// height: 70px;
+			width: 175px;
+			height: 175px;
 		}
 	}
-	// new logo
-	img.logo--folklife, .site--folklife .logo__copy {
-		@include width(15);
-		@include height(15);
-	}
-	img.logo--folklife {
-		padding: 15px;
-	}
-	.site--folklife {
-		.navbar-brand {
-			@include padding-top(4);
-		}
-		.logo-mask {
-			position: relative;
-			@include left(2);
-		}
-	}
-	img.logo--center, img.logo--folklife, img.logo--festival, img.logo--folkways {
+	.block-logo {
+		// @include padding(1);
 		// -webkit-transition: top 0.1s ease;
 		// -moz-transition: top 0.1s ease;
 		// -ms-transition: top 0.1s ease;
 		// -o-transition: top 0.1s ease;
 		// transition: top 0.1s ease;
-	}
-	img.logo--folklife, img.logo--center, img.logo--festival, img.logo--folkways {
-		position: absolute;
+		// position: absolute;
 		top:0;
 		left: 0;
 	}
-	.smaller-header {
-		// new logo
-		background-color: #333;
-		// switch to fixed
-		position: fixed;
-		top:0;
-		width: 100%;
+	.navbar.logo-swap {
 		.navbar-brand {
-			height: 50px;
+			// padding: 0 !important; // bootstrap override
+			padding-top: 0; // other !important override
+
+		}
+		.block-logo {
+			display: none;
+		}
+		.one-line-logo {
+			display: block;
+		}
+	}
+	.one-line-logo {
+		max-width: initial; // otherwise will shrink to a tag above when absolutely positioned
+		display: none;
+		width:25vw;
+		// width:5rem;
+		@include respond-to(break2max) {
+			margin-top: 0.2rem;
+		}
+		@include respond-to(break2) {width:11vw;}
+		@include respond-to(fullwidth) {width:160px;}
+	}
+	.smaller-header, .one-line-logo {
+		.navbar-brand {
 			@include respond-to(break2) {
-				padding: 17px 0;
-				height: 70px;
+				// padding: 17px 0;
 				// -webkit-transition: all 0.3s ease;
 				// -moz-transition: all 0.3s ease;
 				// -ms-transition: all 0.3s ease;
 				// -o-transition: all 0.3s ease;
 				// transition: all 0.3s ease;
 			}
-		}
-		img.sunsplash { position: relative; top: 0.7rem; }
-		// img.logo--center { top: -5rem; }
-		img.logo--center { top: -100%; }
-		// img.logo--folklife { top: -0.8rem; }
-		img.logo--folklife, img.logo--festival, img.logo--folkways { top: -25%; }
-
-		@include respond-to(break2) {
-			img.sunsplash { top: 0.3rem; }
-			img.logo--center { top: -8rem; }
-			img.logo--center { top: -100%; }
-			// img.logo--folklife { top: -3.3rem; }
-			img.logo--folklife, img.logo--festival, img.logo--folkways { top: -45%; }
-			// new header
-			img.logo--folklife { top: -115%; }
-			// img { position: relative; top: -60%; }
-			// new header II
-			img { display: none; }
-			.logo__copy {
-				@include height(4.5);
+			@include respond-to(fullwidth) {
+				padding-top: 2rem;
 			}
+
+		}
+	}
+	.smaller-header {
+		// new logo
+		// switch to fixed
+		position: fixed;
+		top:0;
+		width: 100%;
+		background-color: $navbar; // duplicate from navbar--open because sometimes close navbar when smaller header and need to keep the opacity
+		.block-logo { top: -25%; }
+		.logo {
+			.folkways-logo { top: -35%; }
+			overflow: hidden;
+		}
+		.block-logo {
+			display: none;
+		}
+		.one-line-logo {
+			display: block;
+		}
+		@include respond-to(break2) {
+			.block-logo { top: -45%; }
+			.folkways-logo { top: -35%; }
+			.block-logo { top: -115%; }
 		}
 		& + .banner-section.container {
 			position: relative;
 			top: 142px; // add height of fixed header to next element when activated
 		}
 	}
+	// Only on subpages, navbar gets smaller on scroll
+	body:not(.home-page) {
+		.smaller-header, .logo-swap {
+			.navbar-brand {
+				@include navbarHeight--subpage--smaller;
+			}
+		}
+	}
 
 	.nav-icons {
 		right: 0;
 		text-align:right;
-		margin-top: 12px;
-		margin-top: 7px;
+		margin-top: 2vw; // 12.16 to help with new hamburger nav
+		margin-top: 0.5rem; // 12.19
 		margin-right: -10px;
 		@include respond-to(break2) {
-			margin-top:0;
+			margin-top:0.5vw; // 12.16
 			margin-right: 0;
-			@include vertically-align();
-			width: 66.66667%;
-			right: 0;
+			float: right;
+			// width: 58.33333%;
+			// width: 75%;
 		}
 		@include respond-to(fullwidth) {
+			margin-top:1.3rem;
 			right: 0;
 		}
 	}
 	.nav-icon {
 		display:inline-block;
-		// vertical-align: top;
 		cursor: pointer;
 		float: right;
-		// margin: 2px;
 		opacity: 1; // so bright white on mobile
-		@include respond-to(break2) {
-			// margin: 5px;
-		}
 	}
 	.lighter-nav-icons {
 		opacity: 0.2;
@@ -293,114 +359,120 @@
 	// SEARCH BAR
 	.search-bar {
 		display: none;
-		background-color: white;
-		width: 100%; // 3/4ish of col-8 to be half of page
-		float: right;
 		text-align: left;
 		color: $searchText;
 		padding: 0; // override bootstrap
 		@extend %small-sans-title;
-		@include respond-to(breaksearch) {
-			margin-top: 12px;
-			width: 70%; // 3/4ish of col-8 to be half of page
+		line-height:1.28; // 32 px at full
+		@include respond-to(break2max) {
+			width: 100%; // 3/4ish of col-8 to be half of page
+		}
+		@include respond-to(break2) {
+			// margin-top: 12px;
+			margin-top: 1.2vw;
+		}
+		@include respond-to(fullwidth) {
+			margin-top: 2.4rem;
 		}
 		input {
 			width: 100%;
-			@include respond-to(breaksearch) {
+			background-color: transparent; // override user agent
+			border-bottom: 1px solid black;
+			@include respond-to(break2) {
 				padding: 0 15px;
 			}
 		}
-		&--desktop {
-			@include respond-to(breaksearchmax) {
-				display: none !important;
-			}
-
+	}
+	.desktop-search-bar {
+		@include respond-to(break2max) {
+			display: none !important;
 		}
-		&--mobile {
-			padding: 5px 15px;
-			// border: 5px solid $black80;
 
-			// place above outside click
-			position: relative;
-			z-index: 11;
-			@include respond-to(breaksearch) {
-				display: none !important;
-			}
+	}
+	.mobile-search-bar {
+		padding: 5px 15px;
+		// place above outside click
+		position: relative;
+		z-index: 11;
+		@include respond-to(break2) {
+			display: none !important;
 		}
 	}
 
 
-	// testing
-	// a.meganav__title, a.meganav__title + .meganav__list a {color: pink;}
-	a.meganav__title, .meganav__list a, a.footer-title, .footer-list a {
-		color: pink !important;
+	.header-nav {
+		@include padding-top(3.4);
+		@include padding-bottom(2.6);
 	}
-	// MEGANAV
-	.meganav, .footer {
+
+	.header-nav, .footer-nav {
 
 		// keep above outside click div
 		position: relative;
 
-		// padding: 1rem 0 0; // 40px above and below
-		padding: 0 0 0.5rem; // 40px above and below
-		@include respond-to(break2) {
-			padding: 3.6rem 0 2.6rem; // 40px above and below
-			padding: 4rem 0 2.6rem; // 40px above and below
-		}
-		.active &__title {
+		.active &-title {
 			@include respond-to(break2max) {color: white;}
 		}
-		&__title {
-			@extend %meganav-font;
+		&-title {
+			@extend %header-nav-font;
 			cursor: pointer;
 			padding: 10px 0 0;
-			// color: $black20;
-			color: $black20;
 			display: block; // for mobile
-
-			@include respond-to(break2) {color: white;}
 			&:hover {
-				color: white;
-				@include respond-to(break2) {color: $black20;}
+				color: $black60;
 			}
 			@include respond-to(break2) {
 				padding: 0;
-				color: white;
 			}
+			@include padding-bottom(0.4);
 		}
-		&__list {
+		&-list {
 			display: none;
+			@include margin-bottom(2.2);
+			@include respond-to(break2max) {
+				margin-bottom: 0;
+			}
 			@include respond-to(break2) {
 				display: inline-block;
-
 			}
 		}
 
-		&__sub-item {
+		&-sub-item {
 			display: block;
 			@include link-font;
-			color: white;
-			color:$black20;
+			color:$black60; // 12.12
 			a {
-				color: $black20;
+				color: $black60;
 				display: block;
 				&:hover {
-					color: white;
+					color: black;
 				}
 			}
-			@include respond-to(break2) {color:$black20;}
-			font-weight: 400;	
-			// line-height: 1.44;
 			cursor: pointer;
 			&:hover {
-				color: white;
+				color: black;
 			}
 		}
 	}
-	.meganav {
+	.header-nav {
 		display: none;
-		background-color: $black60;
+		// background-color: $black60;
+		// background-color: $black30;
+		// background-color: rgba(white, 0.95);
 		z-index: 10;
+	}
+	.footer-nav {
+		&-title {
+			color: $black20;
+		}
+		&-sub-item {
+			&:hover {
+				color: $black20;
+			}
+		}
+	}
+	.footer-nav-sub-item {
+		// @include link-font-sm;
 	}
 	.nav-show-mobile {
 		// display: inline-block;
@@ -412,36 +484,59 @@
 	.browsenav {
 		display: none; // initial hide
 		// background-color: $black40;
-		background-color: $black50;
+		// background-color: $black50;
+		// background-color: $black30; // 12.12
+		background-color: $black10; // 12.16
 		position: relative;
-		z-index: 10;
-		top: 3rem;
+		// z-index: 10;
+		z-index: 9; // just below logo
+		top: 1rem;
 		// color: white;
 		// padding: 3rem 0 1rem; // really 40 px with line-height
 		@include respond-to(break2) {
 			padding: 2.8vw 0 2vw; // really 40 px with line-height
-			top: 3rem;
+			// top: 3rem;
+			top: 0;
 		}
 		@include respond-to(breaksearch) {
 			top: 0;
 		}
 		@include respond-to(fullwidth) {
-			padding: 4rem 0 4rem;
+			padding: 5rem 0 2rem;
 		}
 	}
 	
 	.browsenav-title {
 		// font-family: $slabExtraWide;
 		// font-weight: 700;
-		// @extend %meganav-font;
-		@include section-title;
-		color: white;
-		margin-bottom: 3rem;
+		// @extend %header-nav-font;
+		// @include section-title;
+		@extend %header-nav-font;
+		font-family: $slabNarrow;
+		color: $black60;
+		margin-bottom: 2vw;
 		@include respond-to(break2) {
+			text-align: right;
 			margin-bottom: 1.5vw;
 		}
 		@include respond-to(fullwidth) {
 			margin-bottom: 2rem;
+		}
+		// vertically align
+		.vertically-align-grandparent {
+			// @include height(3.4);
+			height: 7vw;
+			@include respond-to(break2) {
+				height: 34px;
+			}
+		}
+		.vertically-align {
+			top: 5vw;
+			left: 0;
+			@include respond-to(break2) {
+				top: 50%;
+				right: 0;
+			}
 		}
 	}
 	.browsenav-item {
@@ -450,18 +545,6 @@
 			margin-bottom: 0;
 		}
 	}
-	.browsenav-inner {
-		// background: url(/assets/images/icons/navicons--tablet.png) no-repeat;
-		// background: url(/assets/images/icons/dropdown.png) no-repeat;
-		// background-position: right 0px center;
-		// background-position: right 0px top -154px; 
-		// background-position: -220px -169px; 
-		// width: 25px; 
-		// height: 14px; 
-		// background-color: white;
-		// background-color: $black20;
-	}
-
 
 	// browse bar
 
@@ -490,13 +573,19 @@
 		outline: none;
 
 		border-radius: 0;
-		padding: 10px 15px 10px;
+		// padding: 10px 15px 10px;
+		@include padding-top(0);
+		@include padding-right(1.5);
+		@include padding-bottom(0.5);
+		@include padding-left(1.5);
+		// padding: 5px 15px 5px;
 		width: 100%;
 		@include link-font;
 		line-height: 1 !important;
 		font-weight: 600;
 		width: 100%; 
-		height: 44px;
+		// height: 44px;
+		height: 34px;
 		// from http://stackoverflow.com/a/30783140
 		// overflow:hidden;
 		// position: relative;
@@ -507,27 +596,37 @@
 	.select {
 		width: 100%;
 		margin-bottom:0;
-		background-color: $black20;
+		// background-color: $black20;
+		background-color: white;
+		color: $black60;
 
 		&:after {
 			content: "\6f";
 			font-family: "vd-icons";
 			font-size: 3rem;
 			vertical-align: top;
-			color: $black50;
+			// color: $black50;
+			color: $black60;
 			position: absolute;
-			right: 2rem; // clear padding right
+			// right: 2rem; // clear padding right
+			right: 3rem; // clear padding right // 12.12
 			top: 0;
-			background: $black20;
+			// background: $black20;
 			// z-index: 1;
-			line-height: 1.1;
+			// line-height: 1.1;
+			line-height:5vw;
+			@include respond-to(break2) {line-height:2.5rem;}
+			@include respond-to(fullwidth) {line-height:0.7;}
 			text-align: center;
 			width: 10%;
 			height: 100%;      
 			pointer-events: none;
 			box-sizing: border-box; 
+			font-size:3rem;
+			@include respond-to(break2) {font-size:2.5vw;}
+			@include respond-to(fullwidth) {font-size:3rem;}
 		}
 		&:hover:after {
-			color: white;
+			color: $fw-link;
 		}
 	}

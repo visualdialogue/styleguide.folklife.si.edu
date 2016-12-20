@@ -1,6 +1,7 @@
 
 <?php snippet('header'); ?>
 <div id="navspacer" class="navspacer"></div>
+<?php snippet('title-bar'); ?>
 <!-- Styleguide-->
 <section class="container first-section styleguide-section">
   <h2 class="section-title">Styleguide</h2>

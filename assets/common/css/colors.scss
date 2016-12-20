@@ -1,14 +1,14 @@
-/* Styleguide example
--------------------------------------------------- */
-	// Colors are stored as SASS variables for easily application and updates. For example:
+/* 
 
-	// SASS variable for Folkways green
-	$fw-green: #939f93;
 
-	// SASS implementation
-	.learn-page {
-		.title-bar {background-color: $fw-green}
-	}
+	  ___|         |                   
+	 |       _ \   |   _ \    __|  __| 
+	 |      (   |  |  (   |  |   \__ \ 
+	\____| \___/  _| \___/  _|   ____/ 
+	                                   
+
+
+*/
 
 /* Folklife
 -------------------------------------------------- */
@@ -17,10 +17,6 @@
 /* Festival
 -------------------------------------------------- */
 
-	// $fs-orange: #e69f57;
-	// $fs-blue: #4967a3;
-
-	// 12.09
 	$fs-green: #00b26a;
 	$fs-lightblue: #75bee9;
 	$fs-blue: #4d72b7;
@@ -28,8 +24,7 @@
 	$fs-tan: #d5bf8f;
 	$fs-aqua: #3ea6ad;
 	$fs-yellow: #ffdf69;
-	// $fs-orange: #eda456;
-	$fs-orange: #eea556; // ???
+	$fs-orange: #eea556;
 	$fs-red: #dd3f48;
 
 	$basque-red: #cd181f;
@@ -52,9 +47,9 @@
 /* Colors
 -------------------------------------------------- */
 
-// from bootstrap
-$body: #333333; 
-$copy: $body; 
+	// from bootstrap
+	$body: #333333; 
+	$copy: $body; 
 
 /* Blacks
 -------------------------------------------------- */
@@ -70,24 +65,19 @@ $copy: $body;
 	$black10: hsl(0, 0, 90);
 	$black08: hsl(0, 0, 92);
 
-$lightblue: #b4e7f8;
-$lightorange: #fceec3;
+	$lightblue: #b4e7f8;
+	$lightorange: #fceec3;
 
 /* Color Application
 -------------------------------------------------- */
-$link: $black80;
-$copylinks: coral;
-$hover: $lightblue;
-$hover: $lightorange;
-// $navbar: $black80; // old banner
-// $navbar: white; // new banner
-$navbar: rgba(white, 0.95);
-$navbar: rgba(white, 0.97);
-$tagline: $black50;
-// $sitelinks: $black30;
-$sitelinks: $black40; // new
+	$link: $black80;
+	$copylinks: coral;
+	$hover: $lightorange;
+	$navbar: rgba(white, 0.97);
+	$tagline: $black50;
+	$sitelinks: $black40; // new
 
-$searchText: $black40;
+	$searchText: $black40;
 
 
 /* Helper classes
