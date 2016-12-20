@@ -31,8 +31,13 @@
 			position: absolute;
 			top:0;
 			bottom:0;
+			ul {
+				// just in case, although needed on folklife dive deep homepage section
+				height: 100%;
+			}
 			.cards {
 				height: 100%;
 			}
+
 		}
 	}

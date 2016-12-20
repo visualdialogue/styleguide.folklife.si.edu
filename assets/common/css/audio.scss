@@ -32,7 +32,7 @@
 // .cards--listen {
 // 	margin-bottom: 0.6rem; // for 80px to hr
 // }
-.audio-player__details, .audio-progress-bar, .audio-time, .volume {
+.audio-player-details, .audio-progress-bar, .audio-time, .volume {
 	display: inline-block;
 	vertical-align: bottom;
 }
@@ -48,7 +48,7 @@
 	right: 0;
 	@include padding(2);
 }
-.audio-player__details {
+.audio-player-details {
 	width:67%;
 	@include respond-to(break2) {width:73%;}
 	@include respond-to(fullwidth) {width:75%;}

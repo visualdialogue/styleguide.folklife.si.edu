@@ -173,28 +173,29 @@
 			width: auto;
 			height: auto;
 			line-height: 0.9; // for vert alignment with more text
+			line-height: 0.2; // for vert alignment with more text
+			@include respond-to(break2) {
+			// vertical-align: middle;
+			// line-height: 2.4;
+			// line-height: 2.4;
+				line-height: 1; // for vert alignment with more text
+			}
+			@include respond-to(fullwidth) {
+			// line-height: 2.5;
+			// height: 1.7rem;
+				// line-height: 0.95; // for vert alignment with more text
+				line-height: 0.75; // for vert alignment with more text
+			}
+			&:before {
+				font-size: 2rem;
 				@include respond-to(break2) {
-				// vertical-align: middle;
-				// line-height: 2.4;
-				// line-height: 2.4;
-					line-height: 1; // for vert alignment with more text
+					font-size: 1.4vw;
+					line-height: 1.3;
 				}
 				@include respond-to(fullwidth) {
-				// line-height: 2.5;
-				// height: 1.7rem;
-					// line-height: 0.95; // for vert alignment with more text
-					line-height: 0.75; // for vert alignment with more text
+					font-size: 2rem;
+					line-height: 1.3;
 				}
-			&:before {
-				font-size: 4vw;
-					@include respond-to(break2) {
-						font-size: 1.4vw;
-						line-height: 1.3;
-					}
-					@include respond-to(fullwidth) {
-						font-size: 2rem;
-						line-height: 1.3;
-					}
 			}
 		}
 	}

@@ -4,11 +4,11 @@
 <?php elseif($src = $card->image()): ?>
 <?php $image = $src; ?>
 <?php endif; ?>
-<li class="card audio-card col-xs-6 col-sm-3 full-border">
+<li class="card audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border">
   <div class="image"><a href="<?= $card->url() ?>"><img src="<?= $image->url() ?>"/></a></div>
   <div class="details">
     <div class="details-inner">
-      <div class="tag card__category">
+      <div class="tag">
         <?php echo $card->category() ; ?></div>
       <div class="title-wrapper-wrapper"><a href="<?= $card->url() ?>" class="high title"><span class="light"><span class="er">
               <?php echo htmlspecialchars($card->title(), ENT_QUOTES, 'UTF-8'); ?></span></span></a>
@@ -24,7 +24,7 @@
           <div class="icon-circle"></div>
           <div class="icon-play"></div>
         </div>
-        <div class="audio-player__details">
+        <div class="audio-player-details">
           <div class="audio-progress-bar"><img src="/assets/images/icons/audio-progress-bar.png"/></div>
           <div class="audio-time">0:00 &vert;&nbsp;
             <?php echo $card->audio_length(); ?>

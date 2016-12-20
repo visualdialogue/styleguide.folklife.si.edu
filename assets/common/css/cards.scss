@@ -161,6 +161,7 @@ a.details {
 		.details-inner {
 			position: relative; // hold player
 			min-height:46vw;
+			min-height: 25rem;
 			@include respond-to(break2) {min-height:20vw;}
 			@include respond-to(fullwidth) {min-height:25rem;}
 		}
@@ -290,8 +291,8 @@ a.details {
 				left:$gutter--small;
 				right:$gutter--small;
 				@include respond-to(break2) {
-					left:$gutter--medium;
-					right:$gutter--medium;
+					// left:$gutter--medium;
+					// right:$gutter--medium;
 				}
 				@include respond-to(fullwidth) {
 					left:2rem;
@@ -302,29 +303,39 @@ a.details {
 		// .image {
 			// margin-left: -1px; // cover white line that shows sometimes. From rounding error?
 		// }
+
+
+		// test cases??
 	// vertical backgrounds
 	.background-card:not(.horizontal-card) {
+		height: 100%; // fill gaps
 		&:after {
 			background-color: white;
+			background-color: red;
 			content:"";
 			display: block;
 			position: absolute;
 			top:0;
 			bottom:0;
 			z-index:-1; // put behind image and details
-			// left:0;
-			// right:0;
-			left:$gutter--small;
-			right:$gutter--small;
+			left:0; // talkstory
+			right:0;
+			// left:$gutter--small;
+			// right:$gutter--small;
 			bottom: 3.75vw; // 3rem responsive at mobile
 			@include respond-to(break2) {
-				left:$gutter--full;
-				right:$gutter--full;
+				// left:$gutter--full;
+				// right:$gutter--full;
+				left: 0;
+				right: 0;
 				bottom: 0; // back to horizontal
 			}
 			@include respond-to(fullwidth) {
 				left:2rem;
 				right:2rem;
+				// dive deep
+				left: 0;
+				right: 0;
 			}
 		}
 	}
@@ -536,52 +547,6 @@ a.details {
 				@extend .col-sm-4;
 			}			
 		// }
-	}
-
-	// folklife collections
-	.cards--half {
-		.card {
-			width: 50%;
-			float: left;
-			&:nth-of-type(2n + 1) {
-				padding-right:$gutter--small;
-				@include respond-to(break2) {padding-right:$gutter--medium;}
-			}
-			&:nth-of-type(2n) {
-				padding-left:$gutter--small;
-				@include respond-to(break2) {padding-left:$gutter--medium;}
-			}
-			// break every 2 cards so cards don't get hung
-			&:nth-of-type(2n + 1) {
-				clear:left;
-			}
-		}
-	}
-
-	// folklife teach
-	.cards--thirds {
-		.card {
-			width: 33.33333%;
-			float: left;
-			&:nth-of-type(3n + 1) {
-				padding-right:$gutter--small;
-				@include respond-to(break2) {padding-right:$gutter--medium;}
-			}
-			&:nth-of-type(3n + 2) {
-				padding-left:$gutter--small;
-				padding-right:$gutter--small;
-				@include respond-to(break2) {padding-left:$gutter--medium;}
-				@include respond-to(break2) {padding-right:$gutter--medium;}
-			}
-			&:nth-of-type(3n + 3) {
-				padding-left:$gutter--small;
-				@include respond-to(break2) {padding-left:$gutter--medium;}
-			}
-			// break every 3 cards so cards don't get hung
-			&:nth-of-type(3n + 1) {
-				clear:left;
-			}
-		}
 	}
 
 

@@ -65,7 +65,7 @@
           <div class="icon-circle"></div>
           <div class="icon-play"></div>
         </div>
-        <div class="audio-player__details">
+        <div class="audio-player-details">
           <div class="audio-progress-bar"><img src="/assets/images/icons/audio-progress-bar.png"/></div>
           <div class="audio-time">0:00 &vert;&nbsp;
             <?php echo $card->audio_length(); ?>
