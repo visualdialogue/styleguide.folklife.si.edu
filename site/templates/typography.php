@@ -52,7 +52,7 @@
   </div>
   <div class="row">
     <div class="col-md-4">
-      <div class="category">Category or Tag</div>
+      <div class="tag">Category or Tag</div>
     </div>
     <div class="col-md-7">
       <pre><code>// Category or Tag
@@ -104,11 +104,11 @@
   </div>
   <div class="row">
     <div class="col-md-4">
-      <div class="sans-lg">Large Sans</div>
+      <div class="sans-xl">Large Sans</div>
     </div>
     <div class="col-md-7">
       <pre><code>// Large Sans
-@mixin sans-lg {
+@mixin sans-xl {
 	font-family: $sans;
 	font-weight: 300;
 	font-size: 5vw;
@@ -125,11 +125,11 @@
   </div>
   <div class="row">
     <div class="col-md-4">
-      <div class="sans-md">Medium Sans</div>
+      <div class="sans-lg">Medium Sans</div>
     </div>
     <div class="col-md-7">
       <pre><code>// Medium Sans
-@mixin sans-md {
+@mixin sans-lg {
 	font-family: $sans;
 	font-weight: 300; // light for acumin
 	line-height: 1.2;
@@ -146,11 +146,11 @@
   </div>
   <div class="row">
     <div class="col-md-4">
-      <div class="sans-sm">Small Sans</div>
+      <div class="sans-md">Small Sans</div>
     </div>
     <div class="col-md-7">
       <pre><code>// Small Sans
-@mixin sans-sm {
+@mixin sans-md {
 	font-family: $sans;
 	font-weight: 300; // light for acumin
 	line-height: 1.2;
@@ -168,11 +168,11 @@
   </div>
   <div class="row">
     <div class="col-md-4">
-      <div class="sans-xs">Extra Small Sans</div>
+      <div class="sans-sm">Extra Small Sans</div>
     </div>
     <div class="col-md-7">
       <pre><code>// Extra Small Sans
-@mixin sans-xs {
+@mixin sans-sm {
 	font-family: $sans;
 	font-weight: 300; // light for acumin
 	line-height: 1.2;

@@ -5,7 +5,14 @@
 <?php $image = $src; ?>
 <?php endif; ?>
 <li class="card col-xs-12">
-  <div class="image"><a href="<?= $card->url() ?>"><img src="<?= $image->url() ?>"/></a></div>
+  <div class="image">
+    <figure><img src="<?= $src->url() ?>" class="ms-header-image"/>
+      <?php if($caption = $page->img_caption()->kt()): ?>
+      <figcaption>
+        <?php echo $caption; ?></figcaption>
+      <?php endif; ?>
+    </figure>
+  </div>
   <div class="details">
     <div class="details-inner">
       <div class="title">

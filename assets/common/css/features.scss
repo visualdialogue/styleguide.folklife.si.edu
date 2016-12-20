@@ -34,7 +34,7 @@ conversion: 				| mobile 	| tablet	| desktop
 	// 	@include padding-bottom(2);
 	// 	@include padding-left(2);
 	// }
-	// .category {
+	// .tag {
 	// 	// @include margin-top(1.2);
 	// 	// @include margin-top(1);
 	// 	// @include margin-bottom(1);
@@ -71,7 +71,7 @@ conversion: 				| mobile 	| tablet	| desktop
 	.details {
 		// @include margin-top(2.5); // add margin back in b/c no title above in horizontal layout
 	}
-	.category {
+	.tag {
 		// @include margin-bottom(0.5);
 	}
 	.title {

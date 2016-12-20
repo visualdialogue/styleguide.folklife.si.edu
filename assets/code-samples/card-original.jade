@@ -127,7 +127,7 @@
 				-endif
 			.details.col-sm-6.details--inset.details--tight(class="")
 				.time!= $card->time()
-				.category
+				.tag
 					!= $card->festival(), ', ', $card->program();
 				a.high(href="<?= $card->url() ?>").title: span.light: span.er= $card->title()
 
@@ -289,7 +289,7 @@
 				-endif
 				.details
 					.details-inner
-						.category.card__category!= $card->category() 
+						.tag.card__category!= $card->category() 
 						.title-wrapper-wrapper
 							a.high.title(href="<?= $card->url() ?>"): span.light: span.er= $card->title()
 							-if('' != $card->audio_album()):

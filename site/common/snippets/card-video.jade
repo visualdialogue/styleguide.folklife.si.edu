@@ -16,7 +16,7 @@ li.card.card-video(class="<?= $card_classes ?>")
 					.icon-play
 		.details(class="<?= $details_col ?>")
 			.details-inner
-				.category!= $card->category()
+				.tag!= $card->category()
 				a.high(href="<?= $card->url() ?>").title: span.light: span.er= $card->title()
 				.description.link-underline
 					p!= excerpt($card->copy()->kt(), '20', 'words')

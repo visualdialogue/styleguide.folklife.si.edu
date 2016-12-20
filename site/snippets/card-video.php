@@ -17,7 +17,7 @@
     </div>
     <div class="details <?= $details_col ?>">
       <div class="details-inner">
-        <div class="category">
+        <div class="tag">
           <?php echo $card->category(); ?></div><a href="<?= $card->url() ?>" class="high title"><span class="light"><span class="er">
               <?php echo htmlspecialchars($card->title(), ENT_QUOTES, 'UTF-8'); ?></span></span></a>
         <div class="description link-underline">

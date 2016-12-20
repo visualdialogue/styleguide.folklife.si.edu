@@ -7254,75 +7254,65 @@ body {
     .sans-xl {
       font-size: 4rem; } }
 
-.sans-lg {
+.sans-xl {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   font-size: 5vw; }
   @media only screen and (min-width: 53.25em) {
-    .sans-lg {
+    .sans-xl {
       font-size: 1.9vw;
       line-height: 1.2; } }
   @media only screen and (min-width: 1560px) {
-    .sans-lg {
+    .sans-xl {
       font-size: 3.5rem; } }
+
+.sans-lg {
+  font-family: "acumin-pro", Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.166667;
+  font-size: 2.37rem; }
+  @media only screen and (min-width: 53.25em) {
+    .sans-lg {
+      font-size: 2.667rem; } }
+  @media only screen and (min-width: 1560px) {
+    .sans-lg {
+      line-height: 1.166667;
+      font-size: 3rem; } }
 
 .sans-md {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 5vw; }
+  font-size: 1.873rem; }
   @media only screen and (min-width: 53.25em) {
     .sans-md {
-      font-size: 1.92vw;
-      line-height: 1.28; } }
+      font-size: 2.107rem; } }
   @media only screen and (min-width: 1560px) {
     .sans-md {
-      line-height: 1.166667;
-      font-size: 3rem; } }
-
-.sans-xxs {
-  font-family: "acumin-pro", Arial, sans-serif;
-  font-weight: 300;
-  line-height: 1.2;
-  font-size: 4vw; }
-  @media only screen and (min-width: 53.25em) {
-    .sans-xxs {
-      font-size: 1.15vw;
-      line-height: 1.3; } }
-  @media only screen and (min-width: 1560px) {
-    .sans-xxs {
-      line-height: 1.3;
-      font-size: 1.8rem; } }
-
-.sans-xs {
-  font-family: "acumin-pro", Arial, sans-serif;
-  font-weight: 300;
-  line-height: 1.2;
-  font-size: 3.5vw; }
-  @media only screen and (min-width: 53.25em) {
-    .sans-xs {
-      font-size: 1.3vw;
-      font-size: 1.2vw;
-      line-height: 1.3; } }
-  @media only screen and (min-width: 1560px) {
-    .sans-xs {
-      font-size: 2rem;
-      line-height: 1.3;
-      line-height: 1.2; } }
+      font-size: 2.37rem; } }
 
 .sans-sm {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 4vw; }
+  font-size: 1.665rem; }
   @media only screen and (min-width: 53.25em) {
     .sans-sm {
-      font-size: 1.6vw;
-      line-height: 1.3; } }
+      font-size: 1.873rem; } }
   @media only screen and (min-width: 1560px) {
     .sans-sm {
-      font-size: 2.4rem;
-      line-height: 1.3; } }
+      font-size: 2.107rem; } }
+
+.sans-xxs {
+  font-family: "acumin-pro", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 1.422rem; }
+  @media only screen and (min-width: 53.25em) {
+    .sans-xxs {
+      font-size: 1.6rem; } }
+  @media only screen and (min-width: 1560px) {
+    .sans-xxs {
+      font-size: 1.8rem; } }
 
 .sans-xxxs {
   font-family: "acumin-pro", Arial, sans-serif;
@@ -7348,33 +7338,17 @@ body {
  * Serif
  *
  ******************/
-.serif-xxl {
-  font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
-  font-weight: 700;
-  line-height: 1.1;
-  font-size: 8vw; }
-  @media only screen and (min-width: 53.25em) {
-    .serif-xxl {
-      font-size: 8.2vw;
-      line-height: 0.7;
-      margin-top: -1rem; } }
-  @media only screen and (min-width: 1560px) {
-    .serif-xxl {
-      font-size: 13rem;
-      margin-top: -1rem;
-      line-height: 0.7; } }
-
 .serif-xl {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1;
-  font-size: 8vw; }
+  font-size: 4.865rem; }
   @media only screen and (min-width: 53.25em) {
     .serif-xl {
-      font-size: 3.8vw; } }
+      font-size: 5.474rem; } }
   @media only screen and (min-width: 1560px) {
     .serif-xl {
-      font-size: 6rem; } }
+      font-size: 6.158rem; } }
 
 .serif-lg {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
@@ -7404,7 +7378,7 @@ body {
       font-size: 1.8vw; } }
   @media only screen and (min-width: 1560px) {
     .serif-md {
-      font-size: 2.8rem; } }
+      font-size: 2.7rem; } }
   @media only screen and (min-width: 53.25em) {
     .serif-md {
       margin-bottom: 0.625vw; } }
@@ -7415,18 +7389,16 @@ body {
 .serif-sm {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 400;
-  line-height: 1.2;
-  font-size: 5vw; }
+  line-height: 1.333333;
+  font-size: 1.896rem; }
   @media only screen and (min-width: 53.25em) {
     .serif-sm {
-      font-size: 1.4vw; } }
+      font-size: 2.133rem; } }
   @media only screen and (min-width: 1560px) {
     .serif-sm {
-      font-size: 2.4rem;
-      line-height: 1.2;
-      line-height: 1.333333; } }
+      font-size: 2.4rem; } }
 
-.category {
+.tag {
   text-transform: uppercase;
   font-family: "acumin-pro-wide", Arial, sans-serif;
   color: #595959;
@@ -7434,16 +7406,15 @@ body {
   letter-spacing: 1px;
   margin-bottom: 0.5rem;
   margin-bottom: 0;
-  font-size: 2.5vw;
+  font-size: 1.2rem;
   position: relative; }
   @media only screen and (min-width: 53.25em) {
-    .category {
-      font-size: 0.95vw;
-      font-size: 1vw;
+    .tag {
+      font-size: 1.4rem;
       margin-bottom: 0.4vw; } }
   @media only screen and (min-width: 1560px) {
-    .category {
-      font-size: 1.6rem;
+    .tag {
+      font-size: 1.4rem;
       margin-bottom: 0;
       line-height: 1.4; } }
 
@@ -7479,7 +7450,7 @@ body {
       font-size: 1.8vw; } }
   @media only screen and (min-width: 1560px) {
     .content h4 {
-      font-size: 2.8rem; } }
+      font-size: 2.7rem; } }
   @media only screen and (min-width: 53.25em) {
     .content h4 {
       margin-bottom: 0.625vw; } }
@@ -7497,20 +7468,16 @@ body {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 3.5vw;
+  font-size: 1.665rem;
   font-weight: 500;
   margin-bottom: 0.625vw;
   margin-bottom: 0.25rem; }
   @media only screen and (min-width: 53.25em) {
     .content h5 {
-      font-size: 1.3vw;
-      font-size: 1.2vw;
-      line-height: 1.3; } }
+      font-size: 1.873rem; } }
   @media only screen and (min-width: 1560px) {
     .content h5 {
-      font-size: 2rem;
-      line-height: 1.3;
-      line-height: 1.2; } }
+      font-size: 2.107rem; } }
   @media only screen and (min-width: 53.25em) {
     .content h5 {
       margin-bottom: 0.3125vw; } }
@@ -7521,17 +7488,15 @@ body {
 .content p {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 400;
-  line-height: 1.2;
-  font-size: 5vw;
+  line-height: 1.333333;
+  font-size: 1.896rem;
   padding-bottom: 2.5vw; }
   @media only screen and (min-width: 53.25em) {
     .content p {
-      font-size: 1.4vw; } }
+      font-size: 2.133rem; } }
   @media only screen and (min-width: 1560px) {
     .content p {
-      font-size: 2.4rem;
-      line-height: 1.2;
-      line-height: 1.333333; } }
+      font-size: 2.4rem; } }
   @media only screen and (min-width: 53.25em) {
     .content p {
       padding-bottom: 1.25vw; } }
@@ -7553,7 +7518,7 @@ body {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 3.5vw;
+  font-size: 1.665rem;
   margin-bottom: 0.375vw;
   margin-bottom: 0.15rem;
   width: initial;
@@ -7561,14 +7526,10 @@ body {
   font-weight: 600; }
   @media only screen and (min-width: 53.25em) {
     .content .title {
-      font-size: 1.3vw;
-      font-size: 1.2vw;
-      line-height: 1.3; } }
+      font-size: 1.873rem; } }
   @media only screen and (min-width: 1560px) {
     .content .title {
-      font-size: 2rem;
-      line-height: 1.3;
-      line-height: 1.2; } }
+      font-size: 2.107rem; } }
   @media only screen and (min-width: 53.25em) {
     .content .title {
       margin-bottom: 0.1875vw; } }
@@ -7583,28 +7544,26 @@ body {
 .archives-page .title {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
-  line-height: 1.2;
-  font-size: 5vw; }
+  line-height: 1.166667;
+  font-size: 2.37rem; }
   @media only screen and (min-width: 53.25em) {
     .archives-page .title {
-      font-size: 1.92vw;
-      line-height: 1.28; } }
+      font-size: 2.667rem; } }
   @media only screen and (min-width: 1560px) {
     .archives-page .title {
       line-height: 1.166667;
       font-size: 3rem; } }
 
-.sans-md {
+.sans-lg {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
-  line-height: 1.2;
-  font-size: 5vw; }
+  line-height: 1.166667;
+  font-size: 2.37rem; }
   @media only screen and (min-width: 53.25em) {
-    .sans-md {
-      font-size: 1.92vw;
-      line-height: 1.28; } }
+    .sans-lg {
+      font-size: 2.667rem; } }
   @media only screen and (min-width: 1560px) {
-    .sans-md {
+    .sans-lg {
       line-height: 1.166667;
       font-size: 3rem; } }
 
@@ -7746,18 +7705,15 @@ body {
   .more-link-text {
     font-family: "acumin-pro", Arial, sans-serif;
     font-weight: 300;
-    line-height: 1.2;
-    font-size: 4vw;
+    font-size: 1.422rem;
     display: inline-block;
     vertical-align: top;
     line-height: 1.1; }
     @media only screen and (min-width: 53.25em) {
       .more-link-text {
-        font-size: 1.15vw;
-        line-height: 1.3; } }
+        font-size: 1.6rem; } }
     @media only screen and (min-width: 1560px) {
       .more-link-text {
-        line-height: 1.3;
         font-size: 1.8rem; } }
     @media only screen and (min-width: 53.25em) {
       .more-link-text {
@@ -8692,49 +8648,42 @@ ul {
     letter-spacing: 1px;
     margin-bottom: 0.5rem;
     margin-bottom: 0;
-    font-size: 2.5vw;
+    font-size: 1.2rem;
     position: relative;
     font-weight: 700; }
     @media only screen and (min-width: 53.25em) {
       .special-event-textbox .time {
-        font-size: 0.95vw;
-        font-size: 1vw;
+        font-size: 1.4rem;
         margin-bottom: 0.4vw; } }
     @media only screen and (min-width: 1560px) {
       .special-event-textbox .time {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         margin-bottom: 0;
         line-height: 1.4; } }
   .special-event-textbox .title {
     font-family: "acumin-pro", Arial, sans-serif;
     font-weight: 300;
     line-height: 1.2;
-    font-size: 4vw;
+    font-size: 1.873rem;
     font-weight: 600; }
     @media only screen and (min-width: 53.25em) {
       .special-event-textbox .title {
-        font-size: 1.6vw;
-        line-height: 1.3; } }
+        font-size: 2.107rem; } }
     @media only screen and (min-width: 1560px) {
       .special-event-textbox .title {
-        font-size: 2.4rem;
-        line-height: 1.3; } }
+        font-size: 2.37rem; } }
   .special-event-textbox .description {
     font-family: "acumin-pro", Arial, sans-serif;
     font-weight: 300;
     line-height: 1.2;
-    font-size: 3.5vw;
+    font-size: 1.665rem;
     font-weight: 400; }
     @media only screen and (min-width: 53.25em) {
       .special-event-textbox .description {
-        font-size: 1.3vw;
-        font-size: 1.2vw;
-        line-height: 1.3; } }
+        font-size: 1.873rem; } }
     @media only screen and (min-width: 1560px) {
       .special-event-textbox .description {
-        font-size: 2rem;
-        line-height: 1.3;
-        line-height: 1.2; } }
+        font-size: 2.107rem; } }
 
 /* General / Sections
 -------------------------------------------------- */
@@ -8806,8 +8755,8 @@ section {
   .sidebar h3, .sidebar-section-title {
     font-family: "acumin-pro", Arial, sans-serif;
     font-weight: 300;
-    line-height: 1.2;
-    font-size: 5vw;
+    line-height: 1.166667;
+    font-size: 2.37rem;
     color: gray;
     padding-bottom: 1.25vw;
     margin-top: 5vw;
@@ -8816,8 +8765,7 @@ section {
     margin-bottom: 0.55rem; }
     @media only screen and (min-width: 53.25em) {
       .sidebar h3, .sidebar-section-title {
-        font-size: 1.92vw;
-        line-height: 1.28; } }
+        font-size: 2.667rem; } }
     @media only screen and (min-width: 1560px) {
       .sidebar h3, .sidebar-section-title {
         line-height: 1.166667;
@@ -9033,15 +8981,13 @@ a .page-title {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 4vw; }
+  font-size: 1.873rem; }
   @media only screen and (min-width: 53.25em) {
     .remodal-description {
-      font-size: 1.6vw;
-      line-height: 1.3; } }
+      font-size: 2.107rem; } }
   @media only screen and (min-width: 1560px) {
     .remodal-description {
-      font-size: 2.4rem;
-      line-height: 1.3; } }
+      font-size: 2.37rem; } }
 
 /* #Become a Member
 -------------------------------------------------- */
@@ -9113,14 +9059,13 @@ a .page-title {
     background-color: white;
     font-family: "acumin-pro", Arial, sans-serif;
     font-weight: 300;
-    line-height: 1.2;
-    font-size: 5vw;
+    line-height: 1.166667;
+    font-size: 2.37rem;
     left: 50%;
     text-align: center; }
     @media only screen and (min-width: 53.25em) {
       .become-a-member .copy {
-        font-size: 1.92vw;
-        line-height: 1.28; } }
+        font-size: 2.667rem; } }
     @media only screen and (min-width: 1560px) {
       .become-a-member .copy {
         line-height: 1.166667;
@@ -9242,15 +9187,12 @@ a .page-title {
 .newsletter-signup-section, .support-section, .support-folkways {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
-  line-height: 1.2;
-  font-size: 4vw; }
+  font-size: 1.422rem; }
   @media only screen and (min-width: 53.25em) {
     .newsletter-signup-section, .support-section, .support-folkways {
-      font-size: 1.15vw;
-      line-height: 1.3; } }
+      font-size: 1.6rem; } }
   @media only screen and (min-width: 1560px) {
     .newsletter-signup-section, .support-section, .support-folkways {
-      line-height: 1.3;
       font-size: 1.8rem; } }
 
 .newsletter-signup-section, .support-section {
@@ -9267,8 +9209,7 @@ a .page-title {
   padding-bottom: 2.5vw;
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
-  line-height: 1.2;
-  font-size: 4vw; }
+  font-size: 1.422rem; }
   @media only screen and (min-width: 53.25em) {
     .newsletter-signup-copy {
       padding-top: 1.1875vw; } }
@@ -9295,11 +9236,9 @@ a .page-title {
       padding-bottom: 2rem; } }
   @media only screen and (min-width: 53.25em) {
     .newsletter-signup-copy {
-      font-size: 1.15vw;
-      line-height: 1.3; } }
+      font-size: 1.6rem; } }
   @media only screen and (min-width: 1560px) {
     .newsletter-signup-copy {
-      line-height: 1.3;
       font-size: 1.8rem; } }
 
 .newsletter-signup-form {
@@ -9369,19 +9308,15 @@ a .page-title {
     font-family: "acumin-pro", Arial, sans-serif;
     font-weight: 300;
     line-height: 1.2;
-    font-size: 3.5vw;
+    font-size: 1.665rem;
     padding-top: 1.875vw;
     padding-bottom: 2.5vw; }
     @media only screen and (min-width: 53.25em) {
       .newsletter-signup--short .newsletter-signup-copy {
-        font-size: 1.3vw;
-        font-size: 1.2vw;
-        line-height: 1.3; } }
+        font-size: 1.873rem; } }
     @media only screen and (min-width: 1560px) {
       .newsletter-signup--short .newsletter-signup-copy {
-        font-size: 2rem;
-        line-height: 1.3;
-        line-height: 1.2; } }
+        font-size: 2.107rem; } }
     @media only screen and (min-width: 53.25em) {
       .newsletter-signup--short .newsletter-signup-copy {
         padding-top: 0.9375vw; } }
@@ -9429,15 +9364,12 @@ a .page-title {
 .cards--audio-player .subtitle, .cards--audio-player .artist {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
-  line-height: 1.2;
-  font-size: 4vw; }
+  font-size: 1.422rem; }
   @media only screen and (min-width: 53.25em) {
     .cards--audio-player .subtitle, .cards--audio-player .artist {
-      font-size: 1.15vw;
-      line-height: 1.3; } }
+      font-size: 1.6rem; } }
   @media only screen and (min-width: 1560px) {
     .cards--audio-player .subtitle, .cards--audio-player .artist {
-      line-height: 1.3;
       font-size: 1.8rem; } }
 
 .cards--listen {
@@ -9493,15 +9425,12 @@ a .page-title {
 .audio-time {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
-  line-height: 1.2;
-  font-size: 4vw; }
+  font-size: 1.422rem; }
   @media only screen and (min-width: 53.25em) {
     .audio-time {
-      font-size: 1.15vw;
-      line-height: 1.3; } }
+      font-size: 1.6rem; } }
   @media only screen and (min-width: 1560px) {
     .audio-time {
-      line-height: 1.3;
       font-size: 1.8rem; } }
 
 /* #footer
@@ -9734,16 +9663,13 @@ a .page-title {
   color: #666666;
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
-  line-height: 1.2;
-  font-size: 4vw;
+  font-size: 1.422rem;
   margin-top: 2.5vw; }
   @media only screen and (min-width: 53.25em) {
     .article-page figcaption {
-      font-size: 1.15vw;
-      line-height: 1.3; } }
+      font-size: 1.6rem; } }
   @media only screen and (min-width: 1560px) {
     .article-page figcaption {
-      line-height: 1.3;
       font-size: 1.8rem; } }
   @media only screen and (min-width: 53.25em) {
     .article-page figcaption {
@@ -9777,15 +9703,15 @@ a .page-title {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1;
-  font-size: 8vw;
+  font-size: 4.865rem;
   margin-bottom: 0.625vw;
   margin-bottom: 0.25rem; }
   @media only screen and (min-width: 53.25em) {
     .blog-article .title {
-      font-size: 3.8vw; } }
+      font-size: 5.474rem; } }
   @media only screen and (min-width: 1560px) {
     .blog-article .title {
-      font-size: 6rem; } }
+      font-size: 6.158rem; } }
   @media only screen and (min-width: 53.25em) {
     .blog-article .title {
       margin-bottom: 0.3125vw; } }
@@ -9796,18 +9722,15 @@ a .page-title {
 .blog-article .date {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
-  line-height: 1.2;
-  font-size: 4vw;
+  font-size: 1.422rem;
   font-weight: 300;
   margin-bottom: 2.5vw;
   margin-bottom: 1rem; }
   @media only screen and (min-width: 53.25em) {
     .blog-article .date {
-      font-size: 1.15vw;
-      line-height: 1.3; } }
+      font-size: 1.6rem; } }
   @media only screen and (min-width: 1560px) {
     .blog-article .date {
-      line-height: 1.3;
       font-size: 1.8rem; } }
   @media only screen and (min-width: 53.25em) {
     .blog-article .date {
@@ -9887,14 +9810,14 @@ a.details {
   .details-wrapper--horizontal {
     padding-left: 2rem; } }
 
-.details-wrapper--horizontal .category {
+.details-wrapper--horizontal .tag {
   margin-bottom: 0.625vw;
   margin-bottom: 0.25rem; }
   @media only screen and (min-width: 53.25em) {
-    .details-wrapper--horizontal .category {
+    .details-wrapper--horizontal .tag {
       margin-bottom: 0.3125vw; } }
   @media only screen and (min-width: 1560px) {
-    .details-wrapper--horizontal .category {
+    .details-wrapper--horizontal .tag {
       margin-bottom: 0.5rem; } }
 
 .title {
@@ -9915,7 +9838,7 @@ a.details {
       font-size: 1.8vw; } }
   @media only screen and (min-width: 1560px) {
     .title--serif {
-      font-size: 2.8rem; } }
+      font-size: 2.7rem; } }
   @media only screen and (min-width: 53.25em) {
     .title--serif {
       margin-bottom: 0.625vw; } }
@@ -9926,18 +9849,15 @@ a.details {
 .subtitle--sans {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
-  line-height: 1.2;
-  font-size: 4vw; }
+  font-size: 1.422rem; }
   @media only screen and (min-width: 53.25em) {
     .subtitle--sans {
-      font-size: 1.15vw;
-      line-height: 1.3; } }
+      font-size: 1.6rem; } }
   @media only screen and (min-width: 1560px) {
     .subtitle--sans {
-      line-height: 1.3;
       font-size: 1.8rem; } }
 
-.category {
+.tag {
   text-transform: uppercase;
   font-family: "acumin-pro-wide", Arial, sans-serif;
   color: #595959;
@@ -9945,20 +9865,19 @@ a.details {
   letter-spacing: 1px;
   margin-bottom: 0.5rem;
   margin-bottom: 0;
-  font-size: 2.5vw;
+  font-size: 1.2rem;
   position: relative; }
   @media only screen and (min-width: 53.25em) {
-    .category {
-      font-size: 0.95vw;
-      font-size: 1vw;
+    .tag {
+      font-size: 1.4rem;
       margin-bottom: 0.4vw; } }
   @media only screen and (min-width: 1560px) {
-    .category {
-      font-size: 1.6rem;
+    .tag {
+      font-size: 1.4rem;
       margin-bottom: 0;
       line-height: 1.4; } }
 
-.date, .tag {
+.date {
   text-transform: uppercase;
   font-family: "acumin-pro-wide", Arial, sans-serif;
   color: #595959;
@@ -9966,17 +9885,16 @@ a.details {
   letter-spacing: 1px;
   margin-bottom: 0.5rem;
   margin-bottom: 0;
-  font-size: 2.5vw;
+  font-size: 1.2rem;
   position: relative;
   font-weight: 700; }
   @media only screen and (min-width: 53.25em) {
-    .date, .tag {
-      font-size: 0.95vw;
-      font-size: 1vw;
+    .date {
+      font-size: 1.4rem;
       margin-bottom: 0.4vw; } }
   @media only screen and (min-width: 1560px) {
-    .date, .tag {
-      font-size: 1.6rem;
+    .date {
+      font-size: 1.4rem;
       margin-bottom: 0;
       line-height: 1.4; } }
 
@@ -9988,19 +9906,18 @@ a.details {
   letter-spacing: 1px;
   margin-bottom: 0.5rem;
   margin-bottom: 0;
-  font-size: 2.5vw;
+  font-size: 1.2rem;
   position: relative;
   letter-spacing: normal;
   text-transform: initial;
   margin-top: 0.625vw; }
   @media only screen and (min-width: 53.25em) {
     .date-sm {
-      font-size: 0.95vw;
-      font-size: 1vw;
+      font-size: 1.4rem;
       margin-bottom: 0.4vw; } }
   @media only screen and (min-width: 1560px) {
     .date-sm {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       margin-bottom: 0;
       line-height: 1.4; } }
   @media only screen and (min-width: 53.25em) {
@@ -10028,7 +9945,7 @@ a.details {
       font-size: 1.8vw; } }
   @media only screen and (min-width: 1560px) {
     .card-vertical .title {
-      font-size: 2.8rem; } }
+      font-size: 2.7rem; } }
   @media only screen and (min-width: 53.25em) {
     .card-vertical .title {
       margin-bottom: 0.625vw; } }
@@ -10053,7 +9970,7 @@ a.details {
       font-size: 1.8vw; } }
   @media only screen and (min-width: 1560px) {
     .card-program .title {
-      font-size: 2.8rem; } }
+      font-size: 2.7rem; } }
   @media only screen and (min-width: 53.25em) {
     .card-program .title {
       margin-bottom: 0.625vw; } }
@@ -10067,7 +9984,7 @@ a.details {
 
 @media only screen and (min-width: 53.25em) {
   .card-program .details-inner {
-    min-height: 19vw; } }
+    min-height: 17vw; } }
 
 @media only screen and (min-width: 1560px) {
   .card-program .details-inner {
@@ -10082,24 +9999,22 @@ a.details {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 4vw;
+  font-size: 1.873rem;
   font-weight: 500;
   margin-bottom: 0; }
   @media only screen and (min-width: 53.25em) {
     .audio-card .title {
-      font-size: 1.6vw;
-      line-height: 1.3; } }
+      font-size: 2.107rem; } }
   @media only screen and (min-width: 1560px) {
     .audio-card .title {
-      font-size: 2.4rem;
-      line-height: 1.3; } }
+      font-size: 2.37rem; } }
 
 .audio-card .details-inner {
   position: relative;
   min-height: 46vw; }
   @media only screen and (min-width: 53.25em) {
     .audio-card .details-inner {
-      min-height: 19vw; } }
+      min-height: 17vw; } }
   @media only screen and (min-width: 1560px) {
     .audio-card .details-inner {
       min-height: 25rem; } }
@@ -10202,15 +10117,12 @@ a.details {
   margin-bottom: 10px;
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
-  line-height: 1.2;
-  font-size: 4vw; }
+  font-size: 1.422rem; }
   @media only screen and (min-width: 53.25em) {
     .remodal-title {
-      font-size: 1.15vw;
-      line-height: 1.3; } }
+      font-size: 1.6rem; } }
   @media only screen and (min-width: 1560px) {
     .remodal-title {
-      line-height: 1.3;
       font-size: 1.8rem; } }
 
 /* #background
@@ -10301,13 +10213,13 @@ a.details {
 
 /* #category
 -------------------------------------------------- */
-.category {
+.tag {
   margin-top: -0.625vw; }
   @media only screen and (min-width: 53.25em) {
-    .category {
+    .tag {
       margin-top: -0.3125vw; } }
   @media only screen and (min-width: 1560px) {
-    .category {
+    .tag {
       margin-top: -0.5rem; } }
 
 /* #horizontal
@@ -10488,7 +10400,7 @@ a.details {
 
 /* Full feature cards
 -------------------------------------------------- */
-.full-feature .category {
+.full-feature .tag {
   display: none; }
 
 @media only screen and (max-width: 53.25em) {
@@ -10499,14 +10411,14 @@ a.details {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1;
-  font-size: 8vw;
+  font-size: 4.865rem;
   margin-bottom: 1rem; }
   @media only screen and (min-width: 53.25em) {
     .full-feature .title {
-      font-size: 3.8vw; } }
+      font-size: 5.474rem; } }
   @media only screen and (min-width: 1560px) {
     .full-feature .title {
-      font-size: 6rem; } }
+      font-size: 6.158rem; } }
   @media only screen and (min-width: 53.25em) {
     .full-feature .title {
       margin-bottom: 1.15vw; } }
@@ -10529,12 +10441,11 @@ a.details {
 .full-feature .description {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
-  line-height: 1.2;
-  font-size: 5vw; }
+  line-height: 1.166667;
+  font-size: 2.37rem; }
   @media only screen and (min-width: 53.25em) {
     .full-feature .description {
-      font-size: 1.92vw;
-      line-height: 1.28; } }
+      font-size: 2.667rem; } }
   @media only screen and (min-width: 1560px) {
     .full-feature .description {
       line-height: 1.166667;
@@ -10556,16 +10467,13 @@ a.details {
   .sidebar-card .details {
     font-family: "acumin-pro", Arial, sans-serif;
     font-weight: 300;
-    line-height: 1.2;
-    font-size: 4vw;
+    font-size: 1.422rem;
     padding-left: 0; }
     @media only screen and (min-width: 53.25em) {
       .sidebar-card .details {
-        font-size: 1.15vw;
-        line-height: 1.3; } }
+        font-size: 1.6rem; } }
     @media only screen and (min-width: 1560px) {
       .sidebar-card .details {
-        line-height: 1.3;
         font-size: 1.8rem; } }
   .sidebar-card .author, .sidebar-card .date {
     display: none; }
@@ -10659,31 +10567,25 @@ a.details {
 .cards--albums .title, .cards--vinyl .title {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
-  line-height: 1.2;
-  font-size: 4vw;
+  font-size: 1.422rem;
   font-weight: 700;
   line-height: 1; }
   @media only screen and (min-width: 53.25em) {
     .cards--albums .title, .cards--vinyl .title {
-      font-size: 1.15vw;
-      line-height: 1.3; } }
+      font-size: 1.6rem; } }
   @media only screen and (min-width: 1560px) {
     .cards--albums .title, .cards--vinyl .title {
-      line-height: 1.3;
       font-size: 1.8rem; } }
 
 .cards--albums .artist, .cards--vinyl .artist {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
-  line-height: 1.2;
-  font-size: 4vw; }
+  font-size: 1.422rem; }
   @media only screen and (min-width: 53.25em) {
     .cards--albums .artist, .cards--vinyl .artist {
-      font-size: 1.15vw;
-      line-height: 1.3; } }
+      font-size: 1.6rem; } }
   @media only screen and (min-width: 1560px) {
     .cards--albums .artist, .cards--vinyl .artist {
-      line-height: 1.3;
       font-size: 1.8rem; } }
 
 @media only screen and (min-width: 53.25em) {
@@ -10726,8 +10628,7 @@ a.details {
 .cards--merchandise .title {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
-  line-height: 1.2;
-  font-size: 4vw;
+  font-size: 1.422rem;
   color: white;
   font-weight: bold;
   text-align: center;
@@ -10735,11 +10636,9 @@ a.details {
   margin-bottom: 0.25rem; }
   @media only screen and (min-width: 53.25em) {
     .cards--merchandise .title {
-      font-size: 1.15vw;
-      line-height: 1.3; } }
+      font-size: 1.6rem; } }
   @media only screen and (min-width: 1560px) {
     .cards--merchandise .title {
-      line-height: 1.3;
       font-size: 1.8rem; } }
   @media only screen and (min-width: 53.25em) {
     .cards--merchandise .title {
@@ -10751,17 +10650,14 @@ a.details {
 .cards--merchandise .price {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
-  line-height: 1.2;
-  font-size: 4vw;
+  font-size: 1.422rem;
   color: #4d4d4d;
   text-align: center; }
   @media only screen and (min-width: 53.25em) {
     .cards--merchandise .price {
-      font-size: 1.15vw;
-      line-height: 1.3; } }
+      font-size: 1.6rem; } }
   @media only screen and (min-width: 1560px) {
     .cards--merchandise .price {
-      line-height: 1.3;
       font-size: 1.8rem; } }
 
 /* Cards with borders
@@ -10847,13 +10743,13 @@ a.details {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1;
-  font-size: 8vw; }
+  font-size: 4.865rem; }
   @media only screen and (min-width: 53.25em) {
     .styleguide-section .title {
-      font-size: 3.8vw; } }
+      font-size: 5.474rem; } }
   @media only screen and (min-width: 1560px) {
     .styleguide-section .title {
-      font-size: 6rem; } }
+      font-size: 6.158rem; } }
 
 .styleguide-section .card {
   margin-bottom: 7.5vw;
@@ -11046,15 +10942,13 @@ code.hljs {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 4vw; }
+  font-size: 1.873rem; }
   @media only screen and (min-width: 53.25em) {
     .video-section .subtitle {
-      font-size: 1.6vw;
-      line-height: 1.3; } }
+      font-size: 2.107rem; } }
   @media only screen and (min-width: 1560px) {
     .video-section .subtitle {
-      font-size: 2.4rem;
-      line-height: 1.3; } }
+      font-size: 2.37rem; } }
 
 /* #structure page
 -------------------------------------------------- */

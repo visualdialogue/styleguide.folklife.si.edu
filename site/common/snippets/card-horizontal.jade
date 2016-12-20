@@ -19,7 +19,7 @@ li.card.card-horizontal(class="<?= $card_classes ?>")
 					.icon-play
 		.details(class="<?= $details_col ?>")
 			.details-inner
-				.category!= $card->category()
+				.tag!= $card->category()
 				
 				-if (isset($date) && isset($time)):
 					.tag!= $card->date('M d, Y'), '<br />', $card->time()

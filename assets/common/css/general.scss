@@ -209,11 +209,11 @@ ul {margin: 0;}
 			@include date;
 		}
 		.title {
-			@include sans-sm;
+			@include sans-md;
 			font-weight: 600;
 		}
 		.description {
-			@include sans-xs;
+			@include sans-sm;
 			font-weight: 400;
 		}
 	}
@@ -267,7 +267,7 @@ ul {margin: 0;}
 		color: $black70;	
 		@include margin-bottom(6); // keep from footer
 		h3, &-section-title {
-			@include sans-md;
+			@include sans-lg;
 			color: $black50;
 			@include padding-bottom(1);
 			@include margin-top(4);
@@ -425,7 +425,7 @@ ul {margin: 0;}
 /* #remodal
 -------------------------------------------------- */
 	.remodal-description {
-		@include sans-sm;
+		@include sans-md;
 	}
 
 /* #Become a Member
@@ -459,7 +459,7 @@ ul {margin: 0;}
 		}
 		.copy {
 			background-color: white;
-			@include sans-md;
+			@include sans-lg;
 			left: 50%;
 			text-align: center;
 			&-inner {
@@ -603,7 +603,7 @@ ul {margin: 0;}
 		}
 
 		.newsletter-signup-copy {
-			@include sans-xs;
+			@include sans-sm;
 			@include padding-top(1.5);
 			@include padding-bottom(2);
 			@include respond-to(break2) {

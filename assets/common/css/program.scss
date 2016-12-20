@@ -22,12 +22,12 @@
 			display: none;
 		}
 		.byline {
-			@include sans-sm;
+			@include sans-md;
 			font-weight: 600;
 			@include margin-bottom(3);
 		}
 		.description p {
-			@include sans-md;
+			@include sans-lg;
 		}
 
 		.program-feature {
@@ -47,7 +47,7 @@
 		.program-resources {
 			// @include margin-top(12.7);
 			.title {
-				@include sans-sm;
+				@include sans-md;
 				font-weight: 600;
 				line-height: 1 !important;
 				@include padding-bottom(1);
@@ -105,7 +105,7 @@
 				@include padding-bottom(0.8);
 				@include padding-left(0.5);
 				@include margin-top(-5);
-				@include sans-xl;
+				@include sans-plus-icon;
 				line-height: 0.8 !important;
 				visibility: visible; // initial show, from http://stackoverflow.com/a/4912823/4504073
 				@include respond-to(break2max) {
@@ -133,7 +133,7 @@
 				@include padding-bottom(0.8);
 				@include padding-left(0.5);
 				@include margin-top(-5);
-				@include sans-xl;
+				@include sans-plus-icon;
 				line-height: 0.8 !important;
 				visibility: visible; // initial show, counteracts parent visiblity hidden. From http://stackoverflow.com/a/4912823/4504073
 				@include respond-to(break2max) {
@@ -176,7 +176,7 @@
 			height: auto;
 		}
 		.page-subtitle {
-			@include sans-md;
+			@include sans-lg;
 			font-weight: 600;
 			color: $basque-green;
 			text-transform: uppercase;
@@ -211,7 +211,7 @@
 			@include margin-bottom(3.1);
 		}
 		&-blurb {
-			@include sans-md;
+			@include sans-lg;
 			@include margin-bottom(2);
 		}
 		&-credits {
@@ -239,7 +239,7 @@
 		}
 		.ms-sidebar-section-title {
 			@include sidebarBorderTop;
-			@include sans-sm;
+			@include sans-md;
 			color: $black70;
 			border-color: $fs-green;
 			font-weight: 600;
@@ -281,12 +281,12 @@
 			@include margin-bottom(0.5);
 		}
 		.byline {
-			@include sans-sm;
+			@include sans-md;
 			font-weight: 600;
 			@include margin-bottom(4);
 		}
 		.blurb {
-			@include sans-md;
+			@include sans-lg;
 		}
 		.anchor-link {
 			@include top(-5);

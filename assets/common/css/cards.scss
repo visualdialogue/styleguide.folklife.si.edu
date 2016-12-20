@@ -61,7 +61,7 @@ a.details {
 	// padding-left:1rem;
 	@include respond-to(break2) {padding-left:$gutter--full;}
 	@include respond-to(fullwidth) {padding-left:2rem;}
-	.category {
+	.tag {
 		@include margin-bottom(0.5);
 	}
 }
@@ -81,10 +81,10 @@ a.details {
 .subtitle--sans {
 	@include sans-xxs;
 }
-.category {
-	@include category;
+.tag {
+	@include tag;
 }
-.date, .tag {@include date;}
+.date {@include date;}
 .date-sm {@include date-sm;}
 
 
@@ -132,7 +132,7 @@ a.details {
 			@include respond-to(break2max) {
 				min-height:55vw !important; // override audio card
 			}
-			@include respond-to(break2) {min-height:19vw;}
+			@include respond-to(break2) {min-height:17vw;}
 			@include respond-to(fullwidth) {min-height:25rem;}
 		}
 	}
@@ -145,14 +145,14 @@ a.details {
 			padding-bottom:0; // prevent making gap in outline
 		}
 		.title {
-			@include sans-sm;
+			@include sans-md;
 			font-weight: 500;
 			margin-bottom:0;
 		}
 		.details-inner {
 			position: relative; // hold player
 			min-height:46vw;
-			@include respond-to(break2) {min-height:19vw;}
+			@include respond-to(break2) {min-height:17vw;}
 			@include respond-to(fullwidth) {min-height:25rem;}
 		}
 	}
@@ -342,7 +342,7 @@ a.details {
 
 /* #category
 -------------------------------------------------- */
-	.category {
+	.tag {
 		// counteract line height of first line for padding
 		@include margin-top(-0.5); // due to line height. to make spacing accurate with padding above
 	}
@@ -598,7 +598,7 @@ a.details {
 /* Full feature cards
 -------------------------------------------------- */
 	.full-feature {
-		.category {
+		.tag {
 			display: none;
 		}
 		.image {
@@ -619,7 +619,7 @@ a.details {
 			}
 		}
 		.description {
-			@include sans-md;
+			@include sans-lg;
 		}
 	}
 
@@ -703,7 +703,7 @@ a.details {
 			padding:0;
 			@include padding-top(2);
 		}
-		.category {
+		.tag {
 			// display: none;
 		}
 		.description {

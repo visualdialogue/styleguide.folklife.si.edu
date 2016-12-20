@@ -63,7 +63,7 @@
 				-endif
 				.details
 					.details-inner
-						.category.card__category!= $card->category() 
+						.tag.card__category!= $card->category() 
 						.title-wrapper-wrapper
 							a.high.title(href="<?= $card->url() ?>"): span.light: span.er= $card->title()
 							-if('' != $card->audio_album()):
@@ -146,11 +146,11 @@
 							-if($showCategory):
 								//- show special date if video card
 								-if(isset($video) && $video === true):
-									.category!= 'Festival, ', $card->year(), ', ', $card->program()
+									.tag!= 'Festival, ', $card->year(), ', ', $card->program()
 								-elseif($type == 'blog'):
-									.category!= $card->festival(), ', ', $card->program();
+									.tag!= $card->festival(), ', ', $card->program();
 								-else:
-									.category!= $card->category()
+									.tag!= $card->category()
 								-endif
 
 							-endif

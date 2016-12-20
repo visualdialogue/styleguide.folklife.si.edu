@@ -229,6 +229,7 @@
 			$navBar.addClass('navbar--open');
 			site.$navbar.addClass('logo-swap'); // switch to one-line logo
 			$navbarOutside.css('position', 'fixed'); // activate navbarOutside
+			console.log('one line logo');				
 			$notMenuIcon.addClass('lighter-nav-icons'); // grey out other icons
 			$megaNav.css('display', 'block'); // show social media icons
 			// $navBarHeader.css('z-index', '0'); // make navbar clickable to close
@@ -308,6 +309,9 @@
 
 
 	  // var $remodal = $('.remodal');
+	  var $remodalIframe = $('.remodal-iframe');
+	  var $remodalTitle = $('.remodal-title');
+	  var $remodalDescription = $('.remodal-description');
 	  var $remodalClose = $('.remodal-close');
 	  // var $remodalOverlay = $('.remodal-overlay');
 	  var player; // global for playing, pausing
@@ -342,6 +346,7 @@
 			  autoplay: true,
 		  }
 
+		  player = new Vimeo.Player('remodal-iframe', options);
 		
 		  if(player)
 			playerLoaded = true;
@@ -349,6 +354,7 @@
 		// else just reload the player
 		else {
 			console.log('NOT first time play');
+		  	// player = new Vimeo.Player('remodal-iframe', options);
 
 	  		player.loadVideo($video_id).then(function() {
 	  			player.play();

@@ -17,7 +17,7 @@
   </div>
   <div class="details">
     <div class="details-inner">
-      <div class="category">
+      <div class="tag">
         <?php echo $card->festival(), ', ', $card->program(); ?></div>
       <div class="title">
         <?php echo $card->title(); ?></div>

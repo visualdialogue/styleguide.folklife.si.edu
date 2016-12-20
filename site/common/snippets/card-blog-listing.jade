@@ -19,7 +19,7 @@ li.card.card-horizontal.col-xs-12.border-top
 					.icon-play
 		.details.col-sm-6
 			.details-inner
-				.category!= $card->festival(), ', ', $card->program();
+				.tag!= $card->festival(), ', ', $card->program();
 
 				a.high(href="<?= $card->url() ?>").title: span.light: span.er= $card->title()
 

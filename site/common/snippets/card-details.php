@@ -2,13 +2,13 @@
 <div class="details-inner <?= $details ?>">
   <?php if($showCategory): ?>
   <?php if(isset($video) && $video === true): ?>
-  <div class="category">
+  <div class="tag">
     <?php echo 'Festival, ', $card->year(), ', ', $card->program(); ?></div>
   <?php elseif($type == 'blog'): ?>
-  <div class="category">
+  <div class="tag">
     <?php echo $card->festival(), ', ', $card->program(); ?></div>
   <?php else: ?>
-  <div class="category">
+  <div class="tag">
     <?php echo $card->category(); ?></div>
   <?php endif; ?>
   <?php endif; ?>

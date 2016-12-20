@@ -8,8 +8,12 @@
 li.card.card-horizontal.col-xs-12
 	.row
 		.image.col-sm-7
-			a(href="<?= $card->url() ?>")
-				img(src="<?= $image->url() ?>")
+			figure
+				img.ms-header-image(src="<?= $src->url() ?>")
+				//- show caption if it exists
+				-if($caption = $page->img_caption()->kt()):
+					figcaption!= $caption
+				-endif
 		.details.col-sm-5
 			.details-inner
 				a.high(href="<?= $card->url() ?>").subtitle: span.light: span.er= $card->subtitle()

@@ -17,7 +17,7 @@
   </div>
   <div class="details">
     <div class="details-inner">
-      <div class="category">
+      <div class="tag">
         <?php echo $card->category(); ?></div>
       <?php if (isset($date) && isset($time)): ?>
       <div class="tag">

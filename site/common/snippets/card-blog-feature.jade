@@ -18,7 +18,7 @@ li.card.blog-feature.col-xs-12
 				.icon-play
 	.details
 		.details-inner
-			.category!= $card->festival(), ', ', $card->program();
+			.tag!= $card->festival(), ', ', $card->program();
 
 			a.high(href="<?= $card->url() ?>").title: span.light: span.er= $card->title()
 

@@ -18,7 +18,7 @@ li.card.blog-article.col-xs-12(class="<? if ($card->type() == 'video') echo 'car
 				.icon-play
 	.details
 		.details-inner
-			.category!= $card->festival(), ', ', $card->program();
+			.tag!= $card->festival(), ', ', $card->program();
 
 			.title!= $card->title()
 
