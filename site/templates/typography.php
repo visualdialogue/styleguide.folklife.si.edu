@@ -2,7 +2,7 @@
 <?php snippet('header'); ?>
 <div id="navspacer" class="navspacer"></div>
 <!-- Typography-->
-<section class="container section--typography section--first">
+<section class="container typography-section first-section">
   <h2 class="section-title">Typography</h2><a id="typography" class="anchor-link"></a>
   <div class="section__description">
     <pre><code>// Fonts are stored as SASS mixins so they can be used anywhere in

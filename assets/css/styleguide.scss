@@ -37,7 +37,7 @@
 
 /* #styleguide
 -------------------------------------------------- */
-	.section--styleguide {
+	.styleguide-section {
 		.title {
 			@include serif-xl;
 		}
@@ -86,7 +86,7 @@
 		// @include padding-left(3);
 		@include padding(3);
 	}
-	.section--typography pre  {
+	.typography-section pre  {
 		@include margin-bottom(8);
 	}
 	.section-subtitle {
@@ -134,7 +134,7 @@
 
 /* #video
 -------------------------------------------------- */
-	.section--video {
+	.video-section {
 		.title {
 			@include serif-lg;
 		}

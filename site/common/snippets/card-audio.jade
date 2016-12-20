@@ -5,14 +5,14 @@
 	-$image = $src
 -endif
 
-li.card.card-audio
+li.card.audio-card
 		.image
 			a(href="<?= $card->url() ?>")
 				img(src="<?= $image->url() ?>")
 		.details
-			.details__inner
+			.details-inner
 				.category.card__category!= $card->category() 
-				.title-wrapper.card__title-wrapper
+				.title-wrapper-wrapper
 					a.high.title(href="<?= $card->url() ?>"): span.light: span.er= $card->title()
 					-if('' != $card->audio_album()):
 						.subtitle!= $card->audio_album()

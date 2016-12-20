@@ -12,12 +12,12 @@ li.card.blog-article.col-xs-12(class="<? if ($card->type() == 'video') echo 'car
 	.video(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= $card->copy() ?>')
 		.center-box
 			.modal-trigger
-				img.card__image(src="<?= $image->url() ?>")
-			.icon-play-button.icon-play-button--video.icon-stack
+				img(src="<?= $image->url() ?>")
+			.icon-play-button.video-icon-play-button.icon-stack
 				.icon-circle
 				.icon-play
 	.details
-		.details__inner
+		.details-inner
 			.category!= $card->festival(), ', ', $card->program();
 
 			.title!= $card->title()

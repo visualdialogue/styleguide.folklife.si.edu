@@ -2,7 +2,7 @@
 <div class="container">
   <hr class="thick-hr"/>
 </div>
-<section class="container section--festival-blog blog">
+<section class="container festival-blog-section blog">
   <div class="more-link-wrapper">
     <h2 class="section-title">Festival Blog</h2>
     <?php snippet('more-link'); ?>

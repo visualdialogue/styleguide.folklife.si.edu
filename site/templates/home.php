@@ -2,7 +2,7 @@
 <?php snippet('header'); ?>
 <div id="navspacer" class="navspacer"></div>
 <!-- Styleguide-->
-<section class="container section--first section--styleguide">
+<section class="container first-section styleguide-section">
   <h2 class="section-title">Styleguide</h2>
   <ul class="row cards">
     <?php foreach($pages->visible() as $card): ?>

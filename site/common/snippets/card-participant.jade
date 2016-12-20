@@ -8,8 +8,8 @@
 li.card.col-xs-6.col-sm-2.card-xs-break-2.card-sm-break-6
 	.image
 		a(href="<?= $card->url() ?>")
-			img.card__image(src="<?= $image->url() ?>")
+			img(src="<?= $image->url() ?>")
 	.details
-		.details__inner
-			a.high(href="<?= $card->url() ?>").title.card__title: span.light: span.er= $card->title()
+		.details-inner
+			a.high(href="<?= $card->url() ?>").title: span.light: span.er= $card->title()
 

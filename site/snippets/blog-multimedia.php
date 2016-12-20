@@ -1,5 +1,5 @@
 
-<h2 class="sidebar__section-title">Multimedia</h2>
+<h2 class="sidebar-section-title">Multimedia</h2>
 <ul class="multimedia-sections">
   <li class="sidebar-highlight"><a>Photo Galleries</a></li>
   <li class="sidebar-highlight"><a>Festival Video</a></li>

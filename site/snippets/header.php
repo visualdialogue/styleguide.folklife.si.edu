@@ -9,7 +9,7 @@
   <title>Smithsonian Center for Folklife and Cultural Heritage | <?php echo $page->title()->html() ?></title><script>(function(d) {var config = {kitId: 'roi1emx',scriptTimeout: 3000,async: true},h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)})(document);</script>
   <style>
     .wf-loading .tagline,
-    .wf-loading .site-toggle__link,
+    .wf-loading .site-toggle-link,
     .wf-loading .title,
     .wf-loading .section-title {
     	/* Hide the blog title and post titles while web fonts are loading */
@@ -32,74 +32,74 @@
 <div id="site-toggle" class="site-toggle">
   <div class="container">
     <div class="tagline">Championing Culture for, by, and of the People</div>
-    <?php if (c::get('isDev')): ?><a href="http://localhost:3003" class="site-toggle__link site-toggle__link--folklife active">Folklife</a>
-    <?php else: ?><a href="http://folklife.lukehatfield.com" class="site-toggle__link site-toggle__link--folkways">Folkways</a>
+    <?php if (c::get('isDev')): ?><a href="http://localhost:3003" class="site-toggle-link folklife-site-toggle-link active">Folklife</a>
+    <?php else: ?><a href="http://folklife.lukehatfield.com" class="site-toggle-link folkways-site-toggle-link">Folkways</a>
     <?php endif; ?>
-    <?php if (c::get('isDev')): ?><a href="http://localhost:3009" class="site-toggle__link site-toggle__link--festival">Folkways</a>
-    <?php else: ?><a href="http://folkways.lukehatfield.com" class="site-toggle__link site-toggle__link--folkways">Folkways</a>
+    <?php if (c::get('isDev')): ?><a href="http://localhost:3009" class="site-toggle-link festival-site-toggle-link">Folkways</a>
+    <?php else: ?><a href="http://folkways.lukehatfield.com" class="site-toggle-link folkways-site-toggle-link">Folkways</a>
     <?php endif; ?>
-    <?php if (c::get('isDev')): ?><a href="http://localhost:3005" class="site-toggle__link site-toggle__link--folklife">Festival</a>
-    <?php else: ?><a href="http://on.festival.lukehatfield.com" class="site-toggle__link site-toggle__link--festival">Festival</a>
+    <?php if (c::get('isDev')): ?><a href="http://localhost:3005" class="site-toggle-link folklife-site-toggle-link">Festival</a>
+    <?php else: ?><a href="http://on.festival.lukehatfield.com" class="site-toggle-link festival-site-toggle-link">Festival</a>
     <?php endif; ?>
   </div>
 </div>
 <div class="navbar-outside"></div>
 <nav id="navbar" class="navbar">
   <div class="navbar-header">
-    <div class="navbar-header__inner">
+    <div class="navbar-header-inner">
       <div href="#" class="navbar-brand"><img src="assets/images/logo/sunsplash.png" class="sunsplash"/><a href="/" class="logo-mask">
           <div class="logo__copy"><img src="assets/images/logo/folklife.png" class="logo--folklife"/><img src="assets/images/logo/center.png" class="logo--center"/></div></a></div>
       <div class="nav-icons">											
-        <div id="menu-icon" aria-hidden="true" class="icon-menu nav-icon nav-icon--main"></div>
+        <div id="menu-icon" aria-hidden="true" class="icon-menu nav-icon main-nav-icon"></div>
       </div>
     </div>
   </div>
   <div id="header-nav" class="header-nav">
     <div class="container">
-      <ul class="header-nav__row row">
-        <li class="header-nav__main-item col-sm-2"> <a href="/colors" class="header-nav__title">Colors</a>
-          <ul class="header-nav__list">
-            <li class="header-nav__sub-item"><a href="/colors#folklife">Folklife</a></li>
-            <li class="header-nav__sub-item"><a href="/colors#festival">Festival</a></li>
-            <li class="header-nav__sub-item"><a href="/colors#folkways">Folkways</a></li>
-            <li class="header-nav__sub-item"><a href="/colors#shades-of-black">Shades of Black</a></li>
+      <ul class="header-nav-row row">
+        <li class="header-nav-main-item col-sm-2"> <a href="/colors" class="header-nav-title">Colors</a>
+          <ul class="header-nav-list">
+            <li class="header-nav-sub-item"><a href="/colors#folklife">Folklife</a></li>
+            <li class="header-nav-sub-item"><a href="/colors#festival">Festival</a></li>
+            <li class="header-nav-sub-item"><a href="/colors#folkways">Folkways</a></li>
+            <li class="header-nav-sub-item"><a href="/colors#shades-of-black">Shades of Black</a></li>
           </ul>
         </li>
-        <li class="header-nav__main-item col-sm-2"> <a href="/typography" class="header-nav__title">Typography</a>
-          <ul class="header-nav__list">
-            <li class="header-nav__sub-item"><a href="/typography#serif">Serif</a></li>
-            <li class="header-nav__sub-item"><a href="/typography#sans">Sans</a></li>
-            <li class="header-nav__sub-item"><a href="/typography#slab-serif">Slab Serif</a></li>
+        <li class="header-nav-main-item col-sm-2"> <a href="/typography" class="header-nav-title">Typography</a>
+          <ul class="header-nav-list">
+            <li class="header-nav-sub-item"><a href="/typography#serif">Serif</a></li>
+            <li class="header-nav-sub-item"><a href="/typography#sans">Sans</a></li>
+            <li class="header-nav-sub-item"><a href="/typography#slab-serif">Slab Serif</a></li>
           </ul>
         </li>
-        <li class="header-nav__main-item col-sm-2"> <a href="/cards" class="header-nav__title">Cards</a>
-          <ul class="header-nav__list">
-            <li class="header-nav__sub-item">Video Standard</li>
-            <li class="header-nav__sub-item">Video Horizontal</li>
-            <li class="header-nav__sub-item">Audio</li>
-            <li class="header-nav__sub-item">Card Vertical</li>
-            <li class="header-nav__sub-item">Card Horizontal				</li>
+        <li class="header-nav-main-item col-sm-2"> <a href="/cards" class="header-nav-title">Cards</a>
+          <ul class="header-nav-list">
+            <li class="header-nav-sub-item">Video Standard</li>
+            <li class="header-nav-sub-item">Video Horizontal</li>
+            <li class="header-nav-sub-item">Audio</li>
+            <li class="header-nav-sub-item">Card Vertical</li>
+            <li class="header-nav-sub-item">Card Horizontal				</li>
           </ul>
         </li>
-        <li class="header-nav__main-item col-sm-2"> <a href="/specials" class="header-nav__title">Specials</a>
-          <ul class="header-nav__list">
-            <li class="header-nav__sub-item"><a href="/specials#email-signup">Email Signup</a></li>
-            <li class="header-nav__sub-item"><a href="/specials#become-a-member">Become a Member</a></li>
-            <li class="header-nav__sub-item"><a href="/specials#support">Support</a></li>
+        <li class="header-nav-main-item col-sm-2"> <a href="/specials" class="header-nav-title">Specials</a>
+          <ul class="header-nav-list">
+            <li class="header-nav-sub-item"><a href="/specials#email-signup">Email Signup</a></li>
+            <li class="header-nav-sub-item"><a href="/specials#become-a-member">Become a Member</a></li>
+            <li class="header-nav-sub-item"><a href="/specials#support">Support</a></li>
           </ul>
         </li>
-        <li class="header-nav__main-item col-sm-2"> <a href="/structure" class="header-nav__title">Structure</a>
-          <ul class="header-nav__list">
-            <li class="header-nav__sub-item"><a href="/framework#sections">Sections</a></li>
-            <li class="header-nav__sub-item"><a href="/framework#half-sections">Half Sections</a></li>
-            <li class="header-nav__sub-item"><a href="/framework#margins">Margins</a></li>
-            <li class="header-nav__sub-item"><a href="/framework#padding">Padding</a></li>
+        <li class="header-nav-main-item col-sm-2"> <a href="/structure" class="header-nav-title">Structure</a>
+          <ul class="header-nav-list">
+            <li class="header-nav-sub-item"><a href="/framework#sections">Sections</a></li>
+            <li class="header-nav-sub-item"><a href="/framework#half-sections">Half Sections</a></li>
+            <li class="header-nav-sub-item"><a href="/framework#margins">Margins</a></li>
+            <li class="header-nav-sub-item"><a href="/framework#padding">Padding</a></li>
           </ul>
         </li>
-        <li class="header-nav__main-item col-sm-2"> <a href="/libraries" class="header-nav__title">Libraries</a>
-          <ul class="header-nav__list">
-            <li class="header-nav__sub-item"><a href="/libraries#bootstrap">Bootstrap</a></li>
-            <li class="header-nav__sub-item"><a href="/libraries#sass">SASS</a></li>
+        <li class="header-nav-main-item col-sm-2"> <a href="/libraries" class="header-nav-title">Libraries</a>
+          <ul class="header-nav-list">
+            <li class="header-nav-sub-item"><a href="/libraries#bootstrap">Bootstrap</a></li>
+            <li class="header-nav-sub-item"><a href="/libraries#sass">SASS</a></li>
           </ul>
         </li>
       </ul>

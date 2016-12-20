@@ -40,10 +40,10 @@
 /*********************
 * Mobile dropdown menu
 *********************/
-	// var $navItem = $('.header-nav__main-item');
-	 var $navItem = $('.header-nav__title').add($('.footer__title'));
-	// var $footerNavItem = $('.footer__main-item');
-	var $navLists = $('.header-nav__list').add($('.footer__list'));
+	// var $navItem = $('.header-nav-main-item');
+	 var $navItem = $('.header-nav-title').add($('.footer-title'));
+	// var $footerNavItem = $('.footer-main-item');
+	var $navLists = $('.header-nav-list').add($('.footer-list'));
 
 	// when click a main list item
 	 $navItem.on('click', function(e) {
@@ -172,7 +172,7 @@
 			navCloseAll(); // close anything else that's open by default, only after we've determined that share is Closed
 			$navBar.addClass('navbar--open');
 			if(site.isMobile) // switch to one-line logo in mobile view
-				site.$navbar.addClass('one-line-logo'); 
+				site.$navbar.addClass('logo-swap'); 
 			$navbarOutside.css('position', 'fixed'); // activate navbarOutside			
 			$notShareIcon.addClass('lighter-nav-icons'); // grey out other icons
 			shareClosed = false; // flag for closing	
@@ -199,7 +199,7 @@
 		if(searchClosed) {
 			navCloseAll(); // after we've determined that search is closed, close anything else that's open by default
 			if(site.isMobile) // switch to one-line logo in mobile view
-				site.$navbar.addClass('one-line-logo'); 
+				site.$navbar.addClass('logo-swap'); 
 			$navBar.addClass('navbar--open');
 			$navbarOutside.css('position', 'fixed'); // activate navbarOutside
 			$notSearchIcon.addClass('lighter-nav-icons'); // grey out other icons
@@ -216,7 +216,7 @@
 * Menu
 *********************/
 	var $megaNav = $('#header-nav');
-	var $megaNavItem = $('.header-nav__sub-item');
+	var $megaNavItem = $('.header-nav-sub-item');
 	var $menuIcon = $('#menu-icon');
 	var menuClosed = true;
 
@@ -227,9 +227,8 @@
 		if(menuClosed) {
 			navCloseAll(); // after we've determined that menu is closed, close anything else that's open by default
 			$navBar.addClass('navbar--open');
-			site.$navbar.addClass('one-line-logo'); // switch to one-line logo
+			site.$navbar.addClass('logo-swap'); // switch to one-line logo
 			$navbarOutside.css('position', 'fixed'); // activate navbarOutside
-			console.log('one line logo');				
 			$notMenuIcon.addClass('lighter-nav-icons'); // grey out other icons
 			$megaNav.css('display', 'block'); // show social media icons
 			// $navBarHeader.css('z-index', '0'); // make navbar clickable to close
@@ -286,7 +285,7 @@
 		searchClosed = true;
 		shareClosed = true;
 
-		site.$navbar.removeClass('one-line-logo'); // switch back to block logo
+		site.$navbar.removeClass('logo-swap'); // switch back to block logo
 	}
 
 
@@ -309,9 +308,6 @@
 
 
 	  // var $remodal = $('.remodal');
-	  var $remodalIframe = $('.remodal__iframe');
-	  var $remodalTitle = $('.remodal__title');
-	  var $remodalDescription = $('.remodal__description');
 	  var $remodalClose = $('.remodal-close');
 	  // var $remodalOverlay = $('.remodal-overlay');
 	  var player; // global for playing, pausing
@@ -346,7 +342,6 @@
 			  autoplay: true,
 		  }
 
-		  player = new Vimeo.Player('remodal__iframe', options);
 		
 		  if(player)
 			playerLoaded = true;
@@ -354,7 +349,6 @@
 		// else just reload the player
 		else {
 			console.log('NOT first time play');
-		  	// player = new Vimeo.Player('remodal__iframe', options);
 
 	  		player.loadVideo($video_id).then(function() {
 	  			player.play();

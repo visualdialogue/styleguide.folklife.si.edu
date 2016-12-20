@@ -15,7 +15,7 @@
     <?php endif; ?>
   </div>
   <?php if (isset($subtitle)): ?>
-  <hr class="hr--thin"/>
+  <hr class="thin-hr"/>
   <div class="container subtitle-height">
     <div class="page-subtitle">
       <?php echo htmlspecialchars($subtitle, ENT_QUOTES, 'UTF-8'); ?></div>

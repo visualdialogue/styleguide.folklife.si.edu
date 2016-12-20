@@ -2,7 +2,7 @@
 <?php snippet('header'); ?>
 <div id="navspacer" class="navspacer"></div>
 <!-- Colors-->
-<section class="container section--first">
+<section class="container first-section">
   <h2 class="section-title">Colors</h2><a id="colors" class="anchor-link"></a>
   <div class="section__description">
     <pre class="code_page"><table cellspacing="0" cellpadding="0" class="code_page"><tbody><tr><td><table cellspacing="0" cellpadding="0" class="code_page"><tbody><tr><td valign="top" id="L_0_4" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;&nbsp;4&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_4"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp; </span><span class=" real_text" style="background-color: #272822; color: #75715E;">// Colors are stored as SASS variables for easily application and updates. For example:</span>

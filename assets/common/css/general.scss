@@ -14,7 +14,7 @@
 			// keep inner bg color smaller
 			padding: 0 40px;
 		}
-		.highlight__inner {
+		.highlight-inner {
 
 			background-color: $black30;
 			// show highlight on mobile
@@ -138,33 +138,33 @@ ul {margin: 0;}
 
 /* #half sections
 -------------------------------------------------- */
-	$section--half-padding-mobile: 4rem;
-	$section--half-padding-tablet: 2.7%;
-	$section--half-padding-desktop: 4rem;
+	$half-padding-mobile-section: 4rem;
+	$half-padding-tablet-section: 2.7%;
+	$half-padding-desktop-section: 4rem;
 
-	.section--half .details {
+	.half-section .details {
 		// @include padding-top(1.4); // smaller padding for smaller sections
 		
 	}
 
 	@include respond-to(break2) {
 
-		.section--half:nth-of-type(1) {
-			padding-right: $section--half-padding-mobile;
+		.half-section:nth-of-type(1) {
+			padding-right: $half-padding-mobile-section;
 			@include respond-to(break2) {
-				padding-right: $section--half-padding-tablet;
+				padding-right: $half-padding-tablet-section;
 			}
 			@include respond-to(fullwidth) {
-				padding-right: $section--half-padding-desktop;
+				padding-right: $half-padding-desktop-section;
 			}
 		}
-		.section--half:nth-of-type(2) {
-			padding-left: $section--half-padding-mobile;
+		.half-section:nth-of-type(2) {
+			padding-left: $half-padding-mobile-section;
 			@include respond-to(break2) {
-				padding-left: $section--half-padding-tablet;
+				padding-left: $half-padding-tablet-section;
 			}
 			@include respond-to(fullwidth) {
-				padding-left: $section--half-padding-desktop;
+				padding-left: $half-padding-desktop-section;
 			}
 		}
 	}
@@ -194,11 +194,11 @@ ul {margin: 0;}
 			margin-bottom: 5vw;
 		}
 	}
-	.special-event__image {
+	.special-event-image {
 		@include col;
 		width: 53%; // 361px/682px
 	}
-	.special-event__textbox {
+	.special-event-textbox {
 		@include col;
 		width: 47%; // 281/682				
 		// border-top: 2px solid $black65;
@@ -239,8 +239,9 @@ ul {margin: 0;}
 			// margin-bottom: 3.5rem;
 			// margin-bottom: 5.5rem;
 			// margin-bottom: 4rem;
-			margin-bottom: 7.3rem; // with line height this equals 80 below for most sections
-			margin-bottom: 6rem; // tighten up for shop banner
+			// margin-bottom: 7.3rem; // with line height this equals 80 below for most sections
+			// margin-bottom: 6rem; // tighten up for shop banner
+			margin-bottom: 2rem; // less because rely on content above to have own padding
 		}
 
 	}
@@ -249,37 +250,23 @@ ul {margin: 0;}
 			margin-bottom: 1.5rem;
 		}
 	}
-	.section {
-		&--first {
-			padding-top:1.5rem;
-			@include respond-to(break2) {padding-top:2.6vw;}
-			@include respond-to(fullwidth) {padding-top:4rem;}
-		}
-		&--blank {
-			height: 50vh;
-			padding-top: 20vh;
-			text-align: center;
-			@include section-title;
-			color: $black50;
-		}
+	.first-section {
+		padding-top:1.5rem;
+		@include respond-to(break2) {padding-top:2.6vw;}
+		@include respond-to(fullwidth) {padding-top:4rem;}
 	}
-	// .main--copy {
+
 	.main {
 		.section-title {
 			margin-bottom:2.2rem;
 			@include respond-to(break2) {margin-bottom:1.3vw;}
 			@include respond-to(fullwidth) {margin-bottom:2.2rem;} // 30 px
 		}
-		// p {
-		// 	margin-bottom:0.5rem;
-		// 	@include respond-to(break2) {margin-bottom:1.5vw;}
-		// 	@include respond-to(fullwidth) {margin-bottom:2.5rem;} // 40 px
-		// }
 	}
 	.sidebar {
 		color: $black70;	
 		@include margin-bottom(6); // keep from footer
-		h3, &__section-title {
+		h3, &-section-title {
 			@include sans-md;
 			color: $black50;
 			@include padding-bottom(1);
@@ -287,21 +274,21 @@ ul {margin: 0;}
 			@include padding-bottom(0);
 			@include margin-bottom(1.1);
 		}
-		h4, &__item-title {
+		h4, &-item-title {
 			@include sans-xxxs;
 			@include margin-top(0.6);
 			color: $black50;
 			text-transform: uppercase;
 			margin: 0;
 		}
-		&__item {
+		&-item {
 			border-top: 1px solid $black50;
 			// margin-bottom:0.5rem;
 			// @include respond-to(break2) {margin-bottom:0.4vw;}
 			// @include respond-to(fullwidth) {margin-bottom:0.8rem;}
 			@include padding-bottom(1);
 		}
-		&__subtitle {
+		&-subtitle {
 			@include sidebar-subtitle;
 			letter-spacing: 0;
 			// line-height:1.5;
@@ -318,7 +305,7 @@ ul {margin: 0;}
 				margin-bottom: 0rem;
 			}
 		}
-		&__copy {
+		&-copy {
 			@include sidebar-copy;
 		}
 		.sidebar-highlight {
@@ -341,45 +328,38 @@ ul {margin: 0;}
 		border:0px;
 		background-size: 100% 100%;
 		background-repeat: no-repeat;
-
-		// &--folklife {
-		&--thick {
-			height:11px;
-			background-image:url(/assets/images/hr.jpg);
-			// margin-bottom: 5vw;
-			margin-top: 10vw;
-			@include respond-to(break2) {
-				// margin-bottom: 2.6vw;
-				margin-top:0;
-			}
-			// @include respond-to(fullwidth) {
-			// 	margin-bottom: 4rem;
-			// 	margin-bottom: 4rem;
-			// }
-			@include margin-bottom(5.2);
+	}
+	.thick-hr {
+		height:11px;
+		background-image:url(/assets/images/hr.jpg);
+		// margin-bottom: 5vw;
+		margin-top: 10vw;
+		@include respond-to(break2) {
+			// margin-bottom: 2.6vw;
+			margin-top:0;
 		}
-		&--half {
-			margin-bottom:2.5vw;
-			@include respond-to(break2) {margin-bottom:1.3vw;}
-			@include respond-to(fullwidth) {margin-bottom:2rem;}
+		@include margin-bottom(5.2);
+	}
+	.half-hr {
+		margin-bottom:2.5vw;
+		@include respond-to(break2) {margin-bottom:1.3vw;}
+		@include respond-to(fullwidth) {margin-bottom:2rem;}
+	}
+	.thin-hr {
+		height:5px;
+		background-image:url(/assets/images/hr--thin.png);
+		// background-image:url(/assets/images/hr--thin4.png);
+		background-repeat: no-repeat;
+		background-size: 100%;
+		margin-top: 1vw;
+		margin-bottom: 3vw;
+		@include respond-to(break2) {
+			margin-top:0.5vw;
+			margin-bottom: 2.4vw;
 		}
-		&--thin {
-			height:5px;
-			background-image:url(/assets/images/hr--thin.png);
-			// background-image:url(/assets/images/hr--thin4.png);
-			background-repeat: no-repeat;
-			background-size: 100%;
-			margin-top: 1vw;
-			margin-bottom: 3vw;
-			@include respond-to(break2) {
-				margin-top:0.5vw;
-				margin-bottom: 2.4vw;
-			}
-			@include respond-to(fullwidth) {
-				margin-top:0.8rem;
-				margin-bottom:3.75rem;
-			}
-
+		@include respond-to(fullwidth) {
+			margin-top:0.8rem;
+			margin-bottom:3.75rem;
 		}
 	}
 
@@ -397,7 +377,7 @@ ul {margin: 0;}
 		// .container {
 			// height: 100%; // so vertically center works
 		// }
-		&__hr {
+		&-hr {
 			margin-top: -1.6rem;
 		}
 	}
@@ -444,7 +424,7 @@ ul {margin: 0;}
 
 /* #remodal
 -------------------------------------------------- */
-	.remodal__description {
+	.remodal-description {
 		@include sans-sm;
 	}
 
@@ -463,7 +443,7 @@ ul {margin: 0;}
 			position: static !important;
 			margin-bottom:5vw;
 		}
-		&__inner {
+		&-inner {
 			position: relative;
 		}
 		.image, .copy {
@@ -482,7 +462,7 @@ ul {margin: 0;}
 			@include sans-md;
 			left: 50%;
 			text-align: center;
-			&__inner {
+			&-inner {
 				@include respond-to(break2max) {
 					width: 100%;
 				}
@@ -503,20 +483,20 @@ ul {margin: 0;}
 			border: none;
 		}
 	}
-	.section--support {
+	.support-section {
 		// @include vertically-align-grandparent;
 	}
 	.support {
 		background-color: white;
 		@include border(all, 2px, $black40);
 		position: relative; // contain support button
-		&__copy, &__button {
+		&-copy, &-button {
 			@include respond-to(break2) {
 				display: inline-block;
 				vertical-align: top;
 			}
 		}
-		&__copy {
+		&-copy {
 			@include respond-to(break2) {
 				width: 46.45%; // 314px / 676px
 				line-height: 1.25;
@@ -531,7 +511,7 @@ ul {margin: 0;}
 			}
 
 		}
-		&__button {
+		&-button {
 			background-color: $black40;
 			@include section-title;
 			margin-bottom:0;
@@ -550,7 +530,7 @@ ul {margin: 0;}
 			}
 		}
 	}
-	.button__inner {
+	.button-inner {
 		line-height: 1.5;
 		@include respond-to(break2) {
 			@include vertically-align;
@@ -560,16 +540,16 @@ ul {margin: 0;}
 
 /* #Newsletter Signup
 -------------------------------------------------- */
-	.section--newsletter-signup, .section--support, .support-folkways {
+	.newsletter-signup-section, .support-section, .support-folkways {
 		@include sans-xxs;
 	}
-	.section--newsletter-signup, .section--support {
+	.newsletter-signup-section, .support-section {
 		margin-bottom: 2rem;
 		@include respond-to(break2) {
 			margin-bottom: 4rem;
 		}
 	}
-	.newsletter-signup__copy {
+	.newsletter-signup-copy {
 		background-color: $black10;
 		@include padding-top(1.9);
 		@include padding-right(2);
@@ -580,7 +560,7 @@ ul {margin: 0;}
 	.newsletter-signup-form {
 		width: 100%;
 	}
-	.newsletter__input {
+	.newsletter-input {
 		background-color: $black20;
 		width: 100%;
 		@include padding-right(2);
@@ -616,13 +596,13 @@ ul {margin: 0;}
 		form, input {
 			height: 7rem;
 		}
-		.newsletter-signup, .newsletter-signup__copy, form, input {
+		.newsletter-signup, .newsletter-signup-copy, form, input {
 			@include respond-to(break2) {
 				height: 100%;
 			}
 		}
 
-		.newsletter-signup__copy {
+		.newsletter-signup-copy {
 			@include sans-xs;
 			@include padding-top(1.5);
 			@include padding-bottom(2);

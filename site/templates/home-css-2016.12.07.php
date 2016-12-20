@@ -1,7 +1,7 @@
 
 <?php snippet('header'); ?>
 <div id="navspacer" class="navspacer"></div>
-<section class="container section--first">
+<section class="container first-section">
   <div class="row">
     <div class="col-sm-12 ms-introduction">
       <!-- Typography-->
@@ -189,7 +189,7 @@
     </div></td></tr><tr><td valign="top" id="L_0_2" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;&nbsp;2&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_2"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp; </span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&lt;</span><span class=" real_text" style="background-color: #272822; color: #F92672;">div</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;"> </span><span class=" real_text" style="background-color: #272822; color: #A6E22E;">data-video-id</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">=</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">"</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">{{ video id }}</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">"</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;"> </span><span class=" real_text" style="background-color: #272822; color: #A6E22E;">data-title</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">=</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">"</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">{{ video title }}</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">"</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;"> </span><span class=" real_text" style="background-color: #272822; color: #A6E22E;">data-description</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">=</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">"</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">"</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;"> </span><span class=" real_text" style="background-color: #272822; color: #A6E22E;">class</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">=</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">"</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">video</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">"</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&gt;</span>
     </div></td></tr><tr><td valign="top" id="L_0_3" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;&nbsp;3&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_3"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&lt;</span><span class=" real_text" style="background-color: #272822; color: #F92672;">div</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;"> </span><span class=" real_text" style="background-color: #272822; color: #A6E22E;">class</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">=</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">"</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">center-box</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">"</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&gt;</span>
     </div></td></tr><tr><td valign="top" id="L_0_4" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;&nbsp;4&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_4"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&lt;</span><span class=" real_text" style="background-color: #272822; color: #F92672;">a</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;"> </span><span class=" real_text" style="background-color: #272822; color: #A6E22E;">class</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">=</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">"</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">modal-trigger</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">"</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&gt;</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&lt;</span><span class=" real_text" style="background-color: #272822; color: #F92672;">img</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;"> </span><span class=" real_text" style="background-color: #272822; color: #A6E22E;">src</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">=</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">"</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">{{ video thumbnail image }}</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">"</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;"> </span><span class=" real_text" style="background-color: #272822; color: #A6E22E;">class</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">=</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">"</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">image</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">"</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&gt;</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&lt;/</span><span class=" real_text" style="background-color: #272822; color: #F92672;">a</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&gt;</span>
-    </div></td></tr><tr><td valign="top" id="L_0_5" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;&nbsp;5&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_5"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&lt;</span><span class=" real_text" style="background-color: #272822; color: #F92672;">div</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;"> </span><span class=" real_text" style="background-color: #272822; color: #A6E22E;">class</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">=</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">"</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">icon-play-button icon-play-button--video icon-stack</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">"</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&gt;</span>
+    </div></td></tr><tr><td valign="top" id="L_0_5" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;&nbsp;5&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_5"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&lt;</span><span class=" real_text" style="background-color: #272822; color: #F92672;">div</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;"> </span><span class=" real_text" style="background-color: #272822; color: #A6E22E;">class</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">=</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">"</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">icon-play-button video-icon-play-button icon-stack</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">"</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&gt;</span>
     </div></td></tr><tr><td valign="top" id="L_0_6" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;&nbsp;6&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_6"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&lt;</span><span class=" real_text" style="background-color: #272822; color: #F92672;">div</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;"> </span><span class=" real_text" style="background-color: #272822; color: #A6E22E;">class</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">=</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">"</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">icon-circle</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">"</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&gt;</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&lt;/</span><span class=" real_text" style="background-color: #272822; color: #F92672;">div</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&gt;</span>
     </div></td></tr><tr><td valign="top" id="L_0_7" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;&nbsp;7&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_7"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&lt;</span><span class=" real_text" style="background-color: #272822; color: #F92672;">div</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;"> </span><span class=" real_text" style="background-color: #272822; color: #A6E22E;">class</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">=</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">"</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">icon-play</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">"</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&gt;</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&lt;/</span><span class=" real_text" style="background-color: #272822; color: #F92672;">div</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&gt;</span>
     </div></td></tr><tr><td valign="top" id="L_0_8" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;&nbsp;8&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_8"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&lt;/</span><span class=" real_text" style="background-color: #272822; color: #F92672;">div</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&gt;</span>
@@ -203,7 +203,7 @@
     </div></td></tr></tbody></table></td></tr></tbody></table></pre>
     <!-- Horizontal Video-->
     <hr class="thick-hr"/>
-    <h2 class="section-title section--horizontal-cards">Horizontal Video</h2><a id="video" class="anchor-link"></a>
+    <h2 class="section-title horizontal-cards-section">Horizontal Video</h2><a id="video" class="anchor-link"></a>
     <ul class="row cards">
       <?php foreach($pages->find('videos')->children()->visible()->limit(1) as $video): ?>
       <?php snippet('card', array('card' => $video, 'type' => 'video', 'col_sm' => 12, 'orientation' => 'horizontal', 'showCategory' => true )); ?>
@@ -214,7 +214,7 @@
     <h2 class="section-title">Audio</h2><a id="audio" class="anchor-link"></a>
   </div>
 </section>
-<section class="section--video container section--first">
+<section class="video-section container first-section">
   <h2 class="section-title">Videos</h2>
   <ul class="row">
     <?php foreach ($page->video_data()->toStructure() as $video): ?><?php //- replace double with single quotes for use in jade below
@@ -246,14 +246,14 @@ $iframe = str_replace('"', "'", $video->iframe()) ?>
 <section class="container">
   <h2 class="section-title">Cards</h2>
   <h3>Horizontal Cards</h3>
-  <p>A class of .section--horizontal-cards must be added to the section tag with horizontal cards as children. Horizontal cards have an extra margin below each card, and the last few cards would push the next section down too far. This class takes the extra spacing into account and removes the bottom margin from the section.</p>
+  <p>A class of .horizontal-cards-section must be added to the section tag with horizontal cards as children. Horizontal cards have an extra margin below each card, and the last few cards would push the next section down too far. This class takes the extra spacing into account and removes the bottom margin from the section.</p>
 </section>
 <div class="container">
   <hr class="thick-hr"/>
 </div>
-<section class="section--audio container">
+<section class="audio-section container">
   <h2 class="section-title">Audio</h2>
-  <ul class="row row--listen">
+  <ul class="row row-listen">
     <?php foreach ($page->audio_data()->toStructure() as $audio): ?>
     <?php if($src = $page->image($audio->img())): ?>
     <li class="col-xs-6 col-sm-3"><img src="<?= $src->url() ?>"/>
@@ -288,7 +288,7 @@ $iframe = str_replace('"', "'", $video->iframe()) ?>
 <div class="container">
   <hr class="thick-hr"/>
 </div>
-<section class="section--participate container">
+<section class="participate-section container">
   <h2 class="section-title">Participate</h2>
   <?php snippet('more-link'); ?>
   <ul class="row">
@@ -306,16 +306,16 @@ $iframe = str_replace('"', "'", $video->iframe()) ?>
     <?php endforeach; ?>
   </ul>
 </section>
-<section class="container section--talk-story">
+<section class="container talk-story-section">
   <h2 class="section-title">Talk Story</h2>
   <div class="row">
     <div class="col-sm-8 talk-story__feature clearfix">
-      <div class="feature__inner">
+      <div class="feature-inner">
         <?php if($src = $page->image($page->talk_story_feature_image())): ?><img src="<?= $src->url() ?>"/>
         <?php endif; ?>
         <div class="textbox talk-story__textbox">
           <div class="details details--inset details--tight">
-            <div class="details__inner">
+            <div class="details-inner">
               <div class="category">
                 <?php echo $page->talk_story_feature_category(); ?></div>
               <div class="title"><a>
@@ -332,7 +332,7 @@ $iframe = str_replace('"', "'", $video->iframe()) ?>
       <?php if($src = $page->image($featurette->img())): ?>
       <li class="talk-story__featurette featurette"><img src="<?= $src->url() ?>" class="featurette__image"/>
         <div class="featurette__details details details--inset details--tight">
-          <div class="details__inner">
+          <div class="details-inner">
             <div class="category">
               <?php echo htmlspecialchars($featurette->category(), ENT_QUOTES, 'UTF-8'); ?></div>
             <div class="title"><a>
@@ -347,12 +347,12 @@ $iframe = str_replace('"', "'", $video->iframe()) ?>
     </ul>
   </div>
 </section>
-<section class="container section--dive-deep">
+<section class="container dive-deep-section">
   <h2 class="section-title">Dive Deep</h2>
   <?php snippet('more-link'); ?>
   <div class="row">
     <div class="col-sm-6 dive-deep__feature clearfix">
-      <div class="feature__inner">
+      <div class="feature-inner">
         <?php if($src = $page->image($page->dive_deep_feature_image())): ?><img src="<?= $src->url() ?>"/>
         <?php endif; ?>
         <div class="textbox dive-deep__textbox">
@@ -386,7 +386,7 @@ $iframe = str_replace('"', "'", $video->iframe()) ?>
 </div>
 <div class="container">
   <div class="row">
-    <section class="col-sm-6 section--half section--explore-collections explore-collections">
+    <section class="col-sm-6 half-section explore-collections-section explore-collections">
       <h2 class="section-title hidden-md">Collections		</h2>
       <h2 class="section-title visible-md">Explore Collections		</h2>
       <?php snippet('more-link'); ?>
@@ -405,7 +405,7 @@ $iframe = str_replace('"', "'", $video->iframe()) ?>
       <div class="vertical-rule"></div>
     </section>
     <hr class="thick-hr hidden-sm hidden-md hidden-lg"/>
-    <section class="col-sm-6 section--half section--teach">
+    <section class="col-sm-6 half-section teach-section">
       <h2 class="section-title">Teach</h2>
       <?php snippet('more-link'); ?>
       <ul class="row teach__featurette-list">
@@ -425,10 +425,10 @@ $iframe = str_replace('"', "'", $video->iframe()) ?>
 </div>
 <button data-remodal-action="close" class="remodal-close visually-hidden"></button>
 <div data-remodal-id="modal">
-  <div id="remodal__iframe" class="remodal__iframe"></div>
-  <div class="remodal__copy">
-    <h3 class="remodal__title"></h3>
-    <div class="remodal__description">
+  <div id="remodal-iframe" class="remodal-iframe"></div>
+  <div class="remodal-copy">
+    <h3 class="remodal-title"></h3>
+    <div class="remodal-description">
       <p></p>
     </div>
   </div>

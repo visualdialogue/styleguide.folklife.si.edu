@@ -3,10 +3,10 @@ a.high.more-link(class="<? if(isset($class)) echo $class ?>" href="<? if(isset($
 		.er
 			//- for custom text like festival/program
 			-if(isset($text)):
-				.more-link__text!= $text
+				.more-link-text!= $text
 			- else:
-				.more-link__text more
+				.more-link-text more
 			-endif
-			//- .more-link__arrow.icon-right-thin
-			.more-link__arrow.icon-arrow2
+			//- .more-link-arrow.icon-right-thin
+			.more-link-arrow.icon-arrow2
 

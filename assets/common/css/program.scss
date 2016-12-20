@@ -52,7 +52,7 @@
 				line-height: 1 !important;
 				@include padding-bottom(1);
 			}
-			.blog-sidebar__feature {
+			.blog-sidebar-feature {
 				min-height: initial;
 				min-height: auto;
 			}
@@ -163,7 +163,7 @@
 		.page-title {
 			color: white;
 		}
-		.hr--thin {
+		.thin-hr {
 			margin: 0;
 			background-image:url(/assets/images/hr--thin4.png);
 			// width: 50%;
@@ -190,10 +190,10 @@
 		.basque {
 			background-color: $basque-red;
 		}
-		&__image {
+		&-image {
 			@include margin-top(4);
 		}
-		&__inner {
+		&-inner {
 			position: relative; // contain caption
 			figcaption {
 				@include padding-top(2);
@@ -210,11 +210,11 @@
 			color: $basque-red;
 			@include margin-bottom(3.1);
 		}
-		&__blurb {
+		&-blurb {
 			@include sans-md;
 			@include margin-bottom(2);
 		}
-		&__credits {
+		&-credits {
 			@include sans-xxs;
 			color: $black50;
 			@include margin-top(5);
@@ -228,13 +228,16 @@
 		}
 	}
 	.ms-sidebar {
-		&__logo {
+		&-logo {
+			@include respond-to(break2max) {
+				margin-top: 2rem;
+			}
 			@include margin-bottom(4.2);
 		}
-		&__nav {
+		&-nav {
 			@include margin-bottom(4);
 		}
-		.ms-sidebar__section-title {
+		.ms-sidebar-section-title {
 			@include sidebarBorderTop;
 			@include sans-sm;
 			color: $black70;
@@ -266,7 +269,7 @@
 	}
 	.ms-section {
 		@include margin-bottom(4);
-		&__copy {
+		&-copy {
 			@include margin-top(-0.5);	
 		}
 		.section-title {
@@ -293,7 +296,7 @@
 		}
 
 	}
-	.section--participants {
+	.participants-section {
 		h3 {
 			@include serif-md;
 			@include margin-top(0.5);

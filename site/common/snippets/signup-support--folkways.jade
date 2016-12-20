@@ -4,10 +4,10 @@
 .newsletter-signup-wrapper.container
 	.newsletter-signup--short
 		.newsletter-signup.clearfix
-			.newsletter-signup__copy
+			.newsletter-signup-copy
 				.icon-mail
 				= $site->newsletter_text()
 			
 	.newsletter-signup--short
 		form(action="/").newsletter-signup-form.newsletter
-			input.newsletter__input(type="email" placeholder="Enter your email")
+			input.newsletter-input(type="email" placeholder="Enter your email")

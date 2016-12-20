@@ -3,7 +3,7 @@
 <div id="navspacer" class="navspacer"></div>
 <?php snippet('title-bar'); ?>
 <!-- Typography-->
-<section class="container section--typography section--first"><a id="top" class="anchor-link"></a>
+<section class="container typography-section first-section"><a id="top" class="anchor-link"></a>
   <div class="section__description">
   </div>
   <div class="row">

@@ -5,19 +5,19 @@
 	-$image = $src
 -endif
 
-li.card.card-horizontal(class="<? if (isset($card_classes)) echo $card_classes ?> <? if ($card->type() == 'audio') echo 'card-audio' ?>")
+li.card.card-horizontal(class="<? if (isset($card_classes)) echo $card_classes ?> <? if ($card->type() == 'audio') echo 'audio-card' ?>")
 	.image
 		a(href="<?= $card->url() ?>")
-			img.card__image(src="<?= $image->url() ?>")
+			img(src="<?= $image->url() ?>")
 	.video(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= $card->copy() ?>')
 		.center-box
 			.modal-trigger
-				img.card__image(src="<?= $image->url() ?>")
-			.icon-play-button.icon-play-button--video.icon-stack
+				img(src="<?= $image->url() ?>")
+			.icon-play-button.video-icon-play-button.icon-stack
 				.icon-circle
 				.icon-play
 	.details
-		.details__inner
+		.details-inner
 			.category!= $card->category()
 			
 			-if (isset($date) && isset($time)):
@@ -26,15 +26,15 @@ li.card.card-horizontal(class="<? if (isset($card_classes)) echo $card_classes ?
 				.tag!= $card->date()
 			-endif
 
-			a.high(href="<?= $card->url() ?>").title.card__title: span.light: span.er= $card->title()
+			a.high(href="<?= $card->url() ?>").title: span.light: span.er= $card->title()
 			
 			//- blurb
 			-if (isset($blurb)):
-				.description.card__description.link-underline.blurb!= $card->blurb()->kt()
+				.description.link-underline.blurb!= $card->blurb()->kt()
 			-endif
 			
 			-if (isset($excerpt)):
-				.description.card__description.link-underline
+				.description.link-underline
 					p!= excerpt($card->copy()->kt(), $excerpt, 'words')
 			-endif
 

@@ -8,10 +8,10 @@
 li.card.col-xs-12
 	.image
 		a(href="<?= $card->url() ?>")
-			img.card__image(src="<?= $image->url() ?>")
+			img(src="<?= $image->url() ?>")
 	.details
-		.details__inner
+		.details-inner
 			.title!= $card->title()
 			.byline!= $card->byline()
 			
-			.description.card__description.link-underline.blurb!= $card->blurb()->kt()
+			.description.link-underline.blurb!= $card->blurb()->kt()

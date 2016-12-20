@@ -8,15 +8,15 @@
   <div class="image"><a href="<?= $card->url() ?>"><img src="<?= $image->url() ?>"/></a></div>
   <div data-video-id="<?= $card->video_id() ?>" data-title="<?= $card->title() ?>" data-description="<?= $card->copy() ?>" class="video">
     <div class="center-box">
-      <div class="modal-trigger"><img src="<?= $image->url() ?>" class="card__image"/></div>
-      <div class="icon-play-button icon-play-button--video icon-stack">
+      <div class="modal-trigger"><img src="<?= $image->url() ?>"/></div>
+      <div class="icon-play-button video-icon-play-button icon-stack">
         <div class="icon-circle"></div>
         <div class="icon-play"></div>
       </div>
     </div>
   </div>
   <div class="details">
-    <div class="details__inner">
+    <div class="details-inner">
       <div class="category">
         <?php echo $card->festival(), ', ', $card->program(); ?></div>
       <div class="title">

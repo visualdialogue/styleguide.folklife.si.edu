@@ -4,13 +4,13 @@
 <?php elseif($src = $card->image()): ?>
 <?php $image = $src; ?>
 <?php endif; ?>
-<li class="card card-audio">
+<li class="card audio-card">
   <div class="image"><a href="<?= $card->url() ?>"><img src="<?= $image->url() ?>"/></a></div>
   <div class="details">
-    <div class="details__inner">
+    <div class="details-inner">
       <div class="category card__category">
         <?php echo $card->category() ; ?></div>
-      <div class="title-wrapper card__title-wrapper"><a href="<?= $card->url() ?>" class="high title"><span class="light"><span class="er">
+      <div class="title-wrapper-wrapper"><a href="<?= $card->url() ?>" class="high title"><span class="light"><span class="er">
               <?php echo htmlspecialchars($card->title(), ENT_QUOTES, 'UTF-8'); ?></span></span></a>
         <?php if('' != $card->audio_album()): ?>
         <div class="subtitle">

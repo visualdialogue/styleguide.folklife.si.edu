@@ -1,5 +1,5 @@
 
-<div class="details__inner <?= $details ?>">
+<div class="details-inner <?= $details ?>">
   <?php if($showCategory): ?>
   <?php if(isset($video) && $video === true): ?>
   <div class="category">
@@ -23,17 +23,17 @@
   <?php endif; ?>
   <?php if($subtitle):	 ?>
   <?php if(!$link): ?>
-  <div class="title card__title"><span class="light"><span class="er">
+  <div class="title"><span class="light"><span class="er">
         <?php echo htmlspecialchars($card->title(), ENT_QUOTES, 'UTF-8'); ?></span></span></div>
   <div class="subtitle"><span class="light"><span class="er">
         <?php echo htmlspecialchars($card->subtitle(), ENT_QUOTES, 'UTF-8'); ?></span></span></div>
   <?php else: ?><a href="<?= $card->url() ?>" class="high">
-    <div class="title card__title"><span class="light"><span class="er">
+    <div class="title"><span class="light"><span class="er">
           <?php echo htmlspecialchars($card->title(), ENT_QUOTES, 'UTF-8'); ?></span></span></div>
     <div class="subtitle"><span class="light"><span class="er">
           <?php echo htmlspecialchars($card->subtitle(), ENT_QUOTES, 'UTF-8'); ?></span></span></div></a>
   <?php endif; ?>
-  <?php else: ?><a href="<?= $card->url() ?>" class="high title card__title"><span class="light"><span class="er">
+  <?php else: ?><a href="<?= $card->url() ?>" class="high title"><span class="light"><span class="er">
         <?php echo htmlspecialchars($card->title(), ENT_QUOTES, 'UTF-8'); ?></span></span></a>
   <?php endif; ?>
   <?php if($type == 'program' && '' != $card->byline()): ?>
@@ -56,11 +56,11 @@
     <?php echo '$', $card->price(); ?></div>
   <?php endif; ?>
   <?php if (isset($blurb)): ?>
-  <div class="description card__description link-underline blurb">
+  <div class="description link-underline blurb">
     <?php echo $card->blurb()->kt(); ?></div>
   <?php endif; ?>
   <?php if (isset($excerpt)): ?>
-  <div class="description card__description link-underline">
+  <div class="description link-underline">
     <p>
       <?php echo excerpt($card->copy()->kt(), $excerpt, 'words'); ?></p>
   </div>

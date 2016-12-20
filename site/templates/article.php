@@ -4,7 +4,7 @@
 <?php snippet('title-bar', array('title' => 'Festival Blog', 'link' => $page->parent()->url())); ?>
 <div class="container">
   <div class="row">
-    <section class="section--first section--article col-sm-8">
+    <section class="first-section article-section col-sm-8">
       <article class="article">
         <!-- use card for correct video/image header-->
         <ul class="row cards blog-feature">

@@ -1,4 +1,4 @@
-.details__inner(class="<?= $details ?>")
+.details-inner(class="<?= $details ?>")
 
 	//- category
 	//- dont' show category on albums
@@ -29,15 +29,15 @@
 	//- if subtitle, group with title for correct highlighting
 	-if($subtitle):	
 		-if(!$link):
-			.title.card__title: span.light: span.er= $card->title()
+			.title: span.light: span.er= $card->title()
 			.subtitle: span.light: span.er= $card->subtitle()
 		-else:
 			a.high(href="<?= $card->url() ?>")
-				.title.card__title: span.light: span.er= $card->title()
+				.title: span.light: span.er= $card->title()
 				.subtitle: span.light: span.er= $card->subtitle()
 		-endif
 	-else:
-		a.high(href="<?= $card->url() ?>").title.card__title: span.light: span.er= $card->title()
+		a.high(href="<?= $card->url() ?>").title: span.light: span.er= $card->title()
 	-endif
 	//- -endif
 
@@ -66,14 +66,14 @@
 
 	//- blurb
 	-if (isset($blurb)):
-		.description.card__description.link-underline.blurb!= $card->blurb()->kt()
+		.description.link-underline.blurb!= $card->blurb()->kt()
 	-endif
 	
 	-if (isset($excerpt)):
-		.description.card__description.link-underline
+		.description.link-underline
 			p!= excerpt($card->copy()->kt(), $excerpt, 'words')
 	//- -elseif('' != $card->copy() && $card->type() != 'video'):
-		.description.card__description.link-underline!= $card->copy()->kt()
+		.description.link-underline!= $card->copy()->kt()
 	-endif
 
 	//- order1

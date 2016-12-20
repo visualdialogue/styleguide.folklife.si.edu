@@ -87,7 +87,7 @@
 			display: inline-block;
 		}
 	}
-	.site-toggle__link {
+	.site-toggle-link {
 		color: $sitelinks;
 		margin-left: 2.5rem;
 		&:hover {
@@ -121,7 +121,7 @@
 			padding: 0 40px;
 		}
 	}
-	.navbar-header__inner {
+	.navbar-header-inner {
 		// @include vertically-align-parent;
 		position: relative;
 		z-index: 100;
@@ -185,16 +185,11 @@
 		overflow: hidden; // hide logo when scrolls up
 		display: inline-block;
 	}
-	.navbar.one-line-logo {
-		.navbar-brand {
-			
-		}
-	}
 	.logo {
 		position: relative;
 		display: inline-block;
 	}
-	.logo__bg, .logo--block {
+	.block-logo {
 		// width: 193px;
 		// height: 32px;
 		width: 25vw;
@@ -212,7 +207,7 @@
 			height: 175px;
 		}
 	}
-	.logo--block {
+	.block-logo {
 		// @include padding(1);
 		// -webkit-transition: top 0.1s ease;
 		// -moz-transition: top 0.1s ease;
@@ -223,15 +218,15 @@
 		top:0;
 		left: 0;
 	}
-	.one-line-logo{
-		.logo__bg, .logo--block {
+	.navbar.logo-swap {
+		.block-logo {
 			display: none;
 		}
-		.logo--one-line {
+		.one-line-logo {
 			display: block;
 		}
 	}
-	.logo--one-line {
+	.one-line-logo {
 		display: none;
 		width:25vw;
 		@include respond-to(break2) {width:11vw;}
@@ -260,23 +255,23 @@
 		top:0;
 		width: 100%;
 		background-color: $navbar; // duplicate from navbar--open because sometimes close navbar when smaller header and need to keep the opacity
-		.logo--block { top: -25%; }
+		.block-logo { top: -25%; }
 		.logo {
 			.folkways-logo { top: -35%; }
 			overflow: hidden;
 		}
-		.logo__bg, .logo--block {
+		.block-logo {
 			display: none;
 		}
-		.logo--one-line {
+		.one-line-logo {
 			display: block;
 		}
 		@include respond-to(break2) {
-			.logo--block { top: -45%; }
+			.block-logo { top: -45%; }
 			.folkways-logo { top: -35%; }
-			.logo--block { top: -115%; }
+			.block-logo { top: -115%; }
 		}
-		& + .section--banner.container {
+		& + .banner-section.container {
 			position: relative;
 			top: 142px; // add height of fixed header to next element when activated
 		}
@@ -365,20 +360,20 @@
 				padding: 0 15px;
 			}
 		}
-		&--desktop {
-			@include respond-to(break2max) {
-				display: none !important;
-			}
-
+	}
+	.desktop-search-bar {
+		@include respond-to(break2max) {
+			display: none !important;
 		}
-		&--mobile {
-			padding: 5px 15px;
-			// place above outside click
-			position: relative;
-			z-index: 11;
-			@include respond-to(break2) {
-				display: none !important;
-			}
+
+	}
+	.mobile-search-bar {
+		padding: 5px 15px;
+		// place above outside click
+		position: relative;
+		z-index: 11;
+		@include respond-to(break2) {
+			display: none !important;
 		}
 	}
 
@@ -393,10 +388,10 @@
 		// keep above outside click div
 		position: relative;
 
-		.active &__title {
+		.active &-title {
 			@include respond-to(break2max) {color: white;}
 		}
-		&__title {
+		&-title {
 			@extend %header-nav-font;
 			cursor: pointer;
 			padding: 10px 0 0;
@@ -409,7 +404,7 @@
 			}
 			@include padding-bottom(0.4);
 		}
-		&__list {
+		&-list {
 			display: none;
 			@include respond-to(break2) {
 				display: inline-block;
@@ -421,7 +416,7 @@
 			@include margin-bottom(2.2);
 		}
 
-		&__sub-item {
+		&-sub-item {
 			display: block;
 			@include link-font;
 			color:$black60; // 12.12
@@ -446,16 +441,16 @@
 		z-index: 10;
 	}
 	.footer-nav {
-		&__title {
+		&-title {
 			color: $black20;
 		}
-		&__sub-item {
+		&-sub-item {
 			&:hover {
 				color: $black20;
 			}
 		}
 	}
-	.footer-nav__sub-item {
+	.footer-nav-sub-item {
 		// @include link-font-sm;
 	}
 	.nav-show-mobile {
@@ -490,7 +485,7 @@
 		}
 	}
 	
-	.browsenav__title {
+	.browsenav-title {
 		// font-family: $slabExtraWide;
 		// font-weight: 700;
 		// @extend %header-nav-font;
@@ -523,24 +518,12 @@
 			}
 		}
 	}
-	.browsenav__item {
+	.browsenav-item {
 		margin-bottom: 2rem;
 		@include respond-to(break2) {
 			margin-bottom: 0;
 		}
 	}
-	.browsenav__inner {
-		// background: url(/assets/images/icons/navicons--tablet.png) no-repeat;
-		// background: url(/assets/images/icons/dropdown.png) no-repeat;
-		// background-position: right 0px center;
-		// background-position: right 0px top -154px; 
-		// background-position: -220px -169px; 
-		// width: 25px; 
-		// height: 14px; 
-		// background-color: white;
-		// background-color: $black20;
-	}
-
 
 	// browse bar
 

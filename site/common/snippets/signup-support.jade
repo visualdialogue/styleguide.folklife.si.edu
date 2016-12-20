@@ -3,17 +3,17 @@
 //- half sections must be wrapped in container to stay in middle and together
 .container
 	.row
-		section.col-sm-6.section--newsletter-signup
+		section.col-sm-6.newsletter-signup-section
 			.newsletter-signup.clearfix
-				.newsletter-signup__copy
+				.newsletter-signup-copy
 					.icon-mail
 					= $site->newsletter_text()
 				form(action="/").newsletter-signup-form.newsletter
-						input.newsletter__input(type="email" placeholder="Enter your email")
-		section.col-sm-6.section--support
+						input.newsletter-input(type="email" placeholder="Enter your email")
+		section.col-sm-6.support-section
 			.support
-				.support__copy.clearfix
+				.support-copy.clearfix
 					= $site->support_text()
-				.support__button.button
-					.button__inner
+				.support-button.button
+					.button-inner
 						= $site->support_button_text()

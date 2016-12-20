@@ -13,7 +13,7 @@ head
 	//- hide text until loaded, like render blocking but just invisible, from http://blog.typekit.com/2010/10/29/font-events-controlling-the-fout/
 	style.
 		.wf-loading .tagline,
-		.wf-loading .site-toggle__link,
+		.wf-loading .site-toggle-link,
 		.wf-loading .title,
 		.wf-loading .section-title {
 			/* Hide the blog title and post titles while web fonts are loading */
@@ -70,25 +70,25 @@ head
 	.container
 		.tagline Championing Culture for, by, and of the People
 		-if (c::get('isDev')):
-			a.site-toggle__link.site-toggle__link--folklife.active(href="http://localhost:3003") Folklife
+			a.site-toggle-link.folklife-site-toggle-link.active(href="http://localhost:3003") Folklife
 		- else:
-			a.site-toggle__link.site-toggle__link--folkways(href="http://folklife.lukehatfield.com") Folkways
+			a.site-toggle-link.folkways-site-toggle-link(href="http://folklife.lukehatfield.com") Folkways
 		-endif
 		-if (c::get('isDev')):
-			a.site-toggle__link.site-toggle__link--festival(href="http://localhost:3009") Folkways
+			a.site-toggle-link.festival-site-toggle-link(href="http://localhost:3009") Folkways
 		- else:
-			a.site-toggle__link.site-toggle__link--folkways(href="http://folkways.lukehatfield.com") Folkways
+			a.site-toggle-link.folkways-site-toggle-link(href="http://folkways.lukehatfield.com") Folkways
 		-endif
 		-if (c::get('isDev')):
-			a.site-toggle__link.site-toggle__link--folklife(href="http://localhost:3005") Festival
+			a.site-toggle-link.folklife-site-toggle-link(href="http://localhost:3005") Festival
 		- else:
-			a.site-toggle__link.site-toggle__link--festival(href="http://on.festival.lukehatfield.com") Festival
+			a.site-toggle-link.festival-site-toggle-link(href="http://on.festival.lukehatfield.com") Festival
 		-endif
 //- nav.navbar.navbar-fixed-top
 .navbar-outside
 nav.navbar#navbar
 	.navbar-header
-		.navbar-header__inner
+		.navbar-header-inner
 			.navbar-brand(href="#")
 				img.sunsplash(src="assets/images/logo/sunsplash.png")
 				a.logo-mask(href="/")
@@ -96,50 +96,50 @@ nav.navbar#navbar
 						img.logo--folklife(src="assets/images/logo/folklife.png")
 						img.logo--center(src="assets/images/logo/center.png")
 			.nav-icons											
-				.icon-menu.nav-icon.nav-icon--main#menu-icon(aria-hidden="true")
+				.icon-menu.nav-icon.main-nav-icon#menu-icon(aria-hidden="true")
 
 	.header-nav#header-nav
 		.container
-			ul.header-nav__row.row
-				li.header-nav__main-item.col-sm-2 
-					a.header-nav__title(href="/colors") Colors
-					ul.header-nav__list
-						li.header-nav__sub-item: a(href="/colors#folklife") Folklife
-						li.header-nav__sub-item: a(href="/colors#festival") Festival
-						li.header-nav__sub-item: a(href="/colors#folkways") Folkways
-						li.header-nav__sub-item: a(href="/colors#shades-of-black") Shades of Black
-				li.header-nav__main-item.col-sm-2 
-					a.header-nav__title(href="/typography") Typography
-					ul.header-nav__list
-						li.header-nav__sub-item: a(href="/typography#serif") Serif
-						li.header-nav__sub-item: a(href="/typography#sans") Sans
-						li.header-nav__sub-item: a(href="/typography#slab-serif") Slab Serif
-				li.header-nav__main-item.col-sm-2 
-					a.header-nav__title(href="/cards") Cards
-					ul.header-nav__list
-						li.header-nav__sub-item Video Standard
-						li.header-nav__sub-item Video Horizontal
-						li.header-nav__sub-item Audio
-						li.header-nav__sub-item Card Vertical
-						li.header-nav__sub-item Card Horizontal				
-				li.header-nav__main-item.col-sm-2 
-					a.header-nav__title(href="/specials") Specials
-					ul.header-nav__list
-						li.header-nav__sub-item: a(href="/specials#email-signup") Email Signup
-						li.header-nav__sub-item: a(href="/specials#become-a-member") Become a Member
-						li.header-nav__sub-item: a(href="/specials#support") Support
-				li.header-nav__main-item.col-sm-2 
-					a.header-nav__title(href="/structure") Structure
-					ul.header-nav__list
-						li.header-nav__sub-item: a(href="/framework#sections") Sections
-						li.header-nav__sub-item: a(href="/framework#half-sections") Half Sections
-						li.header-nav__sub-item: a(href="/framework#margins") Margins
-						li.header-nav__sub-item: a(href="/framework#padding") Padding
-				li.header-nav__main-item.col-sm-2 
-					a.header-nav__title(href="/libraries") Libraries
-					ul.header-nav__list
-						li.header-nav__sub-item: a(href="/libraries#bootstrap") Bootstrap
-						li.header-nav__sub-item: a(href="/libraries#sass") SASS
+			ul.header-nav-row.row
+				li.header-nav-main-item.col-sm-2 
+					a.header-nav-title(href="/colors") Colors
+					ul.header-nav-list
+						li.header-nav-sub-item: a(href="/colors#folklife") Folklife
+						li.header-nav-sub-item: a(href="/colors#festival") Festival
+						li.header-nav-sub-item: a(href="/colors#folkways") Folkways
+						li.header-nav-sub-item: a(href="/colors#shades-of-black") Shades of Black
+				li.header-nav-main-item.col-sm-2 
+					a.header-nav-title(href="/typography") Typography
+					ul.header-nav-list
+						li.header-nav-sub-item: a(href="/typography#serif") Serif
+						li.header-nav-sub-item: a(href="/typography#sans") Sans
+						li.header-nav-sub-item: a(href="/typography#slab-serif") Slab Serif
+				li.header-nav-main-item.col-sm-2 
+					a.header-nav-title(href="/cards") Cards
+					ul.header-nav-list
+						li.header-nav-sub-item Video Standard
+						li.header-nav-sub-item Video Horizontal
+						li.header-nav-sub-item Audio
+						li.header-nav-sub-item Card Vertical
+						li.header-nav-sub-item Card Horizontal				
+				li.header-nav-main-item.col-sm-2 
+					a.header-nav-title(href="/specials") Specials
+					ul.header-nav-list
+						li.header-nav-sub-item: a(href="/specials#email-signup") Email Signup
+						li.header-nav-sub-item: a(href="/specials#become-a-member") Become a Member
+						li.header-nav-sub-item: a(href="/specials#support") Support
+				li.header-nav-main-item.col-sm-2 
+					a.header-nav-title(href="/structure") Structure
+					ul.header-nav-list
+						li.header-nav-sub-item: a(href="/framework#sections") Sections
+						li.header-nav-sub-item: a(href="/framework#half-sections") Half Sections
+						li.header-nav-sub-item: a(href="/framework#margins") Margins
+						li.header-nav-sub-item: a(href="/framework#padding") Padding
+				li.header-nav-main-item.col-sm-2 
+					a.header-nav-title(href="/libraries") Libraries
+					ul.header-nav-list
+						li.header-nav-sub-item: a(href="/libraries#bootstrap") Bootstrap
+						li.header-nav-sub-item: a(href="/libraries#sass") SASS
 
 	<!-- Collect the nav links, forms, and other content for toggling -->
 	.collapse.navbar-collapse(id="bs-example-navbar-collapse-1")

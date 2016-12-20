@@ -123,22 +123,22 @@
 			.border.border--inset
 			.image.col-sm-6.clearfix(class="")
 				-if($image):
-					img.card__image(src="<?= $image->url() ?>")
+					img(src="<?= $image->url() ?>")
 				-endif
 			.details.col-sm-6.details--inset.details--tight(class="")
 				.time!= $card->time()
 				.category
 					!= $card->festival(), ', ', $card->program();
-				a.high(href="<?= $card->url() ?>").title.card__title: span.light: span.er= $card->title()
+				a.high(href="<?= $card->url() ?>").title: span.light: span.er= $card->title()
 
 
 				//- show card author if it isn't blank
 				.date.date-sm!= $card->date('F jS, Y'), e('' != $card->author(), ' | ' . $card->author()), ' | 0 comments'
 				
-				.description.card__description.link-underline!= $card->blurb()->kt()
+				.description.link-underline!= $card->blurb()->kt()
 				
 				-if (isset($excerptData)):
-					.description.card__description.link-underline
+					.description.link-underline
 						p!= excerpt($card->copy()->kt(), $excerptData, 'words')
 				- else:
 					.description.article__description.link-underline!= $card->copy()->kt()
@@ -157,7 +157,7 @@
 			.details(class="")
 				.date!= $card->date('F jS')
 				.time!= $card->time()
-				.title.card__title: a(href="<?= $card->url() ?>")!= $card->title()
+				.title: a(href="<?= $card->url() ?>")!= $card->title()
 
 			//-if video is set, add data to card tag for video remodal
 			-if($video_id != ''):
@@ -165,16 +165,16 @@
 					.center-box
 						-if($image):
 							a.modal-trigger
-								img.card__image(src="<?= $image->url() ?>")
+								img(src="<?= $image->url() ?>")
 						-endif
-							.icon-play-button.icon-play-button--video.icon-stack
+							.icon-play-button.video-icon-play-button.icon-stack
 								.icon-circle
 								.icon-play
 			- else:
 				.image
 					-if($image):
 						a(href="<?= $card->url() ?>")
-							img.card__image(src="<?= $image->url() ?>")
+							img(src="<?= $image->url() ?>")
 					-endif
 			-endif
 
@@ -243,9 +243,9 @@
 								.center-box
 									-if($image):
 										a.modal-trigger
-											img.card__image(src="<?= $image->url() ?>")
+											img(src="<?= $image->url() ?>")
 									-endif
-										.icon-play-button.icon-play-button--video.icon-stack
+										.icon-play-button.video-icon-play-button.icon-stack
 											.icon-circle
 											.icon-play
 						//- .textbox.festival-video__textbox.col-sm-6
@@ -264,14 +264,14 @@
 						//- 	-if('' != $card->date() && $cardTypeData != 'blog' && $date):
 						//- 		.date!= $card->date('M d, Y')
 						//- 	-endif
-						//- 	a.high(href="<?= $card->url() ?>").title.card__title: span.light: span.er= $card->title()
+						//- 	a.high(href="<?= $card->url() ?>").title: span.light: span.er= $card->title()
 						//- -endif
 
 						.image.video(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= $card->copy() ?>')
 							.center-box
 								.modal-trigger
-									img.card__image(src="<?= $image->url() ?>")
-								.icon-play-button.icon-play-button--video.icon-stack
+									img(src="<?= $image->url() ?>")
+								.icon-play-button.video-icon-play-button.icon-stack
 									.icon-circle
 									.icon-play
 						.details
@@ -285,12 +285,12 @@
 				-if($image):
 					.image.clearfix(class="")
 						a(href="<?= $card->url() ?>")
-							img.card__image(src="<?= $image->url() ?>")
+							img(src="<?= $image->url() ?>")
 				-endif
 				.details
-					.details__inner
+					.details-inner
 						.category.card__category!= $card->category() 
-						.title-wrapper.card__title-wrapper
+						.title-wrapper-wrapper
 							a.high.title(href="<?= $card->url() ?>"): span.light: span.er= $card->title()
 							-if('' != $card->audio_album()):
 								.subtitle!= $card->audio_album()
@@ -308,7 +308,7 @@
 									!= $card->audio_length()
 								.volume.icon-volume-up
 			-elseif($cardOrientation == 'horizontal'):				
-				.card__inner
+				.card-inner
 					.image.clearfix(class="col-sm-<?= $img_col ?>")
 
 						//- put image in figure and add figcaption button if program section
@@ -323,14 +323,14 @@
 							-endif
 						-elseif($image):
 							a(href="<?= $card->url() ?>")
-								img.card__image(src="<?= $image->url() ?>")
+								img(src="<?= $image->url() ?>")
 						-endif
 					//- class name below for sidebar of programs page
 					//- .details--horizontal(class="col-sm-<?= $text_col ?>")
 					.details
 						-snippet('card-details', array('card' => $card, 'details' => $detailsData, 'blurb' => $blurbData, 'excerpt' => $excerptData, 'showCategory' => $showCategory, 'type' => $cardTypeData, 'date' => $date, 'author' => $author, 'link' => $link, 'subtitle' => $subtitle ))
 			- else:
-				.card__inner
+				.card-inner
 					//- put title above image if set to top
 					//- -if($titlePositionTop):
 					//- 	div(class="col-sm-<?= $img_col ?>")
@@ -338,7 +338,7 @@
 					//- 		-if('' != $card->date() && $cardTypeData != 'blog' && $date):
 					//- 			.date!= $card->date('M d, Y')
 					//- 		-endif
-					//- 		a.high(href="<?= $card->url() ?>").title.card__title: span.light: span.er= $card->title()
+					//- 		a.high(href="<?= $card->url() ?>").title: span.light: span.er= $card->title()
 					//- -endif
 
 					-if($thumbnail || $image):
@@ -356,11 +356,11 @@
 							//- .image.clearfix(class="col-sm-<?= $img_col ?>")
 							.image
 								a(href="<?= $card->url() ?>")
-									img.card__image(src="<?= $thumbnail->url() ?>")
+									img(src="<?= $thumbnail->url() ?>")
 						-else:
 							.image.clearfix(class="col-sm-<?= $img_col ?>")
 								a(href="<?= $card->url() ?>")
-									img.card__image(src="<?= $image->url() ?>")
+									img(src="<?= $image->url() ?>")
 						-endif
 					-endif
 					//- .details(class="col-sm-<?= $text_col ?>")

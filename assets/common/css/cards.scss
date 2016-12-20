@@ -1,21 +1,27 @@
+.card {
+	// for consistency with rows of cards and next sections
+	@include margin-bottom(4);
+}
+
+
 .border {
 	border-top: 1px solid $black30;
-	&--inset {
+}
+.inset-border {
+	margin-left:2rem;
+	margin-right:2rem;
+	@include respond-to(break2) {
 		margin-left:2rem;
 		margin-right:2rem;
-		@include respond-to(break2) {
-			margin-left:2rem;
-			margin-right:2rem;
-		}
-		@include respond-to(fullwidth) {
-			margin-left:2rem;
-			margin-right:2rem;
-		}
+	}
+	@include respond-to(fullwidth) {
+		margin-left:2rem;
+		margin-right:2rem;
 	}
 }
 
 // details only include top padding
-.details__inner {
+.details-inner {
 	// @include padding-top(2);
 
 	@include respond-to(break2) {
@@ -28,9 +34,6 @@
 }
 a.details {
 	display: inline-block; // for anchor tags that are .details
-}
-.details--notop {
-	@include respond-to(break2) {padding-top: 0 !important;}
 }
 // smaller featurette details require less padding
 .details--tight {
@@ -124,20 +127,20 @@ a.details {
 		.description {
 
 		}
-		.details__inner {
+		.details-inner {
 			// min-height:46vw;
 			@include respond-to(break2max) {
 				min-height:55vw !important; // override audio card
 			}
 			@include respond-to(break2) {min-height:19vw;}
-			@include respond-to(fullwidth) {min-height:27rem;}
+			@include respond-to(fullwidth) {min-height:25rem;}
 		}
 	}
 
 
 /* #audio
 -------------------------------------------------- */
-	.card-audio {
+	.audio-card {
 		.image {
 			padding-bottom:0; // prevent making gap in outline
 		}
@@ -146,11 +149,11 @@ a.details {
 			font-weight: 500;
 			margin-bottom:0;
 		}
-		.details__inner {
+		.details-inner {
 			position: relative; // hold player
 			min-height:46vw;
 			@include respond-to(break2) {min-height:19vw;}
-			@include respond-to(fullwidth) {min-height:27rem;}
+			@include respond-to(fullwidth) {min-height:25rem;}
 		}
 	}
 
@@ -183,7 +186,7 @@ a.details {
 	.modal-trigger {
 		// cursor: pointer; // set in links
 	}
-	.icon-play-button--video {
+	.video-icon-play-button {
 		@include vertically-align;
 		left: 50%;
 		margin-left: -3rem;
@@ -233,13 +236,13 @@ a.details {
 	  height:50px;
 	  line-height: 50px;
 	}
-	.remodal__iframe {
+	.remodal-iframe {
 	  position: relative;
 	  padding-bottom: 56.25%;
 	  height: 0;
 	  overflow: hidden;
 	}
-	.remodal__iframe iframe {
+	.remodal-iframe iframe {
 	  position: absolute;
 	  top:0;
 	  left:0;
@@ -248,10 +251,10 @@ a.details {
 	  height:100%;
 	  z-index: 2;
 	}
-	.remodal__copy {
+	.remodal-copy {
 	  padding:10px 20px;
 	}
-	.remodal__title {
+	.remodal-title {
 		// font-size:1.4rem; // 28px
 		margin-bottom:10px;
 		@include sans-xxs;
@@ -264,8 +267,7 @@ a.details {
 -------------------------------------------------- */
 
 	// horizontal backgrounds
-	.cards--background.cards--horizontal {
-		.card {
+		.background-card, .horizontal-card {
 			position: relative;
 			z-index: 1;
 			&:after {
@@ -287,48 +289,38 @@ a.details {
 				}
 			}
 		}
-		.image {
-			margin-left: -1px; // cover white line that shows sometimes. From rounding error?
-		}
-	}
+		// .image {
+			// margin-left: -1px; // cover white line that shows sometimes. From rounding error?
+		// }
 	// vertical backgrounds
-	.cards--background:not(.cards--horizontal) {
-		// .details__inner {
-		.card {
-			// position: absolute;
-			// position: relative;
-			// z-index: 1;
-			// top:0;
-			// bottom:0;
-			
-			&:after {
-				background-color: white;
-				content:"";
-				position: absolute;
-				top:0;
-				bottom:0;
-				z-index:-1; // put behind image and details
-				// left:0;
-				// right:0;
-				left:$gutter--small;
-				right:$gutter--small;
-				bottom: 3.75vw; // 3rem responsive at mobile
-				@include respond-to(break2) {
-					left:$gutter--full;
-					right:$gutter--full;
-					bottom: 0; // back to horizontal
-				}
-				@include respond-to(fullwidth) {
-					left:2rem;
-					right:2rem;
-				}
+	.background-card:not(.horizontal-card) {
+		&:after {
+			background-color: white;
+			content:"";
+			position: absolute;
+			top:0;
+			bottom:0;
+			z-index:-1; // put behind image and details
+			// left:0;
+			// right:0;
+			left:$gutter--small;
+			right:$gutter--small;
+			bottom: 3.75vw; // 3rem responsive at mobile
+			@include respond-to(break2) {
+				left:$gutter--full;
+				right:$gutter--full;
+				bottom: 0; // back to horizontal
+			}
+			@include respond-to(fullwidth) {
+				left:2rem;
+				right:2rem;
 			}
 		}
 	}
 
 
 
-	.feature--full, .details, .ms-section__copy {
+	.full-feature, .details, .ms-section__copy {
 		.more-link {
 			position: static;
 			float: right;
@@ -343,18 +335,7 @@ a.details {
 			}
 		}
 	}
-	// .card {
-		// .more-link {
-			// off in card by default
-			// display: none;
-		// }
-	// }
-	.cards--more-link {
-		.more-link {
-			display: inline-block;
-		}
-	}
-	.section--half .more-link {
+	.half-section .more-link {
 		// right: 2.7%; // double that of parent padding as percent
 		@include right(4);
 	}
@@ -369,19 +350,18 @@ a.details {
 
 /* #horizontal
 -------------------------------------------------- */
-	.section--horizontal-cards {
+	.horizontal-cards-section {
 		@include respond-to(break2) {margin-bottom:2.5vw;}
 		// @include respond-to(fullwidth) {margin-bottom:4rem;}
 		@include respond-to(fullwidth) {margin-bottom:6rem;}
 	}
-	.section--horizontal-cards:not(.section--banner) {
+	.horizontal-cards-section:not(.banner-section) {
 		// remove extra margin from last row
 		// @include margin-bottom(-1);
 		// margin-bottom: 0;;
 	}
 	.card-horizontal {
-		@include margin-bottom(4);
-		.details__inner {
+		.details-inner {
 			padding-left:$gutter--small;
 			@include respond-to(break2) {padding-left:$gutter--full;}
 			@include respond-to(fullwidth) {padding-left:0;}
@@ -400,7 +380,7 @@ a.details {
 		.details.hasborder {
 			@include margin-top(1); // add margin back if have border b/c no title above in horizontal layout
 		}
-		.details__inner {
+		.details-inner {
 			// padding-left: 0;
 			@include padding(0); // start with no padding, need media queries to win specificity 
 			@include padding-top(2);
@@ -412,24 +392,24 @@ a.details {
 
 /* #Cards modifiers
 -------------------------------------------------- */
-	.cards--inset .details__inner {
+	.inset .details-inner {
 		@include padding-left(2);
 	}
-	.cards--no-padding .details__inner { 
+	.cards--no-padding .details-inner { 
 		padding: 0; 
 	}
-	.cards--left-align .details__inner {
+	.cards--left-align .details-inner {
 		padding-left: 0;
 	}
-	.cards--padding-top-2 .details__inner { 
+	.cards--padding-top-2 .details-inner { 
 		// padding: 0; 
 		@include padding-top(2);
 	}
-	.cards--padding-top-3 .details__inner { 
+	.cards--padding-top-3 .details-inner { 
 		// padding: 0; 
 		@include padding-top(3);
 	}
-	.cards--padding-top-4 .details__inner { 
+	.cards--padding-top-4 .details-inner { 
 		// padding: 0; 
 		@include padding-top(4);
 	}
@@ -437,15 +417,6 @@ a.details {
 /* Cards on the grid
 -------------------------------------------------- */
 
-	// default
-	.cards {
-		.card__inner {
-			// @extend .col-md-12;
-		}
-		.image, .video, .details {
-			// @extend .col-xs-12;
-		}
-	}
 	.cards--xs-6 .card {
 		@extend .col-xs-6;
 		// clear left on every odd card
@@ -619,7 +590,7 @@ a.details {
 				}
 			}
 		}
-		.details__inner {
+		.details-inner {
 			@include padding-top(3);
 		}
 	}
@@ -627,7 +598,6 @@ a.details {
 /* Full feature cards
 -------------------------------------------------- */
 	.full-feature {
-		@include margin-bottom(0);
 		.category {
 			display: none;
 		}
@@ -642,7 +612,7 @@ a.details {
 			@include respond-to(break2) {margin-bottom:1.15vw;}
 			@include respond-to(fullwidth) {margin-bottom:1.8rem;}
 		}
-		.details__inner {
+		.details-inner {
 			@include padding-top(0);
 			@include respond-to(break2max) {
 				padding-left:0; // for full width detail copy
@@ -655,19 +625,20 @@ a.details {
 
 /* Sidebar cards
 -------------------------------------------------- */
-	.cards--sidebar {
+	.sidebar-card {
 		// @include border(top);
-		@include respond-to(break2max) {
-			padding-top: 2vw;
-		}
+		// @include respond-to(break2max) {
+		// 	padding-top: 2vw;
+		// }
+		@include margin-bottom(4);
 		.card {
-			@include margin-bottom(4);
 		}
 		.image  {
 			padding-bottom:0;
 		}
 		.details {
 			@include sans-xxs;
+			padding-left:0;
 		}
 		
 		.author, .date {
@@ -677,7 +648,7 @@ a.details {
 			font-weight: 600;
 			@include margin-top(-0.5); // for true 20px padding top
 		}
-		&.cards--horizontal {
+		&.horizontal-card {
 			.details {
 				@include respond-to(break2) {padding-left:0.8vw;}
 				@include respond-to(fullwidth) {padding-left:0;}
@@ -728,7 +699,7 @@ a.details {
 -------------------------------------------------- */
 	.cards--albums, .cards--vinyl {
 		
-		.details__inner {
+		.details-inner {
 			padding:0;
 			@include padding-top(2);
 		}
@@ -838,7 +809,7 @@ a.details {
 		.image, .video {
 			padding-bottom: 0;
 		}
-		.details__inner {
+		.details-inner {
 			border: 2px solid $black15;
 			@include padding-left(2); // padding on left by default
 			@include padding-bottom(2); // padding on left by default
@@ -895,7 +866,7 @@ a.details {
 
 /* Helpers
 -------------------------------------------------- */
-	.cards--sm-break-none {
+	.cards-sm-break-none {
 		.card {
 			@include respond-to(break2) {
 				clear: none !important;
@@ -913,7 +884,7 @@ a.details {
 		}
 	}
 
-	.cards--sm-break-2 {
+	.cards-sm-break-2 {
 		.card {			
 			@include respond-to(break2) {
 				&:nth-of-type(2n + 1) {
@@ -932,7 +903,7 @@ a.details {
 			}
 		}
 	}
-	.cards--break-3 {
+	.cards-break-3 {
 		@include respond-to(break2) {
 			// clear mobile style
 			&:nth-of-type(2n + 1) {

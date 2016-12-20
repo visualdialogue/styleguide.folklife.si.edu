@@ -1,6 +1,6 @@
 
 <div class="blog-categories">
-  <h2 class="sidebar__section-title">Categories</h2>
+  <h2 class="sidebar-section-title">Categories</h2>
   <ul class="blog-categories">
     <li class="sidebar-highlight"><a>Traditional Knowledge</a></li>
     <li class="sidebar-highlight"><a>Music</a></li>

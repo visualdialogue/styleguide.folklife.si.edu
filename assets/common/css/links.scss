@@ -17,7 +17,7 @@
 	}
 
 	// prevent the above
-	.meganav__title, .footer__title, .logo-mask, .site-toggle__link {
+	.meganav__title, .footer-title, .logo-mask, .site-toggle-link {
 		&:hover {
 			background-color: transparent; // prevent highlighting color
 		}
@@ -37,17 +37,19 @@
 		}
 	}
 	a.high, .high, .video {
-		-webkit-transition: background .15s cubic-bezier(.33,.66,.66,1);
-		transition: background .15s cubic-bezier(.33,.66,.66,1);
-		cursor: pointer;
-		// highlight siblings with links as children for images
-		// &:hover .light, &:hover + .details .light, &:hover + .high .light {
-		// if subtitle or title, highlight each other
-		&:hover .light {
-			background: $hover;
-			color: $copy;
-			.er {
-				position: relative; // Overlap fix for background color highlighting text. Use span.no-highlight inside titles to prevent overlap. From http://stackoverflow.com/a/31440811
+		@include respond-to(break2) {
+			-webkit-transition: background .15s cubic-bezier(.33,.66,.66,1);
+			transition: background .15s cubic-bezier(.33,.66,.66,1);
+			cursor: pointer;
+			// highlight siblings with links as children for images
+			// &:hover .light, &:hover + .details .light, &:hover + .high .light {
+			// if subtitle or title, highlight each other
+			&:hover .light {
+				background: $hover;
+				color: $copy;
+				.er {
+					position: relative; // Overlap fix for background color highlighting text. Use span.no-highlight inside titles to prevent overlap. From http://stackoverflow.com/a/31440811
+				}
 			}
 		}
 	}

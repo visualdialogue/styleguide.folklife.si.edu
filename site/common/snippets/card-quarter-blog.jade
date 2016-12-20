@@ -6,20 +6,20 @@
 -endif
 
 li.card.col-sm-3.border-top(class="<? if ($card->type() == 'video' || ((isset($type)) && ($type == 'video'))) echo 'card-video'?>")
-	.card__inner
+	.card-inner
 		.details
-			.details__inner
+			.details-inner
 				.date!= $card->date('M d, Y')
-				a.high(href="<?= $card->url() ?>").title.card__title: span.light: span.er= $card->title()
+				a.high(href="<?= $card->url() ?>").title: span.light: span.er= $card->title()
 
 		.video(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= $card->copy() ?>')
 			.center-box
 				.modal-trigger
-					img.card__image(src="<?= $image->url() ?>")
-				.icon-play-button.icon-play-button--video.icon-stack
+					img(src="<?= $image->url() ?>")
+				.icon-play-button.video-icon-play-button.icon-stack
 					.icon-circle
 					.icon-play
 
 		.image
 			a(href="<?= $card->url() ?>")
-				img.card__image(src="<?= $image->url() ?>")
+				img(src="<?= $image->url() ?>")

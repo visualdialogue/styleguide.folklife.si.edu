@@ -15,42 +15,42 @@
 		&-logo {
 			color: $black30;
 			margin-bottom: 1vw;
-			&--active {
+			&-active {
 				color: white;
 			}
 		}
-		&__row--1 {
+		&-row-1 {
 			@include respond-to(break2max) {
 				margin-bottom: 4rem;
 				// margin-bottom: 3.4rem;
 			}
 		}
-		&__row--2 {
+		&-row-2 {
 			// margin-top: 4vw;
 			// @include respond-to(break2) { margin-top: 1.6vw; }
 			// @include respond-to(fullwidth) { margin-top: 2.5rem; }
 			@include margin-top(3);
 		}
-		&__row--3 {
+		&-row-3 {
 			color: $black20;
 			// margin-top: 8vw;
 			// @include respond-to(break2) { margin-top: 2.3vw; }
 			// @include respond-to(fullwidth) { margin-top: 5rem; }
 			@include margin-top(3.8);
 		}
-		&__list {
+		&-list {
 			margin-bottom: 0rem;
 			@include respond-to(fullwidth) {margin-bottom:0;}
 		}
 	}
 	.footer-nav {
-		&--news {
+		&-news {
 			@include margin-top(1.1);
 		}
-		&__title {
+		&-title {
 			@include respond-to(break2max) {color:$black40;}
 		}
-		&__sub-item {
+		&-sub-item {
 			a:hover {
 				color: $black20;
 			}
@@ -66,23 +66,23 @@
 			}
 		}
 	}
-	.hr--footer {
+	.footer-hr {
 		@include border(top, 1px, $black20);
 
 	}
-	.footer-logo__img--folklife {
+	.folklife-footer-logo-img {
 		@include respond-to(break2max) {margin-bottom: 3vw;}
 	}
-	.copyright-list, .footer__title {
+	.copyright-list, .footer-title {
 		@include respond-to(break2) {margin-top: -3px;}
 	}
-	.copyright-list, .social-media .footer__list {
+	.copyright-list, .social-media .footer-list {
 		display: block;
 	}
 	.copyright-list {
 		@include respond-to(break2max) {margin-top: 1rem;}
 	}
-	.copyright-list__item {
+	.copyright-list-item {
 		// @include link-font-xs;
 		@include link-font;
 		// line-height: 1.9 !important;
@@ -93,7 +93,7 @@
 			}
 		}
 	}
-	.social-media__title {
+	.social-media-title {
 		@include link-font;
 		font-weight: 400;
 		text-transform: uppercase;
@@ -102,7 +102,7 @@
 		@include margin-bottom(0.6); // align sibling menu list
 		@include margin-left(0.3); // align with facebook icon
 	}
-	.social-media__icon {
+	.social-media-icon {
 		display: inline-block;
 		font-size: 8vw; margin-right: 3vw;
 		@include respond-to(break2) { font-size: 1.9vw; margin-right: 0.2vw; }
