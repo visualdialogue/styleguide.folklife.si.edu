@@ -16,7 +16,6 @@
 ***************************/
 	site.navbar = $('#navbar'); // logo switching for nav
 
-
 	// set mobile flag
 	function checkMobile() {
 		site.screenSize = $( window ).width();
@@ -29,10 +28,6 @@
 
 
 	checkMobile(); // initial
-
-	// $(window).resize( $.throttle(125, function() {
-	// 	checkMobile();
-	// }));
 
 	// make active pseudo styles in mobile safari, from https://alxgbsn.co.uk/2011/10/17/enable-css-active-pseudo-styles-in-mobile-safari/
 	document.addEventListener("touchstart", function() {},false);
@@ -67,20 +62,12 @@
 		var $this = $(this);
 
 	 	var $thisUl = $this.next('ul');
-	 	// console.log('$thisUl: ', $thisUl);
-	 	// console.log('$thisUl.hasClass("nav-show-mobile"): ', $thisUl.hasClass("nav-show-mobile"));
-
-		// var thisNavOpen = ; // check to see you are already open
-
-		// console.log('thisNavOpen: ', thisNavOpen);
 
 		// if you are already open, close all
 		if($thisUl.hasClass('nav-show-mobile')) {
 			$navLists.removeClass('nav-show-mobile'); // close all other open nav lists
 			$navItem.removeClass('active'); // remove all active titles
 			
-			// BUGBUGBUGBUG - show child, otherwise in loop
-			// $thisUl.addClass('nav-show-mobile'); // show child nav list BUG
 		}
 		// else close all and open yourself
 		else {
@@ -99,10 +86,7 @@
 	var $navBarHeader = $('.navbar-header');
 	var $navspacer = $('#navspacer');
 
-	// var gapNavHeight = 62;
 	var gapNavHeight = $siteToggle.outerHeight();
-	// var gapNavHeight = 10;
-	// var navSpacerHeight = 95;
 
 	$(window).scroll(function() {
 		// close all if on phone
@@ -128,12 +112,6 @@
 				$navspacer.removeClass("navspacer-open"); // gracefully cloase
 			
 		}
-
-		// // Close Nav if mobile on scroll
-		// if(site.isMobile && (!shareClosed || !menuClosed || !searchClosed )) {
-		// 	console.log('close it');
-		// 	navCloseAll(); // close anything else that's open
-		// }
 
 	});
 
@@ -247,20 +225,6 @@
 		console.log('header-navitem clicked');
 		navCloseAll();
 	});
-
-
-	// $megaNav.on({
-	//   focusout: function () {
-	//     $(this.hash).data('timer', setTimeout(function () {
-	//       $(this.hash).removeClass('active');
-	//       console.log('clickd outside');
-	//     }.bind(this), 0));
-	//   },
-	//   focusin: function () {
-	//     clearTimeout($(this.hash).data('timer'));  
-	//       console.log('clickd inside');
-	//   }
-	// });
 
 	// GRAY OUT NAV
 	var $allIcons = $menuIcon.add($shareIcon).add($searchIcon);
@@ -395,10 +359,6 @@
 /*********
 * Slick nav functions
 **********/
-	// $(window).resize( $.throttle(125, function() {
-	// 	// on resize
-	// 	slickCarousel();
-	// }));
 	function debounce(func, wait, immediate) {
 		var timeout;
 		return function() {
@@ -413,38 +373,4 @@
 			if (callNow) func.apply(context, args);
 		};
 	};
-
-	// // var unslickifyDesktop = debounce(function() {
-	// var unslickify = function() {
-	// 	console.log('unslickify');
-		
-	// 	// destroy desktop banner
-	// 	if(slickCreatedDesktop) {
-	// 		$('#banner-carousel').slick('unslick');
-	// 		slickCreatedDesktop = false;
-	// 	}
-		
-	// 	// destroy mobile banner
-	// 	if(slickCreatedMobile) {
-	// 		$('#banner-carousel').slick('unslick');
-	// 		$('.banner__nav--mobile').slick('unslick');
-	// 		slickCreatedMobile = false;
-	// 	}
-	// };
-
-	// // $(window).on('breakpoint', function(event, _slick, breakpoint) {
-	// // $(window).resize( $.throttle(125, function() {
-	// $(window).on('resize', function() {
-	// 	checkMobile();
-
-	// 	// if getting smaller
-	// 	if(site.isMobile && slickCreatedDesktop) {
-	// 		unslickify(); // destroy
-	// 		createBannerMobile();
-	//  	} else if(!site.isMobile && slickCreatedMobile) {
-	// 		unslickify(); // destroy
-	// 		createBannerDesktop();
-	// 	}
-	// });
-
 });
