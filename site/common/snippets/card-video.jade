@@ -5,9 +5,9 @@
 	-$image = $src
 -endif
 
-li.card.card-video(class="<?= $card_classes ?>")
+li.card.video-card(class="<?= $card_classes ?>")
 	.row
-		.video(class="<?= $video_col ?>" data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= $card->copy() ?>')
+		.video(class="<?= $video_col ?>" data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= excerpt($card->copy(), 25, "words") ?> <a href=\'#\'>more</a>')
 			.center-box
 				.modal-trigger
 					img(src="<?= $image->url() ?>")

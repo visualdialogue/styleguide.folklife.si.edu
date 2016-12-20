@@ -408,16 +408,18 @@ body {
 	}
 	.serif-lg {@include serif-lg;}
 
-	// Medium Serif Title
+	// Medium Serif Title +
 	@mixin serif-md {
 		font-family: $serif;
 		font-weight: 700;
 		line-height: 1;
-	  	font-size: 6vw;
-	  	font-size: 5vw;
+	  	// font-size: 6vw;
+	  	// font-size: 5vw;
+	  	font-size: 2.133rem;
 		@include respond-to(break2) {
 			line-height: 1.143; // 28/32
-	  		font-size: 1.8vw;
+	  		// font-size: 1.8vw;
+	  		font-size: 2.4rem;
 		}
 		@include respond-to(fullwidth) {
 	  		font-size: 2.7rem;

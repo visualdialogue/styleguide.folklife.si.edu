@@ -5,11 +5,11 @@
 	-$image = $src
 -endif
 
-li.card.blog-article.col-xs-12(class="<? if ($card->type() == 'video') echo 'card-video' ?>")
+li.card.blog-article.col-xs-12(class="<? if ($card->type() == 'video') echo 'video-card' ?>")
 	.image
 		a(href="<?= $card->url() ?>")
 			img(src="<?= $image->url() ?>")
-	.video(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= $card->copy() ?>')
+	.video(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= excerpt($card->copy(), 25, "words") ?> <a href=\'#\'>more</a>')
 		.center-box
 			.modal-trigger
 				img(src="<?= $image->url() ?>")

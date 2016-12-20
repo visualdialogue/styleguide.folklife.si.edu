@@ -120,6 +120,10 @@ a.details {
 	.card-program {
 		.title {
 			@include serif-md;
+			display: block; // for better height management;
+			@include respond-to(break2max) {
+				margin-bottom:0;
+			}
 		}
 		.description {
 
@@ -127,12 +131,16 @@ a.details {
 		&, &.audio-card {
 			.details-inner {
 				// min-height:46vw;
+				// min-height: 2rem;
 				@include respond-to(break2max) {
 					// min-height:55vw !important; // override audio card
-					min-height: 25rem;
+					min-height: 20rem;
 				}
-				@include respond-to(break2) {min-height:20vw;}
-				@include respond-to(fullwidth) {min-height:25rem;}
+				@include respond-to(break2) {
+					min-height:25vw;
+					min-height:22rem;
+				}
+				@include respond-to(fullwidth) {min-height:23rem;}
 			}
 		}
 	}
@@ -177,11 +185,20 @@ a.details {
 	.video {
 		display: none;
 	}
-	.card-video {
+	.video-card:not(.horizontal-card) {
 		.video {
 			// vert align grandparent includes display: table
 			@include vertically-align-grandparent;
 		}
+	}
+	// Show on program sidebar, but not at 100% like above
+	.video-card.horizontal-card {
+		.video {
+			display: block;
+			
+		}
+	}
+	.video-card {
 		.image {
 			display: none;
 		}
@@ -369,7 +386,10 @@ a.details {
 -------------------------------------------------- */
 	.tag {
 		// counteract line height of first line for padding
-		@include margin-top(-0.5); // due to line height. to make spacing accurate with padding above
+		// due to line height. to make spacing accurate with padding above
+		margin-top:-0.5rem;
+		@include respond-to(break2) {margin-top:-0.28125vw;}
+		@include respond-to(fullwidth) {margin-top:-0.5rem;}
 	}
 
 

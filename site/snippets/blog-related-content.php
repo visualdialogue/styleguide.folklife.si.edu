@@ -12,7 +12,7 @@
   <!-- program sidebar-->
   <ul class="row">
     <?php foreach($pages->find('blog')->children()->visible()->filterBy('tags','basque',',')->limit($limit) as $card): ?>
-    <?php snippet('horizontal-card', array('card' => $card, 'card_classes' => 'col-xs-12 border-top sidebar-card', 'image_col' => 'col-xs-6', 'details_col' => 'col-xs-6', 'excerpt' => 12 )); ?>
+    <?php snippet('card-horizontal', array('card' => $card, 'card_classes' => 'col-xs-12 border-top sidebar-card', 'image_col' => 'col-xs-6', 'details_col' => 'col-xs-6', 'excerpt' => 12 )); ?>
     <?php endforeach; ?>
   </ul>
   <?php endif; ?>

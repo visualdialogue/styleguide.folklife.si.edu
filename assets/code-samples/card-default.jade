@@ -13,7 +13,7 @@
 				-if ($cardOrientation == 'horizontal'):
 					.festival-video.clearfix
 						.col-sm-6
-							.video(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= $card->copy() ?>')
+							.video(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= excerpt($card->copy(), 25, "words") ?> <a href=\'#\'>more</a>')
 								.center-box
 									-if($image):
 										a.modal-trigger
@@ -41,7 +41,7 @@
 						//- 	a.high(href="<?= $card->url() ?>").title: span.light: span.er= $card->title()
 						//- -endif
 
-						.image.video(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= $card->copy() ?>')
+						.image.video(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= excerpt($card->copy(), 25, "words") ?> <a href=\'#\'>more</a>')
 							.center-box
 								.modal-trigger
 									img(src="<?= $image->url() ?>")

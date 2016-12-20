@@ -10,7 +10,7 @@ li.card.horizontal-card.col-xs-12.border-top
 		.image.col-sm-6
 			a(href="<?= $card->url() ?>")
 				img(src="<?= $image->url() ?>")
-		.video(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= $card->copy() ?>')
+		.video(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= excerpt($card->copy(), 25, "words") ?> <a href=\'#\'>more</a>')
 			.center-box
 				.modal-trigger
 					img(src="<?= $image->url() ?>")

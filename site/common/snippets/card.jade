@@ -5,20 +5,26 @@
 	-$image = $src
 -endif
 
-li.card(class="<? if (isset($card_classes)) echo $card_classes ?> <? if ($card->type() == 'audio') echo 'audio-card' ?>")
-	.image
-		a(href="<?= $card->url() ?>")
-			img(src="<?= $image->url() ?>")
-	.video(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= $card->copy() ?>')
-		.center-box
-			.modal-trigger
+li.card(class="<? if (isset($card_classes)) echo $card_classes . ' ' ?><? if ($card->type() == 'audio') echo ' audio-card' ?><? if ($card->type() == 'video') echo ' video-card' ?>")
+
+	-if ($card->type() == 'video'):
+		.video(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= excerpt($card->copy(), 25, "words") ?> <a href=\'#\'>more</a>')
+			.center-box
+				.modal-trigger
+					img(src="<?= $image->url() ?>")
+				.icon-play-button.video-icon-play-button.icon-stack
+					.icon-circle
+					.icon-play
+	-else:
+		.image
+			a(href="<?= $card->url() ?>")
 				img(src="<?= $image->url() ?>")
-			.icon-play-button.video-icon-play-button.icon-stack
-				.icon-circle
-				.icon-play
+	-endif
 	.details
 		.details-inner
-			.tag!= $card->category()
+			-if('' != $card->category()):	
+				.tag!= $card->category()
+			-endif
 			
 			-if (isset($date) && isset($time)):
 				.tag!= $card->date('M d, Y'), '<br />', $card->time()

@@ -63,7 +63,8 @@ $gutter--full: 2.72%;
   // $navbarHeight--home--mobile: 11vw;
   // $navbarHeight--home--mobile: 9vw; // new hamburger nav
   $navbarHeight--home--mobile: 5.5rem; // new hamburger nav
-  $navbarHeight--subpage--mobile: 6.2rem;
+  // $navbarHeight--subpage--mobile: 6.2rem;
+  $navbarHeight--subpage--mobile: 5.5rem;
   // $navbarHeight--subpage--mobile--smaller: 12vw;
   $navbarHeight--subpage--mobile--smaller: 5rem;
   $navbarHeight--home--tablet: 5.1vw;
@@ -88,6 +89,7 @@ $gutter--full: 2.72%;
   $headerHeight--subpage--mobile:#{$navbarHeight--subpage--mobile} + #{$navbarSiteToggle--mobile} + #{$logoSpacer--mobile};
   $headerHeight--home--tablet:#{$navbarHeight--home--tablet} + #{$navbarSiteToggle--tablet};
   $headerHeight--subpage--tablet:#{$navbarHeight--subpage--tablet} + #{$navbarSiteToggle--tablet} + #{$logoSpacer--tablet};
+  // $headerHeight--subpage--tablet:#{$navbarHeight--subpage--tablet} + #{$navbarSiteToggle--tablet};
   $headerHeight--home--desktop:#{$navbarHeight--desktop} + #{$navbarSiteToggle--desktop};
   $headerHeight--subpage--desktop:#{$navbarHeight--desktop} + #{$navbarSiteToggle--desktop} + #{$logoSpacer--desktop};
 

@@ -4,9 +4,9 @@
 <?php elseif($src = $card->image()): ?>
 <?php $image = $src; ?>
 <?php endif; ?>
-<li class="card blog-article col-xs-12 <? if ($card->type() == 'video') echo 'card-video' ?>">
+<li class="card blog-article col-xs-12 <? if ($card->type() == 'video') echo 'video-card' ?>">
   <div class="image"><a href="<?= $card->url() ?>"><img src="<?= $image->url() ?>"/></a></div>
-  <div data-video-id="<?= $card->video_id() ?>" data-title="<?= $card->title() ?>" data-description="<?= $card->copy() ?>" class="video">
+  <div data-video-id="<?= $card->video_id() ?>" data-title="<?= $card->title() ?>" data-description="<?= excerpt($card->copy(), 25, "words") ?> <a href='#'>more</a>" class="video">
     <div class="center-box">
       <div class="modal-trigger"><img src="<?= $image->url() ?>"/></div>
       <div class="icon-play-button video-icon-play-button icon-stack">

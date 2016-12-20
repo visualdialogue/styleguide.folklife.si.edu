@@ -113,7 +113,8 @@
 
 		// when user scrolls past height of site toggle, make smaller
 		if (($(this).scrollTop() > gapNavHeight) && (isNavOpen == false)) {  
-			site.navbar.addClass("smaller-header navbar--open");
+			// site.navbar.addClass("smaller-header navbar--open");
+			site.navbar.addClass("smaller-header");
 			isNavOpen = true;
 			if(!site.isMobile) {
 				$navspacer.addClass("navspacer--taller"); // open right away

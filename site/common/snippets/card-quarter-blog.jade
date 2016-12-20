@@ -5,21 +5,23 @@
 	-$image = $src
 -endif
 
-li.card.col-sm-3.border-top.blog-card(class="<? if ($card->type() == 'video' || ((isset($type)) && ($type == 'video'))) echo 'card-video'?>")
+li.card.col-sm-3.border-top.blog-card(class="<? if ($card->type() == 'video' || ((isset($type)) && ($type == 'video'))) echo 'video-card'?>")
 	.card-inner
 		.details
 			.details-inner
 				.date!= $card->date('M d, Y')
 				a.high(href="<?= $card->url() ?>").title: span.light: span.er= $card->title()
 
-		.video(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= $card->copy() ?>')
-			.center-box
-				.modal-trigger
+		-if ($card->type() == 'video'):
+			.video(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= excerpt($card->copy(), 25, "words") ?> <a href=\'#\'>more</a>')
+				.center-box
+					.modal-trigger
+						img(src="<?= $image->url() ?>")
+					.icon-play-button.video-icon-play-button.icon-stack
+						.icon-circle
+						.icon-play
+		-else:
+			.image
+				a(href="<?= $card->url() ?>")
 					img(src="<?= $image->url() ?>")
-				.icon-play-button.video-icon-play-button.icon-stack
-					.icon-circle
-					.icon-play
-
-		.image
-			a(href="<?= $card->url() ?>")
-				img(src="<?= $image->url() ?>")
+		-endif

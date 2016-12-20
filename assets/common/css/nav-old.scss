@@ -14,15 +14,18 @@
 			// position: fixed;
 			width: 100%;
 			z-index: 10;
+			height: $navbarHeight--subpage--mobile;
 		}
 		@include respond-to(break2) {
 			// top: 60px;
 			top: $navbarSiteToggle--tablet;
 			z-index: 2;
 			z-index: 10;
+			height: $navbarHeight--subpage--tablet;
 		}
 		@include respond-to(fullwidth) {
 			top: $navbarSiteToggle--desktop;
+			height: $navbarHeight--desktop;
 		}
 
 		// if open, go light
@@ -189,10 +192,15 @@
 		display: inline-block;
 	}
 	.logo {
-		position: relative;
+		// position: relative;
+		position: absolute; // for menu dropdown height not to be effected
 		display: inline-block;
+		a {
+			display: block;
+		}
 	}
 	.block-logo {
+		max-width: initial; // otherwise will shrink to a tag above when absolutely positioned
 		// width: 193px;
 		// height: 32px;
 		width: 25vw;
@@ -223,7 +231,9 @@
 	}
 	.navbar.logo-swap {
 		.navbar-brand {
-			padding: 0 !important; // bootstrap override
+			// padding: 0 !important; // bootstrap override
+			padding-top: 0; // other !important override
+
 		}
 		.block-logo {
 			display: none;
@@ -233,6 +243,7 @@
 		}
 	}
 	.one-line-logo {
+		max-width: initial; // otherwise will shrink to a tag above when absolutely positioned
 		display: none;
 		width:25vw;
 		// width:5rem;
@@ -288,7 +299,7 @@
 	}
 	// Only on subpages, navbar gets smaller on scroll
 	body:not(.home-page) {
-		.smaller-header {
+		.smaller-header, .logo-swap {
 			.navbar-brand {
 				@include navbarHeight--subpage--smaller;
 			}

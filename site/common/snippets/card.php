@@ -4,9 +4,9 @@
 <?php elseif($src = $card->image()): ?>
 <?php $image = $src; ?>
 <?php endif; ?>
-<li class="card <? if (isset($card_classes)) echo $card_classes ?> <? if ($card->type() == 'audio') echo 'audio-card' ?>">
-  <div class="image"><a href="<?= $card->url() ?>"><img src="<?= $image->url() ?>"/></a></div>
-  <div data-video-id="<?= $card->video_id() ?>" data-title="<?= $card->title() ?>" data-description="<?= $card->copy() ?>" class="video">
+<li class="card <? if (isset($card_classes)) echo $card_classes . ' ' ?><? if ($card->type() == 'audio') echo ' audio-card' ?><? if ($card->type() == 'video') echo ' video-card' ?>">
+  <?php if ($card->type() == 'video'): ?>
+  <div data-video-id="<?= $card->video_id() ?>" data-title="<?= $card->title() ?>" data-description="<?= excerpt($card->copy(), 25, "words") ?> <a href='#'>more</a>" class="video">
     <div class="center-box">
       <div class="modal-trigger"><img src="<?= $image->url() ?>"/></div>
       <div class="icon-play-button video-icon-play-button icon-stack">
@@ -15,10 +15,15 @@
       </div>
     </div>
   </div>
+  <?php else: ?>
+  <div class="image"><a href="<?= $card->url() ?>"><img src="<?= $image->url() ?>"/></a></div>
+  <?php endif; ?>
   <div class="details">
     <div class="details-inner">
+      <?php if('' != $card->category()):	 ?>
       <div class="tag">
         <?php echo $card->category(); ?></div>
+      <?php endif; ?>
       <?php if (isset($date) && isset($time)): ?>
       <div class="tag">
         <?php echo $card->date('M d, Y'), '<br />', $card->time(); ?></div>
