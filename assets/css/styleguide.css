@@ -1448,13 +1448,13 @@ pre code {
   margin-left: -20px;
   margin-right: -20px; }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .cards--sm-2 .card, .cards--albums .card, .cards--merchandise .card, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .cards--sm-3 .card, .cards--audio-player .card, .cards--vinyl .card, .col-md-3, .col-lg-3, .col-xs-4, .cards--image-xs-4 .image, .col-sm-4, .cards--sm-4 .card, .cards--image-sm-4 .image, .cards--image-sm-8 .details, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .cards--image-sm-7 .details, .col-md-5, .col-lg-5, .col-xs-6, .cards--xs-6 .card, .cards--sm-2 .card, .cards--audio-player .card, .cards--albums .card, .cards--vinyl .card, .cards--merchandise .card, .col-sm-6, .cards--sm-6 .card, .card-sm-image-6 .image, .card-sm-image-6 .details, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .cards--image-sm-7 .image, .col-md-7, .col-lg-7, .col-xs-8, .cards--image-xs-4 .details, .col-sm-8, .cards--image-sm-4 .details, .cards--image-sm-8 .image, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .cards--sm-12 .card, .col-md-12, .col-lg-12 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .cards--sm-2 .card, .cards--albums .card, .cards--merchandise .card, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .cards--sm-3 .card, .cards--vinyl .card, .col-md-3, .col-lg-3, .col-xs-4, .cards--image-xs-4 .image, .col-sm-4, .cards--sm-4 .card, .cards--image-sm-4 .image, .cards--image-sm-8 .details, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .cards--image-sm-7 .details, .col-md-5, .col-lg-5, .col-xs-6, .cards--xs-6 .card, .cards--sm-2 .card, .cards--albums .card, .cards--vinyl .card, .cards--merchandise .card, .col-sm-6, .cards--sm-6 .card, .card-sm-image-6 .image, .card-sm-image-6 .details, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .cards--image-sm-7 .image, .col-md-7, .col-lg-7, .col-xs-8, .cards--image-xs-4 .details, .col-sm-8, .cards--image-sm-4 .details, .cards--image-sm-8 .image, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .cards--sm-12 .card, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 20px;
   padding-right: 20px; }
 
-.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .cards--image-xs-4 .image, .col-xs-5, .col-xs-6, .cards--xs-6 .card, .cards--sm-2 .card, .cards--audio-player .card, .cards--albums .card, .cards--vinyl .card, .cards--merchandise .card, .col-xs-7, .col-xs-8, .cards--image-xs-4 .details, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .cards--image-xs-4 .image, .col-xs-5, .col-xs-6, .cards--xs-6 .card, .cards--sm-2 .card, .cards--albums .card, .cards--vinyl .card, .cards--merchandise .card, .col-xs-7, .col-xs-8, .cards--image-xs-4 .details, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
   float: left; }
 
 .col-xs-12 {
@@ -1475,7 +1475,7 @@ pre code {
 .col-xs-7 {
   width: 58.33333333%; }
 
-.col-xs-6, .cards--xs-6 .card, .cards--sm-2 .card, .cards--audio-player .card, .cards--albums .card, .cards--vinyl .card, .cards--merchandise .card {
+.col-xs-6, .cards--xs-6 .card, .cards--sm-2 .card, .cards--albums .card, .cards--vinyl .card, .cards--merchandise .card {
   width: 50%; }
 
 .col-xs-5 {
@@ -1611,7 +1611,7 @@ pre code {
   margin-left: 0%; }
 
 @media (min-width: 852px) {
-  .col-sm-1, .col-sm-2, .cards--sm-2 .card, .cards--albums .card, .cards--merchandise .card, .col-sm-3, .cards--sm-3 .card, .cards--audio-player .card, .cards--vinyl .card, .col-sm-4, .cards--sm-4 .card, .cards--image-sm-4 .image, .cards--image-sm-8 .details, .col-sm-5, .cards--image-sm-7 .details, .col-sm-6, .cards--sm-6 .card, .card-sm-image-6 .image, .card-sm-image-6 .details, .col-sm-7, .cards--image-sm-7 .image, .col-sm-8, .cards--image-sm-4 .details, .cards--image-sm-8 .image, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .cards--sm-12 .card {
+  .col-sm-1, .col-sm-2, .cards--sm-2 .card, .cards--albums .card, .cards--merchandise .card, .col-sm-3, .cards--sm-3 .card, .cards--vinyl .card, .col-sm-4, .cards--sm-4 .card, .cards--image-sm-4 .image, .cards--image-sm-8 .details, .col-sm-5, .cards--image-sm-7 .details, .col-sm-6, .cards--sm-6 .card, .card-sm-image-6 .image, .card-sm-image-6 .details, .col-sm-7, .cards--image-sm-7 .image, .col-sm-8, .cards--image-sm-4 .details, .cards--image-sm-8 .image, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .cards--sm-12 .card {
     float: left; }
   .col-sm-12, .cards--sm-12 .card {
     width: 100%; }
@@ -1631,7 +1631,7 @@ pre code {
     width: 41.66666667%; }
   .col-sm-4, .cards--sm-4 .card, .cards--image-sm-4 .image, .cards--image-sm-8 .details {
     width: 33.33333333%; }
-  .col-sm-3, .cards--sm-3 .card, .cards--audio-player .card, .cards--vinyl .card {
+  .col-sm-3, .cards--sm-3 .card, .cards--vinyl .card {
     width: 25%; }
   .col-sm-2, .cards--sm-2 .card, .cards--albums .card, .cards--merchandise .card {
     width: 16.66666667%; }
@@ -6178,6 +6178,49 @@ a .page-title {
     .newsletter-signup--short .newsletter-signup-copy {
       padding-bottom: 1rem; } }
 
+/* #audio card
+-------------------------------------------------- */
+.audio-card .image {
+  padding-bottom: 0; }
+
+.audio-card .title {
+  font-family: "acumin-pro", Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+  font-size: 1.873rem;
+  font-weight: 600;
+  margin-bottom: 0; }
+  @media only screen and (min-width: 53.25em) {
+    .audio-card .title {
+      font-size: 2.107rem; } }
+  @media only screen and (min-width: 1560px) {
+    .audio-card .title {
+      font-size: 2.37rem; } }
+
+.audio-card .subtitle, .audio-card .artist {
+  font-family: "acumin-pro", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 1.48rem; }
+  @media only screen and (min-width: 53.25em) {
+    .audio-card .subtitle, .audio-card .artist {
+      font-size: 1.665rem; } }
+  @media only screen and (min-width: 1560px) {
+    .audio-card .subtitle, .audio-card .artist {
+      font-size: 1.873rem; } }
+
+.audio-card .details-inner {
+  position: relative;
+  min-height: 46vw;
+  min-height: 25rem; }
+  @media only screen and (min-width: 53.25em) {
+    .audio-card .details-inner {
+      min-height: 20vw; } }
+  @media only screen and (min-width: 1560px) {
+    .audio-card .details-inner {
+      min-height: 25rem; } }
+
+/* #audio player
+-------------------------------------------------- */
 .audio-player-details, .audio-progress-bar, .audio-time, .volume {
   display: inline-block;
   vertical-align: bottom; }
@@ -6765,47 +6808,6 @@ a.details {
   .blog-card {
     margin-bottom: 4rem; } }
 
-/* #audio
--------------------------------------------------- */
-.audio-card .image {
-  padding-bottom: 0; }
-
-.audio-card .title {
-  font-family: "acumin-pro", Arial, sans-serif;
-  font-weight: 300;
-  line-height: 1.2;
-  font-size: 1.873rem;
-  font-weight: 600;
-  margin-bottom: 0; }
-  @media only screen and (min-width: 53.25em) {
-    .audio-card .title {
-      font-size: 2.107rem; } }
-  @media only screen and (min-width: 1560px) {
-    .audio-card .title {
-      font-size: 2.37rem; } }
-
-.audio-card .subtitle, .audio-card .artist {
-  font-family: "acumin-pro", Arial, sans-serif;
-  font-weight: 300;
-  font-size: 1.48rem; }
-  @media only screen and (min-width: 53.25em) {
-    .audio-card .subtitle, .audio-card .artist {
-      font-size: 1.665rem; } }
-  @media only screen and (min-width: 1560px) {
-    .audio-card .subtitle, .audio-card .artist {
-      font-size: 1.873rem; } }
-
-.audio-card .details-inner {
-  position: relative;
-  min-height: 46vw;
-  min-height: 25rem; }
-  @media only screen and (min-width: 53.25em) {
-    .audio-card .details-inner {
-      min-height: 20vw; } }
-  @media only screen and (min-width: 1560px) {
-    .audio-card .details-inner {
-      min-height: 25rem; } }
-
 /* #video
 -------------------------------------------------- */
 .video {
@@ -7133,21 +7135,6 @@ a.details {
     clear: none; }
   .cards--sm-2 .card:nth-of-type(6n + 1) {
     clear: left; } }
-
-/* Audio cards
--------------------------------------------------- */
-@media only screen and (max-width: 53.25em) {
-  .cards--audio-player .card:nth-of-type(2n + 1) {
-    clear: left; } }
-
-.cards--audio-player .details-inner {
-  padding-top: 4.6875vw; }
-  @media only screen and (min-width: 53.25em) {
-    .cards--audio-player .details-inner {
-      padding-top: 1.8729vw; } }
-  @media only screen and (min-width: 1560px) {
-    .cards--audio-player .details-inner {
-      padding-top: 3rem; } }
 
 /* Full feature cards
 -------------------------------------------------- */

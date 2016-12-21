@@ -154,31 +154,6 @@ a.details {
 		}
 	}
 
-/* #audio
--------------------------------------------------- */
-	.audio-card {
-		.image {
-			padding-bottom:0; // prevent making gap in outline
-		}
-		.title {
-			@include sans-md;
-			// font-weight: 500;
-			font-weight: 600;
-			margin-bottom:0;
-		}
-		.subtitle, .artist {
-			@include sans-caption;
-		}
-		.details-inner {
-			position: relative; // hold player
-			min-height:46vw;
-			min-height: 25rem;
-			@include respond-to(break2) {min-height:20vw;}
-			@include respond-to(fullwidth) {min-height:25rem;}
-		}
-	}
-
-
 /* #video
 -------------------------------------------------- */
 	// onlye show video if video card. card-video class dynamically from server, eg festival blog post listing with video on on.festival homepage
@@ -574,25 +549,7 @@ a.details {
 
 
 
-/* Audio cards
--------------------------------------------------- */
-	.cards--audio-player {
-		.card {
-			@extend .col-xs-6;
-			@extend .col-sm-3;
 
-			// for all 1/2 width columns on the phone, break every 2nd one starting at 3!!!
-			@include respond-to(break2max) {
-				// line 'em up!!!
-				&:nth-of-type(2n + 1) {
-					clear:left;
-				}
-			}
-		}
-		.details-inner {
-			@include padding-top(3);
-		}
-	}
 
 /* Full feature cards
 -------------------------------------------------- */

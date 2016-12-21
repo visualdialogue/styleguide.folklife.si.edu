@@ -11,10 +11,11 @@
   </div>
   <div class="codeblock">			
     <div class="row">
-      <div class="col-sm-10">
+      <div class="col-sm-8">
         <h3 class="section-subtitle">Audio Card</h3>
       </div>
-      <?php snippet('show-code'); ?>
+      <?php snippet('show-html'); ?>
+      <?php snippet('show-sass'); ?>
     </div>
     <div class="row">
       <li class="card audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border">
@@ -41,7 +42,7 @@
         </div>
       </li>
       <div class="col-md-9">
-        <pre class="type"><code>&lt;li class="card audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border"&gt;
+        <pre class="type html"><code>&lt;li class="card audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border"&gt;
 	&lt;div class="image"&gt;	
 		&lt;a href="#"&gt;
 			&lt;img src="/320x320.jpg"&gt;
@@ -76,14 +77,24 @@
 &lt;/li&gt;
 </code></pre>
       </div>
+      <div class="col-md-9">
+        <pre class="type sass"><code>.video-card {
+	.title {
+		@include serif-sm;
+		font-weight: 600;
+	}
+}
+</code></pre>
+      </div>
     </div>
   </div>
   <div class="codeblock">			
     <div class="row">
-      <div class="col-sm-10">
+      <div class="col-sm-8">
         <h3 class="section-subtitle">Video Card</h3>
       </div>
-      <?php snippet('show-code'); ?>
+      <?php snippet('show-html'); ?>
+      <?php snippet('show-sass'); ?>
     </div>
     <div class="row">
       <li class="card video-card col-sm-4">
@@ -157,10 +168,11 @@
   </div>
   <div class="codeblock">			
     <div class="row">
-      <div class="col-sm-10">
+      <div class="col-sm-8">
         <h3 class="section-subtitle">Horizontal Card</h3>
       </div>
-      <?php snippet('show-code'); ?>
+      <?php snippet('show-html'); ?>
+      <?php snippet('show-sass'); ?>
     </div>
     <div class="row">
       <div class="card horizontal-card col-xs-6 border-top">
@@ -202,6 +214,7 @@
 		&lt;/div&gt;
 	&lt;/div&gt;
 &lt;/li&gt;
+
 </code></pre>
       </div>
     </div>

@@ -35,11 +35,7 @@
       <div class="row type-title-wrapper">
         <hr/>
         <div class="col-sm-10 large-serif-title-type type-title">Large Serif Title</div>
-        <div class="col-sm-2">
-          <div class="show-code">Show Code
-            <div class="icon-down-arrow"></div>
-          </div>
-        </div>
+        <?php snippet('show-sass'); ?>
       </div>
       <div class="row">
         <div class="col-md-5">
@@ -65,11 +61,7 @@
       <div class="row type-title-wrapper">
         <hr/>
         <div class="col-sm-10 medium-serif-title-type type-title">Medium Serif Title</div>
-        <div class="col-sm-2">
-          <div class="show-code">Show Code
-            <div class="icon-down-arrow"></div>
-          </div>
-        </div>
+        <?php snippet('show-sass'); ?>
       </div>
       <div class="row">
         <div class="col-md-5">
@@ -96,11 +88,7 @@
       <div class="row type-title-wrapper">
         <hr/>
         <div class="col-sm-10 small-serif-title-type type-title">Small Serif Title</div>
-        <div class="col-sm-2">
-          <div class="show-code">Show Code
-            <div class="icon-down-arrow"></div>
-          </div>
-        </div>
+        <?php snippet('show-sass'); ?>
       </div>
       <div class="row">
         <div class="col-md-5">
@@ -131,7 +119,7 @@
       <div class="row type-title-wrapper">
         <hr/>
         <div class="col-sm-10 extra-large-sans-title-type type-title">Extra Large Sans Title</div>
-        <?php snippet('show-code'); ?>
+        <?php snippet('show-sass'); ?>
       </div>
       <div class="row">
         <div class="col-md-5">
@@ -157,7 +145,7 @@
       <div class="row type-title-wrapper">
         <hr/>
         <div class="col-sm-10 extra-large-sans-title-type-light type-title">Extra Large Sans Title Light</div>
-        <?php snippet('show-code'); ?>
+        <?php snippet('show-sass'); ?>
       </div>
       <div class="row">
         <div class="col-md-5">
@@ -183,7 +171,7 @@
       <div class="row type-title-wrapper">
         <hr/>
         <div class="col-sm-10 large-sans-title-type type-title">Large Sans Title</div>
-        <?php snippet('show-code'); ?>
+        <?php snippet('show-sass'); ?>
       </div>
       <div class="row">
         <div class="col-md-5">
@@ -210,7 +198,7 @@
       <div class="row type-title-wrapper">
         <hr/>
         <div class="col-sm-10 large-sans-title-type-light type-title">Large Sans Title Light</div>
-        <?php snippet('show-code'); ?>
+        <?php snippet('show-sass'); ?>
       </div>
       <div class="row">
         <div class="col-md-5">
@@ -237,7 +225,7 @@
       <div class="row type-title-wrapper">
         <hr/>
         <div class="col-sm-10 medium-sans-title-type type-title">Medium Sans Title</div>
-        <?php snippet('show-code'); ?>
+        <?php snippet('show-sass'); ?>
       </div>
       <div class="row">
         <div class="col-md-5">
@@ -264,7 +252,7 @@
       <div class="row type-title-wrapper">
         <hr/>
         <div class="col-sm-10 small-sans-title-type type-title">Small Sans Title</div>
-        <?php snippet('show-code'); ?>
+        <?php snippet('show-sass'); ?>
       </div>
       <div class="row">
         <div class="col-md-5">

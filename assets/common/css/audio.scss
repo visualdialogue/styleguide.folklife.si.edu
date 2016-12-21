@@ -1,81 +1,78 @@
-// .audio-section {
-.cards--audio-player {
-	// .details-inner {
-	// 	position: relative; // contain player
-	// 	border: 2px solid $black15;		
-	// 	// @include padding-bottom(2);
-	// 	// min-height: 60vw !important;
-	// 	// @include min-height(24);
+/* #audio card
+-------------------------------------------------- */
+	.audio-card {
+		.image {
+			padding-bottom:0; // prevent making gap in outline
+		}
+		.title {
+			@include sans-md;
+			// font-weight: 500;
+			font-weight: 600;
+			margin-bottom:0;
+		}
+		.subtitle, .artist {
+			@include sans-caption;
+		}
+		.details-inner {
+			position: relative; // hold player
+			min-height:46vw;
+			min-height: 25rem;
+			@include respond-to(break2) {min-height:20vw;}
+			@include respond-to(fullwidth) {min-height:25rem;}
+		}
+	}
 
-	// 	min-height:46vw; // height of Quelbe!
-	// 	// min-height:56vw; // height of Quelbe!
-	// 	@include respond-to(break2) {min-height:19vw;}
-	// 	@include respond-to(fullwidth) {min-height:27rem;}
+/* #audio player
+-------------------------------------------------- */
 
-	// 	@include padding-left(2); // inset by default
-	// }
-	// .icon-play-button {
-	// 	// @include respond-to(break2) {width: 33%;}
-	// }
-	// .title-wrapper {
-	// 	@include respond-to(break2max) {
-	// 		min-height: 24vw; // for 2 line album titles
-	// 	}
-	// }
-	// .title {
-	// 	@extend %title--sans;
-	// }
-	// .subtitle, .artist {
-	// 	@include sans-caption;
-	// }
-}
-// .cards--listen {
-// 	margin-bottom: 0.6rem; // for 80px to hr
+	.audio-player-details, .audio-progress-bar, .audio-time, .volume {
+		display: inline-block;
+		vertical-align: bottom;
+	}
+	.audio-player {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		right: 0;
+		@include padding(2);
+	}
+	.audio-player-details {
+		line-height: 1;
+		width:67%;
+		@include respond-to(break2) {width:73%;}
+		@include respond-to(fullwidth) {
+			width:75%;
+		}
+		@include padding-left(1);
+	}
+	.audio-progress-bar {
+		max-width: 100%;
+		@include respond-to(break2) {
+			margin-bottom: 4px;
+		}
+	}
+	.volume {
+		display: none;
+		float: right;
+		margin-right: 3px;
+		color: $black80;
+		@include respond-to(break2) {
+			display: block;
+		}
+	}
+	.audio-time {
+		@include sans-caption;
+		@include respond-to(break2full) {
+			font-size: 1.5vw;
+		}
+	}
+
+
+// // for all 1/2 width columns on the phone, break every 2nd one starting at 3!!!
+// @include respond-to(break2max) {
+// 	// line 'em up!!!
+// 	&:nth-of-type(2n + 1) {
+// 		clear:left;
+// 	}
 // }
-.audio-player-details, .audio-progress-bar, .audio-time, .volume {
-	display: inline-block;
-	vertical-align: bottom;
-}
-.audio-player {
-	// margin-top: 0rem;
-	// @include margin-top(2);
-	position: absolute;
-	// bottom: 1.3rem;
-	// for correct width
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	right: 0;
-	@include padding(2);
-}
-.audio-player-details {
-	line-height: 1;
-	width:67%;
-	@include respond-to(break2) {width:73%;}
-	@include respond-to(fullwidth) {
-		width:75%;
-		// line-height: 1.3333;
-	}
-	@include padding-left(1);
-}
-.audio-progress-bar {
-	max-width: 100%;
-	@include respond-to(break2) {
-		margin-bottom: 4px;
-	}
-}
-.volume {
-	display: none;
-	float: right;
-	margin-right: 3px;
-	color: $black80;
-	@include respond-to(break2) {
-		display: block;
-	}
-}
-.audio-time {
-	@include sans-caption;
-	@include respond-to(break2full) {
-		font-size: 1.5vw;
-	}
-}

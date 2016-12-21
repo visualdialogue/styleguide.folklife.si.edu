@@ -7,13 +7,23 @@ $(document).ready(function () {
 /***************************
 * Show Code
 ***************************/
-	var $showCode = $('.show-code');
+	// var $showCode = $('.show-code');
+	var $showHTML = $('.show-html');
+	var $showSASS = $('.show-sass');
 
 	// show on click
 	// if($showCode).
 
-		$showCode.on('click', function () {
-			$(this).closest('.codeblock').find('pre').toggle();
+		// $showCode.on('click', function () {
+		// 	$(this).closest('.codeblock').find('pre').toggle();
+		// });
+		$showHTML.on('click', function () {
+			$(this).closest('.codeblock').find('pre.sass').hide();
+			$(this).closest('.codeblock').find('pre.html').toggle();
+		});
+		$showSASS.on('click', function () {
+			$(this).closest('.codeblock').find('pre.html').hide();
+			$(this).closest('.codeblock').find('pre.sass').toggle();
 		});
 
 /**********

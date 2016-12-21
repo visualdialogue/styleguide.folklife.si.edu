@@ -9,9 +9,10 @@ section.container.cards-section
 	
 	.codeblock			
 		.row
-			.col-sm-10
+			.col-sm-8
 				h3.section-subtitle Audio Card
-			-snippet('show-code')
+			-snippet('show-html')
+			-snippet('show-sass')
 		.row
 			li.card.audio-card.col-xs-6.col-sm-3.card-xs-break-2.full-border
 					.image
@@ -34,7 +35,7 @@ section.container.cards-section
 										|0:00 &vert;&nbsp;23:01
 									.volume.icon-volume-up
 			.col-md-9
-				pre.type: code.
+				pre.type.html: code.
 					&lt;li class="card audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border"&gt;
 						&lt;div class="image"&gt;	
 							&lt;a href="#"&gt;
@@ -69,11 +70,22 @@ section.container.cards-section
 						&lt;/div&gt;
 					&lt;/li&gt;
 
+			.col-md-9
+				pre.type.sass: code.
+					.video-card {
+						.title {
+							@include serif-sm;
+							font-weight: 600;
+						}
+					}
+
 	.codeblock			
 		.row
-			.col-sm-10
+			.col-sm-8
 				h3.section-subtitle Video Card
-			-snippet('show-code')
+			-snippet('show-html')
+			-snippet('show-sass')
+
 		.row
 			li.card.video-card.col-sm-4
 				.row
@@ -137,9 +149,10 @@ section.container.cards-section
 
 	.codeblock			
 		.row
-			.col-sm-10
+			.col-sm-8
 				h3.section-subtitle Horizontal Card
-			-snippet('show-code')
+			-snippet('show-html')
+			-snippet('show-sass')
 		.row
 			.card.horizontal-card.col-xs-6.border-top
 				.row
@@ -181,11 +194,13 @@ section.container.cards-section
 						&lt;/div&gt;
 					&lt;/li&gt;
 
+
 	//- .codeblock.folkways-magazine-feature		
 	//- 	.row
-	//- 		.col-sm-10
+	//- 		.col-sm-8
 	//- 			h3.section-subtitle Folkways Magazine / Feature Card
-	//- 		-snippet('show-code')
+	//- 		-snippet('show-html')
+	//- 		-snippet('show-sass')
 	//- 	.row
 	//- 		.card.feature.background-card.col-sm-6
 	//- 			.image
