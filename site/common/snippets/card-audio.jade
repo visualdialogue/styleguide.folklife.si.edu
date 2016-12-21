@@ -12,7 +12,7 @@ li.card.audio-card.col-xs-6.col-sm-3.card-xs-break-2.full-border
 		.details
 			.details-inner
 				.tag!= $card->category() 
-				.title-wrapper-wrapper
+				.title-wrapper
 					a.high.title(href="<?= $card->url() ?>"): span.light: span.er= $card->title()
 					-if('' != $card->audio_album()):
 						.subtitle!= $card->audio_album()

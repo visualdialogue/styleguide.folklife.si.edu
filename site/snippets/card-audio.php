@@ -10,7 +10,7 @@
     <div class="details-inner">
       <div class="tag">
         <?php echo $card->category() ; ?></div>
-      <div class="title-wrapper-wrapper"><a href="<?= $card->url() ?>" class="high title"><span class="light"><span class="er">
+      <div class="title-wrapper"><a href="<?= $card->url() ?>" class="high title"><span class="light"><span class="er">
               <?php echo htmlspecialchars($card->title(), ENT_QUOTES, 'UTF-8'); ?></span></span></a>
         <?php if('' != $card->audio_album()): ?>
         <div class="subtitle">

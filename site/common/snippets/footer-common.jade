@@ -3,7 +3,7 @@ ul.footer-row.footer-row-2.row
 	li.footer-main-item.col-sm-3
 		.footer-logo.active-footer-logo
 			//- show appropriate link depending on what the current site is and if its on Dev or Live servers
-			-if (c::get('isFolklife')):
+			-if (c::get('isFolklife') || c::get('isStyleguide')):
 				a(href="<? if (c::get('isDev')) echo 'http://localhost:3001'; else echo 'http://folklife.lukehatfield.com' ?>"): img.footer-logo-img.folklife-footer-logo-img(src="/assets/images/logo/smithsonian_center_for_folklife_and_cultural_heritage.png?v=2016.10.21") 
 			-elseif (c::get('isFestival')):
 				a(href="<? if (c::get('isDev')) echo 'http://localhost:3003'; else echo 'http://on.festival.lukehatfield.com' ?>"): img.footer-logo-img(src="/assets/images/logo/smithsonian_folklife_festival.png?v=2016.10.21") 
@@ -13,7 +13,7 @@ ul.footer-row.footer-row-2.row
 	li.footer-main-item.col-sm-3 
 		.footer-logo
 			//- show appropriate link depending on what the current site is and if its on Dev or Live servers
-			-if (c::get('isFolklife')):
+			-if (c::get('isFolklife') || c::get('isStyleguide')):
 				a(href="<? if (c::get('isDev')) echo 'http://localhost:3005'; else echo 'http://folkways.lukehatfield.com' ?>"): img.footer-logo-img(src="/assets/images/logo/smithsonian_folkways_recordings.png?v=2016.10.21") 
 			-elseif (c::get('isFestival') || c::get('isFolkways')):
 				a(href="<? if (c::get('isDev')) echo 'http://localhost:3001'; else echo 'http://folklife.lukehatfield.com' ?>"): img.footer-logo-img.folklife-footer-logo-img(src="/assets/images/logo/smithsonian_center_for_folklife_and_cultural_heritage.png?v=2016.10.21") 
@@ -21,7 +21,7 @@ ul.footer-row.footer-row-2.row
 	li.footer-main-item.col-sm-3 
 		.footer-logo
 			//- show appropriate link depending on what the current site is and if its on Dev or Live servers
-			-if (c::get('isFolklife') || c::get('isFolkways')):
+			-if (c::get('isFolklife') || c::get('isFolkways') || c::get('isStyleguide')):
 				a(href="<? if (c::get('isDev')) echo 'http://localhost:3003'; else echo 'http://on.festival.lukehatfield.com' ?>"): img.footer-logo-img(src="/assets/images/logo/smithsonian_folklife_festival.png?v=2016.10.21") 
 			-elseif (c::get('isFestival')):
 				a(href="<? if (c::get('isDev')) echo 'http://localhost:3005'; else echo 'http://folkways.lukehatfield.com' ?>"): img.footer-logo-img(src="/assets/images/logo/smithsonian_folkways_recordings.png?v=2016.10.21") 

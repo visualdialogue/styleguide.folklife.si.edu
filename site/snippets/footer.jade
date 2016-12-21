@@ -2,18 +2,21 @@ footer.footer#footer
 	.container
 		ul.footer-row.footer-row-1.row
 			li.footer-nav-main-item.col-sm-2 
-				a.footer-nav-title(href="/colors") Colors
-				ul.footer-nav-list
-					li.footer-nav-sub-item: a(href="/colors#folklife") Folklife
-					li.footer-nav-sub-item: a(href="/colors#festival") Festival
-					li.footer-nav-sub-item: a(href="/colors#folkways") Folkways
-					li.footer-nav-sub-item: a(href="/colors#shades-of-black") Shades of Black
+				a.footer-nav-title(href="#grid") Grid
 			li.footer-nav-main-item.col-sm-2 
-				a.footer-nav-title(href="/typography") Typography
+				a.footer-nav-title(href="#colors") Colors
 				ul.footer-nav-list
-					li.footer-nav-sub-item Serif
-					li.footer-nav-sub-item Sans Serif
-					li.footer-nav-sub-item Slab Serif
+					li.footer-nav-sub-item: a(href="#grays") Grays
+					li.footer-nav-sub-item: a(href="#folklife-palette") Folklife
+					li.footer-nav-sub-item: a(href="#folkways-palette") Folkways
+					li.footer-nav-sub-item: a(href="#festival-palette") Festival
+			li.footer-nav-main-item.col-sm-2 
+				a.footer-nav-title(href="#typography") Typography
+				ul.footer-nav-list
+					li.footer-nav-sub-item: a(href="#serif") Serif
+					li.footer-nav-sub-item: a(href="#sans") Sans
+					li.footer-nav-sub-item: a(href="#folkways") Folkways
+					li.footer-nav-sub-item: a(href="#other") Other
 			li.footer-nav-main-item.col-sm-2 
 				a.footer-nav-title(href="/cards") Cards
 				ul.footer-nav-list
@@ -35,11 +38,7 @@ footer.footer#footer
 					li.footer-nav-sub-item: a(href="/framework#half-sections") Half Sections
 					li.footer-nav-sub-item: a(href="/framework#margins") Margins
 					li.footer-nav-sub-item: a(href="/framework#padding") Padding
-			li.footer-nav-main-item.col-sm-2 
-				a.footer-nav-title(href="/libraries") Libraries
-				ul.footer-nav-list
-					li.footer-nav-sub-item: a(href="/libraries#bootstrap") Bootstrap
-					li.footer-nav-sub-item: a(href="/libraries#sass") SASS
+
 			
 		-snippet('footer-common')
 
@@ -51,7 +50,7 @@ footer.footer#footer
 //- <script src="assets/js/vendor.js?v=<?= time() ?>"></script>
 <script src="assets/js/scripts-min.js?v=<?= time() ?>"></script>
 //- js fallback for async css if browser doesn't preload css
-<script>loadCSS( "/assets/css/folklife.css?v=<?= time() ?>" );</script>
+//- <script>loadCSS( "/assets/css/folklife.css?v=<?= time() ?>" );</script>
 
 
 

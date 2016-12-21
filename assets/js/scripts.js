@@ -13,8 +13,14 @@ $(document).ready(function () {
 	// if($showCode).
 
 		$showCode.on('click', function () {
-			$(this).closest('.typeface').find('pre').toggle();
+			$(this).closest('.codeblock').find('pre').toggle();
 		});
+
+/**********
+* Match Heights
+* from https://github.com/liabru/jquery-match-height
+**********/
+	// $('.item').matchHeight(options);
 
 /* Syntax Highlighting
  * from highlightjs.org */

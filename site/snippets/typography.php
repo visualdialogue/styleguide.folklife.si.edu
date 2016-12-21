@@ -31,7 +31,7 @@
   </div>
   <!-- Typefaces-->
   <div class="sub-section">
-    <div class="typeface">
+    <div class="typeface codeblock"><a id="serif" class="anchor-link"></a>
       <div class="row type-title-wrapper">
         <hr/>
         <div class="col-sm-10 large-serif-title-type type-title">Large Serif Title</div>
@@ -61,7 +61,7 @@
         </div>
       </div>
     </div>
-    <div class="typeface">
+    <div class="typeface codeblock">
       <div class="row type-title-wrapper">
         <hr/>
         <div class="col-sm-10 medium-serif-title-type type-title">Medium Serif Title</div>
@@ -92,7 +92,7 @@
         </div>
       </div>
     </div>
-    <div class="typeface">
+    <div class="typeface codeblock">
       <div class="row type-title-wrapper">
         <hr/>
         <div class="col-sm-10 small-serif-title-type type-title">Small Serif Title</div>
@@ -127,7 +127,7 @@
     </div>
   </div>
   <div class="sub-section">
-    <div class="typeface">
+    <div class="typeface codeblock"><a id="sans" class="anchor-link"></a>
       <div class="row type-title-wrapper">
         <hr/>
         <div class="col-sm-10 extra-large-sans-title-type type-title">Extra Large Sans Title</div>
@@ -153,7 +153,7 @@
         </div>
       </div>
     </div>
-    <div class="typeface">
+    <div class="typeface codeblock">
       <div class="row type-title-wrapper">
         <hr/>
         <div class="col-sm-10 extra-large-sans-title-type-light type-title">Extra Large Sans Title Light</div>
@@ -179,7 +179,7 @@
         </div>
       </div>
     </div>
-    <div class="typeface">
+    <div class="typeface codeblock">
       <div class="row type-title-wrapper">
         <hr/>
         <div class="col-sm-10 large-sans-title-type type-title">Large Sans Title</div>
@@ -206,7 +206,7 @@
         </div>
       </div>
     </div>
-    <div class="typeface">
+    <div class="typeface codeblock">
       <div class="row type-title-wrapper">
         <hr/>
         <div class="col-sm-10 large-sans-title-type-light type-title">Large Sans Title Light</div>
@@ -233,7 +233,7 @@
         </div>
       </div>
     </div>
-    <div class="typeface">
+    <div class="typeface codeblock">
       <div class="row type-title-wrapper">
         <hr/>
         <div class="col-sm-10 medium-sans-title-type type-title">Medium Sans Title</div>
@@ -260,7 +260,7 @@
         </div>
       </div>
     </div>
-    <div class="typeface">
+    <div class="typeface codeblock">
       <div class="row type-title-wrapper">
         <hr/>
         <div class="col-sm-10 small-sans-title-type type-title">Small Sans Title</div>

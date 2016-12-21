@@ -196,7 +196,10 @@
 		display:none;
 	}
 	pre {
+		float: left; // stay under show-code button
+		width: 100%;
 		font-size:16px;
+		font-size:14px;
 		border-radius: initial;
 		padding: 0;
 		margin: 0;
@@ -233,6 +236,7 @@
 
 	.show-code {
 		cursor: pointer;
+		float: right;
 		background-color: $black10;
 		@include sans-caption;
 		text-transform: initial;
@@ -242,18 +246,31 @@
 		@include padding-right(1);
 		@include padding-bottom(1);
 		@include padding-left(1);
+		@include respond-to(break2full) {
+			font-size: 1.25vw; // for button responsive sizing
+		}
 		&:hover {
 			color: $black20;
+			background-color: #282c34; // from highlight.js atom dark theme
 		}
 	}
 	.icon-down-arrow {
 		float: right;
 	}
 
-
 /* #color
 -------------------------------------------------- */
-	.color {@include margin-bottom(4)}
+	.color {
+		@include margin-bottom(4)
+		@include respond-to(break2) {
+			&:nth-of-type(2n + 1) {
+				clear:none;
+			}
+			&:nth-of-type(6n + 1) {
+				clear:left;
+			}
+		}
+	}
 	.color__block {@include height(32)}
 	// Festival
 	.festival-color-list {
@@ -315,7 +332,24 @@
 	.medium-sans-title-type-light {@include sans-md;}
 	.small-sans-title-type,.small-sans-title-type-light {@include sans-sm;}
 
-
+/* #cards
+-------------------------------------------------- */
+	.cards-section {
+		.show-code {
+			@include margin-top(5);
+		}
+	}
+	.video-card {
+		.title {
+			@include serif-sm;
+			font-weight: 600;
+		}
+	}
+	.horizontal-card {
+		.title {
+			@include magazinetitle;
+		}
+	}
 
 /* #video
 -------------------------------------------------- */

@@ -1,0 +1,32 @@
+title: Card
+pages: false
+files: true
+  fields:
+    caption:
+      label: Caption
+      type: textarea
+fields:
+  title:
+    label: Title
+    type:  text
+  horizontal_cards:
+    label: Horizontal cards
+    type: structure
+    entry: >
+      {{tag}}<br />
+      {{title}}<br />
+      {{description}}
+    fields:
+      img:
+        label: Image
+        type: select
+        options: files
+      tag:
+        label: Tag
+        type: text
+      title:
+        label: Title
+        type: text
+      description:
+        label: Description
+        type: text

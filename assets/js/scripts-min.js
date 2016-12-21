@@ -377,6 +377,7 @@ var n=t.length,s=Array(n),a=0;r(e,t,function(t,e){s[t]=e,++a===n&&i(s)},o)})}),c
 			if (callNow) func.apply(context, args);
 		};
 	};
+
 });
 $(document).ready(function () {
 
@@ -393,8 +394,14 @@ $(document).ready(function () {
 	// if($showCode).
 
 		$showCode.on('click', function () {
-			$(this).closest('.typeface').find('pre').toggle();
+			$(this).closest('.codeblock').find('pre').toggle();
 		});
+
+/**********
+* Match Heights
+* from https://github.com/liabru/jquery-match-height
+**********/
+	// $('.item').matchHeight(options);
 
 /* Syntax Highlighting
  * from highlightjs.org */

@@ -9,7 +9,6 @@
   <?php snippet('header-fonts'); ?>
   <?php snippet('header-shim'); ?>
   <?php snippet('header-favicons'); ?>
-  <?php echo css('assets/css/folklife.css'); ?>
   <!-- highlightjs.org for code syntax highlighting--><link href="/assets/css/highlight/styles/atom-one-dark.css" type="text/css" rel="stylesheet"><script src="/assets/js/highlight.pack.js"></script><link href="/assets/css/styleguide.css?v=<?= time() ?>" type="text/css" rel="stylesheet">
 </head><body class="site--folklife">
 <div id="site-toggle" class="site-toggle">

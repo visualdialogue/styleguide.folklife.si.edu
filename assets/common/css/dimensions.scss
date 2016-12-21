@@ -153,8 +153,9 @@ $gutter--full: 2.72%;
   /*******
   * set margins with scales
   *******/
-  // $scale: 0.625;
-  $scale: 0.5625; // major 2nd / 2 
+  $scale: 0.625;
+  $scale: 0.6243; // major 2nd 1.125 divided by itself 5 times
+  // $scale: 0.5625; // major 2nd / 2 
   $mobile-scale: 0.64; // major 2nd / major 2nd
   @mixin right($distance) {
     right:#{$distance / $mobile-scale }vw; // eg. 5rem
