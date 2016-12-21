@@ -9,7 +9,7 @@
       </div>
     </main>
   </div>
-  <div class="row type-title-wrapper">
+  <div class="row sub-section">
     <div class="col-sm-10">
       <h3 class="section-subtitle">Audio Player</h3>
     </div>
@@ -17,7 +17,8 @@
   </div>
   <div class="row">
     <li class="card audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border">
-      <div class="image"><a href="#"><img src="/320x320.jpg"/></a></div>
+      <div class="image"><a href="#">
+          <?php echo $section->image('audio.png'); ?></a></div>
       <div class="details">
         <div class="details-inner">
           <div class="tag">New Release</div>
@@ -31,10 +32,7 @@
             </div>
             <div class="audio-player-details">
               <div class="audio-progress-bar"><img src="/assets/images/icons/audio-progress-bar.png"/></div>
-              <div class="audio-time">
-                0:00 &vert;&nbsp;
-                !23:01
-              </div>
+              <div class="audio-time">0:00 &vert;&nbsp;23:01</div>
               <div class="volume icon-volume-up"></div>
             </div>
           </div>
@@ -43,8 +41,8 @@
     </li>
     <div class="col-md-2"></div>
     <div class="col-md-7">
-      <pre class="type"><code>li.card.audio-card.col-xs-6.col-sm-3.card-xs-break-2.full-border
-		.image
+      <pre class="type"><code>&lt;li class="card audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border"&gt;
+	&lt;div class="image" &gt;	
 			a(href="#")
 				img(src="/320x320.jpg")
 		.details

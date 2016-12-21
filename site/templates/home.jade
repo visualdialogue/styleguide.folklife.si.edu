@@ -5,10 +5,15 @@
 -snippet('title-bar', array('title' => 'Styleguide'))
 
 // Sections
--foreach($pages->visible() as $section):
+-$n=0;
+-foreach($pages->visible() as $section): $n++;
+	-if ($n != 1):
+		.container: hr.thick-hr
+	-endif
 	//- call each visible section, so can reorder, and pass relevant data to templates
 	-snippet($section->uid(), array('section' => $section))
-	.container: hr.thick-hr
+
+
 -endforeach
 
 -snippet('footer')

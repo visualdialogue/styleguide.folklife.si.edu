@@ -7473,6 +7473,18 @@ a {
   a:hover {
     color: white; }
 
+/* #general
+-------------------------------------------------- */
+.sub-section {
+  border-top: 1px solid gray;
+  margin-top: 6.25vw; }
+  @media only screen and (min-width: 53.25em) {
+    .sub-section {
+      margin-top: 2.25vw; } }
+  @media only screen and (min-width: 1560px) {
+    .sub-section {
+      margin-top: 4rem; } }
+
 /* #intro
 -------------------------------------------------- */
 .intro-title {
@@ -7804,8 +7816,7 @@ code.hljs {
   margin-bottom: 0.88889rem;
   padding-top: 3.125vw;
   margin-top: 4.6875vw;
-  margin-bottom: 1.77778rem;
-  border-top: 1px solid gray; }
+  margin-bottom: 1.77778rem; }
   @media only screen and (min-width: 53.25em) {
     .section-subtitle {
       line-height: 1.143;
@@ -7978,6 +7989,15 @@ code.hljs {
 
 /* #typography
 -------------------------------------------------- */
+.typography-section {
+  margin-bottom: 5.33333rem; }
+  @media only screen and (min-width: 53.25em) {
+    .typography-section {
+      margin-bottom: 3.375vw; } }
+  @media only screen and (min-width: 1560px) {
+    .typography-section {
+      margin-bottom: 6rem; } }
+
 .typography-section pre {
   margin-bottom: 1.77778rem; }
   @media only screen and (min-width: 53.25em) {
@@ -7988,7 +8008,6 @@ code.hljs {
       margin-bottom: 2rem; } }
 
 .type-title-wrapper {
-  border-top: 1px solid gray;
   margin-top: 6.25vw; }
   @media only screen and (min-width: 53.25em) {
     .type-title-wrapper {

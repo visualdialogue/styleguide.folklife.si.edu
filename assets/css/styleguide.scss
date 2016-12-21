@@ -44,6 +44,14 @@
 		}
 	}
 
+
+/* #general
+-------------------------------------------------- */
+	.sub-section {
+		@include border(top);
+		@include margin-top(4);
+	}
+
 /* #intro
 -------------------------------------------------- */
 	.intro-title {
@@ -218,7 +226,6 @@
 		@include padding-top(2);
 		@include margin-top(3);
 		@include margin-bottom(2);
-		@include border(top);
 	}
 	.section__description {
 		@include margin-bottom(4);
@@ -279,11 +286,13 @@
 /* #typography
 -------------------------------------------------- */
 
+	.typography-section {
+		@include margin-bottom(6);
+	}
 	.typography-section pre  {
 		@include margin-bottom(2);
 	}
 	.type-title-wrapper {
-		@include border(top);
 		@include margin-top(4);
 	}
 	.type-title {

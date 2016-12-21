@@ -30,22 +30,23 @@
     </aside>
   </div>
   <!-- Typefaces-->
-  <div class="typeface">
-    <div class="row type-title-wrapper">
-      <hr/>
-      <div class="col-sm-10 large-serif-title-type type-title">Large Serif Title</div>
-      <div class="col-sm-2">
-        <div class="show-code">Show Code
-          <div class="icon-down-arrow"></div>
+  <div class="sub-section">
+    <div class="typeface">
+      <div class="row type-title-wrapper">
+        <hr/>
+        <div class="col-sm-10 large-serif-title-type type-title">Large Serif Title</div>
+        <div class="col-sm-2">
+          <div class="show-code">Show Code
+            <div class="icon-down-arrow"></div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-md-5">
-        <div class="type-details">Typeface: Freight Text<br/>Weight: Bold<br/>Maximum Font Size: 6.158rem<br/>Maximum Line Height: 6.738rem</div>
-      </div>
-      <div class="col-md-7">
-        <pre class="type"><code>@mixin serif-lg {
+      <div class="row">
+        <div class="col-md-5">
+          <div class="type-details">Typeface: Freight Text<br/>Weight: Bold<br/>Maximum Font Size: 6.158rem<br/>Maximum Line Height: 6.738rem</div>
+        </div>
+        <div class="col-md-7">
+          <pre class="type"><code>@mixin serif-lg {
 	font-family: $serif;
 	font-weight: 700;
 	line-height: 1.1;
@@ -57,25 +58,25 @@
 		font-size: 6.158rem;
 }
 </code></pre>
-      </div>
-    </div>
-  </div>
-  <div class="typeface">
-    <div class="row type-title-wrapper">
-      <hr/>
-      <div class="col-sm-10 medium-serif-title-type type-title">Medium Serif Title</div>
-      <div class="col-sm-2">
-        <div class="show-code">Show Code
-          <div class="icon-down-arrow"></div>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-5">
-        <div class="type-details">Typeface: Freight Text<br/>Weight: Bold<br/>Maximum Font Size: 4.325rem<br/>Maximum Line Height: 4.325rem</div>
+    <div class="typeface">
+      <div class="row type-title-wrapper">
+        <hr/>
+        <div class="col-sm-10 medium-serif-title-type type-title">Medium Serif Title</div>
+        <div class="col-sm-2">
+          <div class="show-code">Show Code
+            <div class="icon-down-arrow"></div>
+          </div>
+        </div>
       </div>
-      <div class="col-md-7">
-        <pre class="type"><code>@mixin serif-md {
+      <div class="row">
+        <div class="col-md-5">
+          <div class="type-details">Typeface: Freight Text<br/>Weight: Bold<br/>Maximum Font Size: 4.325rem<br/>Maximum Line Height: 4.325rem</div>
+        </div>
+        <div class="col-md-7">
+          <pre class="type"><code>@mixin serif-md {
 	font-family: $serif;
 	font-weight: 700;
 	line-height: 1;
@@ -88,25 +89,25 @@
 	}
 }
 </code></pre>
-      </div>
-    </div>
-  </div>
-  <div class="typeface">
-    <div class="row type-title-wrapper">
-      <hr/>
-      <div class="col-sm-10 small-serif-title-type type-title">Small Serif Title</div>
-      <div class="col-sm-2">
-        <div class="show-code">Show Code
-          <div class="icon-down-arrow"></div>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-5">
-        <div class="type-details">Typeface: Freight Text<br/>Weight: Bold<br/>Maximum Font Size: 2.7rem<br/>Maximum Line Height: 3.0861rem</div>
+    <div class="typeface">
+      <div class="row type-title-wrapper">
+        <hr/>
+        <div class="col-sm-10 small-serif-title-type type-title">Small Serif Title</div>
+        <div class="col-sm-2">
+          <div class="show-code">Show Code
+            <div class="icon-down-arrow"></div>
+          </div>
+        </div>
       </div>
-      <div class="col-md-7">
-        <pre class="type"><code>@mixin serif-sm {
+      <div class="row">
+        <div class="col-md-5">
+          <div class="type-details">Typeface: Freight Text<br/>Weight: Bold<br/>Maximum Font Size: 2.7rem<br/>Maximum Line Height: 3.0861rem</div>
+        </div>
+        <div class="col-md-7">
+          <pre class="type"><code>@mixin serif-sm {
 	font-family: $serif;
 	font-weight: 700;
 	line-height: 1;
@@ -121,21 +122,23 @@
 	@include margin-bottom(1);
 }
 </code></pre>
+        </div>
       </div>
     </div>
   </div>
-  <div class="typeface">
-    <div class="row type-title-wrapper">
-      <hr/>
-      <div class="col-sm-10 extra-large-sans-title-type type-title">Extra Large Sans Title</div>
-      <?php snippet('show-code'); ?>
-    </div>
-    <div class="row">
-      <div class="col-md-5">
-        <div class="type-details">Typeface: Acumin Pro<br/>Weight: Semibold<br/>Maximum Font Size: 3.375rem<br/>Maximum Line Height: 40.5rem</div>
+  <div class="sub-section">
+    <div class="typeface">
+      <div class="row type-title-wrapper">
+        <hr/>
+        <div class="col-sm-10 extra-large-sans-title-type type-title">Extra Large Sans Title</div>
+        <?php snippet('show-code'); ?>
       </div>
-      <div class="col-md-7">
-        <pre class="type"><code>@mixin sans-xl {
+      <div class="row">
+        <div class="col-md-5">
+          <div class="type-details">Typeface: Acumin Pro<br/>Weight: Semibold<br/>Maximum Font Size: 3.375rem<br/>Maximum Line Height: 40.5rem</div>
+        </div>
+        <div class="col-md-7">
+          <pre class="type"><code>@mixin sans-xl {
 	font-family: $sans;
 	font-weight: 600;
 	font-size: 2.667rem;
@@ -147,21 +150,21 @@
 		font-size: 3.375rem;
 	}
 }</code></pre>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="typeface">
-    <div class="row type-title-wrapper">
-      <hr/>
-      <div class="col-sm-10 extra-large-sans-title-type-light type-title">Extra Large Sans Title Light</div>
-      <?php snippet('show-code'); ?>
-    </div>
-    <div class="row">
-      <div class="col-md-5">
-        <div class="type-details">Typeface: Acumin Pro<br/>Weight: Light<br/>Maximum Font Size: 3.375rem<br/>Maximum Line Height: 40.5rem</div>
+    <div class="typeface">
+      <div class="row type-title-wrapper">
+        <hr/>
+        <div class="col-sm-10 extra-large-sans-title-type-light type-title">Extra Large Sans Title Light</div>
+        <?php snippet('show-code'); ?>
       </div>
-      <div class="col-md-7">
-        <pre class="type"><code>@mixin sans-xl {
+      <div class="row">
+        <div class="col-md-5">
+          <div class="type-details">Typeface: Acumin Pro<br/>Weight: Light<br/>Maximum Font Size: 3.375rem<br/>Maximum Line Height: 40.5rem</div>
+        </div>
+        <div class="col-md-7">
+          <pre class="type"><code>@mixin sans-xl {
 	font-family: $sans;
 	font-weight: 300;
 	font-size: 2.667rem;
@@ -173,21 +176,21 @@
 		font-size: 3.375rem;
 	}
 }</code></pre>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="typeface">
-    <div class="row type-title-wrapper">
-      <hr/>
-      <div class="col-sm-10 large-sans-title-type type-title">Large Sans Title</div>
-      <?php snippet('show-code'); ?>
-    </div>
-    <div class="row">
-      <div class="col-md-5">
-        <div class="type-details">Typeface: Acumin Pro<br/>Weight: Semibold<br/>Maximum Font Size: 3rem<br/>Maximum Line Height: 3.5rem</div>
+    <div class="typeface">
+      <div class="row type-title-wrapper">
+        <hr/>
+        <div class="col-sm-10 large-sans-title-type type-title">Large Sans Title</div>
+        <?php snippet('show-code'); ?>
       </div>
-      <div class="col-md-7">
-        <pre class="type"><code>@mixin sans-lg {
+      <div class="row">
+        <div class="col-md-5">
+          <div class="type-details">Typeface: Acumin Pro<br/>Weight: Semibold<br/>Maximum Font Size: 3rem<br/>Maximum Line Height: 3.5rem</div>
+        </div>
+        <div class="col-md-7">
+          <pre class="type"><code>@mixin sans-lg {
 	font-family: $sans;
 	font-weight: 600;
 	line-height: 1.166667;
@@ -200,21 +203,21 @@
 	}
 }
 </code></pre>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="typeface">
-    <div class="row type-title-wrapper">
-      <hr/>
-      <div class="col-sm-10 large-sans-title-type-light type-title">Large Sans Title Light</div>
-      <?php snippet('show-code'); ?>
-    </div>
-    <div class="row">
-      <div class="col-md-5">
-        <div class="type-details">Typeface: Acumin Pro<br/>Weight: Light<br/>Maximum Font Size: 3rem<br/>Maximum Line Height: 3.5rem</div>
+    <div class="typeface">
+      <div class="row type-title-wrapper">
+        <hr/>
+        <div class="col-sm-10 large-sans-title-type-light type-title">Large Sans Title Light</div>
+        <?php snippet('show-code'); ?>
       </div>
-      <div class="col-md-7">
-        <pre class="type"><code>@mixin sans-lg {
+      <div class="row">
+        <div class="col-md-5">
+          <div class="type-details">Typeface: Acumin Pro<br/>Weight: Light<br/>Maximum Font Size: 3rem<br/>Maximum Line Height: 3.5rem</div>
+        </div>
+        <div class="col-md-7">
+          <pre class="type"><code>@mixin sans-lg {
 	font-family: $sans;
 	font-weight: 300;
 	line-height: 1.166667;
@@ -227,21 +230,21 @@
 	}
 }
 </code></pre>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="typeface">
-    <div class="row type-title-wrapper">
-      <hr/>
-      <div class="col-sm-10 medium-sans-title-type type-title">Medium Sans Title</div>
-      <?php snippet('show-code'); ?>
-    </div>
-    <div class="row">
-      <div class="col-md-5">
-        <div class="type-details">Typeface: Acumin Pro<br/>Weight: Semibold<br/>Maximum Font Size: 2.37rem<br/>Maximum Line Height: 2.844rem</div>
+    <div class="typeface">
+      <div class="row type-title-wrapper">
+        <hr/>
+        <div class="col-sm-10 medium-sans-title-type type-title">Medium Sans Title</div>
+        <?php snippet('show-code'); ?>
       </div>
-      <div class="col-md-7">
-        <pre class="type"><code>@mixin sans-md {
+      <div class="row">
+        <div class="col-md-5">
+          <div class="type-details">Typeface: Acumin Pro<br/>Weight: Semibold<br/>Maximum Font Size: 2.37rem<br/>Maximum Line Height: 2.844rem</div>
+        </div>
+        <div class="col-md-7">
+          <pre class="type"><code>@mixin sans-md {
 	font-family: $sans;
 	font-weight: 600;
 	line-height: 1.2;
@@ -254,21 +257,21 @@
 	}
 }
 </code></pre>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="typeface">
-    <div class="row type-title-wrapper">
-      <hr/>
-      <div class="col-sm-10 small-sans-title-type type-title">Small Sans Title</div>
-      <?php snippet('show-code'); ?>
-    </div>
-    <div class="row">
-      <div class="col-md-5">
-        <div class="type-details">Typeface: Acumin Pro<br/>Weight: Semibold<br/>Maximum Font Size: 2.107rem<br/>Maximum Line Height: 2.528rem</div>
+    <div class="typeface">
+      <div class="row type-title-wrapper">
+        <hr/>
+        <div class="col-sm-10 small-sans-title-type type-title">Small Sans Title</div>
+        <?php snippet('show-code'); ?>
       </div>
-      <div class="col-md-7">
-        <pre class="type"><code>@mixin sans-sm {
+      <div class="row">
+        <div class="col-md-5">
+          <div class="type-details">Typeface: Acumin Pro<br/>Weight: Semibold<br/>Maximum Font Size: 2.107rem<br/>Maximum Line Height: 2.528rem</div>
+        </div>
+        <div class="col-md-7">
+          <pre class="type"><code>@mixin sans-sm {
 	font-family: $sans;
 	font-weight: 500;
 	line-height: 1.2;
@@ -280,6 +283,7 @@
   		font-size: 2.107rem;
 	}
 }</code></pre>
+        </div>
       </div>
     </div>
   </div>
