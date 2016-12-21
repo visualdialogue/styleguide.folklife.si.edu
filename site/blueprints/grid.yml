@@ -1,0 +1,53 @@
+title: Grid
+pages: false
+files: false
+fields:
+  title:
+    label: Title
+    type:  text
+  # classes:
+  #   label: Grid Classes (without the dots)
+  #   type: structure
+  #   entry: >
+  #     {{name}}
+  #   fields:
+  #     name:
+  #       label: Class
+  #       type: text
+  # custom_classes:
+  #   label: Custom Classes (without the dots)
+  #   type: structure
+  #   entry: >
+  #     {{name}}
+  #   fields:
+  #     name:
+  #       label: Class
+  #       type: text
+  # year_released: 
+  #   label: Year Released
+  #   type: text
+  # record_label:
+  #   label: Record Label
+  #   type: text
+  # source_archive:
+  #   label: Source Archive
+  #   type: text
+  # copyright:
+  #   label: Copyright
+  #   type: text
+  # genre:
+  #   label: Genre(s)
+  #   type: tags
+  # country:
+  #   label: Country(s)
+  #   type: tags
+  # culture_groups:
+  #   label: Culture Group(s)
+  #   type: tags
+  # instrument:
+  #   label: Instrument(s)
+  #   type: tags
+  # liner_notes:
+  #   label: Liner Notes
+  #   type: select
+  #   options: files

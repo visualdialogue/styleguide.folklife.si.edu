@@ -5,7 +5,6 @@ head
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	meta(robots="none")
-	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	<title>Smithsonian Center for Folklife and Cultural Heritage | <?php echo $page->title()->html() ?></title>
 	
 	-snippet('header-fonts')
@@ -14,64 +13,53 @@ head
 
 	-snippet('header-favicons')
 
-	//- never cache css in development because echoing php time stamp
-	//- <link href="assets/css/folklife.css?v=<?= time() ?>" rel="stylesheet">
-	//- from https://github.com/filamentgroup/loadCSS
-
-	//- critical css
-	<style>/*- include './assets/css/critical.css'*/</style>
-	//- async rest of css
 	!= css('assets/css/folklife.css')
-	//- <link rel="preload" href="assets/css/folklife.css?v=<?= time() ?>" as="style" onload="this.rel='stylesheet'">
-	//- no js fallback for rest of css
-	//- <noscript><link href="assets/css/folklife.css?v=<?= time() ?>" rel="stylesheet"></noscript>
 	
 	//- syntax highlighting, from highlightjs.org
 	//- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/solarized-dark.min.css">
 	//- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/monokai-sublime.min.css">
 	//- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
 	// highlightjs.org for code syntax highlighting
-	<link href="/assets/css/highlight/styles/monokai-sublime.css" type="text/css" rel="stylesheet">
+	//- <link href="/assets/css/highlight/styles/monokai-sublime.css" type="text/css" rel="stylesheet">
+	//- <link href="/assets/css/highlight/styles/rainbow.css" type="text/css" rel="stylesheet">
+	<link href="/assets/css/highlight/styles/atom-one-dark.css" type="text/css" rel="stylesheet">
 	//- <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
 	<script src="/assets/js/highlight.pack.js"></script>
 
 	//- out for firefox and safri, debug later
 	<link href="/assets/css/styleguide.css?v=<?= time() ?>" type="text/css" rel="stylesheet">
 
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
-<body class="site--folklife <?= str::lower($page->title()) ?>-page">
+<body class="site--folklife">
 #site-toggle.site-toggle
 	.container
-		.tagline Championing Culture for, by, and of the People
-		a.site-toggle-link.folklife-site-toggle-link.active(href="/") Folklife
+		.tagline Bringing Tradition Bearers From Around The World To The National Mall
+		a.site-toggle-link.festival-site-toggle-link.active(href="/") Festival
+		-if (c::get('isDev')):
+			a.site-toggle-link.folklife-site-toggle-link(href="http://localhost:3001") Folklife
+		- else:
+			a.site-toggle-link.folklife-site-toggle-link(href="http://folklife.lukehatfield.com") Folklife
+		-endif
 		-if (c::get('isDev')):
 			a.site-toggle-link.festival-site-toggle-link(href="http://localhost:3005") Folkways
 		- else:
 			a.site-toggle-link.folkways-site-toggle-link(href="http://folkways.lukehatfield.com") Folkways
 		-endif
-		-if (c::get('isDev')):
-			a.site-toggle-link.folklife-site-toggle-link(href="http://localhost:3003") Festival
-		- else:
-			a.site-toggle-link.festival-site-toggle-link(href="http://on.festival.lukehatfield.com") Festival
-		-endif
-//- nav.navbar.navbar-fixed-top
+
 .navbar-outside
+// Navbar
 nav.navbar#navbar
 	.navbar-header.container
-		.navbar-header-inner.row
+		ul.row
+			// Logo
 			.navbar-brand.col-sm-2
-				.logo
+				#logo-wrapper.logo
 					a(href="/")
 						img#block-logo.block-logo.folkways-block-logo(src="/assets/images/logo/folklife-block-logo_2016.12.17.png")
 						img#one-line-logo.one-line-logo.folklife-one-line-logo(src="/assets/images/logo/folklife-one-line-logo_2016.12.15.png")
 			-snippet('nav-icons-search')
 
 
+	// Full Navigation Dropdown
 	.header-nav#header-nav
 		.container
 			ul.header-nav-row.row

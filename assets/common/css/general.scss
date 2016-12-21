@@ -67,25 +67,6 @@ ul {margin: 0;}
 	width: 46%;
 }
 
-// festival blog article related content sidebar
-.col-xs-75 {
-	float: left;
-	width: 63%;
-}
-
-
-// folklife - dive deep
-.col-xs-56 {
-	float: left;
-	width: 56%;
-}
-.col-xs-44 {
-	float: left;
-	width: 44%;
-	@include respond-to(fullwidth) {
-		// padding-left: 0 !important; // fit the layout alt-grid
-	}
-}
 
 // folklife homepage bottom collections
 .col-half {

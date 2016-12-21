@@ -1,26 +1,7 @@
 
-<?php snippet('header'); ?>
-<div id="navspacer" class="navspacer"></div>
 <!-- Typography-->
-<section class="container typography-section first-section">
-  <h2 class="section-title">Typography</h2><a id="typography" class="anchor-link"></a>
+<section class="container typography-section first-section"><a id="top" class="anchor-link"></a>
   <div class="section__description">
-    <pre><code>// Fonts are stored as SASS mixins so they can be used anywhere in
-// the .scss file without concern of being overwritten by the cascade. 
-// Read more here: https://sass-guidelin.es/#mixins
-
-   
-/* Implement the mixin by targeting a specific .title class like so: */
-.archives-page {
-	.title {
-		@include sans-xl;
-	}
-}
-   
-/* or, if you must, use a class with the same name of the font style and size
-* although it doesn't seem as clean as the previous method */
-.sans-xl {@include sans-xl;}	
-</code></pre>
   </div>
   <div class="row">
     <div class="col-md-4">
@@ -46,7 +27,8 @@
 		font-size: 3rem;
 		margin-bottom: 4.2rem;
 	}
-}</code></pre>
+}
+</code></pre>
     </div>
     <div class="col-md-6"></div>
   </div>
@@ -55,27 +37,29 @@
       <div class="tag">Category or Tag</div>
     </div>
     <div class="col-md-7">
-      <pre><code>// Category or Tag
-@mixin category {
-	text-transform: uppercase;
-	font-family: $sansWide;
-	color: $black65;
-	font-weight: 300;
-	letter-spacing: 1px;
-	margin-bottom: 0.5rem;
-	margin-bottom: 0;
-	font-size: 2.5vw;
-	@include respond-to(break2) {
-		font-size: 0.95vw;
-		font-size: 1vw;
-		margin-bottom: 0.4vw;
-	}
-	@include respond-to(fullwidth) {
-		font-size: 1.6rem; // acumin pro
-		margin-bottom: 0.5rem;
-		line-height: 1;
-	}
-}</code></pre>
+      <pre><code class="scss">
+      // Category or Tag
+      @mixin category {
+      	text-transform: uppercase;
+      	font-family: $sansWide;
+      	color: $black65;
+      	font-weight: 300;
+      	letter-spacing: 1px;
+      	margin-bottom: 0.5rem;
+      	margin-bottom: 0;
+      	font-size: 2.5vw;
+      	@include respond-to(break2) {
+      		font-size: 0.95vw;
+      		font-size: 1vw;
+      		margin-bottom: 0.4vw;
+      	}
+      	@include respond-to(fullwidth) {
+      		font-size: 1.6rem; // acumin pro
+      		margin-bottom: 0.5rem;
+      		line-height: 1;
+      	}
+      }
+      </code></pre>
     </div>
     <div class="col-md-6"></div>
   </div>
@@ -88,18 +72,20 @@
       <div class="sans-xl">Extra Large Sans</div>
     </div>
     <div class="col-md-7">
-      <pre><code>// Extra Large Sans
-@mixin sans-xl {
-	font-family: $sans;
-	font-size: 5vw;
-	@include respond-to(break2) {
-		font-size: 2.5vw;
-		line-height: 1.2;
-	}
-	@include respond-to(fullwidth) {
-		font-size: 4rem;
-	}
-}</code></pre>
+      <pre><code class="scss">
+      // Extra Large Sans
+      @mixin sans-xl {
+      	font-family: $sans;
+      	font-size: 5vw;
+      	@include respond-to(break2) {
+      		font-size: 2.5vw;
+      		line-height: 1.2;
+      	}
+      	@include respond-to(fullwidth) {
+      		font-size: 4rem;
+      	}
+      }
+      </code></pre>
     </div>
   </div>
   <div class="row">
@@ -107,20 +93,22 @@
       <div class="sans-xl">Large Sans</div>
     </div>
     <div class="col-md-7">
-      <pre><code>// Large Sans
-@mixin sans-xl {
-	font-family: $sans;
-	font-weight: 300;
-	font-size: 5vw;
-	@include respond-to(break2) {
-		font-size: 1.9vw;
-		line-height: 1.2;
-	}
-	@include respond-to(fullwidth) {
-		font-size: 3.5rem;
-	}
-}
-</code></pre>
+      <pre><code class="scss">
+      // Large Sans
+      @mixin sans-xl {
+      	font-family: $sans;
+      	font-weight: 300;
+      	font-size: 5vw;
+      	@include respond-to(break2) {
+      		font-size: 1.9vw;
+      		line-height: 1.2;
+      	}
+      	@include respond-to(fullwidth) {
+      		font-size: 3.5rem;
+      	}
+      }
+      </code></pre>
+      
     </div>
   </div>
   <div class="row">
@@ -128,20 +116,22 @@
       <div class="sans-lg">Medium Sans</div>
     </div>
     <div class="col-md-7">
-      <pre><code>// Medium Sans
-@mixin sans-lg {
-	font-family: $sans;
-	font-weight: 300; // light for acumin
-	line-height: 1.2;
-	font-size: 5vw;
-	@include respond-to(break2) {
-		font-size: 1.92vw;
-		line-height: 1.28;
-	}
-	@include respond-to(fullwidth) {
-		font-size: 3rem;
-	}
-}</code></pre>
+      <pre><code class="scss">
+      // Medium Sans
+      @mixin sans-lg {
+      	font-family: $sans;
+      	font-weight: 300; // light for acumin
+      	line-height: 1.2;
+      	font-size: 5vw;
+      	@include respond-to(break2) {
+      		font-size: 1.92vw;
+      		line-height: 1.28;
+      	}
+      	@include respond-to(fullwidth) {
+      		font-size: 3rem;
+      	}
+      }
+      </code></pre>
     </div>
   </div>
   <div class="row">
@@ -149,21 +139,23 @@
       <div class="sans-md">Small Sans</div>
     </div>
     <div class="col-md-7">
-      <pre><code>// Small Sans
-@mixin sans-md {
-	font-family: $sans;
-	font-weight: 300; // light for acumin
-	line-height: 1.2;
-	font-size: 4vw;
-	@include respond-to(break2) {
-		font-size: 1.6vw;
-		line-height: 1.3;
-	}
-	@include respond-to(fullwidth) {
-		font-size: 2.5rem;
-		line-height: 1.3;
-	}
-}</code></pre>
+      <pre><code class="scss">
+      // Small Sans
+      @mixin sans-md {
+      	font-family: $sans;
+      	font-weight: 300; // light for acumin
+      	line-height: 1.2;
+      	font-size: 4vw;
+      	@include respond-to(break2) {
+      		font-size: 1.6vw;
+      		line-height: 1.3;
+      	}
+      	@include respond-to(fullwidth) {
+      		font-size: 2.5rem;
+      		line-height: 1.3;
+      	}
+      }
+      </code></pre>
     </div>
   </div>
   <div class="row">
@@ -171,22 +163,24 @@
       <div class="sans-sm">Extra Small Sans</div>
     </div>
     <div class="col-md-7">
-      <pre><code>// Extra Small Sans
-@mixin sans-sm {
-	font-family: $sans;
-	font-weight: 300; // light for acumin
-	line-height: 1.2;
-	font-size: 3.5vw;
-	@include respond-to(break2) {
-		font-size: 1.3vw;
-		line-height: 1.3;
-	}
-	@include respond-to(fullwidth) {
-		font-size: 2rem;
-		line-height: 1.3;
-	}
-}
-</code></pre>
+      <pre><code class="scss">
+      // Extra Small Sans
+      @mixin sans-sm {
+      	font-family: $sans;
+      	font-weight: 300; // light for acumin
+      	line-height: 1.2;
+      	font-size: 3.5vw;
+      	@include respond-to(break2) {
+      		font-size: 1.3vw;
+      		line-height: 1.3;
+      	}
+      	@include respond-to(fullwidth) {
+      		font-size: 2rem;
+      		line-height: 1.3;
+      	}
+      }
+      </code></pre>
+      
     </div>
   </div>
   <div class="row">
@@ -194,23 +188,25 @@
       <div class="sans-caption">Extra Extra Small Sans</div>
     </div>
     <div class="col-md-7">
-      <pre><code>// Extra Extra Small Sans
-@mixin sans-caption {
-	font-family: $sans;
-	font-weight: 300; // light for acumin
-	line-height: 1.2;
-	line-height: 1.4;
-	font-size: 4vw;
-	@include respond-to(break2) {
-		font-size: 1.15vw;
-		line-height: 1.3;
-	}
-	@include respond-to(fullwidth) {
-		line-height: 1.3;
-		font-size: 1.8rem; // oct 19 for fritz
-	}
-}
-</code></pre>
+      <pre><code class="scss">
+      // Extra Extra Small Sans
+      @mixin sans-caption {
+      	font-family: $sans;
+      	font-weight: 300; // light for acumin
+      	line-height: 1.2;
+      	line-height: 1.4;
+      	font-size: 4vw;
+      	@include respond-to(break2) {
+      		font-size: 1.15vw;
+      		line-height: 1.3;
+      	}
+      	@include respond-to(fullwidth) {
+      		line-height: 1.3;
+      		font-size: 1.8rem; // oct 19 for fritz
+      	}
+      }
+      </code></pre>
+      
     </div>
   </div>
 </section>
@@ -222,7 +218,11 @@
       <div class="serif-xxl">Extra Extra Large Serif</div>
     </div>
     <div class="col-md-7">
-      <pre><code></code></pre></div></td></tr><tr><td valign="top" id="L_0_413" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;413&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_413"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">font-family</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">: </span><span class="italic real_text" style="background-color: #272822; color: #FD971F;">$serif</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
+      <pre><code class="scss">
+      
+      
+      
+      </div></td></tr><tr><td valign="top" id="L_0_413" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;413&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_413"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">font-family</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">: </span><span class="italic real_text" style="background-color: #272822; color: #FD971F;">$serif</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
       </div></td></tr><tr><td valign="top" id="L_0_414" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;414&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_414"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">font-weight</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">:</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;"> 700</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
       </div></td></tr><tr><td valign="top" id="L_0_415" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;415&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_415"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">line-height</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">:</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;"> 1.1</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
       </div></td></tr><tr><td valign="top" id="L_0_416" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;416&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_416"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">font-size</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">:</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;"> 8</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;">vw</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
@@ -245,7 +245,11 @@
       <div class="serif-xl">Extra Large Serif</div>
     </div>
     <div class="col-md-7">
-      <pre><code></code></pre></div></td></tr><tr><td valign="top" id="L_0_397" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;397&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_397"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">font-family</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">: </span><span class="italic real_text" style="background-color: #272822; color: #FD971F;">$serif</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
+      <pre><code class="scss">
+      
+      
+      
+      </div></td></tr><tr><td valign="top" id="L_0_397" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;397&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_397"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">font-family</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">: </span><span class="italic real_text" style="background-color: #272822; color: #FD971F;">$serif</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
       </div></td></tr><tr><td valign="top" id="L_0_398" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;398&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_398"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">font-weight</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">:</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;"> 700</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
       </div></td></tr><tr><td valign="top" id="L_0_399" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;399&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_399"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">line-height</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">:</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;"> 1.1</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
       </div></td></tr><tr><td valign="top" id="L_0_400" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;400&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_400"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">font-size</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">:</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;"> 8</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;">vw</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
@@ -266,7 +270,11 @@
       <div class="serif-lg">Large Serif</div>
     </div>
     <div class="col-md-7">
-      <pre><code></code></pre></div></td></tr><tr><td valign="top" id="L_0_380" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;380&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_380"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">font-family</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">: </span><span class="italic real_text" style="background-color: #272822; color: #FD971F;">$serif</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
+      <pre><code class="scss">
+      
+      
+      
+      </div></td></tr><tr><td valign="top" id="L_0_380" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;380&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_380"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">font-family</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">: </span><span class="italic real_text" style="background-color: #272822; color: #FD971F;">$serif</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
       </div></td></tr><tr><td valign="top" id="L_0_381" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;381&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_381"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">font-weight</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">:</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;"> 700</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
       </div></td></tr><tr><td valign="top" id="L_0_382" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;382&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_382"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">line-height</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">:</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;"> 1.2</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
       </div></td></tr><tr><td valign="top" id="L_0_383" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;383&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_383"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">font-size</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">:</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;"> 6</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;">vw</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
@@ -287,7 +295,11 @@
       <div class="serif-md">Medium Serif</div>
     </div>
     <div class="col-md-7">
-      <pre><code></code></pre></div></td></tr><tr><td valign="top" id="L_0_365" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;365&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_365"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">font-family</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">: </span><span class="italic real_text" style="background-color: #272822; color: #FD971F;">$serif</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
+      <pre><code class="scss">
+      
+      
+      
+      </div></td></tr><tr><td valign="top" id="L_0_365" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;365&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_365"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">font-family</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">: </span><span class="italic real_text" style="background-color: #272822; color: #FD971F;">$serif</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
       </div></td></tr><tr><td valign="top" id="L_0_366" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;366&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_366"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">font-weight</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">:</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;"> 700</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
       </div></td></tr><tr><td valign="top" id="L_0_367" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;367&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_367"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">line-height</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">:</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;"> 1.2</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
       </div></td></tr><tr><td valign="top" id="L_0_368" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;368&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_368"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">font-size</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">:</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;"> 6</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;">vw</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
@@ -299,7 +311,32 @@
       </div></td></tr><tr><td valign="top" id="L_0_374" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;374&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_374"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span>
       </div></td></tr><tr><td valign="top" id="L_0_375" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;375&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_375"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp; }</span>
       </div></td></tr></tbody></table></td></tr></tbody></table></pre>
+      //- // Serif 
+      //- .serif-xl Extra-Large Serif
+      //- .row
+      //- 	.col-sm-6
+      //- 		<pre class="code_page"><table cellspacing="0" cellpadding="0" class="code_page"><tbody><tr><td><table cellspacing="0" cellpadding="0" class="code_page"><tbody><tr><td valign="top" id="L_0_17" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;17&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_17"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&lt;</span><span class=" real_text" style="background-color: #272822; color: #F92672;">div</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;"> </span><span class=" real_text" style="background-color: #272822; color: #A6E22E;">class</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">=</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">"</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">serif-xl</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">"</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&gt;</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">Extra-Large Serif</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&lt;/</span><span class=" real_text" style="background-color: #272822; color: #F92672;">div</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&gt;</span></div></td></tr></tbody></table></td></tr></tbody></table></pre>
+      
+      //- .row
+      //- 	.col-sm-6
+      //- 		.serif-lg Large Serif
+      //- 		<pre class="code_page"><table cellspacing="0" cellpadding="0" class="code_page"><tbody><tr><td><table cellspacing="0" cellpadding="0" class="code_page"><tbody><tr><td valign="top" id="L_0_17" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;17&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_17"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&lt;</span><span class=" real_text" style="background-color: #272822; color: #F92672;">div</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;"> </span><span class=" real_text" style="background-color: #272822; color: #A6E22E;">class</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">=</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">"</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">serif-lg</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">"</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&gt;</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">Large Serif</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&lt;/</span><span class=" real_text" style="background-color: #272822; color: #F92672;">div</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&gt;</span></div></td></tr></tbody></table></td></tr></tbody></table></pre>
+      //- 	.col-sm-6
+      //- 		|CSS
+      
+      //- .row
+      //- 	.col-sm-6
+      //- 		.serif-md Medium Serif
+      //- 		<pre class="code_page"><table cellspacing="0" cellpadding="0" class="code_page"><tbody><tr><td><table cellspacing="0" cellpadding="0" class="code_page"><tbody><tr><td valign="top" id="L_0_17" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;17&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_17"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&lt;</span><span class=" real_text" style="background-color: #272822; color: #F92672;">div</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;"> </span><span class=" real_text" style="background-color: #272822; color: #A6E22E;">class</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">=</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">"</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">serif-md</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">"</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&gt;</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">Medium Serif</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&lt;/</span><span class=" real_text" style="background-color: #272822; color: #F92672;">div</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&gt;</span></div></td></tr></tbody></table></td></tr></tbody></table></pre>
+      //- 	.col-sm-6
+      //- 		|CSS
+      
+      //- .row
+      //- 	.col-sm-12
+      //- 		.serif-sm Small Serif
+      //- .row
+      //- 	.col-sm-6
+      //- 		<pre class="code_page"><table cellspacing="0" cellpadding="0" class="code_page"><tbody><tr><td><table cellspacing="0" cellpadding="0" class="code_page"><tbody><tr><td valign="top" id="L_0_17" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;17&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_17"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&lt;</span><span class=" real_text" style="background-color: #272822; color: #F92672;">div</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;"> </span><span class=" real_text" style="background-color: #272822; color: #A6E22E;">class</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">=</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">"</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">serif-sm</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">"</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&gt;</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">Small Serif</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&lt;/</span><span class=" real_text" style="background-color: #272822; color: #F92672;">div</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&gt;</span></div></td></tr></tbody></table></td></tr></tbody></table></pre>
     </div>
   </div>
 </section>
-<?php snippet('footer'); ?>

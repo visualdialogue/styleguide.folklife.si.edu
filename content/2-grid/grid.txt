@@ -1,0 +1,55 @@
+Title: Grid
+
+----
+
+Text: 
+
+----
+
+Img: 
+
+----
+
+Classes: 
+
+- 
+  name: col-sm-12
+- 
+  name: col-sm-6
+- 
+  name: col-sm-6
+- 
+  name: col-sm-7
+- 
+  name: col-sm-1 blank
+- 
+  name: col-sm-4
+- 
+  name: col-sm-6
+- 
+  name: col-sm-2
+- 
+  name: col-sm-2
+- 
+  name: col-sm-2
+- 
+  name: col-sm-2
+- 
+  name: col-sm-2
+- 
+  name: col-sm-2
+- 
+  name: col-sm-2
+- 
+  name: col-sm-2
+- 
+  name: col-sm-2
+
+----
+
+Custom-classes: 
+
+- 
+  name: col-xs-half-image
+- 
+  name: col-xs-half-details

@@ -1,6 +1,4 @@
 
-<?php snippet('header'); ?>
-<div id="navspacer" class="navspacer"></div>
 <!-- Colors-->
 <section class="container first-section">
   <h2 class="section-title">Colors</h2><a id="colors" class="anchor-link"></a>
@@ -177,7 +175,5 @@
     		Green:
     		#79b93e
     		121, 185, 62
-    
   </div>
 </section>
-<?php snippet('footer'); ?>

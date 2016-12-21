@@ -3,6 +3,7 @@
 	Author: Visual Dialogue
 	URL:    http://visualdialogue.com
 	Created: Fall 2016
+	Heights based on 1.125 major 2nd scale of 8rem (80px for navbar);
 */
 
 /* Imports
@@ -34,22 +35,141 @@
   @import "../common/css/cards.scss";
 
 
-/* #styleguide
+/* #intro
 -------------------------------------------------- */
-	.styleguide-section {
-		.title {
-			@include serif-xl;
+	.intro-title {
+		@include serif-xl;
+		margin-top:0;
+	}
+	.intro-copy {
+		@include serif-md;
+		font-weight: 500;
+	}
+	.intro-section {
+		@include margin-bottom(4);
+	}
+
+/* #grid
+-------------------------------------------------- */
+	.grid-item {
+		&-inner {
+			background-color: $black80;
+			@include height(9);
+			@include margin-bottom(2);
+
+			// Reveal more info
+			&.hidden-content:hover {
+				background-color: $black60;
+				cursor: zoom-in;
+				.copy {
+					color: $black60; // hide existing text
+					&:after {
+						content: attr(data-hover);
+						color: $black20;
+						display: block;
+						position: absolute;
+						top: 0;
+						left: 0;
+						right: 0;
+						bottom: 0;
+					}
+				}
+			}
+
+			.copy {
+				@include sans-sm;
+				color: white;
+				text-align: center;
+				// vertically align
+				position: relative;
+				top: 50%;
+				-webkit-transform: translateY(-50%);
+				-ms-transform: translateY(-50%);
+				transform: translateY(-50%);
+			}
 		}
-		.card {
-			@include margin-bottom(6);
+		@at-root &.blank {
+			.grid-item-inner {
+				visibility:hidden;
+			}
 		}
 	}
+	.custom-grid-item-inner {
+		background-color: $black40;
+	}
+	.custom-grid-container {
+		@include margin-bottom(4);
+	}
+
+/* #colors
+-------------------------------------------------- */
+	.color {
+		@include sans-caption;
+		margin-bottom: 0 !important;
+	}
+	.color-name {
+		font-weight: 600;
+	}
+	.color-square {
+		@include height(20);
+		@include margin-bottom(1);
+	}
+
+	.color code.hljs {
+		@include margin-top(0.5);
+		@include padding(1);
+		font-size:1.4rem;
+		@include respond-to(break2) {font-size:1.4rem;}
+		@include respond-to(fullwidth) {font-size:1.4rem;}
+	}
+
+	// Grays
+	.color-e4e2e1 { background-color: #e4e2e1;}
+	.color-cccccc { background-color: #cccccc;}
+	.color-999999 { background-color: #999999;}
+	.color-595959 { background-color: #595959;}
+	.color-333333 { background-color: #333333;}
+	.color-000000 { background-color: #000000;}
+
+	// Folklife Colors
+	.color-92c5eb { background-color: #92c5eb;}
+	.color-4495d1 { background-color: #4495d1;}
+	.color-b455a0 { background-color: #b455a0;}
+	.color-e4f1de { background-color: #e4f1de;}
+	.color-32bcad { background-color: #32bcad;}
+	.color-248397 { background-color: #248397;}
+	.color-bfff00 { background-color: #bfff00;}
+	.color-ffefc6 { background-color: #ffefc6;}
+	.color-c74a34 { background-color: #c74a34;}
+
+	// Folkways Palette
+	.color-cfdcf1 { background-color: #cfdcf1;}
+	.color-b0d5de { background-color: #b0d5de;}
+	.color-a499bc { background-color: #a499bc;}
+	.color-fff2df { background-color: #fff2df;}
+	.color-c2e1b7 { background-color: #c2e1b7;}
+	.color-94a094 { background-color: #94a094;}
+	.color-fbf6f0 { background-color: #fbf6f0;}
+	.color-cdc4b3 { background-color: #cdc4b3;}
+	.color-ec837a { background-color: #ec837a;}
+
+	// Festival Palette
+	.color-75bee9 { background-color: #75bee9;}
+	.color-4e72b8 { background-color: #4e72b8;}
+	.color-7c51a1 { background-color: #7c51a1;}
+	.color-d5bf90 { background-color: #d5bf90;}
+	.color-3ea6ae { background-color: #3ea6ae;}
+	.color-00b26b { background-color: #00b26b;}
+	.color-ffe06a { background-color: #ffe06a;}
+	.color-eea557 { background-color: #eea557;}
+	.color-de4049 { background-color: #de4049;}
+
 
 /* #code
 -------------------------------------------------- */
 	.title-bar {
 		color: white;
-		background-color: $fs-aqua;
+		background-color: $fl-blue;
 	}
 	.code_gutter {
 		display:none;
@@ -83,20 +203,18 @@
 	}
 	// highlight.js code block
 	code.hljs {
-		// @include padding-top(3);
-		// @include padding-right(0);
-		// @include padding-bottom(3);
-		// @include padding-left(3);
 		@include padding(3);
 	}
+
 	.typography-section pre  {
 		@include margin-bottom(8);
 	}
 	.section-subtitle {
-		@include serif-lg;
-		color: $black50;
+		@include serif-md;
+		@include padding-top(2);
 		@include margin-top(3);
 		@include margin-bottom(2);
+		@include border(top);
 	}
 	.section__description {
 		@include margin-bottom(4);

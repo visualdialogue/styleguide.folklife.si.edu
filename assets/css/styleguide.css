@@ -4,6 +4,7 @@
 	Author: Visual Dialogue
 	URL:    http://visualdialogue.com
 	Created: Fall 2016
+	Heights based on 1.125 major 2nd scale of 8rem (80px for navbar);
 */
 /* Imports
 -------------------------------------------------- */
@@ -5532,18 +5533,6 @@ ul {
   float: left;
   width: 46%; }
 
-.col-xs-75 {
-  float: left;
-  width: 63%; }
-
-.col-xs-56 {
-  float: left;
-  width: 56%; }
-
-.col-xs-44 {
-  float: left;
-  width: 44%; }
-
 .col-half {
   width: 50%;
   float: left; }
@@ -7633,34 +7622,277 @@ a.details {
   .cards-break-3:nth-of-type(4n + 1) {
     clear: left; } }
 
-/* #styleguide
+/* #intro
 -------------------------------------------------- */
-.styleguide-section .title {
+.intro-title {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1.1;
-  font-size: 4.865rem; }
+  font-size: 4.865rem;
+  margin-top: 0; }
   @media only screen and (min-width: 53.25em) {
-    .styleguide-section .title {
+    .intro-title {
       font-size: 5.474rem; } }
   @media only screen and (min-width: 1560px) {
-    .styleguide-section .title {
+    .intro-title {
       font-size: 6.158rem; } }
 
-.styleguide-section .card {
-  margin-bottom: 5.33333rem; }
+.intro-copy {
+  font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: 700;
+  line-height: 1;
+  font-size: 2.133rem;
+  margin-bottom: 0.88889rem;
+  font-weight: 500; }
   @media only screen and (min-width: 53.25em) {
-    .styleguide-section .card {
-      margin-bottom: 3.375vw; } }
+    .intro-copy {
+      line-height: 1.143;
+      font-size: 2.4rem; } }
   @media only screen and (min-width: 1560px) {
-    .styleguide-section .card {
-      margin-bottom: 6rem; } }
+    .intro-copy {
+      font-size: 2.7rem; } }
+  @media only screen and (min-width: 53.25em) {
+    .intro-copy {
+      margin-bottom: 0.5625vw; } }
+  @media only screen and (min-width: 1560px) {
+    .intro-copy {
+      margin-bottom: 1rem; } }
+
+.intro-section {
+  margin-bottom: 3.55556rem; }
+  @media only screen and (min-width: 53.25em) {
+    .intro-section {
+      margin-bottom: 2.25vw; } }
+  @media only screen and (min-width: 1560px) {
+    .intro-section {
+      margin-bottom: 4rem; } }
+
+/* #grid
+-------------------------------------------------- */
+.grid-item-inner {
+  background-color: #333333;
+  height: 14.0625vw;
+  margin-bottom: 1.77778rem; }
+  @media only screen and (min-width: 53.25em) {
+    .grid-item-inner {
+      height: 5.0625vw; } }
+  @media only screen and (min-width: 1560px) {
+    .grid-item-inner {
+      height: 9rem; } }
+  @media only screen and (min-width: 53.25em) {
+    .grid-item-inner {
+      margin-bottom: 1.125vw; } }
+  @media only screen and (min-width: 1560px) {
+    .grid-item-inner {
+      margin-bottom: 2rem; } }
+  .grid-item-inner.hidden-content:hover {
+    background-color: #666666;
+    cursor: zoom-in; }
+    .grid-item-inner.hidden-content:hover .copy {
+      color: #666666; }
+      .grid-item-inner.hidden-content:hover .copy:after {
+        content: attr(data-hover);
+        color: #cccccc;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; }
+  .grid-item-inner .copy {
+    font-family: "acumin-pro", Arial, sans-serif;
+    font-weight: 300;
+    line-height: 1.2;
+    font-size: 1.665rem;
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
+    @media only screen and (min-width: 53.25em) {
+      .grid-item-inner .copy {
+        font-size: 1.873rem; } }
+    @media only screen and (min-width: 1560px) {
+      .grid-item-inner .copy {
+        font-size: 2.107rem; } }
+
+.grid-item.blank .grid-item-inner {
+  visibility: hidden; }
+
+.custom-grid-item-inner {
+  background-color: #999999; }
+
+.custom-grid-container {
+  margin-bottom: 3.55556rem; }
+  @media only screen and (min-width: 53.25em) {
+    .custom-grid-container {
+      margin-bottom: 2.25vw; } }
+  @media only screen and (min-width: 1560px) {
+    .custom-grid-container {
+      margin-bottom: 4rem; } }
+
+/* #colors
+-------------------------------------------------- */
+.color {
+  font-family: "acumin-pro", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 1.48rem;
+  margin-bottom: 0 !important; }
+  @media only screen and (min-width: 53.25em) {
+    .color {
+      font-size: 1.665rem; } }
+  @media only screen and (min-width: 1560px) {
+    .color {
+      font-size: 1.873rem; } }
+
+.color-name {
+  font-weight: 600; }
+
+.color-square {
+  height: 31.25vw;
+  margin-bottom: 0.88889rem; }
+  @media only screen and (min-width: 53.25em) {
+    .color-square {
+      height: 11.25vw; } }
+  @media only screen and (min-width: 1560px) {
+    .color-square {
+      height: 20rem; } }
+  @media only screen and (min-width: 53.25em) {
+    .color-square {
+      margin-bottom: 0.5625vw; } }
+  @media only screen and (min-width: 1560px) {
+    .color-square {
+      margin-bottom: 1rem; } }
+
+.color code.hljs {
+  margin-top: 0.78125vw;
+  padding: 1.5625vw;
+  font-size: 1.4rem; }
+  @media only screen and (min-width: 53.25em) {
+    .color code.hljs {
+      margin-top: 0.28125vw; } }
+  @media only screen and (min-width: 1560px) {
+    .color code.hljs {
+      margin-top: 0.5rem; } }
+  @media only screen and (min-width: 53.25em) {
+    .color code.hljs {
+      padding: 0.5625vw; } }
+  @media only screen and (min-width: 1560px) {
+    .color code.hljs {
+      padding: 1rem; } }
+  @media only screen and (min-width: 53.25em) {
+    .color code.hljs {
+      font-size: 1.4rem; } }
+  @media only screen and (min-width: 1560px) {
+    .color code.hljs {
+      font-size: 1.4rem; } }
+
+.color-e4e2e1 {
+  background-color: #e4e2e1; }
+
+.color-cccccc {
+  background-color: #cccccc; }
+
+.color-999999 {
+  background-color: #999999; }
+
+.color-595959 {
+  background-color: #595959; }
+
+.color-333333 {
+  background-color: #333333; }
+
+.color-000000 {
+  background-color: #000000; }
+
+.color-92c5eb {
+  background-color: #92c5eb; }
+
+.color-4495d1 {
+  background-color: #4495d1; }
+
+.color-b455a0 {
+  background-color: #b455a0; }
+
+.color-e4f1de {
+  background-color: #e4f1de; }
+
+.color-32bcad {
+  background-color: #32bcad; }
+
+.color-248397 {
+  background-color: #248397; }
+
+.color-bfff00 {
+  background-color: #bfff00; }
+
+.color-ffefc6 {
+  background-color: #ffefc6; }
+
+.color-c74a34 {
+  background-color: #c74a34; }
+
+.color-cfdcf1 {
+  background-color: #cfdcf1; }
+
+.color-b0d5de {
+  background-color: #b0d5de; }
+
+.color-a499bc {
+  background-color: #a499bc; }
+
+.color-fff2df {
+  background-color: #fff2df; }
+
+.color-c2e1b7 {
+  background-color: #c2e1b7; }
+
+.color-94a094 {
+  background-color: #94a094; }
+
+.color-fbf6f0 {
+  background-color: #fbf6f0; }
+
+.color-cdc4b3 {
+  background-color: #cdc4b3; }
+
+.color-ec837a {
+  background-color: #ec837a; }
+
+.color-75bee9 {
+  background-color: #75bee9; }
+
+.color-4e72b8 {
+  background-color: #4e72b8; }
+
+.color-7c51a1 {
+  background-color: #7c51a1; }
+
+.color-d5bf90 {
+  background-color: #d5bf90; }
+
+.color-3ea6ae {
+  background-color: #3ea6ae; }
+
+.color-00b26b {
+  background-color: #00b26b; }
+
+.color-ffe06a {
+  background-color: #ffe06a; }
+
+.color-eea557 {
+  background-color: #eea557; }
+
+.color-de4049 {
+  background-color: #de4049; }
 
 /* #code
 -------------------------------------------------- */
 .title-bar {
   color: white;
-  background-color: #3ea6ad; }
+  background-color: #4189bd; }
 
 .code_gutter {
   display: none; }
@@ -7708,16 +7940,31 @@ code.hljs {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1;
-  font-size: 3.417rem;
-  color: gray;
+  font-size: 2.133rem;
+  margin-bottom: 0.88889rem;
+  padding-top: 3.125vw;
   margin-top: 4.6875vw;
-  margin-bottom: 1.77778rem; }
+  margin-bottom: 1.77778rem;
+  border-top: 1px solid gray; }
   @media only screen and (min-width: 53.25em) {
     .section-subtitle {
-      font-size: 3.844rem; } }
+      line-height: 1.143;
+      font-size: 2.4rem; } }
   @media only screen and (min-width: 1560px) {
     .section-subtitle {
-      font-size: 4.325rem; } }
+      font-size: 2.7rem; } }
+  @media only screen and (min-width: 53.25em) {
+    .section-subtitle {
+      margin-bottom: 0.5625vw; } }
+  @media only screen and (min-width: 1560px) {
+    .section-subtitle {
+      margin-bottom: 1rem; } }
+  @media only screen and (min-width: 53.25em) {
+    .section-subtitle {
+      padding-top: 1.125vw; } }
+  @media only screen and (min-width: 1560px) {
+    .section-subtitle {
+      padding-top: 2rem; } }
   @media only screen and (min-width: 53.25em) {
     .section-subtitle {
       margin-top: 1.6875vw; } }

@@ -1,14 +1,12 @@
 
 <?php snippet('header'); ?>
 <div id="navspacer" class="navspacer"></div>
-<?php snippet('title-bar'); ?>
-<!-- Styleguide-->
-<section class="container first-section styleguide-section">
-  <h2 class="section-title">Styleguide</h2>
-  <ul class="row cards">
-    <?php foreach($pages->visible() as $card): ?>
-    <?php snippet('card', array('card' => $card, 'col_sm' => 4 )); ?>
-    <?php endforeach; ?>
-  </ul>
-</section>
+<?php snippet('title-bar', array('title' => 'Styleguide')); ?>
+<!-- Sections-->
+<?php foreach($pages->visible() as $section): ?>
+<?php snippet($section->uid(), array('section' => $section)); ?>
+<div class="container">
+  <hr class="thick-hr"/>
+</div>
+<?php endforeach; ?>
 <?php snippet('footer'); ?>

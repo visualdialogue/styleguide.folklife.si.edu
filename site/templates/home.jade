@@ -2,16 +2,13 @@
 
 #navspacer.navspacer
 
--snippet('title-bar')
+-snippet('title-bar', array('title' => 'Styleguide'))
 
-// Styleguide
-section.container.first-section.styleguide-section
-	h2.section-title Styleguide
-
-	ul.row.cards
-		-foreach($pages->visible() as $card):
-			//- get card for current content item
-			-snippet('card', array('card' => $card, 'col_sm' => 4 ))
-		-endforeach
+// Sections
+-foreach($pages->visible() as $section):
+	//- call each visible section, so can reorder, and pass relevant data to templates
+	-snippet($section->uid(), array('section' => $section))
+	.container: hr.thick-hr
+-endforeach
 
 -snippet('footer')

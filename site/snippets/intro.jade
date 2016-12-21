@@ -1,0 +1,18 @@
+// Intro
+section.container.first-section.intro-section
+	a.anchor-link#intro
+	.row
+		main.copy.col-sm-7
+			h2.intro-title Using the Styleguide
+			.intro-copy.link-underline
+				!= $section->copy()
+
+		aside.sidebar.sidebar--info.col-sm-4.col-sm-offset-1
+			h3.sidebar-section-title References
+			ul
+				//- get all references
+				-foreach ($section->references()->toStructure() as $reference):
+						li.sidebar-item
+							h4.sidebar-item-title= $reference->title()
+							.info: a(href="<?= $reference->url() ?>" target="_blank")!= $reference->link()
+				-endforeach

@@ -1,0 +1,52 @@
+title: Intro
+pages: false
+files: false
+fields:
+  title:
+    label: Title
+    type:  text
+  references:
+    label: References
+    type: structure
+    entry: >
+      {{reference}} <br />
+      &mdash; {{link}}  <br />
+      &mdash; {{url}}
+    fields:
+      title:
+        label: Title
+        type: text
+      link:
+        label: Visible Link Name
+        type: text
+      url:
+        label: Full Url
+        type: text
+  # year_released: 
+  #   label: Year Released
+  #   type: text
+  # record_label:
+  #   label: Record Label
+  #   type: text
+  # source_archive:
+  #   label: Source Archive
+  #   type: text
+  # copyright:
+  #   label: Copyright
+  #   type: text
+  # genre:
+  #   label: Genre(s)
+  #   type: tags
+  # country:
+  #   label: Country(s)
+  #   type: tags
+  # culture_groups:
+  #   label: Culture Group(s)
+  #   type: tags
+  # instrument:
+  #   label: Instrument(s)
+  #   type: tags
+  # liner_notes:
+  #   label: Liner Notes
+  #   type: select
+  #   options: files
