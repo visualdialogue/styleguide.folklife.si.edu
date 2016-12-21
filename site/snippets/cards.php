@@ -56,7 +56,7 @@
 						Quelbe!
 					&lt;/span&gt;
 				&lt;/span&gt;
-			&lt;/div&gt;
+			&lt;/a&gt;
 			&lt;div class="artist"&gt;
 				Stanley and the Ten Sleepless Nights
 			&lt;/div&gt;
@@ -130,6 +130,7 @@
 							Circus Arts 2017
 						&lt;/span&gt;
 					&lt;/span&gt;
+				&lt;/a&gt;
 				&lt;div class="description link-underline"&gt;
 					&lt;p&gt;See the culture and history of circus arts across the U.S.&lt;/p&gt;
 				&lt;/div&gt;
@@ -182,22 +183,26 @@
 		&lt;div class="image col-sm-6"&gt;
 			&lt;a href="#"&gt;
 				&lt;img src="horizontal.png"&gt;
+			&lt;/a&gt;
+		&lt;/div&gt;
 		&lt;div class="details col-sm-6"&gt;
 			&lt;div class="details-inner"&gt;
-				&lt;div class="tag"&gt; Recording Spotlight
+				&lt;div class="tag"&gt; Recording Spotlight&lt;/div&gt;
 				&lt;a class="high title" href="#"&gt; 
 					&lt;span class="light"&gt;
 						&lt;span class="er"&gt;
 							Rasta Sounds
 						&lt;/span&gt;
 					&lt;/span&gt;
+				&lt;/a&gt;
 				&lt;div class="description link-underline"&gt;
 					&lt;p&gt;The global African Diaspora has often searched through music for a “post-racist utopia.”&lt;p&gt;
 				&lt;/div&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
-&lt;/li&gt;</code></pre>
+&lt;/li&gt;
+</code></pre>
       </div>
     </div>
   </div>

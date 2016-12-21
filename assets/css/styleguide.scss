@@ -335,6 +335,10 @@
 /* #cards
 -------------------------------------------------- */
 	.cards-section {
+		.codeblock {
+			@include border(top);
+			@include margin-bottom(4);
+		}
 		.show-code {
 			@include margin-top(5);
 		}
@@ -349,6 +353,12 @@
 		.title {
 			@include magazinetitle;
 		}
+	}
+	.feature {
+		.title {
+			@include magazinetitle;
+		}
+		.
 	}
 
 /* #video
