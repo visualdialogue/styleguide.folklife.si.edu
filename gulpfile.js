@@ -30,7 +30,7 @@ gulp.task('vendor', function() {
     // '/js/modernizr-custom.js',
     ])
     .pipe(concat('vendor.js'))
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(gulp.dest('./assets/js/'))
 });
 
@@ -220,7 +220,7 @@ gulp.task('js', function() {
     ])
     .pipe(concat('scripts.js'))
     // .pipe(concat('../../../../bower_components/jquery/dist/jquery.js'))
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(rename('scripts-min.js'))
     .pipe(gulp.dest('./assets/js/'));
     // gulp.watch('/js/scripts.js',['scripts']);

@@ -110,7 +110,7 @@ a.details {
 -------------------------------------------------- */
 .card-vertical {
 	.title {
-		@include serif-md;
+		@include serif-sm;
 	}
 }
 
@@ -119,7 +119,7 @@ a.details {
 -------------------------------------------------- */
 	.card-program {
 		.title {
-			@include serif-md;
+			@include serif-sm;
 			display: block; // for better height management;
 			@include respond-to(break2max) {
 				margin-bottom:0;
@@ -606,7 +606,7 @@ a.details {
 			}
 		}
 		.title {
-			@include serif-xl;
+			@include serif-lg;
 			margin-bottom:1rem;
 			@include respond-to(break2) {margin-bottom:1.15vw;}
 			@include respond-to(fullwidth) {margin-bottom:1.8rem;}

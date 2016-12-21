@@ -1,303 +1,318 @@
 // Typography
 section.container.typography-section
-	h2.section-title Typography
-	a.anchor-link#typography
+	.row
+		main.content.col-sm-7
+			h2.section-title Typography
+			a.anchor-link#typography
+			.intro-copy.link-underline
+				p Fonts are stored as SASS <em>mixins</em> so they can be used anywhere in the .scss files without fear of cascading styles overriding them.
+				p You can easily implement the mixin by targeting a specific .title, or other, class as seen in the following lines:
 
-	.row
-		.col-md-4
-			.section-title Section Title
-		.col-md-7
-			pre: code.
-				// Section Title
-				@mixin section-title {
-					font-family: $slabWide;
-					text-transform: uppercase;
-					font-size: 5vw;
-					letter-spacing: 0.5px;
-					margin-top: 0; // bootstrap reset
-					margin-bottom: 1.5rem;
-					color: $black65;
-					line-height: 1.2;
-					@include respond-to(break2) {
-						line-height: 0.7; // so margins accurate
-						font-size: 1.9vw;
-						margin-bottom: 2.7vw;
+				pre: code.
+					.archives-page {
+						.title {@include sans-lg}
 					}
-					@include respond-to(fullwidth) {
-						font-size: 3rem;
-						margin-bottom: 4.2rem;
+
+				p Font sizes were determined by the design and with the major second modular scale mainly for responsive sizes (1.125). See <a href="http://www.modularscale.com" target="_blank">www.modularscale.com</a>.
+
+		aside.sidebar.sidebar--info.col-sm-4.col-sm-offset-1
+			h3.sidebar-section-title References
+			ul
+				li.sidebar-item.sidebar-highlight
+					a(href="https://sass-guidelin.es/#mixins" target="_blank")
+						h4.sidebar-item-title SASS mixins
+						.info sass-guidelin.es/#mixins
+				li.sidebar-item.sidebar-highlight
+					a(href="http://www.modularscale.com/?2.4&rem&1.125&web&text" target="_blank")
+						h4.sidebar-item-title Serif Scale (base 2.4rem, 1.125, major second)
+						.info modularscale.com
+				li.sidebar-item.sidebar-highlight
+					a(href="http://www.modularscale.com/?3&rem&1.125&web&text" target="_blank")
+						h4.sidebar-item-title Sans Scale (base 3rem, 1.125, major second)
+						.info modularscale.com
+					
+	// Typefaces
+	.typeface
+		.row.type-title-wrapper
+			hr
+			.col-sm-10.large-serif-title-type.type-title Large Serif Title
+			.col-sm-2
+				.show-code Show Code
+					.icon-down-arrow
+		.row
+			.col-md-5
+				.type-details
+					|Typeface: Freight Text
+					br
+					|Weight: Bold
+					br
+					|Maximum Font Size: 6.158rem
+					br
+					|Maximum Line Height: 6.738rem
+
+			.col-md-7
+				pre.type: code.
+					@mixin serif-lg {
+						font-family: $serif;
+						font-weight: 700;
+						line-height: 1.1;
+						font-size: 4.865rem;
+						@include respond-to(break2) {
+							font-size: 5.474rem;			
+						}
+						@include respond-to(fullwidth) {
+							font-size: 6.158rem;
 					}
-				}
-		.col-md-6
-	.row
-		.col-md-4
-			.tag Category or Tag
-		.col-md-7
-			pre: code.
-				// Category or Tag
-				@mixin category {
-					text-transform: uppercase;
-					font-family: $sansWide;
-					color: $black65;
-					font-weight: 300;
-					letter-spacing: 1px;
-					margin-bottom: 0.5rem;
-					margin-bottom: 0;
-					font-size: 2.5vw;
-					@include respond-to(break2) {
-						font-size: 0.95vw;
-						font-size: 1vw;
-						margin-bottom: 0.4vw;
-					}
-					@include respond-to(fullwidth) {
-						font-size: 1.6rem; // acumin pro
-						margin-bottom: 0.5rem;
+
+	.typeface
+		.row.type-title-wrapper
+			hr
+			.col-sm-10.medium-serif-title-type.type-title Medium Serif Title
+			.col-sm-2
+				.show-code Show Code
+					.icon-down-arrow
+		.row
+			.col-md-5
+				.type-details
+					|Typeface: Freight Text
+					br
+					|Weight: Bold
+					br
+					|Maximum Font Size: 4.325rem
+					br
+					|Maximum Line Height: 4.325rem
+
+			.col-md-7
+				pre.type: code.
+					@mixin serif-md {
+						font-family: $serif;
+						font-weight: 700;
 						line-height: 1;
+						font-size: 3.417rem;
+						@include respond-to(break2) {
+							font-size: 3.844rem;
+						}
+						@include respond-to(fullwidth) {
+							font-size: 4.325rem;
+						}
 					}
-				}
-		.col-md-6
+		
+	.typeface
+		.row.type-title-wrapper
+			hr
+			.col-sm-10.small-serif-title-type.type-title Small Serif Title
+			.col-sm-2
+				.show-code Show Code
+					.icon-down-arrow
+		.row
+			.col-md-5
+				.type-details
+					|Typeface: Freight Text
+					br
+					|Weight: Bold
+					br
+					|Maximum Font Size: 2.7rem
+					br
+					|Maximum Line Height: 3.0861rem
 
-// Sans
-section.container
-	h2.section-title Sans
-	a.anchor-link#sans
-	.row
-		.col-md-4
-			.sans-xl Extra Large Sans
-		.col-md-7
-			pre: code.
-				// Extra Large Sans
-				@mixin sans-xl {
-					font-family: $sans;
-					font-size: 5vw;
-					@include respond-to(break2) {
-						font-size: 2.5vw;
+			.col-md-7
+				pre.type: code.
+					@mixin serif-sm {
+						font-family: $serif;
+						font-weight: 700;
+						line-height: 1;
+					  	font-size: 2.133rem;
+						@include respond-to(break2) {
+							line-height: 1.143;
+					  		font-size: 2.4rem;
+						}
+						@include respond-to(fullwidth) {
+					  		font-size: 2.7rem;
+						}
+						@include margin-bottom(1);
+					}
+
+	.typeface
+		.row.type-title-wrapper
+			hr
+			.col-sm-10.extra-large-sans-title-type.type-title Extra Large Sans Title
+			-snippet('show-code')
+		.row
+			.col-md-5
+				.type-details
+					|Typeface: Acumin Pro
+					br
+					|Weight: Semibold
+					br
+					|Maximum Font Size: 3.375rem
+					br
+					|Maximum Line Height: 40.5rem
+
+			.col-md-7
+				pre.type: code.
+					@mixin sans-xl {
+						font-family: $sans;
+						font-weight: 600;
+						font-size: 2.667rem;
+						@include respond-to(break2) {
+							font-size: 3rem;
+							line-height: 1.2;
+						}
+						@include respond-to(fullwidth) {
+							font-size: 3.375rem;
+						}
+					}
+	.typeface
+		.row.type-title-wrapper
+			hr
+			.col-sm-10.extra-large-sans-title-type-light.type-title Extra Large Sans Title Light
+			-snippet('show-code')
+		.row
+			.col-md-5
+				.type-details
+					|Typeface: Acumin Pro
+					br
+					|Weight: Light
+					br
+					|Maximum Font Size: 3.375rem
+					br
+					|Maximum Line Height: 40.5rem
+
+			.col-md-7
+				pre.type: code.
+					@mixin sans-xl {
+						font-family: $sans;
+						font-weight: 300;
+						font-size: 2.667rem;
+						@include respond-to(break2) {
+							font-size: 3rem;
+							line-height: 1.2;
+						}
+						@include respond-to(fullwidth) {
+							font-size: 3.375rem;
+						}
+					}
+	.typeface
+		.row.type-title-wrapper
+			hr
+			.col-sm-10.large-sans-title-type.type-title Large Sans Title
+			-snippet('show-code')
+		.row
+			.col-md-5
+				.type-details
+					|Typeface: Acumin Pro
+					br
+					|Weight: Semibold
+					br
+					|Maximum Font Size: 3rem
+					br
+					|Maximum Line Height: 3.5rem
+
+			.col-md-7
+				pre.type: code.
+					@mixin sans-lg {
+						font-family: $sans;
+						font-weight: 600;
+						line-height: 1.166667;
+					  	font-size: 2.37rem;
+						@include respond-to(break2) {
+					  		font-size: 2.667rem;
+						}
+						@include respond-to(fullwidth) {
+					  		font-size: 3rem;
+						}
+					}
+
+	.typeface
+		.row.type-title-wrapper
+			hr
+			.col-sm-10.large-sans-title-type-light.type-title Large Sans Title Light
+			-snippet('show-code')
+		.row
+			.col-md-5
+				.type-details
+					|Typeface: Acumin Pro
+					br
+					|Weight: Light
+					br
+					|Maximum Font Size: 3rem
+					br
+					|Maximum Line Height: 3.5rem
+
+			.col-md-7
+				pre.type: code.
+					@mixin sans-lg {
+						font-family: $sans;
+						font-weight: 300;
+						line-height: 1.166667;
+					  	font-size: 2.37rem;
+						@include respond-to(break2) {
+					  		font-size: 2.667rem;
+						}
+						@include respond-to(fullwidth) {
+					  		font-size: 3rem;
+						}
+					}
+
+	.typeface
+		.row.type-title-wrapper
+			hr
+			.col-sm-10.medium-sans-title-type.type-title Medium Sans Title
+			-snippet('show-code')
+		.row
+			.col-md-5
+				.type-details
+					|Typeface: Acumin Pro
+					br
+					|Weight: Semibold
+					br
+					|Maximum Font Size: 2.37rem
+					br
+					|Maximum Line Height: 2.844rem
+
+			.col-md-7
+				pre.type: code.
+					@mixin sans-md {
+						font-family: $sans;
+						font-weight: 600;
 						line-height: 1.2;
+					  	font-size: 1.873rem;
+						@include respond-to(break2) {
+					  		font-size: 2.107rem;
+						}
+						@include respond-to(fullwidth) {
+					  		font-size: 2.37rem;
+						}
 					}
-					@include respond-to(fullwidth) {
-						font-size: 4rem;
-					}
-				}
-	.row
-		.col-md-4
-			.sans-xl Large Sans
-		.col-md-7
-			pre: code.
-				// Large Sans
-				@mixin sans-xl {
-					font-family: $sans;
-					font-weight: 300;
-					font-size: 5vw;
-					@include respond-to(break2) {
-						font-size: 1.9vw;
+
+	.typeface
+		.row.type-title-wrapper
+			hr
+			.col-sm-10.small-sans-title-type.type-title Small Sans Title
+			-snippet('show-code')
+		.row
+			.col-md-5
+				.type-details
+					|Typeface: Acumin Pro
+					br
+					|Weight: Semibold
+					br
+					|Maximum Font Size: 2.107rem
+					br
+					|Maximum Line Height: 2.528rem
+
+			.col-md-7
+				pre.type: code.
+					@mixin sans-sm {
+						font-family: $sans;
+						font-weight: 500;
 						line-height: 1.2;
+					  	font-size: 1.665rem;
+						@include respond-to(break2) {
+							font-size: 1.873rem;
+						}
+						@include respond-to(fullwidth) {
+					  		font-size: 2.107rem;
+						}
 					}
-					@include respond-to(fullwidth) {
-						font-size: 3.5rem;
-					}
-				}
-			
-	.row
-		.col-md-4
-			.sans-lg Medium Sans
-		.col-md-7
-			pre: code.
-				// Medium Sans
-				@mixin sans-lg {
-					font-family: $sans;
-					font-weight: 300; // light for acumin
-					line-height: 1.2;
-					font-size: 5vw;
-					@include respond-to(break2) {
-						font-size: 1.92vw;
-						line-height: 1.28;
-					}
-					@include respond-to(fullwidth) {
-						font-size: 3rem;
-					}
-				}
-	.row
-		.col-md-4
-			.sans-md Small Sans
-		.col-md-7
-			pre: code.
-				// Small Sans
-				@mixin sans-md {
-					font-family: $sans;
-					font-weight: 300; // light for acumin
-					line-height: 1.2;
-					font-size: 4vw;
-					@include respond-to(break2) {
-						font-size: 1.6vw;
-						line-height: 1.3;
-					}
-					@include respond-to(fullwidth) {
-						font-size: 2.5rem;
-						line-height: 1.3;
-					}
-				}
-	.row
-		.col-md-4
-			.sans-sm Extra Small Sans
-		.col-md-7
-			pre: code.
-				// Extra Small Sans
-				@mixin sans-sm {
-					font-family: $sans;
-					font-weight: 300; // light for acumin
-					line-height: 1.2;
-					font-size: 3.5vw;
-					@include respond-to(break2) {
-						font-size: 1.3vw;
-						line-height: 1.3;
-					}
-					@include respond-to(fullwidth) {
-						font-size: 2rem;
-						line-height: 1.3;
-					}
-				}
 
-	.row
-		.col-md-4
-			.sans-caption Extra Extra Small Sans
-		.col-md-7
-			pre: code.
-				// Extra Extra Small Sans
-				@mixin sans-caption {
-					font-family: $sans;
-					font-weight: 300; // light for acumin
-					line-height: 1.2;
-					line-height: 1.4;
-					font-size: 4vw;
-					@include respond-to(break2) {
-						font-size: 1.15vw;
-						line-height: 1.3;
-					}
-					@include respond-to(fullwidth) {
-						line-height: 1.3;
-						font-size: 1.8rem; // oct 19 for fritz
-					}
-				}
-	
-// Serif
-section.container
-	h2.section-title Serif
-	a.anchor-link#serif
-	.row
-		.col-md-4
-			.serif-xxl Extra Extra Large Serif
-		.col-md-7
-			pre: code.
-			
-			
-
-
-			</div></td></tr><tr><td valign="top" id="L_0_413" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;413&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_413"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">font-family</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">: </span><span class="italic real_text" style="background-color: #272822; color: #FD971F;">$serif</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
-			</div></td></tr><tr><td valign="top" id="L_0_414" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;414&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_414"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">font-weight</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">:</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;"> 700</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
-			</div></td></tr><tr><td valign="top" id="L_0_415" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;415&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_415"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">line-height</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">:</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;"> 1.1</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
-			</div></td></tr><tr><td valign="top" id="L_0_416" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;416&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_416"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">font-size</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">:</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;"> 8</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;">vw</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
-			</div></td></tr><tr><td valign="top" id="L_0_417" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;417&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_417"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class=" real_text" style="background-color: #272822; color: #F92672;">@include</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;"> </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">respond-to</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">(break</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;">2</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">) {</span>
-			</div></td></tr><tr><td valign="top" id="L_0_418" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;418&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_418"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">font-size</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">:</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;"> 8.2</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;">vw</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
-			</div></td></tr><tr><td valign="top" id="L_0_419" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;419&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_419"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">line-height</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">:</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;"> 0.7</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
-			</div></td></tr><tr><td valign="top" id="L_0_420" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;420&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_420"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">margin-top</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">: </span><span class=" real_text" style="background-color: #272822; color: #AE81FF;">-1</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;">rem</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
-			</div></td></tr><tr><td valign="top" id="L_0_421" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;421&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_421"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span>
-			</div></td></tr><tr><td valign="top" id="L_0_422" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;422&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_422"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class=" real_text" style="background-color: #272822; color: #F92672;">@include</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;"> </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">respond-to</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">(fullwidth) {</span>
-			</div></td></tr><tr><td valign="top" id="L_0_423" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;423&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_423"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">font-size</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">:</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;"> 13</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;">rem</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
-			</div></td></tr><tr><td valign="top" id="L_0_424" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;424&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_424"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">margin-top</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">: </span><span class=" real_text" style="background-color: #272822; color: #AE81FF;">-1</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;">rem</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
-			</div></td></tr><tr><td valign="top" id="L_0_425" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;425&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_425"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">line-height</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">:</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;"> 0.7</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
-			</div></td></tr><tr><td valign="top" id="L_0_426" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;426&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_426"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span>
-			</div></td></tr><tr><td valign="top" id="L_0_427" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;427&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_427"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp; }</span>
-			</div></td></tr></tbody></table></td></tr></tbody></table></pre>
-	.row
-		.col-md-4
-			.serif-xl Extra Large Serif
-		.col-md-7
-			pre: code.
-			
-			
-
-
-			</div></td></tr><tr><td valign="top" id="L_0_397" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;397&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_397"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">font-family</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">: </span><span class="italic real_text" style="background-color: #272822; color: #FD971F;">$serif</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
-			</div></td></tr><tr><td valign="top" id="L_0_398" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;398&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_398"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">font-weight</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">:</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;"> 700</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
-			</div></td></tr><tr><td valign="top" id="L_0_399" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;399&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_399"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">line-height</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">:</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;"> 1.1</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
-			</div></td></tr><tr><td valign="top" id="L_0_400" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;400&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_400"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">font-size</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">:</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;"> 8</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;">vw</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
-			</div></td></tr><tr><td valign="top" id="L_0_401" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;401&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_401"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class=" real_text" style="background-color: #272822; color: #F92672;">@include</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;"> </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">respond-to</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">(break</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;">2</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">) {</span>
-			</div></td></tr><tr><td valign="top" id="L_0_402" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;402&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_402"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">font-size</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">:</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;"> 3.8</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;">vw</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
-			</div></td></tr><tr><td valign="top" id="L_0_403" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;403&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_403"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">margin-top</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">: </span><span class=" real_text" style="background-color: #272822; color: #AE81FF;">-1</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;">rem</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
-			</div></td></tr><tr><td valign="top" id="L_0_404" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;404&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_404"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span>
-			</div></td></tr><tr><td valign="top" id="L_0_405" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;405&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_405"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class=" real_text" style="background-color: #272822; color: #F92672;">@include</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;"> </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">respond-to</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">(fullwidth) {</span>
-			</div></td></tr><tr><td valign="top" id="L_0_406" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;406&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_406"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">font-size</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">:</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;"> 6</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;">rem</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
-			</div></td></tr><tr><td valign="top" id="L_0_407" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;407&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_407"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">margin-top</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">: </span><span class=" real_text" style="background-color: #272822; color: #AE81FF;">-1</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;">rem</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
-			</div></td></tr><tr><td valign="top" id="L_0_408" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;408&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_408"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span>
-			</div></td></tr><tr><td valign="top" id="L_0_409" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;409&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_409"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp; }</span>
-			</div></td></tr></tbody></table></td></tr></tbody></table></pre>
-	.row
-		.col-md-4
-			.serif-lg Large Serif
-		.col-md-7
-			pre: code.
-			
-			
-
-
-			</div></td></tr><tr><td valign="top" id="L_0_380" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;380&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_380"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">font-family</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">: </span><span class="italic real_text" style="background-color: #272822; color: #FD971F;">$serif</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
-			</div></td></tr><tr><td valign="top" id="L_0_381" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;381&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_381"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">font-weight</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">:</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;"> 700</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
-			</div></td></tr><tr><td valign="top" id="L_0_382" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;382&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_382"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">line-height</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">:</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;"> 1.2</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
-			</div></td></tr><tr><td valign="top" id="L_0_383" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;383&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_383"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">font-size</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">:</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;"> 6</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;">vw</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
-			</div></td></tr><tr><td valign="top" id="L_0_384" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;384&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_384"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class=" real_text" style="background-color: #272822; color: #F92672;">@include</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;"> </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">respond-to</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">(break</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;">2</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">) {</span>
-			</div></td></tr><tr><td valign="top" id="L_0_385" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;385&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_385"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">font-size</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">:</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;"> 2.7</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;">vw</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
-			</div></td></tr><tr><td valign="top" id="L_0_386" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;386&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_386"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">line-height</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">:</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;"> 1.2</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
-			</div></td></tr><tr><td valign="top" id="L_0_387" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;387&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_387"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span>
-			</div></td></tr><tr><td valign="top" id="L_0_388" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;388&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_388"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class=" real_text" style="background-color: #272822; color: #F92672;">@include</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;"> </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">respond-to</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">(fullwidth) {</span>
-			</div></td></tr><tr><td valign="top" id="L_0_389" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;389&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_389"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">font-size</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">:</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;"> 4.2</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;">rem</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
-			</div></td></tr><tr><td valign="top" id="L_0_390" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;390&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_390"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">line-height</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">:</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;"> 1.1</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
-			</div></td></tr><tr><td valign="top" id="L_0_391" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;391&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_391"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span>
-			</div></td></tr><tr><td valign="top" id="L_0_392" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;392&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_392"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp; }</span>
-			</div></td></tr></tbody></table></td></tr></tbody></table></pre>
-	.row
-		.col-md-4
-			.serif-md Medium Serif
-		.col-md-7
-			pre: code.
-			
-			
-
-
-			</div></td></tr><tr><td valign="top" id="L_0_365" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;365&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_365"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">font-family</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">: </span><span class="italic real_text" style="background-color: #272822; color: #FD971F;">$serif</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
-			</div></td></tr><tr><td valign="top" id="L_0_366" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;366&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_366"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">font-weight</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">:</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;"> 700</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
-			</div></td></tr><tr><td valign="top" id="L_0_367" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;367&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_367"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">line-height</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">:</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;"> 1.2</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
-			</div></td></tr><tr><td valign="top" id="L_0_368" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;368&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_368"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">font-size</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">:</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;"> 6</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;">vw</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
-			</div></td></tr><tr><td valign="top" id="L_0_369" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;369&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_369"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class=" real_text" style="background-color: #272822; color: #F92672;">@include</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;"> </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">respond-to</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">(break</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;">2</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">) {</span>
-			</div></td></tr><tr><td valign="top" id="L_0_370" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;370&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_370"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">font-size</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">:</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;"> 1.8</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;">vw</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
-			</div></td></tr><tr><td valign="top" id="L_0_371" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;371&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_371"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span>
-			</div></td></tr><tr><td valign="top" id="L_0_372" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;372&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_372"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class=" real_text" style="background-color: #272822; color: #F92672;">@include</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;"> </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">respond-to</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">(fullwidth) {</span>
-			</div></td></tr><tr><td valign="top" id="L_0_373" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;373&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_373"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="italic real_text" style="background-color: #272822; color: #66D9EF;">font-size</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">:</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;"> 2.8</span><span class=" real_text" style="background-color: #272822; color: #AE81FF;">rem</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">;</span>
-			</div></td></tr><tr><td valign="top" id="L_0_374" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;374&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_374"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span>
-			</div></td></tr><tr><td valign="top" id="L_0_375" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;375&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_375"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&nbsp;&nbsp;&nbsp; }</span>
-			</div></td></tr></tbody></table></td></tr></tbody></table></pre>
-			//- // Serif 
-			//- .serif-xl Extra-Large Serif
-			//- .row
-			//- 	.col-sm-6
-			//- 		<pre class="code_page"><table cellspacing="0" cellpadding="0" class="code_page"><tbody><tr><td><table cellspacing="0" cellpadding="0" class="code_page"><tbody><tr><td valign="top" id="L_0_17" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;17&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_17"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&lt;</span><span class=" real_text" style="background-color: #272822; color: #F92672;">div</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;"> </span><span class=" real_text" style="background-color: #272822; color: #A6E22E;">class</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">=</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">"</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">serif-xl</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">"</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&gt;</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">Extra-Large Serif</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&lt;/</span><span class=" real_text" style="background-color: #272822; color: #F92672;">div</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&gt;</span></div></td></tr></tbody></table></td></tr></tbody></table></pre>
-
-			//- .row
-			//- 	.col-sm-6
-			//- 		.serif-lg Large Serif
-			//- 		<pre class="code_page"><table cellspacing="0" cellpadding="0" class="code_page"><tbody><tr><td><table cellspacing="0" cellpadding="0" class="code_page"><tbody><tr><td valign="top" id="L_0_17" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;17&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_17"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&lt;</span><span class=" real_text" style="background-color: #272822; color: #F92672;">div</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;"> </span><span class=" real_text" style="background-color: #272822; color: #A6E22E;">class</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">=</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">"</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">serif-lg</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">"</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&gt;</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">Large Serif</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&lt;/</span><span class=" real_text" style="background-color: #272822; color: #F92672;">div</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&gt;</span></div></td></tr></tbody></table></td></tr></tbody></table></pre>
-			//- 	.col-sm-6
-			//- 		|CSS
-
-			//- .row
-			//- 	.col-sm-6
-			//- 		.serif-md Medium Serif
-			//- 		<pre class="code_page"><table cellspacing="0" cellpadding="0" class="code_page"><tbody><tr><td><table cellspacing="0" cellpadding="0" class="code_page"><tbody><tr><td valign="top" id="L_0_17" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;17&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_17"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&lt;</span><span class=" real_text" style="background-color: #272822; color: #F92672;">div</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;"> </span><span class=" real_text" style="background-color: #272822; color: #A6E22E;">class</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">=</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">"</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">serif-md</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">"</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&gt;</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">Medium Serif</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&lt;/</span><span class=" real_text" style="background-color: #272822; color: #F92672;">div</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&gt;</span></div></td></tr></tbody></table></td></tr></tbody></table></pre>
-			//- 	.col-sm-6
-			//- 		|CSS
-
-			//- .row
-			//- 	.col-sm-12
-			//- 		.serif-sm Small Serif
-			//- .row
-			//- 	.col-sm-6
-			//- 		<pre class="code_page"><table cellspacing="0" cellpadding="0" class="code_page"><tbody><tr><td><table cellspacing="0" cellpadding="0" class="code_page"><tbody><tr><td valign="top" id="L_0_17" class="code_text code_gutter" style="background: #272822"><span style="color: #F8F8F2;">&nbsp;17&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #272822;"><div id="C_0_17"><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&lt;</span><span class=" real_text" style="background-color: #272822; color: #F92672;">div</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;"> </span><span class=" real_text" style="background-color: #272822; color: #A6E22E;">class</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">=</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">"</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">serif-sm</span><span class=" real_text" style="background-color: #272822; color: #E6DB74;">"</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&gt;</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">Small Serif</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&lt;/</span><span class=" real_text" style="background-color: #272822; color: #F92672;">div</span><span class=" real_text" style="background-color: #272822; color: #F8F8F2;">&gt;</span></div></td></tr></tbody></table></td></tr></tbody></table></pre>

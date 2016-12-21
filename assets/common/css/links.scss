@@ -1,20 +1,12 @@
 /* #Links
 -------------------------------------------------- */
-	a {
-		color: $link;
-	}
+	a { color: $link; }
+	a:hover { text-decoration: none; }
 	// a:hover, .main-copy h2 a:hover  { color: $hover; }
-	.main-copy a { color: $copylinks; }
-
-	
-	a:hover {
-		// color: $hover;
-		// background: $hover;
-		text-decoration: none;
-	}
-	.title a:hover {
+	// .main-copy a { color: $copylinks; }
+	// .title a:hover {
 		// color: $copy;
-	}
+	// }
 
 	// prevent the above
 	.meganav__title, .footer-title, .logo-mask, .site-toggle-link {
@@ -24,7 +16,7 @@
 	}
 
 	/* inspired by links on medium.com */
-	.copy a {
+	.content a {
 		color: $copy;
 		// underline effect
 		border-bottom: 3px solid $hover;

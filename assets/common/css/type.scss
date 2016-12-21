@@ -4,7 +4,7 @@
 // serif line-height of 1.3333 from body text of 24/32
 
 body {
-	font-family: $sans;
+	font-family: $serif;
 	line-height: 1.333333; // 24/32
 }
 
@@ -158,21 +158,6 @@ body {
 		}
 	}
 
-	// %title--sans {
-	// 	font-family: $sans;
-	// 	font-weight: 600; // semibold for acumin
-	// 	line-height: 1.2;
-	//   	font-size: 5vw;
-	// 	@include respond-to(break2) {
-	//   		font-size: 1.5vw;
-	//   		margin-bottom: 0.3vw;
-	// 	}
-	// 	@include respond-to(fullwidth) {
-	//   		font-size: 2.4rem;
-	//   		margin-bottom: 0.5rem;
-	// 	}
-	// }
-
 	// Plus icon
 	@mixin sans-plus-icon {
 		font-family: $sans;
@@ -185,25 +170,23 @@ body {
 			font-size: 4rem;
 		}
 	}
-	.sans-xl {@include sans-plus-icon}
-
 
 	// Extra Large Sans (Folkways)
 	@mixin sans-xl {
 		font-family: $sans;
 		font-weight: 300;
-		font-size: 5vw;
+		// font-size: 5vw;
+		font-size: 2.667rem;
 		@include respond-to(break2) {
-			font-size: 1.9vw;
+			// font-size: 1.9vw;
+			font-size: 3rem;
 			line-height: 1.2;
 		}
 		@include respond-to(fullwidth) {
-			font-size: 3.5rem;
+			// font-size: 3.5rem;
+			font-size: 3.375rem;
 		}
 	}
-
-	// HTML Implementation
-	.sans-xl {@include sans-xl;}
 
 
 	// Large Sans +
@@ -220,8 +203,6 @@ body {
 	  		font-size: 3rem;
 		}
 	}
-	// HTML Implementation
-	.sans-lg {@include sans-lg;}
 
 
 	// Medium Sans +
@@ -242,9 +223,6 @@ body {
 	  		font-size: 2.37rem; // 12.19
 		}
 	}
-	// HTML Implementation
-	.sans-md {@include sans-md;}
-
 
 	// Small Sans +
 	@mixin sans-sm {
@@ -259,8 +237,6 @@ body {
 	  		font-size: 2.107rem;
 		}
 	}
-	// HTML Implementation
-	.sans-sm {@include sans-sm;}
 
 	// Sans Caption
 	@mixin sans-caption {
@@ -353,30 +329,8 @@ body {
 /* Serif
 -------------------------------------------------- */
 
-	// Body
-	@mixin body-text {
-		font-family: $serif;
-		font-size:5vw;
-		color: black;
-		@include respond-to(break2) {font-size:1.5vw;}
-		@include respond-to(fullwidth) {font-size:2.4rem;}
-	}
-	@mixin h3 {
-		font-weight: 600;
-		font-size:6vw;
-		margin-bottom: 1rem;
-		@include respond-to(break2) {
-			font-size:1.8vw;
-			margin-bottom: 0.9vw; 
-		}
-		@include respond-to(fullwidth) {
-			font-size:2.8rem;
-			margin-bottom: 1.5rem; // 30px
-		}
-	}
-
-	// Extra Large Serif Title +
-	@mixin serif-xl {
+	// Large Serif Title +
+	@mixin serif-lg {
 		font-family: $serif;
 		font-weight: 700;
 		line-height: 1.1;
@@ -388,10 +342,9 @@ body {
 			font-size: 6.158rem;
 		}
 	}
-	.serif-xl {@include serif-xl;}
 
-	// Large Serif Title +
-	@mixin serif-lg {
+	// Medium Serif Title +
+	@mixin serif-md {
 		font-family: $serif;
 		font-weight: 700;
 		line-height: 1; // smaller for folkways banner titles
@@ -406,10 +359,9 @@ body {
 			font-size: 4.325rem;
 		}
 	}
-	.serif-lg {@include serif-lg;}
 
-	// Medium Serif Title +
-	@mixin serif-md {
+	// Small Serif Title +
+	@mixin serif-sm {
 		font-family: $serif;
 		font-weight: 700;
 		line-height: 1;
@@ -426,12 +378,9 @@ body {
 		}
 		@include margin-bottom(1);
 	}
-	.serif-md {
-		@include serif-md;
-	}
 
 	// Small Serif Title +
-	@mixin serif-sm {
+	@mixin serif-body {
 		font-family: $serif;
 		font-weight: 400;
 		line-height: 1.333333; // 24/32
@@ -443,16 +392,15 @@ body {
 	  		font-size: 2.4rem;
 		}
 	}
-	.serif-sm {@include serif-sm;}
 
 
 
-
+/* Specials
+-------------------------------------------------- */
 @mixin buybutton {
 	text-transform: uppercase;
 	font-family: $sansWide;
 	font-weight: 800;
-	// letter-spacing: 1px;
 	margin-bottom: 0.5rem;
 	margin-bottom: 0;
 	font-size: 2.7vw;
@@ -472,20 +420,12 @@ body {
 	font-family: $sansWide;
 	font-weight: 800;
 	line-height: 1.095237; // 46px desktop
-	// font-size: 4.5vw;
 	font-size: 3.319rem;
 	@include respond-to(break2) {
-		// font-size: 0.95vw;
-		// font-size: 2.7vw;
-		// font-size: 2.3vw;
 		font-size: 3.733rem;
-		// margin-bottom: 0.4vw;
 	}
 	@include respond-to(fullwidth) {
 		font-size: 4.2rem; // acumin pro
-		// font-size: 3.6rem; // acumin pro
-		// margin-bottom: 0.5rem;
-		// line-height: 1;
 	}
 }
 
@@ -493,7 +433,6 @@ body {
 	font-family: $sans;
 	font-size: 5vw;
 	@include respond-to(break2) {
-		// padding-top: 0.9vw;
 		font-size: 2.2vw;
 	}
 	@include respond-to(fullwidth) {
@@ -513,67 +452,26 @@ body {
 	}
 }
 
-// FONTS
-@mixin sans-semibold {
-	font-family: $sans;
-	font-weight: 600;
-}
-// SCALES
-@mixin fs-18 {
-	font-size: 4.1vw;
-	@include respond-to(break2) {font-size: 1.1vw;}
-	@include respond-to(fullwidth) {font-size: 1.8rem;}
-}
-
-
 @mixin date {
 	@include sans-tag;
 	font-weight: 700;
 }
 @mixin date-sm {
 	@include sans-tag;
-	// font-weight: 300;
 	letter-spacing: normal;
 	text-transform: initial;
 	@include margin-top(0.5);
-	// margin-top:rem;
-	// @include respond-to(break2) {margin-top:0.2vw;}
-	// @include respond-to(fullwidth) {
-		// margin-top:0.5rem;
-		// margin-bottom:5rem;
-	// }
 }
-
-// @mixin sidebar-subtitle {
-// 	// @include sans-tag;
-// 	// font-family: $sans;
-// 	// @include sans-caption;
-// 	// color: $black70;
-// }
-// @mixin sidebar-copy {
-// 	font-family: $sans;
-// 	@include fs-18;
-// 	letter-spacing: 0;
-// 	// font-weight: 600;
-// 	// font-weight: 500;
-// 	text-transform: none;
-// 	color: $black70;
-// 	line-height: 1.33333;
-// 	p {
-// 		margin-bottom:0;
-// 	}
-
-// }
 
 
 /* CSS type helper classes
 -------------------------------------------------- */
 	.content {
 		h3 {
-			@include serif-lg;
+			@include serif-md;
 		}
 		h4 {
-			@include serif-md;
+			@include serif-sm;
 			@include margin-bottom(2);
 		}
 		h5 {
@@ -582,12 +480,8 @@ body {
 			@include margin-bottom(0.5);
 		}
 		p {
-			// @include sans-sm;
-			@include serif-sm;
-			// font-style: italic;
-			// @include margin-bottom(2);
+			@include serif-body;
 			@include padding-bottom(2); // not margin because then when using columns, the margin carries over!!!, from http://stackoverflow.com/a/12503808
-			// font-weight: 200;
 		}
 		ul {
 			@include margin-bottom(1);
@@ -600,35 +494,3 @@ body {
 			font-weight: 600;
 		}
 	}
-
-
-
-
-/* Sans reference
--------------------------------------------------- */
-
-// Variation 	font-family 	font-weight 	font-style 	Copy CSS
-// Thin 				 	100 	 	
-// Extra Light 				200 	 	
-// Light 				 	300 	 	
-// Regular 				 	400 	 	
-// Medium 				 	500 	 	
-// Semibold 				600 	 	
-// Bold 				 	700 	 	
-// Black 				 	800 	 	
-// Ultra Black 				900 	 	
-
-
-/* Styleguide explanation
--------------------------------------------------- */
-	// Fonts are stored as SASS mixins so they can be used anywhere in
-	// the .scss file without concern of being overwritten by the cascade. 
-	// Read more here: https://sass-guidelin.es/#mixins
-
-	// Implement the mixin by targeting a specific .title class like so:
-	.archives-page {
-		.title {@include sans-lg}
-	}
-	// or, if you must, use a class with the same name of the font style and size
-	// although it doesn't seem as clean
-	.sans-lg {@include sans-lg}

@@ -1,0 +1,42 @@
+// Conventions
+section.container.conventions-section
+	.row
+		main.content.col-sm-7
+			h2.section-title Conventions
+			a.anchor-link#conventions
+
+			h3.section-subtitle Naming Scheme
+			|The <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/" target="_blank">Block-Element-Modifier (BEM)</a> methodology was substituted with <a href="http://oxygencss.com/" target="_blank">Oxygen</a> because it meshes well with Bootstrap naming conventions (single dash) and is more readable. The drawback with the Oxygen method is you lose clarity of parent-child and modifer relationships without the double dash syntax.
+
+			h3.section-subtitle Helper Classes
+
+			.intro-copy.link-underline
+				p Helper classes can improve consistency and maintainability across the sites. Here are a few common rules / patterns we've used:
+				
+
+				pre: code.
+					// Typesetting with parent and child class. 
+					// Targets the commonly used .title class in almost every card.
+					.archives-page {
+						.title {@include sans-lg}
+					}
+
+				pre: code.
+					&lt;!-- Use the .content class on a page with body copy. 
+					This applies correct heading and paragraphy styles. --&gt;
+					&lt;div class="main content"&gt;
+						... content goes here ...
+					&lt;/div&gt;
+
+		aside.sidebar.sidebar--info.col-sm-4.col-sm-offset-1
+			h3.sidebar-section-title References
+			ul
+				li.sidebar-item.sidebar-highlight
+					h4.sidebar-item-title Oxygen CSS Naming Convention
+					.info: a(href="http://oxygencss.com/" target="_blank") oxygencss.com
+				li.sidebar-item.sidebar-highlight
+					h4.sidebar-item-title SASS mixins
+					.info: a(href="https://sass-guidelin.es/#mixins" target="_blank") sass-guidelin.es/#mixins
+
+					
+

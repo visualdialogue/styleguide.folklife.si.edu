@@ -2,7 +2,7 @@
 section.container.first-section.intro-section
 	a.anchor-link#intro
 	.row
-		main.copy.col-sm-7
+		main.content.col-sm-7
 			h2.intro-title Using the Styleguide
 			.intro-copy.link-underline
 				!= $section->copy()
@@ -12,7 +12,8 @@ section.container.first-section.intro-section
 			ul
 				//- get all references
 				-foreach ($section->references()->toStructure() as $reference):
-						li.sidebar-item
-							h4.sidebar-item-title= $reference->title()
-							.info: a(href="<?= $reference->url() ?>" target="_blank")!= $reference->link()
+						li.sidebar-item.sidebar-highlight
+							a(href="<?= $reference->url() ?>" target="_blank")
+								h4.sidebar-item-title= $reference->title()
+								.info!= $reference->link()
 				-endforeach

@@ -16,7 +16,7 @@
 			@include margin-bottom(4);
 		}
 		.title {
-			@include serif-lg;
+			@include serif-md;
 		}
 		.subtitle {
 			display: none;
@@ -276,7 +276,7 @@
 			color: $basque-red;
 		}
 		.subtitle {
-			@include serif-lg;
+			@include serif-md;
 			color: black;
 			@include margin-bottom(0.5);
 		}
@@ -298,7 +298,7 @@
 	}
 	.participants-section {
 		h3 {
-			@include serif-md;
+			@include serif-sm;
 			@include margin-top(0.5);
 		}
 		.blurb {

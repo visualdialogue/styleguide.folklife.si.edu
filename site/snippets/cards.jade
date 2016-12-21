@@ -1,0 +1,72 @@
+// Cards
+section.container.conventions-section
+	.row
+		main.content.col-sm-7
+			h2.section-title Cards
+			a.anchor-link#cards
+			.intro-copy.content.link-underline
+				p Cards are the smallest component pieces on the site besides UI elements. They usually consist of an image, a tag or date, a title, and the first few words of the copy. Some cards contain audio players or video buttons. Some cards lie horizontally. Here you'll find code to study and copy.
+				
+	.row.type-title-wrapper
+		.col-sm-10
+			h3.section-subtitle Audio Player
+		-snippet('show-code')
+	.row
+		li.card.audio-card.col-xs-6.col-sm-3.card-xs-break-2.full-border
+				.image
+					a(href="#")
+						img(src="/320x320.jpg")
+				.details
+					.details-inner
+						.tag New Release
+						.title-wrapper-wrapper
+							a.high.title(href="#"): span.light: span.er Quelbe!
+							.artist Stanley and the Ten Sleepless Nights
+						.audio-player
+							.icon-play-button.icon-stack
+								.icon-circle
+								.icon-play
+							.audio-player-details
+								.audio-progress-bar
+									img(src="/assets/images/icons/audio-progress-bar.png")
+								.audio-time
+									|0:00 &vert;&nbsp;
+									!23:01
+								.volume.icon-volume-up
+
+		.col-md-2
+		.col-md-7
+			pre.type: code.
+				li.card.audio-card.col-xs-6.col-sm-3.card-xs-break-2.full-border
+						.image
+							a(href="#")
+								img(src="/320x320.jpg")
+						.details
+							.details-inner
+								.tag New Release
+								.title-wrapper-wrapper
+									a.high.title(href="#"): span.light: span.er Quelbe!
+									.artist Stanley and the Ten Sleepless Nights
+								.audio-player
+									.icon-play-button.icon-stack
+										.icon-circle
+										.icon-play
+									.audio-player-details
+										.audio-progress-bar
+											img(src="/assets/images/icons/audio-progress-bar.png")
+										.audio-time
+											|0:00 &vert;&nbsp;
+											!23:01
+										.volume.icon-volume-up
+
+
+
+	//- aside.sidebar.sidebar--info.col-sm-4.col-sm-offset-1
+	//- 	h3.sidebar-section-title References
+	//- 	ul
+	//- 		li.sidebar-item.sidebar-highlight
+	//- 			h4.sidebar-item-title Oxygen CSS Naming Convention
+	//- 			.info: a(href="http://oxygencss.com/" target="_blank") oxygencss.com
+	//- 		li.sidebar-item.sidebar-highlight
+	//- 			h4.sidebar-item-title SASS mixins
+	//- 			.info: a(href="https://sass-guidelin.es/#mixins" target="_blank") sass-guidelin.es/#mixins

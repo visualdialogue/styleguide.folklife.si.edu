@@ -11,8 +11,8 @@ item: 						| mobile 	| tablet	| desktop
 %category 					| 4.1vw		| 1.2vw		| 1.8rem
 %section-header				|			| 2vw		| 3rem
 -----------------------------------------------------
-%serif-md 				| 6vw		| 1.9vw		| 2.8rem
-%serif-md--large 		| 5vw		| 2.7vw		|
+%serif-sm 				| 6vw		| 1.9vw		| 2.8rem
+%serif-sm--large 		| 5vw		| 2.7vw		|
 -----------------------------------------------------
 .audio__details padding		| 2vw		| 2rem		|
 .item__details--audio padd: | 3vw		| 2vw		| 3rem
@@ -40,7 +40,7 @@ conversion: 				| mobile 	| tablet	| desktop
 	// 	// @include margin-bottom(1);
 	// }
 	// .title {
-	// 	@include serif-lg;
+	// 	@include serif-md;
 	// 	// @include margin-bottom(0.5);
 	// }
 }
@@ -75,6 +75,6 @@ conversion: 				| mobile 	| tablet	| desktop
 		// @include margin-bottom(0.5);
 	}
 	.title {
-		// @include serif-md;
+		// @include serif-sm;
 	}
 }

@@ -134,6 +134,9 @@ _|   \___/  _|  _| \__| ____/
 .icon-menu:before {
   content: "\65"; }
 
+.icon-down-arrow:before {
+  content: "\66"; }
+
 /*
 
 
@@ -4084,8 +4087,8 @@ item: 						| mobile 	| tablet	| desktop
 %category 					| 4.1vw		| 1.2vw		| 1.8rem
 %section-header				|			| 2vw		| 3rem
 -----------------------------------------------------
-%serif-md 				| 6vw		| 1.9vw		| 2.8rem
-%serif-md--large 		| 5vw		| 2.7vw		|
+%serif-sm 				| 6vw		| 1.9vw		| 2.8rem
+%serif-sm--large 		| 5vw		| 2.7vw		|
 email-newsletter: 			| 			| 			| 3.5rem
 										| 3vw		| 6.2rem
 -----------------------------------------------------
@@ -4197,7 +4200,7 @@ conversion: 				| mobile 	| tablet	| desktop
   color: black; }
 
 body {
-  font-family: "acumin-pro", Arial, sans-serif;
+  font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   line-height: 1.333333; }
 
 /* Slab Knockout
@@ -4236,66 +4239,6 @@ body {
 
 /* Sans Acumin
 -------------------------------------------------- */
-.sans-xl {
-  font-family: "acumin-pro", Arial, sans-serif;
-  font-size: 5vw; }
-  @media only screen and (min-width: 53.25em) {
-    .sans-xl {
-      font-size: 2.5vw;
-      line-height: 1.2; } }
-  @media only screen and (min-width: 1560px) {
-    .sans-xl {
-      font-size: 4rem; } }
-
-.sans-xl {
-  font-family: "acumin-pro", Arial, sans-serif;
-  font-weight: 300;
-  font-size: 5vw; }
-  @media only screen and (min-width: 53.25em) {
-    .sans-xl {
-      font-size: 1.9vw;
-      line-height: 1.2; } }
-  @media only screen and (min-width: 1560px) {
-    .sans-xl {
-      font-size: 3.5rem; } }
-
-.sans-lg {
-  font-family: "acumin-pro", Arial, sans-serif;
-  font-weight: 300;
-  line-height: 1.166667;
-  font-size: 2.37rem; }
-  @media only screen and (min-width: 53.25em) {
-    .sans-lg {
-      font-size: 2.667rem; } }
-  @media only screen and (min-width: 1560px) {
-    .sans-lg {
-      line-height: 1.166667;
-      font-size: 3rem; } }
-
-.sans-md {
-  font-family: "acumin-pro", Arial, sans-serif;
-  font-weight: 300;
-  line-height: 1.2;
-  font-size: 1.873rem; }
-  @media only screen and (min-width: 53.25em) {
-    .sans-md {
-      font-size: 2.107rem; } }
-  @media only screen and (min-width: 1560px) {
-    .sans-md {
-      font-size: 2.37rem; } }
-
-.sans-sm {
-  font-family: "acumin-pro", Arial, sans-serif;
-  font-weight: 300;
-  line-height: 1.2;
-  font-size: 1.665rem; }
-  @media only screen and (min-width: 53.25em) {
-    .sans-sm {
-      font-size: 1.873rem; } }
-  @media only screen and (min-width: 1560px) {
-    .sans-sm {
-      font-size: 2.107rem; } }
-
 .sans-caption {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
@@ -4348,62 +4291,8 @@ body {
 
 /* Serif
 -------------------------------------------------- */
-.serif-xl {
-  font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
-  font-weight: 700;
-  line-height: 1.1;
-  font-size: 4.865rem; }
-  @media only screen and (min-width: 53.25em) {
-    .serif-xl {
-      font-size: 5.474rem; } }
-  @media only screen and (min-width: 1560px) {
-    .serif-xl {
-      font-size: 6.158rem; } }
-
-.serif-lg {
-  font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
-  font-weight: 700;
-  line-height: 1;
-  font-size: 3.417rem; }
-  @media only screen and (min-width: 53.25em) {
-    .serif-lg {
-      font-size: 3.844rem; } }
-  @media only screen and (min-width: 1560px) {
-    .serif-lg {
-      font-size: 4.325rem; } }
-
-.serif-md {
-  font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
-  font-weight: 700;
-  line-height: 1;
-  font-size: 2.133rem;
-  margin-bottom: 0.88889rem; }
-  @media only screen and (min-width: 53.25em) {
-    .serif-md {
-      line-height: 1.143;
-      font-size: 2.4rem; } }
-  @media only screen and (min-width: 1560px) {
-    .serif-md {
-      font-size: 2.7rem; } }
-  @media only screen and (min-width: 53.25em) {
-    .serif-md {
-      margin-bottom: 0.5625vw; } }
-  @media only screen and (min-width: 1560px) {
-    .serif-md {
-      margin-bottom: 1rem; } }
-
-.serif-sm {
-  font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
-  font-weight: 400;
-  line-height: 1.333333;
-  font-size: 1.896rem; }
-  @media only screen and (min-width: 53.25em) {
-    .serif-sm {
-      font-size: 2.133rem; } }
-  @media only screen and (min-width: 1560px) {
-    .serif-sm {
-      font-size: 2.4rem; } }
-
+/* Specials
+-------------------------------------------------- */
 /* CSS type helper classes
 -------------------------------------------------- */
 .content h3 {
@@ -4514,36 +4403,6 @@ body {
   @media only screen and (min-width: 1560px) {
     .content .title {
       margin-bottom: 0.3rem; } }
-
-/* Sans reference
--------------------------------------------------- */
-/* Styleguide explanation
--------------------------------------------------- */
-.archives-page .title {
-  font-family: "acumin-pro", Arial, sans-serif;
-  font-weight: 300;
-  line-height: 1.166667;
-  font-size: 2.37rem; }
-  @media only screen and (min-width: 53.25em) {
-    .archives-page .title {
-      font-size: 2.667rem; } }
-  @media only screen and (min-width: 1560px) {
-    .archives-page .title {
-      line-height: 1.166667;
-      font-size: 3rem; } }
-
-.sans-lg {
-  font-family: "acumin-pro", Arial, sans-serif;
-  font-weight: 300;
-  line-height: 1.166667;
-  font-size: 2.37rem; }
-  @media only screen and (min-width: 53.25em) {
-    .sans-lg {
-      font-size: 2.667rem; } }
-  @media only screen and (min-width: 1560px) {
-    .sans-lg {
-      line-height: 1.166667;
-      font-size: 3rem; } }
 
 /* Icons
 -------------------------------------------------- */
@@ -4744,8 +4603,8 @@ item: 						| mobile 	| tablet	| desktop
 %category 					| 4.1vw		| 1.2vw		| 1.8rem
 %section-header				|			| 2vw		| 3rem
 -----------------------------------------------------
-%serif-md 				| 6vw		| 1.9vw		| 2.8rem
-%serif-md--large 		| 5vw		| 2.7vw		|
+%serif-sm 				| 6vw		| 1.9vw		| 2.8rem
+%serif-sm--large 		| 5vw		| 2.7vw		|
 -----------------------------------------------------
 .audio__details padding		| 2vw		| 2rem		|
 .item__details--audio padd: | 3vw		| 2vw		| 3rem
@@ -4775,9 +4634,6 @@ conversion: 				| mobile 	| tablet	| desktop
 a {
   color: #333333; }
 
-.main-copy a {
-  color: coral; }
-
 a:hover {
   text-decoration: none; }
 
@@ -4785,13 +4641,13 @@ a:hover {
   background-color: transparent; }
 
 /* inspired by links on medium.com */
-.copy a {
+.content a {
   color: #333333;
   border-bottom: 3px solid #fceec3;
   box-shadow: inset 0 -4px 0 #fceec3;
   -webkit-transition: background 0.15s cubic-bezier(0.33, 0.66, 0.66, 1);
   transition: background 0.15s cubic-bezier(0.33, 0.66, 0.66, 1); }
-  .copy a:hover {
+  .content a:hover {
     background: #fceec3;
     color: #333333; }
 
@@ -5709,27 +5565,15 @@ ul {
 -------------------------------------------------- */
 body {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
-  font-size: 5vw;
-  color: black; }
+  font-weight: 400;
+  line-height: 1.333333;
+  font-size: 1.896rem; }
   @media only screen and (min-width: 53.25em) {
     body {
-      font-size: 1.5vw; } }
+      font-size: 2.133rem; } }
   @media only screen and (min-width: 1560px) {
     body {
       font-size: 2.4rem; } }
-
-h3 {
-  font-weight: 600;
-  font-size: 6vw;
-  margin-bottom: 1rem; }
-  @media only screen and (min-width: 53.25em) {
-    h3 {
-      font-size: 1.8vw;
-      margin-bottom: 0.9vw; } }
-  @media only screen and (min-width: 1560px) {
-    h3 {
-      font-size: 2.8rem;
-      margin-bottom: 1.5rem; } }
 
 section {
   position: relative;
@@ -7622,6 +7466,13 @@ a.details {
   .cards-break-3:nth-of-type(4n + 1) {
     clear: left; } }
 
+/* #links
+-------------------------------------------------- */
+a {
+  color: #333333; }
+  a:hover {
+    color: white; }
+
 /* #intro
 -------------------------------------------------- */
 .intro-title {
@@ -7666,6 +7517,15 @@ a.details {
   @media only screen and (min-width: 1560px) {
     .intro-section {
       margin-bottom: 4rem; } }
+
+h3.sidebar-section-title {
+  margin-top: 0.78125vw; }
+  @media only screen and (min-width: 53.25em) {
+    h3.sidebar-section-title {
+      margin-top: 0.28125vw; } }
+  @media only screen and (min-width: 1560px) {
+    h3.sidebar-section-title {
+      margin-top: 0.5rem; } }
 
 /* #grid
 -------------------------------------------------- */
@@ -7905,7 +7765,8 @@ pre {
   border: none;
   background-color: transparent;
   white-space: initial;
-  margin-bottom: 3.55556rem;
+  margin-bottom: 4rem;
+  margin-top: 1.5625vw;
   -moz-tab-size: 4;
   /* Code for Firefox */
   -o-tab-size: 4;
@@ -7913,10 +7774,18 @@ pre {
   tab-size: 4; }
   @media only screen and (min-width: 53.25em) {
     pre {
-      margin-bottom: 2.25vw; } }
+      margin-bottom: 2.55vw; } }
   @media only screen and (min-width: 1560px) {
     pre {
-      margin-bottom: 4rem; } }
+      margin-bottom: 8rem; } }
+  @media only screen and (min-width: 53.25em) {
+    pre {
+      margin-top: 0.5625vw; } }
+  @media only screen and (min-width: 1560px) {
+    pre {
+      margin-top: 1rem; } }
+  pre.type {
+    display: none; }
 
 code.hljs {
   padding: 4.6875vw; }
@@ -7926,15 +7795,6 @@ code.hljs {
   @media only screen and (min-width: 1560px) {
     code.hljs {
       padding: 3rem; } }
-
-.typography-section pre {
-  margin-bottom: 7.11111rem; }
-  @media only screen and (min-width: 53.25em) {
-    .typography-section pre {
-      margin-bottom: 4.5vw; } }
-  @media only screen and (min-width: 1560px) {
-    .typography-section pre {
-      margin-bottom: 8rem; } }
 
 .section-subtitle {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
@@ -7986,6 +7846,61 @@ code.hljs {
   @media only screen and (min-width: 1560px) {
     .section__description {
       margin-bottom: 4rem; } }
+
+.show-code {
+  cursor: pointer;
+  background-color: #e6e6e6;
+  font-family: "acumin-pro", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 1.48rem;
+  text-transform: initial;
+  font-weight: 600;
+  height: 5.3125vw;
+  padding-top: 0.46875vw;
+  padding-right: 1.5625vw;
+  padding-bottom: 1.5625vw;
+  padding-left: 1.5625vw; }
+  @media only screen and (min-width: 53.25em) {
+    .show-code {
+      font-size: 1.665rem; } }
+  @media only screen and (min-width: 1560px) {
+    .show-code {
+      font-size: 1.873rem; } }
+  @media only screen and (min-width: 53.25em) {
+    .show-code {
+      height: 1.9125vw; } }
+  @media only screen and (min-width: 1560px) {
+    .show-code {
+      height: 3.4rem; } }
+  @media only screen and (min-width: 53.25em) {
+    .show-code {
+      padding-top: 0.16875vw; } }
+  @media only screen and (min-width: 1560px) {
+    .show-code {
+      padding-top: 0.3rem; } }
+  @media only screen and (min-width: 53.25em) {
+    .show-code {
+      padding-right: 0.5625vw; } }
+  @media only screen and (min-width: 1560px) {
+    .show-code {
+      padding-right: 1rem; } }
+  @media only screen and (min-width: 53.25em) {
+    .show-code {
+      padding-bottom: 0.5625vw; } }
+  @media only screen and (min-width: 1560px) {
+    .show-code {
+      padding-bottom: 1rem; } }
+  @media only screen and (min-width: 53.25em) {
+    .show-code {
+      padding-left: 0.5625vw; } }
+  @media only screen and (min-width: 1560px) {
+    .show-code {
+      padding-left: 1rem; } }
+  .show-code:hover {
+    color: #cccccc; }
+
+.icon-down-arrow {
+  float: right; }
 
 /* #color
 -------------------------------------------------- */
@@ -8060,6 +7975,189 @@ code.hljs {
 
 .gray-color-list .color:nth-of-type(11) .color__block {
   background-color: #ebebeb; }
+
+/* #typography
+-------------------------------------------------- */
+.typography-section pre {
+  margin-bottom: 1.77778rem; }
+  @media only screen and (min-width: 53.25em) {
+    .typography-section pre {
+      margin-bottom: 1.125vw; } }
+  @media only screen and (min-width: 1560px) {
+    .typography-section pre {
+      margin-bottom: 2rem; } }
+
+.type-title-wrapper {
+  border-top: 1px solid gray;
+  margin-top: 6.25vw; }
+  @media only screen and (min-width: 53.25em) {
+    .type-title-wrapper {
+      margin-top: 2.25vw; } }
+  @media only screen and (min-width: 1560px) {
+    .type-title-wrapper {
+      margin-top: 4rem; } }
+
+.type-title {
+  margin-bottom: 1.77778rem; }
+  @media only screen and (min-width: 53.25em) {
+    .type-title {
+      margin-bottom: 1.125vw; } }
+  @media only screen and (min-width: 1560px) {
+    .type-title {
+      margin-bottom: 2rem; } }
+
+.type-title, .show-code {
+  margin-top: 3.125vw; }
+  @media only screen and (min-width: 53.25em) {
+    .type-title, .show-code {
+      margin-top: 1.125vw; } }
+  @media only screen and (min-width: 1560px) {
+    .type-title, .show-code {
+      margin-top: 2rem; } }
+
+.type-details {
+  font-family: "acumin-pro", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 1.48rem; }
+  @media only screen and (min-width: 53.25em) {
+    .type-details {
+      font-size: 1.665rem; } }
+  @media only screen and (min-width: 1560px) {
+    .type-details {
+      font-size: 1.873rem; } }
+
+.large-serif-title-type {
+  font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: 700;
+  line-height: 1.1;
+  font-size: 4.865rem; }
+  @media only screen and (min-width: 53.25em) {
+    .large-serif-title-type {
+      font-size: 5.474rem; } }
+  @media only screen and (min-width: 1560px) {
+    .large-serif-title-type {
+      font-size: 6.158rem; } }
+
+.medium-serif-title-type {
+  font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: 700;
+  line-height: 1;
+  font-size: 3.417rem; }
+  @media only screen and (min-width: 53.25em) {
+    .medium-serif-title-type {
+      font-size: 3.844rem; } }
+  @media only screen and (min-width: 1560px) {
+    .medium-serif-title-type {
+      font-size: 4.325rem; } }
+
+.small-serif-title-type {
+  font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: 700;
+  line-height: 1;
+  font-size: 2.133rem;
+  margin-bottom: 0.88889rem; }
+  @media only screen and (min-width: 53.25em) {
+    .small-serif-title-type {
+      line-height: 1.143;
+      font-size: 2.4rem; } }
+  @media only screen and (min-width: 1560px) {
+    .small-serif-title-type {
+      font-size: 2.7rem; } }
+  @media only screen and (min-width: 53.25em) {
+    .small-serif-title-type {
+      margin-bottom: 0.5625vw; } }
+  @media only screen and (min-width: 1560px) {
+    .small-serif-title-type {
+      margin-bottom: 1rem; } }
+
+.extra-large-sans-title-type {
+  font-family: "acumin-pro", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 2.667rem;
+  font-weight: 600; }
+  @media only screen and (min-width: 53.25em) {
+    .extra-large-sans-title-type {
+      font-size: 3rem;
+      line-height: 1.2; } }
+  @media only screen and (min-width: 1560px) {
+    .extra-large-sans-title-type {
+      font-size: 3.375rem; } }
+
+.extra-large-sans-title-type-light {
+  font-family: "acumin-pro", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 2.667rem; }
+  @media only screen and (min-width: 53.25em) {
+    .extra-large-sans-title-type-light {
+      font-size: 3rem;
+      line-height: 1.2; } }
+  @media only screen and (min-width: 1560px) {
+    .extra-large-sans-title-type-light {
+      font-size: 3.375rem; } }
+
+.large-sans-title-type {
+  font-family: "acumin-pro", Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.166667;
+  font-size: 2.37rem;
+  font-weight: 600; }
+  @media only screen and (min-width: 53.25em) {
+    .large-sans-title-type {
+      font-size: 2.667rem; } }
+  @media only screen and (min-width: 1560px) {
+    .large-sans-title-type {
+      line-height: 1.166667;
+      font-size: 3rem; } }
+
+.large-sans-title-type-light {
+  font-family: "acumin-pro", Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.166667;
+  font-size: 2.37rem; }
+  @media only screen and (min-width: 53.25em) {
+    .large-sans-title-type-light {
+      font-size: 2.667rem; } }
+  @media only screen and (min-width: 1560px) {
+    .large-sans-title-type-light {
+      line-height: 1.166667;
+      font-size: 3rem; } }
+
+.medium-sans-title-type {
+  font-family: "acumin-pro", Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+  font-size: 1.873rem;
+  font-weight: 600; }
+  @media only screen and (min-width: 53.25em) {
+    .medium-sans-title-type {
+      font-size: 2.107rem; } }
+  @media only screen and (min-width: 1560px) {
+    .medium-sans-title-type {
+      font-size: 2.37rem; } }
+
+.medium-sans-title-type-light {
+  font-family: "acumin-pro", Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+  font-size: 1.873rem; }
+  @media only screen and (min-width: 53.25em) {
+    .medium-sans-title-type-light {
+      font-size: 2.107rem; } }
+  @media only screen and (min-width: 1560px) {
+    .medium-sans-title-type-light {
+      font-size: 2.37rem; } }
+
+.small-sans-title-type, .small-sans-title-type-light {
+  font-family: "acumin-pro", Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+  font-size: 1.665rem; }
+  @media only screen and (min-width: 53.25em) {
+    .small-sans-title-type, .small-sans-title-type-light {
+      font-size: 1.873rem; } }
+  @media only screen and (min-width: 1560px) {
+    .small-sans-title-type, .small-sans-title-type-light {
+      font-size: 2.107rem; } }
 
 /* #video
 -------------------------------------------------- */
