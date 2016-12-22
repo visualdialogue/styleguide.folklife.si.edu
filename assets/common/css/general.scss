@@ -73,12 +73,12 @@ ul {margin: 0;}
 	width: 50%;
 	float: left;
 	&:nth-of-type(2n + 1) {
-		padding-right:$gutter--small;
-		@include respond-to(break2) {padding-right:$gutter--medium;}
+		padding-right:$small-gutter;
+		@include respond-to(break2) {padding-right:$medium-gutter;}
 	}
 	&:nth-of-type(2n) {
-		padding-left:$gutter--small;
-		@include respond-to(break2) {padding-left:$gutter--medium;}
+		padding-left:$small-gutter;
+		@include respond-to(break2) {padding-left:$medium-gutter;}
 	}
 	// break every 2 cards so cards don't get hung
 	&:nth-of-type(2n + 1) {
@@ -91,18 +91,18 @@ ul {margin: 0;}
 	width: 33.33333%;
 	float: left;
 	&:nth-of-type(3n + 1) {
-		padding-right:$gutter--small;
-		@include respond-to(break2) {padding-right:$gutter--medium;}
+		padding-right:$small-gutter;
+		@include respond-to(break2) {padding-right:$medium-gutter;}
 	}
 	&:nth-of-type(3n + 2) {
-		padding-left:$gutter--small;
-		padding-right:$gutter--small;
-		@include respond-to(break2) {padding-left:$gutter--medium;}
-		@include respond-to(break2) {padding-right:$gutter--medium;}
+		padding-left:$small-gutter;
+		padding-right:$small-gutter;
+		@include respond-to(break2) {padding-left:$medium-gutter;}
+		@include respond-to(break2) {padding-right:$medium-gutter;}
 	}
 	&:nth-of-type(3n + 3) {
-		padding-left:$gutter--small;
-		@include respond-to(break2) {padding-left:$gutter--medium;}
+		padding-left:$small-gutter;
+		@include respond-to(break2) {padding-left:$medium-gutter;}
 	}
 	// break every 3 cards so cards don't get hung
 	&:nth-of-type(3n + 1) {
@@ -130,11 +130,11 @@ ul {margin: 0;}
 	
 	
 	.row {
-		margin-left: -$gutter--small;
-		margin-right: -$gutter--small;
+		margin-left: -$small-gutter;
+		margin-right: -$small-gutter;
 		@include respond-to(break2) {
-			margin-left: -$gutter--medium;
-			margin-right: -$gutter--medium;
+			margin-left: -$medium-gutter;
+			margin-right: -$medium-gutter;
 		}
 		@include respond-to(fullwidth) {
 			margin-left: -20px;
@@ -146,11 +146,11 @@ ul {margin: 0;}
 	// 3 selectors to win specificity war
 	// [class*="col-"], .cards .card, .cards .image, .cards .details {
 	[class*="col-"] {
-		padding-left: $gutter--small;
-		padding-right: $gutter--small;
+		padding-left: $small-gutter;
+		padding-right: $small-gutter;
 		@include respond-to(break2) {
-			padding-left: $gutter--medium;
-			padding-right: $gutter--medium;
+			padding-left: $medium-gutter;
+			padding-right: $medium-gutter;
 		}
 		@include respond-to(fullwidth) {
 			padding-left: 20px;
@@ -266,7 +266,7 @@ ul {margin: 0;}
 	}
 	section li {
 		@include respond-to(break2max) {
-			margin-bottom: 1.5rem;
+			// margin-bottom: 1.5rem;
 		}
 	}
 	.first-section {
@@ -393,6 +393,10 @@ ul {margin: 0;}
 	}
 	a .page-title {
 		color: white; // override a color
+		&:hover {
+			// custom hover, getting variable from top of main scss file, e.g. festival.scss
+			color: $hover;
+		}
 	}
 
 	.copy-columns {
@@ -573,7 +577,8 @@ ul {margin: 0;}
 		@include padding-right(2);
 		@include padding-left(2);
 		@include email-newsletter;
-		height: 18vw;
+		// height: 18vw;
+		height: 5rem;
 		@include respond-to(break2) {
 			// height: 3.95vw;
 			height: 4.5vw;

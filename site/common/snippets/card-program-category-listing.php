@@ -7,7 +7,7 @@
 <li class="card horizontal-card col-xs-12">
   <div class="row">
     <div class="image col-sm-7">
-      <figure><img src="<?= $src->url() ?>" class="ms-header-image"/>
+      <figure><img src="<?= $src->url() ?>"/>
         <?php if($caption = $page->img_caption()->kt()): ?>
         <figcaption>
           <?php echo $caption; ?></figcaption>

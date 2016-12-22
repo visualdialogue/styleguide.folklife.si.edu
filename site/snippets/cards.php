@@ -18,7 +18,7 @@
       <?php snippet('show-sass'); ?>
     </div>
     <div class="row">
-      <li class="card audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border">
+      <li class="card audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border-card">
         <div class="image"><a href="#">
             <?php echo $section->image('audio.png'); ?></a></div>
         <div class="details">
@@ -42,7 +42,7 @@
         </div>
       </li>
       <div class="col-md-9">
-        <pre class="html"><code>&lt;li class="card audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border"&gt;
+        <pre class="html"><code>&lt;li class="card audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border-card"&gt;
 	&lt;div class="image"&gt;	
 		&lt;a href="#"&gt;
 			&lt;img src="/320x320.jpg"&gt;
@@ -179,7 +179,7 @@
       <?php snippet('show-sass'); ?>
     </div>
     <div class="row">
-      <div class="card horizontal-card col-xs-6 border-top">
+      <div class="card horizontal-card col-xs-6 top-border-card">
         <div class="row">
           <div class="image col-sm-6"><a href="#">
               <?php echo $section->image('horizontal.png'); ?></a></div>
@@ -201,7 +201,7 @@
 }</code></pre>
       </div>
       <div class="col-sm-6">
-        <pre class="html"><code>&lt;li class="card horizontal-card col-xs-6 border-top"&gt;
+        <pre class="html"><code>&lt;li class="card horizontal-card col-xs-6 top-border"&gt;
 	&lt;div class="row"&gt;
 		&lt;div class="image col-sm-6"&gt;
 			&lt;a href="#"&gt;

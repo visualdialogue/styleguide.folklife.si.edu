@@ -241,7 +241,8 @@
 	 		$navLists.removeClass('nav-show-mobile'); // close all other open nav lists - mobile only
 	 	else
 			$folkwaysNav.show(); // reset folkways nav, but not on mobile
-	 		
+	 	
+		$navbarOutside.css('position', 'static'); // remove outside clicker so can hover rest of page
 		site.navbar.removeClass('navbar--open');
 		$allIcons.removeClass('lighter-nav-icons');
 		$megaNav.add($searchBar).add($browsenav).add($socialMediaIcons).hide(); // close auxiliaries
@@ -373,5 +374,21 @@
 			if (callNow) func.apply(context, args);
 		};
 	};
+
+/**********
+* Match Heights
+* from https://github.com/liabru/jquery-match-height
+**********/
+	$('.audio-card .details-inner').matchHeight();
+			
+	// Folklife Dive Deep
+	$('.eh-fl-dive-deep').matchHeight();
+
+	// Explore Collections & Teach
+	if(!site.isMobile)
+		$('.eh-fl-explore-teach .card').matchHeight({byRow:false});
+	else
+		$('.eh-fl-explore-teach .card').matchHeight({byRow:true});
+
 
 });

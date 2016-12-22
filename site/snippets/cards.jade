@@ -14,7 +14,7 @@ section.container.cards-section
 			-snippet('show-html')
 			-snippet('show-sass')
 		.row
-			li.card.audio-card.col-xs-6.col-sm-3.card-xs-break-2.full-border
+			li.card.audio-card.col-xs-6.col-sm-3.card-xs-break-2.full-border-card
 					.image
 						a(href="#")
 							!= $section->image('audio.png')
@@ -36,7 +36,7 @@ section.container.cards-section
 									.volume.icon-volume-up
 			.col-md-9
 				pre.html: code.
-					&lt;li class="card audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border"&gt;
+					&lt;li class="card audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border-card"&gt;
 						&lt;div class="image"&gt;	
 							&lt;a href="#"&gt;
 								&lt;img src="/320x320.jpg"&gt;
@@ -158,7 +158,7 @@ section.container.cards-section
 			-snippet('show-html')
 			-snippet('show-sass')
 		.row
-			.card.horizontal-card.col-xs-6.border-top
+			.card.horizontal-card.col-xs-6.top-border-card
 				.row
 					.image.col-sm-6
 						a(href="#")
@@ -180,7 +180,7 @@ section.container.cards-section
 					}
 			.col-sm-6
 				pre.html: code.
-					&lt;li class="card horizontal-card col-xs-6 border-top"&gt;
+					&lt;li class="card horizontal-card col-xs-6 top-border"&gt;
 						&lt;div class="row"&gt;
 							&lt;div class="image col-sm-6"&gt;
 								&lt;a href="#"&gt;

@@ -4,7 +4,7 @@
 <?php elseif($src = $card->image()): ?>
 <?php $image = $src; ?>
 <?php endif; ?>
-<li class="card <?= $card_classes ?>"><a href="<?= $card->url() ?>" class="high title"><span class="light"><span class="er">
+<li class="card inverse-card <?= $card_classes ?>"><a href="<?= $card->url() ?>" class="high title"><span class="light"><span class="er">
         <?php echo htmlspecialchars($card->title(), ENT_QUOTES, 'UTF-8'); ?></span></span></a>
   <div class="image"><a href="<?= $card->url() ?>"><img src="<?= $image->url() ?>"/></a></div>
   <div class="details">

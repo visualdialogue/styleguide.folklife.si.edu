@@ -114,6 +114,37 @@
 	// width:100%;
  //  }
 
-
  @mixin sidebarBorderTop { border-top: 1px solid $black50; }
  @mixin sidebarBorderBottom { border-bottom: 1px solid $black50; }
+
+ /* Clear left for correct alignment of cards in rows
+ -------------------------------------------------- */
+
+	 @mixin clear-2 {
+	 		&:nth-of-type(2n + 1) {
+	 			clear:left;
+	 		}
+	 }
+	 @mixin clear-3 {
+	 	// reset
+	 	&:nth-of-type(2n + 1) {
+	 		clear:none;
+	 	}
+	 	// rule
+	 	&:nth-of-type(3n + 1) {
+ 			clear:left;
+ 		}
+	 }
+	 @mixin clear-4 {
+	 	// reset
+	 	&:nth-of-type(2n + 1) {
+	 		clear:none;
+	 	}
+	 	&:nth-of-type(3n + 1) {
+ 			clear:none;
+ 		}
+	 	// rule
+	 	&:nth-of-type(4n + 1) {
+ 			clear:left;
+ 		}
+	 }

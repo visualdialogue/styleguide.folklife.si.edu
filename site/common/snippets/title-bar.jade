@@ -4,7 +4,7 @@
 		-if (isset($title)):
 			//- if link passed
 			-if (isset($link)):
-				a.high(href="<?= $link ?>"): h1.page-title: span.light: span.er= $title
+				a(href="<?= $link ?>"): h1.page-title= $title
 			//- no link passed
 			-else:
 				h1.page-title= $title

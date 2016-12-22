@@ -1,8 +1,10 @@
 //- use thumbnail if it’s set in panel
 -if ('' != $card->thumbnail_img()):
 	-$image = $card->image($card->thumbnail_img())
-- elseif($src = $card->image()):
+-elseif($src = $card->image()):
 	-$image = $src
+-else:
+	-$image = null
 -endif
 
 li.card(class="<? if (isset($card_classes)) echo $card_classes . ' ' ?><? if ($card->type() == 'audio') echo ' audio-card' ?><? if ($card->type() == 'video') echo ' video-card' ?>")
@@ -15,7 +17,7 @@ li.card(class="<? if (isset($card_classes)) echo $card_classes . ' ' ?><? if ($c
 				.icon-play-button.video-icon-play-button.icon-stack
 					.icon-circle
 					.icon-play
-	-else:
+	-elseif($image):
 		.image
 			a(href="<?= $card->url() ?>")
 				img(src="<?= $image->url() ?>")

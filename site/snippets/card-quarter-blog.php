@@ -4,9 +4,9 @@
 <?php elseif($src = $card->image()): ?>
 <?php $image = $src; ?>
 <?php endif; ?>
-<li class="card col-sm-3 border-top blog-card <? if ($card->type() == 'video' || ((isset($type)) && ($type == 'video'))) echo 'video-card'?>">
+<li class="card col-sm-3 top-border-card blog-card <? if ($card->type() == 'video' || ((isset($type)) && ($type == 'video'))) echo 'video-card'?>">
   <div class="card-inner">
-    <div class="details">
+    <div class="details eh-fs-quarter-blog">
       <div class="details-inner">
         <div class="date">
           <?php echo $card->date('M d, Y'); ?></div><a href="<?= $card->url() ?>" class="high title"><span class="light"><span class="er">

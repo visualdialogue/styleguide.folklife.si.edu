@@ -231,10 +231,13 @@ body {
 		line-height: 1.2;
 	  	font-size: 1.665rem;
 		@include respond-to(break2) {
-			font-size: 1.873rem;
+			// font-size: 1.873rem;
+			font-size: 1.665rem;
 		}
 		@include respond-to(fullwidth) {
-	  		font-size: 2.107rem;
+	  		// font-size: 2rem;
+	  		// font-size: 2.107rem;
+	  		font-size: 1.873rem;
 		}
 	}
 
@@ -348,6 +351,7 @@ body {
 		font-family: $serif;
 		font-weight: 700;
 		line-height: 1; // smaller for folkways banner titles
+		line-height: 0.95; // smaller for folklife dive deep
 		// font-size: 6vw;
 		font-size: 3.417rem;
 		@include respond-to(break2) {
@@ -398,19 +402,19 @@ body {
 /* Specials
 -------------------------------------------------- */
 @mixin buybutton {
+	@include sans-tag;
 	text-transform: uppercase;
 	font-family: $sansWide;
 	font-weight: 800;
 	margin-bottom: 0.5rem;
 	margin-bottom: 0;
-	font-size: 2.7vw;
+	font-size: 1.48rem;
 	@include respond-to(break2) {
-		// font-size: 0.95vw;
-		font-size: 1.1vw;
+		font-size: 1.665rem;
 		margin-bottom: 0.4vw;
 	}
 	@include respond-to(fullwidth) {
-		font-size: 1.8rem; // acumin pro
+		font-size: 1.873rem; // acumin pro
 		margin-bottom: 0.5rem;
 		line-height: 1.4;
 	}
@@ -466,7 +470,7 @@ body {
 
 /* CSS type helper classes
 -------------------------------------------------- */
-	.content {
+	.content, .text-card {
 		h3 {
 			@include serif-md;
 		}

@@ -9,6 +9,7 @@
   // $break-3: 80em; // 1350 px feature descriptions
   // $break-4: 89.375em; // 1430 px for showrooms page only
   $fullWidth: $pageWidth; // use em for correct media query calculation
+  $minHeight: 600px;
 
   @mixin respond-to($media) {
     @if $media == break1 {
@@ -34,6 +35,9 @@
     }
     @else if $media == breaksearchmax {
       @media only screen and (max-width: $breaksearch) { @content; }
+    }
+    @else if $media == minHeight {
+      @media only screen and (min-height: $minHeight) { @content; }
     }
     // @else if $media == break3 {
     //   @media only screen and (min-width: $break-3) { @content; }

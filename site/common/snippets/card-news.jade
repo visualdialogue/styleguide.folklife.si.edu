@@ -1,0 +1,17 @@
+//- use thumbnail if it’s set in panel
+-if ('' != $card->thumbnail_img()):
+	-$image = $card->image($card->thumbnail_img())
+-elseif($src = $card->image()):
+	-$image = $src
+-else:
+	-$image = null
+-endif
+
+li.card.news-card(class="<? if (isset($card_classes)) echo $card_classes . ' ' ?>")
+	.image
+		a(href="<?= $card->url() ?>")
+			img(src="<?= $image->url() ?>")
+	.details
+		.details-inner
+			.date!= $card->date('n.j.Y')
+			a.high(href="<?= $card->url() ?>").title: span.light: span.er= $card->title()

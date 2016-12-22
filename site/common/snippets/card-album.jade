@@ -1,0 +1,19 @@
+//- use thumbnail if it’s set in panel
+-if ('' != $card->thumbnail_img()):
+	-$image = $card->image($card->thumbnail_img())
+-elseif($src = $card->image()):
+	-$image = $src
+-else:
+	-$image = null
+-endif
+
+li.card.album-card
+
+	.image
+		a(href="<?= $card->url() ?>")
+			img(src="<?= $image->url() ?>")
+	.details
+		.details-inner
+			a.high(href="<?= $card->url() ?>").title: span.light: span.er= $card->title()
+			
+			.artist!= $card->artist()->kt()

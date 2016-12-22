@@ -260,11 +260,11 @@
 			}
 		}
 	}
-	.related-content {
+	.sidebar-card {
 		
-		// li {
-		// 	@include margin-bottom(4);
-		// }
+		.details-inner {
+			@include padding-top(1);
+		}
 
 	}
 	.ms-section {

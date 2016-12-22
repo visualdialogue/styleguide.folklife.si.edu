@@ -377,7 +377,7 @@
 		input {
 			width: 100%;
 			background-color: transparent; // override user agent
-			border-bottom: 1px solid black;
+			border-bottom: 2px solid black; // 2px search per aiden on 12.22
 			@include respond-to(break2) {
 				padding: 0 15px;
 			}

@@ -30,11 +30,15 @@ This applies correct heading and paragraphy styles. --&gt;
 		&lt;/a&gt;
 	&lt;/li&gt;
 &lt;/ul&gt;
-
 </code></pre>
+        <h4>.content gives links their underline</h4>
+        <h4>.top-border-card gives border along top</h4>
+        <h4>.full-border-card</h4>
+        <h4>.full-feature-card</h4>
+        <h4>.horizontal-card for background highlighting differences</h4>
       </div>
     </main>
-    <aside class="sidebar sidebar--info col-sm-4 col-sm-offset-1">
+    <aside class="sidebar col-sm-4 col-sm-offset-1">
       <h3 class="sidebar-section-title">References</h3>
       <ul>
         <li class="sidebar-item">

@@ -5,9 +5,9 @@
 	-$image = $src
 -endif
 
-li.card.col-sm-3.border-top.blog-card(class="<? if ($card->type() == 'video' || ((isset($type)) && ($type == 'video'))) echo 'video-card'?>")
+li.card.col-sm-3.top-border-card.blog-card(class="<? if ($card->type() == 'video' || ((isset($type)) && ($type == 'video'))) echo 'video-card'?>")
 	.card-inner
-		.details
+		.details.eh-fs-quarter-blog
 			.details-inner
 				.date!= $card->date('M d, Y')
 				a.high(href="<?= $card->url() ?>").title: span.light: span.er= $card->title()

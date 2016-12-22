@@ -1,6 +1,11 @@
 /* #audio card
 -------------------------------------------------- */
 	.audio-card {
+		.card {
+			@include respond-to(break2) {
+				margin-bottom: 1.5rem;
+			}
+		}
 		.image {
 			padding-bottom:0; // prevent making gap in outline
 		}
@@ -15,10 +20,11 @@
 		}
 		.details-inner {
 			position: relative; // hold player
-			min-height:46vw;
-			min-height: 25rem;
-			@include respond-to(break2) {min-height:20vw;}
-			@include respond-to(fullwidth) {min-height:25rem;}
+			// bottom padding for abs positioned audio player
+			padding-bottom:7rem;
+			padding-bottom:15vw;
+			@include respond-to(break2) {padding-bottom:7vw;}
+			@include respond-to(fullwidth) {padding-bottom:10rem;}
 		}
 	}
 
@@ -40,7 +46,8 @@
 	.audio-player-details {
 		line-height: 1;
 		width:67%;
-		@include respond-to(break2) {width:73%;}
+		// @include respond-to(break2) {width:73%;}
+		@include respond-to(break2) {width:70%;}
 		@include respond-to(fullwidth) {
 			width:75%;
 		}

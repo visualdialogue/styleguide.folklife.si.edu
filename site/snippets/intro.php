@@ -8,7 +8,7 @@
         <?php echo $section->copy(); ?>
       </div>
     </main>
-    <aside class="sidebar sidebar--info col-sm-4 col-sm-offset-1">
+    <aside class="sidebar col-sm-4 col-sm-offset-1">
       <h3 class="sidebar-section-title">References</h3>
       <ul>
         <li class="sidebar-item">

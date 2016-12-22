@@ -15,7 +15,7 @@
         <p>Font sizes were determined by the design and with the major second modular scale mainly for responsive sizes (1.125). See <a href="http://www.modularscale.com" target="_blank">www.modularscale.com</a>.</p>
       </div>
     </main>
-    <aside class="sidebar sidebar--info col-sm-4 col-sm-offset-1">
+    <aside class="sidebar col-sm-4 col-sm-offset-1">
       <h3 class="sidebar-section-title">References</h3>
       <ul>
         <li class="sidebar-item sidebar-highlight"><a href="https://sass-guidelin.es/#mixins" target="_blank">

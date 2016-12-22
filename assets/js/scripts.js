@@ -28,11 +28,7 @@ $(document).ready(function () {
 			$(this).closest('.codeblock').find('pre.sass').toggle();
 		});
 
-/**********
-* Match Heights
-* from https://github.com/liabru/jquery-match-height
-**********/
-	// $('.item').matchHeight(options);
+
 
 /* Syntax Highlighting
  * from highlightjs.org */

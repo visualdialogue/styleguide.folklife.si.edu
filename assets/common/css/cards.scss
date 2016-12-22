@@ -1,6 +1,9 @@
 .card {
 	// for consistency with rows of cards and next sections
 	@include margin-bottom(4);
+	margin-bottom:1.5rem;
+	@include respond-to(break2) {margin-bottom:3.2vw;}
+	@include respond-to(fullwidth) {margin-bottom:4rem;}
 	@include respond-to(break2max) {
 		.image, .video {
 			// margin-bottom: 1rem;
@@ -8,7 +11,6 @@
 	}
 	
 }
-
 
 .border {
 	border-top: 1px solid $black30;
@@ -37,6 +39,13 @@
 	// @include padding-top(3);
 	@include padding-top(2);
 	@include padding-right(1);
+	padding-top:1.5rem;
+	@include respond-to(break2) {
+		padding-top:1.5rem;
+	}
+	@include respond-to(fullwidth) {
+		padding-top:3rem;
+	}
 }
 a.details {
 	display: inline-block; // for anchor tags that are .details
@@ -65,7 +74,7 @@ a.details {
 .details-wrapper--horizontal {
 	// @include padding-right(13);
 	// padding-left:1rem;
-	@include respond-to(break2) {padding-left:$gutter--full;}
+	@include respond-to(break2) {padding-left:$full-gutter;}
 	@include respond-to(fullwidth) {padding-left:2rem;}
 	.tag {
 		@include margin-bottom(0.5);
@@ -104,6 +113,29 @@ a.details {
 
 		}
 		@include bottom(4);
+	}
+
+/* #text card, folklfe/learn or collectiom
+-------------------------------------------------- */
+	.text-card {
+		// cards that are more text-based need to be closer together, and have no image, FL-learn page
+		@include margin-bottom(0);
+		// turn off link highlighting for titles because under .content div
+		a.title {
+			border-bottom: none;
+			box-shadow: none;
+		}
+		.details-inner {
+			@include padding-top(0);
+		}
+	}
+
+/* #publication card
+-------------------------------------------------- */
+	.publication-card {
+		.title {
+			@include margin-top(-0.8);
+		}
 	}
 
 /* #vertical
@@ -179,7 +211,8 @@ a.details {
 		}
 	}
 
-	.video {
+	// hover effect on entire video card and on audio player play button
+	.video, .icon-play-button  {
 		&:hover .icon-circle:before {
 			color: $hover;
 		}
@@ -272,9 +305,9 @@ a.details {
 -------------------------------------------------- */
 
 	// horizontal backgrounds
-		.background-card, .horizontal-card {
+		.horizontal-background-card {
 			position: relative;
-			z-index: 1;
+			// z-index: 1;
 			&:after {
 				background-color: white;
 				content:"";
@@ -283,15 +316,15 @@ a.details {
 				top:0;
 				bottom:0;
 				z-index:-1;
-				left:$gutter--small;
-				right:$gutter--small;
+				left:$small-gutter;
+				right:$small-gutter;
 				@include respond-to(break2) {
-					// left:$gutter--medium;
-					// right:$gutter--medium;
+					// left:$medium-gutter;
+					// right:$medium-gutter;
 				}
 				@include respond-to(fullwidth) {
-					left:2rem;
-					right:2rem;
+					left:2rem; // folklife talkstory
+					right:2rem; // folklife talkstory
 				}
 			}
 		}
@@ -302,11 +335,12 @@ a.details {
 
 		// test cases??
 	// vertical backgrounds
-	.background-card:not(.horizontal-card) {
+	.vertical-background-card {
+		position: relative;
 		height: 100%; // fill gaps
 		&:after {
 			background-color: white;
-			background-color: red;
+			// background-color: red;
 			content:"";
 			display: block;
 			position: absolute;
@@ -315,29 +349,35 @@ a.details {
 			z-index:-1; // put behind image and details
 			left:0; // talkstory
 			right:0;
-			// left:$gutter--small;
-			// right:$gutter--small;
+			// dive deep
+			left:$medium-gutter;
+			right:$medium-gutter;
+			// left:$small-gutter;
+			// right:$small-gutter;
 			bottom: 3.75vw; // 3rem responsive at mobile
 			@include respond-to(break2) {
-				// left:$gutter--full;
-				// right:$gutter--full;
-				left: 0;
-				right: 0;
+				// folklife dive deep
+				left:$medium-gutter;
+				right:$medium-gutter;
+				// left: 0;
+				// right: 0;
 				bottom: 0; // back to horizontal
+				// bottom: 2rem;
 			}
 			@include respond-to(fullwidth) {
-				left:2rem;
-				right:2rem;
+				// folklife dive deep
+				left:2rem; 
+				right:2rem; 
 				// dive deep
-				left: 0;
-				right: 0;
+				// left: 0; 
+				// right: 0;
 			}
 		}
 	}
 
 
 
-	.full-feature, .details, .ms-section__copy {
+	.full-feature-card, .details, .ms-section__copy {
 		.more-link {
 			position: static;
 			float: right;
@@ -382,8 +422,8 @@ a.details {
 	}
 	.horizontal-card {
 		.details-inner {
-			padding-left:$gutter--small;
-			@include respond-to(break2) {padding-left:$gutter--full;}
+			padding-left:$small-gutter;
+			@include respond-to(break2) {padding-left:$full-gutter;}
 			@include respond-to(fullwidth) {padding-left:0;}
 		}
 	}
@@ -438,7 +478,6 @@ a.details {
 -------------------------------------------------- */
 
 	.cards--xs-6 .card {
-		@extend .col-xs-6;
 		// clear left on every odd card
 		&:nth-of-type(2n + 1) {
 			clear:left;
@@ -454,8 +493,8 @@ a.details {
 		@extend .col-sm-12;
 	}
 	.cards--sm-2 .card {
-		@extend .col-xs-6;
-		@extend .col-sm-2;
+		// @extend .col-xs-6;
+		// @extend .col-sm-2;
 		// break every 2 cards on mobile
 		&:nth-of-type(2n + 1) {
 			clear:left;
@@ -473,11 +512,11 @@ a.details {
 	}
 	.cards--sm-3 .card {
 		// @extend .col-xs-6;
-		@extend .col-sm-3;
+		// @extend .col-sm-3;
 		
 	}
 	.cards--sm-4 .card {
-		@extend .col-sm-4;
+		// @extend .col-sm-4;
 	}
 	.cards--sm-6 .card {
 		@extend .col-sm-6;
@@ -549,11 +588,19 @@ a.details {
 
 
 
+/* Feature cards
+-------------------------------------------------- */
+	.feature-card {
+		@include respond-to(break2) {
+			margin-bottom: 0;
+		}
+	}
 
 
 /* Full feature cards
 -------------------------------------------------- */
-	.full-feature {
+	.full-feature-card {
+		@include margin-bottom(0);
 		.tag {
 			display: none;
 		}
@@ -653,7 +700,7 @@ a.details {
 
 /* Albums & Vinyl
 -------------------------------------------------- */
-	.cards--albums, .cards--vinyl {
+	.album-card, .vinyl-card {
 		
 		.details-inner {
 			padding:0;
@@ -676,40 +723,36 @@ a.details {
 			@include sans-caption;
 			// @include margin-top(-0.2); // close the gap a bit
 		}
-		@include respond-to(break2) {
-			@include margin-bottom(2.4); //- 40px
-		}
+		// @include respond-to(break2) {
+			// @include margin-bottom(2.4); //- 40px
+		// }
 
 	}
-	.cards--albums {
-		.card {
-			@extend .col-xs-6;
-			@extend .col-sm-2;
-			&:nth-of-type(2n + 1) {
-				@include respond-to(break2max) {
-					clear:left;
-				}
+	.album-card {
+		@extend .col-xs-6;
+		@extend .col-sm-2;
+		&:nth-of-type(2n + 1) {
+			@include respond-to(break2max) {
+				clear:left;
 			}
-			&:nth-of-type(6n + 1) {
-				@include respond-to(break2) {
-					clear:left;
-				}
+		}
+		&:nth-of-type(6n + 1) {
+			@include respond-to(break2) {
+				clear:left;
 			}
 		}
 	}
-	.cards--vinyl {
-		.card {
-			@extend .col-xs-6;
-			@extend .col-sm-3;
-			&:nth-of-type(2n + 1) {
-				@include respond-to(break2max) {
-					clear:left;
-				}
+	.vinyl-card {
+		@extend .col-xs-6;
+		@extend .col-sm-3;
+		&:nth-of-type(2n + 1) {
+			@include respond-to(break2max) {
+				clear:left;
 			}
-			&:nth-of-type(4n + 1) {
-				@include respond-to(break2) {
-					clear:left;
-				}
+		}
+		&:nth-of-type(4n + 1) {
+			@include respond-to(break2) {
+				clear:left;
 			}
 		}
 	}
@@ -717,19 +760,17 @@ a.details {
 /* Merchandise
 -------------------------------------------------- */
 
-	.cards--merchandise {
-		.card {
-			@extend .col-xs-6;
-			@extend .col-sm-2;
-			&:nth-of-type(2n + 1) {
-				@include respond-to(break2max) {
-					clear:left;
-				}
+	.merchandise-card {
+		@extend .col-xs-6;
+		@extend .col-sm-2;
+		&:nth-of-type(2n + 1) {
+			@include respond-to(break2max) {
+				clear:left;
 			}
-			&:nth-of-type(6n + 1) {
-				@include respond-to(break2) {
-					clear:left;
-				}
+		}
+		&:nth-of-type(6n + 1) {
+			@include respond-to(break2) {
+				clear:left;
 			}
 		}
 		.title {
@@ -746,9 +787,19 @@ a.details {
 		}
 	}
 
+
+/* Inverse cards (titles above images)
+-------------------------------------------------- */
+	.inverse-card {
+		// need to add space below title after gets matchHeight. apply margin to image because matchHeight ignores it
+		.image {
+			@include margin-top(2);
+		}
+	}
+
 /* Cards with borders
 -------------------------------------------------- */
-	.border-top {
+	.top-border-card {
 		&:before {
 			content: '';
 			border-top: 1px solid $black30;
@@ -761,58 +812,20 @@ a.details {
 		}
 	}
 
-	.full-border {
+	.full-border-card {
 		.image, .video {
 			padding-bottom: 0;
 		}
 		.details-inner {
 			border: 2px solid $black15;
 			@include padding-left(2); // padding on left by default
+			// @include padding-le
 			@include padding-bottom(2); // padding on left by default
+			padding-left:1rem;
+			@include respond-to(break2) {padding-left:1rem;}
+			@include respond-to(fullwidth) {padding-left:2rem;}
 		}
 	}
-
-	// .cards--border-top {
-	// 	.card {
-	// 		&:before {
-	// 			content: '';
-	// 			border-top: 1px solid $black30;
-	// 			// border-top: 1px solid blue;
-	// 			width: 100%;
-	// 			display: block;
-	// 		}
-	// 	}
-	// 	.image {
-	// 		margin-top: -1px; // cover part of line that goes above image
-	// 	}
-		
-	// }
-
-	// .full-border {
-	// 	.details {
-	// 		&:before {
-	// 			content: '';
-	// 			border: 1px solid $black30;
-	// 			// border-top: 1px solid blue;
-	// 			// width: 100%;
-	// 			display: block;
-	// 			position: absolute;
-	// 			top: 0;
-	// 			bottom: 0;
-	// 			left:$gutter--small;
-	// 			right:$gutter--small;
-	// 			@include respond-to(break2) {
-	// 				left:$gutter--medium;
-	// 				right:$gutter--medium;
-	// 			}
-	// 			@include respond-to(fullwidth) {
-	// 				left:2rem;
-	// 				right:2rem;
-	// 			}
-	// 		}
-	// 	}
-	// }
-
 
 /* Blog article
 -------------------------------------------------- */
@@ -842,11 +855,7 @@ a.details {
 
 	.cards-sm-break-2 {
 		.card {			
-			@include respond-to(break2) {
-				&:nth-of-type(2n + 1) {
-					clear:left;
-				}
-			}
+			
 		}
 	}
 	.card-sm-break-6 {
@@ -860,16 +869,7 @@ a.details {
 		}
 	}
 	.cards-break-3 {
-		@include respond-to(break2) {
-			// clear mobile style
-			&:nth-of-type(2n + 1) {
-				clear: none;
-			}
-			// break every 5 cards so cards don't get hung
-			&:nth-of-type(4n + 1) {
-				clear:left;
-			}
-		}
+		
 	}
 
 

@@ -3,6 +3,8 @@
 <?php $image = $card->image($card->thumbnail_img()); ?>
 <?php elseif($src = $card->image()): ?>
 <?php $image = $src; ?>
+<?php else: ?>
+<?php $image = null; ?>
 <?php endif; ?>
 <li class="card <? if (isset($card_classes)) echo $card_classes . ' ' ?><? if ($card->type() == 'audio') echo ' audio-card' ?><? if ($card->type() == 'video') echo ' video-card' ?>">
   <?php if ($card->type() == 'video'): ?>
@@ -15,7 +17,7 @@
       </div>
     </div>
   </div>
-  <?php else: ?>
+  <?php elseif($image): ?>
   <div class="image"><a href="<?= $card->url() ?>"><img src="<?= $image->url() ?>"/></a></div>
   <?php endif; ?>
   <div class="details">

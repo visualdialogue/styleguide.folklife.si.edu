@@ -9,7 +9,7 @@ li.card.horizontal-card.col-xs-12
 	.row
 		.image.col-sm-7
 			figure
-				img.ms-header-image(src="<?= $src->url() ?>")
+				img(src="<?= $src->url() ?>")
 				//- show caption if it exists
 				-if($caption = $page->img_caption()->kt()):
 					figcaption!= $caption

@@ -902,7 +902,7 @@ th {
     display: none; }
   .btn > .caret,
   .dropup > .btn > .caret {
-    border-top-color: #000 !important; }
+    top-border-color: #000 !important; }
   .label {
     border: 1px solid #000; }
   .table {
@@ -1448,13 +1448,13 @@ pre code {
   margin-left: -20px;
   margin-right: -20px; }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .cards--sm-2 .card, .cards--albums .card, .cards--merchandise .card, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .cards--sm-3 .card, .cards--vinyl .card, .col-md-3, .col-lg-3, .col-xs-4, .cards--image-xs-4 .image, .col-sm-4, .cards--sm-4 .card, .cards--image-sm-4 .image, .cards--image-sm-8 .details, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .cards--image-sm-7 .details, .col-md-5, .col-lg-5, .col-xs-6, .cards--xs-6 .card, .cards--sm-2 .card, .cards--albums .card, .cards--vinyl .card, .cards--merchandise .card, .col-sm-6, .cards--sm-6 .card, .card-sm-image-6 .image, .card-sm-image-6 .details, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .cards--image-sm-7 .image, .col-md-7, .col-lg-7, .col-xs-8, .cards--image-xs-4 .details, .col-sm-8, .cards--image-sm-4 .details, .cards--image-sm-8 .image, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .cards--sm-12 .card, .col-md-12, .col-lg-12 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .album-card, .merchandise-card, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .vinyl-card, .col-md-3, .col-lg-3, .col-xs-4, .cards--image-xs-4 .image, .col-sm-4, .cards--image-sm-4 .image, .cards--image-sm-8 .details, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .cards--image-sm-7 .details, .col-md-5, .col-lg-5, .col-xs-6, .album-card, .vinyl-card, .merchandise-card, .col-sm-6, .cards--sm-6 .card, .card-sm-image-6 .image, .card-sm-image-6 .details, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .cards--image-sm-7 .image, .col-md-7, .col-lg-7, .col-xs-8, .cards--image-xs-4 .details, .col-sm-8, .cards--image-sm-4 .details, .cards--image-sm-8 .image, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .cards--sm-12 .card, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 20px;
   padding-right: 20px; }
 
-.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .cards--image-xs-4 .image, .col-xs-5, .col-xs-6, .cards--xs-6 .card, .cards--sm-2 .card, .cards--albums .card, .cards--vinyl .card, .cards--merchandise .card, .col-xs-7, .col-xs-8, .cards--image-xs-4 .details, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .cards--image-xs-4 .image, .col-xs-5, .col-xs-6, .album-card, .vinyl-card, .merchandise-card, .col-xs-7, .col-xs-8, .cards--image-xs-4 .details, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
   float: left; }
 
 .col-xs-12 {
@@ -1475,7 +1475,7 @@ pre code {
 .col-xs-7 {
   width: 58.33333333%; }
 
-.col-xs-6, .cards--xs-6 .card, .cards--sm-2 .card, .cards--albums .card, .cards--vinyl .card, .cards--merchandise .card {
+.col-xs-6, .album-card, .vinyl-card, .merchandise-card {
   width: 50%; }
 
 .col-xs-5 {
@@ -1611,7 +1611,7 @@ pre code {
   margin-left: 0%; }
 
 @media (min-width: 852px) {
-  .col-sm-1, .col-sm-2, .cards--sm-2 .card, .cards--albums .card, .cards--merchandise .card, .col-sm-3, .cards--sm-3 .card, .cards--vinyl .card, .col-sm-4, .cards--sm-4 .card, .cards--image-sm-4 .image, .cards--image-sm-8 .details, .col-sm-5, .cards--image-sm-7 .details, .col-sm-6, .cards--sm-6 .card, .card-sm-image-6 .image, .card-sm-image-6 .details, .col-sm-7, .cards--image-sm-7 .image, .col-sm-8, .cards--image-sm-4 .details, .cards--image-sm-8 .image, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .cards--sm-12 .card {
+  .col-sm-1, .col-sm-2, .album-card, .merchandise-card, .col-sm-3, .vinyl-card, .col-sm-4, .cards--image-sm-4 .image, .cards--image-sm-8 .details, .col-sm-5, .cards--image-sm-7 .details, .col-sm-6, .cards--sm-6 .card, .card-sm-image-6 .image, .card-sm-image-6 .details, .col-sm-7, .cards--image-sm-7 .image, .col-sm-8, .cards--image-sm-4 .details, .cards--image-sm-8 .image, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .cards--sm-12 .card {
     float: left; }
   .col-sm-12, .cards--sm-12 .card {
     width: 100%; }
@@ -1629,11 +1629,11 @@ pre code {
     width: 50%; }
   .col-sm-5, .cards--image-sm-7 .details {
     width: 41.66666667%; }
-  .col-sm-4, .cards--sm-4 .card, .cards--image-sm-4 .image, .cards--image-sm-8 .details {
+  .col-sm-4, .cards--image-sm-4 .image, .cards--image-sm-8 .details {
     width: 33.33333333%; }
-  .col-sm-3, .cards--sm-3 .card, .cards--vinyl .card {
+  .col-sm-3, .vinyl-card {
     width: 25%; }
-  .col-sm-2, .cards--sm-2 .card, .cards--albums .card, .cards--merchandise .card {
+  .col-sm-2, .album-card, .merchandise-card {
     width: 16.66666667%; }
   .col-sm-1 {
     width: 8.33333333%; }
@@ -3297,8 +3297,8 @@ input[type="button"].btn-block {
 
 .nav-tabs .dropdown-menu {
   margin-top: -1px;
-  border-top-right-radius: 0;
-  border-top-left-radius: 0; }
+  top-border-right-radius: 0;
+  top-border-left-radius: 0; }
 
 .navbar {
   position: relative;
@@ -3548,13 +3548,13 @@ input[type="button"].btn-block {
 
 .navbar-nav > li > .dropdown-menu {
   margin-top: 0;
-  border-top-right-radius: 0;
-  border-top-left-radius: 0; }
+  top-border-right-radius: 0;
+  top-border-left-radius: 0; }
 
 .navbar-fixed-bottom .navbar-nav > li > .dropdown-menu {
   margin-bottom: 0;
-  border-top-right-radius: 4px;
-  border-top-left-radius: 4px;
+  top-border-right-radius: 4px;
+  top-border-left-radius: 4px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
@@ -4295,19 +4295,20 @@ body {
 -------------------------------------------------- */
 /* CSS type helper classes
 -------------------------------------------------- */
-.content h3 {
+.content h3, .text-card h3 {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1;
+  line-height: 0.95;
   font-size: 3.417rem; }
   @media only screen and (min-width: 53.25em) {
-    .content h3 {
+    .content h3, .text-card h3 {
       font-size: 3.844rem; } }
   @media only screen and (min-width: 1560px) {
-    .content h3 {
+    .content h3, .text-card h3 {
       font-size: 4.325rem; } }
 
-.content h4 {
+.content h4, .text-card h4 {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1;
@@ -4315,26 +4316,26 @@ body {
   margin-bottom: 0.88889rem;
   margin-bottom: 1.77778rem; }
   @media only screen and (min-width: 53.25em) {
-    .content h4 {
+    .content h4, .text-card h4 {
       line-height: 1.143;
       font-size: 2.4rem; } }
   @media only screen and (min-width: 1560px) {
-    .content h4 {
+    .content h4, .text-card h4 {
       font-size: 2.7rem; } }
   @media only screen and (min-width: 53.25em) {
-    .content h4 {
-      margin-bottom: 0.6243vw; } }
+    .content h4, .text-card h4 {
+      margin-bottom: 0.64vw; } }
   @media only screen and (min-width: 1560px) {
-    .content h4 {
+    .content h4, .text-card h4 {
       margin-bottom: 1rem; } }
   @media only screen and (min-width: 53.25em) {
-    .content h4 {
-      margin-bottom: 1.2486vw; } }
+    .content h4, .text-card h4 {
+      margin-bottom: 1.28vw; } }
   @media only screen and (min-width: 1560px) {
-    .content h4 {
+    .content h4, .text-card h4 {
       margin-bottom: 2rem; } }
 
-.content h5 {
+.content h5, .text-card h5 {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
@@ -4342,47 +4343,47 @@ body {
   font-weight: 500;
   margin-bottom: 0.44444rem; }
   @media only screen and (min-width: 53.25em) {
-    .content h5 {
+    .content h5, .text-card h5 {
+      font-size: 1.665rem; } }
+  @media only screen and (min-width: 1560px) {
+    .content h5, .text-card h5 {
       font-size: 1.873rem; } }
-  @media only screen and (min-width: 1560px) {
-    .content h5 {
-      font-size: 2.107rem; } }
   @media only screen and (min-width: 53.25em) {
-    .content h5 {
-      margin-bottom: 0.31215vw; } }
+    .content h5, .text-card h5 {
+      margin-bottom: 0.32vw; } }
   @media only screen and (min-width: 1560px) {
-    .content h5 {
+    .content h5, .text-card h5 {
       margin-bottom: 0.5rem; } }
 
-.content p {
+.content p, .text-card p {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 400;
   line-height: 1.333333;
   font-size: 1.896rem;
-  padding-bottom: 3.125vw; }
+  padding-bottom: 0.8em; }
   @media only screen and (min-width: 53.25em) {
-    .content p {
+    .content p, .text-card p {
       font-size: 2.133rem; } }
   @media only screen and (min-width: 1560px) {
-    .content p {
+    .content p, .text-card p {
       font-size: 2.4rem; } }
   @media only screen and (min-width: 53.25em) {
-    .content p {
-      padding-bottom: 1.2486vw; } }
+    .content p, .text-card p {
+      padding-bottom: 1.28vw; } }
   @media only screen and (min-width: 1560px) {
-    .content p {
+    .content p, .text-card p {
       padding-bottom: 2rem; } }
 
-.content ul {
+.content ul, .text-card ul {
   margin-bottom: 0.88889rem; }
   @media only screen and (min-width: 53.25em) {
-    .content ul {
-      margin-bottom: 0.6243vw; } }
+    .content ul, .text-card ul {
+      margin-bottom: 0.64vw; } }
   @media only screen and (min-width: 1560px) {
-    .content ul {
+    .content ul, .text-card ul {
       margin-bottom: 1rem; } }
 
-.content .title {
+.content .title, .text-card .title {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
@@ -4392,16 +4393,16 @@ body {
   width: auto;
   font-weight: 600; }
   @media only screen and (min-width: 53.25em) {
-    .content .title {
+    .content .title, .text-card .title {
+      font-size: 1.665rem; } }
+  @media only screen and (min-width: 1560px) {
+    .content .title, .text-card .title {
       font-size: 1.873rem; } }
-  @media only screen and (min-width: 1560px) {
-    .content .title {
-      font-size: 2.107rem; } }
   @media only screen and (min-width: 53.25em) {
-    .content .title {
-      margin-bottom: 0.18729vw; } }
+    .content .title, .text-card .title {
+      margin-bottom: 0.192vw; } }
   @media only screen and (min-width: 1560px) {
-    .content .title {
+    .content .title, .text-card .title {
       margin-bottom: 0.3rem; } }
 
 /* Icons
@@ -4478,10 +4479,10 @@ body {
 
 .social-icon {
   color: #666666;
-  padding: 1.5625vw; }
+  padding: 0.4em; }
   @media only screen and (min-width: 53.25em) {
     .social-icon {
-      padding: 0.6243vw; } }
+      padding: 0.64vw; } }
   @media only screen and (min-width: 1560px) {
     .social-icon {
       padding: 1rem; } }
@@ -4516,19 +4517,6 @@ body {
   @media only screen and (min-width: 1560px) {
     .icon-circle:before, .icon-play:before {
       font-size: 6rem; } }
-
-.icon-mail:before {
-  font-size: 10vw; }
-  @media only screen and (min-width: 53.25em) {
-    .icon-mail:before {
-      font-size: 4vw;
-      padding-right: 0.2vw;
-      line-height: 0.8; } }
-  @media only screen and (min-width: 1560px) {
-    .icon-mail:before {
-      font-size: 5.2rem;
-      padding-right: 2px;
-      line-height: 1; } }
 
 .more-link-wrapper {
   position: relative; }
@@ -4590,6 +4578,19 @@ body {
     .icon-mail {
       margin-left: 2rem; } }
 
+.icon-mail:before {
+  font-size: 4rem; }
+  @media only screen and (min-width: 53.25em) {
+    .icon-mail:before {
+      font-size: 4vw;
+      padding-right: 0.2vw;
+      line-height: 0.8; } }
+  @media only screen and (min-width: 1560px) {
+    .icon-mail:before {
+      font-size: 5.2rem;
+      padding-right: 2px;
+      line-height: 1; } }
+
 /* 
 
 -----------------------------------------------------
@@ -4618,10 +4619,10 @@ conversion: 				| mobile 	| tablet	| desktop
 
 */
 .feature .textbox {
-  padding-top: 1.5625vw; }
+  padding-top: 0.4em; }
   @media only screen and (min-width: 53.25em) {
     .feature .textbox {
-      padding-top: 0.6243vw; } }
+      padding-top: 0.64vw; } }
   @media only screen and (min-width: 1560px) {
     .feature .textbox {
       padding-top: 1rem; } }
@@ -4663,10 +4664,10 @@ a:hover {
         position: relative; } }
 
 .more-link .er {
-  padding: 0.3125vw; }
+  padding: 0.08em; }
   @media only screen and (min-width: 53.25em) {
     .more-link .er {
-      padding: 0.12486vw; } }
+      padding: 0.128vw; } }
   @media only screen and (min-width: 1560px) {
     .more-link .er {
       padding: 0.2rem; } }
@@ -4682,8 +4683,9 @@ a:hover {
   @media only screen and (min-width: 1560px) {
     .anchor-link {
       top: -17rem; } }
-  .anchor-link--first {
-    top: -20rem; }
+
+.first-anchor-link {
+  top: -20rem; }
 
 /* #Helpers
 -------------------------------------------------- */
@@ -4778,6 +4780,8 @@ a:hover {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%); }
 
+/* Clear left for correct alignment of cards in rows
+ -------------------------------------------------- */
 /* Nav
 -------------------------------------------------- */
 .navbar {
@@ -5084,7 +5088,7 @@ body:not(.home-page) .smaller-header .navbar-brand, body:not(.home-page) .logo-s
   .search-bar input {
     width: 100%;
     background-color: transparent;
-    border-bottom: 1px solid black; }
+    border-bottom: 2px solid black; }
     @media only screen and (min-width: 53.25em) {
       .search-bar input {
         padding: 0 15px; } }
@@ -5102,17 +5106,17 @@ body:not(.home-page) .smaller-header .navbar-brand, body:not(.home-page) .logo-s
       display: none !important; } }
 
 .header-nav {
-  padding-top: 5.3125vw;
-  padding-bottom: 4.0625vw; }
+  padding-top: 1.36em;
+  padding-bottom: 1.04em; }
   @media only screen and (min-width: 53.25em) {
     .header-nav {
-      padding-top: 2.12262vw; } }
+      padding-top: 2.176vw; } }
   @media only screen and (min-width: 1560px) {
     .header-nav {
       padding-top: 3.4rem; } }
   @media only screen and (min-width: 53.25em) {
     .header-nav {
-      padding-bottom: 1.62318vw; } }
+      padding-bottom: 1.664vw; } }
   @media only screen and (min-width: 1560px) {
     .header-nav {
       padding-bottom: 2.6rem; } }
@@ -5126,7 +5130,7 @@ body:not(.home-page) .smaller-header .navbar-brand, body:not(.home-page) .logo-s
     cursor: pointer;
     padding: 10px 0 0;
     display: block;
-    padding-bottom: 0.625vw; }
+    padding-bottom: 0.16em; }
     .header-nav-title:hover, .footer-nav-title:hover {
       color: #666666; }
     @media only screen and (min-width: 53.25em) {
@@ -5134,7 +5138,7 @@ body:not(.home-page) .smaller-header .navbar-brand, body:not(.home-page) .logo-s
         padding: 0; } }
     @media only screen and (min-width: 53.25em) {
       .header-nav-title, .footer-nav-title {
-        padding-bottom: 0.24972vw; } }
+        padding-bottom: 0.256vw; } }
     @media only screen and (min-width: 1560px) {
       .header-nav-title, .footer-nav-title {
         padding-bottom: 0.4rem; } }
@@ -5143,7 +5147,7 @@ body:not(.home-page) .smaller-header .navbar-brand, body:not(.home-page) .logo-s
     margin-bottom: 1.95556rem; }
     @media only screen and (min-width: 53.25em) {
       .header-nav-list, .footer-nav-list {
-        margin-bottom: 1.37346vw; } }
+        margin-bottom: 1.408vw; } }
     @media only screen and (min-width: 1560px) {
       .header-nav-list, .footer-nav-list {
         margin-bottom: 2.2rem; } }
@@ -5249,10 +5253,10 @@ select {
   cursor: pointer;
   outline: none;
   border-radius: 0;
-  padding-top: 0vw;
-  padding-right: 2.34375vw;
-  padding-bottom: 0.78125vw;
-  padding-left: 2.34375vw;
+  padding-top: 0em;
+  padding-right: 0.6em;
+  padding-bottom: 0.2em;
+  padding-left: 0.6em;
   width: 100%;
   font-family: "acumin-pro", Arial, sans-serif;
   font-size: 1.7rem;
@@ -5270,19 +5274,19 @@ select {
       padding-top: 0rem; } }
   @media only screen and (min-width: 53.25em) {
     select {
-      padding-right: 0.93645vw; } }
+      padding-right: 0.96vw; } }
   @media only screen and (min-width: 1560px) {
     select {
       padding-right: 1.5rem; } }
   @media only screen and (min-width: 53.25em) {
     select {
-      padding-bottom: 0.31215vw; } }
+      padding-bottom: 0.32vw; } }
   @media only screen and (min-width: 1560px) {
     select {
       padding-bottom: 0.5rem; } }
   @media only screen and (min-width: 53.25em) {
     select {
-      padding-left: 0.93645vw; } }
+      padding-left: 0.96vw; } }
   @media only screen and (min-width: 1560px) {
     select {
       padding-left: 1.5rem; } }
@@ -5363,7 +5367,7 @@ select {
     margin-bottom: 3.02222rem; }
     @media only screen and (min-width: 53.25em) {
       .highlight-container .section-title {
-        margin-bottom: 2.12262vw; } }
+        margin-bottom: 2.176vw; } }
     @media only screen and (min-width: 1560px) {
       .highlight-container .section-title {
         margin-bottom: 3.4rem; } }
@@ -5556,10 +5560,10 @@ ul {
     font-weight: 400; }
     @media only screen and (min-width: 53.25em) {
       .special-event-textbox .description {
-        font-size: 1.873rem; } }
+        font-size: 1.665rem; } }
     @media only screen and (min-width: 1560px) {
       .special-event-textbox .description {
-        font-size: 2.107rem; } }
+        font-size: 1.873rem; } }
 
 /* General / Sections
 -------------------------------------------------- */
@@ -5580,14 +5584,10 @@ section {
   margin-bottom: 1.77778rem; }
   @media only screen and (min-width: 53.25em) {
     section {
-      margin-bottom: 1.2486vw; } }
+      margin-bottom: 1.28vw; } }
   @media only screen and (min-width: 1560px) {
     section {
       margin-bottom: 2rem; } }
-
-@media only screen and (max-width: 53.25em) {
-  section li {
-    margin-bottom: 1.5rem; } }
 
 .first-section {
   padding-top: 1.5rem; }
@@ -5612,7 +5612,7 @@ section {
   margin-bottom: 5.33333rem; }
   @media only screen and (min-width: 53.25em) {
     .sidebar {
-      margin-bottom: 3.7458vw; } }
+      margin-bottom: 3.84vw; } }
   @media only screen and (min-width: 1560px) {
     .sidebar {
       margin-bottom: 6rem; } }
@@ -5622,9 +5622,9 @@ section {
     line-height: 1.166667;
     font-size: 2.37rem;
     color: gray;
-    padding-bottom: 1.5625vw;
-    margin-top: 6.25vw;
-    padding-bottom: 0vw;
+    padding-bottom: 0.4em;
+    margin-top: 1.6em;
+    padding-bottom: 0em;
     margin-bottom: 0.97778rem; }
     @media only screen and (min-width: 53.25em) {
       .sidebar h3, .sidebar-section-title {
@@ -5635,13 +5635,13 @@ section {
         font-size: 3rem; } }
     @media only screen and (min-width: 53.25em) {
       .sidebar h3, .sidebar-section-title {
-        padding-bottom: 0.6243vw; } }
+        padding-bottom: 0.64vw; } }
     @media only screen and (min-width: 1560px) {
       .sidebar h3, .sidebar-section-title {
         padding-bottom: 1rem; } }
     @media only screen and (min-width: 53.25em) {
       .sidebar h3, .sidebar-section-title {
-        margin-top: 2.4972vw; } }
+        margin-top: 2.56vw; } }
     @media only screen and (min-width: 1560px) {
       .sidebar h3, .sidebar-section-title {
         margin-top: 4rem; } }
@@ -5653,7 +5653,7 @@ section {
         padding-bottom: 0rem; } }
     @media only screen and (min-width: 53.25em) {
       .sidebar h3, .sidebar-section-title {
-        margin-bottom: 0.68673vw; } }
+        margin-bottom: 0.704vw; } }
     @media only screen and (min-width: 1560px) {
       .sidebar h3, .sidebar-section-title {
         margin-bottom: 1.1rem; } }
@@ -5662,7 +5662,7 @@ section {
     font-weight: 300;
     line-height: 1.4;
     text-transform: uppercase;
-    margin-top: 0.9375vw;
+    margin-top: 0.24em;
     color: gray;
     margin: 0; }
     @media only screen and (min-width: 53.25em) {
@@ -5674,16 +5674,16 @@ section {
         font-size: 1.6rem; } }
     @media only screen and (min-width: 53.25em) {
       .sidebar h4, .sidebar-item-title {
-        margin-top: 0.37458vw; } }
+        margin-top: 0.384vw; } }
     @media only screen and (min-width: 1560px) {
       .sidebar h4, .sidebar-item-title {
         margin-top: 0.6rem; } }
   .sidebar-item {
     border-top: 1px solid gray;
-    padding-bottom: 1.5625vw; }
+    padding-bottom: 0.4em; }
     @media only screen and (min-width: 53.25em) {
       .sidebar-item {
-        padding-bottom: 0.6243vw; } }
+        padding-bottom: 0.64vw; } }
     @media only screen and (min-width: 1560px) {
       .sidebar-item {
         padding-bottom: 1rem; } }
@@ -5711,7 +5711,7 @@ hr {
       margin-top: 0; } }
   @media only screen and (min-width: 53.25em) {
     .thick-hr {
-      margin-bottom: 3.24636vw; } }
+      margin-bottom: 3.328vw; } }
   @media only screen and (min-width: 1560px) {
     .thick-hr {
       margin-bottom: 5.2rem; } }
@@ -5782,6 +5782,8 @@ hr {
 
 a .page-title {
   color: white; }
+  a .page-title:hover {
+    color: #fceec3; }
 
 @media only screen and (min-width: 53.25em) {
   .copy-columns {
@@ -5802,11 +5804,11 @@ a .page-title {
       break-inside: avoid; } }
 
 .subcollection {
-  padding-bottom: 2.34375vw;
+  padding-bottom: 0.6em;
   display: inline-block; }
   @media only screen and (min-width: 53.25em) {
     .subcollection {
-      padding-bottom: 0.93645vw; } }
+      padding-bottom: 0.96vw; } }
   @media only screen and (min-width: 1560px) {
     .subcollection {
       padding-bottom: 1.5rem; } }
@@ -5829,24 +5831,24 @@ a .page-title {
 -------------------------------------------------- */
 .highlight-bar {
   background-color: #cccccc;
-  padding-top: 6.25vw;
-  padding-bottom: 6.25vw;
+  padding-top: 1.6em;
+  padding-bottom: 1.6em;
   margin-bottom: 6.4rem; }
   @media only screen and (min-width: 53.25em) {
     .highlight-bar {
-      padding-top: 2.4972vw; } }
+      padding-top: 2.56vw; } }
   @media only screen and (min-width: 1560px) {
     .highlight-bar {
       padding-top: 4rem; } }
   @media only screen and (min-width: 53.25em) {
     .highlight-bar {
-      padding-bottom: 2.4972vw; } }
+      padding-bottom: 2.56vw; } }
   @media only screen and (min-width: 1560px) {
     .highlight-bar {
       padding-bottom: 4rem; } }
   @media only screen and (min-width: 53.25em) {
     .highlight-bar {
-      margin-bottom: 4.49496vw; } }
+      margin-bottom: 4.608vw; } }
   @media only screen and (min-width: 1560px) {
     .highlight-bar {
       margin-bottom: 7.2rem; } }
@@ -5929,10 +5931,10 @@ a .page-title {
       display: inline-block;
       vertical-align: top; } }
   .support-copy {
-    padding-top: 2.5vw;
-    padding-right: 3.125vw;
-    padding-bottom: 3.125vw;
-    padding-left: 3.125vw; }
+    padding-top: 0.64em;
+    padding-right: 0.8em;
+    padding-bottom: 0.8em;
+    padding-left: 0.8em; }
     @media only screen and (min-width: 53.25em) {
       .support-copy {
         width: 46.45%;
@@ -5943,25 +5945,25 @@ a .page-title {
         font-size: 1.2vw; } }
     @media only screen and (min-width: 53.25em) {
       .support-copy {
-        padding-top: 0.99888vw; } }
+        padding-top: 1.024vw; } }
     @media only screen and (min-width: 1560px) {
       .support-copy {
         padding-top: 1.6rem; } }
     @media only screen and (min-width: 53.25em) {
       .support-copy {
-        padding-right: 1.2486vw; } }
+        padding-right: 1.28vw; } }
     @media only screen and (min-width: 1560px) {
       .support-copy {
         padding-right: 2rem; } }
     @media only screen and (min-width: 53.25em) {
       .support-copy {
-        padding-bottom: 1.2486vw; } }
+        padding-bottom: 1.28vw; } }
     @media only screen and (min-width: 1560px) {
       .support-copy {
         padding-bottom: 2rem; } }
     @media only screen and (min-width: 53.25em) {
       .support-copy {
-        padding-left: 1.2486vw; } }
+        padding-left: 1.28vw; } }
     @media only screen and (min-width: 1560px) {
       .support-copy {
         padding-left: 2rem; } }
@@ -6040,34 +6042,34 @@ a .page-title {
 
 .newsletter-signup-copy {
   background-color: #e6e6e6;
-  padding-top: 2.96875vw;
-  padding-right: 3.125vw;
-  padding-left: 3.125vw;
-  padding-bottom: 3.125vw;
+  padding-top: 0.76em;
+  padding-right: 0.8em;
+  padding-left: 0.8em;
+  padding-bottom: 0.8em;
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   font-size: 1.48rem; }
   @media only screen and (min-width: 53.25em) {
     .newsletter-signup-copy {
-      padding-top: 1.18617vw; } }
+      padding-top: 1.216vw; } }
   @media only screen and (min-width: 1560px) {
     .newsletter-signup-copy {
       padding-top: 1.9rem; } }
   @media only screen and (min-width: 53.25em) {
     .newsletter-signup-copy {
-      padding-right: 1.2486vw; } }
+      padding-right: 1.28vw; } }
   @media only screen and (min-width: 1560px) {
     .newsletter-signup-copy {
       padding-right: 2rem; } }
   @media only screen and (min-width: 53.25em) {
     .newsletter-signup-copy {
-      padding-left: 1.2486vw; } }
+      padding-left: 1.28vw; } }
   @media only screen and (min-width: 1560px) {
     .newsletter-signup-copy {
       padding-left: 2rem; } }
   @media only screen and (min-width: 53.25em) {
     .newsletter-signup-copy {
-      padding-bottom: 1.2486vw; } }
+      padding-bottom: 1.28vw; } }
   @media only screen and (min-width: 1560px) {
     .newsletter-signup-copy {
       padding-bottom: 2rem; } }
@@ -6087,20 +6089,20 @@ a .page-title {
 .newsletter-input {
   background-color: #cccccc;
   width: 100%;
-  padding-right: 3.125vw;
-  padding-left: 3.125vw;
+  padding-right: 0.8em;
+  padding-left: 0.8em;
   font-family: "acumin-pro", Arial, sans-serif;
   font-size: 5vw;
-  height: 18vw; }
+  height: 5rem; }
   @media only screen and (min-width: 53.25em) {
     .newsletter-input {
-      padding-right: 1.2486vw; } }
+      padding-right: 1.28vw; } }
   @media only screen and (min-width: 1560px) {
     .newsletter-input {
       padding-right: 2rem; } }
   @media only screen and (min-width: 53.25em) {
     .newsletter-input {
-      padding-left: 1.2486vw; } }
+      padding-left: 1.28vw; } }
   @media only screen and (min-width: 1560px) {
     .newsletter-input {
       padding-left: 2rem; } }
@@ -6123,7 +6125,7 @@ a .page-title {
   margin-bottom: 3.55556rem; }
   @media only screen and (min-width: 53.25em) {
     .newsletter-signup-wrapper {
-      margin-bottom: 2.4972vw; } }
+      margin-bottom: 2.56vw; } }
   @media only screen and (min-width: 1560px) {
     .newsletter-signup-wrapper {
       margin-bottom: 4rem; } }
@@ -6148,38 +6150,42 @@ a .page-title {
     font-weight: 300;
     line-height: 1.2;
     font-size: 1.665rem;
-    padding-top: 2.34375vw;
-    padding-bottom: 3.125vw; }
+    padding-top: 0.6em;
+    padding-bottom: 0.8em; }
     @media only screen and (min-width: 53.25em) {
       .newsletter-signup--short .newsletter-signup-copy {
-        font-size: 1.873rem; } }
+        font-size: 1.665rem; } }
     @media only screen and (min-width: 1560px) {
       .newsletter-signup--short .newsletter-signup-copy {
-        font-size: 2.107rem; } }
+        font-size: 1.873rem; } }
     @media only screen and (min-width: 53.25em) {
       .newsletter-signup--short .newsletter-signup-copy {
-        padding-top: 0.93645vw; } }
+        padding-top: 0.96vw; } }
     @media only screen and (min-width: 1560px) {
       .newsletter-signup--short .newsletter-signup-copy {
         padding-top: 1.5rem; } }
     @media only screen and (min-width: 53.25em) {
       .newsletter-signup--short .newsletter-signup-copy {
-        padding-bottom: 1.2486vw; } }
+        padding-bottom: 1.28vw; } }
     @media only screen and (min-width: 1560px) {
       .newsletter-signup--short .newsletter-signup-copy {
         padding-bottom: 2rem; } }
     @media only screen and (min-width: 53.25em) {
       .newsletter-signup--short .newsletter-signup-copy {
-        padding-bottom: 1.5625vw; } }
+        padding-bottom: 0.4em; } }
   @media only screen and (min-width: 53.25em) and (min-width: 53.25em) {
     .newsletter-signup--short .newsletter-signup-copy {
-      padding-bottom: 0.6243vw; } }
+      padding-bottom: 0.64vw; } }
   @media only screen and (min-width: 53.25em) and (min-width: 1560px) {
     .newsletter-signup--short .newsletter-signup-copy {
       padding-bottom: 1rem; } }
 
 /* #audio card
 -------------------------------------------------- */
+@media only screen and (min-width: 53.25em) {
+  .audio-card .card {
+    margin-bottom: 1.5rem; } }
+
 .audio-card .image {
   padding-bottom: 0; }
 
@@ -6210,14 +6216,14 @@ a .page-title {
 
 .audio-card .details-inner {
   position: relative;
-  min-height: 46vw;
-  min-height: 25rem; }
+  padding-bottom: 7rem;
+  padding-bottom: 15vw; }
   @media only screen and (min-width: 53.25em) {
     .audio-card .details-inner {
-      min-height: 20vw; } }
+      padding-bottom: 7vw; } }
   @media only screen and (min-width: 1560px) {
     .audio-card .details-inner {
-      min-height: 25rem; } }
+      padding-bottom: 10rem; } }
 
 /* #audio player
 -------------------------------------------------- */
@@ -6231,10 +6237,10 @@ a .page-title {
   left: 0;
   width: 100%;
   right: 0;
-  padding: 3.125vw; }
+  padding: 0.8em; }
   @media only screen and (min-width: 53.25em) {
     .audio-player {
-      padding: 1.2486vw; } }
+      padding: 1.28vw; } }
   @media only screen and (min-width: 1560px) {
     .audio-player {
       padding: 2rem; } }
@@ -6242,16 +6248,16 @@ a .page-title {
 .audio-player-details {
   line-height: 1;
   width: 67%;
-  padding-left: 1.5625vw; }
+  padding-left: 0.4em; }
   @media only screen and (min-width: 53.25em) {
     .audio-player-details {
-      width: 73%; } }
+      width: 70%; } }
   @media only screen and (min-width: 1560px) {
     .audio-player-details {
       width: 75%; } }
   @media only screen and (min-width: 53.25em) {
     .audio-player-details {
-      padding-left: 0.6243vw; } }
+      padding-left: 0.64vw; } }
   @media only screen and (min-width: 1560px) {
     .audio-player-details {
       padding-left: 1rem; } }
@@ -6288,20 +6294,20 @@ a .page-title {
 /* #footer
 -------------------------------------------------- */
 .footer {
-  padding-top: 4.0625vw;
-  padding-bottom: 2.96875vw;
+  padding-top: 1.04em;
+  padding-bottom: 0.76em;
   background-color: #333333;
   color: #cccccc;
   z-index: 1; }
   @media only screen and (min-width: 53.25em) {
     .footer {
-      padding-top: 1.62318vw; } }
+      padding-top: 1.664vw; } }
   @media only screen and (min-width: 1560px) {
     .footer {
       padding-top: 2.6rem; } }
   @media only screen and (min-width: 53.25em) {
     .footer {
-      padding-bottom: 1.18617vw; } }
+      padding-bottom: 1.216vw; } }
   @media only screen and (min-width: 1560px) {
     .footer {
       padding-bottom: 1.9rem; } }
@@ -6317,19 +6323,19 @@ a .page-title {
     .footer-row-1 {
       margin-bottom: 4rem; } }
   .footer-row-2 {
-    margin-top: 4.6875vw; }
+    margin-top: 1.2em; }
     @media only screen and (min-width: 53.25em) {
       .footer-row-2 {
-        margin-top: 1.8729vw; } }
+        margin-top: 1.92vw; } }
     @media only screen and (min-width: 1560px) {
       .footer-row-2 {
         margin-top: 3rem; } }
   .footer-row-3 {
     color: #cccccc;
-    margin-top: 5.9375vw; }
+    margin-top: 1.52em; }
     @media only screen and (min-width: 53.25em) {
       .footer-row-3 {
-        margin-top: 2.37234vw; } }
+        margin-top: 2.432vw; } }
     @media only screen and (min-width: 1560px) {
       .footer-row-3 {
         margin-top: 3.8rem; } }
@@ -6340,10 +6346,10 @@ a .page-title {
         margin-bottom: 0; } }
 
 .footer-nav-news {
-  margin-top: 1.71875vw; }
+  margin-top: 0.44em; }
   @media only screen and (min-width: 53.25em) {
     .footer-nav-news {
-      margin-top: 0.68673vw; } }
+      margin-top: 0.704vw; } }
   @media only screen and (min-width: 1560px) {
     .footer-nav-news {
       margin-top: 1.1rem; } }
@@ -6410,7 +6416,7 @@ a .page-title {
   text-transform: uppercase;
   color: #666666;
   margin-bottom: 0.53333rem;
-  margin-left: 0.46875vw; }
+  margin-left: 0.12em; }
   @media only screen and (min-width: 53.25em) {
     .social-media-title {
       font-size: 1.1vw;
@@ -6421,13 +6427,13 @@ a .page-title {
       line-height: 1.8; } }
   @media only screen and (min-width: 53.25em) {
     .social-media-title {
-      margin-bottom: 0.37458vw; } }
+      margin-bottom: 0.384vw; } }
   @media only screen and (min-width: 1560px) {
     .social-media-title {
       margin-bottom: 0.6rem; } }
   @media only screen and (min-width: 53.25em) {
     .social-media-title {
-      margin-left: 0.18729vw; } }
+      margin-left: 0.192vw; } }
   @media only screen and (min-width: 1560px) {
     .social-media-title {
       margin-left: 0.3rem; } }
@@ -6494,17 +6500,17 @@ a .page-title {
   margin: 0; }
 
 .article-page figure {
-  margin-top: 6.25vw;
+  margin-top: 1.6em;
   margin-bottom: 3.55556rem; }
   @media only screen and (min-width: 53.25em) {
     .article-page figure {
-      margin-top: 2.4972vw; } }
+      margin-top: 2.56vw; } }
   @media only screen and (min-width: 1560px) {
     .article-page figure {
       margin-top: 4rem; } }
   @media only screen and (min-width: 53.25em) {
     .article-page figure {
-      margin-bottom: 2.4972vw; } }
+      margin-bottom: 2.56vw; } }
   @media only screen and (min-width: 1560px) {
     .article-page figure {
       margin-bottom: 4rem; } }
@@ -6514,7 +6520,7 @@ a .page-title {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   font-size: 1.48rem;
-  margin-top: 3.125vw; }
+  margin-top: 0.8em; }
   @media only screen and (min-width: 53.25em) {
     .article-page figcaption {
       font-size: 1.665rem; } }
@@ -6523,7 +6529,7 @@ a .page-title {
       font-size: 1.873rem; } }
   @media only screen and (min-width: 53.25em) {
     .article-page figcaption {
-      margin-top: 1.2486vw; } }
+      margin-top: 1.28vw; } }
   @media only screen and (min-width: 1560px) {
     .article-page figcaption {
       margin-top: 2rem; } }
@@ -6533,7 +6539,7 @@ a .page-title {
   margin-bottom: 1.77778rem; }
   @media only screen and (min-width: 53.25em) {
     .article-page .related-content h2 {
-      margin-bottom: 1.2486vw; } }
+      margin-bottom: 1.28vw; } }
   @media only screen and (min-width: 1560px) {
     .article-page .related-content h2 {
       margin-bottom: 2rem; } }
@@ -6542,7 +6548,7 @@ a .page-title {
   margin-bottom: 1.77778rem; }
   @media only screen and (min-width: 53.25em) {
     .blog-article .image {
-      margin-bottom: 1.2486vw; } }
+      margin-bottom: 1.28vw; } }
   @media only screen and (min-width: 1560px) {
     .blog-article .image {
       margin-bottom: 2rem; } }
@@ -6561,7 +6567,7 @@ a .page-title {
       font-size: 6.158rem; } }
   @media only screen and (min-width: 53.25em) {
     .blog-article .title {
-      margin-bottom: 0.6243vw; } }
+      margin-bottom: 0.64vw; } }
   @media only screen and (min-width: 1560px) {
     .blog-article .title {
       margin-bottom: 1rem; } }
@@ -6580,7 +6586,7 @@ a .page-title {
       font-size: 1.873rem; } }
   @media only screen and (min-width: 53.25em) {
     .blog-article .date {
-      margin-bottom: 1.2486vw; } }
+      margin-bottom: 1.28vw; } }
   @media only screen and (min-width: 1560px) {
     .blog-article .date {
       margin-bottom: 2rem; } }
@@ -6593,10 +6599,17 @@ a .page-title {
     color: #4d4d4d; }
 
 .card {
-  margin-bottom: 3.55556rem; }
+  margin-bottom: 3.55556rem;
+  margin-bottom: 1.5rem; }
   @media only screen and (min-width: 53.25em) {
     .card {
-      margin-bottom: 2.4972vw; } }
+      margin-bottom: 2.56vw; } }
+  @media only screen and (min-width: 1560px) {
+    .card {
+      margin-bottom: 4rem; } }
+  @media only screen and (min-width: 53.25em) {
+    .card {
+      margin-bottom: 3.2vw; } }
   @media only screen and (min-width: 1560px) {
     .card {
       margin-bottom: 4rem; } }
@@ -6617,24 +6630,31 @@ a .page-title {
       margin-right: 2rem; } }
 
 .details-inner {
-  padding-top: 3.125vw;
-  padding-right: 1.5625vw; }
+  padding-top: 0.8em;
+  padding-right: 0.4em;
+  padding-top: 1.5rem; }
   @media only screen and (min-width: 53.25em) {
     .details-inner {
       min-height: initial;
       min-height: auto; } }
   @media only screen and (min-width: 53.25em) {
     .details-inner {
-      padding-top: 1.2486vw; } }
+      padding-top: 1.28vw; } }
   @media only screen and (min-width: 1560px) {
     .details-inner {
       padding-top: 2rem; } }
   @media only screen and (min-width: 53.25em) {
     .details-inner {
-      padding-right: 0.6243vw; } }
+      padding-right: 0.64vw; } }
   @media only screen and (min-width: 1560px) {
     .details-inner {
       padding-right: 1rem; } }
+  @media only screen and (min-width: 53.25em) {
+    .details-inner {
+      padding-top: 1.5rem; } }
+  @media only screen and (min-width: 1560px) {
+    .details-inner {
+      padding-top: 3rem; } }
 
 a.details {
   display: inline-block; }
@@ -6659,7 +6679,7 @@ a.details {
   margin-bottom: 0.44444rem; }
   @media only screen and (min-width: 53.25em) {
     .details-wrapper--horizontal .tag {
-      margin-bottom: 0.31215vw; } }
+      margin-bottom: 0.32vw; } }
   @media only screen and (min-width: 1560px) {
     .details-wrapper--horizontal .tag {
       margin-bottom: 0.5rem; } }
@@ -6721,7 +6741,7 @@ a.details {
   line-height: 1.4;
   letter-spacing: normal;
   text-transform: initial;
-  margin-top: 0.78125vw; }
+  margin-top: 0.2em; }
   @media only screen and (min-width: 53.25em) {
     .date-sm {
       font-size: 1.4rem;
@@ -6733,13 +6753,46 @@ a.details {
       line-height: 1.4; } }
   @media only screen and (min-width: 53.25em) {
     .date-sm {
-      margin-top: 0.31215vw; } }
+      margin-top: 0.32vw; } }
   @media only screen and (min-width: 1560px) {
     .date-sm {
       margin-top: 0.5rem; } }
 
 /* #textbox
 -------------------------------------------------- */
+/* #text card, folklfe/learn or collectiom
+-------------------------------------------------- */
+.text-card {
+  margin-bottom: 0rem; }
+  @media only screen and (min-width: 53.25em) {
+    .text-card {
+      margin-bottom: 0vw; } }
+  @media only screen and (min-width: 1560px) {
+    .text-card {
+      margin-bottom: 0rem; } }
+  .text-card a.title {
+    border-bottom: none;
+    box-shadow: none; }
+  .text-card .details-inner {
+    padding-top: 0em; }
+    @media only screen and (min-width: 53.25em) {
+      .text-card .details-inner {
+        padding-top: 0vw; } }
+    @media only screen and (min-width: 1560px) {
+      .text-card .details-inner {
+        padding-top: 0rem; } }
+
+/* #publication card
+-------------------------------------------------- */
+.publication-card .title {
+  margin-top: -0.32em; }
+  @media only screen and (min-width: 53.25em) {
+    .publication-card .title {
+      margin-top: -0.512vw; } }
+  @media only screen and (min-width: 1560px) {
+    .publication-card .title {
+      margin-top: -0.8rem; } }
+
 /* #vertical
 -------------------------------------------------- */
 .card-vertical .title {
@@ -6757,7 +6810,7 @@ a.details {
       font-size: 2.7rem; } }
   @media only screen and (min-width: 53.25em) {
     .card-vertical .title {
-      margin-bottom: 0.6243vw; } }
+      margin-bottom: 0.64vw; } }
   @media only screen and (min-width: 1560px) {
     .card-vertical .title {
       margin-bottom: 1rem; } }
@@ -6781,7 +6834,7 @@ a.details {
       font-size: 2.7rem; } }
   @media only screen and (min-width: 53.25em) {
     .card-program .title {
-      margin-bottom: 0.6243vw; } }
+      margin-bottom: 0.64vw; } }
   @media only screen and (min-width: 1560px) {
     .card-program .title {
       margin-bottom: 1rem; } }
@@ -6823,10 +6876,10 @@ a.details {
 .video-card .image {
   display: none; }
 
-.video:hover .icon-circle:before {
+.video:hover .icon-circle:before, .icon-play-button:hover .icon-circle:before {
   color: #fceec3; }
 
-.video:hover .icon-play:before {
+.video:hover .icon-play:before, .icon-play-button:hover .icon-play:before {
   color: #333333; }
 
 .video-icon-play-button {
@@ -6921,10 +6974,9 @@ a.details {
 * the following rules apply a background color to the :after element
 * if color was applied to the card itself, it would show through the padding on the edges
 -------------------------------------------------- */
-.background-card, .horizontal-card {
-  position: relative;
-  z-index: 1; }
-  .background-card:after, .horizontal-card:after {
+.horizontal-background-card {
+  position: relative; }
+  .horizontal-background-card:after {
     background-color: white;
     content: "";
     display: block;
@@ -6935,15 +6987,15 @@ a.details {
     left: 7.5px;
     right: 7.5px; }
     @media only screen and (min-width: 1560px) {
-      .background-card:after, .horizontal-card:after {
+      .horizontal-background-card:after {
         left: 2rem;
         right: 2rem; } }
 
-.background-card:not(.horizontal-card) {
+.vertical-background-card {
+  position: relative;
   height: 100%; }
-  .background-card:not(.horizontal-card):after {
+  .vertical-background-card:after {
     background-color: white;
-    background-color: red;
     content: "";
     display: block;
     position: absolute;
@@ -6952,55 +7004,55 @@ a.details {
     z-index: -1;
     left: 0;
     right: 0;
+    left: 1.36%;
+    right: 1.36%;
     bottom: 3.75vw; }
     @media only screen and (min-width: 53.25em) {
-      .background-card:not(.horizontal-card):after {
-        left: 0;
-        right: 0;
+      .vertical-background-card:after {
+        left: 1.36%;
+        right: 1.36%;
         bottom: 0; } }
     @media only screen and (min-width: 1560px) {
-      .background-card:not(.horizontal-card):after {
+      .vertical-background-card:after {
         left: 2rem;
-        right: 2rem;
-        left: 0;
-        right: 0; } }
+        right: 2rem; } }
 
-.full-feature .more-link, .details .more-link, .ms-section__copy .more-link {
+.full-feature-card .more-link, .details .more-link, .ms-section__copy .more-link {
   position: static;
   float: right;
-  margin-top: 3.125vw;
+  margin-top: 0.8em;
   margin-bottom: 1.77778rem;
-  margin-left: 3.125vw; }
+  margin-left: 0.8em; }
   @media only screen and (min-width: 53.25em) {
-    .full-feature .more-link, .details .more-link, .ms-section__copy .more-link {
-      margin-top: 1.2486vw; } }
+    .full-feature-card .more-link, .details .more-link, .ms-section__copy .more-link {
+      margin-top: 1.28vw; } }
   @media only screen and (min-width: 1560px) {
-    .full-feature .more-link, .details .more-link, .ms-section__copy .more-link {
+    .full-feature-card .more-link, .details .more-link, .ms-section__copy .more-link {
       margin-top: 2rem; } }
   @media only screen and (min-width: 53.25em) {
-    .full-feature .more-link, .details .more-link, .ms-section__copy .more-link {
-      margin-bottom: 1.2486vw; } }
+    .full-feature-card .more-link, .details .more-link, .ms-section__copy .more-link {
+      margin-bottom: 1.28vw; } }
   @media only screen and (min-width: 1560px) {
-    .full-feature .more-link, .details .more-link, .ms-section__copy .more-link {
+    .full-feature-card .more-link, .details .more-link, .ms-section__copy .more-link {
       margin-bottom: 2rem; } }
   @media only screen and (min-width: 53.25em) {
-    .full-feature .more-link, .details .more-link, .ms-section__copy .more-link {
-      margin-left: 1.2486vw; } }
+    .full-feature-card .more-link, .details .more-link, .ms-section__copy .more-link {
+      margin-left: 1.28vw; } }
   @media only screen and (min-width: 1560px) {
-    .full-feature .more-link, .details .more-link, .ms-section__copy .more-link {
+    .full-feature-card .more-link, .details .more-link, .ms-section__copy .more-link {
       margin-left: 2rem; } }
   @media only screen and (min-width: 53.25em) {
-    .full-feature .more-link, .details .more-link, .ms-section__copy .more-link {
+    .full-feature-card .more-link, .details .more-link, .ms-section__copy .more-link {
       margin: 0;
       float: none;
       margin-top: 2vw;
       display: inline-block; } }
 
 .half-section .more-link {
-  right: 6.25vw; }
+  right: 1.6em; }
   @media only screen and (min-width: 53.25em) {
     .half-section .more-link {
-      right: 2.4972vw; } }
+      right: 2.56vw; } }
   @media only screen and (min-width: 1560px) {
     .half-section .more-link {
       right: 4rem; } }
@@ -7043,18 +7095,18 @@ a.details {
     padding-bottom: 0; } }
 
 .cards--horizontal .details.hasborder {
-  margin-top: 1.5625vw; }
+  margin-top: 0.4em; }
   @media only screen and (min-width: 53.25em) {
     .cards--horizontal .details.hasborder {
-      margin-top: 0.6243vw; } }
+      margin-top: 0.64vw; } }
   @media only screen and (min-width: 1560px) {
     .cards--horizontal .details.hasborder {
       margin-top: 1rem; } }
 
 .cards--horizontal .details-inner {
-  padding: 0vw;
-  padding-top: 3.125vw;
-  padding-right: 1.5625vw; }
+  padding: 0em;
+  padding-top: 0.8em;
+  padding-right: 0.4em; }
   @media only screen and (min-width: 53.25em) {
     .cards--horizontal .details-inner {
       padding: 0vw; } }
@@ -7063,13 +7115,13 @@ a.details {
       padding: 0rem; } }
   @media only screen and (min-width: 53.25em) {
     .cards--horizontal .details-inner {
-      padding-top: 1.2486vw; } }
+      padding-top: 1.28vw; } }
   @media only screen and (min-width: 1560px) {
     .cards--horizontal .details-inner {
       padding-top: 2rem; } }
   @media only screen and (min-width: 53.25em) {
     .cards--horizontal .details-inner {
-      padding-right: 0.6243vw; } }
+      padding-right: 0.64vw; } }
   @media only screen and (min-width: 1560px) {
     .cards--horizontal .details-inner {
       padding-right: 1rem; } }
@@ -7077,10 +7129,10 @@ a.details {
 /* #Cards modifiers
 -------------------------------------------------- */
 .inset .details-inner {
-  padding-left: 3.125vw; }
+  padding-left: 0.8em; }
   @media only screen and (min-width: 53.25em) {
     .inset .details-inner {
-      padding-left: 1.2486vw; } }
+      padding-left: 1.28vw; } }
   @media only screen and (min-width: 1560px) {
     .inset .details-inner {
       padding-left: 2rem; } }
@@ -7092,28 +7144,28 @@ a.details {
   padding-left: 0; }
 
 .cards--padding-top-2 .details-inner {
-  padding-top: 3.125vw; }
+  padding-top: 0.8em; }
   @media only screen and (min-width: 53.25em) {
     .cards--padding-top-2 .details-inner {
-      padding-top: 1.2486vw; } }
+      padding-top: 1.28vw; } }
   @media only screen and (min-width: 1560px) {
     .cards--padding-top-2 .details-inner {
       padding-top: 2rem; } }
 
 .cards--padding-top-3 .details-inner {
-  padding-top: 4.6875vw; }
+  padding-top: 1.2em; }
   @media only screen and (min-width: 53.25em) {
     .cards--padding-top-3 .details-inner {
-      padding-top: 1.8729vw; } }
+      padding-top: 1.92vw; } }
   @media only screen and (min-width: 1560px) {
     .cards--padding-top-3 .details-inner {
       padding-top: 3rem; } }
 
 .cards--padding-top-4 .details-inner {
-  padding-top: 6.25vw; }
+  padding-top: 1.6em; }
   @media only screen and (min-width: 53.25em) {
     .cards--padding-top-4 .details-inner {
-      padding-top: 2.4972vw; } }
+      padding-top: 2.56vw; } }
   @media only screen and (min-width: 1560px) {
     .cards--padding-top-4 .details-inner {
       padding-top: 4rem; } }
@@ -7136,58 +7188,68 @@ a.details {
   .cards--sm-2 .card:nth-of-type(6n + 1) {
     clear: left; } }
 
+/* Feature cards
+-------------------------------------------------- */
+@media only screen and (min-width: 53.25em) {
+  .feature-card {
+    margin-bottom: 0; } }
+
 /* Full feature cards
 -------------------------------------------------- */
-.full-feature .tag {
-  display: none; }
-
-@media only screen and (max-width: 53.25em) {
-  .full-feature .image {
-    padding-bottom: 2.5vw; } }
-
-.full-feature .title {
-  font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
-  font-weight: 700;
-  line-height: 1.1;
-  font-size: 4.865rem;
-  margin-bottom: 1rem; }
+.full-feature-card {
+  margin-bottom: 0rem; }
   @media only screen and (min-width: 53.25em) {
-    .full-feature .title {
-      font-size: 5.474rem; } }
+    .full-feature-card {
+      margin-bottom: 0vw; } }
   @media only screen and (min-width: 1560px) {
-    .full-feature .title {
-      font-size: 6.158rem; } }
-  @media only screen and (min-width: 53.25em) {
-    .full-feature .title {
-      margin-bottom: 1.15vw; } }
-  @media only screen and (min-width: 1560px) {
-    .full-feature .title {
-      margin-bottom: 1.8rem; } }
-
-.full-feature .details-inner {
-  padding-top: 0vw; }
-  @media only screen and (min-width: 53.25em) {
-    .full-feature .details-inner {
-      padding-top: 0vw; } }
-  @media only screen and (min-width: 1560px) {
-    .full-feature .details-inner {
-      padding-top: 0rem; } }
+    .full-feature-card {
+      margin-bottom: 0rem; } }
+  .full-feature-card .tag {
+    display: none; }
   @media only screen and (max-width: 53.25em) {
-    .full-feature .details-inner {
-      padding-left: 0; } }
-
-.full-feature .description {
-  font-family: "acumin-pro", Arial, sans-serif;
-  font-weight: 300;
-  line-height: 1.166667;
-  font-size: 2.37rem; }
-  @media only screen and (min-width: 53.25em) {
-    .full-feature .description {
-      font-size: 2.667rem; } }
-  @media only screen and (min-width: 1560px) {
-    .full-feature .description {
-      line-height: 1.166667;
-      font-size: 3rem; } }
+    .full-feature-card .image {
+      padding-bottom: 2.5vw; } }
+  .full-feature-card .title {
+    font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+    font-weight: 700;
+    line-height: 1.1;
+    font-size: 4.865rem;
+    margin-bottom: 1rem; }
+    @media only screen and (min-width: 53.25em) {
+      .full-feature-card .title {
+        font-size: 5.474rem; } }
+    @media only screen and (min-width: 1560px) {
+      .full-feature-card .title {
+        font-size: 6.158rem; } }
+    @media only screen and (min-width: 53.25em) {
+      .full-feature-card .title {
+        margin-bottom: 1.15vw; } }
+    @media only screen and (min-width: 1560px) {
+      .full-feature-card .title {
+        margin-bottom: 1.8rem; } }
+  .full-feature-card .details-inner {
+    padding-top: 0em; }
+    @media only screen and (min-width: 53.25em) {
+      .full-feature-card .details-inner {
+        padding-top: 0vw; } }
+    @media only screen and (min-width: 1560px) {
+      .full-feature-card .details-inner {
+        padding-top: 0rem; } }
+    @media only screen and (max-width: 53.25em) {
+      .full-feature-card .details-inner {
+        padding-left: 0; } }
+  .full-feature-card .description {
+    font-family: "acumin-pro", Arial, sans-serif;
+    font-weight: 300;
+    line-height: 1.166667;
+    font-size: 2.37rem; }
+    @media only screen and (min-width: 53.25em) {
+      .full-feature-card .description {
+        font-size: 2.667rem; } }
+    @media only screen and (min-width: 1560px) {
+      .full-feature-card .description {
+        line-height: 1.166667;
+        font-size: 3rem; } }
 
 /* Sidebar cards
 -------------------------------------------------- */
@@ -7195,7 +7257,7 @@ a.details {
   margin-bottom: 3.55556rem; }
   @media only screen and (min-width: 53.25em) {
     .sidebar-card {
-      margin-bottom: 2.4972vw; } }
+      margin-bottom: 2.56vw; } }
   @media only screen and (min-width: 1560px) {
     .sidebar-card {
       margin-bottom: 4rem; } }
@@ -7216,10 +7278,10 @@ a.details {
     display: none; }
   .sidebar-card .title {
     font-weight: 600;
-    margin-top: -0.78125vw; }
+    margin-top: -0.2em; }
     @media only screen and (min-width: 53.25em) {
       .sidebar-card .title {
-        margin-top: -0.31215vw; } }
+        margin-top: -0.32vw; } }
     @media only screen and (min-width: 1560px) {
       .sidebar-card .title {
         margin-top: -0.5rem; } }
@@ -7233,20 +7295,20 @@ a.details {
 /* Titles on top
 -------------------------------------------------- */
 .cards--title-top .image {
-  padding-top: 12.5vw;
-  padding-bottom: 3.125vw; }
+  padding-top: 3.2em;
+  padding-bottom: 0.8em; }
   @media only screen and (max-width: 53.25em) {
     .cards--title-top .image {
       padding-top: 11vw; } }
   @media only screen and (min-width: 53.25em) {
     .cards--title-top .image {
-      padding-top: 4.9944vw; } }
+      padding-top: 5.12vw; } }
   @media only screen and (min-width: 1560px) {
     .cards--title-top .image {
       padding-top: 8rem; } }
   @media only screen and (min-width: 53.25em) {
     .cards--title-top .image {
-      padding-bottom: 1.2486vw; } }
+      padding-bottom: 1.28vw; } }
   @media only screen and (min-width: 1560px) {
     .cards--title-top .image {
       padding-bottom: 2rem; } }
@@ -7263,19 +7325,19 @@ a.details {
     margin-bottom: 3.55556rem; } }
   @media only screen and (max-width: 53.25em) and (min-width: 53.25em) {
     .cards--date-title-top .card {
-      margin-bottom: 2.4972vw; } }
+      margin-bottom: 2.56vw; } }
   @media only screen and (max-width: 53.25em) and (min-width: 1560px) {
     .cards--date-title-top .card {
       margin-bottom: 4rem; } }
 
 .cards--date-title-top .image {
-  padding-top: 26.5625vw; }
+  padding-top: 6.8em; }
   @media only screen and (max-width: 53.25em) {
     .cards--date-title-top .image {
       padding-top: 0; } }
   @media only screen and (min-width: 53.25em) {
     .cards--date-title-top .image {
-      padding-top: 10.6131vw; } }
+      padding-top: 10.88vw; } }
   @media only screen and (min-width: 1560px) {
     .cards--date-title-top .image {
       padding-top: 17rem; } }
@@ -7287,80 +7349,70 @@ a.details {
 
 /* Albums & Vinyl
 -------------------------------------------------- */
-.cards--albums .details-inner, .cards--vinyl .details-inner {
+.album-card .details-inner, .vinyl-card .details-inner {
   padding: 0;
-  padding-top: 3.125vw; }
+  padding-top: 0.8em; }
   @media only screen and (min-width: 53.25em) {
-    .cards--albums .details-inner, .cards--vinyl .details-inner {
-      padding-top: 1.2486vw; } }
+    .album-card .details-inner, .vinyl-card .details-inner {
+      padding-top: 1.28vw; } }
   @media only screen and (min-width: 1560px) {
-    .cards--albums .details-inner, .cards--vinyl .details-inner {
+    .album-card .details-inner, .vinyl-card .details-inner {
       padding-top: 2rem; } }
 
-.cards--albums .description, .cards--vinyl .description {
+.album-card .description, .vinyl-card .description {
   display: none; }
 
-.cards--albums .title, .cards--vinyl .title {
+.album-card .title, .vinyl-card .title {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   font-size: 1.48rem;
   font-weight: 700;
   line-height: 1; }
   @media only screen and (min-width: 53.25em) {
-    .cards--albums .title, .cards--vinyl .title {
+    .album-card .title, .vinyl-card .title {
       font-size: 1.665rem; } }
   @media only screen and (min-width: 1560px) {
-    .cards--albums .title, .cards--vinyl .title {
+    .album-card .title, .vinyl-card .title {
       font-size: 1.873rem; } }
 
-.cards--albums .artist, .cards--vinyl .artist {
+.album-card .artist, .vinyl-card .artist {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   font-size: 1.48rem; }
   @media only screen and (min-width: 53.25em) {
-    .cards--albums .artist, .cards--vinyl .artist {
+    .album-card .artist, .vinyl-card .artist {
       font-size: 1.665rem; } }
   @media only screen and (min-width: 1560px) {
-    .cards--albums .artist, .cards--vinyl .artist {
+    .album-card .artist, .vinyl-card .artist {
       font-size: 1.873rem; } }
 
-@media only screen and (min-width: 53.25em) {
-  .cards--albums, .cards--vinyl {
-    margin-bottom: 2.13333rem; } }
-  @media only screen and (min-width: 53.25em) and (min-width: 53.25em) {
-    .cards--albums, .cards--vinyl {
-      margin-bottom: 1.49832vw; } }
-  @media only screen and (min-width: 53.25em) and (min-width: 1560px) {
-    .cards--albums, .cards--vinyl {
-      margin-bottom: 2.4rem; } }
-
 @media only screen and (max-width: 53.25em) {
-  .cards--albums .card:nth-of-type(2n + 1) {
+  .album-card:nth-of-type(2n + 1) {
     clear: left; } }
 
 @media only screen and (min-width: 53.25em) {
-  .cards--albums .card:nth-of-type(6n + 1) {
+  .album-card:nth-of-type(6n + 1) {
     clear: left; } }
 
 @media only screen and (max-width: 53.25em) {
-  .cards--vinyl .card:nth-of-type(2n + 1) {
+  .vinyl-card:nth-of-type(2n + 1) {
     clear: left; } }
 
 @media only screen and (min-width: 53.25em) {
-  .cards--vinyl .card:nth-of-type(4n + 1) {
+  .vinyl-card:nth-of-type(4n + 1) {
     clear: left; } }
 
 /* Merchandise
 -------------------------------------------------- */
 @media only screen and (max-width: 53.25em) {
-  .cards--merchandise .card:nth-of-type(2n + 1) {
+  .merchandise-card:nth-of-type(2n + 1) {
     clear: left; } }
 
 @media only screen and (min-width: 53.25em) {
-  .cards--merchandise .card:nth-of-type(6n + 1) {
+  .merchandise-card:nth-of-type(6n + 1) {
     clear: left; } }
 
-.cards--merchandise .title {
+.merchandise-card .title {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   font-size: 1.48rem;
@@ -7369,58 +7421,76 @@ a.details {
   text-align: center;
   margin-bottom: 0.44444rem; }
   @media only screen and (min-width: 53.25em) {
-    .cards--merchandise .title {
+    .merchandise-card .title {
       font-size: 1.665rem; } }
   @media only screen and (min-width: 1560px) {
-    .cards--merchandise .title {
+    .merchandise-card .title {
       font-size: 1.873rem; } }
   @media only screen and (min-width: 53.25em) {
-    .cards--merchandise .title {
-      margin-bottom: 0.31215vw; } }
+    .merchandise-card .title {
+      margin-bottom: 0.32vw; } }
   @media only screen and (min-width: 1560px) {
-    .cards--merchandise .title {
+    .merchandise-card .title {
       margin-bottom: 0.5rem; } }
 
-.cards--merchandise .price {
+.merchandise-card .price {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   font-size: 1.48rem;
   color: #4d4d4d;
   text-align: center; }
   @media only screen and (min-width: 53.25em) {
-    .cards--merchandise .price {
+    .merchandise-card .price {
       font-size: 1.665rem; } }
   @media only screen and (min-width: 1560px) {
-    .cards--merchandise .price {
+    .merchandise-card .price {
       font-size: 1.873rem; } }
+
+/* Inverse cards (titles above images)
+-------------------------------------------------- */
+.inverse-card .image {
+  margin-top: 0.8em; }
+  @media only screen and (min-width: 53.25em) {
+    .inverse-card .image {
+      margin-top: 1.28vw; } }
+  @media only screen and (min-width: 1560px) {
+    .inverse-card .image {
+      margin-top: 2rem; } }
 
 /* Cards with borders
 -------------------------------------------------- */
-.border-top:before {
+.top-border-card:before {
   content: '';
   border-top: 1px solid #b3b3b3;
   width: 100%;
   display: block; }
 
-.full-border .image, .full-border .video {
+.full-border-card .image, .full-border-card .video {
   padding-bottom: 0; }
 
-.full-border .details-inner {
+.full-border-card .details-inner {
   border: 2px solid #d9d9d9;
-  padding-left: 3.125vw;
-  padding-bottom: 3.125vw; }
+  padding-left: 0.8em;
+  padding-bottom: 0.8em;
+  padding-left: 1rem; }
   @media only screen and (min-width: 53.25em) {
-    .full-border .details-inner {
-      padding-left: 1.2486vw; } }
+    .full-border-card .details-inner {
+      padding-left: 1.28vw; } }
   @media only screen and (min-width: 1560px) {
-    .full-border .details-inner {
+    .full-border-card .details-inner {
       padding-left: 2rem; } }
   @media only screen and (min-width: 53.25em) {
-    .full-border .details-inner {
-      padding-bottom: 1.2486vw; } }
+    .full-border-card .details-inner {
+      padding-bottom: 1.28vw; } }
   @media only screen and (min-width: 1560px) {
-    .full-border .details-inner {
+    .full-border-card .details-inner {
       padding-bottom: 2rem; } }
+  @media only screen and (min-width: 53.25em) {
+    .full-border-card .details-inner {
+      padding-left: 1rem; } }
+  @media only screen and (min-width: 1560px) {
+    .full-border-card .details-inner {
+      padding-left: 2rem; } }
 
 /* Blog article
 -------------------------------------------------- */
@@ -7438,19 +7508,9 @@ a.details {
     clear: none; } }
 
 @media only screen and (min-width: 53.25em) {
-  .cards-sm-break-2 .card:nth-of-type(2n + 1) {
-    clear: left; } }
-
-@media only screen and (min-width: 53.25em) {
   .card-sm-break-6:nth-of-type(2n + 1) {
     clear: none; }
   .card-sm-break-6:nth-of-type(6n + 1) {
-    clear: left; } }
-
-@media only screen and (min-width: 53.25em) {
-  .cards-break-3:nth-of-type(2n + 1) {
-    clear: none; }
-  .cards-break-3:nth-of-type(4n + 1) {
     clear: left; } }
 
 /* #links
@@ -7464,10 +7524,10 @@ a {
 -------------------------------------------------- */
 .sub-section {
   border-top: 1px solid gray;
-  margin-top: 6.25vw; }
+  margin-top: 1.6em; }
   @media only screen and (min-width: 53.25em) {
     .sub-section {
-      margin-top: 2.4972vw; } }
+      margin-top: 2.56vw; } }
   @media only screen and (min-width: 1560px) {
     .sub-section {
       margin-top: 4rem; } }
@@ -7503,7 +7563,7 @@ a {
       font-size: 2.7rem; } }
   @media only screen and (min-width: 53.25em) {
     .intro-copy {
-      margin-bottom: 0.6243vw; } }
+      margin-bottom: 0.64vw; } }
   @media only screen and (min-width: 1560px) {
     .intro-copy {
       margin-bottom: 1rem; } }
@@ -7512,16 +7572,16 @@ a {
   margin-bottom: 3.55556rem; }
   @media only screen and (min-width: 53.25em) {
     .intro-section {
-      margin-bottom: 2.4972vw; } }
+      margin-bottom: 2.56vw; } }
   @media only screen and (min-width: 1560px) {
     .intro-section {
       margin-bottom: 4rem; } }
 
 h3.sidebar-section-title {
-  margin-top: 0.78125vw; }
+  margin-top: 0.2em; }
   @media only screen and (min-width: 53.25em) {
     h3.sidebar-section-title {
-      margin-top: 0.31215vw; } }
+      margin-top: 0.32vw; } }
   @media only screen and (min-width: 1560px) {
     h3.sidebar-section-title {
       margin-top: 0.5rem; } }
@@ -7530,17 +7590,17 @@ h3.sidebar-section-title {
 -------------------------------------------------- */
 .grid-item-inner {
   background-color: #333333;
-  height: 14.0625vw;
+  height: 3.6em;
   margin-bottom: 1.77778rem; }
   @media only screen and (min-width: 53.25em) {
     .grid-item-inner {
-      height: 5.6187vw; } }
+      height: 5.76vw; } }
   @media only screen and (min-width: 1560px) {
     .grid-item-inner {
       height: 9rem; } }
   @media only screen and (min-width: 53.25em) {
     .grid-item-inner {
-      margin-bottom: 1.2486vw; } }
+      margin-bottom: 1.28vw; } }
   @media only screen and (min-width: 1560px) {
     .grid-item-inner {
       margin-bottom: 2rem; } }
@@ -7572,10 +7632,10 @@ h3.sidebar-section-title {
     transform: translateY(-50%); }
     @media only screen and (min-width: 53.25em) {
       .grid-item-inner .copy {
-        font-size: 1.873rem; } }
+        font-size: 1.665rem; } }
     @media only screen and (min-width: 1560px) {
       .grid-item-inner .copy {
-        font-size: 2.107rem; } }
+        font-size: 1.873rem; } }
 
 .grid-item.blank .grid-item-inner {
   visibility: hidden; }
@@ -7587,7 +7647,7 @@ h3.sidebar-section-title {
   margin-bottom: 3.55556rem; }
   @media only screen and (min-width: 53.25em) {
     .custom-grid-container {
-      margin-bottom: 2.4972vw; } }
+      margin-bottom: 2.56vw; } }
   @media only screen and (min-width: 1560px) {
     .custom-grid-container {
       margin-bottom: 4rem; } }
@@ -7610,34 +7670,34 @@ h3.sidebar-section-title {
   font-weight: 600; }
 
 .color-square {
-  height: 31.25vw;
+  height: 8em;
   margin-bottom: 0.88889rem; }
   @media only screen and (min-width: 53.25em) {
     .color-square {
-      height: 12.486vw; } }
+      height: 12.8vw; } }
   @media only screen and (min-width: 1560px) {
     .color-square {
       height: 20rem; } }
   @media only screen and (min-width: 53.25em) {
     .color-square {
-      margin-bottom: 0.6243vw; } }
+      margin-bottom: 0.64vw; } }
   @media only screen and (min-width: 1560px) {
     .color-square {
       margin-bottom: 1rem; } }
 
 .color code.hljs {
-  margin-top: 0.78125vw;
-  padding: 1.5625vw;
+  margin-top: 0.2em;
+  padding: 0.4em;
   font-size: 1.4rem; }
   @media only screen and (min-width: 53.25em) {
     .color code.hljs {
-      margin-top: 0.31215vw; } }
+      margin-top: 0.32vw; } }
   @media only screen and (min-width: 1560px) {
     .color code.hljs {
       margin-top: 0.5rem; } }
   @media only screen and (min-width: 53.25em) {
     .color code.hljs {
-      padding: 0.6243vw; } }
+      padding: 0.64vw; } }
   @media only screen and (min-width: 1560px) {
     .color code.hljs {
       padding: 1rem; } }
@@ -7782,10 +7842,10 @@ pre {
       margin-bottom: 8rem; } }
 
 code.hljs {
-  padding: 4.6875vw; }
+  padding: 1.2em; }
   @media only screen and (min-width: 53.25em) {
     code.hljs {
-      padding: 1.8729vw; } }
+      padding: 1.92vw; } }
   @media only screen and (min-width: 1560px) {
     code.hljs {
       padding: 3rem; } }
@@ -7799,8 +7859,8 @@ code.hljs {
   line-height: 1;
   font-size: 2.133rem;
   margin-bottom: 0.88889rem;
-  padding-top: 3.125vw;
-  margin-top: 4.6875vw;
+  padding-top: 0.8em;
+  margin-top: 1.2em;
   margin-bottom: 1.77778rem; }
   @media only screen and (min-width: 53.25em) {
     .section-subtitle {
@@ -7811,25 +7871,25 @@ code.hljs {
       font-size: 2.7rem; } }
   @media only screen and (min-width: 53.25em) {
     .section-subtitle {
-      margin-bottom: 0.6243vw; } }
+      margin-bottom: 0.64vw; } }
   @media only screen and (min-width: 1560px) {
     .section-subtitle {
       margin-bottom: 1rem; } }
   @media only screen and (min-width: 53.25em) {
     .section-subtitle {
-      padding-top: 1.2486vw; } }
+      padding-top: 1.28vw; } }
   @media only screen and (min-width: 1560px) {
     .section-subtitle {
       padding-top: 2rem; } }
   @media only screen and (min-width: 53.25em) {
     .section-subtitle {
-      margin-top: 1.8729vw; } }
+      margin-top: 1.92vw; } }
   @media only screen and (min-width: 1560px) {
     .section-subtitle {
       margin-top: 3rem; } }
   @media only screen and (min-width: 53.25em) {
     .section-subtitle {
-      margin-bottom: 1.2486vw; } }
+      margin-bottom: 1.28vw; } }
   @media only screen and (min-width: 1560px) {
     .section-subtitle {
       margin-bottom: 2rem; } }
@@ -7838,7 +7898,7 @@ code.hljs {
   margin-bottom: 3.55556rem; }
   @media only screen and (min-width: 53.25em) {
     .section__description {
-      margin-bottom: 2.4972vw; } }
+      margin-bottom: 2.56vw; } }
   @media only screen and (min-width: 1560px) {
     .section__description {
       margin-bottom: 4rem; } }
@@ -7852,11 +7912,11 @@ code.hljs {
   font-size: 1.48rem;
   text-transform: initial;
   font-weight: 600;
-  height: 5.3125vw;
-  padding-top: 0.46875vw;
-  padding-right: 1.5625vw;
-  padding-bottom: 1.5625vw;
-  padding-left: 1.5625vw; }
+  height: 1.36em;
+  padding-top: 0.12em;
+  padding-right: 0.4em;
+  padding-bottom: 0.4em;
+  padding-left: 0.4em; }
   @media only screen and (min-width: 53.25em) {
     .show-code {
       font-size: 1.665rem; } }
@@ -7865,31 +7925,31 @@ code.hljs {
       font-size: 1.873rem; } }
   @media only screen and (min-width: 53.25em) {
     .show-code {
-      height: 2.12262vw; } }
+      height: 2.176vw; } }
   @media only screen and (min-width: 1560px) {
     .show-code {
       height: 3.4rem; } }
   @media only screen and (min-width: 53.25em) {
     .show-code {
-      padding-top: 0.18729vw; } }
+      padding-top: 0.192vw; } }
   @media only screen and (min-width: 1560px) {
     .show-code {
       padding-top: 0.3rem; } }
   @media only screen and (min-width: 53.25em) {
     .show-code {
-      padding-right: 0.6243vw; } }
+      padding-right: 0.64vw; } }
   @media only screen and (min-width: 1560px) {
     .show-code {
       padding-right: 1rem; } }
   @media only screen and (min-width: 53.25em) {
     .show-code {
-      padding-bottom: 0.6243vw; } }
+      padding-bottom: 0.64vw; } }
   @media only screen and (min-width: 1560px) {
     .show-code {
       padding-bottom: 1rem; } }
   @media only screen and (min-width: 53.25em) {
     .show-code {
-      padding-left: 0.6243vw; } }
+      padding-left: 0.64vw; } }
   @media only screen and (min-width: 1560px) {
     .show-code {
       padding-left: 1rem; } }
@@ -7912,7 +7972,7 @@ code.hljs {
   margin-bottom: 3.55556rem; }
   @media only screen and (min-width: 53.25em) {
     .color {
-      margin-bottom: 2.4972vw; } }
+      margin-bottom: 2.56vw; } }
   @media only screen and (min-width: 1560px) {
     .color {
       margin-bottom: 4rem; } }
@@ -7923,10 +7983,10 @@ code.hljs {
       clear: left; } }
 
 .color__block {
-  height: 50vw; }
+  height: 12.8em; }
   @media only screen and (min-width: 53.25em) {
     .color__block {
-      height: 19.9776vw; } }
+      height: 20.48vw; } }
   @media only screen and (min-width: 1560px) {
     .color__block {
       height: 32rem; } }
@@ -7991,7 +8051,7 @@ code.hljs {
   margin-bottom: 5.33333rem; }
   @media only screen and (min-width: 53.25em) {
     .typography-section {
-      margin-bottom: 3.7458vw; } }
+      margin-bottom: 3.84vw; } }
   @media only screen and (min-width: 1560px) {
     .typography-section {
       margin-bottom: 6rem; } }
@@ -8000,16 +8060,16 @@ code.hljs {
   margin-bottom: 1.77778rem; }
   @media only screen and (min-width: 53.25em) {
     .typography-section pre {
-      margin-bottom: 1.2486vw; } }
+      margin-bottom: 1.28vw; } }
   @media only screen and (min-width: 1560px) {
     .typography-section pre {
       margin-bottom: 2rem; } }
 
 .type-title-wrapper {
-  margin-top: 6.25vw; }
+  margin-top: 1.6em; }
   @media only screen and (min-width: 53.25em) {
     .type-title-wrapper {
-      margin-top: 2.4972vw; } }
+      margin-top: 2.56vw; } }
   @media only screen and (min-width: 1560px) {
     .type-title-wrapper {
       margin-top: 4rem; } }
@@ -8018,16 +8078,16 @@ code.hljs {
   margin-bottom: 1.77778rem; }
   @media only screen and (min-width: 53.25em) {
     .type-title {
-      margin-bottom: 1.2486vw; } }
+      margin-bottom: 1.28vw; } }
   @media only screen and (min-width: 1560px) {
     .type-title {
       margin-bottom: 2rem; } }
 
 .type-title, .show-code {
-  margin-top: 3.125vw; }
+  margin-top: 0.8em; }
   @media only screen and (min-width: 53.25em) {
     .type-title, .show-code {
-      margin-top: 1.2486vw; } }
+      margin-top: 1.28vw; } }
   @media only screen and (min-width: 1560px) {
     .type-title, .show-code {
       margin-top: 2rem; } }
@@ -8059,6 +8119,7 @@ code.hljs {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1;
+  line-height: 0.95;
   font-size: 3.417rem; }
   @media only screen and (min-width: 53.25em) {
     .medium-serif-title-type {
@@ -8082,7 +8143,7 @@ code.hljs {
       font-size: 2.7rem; } }
   @media only screen and (min-width: 53.25em) {
     .small-serif-title-type {
-      margin-bottom: 0.6243vw; } }
+      margin-bottom: 0.64vw; } }
   @media only screen and (min-width: 1560px) {
     .small-serif-title-type {
       margin-bottom: 1rem; } }
@@ -8171,10 +8232,10 @@ code.hljs {
   font-size: 1.665rem; }
   @media only screen and (min-width: 53.25em) {
     .small-sans-title-type, .small-sans-title-type-light {
-      font-size: 1.873rem; } }
+      font-size: 1.665rem; } }
   @media only screen and (min-width: 1560px) {
     .small-sans-title-type, .small-sans-title-type-light {
-      font-size: 2.107rem; } }
+      font-size: 1.873rem; } }
 
 /* #cards
 -------------------------------------------------- */
@@ -8183,16 +8244,16 @@ code.hljs {
   margin-bottom: 3.55556rem; }
   @media only screen and (min-width: 53.25em) {
     .cards-section .codeblock {
-      margin-bottom: 2.4972vw; } }
+      margin-bottom: 2.56vw; } }
   @media only screen and (min-width: 1560px) {
     .cards-section .codeblock {
       margin-bottom: 4rem; } }
 
 .cards-section .show-code {
-  margin-top: 7.8125vw; }
+  margin-top: 2em; }
   @media only screen and (min-width: 53.25em) {
     .cards-section .show-code {
-      margin-top: 3.1215vw; } }
+      margin-top: 3.2vw; } }
   @media only screen and (min-width: 1560px) {
     .cards-section .show-code {
       margin-top: 5rem; } }
@@ -8213,7 +8274,7 @@ code.hljs {
       font-size: 2.7rem; } }
   @media only screen and (min-width: 53.25em) {
     .video-card .title {
-      margin-bottom: 0.6243vw; } }
+      margin-bottom: 0.64vw; } }
   @media only screen and (min-width: 1560px) {
     .video-card .title {
       margin-bottom: 1rem; } }
@@ -8248,6 +8309,7 @@ code.hljs {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1;
+  line-height: 0.95;
   font-size: 3.417rem; }
   @media only screen and (min-width: 53.25em) {
     .video-section .title {

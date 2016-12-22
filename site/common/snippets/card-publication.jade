@@ -1,0 +1,31 @@
+-if ('' != $card->thumbnail_img()):
+	//- set thumbnail as image if it's set in panel
+	-$image = $card->image($card->thumbnail_img())
+- elseif($src = $card->image()):
+	-$image = $src
+-endif
+
+li.card.col-sm-6.publication-card.top-border-card
+	.row
+		.image.col-xs-4
+			a(href="<?= $card->url() ?>")
+				img(src="<?= $image->url() ?>")
+		.details.col-xs-8
+			.details-inner
+
+				a.high(href="<?= $card->url() ?>").title: span.light: span.er= $card->title()
+
+				.author!= $card->author()
+
+				//- order1
+				-if('' != $card->order1()):	
+					//- text, non-breaking space, right arrow
+					a.high.buy-now-button(href="#"): span.light: span.er!= $card->order1(), '&nbsp;&#x2192';
+				-endif
+
+				//- order2
+				-if('' != $card->order2()):	
+					//- text, non-breaking space, right arrow
+					a.high.buy-now-button(href="#"): span.light: span.er!= $card->order2(), '&nbsp;&#x2192';
+				-endif
+
