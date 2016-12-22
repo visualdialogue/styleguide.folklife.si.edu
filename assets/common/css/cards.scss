@@ -493,8 +493,6 @@ a.details {
 		@extend .col-sm-12;
 	}
 	.cards--sm-2 .card {
-		// @extend .col-xs-6;
-		// @extend .col-sm-2;
 		// break every 2 cards on mobile
 		&:nth-of-type(2n + 1) {
 			clear:left;
