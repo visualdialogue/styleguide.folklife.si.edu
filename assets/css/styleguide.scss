@@ -40,7 +40,7 @@
 	a {
 		color: $copy;
 		&:hover {
-			color: white;
+			color: $black40;
 		}
 	}
 
@@ -196,6 +196,8 @@
 		display:none;
 	}
 	pre {
+		display: none; // start hidden
+		
 		float: left; // stay under show-code button
 		width: 100%;
 		font-size:16px;
@@ -208,20 +210,21 @@
 		white-space: initial;
 		margin-bottom:4rem;
 		@include respond-to(break2) {margin-bottom:2.55vw;}
-		@include respond-to(fullwidth) {margin-bottom:8rem;}
-		@include margin-top(1);
+		@include respond-to(fullwidth) {
+			margin-bottom:8rem;
+		}
+		// @include margin-top(1);
 
 		-moz-tab-size: 4; /* Code for Firefox */
 		-o-tab-size: 4; /* Code for Opera 10.6-12.1 */
 		tab-size: 4;
-
-		&.type {
-			display: none; // start hidden
-		}
 	}
 	// highlight.js code block
 	code.hljs {
 		@include padding(3);
+	}
+	.html code {
+		width: 300%; // prevent code breaking on html code
 	}
 
 	.section-subtitle {
@@ -252,6 +255,10 @@
 		&:hover {
 			color: $black20;
 			background-color: #282c34; // from highlight.js atom dark theme
+		}
+		&.active {
+			color: $black20;
+			background-color: #282c34;
 		}
 	}
 	.icon-down-arrow {

@@ -10,10 +10,15 @@ section.container.first-section.intro-section
 		aside.sidebar.sidebar--info.col-sm-4.col-sm-offset-1
 			h3.sidebar-section-title References
 			ul
-				//- get all references
-				-foreach ($section->references()->toStructure() as $reference):
-						li.sidebar-item.sidebar-highlight
-							a(href="<?= $reference->url() ?>" target="_blank")
-								h4.sidebar-item-title= $reference->title()
-								.info!= $reference->link()
-				-endforeach
+				li.sidebar-item
+					h4.sidebar-item-title SASS
+					.info
+						a(href="http://sass-lang.com" target="_blank") sass-lang.com						
+				li.sidebar-item
+					h4.sidebar-item-title Oxygen
+					.info
+						a(href="http://oxygencss.com" target="_blank") oxygencss.com
+				li.sidebar-item
+					h4.sidebar-item-title Bootstrap
+					.info
+						a(href="http://getbootstrap.com" target="_blank") getbootstrap.com

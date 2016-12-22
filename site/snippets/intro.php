@@ -11,13 +11,18 @@
     <aside class="sidebar sidebar--info col-sm-4 col-sm-offset-1">
       <h3 class="sidebar-section-title">References</h3>
       <ul>
-        <?php foreach ($section->references()->toStructure() as $reference): ?>
-        <li class="sidebar-item sidebar-highlight"><a href="<?= $reference->url() ?>" target="_blank">
-            <h4 class="sidebar-item-title">
-              <?php echo htmlspecialchars($reference->title(), ENT_QUOTES, 'UTF-8'); ?></h4>
-            <div class="info">
-              <?php echo $reference->link(); ?></div></a></li>
-        <?php endforeach; ?>
+        <li class="sidebar-item">
+          <h4 class="sidebar-item-title">SASS</h4>
+          <div class="info"><a href="http://sass-lang.com" target="_blank">sass-lang.com						</a></div>
+        </li>
+        <li class="sidebar-item">
+          <h4 class="sidebar-item-title">Oxygen</h4>
+          <div class="info"><a href="http://oxygencss.com" target="_blank">oxygencss.com</a></div>
+        </li>
+        <li class="sidebar-item">
+          <h4 class="sidebar-item-title">Bootstrap</h4>
+          <div class="info"><a href="http://getbootstrap.com" target="_blank">getbootstrap.com</a></div>
+        </li>
       </ul>
     </aside>
   </div>

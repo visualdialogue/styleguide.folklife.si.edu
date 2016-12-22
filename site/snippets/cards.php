@@ -42,7 +42,7 @@
         </div>
       </li>
       <div class="col-md-9">
-        <pre class="type html"><code>&lt;li class="card audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border"&gt;
+        <pre class="html"><code>&lt;li class="card audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border"&gt;
 	&lt;div class="image"&gt;	
 		&lt;a href="#"&gt;
 			&lt;img src="/320x320.jpg"&gt;
@@ -78,12 +78,7 @@
 </code></pre>
       </div>
       <div class="col-md-9">
-        <pre class="type sass"><code>.video-card {
-	.title {
-		@include serif-sm;
-		font-weight: 600;
-	}
-}
+        <pre class="sass"><code>// audio styles are default, and controlled with audio.scss
 </code></pre>
       </div>
     </div>
@@ -121,7 +116,16 @@
         </div>
       </li>
       <div class="col-md-8">
-        <pre class="type"><code>&lt;li class="card video-card col-sm-4"&gt;
+        <pre class="sass"><code>// As video cards can have different looks, we set the title font based on the section via the CSS
+.folkways-learn-section {
+	.title {
+		@include serif-sm;
+		font-weight: 600;
+	}
+}</code></pre>
+      </div>
+      <div class="col-md-8">
+        <pre class="html"><code>&lt;li class="card video-card col-sm-4"&gt;
 	&lt;div class="row"&gt;
 		&lt;div class="video col-xs-12" data-video-id="190599898" data-title="Festival 101" data-description="Lorem ipsum... &lt;a&gt;more&lt;/a&gt;"&gt;
 			&lt;div class="center-box"&gt;
@@ -190,7 +194,14 @@
         </div>
       </div>
       <div class="col-sm-6">
-        <pre class="type"><code>&lt;li class="card horizontal-card col-xs-6 border-top"&gt;
+        <pre class="sass"><code>.folkways-magazine-card {
+	.title {
+		@include magazinetitle;
+	}
+}</code></pre>
+      </div>
+      <div class="col-sm-6">
+        <pre class="html"><code>&lt;li class="card horizontal-card col-xs-6 border-top"&gt;
 	&lt;div class="row"&gt;
 		&lt;div class="image col-sm-6"&gt;
 			&lt;a href="#"&gt;

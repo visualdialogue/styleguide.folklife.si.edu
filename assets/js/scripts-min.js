@@ -399,10 +399,12 @@ $(document).ready(function () {
 		// 	$(this).closest('.codeblock').find('pre').toggle();
 		// });
 		$showHTML.on('click', function () {
+			$(this).toggleClass('active');
 			$(this).closest('.codeblock').find('pre.sass').hide();
 			$(this).closest('.codeblock').find('pre.html').toggle();
 		});
 		$showSASS.on('click', function () {
+			$(this).toggleClass('active');
 			$(this).closest('.codeblock').find('pre.html').hide();
 			$(this).closest('.codeblock').find('pre.sass').toggle();
 		});

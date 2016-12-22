@@ -37,13 +37,17 @@ This applies correct heading and paragraphy styles. --&gt;
     <aside class="sidebar sidebar--info col-sm-4 col-sm-offset-1">
       <h3 class="sidebar-section-title">References</h3>
       <ul>
-        <li class="sidebar-item sidebar-highlight">
+        <li class="sidebar-item">
           <h4 class="sidebar-item-title">Oxygen CSS Naming Convention</h4>
           <div class="info"><a href="http://oxygencss.com/" target="_blank">oxygencss.com</a></div>
         </li>
-        <li class="sidebar-item sidebar-highlight">
+        <li class="sidebar-item">
           <h4 class="sidebar-item-title">SASS mixins</h4>
           <div class="info"><a href="https://sass-guidelin.es/#mixins" target="_blank">sass-guidelin.es/#mixins</a></div>
+        </li>
+        <li class="sidebar-item">
+          <h4 class="sidebar-item-title">More SASS</h4>
+          <div class="info"><a href="http://thesassway.com" target="_blank">thesassway.com	</a></div>
         </li>
       </ul>
     </aside>

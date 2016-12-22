@@ -7458,7 +7458,7 @@ a.details {
 a {
   color: #333333; }
   a:hover {
-    color: white; }
+    color: #999999; }
 
 /* #general
 -------------------------------------------------- */
@@ -7757,6 +7757,7 @@ h3.sidebar-section-title {
   display: none; }
 
 pre {
+  display: none;
   float: left;
   width: 100%;
   font-size: 16px;
@@ -7768,7 +7769,6 @@ pre {
   background-color: transparent;
   white-space: initial;
   margin-bottom: 4rem;
-  margin-top: 1.5625vw;
   -moz-tab-size: 4;
   /* Code for Firefox */
   -o-tab-size: 4;
@@ -7780,14 +7780,6 @@ pre {
   @media only screen and (min-width: 1560px) {
     pre {
       margin-bottom: 8rem; } }
-  @media only screen and (min-width: 53.25em) {
-    pre {
-      margin-top: 0.6243vw; } }
-  @media only screen and (min-width: 1560px) {
-    pre {
-      margin-top: 1rem; } }
-  pre.type {
-    display: none; }
 
 code.hljs {
   padding: 4.6875vw; }
@@ -7797,6 +7789,9 @@ code.hljs {
   @media only screen and (min-width: 1560px) {
     code.hljs {
       padding: 3rem; } }
+
+.html code {
+  width: 300%; }
 
 .section-subtitle {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
@@ -7902,6 +7897,9 @@ code.hljs {
     .show-code {
       font-size: 1.25vw; } }
   .show-code:hover {
+    color: #cccccc;
+    background-color: #282c34; }
+  .show-code.active {
     color: #cccccc;
     background-color: #282c34; }
 

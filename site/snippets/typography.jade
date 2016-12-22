@@ -5,12 +5,13 @@ section.container.typography-section
 			h2.section-title Typography
 			a.anchor-link#typography
 			.intro-copy.link-underline
-				p Fonts are stored as SASS <em>mixins</em> so they can be used anywhere in the .scss files without fear of cascading styles overriding them.
-				p You can easily implement the mixin by targeting a specific .title, or other, class as seen in the following lines:
+				p Fonts are stored as SASS <em>mixins</em> so they can be used anywhere in the .scss files without fear of cascading styles overriding them. You can easily implement the mixin by targeting a specific .title, or other, class as seen in the following lines:
 
 				pre: code.
 					.archives-page {
-						.title {@include sans-lg}
+						.title {
+							@include sans-lg;
+						}
 					}
 
 				p Font sizes were determined by the design and with the major second modular scale mainly for responsive sizes (1.125). See <a href="http://www.modularscale.com" target="_blank">www.modularscale.com</a>.
@@ -51,7 +52,7 @@ section.container.typography-section
 						|Maximum Line Height: 6.738rem
 
 				.col-md-7
-					pre.type: code.
+					pre.sass: code.
 						@mixin serif-lg {
 							font-family: $serif;
 							font-weight: 700;
@@ -81,7 +82,7 @@ section.container.typography-section
 						|Maximum Line Height: 4.325rem
 
 				.col-md-7
-					pre.type: code.
+					pre.sass: code.
 						@mixin serif-md {
 							font-family: $serif;
 							font-weight: 700;
@@ -112,7 +113,7 @@ section.container.typography-section
 						|Maximum Line Height: 3.0861rem
 
 				.col-md-7
-					pre.type: code.
+					pre.sass: code.
 						@mixin serif-sm {
 							font-family: $serif;
 							font-weight: 700;
@@ -147,7 +148,7 @@ section.container.typography-section
 						|Maximum Line Height: 40.5rem
 
 				.col-md-7
-					pre.type: code.
+					pre.sass: code.
 						@mixin sans-xl {
 							font-family: $sans;
 							font-weight: 600;
@@ -177,7 +178,7 @@ section.container.typography-section
 						|Maximum Line Height: 40.5rem
 
 				.col-md-7
-					pre.type: code.
+					pre.sass: code.
 						@mixin sans-xl {
 							font-family: $sans;
 							font-weight: 300;
@@ -207,7 +208,7 @@ section.container.typography-section
 						|Maximum Line Height: 3.5rem
 
 				.col-md-7
-					pre.type: code.
+					pre.sass: code.
 						@mixin sans-lg {
 							font-family: $sans;
 							font-weight: 600;
@@ -238,7 +239,7 @@ section.container.typography-section
 						|Maximum Line Height: 3.5rem
 
 				.col-md-7
-					pre.type: code.
+					pre.sass: code.
 						@mixin sans-lg {
 							font-family: $sans;
 							font-weight: 300;
@@ -269,7 +270,7 @@ section.container.typography-section
 						|Maximum Line Height: 2.844rem
 
 				.col-md-7
-					pre.type: code.
+					pre.sass: code.
 						@mixin sans-md {
 							font-family: $sans;
 							font-weight: 600;
@@ -300,7 +301,7 @@ section.container.typography-section
 						|Maximum Line Height: 2.528rem
 
 				.col-md-7
-					pre.type: code.
+					pre.sass: code.
 						@mixin sans-sm {
 							font-family: $sans;
 							font-weight: 500;

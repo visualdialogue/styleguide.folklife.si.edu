@@ -5,10 +5,11 @@
     <main class="content col-sm-7">
       <h2 class="section-title">Typography</h2><a id="typography" class="anchor-link"></a>
       <div class="intro-copy link-underline">
-        <p>Fonts are stored as SASS <em>mixins</em> so they can be used anywhere in the .scss files without fear of cascading styles overriding them.</p>
-        <p>You can easily implement the mixin by targeting a specific .title, or other, class as seen in the following lines:</p>
+        <p>Fonts are stored as SASS <em>mixins</em> so they can be used anywhere in the .scss files without fear of cascading styles overriding them. You can easily implement the mixin by targeting a specific .title, or other, class as seen in the following lines:</p>
         <pre><code>.archives-page {
-	.title {@include sans-lg}
+	.title {
+		@include sans-lg;
+	}
 }
 </code></pre>
         <p>Font sizes were determined by the design and with the major second modular scale mainly for responsive sizes (1.125). See <a href="http://www.modularscale.com" target="_blank">www.modularscale.com</a>.</p>
@@ -42,7 +43,7 @@
           <div class="type-details">Typeface: Freight Text<br/>Weight: Bold<br/>Maximum Font Size: 6.158rem<br/>Maximum Line Height: 6.738rem</div>
         </div>
         <div class="col-md-7">
-          <pre class="type"><code>@mixin serif-lg {
+          <pre class="sass"><code>@mixin serif-lg {
 	font-family: $serif;
 	font-weight: 700;
 	line-height: 1.1;
@@ -68,7 +69,7 @@
           <div class="type-details">Typeface: Freight Text<br/>Weight: Bold<br/>Maximum Font Size: 4.325rem<br/>Maximum Line Height: 4.325rem</div>
         </div>
         <div class="col-md-7">
-          <pre class="type"><code>@mixin serif-md {
+          <pre class="sass"><code>@mixin serif-md {
 	font-family: $serif;
 	font-weight: 700;
 	line-height: 1;
@@ -95,7 +96,7 @@
           <div class="type-details">Typeface: Freight Text<br/>Weight: Bold<br/>Maximum Font Size: 2.7rem<br/>Maximum Line Height: 3.0861rem</div>
         </div>
         <div class="col-md-7">
-          <pre class="type"><code>@mixin serif-sm {
+          <pre class="sass"><code>@mixin serif-sm {
 	font-family: $serif;
 	font-weight: 700;
 	line-height: 1;
@@ -126,7 +127,7 @@
           <div class="type-details">Typeface: Acumin Pro<br/>Weight: Semibold<br/>Maximum Font Size: 3.375rem<br/>Maximum Line Height: 40.5rem</div>
         </div>
         <div class="col-md-7">
-          <pre class="type"><code>@mixin sans-xl {
+          <pre class="sass"><code>@mixin sans-xl {
 	font-family: $sans;
 	font-weight: 600;
 	font-size: 2.667rem;
@@ -152,7 +153,7 @@
           <div class="type-details">Typeface: Acumin Pro<br/>Weight: Light<br/>Maximum Font Size: 3.375rem<br/>Maximum Line Height: 40.5rem</div>
         </div>
         <div class="col-md-7">
-          <pre class="type"><code>@mixin sans-xl {
+          <pre class="sass"><code>@mixin sans-xl {
 	font-family: $sans;
 	font-weight: 300;
 	font-size: 2.667rem;
@@ -178,7 +179,7 @@
           <div class="type-details">Typeface: Acumin Pro<br/>Weight: Semibold<br/>Maximum Font Size: 3rem<br/>Maximum Line Height: 3.5rem</div>
         </div>
         <div class="col-md-7">
-          <pre class="type"><code>@mixin sans-lg {
+          <pre class="sass"><code>@mixin sans-lg {
 	font-family: $sans;
 	font-weight: 600;
 	line-height: 1.166667;
@@ -205,7 +206,7 @@
           <div class="type-details">Typeface: Acumin Pro<br/>Weight: Light<br/>Maximum Font Size: 3rem<br/>Maximum Line Height: 3.5rem</div>
         </div>
         <div class="col-md-7">
-          <pre class="type"><code>@mixin sans-lg {
+          <pre class="sass"><code>@mixin sans-lg {
 	font-family: $sans;
 	font-weight: 300;
 	line-height: 1.166667;
@@ -232,7 +233,7 @@
           <div class="type-details">Typeface: Acumin Pro<br/>Weight: Semibold<br/>Maximum Font Size: 2.37rem<br/>Maximum Line Height: 2.844rem</div>
         </div>
         <div class="col-md-7">
-          <pre class="type"><code>@mixin sans-md {
+          <pre class="sass"><code>@mixin sans-md {
 	font-family: $sans;
 	font-weight: 600;
 	line-height: 1.2;
@@ -259,7 +260,7 @@
           <div class="type-details">Typeface: Acumin Pro<br/>Weight: Semibold<br/>Maximum Font Size: 2.107rem<br/>Maximum Line Height: 2.528rem</div>
         </div>
         <div class="col-md-7">
-          <pre class="type"><code>@mixin sans-sm {
+          <pre class="sass"><code>@mixin sans-sm {
 	font-family: $sans;
 	font-weight: 500;
 	line-height: 1.2;

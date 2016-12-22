@@ -35,7 +35,7 @@ section.container.cards-section
 										|0:00 &vert;&nbsp;23:01
 									.volume.icon-volume-up
 			.col-md-9
-				pre.type.html: code.
+				pre.html: code.
 					&lt;li class="card audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border"&gt;
 						&lt;div class="image"&gt;	
 							&lt;a href="#"&gt;
@@ -71,13 +71,8 @@ section.container.cards-section
 					&lt;/li&gt;
 
 			.col-md-9
-				pre.type.sass: code.
-					.video-card {
-						.title {
-							@include serif-sm;
-							font-weight: 600;
-						}
-					}
+				pre.sass: code.
+					// audio styles are default, and controlled with audio.scss
 
 	.codeblock			
 		.row
@@ -104,7 +99,16 @@ section.container.cards-section
 								p See the culture and history of circus arts across the U.S.
 
 			.col-md-8
-				pre.type: code.
+				pre.sass: code.
+					// As video cards can have different looks, we set the title font based on the section via the CSS
+					.folkways-learn-section {
+						.title {
+							@include serif-sm;
+							font-weight: 600;
+						}
+					}
+			.col-md-8
+				pre.html: code.
 					&lt;li class="card video-card col-sm-4"&gt;
 						&lt;div class="row"&gt;
 							&lt;div class="video col-xs-12" data-video-id="190599898" data-title="Festival 101" data-description="Lorem ipsum... &lt;a&gt;more&lt;/a&gt;"&gt;
@@ -168,7 +172,14 @@ section.container.cards-section
 								p The global African Diaspora has often searched through music for a “post-racist utopia.”
 
 			.col-sm-6
-				pre.type: code.
+				pre.sass: code.
+					.folkways-magazine-card {
+						.title {
+							@include magazinetitle;
+						}
+					}
+			.col-sm-6
+				pre.html: code.
 					&lt;li class="card horizontal-card col-xs-6 border-top"&gt;
 						&lt;div class="row"&gt;
 							&lt;div class="image col-sm-6"&gt;
@@ -212,7 +223,7 @@ section.container.cards-section
 	//- 					a.high(href="#").title: span.light: span.er Alza Tu Voz (Speak Out): From Picket Line to Radio
 
 	//- 		.col-sm-6
-	//- 			pre.type: code.
+	//- 			pre: code.
 	//- 				&lt;div class="card feature background-card col-sm-6"&gt;
 	//- 					&lt;div class="image col-sm-6"&gt;
 	//- 						&lt;a href="#"&gt;
