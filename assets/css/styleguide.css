@@ -4174,6 +4174,7 @@ iframe {
 -------------------------------------------------- */
 /* Sans serif
 * Acumin Pro from Typekit
+* minor second (1.125) based on 3rem?
 -------------------------------------------------- */
 /* Slab
 * Unit Gothic 717 and 718 from Typekit
@@ -4193,7 +4194,9 @@ body {
   font-weight: 700;
   line-height: 1;
   line-height: 0.95;
-  font-size: 3.417rem; }
+  font-size: 3.417rem;
+  font-size: 3.038rem;
+  font-size: 2.7rem; }
   @media only screen and (min-width: 53.25em) {
     .content h3, .text-card h3 {
       font-size: 3.844rem; } }
@@ -4205,7 +4208,7 @@ body {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1;
-  font-size: 2.133rem;
+  font-size: 1.896rem;
   margin-bottom: 0.88889rem;
   margin-bottom: 1.77778rem; }
   @media only screen and (min-width: 53.25em) {
@@ -4491,6 +4494,9 @@ a {
 
 a:hover {
   text-decoration: none; }
+  @media only screen and (max-width: 53.25em) {
+    a:hover {
+      color: #333333; } }
 
 .footer-title:hover, .logo-mask:hover, .site-toggle-link:hover {
   background-color: transparent; }
@@ -4812,8 +4818,8 @@ a:hover {
 
 .block-logo {
   max-width: initial;
-  width: 120px;
-  height: 120px; }
+  width: 100px;
+  height: 100px; }
   @media only screen and (min-width: 53.25em) {
     .block-logo {
       width: 150px;
@@ -4830,8 +4836,8 @@ a:hover {
 .one-line-logo {
   max-width: initial;
   display: none;
-  width: 120px;
-  margin-top: 0.2rem; }
+  width: 100px;
+  margin-top: 0.5rem; }
   @media only screen and (min-width: 53.25em) {
     .one-line-logo {
       margin-top: 0.5rem;
@@ -4895,11 +4901,10 @@ body:not(.home-page) .is-smaller .logo-wrapper, body:not(.home-page) .has-one-li
 
 .nav-icons {
   right: 0;
-  text-align: right;
-  margin-right: -10px; }
+  text-align: right; }
   @media only screen and (min-width: 53.25em) {
     .nav-icons {
-      margin-right: 0;
+      position: static;
       float: right;
       margin-top: 0.2rem; } }
   @media only screen and (min-width: 1560px) {
@@ -5267,13 +5272,25 @@ select {
 .last-container section {
   margin-bottom: 2.5rem; }
 
-.col-xs-half-image {
-  float: left;
-  width: 54%; }
+@media only screen and (max-width: 53.25em) {
+  .col-xs-half-image {
+    float: left;
+    width: 54%; } }
 
-.col-xs-half-details {
-  float: left;
-  width: 46%; }
+@media only screen and (max-width: 53.25em) {
+  .col-xs-half-details {
+    float: left;
+    width: 46%; } }
+
+@media only screen and (min-width: 53.25em) {
+  .col-sm-half-image {
+    float: left;
+    width: 54%; } }
+
+@media only screen and (min-width: 53.25em) {
+  .col-sm-half-details {
+    float: left;
+    width: 46%; } }
 
 .col-half {
   width: 50%;
@@ -5467,7 +5484,7 @@ ul {
     font-family: "acumin-pro", Arial, sans-serif;
     font-weight: 300;
     line-height: 1.166667;
-    font-size: 2.37rem;
+    font-size: 2.107rem;
     color: gray;
     padding-bottom: 0.4em;
     margin-top: 1.6em;
@@ -5737,7 +5754,7 @@ a .page-title {
     font-family: "acumin-pro", Arial, sans-serif;
     font-weight: 300;
     line-height: 1.166667;
-    font-size: 2.37rem;
+    font-size: 2.107rem;
     text-align: center; }
     @media only screen and (min-width: 53.25em) {
       .become-a-member .copy {
@@ -6106,6 +6123,7 @@ a .page-title {
 .audio-player-details {
   line-height: 1;
   width: 67%;
+  width: 65%;
   padding-left: 0.4em; }
   @media only screen and (min-width: 53.25em) {
     .audio-player-details {
@@ -6415,7 +6433,7 @@ a .page-title {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1.1;
-  font-size: 4.865rem;
+  font-size: 4.325rem;
   margin-bottom: 0.88889rem; }
   @media only screen and (min-width: 53.25em) {
     .blog-article .title {
@@ -6633,7 +6651,7 @@ a.details {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1;
-  font-size: 2.133rem;
+  font-size: 1.896rem;
   margin-bottom: 0.88889rem;
   display: block; }
   @media only screen and (min-width: 53.25em) {
@@ -6949,7 +6967,7 @@ a.details {
     font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
     font-weight: 700;
     line-height: 1.1;
-    font-size: 4.865rem;
+    font-size: 4.325rem;
     margin-bottom: 1rem; }
     @media only screen and (min-width: 53.25em) {
       .full-feature-card .title {
@@ -6978,7 +6996,7 @@ a.details {
     font-family: "acumin-pro", Arial, sans-serif;
     font-weight: 300;
     line-height: 1.166667;
-    font-size: 2.37rem; }
+    font-size: 2.107rem; }
     @media only screen and (min-width: 53.25em) {
       .full-feature-card .description {
         font-size: 2.667rem; } }
@@ -7172,6 +7190,18 @@ a.details {
     .full-border-card .details-inner {
       padding-left: 2rem; } }
 
+/* Card stacking
+-------------------------------------------------- */
+@media only screen and (max-width: 53.25em) {
+  .card-xs-break-2:nth-of-type(2n + 1) {
+    clear: left; } }
+
+@media only screen and (min-width: 53.25em) {
+  .card-sm-break-6:nth-of-type(2n + 1) {
+    clear: none; }
+  .card-sm-break-6:nth-of-type(6n + 1) {
+    clear: left; } }
+
 /* #links
 -------------------------------------------------- */
 a {
@@ -7197,7 +7227,7 @@ a {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1.1;
-  font-size: 4.865rem;
+  font-size: 4.325rem;
   margin-top: 0; }
   @media only screen and (min-width: 53.25em) {
     .intro-title {
@@ -7210,7 +7240,7 @@ a {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1;
-  font-size: 2.133rem;
+  font-size: 1.896rem;
   margin-bottom: 0.88889rem;
   font-weight: 500; }
   @media only screen and (min-width: 53.25em) {
@@ -7516,7 +7546,7 @@ code.hljs {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1;
-  font-size: 2.133rem;
+  font-size: 1.896rem;
   margin-bottom: 0.88889rem;
   padding-top: 0.8em;
   margin-top: 1.2em;
@@ -7703,7 +7733,7 @@ code.hljs {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1.1;
-  font-size: 4.865rem; }
+  font-size: 4.325rem; }
   @media only screen and (min-width: 53.25em) {
     .large-serif-title-type {
       font-size: 5.474rem; } }
@@ -7716,7 +7746,9 @@ code.hljs {
   font-weight: 700;
   line-height: 1;
   line-height: 0.95;
-  font-size: 3.417rem; }
+  font-size: 3.417rem;
+  font-size: 3.038rem;
+  font-size: 2.7rem; }
   @media only screen and (min-width: 53.25em) {
     .medium-serif-title-type {
       font-size: 3.844rem; } }
@@ -7728,7 +7760,7 @@ code.hljs {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1;
-  font-size: 2.133rem;
+  font-size: 1.896rem;
   margin-bottom: 0.88889rem; }
   @media only screen and (min-width: 53.25em) {
     .small-serif-title-type {
@@ -7773,7 +7805,7 @@ code.hljs {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.166667;
-  font-size: 2.37rem;
+  font-size: 2.107rem;
   font-weight: 600; }
   @media only screen and (min-width: 53.25em) {
     .large-sans-title-type {
@@ -7787,7 +7819,7 @@ code.hljs {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.166667;
-  font-size: 2.37rem; }
+  font-size: 2.107rem; }
   @media only screen and (min-width: 53.25em) {
     .large-sans-title-type-light {
       font-size: 2.667rem; } }
@@ -7858,7 +7890,7 @@ code.hljs {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1;
-  font-size: 2.133rem;
+  font-size: 1.896rem;
   margin-bottom: 0.88889rem;
   font-weight: 600; }
   @media only screen and (min-width: 53.25em) {
@@ -7906,7 +7938,9 @@ code.hljs {
   font-weight: 700;
   line-height: 1;
   line-height: 0.95;
-  font-size: 3.417rem; }
+  font-size: 3.417rem;
+  font-size: 3.038rem;
+  font-size: 2.7rem; }
   @media only screen and (min-width: 53.25em) {
     .video-section .title {
       font-size: 3.844rem; } }

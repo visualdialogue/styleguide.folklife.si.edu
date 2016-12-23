@@ -1,7 +1,12 @@
 /* #Links
 -------------------------------------------------- */
 	a { color: $link; }
-	a:hover { text-decoration: none; }
+	a:hover { 
+		text-decoration: none; 
+		@include respond-to(break2max) {
+			color: $link;
+		}
+	}
 	// a:hover, .main-copy h2 a:hover  { color: $hover; }
 	// .main-copy a { color: $copylinks; }
 	// .title a:hover {

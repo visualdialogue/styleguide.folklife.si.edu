@@ -12,7 +12,8 @@
 		font-family: $serif;
 		font-weight: 700;
 		line-height: 1.1;
-		font-size: 4.865rem;
+		// font-size: 4.865rem;
+		font-size: 4.325rem;
 		@include respond-to(break2) {
 			font-size: 5.474rem;			
 		}
@@ -29,6 +30,8 @@
 		line-height: 0.95; // smaller for folklife dive deep
 		// font-size: 6vw;
 		font-size: 3.417rem;
+		font-size: 3.038rem;
+		font-size: 2.7rem;
 		@include respond-to(break2) {
 			// font-size: 2.6vw;
 			font-size: 3.844rem;
@@ -46,7 +49,8 @@
 		line-height: 1;
 	  	// font-size: 6vw;
 	  	// font-size: 5vw;
-	  	font-size: 2.133rem;
+	  	// font-size: 2.133rem;
+	  	font-size: 1.896rem;
 		@include respond-to(break2) {
 			line-height: 1.143; // 28/32
 	  		// font-size: 1.8vw;
@@ -75,6 +79,7 @@
 
 /* Sans serif
 * Acumin Pro from Typekit
+* minor second (1.125) based on 3rem?
 -------------------------------------------------- */
 	// Extra Large Sans (Folkways)
 	@mixin sans-xl {
@@ -99,7 +104,9 @@
 		font-family: $sans;
 		font-weight: 300; // light for acumin
 		line-height: 1.166667; // tighter for festival/learn page // 35px
-	  	font-size: 2.37rem;
+	  	// font-size: 2.37rem;
+		font-size: 2.107rem;
+
 		@include respond-to(break2) {
 	  		font-size: 2.667rem;
 		}
@@ -380,8 +387,10 @@
 		font-family: $sansWide;
 		font-weight: 800;
 		line-height: 1.095237; // 46px desktop
-		font-size: 2.622rem;
-		font-size: 2.331rem;
+		// font-size: 2.622rem;
+		// font-size: 2.331rem;
+		// font-size: 2.072rem;
+		font-size: 1.842rem;
 		@include respond-to(break2) {
 			// font-size: 3.319rem;
 			font-size: 2.95rem;

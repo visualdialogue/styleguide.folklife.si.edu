@@ -47,12 +47,28 @@
 
 // folklife - talk story
 .col-xs-half-image {
-	float: left;
-	width: 54%;
+	@include respond-to(break2max) {
+		float: left;
+		width: 54%;
+	}
 }
 .col-xs-half-details {
-	float: left;
-	width: 46%;
+	@include respond-to(break2max) {
+		float: left;
+		width: 46%;
+	}
+}
+.col-sm-half-image {
+	@include respond-to(break2) {
+		float: left;
+		width: 54%;
+	}
+}
+.col-sm-half-details {
+	@include respond-to(break2) {
+		float: left;
+		width: 46%;
+	}
 }
 
 // folklife homepage bottom collections

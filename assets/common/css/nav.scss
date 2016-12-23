@@ -198,15 +198,15 @@
 		// height: 32px;
 		// width: 25vw;
 		// height: 25vw;
-		width: 120px;
-		height: 120px;
+		width: 100px;
+		height: 100px;
 		@include respond-to(break2) {
 			// width: 420px;
 			// height: 70px;
 			// width: 11vw;
 			// height: 11vw;
-			// width: 120px;
-			// height: 120px;
+			// width: 100px;
+			// height: 100px;
 			width: 150px;
 			height: 150px;
 		}
@@ -238,12 +238,12 @@
 		// @include respond-to(break2max) {
 			// margin-top: 0.2rem;
 		// }
-		width: 120px;
-		margin-top:0.2rem;
+		width: 100px;
+		margin-top:0.5rem;
 		@include respond-to(break2) {
 			margin-top:0.5rem;
 			// width:11vw; // too blurry
-			// width: 120px;
+			// width: 100px;
 			width:150px;
 		}
 		@include respond-to(fullwidth) {
@@ -344,18 +344,13 @@
 	}
 
 	.nav-icons {
+		// position: absolute;
 		right: 0;
 		text-align:right;
-		// margin-top: 2vw; // 12.16 to help with new hamburger nav
-		// margin-top: 0.5rem; // 12.19
-		margin-right: -10px;
 		@include respond-to(break2) {
-			// margin-top:0.5vw; // 12.16
-			margin-right: 0;
+			position: static;
 			float: right;
 			margin-top: 0.2rem;
-			// width: 58.33333%;
-			// width: 75%;
 		}
 		@include respond-to(fullwidth) {
 			margin-top:1.3rem;

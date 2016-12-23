@@ -540,3 +540,26 @@ a.details {
 			@include respond-to(fullwidth) {padding-left:2rem;}
 		}
 	}
+
+
+/* Card stacking
+-------------------------------------------------- */
+
+	.card-xs-break-2 {
+		&:nth-of-type(2n + 1) {
+			@include respond-to(break2max) {
+				clear:left;
+			}
+		}
+	
+	}
+	.card-sm-break-6 {
+		@include respond-to(break2) {
+			&:nth-of-type(2n + 1) {
+				clear:none;
+			}
+			&:nth-of-type(6n + 1) {
+				clear:left;
+			}
+		}
+	}

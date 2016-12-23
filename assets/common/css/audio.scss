@@ -46,6 +46,7 @@
 	.audio-player-details {
 		line-height: 1;
 		width:67%;
+		width:65%;
 		// @include respond-to(break2) {width:73%;}
 		@include respond-to(break2) {width:70%;}
 		@include respond-to(fullwidth) {

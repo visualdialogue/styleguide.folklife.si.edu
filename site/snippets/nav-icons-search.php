@@ -1,6 +1,6 @@
 
 <!-- Search Bar-->
-<form action="." class="search-bar desktop-search-bar form col-sm-5 col-sm-offset-1 col-md-5 col-md-offset-2 col-lg-offset-2 col-lg-6">
+<form action="." class="search-bar desktop-search-bar col-sm-offset-1 col-sm-5 col-md-5 col-md-offset-1 col-lg-offset-2 col-lg-6">
   <input placeholder="Search..." type="search"/>
 </form>
 <!-- Main Navigation Icons-->
