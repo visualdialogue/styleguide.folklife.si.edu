@@ -14,28 +14,28 @@
 			// position: fixed;
 			width: 100%;
 			z-index: 10;
-			height: $navbarHeight--subpage--mobile;
+			height: $mobile-subpage-navbarHeight;
 		}
 		@include respond-to(break2) {
 			// top: 60px;
-			top: $navbarSiteToggle--tablet;
+			top: $tablet-navbarSiteToggle;
 			z-index: 2;
 			z-index: 10;
-			height: $navbarHeight--subpage--tablet;
+			height: $tablet-subpage-navbarHeight;
 		}
 		@include respond-to(fullwidth) {
-			top: $navbarSiteToggle--desktop;
-			height: $navbarHeight--desktop;
+			top: $desktop-navbarSiteToggle;
+			height: $desktop-navbarHeight;
 		}
 
 		// if open, go light
-		&--open {
+		&.isOpen {
 			background-color: $navbar; // only go less opacity here otherwise folklife banner movement will show below
 			height: auto !important; // so will expand with menu when needed
 		}
 
 		// set height to match with navbar
-		// @include headerHeight--subpage;
+		// @include subpage-headerHeight;
 
 		// shadow, from 
 		box-shadow: 0px 17px 41px -8px rgba(0,0,0,0.20);
@@ -50,8 +50,8 @@
 	.home-page {
 		.navbar {
 			// set height to match with navbar
-			// @include headerHeight--home;
-			@include navbarHeight--home;
+			// @include home-headerHeight;
+			@include home-navbarHeight;
 		}
 	}
 
@@ -74,12 +74,12 @@
 			position: absolute; // height 72px
 			width: 100%;
 			padding-top: 0.8rem;
-			height: $navbarSiteToggle--tablet;
+			height: $tablet-navbarSiteToggle;
 		}
 		@include respond-to(fullwidth) {
 			line-height:3.5rem !important;
 			padding: 0;
-			height: $navbarSiteToggle--desktop;
+			height: $desktop-navbarSiteToggle;
 		}
 	}
 	.tagline {
@@ -131,47 +131,31 @@
 
 		// new header
 	}
-	
 
-	.navbar-brand {
+	.logo-wrapper {
+		float: left; // allow nav icons to go to right
 		height: auto; // bootstrap override
-		// padding-left:0 !important; // bootstrap override
 		margin-left: 0 !important; // bootstrap override
 		font-size: 10px; // prevent gap to sunsplash
-		// padding: 10px 0 0 0;
-		// padding: 0 !important ;
-		// @include navbarHeight--subpage;
+		@include padding-top(2);
+		@include respond-to(break2max) {
+			padding-top: 1.5rem;
+		}
 		@include respond-to(break2) {
-			// height: 115px; // old
-			// height: $navbarHeight--home--tablet; // new
-			// padding: 1.4vw 0 10px 0;
-			// width: 14.2857%; // 200 / 1400
+
 		}
 
 		@include respond-to(fullwidth) {
-			// padding: 23px 0 18px 0;
-			// padding: 20px 0 18px 0;
-			// line up with left side
-			padding-top: 10px !important; // bootstrap override
 			font-size: 25px; // back to normal
-
-			// height: 118px; // from layout
-			// new header
-			// height: $navbarHeight--home--desktop; // from new layout
-
-			// new
-			// padding-left:0; // align with left side instead of col
-			// folkways
-			// width: 14.2857%; // 200 / 1400
 		}
 	}
 	.home-page {
-		.navbar-brand {
-			@include navbarHeight--home;
+		.logo-wrapper {
+			@include home-navbarHeight;
 		}
 	}
 	.navspacer {
-		@include headerHeight--subpage;
+		@include subpage-headerHeight;
 		// background-color: $black80;
 		&-open {
 			// height: 132px !important;
@@ -184,7 +168,7 @@
 	}
 	.home-page {
 		.navspacer {
-			@include headerHeight--home;
+			@include home-headerHeight;
 		}
 	}
 	.logo-mask {
@@ -230,10 +214,7 @@
 		left: 0;
 	}
 	.navbar.logo-swap {
-		.navbar-brand {
-			// padding: 0 !important; // bootstrap override
-			padding-top: 0; // other !important override
-
+		.logo-wrapper {
 		}
 		.block-logo {
 			display: none;
@@ -254,20 +235,25 @@
 		@include respond-to(fullwidth) {width:160px;}
 	}
 	.smaller-header, .one-line-logo {
-		.navbar-brand {
+		.logo-wrapper {
+				// padding-top: 0;
 			@include respond-to(break2) {
-				// padding: 17px 0;
-				// -webkit-transition: all 0.3s ease;
-				// -moz-transition: all 0.3s ease;
-				// -ms-transition: all 0.3s ease;
-				// -o-transition: all 0.3s ease;
-				// transition: all 0.3s ease;
+				// padding-top: 0;
 			}
 			@include respond-to(fullwidth) {
-				padding-top: 2rem;
+				// padding-top: 1rem;
 			}
 
 		}
+	}
+	.smaller-header, .one-line-logo {
+		.logo-wrapper {
+			// @include padding-top(0.9);
+			// @include padding-top(1.5);
+			padding-top:0.8rem;
+			@include respond-to(break2) {padding-top:1vw;}
+			@include respond-to(fullwidth) {padding-top:1rem;}
+		}	
 	}
 	.smaller-header {
 		// new logo
@@ -275,7 +261,7 @@
 		position: fixed;
 		top:0;
 		width: 100%;
-		background-color: $navbar; // duplicate from navbar--open because sometimes close navbar when smaller header and need to keep the opacity
+		background-color: $navbar; // duplicate from navbar-open because sometimes close navbar when smaller header and need to keep the opacity
 		.block-logo { top: -25%; }
 		.logo {
 			.folkways-logo { top: -35%; }
@@ -300,8 +286,8 @@
 	// Only on subpages, navbar gets smaller on scroll
 	body:not(.home-page) {
 		.smaller-header, .logo-swap {
-			.navbar-brand {
-				@include navbarHeight--subpage--smaller;
+			.logo-wrapper {
+				@include subpage-smaller-navbarHeight;
 			}
 		}
 	}

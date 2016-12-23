@@ -97,11 +97,10 @@
 
 		// when user scrolls past height of site toggle, make smaller
 		if (($(this).scrollTop() > gapNavHeight) && (isNavOpen == false)) {  
-			// site.navbar.addClass("smaller-header navbar--open");
 			site.navbar.addClass("smaller-header");
 			isNavOpen = true;
 			if(!site.isMobile) {
-				$navspacer.addClass("navspacer--taller"); // open right away
+				// $navspacer.addClass("navspacer-\-taller"); // open right away
 				$navspacer.addClass("navspacer-open"); // open right away
 			}
 		}
@@ -134,9 +133,9 @@
 /*********************
 * Social Media Icons
 *********************/
-	var $socialMediaIconDivMobile = $('.social-icons--mobile');
-	var $socialMediaIconsMobile = $('.social-icon--mobile');
-	var $socialMediaIconsDesktop = $('.social-icons--desktop');
+	var $socialMediaIconDivMobile = $('.mobile-social-icons');
+	var $socialMediaIconsMobile = $('.mobile-social-icon');
+	var $socialMediaIconsDesktop = $('.desktop-social-icons');
 	var $socialMediaIcons = $('.social-icons');
 	var $shareIcon = $('#share-icon');
 	var shareClosed = true;
@@ -148,14 +147,14 @@
 		// if not yet open
 		if(shareClosed) {
 			navCloseAll(); // close anything else that's open by default, only after we've determined that share is Closed
-			site.navbar.addClass('navbar--open');
+			site.navbar.addClass('isOpen');
 			if(site.isMobile) // switch to one-line logo in mobile view
 				site.navbar.addClass('logo-swap'); 
 			$navbarOutside.css('position', 'fixed'); // activate navbarOutside			
 			$notShareIcon.addClass('lighter-nav-icons'); // grey out other icons
 			shareClosed = false; // flag for closing	
 			$socialMediaIcons.show();
-			$folkwaysNav.hide(); // hide folkways nav
+			// $folkwaysNav.hide(); // hide folkways nav
 		} else {
 			navCloseAll(); // close anything else that's open by default
 			shareClosed = true; // flag for closing	
@@ -166,7 +165,7 @@
 * Search 
 *********************/
 	var $searchBar = $('.search-bar');
-	var $searchBarMobile = $('.search-bar--mobile');
+	var $searchBarMobile = $('.mobile-search-bar');
 	var $searchIcon = $('#search-icon');
 	var $browsenav = $('#browsenav'); // will only exist on folkways, otherwise hidden with php
 	var searchClosed = true;
@@ -178,7 +177,7 @@
 			navCloseAll(); // after we've determined that search is closed, close anything else that's open by default
 			if(site.isMobile) // switch to one-line logo in mobile view
 				site.navbar.addClass('logo-swap'); 
-			site.navbar.addClass('navbar--open');
+			site.navbar.addClass('isOpen');
 			$navbarOutside.css('position', 'fixed'); // activate navbarOutside
 			$notSearchIcon.addClass('lighter-nav-icons'); // grey out other icons
 			$searchBar.add($browsenav).show(); // show social media icons
@@ -204,7 +203,7 @@
 		// if not yet open
 		if(menuClosed) {
 			navCloseAll(); // after we've determined that menu is closed, close anything else that's open by default
-			site.navbar.addClass('navbar--open');
+			site.navbar.addClass('isOpen');
 			site.navbar.addClass('logo-swap'); // switch to one-line logo
 			$navbarOutside.css('position', 'fixed'); // activate navbarOutside
 			console.log('one line logo');				
@@ -243,7 +242,7 @@
 			$folkwaysNav.show(); // reset folkways nav, but not on mobile
 	 	
 		$navbarOutside.css('position', 'static'); // remove outside clicker so can hover rest of page
-		site.navbar.removeClass('navbar--open');
+		site.navbar.removeClass('isOpen');
 		$allIcons.removeClass('lighter-nav-icons');
 		$megaNav.add($searchBar).add($browsenav).add($socialMediaIcons).hide(); // close auxiliaries
 		console.log('all closed');
@@ -285,7 +284,7 @@
 	  // on playing a video in the gallery...
 	  $('.video').on('click', function() {
 	  	// console.log('click');
-	  	// manually open remodal because sometimes just doesn't do it--\/--
+	  	// manually open remodal because sometimes just doesn't do it
 	  	remodalInstance.open();
 	  	console.log('opened remodal');
 
@@ -380,15 +379,6 @@
 * from https://github.com/liabru/jquery-match-height
 **********/
 	$('.audio-card .details-inner').matchHeight();
-			
-	// Folklife Dive Deep
-	$('.eh-fl-dive-deep').matchHeight();
-
-	// Explore Collections & Teach
-	if(!site.isMobile)
-		$('.eh-fl-explore-teach .card').matchHeight({byRow:false});
-	else
-		$('.eh-fl-explore-teach .card').matchHeight({byRow:true});
 
 
 });

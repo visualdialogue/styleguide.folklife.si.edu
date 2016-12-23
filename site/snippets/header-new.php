@@ -30,7 +30,7 @@
   <div class="navbar-header container">
     <div class="ul row">
       <!-- Logo-->
-      <div class="navbar-brand col-sm-2">
+      <div class="logo-wrapper col-sm-2">
         <div id="logo-wrapper" class="logo"><a href="/"><img id="logo" src="/assets/images/logo/festival-block-logo_2016.12.19.png" class="block-logo festival-block-logo"/><img id="one-line-logo" src="/assets/images/logo/festival-one-line-logo_2016.12.19.png" class="one-line-logo festival-one-line-logo"/></a></div>
       </div>
       <?php snippet('nav-icons-search'); ?>

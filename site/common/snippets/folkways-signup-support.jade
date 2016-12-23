@@ -2,12 +2,12 @@
 
 //- half sections must be wrapped in container to stay in middle and together
 .newsletter-signup-wrapper.container
-	.newsletter-signup--short
+	.short-newsletter-signup
 		.newsletter-signup.clearfix
 			.newsletter-signup-copy
 				.icon-mail
 				= $site->newsletter_text()
 			
-	.newsletter-signup--short
+	.short-newsletter-signup
 		form(action="/").newsletter-signup-form.newsletter
 			input.newsletter-input(type="email" placeholder="Enter your email")

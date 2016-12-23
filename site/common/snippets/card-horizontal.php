@@ -30,7 +30,7 @@
           <?php echo $card->date('M d, Y'), '<br />', $card->time(); ?></div>
         <?php elseif (isset($date)): ?>
         <div class="tag">
-          <?php echo $card->date(); ?></div>
+          <?php echo $card->date('F j, Y'); ?></div>
         <?php endif; ?>
         <?php if('' != $card->subtitle()):	 ?><a href="<?= $card->url() ?>" class="high">
           <div class="title"><span class="light"><span class="er">
@@ -39,6 +39,10 @@
                 <?php echo htmlspecialchars($card->subtitle(), ENT_QUOTES, 'UTF-8'); ?></span></span></div></a>
         <?php else: ?><a href="<?= $card->url() ?>" class="high title"><span class="light"><span class="er">
               <?php echo htmlspecialchars($card->title(), ENT_QUOTES, 'UTF-8'); ?></span></span></a>
+        <?php endif; ?>
+        <?php if (isset($artist)): ?>
+        <div class="artist">
+          <?php echo $card->artist()->kt(); ?></div>
         <?php endif; ?>
         <?php if (isset($blurb)): ?>
         <div class="description link-underline blurb">
@@ -52,6 +56,8 @@
         <?php endif; ?>
         <?php if (isset($more_link)): ?>
         <?php snippet('more-link', array('link' => $card->url())); ?>
+        <?php endif; ?>
+        <?php if (isset($simple_more_link)): ?><a href="#" class="simple-more-link">more</a>
         <?php endif; ?>
       </div>
     </div>

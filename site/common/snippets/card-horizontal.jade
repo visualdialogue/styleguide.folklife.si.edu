@@ -30,7 +30,7 @@ li.card(class="<?= $card_classes ?><? if ($card->type() == 'video') echo ' video
 				-if (isset($date) && isset($time)):
 					.tag!= $card->date('M d, Y'), '<br />', $card->time()
 				-elseif (isset($date)):
-					.tag!= $card->date()
+					.tag!= $card->date('F j, Y')
 				-endif
 
 				//- if subtitle, group with title for correct highlighting
@@ -40,6 +40,10 @@ li.card(class="<?= $card_classes ?><? if ($card->type() == 'video') echo ' video
 						.subtitle: span.light: span.er= $card->subtitle()
 				-else:
 					a.high(href="<?= $card->url() ?>").title: span.light: span.er= $card->title()
+				-endif
+				
+				-if (isset($artist)):
+					.artist!= $card->artist()->kt()
 				-endif
 
 				//- blurb
@@ -54,4 +58,8 @@ li.card(class="<?= $card_classes ?><? if ($card->type() == 'video') echo ' video
 
 				-if (isset($more_link)):
 					-snippet('more-link', array('link' => $card->url()))
+				-endif
+
+				-if (isset($simple_more_link)):
+					a.simple-more-link(href="#") more
 				-endif

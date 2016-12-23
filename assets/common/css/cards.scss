@@ -4,12 +4,6 @@
 	margin-bottom:1.5rem;
 	@include respond-to(break2) {margin-bottom:3.2vw;}
 	@include respond-to(fullwidth) {margin-bottom:4rem;}
-	@include respond-to(break2max) {
-		.image, .video {
-			// margin-bottom: 1rem;
-		}	
-	}
-	
 }
 
 .border {
@@ -30,13 +24,10 @@
 
 // details only include top padding
 .details-inner {
-	// @include padding-top(2);
-
 	@include respond-to(break2) {
 		min-height: initial; // reset // for ios
 		min-height: auto; // for windows
 	}
-	// @include padding-top(3);
 	@include padding-top(2);
 	@include padding-right(1);
 	padding-top:1.5rem;
@@ -50,37 +41,6 @@
 a.details {
 	display: inline-block; // for anchor tags that are .details
 }
-// smaller featurette details require less padding
-.details--tight {
-	@include respond-to(break2) {
-		// padding: 1.35vw 0.6vw 0 1.35vw;
-		// padding: 0.9vw 0.7vw 0 1.0vw;
-	}
-	@include respond-to(fullwidth) {
-		// padding: 1.4rem 1.8rem 0 2rem;
-		// padding: 1.6rem 1.8rem 0 1.8rem;
-	}
-}
-// smaller featurette details require less padding
-.details--tight-bottom {
-	@include respond-to(break2) {
-		padding-bottom: 1.25vw;
-	}
-	@include respond-to(fullwidth) {
-		padding-bottom: 1.5rem;
-	}
-}
-
-.details-wrapper--horizontal {
-	// @include padding-right(13);
-	// padding-left:1rem;
-	@include respond-to(break2) {padding-left:$full-gutter;}
-	@include respond-to(fullwidth) {padding-left:2rem;}
-	.tag {
-		@include margin-bottom(0.5);
-	}
-}
-
 
 // TITLE
 .title {
@@ -106,7 +66,6 @@ a.details {
 			left: 2.8%;
 			width: 22.86%; // 320 px at fullwidth
 			min-height: 40%;
-
 		}
 		@include respond-to(fullwidth) {
 			left: 4rem;
@@ -138,14 +97,6 @@ a.details {
 		}
 	}
 
-/* #vertical
--------------------------------------------------- */
-.card-vertical {
-	.title {
-		@include serif-sm;
-	}
-}
-
 /* #program highlight (on.festival/learn 1/4 card)
 * before audio card because audio title needs to override
 -------------------------------------------------- */
@@ -155,24 +106,6 @@ a.details {
 			display: block; // for better height management;
 			@include respond-to(break2max) {
 				margin-bottom:0;
-			}
-		}
-		.description {
-
-		}
-		&, &.audio-card {
-			.details-inner {
-				// min-height:46vw;
-				// min-height: 2rem;
-				@include respond-to(break2max) {
-					// min-height:55vw !important; // override audio card
-					min-height: 20rem;
-				}
-				@include respond-to(break2) {
-					min-height:25vw;
-					min-height:22rem;
-				}
-				@include respond-to(fullwidth) {min-height:23rem;}
 			}
 		}
 	}
@@ -415,11 +348,6 @@ a.details {
 		// @include respond-to(fullwidth) {margin-bottom:4rem;}
 		@include respond-to(fullwidth) {margin-bottom:6rem;}
 	}
-	.horizontal-cards-section:not(.banner-section) {
-		// remove extra margin from last row
-		// @include margin-bottom(-1);
-		// margin-bottom: 0;;
-	}
 	.horizontal-card {
 		.details-inner {
 			padding-left:$small-gutter;
@@ -427,7 +355,7 @@ a.details {
 			@include respond-to(fullwidth) {padding-left:0;}
 		}
 	}
-	.cards--horizontal {
+	.horizontal-card {
 		// featurette list
 		li:last-of-type {
 			margin-bottom: 0 !important;
@@ -448,142 +376,6 @@ a.details {
 		}
 
 	}
-
-
-/* #Cards modifiers
--------------------------------------------------- */
-	.inset .details-inner {
-		@include padding-left(2);
-	}
-	.cards--no-padding .details-inner { 
-		padding: 0; 
-	}
-	.cards--left-align .details-inner {
-		padding-left: 0;
-	}
-	.cards--padding-top-2 .details-inner { 
-		// padding: 0; 
-		@include padding-top(2);
-	}
-	.cards--padding-top-3 .details-inner { 
-		// padding: 0; 
-		@include padding-top(3);
-	}
-	.cards--padding-top-4 .details-inner { 
-		// padding: 0; 
-		@include padding-top(4);
-	}
-
-/* Cards on the grid
--------------------------------------------------- */
-
-	.cards--xs-6 .card {
-		// clear left on every odd card
-		&:nth-of-type(2n + 1) {
-			clear:left;
-		}
-		// reset for sm
-		@include respond-to(break2) {
-			&:nth-of-type(2n + 1) {
-				clear: none;
-			}
-		}
-	}
-	.cards--sm-12 .card {
-		@extend .col-sm-12;
-	}
-	.cards--sm-2 .card {
-		// break every 2 cards on mobile
-		&:nth-of-type(2n + 1) {
-			clear:left;
-		}
-		@include respond-to(break2) {
-			// clear mobile style
-			&:nth-of-type(2n + 1) {
-				clear: none;
-			}
-			// break every 5 cards so cards don't get hung
-			&:nth-of-type(6n + 1) {
-				clear:left;
-			}
-		}
-	}
-	.cards--sm-3 .card {
-		// @extend .col-xs-6;
-		// @extend .col-sm-3;
-		
-	}
-	.cards--sm-4 .card {
-		// @extend .col-sm-4;
-	}
-	.cards--sm-6 .card {
-		@extend .col-sm-6;
-	}
-
-	.cards--image-xs-4 {
-		// add card for more specificity to override other default @extends
-		// risky business here
-		// .card {
-			.image {
-				@extend .col-xs-4;
-			}
-			.details {
-				@extend .col-xs-8;
-			}			
-		// }
-	}
-	// festival learn page
-	.cards--image-sm-4 {
-		// add card for more specificity to override other default @extends
-		// risky business here
-		// .card {
-			.image {
-				@extend .col-sm-4;
-			}
-			.details {
-				@extend .col-sm-8;
-			}			
-		// }
-	}
-	.card-sm-image-6 {
-		// add card for more specificity to override other default @extends
-		// risky business here
-		// .card {
-			.image {
-				@extend .col-sm-6;
-			}
-			.details {
-				@extend .col-sm-6;
-			}			
-		// }
-	}
-	// folklife education page
-	.cards--image-sm-7 {
-		// add card for more specificity to override other default @extends
-		// risky business here
-		// .card {
-			.image {
-				@extend .col-sm-7;
-			}
-			.details {
-				@extend .col-sm-5;
-			}			
-		// }
-	}
-	// festival OFF homepage
-	.cards--image-sm-8 {
-		// add card for more specificity to override other default @extends
-		// risky business here
-		// .card {
-			.image {
-				@extend .col-sm-8;
-			}
-			.details {
-				@extend .col-sm-4;
-			}			
-		// }
-	}
-
 
 
 /* Feature cards
@@ -627,13 +419,7 @@ a.details {
 /* Sidebar cards
 -------------------------------------------------- */
 	.sidebar-card {
-		// @include border(top);
-		// @include respond-to(break2max) {
-		// 	padding-top: 2vw;
-		// }
 		@include margin-bottom(4);
-		.card {
-		}
 		.image  {
 			padding-bottom:0;
 		}
@@ -649,52 +435,15 @@ a.details {
 			font-weight: 600;
 			@include margin-top(-0.5); // for true 20px padding top
 		}
-		&.horizontal-card {
+		&.horizontal-card, &.suggested-album {
 			.details {
+				padding-left:$small-gutter;
 				@include respond-to(break2) {padding-left:0.8vw;}
 				@include respond-to(fullwidth) {padding-left:0;}
 			}
 		}
 	}
 
-
-/* Titles on top
--------------------------------------------------- */
-	.cards--title-top {
-		.image {
-			@include respond-to(break2max) {
-				padding-top: 11vw
-			}
-			@include padding-top(8);
-			@include padding-bottom(2);
-		}
-		.details {
-			position: static; // so title can go up higher
-		}
-		.title {
-			position: absolute;
-			top: 0;
-		}
-	}
-	.cards--date-title-top {
-		.card {
-			@include respond-to(break2max) {
-				@include margin-bottom(4);
-			}	
-		}
-		.image {
-			@include respond-to(break2max) {
-				padding-top: 0;
-			}
-			@include padding-top(17);
-		}
-		.details {
-			@include respond-to(break2) {
-				position: absolute;
-				top: 0;
-			}
-		}
-	}
 
 /* Albums & Vinyl
 -------------------------------------------------- */
@@ -721,39 +470,11 @@ a.details {
 			@include sans-caption;
 			// @include margin-top(-0.2); // close the gap a bit
 		}
-		// @include respond-to(break2) {
-			// @include margin-bottom(2.4); //- 40px
-		// }
 
+		@include clear-2;
+		@include respond-to(break2) {@include clear-6;}
 	}
-	.album-card {
-		@extend .col-xs-6;
-		@extend .col-sm-2;
-		&:nth-of-type(2n + 1) {
-			@include respond-to(break2max) {
-				clear:left;
-			}
-		}
-		&:nth-of-type(6n + 1) {
-			@include respond-to(break2) {
-				clear:left;
-			}
-		}
-	}
-	.vinyl-card {
-		@extend .col-xs-6;
-		@extend .col-sm-3;
-		&:nth-of-type(2n + 1) {
-			@include respond-to(break2max) {
-				clear:left;
-			}
-		}
-		&:nth-of-type(4n + 1) {
-			@include respond-to(break2) {
-				clear:left;
-			}
-		}
-	}
+
 
 /* Merchandise
 -------------------------------------------------- */
@@ -805,9 +526,6 @@ a.details {
 			width: 100%;
 			display: block;
 		}
-		.image {
-			// margin-top: -1px; // cover part of line that goes above image // toby doesn't like it
-		}
 	}
 
 	.full-border-card {
@@ -824,50 +542,3 @@ a.details {
 			@include respond-to(fullwidth) {padding-left:2rem;}
 		}
 	}
-
-/* Blog article
--------------------------------------------------- */
-	.cards--blog.article {
-
-	}
-
-/* Helpers
--------------------------------------------------- */
-	.cards-sm-break-none {
-		.card {
-			@include respond-to(break2) {
-				clear: none !important;
-			}
-		}
-	}
-	.card-xs-break-2 {
-		&:nth-of-type(2n + 1) {
-			clear:left;
-		}
-		@include respond-to(break2) {
-			&:nth-of-type(2n + 1) {
-				clear:none;
-			}
-		}
-	}
-
-	.cards-sm-break-2 {
-		.card {			
-			
-		}
-	}
-	.card-sm-break-6 {
-		@include respond-to(break2) {
-			&:nth-of-type(2n + 1) {
-				clear:none;
-			}
-			&:nth-of-type(6n + 1) {
-				clear:left;
-			}
-		}
-	}
-	.cards-break-3 {
-		
-	}
-
-

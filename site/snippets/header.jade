@@ -27,7 +27,7 @@ head
 	//- out for firefox and safri, debug later
 	<link href="/assets/css/styleguide.css?v=<?= time() ?>" type="text/css" rel="stylesheet">
 
-<body class="site--folklife">
+<body class="folklife-site">
 #site-toggle.site-toggle
 	.container
 		.tagline Bringing Tradition Bearers From Around The World To The National Mall
@@ -49,7 +49,7 @@ nav.navbar#navbar
 	.navbar-header.container
 		ul.row
 			// Logo
-			.navbar-brand.col-sm-2
+			.logo-wrapper.col-sm-2
 				#logo-wrapper.logo
 					a(href="/")
 						img#block-logo.block-logo.folkways-block-logo(src="/assets/images/logo/folklife-block-logo_2016.12.17.png")
@@ -101,5 +101,5 @@ nav.navbar#navbar
 						li.header-nav-sub-item: a(href="/libraries#bootstrap") Bootstrap
 						li.header-nav-sub-item: a(href="/libraries#sass") SASS
 
-	<!-- Collect the nav links, forms, and other content for toggling -->
+	// Collect the nav links, forms, and other content for toggling 
 	.collapse.navbar-collapse(id="bs-example-navbar-collapse-1")

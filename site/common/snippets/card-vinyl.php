@@ -6,7 +6,7 @@
 <?php else: ?>
 <?php $image = null; ?>
 <?php endif; ?>
-<li class="card album-card col-xs-6 col-sm-2">
+<li class="card vinyl-card col-xs-6 col-sm-3">
   <div class="image"><a href="<?= $card->url() ?>"><img src="<?= $image->url() ?>"/></a></div>
   <div class="details">
     <div class="details-inner"><a href="<?= $card->url() ?>" class="high title"><span class="light"><span class="er">

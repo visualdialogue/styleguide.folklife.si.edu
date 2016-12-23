@@ -401,6 +401,8 @@ body {
 
 /* Specials
 -------------------------------------------------- */
+
+// SansWide uses 1.25 modular scale based on 4.2rem
 @mixin buybutton {
 	@include sans-tag;
 	text-transform: uppercase;
@@ -408,13 +410,14 @@ body {
 	font-weight: 800;
 	margin-bottom: 0.5rem;
 	margin-bottom: 0;
-	font-size: 1.48rem;
+	// font-size: 1.48rem;
+	font-size: 1.376rem;
 	@include respond-to(break2) {
-		font-size: 1.665rem;
+		font-size: 1.376rem;
 		margin-bottom: 0.4vw;
 	}
 	@include respond-to(fullwidth) {
-		font-size: 1.873rem; // acumin pro
+		font-size: 1.72rem; // acumin pro
 		margin-bottom: 0.5rem;
 		line-height: 1.4;
 	}

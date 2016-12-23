@@ -1,35 +1,3 @@
-/* 
-
------------------------------------------------------
-item: 						| mobile 	| tablet	| desktop
------------------------------------------------------
-%meganav-font 				| 10vw   	| 4rem		| 4rem
-%link-font 					| 1.7rem 	| 2rem   	|
-%title--sans 				| 5vw		| 1.6vw		| 2.4rem
-%title--sans--alt 			| 5vw		| 2vw		| 3rem
-%subtitle--sans  			| 4vw		| 1.35vw	| 2rem
-%category 					| 4.1vw		| 1.2vw		| 1.8rem
-%section-header				|			| 2vw		| 3rem
------------------------------------------------------
-%serif-sm 				| 6vw		| 1.9vw		| 2.8rem
-%serif-sm--large 		| 5vw		| 2.7vw		|
-email-newsletter: 			| 			| 			| 3.5rem
-										| 3vw		| 6.2rem
------------------------------------------------------
-.audio__details padding		| 2vw		| 2rem		|
-.item__details--audio padd: | 3vw		| 2vw		| 3rem
-.item__details--audio padd: | 2vw		| 1.3vw		| 2rem
-.details--banner			| 2vw		| 1.35vw	| 2rem
-
-
------------------------------------------------------
-conversion: 				| mobile 	| tablet	| desktop
------------------------------------------------------
-										| 2.65vw	| 4rem
-
-*/
-
-
 /* Gutters
 -------------------------------------------------- */
 
@@ -43,10 +11,6 @@ $full-gutter: 2.72%;
 
 /* Sizes
 -------------------------------------------------- */
-  // $headerWidth: 74rem; // 1420px + 30px + 30px = 1480px for design overhang
-  // $small-header: 48px;
-  // // $pageWidth: 72rem; // 1420px + 10px + 10px = 1440px for mobile gutters on both sides
-  // // $pageWidth: 73rem; // 1420px + 20px + 20px = 1460px for mobile gutters on both sides
   $pageWidth: 1560px; // 1400px + 80px + 80px = 1560px for desktop gutters on both sides
 
   /**********
@@ -54,100 +18,82 @@ $full-gutter: 2.72%;
   * Accomplished by taking full height and subtracting height of navbar
   **********/
   // height of site toggle area on tablet and desktop
-  // $navbarSiteToggle--tablet: 2.5vw;
-  $navbarSiteToggle--mobile: 0px;
-  $navbarSiteToggle--tablet: 3.5rem;
-  $navbarSiteToggle--desktop: 36px;
+  $mobile-navbarSiteToggle: 0px;
+  $tablet-navbarSiteToggle: 3.5rem;
+  $desktop-navbarSiteToggle: 36px;
 
   // height of navbar on tablet and desktop
-  // $navbarHeight--home--mobile: 11vw;
-  // $navbarHeight--home--mobile: 9vw; // new hamburger nav
-  $navbarHeight--home--mobile: 5.5rem; // new hamburger nav
-  // $navbarHeight--subpage--mobile: 6.2rem;
-  $navbarHeight--subpage--mobile: 5.5rem;
-  // $navbarHeight--subpage--mobile--smaller: 12vw;
-  $navbarHeight--subpage--mobile--smaller: 5rem;
-  $navbarHeight--home--tablet: 5.1vw;
-  // $navbarHeight--home--tablet: 6.29vw;
-  $navbarHeight--subpage--tablet: 15.1vw;
-  $navbarHeight--subpage--tablet: 5.1vw;
-  $navbarHeight--subpage--tablet--smaller: 5.1vw;
-  $navbarHeight--desktop: 80px;
+  $mobile-home-navbarHeight: 5.5rem; // new hamburger nav
+  $mobile-subpage-navbarHeight: 5.5rem;
+  $mobile-subpage-smaller-navbarHeight: 5rem;
+  $tablet-home-navbarHeight: 5.1vw;
+  $tablet-subpage-navbarHeight: 15.1vw;
+  $tablet-subpage-navbarHeight: 5.1vw;
+  $tablet-subpage-smaller-navbarHeight: 5.1vw;
+  $desktop-navbarHeight: 80px;
 
   // spacer for logo
-  $logoSpacer--mobile:20vw;
-  $logoSpacer--tablet:9vw;
-  // $logoSpacer--desktop:153px; // from layout
-  $logoSpacer--desktop:125px; // from layout
+  $mobile-logoSpacer:19vw;
+  $tablet-logoSpacer:8.4vw;
+  $desktop-logoSpacer:135px; // from layout
 
   // height of toggle, navbar, and spacer
-  // $headerHeight--home--mobile: 7.4vw; // temp for mobile
-  $headerHeight--home--mobile: 5.5rem; // temp for mobile
-  // $headerHeight--home--mobile: 7rem; // temp for mobile
-  // $headerHeight--subpage--mobile: 34vw; // temp for mobile
-  // $headerHeight--subpage--mobile: 16rem; // temp for mobile
-  $headerHeight--subpage--mobile:#{$navbarHeight--subpage--mobile} + #{$navbarSiteToggle--mobile} + #{$logoSpacer--mobile};
-  $headerHeight--home--tablet:#{$navbarHeight--home--tablet} + #{$navbarSiteToggle--tablet};
-  $headerHeight--subpage--tablet:#{$navbarHeight--subpage--tablet} + #{$navbarSiteToggle--tablet} + #{$logoSpacer--tablet};
-  // $headerHeight--subpage--tablet:#{$navbarHeight--subpage--tablet} + #{$navbarSiteToggle--tablet};
-  $headerHeight--home--desktop:#{$navbarHeight--desktop} + #{$navbarSiteToggle--desktop};
-  $headerHeight--subpage--desktop:#{$navbarHeight--desktop} + #{$navbarSiteToggle--desktop} + #{$logoSpacer--desktop};
+  $mobile-home-headerHeight: 5.5rem; // temp for mobile
+  $mobile-subpage-headerHeight:#{$mobile-subpage-navbarHeight} + #{$mobile-navbarSiteToggle} + #{$mobile-logoSpacer};
+  $tablet-home-headerHeight:#{$tablet-home-navbarHeight} + #{$tablet-navbarSiteToggle};
+  $tablet-subpage-headerHeight:#{$tablet-subpage-navbarHeight} + #{$tablet-navbarSiteToggle} + #{$tablet-logoSpacer};
+  $desktop-home-headerHeight:#{$desktop-navbarHeight} + #{$desktop-navbarSiteToggle};
+  $desktop-subpage-headerHeight:#{$desktop-navbarHeight} + #{$desktop-navbarSiteToggle} + #{$desktop-logoSpacer};
 
 
   // tab heights for Festival on homepage so can peek from bottom
-  $tabHeight--mobile:12rem;
-  // $tabHeight--tablet:6.5vw;
-  $tabHeight--tablet:4.7vw;
-  $tabHeight--desktop:94px;
-
-  // tab heights for Folkways banner title tabs
-  // $tabHeight--mobile:200px;
-  // $tabHeight--tablet:6.5vw;
-  // $tabHeight--desktop:94px;
+  $mobile-tabHeight:12rem;
+  $tablet-tabHeight:4.7vw;
+  $desktop-tabHeight:94px;
 
   // toggle nav and navbar height for navspacer
-  @mixin navbarHeight--home {
-    height: $navbarHeight--home--mobile;
-    @include respond-to(break2) {height: $navbarHeight--home--tablet;}
-    @include respond-to(fullwidth) {height: $navbarHeight--desktop;}
+  @mixin home-navbarHeight {
+    height: $mobile-home-navbarHeight;
+    @include respond-to(break2) {height: $tablet-home-navbarHeight;}
+    @include respond-to(fullwidth) {height: $desktop-navbarHeight;}
 
   }
-  @mixin navbarHeight--subpage {
-    height: $navbarHeight--subpage--mobile;
-    @include respond-to(break2) {height: $navbarHeight--subpage--tablet;}
-    @include respond-to(fullwidth) {height: $navbarHeight--desktop;}
+  @mixin subpage-navbarHeight {
+    height: $mobile-subpage-navbarHeight;
+    @include respond-to(break2) {height: $tablet-subpage-navbarHeight;}
+    @include respond-to(fullwidth) {height: $desktop-navbarHeight;}
 
   }
-  @mixin navbarHeight--subpage--smaller {
-    height: $navbarHeight--subpage--mobile--smaller;
-    @include respond-to(break2) {height: $navbarHeight--subpage--tablet--smaller;}
-    @include respond-to(fullwidth) {height: $navbarHeight--desktop;}
+  @mixin subpage-smaller-navbarHeight {
+    height: $mobile-subpage-smaller-navbarHeight;
+    @include respond-to(break2) {height: $tablet-subpage-smaller-navbarHeight;}
+    @include respond-to(fullwidth) {height: $desktop-navbarHeight;}
 
   }
-  @mixin headerHeight--home {
-    height:$headerHeight--home--mobile;
-    @include respond-to(break2) {height:calc(#{$headerHeight--home--tablet});}
-    @include respond-to(fullwidth) {height:calc(#{$headerHeight--home--desktop});}
+  @mixin home-headerHeight {
+    height:$mobile-home-headerHeight;
+    @include respond-to(break2) {height:calc(#{$tablet-home-headerHeight});}
+    @include respond-to(fullwidth) {height:calc(#{$desktop-home-headerHeight});}
   }
 
-  @mixin headerHeight--subpage {
-    height:calc(#{$headerHeight--subpage--mobile});
-    @include respond-to(break2) {height:calc(#{$headerHeight--subpage--tablet});}
-    @include respond-to(fullwidth) {height:calc(#{$headerHeight--subpage--desktop});}
+  @mixin subpage-headerHeight {
+    height:calc(#{$mobile-subpage-headerHeight});
+    @include respond-to(break2) {height:calc(#{$tablet-subpage-headerHeight});}
+    @include respond-to(fullwidth) {height:calc(#{$desktop-subpage-headerHeight});}
   }
 
   // calculate full height minus height of header, grouping media queries in mixin
   @mixin bannerHeight {
-    height: calc(100vh - (#{$headerHeight--home--mobile}));
-    @include respond-to(break2) {height:calc(100vh - (#{$headerHeight--home--tablet});}
-    @include respond-to(fullwidth) {height:calc(100vh - (#{$headerHeight--home--desktop});}
+    height: calc(100vh - (#{$mobile-home-headerHeight}));
+    @include respond-to(break2) {height:calc(100vh - (#{$tablet-home-headerHeight});}
+    @include respond-to(fullwidth) {height:calc(100vh - (#{$desktop-home-headerHeight});}
   }
   // tab top margin for on.festival homepage
   // gets full screen height minus header height, minus tab height
   @mixin marginTopBanner {
-    margin-top: calc(100vh - (#{$headerHeight--home--mobile} + #{$tabHeight--mobile}));
-    @include respond-to(break2) {margin-top:calc(100vh - (#{$headerHeight--home--tablet} + #{$tabHeight--tablet});}
-    @include respond-to(fullwidth) {margin-top:calc(100vh - (#{$headerHeight--home--desktop} + #{$tabHeight--desktop});}
+    margin-top: calc(100vh - (#{$mobile-home-headerHeight} + #{$mobile-tabHeight}));
+    @include respond-to(break2) {margin-top:calc(100vh - (#{$tablet-home-headerHeight} + #{$tablet-tabHeight});}
+    @include respond-to(fullwidth) {margin-top:calc(100vh - (#{$desktop-home-headerHeight} + #{$desktop-tabHeight});}
   }
 
   /*******

@@ -22,7 +22,6 @@
   @import "../common/css/colors.scss"; // colors may be used in type.scss
   @import "../common/css/type.scss";
   @import "../common/css/icons.scss";
-  @import "../common/css/features.scss";
   @import "../common/css/padding.scss";
   @import "../common/css/links.scss";
   @import "../common/css/helpers.scss";
@@ -277,34 +276,6 @@
 				clear:left;
 			}
 		}
-	}
-	.color__block {@include height(32)}
-	// Festival
-	.festival-color-list {
-		.color:nth-of-type(1) .color__block {background-color:$fs-purple;}
-		.color:nth-of-type(2) .color__block {background-color:$fs-orange;}
-		.color:nth-of-type(3) .color__block {background-color:$fs-blue;}
-	}
-	// Folkways
-	.folkways-color-list {
-		.color:nth-of-type(1) .color__block {background-color:$fw-green;}
-		.color:nth-of-type(2) .color__block {background-color:$fw-red;}
-		.color:nth-of-type(3) .color__block {background-color:$fw-purple;}
-		.color:nth-of-type(4) .color__block {background-color:$fw-lightGreen;}
-	}
-	// Shades of Gray
-	.gray-color-list {
-		.color:nth-of-type(1) .color__block {background-color: $black80}
-		.color:nth-of-type(2) .color__block {background-color: $black70}
-		.color:nth-of-type(3) .color__block {background-color: $black65}
-		.color:nth-of-type(4) .color__block {background-color: $black60}
-		.color:nth-of-type(5) .color__block {background-color: $black50}
-		.color:nth-of-type(6) .color__block {background-color: $black40}
-		.color:nth-of-type(7) .color__block {background-color: $black30}
-		.color:nth-of-type(8) .color__block {background-color: $black20}
-		.color:nth-of-type(9) .color__block {background-color: $black15}
-		.color:nth-of-type(10) .color__block {background-color: $black10}
-		.color:nth-of-type(11) .color__block {background-color: $black08}
 	}
 
 /* #typography

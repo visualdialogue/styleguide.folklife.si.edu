@@ -7,7 +7,7 @@
 	-$image = null
 -endif
 
-li.card.album-card.col-xs-6.col-sm-2
+li.card.merchandise-card.col-xs-6.col-sm-2
 	.image
 		a(href="<?= $card->url() ?>")
 			img(src="<?= $image->url() ?>")
@@ -15,4 +15,4 @@ li.card.album-card.col-xs-6.col-sm-2
 		.details-inner
 			a.high(href="<?= $card->url() ?>").title: span.light: span.er= $card->title()
 			
-			.artist!= $card->artist()->kt()
+			.price!= '$', $card->price()

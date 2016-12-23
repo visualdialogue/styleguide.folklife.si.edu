@@ -1,21 +1,21 @@
 // Member | Support
 .highlight-bar
 	.container
-		.row.equal-height-parent
-			.col-sm-6.become-a-member.equal-height-child
+		.row
+			.col-sm-6.become-a-member
 				.become-a-member-inner.clearfix
 					.image
-						img(src="/assets/images/become-a-member.jpg")
-						.vertically-align Become a member
-					.copy.equal-height-child 
+						img#member-image(src="/assets/images/become-a-member.jpg")
+						.vertically-align.become-a-member-image-text Become a member
+					.copy
 						.copy-inner.vertically-align
 							|Free downloads <br />
 							|Cover art prints  <br />
 							|Exclusive events
-			.col-sm-6.col-sm-push-6.support-folkways
-				.support
-					.support-copy.clearfix
+			.col-sm-6.support-folkways
+				.support.clearfix
+					.support-copy.mh-member-support
 						= $site->support_text()
-					.support-button.button
+					.support-button.button.mh-member-support
 						.button-inner
 							= $site->support_button_text()

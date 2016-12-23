@@ -9,7 +9,7 @@
 	// }
 
 	// prevent the above
-	.meganav__title, .footer-title, .logo-mask, .site-toggle-link {
+	.footer-title, .logo-mask, .site-toggle-link {
 		&:hover {
 			background-color: transparent; // prevent highlighting color
 		}

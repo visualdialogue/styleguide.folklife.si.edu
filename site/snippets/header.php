@@ -10,7 +10,7 @@
   <?php snippet('header-shim'); ?>
   <?php snippet('header-favicons'); ?>
   <!-- highlightjs.org for code syntax highlighting--><link href="/assets/css/highlight/styles/atom-one-dark.css" type="text/css" rel="stylesheet"><script src="/assets/js/highlight.pack.js"></script><link href="/assets/css/styleguide.css?v=<?= time() ?>" type="text/css" rel="stylesheet">
-</head><body class="site--folklife">
+</head><body class="folklife-site">
 <div id="site-toggle" class="site-toggle">
   <div class="container">
     <div class="tagline">Bringing Tradition Bearers From Around The World To The National Mall</div><a href="/" class="site-toggle-link festival-site-toggle-link active">Festival</a>
@@ -28,7 +28,7 @@
   <div class="navbar-header container">
     <ul class="row">
       <!-- Logo-->
-      <div class="navbar-brand col-sm-2">
+      <div class="logo-wrapper col-sm-2">
         <div id="logo-wrapper" class="logo"><a href="/"><img id="block-logo" src="/assets/images/logo/folklife-block-logo_2016.12.17.png" class="block-logo folkways-block-logo"/><img id="one-line-logo" src="/assets/images/logo/folklife-one-line-logo_2016.12.15.png" class="one-line-logo folklife-one-line-logo"/></a></div>
       </div>
       <?php snippet('nav-icons-search'); ?>
@@ -85,6 +85,7 @@
         </li>
       </ul>
     </div>
-  </div><!-- Collect the nav links, forms, and other content for toggling -->
+  </div>
+  <!-- Collect the nav links, forms, and other content for toggling -->
   <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse"></div>
 </nav>

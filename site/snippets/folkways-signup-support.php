@@ -3,7 +3,7 @@
   <hr class="thick-hr"/>
 </div>
 <div class="newsletter-signup-wrapper container">
-  <div class="newsletter-signup--short">
+  <div class="short-newsletter-signup">
     <div class="newsletter-signup clearfix">
       <div class="newsletter-signup-copy">
         <div class="icon-mail"></div>
@@ -11,7 +11,7 @@
       </div>
     </div>
   </div>
-  <div class="newsletter-signup--short">
+  <div class="short-newsletter-signup">
     <form action="/" class="newsletter-signup-form newsletter">
       <input type="email" placeholder="Enter your email" class="newsletter-input"/>
     </form>
