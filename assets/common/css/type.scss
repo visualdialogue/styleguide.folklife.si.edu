@@ -3,125 +3,79 @@
 // using modular scale of major second, starting at 24px for serif body copy and
 // serif line-height of 1.3333 from body text of 24/32
 
-body {
-	font-family: $serif;
-	line-height: 1.333333; // 24/32
-}
-
-/* Slab Knockout
+	
+/* Serif
+* Freight Text Pro from typekit
 -------------------------------------------------- */
-	@mixin nav-title {
-		font-family: $slabNarrow;
-		text-transform: uppercase;
-		font-weight: 800;
-		font-size: 5vw;
+	// Large Serif Title +
+	@mixin serif-lg {
+		font-family: $serif;
+		font-weight: 700;
+		line-height: 1.1;
+		font-size: 4.865rem;
 		@include respond-to(break2) {
-			font-size: 1.15vw;
-			line-height: 1.2;
+			font-size: 5.474rem;			
 		}
 		@include respond-to(fullwidth) {
-			line-height: 1.2353; // 21px
-			font-size: 1.7rem;
+			font-size: 6.158rem;
 		}
 	}
 
-	@mixin section-title {
-		font-family: $slabWide;
-		text-transform: uppercase;
-		font-size: 5vw;
-		letter-spacing: 0.5px;
-		margin-top: 0; // bootstrap reset
-		margin-bottom: 1.5rem;
-		color: $black65;
-		line-height: 1.2;
+	// Medium Serif Title +
+	@mixin serif-md {
+		font-family: $serif;
+		font-weight: 700;
+		line-height: 1; // smaller for folkways banner titles
+		line-height: 0.95; // smaller for folklife dive deep
+		// font-size: 6vw;
+		font-size: 3.417rem;
 		@include respond-to(break2) {
-			// line-height: 0.7; // so margins accurate
-			// line-height: 1.1;
-			font-size: 1.9vw;
-			margin-bottom: 2.6vw;
+			// font-size: 2.6vw;
+			font-size: 3.844rem;
 		}
 		@include respond-to(fullwidth) {
-			font-size: 3rem;
-			margin-bottom: 3.3rem; // 40px
+			// font-size: 4.2rem;
+			font-size: 4.325rem;
 		}
 	}
 
-	@mixin slab-md {
-		font-family: $slabWide;
-		text-transform: uppercase;
-		font-size: 6vw;
-		letter-spacing: 0.5px;
-		margin-top: 0; // bootstrap reset
-		margin-bottom: 5vw;
+	// Small Serif Title +
+	@mixin serif-sm {
+		font-family: $serif;
+		font-weight: 700;
+		line-height: 1;
+	  	// font-size: 6vw;
+	  	// font-size: 5vw;
+	  	font-size: 2.133rem;
 		@include respond-to(break2) {
-			// font-size: 4rem; // ff-good
-			// font-size: 2.5rem;
-			font-size: 1.9vw;
-			// margin-bottom: 2.8vw;
-			margin-bottom: 0;
+			line-height: 1.143; // 28/32
+	  		// font-size: 1.8vw;
+	  		font-size: 2.4rem;
 		}
 		@include respond-to(fullwidth) {
-			// font-size: 3.25rem;
-			font-size: 3rem;
-			// margin-bottom: 4.2rem;
+	  		font-size: 2.7rem;
 		}
+		@include margin-bottom(1);
 	}
-	@mixin slab-lg {
-		font-family: $slabWide;
-		text-transform: uppercase;
-		// font-size: 6vw;
-		// letter-spacing: 0.5px;
-		// margin-top: 0; // bootstrap reset
-		// margin-bottom: 5vw;
+
+	// Small Serif Title +
+	@mixin serif-body {
+		font-family: $serif;
+		font-weight: 400;
+		line-height: 1.333333; // 24/32
+	  	font-size: 1.896rem; // 18px on medium.com mobile, 1.896 on modular scale
 		@include respond-to(break2) {
-			font-size: 2.4vw;
-			line-height: 1;
-			// margin-bottom: 0;
+	  		font-size: 2.133rem; // close to 24px at top
 		}
 		@include respond-to(fullwidth) {
-			font-size: 3.8rem;
-			line-height: 1;
-		}
-	}
-	@mixin slab-xl {
-		font-family: $slabWide;
-		text-transform: uppercase;
-		// font-size: 6vw;
-		// letter-spacing: 0.5px;
-		// margin-top: 0; // bootstrap reset
-		// margin-bottom: 5vw;
-		font-size: 8vw;
-		@include respond-to(break2) {
-			font-size: 2.9vw;
-			line-height: 1;
-			// margin-bottom: 0;
-		}
-		@include respond-to(fullwidth) {
-			font-size: 4.5rem;
-			line-height: 1;
-		}
-	}
-	@mixin slab-xxl {
-		font-family: $slabWide;
-		text-transform: uppercase;
-		// font-size: 6vw;
-		// letter-spacing: 0.5px;
-		// margin-top: 0; // bootstrap reset
-		// margin-bottom: 5vw;
-		@include respond-to(break2) {
-			font-size: 3.1vw;
-			line-height: 1.3;
-			// margin-bottom: 0;
-		}
-		@include respond-to(fullwidth) {
-			font-size: 5rem;
-			line-height: 1.3;
+	  		font-size: 2.4rem;
 		}
 	}
 
-/* Sans Acumin
+
+/* Sans serif
+* Acumin Pro from Typekit
 -------------------------------------------------- */
-
 	@mixin link-font {
 		font-family: $sans;
 		font-size: 1.7rem;
@@ -173,7 +127,7 @@ body {
 		font-family: $sans;
 		font-weight: 300;
 		// font-size: 5vw;
-		font-size: 2.667rem;
+		font-size: 2.37rem;
 		@include respond-to(break2) {
 			// font-size: 1.9vw;
 			font-size: 3rem;
@@ -275,7 +229,205 @@ body {
 	  		// font-size: 1.665rem;
 		}
 	}
+
+	@mixin date {
+		@include sans-tag;
+		font-weight: 700;
+	}
+	@mixin date-sm {
+		@include sans-tag;
+		letter-spacing: normal;
+		text-transform: initial;
+		@include margin-top(0.5);
+	}
+
+	// search bar
+	@mixin search-title {
+	  font-family: $sans;
+	  font-weight: 500;
+	  line-height: 1.7;
+	  font-size: 2.5rem;
+	}
+
+	@mixin email-newsletter {
+		font-family: $sans;
+		font-size: 5vw;
+		@include respond-to(break2) {
+			font-size: 2.2vw;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 3.5rem;
+			padding-top: 1.5rem;
+		}
+	}
 	
+	
+/* Slab
+* Unit Gothic 717 and 718 from Typekit
+-------------------------------------------------- */
+	@mixin slab-xxl {
+		font-family: $slabWide;
+		text-transform: uppercase;
+		// font-size: 6vw;
+		// letter-spacing: 0.5px;
+		// margin-top: 0; // bootstrap reset
+		// margin-bottom: 5vw;
+		@include respond-to(break2) {
+			font-size: 3.1vw;
+			line-height: 1.3;
+			// margin-bottom: 0;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 5rem;
+			line-height: 1.3;
+		}
+	}
+	@mixin slab-xl {
+		font-family: $slabWide;
+		text-transform: uppercase;
+		// font-size: 6vw;
+		// letter-spacing: 0.5px;
+		// margin-top: 0; // bootstrap reset
+		// margin-bottom: 5vw;
+		font-size: 8vw;
+		@include respond-to(break2) {
+			font-size: 2.9vw;
+			line-height: 1;
+			// margin-bottom: 0;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 4.5rem;
+			line-height: 1;
+		}
+	}
+	@mixin slab-lg {
+		font-family: $slabWide;
+		text-transform: uppercase;
+		// font-size: 6vw;
+		// letter-spacing: 0.5px;
+		// margin-top: 0; // bootstrap reset
+		// margin-bottom: 5vw;
+		@include respond-to(break2) {
+			font-size: 2.4vw;
+			line-height: 1;
+			// margin-bottom: 0;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 3.8rem;
+			line-height: 1;
+		}
+	}
+	@mixin slab-md {
+		font-family: $slabWide;
+		text-transform: uppercase;
+		font-size: 6vw;
+		letter-spacing: 0.5px;
+		margin-top: 0; // bootstrap reset
+		margin-bottom: 5vw;
+		@include respond-to(break2) {
+			// font-size: 4rem; // ff-good
+			// font-size: 2.5rem;
+			font-size: 1.9vw;
+			// margin-bottom: 2.8vw;
+			margin-bottom: 0;
+		}
+		@include respond-to(fullwidth) {
+			// font-size: 3.25rem;
+			font-size: 3rem;
+			// margin-bottom: 4.2rem;
+		}
+	}
+
+
+	@mixin nav-title {
+		font-family: $slabNarrow;
+		text-transform: uppercase;
+		font-weight: 800;
+		font-size: 5vw;
+		@include respond-to(break2) {
+			font-size: 1.15vw;
+			line-height: 1.2;
+		}
+		@include respond-to(fullwidth) {
+			line-height: 1.2353; // 21px
+			font-size: 1.7rem;
+		}
+	}
+
+	@mixin section-title {
+		font-family: $slabWide;
+		text-transform: uppercase;
+		font-size: 5vw;
+		letter-spacing: 0.5px;
+		margin-top: 0; // bootstrap reset
+		margin-bottom: 1.5rem;
+		color: $black65;
+		line-height: 1.2;
+		@include respond-to(break2) {
+			// line-height: 0.7; // so margins accurate
+			// line-height: 1.1;
+			font-size: 1.9vw;
+			margin-bottom: 2.6vw;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 3rem;
+			margin-bottom: 3.3rem; // 40px
+		}
+	}
+
+
+/* Sans serif - wide
+* Acumin Pro Wide from Typekit
+* We use the 1.125 modular scale based on 4.2rem
+-------------------------------------------------- */
+	@mixin magazinetitle-lg {
+		font-family: $sansWide;
+		font-weight: 800;
+		line-height: 1.095237; // 46px desktop
+		font-size: 2.622rem;
+		@include respond-to(break2) {
+			font-size: 3.319rem;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 4.2rem; // acumin pro
+		}
+	}
+
+	@mixin magazinetitle-sm {
+		font-family: $sansWide;
+		font-weight: 800;
+		line-height: 1.095237; // 46px desktop
+		font-size: 2.622rem;
+		font-size: 2.331rem;
+		@include respond-to(break2) {
+			// font-size: 3.319rem;
+			font-size: 2.95rem;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 3.733rem;
+		}
+	}
+
+	@mixin buybutton {
+		@include sans-tag;
+		text-transform: uppercase;
+		font-family: $sansWide;
+		font-weight: 800;
+		margin-bottom: 0.5rem;
+		margin-bottom: 0;
+		// font-size: 1.48rem;
+		font-size: 1.376rem;
+		@include respond-to(break2) {
+			font-size: 1.376rem;
+			margin-bottom: 0.4vw;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 1.72rem; // acumin pro
+			margin-bottom: 0.5rem;
+			line-height: 1.4;
+		}
+	}
+
 	@mixin sans-tag {
 		text-transform: uppercase;
 		font-family: $sansWide;
@@ -297,159 +449,13 @@ body {
 			line-height: 1.4;
 		}
 	}
-	
-/* Serif
--------------------------------------------------- */
-
-	// Large Serif Title +
-	@mixin serif-lg {
-		font-family: $serif;
-		font-weight: 700;
-		line-height: 1.1;
-		font-size: 4.865rem;
-		@include respond-to(break2) {
-			font-size: 5.474rem;			
-		}
-		@include respond-to(fullwidth) {
-			font-size: 6.158rem;
-		}
-	}
-
-	// Medium Serif Title +
-	@mixin serif-md {
-		font-family: $serif;
-		font-weight: 700;
-		line-height: 1; // smaller for folkways banner titles
-		line-height: 0.95; // smaller for folklife dive deep
-		// font-size: 6vw;
-		font-size: 3.417rem;
-		@include respond-to(break2) {
-			// font-size: 2.6vw;
-			font-size: 3.844rem;
-		}
-		@include respond-to(fullwidth) {
-			// font-size: 4.2rem;
-			font-size: 4.325rem;
-		}
-	}
-
-	// Small Serif Title +
-	@mixin serif-sm {
-		font-family: $serif;
-		font-weight: 700;
-		line-height: 1;
-	  	// font-size: 6vw;
-	  	// font-size: 5vw;
-	  	font-size: 2.133rem;
-		@include respond-to(break2) {
-			line-height: 1.143; // 28/32
-	  		// font-size: 1.8vw;
-	  		font-size: 2.4rem;
-		}
-		@include respond-to(fullwidth) {
-	  		font-size: 2.7rem;
-		}
-		@include margin-bottom(1);
-	}
-
-	// Small Serif Title +
-	@mixin serif-body {
-		font-family: $serif;
-		font-weight: 400;
-		line-height: 1.333333; // 24/32
-	  	font-size: 1.896rem; // 18px on medium.com mobile, 1.896 on modular scale
-		@include respond-to(break2) {
-	  		font-size: 2.133rem; // close to 24px at top
-		}
-		@include respond-to(fullwidth) {
-	  		font-size: 2.4rem;
-		}
-	}
-
-
-
-/* Specials
--------------------------------------------------- */
-
-	// search bar
-	@mixin search-title {
-	  font-family: $sans;
-	  font-weight: 500;
-	  line-height: 1.7;
-	  font-size: 2.5rem;
-	}
-	
-	// SansWide uses 1.25 modular scale based on 4.2rem
-	@mixin buybutton {
-		@include sans-tag;
-		text-transform: uppercase;
-		font-family: $sansWide;
-		font-weight: 800;
-		margin-bottom: 0.5rem;
-		margin-bottom: 0;
-		// font-size: 1.48rem;
-		font-size: 1.376rem;
-		@include respond-to(break2) {
-			font-size: 1.376rem;
-			margin-bottom: 0.4vw;
-		}
-		@include respond-to(fullwidth) {
-			font-size: 1.72rem; // acumin pro
-			margin-bottom: 0.5rem;
-			line-height: 1.4;
-		}
-	}
-
-	@mixin magazinetitle {
-		font-family: $sansWide;
-		font-weight: 800;
-		line-height: 1.095237; // 46px desktop
-		font-size: 3.319rem;
-		@include respond-to(break2) {
-			font-size: 3.733rem;
-		}
-		@include respond-to(fullwidth) {
-			font-size: 4.2rem; // acumin pro
-		}
-	}
-
-	@mixin email-newsletter {
-		font-family: $sans;
-		font-size: 5vw;
-		@include respond-to(break2) {
-			font-size: 2.2vw;
-		}
-		@include respond-to(fullwidth) {
-			font-size: 3.5rem;
-			padding-top: 1.5rem;
-		}
-	}
-
-	@mixin smithsonian-institution-logo {
-		font-family: $serif;
-		font-size: 5vw;
-		@include respond-to(break2) {
-			font-size: 2.2vw;
-		}
-		@include respond-to(fullwidth) {
-			font-size: 3.5rem;
-		}
-	}
-
-	@mixin date {
-		@include sans-tag;
-		font-weight: 700;
-	}
-	@mixin date-sm {
-		@include sans-tag;
-		letter-spacing: normal;
-		text-transform: initial;
-		@include margin-top(0.5);
-	}
-
 
 /* CSS type helper classes
 -------------------------------------------------- */
+	body {
+		font-family: $serif;
+		line-height: 1.333333; // 24/32
+	}
 	.content, .text-card {
 		h3 {
 			@include serif-md;

@@ -14,17 +14,18 @@
 			// position: fixed;
 			width: 100%;
 			z-index: 10;
-			height: $mobile-subpage-navbarHeight;
+			// height: $mobile-subpage-navbarHeight;
 		}
 		@include respond-to(break2) {
 			// top: 60px;
 			top: $tablet-navbarSiteToggle;
 			z-index: 2;
 			z-index: 10;
-			height: $tablet-subpage-navbarHeight;
+			// height: $tablet-subpage-navbarHeight;
 		}
 		@include respond-to(fullwidth) {
 			top: $desktop-navbarSiteToggle;
+			// height: $tablet-subpage-navbarHeight; // need height b/c fixed??
 		}
 
 		// if open, go light

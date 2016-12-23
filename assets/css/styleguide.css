@@ -4651,14 +4651,12 @@ a:hover {
   @media only screen and (max-width: 53.25em) {
     .navbar {
       width: 100%;
-      z-index: 10;
-      height: 5.5rem; } }
+      z-index: 10; } }
   @media only screen and (min-width: 53.25em) {
     .navbar {
       top: 3.5rem;
       z-index: 2;
-      z-index: 10;
-      height: 6rem; } }
+      z-index: 10; } }
   @media only screen and (min-width: 1560px) {
     .navbar {
       top: 36px; } }
@@ -5428,6 +5426,24 @@ ul {
   @media only screen and (min-width: 1560px) {
     .first-section {
       padding-top: 4rem; } }
+
+.section-title {
+  font-family: "unit-gothic-717", Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 5vw;
+  letter-spacing: 0.5px;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #595959;
+  line-height: 1.2; }
+  @media only screen and (min-width: 53.25em) {
+    .section-title {
+      font-size: 1.9vw;
+      margin-bottom: 2.6vw; } }
+  @media only screen and (min-width: 1560px) {
+    .section-title {
+      font-size: 3rem;
+      margin-bottom: 3.3rem; } }
 
 .main .section-title {
   margin-bottom: 2.2rem; }
@@ -7724,7 +7740,7 @@ code.hljs {
 .extra-large-sans-title-type {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
-  font-size: 2.667rem;
+  font-size: 2.37rem;
   font-weight: 600; }
   @media only screen and (min-width: 53.25em) {
     .extra-large-sans-title-type {
@@ -7737,7 +7753,7 @@ code.hljs {
 .extra-large-sans-title-type-light {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
-  font-size: 2.667rem; }
+  font-size: 2.37rem; }
   @media only screen and (min-width: 53.25em) {
     .extra-large-sans-title-type-light {
       font-size: 3rem;
@@ -7856,10 +7872,10 @@ code.hljs {
   font-family: "acumin-pro-wide", Arial, sans-serif;
   font-weight: 800;
   line-height: 1.095237;
-  font-size: 3.319rem; }
+  font-size: 2.622rem; }
   @media only screen and (min-width: 53.25em) {
     .horizontal-card .title {
-      font-size: 3.733rem; } }
+      font-size: 3.319rem; } }
   @media only screen and (min-width: 1560px) {
     .horizontal-card .title {
       font-size: 4.2rem; } }
@@ -7868,10 +7884,10 @@ code.hljs {
   font-family: "acumin-pro-wide", Arial, sans-serif;
   font-weight: 800;
   line-height: 1.095237;
-  font-size: 3.319rem; }
+  font-size: 2.622rem; }
   @media only screen and (min-width: 53.25em) {
     .feature .title {
-      font-size: 3.733rem; } }
+      font-size: 3.319rem; } }
   @media only screen and (min-width: 1560px) {
     .feature .title {
       font-size: 4.2rem; } }

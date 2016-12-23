@@ -196,6 +196,9 @@
 		@include respond-to(break2) {padding-top:2.6vw;}
 		@include respond-to(fullwidth) {padding-top:4rem;}
 	}
+	.section-title {
+		@include section-title;
+	}
 	.main {
 		.section-title {
 			margin-bottom:2.2rem;
