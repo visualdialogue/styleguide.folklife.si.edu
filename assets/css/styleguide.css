@@ -4169,20 +4169,25 @@ iframe {
 .black {
   color: black; }
 
+/* Serif
+* Freight Text Pro from typekit
+-------------------------------------------------- */
+/* Sans serif
+* Acumin Pro from Typekit
+-------------------------------------------------- */
+/* Slab
+* Unit Gothic 717 and 718 from Typekit
+-------------------------------------------------- */
+/* Sans serif - wide
+* Acumin Pro Wide from Typekit
+* We use the 1.125 modular scale based on 4.2rem
+-------------------------------------------------- */
+/* CSS type helper classes
+-------------------------------------------------- */
 body {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   line-height: 1.333333; }
 
-/* Slab Knockout
--------------------------------------------------- */
-/* Sans Acumin
--------------------------------------------------- */
-/* Serif
--------------------------------------------------- */
-/* Specials
--------------------------------------------------- */
-/* CSS type helper classes
--------------------------------------------------- */
 .content h3, .text-card h3 {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
@@ -4660,7 +4665,7 @@ a:hover {
   @media only screen and (min-width: 1560px) {
     .navbar {
       top: 36px; } }
-  .navbar.isOpen {
+  .navbar.is-open {
     background-color: rgba(255, 255, 255, 0.97);
     height: auto !important; }
 
@@ -4754,19 +4759,20 @@ a:hover {
   margin-top: 1rem; }
   @media only screen and (min-width: 53.25em) and (max-width: 1560px) {
     .logo-wrapper {
-      margin-top: 1.5rem; } }
+      margin-top: 1.5rem;
+      width: 175px; } }
   @media only screen and (min-width: 1560px) {
     .logo-wrapper {
       margin-top: 2rem;
       font-size: 25px; } }
 
-.home-page .navbar.smaller-header {
+.home-page .navbar.is-smaller {
   height: 4.5rem; }
   @media only screen and (min-width: 53.25em) {
-    .home-page .navbar.smaller-header {
+    .home-page .navbar.is-smaller {
       height: 6rem; } }
   @media only screen and (min-width: 1560px) {
-    .home-page .navbar.smaller-header {
+    .home-page .navbar.is-smaller {
       height: 8rem; } }
 
 .navspacer {
@@ -4834,7 +4840,7 @@ a:hover {
     .one-line-logo {
       width: 175px; } }
 
-.smaller-header .logo-wrapper, .one-line-logo .logo-wrapper, .logo-swap .logo-wrapper {
+.is-smaller .logo-wrapper, .one-line-logo .logo-wrapper, .has-one-line-logo .logo-wrapper {
   margin-top: 0; }
 
 @media only screen and (min-width: 1560px) {
@@ -4847,58 +4853,50 @@ a:hover {
     .desktop-block-logo {
       display: block; } }
 
-.navbar.logo-swap .block-logo {
+.navbar.has-one-line-logo .block-logo, .navbar.is-smaller .block-logo {
   display: none; }
 
-.navbar.logo-swap .tablet-one-line-logo {
+.navbar.has-one-line-logo .tablet-one-line-logo, .navbar.is-smaller .tablet-one-line-logo {
   display: block; }
 
-@media only screen and (min-width: 53.25em) {
-  .navbar.logo-swap .block-logo {
-    top: -45%; }
-  .navbar.logo-swap .folkways-logo {
-    top: -35%; }
-  .navbar.logo-swap .block-logo {
-    top: -115%; } }
-
 @media only screen and (min-width: 1560px) {
-  .navbar.logo-swap .tablet-one-line-logo {
+  .navbar.has-one-line-logo .tablet-one-line-logo, .navbar.is-smaller .tablet-one-line-logo {
     display: none; }
-  .navbar.logo-swap .desktop-one-line-logo {
+  .navbar.has-one-line-logo .desktop-one-line-logo, .navbar.is-smaller .desktop-one-line-logo {
     display: block; } }
 
-.smaller-header {
+.is-smaller {
   position: fixed;
   top: 0;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.97); }
-  .smaller-header .block-logo {
+  .is-smaller .block-logo {
     display: none; }
-  .smaller-header .tablet-one-line-logo {
+  .is-smaller .tablet-one-line-logo {
     display: block; }
   @media only screen and (min-width: 53.25em) {
-    .smaller-header .block-logo {
+    .is-smaller .block-logo {
       top: -45%; }
-    .smaller-header .folkways-logo {
+    .is-smaller .folkways-logo {
       top: -35%; }
-    .smaller-header .block-logo {
+    .is-smaller .block-logo {
       top: -115%; } }
   @media only screen and (min-width: 1560px) {
-    .smaller-header .tablet-one-line-logo {
+    .is-smaller .tablet-one-line-logo {
       display: none; }
-    .smaller-header .desktop-one-line-logo {
+    .is-smaller .desktop-one-line-logo {
       display: block; } }
-  .smaller-header + .banner-section.container {
+  .is-smaller + .banner-section.container {
     position: relative;
     top: 142px; }
 
-body:not(.home-page) .smaller-header .logo-wrapper, body:not(.home-page) .logo-swap .logo-wrapper {
+body:not(.home-page) .is-smaller .logo-wrapper, body:not(.home-page) .has-one-line-logo .logo-wrapper {
   height: 5rem; }
   @media only screen and (min-width: 53.25em) {
-    body:not(.home-page) .smaller-header .logo-wrapper, body:not(.home-page) .logo-swap .logo-wrapper {
+    body:not(.home-page) .is-smaller .logo-wrapper, body:not(.home-page) .has-one-line-logo .logo-wrapper {
       height: 6rem; } }
   @media only screen and (min-width: 1560px) {
-    body:not(.home-page) .smaller-header .logo-wrapper, body:not(.home-page) .logo-swap .logo-wrapper {
+    body:not(.home-page) .is-smaller .logo-wrapper, body:not(.home-page) .has-one-line-logo .logo-wrapper {
       height: 8rem; } }
 
 .nav-icons {
@@ -5418,31 +5416,39 @@ p {
 ul {
   margin: 0; }
 
-.first-section {
-  padding-top: 1.5rem; }
+.first-section .section-title {
+  margin-top: -0.32em; }
   @media only screen and (min-width: 53.25em) {
-    .first-section {
-      padding-top: 2.6vw; } }
+    .first-section .section-title {
+      margin-top: -0.512vw; } }
   @media only screen and (min-width: 1560px) {
-    .first-section {
-      padding-top: 4rem; } }
+    .first-section .section-title {
+      margin-top: -0.8rem; } }
 
 .section-title {
   font-family: "unit-gothic-717", Arial, sans-serif;
   text-transform: uppercase;
   font-size: 5vw;
+  font-size: 6vw;
   letter-spacing: 0.5px;
   margin-top: 0;
   margin-bottom: 1.5rem;
+  margin-bottom: 5vw;
+  line-height: 1.2;
   color: #595959;
-  line-height: 1.2; }
+  margin-bottom: 1.5rem; }
   @media only screen and (min-width: 53.25em) {
     .section-title {
       font-size: 1.9vw;
+      margin-bottom: 0; } }
+  @media only screen and (min-width: 1560px) {
+    .section-title {
+      font-size: 3rem; } }
+  @media only screen and (min-width: 53.25em) {
+    .section-title {
       margin-bottom: 2.6vw; } }
   @media only screen and (min-width: 1560px) {
     .section-title {
-      font-size: 3rem;
       margin-bottom: 3.3rem; } }
 
 .main .section-title {
@@ -5594,7 +5600,8 @@ hr {
 .title-bar {
   padding: 0;
   margin: 0;
-  border: none; }
+  border: none;
+  margin-bottom: 3.55556rem; }
   .title-bar .title-height {
     height: 12vw; }
     @media only screen and (min-width: 53.25em) {
@@ -5605,6 +5612,12 @@ hr {
         height: 66px; } }
   .title-bar-hr {
     margin-top: -1.6rem; }
+  @media only screen and (min-width: 53.25em) {
+    .title-bar {
+      margin-bottom: 2.56vw; } }
+  @media only screen and (min-width: 1560px) {
+    .title-bar {
+      margin-bottom: 4rem; } }
 
 .page-title {
   color: white;
@@ -5698,10 +5711,11 @@ a .page-title {
     font-family: "unit-gothic-717", Arial, sans-serif;
     text-transform: uppercase;
     font-size: 5vw;
+    font-size: 6vw;
     letter-spacing: 0.5px;
     margin-top: 0;
     margin-bottom: 1.5rem;
-    color: #595959;
+    margin-bottom: 5vw;
     line-height: 1.2;
     margin-bottom: 0rem;
     color: white;
@@ -5710,11 +5724,10 @@ a .page-title {
     @media only screen and (min-width: 53.25em) {
       .become-a-member .image {
         font-size: 1.9vw;
-        margin-bottom: 2.6vw; } }
+        margin-bottom: 0; } }
     @media only screen and (min-width: 1560px) {
       .become-a-member .image {
-        font-size: 3rem;
-        margin-bottom: 3.3rem; } }
+        font-size: 3rem; } }
     @media only screen and (min-width: 53.25em) {
       .become-a-member .image {
         margin-bottom: 0vw; } }
@@ -5823,10 +5836,11 @@ a .page-title {
     font-family: "unit-gothic-717", Arial, sans-serif;
     text-transform: uppercase;
     font-size: 5vw;
+    font-size: 6vw;
     letter-spacing: 0.5px;
     margin-top: 0;
     margin-bottom: 1.5rem;
-    color: #595959;
+    margin-bottom: 5vw;
     line-height: 1.2;
     margin-bottom: 0;
     padding: 3vw;
@@ -5835,11 +5849,10 @@ a .page-title {
     @media only screen and (min-width: 53.25em) {
       .support-button {
         font-size: 1.9vw;
-        margin-bottom: 2.6vw; } }
+        margin-bottom: 0; } }
     @media only screen and (min-width: 1560px) {
       .support-button {
-        font-size: 3rem;
-        margin-bottom: 3.3rem; } }
+        font-size: 3rem; } }
     @media only screen and (min-width: 53.25em) {
       .support-button {
         padding: 0;

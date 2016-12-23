@@ -30,7 +30,7 @@
 
 		// if open, go light
 		background-color: white; // only go less opacity here otherwise folklife banner movement will show below
-		&.isOpen {
+		&.is-open {
 			background-color: $navbar; // only go less opacity here otherwise folklife banner movement will show below
 			height: auto !important; // so will expand with menu when needed
 		}
@@ -145,7 +145,7 @@
 		margin-top: 1rem;
 		@include respond-to(break2full) {
 			margin-top: 1.5rem;
-			// width: 175px;
+			width: 175px;
 		}
 
 		@include respond-to(fullwidth) {
@@ -159,7 +159,7 @@
 		}
 	}
 	.home-page {
-		.navbar.smaller-header {
+		.navbar.is-smaller {
 			@include home-smaller-navbarHeight;
 		}
 	}
@@ -258,7 +258,7 @@
 	// 		display: block;
 	// 	}
 	// }
-	.smaller-header, .one-line-logo, .logo-swap {
+	.is-smaller, .one-line-logo, .has-one-line-logo {
 		.logo-wrapper {
 			margin-top: 0;
 			// padding-top:0.8rem;
@@ -279,18 +279,18 @@
 		}
 	}
 
-	.navbar.logo-swap {
+	.navbar.has-one-line-logo, .navbar.is-smaller {
 		.block-logo	{
 			display: none;
 		}
 		.tablet-one-line-logo {
 			display: block;
 		}
-		@include respond-to(break2) {
-			.block-logo { top: -45%; }
-			.folkways-logo { top: -35%; }
-			.block-logo { top: -115%; }
-		}
+		// @include respond-to(break2) {
+			// .block-logo { top: -45%; }
+			// .folkways-logo { top: -35%; }
+			// .block-logo { top: -115%; }
+		// }
 		@include respond-to(fullwidth) {
 			.tablet-one-line-logo {
 				display: none;
@@ -300,7 +300,7 @@
 			}
 		}
 	}
-	.smaller-header {
+	.is-smaller {
 		// new logo
 		// switch to fixed
 		position: fixed;
@@ -333,7 +333,7 @@
 	}
 	// Only on subpages, navbar gets smaller on scroll
 	body:not(.home-page) {
-		.smaller-header, .logo-swap {
+		.is-smaller, .has-one-line-logo {
 			.logo-wrapper {
 				@include subpage-smaller-navbarHeight;
 			}
@@ -543,10 +543,6 @@
 	}
 	
 	.browsenav-title {
-		// font-family: $slabExtraWide;
-		// font-weight: 700;
-		// @include nav-title;
-		// @include section-title;
 		@include nav-title;
 		font-family: $slabNarrow;
 		color: $black60;

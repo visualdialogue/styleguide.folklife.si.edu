@@ -192,12 +192,23 @@
 		margin: 0;
 	}
 	.first-section {
-		padding-top:1.5rem;
-		@include respond-to(break2) {padding-top:2.6vw;}
-		@include respond-to(fullwidth) {padding-top:4rem;}
+		// padding-top:1.5rem;
+		// @include respond-to(break2) {padding-top:2.6vw;}
+		// @include respond-to(fullwidth) {margin-top:0;}
+		.section-title {
+			@include margin-top(-0.8);
+		}
 	}
 	.section-title {
-		@include section-title;
+		@include slab-md;
+		color: $black65;
+		margin-bottom: 1.5rem;
+		@include respond-to(break2) {
+			margin-bottom: 2.6vw;
+		}
+		@include respond-to(fullwidth) {
+			margin-bottom: 3.3rem; // 40px
+		}
 	}
 	.main {
 		.section-title {
@@ -295,6 +306,7 @@
 		&-hr {
 			margin-top: -1.6rem;
 		}
+		@include margin-bottom(4);
 	}
 	.page-title {
 		color: white;
@@ -346,7 +358,7 @@
 		}
 		.image {
 			position: relative; // contain vert child
-			@include section-title;
+			@include slab-md;
 			@include margin-bottom(0);
 			color: white;
 			text-align: center;
@@ -427,7 +439,7 @@
 		}
 		&-button {
 			background-color: $black40;
-			@include section-title;
+			@include slab-md;
 			margin-bottom:0;
 			padding: 3vw;
 			color: white;

@@ -329,12 +329,12 @@
 	}
 	.horizontal-card {
 		.title {
-			@include magazinetitle;
+			@include magazinetitle-lg;
 		}
 	}
 	.feature {
 		.title {
-			@include magazinetitle;
+			@include magazinetitle-lg;
 		}
 	}
 

@@ -76,52 +76,6 @@
 /* Sans serif
 * Acumin Pro from Typekit
 -------------------------------------------------- */
-	@mixin link-font {
-		font-family: $sans;
-		font-size: 1.7rem;
-		line-height: 2;
-		// font-weight: 300;
-		font-weight: 400;
-		@include respond-to(break2) {
-			font-size: 1.1vw;
-			line-height: 1.45;
-		}
-		@include respond-to(fullwidth) {
-			// font-size: 2rem;
-			font-size: 1.6rem;
-			// line-height: 1.25;
-			line-height: 1.8; // 16 px
-		}
-	}
-
-	@mixin link-font-sm {
-		font-family: $sans;
-		font-size: 1.6rem;
-		line-height: 1.7;
-		// font-weight: 300;
-		@include respond-to(break2) {
-			font-size: 1.1vw;
-			line-height: 1.8;
-		}
-		@include respond-to(fullwidth) {
-			font-size: 1.6rem;
-			line-height: 1.5;
-		}
-	}
-
-	// Plus icon
-	@mixin sans-plus-icon {
-		font-family: $sans;
-		font-size: 5vw;
-		@include respond-to(break2) {
-			font-size: 2.5vw;
-			line-height: 1.2;
-		}
-		@include respond-to(fullwidth) {
-			font-size: 4rem;
-		}
-	}
-
 	// Extra Large Sans (Folkways)
 	@mixin sans-xl {
 		font-family: $sans;
@@ -260,6 +214,52 @@
 			padding-top: 1.5rem;
 		}
 	}
+
+	@mixin link-font {
+		font-family: $sans;
+		font-size: 1.7rem;
+		line-height: 2;
+		// font-weight: 300;
+		font-weight: 400;
+		@include respond-to(break2) {
+			font-size: 1.1vw;
+			line-height: 1.45;
+		}
+		@include respond-to(fullwidth) {
+			// font-size: 2rem;
+			font-size: 1.6rem;
+			// line-height: 1.25;
+			line-height: 1.8; // 16 px
+		}
+	}
+
+	@mixin link-font-sm {
+		font-family: $sans;
+		font-size: 1.6rem;
+		line-height: 1.7;
+		// font-weight: 300;
+		@include respond-to(break2) {
+			font-size: 1.1vw;
+			line-height: 1.8;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 1.6rem;
+			line-height: 1.5;
+		}
+	}
+
+	// Plus icon
+	@mixin sans-plus-icon {
+		font-family: $sans;
+		font-size: 5vw;
+		@include respond-to(break2) {
+			font-size: 2.5vw;
+			line-height: 1.2;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 4rem;
+		}
+	}
 	
 	
 /* Slab
@@ -320,24 +320,26 @@
 	@mixin slab-md {
 		font-family: $slabWide;
 		text-transform: uppercase;
+		font-size: 5vw; // from section title
 		font-size: 6vw;
 		letter-spacing: 0.5px;
 		margin-top: 0; // bootstrap reset
+		margin-bottom: 1.5rem; // section title
+
 		margin-bottom: 5vw;
+		line-height: 1.2; // section title
 		@include respond-to(break2) {
 			// font-size: 4rem; // ff-good
 			// font-size: 2.5rem;
 			font-size: 1.9vw;
+			// font-size: 2rem;
 			// margin-bottom: 2.8vw;
 			margin-bottom: 0;
 		}
 		@include respond-to(fullwidth) {
-			// font-size: 3.25rem;
 			font-size: 3rem;
-			// margin-bottom: 4.2rem;
 		}
 	}
-
 
 	@mixin nav-title {
 		font-family: $slabNarrow;
@@ -354,26 +356,7 @@
 		}
 	}
 
-	@mixin section-title {
-		font-family: $slabWide;
-		text-transform: uppercase;
-		font-size: 5vw;
-		letter-spacing: 0.5px;
-		margin-top: 0; // bootstrap reset
-		margin-bottom: 1.5rem;
-		color: $black65;
-		line-height: 1.2;
-		@include respond-to(break2) {
-			// line-height: 0.7; // so margins accurate
-			// line-height: 1.1;
-			font-size: 1.9vw;
-			margin-bottom: 2.6vw;
-		}
-		@include respond-to(fullwidth) {
-			font-size: 3rem;
-			margin-bottom: 3.3rem; // 40px
-		}
-	}
+
 
 
 /* Sans serif - wide
