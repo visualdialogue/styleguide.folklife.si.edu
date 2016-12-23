@@ -10,7 +10,7 @@ body {
 
 /* Slab Knockout
 -------------------------------------------------- */
-	%header-nav-font {
+	@mixin nav-title {
 		font-family: $slabNarrow;
 		text-transform: uppercase;
 		font-weight: 800;
@@ -45,9 +45,6 @@ body {
 			margin-bottom: 3.3rem; // 40px
 		}
 	}
-
-	// HTML Implementation
-	.section-title {@include section-title;}
 
 	@mixin slab-md {
 		font-family: $slabWide;
@@ -257,7 +254,6 @@ body {
 	  		font-size: 1.873rem; // dec 19 for mod scale - major second
 		}
 	}
-	.sans-caption {@include sans-caption;}
 
 	// Tag
 	@mixin sans-mini {
@@ -280,9 +276,6 @@ body {
 		}
 	}
 	
-	// HTML Implementation
-	.sans-mini {@include sans-mini;}
-
 	@mixin sans-tag {
 		text-transform: uppercase;
 		font-family: $sansWide;
@@ -305,30 +298,6 @@ body {
 		}
 	}
 	
-	// HTML Implementation
-	.tag {@include sans-tag}
-
-
-	// search bar
-	%small-sans-title {
-	  font-family: $sans;
-	  font-weight: 500;
-	  line-height: 1.7;
-	  font-size: 2.5rem;
-	  // @include respond-to(break1) {
-	  //   font-size: 4vw;
-	  // }
-	  // @include respond-to(break2) {
-	  //   // font-size: 1.8vw;
-	  //   font-size: 2vw;
-	  //   line-height: 1.25;
-	  // }
-	  // @include respond-to(fullwidth) {
-	  //   // font-size: 1.3rem;
-	  //   font-size: 1.4rem;
-	  // }
-	}
-
 /* Serif
 -------------------------------------------------- */
 
@@ -402,73 +371,81 @@ body {
 /* Specials
 -------------------------------------------------- */
 
-// SansWide uses 1.25 modular scale based on 4.2rem
-@mixin buybutton {
-	@include sans-tag;
-	text-transform: uppercase;
-	font-family: $sansWide;
-	font-weight: 800;
-	margin-bottom: 0.5rem;
-	margin-bottom: 0;
-	// font-size: 1.48rem;
-	font-size: 1.376rem;
-	@include respond-to(break2) {
-		font-size: 1.376rem;
-		margin-bottom: 0.4vw;
+	// search bar
+	@mixin search-title {
+	  font-family: $sans;
+	  font-weight: 500;
+	  line-height: 1.7;
+	  font-size: 2.5rem;
 	}
-	@include respond-to(fullwidth) {
-		font-size: 1.72rem; // acumin pro
+	
+	// SansWide uses 1.25 modular scale based on 4.2rem
+	@mixin buybutton {
+		@include sans-tag;
+		text-transform: uppercase;
+		font-family: $sansWide;
+		font-weight: 800;
 		margin-bottom: 0.5rem;
-		line-height: 1.4;
+		margin-bottom: 0;
+		// font-size: 1.48rem;
+		font-size: 1.376rem;
+		@include respond-to(break2) {
+			font-size: 1.376rem;
+			margin-bottom: 0.4vw;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 1.72rem; // acumin pro
+			margin-bottom: 0.5rem;
+			line-height: 1.4;
+		}
 	}
-}
 
-@mixin magazinetitle {
-	font-family: $sansWide;
-	font-weight: 800;
-	line-height: 1.095237; // 46px desktop
-	font-size: 3.319rem;
-	@include respond-to(break2) {
-		font-size: 3.733rem;
+	@mixin magazinetitle {
+		font-family: $sansWide;
+		font-weight: 800;
+		line-height: 1.095237; // 46px desktop
+		font-size: 3.319rem;
+		@include respond-to(break2) {
+			font-size: 3.733rem;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 4.2rem; // acumin pro
+		}
 	}
-	@include respond-to(fullwidth) {
-		font-size: 4.2rem; // acumin pro
-	}
-}
 
-@mixin email-newsletter {
-	font-family: $sans;
-	font-size: 5vw;
-	@include respond-to(break2) {
-		font-size: 2.2vw;
+	@mixin email-newsletter {
+		font-family: $sans;
+		font-size: 5vw;
+		@include respond-to(break2) {
+			font-size: 2.2vw;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 3.5rem;
+			padding-top: 1.5rem;
+		}
 	}
-	@include respond-to(fullwidth) {
-		font-size: 3.5rem;
-		padding-top: 1.5rem;
-	}
-}
 
-@mixin smithsonian-institution-logo {
-	font-family: $serif;
-	font-size: 5vw;
-	@include respond-to(break2) {
-		font-size: 2.2vw;
+	@mixin smithsonian-institution-logo {
+		font-family: $serif;
+		font-size: 5vw;
+		@include respond-to(break2) {
+			font-size: 2.2vw;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 3.5rem;
+		}
 	}
-	@include respond-to(fullwidth) {
-		font-size: 3.5rem;
-	}
-}
 
-@mixin date {
-	@include sans-tag;
-	font-weight: 700;
-}
-@mixin date-sm {
-	@include sans-tag;
-	letter-spacing: normal;
-	text-transform: initial;
-	@include margin-top(0.5);
-}
+	@mixin date {
+		@include sans-tag;
+		font-weight: 700;
+	}
+	@mixin date-sm {
+		@include sans-tag;
+		letter-spacing: normal;
+		text-transform: initial;
+		@include margin-top(0.5);
+	}
 
 
 /* CSS type helper classes

@@ -25,10 +25,10 @@
 		}
 		@include respond-to(fullwidth) {
 			top: $desktop-navbarSiteToggle;
-			height: $desktop-navbarHeight;
 		}
 
 		// if open, go light
+		background-color: white; // only go less opacity here otherwise folklife banner movement will show below
 		&.isOpen {
 			background-color: $navbar; // only go less opacity here otherwise folklife banner movement will show below
 			height: auto !important; // so will expand with menu when needed
@@ -123,6 +123,9 @@
 		@include respond-to(break2) {
 			padding: 0 40px;
 		}
+		@include respond-to(fullwidth) {
+			height: $desktop-navbarHeight; // to push social media down when open
+		}
 	}
 	.navbar-header-inner {
 		// @include vertically-align-parent;
@@ -137,21 +140,21 @@
 		height: auto; // bootstrap override
 		margin-left: 0 !important; // bootstrap override
 		font-size: 10px; // prevent gap to sunsplash
-		@include padding-top(2);
-		@include respond-to(break2max) {
-			padding-top: 1.5rem;
-		}
-		@include respond-to(break2) {
-
+		// @include padding-top(2);
+		margin-top: 1rem;
+		@include respond-to(break2full) {
+			margin-top: 1.5rem;
+			// width: 175px;
 		}
 
 		@include respond-to(fullwidth) {
+			margin-top: 2rem;
 			font-size: 25px; // back to normal
 		}
 	}
 	.home-page {
 		.logo-wrapper {
-			@include home-navbarHeight;
+			// @include home-navbarHeight;
 		}
 	}
 	.home-page {
@@ -173,7 +176,7 @@
 	}
 	.home-page {
 		.navspacer {
-			@include home-headerHeight;
+			@include home-headerHeight; // account for sit-toggle as well
 		}
 	}
 	.logo-mask {
@@ -181,9 +184,9 @@
 		display: inline-block;
 	}
 	.logo {
-		// position: relative;
 		position: absolute; // for menu dropdown height not to be effected
 		display: inline-block;
+		top:0;
 		a {
 			display: block;
 		}
@@ -192,13 +195,17 @@
 		max-width: initial; // otherwise will shrink to a tag above when absolutely positioned
 		// width: 193px;
 		// height: 32px;
-		width: 25vw;
-		height: 25vw;
+		// width: 25vw;
+		// height: 25vw;
+		width: 120px;
+		height: 120px;
 		@include respond-to(break2) {
 			// width: 420px;
 			// height: 70px;
-			width: 11vw;
-			height: 11vw;
+			// width: 11vw;
+			// height: 11vw;
+			width: 120px;
+			height: 120px;
 		}
 		@include respond-to(fullwidth) {
 			// width: 420px;
@@ -218,53 +225,79 @@
 		top:0;
 		left: 0;
 	}
-	.navbar.logo-swap {
-		.logo-wrapper {
-		}
-		.block-logo {
-			display: none;
-		}
-		.one-line-logo {
-			display: block;
-		}
-	}
+
 	.one-line-logo {
 		max-width: initial; // otherwise will shrink to a tag above when absolutely positioned
 		display: none;
 		// width:25vw;
 		// width:5rem;
-		@include respond-to(break2max) {
-			margin-top: 0.2rem;
-		}
+		// @include respond-to(break2max) {
+			// margin-top: 0.2rem;
+		// }
+		width: 120px;
+		margin-top:0.2rem;
 		@include respond-to(break2) {
+			margin-top:1rem;
 			// width:11vw; // too blurry
 			// width: 120px;
-			width:130px;
+			width:120px;
 		}
 		@include respond-to(fullwidth) {
-			width:115px;
+			width:175px;
 		}
 	}
-	.smaller-header, .one-line-logo {
+	// .tablet-one-line-logo {
+	// 	@include respond-to(fullwidth) {
+	// 		display: none;
+	// 	}
+	// }
+	// .desktop-one-line-logo {
+	// 	display: none;
+	// 	@include respond-to(fullwidth) {
+	// 		display: block;
+	// 	}
+	// }
+	.smaller-header, .one-line-logo, .logo-swap {
 		.logo-wrapper {
-				// padding-top: 0;
-			@include respond-to(break2) {
-				// padding-top: 0;
-			}
-			@include respond-to(fullwidth) {
-				// padding-top: 1rem;
-			}
-
-		}
-	}
-	.smaller-header, .one-line-logo {
-		.logo-wrapper {
-			// @include padding-top(0.9);
-			// @include padding-top(1.5);
-			padding-top:0.8rem;
-			@include respond-to(break2) {padding-top:1vw;}
-			@include respond-to(fullwidth) {padding-top:1rem;}
+			margin-top: 0;
+			// padding-top:0.8rem;
+			// padding-top:0.2rem;
+			// @include respond-to(break2) {padding-top:1rem;}
+			// @include respond-to(fullwidth) {padding-top:1rem;}
 		}	
+	}
+	.tablet-block-logo {
+		@include respond-to(fullwidth) {
+			display: none;
+		}
+	}
+	.desktop-block-logo {
+		display: none;
+		@include respond-to(fullwidth) {
+			display: block;
+		}
+	}
+
+	.navbar.logo-swap {
+		.block-logo	{
+			display: none;
+		}
+		.tablet-one-line-logo {
+			display: block;
+		}
+		@include respond-to(break2) {
+			.block-logo { top: -45%; }
+			.folkways-logo { top: -35%; }
+			.block-logo { top: -115%; }
+		}
+		@include respond-to(fullwidth) {
+			.tablet-one-line-logo {
+				display: none;
+			}
+			.desktop-one-line-logo {
+				display: block;
+			}
+		}
 	}
 	.smaller-header {
 		// new logo
@@ -273,21 +306,24 @@
 		top:0;
 		width: 100%;
 		background-color: $navbar; // duplicate from navbar-open because sometimes close navbar when smaller header and need to keep the opacity
-		.block-logo { top: -25%; }
-		.logo {
-			.folkways-logo { top: -35%; }
-			overflow: hidden;
-		}
 		.block-logo {
 			display: none;
 		}
-		.one-line-logo {
+		.tablet-one-line-logo {
 			display: block;
 		}
 		@include respond-to(break2) {
 			.block-logo { top: -45%; }
 			.folkways-logo { top: -35%; }
 			.block-logo { top: -115%; }
+		}
+		@include respond-to(fullwidth) {
+			.tablet-one-line-logo {
+				display: none;
+			}
+			.desktop-one-line-logo {
+				display: block;
+			}
 		}
 		& + .banner-section.container {
 			position: relative;
@@ -306,13 +342,14 @@
 	.nav-icons {
 		right: 0;
 		text-align:right;
-		margin-top: 2vw; // 12.16 to help with new hamburger nav
-		margin-top: 0.5rem; // 12.19
+		// margin-top: 2vw; // 12.16 to help with new hamburger nav
+		// margin-top: 0.5rem; // 12.19
 		margin-right: -10px;
 		@include respond-to(break2) {
-			margin-top:0.5vw; // 12.16
+			// margin-top:0.5vw; // 12.16
 			margin-right: 0;
 			float: right;
+			margin-top: 0.2rem;
 			// width: 58.33333%;
 			// width: 75%;
 		}
@@ -359,14 +396,15 @@
 		text-align: left;
 		color: $searchText;
 		padding: 0; // override bootstrap
-		@extend %small-sans-title;
+		@include search-title;
 		line-height:1.28; // 32 px at full
 		@include respond-to(break2max) {
 			width: 100%; // 3/4ish of col-8 to be half of page
 		}
 		@include respond-to(break2) {
 			// margin-top: 12px;
-			margin-top: 1.2vw;
+			margin-top: 1vw;
+			// margin-top: 1rem;
 		}
 		@include respond-to(fullwidth) {
 			margin-top: 2.4rem;
@@ -411,7 +449,7 @@
 			@include respond-to(break2max) {color: white;}
 		}
 		&-title {
-			@extend %header-nav-font;
+			@include nav-title;
 			cursor: pointer;
 			padding: 10px 0 0;
 			display: block; // for mobile
@@ -506,9 +544,9 @@
 	.browsenav-title {
 		// font-family: $slabExtraWide;
 		// font-weight: 700;
-		// @extend %header-nav-font;
+		// @include nav-title;
 		// @include section-title;
-		@extend %header-nav-font;
+		@include nav-title;
 		font-family: $slabNarrow;
 		color: $black60;
 		margin-bottom: 2vw;

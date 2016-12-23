@@ -247,7 +247,7 @@
 	}
 	.thick-hr {
 		height:11px;
-		background-image:url(/assets/images/hr.jpg);
+		background-image:url(/assets/images/hr/hr.jpg);
 		@include respond-to(break2) {
 			margin-top:0;
 		}
@@ -260,7 +260,7 @@
 	}
 	.thin-hr {
 		height:5px;
-		background-image:url(/assets/images/hr--thin.png);
+		background-image:url(/assets/images/hr/hr--thin.png);
 		background-repeat: no-repeat;
 		background-size: 100%;
 		margin-top: 1vw;

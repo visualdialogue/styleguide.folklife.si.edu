@@ -86,13 +86,15 @@
 	var $navBarHeader = $('.navbar-header');
 	var $navspacer = $('#navspacer');
 
+
 	var gapNavHeight = $siteToggle.outerHeight();
 
+	console.log('gapNavHeight', gapNavHeight);
 	$(window).scroll(function() {
 		// close all if on phone
 		if(site.isMobile) {
 			navCloseAll(); // close anything else that's open by default
-			gapNavHeight = 0; // activate next condition immediately
+			// gapNavHeight = 0; // activate next condition immediately
 		}
 
 		// when user scrolls past height of site toggle, make smaller

@@ -23,8 +23,8 @@ $full-gutter: 2.72%;
   $desktop-navbarSiteToggle: 36px;
 
   // height of navbar on tablet and desktop
-  $mobile-home-navbarHeight: 5.5rem; // new hamburger nav
-  $mobile-home-smaller-navbarHeight: 5.5rem; // new hamburger nav
+  $mobile-home-navbarHeight: 4.5rem; // new hamburger nav
+  $mobile-home-smaller-navbarHeight: 4.5rem; // new hamburger nav
   $mobile-subpage-navbarHeight: 5.5rem;
   $mobile-subpage-smaller-navbarHeight: 5rem;
   // $tablet-home-navbarHeight: 5.1vw; // responsive but blurry logo
@@ -44,7 +44,7 @@ $full-gutter: 2.72%;
   $desktop-logoSpacer:135px; // from layout
 
   // height of toggle, navbar, and spacer
-  $mobile-home-headerHeight: 5.5rem; // temp for mobile
+  $mobile-home-headerHeight: 4.5rem; // temp for mobile
   $mobile-subpage-headerHeight:#{$mobile-subpage-navbarHeight} + #{$mobile-navbarSiteToggle} + #{$mobile-logoSpacer};
   $tablet-home-headerHeight:#{$tablet-home-navbarHeight} + #{$tablet-navbarSiteToggle};
   $tablet-subpage-headerHeight:#{$tablet-subpage-navbarHeight} + #{$tablet-navbarSiteToggle} + #{$tablet-logoSpacer};
