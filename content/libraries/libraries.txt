@@ -1,9 +1,0 @@
-Title: Libraries
-
-----
-
-Text: 
-
-----
-
-Img: b-sass.png

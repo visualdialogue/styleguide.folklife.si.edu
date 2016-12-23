@@ -17,15 +17,15 @@ var  browserSync = require('browser-sync').create(),
 // uglify and concat all js library dependancies
 gulp.task('vendor', function() {  
   return gulp.src([
-    '/bower_components/jquery/dist/jquery.min.js',
+    // '/bower_components/jquery/dist/jquery.min.js',
     // '/bower_components/jquery.scrollTo/jquery.scrollTo.min.js',
     // '/bower_components/jquery.localScroll/jquery.localScroll.min.js',
     // './assets/bower_components/bootstrap/dist/js/bootstrap.min.js',
-    './assets/bower_components/slick-carousel/slick/slick.min.js',
-    './assets/bower_components/remodal/dist/remodal.min.js',
-    './assets/bower_components/vimeo-player-js/dist/player.min.js',
+    // './assets/bower_components/slick-carousel/slick/slick.min.js',
+    // './assets/bower_components/remodal/dist/remodal.min.js',
+    // './assets/bower_components/vimeo-player-js/dist/player.min.js',
     // './assets/bower_components/loadcss/src/loadCSS.js',
-    './assets/bower_components/matchHeight/dist/jquery.matchHeight-min.js',
+    // './assets/bower_components/matchHeight/dist/jquery.matchHeight-min.js',
     // '/bower_components/bxslider-4/jquery3-patch/jquery.bxslider.js',
     // './assets/js/throttle.js',
     // '/js/modernizr-custom.js',
@@ -216,6 +216,7 @@ gulp.task('less', function () {
 gulp.task('js', function() {
   // return gulp.src('/bdc/js/scripts.js')
   return gulp.src([
+      './assets/common/js/common-vendor.js',
       './assets/js/vendor.js',
       './assets/common/js/common-scripts.js',
       './assets/js/scripts.js'

@@ -4739,11 +4739,11 @@ a:hover {
       top: 3.5rem;
       z-index: 2;
       z-index: 10;
-      height: 5.1vw; } }
+      height: 6rem; } }
   @media only screen and (min-width: 1560px) {
     .navbar {
       top: 36px;
-      height: 80px; } }
+      height: 8rem; } }
   .navbar.isOpen {
     background-color: rgba(255, 255, 255, 0.97);
     height: auto !important; }
@@ -4752,10 +4752,10 @@ a:hover {
   height: 5.5rem; }
   @media only screen and (min-width: 53.25em) {
     .home-page .navbar {
-      height: 5.1vw; } }
+      height: 6rem; } }
   @media only screen and (min-width: 1560px) {
     .home-page .navbar {
-      height: 80px; } }
+      height: 8rem; } }
 
 .site-toggle {
   display: none;
@@ -4850,19 +4850,28 @@ a:hover {
   height: 5.5rem; }
   @media only screen and (min-width: 53.25em) {
     .home-page .logo-wrapper {
-      height: 5.1vw; } }
+      height: 6rem; } }
   @media only screen and (min-width: 1560px) {
     .home-page .logo-wrapper {
-      height: 80px; } }
+      height: 8rem; } }
+
+.home-page .navbar.smaller-header {
+  height: 5.5rem; }
+  @media only screen and (min-width: 53.25em) {
+    .home-page .navbar.smaller-header {
+      height: 6rem; } }
+  @media only screen and (min-width: 1560px) {
+    .home-page .navbar.smaller-header {
+      height: 8rem; } }
 
 .navspacer {
   height: calc(5.5rem + 0px + 19vw); }
   @media only screen and (min-width: 53.25em) {
     .navspacer {
-      height: calc(5.1vw + 3.5rem + 8.4vw); } }
+      height: calc(6rem + 3.5rem + 8.4vw); } }
   @media only screen and (min-width: 1560px) {
     .navspacer {
-      height: calc(80px + 36px + 135px); } }
+      height: calc(8rem + 36px + 135px); } }
   .navspacer-open {
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -4874,10 +4883,10 @@ a:hover {
   height: 5.5rem; }
   @media only screen and (min-width: 53.25em) {
     .home-page .navspacer {
-      height: calc(5.1vw + 3.5rem); } }
+      height: calc(6rem + 3.5rem); } }
   @media only screen and (min-width: 1560px) {
     .home-page .navspacer {
-      height: calc(80px + 36px); } }
+      height: calc(8rem + 36px); } }
 
 .logo-mask {
   overflow: hidden;
@@ -4914,17 +4923,16 @@ a:hover {
 
 .one-line-logo {
   max-width: initial;
-  display: none;
-  width: 25vw; }
+  display: none; }
   @media only screen and (max-width: 53.25em) {
     .one-line-logo {
       margin-top: 0.2rem; } }
   @media only screen and (min-width: 53.25em) {
     .one-line-logo {
-      width: 11vw; } }
+      width: 130px; } }
   @media only screen and (min-width: 1560px) {
     .one-line-logo {
-      width: 160px; } }
+      width: 115px; } }
 
 .smaller-header .logo-wrapper, .one-line-logo .logo-wrapper {
   padding-top: 0.8rem; }
@@ -4965,10 +4973,10 @@ body:not(.home-page) .smaller-header .logo-wrapper, body:not(.home-page) .logo-s
   height: 5rem; }
   @media only screen and (min-width: 53.25em) {
     body:not(.home-page) .smaller-header .logo-wrapper, body:not(.home-page) .logo-swap .logo-wrapper {
-      height: 5.1vw; } }
+      height: 6rem; } }
   @media only screen and (min-width: 1560px) {
     body:not(.home-page) .smaller-header .logo-wrapper, body:not(.home-page) .logo-swap .logo-wrapper {
-      height: 80px; } }
+      height: 8rem; } }
 
 .nav-icons {
   right: 0;

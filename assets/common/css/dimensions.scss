@@ -24,13 +24,19 @@ $full-gutter: 2.72%;
 
   // height of navbar on tablet and desktop
   $mobile-home-navbarHeight: 5.5rem; // new hamburger nav
+  $mobile-home-smaller-navbarHeight: 5.5rem; // new hamburger nav
   $mobile-subpage-navbarHeight: 5.5rem;
   $mobile-subpage-smaller-navbarHeight: 5rem;
-  $tablet-home-navbarHeight: 5.1vw;
-  $tablet-subpage-navbarHeight: 15.1vw;
-  $tablet-subpage-navbarHeight: 5.1vw;
+  // $tablet-home-navbarHeight: 5.1vw; // responsive but blurry logo
+  $tablet-home-navbarHeight: 6rem;
+  $tablet-home-smaller-navbarHeight: 6rem;
+  // $tablet-subpage-navbarHeight: 15.1vw;
+  // $tablet-subpage-navbarHeight: 5.1vw;
+  $tablet-subpage-navbarHeight: 6rem;
   $tablet-subpage-smaller-navbarHeight: 5.1vw;
-  $desktop-navbarHeight: 80px;
+  $tablet-subpage-smaller-navbarHeight: 6rem;
+  $desktop-home-smaller-navbarHeight: 8rem;
+  $desktop-navbarHeight: 8rem;
 
   // spacer for logo
   $mobile-logoSpacer:19vw;
@@ -56,7 +62,11 @@ $full-gutter: 2.72%;
     height: $mobile-home-navbarHeight;
     @include respond-to(break2) {height: $tablet-home-navbarHeight;}
     @include respond-to(fullwidth) {height: $desktop-navbarHeight;}
-
+  }
+  @mixin home-smaller-navbarHeight {
+    height: $mobile-home-smaller-navbarHeight;
+    @include respond-to(break2) {height: $tablet-home-smaller-navbarHeight;}
+    @include respond-to(fullwidth) {height: $desktop-home-smaller-navbarHeight;}
   }
   @mixin subpage-navbarHeight {
     height: $mobile-subpage-navbarHeight;

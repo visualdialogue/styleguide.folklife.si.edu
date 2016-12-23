@@ -154,6 +154,11 @@
 			@include home-navbarHeight;
 		}
 	}
+	.home-page {
+		.navbar.smaller-header {
+			@include home-smaller-navbarHeight;
+		}
+	}
 	.navspacer {
 		@include subpage-headerHeight;
 		// background-color: $black80;
@@ -226,13 +231,19 @@
 	.one-line-logo {
 		max-width: initial; // otherwise will shrink to a tag above when absolutely positioned
 		display: none;
-		width:25vw;
+		// width:25vw;
 		// width:5rem;
 		@include respond-to(break2max) {
 			margin-top: 0.2rem;
 		}
-		@include respond-to(break2) {width:11vw;}
-		@include respond-to(fullwidth) {width:160px;}
+		@include respond-to(break2) {
+			// width:11vw; // too blurry
+			// width: 120px;
+			width:130px;
+		}
+		@include respond-to(fullwidth) {
+			width:115px;
+		}
 	}
 	.smaller-header, .one-line-logo {
 		.logo-wrapper {
