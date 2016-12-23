@@ -6055,118 +6055,6 @@ a .page-title {
     .short-newsletter-signup .newsletter-signup-copy {
       padding-bottom: 1rem; } }
 
-/* #audio card
--------------------------------------------------- */
-@media only screen and (min-width: 53.25em) {
-  .audio-card .card {
-    margin-bottom: 1.5rem; } }
-
-.audio-card .image {
-  padding-bottom: 0; }
-
-.audio-card .title {
-  font-family: "acumin-pro", Arial, sans-serif;
-  font-weight: 300;
-  line-height: 1.2;
-  font-size: 1.873rem;
-  font-weight: 600;
-  margin-bottom: 0; }
-  @media only screen and (min-width: 53.25em) {
-    .audio-card .title {
-      font-size: 2.107rem; } }
-  @media only screen and (min-width: 1560px) {
-    .audio-card .title {
-      font-size: 2.37rem; } }
-
-.audio-card .subtitle, .audio-card .artist {
-  font-family: "acumin-pro", Arial, sans-serif;
-  font-weight: 300;
-  font-size: 1.48rem; }
-  @media only screen and (min-width: 53.25em) {
-    .audio-card .subtitle, .audio-card .artist {
-      font-size: 1.665rem; } }
-  @media only screen and (min-width: 1560px) {
-    .audio-card .subtitle, .audio-card .artist {
-      font-size: 1.873rem; } }
-
-.audio-card .details-inner {
-  position: relative;
-  padding-bottom: 7rem;
-  padding-bottom: 15vw; }
-  @media only screen and (min-width: 53.25em) {
-    .audio-card .details-inner {
-      padding-bottom: 7vw; } }
-  @media only screen and (min-width: 1560px) {
-    .audio-card .details-inner {
-      padding-bottom: 10rem; } }
-
-/* #audio player
--------------------------------------------------- */
-.audio-player-details, .audio-progress-bar, .audio-time, .volume {
-  display: inline-block;
-  vertical-align: bottom; }
-
-.audio-player {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  right: 0;
-  padding: 0.8em; }
-  @media only screen and (min-width: 53.25em) {
-    .audio-player {
-      padding: 1.28vw; } }
-  @media only screen and (min-width: 1560px) {
-    .audio-player {
-      padding: 2rem; } }
-
-.audio-player-details {
-  line-height: 1;
-  width: 67%;
-  width: 65%;
-  padding-left: 0.4em; }
-  @media only screen and (min-width: 53.25em) {
-    .audio-player-details {
-      width: 70%; } }
-  @media only screen and (min-width: 1560px) {
-    .audio-player-details {
-      width: 75%; } }
-  @media only screen and (min-width: 53.25em) {
-    .audio-player-details {
-      padding-left: 0.64vw; } }
-  @media only screen and (min-width: 1560px) {
-    .audio-player-details {
-      padding-left: 1rem; } }
-
-.audio-progress-bar {
-  max-width: 100%; }
-  @media only screen and (min-width: 53.25em) {
-    .audio-progress-bar {
-      margin-bottom: 4px; } }
-
-.volume {
-  display: none;
-  float: right;
-  margin-right: 3px;
-  color: #333333; }
-  @media only screen and (min-width: 53.25em) {
-    .volume {
-      display: block; } }
-
-.audio-time {
-  font-family: "acumin-pro", Arial, sans-serif;
-  font-weight: 300;
-  font-size: 1.48rem; }
-  @media only screen and (min-width: 53.25em) {
-    .audio-time {
-      font-size: 1.665rem; } }
-  @media only screen and (min-width: 1560px) {
-    .audio-time {
-      font-size: 1.873rem; } }
-  @media only screen and (min-width: 53.25em) and (max-width: 1560px) {
-    .audio-time {
-      font-size: 1.5vw; } }
-
 /* #footer
 -------------------------------------------------- */
 .footer {
@@ -7201,6 +7089,118 @@ a.details {
     clear: none; }
   .card-sm-break-6:nth-of-type(6n + 1) {
     clear: left; } }
+
+/* #audio card
+-------------------------------------------------- */
+@media only screen and (min-width: 53.25em) {
+  .audio-card .card {
+    margin-bottom: 1.5rem; } }
+
+.audio-card .image {
+  padding-bottom: 0; }
+
+.audio-card .title {
+  font-family: "acumin-pro", Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+  font-size: 1.873rem;
+  font-weight: 600;
+  margin-bottom: 0; }
+  @media only screen and (min-width: 53.25em) {
+    .audio-card .title {
+      font-size: 2.107rem; } }
+  @media only screen and (min-width: 1560px) {
+    .audio-card .title {
+      font-size: 2.37rem; } }
+
+.audio-card .subtitle, .audio-card .artist {
+  font-family: "acumin-pro", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 1.48rem; }
+  @media only screen and (min-width: 53.25em) {
+    .audio-card .subtitle, .audio-card .artist {
+      font-size: 1.665rem; } }
+  @media only screen and (min-width: 1560px) {
+    .audio-card .subtitle, .audio-card .artist {
+      font-size: 1.873rem; } }
+
+.audio-card .details-inner {
+  position: relative;
+  padding-bottom: 7rem;
+  padding-bottom: 15vw; }
+  @media only screen and (min-width: 53.25em) {
+    .audio-card .details-inner {
+      padding-bottom: 7vw; } }
+  @media only screen and (min-width: 1560px) {
+    .audio-card .details-inner {
+      padding-bottom: 10rem; } }
+
+/* #audio player
+-------------------------------------------------- */
+.audio-player-details, .audio-progress-bar, .audio-time, .volume {
+  display: inline-block;
+  vertical-align: bottom; }
+
+.audio-player {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  right: 0;
+  padding: 0.8em; }
+  @media only screen and (min-width: 53.25em) {
+    .audio-player {
+      padding: 1.28vw; } }
+  @media only screen and (min-width: 1560px) {
+    .audio-player {
+      padding: 2rem; } }
+
+.audio-player-details {
+  line-height: 1;
+  width: 67%;
+  width: 65%;
+  padding-left: 0.4em; }
+  @media only screen and (min-width: 53.25em) {
+    .audio-player-details {
+      width: 70%; } }
+  @media only screen and (min-width: 1560px) {
+    .audio-player-details {
+      width: 75%; } }
+  @media only screen and (min-width: 53.25em) {
+    .audio-player-details {
+      padding-left: 0.64vw; } }
+  @media only screen and (min-width: 1560px) {
+    .audio-player-details {
+      padding-left: 1rem; } }
+
+.audio-progress-bar {
+  max-width: 100%; }
+  @media only screen and (min-width: 53.25em) {
+    .audio-progress-bar {
+      margin-bottom: 4px; } }
+
+.volume {
+  display: none;
+  float: right;
+  margin-right: 3px;
+  color: #333333; }
+  @media only screen and (min-width: 53.25em) {
+    .volume {
+      display: block; } }
+
+.audio-time {
+  font-family: "acumin-pro", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 1.48rem; }
+  @media only screen and (min-width: 53.25em) {
+    .audio-time {
+      font-size: 1.665rem; } }
+  @media only screen and (min-width: 1560px) {
+    .audio-time {
+      font-size: 1.873rem; } }
+  @media only screen and (min-width: 53.25em) and (max-width: 1560px) {
+    .audio-time {
+      font-size: 1.5vw; } }
 
 /* #links
 -------------------------------------------------- */
