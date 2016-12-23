@@ -224,7 +224,7 @@ gulp.task('js', function() {
     .pipe(concat('scripts.js'))
     // .pipe(concat('../../../../bower_components/jquery/dist/jquery.js'))
     // .pipe(uglify())
-    .pipe(rename('scripts-min.js'))
+    .pipe(rename('scripts.min.js'))
     .pipe(gulp.dest('./assets/js/'));
     // gulp.watch('/js/scripts.js',['scripts']);
 });
