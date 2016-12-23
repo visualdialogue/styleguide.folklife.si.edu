@@ -17,7 +17,11 @@
       </div>
     </div>
     <?php else: ?>
-    <div class="image <?= $image_col ?>"><a href="<?= $card->url() ?>"><img src="<?= $image->url() ?>"/></a></div>
+    <div class="image <?= $image_col ?>">
+      <?php if (null != $card->url()): ?><a href="<?= $card->url() ?>"><img src="<?= $image->url() ?>"/></a>
+      <?php else: ?><a href="#"><img src="<?= $image->url() ?>"/></a>
+      <?php endif; ?>
+    </div>
     <?php endif; ?>
     <div class="details <?= $details_col ?>">
       <div class="details-inner">

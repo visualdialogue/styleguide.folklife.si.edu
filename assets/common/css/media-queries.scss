@@ -3,6 +3,7 @@
 -------------------------------------------------- */
   $break1: 40em; // 640 px
   $break2: 53.25em; // 852 px
+  $break3: 62em; // 992px from bootstrap's col-lg
   // $break-25: 72em; // 1152 px
   $breakTagline: 62.5em; // 1000px
   $breaksearch: 74.25em; // 1188px for search bar
@@ -26,6 +27,9 @@
     }
     @else if $media == break2full {
       @media only screen and (min-width: $break2) and (max-width: $fullWidth) { @content; }
+    }
+    @else if $media == break3 {
+      @media only screen and (min-width: $break3) { @content; }
     }
     @else if $media == breakTagline {
       @media only screen and (min-width: $breakTagline) { @content; }

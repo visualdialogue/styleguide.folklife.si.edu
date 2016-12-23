@@ -19,8 +19,13 @@ li.card(class="<? if (isset($card_classes)) echo $card_classes . ' ' ?><? if ($c
 					.icon-play
 	-elseif($image):
 		.image
+			-if (null != $card->url()):
 			a(href="<?= $card->url() ?>")
 				img(src="<?= $image->url() ?>")
+			-else:
+			a(href="#")
+				img(src="<?= $image->url() ?>")
+			-endif
 	-endif
 	.details
 		.details-inner

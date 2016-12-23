@@ -27,21 +27,20 @@ $full-gutter: 2.72%;
   $mobile-home-smaller-navbarHeight: 4.5rem; // new hamburger nav
   $mobile-subpage-navbarHeight: 5.5rem;
   $mobile-subpage-smaller-navbarHeight: 5rem;
-  // $tablet-home-navbarHeight: 5.1vw; // responsive but blurry logo
+
   $tablet-home-navbarHeight: 6rem;
   $tablet-home-smaller-navbarHeight: 6rem;
-  // $tablet-subpage-navbarHeight: 15.1vw;
-  // $tablet-subpage-navbarHeight: 5.1vw;
   $tablet-subpage-navbarHeight: 6rem;
-  $tablet-subpage-smaller-navbarHeight: 5.1vw;
   $tablet-subpage-smaller-navbarHeight: 6rem;
+
   $desktop-home-smaller-navbarHeight: 8rem;
   $desktop-navbarHeight: 8rem;
 
   // spacer for logo
-  $mobile-logoSpacer:19vw;
-  $tablet-logoSpacer:8.4vw;
-  $desktop-logoSpacer:135px; // from layout
+  // $mobile-logoSpacer:19vw;
+  $mobile-logoSpacer:8.5rem;
+  $tablet-logoSpacer:12rem;
+  $desktop-logoSpacer:13.5rem; // from layout
 
   // height of toggle, navbar, and spacer
   $mobile-home-headerHeight: 4.5rem; // temp for mobile

@@ -156,8 +156,8 @@ $(document).ready(function () {
 		if(menuClosed) {
 			navCloseAll(); // after we've determined that menu is closed, close anything else that's open by default
 			site.navbar.addClass('is-open');
-			if(site.isMobile) // switch to one-line logo in mobile view
-				site.navbar.addClass('has-one-line-logo'); // switch to one-line logo
+			// if(site.isMobile) // switch to one-line logo in mobile view
+			site.navbar.addClass('has-one-line-logo'); // switch to one-line logo
 			$navbarOutside.css('position', 'fixed'); // activate navbarOutside
 			// console.log('one line logo');				
 			$notMenuIcon.addClass('lighter-nav-icons'); // grey out other icons

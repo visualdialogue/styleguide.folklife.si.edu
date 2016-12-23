@@ -18,8 +18,13 @@ li.card(class="<?= $card_classes ?><? if ($card->type() == 'video') echo ' video
 						.icon-play
 		-else:
 			.image(class="<?= $image_col ?>")
+				-if (null != $card->url()):
 				a(href="<?= $card->url() ?>")
 					img(src="<?= $image->url() ?>")
+				-else:
+				a(href="#")
+					img(src="<?= $image->url() ?>")
+				-endif
 		-endif
 		.details(class="<?= $details_col ?>")
 			.details-inner
