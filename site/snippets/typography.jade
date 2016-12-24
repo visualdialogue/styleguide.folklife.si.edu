@@ -128,6 +128,39 @@ section.container.typography-section
 							}
 							@include margin-bottom(1);
 						}
+		.typeface.codeblock
+			.row.type-title-wrapper
+				hr
+				.col-sm-10.small-serif-title-type.type-title: em Small Serif Title Italic
+				-snippet('show-sass')
+			.row
+				.col-md-5
+					.type-details
+						|Typeface: Freight Text
+						br
+						|Weight: Bold Italic
+						br
+						|Maximum Font Size: 2.7rem
+						br
+						|Maximum Line Height: 3.0861rem
+
+				.col-md-7
+					pre.sass: code.
+						@mixin serif-sm {
+							font-family: $serif;
+							font-weight: 700;
+							line-height: 1;
+							font-size: 1.896rem;
+							text-style: italic;
+							@include respond-to(break2) {
+								line-height: 1.143; // for 28/32
+								font-size: 2.4rem;
+							}
+							@include respond-to(fullwidth) {
+								font-size: 2.7rem;
+							}
+							@include margin-bottom(1);
+						}
 
 	.sub-section
 		.typeface.codeblock
@@ -213,12 +246,12 @@ section.container.typography-section
 							font-family: $sans;
 							font-weight: 600;
 							line-height: 1.166667;
-					  		font-size: 3rem;
+							font-size: 3rem;
 							@include respond-to(break2) {
-						  		font-size: 2.667rem;
+								font-size: 2.667rem;
 							}
 							@include respond-to(fullwidth) {
-						  		font-size: 3rem;
+								font-size: 3rem;
 							}
 						}
 

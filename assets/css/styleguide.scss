@@ -243,11 +243,11 @@
 		cursor: pointer;
 		float: right;
 		background-color: $black10;
-		@include sans-caption;
+		@include sans-mini;
 		text-transform: initial;
-		font-weight: 600;
+		// font-weight: 600;
 		@include height(3.4);
-		@include padding-top(0.3);
+		@include padding-top(0.6);
 		@include padding-right(1);
 		@include padding-bottom(1);
 		@include padding-left(1);
@@ -265,6 +265,8 @@
 	}
 	.icon-down-arrow {
 		float: right;
+		font-size: 1.4rem;
+		color: $black65;
 	}
 
 /* #color

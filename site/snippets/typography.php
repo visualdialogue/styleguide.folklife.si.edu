@@ -47,7 +47,7 @@
 	font-family: $serif;
 	font-weight: 700;
 	line-height: 1.1;
-	font-size: 4.865rem;
+	font-size: 4.325rem;
 	@include respond-to(break2) {
 		font-size: 5.474rem;			
 	}
@@ -72,8 +72,8 @@
           <pre class="sass"><code>@mixin serif-md {
 	font-family: $serif;
 	font-weight: 700;
-	line-height: 1;
-	font-size: 3.417rem;
+	line-height: 0.95; // smaller for folklife dive deep
+	font-size: 2.7rem;
 	@include respond-to(break2) {
 		font-size: 3.844rem;
 	}
@@ -100,13 +100,42 @@
 	font-family: $serif;
 	font-weight: 700;
 	line-height: 1;
-  	font-size: 2.133rem;
+  	font-size: 1.896rem;
 	@include respond-to(break2) {
-		line-height: 1.143;
+		line-height: 1.143; // for 28/32
   		font-size: 2.4rem;
 	}
 	@include respond-to(fullwidth) {
   		font-size: 2.7rem;
+	}
+	@include margin-bottom(1);
+}</code></pre>
+        </div>
+      </div>
+    </div>
+    <div class="typeface codeblock">
+      <div class="row type-title-wrapper">
+        <hr/>
+        <div class="col-sm-10 small-serif-title-type type-title"><em>Small Serif Title Italic</em></div>
+        <?php snippet('show-sass'); ?>
+      </div>
+      <div class="row">
+        <div class="col-md-5">
+          <div class="type-details">Typeface: Freight Text<br/>Weight: Bold Italic<br/>Maximum Font Size: 2.7rem<br/>Maximum Line Height: 3.0861rem</div>
+        </div>
+        <div class="col-md-7">
+          <pre class="sass"><code>@mixin serif-sm {
+	font-family: $serif;
+	font-weight: 700;
+	line-height: 1;
+	font-size: 1.896rem;
+	text-style: italic;
+	@include respond-to(break2) {
+		line-height: 1.143; // for 28/32
+		font-size: 2.4rem;
+	}
+	@include respond-to(fullwidth) {
+		font-size: 2.7rem;
 	}
 	@include margin-bottom(1);
 }
@@ -130,7 +159,7 @@
           <pre class="sass"><code>@mixin sans-xl {
 	font-family: $sans;
 	font-weight: 600;
-	font-size: 2.667rem;
+	font-size: 2.37rem;
 	@include respond-to(break2) {
 		font-size: 3rem;
 		line-height: 1.2;
@@ -156,7 +185,7 @@
           <pre class="sass"><code>@mixin sans-xl {
 	font-family: $sans;
 	font-weight: 300;
-	font-size: 2.667rem;
+	font-size: 2.37rem;
 	@include respond-to(break2) {
 		font-size: 3rem;
 		line-height: 1.2;
@@ -183,12 +212,12 @@
 	font-family: $sans;
 	font-weight: 600;
 	line-height: 1.166667;
-  	font-size: 2.37rem;
+	font-size: 3rem;
 	@include respond-to(break2) {
-  		font-size: 2.667rem;
+		font-size: 2.667rem;
 	}
 	@include respond-to(fullwidth) {
-  		font-size: 3rem;
+		font-size: 3rem;
 	}
 }
 </code></pre>
@@ -210,7 +239,7 @@
 	font-family: $sans;
 	font-weight: 300;
 	line-height: 1.166667;
-  	font-size: 2.37rem;
+  	font-size: 2.107rem;
 	@include respond-to(break2) {
   		font-size: 2.667rem;
 	}
@@ -257,7 +286,7 @@
       </div>
       <div class="row">
         <div class="col-md-5">
-          <div class="type-details">Typeface: Acumin Pro<br/>Weight: Semibold<br/>Maximum Font Size: 2.107rem<br/>Maximum Line Height: 2.528rem</div>
+          <div class="type-details">Typeface: Acumin Pro<br/>Weight: Semibold<br/>Maximum Font Size: 1.873rem<br/>Maximum Line Height: 2.248rem</div>
         </div>
         <div class="col-md-7">
           <pre class="sass"><code>@mixin sans-sm {
@@ -266,10 +295,10 @@
 	line-height: 1.2;
   	font-size: 1.665rem;
 	@include respond-to(break2) {
-		font-size: 1.873rem;
+		font-size: 1.665rem;
 	}
 	@include respond-to(fullwidth) {
-  		font-size: 2.107rem;
+		font-size: 1.873rem;
 	}
 }</code></pre>
         </div>

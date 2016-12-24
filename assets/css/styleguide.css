@@ -7594,20 +7594,21 @@ code.hljs {
   background-color: #e6e6e6;
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
-  font-size: 1.48rem;
+  line-height: 1.4;
+  text-transform: uppercase;
   text-transform: initial;
-  font-weight: 600;
   height: 1.36em;
-  padding-top: 0.12em;
+  padding-top: 0.24em;
   padding-right: 0.4em;
   padding-bottom: 0.4em;
   padding-left: 0.4em; }
   @media only screen and (min-width: 53.25em) {
     .show-code {
-      font-size: 1.665rem; } }
+      line-height: 1.3;
+      font-size: 1.316rem; } }
   @media only screen and (min-width: 1560px) {
     .show-code {
-      font-size: 1.873rem; } }
+      font-size: 1.6rem; } }
   @media only screen and (min-width: 53.25em) {
     .show-code {
       height: 2.176vw; } }
@@ -7616,10 +7617,10 @@ code.hljs {
       height: 3.4rem; } }
   @media only screen and (min-width: 53.25em) {
     .show-code {
-      padding-top: 0.192vw; } }
+      padding-top: 0.384vw; } }
   @media only screen and (min-width: 1560px) {
     .show-code {
-      padding-top: 0.3rem; } }
+      padding-top: 0.6rem; } }
   @media only screen and (min-width: 53.25em) {
     .show-code {
       padding-right: 0.64vw; } }
@@ -7649,7 +7650,9 @@ code.hljs {
     background-color: #282c34; }
 
 .icon-down-arrow {
-  float: right; }
+  float: right;
+  font-size: 1.4rem;
+  color: #595959; }
 
 /* #color
 -------------------------------------------------- */
