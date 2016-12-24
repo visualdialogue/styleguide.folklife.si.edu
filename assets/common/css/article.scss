@@ -19,7 +19,7 @@
 	}
 	figcaption {
 		color: $black60;
-		@include sans-caption;
+		@include sm-sans;
 		@include margin-top(2);
 	}
 	.related-content {
@@ -37,12 +37,12 @@
 		// @include margin-bottom(1);
 	}
 	.title {
-		@include serif-lg;
+		@include lg-serif;
 		// @include margin-bottom(0.5);
 		@include margin-bottom(1);
 	}
 	.date {
-		@include sans-caption;
+		@include sm-sans;
 		font-weight: 300;
 		@include margin-bottom(2);
 	}

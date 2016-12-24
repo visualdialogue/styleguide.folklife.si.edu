@@ -7,8 +7,8 @@
 /* Serif
 * Freight Text Pro from typekit
 -------------------------------------------------- */
-	// Large Serif Title +
-	@mixin serif-lg {
+	// Large Serif Title
+	@mixin lg-serif {
 		font-family: $serif;
 		font-weight: 700;
 		line-height: 1.1;
@@ -20,9 +20,10 @@
 			font-size: 6.158rem;
 		}
 	}
+	.lg-serif {@include lg-serif;}
 
-	// Medium Serif Title +
-	@mixin serif-md {
+	// Medium Serif Title
+	@mixin md-serif {
 		font-family: $serif;
 		font-weight: 700;
 		line-height: 0.95; // smaller for folklife dive deep
@@ -36,9 +37,10 @@
 			font-size: 4.325rem;
 		}
 	}
+	.md-serif {@include md-serif;}
 
-	// Small Serif Title +
-	@mixin serif-sm {
+	// Small Serif Title
+	@mixin sm-serif {
 		font-family: $serif;
 		font-weight: 700;
 		line-height: 1;
@@ -56,9 +58,11 @@
 		}
 		@include margin-bottom(1);
 	}
+	.sm-serif {@include sm-serif;}
+	.sm-serif-italic {@include sm-serif;font-style: italic;}
 
-	// Small Serif Title +
-	@mixin serif-body {
+	// Small Serif Title
+	@mixin body-serif {
 		font-family: $serif;
 		font-weight: 400;
 		line-height: 1.333333; // 24/32
@@ -70,6 +74,8 @@
 	  		font-size: 2.4rem;
 		}
 	}
+	.body-serif {@include body-serif;}
+
 
 
 /* Sans serif
@@ -77,7 +83,7 @@
 * minor second (1.125) based on 3rem?
 -------------------------------------------------- */
 	// Extra Large Sans (Folkways)
-	@mixin sans-xl {
+	@mixin xl-sans {
 		font-family: $sans;
 		font-weight: 300;
 		// font-size: 5vw;
@@ -92,12 +98,14 @@
 			font-size: 3.375rem;
 		}
 	}
+	.xl-sans {@include xl-sans;}
+	.xl-sans-semi {@include xl-sans;font-weight: 600;}
 
 
-	// Large Sans +
-	@mixin sans-lg {
+	// Large Sans
+	@mixin lg-sans {
 		font-family: $sans;
-		font-weight: 300; // light for acumin
+		font-weight: 300;
 		line-height: 1.166667; // tighter for festival/learn page // 35px
 	  	// font-size: 2.37rem;
 		font-size: 2.107rem;
@@ -109,12 +117,14 @@
 	  		font-size: 3rem;
 		}
 	}
+	.lg-sans {@include lg-sans;}
+	.lg-sans-semi {@include lg-sans;font-weight: 600;}
 
 
-	// Medium Sans +
-	@mixin sans-md {
+	// Medium Sans
+	@mixin md-sans {
 		font-family: $sans;
-		font-weight: 300; // light for acumin
+		font-weight: 300;
 		line-height: 1.2;
 	  	// font-size: 4vw;
 	  	font-size: 1.873rem;
@@ -129,13 +139,16 @@
 	  		font-size: 2.37rem; // 12.19
 		}
 	}
+	.md-sans {@include md-sans;}
+	.md-sans-semi {@include md-sans;font-weight: 600;}
 
-	// Small Sans +
-	@mixin sans-sm {
+	// Small Sans
+	@mixin sm-sans {
 		font-family: $sans;
-		font-weight: 300; // light for acumin
+		font-weight: 300;
 		line-height: 1.2;
-	  	font-size: 1.665rem;
+	  	// font-size: 1.665rem;
+	  	font-size: 1.48rem;
 		@include respond-to(break2) {
 			// font-size: 1.873rem;
 			font-size: 1.665rem;
@@ -146,28 +159,14 @@
 	  		font-size: 1.873rem;
 		}
 	}
+	.sm-sans {@include sm-sans;}
+	.body-sans {@include sm-sans;}
+	.caption-sans {@include sm-sans;}
+	.sm-sans-semi {@include sm-sans;font-weight: 600;}
 
-	// Sans Caption
-	@mixin sans-caption {
+	@mixin mini-sans {
 		font-family: $sans;
-		font-weight: 300; // light for acumin
-	  	// font-size: 4vw;
-	  	font-size: 1.48rem;
-		@include respond-to(break2) {
-	  		// font-size: 1.15vw;
-	  		// font-size: 1.15vw;
-	  		font-size: 1.665rem;
-		}
-		@include respond-to(fullwidth) {
-	  		// font-size: 1.8rem; // oct 19 for fritz
-	  		font-size: 1.873rem; // dec 19 for mod scale - major second
-		}
-	}
-
-	// Tag
-	@mixin sans-mini {
-		font-family: $sans;
-		font-weight: 300; // light for acumin
+		font-weight: 300;
 		line-height: 1.4;
 	  	// font-size: 3.8vw;
 	  	text-transform: uppercase;
@@ -179,11 +178,12 @@
 		@include respond-to(fullwidth) {
 			// line-height: 1.3;
 			// line-height: 1.6;
-	  		font-size: 1.6rem; // oct 19 for fritz
+	  		// font-size: 1.6rem; // oct 19 for fritz
 	  		// font-size: 1.48rem;
-	  		// font-size: 1.665rem;
+	  		font-size: 1.665rem;
 		}
 	}
+	.mini-sans {@include mini-sans;}
 
 	@mixin date {
 		@include sans-tag;
@@ -266,83 +266,54 @@
 /* Slab
 * Unit Gothic 717 and 718 from Typekit
 -------------------------------------------------- */
-	@mixin slab-xxl {
+	@mixin xl-slab {
 		font-family: $slabWide;
 		text-transform: uppercase;
-		// font-size: 6vw;
-		// letter-spacing: 0.5px;
-		// margin-top: 0; // bootstrap reset
-		// margin-bottom: 5vw;
-		@include respond-to(break2) {
-			font-size: 3.1vw;
-			line-height: 1.3;
-			// margin-bottom: 0;
-		}
-		@include respond-to(fullwidth) {
-			font-size: 5rem;
-			line-height: 1.3;
-		}
-	}
-	@mixin slab-xl {
-		font-family: $slabWide;
-		text-transform: uppercase;
-		// font-size: 6vw;
-		// letter-spacing: 0.5px;
-		// margin-top: 0; // bootstrap reset
-		// margin-bottom: 5vw;
 		font-size: 8vw;
 		@include respond-to(break2) {
 			font-size: 2.9vw;
 			line-height: 1;
-			// margin-bottom: 0;
 		}
 		@include respond-to(fullwidth) {
 			font-size: 4.5rem;
 			line-height: 1;
 		}
 	}
-	@mixin slab-lg {
+	.xl-slab {@include xl-slab;}
+	@mixin lg-slab {
 		font-family: $slabWide;
 		text-transform: uppercase;
-		// font-size: 6vw;
-		// letter-spacing: 0.5px;
-		// margin-top: 0; // bootstrap reset
-		// margin-bottom: 5vw;
 		@include respond-to(break2) {
 			font-size: 2.4vw;
 			line-height: 1;
-			// margin-bottom: 0;
 		}
 		@include respond-to(fullwidth) {
 			font-size: 3.8rem;
 			line-height: 1;
 		}
 	}
-	@mixin slab-md {
+	.lg-slab {@include lg-slab;}
+	@mixin md-slab {
 		font-family: $slabWide;
 		text-transform: uppercase;
-		font-size: 5vw; // from section title
+		font-size: 5vw;
 		font-size: 6vw;
 		letter-spacing: 0.5px;
 		margin-top: 0; // bootstrap reset
 		margin-bottom: 1.5rem; // section title
-
-		margin-bottom: 5vw;
+		// margin-bottom: 5vw;
 		line-height: 1.2; // section title
 		@include respond-to(break2) {
-			// font-size: 4rem; // ff-good
-			// font-size: 2.5rem;
 			font-size: 1.9vw;
-			// font-size: 2rem;
-			// margin-bottom: 2.8vw;
 			margin-bottom: 0;
 		}
 		@include respond-to(fullwidth) {
 			font-size: 3rem;
 		}
 	}
+	.md-slab {@include md-slab;}
 
-	@mixin nav-title {
+	@mixin nav-header {
 		font-family: $slabNarrow;
 		text-transform: uppercase;
 		font-weight: 800;
@@ -356,6 +327,7 @@
 			font-size: 1.7rem;
 		}
 	}
+	.nav-header {@include nav-header;}
 
 
 
@@ -364,23 +336,24 @@
 * Acumin Pro Wide from Typekit
 * We use the 1.125 modular scale based on 4.2rem
 -------------------------------------------------- */
-	@mixin magazinetitle-lg {
+	@mixin lg-magazine-title {
 		font-family: $sansWide;
 		font-weight: 800;
-		line-height: 1.095237; // 46px desktop
+		line-height: 1.095237;
 		font-size: 2.622rem;
 		@include respond-to(break2) {
 			font-size: 3.319rem;
 		}
 		@include respond-to(fullwidth) {
-			font-size: 4.2rem; // acumin pro
+			font-size: 4.2rem;
 		}
 	}
+	.lg-magazine-title {@include lg-magazine-title;}
 
-	@mixin magazinetitle-sm {
+	@mixin md-magazine-title {
 		font-family: $sansWide;
 		font-weight: 800;
-		line-height: 1.095237; // 46px desktop
+		line-height: 1.095237;
 		// font-size: 2.622rem;
 		// font-size: 2.331rem;
 		// font-size: 2.072rem;
@@ -393,9 +366,11 @@
 			font-size: 3.733rem;
 		}
 	}
+	.md-magazine-title {@include md-magazine-title;}
 
-	@mixin buybutton {
-		@include sans-tag;
+	// 
+	@mixin sm-magazine-title {
+		// @include sans-tag;
 		text-transform: uppercase;
 		font-family: $sansWide;
 		font-weight: 800;
@@ -408,11 +383,12 @@
 			margin-bottom: 0.4vw;
 		}
 		@include respond-to(fullwidth) {
-			font-size: 1.72rem; // acumin pro
+			font-size: 1.72rem;
 			margin-bottom: 0.5rem;
 			line-height: 1.4;
 		}
 	}
+	.sm-magazine-title {@include sm-magazine-title;}
 
 	@mixin sans-tag {
 		text-transform: uppercase;
@@ -429,12 +405,14 @@
 			margin-bottom: 0.4vw;
 		}
 		@include respond-to(fullwidth) {
-			// font-size: 1.4rem; // acumin pro
-			font-size: 1.665rem; // acumin pro
+			// font-size: 1.4rem;
+			font-size: 1.665rem;
 			margin-bottom: 0;
 			line-height: 1.4;
 		}
 	}
+	.category-tag-type {@include sans-tag;}
+	.category-tag-bold-type {@include sans-tag;font-weight: 700;}
 
 /* CSS type helper classes
 -------------------------------------------------- */
@@ -444,26 +422,26 @@
 	}
 	.content, .text-card {
 		h3 {
-			@include serif-md;
+			@include md-serif;
 		}
 		h4 {
-			@include serif-sm;
+			@include sm-serif;
 			@include margin-bottom(2);
 		}
 		h5 {
-			@include sans-sm;
+			@include sm-sans;
 			font-weight: 500;
 			@include margin-bottom(0.5);
 		}
 		p {
-			@include serif-body;
+			@include body-serif;
 			@include padding-bottom(2); // not margin because then when using columns, the margin carries over!!!, from http://stackoverflow.com/a/12503808
 		}
 		ul {
 			@include margin-bottom(1);
 		}
 		.title {
-			@include sans-sm;
+			@include sm-sans;
 			@include margin-bottom(0.3);
 			width: initial;
 			width: auto;

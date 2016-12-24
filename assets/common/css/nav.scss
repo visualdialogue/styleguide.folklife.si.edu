@@ -67,7 +67,7 @@
 		text-align:right;
 		line-height:2vw;
 		// line-height:2rem;
-		@include sans-mini;
+		@include mini-sans;
 		font-weight: 500;
 		line-height: 1;
 		@include respond-to(break2) {
@@ -448,7 +448,7 @@
 			@include respond-to(break2max) {color: white;}
 		}
 		&-title {
-			@include nav-title;
+			@include nav-header;
 			cursor: pointer;
 			padding: 10px 0 0;
 			display: block; // for mobile
@@ -541,7 +541,7 @@
 	}
 	
 	.browsenav-title {
-		@include nav-title;
+		@include nav-header;
 		font-family: $slabNarrow;
 		color: $black60;
 		margin-bottom: 2vw;

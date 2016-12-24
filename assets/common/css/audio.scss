@@ -10,13 +10,13 @@
 			padding-bottom:0; // prevent making gap in outline
 		}
 		.title {
-			@include sans-md;
+			@include md-sans;
 			// font-weight: 500;
 			font-weight: 600;
 			margin-bottom:0;
 		}
 		.subtitle, .artist {
-			@include sans-caption;
+			@include sm-sans;
 		}
 		.details-inner {
 			position: relative; // hold player
@@ -70,7 +70,7 @@
 		}
 	}
 	.audio-time {
-		@include sans-caption;
+		@include sm-sans;
 		@include respond-to(break2full) {
 			font-size: 1.5vw;
 		}

@@ -16,18 +16,18 @@
 			@include margin-bottom(4);
 		}
 		.title {
-			@include serif-md;
+			@include md-serif;
 		}
 		.subtitle {
 			display: none;
 		}
 		.byline {
-			@include sans-md;
+			@include md-sans;
 			font-weight: 600;
 			@include margin-bottom(3);
 		}
 		.description p {
-			@include sans-lg;
+			@include lg-sans;
 		}
 
 		.program-feature {
@@ -41,13 +41,13 @@
 		}
 		figcaption {
 			color: $black60;
-			@include sans-caption;
+			@include sm-sans;
 			@include margin-top(2);
 		}
 		.program-resources {
 			// @include margin-top(12.7);
 			.title {
-				@include sans-md;
+				@include md-sans;
 				font-weight: 600;
 				line-height: 1 !important;
 				@include padding-bottom(1);
@@ -79,7 +79,7 @@
 			color: white;
 			// background-color: $black50;
 			background-color: rgba($black70, 0.9);
-			@include sans-caption;
+			@include sm-sans;
 			width: 100%;
 
 			cursor: pointer;
@@ -176,7 +176,7 @@
 			height: auto;
 		}
 		.page-subtitle {
-			@include sans-lg;
+			@include lg-sans;
 			font-weight: 600;
 			color: $basque-green;
 			text-transform: uppercase;
@@ -211,11 +211,11 @@
 			@include margin-bottom(3.1);
 		}
 		&-blurb {
-			@include sans-lg;
+			@include lg-sans;
 			@include margin-bottom(2);
 		}
 		&-credits {
-			@include sans-caption;
+			@include sm-sans;
 			color: $black50;
 			@include margin-top(5);
 		}
@@ -239,12 +239,12 @@
 		}
 		.ms-sidebar-section-title {
 			@include sidebarBorderTop;
-			@include sans-md;
+			@include md-sans;
 			color: $black70;
 			border-color: $fs-green;
 			font-weight: 600;
 			&.small {
-				@include sans-caption;
+				@include sm-sans;
 				color: $black50;
 				text-transform: uppercase;
 			}
@@ -276,17 +276,17 @@
 			color: $basque-red;
 		}
 		.subtitle {
-			@include serif-md;
+			@include md-serif;
 			color: black;
 			@include margin-bottom(0.5);
 		}
 		.byline {
-			@include sans-md;
+			@include md-sans;
 			font-weight: 600;
 			@include margin-bottom(4);
 		}
 		.blurb {
-			@include sans-lg;
+			@include lg-sans;
 		}
 		.anchor-link {
 			@include top(-5);
@@ -298,10 +298,10 @@
 	}
 	.participants-section {
 		h3 {
-			@include serif-sm;
+			@include sm-serif;
 			@include margin-top(0.5);
 		}
 		.blurb {
-			@include sans-caption;
+			@include sm-sans;
 		}
 	}

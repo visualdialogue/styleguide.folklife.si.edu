@@ -195,7 +195,7 @@
 -------------------------------------------------- */
 
 	body {
-		@include serif-body;
+		@include body-serif;
 	}
 	section {
 		position: relative; // contain more link
@@ -216,7 +216,7 @@
 		}
 	}
 	.section-title {
-		@include slab-md;
+		@include md-slab;
 		color: $black65;
 		margin-bottom: 1.5rem;
 		@include respond-to(break2) {
@@ -237,7 +237,7 @@
 		color: $black70;	
 		@include margin-bottom(6); // keep from footer
 		h3, &-section-title {
-			@include sans-lg;
+			@include lg-sans;
 			color: $black50;
 			@include padding-bottom(1);
 			@include margin-top(4);
@@ -245,7 +245,7 @@
 			@include margin-bottom(1.1);
 		}
 		h4, &-item-title {
-			@include sans-mini;
+			@include mini-sans;
 			@include margin-top(0.6);
 			color: $black50;
 			margin: 0;
@@ -326,7 +326,7 @@
 	}
 	.page-title {
 		color: white;
-		@include slab-xl;
+		@include xl-slab;
 		margin-top:1.4vw;
 		@include respond-to(break2) {margin-top:0.6vw;}
 		@include respond-to(fullwidth) {margin-top:0.9rem;}
@@ -347,7 +347,7 @@
 /* #remodal
 -------------------------------------------------- */
 	.remodal-description {
-		@include sans-md;
+		@include md-sans;
 	}
 
 /* #Become a Member
@@ -374,7 +374,7 @@
 		}
 		.image {
 			position: relative; // contain vert child
-			@include slab-md;
+			@include md-slab;
 			@include margin-bottom(0);
 			color: white;
 			text-align: center;
@@ -388,7 +388,7 @@
 			width: 100%;
 		}
 		.copy {
-			@include sans-lg;
+			@include lg-sans;
 			text-align: center;
 			@include respond-to(break2max) {
 				width: 50%;
@@ -455,7 +455,7 @@
 		}
 		&-button {
 			background-color: $black40;
-			@include slab-md;
+			@include md-slab;
 			margin-bottom:0;
 			padding: 3vw;
 			color: white;
@@ -486,7 +486,7 @@
 /* #Newsletter Signup
 -------------------------------------------------- */
 	.newsletter-signup-section, .support-section, .support-folkways {
-		@include sans-caption;
+		@include sm-sans;
 	}
 	.newsletter-signup-section, .support-section {
 		margin-bottom: 2rem;
@@ -500,7 +500,7 @@
 		@include padding-right(2);
 		@include padding-left(2);
 		@include padding-bottom(2);
-		@include sans-caption;
+		@include sm-sans;
 		@include respond-to(break2full) {
 			font-size: 1.2vw;
 		}
@@ -547,7 +547,7 @@
 			}
 		}
 		.newsletter-signup-copy {
-			@include sans-sm;
+			@include sm-sans;
 			@include padding-top(1.5);
 			@include padding-bottom(2);
 			@include respond-to(break2) {

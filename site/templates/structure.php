@@ -188,12 +188,12 @@
   </div>
   <div class="row">
     <div class="col-md-4">
-      <div class="sans-caption">Extra Extra Small Sans</div>
+      <div class="sans-sm">Extra Extra Small Sans</div>
     </div>
     <div class="col-md-7">
       <pre><code class="scss">
       // Extra Extra Small Sans
-      @mixin sans-caption {
+      @mixin sans-sm {
       	font-family: $sans;
       	font-weight: 300; // light for acumin
       	line-height: 1.2;

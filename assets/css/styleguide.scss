@@ -54,11 +54,11 @@
 /* #intro
 -------------------------------------------------- */
 	.intro-title {
-		@include serif-lg;
+		@include lg-serif;
 		margin-top:0;
 	}
 	.intro-copy {
-		@include serif-sm;
+		@include sm-serif;
 		font-weight: 500;
 	}
 	.intro-section {
@@ -97,7 +97,7 @@
 			}
 
 			.copy {
-				@include sans-sm;
+				@include sm-sans;
 				color: white;
 				text-align: center;
 				// vertically align
@@ -124,7 +124,7 @@
 /* #colors
 -------------------------------------------------- */
 	.color {
-		@include sans-caption;
+		@include sm-sans;
 		margin-bottom: 0 !important;
 		pre {
 			display: block; // hide other code chunks
@@ -230,7 +230,7 @@
 	}
 
 	.section-subtitle {
-		@include serif-sm;
+		@include sm-serif;
 		@include padding-top(2);
 		@include margin-top(3);
 		@include margin-bottom(2);
@@ -243,7 +243,7 @@
 		cursor: pointer;
 		float: right;
 		background-color: $black10;
-		@include sans-mini;
+		@include mini-sans;
 		text-transform: initial;
 		// font-weight: 600;
 		@include height(3.4);
@@ -302,18 +302,15 @@
 		@include margin-top(2);
 	}
 	.type-details {
-		@include sans-caption;
+		@include sm-sans;
 	}
-	.large-serif-title-type {@include serif-lg;}
-	.medium-serif-title-type {@include serif-md;}
-	.small-serif-title-type {@include serif-sm;}
-	.extra-large-sans-title-type {@include sans-xl;font-weight: 600;}
-	.extra-large-sans-title-type-light {@include sans-xl;}
-	.large-sans-title-type {@include sans-lg;font-weight: 600;}
-	.large-sans-title-type-light {@include sans-lg;}
-	.medium-sans-title-type {@include sans-md;font-weight: 600;}
-	.medium-sans-title-type-light {@include sans-md;}
-	.small-sans-title-type,.small-sans-title-type-light {@include sans-sm;}
+	.extra-large-sans-title-type {@include xl-sans;font-weight: 600;}
+	.extra-large-sans-title-type-light {@include xl-sans;}
+	.large-sans-title-type {@include lg-sans;font-weight: 600;}
+	.large-sans-title-type-light {@include lg-sans;}
+	.medium-sans-title-type {@include md-sans;font-weight: 600;}
+	.medium-sans-title-type-light {@include md-sans;}
+	.small-sans-title-type,.small-sans-title-type-light {@include sm-sans;}
 
 /* #cards
 -------------------------------------------------- */
@@ -328,18 +325,18 @@
 	}
 	.video-card {
 		.title {
-			@include serif-sm;
+			@include sm-serif;
 			font-weight: 600;
 		}
 	}
 	.horizontal-card {
 		.title {
-			@include magazinetitle-lg;
+			@include lg-magazine-title;
 		}
 	}
 	.feature {
 		.title {
-			@include magazinetitle-lg;
+			@include lg-magazine-title;
 		}
 	}
 
@@ -347,10 +344,10 @@
 -------------------------------------------------- */
 	.video-section {
 		.title {
-			@include serif-md;
+			@include md-serif;
 		}
 		.subtitle {
-			@include sans-md;
+			@include md-sans;
 		}
 	}
 

@@ -102,7 +102,7 @@ a.details {
 -------------------------------------------------- */
 	.card-program {
 		.title {
-			@include serif-sm;
+			@include sm-serif;
 			display: block; // for better height management;
 			@include respond-to(break2max) {
 				margin-bottom:0;
@@ -228,7 +228,7 @@ a.details {
 	.remodal-title {
 		// font-size:1.4rem; // 28px
 		margin-bottom:10px;
-		@include sans-caption;
+		@include sm-sans;
 	}
 
 
@@ -400,7 +400,7 @@ a.details {
 			}
 		}
 		.title {
-			@include serif-lg;
+			@include lg-serif;
 			margin-bottom:1rem;
 			@include respond-to(break2) {margin-bottom:1.15vw;}
 			@include respond-to(fullwidth) {margin-bottom:1.8rem;}
@@ -412,7 +412,7 @@ a.details {
 			}
 		}
 		.description {
-			@include sans-lg;
+			@include lg-sans;
 		}
 	}
 
@@ -424,7 +424,7 @@ a.details {
 			padding-bottom:0;
 		}
 		.details {
-			@include sans-caption;
+			@include sm-sans;
 			padding-left:0;
 		}
 		
@@ -460,14 +460,14 @@ a.details {
 			display: none; // hide copy on cards
 		}
 		.title {
-			@include sans-caption;
+			@include sm-sans;
 			font-weight: 700;
 			line-height: 1;
 
 			// @include margin-bottom(2);
 		}
 		.artist {
-			@include sans-caption;
+			@include sm-sans;
 			// @include margin-top(-0.2); // close the gap a bit
 		}
 
@@ -491,14 +491,14 @@ a.details {
 			}
 		}
 		.title {
-			@include sans-caption;
+			@include sm-sans;
 			color: white;
 			font-weight: bold;
 			text-align: center;
 			@include margin-bottom(0.5);
 		}
 		.price {
-			@include sans-caption;
+			@include sm-sans;
 			color: $black70;
 			text-align: center;
 		}
