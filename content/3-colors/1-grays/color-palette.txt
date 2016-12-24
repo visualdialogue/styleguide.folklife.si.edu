@@ -6,42 +6,36 @@ Colors:
 
 - 
   name: '10% Gray'
-  hex: '#e5e5e5'
   r: "230"
   g: "230"
   b: "230"
   sass: $black10
 - 
   name: '20% Gray'
-  hex: '#cccccc'
   r: "204"
   g: "204"
   b: "204"
   sass: $black20
 - 
   name: '40% Gray'
-  hex: '#999999'
   r: "153"
   g: "153"
   b: "153"
   sass: $black40
 - 
   name: '65% Gray'
-  hex: '#595959'
   r: "89"
   g: "89"
   b: "89"
   sass: $black65
 - 
   name: '80% Gray'
-  hex: '#333333'
   r: "51"
   g: "51"
   b: "51"
   sass: $black80
 - 
   name: Black
-  hex: '#000000'
   r: "0"
   g: "0"
   b: "0"
