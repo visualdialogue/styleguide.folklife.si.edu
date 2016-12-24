@@ -57,7 +57,7 @@ section.container.typography-section
 							font-family: $serif;
 							font-weight: 700;
 							line-height: 1.1;
-							font-size: 4.865rem;
+							font-size: 4.325rem;
 							@include respond-to(break2) {
 								font-size: 5.474rem;			
 							}
@@ -86,8 +86,8 @@ section.container.typography-section
 						@mixin serif-md {
 							font-family: $serif;
 							font-weight: 700;
-							line-height: 1;
-							font-size: 3.417rem;
+							line-height: 0.95; // smaller for folklife dive deep
+							font-size: 2.7rem;
 							@include respond-to(break2) {
 								font-size: 3.844rem;
 							}
@@ -118,9 +118,9 @@ section.container.typography-section
 							font-family: $serif;
 							font-weight: 700;
 							line-height: 1;
-						  	font-size: 2.133rem;
+						  	font-size: 1.896rem;
 							@include respond-to(break2) {
-								line-height: 1.143;
+								line-height: 1.143; // for 28/32
 						  		font-size: 2.4rem;
 							}
 							@include respond-to(fullwidth) {
@@ -152,7 +152,7 @@ section.container.typography-section
 						@mixin sans-xl {
 							font-family: $sans;
 							font-weight: 600;
-							font-size: 2.667rem;
+							font-size: 2.37rem;
 							@include respond-to(break2) {
 								font-size: 3rem;
 								line-height: 1.2;
@@ -182,7 +182,7 @@ section.container.typography-section
 						@mixin sans-xl {
 							font-family: $sans;
 							font-weight: 300;
-							font-size: 2.667rem;
+							font-size: 2.37rem;
 							@include respond-to(break2) {
 								font-size: 3rem;
 								line-height: 1.2;
@@ -213,7 +213,7 @@ section.container.typography-section
 							font-family: $sans;
 							font-weight: 600;
 							line-height: 1.166667;
-						  	font-size: 2.37rem;
+					  		font-size: 3rem;
 							@include respond-to(break2) {
 						  		font-size: 2.667rem;
 							}
@@ -244,7 +244,7 @@ section.container.typography-section
 							font-family: $sans;
 							font-weight: 300;
 							line-height: 1.166667;
-						  	font-size: 2.37rem;
+						  	font-size: 2.107rem;
 							@include respond-to(break2) {
 						  		font-size: 2.667rem;
 							}
@@ -296,9 +296,9 @@ section.container.typography-section
 						br
 						|Weight: Semibold
 						br
-						|Maximum Font Size: 2.107rem
+						|Maximum Font Size: 1.873rem
 						br
-						|Maximum Line Height: 2.528rem
+						|Maximum Line Height: 2.248rem
 
 				.col-md-7
 					pre.sass: code.
@@ -308,10 +308,10 @@ section.container.typography-section
 							line-height: 1.2;
 						  	font-size: 1.665rem;
 							@include respond-to(break2) {
-								font-size: 1.873rem;
+								font-size: 1.665rem;
 							}
 							@include respond-to(fullwidth) {
-						  		font-size: 2.107rem;
+								font-size: 1.873rem;
 							}
 						}
 

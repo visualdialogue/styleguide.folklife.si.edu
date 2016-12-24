@@ -1,0 +1,69 @@
+Title: Folkways Palette
+
+----
+
+Colors: 
+
+- 
+  name: Light Blue
+  hex: '#cfdcf1 '
+  r: "207"
+  g: "220"
+  b: "241"
+  sass: $fw-light-blue
+- 
+  name: Blue
+  hex: '#b0d5de'
+  r: "176"
+  g: "213"
+  b: "222"
+  sass: $fw-blue
+- 
+  name: Purple
+  hex: '#a499bc'
+  r: "164"
+  g: "153"
+  b: "188"
+  sass: $fw-purple
+- 
+  name: Light Green
+  hex: '#fff2df'
+  r: "255"
+  g: "242"
+  b: "223"
+  sass: $fw-light-green
+- 
+  name: Green
+  hex: '#c2e1b7'
+  r: "194"
+  g: "225"
+  b: "183"
+  sass: $fw-green
+- 
+  name: Teal
+  hex: '#94a094'
+  r: "148"
+  g: "160"
+  b: "148"
+  sass: $fw-teal
+- 
+  name: Yellow
+  hex: '#fbf6f0'
+  r: "251"
+  g: "246"
+  b: "240"
+  sass: $fw-yellow
+- 
+  name: Orange
+  hex: '#cdc4b3'
+  r: "205"
+  g: "196"
+  b: "179"
+  sass: $fw-orange
+- 
+  name: Red
+  hex: '#ec837a'
+  r: "236"
+  g: "131"
+  b: "122"
+  sass: $fw-red

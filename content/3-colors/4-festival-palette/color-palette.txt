@@ -1,0 +1,69 @@
+Title: Festival Palette
+
+----
+
+Colors: 
+
+- 
+  name: Light Blue
+  hex: '#75bee9'
+  r: '117'
+  g: '190' 
+  b: '233'
+  sass: $fs-light-blue
+- 
+  name: Blue
+  hex: '#4e72b8'
+  r: '78'
+  g: '114' 
+  b: '184'
+  sass: $fs-blue
+- 
+  name: Purple
+  hex: '#7c51a1'
+  r: '124'
+  g: '81' 
+  b: '161'
+  sass: $fs-purple
+- 
+  name: Light Green
+  hex: '#d5bf90'
+  r: '213'
+  g: '191' 
+  b: '144'
+  sass: $fs-light-green
+- 
+  name: Green
+  hex: '#3ea6ae'
+  r: '62'
+  g: '166' 
+  b: '174'
+  sass: $fs-green
+- 
+  name: Teal
+  hex: '#00b26b'
+  r: '0'
+  g: '178' 
+  b: '107'
+  sass: $fs-teal
+- 
+  name: Yellow
+  hex: '#ffe06a'
+  r: '255'
+  g: '224' 
+  b: '106'
+  sass: $fs-yellow
+- 
+  name: Orange
+  hex: '#eea557'
+  r: '238'
+  g: '165' 
+  b: '87'
+  sass: $fs-orange
+- 
+  name: Red
+  hex: '#de4049'
+  r: '222'
+  g: '64' 
+  b: '73'
+  sass: $fs-red

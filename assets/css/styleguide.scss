@@ -126,6 +126,9 @@
 	.color {
 		@include sans-caption;
 		margin-bottom: 0 !important;
+		pre {
+			display: block; // hide other code chunks
+		}
 	}
 	.color-name {
 		font-weight: 600;
@@ -152,7 +155,7 @@
 	.color-000000 { background-color: #000000;}
 
 	// Folklife Colors
-	.color-92c5eb { background-color: #92c5eb;}
+	.light-blue-color { background-color: #91c5ea;}
 	.color-4495d1 { background-color: #4495d1;}
 	.color-b455a0 { background-color: #b455a0;}
 	.color-e4f1de { background-color: #e4f1de;}

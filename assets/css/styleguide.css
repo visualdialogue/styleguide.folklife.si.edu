@@ -4192,10 +4192,7 @@ body {
 .content h3, .text-card h3 {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
-  line-height: 1;
   line-height: 0.95;
-  font-size: 3.417rem;
-  font-size: 3.038rem;
   font-size: 2.7rem; }
   @media only screen and (min-width: 53.25em) {
     .content h3, .text-card h3 {
@@ -5495,7 +5492,6 @@ ul {
         font-size: 2.667rem; } }
     @media only screen and (min-width: 1560px) {
       .sidebar h3, .sidebar-section-title {
-        line-height: 1.166667;
         font-size: 3rem; } }
     @media only screen and (min-width: 53.25em) {
       .sidebar h3, .sidebar-section-title {
@@ -5761,7 +5757,6 @@ a .page-title {
         font-size: 2.667rem; } }
     @media only screen and (min-width: 1560px) {
       .become-a-member .copy {
-        line-height: 1.166667;
         font-size: 3rem; } }
     @media only screen and (max-width: 53.25em) {
       .become-a-member .copy {
@@ -6890,7 +6885,6 @@ a.details {
         font-size: 2.667rem; } }
     @media only screen and (min-width: 1560px) {
       .full-feature-card .description {
-        line-height: 1.166667;
         font-size: 3rem; } }
 
 /* Sidebar cards
@@ -7354,6 +7348,8 @@ h3.sidebar-section-title {
   @media only screen and (min-width: 1560px) {
     .color {
       font-size: 1.873rem; } }
+  .color pre {
+    display: block; }
 
 .color-name {
   font-weight: 600; }
@@ -7415,8 +7411,8 @@ h3.sidebar-section-title {
 .color-000000 {
   background-color: #000000; }
 
-.color-92c5eb {
-  background-color: #92c5eb; }
+.light-blue-color {
+  background-color: #91c5ea; }
 
 .color-4495d1 {
   background-color: #4495d1; }
@@ -7744,10 +7740,7 @@ code.hljs {
 .medium-serif-title-type {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
-  line-height: 1;
   line-height: 0.95;
-  font-size: 3.417rem;
-  font-size: 3.038rem;
   font-size: 2.7rem; }
   @media only screen and (min-width: 53.25em) {
     .medium-serif-title-type {
@@ -7812,7 +7805,6 @@ code.hljs {
       font-size: 2.667rem; } }
   @media only screen and (min-width: 1560px) {
     .large-sans-title-type {
-      line-height: 1.166667;
       font-size: 3rem; } }
 
 .large-sans-title-type-light {
@@ -7825,7 +7817,6 @@ code.hljs {
       font-size: 2.667rem; } }
   @media only screen and (min-width: 1560px) {
     .large-sans-title-type-light {
-      line-height: 1.166667;
       font-size: 3rem; } }
 
 .medium-sans-title-type {
@@ -7936,10 +7927,7 @@ code.hljs {
 .video-section .title {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
-  line-height: 1;
   line-height: 0.95;
-  font-size: 3.417rem;
-  font-size: 3.038rem;
   font-size: 2.7rem; }
   @media only screen and (min-width: 53.25em) {
     .video-section .title {

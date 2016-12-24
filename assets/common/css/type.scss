@@ -12,7 +12,6 @@
 		font-family: $serif;
 		font-weight: 700;
 		line-height: 1.1;
-		// font-size: 4.865rem;
 		font-size: 4.325rem;
 		@include respond-to(break2) {
 			font-size: 5.474rem;			
@@ -26,11 +25,7 @@
 	@mixin serif-md {
 		font-family: $serif;
 		font-weight: 700;
-		line-height: 1; // smaller for folkways banner titles
 		line-height: 0.95; // smaller for folklife dive deep
-		// font-size: 6vw;
-		font-size: 3.417rem;
-		font-size: 3.038rem;
 		font-size: 2.7rem;
 		@include respond-to(break2) {
 			// font-size: 2.6vw;
@@ -111,7 +106,6 @@
 	  		font-size: 2.667rem;
 		}
 		@include respond-to(fullwidth) {
-			line-height: 1.166667; // tighter for festival/learn page // 35px
 	  		font-size: 3rem;
 		}
 	}

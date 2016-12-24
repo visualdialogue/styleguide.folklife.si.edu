@@ -1,0 +1,69 @@
+Title: Folklife Palette
+
+----
+
+Colors: 
+
+- 
+  name: Light Blue
+  hex: '#92c5eb'
+  r: "161"
+  g: "196"
+  b: "233"
+  sass: $fl-light-blue
+- 
+  name: Blue
+  hex: '#4495d1'
+  r: "100"
+  g: "148"
+  b: "206"
+  sass: $fl-blue
+- 
+  name: Purple
+  hex: '#b455a0'
+  r: "158"
+  g: "86"
+  b: "157"
+  sass: $fl-purple
+- 
+  name: Light Green
+  hex: '#e4f1de'
+  r: "231"
+  g: "241"
+  b: "222"
+  sass: $fl-light-green
+- 
+  name: Green
+  hex: '#32bcad'
+  r: "113"
+  g: "187"
+  b: "172"
+  sass: $fl-green
+- 
+  name: Teal
+  hex: '#248397'
+  r: "36"
+  g: "131"
+  b: "151"
+  sass: $fl-teal
+- 
+  name: Yellow
+  hex: '#ffefc6'
+  r: "255"
+  g: "239"
+  b: "198"
+  sass: $fl-yellow
+- 
+  name: Orange
+  hex: '#df7756'
+  r: "223"
+  g: "119"
+  b: "86"
+  sass: $fl-orange
+- 
+  name: Red
+  hex: '#c74a34'
+  r: "199"
+  g: "74"
+  b: "52"
+  sass: $fl-red
