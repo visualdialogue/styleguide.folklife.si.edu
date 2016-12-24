@@ -443,7 +443,7 @@
 			@include respond-to(break2full) {
 				font-size: 1.2vw;
 			}
-			@include padding-top(1.6);
+			@include padding-top(1.4);
 			padding-top: 1vw; // responsive for sizing at mobile
 			@include padding-right(2);
 			@include padding-bottom(2);

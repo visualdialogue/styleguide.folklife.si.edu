@@ -425,7 +425,7 @@
           <div class="type-details">Typeface: Acumin Pro Wide<br/>Weight: Black<br/>Maximum Font Size: 4.2rem</div>
         </div>
         <div class="col-md-7">
-          <pre class="sass"><code>@mixin magazinetitle-lg {
+          <pre class="sass"><code>@mixin lg-magazine-title {
 	font-family: $sansWide;
 	font-weight: 800;
 	line-height: 1.095237;
@@ -450,7 +450,7 @@
             <div class="type-details">Typeface: Acumin Pro Wide<br/>Weight: Black<br/>Maximum Font Size: 3.733rem</div>
           </div>
           <div class="col-md-7">
-            <pre class="sass"><code>@mixin magazinetitle-sm {
+            <pre class="sass"><code>@mixin md-magazine-title {
 	font-family: $sansWide;
 	font-weight: 800;
 	line-height: 1.095237;
@@ -473,7 +473,34 @@
         </div>
         <div class="row">
           <div class="col-md-5">
-            <div class="type-details">Typeface: Acumin Pro Wide<br/>Weight: Black<br/>Maximum Font Size: 1.72rem</div>
+            <div class="type-details">Typeface: Acumin Pro Wide<br/>Weight: Black<br/>Maximum Font Size: 1.72rem<br/>Usage: Buy now buttons, subscribe button</div>
+          </div>
+          <div class="col-md-7">
+            <pre class="sass"><code>@mixin sm-magazine-title {
+	font-family: $sansWide;
+	font-weight: 800;
+	line-height: 1.2;
+	font-size: 1.841rem;
+	@include margin-bottom(1); // for consistency across applications
+	@include respond-to(break2) {
+		font-size: 2.33rem;
+	}
+	@include respond-to(fullwidth) {
+		font-size: 2.95rem;
+	}
+}</code></pre>
+          </div>
+        </div>
+      </div>
+      <div class="typeface codeblock">
+        <div class="row type-title-wrapper">
+          <hr/>
+          <div class="col-sm-10 sm-magazine-title type-title">Buttons</div>
+          <?php snippet('show-sass'); ?>
+        </div>
+        <div class="row">
+          <div class="col-md-5">
+            <div class="type-details">Typeface: Acumin Pro Wide<br/>Weight: Black<br/>Maximum Font Size: 1.72rem<br/>Usage: Buy now buttons, subscribe button</div>
           </div>
           <div class="col-md-7">
             <pre class="sass"><code>@mixin buybutton {

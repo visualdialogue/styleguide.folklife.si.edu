@@ -483,7 +483,7 @@ section.container.typography-section
 
 				.col-md-7
 					pre.sass: code.
-						@mixin magazinetitle-lg {
+						@mixin lg-magazine-title {
 							font-family: $sansWide;
 							font-weight: 800;
 							line-height: 1.095237;
@@ -511,7 +511,7 @@ section.container.typography-section
 
 					.col-md-7
 						pre.sass: code.
-							@mixin magazinetitle-sm {
+							@mixin md-magazine-title {
 								font-family: $sansWide;
 								font-weight: 800;
 								line-height: 1.095237;
@@ -536,6 +536,39 @@ section.container.typography-section
 							|Weight: Black
 							br
 							|Maximum Font Size: 1.72rem
+							br
+							|Usage: Buy now buttons, subscribe button
+
+					.col-md-7
+						pre.sass: code.
+							@mixin sm-magazine-title {
+								font-family: $sansWide;
+								font-weight: 800;
+								line-height: 1.2;
+								font-size: 1.841rem;
+								@include margin-bottom(1); // for consistency across applications
+								@include respond-to(break2) {
+									font-size: 2.33rem;
+								}
+								@include respond-to(fullwidth) {
+									font-size: 2.95rem;
+								}
+							}
+			.typeface.codeblock
+				.row.type-title-wrapper
+					hr
+					.col-sm-10.sm-magazine-title.type-title Buttons
+					-snippet('show-sass')
+				.row
+					.col-md-5
+						.type-details
+							|Typeface: Acumin Pro Wide
+							br
+							|Weight: Black
+							br
+							|Maximum Font Size: 1.72rem
+							br
+							|Usage: Buy now buttons, subscribe button
 
 					.col-md-7
 						pre.sass: code.

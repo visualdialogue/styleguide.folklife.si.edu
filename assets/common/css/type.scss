@@ -346,6 +346,7 @@
 		}
 		@include respond-to(fullwidth) {
 			font-size: 4.2rem;
+			font-size: 4.6rem; // new layout
 		}
 	}
 	.lg-magazine-title {@include lg-magazine-title;}
@@ -369,7 +370,24 @@
 	.md-magazine-title {@include md-magazine-title;}
 
 	// 
+
 	@mixin sm-magazine-title {
+		font-family: $sansWide;
+		font-weight: 800;
+		line-height: 1.2;
+		font-size: 1.841rem;
+		@include margin-bottom(1);
+		@include respond-to(break2) {
+			font-size: 2.33rem;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 2.95rem;
+		}
+	}
+	.sm-magazine-title {@include sm-magazine-title;}
+
+	// 
+	@mixin buy-button {
 		// @include sans-tag;
 		text-transform: uppercase;
 		font-family: $sansWide;
@@ -388,7 +406,7 @@
 			line-height: 1.4;
 		}
 	}
-	.sm-magazine-title {@include sm-magazine-title;}
+	.buy-button {@include buy-button;}
 
 	@mixin sans-tag {
 		text-transform: uppercase;

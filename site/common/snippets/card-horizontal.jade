@@ -59,6 +59,8 @@ li.card(class="<?= $card_classes ?><? if ($card->type() == 'video') echo ' video
 				-if (isset($excerpt)):
 					.description.link-underline
 						p!= excerpt($card->copy()->kt(), $excerpt, 'words')
+						//- fw magazine
+						p!= excerpt($card->contents()->kt(), $excerpt, 'words') 
 				-endif
 
 				-if (isset($more_link)):

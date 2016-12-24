@@ -7,7 +7,13 @@
 	-$image = null
 -endif
 
-li.card.album-card.col-xs-6.col-sm-2
+-if (isset($col_override)):
+	-$col = $col_override
+-else:
+	-$col = 'col-xs-6 col-sm-2'
+-endif
+
+li.card.album-card(class="<?= $col ?>")
 	.image
 		a(href="<?= $card->url() ?>")
 			img(src="<?= $image->url() ?>")

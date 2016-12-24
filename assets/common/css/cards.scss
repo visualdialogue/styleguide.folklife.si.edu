@@ -238,7 +238,7 @@ a.details {
 -------------------------------------------------- */
 
 	// horizontal backgrounds
-		.horizontal-background-card {
+		.background-card {
 			position: relative;
 			// z-index: 1;
 			&:after {
@@ -266,47 +266,49 @@ a.details {
 		// }
 
 
+	// vertical backgrounds apply color to .details-inner
+
 		// test cases??
 	// vertical backgrounds
-	.vertical-background-card {
-		position: relative;
-		height: 100%; // fill gaps
-		&:after {
-			background-color: white;
-			// background-color: red;
-			content:"";
-			display: block;
-			position: absolute;
-			top:0;
-			bottom:0;
-			z-index:-1; // put behind image and details
-			left:0; // talkstory
-			right:0;
-			// dive deep
-			left:$medium-gutter;
-			right:$medium-gutter;
-			// left:$small-gutter;
-			// right:$small-gutter;
-			bottom: 3.75vw; // 3rem responsive at mobile
-			@include respond-to(break2) {
-				// folklife dive deep
-				left:$medium-gutter;
-				right:$medium-gutter;
-				// left: 0;
-				// right: 0;
-				bottom: 0; // back to horizontal
-				// bottom: 2rem;
-			}
-			@include respond-to(fullwidth) {
-				// folklife dive deep
-				left:2rem; 
-				right:2rem; 
-				// dive deep
-				// left: 0; 
-				// right: 0;
-			}
-		}
-	}
+	// .vertical-background-card {
+	// 	position: relative;
+	// 	height: 100%; // fill gaps
+	// 	&:after {
+	// 		background-color: white;
+	// 		// background-color: red;
+	// 		content:"";
+	// 		display: block;
+	// 		position: absolute;
+	// 		top:0;
+	// 		bottom:0;
+	// 		z-index:-1; // put behind image and details
+	// 		left:0; // talkstory
+	// 		right:0;
+	// 		// dive deep
+	// 		left:$medium-gutter;
+	// 		right:$medium-gutter;
+	// 		// left:$small-gutter;
+	// 		// right:$small-gutter;
+	// 		bottom: 3.75vw; // 3rem responsive at mobile
+	// 		@include respond-to(break2) {
+	// 			// folklife dive deep
+	// 			left:$medium-gutter;
+	// 			right:$medium-gutter;
+	// 			// left: 0;
+	// 			// right: 0;
+	// 			bottom: 0; // back to horizontal
+	// 			// bottom: 2rem;
+	// 		}
+	// 		@include respond-to(fullwidth) {
+	// 			// folklife dive deep
+	// 			left:2rem; 
+	// 			right:2rem; 
+	// 			// dive deep
+	// 			// left: 0; 
+	// 			// right: 0;
+	// 		}
+	// 	}
+	// }
 
 
 
@@ -322,6 +324,9 @@ a.details {
 				float: none;
 				margin-top: 2vw;
 				display: inline-block;
+			}
+			@include respond-to(breakfull) {
+				margin-top: 2rem;
 			}
 		}
 	}
@@ -407,6 +412,7 @@ a.details {
 		}
 		.details-inner {
 			@include padding-top(0);
+			@include padding-right(2);
 			@include respond-to(break2max) {
 				padding-left:0; // for full width detail copy
 			}

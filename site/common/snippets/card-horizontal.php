@@ -56,6 +56,8 @@
         <div class="description link-underline">
           <p>
             <?php echo excerpt($card->copy()->kt(), $excerpt, 'words'); ?></p>
+          <p>
+            <?php echo excerpt($card->contents()->kt(), $excerpt, 'words') ; ?></p>
         </div>
         <?php endif; ?>
         <?php if (isset($more_link)): ?>

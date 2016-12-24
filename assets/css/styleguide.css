@@ -4463,7 +4463,8 @@ iframe {
       font-size: 3.319rem; } }
   @media only screen and (min-width: 1560px) {
     .lg-magazine-title {
-      font-size: 4.2rem; } }
+      font-size: 4.2rem;
+      font-size: 4.6rem; } }
 
 .md-magazine-title {
   font-family: "acumin-pro-wide", Arial, sans-serif;
@@ -4478,6 +4479,25 @@ iframe {
       font-size: 3.733rem; } }
 
 .sm-magazine-title {
+  font-family: "acumin-pro-wide", Arial, sans-serif;
+  font-weight: 800;
+  line-height: 1.2;
+  font-size: 1.841rem;
+  margin-bottom: 0.88889rem; }
+  @media only screen and (min-width: 53.25em) {
+    .sm-magazine-title {
+      margin-bottom: 0.64vw; } }
+  @media only screen and (min-width: 1560px) {
+    .sm-magazine-title {
+      margin-bottom: 1rem; } }
+  @media only screen and (min-width: 53.25em) {
+    .sm-magazine-title {
+      font-size: 2.33rem; } }
+  @media only screen and (min-width: 1560px) {
+    .sm-magazine-title {
+      font-size: 2.95rem; } }
+
+.buy-button {
   text-transform: uppercase;
   font-family: "acumin-pro-wide", Arial, sans-serif;
   font-weight: 800;
@@ -4485,11 +4505,11 @@ iframe {
   margin-bottom: 0;
   font-size: 1.376rem; }
   @media only screen and (min-width: 53.25em) {
-    .sm-magazine-title {
+    .buy-button {
       font-size: 1.376rem;
       margin-bottom: 0.4vw; } }
   @media only screen and (min-width: 1560px) {
-    .sm-magazine-title {
+    .buy-button {
       font-size: 1.72rem;
       margin-bottom: 0.5rem;
       line-height: 1.4; } }
@@ -6145,7 +6165,7 @@ a .page-title {
         display: inline-block;
         vertical-align: top; } }
   .support-copy {
-    padding-top: 0.64em;
+    padding-top: 0.56em;
     padding-top: 1vw;
     padding-right: 0.8em;
     padding-bottom: 0.8em;
@@ -6163,10 +6183,10 @@ a .page-title {
         font-size: 1.2vw; } }
     @media only screen and (min-width: 53.25em) {
       .support-copy {
-        padding-top: 1.024vw; } }
+        padding-top: 0.896vw; } }
     @media only screen and (min-width: 1560px) {
       .support-copy {
-        padding-top: 1.6rem; } }
+        padding-top: 1.4rem; } }
     @media only screen and (min-width: 53.25em) {
       .support-copy {
         padding-right: 1.28vw; } }
@@ -7028,9 +7048,9 @@ a.details {
 * the following rules apply a background color to the :after element
 * if color was applied to the card itself, it would show through the padding on the edges
 -------------------------------------------------- */
-.horizontal-background-card {
+.background-card {
   position: relative; }
-  .horizontal-background-card:after {
+  .background-card:after {
     background-color: white;
     content: "";
     display: block;
@@ -7041,33 +7061,7 @@ a.details {
     left: 7.5px;
     right: 7.5px; }
     @media only screen and (min-width: 1560px) {
-      .horizontal-background-card:after {
-        left: 2rem;
-        right: 2rem; } }
-
-.vertical-background-card {
-  position: relative;
-  height: 100%; }
-  .vertical-background-card:after {
-    background-color: white;
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    z-index: -1;
-    left: 0;
-    right: 0;
-    left: 1.36%;
-    right: 1.36%;
-    bottom: 3.75vw; }
-    @media only screen and (min-width: 53.25em) {
-      .vertical-background-card:after {
-        left: 1.36%;
-        right: 1.36%;
-        bottom: 0; } }
-    @media only screen and (min-width: 1560px) {
-      .vertical-background-card:after {
+      .background-card:after {
         left: 2rem;
         right: 2rem; } }
 
@@ -7220,13 +7214,20 @@ a.details {
       .full-feature-card .title {
         margin-bottom: 1.8rem; } }
   .full-feature-card .details-inner {
-    padding-top: 0em; }
+    padding-top: 0em;
+    padding-right: 0.8em; }
     @media only screen and (min-width: 53.25em) {
       .full-feature-card .details-inner {
         padding-top: 0vw; } }
     @media only screen and (min-width: 1560px) {
       .full-feature-card .details-inner {
         padding-top: 0rem; } }
+    @media only screen and (min-width: 53.25em) {
+      .full-feature-card .details-inner {
+        padding-right: 1.28vw; } }
+    @media only screen and (min-width: 1560px) {
+      .full-feature-card .details-inner {
+        padding-right: 2rem; } }
     @media only screen and (max-width: 53.25em) {
       .full-feature-card .details-inner {
         padding-left: 0; } }
@@ -8231,7 +8232,8 @@ code.hljs {
       font-size: 3.319rem; } }
   @media only screen and (min-width: 1560px) {
     .horizontal-card .title {
-      font-size: 4.2rem; } }
+      font-size: 4.2rem;
+      font-size: 4.6rem; } }
 
 .feature .title {
   font-family: "acumin-pro-wide", Arial, sans-serif;
@@ -8243,7 +8245,8 @@ code.hljs {
       font-size: 3.319rem; } }
   @media only screen and (min-width: 1560px) {
     .feature .title {
-      font-size: 4.2rem; } }
+      font-size: 4.2rem;
+      font-size: 4.6rem; } }
 
 /* #video
 -------------------------------------------------- */

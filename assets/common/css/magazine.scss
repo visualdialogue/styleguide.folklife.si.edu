@@ -1,0 +1,129 @@
+/* Festival Program page
+-------------------------------------------------- */
+	body.magazine-page {
+		background-color: $black05;
+	}
+	.magazine-title-bar {
+		background-color: black;
+		.folkways-magazine-logo {
+			@include padding-top(2.8);
+			@include padding-bottom(0.2);	
+		}
+		.issue-title {
+			background-color: $fw-yellow;
+			position: absolute;
+			top:0;
+			right: 0;
+			bottom:0;
+			left:-2rem;
+			height: 12rem;
+			&:after {
+				content: 'bg';
+				display: block;
+				position: absolute;
+				top:0;
+				right:0;
+				bottom:0;
+				left:0;
+				background-color: $fw-yellow;
+			}
+		}
+	}
+	.cover-story-section {
+		@include margin-bottom(4); // horizontal-cards override b/c no hr below
+		.card:after {
+				background-color: white;
+			}
+		.tag {
+			// override full-feature-card default
+			display: block; 
+			@include margin-top(4)
+		}
+		.title {
+			@include lg-magazine-title;
+		}
+	}
+	// home page features
+	.magazine-feature {
+		.title {
+			@include sm-magazine-title;
+		}
+		.details {
+			background-color: white;
+		}
+		.details-inner {
+			@include padding-left(2);
+			@include padding-bottom(2);
+		}
+		.description {
+			@include md-sans;
+		}
+		.more-link {
+			@include margin-top(1);
+		}
+	}
+	// homepage video block
+	.video-spotlight-section {
+		.card {
+			&:after {
+				background-color: black
+			}
+		}
+		.video {
+			@include padding(2);
+		}
+		.tag, .title, .description, .more-link {
+			color: white;
+		}
+		.title {
+			@include sm-magazine-title;
+		}
+		.details-inner {
+			@include padding-left(2);
+			@include padding-bottom(2);
+			@include md-sans;
+		}
+	}
+	.from-the-collection-section {
+		hr {
+			@include margin-bottom(3);
+		}
+		.card {
+			@include clear-3; // don't hang on cards that are taller
+		}
+		.more-link {
+			display: none;
+		}
+	}
+	.back-issues-section {
+		.band {
+			background-color: $black60;
+			
+		}
+		.container {
+
+		}
+		.back-issues-column {
+			@include border(left);
+			@include padding-top(2);
+			@include padding-bottom(2);
+		}
+		.tag {
+			color: $black30;
+		}
+		.title {
+			color: white;
+			@include md-sans;
+			font-weight: 700;
+		}
+		li:last-of-type {
+			@include border(right);
+		}
+		.view-all-issues {
+			.title {
+				@include padding-bottom(0.5);
+				border-bottom: 2px solid white;
+			}
+		}
+		
+	}
