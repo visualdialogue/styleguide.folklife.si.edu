@@ -2,7 +2,7 @@
 
 #navspacer.navspacer
 
--snippet('title-bar', array('title' => 'Festival Blog', 'link' => $page->parent()->url()))
+-snippet('magazine-title-bar', array('link' => $page->parent()->url()))
 
 .container
 	.row
@@ -20,9 +20,5 @@
 		aside.sidebar.col-sm-3.blog-sidebar
 
 			-snippet('blog-related-content', array('orientation' => 'vertical', 'limit' => 3))
-
-			-snippet('blog-most-popular')
-			
-			-snippet('blog-categories')
 
 -snippet('footer')

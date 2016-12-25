@@ -1,10 +1,16 @@
 .related-content
 	h2.sidebar-section-title Related Content
-	-if($page->template() == 'article'):
+	-if($page->template() == 'blog-article'):
 		// blog article sidebar
 		ul.row
 			-foreach($page->siblings(false)->visible()->filterBy('tags','basque',',')->limit($limit) as $card):
 				-snippet('card', array('card' => $card, 'card_classes' => 'col-xs-12 sidebar-card' ))
+			-endforeach
+	-elseif($page->template() == 'magazine-article'):
+		// magazine article sidebar
+		ul.row
+			-foreach($page->siblings(false)->visible()->filterBy('tags','basque',',')->limit($limit) as $card):
+				//- -snippet('card', array('card' => $card, 'card_classes' => 'col-xs-12 sidebar-card' ))
 			-endforeach
 	-else:
 		// program sidebar

@@ -1,11 +1,17 @@
 
 <div class="related-content">
   <h2 class="sidebar-section-title">Related Content</h2>
-  <?php if($page->template() == 'article'): ?>
+  <?php if($page->template() == 'blog-article'): ?>
   <!-- blog article sidebar-->
   <ul class="row">
     <?php foreach($page->siblings(false)->visible()->filterBy('tags','basque',',')->limit($limit) as $card): ?>
     <?php snippet('card', array('card' => $card, 'card_classes' => 'col-xs-12 sidebar-card' )); ?>
+    <?php endforeach; ?>
+  </ul>
+  <?php elseif($page->template() == 'magazine-article'): ?>
+  <!-- magazine article sidebar-->
+  <ul class="row">
+    <?php foreach($page->siblings(false)->visible()->filterBy('tags','basque',',')->limit($limit) as $card): ?>
     <?php endforeach; ?>
   </ul>
   <?php else: ?>

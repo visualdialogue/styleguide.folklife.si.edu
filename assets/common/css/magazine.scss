@@ -3,31 +3,83 @@
 	body.magazine-page {
 		background-color: $black05;
 	}
+	.magazine-title-bar-wrapper {
+		position: relative; // hold abs child
+	}
 	.magazine-title-bar {
-		background-color: black;
-		.folkways-magazine-logo {
-			@include padding-top(2.8);
-			@include padding-bottom(0.2);	
-		}
-		.issue-title {
-			background-color: $fw-yellow;
+		// background-color: black;
+		// Split background colors for backdrop behind color grid
+		height:11.7rem; // from layout
+
+		&:before, &:after {
+			content: '';
 			position: absolute;
 			top:0;
-			right: 0;
 			bottom:0;
-			left:-2rem;
-			height: 12rem;
-			&:after {
-				content: 'bg';
-				display: block;
-				position: absolute;
-				top:0;
-				right:0;
-				bottom:0;
-				left:0;
-				background-color: $fw-yellow;
+			z-index: -1;
+		}
+		&:before {
+			left:0;
+			right:0;
+			background-color: black;
+			@include respond-to(break2) {
+				right: 50vw; // go to middle of screen, behind grid
+
 			}
 		}
+		&:after {
+			right:0;
+			background-color: $fw-yellow;
+			@include respond-to(break2) {
+				left: 50vw; // go to middle of screen, behind grid
+			}
+		}
+
+		.folkways-magazine-logo {
+			@include padding-top(2.8);
+			// @include padding-bottom(0.2);	
+		}
+		.black-spacer {
+			background-color: black;
+			height:11.7rem; // from layout
+		}
+		.issue-title {
+			color: black;
+			background-color: $fw-yellow;
+			@include respond-to(break2) {
+				position: absolute;
+				top:0;
+				right: 0;
+				bottom:0;
+				left:-2rem;
+				z-index: 2;
+				height: 11.7rem;
+				left:-2rem;
+			}
+			
+			@include respond-to(break2) {left:-2rem;}
+			@include respond-to(fullwidth) {left:-2rem;}
+
+			@include padding-top(3);
+			@include padding-left(4);
+
+			// &:after {
+			// 	content: '';
+			// 	display: block;
+			// 	position: absolute;
+			// 	top:0;
+			// 	right:0;
+			// 	bottom:0;
+			// 	left:0;
+			// 	z-index:1;
+			// 	// background-color: $fw-yellow;
+			// }
+			.title {
+				@include md-serif;
+				@include margin-top(0.4);
+			}
+		}
+
 	}
 	.cover-story-section {
 		@include margin-bottom(4); // horizontal-cards override b/c no hr below
