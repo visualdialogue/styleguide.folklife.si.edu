@@ -5019,6 +5019,7 @@ a:hover {
   width: 100%;
   min-height: initial;
   min-height: auto;
+  height: 5.5rem;
   background-color: white;
   box-shadow: 0px 17px 41px -8px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0px 17px 41px -8px rgba(0, 0, 0, 0.2);
@@ -5026,6 +5027,12 @@ a:hover {
   box-shadow: 0px 10px 41px -8px rgba(0, 0, 0, 0.08);
   -webkit-box-shadow: 0px 10px 41px -8px rgba(0, 0, 0, 0.08);
   -moz-box-shadow: 0px 10px 41px -8px rgba(0, 0, 0, 0.08); }
+  @media only screen and (min-width: 53.25em) {
+    .navbar {
+      height: 7rem; } }
+  @media only screen and (min-width: 1560px) {
+    .navbar {
+      height: 8rem; } }
   @media only screen and (max-width: 53.25em) {
     .navbar {
       width: 100%;
@@ -5046,7 +5053,7 @@ a:hover {
   height: 4.5rem; }
   @media only screen and (min-width: 53.25em) {
     .home-page .navbar {
-      height: 6rem; } }
+      height: 7rem; } }
   @media only screen and (min-width: 1560px) {
     .home-page .navbar {
       height: 8rem; } }
@@ -5133,6 +5140,7 @@ a:hover {
   @media only screen and (min-width: 53.25em) and (max-width: 1560px) {
     .logo-wrapper {
       margin-top: 1.5rem;
+      margin-top: 1rem;
       width: 175px; } }
   @media only screen and (min-width: 1560px) {
     .logo-wrapper {
@@ -5143,7 +5151,7 @@ a:hover {
   height: 4.5rem; }
   @media only screen and (min-width: 53.25em) {
     .home-page .navbar.is-smaller {
-      height: 6rem; } }
+      height: 7rem; } }
   @media only screen and (min-width: 1560px) {
     .home-page .navbar.is-smaller {
       height: 8rem; } }
@@ -5152,7 +5160,7 @@ a:hover {
   height: calc(5.5rem + 0px + 8.5rem); }
   @media only screen and (min-width: 53.25em) {
     .navspacer {
-      height: calc(6rem + 3.4rem + 12rem); } }
+      height: calc(7rem + 3.4rem + 12rem); } }
   @media only screen and (min-width: 1560px) {
     .navspacer {
       height: calc(8rem + 36px + 13.5rem); } }
@@ -5167,7 +5175,7 @@ a:hover {
   height: 4.5rem; }
   @media only screen and (min-width: 53.25em) {
     .home-page .navspacer {
-      height: calc(6rem + 3.4rem); } }
+      height: calc(7rem + 3.4rem); } }
   @media only screen and (min-width: 1560px) {
     .home-page .navspacer {
       height: calc(8rem + 36px); } }
@@ -5208,6 +5216,7 @@ a:hover {
   @media only screen and (min-width: 53.25em) {
     .one-line-logo {
       margin-top: 0.5rem;
+      margin-top: 0.8rem;
       width: 150px; } }
   @media only screen and (min-width: 1560px) {
     .one-line-logo {
@@ -5257,13 +5266,13 @@ a:hover {
     position: relative;
     top: 142px; }
 
-body:not(.home-page) .is-smaller .logo-wrapper, body:not(.home-page) .has-one-line-logo .logo-wrapper {
-  height: 5rem; }
+body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
+  height: 4.5rem; }
   @media only screen and (min-width: 53.25em) {
-    body:not(.home-page) .is-smaller .logo-wrapper, body:not(.home-page) .has-one-line-logo .logo-wrapper {
-      height: 6rem; } }
+    body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
+      height: 7rem; } }
   @media only screen and (min-width: 1560px) {
-    body:not(.home-page) .is-smaller .logo-wrapper, body:not(.home-page) .has-one-line-logo .logo-wrapper {
+    body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
       height: 8rem; } }
 
 .nav-icons {
@@ -5273,7 +5282,8 @@ body:not(.home-page) .is-smaller .logo-wrapper, body:not(.home-page) .has-one-li
     .nav-icons {
       position: static;
       float: right;
-      margin-top: 0.2rem; } }
+      margin-top: 0.2rem;
+      margin-top: 1.2rem; } }
   @media only screen and (min-width: 1560px) {
     .nav-icons {
       margin-top: 1.3rem;

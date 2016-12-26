@@ -10,6 +10,7 @@
 		width: 100%;
 		min-height: initial;
 		min-height: auto;
+		@include subpage-navbarHeight;	
 		@include respond-to(break2max) {
 			// position: fixed;
 			width: 100%;
@@ -145,6 +146,7 @@
 		margin-top: 1rem;
 		@include respond-to(break2full) {
 			margin-top: 1.5rem;
+			margin-top: 1rem;
 			width: 175px;
 		}
 
@@ -242,6 +244,7 @@
 		margin-top:0.5rem;
 		@include respond-to(break2) {
 			margin-top:0.5rem;
+			margin-top:0.8rem;
 			// width:11vw; // too blurry
 			// width: 100px;
 			width:150px;
@@ -337,9 +340,9 @@
 	// Only on subpages, navbar gets smaller on scroll
 	body:not(.home-page) {
 		.is-smaller, .has-one-line-logo {
-			.logo-wrapper {
-				@include subpage-smaller-navbarHeight;
-			}
+			@include subpage-smaller-navbarHeight;
+			// .logo-wrapper {
+			// }
 		}
 	}
 
@@ -351,6 +354,7 @@
 			position: static;
 			float: right;
 			margin-top: 0.2rem;
+			margin-top:1.2rem;
 		}
 		@include respond-to(fullwidth) {
 			margin-top:1.3rem;
