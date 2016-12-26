@@ -1,0 +1,113 @@
+title: Card
+pages: false
+files: true
+  fields:
+    caption:
+      label: Caption
+      type: textarea
+fields:
+  title:
+    label: Title
+    type:  text
+  subtitle:
+    label: Subtitle
+    type:  text
+  type:
+    label: Card Type
+    type: radio
+    default: standard
+    options:
+      standard: Standard
+      video: Video
+      audio: Audio
+  category:
+    label: Category
+    type: text
+    width: 1/2
+    icon: cab
+  program:
+    label: Program
+    type: text
+    width: 1/2
+  date:
+    label: Date
+    type: date
+    width: 1/2
+  time:
+    label: Time
+    type: time
+    width: 1/2
+    interval: 30
+  img:
+    label: Image
+    type: select
+    options: images
+    width: 1/2
+    icon: image
+  banner_img:
+    label: Banner Image
+    type: select
+    options: images
+    width: 1/2
+    icon: image
+  first_img_caption:
+    label: First image caption
+    type: text
+  blurb:
+    label: Blurb for card
+    type: textarea
+  contents:
+    label: Text
+    type:  textarea
+  tags:
+    label: Tags
+    type: tags
+  
+  articlesection:
+    label: Article / Book
+    type: headline
+  author:
+    label: Author
+    type: text
+  order1:
+    label: Order Button 1
+    type: text
+    width: 1/2
+    icon: external-link
+  order2:
+    label: Order Button 2
+    type: text
+    width: 1/2
+    icon: external-link
+
+  audiosection:
+    label: Audio
+    type: headline
+  artist:
+    label: Artist
+    type: text
+    width: 1/2
+    icon: music
+  audio_length:
+    label: Audio Length
+    type: text
+    width: 1/2
+    icon: clock-o
+
+  videosection:
+    label: Video
+    type: headline
+  video_id:
+    label: Vimeo Video ID
+    type: text
+    width: 1/2
+    icon: film
+
+  merchandisesection:
+    label: Merchandise
+    type: headline
+  price:
+    label: Price
+    type: text
+    width: 1/2
+    icon: dollar

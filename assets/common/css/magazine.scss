@@ -1,6 +1,6 @@
-/* Festival Program page
+/* Folkways Magazine Homepage
 -------------------------------------------------- */
-	body.magazine-page {
+	body.magazine-page, body.magazine-article-page {
 		background-color: $black05;
 	}
 	.magazine-title-bar-wrapper {
@@ -10,6 +10,7 @@
 		// background-color: black;
 		// Split background colors for backdrop behind color grid
 		height:11.7rem; // from layout
+		@include margin-bottom(4);
 
 		&:before, &:after {
 			content: '';
@@ -178,4 +179,25 @@
 			}
 		}
 		
+	}
+
+/* Folkways Magazine Article Page
+-------------------------------------------------- */
+	.magazine-article-page {
+		.magazine-article-top {
+			.image {
+				margin-bottom:0;
+			}
+			.details {
+				background-color: white;
+				@include padding-left(2);
+			}
+			.title {
+				@include lg-magazine-title;
+				@include padding-right(4); // smaller width from design
+			}
+		}
+		.content {
+			background-color: white;
+		}
 	}

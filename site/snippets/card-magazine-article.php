@@ -18,16 +18,16 @@
   <div class="details">
     <div class="details-inner">
       <div class="tag">
-        <?php echo $card->festival(), ', ', $card->program(); ?></div>
-      <?php if('' != $card->subtitle()):	 ?>
+        <?php echo $card->category(); ?></div>
+      <?php if('' != $card->subtitle()): ?>
       <div class="title">
         <?php echo $card->title(), ': ', $card->subtitle(); ?></div>
       <?php else: ?>
       <div class="title">
         <?php echo $card->title(); ?></div>
       <?php endif; ?>
-      <div class="date">
-        <?php echo $card->date('F jS, Y'), e('' != $card->author(), ' | ' . $card->author()), ' | 0 comments'; ?></div>
+      <div class="author">
+        <?php echo $card->author(); ?></div>
     </div>
   </div>
 </li>

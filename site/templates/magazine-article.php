@@ -8,15 +8,15 @@
       <article class="article">
         <!-- use card for correct video/image header-->
         <ul class="row cards blog-feature">
-          <?php snippet('card-blog-article', array('card' => $page, 'type' => 'blog', 'caption' => true, 'link' => false)); ?>
+          <?php snippet('card-magazine-article', array('card' => $page, 'card_classes' => 'magazine-article-top' )); ?>
         </ul>
         <div class="content">
-          <?php echo $page->copy()->kt(); ?>
+          <?php echo $page->contents()->kt(); ?>
         </div>
       </article>
     </section>
-    <div class="col-sm-1 spacer"></div>
-    <aside class="sidebar col-sm-3 blog-sidebar">
+    <aside class="sidebar col-sm-4 blog-sidebar">
+      <?php snippet('sidebar-audio'); ?>
       <?php snippet('blog-related-content', array('orientation' => 'vertical', 'limit' => 3)); ?>
     </aside>
   </div>

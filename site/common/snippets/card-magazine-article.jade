@@ -18,13 +18,13 @@ li.card.blog-article.col-xs-12(class="<? if ($card->type() == 'video') echo 'vid
 				.icon-play
 	.details
 		.details-inner
-			.tag!= $card->festival(), ', ', $card->program();
+			.tag!= $card->category()
 
 			//- if subtitle, group with title for correct highlighting
-			-if('' != $card->subtitle()):	
+			-if('' != $card->subtitle()):
 				.title!= $card->title(), ': ', $card->subtitle()
 			-else:
 				.title!= $card->title()
 			-endif
 
-			.date!= $card->date('F jS, Y'), e('' != $card->author(), ' | ' . $card->author()), ' | 0 comments'
+			.author!= $card->author()

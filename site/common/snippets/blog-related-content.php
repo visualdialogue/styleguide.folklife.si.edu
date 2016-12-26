@@ -11,7 +11,7 @@
   <?php elseif($page->template() == 'magazine-article'): ?>
   <!-- magazine article sidebar-->
   <ul class="row">
-    <?php foreach($page->siblings(false)->visible()->filterBy('tags','basque',',')->limit($limit) as $card): ?>
+    <?php foreach($page->siblings(false)->visible() as $card): ?>
     <?php endforeach; ?>
   </ul>
   <?php else: ?>

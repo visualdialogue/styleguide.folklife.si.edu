@@ -9,7 +9,7 @@
 	-elseif($page->template() == 'magazine-article'):
 		// magazine article sidebar
 		ul.row
-			-foreach($page->siblings(false)->visible()->filterBy('tags','basque',',')->limit($limit) as $card):
+			-foreach($page->siblings(false)->visible() as $card):
 				//- -snippet('card', array('card' => $card, 'card_classes' => 'col-xs-12 sidebar-card' ))
 			-endforeach
 	-else:

@@ -10,15 +10,16 @@
 			article.article
 				// use card for correct video/image header
 				ul.row.cards.blog-feature
-					-snippet('card-blog-article', array('card' => $page, 'type' => 'blog', 'caption' => true, 'link' => false))
+					-snippet('card-magazine-article', array('card' => $page, 'card_classes' => 'magazine-article-top' ))
 
 				.content
-					!= $page->copy()->kt()
+					!= $page->contents()->kt()
 
-				
-		div.col-sm-1.spacer
-		aside.sidebar.col-sm-3.blog-sidebar
+		aside.sidebar.col-sm-4.blog-sidebar
+
+			-snippet('sidebar-audio')
 
 			-snippet('blog-related-content', array('orientation' => 'vertical', 'limit' => 3))
+			
 
 -snippet('footer')
