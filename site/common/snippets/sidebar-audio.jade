@@ -1,6 +1,22 @@
+-$album = $pages->find('explore')->children()->find('sounds')->children()->find('west-indian-folksongs-for-children');
+
 .sidebar-audio
 	.tag Audio
-	.title Children’s Music from Around the World
-		ul.row
-			-snippet('card-horizontal', array('card' => $pages->find('explore')->children()->find('sounds')->children()->visible()->first(), 'card_classes' => 'col-xs-12 suggested-album sidebar-card', 'image_col' => 'col-sm-6', 'details_col' => 'col-sm-6', 'artist' => true ))
+	.sidebar-title Children’s Music from Around the World
+	ul.row
+		-snippet('card-horizontal', array('card' => $album, 'card_classes' => 'col-xs-12 sidebar-card', 'image_col' => 'col-sm-6', 'details_col' => 'col-sm-6', 'artist' => true ))
+
+	// track listing
+	//- bootstrap class to make table go vertical on mobile
+	.table-responsive
+		table.table.table-hover.track-listing 
+
+			//- set track listing start number
+			- $n = 0
+			-foreach($album->children()->visible() as $track): $n++
+				tr.track
+					td.track-number!= $n
+					td.track-title!= $track->title()
+					td.track-action More Info
+			-endforeach
 

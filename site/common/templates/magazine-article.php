@@ -12,6 +12,7 @@
         </ul>
         <div class="content">
           <?php echo $page->contents()->kt(); ?>
+          <?php snippet('disqus')         ; ?>
         </div>
       </article>
     </section>

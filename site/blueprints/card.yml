@@ -25,7 +25,7 @@ fields:
       video: Video
       audio: Audio
   category:
-    label: Category
+    label: Tag
     type: text
     width: 1/2
     icon: cab

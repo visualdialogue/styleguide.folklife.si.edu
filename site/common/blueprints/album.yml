@@ -1,6 +1,7 @@
 title: Album
-pages: Track
+pages:
   limit: 100
+  template: track
 files: true
 fields:
   title:

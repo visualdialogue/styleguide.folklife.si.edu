@@ -11,7 +11,8 @@
   <?php elseif($page->template() == 'magazine-article'): ?>
   <!-- magazine article sidebar-->
   <ul class="row">
-    <?php foreach($page->siblings(false)->visible() as $card): ?>
+    <?php foreach($pages->find('blog')->children()->visible()->limit(3) as $card): ?>
+    <?php snippet('card-horizontal', array('card' => $card, 'card_classes' => 'col-xs-12 top-border-card sidebar-card horizontal-card', 'image_col' => 'col-xs-6', 'details_col' => 'col-xs-6', 'excerpt' => 12 )); ?>
     <?php endforeach; ?>
   </ul>
   <?php else: ?>

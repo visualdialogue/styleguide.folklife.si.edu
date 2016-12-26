@@ -1,5 +1,6 @@
 title: Card
-pages: false
+pages: Track
+  limit: 100
 files: true
   fields:
     caption:

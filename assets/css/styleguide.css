@@ -4340,18 +4340,6 @@ iframe {
     .sm-sans {
       font-size: 1.873rem; } }
 
-.body-sans {
-  font-family: "acumin-pro", Arial, sans-serif;
-  font-weight: 300;
-  line-height: 1.2;
-  font-size: 1.48rem; }
-  @media only screen and (min-width: 53.25em) {
-    .body-sans {
-      font-size: 1.665rem; } }
-  @media only screen and (min-width: 1560px) {
-    .body-sans {
-      font-size: 1.873rem; } }
-
 .caption-sans {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
@@ -4376,6 +4364,15 @@ iframe {
   @media only screen and (min-width: 1560px) {
     .sm-sans-semi {
       font-size: 1.873rem; } }
+
+.body-sans {
+  font-family: "acumin-pro", Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.35;
+  font-size: 1.873rem; }
+  @media only screen and (min-width: 1560px) {
+    .body-sans {
+      font-size: 2.107rem; } }
 
 .mini-sans {
   font-family: "acumin-pro", Arial, sans-serif;
