@@ -13,7 +13,7 @@
 		@include respond-to(break2max) { padding-top:2rem; }
 
 		&-logo {
-			color: $black30;
+			color: $black40; // formerly $black30
 			margin-bottom: 1vw;
 			&-active {
 				color: white;
@@ -87,7 +87,7 @@
 		@include link-font;
 		// line-height: 1.9 !important;
 		a {
-			color: $black60;
+			color: $black65;
 			&:hover {
 				color: $black20;
 			}
@@ -97,7 +97,7 @@
 		@include link-font;
 		font-weight: 400;
 		text-transform: uppercase;
-		color: $black60;
+		color: $black65;
 		// @include margin-top(-0.4); // align sibling menu list
 		@include margin-bottom(0.6); // align sibling menu list
 		@include margin-left(0.3); // align with facebook icon
@@ -109,7 +109,7 @@
 		@include respond-to(fullwidth) { font-size: 3rem; margin-right: 0.5rem; }
 
 		a {
-			color:$black60;
+			color:$black65;
 			&:hover {
 				color: $black20;
 				text-decoration: none;
@@ -121,7 +121,7 @@
 	}
 	.copyright {
 		@include link-font;
-		color: $black60;
+		color: $black65;
 		padding-top: 2vw;
 		font-weight: 300;
 		@include respond-to(break2) {padding-top:0.4vw;}

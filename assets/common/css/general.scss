@@ -21,7 +21,7 @@
 		padding: 0 40px;
 	}
 	.highlight-inner {
-		background-color: $black30;
+		background-color: $black40; // formerly $black30
 		// show highlight on mobile
 		padding: 15px;
 
@@ -234,11 +234,11 @@
 		}
 	}
 	.sidebar {
-		color: $black70;	
+		color: $black65; // formerly $black70	
 		@include margin-bottom(6); // keep from footer
 		h3, &-section-title {
 			@include lg-sans;
-			color: $black50;
+			color: $black65; // formerly $black50
 			@include padding-bottom(1);
 			@include margin-top(4);
 			@include padding-bottom(0);
@@ -247,11 +247,11 @@
 		h4, &-item-title {
 			@include mini-sans;
 			@include margin-top(0.6);
-			color: $black50;
+			color: $black65; // formerly $black50
 			margin: 0;
 		}
 		&-item {
-			border-top: 1px solid $black50;
+			border-top: 1px solid $black65; // formerly $black50
 			@include padding-bottom(1);
 		}
 		.sidebar-highlight {
@@ -260,7 +260,7 @@
 			}
 			// text stays same
 			a:hover {
-				color: $black70;
+				color: $black65; // formerly $black70
 			}
 		}
 	}

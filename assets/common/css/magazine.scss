@@ -1,7 +1,7 @@
 /* Folkways Magazine Homepage
 -------------------------------------------------- */
 	body.magazine-page, body.magazine-article-page {
-		background-color: $black05;
+		background-color: $black10; // formerly $black05
 	}
 	.magazine-title-bar-wrapper {
 		position: relative; // hold abs child
@@ -150,7 +150,7 @@
 	}
 	.back-issues-section {
 		.band {
-			background-color: $black60;
+			background-color: $black65;
 			
 		}
 		.container {
@@ -162,7 +162,7 @@
 			@include padding-bottom(2);
 		}
 		.tag {
-			color: $black30;
+			color: $black40; // formerly $black30
 		}
 		.title {
 			color: white;

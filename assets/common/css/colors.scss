@@ -10,73 +10,79 @@
 
 */
 
+/* Grays
+-------------------------------------------------- */
+	$black80: hsl(0, 0, 20);
+	$black65: hsl(0, 0, 35);
+	$black40: hsl(0, 0, 60);
+	$black20: hsl(0, 0, 80);
+	$black10: hsl(0, 0, 90);
+
 /* Folklife
 -------------------------------------------------- */
-	$fl-green: #31bcad;
-	$fl-blue: #4189bd; //+
+	$fl-light-blue: #a1c4e9;
+	$fl-blue: #6494ce;
+	$fl-purple: #9e569d;
+	$fl-light-green: #e7f1de;
+	$fl-green: #71bbac;
+	$fl-teal: #508295;
+	$fl-yellow: #fceec7;
+	$fl-orange: #c77659;
+	$fl-red: #ad4c38;
+
+	// application
+	// $fl-hover: #e2f0d8;
+	$fl-hover: $fl-light-green;
+
 
 /* Festival
 -------------------------------------------------- */
-	$fs-green: #00b26a;
-	$fs-lightblue: #75bee9;
-	$fs-blue: #4d72b7;
-	$fs-purple: #7c51a1;
-	$fs-tan: #d5bf8f;
-	$fs-aqua: #3ea6ad;
-	$fs-yellow: #ffdf69;
-	$fs-orange: #eea556;
-	$fs-red: #dd3f48;
+	$fs-light-blue: #8ebde7;
+	$fs-blue: #5a71b4;
+	$fs-purple: #71529d;
+	$fs-light-green: #cebe91;
+	$fs-green: #69a5ac;
+	$fs-teal: #62b16e;
+	$fs-yellow: #f9df72;
+	$fs-orange: #dca45c;
+	$fs-red: #c0424a;
 
+	// application
+	$fs-hover: $fs-yellow;
+
+	// basque
 	$basque-red: #cd181f;
 	$basque-green: #79b93e;
-
-	// application#fcdc6b#fcdc6b
-	$fs-hover: $fs-yellow;
 	.basque-child-page .section-title {color: $basque-red;}
 
 
 /* Folkways
 -------------------------------------------------- */
-	$fw-green: #939f93;
-	$fw-red: #ec8279;
-	$fw-purple: #a499bb;
-	$fw-lightGreen: #c1e0b7;
-	$fw-link: #cad9e7;
-	$fw-yellow: #f9df72;
+	$fw-light-blue: #d1dbf0;
+	$fw-blue: #bad4dd;
+	$fw-purple: #a098b9;
+	$fw-light-green: #fcf2df;
+	$fw-green: #cae0b8;
+	$fw-teal: #969e93;
+	$fw-yellow: #f9f6f0;
+	$fw-orange: #c9c3b2;
+	$fw-red: #d48279;
+
+	// application
+	$fw-hover: $fw-light-blue;
 
 
-/* Colors
+/* General
 -------------------------------------------------- */
 	// from bootstrap
 	$body: #333333; 
 	$copy: $body; 
 
-
-/* Blacks
--------------------------------------------------- */
-	$black80: hsl(0, 0, 20);
-	$black70: hsl(0, 0, 30);
-	$black65: hsl(0, 0, 35);
-	$black60: hsl(0, 0, 40);
-	$black50: hsl(0, 0, 50);
-	$black40: hsl(0, 0, 60);
-	$black30: hsl(0, 0, 70);
-	$black20: hsl(0, 0, 80);
-	$black15: hsl(0, 0, 85);
-	$black10: hsl(0, 0, 90);
-	$black08: hsl(0, 0, 92);
-	$black05: hsl(0, 0, 95); // Folkways magazine body bg color
-
-	$lightblue: #b4e7f8;
-	$lightorange: #fceec3;
-
 /* Color Application
 -------------------------------------------------- */
 	$link: $black80;
-	$copylinks: coral;
-	$hover: $lightorange;
 	$navbar: rgba(white, 0.97);
-	$tagline: $black50;
+	$tagline: $black65; // formerly $black50
 	$sitelinks: $black40; // new
 
 	$searchText: $black40;

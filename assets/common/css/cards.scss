@@ -7,7 +7,7 @@
 }
 
 .border {
-	border-top: 1px solid $black30;
+	border-top: 1px solid $black40; // formerly $black30
 }
 .inset-border {
 	margin-left:2rem;
@@ -505,7 +505,7 @@ a.details {
 		}
 		.price {
 			@include sm-sans;
-			color: $black70;
+			color: $black65; // formerly $black70
 			text-align: center;
 		}
 	}
@@ -525,7 +525,7 @@ a.details {
 	.top-border-card {
 		&:before {
 			content: '';
-			border-top: 1px solid $black30;
+			border-top: 1px solid $black40; // formerly $black30
 			// border-top: 1px solid blue;
 			width: 100%;
 			display: block;
@@ -537,7 +537,7 @@ a.details {
 			padding-bottom: 0;
 		}
 		.details-inner {
-			border: 2px solid $black15;
+			border: 2px solid $black20; // formerly $black15
 			@include padding-left(2); // padding on left by default
 			// @include padding-le
 			@include padding-bottom(2); // padding on left by default

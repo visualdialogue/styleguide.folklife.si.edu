@@ -457,7 +457,7 @@
 			padding: 10px 0 0;
 			display: block; // for mobile
 			&:hover {
-				color: $black60;
+				color: $black65;
 			}
 			@include respond-to(break2) {
 				padding: 0;
@@ -478,9 +478,9 @@
 		&-sub-item {
 			display: block;
 			@include link-font;
-			color:$black60; // 12.12
+			color:$black65; // 12.12
 			a {
-				color: $black60;
+				color: $black65;
 				display: block;
 				&:hover {
 					color: black;
@@ -494,8 +494,8 @@
 	}
 	.header-nav {
 		display: none;
-		// background-color: $black60;
-		// background-color: $black30;
+		// background-color: $black65;
+		// background-color: $black40; // formerly $black30
 		// background-color: rgba(white, 0.95);
 		z-index: 10;
 	}
@@ -522,8 +522,8 @@
 	.browsenav {
 		display: none; // initial hide
 		// background-color: $black40;
-		// background-color: $black50;
-		// background-color: $black30; // 12.12
+		// background-color: $black65; // formerly $black50
+		// background-color: $black40; // formerly $black30 // 12.12
 		background-color: $black10; // 12.16
 		position: relative;
 		// z-index: 10;
@@ -547,7 +547,7 @@
 	.browsenav-title {
 		@include nav-header;
 		font-family: $slabNarrow;
-		color: $black60;
+		color: $black65;
 		margin-bottom: 2vw;
 		@include respond-to(break2) {
 			text-align: right;
@@ -632,15 +632,15 @@
 		margin-bottom:0;
 		// background-color: $black20;
 		background-color: white;
-		color: $black60;
+		color: $black65;
 
 		&:after {
 			content: "\6f";
 			font-family: "vd-icons";
 			font-size: 3rem;
 			vertical-align: top;
-			// color: $black50;
-			color: $black60;
+			// color: $black65; // formerly $black50
+			color: $black65;
 			position: absolute;
 			// right: 2rem; // clear padding right
 			right: 3rem; // clear padding right // 12.12
@@ -661,6 +661,6 @@
 			@include respond-to(fullwidth) {font-size:3rem;}
 		}
 		&:hover:after {
-			color: $fw-link;
+			color: $hover;
 		}
 	}

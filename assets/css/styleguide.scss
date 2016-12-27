@@ -20,6 +20,7 @@
   @import "../common/css/dimensions.scss";
   @import "../common/css/media-queries.scss";
   @import "../common/css/colors.scss"; // colors may be used in type.scss
+  $hover: $fl-hover;
   @import "../common/css/type.scss";
   @import "../common/css/icons.scss";
   @import "../common/css/padding.scss";
@@ -79,10 +80,10 @@
 
 			// Reveal more info
 			&.hidden-content:hover {
-				background-color: $black60;
+				background-color: $black65;
 				cursor: zoom-in;
 				.copy {
-					color: $black60; // hide existing text
+					color: $black65; // hide existing text
 					&:after {
 						content: attr(data-hover);
 						color: $black20;
