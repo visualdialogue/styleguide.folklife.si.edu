@@ -26,6 +26,7 @@ $full-gutter: 2.72%;
   $mobile-home-navbarHeight: 4.5rem; // new hamburger nav
   $mobile-home-smaller-navbarHeight: 4.5rem; // new hamburger nav
   $mobile-subpage-navbarHeight: 5.5rem;
+  $mobile-subpage-navbarHeight: 4.5rem;
   $mobile-subpage-smaller-navbarHeight: 4.5rem;
 
   $tablet-home-navbarHeight: 7rem;
@@ -38,9 +39,12 @@ $full-gutter: 2.72%;
 
   // spacer for logo
   // $mobile-logoSpacer:19vw;
+  $mobile-logoSpacer:8rem;
   $mobile-logoSpacer:8.5rem;
-  $tablet-logoSpacer:12rem;
-  $desktop-logoSpacer:13.5rem; // from layout
+  // $tablet-logoSpacer:12rem;
+  $tablet-logoSpacer:11rem;
+  // $desktop-logoSpacer:13.5rem; // from layout
+  $desktop-logoSpacer:15.5rem; // from layout
 
   // height of toggle, navbar, and spacer
   $mobile-home-headerHeight: 4.5rem; // temp for mobile
@@ -49,7 +53,6 @@ $full-gutter: 2.72%;
   $tablet-subpage-headerHeight:#{$tablet-subpage-navbarHeight} + #{$tablet-navbarSiteToggle} + #{$tablet-logoSpacer};
   $desktop-home-headerHeight:#{$desktop-navbarHeight} + #{$desktop-navbarSiteToggle};
   $desktop-subpage-headerHeight:#{$desktop-navbarHeight} + #{$desktop-navbarSiteToggle} + #{$desktop-logoSpacer};
-
 
   // tab heights for Festival on homepage so can peek from bottom
   $mobile-tabHeight:12rem;
@@ -137,7 +140,7 @@ $full-gutter: 2.72%;
   }
   @mixin margin-bottom($margin) {
     // margin-bottom:#{$margin / $mobile-scale }em; // eg. 5rem
-    margin-bottom:#{$margin / 1.125}rem; // eg. 5rem
+    margin-bottom:#{$margin / $mobile-scale}rem; // eg. 5rem
     @include respond-to(break2) {margin-bottom:#{$margin * $tablet-scale}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {margin-bottom:#{$margin}rem;} // eg 4rem
   }

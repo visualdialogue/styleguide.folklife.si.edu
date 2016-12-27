@@ -65,18 +65,3 @@
 		height: 100%;	
 	}	
   }
-
-	// @mixin border($location: all, $width: 1px, $color: $black50) {
-	@mixin border($location: all, $width: 1px, $color: $black65) {
-		@if $location == top {
-		  border-top: $width solid $color;
-		} @else if $location == bottom {
-		  border-bottom: $width solid $color;
-		} @else if $location == right {
-		  border-right: $width solid $color;
-		} @else if $location == left {
-		  border-left: $width solid $color;
-		} @else {
-		  border: $width solid $color;
-		}
-	}

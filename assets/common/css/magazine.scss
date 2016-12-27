@@ -30,7 +30,7 @@
 		}
 		&:after {
 			right:0;
-			background-color: $fw-yellow;
+			background-color: $fs-yellow;
 			@include respond-to(break2) {
 				left: 50vw; // go to middle of screen, behind grid
 			}
@@ -46,7 +46,7 @@
 		}
 		.issue-title {
 			color: black;
-			background-color: $fw-yellow;
+			background-color: $fs-yellow;
 			@include respond-to(break2) {
 				position: absolute;
 				top:0;
@@ -64,17 +64,6 @@
 			@include padding-top(3);
 			@include padding-left(4);
 
-			// &:after {
-			// 	content: '';
-			// 	display: block;
-			// 	position: absolute;
-			// 	top:0;
-			// 	right:0;
-			// 	bottom:0;
-			// 	left:0;
-			// 	z-index:1;
-			// 	// background-color: $fw-yellow;
-			// }
 			.title {
 				@include md-serif;
 				@include margin-top(0.4);
@@ -91,9 +80,16 @@
 			// override full-feature-card default
 			display: block; 
 			@include margin-top(4)
+			margin-top: 0; // mobile
 		}
 		.title {
 			@include lg-magazine-title;
+		}
+		.details-inner {
+			// @include padding-left(2);
+			@include respond-to(break2max) {
+				padding-left: 1.5rem;
+			}
 		}
 	}
 	// home page features
@@ -149,24 +145,23 @@
 		}
 	}
 	.back-issues-section {
+		@include margin-bottom(4);
 		.band {
 			background-color: $black65;
-			
-		}
-		.container {
-
 		}
 		.back-issues-column {
-			@include border(left);
 			@include padding-top(2);
 			@include padding-bottom(2);
+			@include respond-to(break2) {
+				@include border(left);
+			}
 		}
 		.tag {
 			color: $black40; // formerly $black30
 		}
 		.title {
 			color: white;
-			@include md-sans;
+			@include lg-sans;
 			font-weight: 700;
 		}
 		li:last-of-type {
@@ -178,7 +173,29 @@
 				border-bottom: 2px solid white;
 			}
 		}
-		
+	}
+	.back-issues-select {
+		@include sm-sans;
+		color: white;
+		background-color: $black65;
+		border: none;
+		border-radius: 0;
+		@include margin-top(1.8);
+		width: 100%;
+		// @include height(3.8);
+		padding-left:0; // nice-select override
+		@include respond-to(break2) {
+			@include border(bottom, 2px, white);
+		}
+		.current {
+			@include lg-sans;
+			font-weight: 700;
+		}
+		.list {
+			width: 100%;
+			border-radius:0;
+			color: $black65;
+		}
 	}
 
 /* Folkways Magazine Article Page

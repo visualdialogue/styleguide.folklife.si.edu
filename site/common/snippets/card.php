@@ -25,7 +25,7 @@
   </div>
   <?php endif; ?>
   <div class="details">
-    <div class="details-inner">
+    <div class="details-inner clearfix">
       <?php if('' != $card->category()):	 ?>
       <div class="tag">
         <?php echo $card->category(); ?></div>

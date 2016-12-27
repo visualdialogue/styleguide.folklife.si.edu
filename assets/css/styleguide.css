@@ -4201,7 +4201,7 @@ iframe {
   font-weight: 700;
   line-height: 1;
   font-size: 1.896rem;
-  margin-bottom: 0.88889rem; }
+  margin-bottom: 0.4rem; }
   @media only screen and (min-width: 53.25em) {
     .sm-serif {
       line-height: 1.143;
@@ -4221,7 +4221,7 @@ iframe {
   font-weight: 700;
   line-height: 1;
   font-size: 1.896rem;
-  margin-bottom: 0.88889rem;
+  margin-bottom: 0.4rem;
   font-style: italic; }
   @media only screen and (min-width: 53.25em) {
     .sm-serif-italic {
@@ -4480,7 +4480,7 @@ iframe {
   font-weight: 800;
   line-height: 1.2;
   font-size: 1.841rem;
-  margin-bottom: 0.88889rem; }
+  margin-bottom: 0.4rem; }
   @media only screen and (min-width: 53.25em) {
     .sm-magazine-title {
       margin-bottom: 0.64vw; } }
@@ -4575,8 +4575,8 @@ body {
   font-weight: 700;
   line-height: 1;
   font-size: 1.896rem;
-  margin-bottom: 0.88889rem;
-  margin-bottom: 1.77778rem; }
+  margin-bottom: 0.4rem;
+  margin-bottom: 0.8rem; }
   @media only screen and (min-width: 53.25em) {
     .content h4, .text-card h4 {
       line-height: 1.143;
@@ -4603,7 +4603,7 @@ body {
   line-height: 1.2;
   font-size: 1.48rem;
   font-weight: 500;
-  margin-bottom: 0.44444rem; }
+  margin-bottom: 0.2rem; }
   @media only screen and (min-width: 53.25em) {
     .content h5, .text-card h5 {
       font-size: 1.665rem; } }
@@ -4637,7 +4637,7 @@ body {
       padding-bottom: 2rem; } }
 
 .content ul, .text-card ul {
-  margin-bottom: 0.88889rem; }
+  margin-bottom: 0.4rem; }
   @media only screen and (min-width: 53.25em) {
     .content ul, .text-card ul {
       margin-bottom: 0.64vw; } }
@@ -4650,7 +4650,7 @@ body {
   font-weight: 300;
   line-height: 1.2;
   font-size: 1.48rem;
-  margin-bottom: 0.26667rem;
+  margin-bottom: 0.12rem;
   width: initial;
   width: auto;
   font-weight: 600; }
@@ -4842,7 +4842,7 @@ body {
       margin-left: 2rem; } }
 
 .icon-mail:before {
-  font-size: 4rem; }
+  font-size: 2rem; }
   @media only screen and (min-width: 53.25em) {
     .icon-mail:before {
       font-size: 4vw;
@@ -5019,7 +5019,7 @@ a:hover {
   width: 100%;
   min-height: initial;
   min-height: auto;
-  height: 5.5rem;
+  height: 4.5rem;
   background-color: white;
   box-shadow: 0px 17px 41px -8px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0px 17px 41px -8px rgba(0, 0, 0, 0.2);
@@ -5040,7 +5040,6 @@ a:hover {
   @media only screen and (min-width: 53.25em) {
     .navbar {
       top: 3.4rem;
-      z-index: 2;
       z-index: 10; } }
   @media only screen and (min-width: 1560px) {
     .navbar {
@@ -5157,13 +5156,13 @@ a:hover {
       height: 8rem; } }
 
 .navspacer {
-  height: calc(5.5rem + 0px + 8.5rem); }
+  height: calc(4.5rem + 0px + 8.5rem); }
   @media only screen and (min-width: 53.25em) {
     .navspacer {
-      height: calc(7rem + 3.4rem + 12rem); } }
+      height: calc(7rem + 3.4rem + 11rem); } }
   @media only screen and (min-width: 1560px) {
     .navspacer {
-      height: calc(8rem + 36px + 13.5rem); } }
+      height: calc(8rem + 36px + 15.5rem); } }
   .navspacer-open {
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -5283,7 +5282,7 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
       position: static;
       float: right;
       margin-top: 0.2rem;
-      margin-top: 1.2rem; } }
+      margin-top: 0.8rem; } }
   @media only screen and (min-width: 1560px) {
     .nav-icons {
       margin-top: 1.3rem;
@@ -5406,7 +5405,7 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
         padding-bottom: 0.4rem; } }
   .header-nav-list, .footer-nav-list {
     display: none;
-    margin-bottom: 1.95556rem; }
+    margin-bottom: 0.88rem; }
     @media only screen and (min-width: 53.25em) {
       .header-nav-list, .footer-nav-list {
         margin-bottom: 1.408vw; } }
@@ -5638,7 +5637,7 @@ select {
       .highlight-container .highlight-inner {
         padding: 40px 40px; } }
   .highlight-container .section-title {
-    margin-bottom: 3.02222rem; }
+    margin-bottom: 1.36rem; }
     @media only screen and (min-width: 53.25em) {
       .highlight-container .section-title {
         margin-bottom: 2.176vw; } }
@@ -5790,7 +5789,7 @@ body {
 
 section {
   position: relative;
-  margin-bottom: 1.77778rem; }
+  margin-bottom: 0.8rem; }
   @media only screen and (min-width: 53.25em) {
     section {
       margin-bottom: 1.28vw; } }
@@ -5849,7 +5848,7 @@ ul {
 
 .sidebar {
   color: #595959;
-  margin-bottom: 5.33333rem; }
+  margin-bottom: 2.4rem; }
   @media only screen and (min-width: 53.25em) {
     .sidebar {
       margin-bottom: 3.84vw; } }
@@ -5862,10 +5861,10 @@ ul {
     line-height: 1.166667;
     font-size: 2.107rem;
     color: #595959;
-    padding-bottom: 0.4em;
     margin-top: 1.6em;
-    padding-bottom: 0em;
-    margin-bottom: 0.97778rem; }
+    margin-bottom: 0rem;
+    padding-bottom: 0.4em;
+    border-bottom: 1px solid #999999; }
     @media only screen and (min-width: 53.25em) {
       .sidebar h3, .sidebar-section-title {
         font-size: 2.667rem; } }
@@ -5874,28 +5873,22 @@ ul {
         font-size: 3rem; } }
     @media only screen and (min-width: 53.25em) {
       .sidebar h3, .sidebar-section-title {
-        padding-bottom: 0.64vw; } }
-    @media only screen and (min-width: 1560px) {
-      .sidebar h3, .sidebar-section-title {
-        padding-bottom: 1rem; } }
-    @media only screen and (min-width: 53.25em) {
-      .sidebar h3, .sidebar-section-title {
         margin-top: 2.56vw; } }
     @media only screen and (min-width: 1560px) {
       .sidebar h3, .sidebar-section-title {
         margin-top: 4rem; } }
     @media only screen and (min-width: 53.25em) {
       .sidebar h3, .sidebar-section-title {
-        padding-bottom: 0vw; } }
+        margin-bottom: 0vw; } }
     @media only screen and (min-width: 1560px) {
       .sidebar h3, .sidebar-section-title {
-        padding-bottom: 0rem; } }
+        margin-bottom: 0rem; } }
     @media only screen and (min-width: 53.25em) {
       .sidebar h3, .sidebar-section-title {
-        margin-bottom: 0.704vw; } }
+        padding-bottom: 0.64vw; } }
     @media only screen and (min-width: 1560px) {
       .sidebar h3, .sidebar-section-title {
-        margin-bottom: 1.1rem; } }
+        padding-bottom: 1rem; } }
   .sidebar h4, .sidebar-item-title {
     font-family: "acumin-pro", Arial, sans-serif;
     font-weight: 300;
@@ -5918,7 +5911,7 @@ ul {
       .sidebar h4, .sidebar-item-title {
         margin-top: 0.6rem; } }
   .sidebar-item {
-    border-top: 1px solid #595959;
+    border-bottom: 1px solid #999999;
     padding-bottom: 0.4em; }
     @media only screen and (min-width: 53.25em) {
       .sidebar-item {
@@ -5926,6 +5919,8 @@ ul {
     @media only screen and (min-width: 1560px) {
       .sidebar-item {
         padding-bottom: 1rem; } }
+  .sidebar li:last-of-type {
+    border-bottom: none; }
   .sidebar .sidebar-highlight.active, .sidebar .sidebar-highlight:hover {
     background-color: #e6e6e6; }
   .sidebar .sidebar-highlight a:hover {
@@ -5944,7 +5939,7 @@ hr {
 .thick-hr {
   height: 11px;
   background-image: url(/assets/images/hr/hr.jpg);
-  margin-bottom: 4.62222rem; }
+  margin-bottom: 2.08rem; }
   @media only screen and (min-width: 53.25em) {
     .thick-hr {
       margin-top: 0; } }
@@ -5987,7 +5982,7 @@ hr {
   padding: 0;
   margin: 0;
   border: none;
-  margin-bottom: 3.55556rem; }
+  margin-bottom: 1.6rem; }
   .title-bar .title-height {
     height: 12vw; }
     @media only screen and (min-width: 53.25em) {
@@ -6061,7 +6056,7 @@ a .page-title {
   background-color: #cccccc;
   padding-top: 1.6em;
   padding-bottom: 1.6em;
-  margin-bottom: 6.4rem; }
+  margin-bottom: 2.88rem; }
   @media only screen and (min-width: 53.25em) {
     .highlight-bar {
       padding-top: 2.56vw; } }
@@ -6333,6 +6328,9 @@ a .page-title {
     .newsletter-signup-copy {
       font-size: 1.2vw; } }
 
+.magazine-page .newsletter-signup-copy, .magazine-article-page .newsletter-signup-copy {
+  background-color: white; }
+
 .newsletter-signup-form {
   width: 100%; }
 
@@ -6372,7 +6370,7 @@ a .page-title {
       padding-bottom: 2rem; } }
 
 .newsletter-signup-wrapper {
-  margin-bottom: 3.55556rem; }
+  margin-bottom: 1.6rem; }
   @media only screen and (min-width: 53.25em) {
     .newsletter-signup-wrapper {
       margin-bottom: 2.56vw; } }
@@ -6429,6 +6427,51 @@ a .page-title {
   @media only screen and (min-width: 53.25em) and (min-width: 1560px) {
     .short-newsletter-signup .newsletter-signup-copy {
       padding-bottom: 1rem; } }
+
+/* #Custom select dropdown
+* from http://hernansartorio.com/jquery-nice-select/
+-------------------------------------------------- */
+.nice-select:after {
+  content: '\62';
+  font-family: "vd-icons" !important;
+  border: none;
+  transform: rotate(90deg);
+  font-size: 2.5rem;
+  height: auto;
+  top: 0.32em;
+  transform-origin: 15px 15px;
+  margin-top: 0em; }
+  @media only screen and (min-width: 53.25em) {
+    .nice-select:after {
+      top: 0.512vw; } }
+  @media only screen and (min-width: 1560px) {
+    .nice-select:after {
+      top: 0.8rem; } }
+  @media only screen and (min-width: 53.25em) {
+    .nice-select:after {
+      margin-top: 0vw; } }
+  @media only screen and (min-width: 1560px) {
+    .nice-select:after {
+      margin-top: 0rem; } }
+  @media only screen and (min-width: 53.25em) {
+    .nice-select:after {
+      top: 0.8rem;
+      right: 2rem; } }
+  @media only screen and (min-width: 1560px) {
+    .nice-select:after {
+      top: 0.8rem;
+      right: 1.8rem; } }
+
+.nice-select.open:after {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  transform: rotate(-90deg); }
+
+.nice-select .list {
+  margin-top: 0; }
+
+.nice-select .option:hover {
+  background-color: #cccccc; }
 
 /* #footer
 -------------------------------------------------- */
@@ -6554,7 +6597,7 @@ a .page-title {
   font-weight: 400;
   text-transform: uppercase;
   color: #595959;
-  margin-bottom: 0.53333rem;
+  margin-bottom: 0.24rem;
   margin-left: 0.12em; }
   @media only screen and (min-width: 53.25em) {
     .social-media-title {
@@ -6640,7 +6683,7 @@ a .page-title {
 
 .article-page figure {
   margin-top: 1.6em;
-  margin-bottom: 3.55556rem; }
+  margin-bottom: 1.6rem; }
   @media only screen and (min-width: 53.25em) {
     .article-page figure {
       margin-top: 2.56vw; } }
@@ -6675,8 +6718,8 @@ a .page-title {
       margin-top: 2rem; } }
 
 .article-page .related-content h2 {
-  border-bottom: 1px solid #595959;
-  margin-bottom: 1.77778rem; }
+  border-bottom: 1px solid #999999;
+  margin-bottom: 0.8rem; }
   @media only screen and (min-width: 53.25em) {
     .article-page .related-content h2 {
       margin-bottom: 1.28vw; } }
@@ -6684,52 +6727,52 @@ a .page-title {
     .article-page .related-content h2 {
       margin-bottom: 2rem; } }
 
-.blog-article .image {
-  margin-bottom: 1.77778rem; }
+.blog-article-card .image {
+  margin-bottom: 0.8rem; }
   @media only screen and (min-width: 53.25em) {
-    .blog-article .image {
+    .blog-article-card .image {
       margin-bottom: 1.28vw; } }
   @media only screen and (min-width: 1560px) {
-    .blog-article .image {
+    .blog-article-card .image {
       margin-bottom: 2rem; } }
 
-.blog-article .title {
+.blog-article-card .title {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1.1;
   font-size: 4.325rem;
-  margin-bottom: 0.88889rem; }
+  margin-bottom: 0.4rem; }
   @media only screen and (min-width: 53.25em) {
-    .blog-article .title {
+    .blog-article-card .title {
       font-size: 5.474rem; } }
   @media only screen and (min-width: 1560px) {
-    .blog-article .title {
+    .blog-article-card .title {
       font-size: 6.158rem; } }
   @media only screen and (min-width: 53.25em) {
-    .blog-article .title {
+    .blog-article-card .title {
       margin-bottom: 0.64vw; } }
   @media only screen and (min-width: 1560px) {
-    .blog-article .title {
+    .blog-article-card .title {
       margin-bottom: 1rem; } }
 
-.blog-article .date {
+.blog-article-card .date {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
   font-size: 1.48rem;
   font-weight: 300;
-  margin-bottom: 1.77778rem; }
+  margin-bottom: 0.8rem; }
   @media only screen and (min-width: 53.25em) {
-    .blog-article .date {
+    .blog-article-card .date {
       font-size: 1.665rem; } }
   @media only screen and (min-width: 1560px) {
-    .blog-article .date {
+    .blog-article-card .date {
       font-size: 1.873rem; } }
   @media only screen and (min-width: 53.25em) {
-    .blog-article .date {
+    .blog-article-card .date {
       margin-bottom: 1.28vw; } }
   @media only screen and (min-width: 1560px) {
-    .blog-article .date {
+    .blog-article-card .date {
       margin-bottom: 2rem; } }
 
 /* Sidebar
@@ -6740,7 +6783,7 @@ a .page-title {
     color: #595959; }
 
 .card {
-  margin-bottom: 3.55556rem;
+  margin-bottom: 1.6rem;
   margin-bottom: 1.5rem; }
   @media only screen and (min-width: 53.25em) {
     .card {
@@ -6917,7 +6960,7 @@ a.details {
   font-weight: 700;
   line-height: 1;
   font-size: 1.896rem;
-  margin-bottom: 0.88889rem;
+  margin-bottom: 0.4rem;
   display: block; }
   @media only screen and (min-width: 53.25em) {
     .card-program .title {
@@ -7077,7 +7120,7 @@ a.details {
   position: static;
   float: right;
   margin-top: 0.8em;
-  margin-bottom: 1.77778rem;
+  margin-bottom: 0.8rem;
   margin-left: 0.8em; }
   @media only screen and (min-width: 53.25em) {
     .full-feature-card .more-link, .details .more-link, .ms-section__copy .more-link {
@@ -7254,7 +7297,7 @@ a.details {
 /* Sidebar cards
 -------------------------------------------------- */
 .sidebar-card {
-  margin-bottom: 3.55556rem; }
+  margin-bottom: 1.6rem; }
   @media only screen and (min-width: 53.25em) {
     .sidebar-card {
       margin-bottom: 2.56vw; } }
@@ -7297,20 +7340,20 @@ a.details {
 
 /* Albums & Vinyl
 -------------------------------------------------- */
-.album-card .details-inner, .vinyl-card .details-inner {
+.album-card .details-inner, .vinyl-card .details-inner, .books-card .details-inner {
   padding: 0;
   padding-top: 0.8em; }
   @media only screen and (min-width: 53.25em) {
-    .album-card .details-inner, .vinyl-card .details-inner {
+    .album-card .details-inner, .vinyl-card .details-inner, .books-card .details-inner {
       padding-top: 1.28vw; } }
   @media only screen and (min-width: 1560px) {
-    .album-card .details-inner, .vinyl-card .details-inner {
+    .album-card .details-inner, .vinyl-card .details-inner, .books-card .details-inner {
       padding-top: 2rem; } }
 
-.album-card .description, .vinyl-card .description {
+.album-card .description, .vinyl-card .description, .books-card .description {
   display: none; }
 
-.album-card .title, .vinyl-card .title {
+.album-card .title, .vinyl-card .title, .books-card .title {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
@@ -7318,35 +7361,35 @@ a.details {
   font-weight: 700;
   line-height: 1; }
   @media only screen and (min-width: 53.25em) {
-    .album-card .title, .vinyl-card .title {
+    .album-card .title, .vinyl-card .title, .books-card .title {
       font-size: 1.665rem; } }
   @media only screen and (min-width: 1560px) {
-    .album-card .title, .vinyl-card .title {
+    .album-card .title, .vinyl-card .title, .books-card .title {
       font-size: 1.873rem; } }
 
-.album-card .artist, .vinyl-card .artist {
+.album-card .artist, .vinyl-card .artist, .books-card .artist {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
   font-size: 1.48rem; }
   @media only screen and (min-width: 53.25em) {
-    .album-card .artist, .vinyl-card .artist {
+    .album-card .artist, .vinyl-card .artist, .books-card .artist {
       font-size: 1.665rem; } }
   @media only screen and (min-width: 1560px) {
-    .album-card .artist, .vinyl-card .artist {
+    .album-card .artist, .vinyl-card .artist, .books-card .artist {
       font-size: 1.873rem; } }
 
-.album-card:nth-of-type(2n + 1), .vinyl-card:nth-of-type(2n + 1) {
+.album-card:nth-of-type(2n + 1), .vinyl-card:nth-of-type(2n + 1), .books-card:nth-of-type(2n + 1) {
   clear: left; }
 
 @media only screen and (min-width: 53.25em) {
-  .album-card:nth-of-type(2n + 1), .vinyl-card:nth-of-type(2n + 1) {
+  .album-card:nth-of-type(2n + 1), .vinyl-card:nth-of-type(2n + 1), .books-card:nth-of-type(2n + 1) {
     clear: none; }
-  .album-card:nth-of-type(3n + 1), .vinyl-card:nth-of-type(3n + 1) {
+  .album-card:nth-of-type(3n + 1), .vinyl-card:nth-of-type(3n + 1), .books-card:nth-of-type(3n + 1) {
     clear: none; }
-  .album-card:nth-of-type(4n + 1), .vinyl-card:nth-of-type(4n + 1) {
+  .album-card:nth-of-type(4n + 1), .vinyl-card:nth-of-type(4n + 1), .books-card:nth-of-type(4n + 1) {
     clear: none; }
-  .album-card:nth-of-type(6n + 1), .vinyl-card:nth-of-type(6n + 1) {
+  .album-card:nth-of-type(6n + 1), .vinyl-card:nth-of-type(6n + 1), .books-card:nth-of-type(6n + 1) {
     clear: left; } }
 
 /* Merchandise
@@ -7367,7 +7410,7 @@ a.details {
   color: white;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 0.44444rem; }
+  margin-bottom: 0.2rem; }
   @media only screen and (min-width: 53.25em) {
     .merchandise-card .title {
       font-size: 1.665rem; } }
@@ -7579,7 +7622,7 @@ a {
 /* #general
 -------------------------------------------------- */
 .sub-section {
-  border-top: 1px solid #595959;
+  border-top: 1px solid #999999;
   margin-top: 1.6em; }
   @media only screen and (min-width: 53.25em) {
     .sub-section {
@@ -7608,7 +7651,7 @@ a {
   font-weight: 700;
   line-height: 1;
   font-size: 1.896rem;
-  margin-bottom: 0.88889rem;
+  margin-bottom: 0.4rem;
   font-weight: 500; }
   @media only screen and (min-width: 53.25em) {
     .intro-copy {
@@ -7625,7 +7668,7 @@ a {
       margin-bottom: 1rem; } }
 
 .intro-section {
-  margin-bottom: 3.55556rem; }
+  margin-bottom: 1.6rem; }
   @media only screen and (min-width: 53.25em) {
     .intro-section {
       margin-bottom: 2.56vw; } }
@@ -7647,7 +7690,7 @@ h3.sidebar-section-title {
 .grid-item-inner {
   background-color: #333333;
   height: 3.6em;
-  margin-bottom: 1.77778rem; }
+  margin-bottom: 0.8rem; }
   @media only screen and (min-width: 53.25em) {
     .grid-item-inner {
       height: 5.76vw; } }
@@ -7700,7 +7743,7 @@ h3.sidebar-section-title {
   background-color: #999999; }
 
 .custom-grid-container {
-  margin-bottom: 3.55556rem; }
+  margin-bottom: 1.6rem; }
   @media only screen and (min-width: 53.25em) {
     .custom-grid-container {
       margin-bottom: 2.56vw; } }
@@ -7730,7 +7773,7 @@ h3.sidebar-section-title {
 
 .color-square {
   height: 8em;
-  margin-bottom: 0.88889rem; }
+  margin-bottom: 0.4rem; }
   @media only screen and (min-width: 53.25em) {
     .color-square {
       height: 12.8vw; } }
@@ -7917,10 +7960,10 @@ code.hljs {
   font-weight: 700;
   line-height: 1;
   font-size: 1.896rem;
-  margin-bottom: 0.88889rem;
+  margin-bottom: 0.4rem;
   padding-top: 0.8em;
   margin-top: 1.2em;
-  margin-bottom: 1.77778rem; }
+  margin-bottom: 0.8rem; }
   @media only screen and (min-width: 53.25em) {
     .section-subtitle {
       line-height: 1.143;
@@ -7954,7 +7997,7 @@ code.hljs {
       margin-bottom: 2rem; } }
 
 .section__description {
-  margin-bottom: 3.55556rem; }
+  margin-bottom: 1.6rem; }
   @media only screen and (min-width: 53.25em) {
     .section__description {
       margin-bottom: 2.56vw; } }
@@ -8031,7 +8074,7 @@ code.hljs {
 /* #color
 -------------------------------------------------- */
 .color {
-  margin-bottom: 3.55556rem; }
+  margin-bottom: 1.6rem; }
   @media only screen and (min-width: 53.25em) {
     .color {
       margin-bottom: 2.56vw; } }
@@ -8047,7 +8090,7 @@ code.hljs {
 /* #typography
 -------------------------------------------------- */
 .typography-section {
-  margin-bottom: 5.33333rem; }
+  margin-bottom: 2.4rem; }
   @media only screen and (min-width: 53.25em) {
     .typography-section {
       margin-bottom: 3.84vw; } }
@@ -8056,7 +8099,7 @@ code.hljs {
       margin-bottom: 6rem; } }
 
 .typography-section pre {
-  margin-bottom: 1.77778rem; }
+  margin-bottom: 0.8rem; }
   @media only screen and (min-width: 53.25em) {
     .typography-section pre {
       margin-bottom: 1.28vw; } }
@@ -8074,7 +8117,7 @@ code.hljs {
       margin-top: 4rem; } }
 
 .type-title {
-  margin-bottom: 1.77778rem; }
+  margin-bottom: 0.8rem; }
   @media only screen and (min-width: 53.25em) {
     .type-title {
       margin-bottom: 1.28vw; } }
@@ -8193,8 +8236,8 @@ code.hljs {
 /* #cards
 -------------------------------------------------- */
 .cards-section .codeblock {
-  border-top: 1px solid #595959;
-  margin-bottom: 3.55556rem; }
+  border-top: 1px solid #999999;
+  margin-bottom: 1.6rem; }
   @media only screen and (min-width: 53.25em) {
     .cards-section .codeblock {
       margin-bottom: 2.56vw; } }
@@ -8216,7 +8259,7 @@ code.hljs {
   font-weight: 700;
   line-height: 1;
   font-size: 1.896rem;
-  margin-bottom: 0.88889rem;
+  margin-bottom: 0.4rem;
   font-weight: 600; }
   @media only screen and (min-width: 53.25em) {
     .video-card .title {

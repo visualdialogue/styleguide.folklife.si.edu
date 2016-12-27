@@ -20,7 +20,7 @@
 		@include respond-to(break2) {
 			// top: 60px;
 			top: $tablet-navbarSiteToggle;
-			z-index: 2;
+			// z-index: 2;
 			z-index: 10;
 			// height: $tablet-subpage-navbarHeight;
 		}
@@ -354,7 +354,7 @@
 			position: static;
 			float: right;
 			margin-top: 0.2rem;
-			margin-top:1.2rem;
+			margin-top:0.8rem;
 		}
 		@include respond-to(fullwidth) {
 			margin-top:1.3rem;

@@ -15,6 +15,9 @@
 			@include margin-top(2);
 			@include margin-bottom(4);
 		}
+		.content .card {
+			margin-bottom: 0;
+		}
 		.title {
 			@include md-serif;
 		}
@@ -191,7 +194,7 @@
 			background-color: $basque-red;
 		}
 		&-image {
-			@include margin-top(4);
+			// @include margin-top(4);
 		}
 		&-inner {
 			position: relative; // contain caption
@@ -217,7 +220,7 @@
 		&-credits {
 			@include sm-sans;
 			color: $black65; // formerly $black50
-			@include margin-top(5);
+			// @include margin-top(5);
 		}
 		img {
 			@include margin-top(2.7);

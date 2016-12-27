@@ -239,10 +239,11 @@
 		h3, &-section-title {
 			@include lg-sans;
 			color: $black65; // formerly $black50
-			@include padding-bottom(1);
 			@include margin-top(4);
-			@include padding-bottom(0);
-			@include margin-bottom(1.1);
+			// @include margin-bottom(1.1);
+			@include margin-bottom(0); // override default h3
+			@include padding-bottom(1);
+			@include border(bottom);
 		}
 		h4, &-item-title {
 			@include mini-sans;
@@ -251,8 +252,11 @@
 			margin: 0;
 		}
 		&-item {
-			border-top: 1px solid $black65; // formerly $black50
+			@include border(bottom);
 			@include padding-bottom(1);
+		}
+		li:last-of-type {
+			border-bottom: none;
 		}
 		.sidebar-highlight {
 			&.active, &:hover {
@@ -282,6 +286,7 @@
 			margin-top:0;
 		}
 		@include margin-bottom(5.2);
+		// margin-bottom:2rem;
 	}
 	.half-hr {
 		margin-bottom:2.5vw;
@@ -507,6 +512,11 @@
 			font-size: 1.2vw;
 		}
 	}
+	.magazine-page, .magazine-article-page {
+		.newsletter-signup-copy {
+			background-color: white;
+		}
+	}
 	.newsletter-signup-form {
 		width: 100%;
 	}
@@ -556,4 +566,41 @@
 				@include padding-bottom(1);
 			}
 		}
+	}
+
+/* #Custom select dropdown
+* from http://hernansartorio.com/jquery-nice-select/
+-------------------------------------------------- */
+	.nice-select:after {
+		content: '\62';
+  		font-family: "vd-icons" !important;
+  		border: none; // remove default arrow
+  		transform: rotate(90deg);
+  		font-size: 2.5rem;
+  		// override nice-select defaults
+  		height: auto;
+  		// top:0.8rem;
+  		@include top(0.8);
+  		// @include right(1.8);
+  		transform-origin: 15px 15px;
+  		@include margin-top(0);
+  		@include respond-to(break2) {
+  			top: 0.8rem;
+  			right:2rem;
+  		}
+  		@include respond-to(fullwidth) {
+  			top: 0.8rem;
+  			right:1.8rem;
+  		}
+	}
+	.nice-select.open:after {
+  		-webkit-transform: rotate(-90deg);
+  		-moz-transform: rotate(-90deg);
+  		transform: rotate(-90deg);
+	}
+	.nice-select .list {
+		margin-top:0;
+	}
+	.nice-select .option:hover {
+		background-color: $black20;
 	}

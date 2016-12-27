@@ -1,7 +1,9 @@
 
+<?php if($page->intendedTemplate() != 'magazine'): ?>
 <div class="container">
   <hr class="thick-hr"/>
 </div>
+<?php endif; ?>
 <div class="newsletter-signup-wrapper container">
   <div class="short-newsletter-signup">
     <div class="newsletter-signup clearfix">

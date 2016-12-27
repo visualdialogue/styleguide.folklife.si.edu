@@ -28,7 +28,8 @@ li.card(class="<? if (isset($card_classes)) echo $card_classes . ' ' ?><? if ($c
 			-endif
 	-endif
 	.details
-		.details-inner
+		//- clearfix holds floating more info arrows at narrow widths
+		.details-inner.clearfix
 			-if('' != $card->category()):	
 				.tag!= $card->category()
 			-endif

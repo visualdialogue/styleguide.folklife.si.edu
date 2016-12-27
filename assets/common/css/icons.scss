@@ -206,7 +206,15 @@
 		}
 	}
 	.icon-mail:before {
-		font-size: 4rem;
-		@include respond-to(break2) { font-size: 4vw; padding-right: 0.2vw; line-height: 0.8;}
-		@include respond-to(fullwidth) { font-size: 5.2rem; padding-right: 2px; line-height: 1;}
+		font-size: 2rem;
+		@include respond-to(break2) {
+			font-size: 4vw;
+			padding-right: 0.2vw; 
+			line-height: 0.8;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 5.2rem;
+			padding-right: 2px; 
+			line-height: 1;
+		}
 	}

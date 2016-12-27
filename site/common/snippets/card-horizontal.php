@@ -36,7 +36,7 @@
         <div class="tag">
           <?php echo $card->date('F j, Y'); ?></div>
         <?php endif; ?>
-        <?php if('' != $card->subtitle()):	 ?><a href="<?= $card->url() ?>" class="high">
+        <?php if('' != $card->subtitle() && $page->intendedTemplate() != 'magazine'):	 ?><a href="<?= $card->url() ?>" class="high">
           <div class="title"><span class="light"><span class="er">
                 <?php echo htmlspecialchars($card->title(), ENT_QUOTES, 'UTF-8'); ?></span></span></div>
           <div class="subtitle"><span class="light"><span class="er">

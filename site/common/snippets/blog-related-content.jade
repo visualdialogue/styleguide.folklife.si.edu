@@ -1,9 +1,9 @@
 .related-content
-	h2.sidebar-section-title Related Content
+	h2.sidebar-section-title.related-content-title Related Content
 	-if($page->template() == 'blog-article'):
 		// blog article sidebar
 		ul.row
-			-foreach($page->siblings(false)->visible()->filterBy('tags','basque',',')->limit($limit) as $card):
+			-foreach($page->siblings(false)->visible()->filterBy('tags','basque',',')->limit(3) as $card):
 				-snippet('card', array('card' => $card, 'card_classes' => 'col-xs-12 sidebar-card' ))
 			-endforeach
 	-elseif($page->template() == 'magazine-article'):

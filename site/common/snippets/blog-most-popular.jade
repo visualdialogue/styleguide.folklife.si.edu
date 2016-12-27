@@ -1,9 +1,10 @@
 .blog-most-popular
-	h2.sidebar-section-title Most Popular
+	h3.sidebar-section-title Most Popular
 	//- get all articles marked popular
-	- $n=0;
-	-foreach($pages->find('blog')->children()->visible()->filterBy('tags', 'popular', ',')->limit(5) as $entry): $n++
-		div.blog-sidebar-feature.sidebar-highlight
-			.blog-sidebar-number!= $n
-			a.title(href="<?= $entry->url() ?>")!= $entry->title()->excerpt('8', 'words')
-	-endforeach
+	ul
+		- $n=0;
+		-foreach($pages->find('blog')->children()->visible()->filterBy('tags', 'popular', ',')->limit(5) as $entry): $n++
+			li.sidebar-item.numbered-sidebar-item.sidebar-highlight
+				.blog-sidebar-number!= $n
+				a.title(href="<?= $entry->url() ?>")!= $entry->title()->excerpt('8', 'words')
+		-endforeach
