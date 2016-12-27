@@ -4520,9 +4520,10 @@ iframe {
   margin-bottom: 0;
   font-size: 1.2rem;
   position: relative;
-  line-height: 1.4; }
+  line-height: 1.1; }
   @media only screen and (min-width: 53.25em) {
     .category-tag-type {
+      line-height: 1.4;
       font-size: 1.4rem;
       margin-bottom: 0.4vw; } }
   @media only screen and (min-width: 1560px) {
@@ -4540,10 +4541,11 @@ iframe {
   margin-bottom: 0;
   font-size: 1.2rem;
   position: relative;
-  line-height: 1.4;
+  line-height: 1.1;
   font-weight: 700; }
   @media only screen and (min-width: 53.25em) {
     .category-tag-bold-type {
+      line-height: 1.4;
       font-size: 1.4rem;
       margin-bottom: 0.4vw; } }
   @media only screen and (min-width: 1560px) {
@@ -7118,7 +7120,7 @@ figcaption {
 .details-inner {
   padding-top: 0.8em;
   padding-right: 0.4em;
-  padding-top: 1.5rem; }
+  padding-top: 1.3rem; }
   @media only screen and (min-width: 53.25em) {
     .details-inner {
       min-height: initial;
@@ -7146,7 +7148,7 @@ a.details {
   display: inline-block; }
 
 .title {
-  display: inline-block;
+  display: block;
   width: 100%; }
 
 .tag {
@@ -7158,9 +7160,10 @@ a.details {
   margin-bottom: 0;
   font-size: 1.2rem;
   position: relative;
-  line-height: 1.4; }
+  line-height: 1.1; }
   @media only screen and (min-width: 53.25em) {
     .tag {
+      line-height: 1.4;
       font-size: 1.4rem;
       margin-bottom: 0.4vw; } }
   @media only screen and (min-width: 1560px) {
@@ -7178,10 +7181,11 @@ a.details {
   margin-bottom: 0;
   font-size: 1.2rem;
   position: relative;
-  line-height: 1.4;
+  line-height: 1.1;
   font-weight: 700; }
   @media only screen and (min-width: 53.25em) {
     .date {
+      line-height: 1.4;
       font-size: 1.4rem;
       margin-bottom: 0.4vw; } }
   @media only screen and (min-width: 1560px) {
@@ -7199,12 +7203,13 @@ a.details {
   margin-bottom: 0;
   font-size: 1.2rem;
   position: relative;
-  line-height: 1.4;
+  line-height: 1.1;
   letter-spacing: normal;
   text-transform: initial;
   margin-top: 0.2em; }
   @media only screen and (min-width: 53.25em) {
     .date-sm {
+      line-height: 1.4;
       font-size: 1.4rem;
       margin-bottom: 0.4vw; } }
   @media only screen and (min-width: 1560px) {

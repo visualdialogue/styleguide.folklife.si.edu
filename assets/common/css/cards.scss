@@ -30,7 +30,7 @@
 	}
 	@include padding-top(2);
 	@include padding-right(1);
-	padding-top:1.5rem;
+	padding-top:1.3rem;
 	@include respond-to(break2) {
 		padding-top:1.5rem;
 	}
@@ -44,7 +44,8 @@ a.details {
 
 // TITLE
 .title {
-	display: inline-block; // so a tag doesn't get rid of margins
+	// display: inline-block; // so a tag doesn't get rid of margins
+	display: block; // so space above is consistent, unline inline-block with 2 lines vs 2 line
 	width: 100%; // text align center does exactly that
 }
 .tag {

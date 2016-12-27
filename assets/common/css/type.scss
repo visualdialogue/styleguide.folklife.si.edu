@@ -438,8 +438,9 @@
 		margin-bottom: 0;
 		font-size: 1.2rem;
 		position: relative; // keep from being hidden under highlighted title
-		line-height: 1.4;
+		line-height: 1.1;
 		@include respond-to(break2) {
+			line-height: 1.4;
 			font-size: 1.4rem;
 			margin-bottom: 0.4vw;
 		}

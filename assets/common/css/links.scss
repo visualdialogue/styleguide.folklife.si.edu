@@ -34,6 +34,7 @@
 		}
 	}
 	a.high, .high, .video {
+		// display: block;
 		@include respond-to(break2) {
 			-webkit-transition: background .15s cubic-bezier(.33,.66,.66,1);
 			transition: background .15s cubic-bezier(.33,.66,.66,1);
