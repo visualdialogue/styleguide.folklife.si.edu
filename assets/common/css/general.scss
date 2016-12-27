@@ -433,7 +433,8 @@
 		}
 		&-copy {
 			@include respond-to(break2max) {
-				font-size: 2.7vw;
+				font-size: 2.8vw;
+				// font-size: 3vw;
 			}
 			@include respond-to(break2) {
 				width: 46.45%; // 314px / 676px
@@ -444,7 +445,7 @@
 				font-size: 1.2vw;
 			}
 			@include padding-top(1.4);
-			padding-top: 1vw; // responsive for sizing at mobile
+			padding-top: 1.2vw; // responsive for sizing at mobile
 			@include padding-right(2);
 			@include padding-bottom(2);
 			@include padding-left(2);
@@ -475,6 +476,7 @@
 	.button-inner {
 		@include respond-to(break2max) {
 			font-size: 4vw;
+			font-size: 3.8vw;
 		}
 		@include respond-to(break2) {
 			line-height: 1.5;

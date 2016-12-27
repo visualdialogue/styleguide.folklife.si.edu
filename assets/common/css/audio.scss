@@ -42,6 +42,7 @@
 		width: 100%;
 		right: 0;
 		@include padding(2);
+		padding-left:1rem;
 	}
 	.audio-player-details {
 		line-height: 1;
@@ -71,8 +72,9 @@
 	}
 	.audio-time {
 		@include sm-sans;
+		font-size: 4vw;
 		@include respond-to(break2full) {
-			font-size: 1.5vw;
+			font-size: 1.2vw;
 		}
 	}
 

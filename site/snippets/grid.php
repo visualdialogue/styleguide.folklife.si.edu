@@ -123,14 +123,14 @@
     </li>
     <li class="grid-item col-sm-6">
       <div class="row">
-        <div class="col-xs-half-image">
+        <div class="col-sm-half-image">
           <div class="grid-item-inner custom-grid-item-inner hidden-content">
-            <div data-hover="(FL home featurette)" class="copy">.col-xs-half-image</div>
+            <div data-hover="(FL home featurette)" class="copy">.col-sm-half-image</div>
           </div>
         </div>
-        <div class="col-xs-half-details">
+        <div class="col-sm-half-details">
           <div class="grid-item-inner custom-grid-item-inner hidden-content">
-            <div data-hover="(FL home featurette)" class="copy">.col-xs-half-details</div>
+            <div data-hover="(FL home featurette)" class="copy">.col-sm-half-details</div>
           </div>
         </div>
       </div>

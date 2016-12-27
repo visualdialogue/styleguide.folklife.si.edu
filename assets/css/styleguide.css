@@ -6173,13 +6173,13 @@ a .page-title {
         vertical-align: top; } }
   .support-copy {
     padding-top: 0.56em;
-    padding-top: 1vw;
+    padding-top: 1.2vw;
     padding-right: 0.8em;
     padding-bottom: 0.8em;
     padding-left: 0.8em; }
     @media only screen and (max-width: 53.25em) {
       .support-copy {
-        font-size: 2.7vw; } }
+        font-size: 2.8vw; } }
     @media only screen and (min-width: 53.25em) {
       .support-copy {
         width: 46.45%;
@@ -6256,7 +6256,8 @@ a .page-title {
 
 @media only screen and (max-width: 53.25em) {
   .button-inner {
-    font-size: 4vw; } }
+    font-size: 4vw;
+    font-size: 3.8vw; } }
 
 @media only screen and (min-width: 53.25em) {
   .button-inner {
@@ -7510,7 +7511,8 @@ a.details {
   left: 0;
   width: 100%;
   right: 0;
-  padding: 0.8em; }
+  padding: 0.8em;
+  padding-left: 1rem; }
   @media only screen and (min-width: 53.25em) {
     .audio-player {
       padding: 1.28vw; } }
@@ -7555,7 +7557,8 @@ a.details {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 1.48rem; }
+  font-size: 1.48rem;
+  font-size: 4vw; }
   @media only screen and (min-width: 53.25em) {
     .audio-time {
       font-size: 1.665rem; } }
@@ -7564,7 +7567,7 @@ a.details {
       font-size: 1.873rem; } }
   @media only screen and (min-width: 53.25em) and (max-width: 1560px) {
     .audio-time {
-      font-size: 1.5vw; } }
+      font-size: 1.2vw; } }
 
 /* #links
 -------------------------------------------------- */
