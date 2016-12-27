@@ -4714,173 +4714,6 @@ body {
     @media only screen and (min-width: 1560px) {
       .content ol ol li, .text-card ol ol li {
         padding-left: 4rem; } }
-  .content figure, .text-card figure {
-    position: relative; }
-  .content figcaption, .text-card figcaption {
-    position: absolute;
-    padding-top: 0.6em;
-    padding-right: 0.4em;
-    padding-bottom: 0.6em;
-    padding-left: 0.8em;
-    bottom: 0;
-    left: 0;
-    color: white;
-    background-color: rgba(89, 89, 89, 0.9);
-    font-family: "acumin-pro", Arial, sans-serif;
-    font-weight: 300;
-    line-height: 1.2;
-    font-size: 1.48rem;
-    width: 100%;
-    cursor: pointer;
-    visibility: hidden; }
-    @media only screen and (min-width: 53.25em) {
-      .content figcaption, .text-card figcaption {
-        padding-top: 0.96vw; } }
-    @media only screen and (min-width: 1560px) {
-      .content figcaption, .text-card figcaption {
-        padding-top: 1.5rem; } }
-    @media only screen and (min-width: 53.25em) {
-      .content figcaption, .text-card figcaption {
-        padding-right: 0.64vw; } }
-    @media only screen and (min-width: 1560px) {
-      .content figcaption, .text-card figcaption {
-        padding-right: 1rem; } }
-    @media only screen and (min-width: 53.25em) {
-      .content figcaption, .text-card figcaption {
-        padding-bottom: 0.96vw; } }
-    @media only screen and (min-width: 1560px) {
-      .content figcaption, .text-card figcaption {
-        padding-bottom: 1.5rem; } }
-    @media only screen and (min-width: 53.25em) {
-      .content figcaption, .text-card figcaption {
-        padding-left: 1.28vw; } }
-    @media only screen and (min-width: 1560px) {
-      .content figcaption, .text-card figcaption {
-        padding-left: 2rem; } }
-    @media only screen and (min-width: 53.25em) {
-      .content figcaption, .text-card figcaption {
-        font-size: 1.665rem; } }
-    @media only screen and (min-width: 1560px) {
-      .content figcaption, .text-card figcaption {
-        font-size: 1.873rem; } }
-    @media only screen and (max-width: 53.25em) {
-      .content figcaption, .text-card figcaption {
-        min-height: 4rem; } }
-    .content figcaption:after, .text-card figcaption:after {
-      display: block;
-      content: "+";
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      background-color: #595959;
-      color: white;
-      padding-right: 0.2em;
-      padding-bottom: 0.32em;
-      padding-left: 0.2em;
-      margin-top: -2em;
-      font-family: "acumin-pro", Arial, sans-serif;
-      font-size: 5vw;
-      line-height: 0.8 !important;
-      visibility: visible; }
-      @media only screen and (min-width: 53.25em) {
-        .content figcaption:after, .text-card figcaption:after {
-          padding-right: 0.32vw; } }
-      @media only screen and (min-width: 1560px) {
-        .content figcaption:after, .text-card figcaption:after {
-          padding-right: 0.5rem; } }
-      @media only screen and (min-width: 53.25em) {
-        .content figcaption:after, .text-card figcaption:after {
-          padding-bottom: 0.512vw; } }
-      @media only screen and (min-width: 1560px) {
-        .content figcaption:after, .text-card figcaption:after {
-          padding-bottom: 0.8rem; } }
-      @media only screen and (min-width: 53.25em) {
-        .content figcaption:after, .text-card figcaption:after {
-          padding-left: 0.32vw; } }
-      @media only screen and (min-width: 1560px) {
-        .content figcaption:after, .text-card figcaption:after {
-          padding-left: 0.5rem; } }
-      @media only screen and (min-width: 53.25em) {
-        .content figcaption:after, .text-card figcaption:after {
-          margin-top: -3.2vw; } }
-      @media only screen and (min-width: 1560px) {
-        .content figcaption:after, .text-card figcaption:after {
-          margin-top: -5rem; } }
-      @media only screen and (min-width: 53.25em) {
-        .content figcaption:after, .text-card figcaption:after {
-          font-size: 2.5vw;
-          line-height: 1.2; } }
-      @media only screen and (min-width: 1560px) {
-        .content figcaption:after, .text-card figcaption:after {
-          font-size: 4rem; } }
-      @media only screen and (max-width: 53.25em) {
-        .content figcaption:after, .text-card figcaption:after {
-          width: 4rem;
-          height: 4rem;
-          font-size: 3rem;
-          text-align: center;
-          padding-top: 0.5rem; } }
-    .content figcaption.minus-sign:after, .text-card figcaption.minus-sign:after {
-      display: none; }
-    .content figcaption.minus-sign:before, .text-card figcaption.minus-sign:before {
-      content: "–";
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      right: 0.2em;
-      color: white;
-      padding-right: 0.08em;
-      padding-bottom: 0.32em;
-      padding-left: 0.2em;
-      margin-top: -2em;
-      font-family: "acumin-pro", Arial, sans-serif;
-      font-size: 5vw;
-      line-height: 0.8 !important;
-      visibility: visible; }
-      @media only screen and (min-width: 53.25em) {
-        .content figcaption.minus-sign:before, .text-card figcaption.minus-sign:before {
-          right: 0.32vw; } }
-      @media only screen and (min-width: 1560px) {
-        .content figcaption.minus-sign:before, .text-card figcaption.minus-sign:before {
-          right: 0.5rem; } }
-      @media only screen and (min-width: 53.25em) {
-        .content figcaption.minus-sign:before, .text-card figcaption.minus-sign:before {
-          padding-right: 0.128vw; } }
-      @media only screen and (min-width: 1560px) {
-        .content figcaption.minus-sign:before, .text-card figcaption.minus-sign:before {
-          padding-right: 0.2rem; } }
-      @media only screen and (min-width: 53.25em) {
-        .content figcaption.minus-sign:before, .text-card figcaption.minus-sign:before {
-          padding-bottom: 0.512vw; } }
-      @media only screen and (min-width: 1560px) {
-        .content figcaption.minus-sign:before, .text-card figcaption.minus-sign:before {
-          padding-bottom: 0.8rem; } }
-      @media only screen and (min-width: 53.25em) {
-        .content figcaption.minus-sign:before, .text-card figcaption.minus-sign:before {
-          padding-left: 0.32vw; } }
-      @media only screen and (min-width: 1560px) {
-        .content figcaption.minus-sign:before, .text-card figcaption.minus-sign:before {
-          padding-left: 0.5rem; } }
-      @media only screen and (min-width: 53.25em) {
-        .content figcaption.minus-sign:before, .text-card figcaption.minus-sign:before {
-          margin-top: -3.2vw; } }
-      @media only screen and (min-width: 1560px) {
-        .content figcaption.minus-sign:before, .text-card figcaption.minus-sign:before {
-          margin-top: -5rem; } }
-      @media only screen and (min-width: 53.25em) {
-        .content figcaption.minus-sign:before, .text-card figcaption.minus-sign:before {
-          font-size: 2.5vw;
-          line-height: 1.2; } }
-      @media only screen and (min-width: 1560px) {
-        .content figcaption.minus-sign:before, .text-card figcaption.minus-sign:before {
-          font-size: 4rem; } }
-      @media only screen and (max-width: 53.25em) {
-        .content figcaption.minus-sign:before, .text-card figcaption.minus-sign:before {
-          width: 4rem;
-          height: 4rem;
-          font-size: 3rem;
-          text-align: center;
-          padding-top: 0.5rem; } }
 
 /* Icons
 -------------------------------------------------- */
@@ -5924,8 +5757,6 @@ select {
   .col-thirds:nth-of-type(3n + 1) {
     clear: left; }
 
-/* Tags
--------------------------------------------------- */
 /* Grid System
 -------------------------------------------------- */
 .row {
@@ -5985,7 +5816,7 @@ select {
       right: -4.5px;
       height: 100%;
       width: 9px;
-      background-image: url(/assets/images/folklife-vr.png);
+      background-image: url(/assets/images/hr/folklife-vr.png);
       background-position: right;
       background-repeat: no-repeat;
       background-size: 9px 100%; } }
@@ -6549,6 +6380,12 @@ a .page-title {
         top: 0;
         right: 0;
         bottom: 0; } }
+    .support-button .button-inner {
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%); }
 
 @media only screen and (max-width: 53.25em) {
   .button-inner {
@@ -6766,6 +6603,177 @@ a .page-title {
 
 .nice-select .option:hover {
   background-color: #cccccc; }
+
+/* Plus icons for figures with figcaptions
+-------------------------------------------------- */
+figure {
+  position: relative; }
+
+figcaption {
+  position: absolute;
+  padding-top: 0.6em;
+  padding-right: 0.4em;
+  padding-bottom: 0.6em;
+  padding-left: 0.8em;
+  bottom: 0;
+  left: 0;
+  color: white;
+  background-color: rgba(89, 89, 89, 0.9);
+  font-family: "acumin-pro", Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+  font-size: 1.48rem;
+  width: 100%;
+  cursor: pointer;
+  visibility: hidden; }
+  @media only screen and (min-width: 53.25em) {
+    figcaption {
+      padding-top: 0.96vw; } }
+  @media only screen and (min-width: 1560px) {
+    figcaption {
+      padding-top: 1.5rem; } }
+  @media only screen and (min-width: 53.25em) {
+    figcaption {
+      padding-right: 0.64vw; } }
+  @media only screen and (min-width: 1560px) {
+    figcaption {
+      padding-right: 1rem; } }
+  @media only screen and (min-width: 53.25em) {
+    figcaption {
+      padding-bottom: 0.96vw; } }
+  @media only screen and (min-width: 1560px) {
+    figcaption {
+      padding-bottom: 1.5rem; } }
+  @media only screen and (min-width: 53.25em) {
+    figcaption {
+      padding-left: 1.28vw; } }
+  @media only screen and (min-width: 1560px) {
+    figcaption {
+      padding-left: 2rem; } }
+  @media only screen and (min-width: 53.25em) {
+    figcaption {
+      font-size: 1.665rem; } }
+  @media only screen and (min-width: 1560px) {
+    figcaption {
+      font-size: 1.873rem; } }
+  @media only screen and (max-width: 53.25em) {
+    figcaption {
+      min-height: 4rem; } }
+  figcaption:after {
+    display: block;
+    content: "+";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #595959;
+    color: white;
+    padding-right: 0.2em;
+    padding-bottom: 0.32em;
+    padding-left: 0.2em;
+    margin-top: -2em;
+    font-family: "acumin-pro", Arial, sans-serif;
+    font-size: 5vw;
+    line-height: 0.8 !important;
+    visibility: visible; }
+    @media only screen and (min-width: 53.25em) {
+      figcaption:after {
+        padding-right: 0.32vw; } }
+    @media only screen and (min-width: 1560px) {
+      figcaption:after {
+        padding-right: 0.5rem; } }
+    @media only screen and (min-width: 53.25em) {
+      figcaption:after {
+        padding-bottom: 0.512vw; } }
+    @media only screen and (min-width: 1560px) {
+      figcaption:after {
+        padding-bottom: 0.8rem; } }
+    @media only screen and (min-width: 53.25em) {
+      figcaption:after {
+        padding-left: 0.32vw; } }
+    @media only screen and (min-width: 1560px) {
+      figcaption:after {
+        padding-left: 0.5rem; } }
+    @media only screen and (min-width: 53.25em) {
+      figcaption:after {
+        margin-top: -3.2vw; } }
+    @media only screen and (min-width: 1560px) {
+      figcaption:after {
+        margin-top: -5rem; } }
+    @media only screen and (min-width: 53.25em) {
+      figcaption:after {
+        font-size: 2.5vw;
+        line-height: 1.2; } }
+    @media only screen and (min-width: 1560px) {
+      figcaption:after {
+        font-size: 4rem; } }
+    @media only screen and (max-width: 53.25em) {
+      figcaption:after {
+        width: 4rem;
+        height: 4rem;
+        font-size: 3rem;
+        text-align: center;
+        padding-top: 0.5rem; } }
+  figcaption.minus-sign:after {
+    display: none; }
+  figcaption.minus-sign:before {
+    content: "–";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    right: 0.2em;
+    color: white;
+    padding-right: 0.08em;
+    padding-bottom: 0.32em;
+    padding-left: 0.2em;
+    margin-top: -2em;
+    font-family: "acumin-pro", Arial, sans-serif;
+    font-size: 5vw;
+    line-height: 0.8 !important;
+    visibility: visible; }
+    @media only screen and (min-width: 53.25em) {
+      figcaption.minus-sign:before {
+        right: 0.32vw; } }
+    @media only screen and (min-width: 1560px) {
+      figcaption.minus-sign:before {
+        right: 0.5rem; } }
+    @media only screen and (min-width: 53.25em) {
+      figcaption.minus-sign:before {
+        padding-right: 0.128vw; } }
+    @media only screen and (min-width: 1560px) {
+      figcaption.minus-sign:before {
+        padding-right: 0.2rem; } }
+    @media only screen and (min-width: 53.25em) {
+      figcaption.minus-sign:before {
+        padding-bottom: 0.512vw; } }
+    @media only screen and (min-width: 1560px) {
+      figcaption.minus-sign:before {
+        padding-bottom: 0.8rem; } }
+    @media only screen and (min-width: 53.25em) {
+      figcaption.minus-sign:before {
+        padding-left: 0.32vw; } }
+    @media only screen and (min-width: 1560px) {
+      figcaption.minus-sign:before {
+        padding-left: 0.5rem; } }
+    @media only screen and (min-width: 53.25em) {
+      figcaption.minus-sign:before {
+        margin-top: -3.2vw; } }
+    @media only screen and (min-width: 1560px) {
+      figcaption.minus-sign:before {
+        margin-top: -5rem; } }
+    @media only screen and (min-width: 53.25em) {
+      figcaption.minus-sign:before {
+        font-size: 2.5vw;
+        line-height: 1.2; } }
+    @media only screen and (min-width: 1560px) {
+      figcaption.minus-sign:before {
+        font-size: 4rem; } }
+    @media only screen and (max-width: 53.25em) {
+      figcaption.minus-sign:before {
+        width: 4rem;
+        height: 4rem;
+        font-size: 3rem;
+        text-align: center;
+        padding-top: 0.5rem; } }
 
 /* #footer
 -------------------------------------------------- */

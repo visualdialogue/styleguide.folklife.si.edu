@@ -113,11 +113,6 @@
 		}
 	}
 
-/* Tags
--------------------------------------------------- */
-
-	
-
 /* Grid System
 -------------------------------------------------- */
 	// bootstrap gutter override!!!
@@ -188,7 +183,7 @@
 			height: 100%;
 			width: 9px;
 		// right border as image from http://stackoverflow.com/a/7948532
-			background-image: url(/assets/images/folklife-vr.png);
+			background-image: url(/assets/images/hr/folklife-vr.png);
 			background-position: right;
 			background-repeat: no-repeat;
 			background-size: 9px 100%;
@@ -524,6 +519,9 @@
 				right: 0;
 				bottom: 0;
 			}
+			.button-inner {
+				@include vertically-align;
+			}
 		}
 	}
 	.button-inner {
@@ -653,3 +651,93 @@
 	.nice-select .option:hover {
 		background-color: $black20;
 	}
+
+/* Plus icons for figures with figcaptions
+-------------------------------------------------- */
+	// Images with captions
+	figure {
+		position: relative; // contain figcaption
+	}
+	figcaption {
+		position: absolute;
+		@include padding-top(1.5);
+		@include padding-right(1);
+		@include padding-bottom(1.5);
+		@include padding-left(2);
+		bottom: 0;
+		left: 0;
+		color: white;
+		// background-color: $black65; // formerly $black50
+		background-color: rgba($black65, 0.9);
+		@include sm-sans;
+		width: 100%;
+
+		cursor: pointer;
+
+		visibility: hidden; // initial hide
+		// @include width(2); // only show enough for plus sign
+		// @include height(2); // only show enough for plus sign
+		// display: none; // initial hide
+		// plus sign
+		@include respond-to(break2max) {
+			min-height: 4rem;
+		}
+		&:after {
+			display: block;
+			content: "+";
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			background-color: $black65; // formerly $black50
+			color: white;
+			// @include padding-top(0);
+			@include padding-right(0.5);
+			@include padding-bottom(0.8);
+			@include padding-left(0.5);
+			@include margin-top(-5);
+			@include sans-plus-icon;
+			line-height: 0.8 !important;
+			visibility: visible; // initial show, from http://stackoverflow.com/a/4912823/4504073
+			@include respond-to(break2max) {
+				width: 4rem;
+				height: 4rem;
+				font-size: 3rem;
+				text-align: center;
+				padding-top: 0.5rem;
+			}
+		}
+		// minus sign. Need to use other pseudo element b/c chrome not updating content from :after
+		&.minus-sign:after {
+			display: none;
+		}
+		&.minus-sign:before {
+			content: "–";
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			@include right(0.5);
+			// background-color: $black65; // formerly $black50
+			color: white;
+			// @include padding-top(0);
+			@include padding-right(0.2);
+			@include padding-bottom(0.8);
+			@include padding-left(0.5);
+			@include margin-top(-5);
+			@include sans-plus-icon;
+			line-height: 0.8 !important;
+			visibility: visible; // initial show, counteracts parent visiblity hidden. From http://stackoverflow.com/a/4912823/4504073
+			@include respond-to(break2max) {
+				width: 4rem;
+				height: 4rem;
+				font-size: 3rem;
+				text-align: center;
+				padding-top: 0.5rem;
+			}
+		}
+	}
+	// ol, ul {
+	// 	figure {
+	// 		// position: absolute;
+	// 		@include margin-left(-5);
+	// 	}
+	// }
