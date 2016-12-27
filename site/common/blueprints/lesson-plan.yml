@@ -1,6 +1,5 @@
 title: Card
-pages: Track
-  limit: 100
+pages: false
 files: true
   fields:
     caption:
@@ -13,6 +12,10 @@ fields:
   subtitle:
     label: Subtitle
     type:  text
+  byline:
+    label: Byline (for Festival Programs)
+    type: text
+    width: 1/2
   type:
     label: Card Type
     type: radio
@@ -22,14 +25,10 @@ fields:
       video: Video
       audio: Audio
   category:
-    label: Category
+    label: Tag
     type: text
     width: 1/2
     icon: cab
-  program:
-    label: Program
-    type: text
-    width: 1/2
   date:
     label: Date
     type: date
@@ -45,6 +44,12 @@ fields:
     options: images
     width: 1/2
     icon: image
+  thumbnail_img:
+    label: Thumbnail Image
+    type: select
+    options: images
+    width: 1/2
+    icon: image
   banner_img:
     label: Banner Image
     type: select
@@ -53,16 +58,13 @@ fields:
     icon: image
   first_img_caption:
     label: First image caption
-    type: text
+    type: textarea
   blurb:
     label: Blurb for card
     type: textarea
   contents:
-    label: Text
+    label: Content
     type:  textarea
-  references:
-    label: References
-    type: textarea
   tags:
     label: Tags
     type: tags
@@ -115,3 +117,60 @@ fields:
     type: text
     width: 1/2
     icon: dollar
+
+  sidebar_listing_heading:
+    label: Programs pages
+    type: headline
+  sidebar_listing:
+    label: Sidebar Listing
+    type: checkbox
+    text: Smaller font?
+    width: 1/2
+
+  lessonplansection:
+    label: Lesson Plan
+    type: headline
+  year_released:
+    label: Year Released
+    type: text
+    width: 1/2
+  suggested_grade_levels:
+    label: Suggested Grade Levels
+    type: text
+    width: 1/2
+  country:
+    label: Country
+    type: text
+    width: 1/2
+  region:
+    label: Region
+    type: text
+    width: 1/2
+  culture_group:
+    label: Culture Group
+    type: text
+    width: 1/2
+  genre:
+    label: Genre
+    type: text
+    width: 1/2
+  instruments:
+    label: Instruments
+    type: text
+    width: 1/2
+  language:
+    label: Language
+    type: text
+    width: 1/2
+  co-curricular_areas:
+    label: Co-curricular Areas
+    type: text
+    width: 1/2
+  national_standards:
+    label: National Standards
+    type: text
+    width: 1/2
+  prerequisites:
+    label: prerequisites
+    type: text
+    width: 1/2

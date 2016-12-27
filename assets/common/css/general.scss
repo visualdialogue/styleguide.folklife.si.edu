@@ -1,118 +1,122 @@
 /* Bootstrap overrides
 -------------------------------------------------*/
-.navbar-header {
-	float: none;
-}
-.container {
-	width: 100%;
-	max-width: $pageWidth;
-	padding: 0 15px;
-	@include respond-to(break2) {
-		padding: 0 80px;
+	.navbar-header {
+		float: none;
 	}
-	
-}
-.highlight-container {
-	width: 100%;
-	max-width: $pageWidth;
-	padding: 0;
-	@include respond-to(break2) {
-		// keep inner bg color smaller
-		padding: 0 40px;
-	}
-	.highlight-inner {
-		background-color: $black40; // formerly $black30
-		// show highlight on mobile
-		padding: 15px;
-
-		// go below card colors
-		position: relative;
-		z-index: 0;
-		
+	.container {
+		width: 100%;
+		max-width: $pageWidth;
+		padding: 0 15px;
 		@include respond-to(break2) {
-			// show highlight color around box
-			padding: 40px 40px;
+			padding: 0 80px;
+		}
+		
+	}
+	.highlight-container {
+		width: 100%;
+		max-width: $pageWidth;
+		padding: 0;
+		@include respond-to(break2) {
+			// keep inner bg color smaller
+			padding: 0 40px;
+		}
+		.highlight-inner {
+			background-color: $black40; // formerly $black30
+			// show highlight on mobile
+			padding: 15px;
+
+			// go below card colors
+			position: relative;
+			z-index: 0;
+			
+			@include respond-to(break2) {
+				// show highlight color around box
+				padding: 40px 40px;
+			}
+		}
+		.section-title {
+			@include margin-bottom(3.4);
 		}
 	}
-	.section-title {
-		@include margin-bottom(3.4);
-	}
-}
 
-.last-container {
-	section {
-		margin-bottom: 2.5rem;
+	.last-container {
+		section {
+			margin-bottom: 2.5rem;
+		}
 	}
-}
 
-// folklife - talk story
-.col-xs-half-image {
-	@include respond-to(break2max) {
+	// folklife - talk story
+	.col-xs-half-image {
+		@include respond-to(break2max) {
+			float: left;
+			width: 54%;
+		}
+	}
+	.col-xs-half-details {
+		@include respond-to(break2max) {
+			float: left;
+			width: 46%;
+		}
+	}
+	.col-sm-half-image {
+		@include respond-to(break2) {
+			float: left;
+			width: 54%;
+		}
+	}
+	.col-sm-half-details {
+		@include respond-to(break2) {
+			float: left;
+			width: 46%;
+		}
+	}
+
+	// folklife homepage bottom collections
+	.col-half {
+		width: 50%;
 		float: left;
-		width: 54%;
+		&:nth-of-type(2n + 1) {
+			padding-right:$small-gutter;
+			@include respond-to(break2) {padding-right:$medium-gutter;}
+		}
+		&:nth-of-type(2n) {
+			padding-left:$small-gutter;
+			@include respond-to(break2) {padding-left:$medium-gutter;}
+		}
+		// break every 2 cards so cards don't get hung
+		&:nth-of-type(2n + 1) {
+			clear:left;
+		}
 	}
-}
-.col-xs-half-details {
-	@include respond-to(break2max) {
-		float: left;
-		width: 46%;
-	}
-}
-.col-sm-half-image {
-	@include respond-to(break2) {
-		float: left;
-		width: 54%;
-	}
-}
-.col-sm-half-details {
-	@include respond-to(break2) {
-		float: left;
-		width: 46%;
-	}
-}
 
-// folklife homepage bottom collections
-.col-half {
-	width: 50%;
-	float: left;
-	&:nth-of-type(2n + 1) {
-		padding-right:$small-gutter;
-		@include respond-to(break2) {padding-right:$medium-gutter;}
+	// folklife teach
+	.col-thirds {
+		width: 33.33333%;
+		float: left;
+		&:nth-of-type(3n + 1) {
+			padding-right:$small-gutter;
+			@include respond-to(break2) {padding-right:$medium-gutter;}
+		}
+		&:nth-of-type(3n + 2) {
+			padding-left:$small-gutter;
+			padding-right:$small-gutter;
+			@include respond-to(break2) {padding-left:$medium-gutter;}
+			@include respond-to(break2) {padding-right:$medium-gutter;}
+		}
+		&:nth-of-type(3n + 3) {
+			padding-left:$small-gutter;
+			@include respond-to(break2) {padding-left:$medium-gutter;}
+		}
+		// break every 3 cards so cards don't get hung
+		&:nth-of-type(3n + 1) {
+			clear:left;
+		}
 	}
-	&:nth-of-type(2n) {
-		padding-left:$small-gutter;
-		@include respond-to(break2) {padding-left:$medium-gutter;}
-	}
-	// break every 2 cards so cards don't get hung
-	&:nth-of-type(2n + 1) {
-		clear:left;
-	}
-}
 
-// folklife teach
-.col-thirds {
-	width: 33.33333%;
-	float: left;
-	&:nth-of-type(3n + 1) {
-		padding-right:$small-gutter;
-		@include respond-to(break2) {padding-right:$medium-gutter;}
-	}
-	&:nth-of-type(3n + 2) {
-		padding-left:$small-gutter;
-		padding-right:$small-gutter;
-		@include respond-to(break2) {padding-left:$medium-gutter;}
-		@include respond-to(break2) {padding-right:$medium-gutter;}
-	}
-	&:nth-of-type(3n + 3) {
-		padding-left:$small-gutter;
-		@include respond-to(break2) {padding-left:$medium-gutter;}
-	}
-	// break every 3 cards so cards don't get hung
-	&:nth-of-type(3n + 1) {
-		clear:left;
-	}
-}
+/* Tags
+-------------------------------------------------- */
 
+	
 
 /* Grid System
 -------------------------------------------------- */
@@ -239,7 +243,7 @@
 		h3, &-section-title {
 			@include lg-sans;
 			color: $black65; // formerly $black50
-			@include margin-top(4);
+			margin-top: 0;
 			// @include margin-bottom(1.1);
 			@include margin-bottom(0); // override default h3
 			@include padding-bottom(1);
@@ -267,6 +271,9 @@
 				color: $black65; // formerly $black70
 			}
 		}
+	}
+	.sidebar-section {
+		@include margin-bottom(4);
 	}
 	hr {
 		margin: 0; // bootstrap reset
@@ -319,10 +326,11 @@
 		padding: 0;
 		margin: 0;
 		border: none;
+		background-color: $black65; // default
 		.title-height {
-			height:12vw;
-			@include respond-to(break2) {height:4.2vw;}
-			@include respond-to(fullwidth) {height:66px;}	
+			// height:12vw;
+			// @include respond-to(break2) {height:4.2vw;}
+			// @include respond-to(fullwidth) {height:66px;}	
 		}
 		&-hr {
 			margin-top: -1.6rem;
@@ -347,6 +355,46 @@
 	.subcollection {
 		@include padding-bottom(1.5); // not margin b/c margin carries over on column breaks
 		display: inline-block; // prevent column overhang
+	}
+
+/* Folkways Magazine Article and Lesson Plans Sidebar
+-------------------------------------------------- */
+	.sidebar-audio {
+		@include margin-bottom(4);
+		.sidebar-title {
+			@include xl-sans;
+			font-weight: 600;
+			@include margin-bottom(2);
+			line-height: 1 !important; // mq override
+		}
+		.sidebar-card {
+			.title {
+				@include margin-top(0);
+				line-height: 1.3;
+				@include margin-bottom(0.2);
+			}
+			.details-inner {
+				padding-top:0;
+			}
+		}
+		.track {
+			@include sm-sans;
+		}
+		.track-title {
+			font-weight: 600;
+		}
+		.track-action {
+			@include mini-sans;
+			text-transform: none;
+		}
+	}
+
+	// Sidebar Video
+	.sidebar-video, .sidebar-album {
+		.title {
+			@include xl-sans;
+			font-weight: 600;
+		}
 	}
 
 /* #remodal
@@ -480,12 +528,13 @@
 	}
 	.button-inner {
 		@include respond-to(break2max) {
-			font-size: 4vw;
-			font-size: 3.8vw;
+			// font-size: 4vw;
+			// font-size: 3.8vw;
+			font-size: 2rem;
 		}
 		@include respond-to(break2) {
-			line-height: 1.5;
-			@include vertically-align;
+			// line-height: 1.5;
+			// @include vertically-align;
 			line-height: 1.1;
 		}
 	}

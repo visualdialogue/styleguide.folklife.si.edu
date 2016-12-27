@@ -14,6 +14,9 @@
 
 				.content
 					!= $page->contents()->kt()
+					.references
+						h2 References
+						!= $page->references()->kt()
 
 					-snippet('disqus')         
 
@@ -21,6 +24,11 @@
 		aside.sidebar.col-sm-4.blog-sidebar
 
 			-snippet('sidebar-audio')
+
+			//- -snippet('card-horizontal', array('card' => $pages->find('explore')->children()->find('videos')->children()->find('music-of-central-asia-and-the-aga-khan-music-initiative'), 'card_classes' => 'sidebar-video horizontal-card', 'image_col' => 'col-xs-half-image', 'details_col' => 'col-xs-half-details' ))
+			-snippet('card', array('card' => $pages->find('explore')->children()->find('videos')->children()->find('music-of-central-asia-and-the-aga-khan-music-initiative'), 'card_classes' => 'sidebar-video' ))
+			
+			-snippet('card', array('card' => $pages->find('explore')->children()->find('sounds')->children()->find('album-covers'), 'card_classes' => 'sidebar-album' ))
 
 			-snippet('blog-related-content', array('orientation' => 'vertical', 'limit' => 3))
 			

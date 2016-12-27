@@ -2,7 +2,12 @@
 <?php $album = $pages->find('explore')->children()->find('sounds')->children()->find('west-indian-folksongs-for-children'); ?>
 <div class="sidebar-audio">
   <div class="tag">Audio</div>
+  <?php if (isset($title)): ?>
+  <div class="sidebar-title">
+    <?php echo $title; ?></div>
+  <?php else: ?>
   <div class="sidebar-title">Children’s Music from Around the World</div>
+  <?php endif; ?>
   <ul class="row">
     <?php snippet('card-horizontal', array('card' => $album, 'card_classes' => 'col-xs-12 sidebar-card', 'image_col' => 'col-sm-6', 'details_col' => 'col-sm-6', 'artist' => true )); ?>
   </ul>

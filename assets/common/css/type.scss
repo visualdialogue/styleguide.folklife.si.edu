@@ -12,6 +12,7 @@
 		font-family: $serif;
 		font-weight: 700;
 		line-height: 1.1;
+		// line-height: 1;
 		font-size: 4.325rem;
 		@include respond-to(break2) {
 			font-size: 5.474rem;			
@@ -459,6 +460,11 @@
 		line-height: 1.333333; // 24/32
 	}
 	.content, .text-card {
+		position: relative; // hold abs images that live inside ol or ul
+		h2 {
+			font-weight: 600;
+			margin-bottom:0; // reset
+		}
 		h3 {
 			@include md-serif;
 		}
@@ -475,8 +481,11 @@
 			@include body-serif;
 			@include padding-bottom(2); // not margin because then when using columns, the margin carries over!!!, from http://stackoverflow.com/a/12503808
 		}
-		ul {
-			@include margin-bottom(1);
+		// common to ul and ol
+		li {
+			// line-height: 2;
+			list-style-position: inside;
+			@include margin-bottom(1.5);
 		}
 		.title {
 			@include sm-sans;
@@ -485,4 +494,127 @@
 			width: auto;
 			font-weight: 600;
 		}
+		ul {
+			@include padding-bottom(2); // not margin because then when using columns, the margin carries over!!!, from http://stackoverflow.com/a/12503808
+			@include margin-bottom(1);
+			li:not(.card) {
+				// bullets
+				&:before {
+					content: '\61';
+					font-family: 'vd-icons';
+					font-size:0.7rem;
+					display: inline-block;
+					position: relative;
+					bottom: 2px;
+					@include padding-right(1);
+					@include respond-to(break2) {
+						font-size:1rem;
+					}
+					@include respond-to(fullwidth) {
+						font-size:0.7rem;
+						bottom: 5px;
+
+					}
+				}
+			}
+		}
+		ol {
+			li {
+				list-style-type: decimal;
+			}
+			ol {
+				li {
+					list-style-type: upper-alpha;
+					@include padding-left(4);
+				}
+			}
+		}
+
+		// Images with captions
+		figure {
+			position: relative; // contain figcaption
+		}
+		figcaption {
+			position: absolute;
+			@include padding-top(1.5);
+			@include padding-right(1);
+			@include padding-bottom(1.5);
+			@include padding-left(2);
+			bottom: 0;
+			left: 0;
+			color: white;
+			// background-color: $black65; // formerly $black50
+			background-color: rgba($black65, 0.9);
+			@include sm-sans;
+			width: 100%;
+
+			cursor: pointer;
+
+			visibility: hidden; // initial hide
+			// @include width(2); // only show enough for plus sign
+			// @include height(2); // only show enough for plus sign
+			// display: none; // initial hide
+			// plus sign
+			@include respond-to(break2max) {
+				min-height: 4rem;
+			}
+			&:after {
+				display: block;
+				content: "+";
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				background-color: $black65; // formerly $black50
+				color: white;
+				// @include padding-top(0);
+				@include padding-right(0.5);
+				@include padding-bottom(0.8);
+				@include padding-left(0.5);
+				@include margin-top(-5);
+				@include sans-plus-icon;
+				line-height: 0.8 !important;
+				visibility: visible; // initial show, from http://stackoverflow.com/a/4912823/4504073
+				@include respond-to(break2max) {
+					width: 4rem;
+					height: 4rem;
+					font-size: 3rem;
+					text-align: center;
+					padding-top: 0.5rem;
+				}
+			}
+			// minus sign. Need to use other pseudo element b/c chrome not updating content from :after
+			&.minus-sign:after {
+				display: none;
+			}
+			&.minus-sign:before {
+				content: "–";
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				@include right(0.5);
+				// background-color: $black65; // formerly $black50
+				color: white;
+				// @include padding-top(0);
+				@include padding-right(0.2);
+				@include padding-bottom(0.8);
+				@include padding-left(0.5);
+				@include margin-top(-5);
+				@include sans-plus-icon;
+				line-height: 0.8 !important;
+				visibility: visible; // initial show, counteracts parent visiblity hidden. From http://stackoverflow.com/a/4912823/4504073
+				@include respond-to(break2max) {
+					width: 4rem;
+					height: 4rem;
+					font-size: 3rem;
+					text-align: center;
+					padding-top: 0.5rem;
+				}
+			}
+		}
+		// ol, ul {
+		// 	figure {
+		// 		// position: absolute;
+		// 		@include margin-left(-5);
+		// 	}
+		// }
 	}

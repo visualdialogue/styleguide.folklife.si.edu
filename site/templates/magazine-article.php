@@ -12,12 +12,18 @@
         </ul>
         <div class="content">
           <?php echo $page->contents()->kt(); ?>
+          <div class="references">
+            <h2>References</h2>
+            <?php echo $page->references()->kt(); ?>
+          </div>
           <?php snippet('disqus')         ; ?>
         </div>
       </article>
     </section>
     <aside class="sidebar col-sm-4 blog-sidebar">
       <?php snippet('sidebar-audio'); ?>
+      <?php snippet('card', array('card' => $pages->find('explore')->children()->find('videos')->children()->find('music-of-central-asia-and-the-aga-khan-music-initiative'), 'card_classes' => 'sidebar-video' )); ?>
+      <?php snippet('card', array('card' => $pages->find('explore')->children()->find('sounds')->children()->find('album-covers'), 'card_classes' => 'sidebar-album' )); ?>
       <?php snippet('blog-related-content', array('orientation' => 'vertical', 'limit' => 3)); ?>
     </aside>
   </div>

@@ -11,10 +11,12 @@
     <div class="details-inner">
       <div class="tag">
         <?php echo $card->category(); ?></div>
+      <?php if(isset($excerpt)): ?>
       <div class="description link-underline">
         <p>
           <?php echo excerpt($card->copy()->kt(), $excerpt, 'words'); ?></p>
       </div>
+      <?php endif; ?>
     </div>
   </div>
 </li>

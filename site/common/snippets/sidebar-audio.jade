@@ -2,7 +2,11 @@
 
 .sidebar-audio
 	.tag Audio
-	.sidebar-title Children’s Music from Around the World
+	-if (isset($title)):
+		.sidebar-title!= $title
+	-else:
+		.sidebar-title Children’s Music from Around the World
+	-endif
 	ul.row
 		-snippet('card-horizontal', array('card' => $album, 'card_classes' => 'col-xs-12 sidebar-card', 'image_col' => 'col-sm-6', 'details_col' => 'col-sm-6', 'artist' => true ))
 

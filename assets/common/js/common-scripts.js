@@ -385,6 +385,31 @@ $(document).ready(function () {
 		};
 	};
 
+/*********************
+* Show figcaption
+* When click +
+*********************/
+	// for any program page image
+	if (site.$body.hasClass('program-page') || site.$body.hasClass('program-category-page') || site.$body.hasClass('lesson-plan-page')) {
+		var $figcaption = $('.container').find('figcaption'); // get all figures on the page
+		console.log('figure loaded');
+		// if click on figure, show figcaption
+		// important that pointer-events have been set to none for <figure> This allows us to listen to :after element
+		$figcaption.on('click', function() {
+			console.log('show caption');
+			$this = $(this); // cache var
+			if($this.css('visibility') == 'hidden') { // if hidden, show
+				$this.css('visibility', 'visible');
+				$this.addClass('minus-sign');// add minus sign
+				// $this.attr('data-content');// add minus sign
+			}
+			else { // else hide
+				$this.css('visibility', 'hidden');
+				$this.removeClass('minus-sign');// add minus sign
+			}
+		})
+	}
+
 /**********
 * Match Heights
 * from https://github.com/liabru/jquery-match-height

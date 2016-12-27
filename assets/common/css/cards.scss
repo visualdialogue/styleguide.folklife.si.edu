@@ -340,7 +340,7 @@ a.details {
 	.tag {
 		// counteract line height of first line for padding
 		// due to line height. to make spacing accurate with padding above
-		margin-top:-0.5rem;
+		// margin-top:-0.5rem;
 		@include respond-to(break2) {margin-top:-0.28125vw;}
 		@include respond-to(fullwidth) {margin-top:-0.5rem;}
 	}
@@ -431,7 +431,9 @@ a.details {
 		}
 		.details {
 			@include sm-sans;
-			padding-left:0;
+			@include respond-to(fullwidth) {
+				padding-left:0;
+			}
 		}
 		
 		.author, .date {

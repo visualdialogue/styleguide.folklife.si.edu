@@ -60,6 +60,9 @@ fields:
   contents:
     label: Text
     type:  textarea
+  references:
+    label: References
+    type: textarea
   tags:
     label: Tags
     type: tags

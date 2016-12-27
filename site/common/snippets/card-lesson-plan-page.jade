@@ -1,0 +1,31 @@
+//- use thumbnail if it’s set in panel
+-if ('' != $card->thumbnail_img()):
+	-$image = $card->image($card->thumbnail_img())
+- elseif($src = $card->image()):
+	-$image = $src
+-endif
+
+li.card.blog-article-card.col-xs-12(class="<? if ($card->type() == 'video') echo 'video-card' ?> <? if (isset($card_classes)) echo $card_classes ?>")
+	.details
+		.details-inner
+			.tag!= $card->category()
+
+			//- if subtitle, group with title for correct highlighting
+			-if('' != $card->subtitle()):
+				.title!= $card->title(), ': ', $card->subtitle()
+			-else:
+				.title!= $card->title()
+			-endif
+
+			.author!= 'Designed by: ', $card->author()
+			.author.author-location University of Washington
+	.image
+		a(href="<?= $card->url() ?>")
+			img(src="<?= $image->url() ?>")
+	.video(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= excerpt($card->copy(), 25, "words") ?> <a href=\'#\'>more</a>')
+		.center-box
+			.modal-trigger
+				img(src="<?= $image->url() ?>")
+			.icon-play-button.video-icon-play-button.icon-stack
+				.icon-circle
+				.icon-play

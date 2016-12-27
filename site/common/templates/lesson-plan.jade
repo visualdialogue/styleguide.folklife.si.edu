@@ -1,0 +1,78 @@
+-snippet('header')
+
+#navspacer.navspacer
+
+-snippet('title-bar', array('title' => 'Learn', 'link' => $pages->find('learn')->url()))
+
+.container
+	.row
+		section.first-section.article-section.col-sm-7
+			article.article
+				// use card for correct video/image header
+				ul.row.cards.blog-feature
+					-snippet('card-lesson-plan-page', array('card' => $page, 'card_classes' => 'lesson-plan-top' ))
+
+				.content
+					!= $page->contents()->kt()
+
+					-snippet('disqus')         
+
+		div.col-sm-1.spacer
+		aside.sidebar.col-sm-4.blog-sidebar
+			.row
+				.buy-button.col-sm-7
+					.button-inner
+						span.title Download PDF
+			.row
+				.lesson-info.sidebar-section.col-sm-12
+					h3.sidebar-section-title Lesson Info
+					-if('' != $page->year_released()):
+						h4.year-released Year Released
+						.copy!= $page->year_released()
+					-endif
+					-if('' != $page->suggested_grade_levels()):
+						h4 Suggested Grade Levels
+						.copy!= $page->suggested_grade_levels()
+					-endif
+					-if('' != $page->country()):
+						h4 Country
+						.copy!= $page->country()
+					-endif
+					-if('' != $page->region()):
+						h4 Region
+						.copy!= $page->region()
+					-endif
+					-if('' != $page->culture_group()):
+						h4 Culture Group
+						.copy!= $page->culture_group()
+					-endif
+					-if('' != $page->genre()):
+						h4 Genre
+						.copy!= $page->genre()
+					-endif
+					-if('' != $page->instruments()):
+						h4 Instruments
+						.copy!= $page->instruments()
+					-endif
+					-if('' != $page->language()):
+						h4 Language
+						.copy!= $page->language()
+					-endif
+					-if('' != $page->co_curricular_areas()):
+						h4 Co-curricular Areas
+						.copy!= $page->co_curricular_areas()
+					-endif
+					-if('' != $page->national_standards()):
+						h4 National Standards
+						.copy!= $page->national_standards()
+					-endif
+					-if('' != $page->prerequisites()):
+						h4 Prerequisites
+						.copy!= $page->prerequisites()
+					-endif
+
+			-snippet('sidebar-audio', array('title' => 'Traditional Music of Botswana'))
+
+			-snippet('folkways-suggests', array())
+
+-snippet('footer')
