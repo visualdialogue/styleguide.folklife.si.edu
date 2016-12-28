@@ -12,7 +12,7 @@
 	}
 	.program-category-page {
 		.section-title {
-			@include margin-top(2);
+			@include margin-top(-0.8);
 			@include margin-bottom(0);
 		}
 		.content .card {
@@ -86,7 +86,8 @@
 			// height:6rem;
 			height: auto;
 			@include respond-to(break2) {height:8.7vw;}
-			@include respond-to(fullwidth) {height:13.7rem;}
+			// @include respond-to(fullwidth) {height:13.7rem;}
+			@include respond-to(fullwidth) {height:12rem;}
 		}
 		.page-title {
 			color: white;
@@ -95,6 +96,9 @@
 			margin: 0;
 			background-image:url(/assets/images/hr/hr--thin4.png);
 			// width: 50%;
+		}
+		.thin-hr-svg {
+			margin: 0;
 		}
 		.subtitle-height {
 			// height:5rem;
@@ -115,6 +119,13 @@
 			@include respond-to(break2) {margin-top:0.2vw;}
 			@include respond-to(fullwidth) {margin-top:0.5rem;}
 		}
+		// .thin-hr-svg {
+		// 	// make inline with js, from http://stackoverflow.com/questions/24933430/img-src-svg-changing-the-fill-color
+		// 	// color: blue;
+		// 	path {
+		// 		fill: $basque-green;
+		// 	}
+		// }
 		.basque {
 			background-color: $basque-red;
 		}
@@ -166,7 +177,7 @@
 			@include margin-bottom(4);
 		}
 		.ms-sidebar-section-title {
-			@include sidebarBorderTop;
+			@include border(top, 1px, $basque-green)
 			@include md-sans;
 			color: $black70;
 			border-color: $fs-green;
@@ -177,7 +188,7 @@
 				text-transform: uppercase;
 			}
 			&:last-of-type {
-				@include sidebarBorderBottom;
+				@include border(bottom, 1px, $basque-green)
 				border-color: $fs-green;
 			}
 			a {
@@ -187,16 +198,23 @@
 				@include padding-left(1.5);
 			}
 		}
+		.top-border-card:before {
+			border-color: $basque-green;
+		}
+
 	}
 	.sidebar-card {
-		
 		.details-inner {
 			@include padding-top(1);
 		}
 
 	}
 	.ms-section {
-		@include margin-bottom(4);
+		// @include margin-bottom(4);
+		margin-bottom:0;
+		.card {
+			@include margin-bottom(2.5);
+		}
 		&-copy {
 			@include margin-top(-0.5);	
 		}
@@ -221,6 +239,15 @@
 		}
 		.image {
 			cursor: initial;
+		}
+		.details-inner {
+			padding-top:0 !important;
+		}
+		.thin-hr-svg {
+			@include margin-bottom(0.5);
+			path {
+				fill: $basque-green;
+			}
 		}
 
 	}

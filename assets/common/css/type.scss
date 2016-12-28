@@ -30,6 +30,7 @@
 		font-weight: 700;
 		// line-height: 0.95; // smaller for folklife dive deep
 		line-height: 1.1; // 42/46
+		line-height: 1; // dec 2
 		font-size: 2.7rem;
 		@include respond-to(break2) {
 			font-size: 2.5vw;
@@ -161,9 +162,11 @@
 			font-size: 1.2vw;
 		}
 		@include respond-to(fullwidth) {
+			line-height: 1.12; // 18/20
 	  		// font-size: 2rem;
 	  		// font-size: 2.107rem;
-	  		font-size: 1.873rem;
+	  		// font-size: 1.873rem;
+	  		font-size: 1.8rem;
 		}
 	}
 	.sm-sans {@include sm-sans;}
@@ -213,6 +216,9 @@
 		letter-spacing: normal;
 		text-transform: initial;
 		@include margin-top(0.5);
+	}
+	@mixin byline {
+		@include sm-sans;
 	}
 
 	// search bar
@@ -435,18 +441,20 @@
 		font-family: $sansWide;
 		color: $black65;
 		font-weight: 300;
-		letter-spacing: 1px;
 		margin-bottom: 0;
 		font-size: 1.2rem;
 		position: relative; // keep from being hidden under highlighted title
 		line-height: 1.1;
+		letter-spacing: 0.5px;
 		@include respond-to(break2) {
 			line-height: 1.4;
 			// font-size: 1.4rem;
 			font-size: 1.05vw;
 			margin-bottom: 0.4vw;
+			letter-spacing: 0.5px;
 		}
 		@include respond-to(fullwidth) {
+			letter-spacing: 1px;
 			// font-size: 1.4rem;
 			font-size: 1.665rem;
 			margin-bottom: 0;

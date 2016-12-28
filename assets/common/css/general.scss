@@ -256,6 +256,7 @@
 		}
 		li:last-of-type {
 			border-bottom: none;
+			@include margin-bottom(1.7);
 		}
 		.sidebar-highlight {
 			&.active, &:hover {
@@ -268,7 +269,7 @@
 		}
 	}
 	.sidebar-section {
-		@include margin-bottom(4);
+		@include margin-bottom(2.4);
 	}
 	hr {
 		margin: 0; // bootstrap reset
@@ -295,11 +296,8 @@
 		@include respond-to(break2) {margin-bottom:1.3vw;}
 		@include respond-to(fullwidth) {margin-bottom:2rem;}
 	}
-	.thin-hr {
-		height:5px;
-		background-image:url(/assets/images/hr/hr--thin.png);
-		background-repeat: no-repeat;
-		background-size: 100%;
+	.thin-hr, .thin-hr-svg {
+		
 		margin-top: 1vw;
 		margin-bottom: 3vw;
 		@include respond-to(break2) {
@@ -309,6 +307,20 @@
 		@include respond-to(fullwidth) {
 			margin-top:0.8rem;
 			margin-bottom:3.75rem;
+		}
+	}
+	.thin-hr {
+		height:5px;
+		background-image:url(/assets/images/hr/hr--thin.png);
+		background-repeat: no-repeat;
+		background-size: 100%;
+	}
+	.thin-hr-svg {
+		// make inline with js, from http://stackoverflow.com/questions/24933430/img-src-svg-changing-the-fill-color
+		// color: blue;
+		path {
+			fill: $fs-teal;
+			fill: white;
 		}
 	}
 	.mobile-only-hr {

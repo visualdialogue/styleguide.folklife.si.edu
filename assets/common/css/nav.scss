@@ -147,7 +147,8 @@
 		@include respond-to(break2full) {
 			margin-top: 1.5rem;
 			margin-top: 1rem;
-			width: 175px;
+			// width: 175px;
+			width: 195px;
 		}
 
 		@include respond-to(fullwidth) {
@@ -200,6 +201,7 @@
 		// height: 32px;
 		// width: 25vw;
 		// height: 25vw;
+		margin-top: 1rem;			
 		width: 100px;
 		height: 100px;
 		@include respond-to(break2) {
@@ -209,13 +211,14 @@
 			// height: 11vw;
 			// width: 100px;
 			// height: 100px;
+			margin-top: 1.5rem;			
 			width: 150px;
 			height: 150px;
 		}
 		@include respond-to(fullwidth) {
 			// width: 420px;
 			// height: 70px;
-			
+			margin-top: 2rem;			
 			width: 175px;
 			height: 175px;
 		}
@@ -265,6 +268,12 @@
 	// 		display: block;
 	// 	}
 	// }
+	.one-line-logos, .block-logos {
+		position: absolute;
+	}
+	.logo-wrapper {
+		margin-top:0;
+	}
 	.one-line-logos {
 		display: none;
 	}
@@ -278,20 +287,20 @@
 		}	
 		// show logo container and logos inside will have rules on when to show or not
 		.one-line-logos {
-			display: block;
+			// display: block;
 		}
 	}
 	.navbar.is-smaller, .navbar.has-one-line-logo {
 		.block-logos {
-			display: none;
+			// display: none;
 		}
 	}
 
 	.navbar.has-one-line-logo, .navbar.is-smaller {
 		.block-logo	{
-			display: none;
+			// display: none;
 		}
-		.one-line-logo {display: block;}
+		// .one-line-logo {display: block;}
 		// @include respond-to(break2) {
 		// 	.block-logo { top: -45%; }
 		// 	.folkways-logo { top: -35%; }

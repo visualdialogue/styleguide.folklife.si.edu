@@ -20,7 +20,7 @@
       <div class="tag">
         <?php echo $card->festival(), ', ', $card->program(); ?></div><a href="<?= $card->url() ?>" class="high title"><span class="light"><span class="er">
             <?php echo htmlspecialchars($card->title(), ENT_QUOTES, 'UTF-8'); ?></span></span></a>
-      <div class="date">
+      <div class="byline">
         <?php echo $card->date('F jS, Y'), e('' != $card->author(), ' | ' . $card->author()), ' | 0 comments'; ?></div>
       <div class="description link-underline">
         <p>

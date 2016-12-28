@@ -1,5 +1,5 @@
 
-<div class="blog-categories">
+<div class="blog-categories sidebar-section">
   <h2 class="sidebar-section-title">Categories</h2>
   <ul class="blog-categories">
     <li class="sidebar-item sidebar-highlight"><a>Traditional Knowledge</a></li>

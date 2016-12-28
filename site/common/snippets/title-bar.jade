@@ -14,7 +14,8 @@
 			h1.page-title= $page->title()
 		-endif
 	-if (isset($subtitle)):
-	hr.thin-hr
+	//- hr.thin-hr
+	img(class="thin-hr-svg svg" src="/assets/images/icons/cfch_thinline.svg")
 	.container.subtitle-height
 		.page-subtitle= $subtitle
 	-endif

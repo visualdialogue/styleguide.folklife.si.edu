@@ -1,5 +1,5 @@
 
-<div class="related-content">
+<div class="related-content sidebar-section">
   <h2 class="sidebar-section-title related-content-title">Related Content</h2>
   <?php if($page->template() == 'blog-article'): ?>
   <!-- blog article sidebar-->

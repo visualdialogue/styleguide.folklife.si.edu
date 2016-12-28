@@ -53,6 +53,7 @@ a.details {
 }
 .date {@include date;}
 .date-sm {@include date-sm;}
+.byline {@include byline;}
 
 
 /* #textbox
@@ -358,7 +359,8 @@ a.details {
 	.horizontal-card {
 		.details-inner {
 			padding-left:$small-gutter;
-			@include respond-to(break2) {padding-left:$full-gutter;}
+			// @include respond-to(break2) {padding-left:$full-gutter;}
+			@include respond-to(break2) {padding-left:0;}
 			@include respond-to(fullwidth) {padding-left:0;}
 		}
 	}
@@ -472,7 +474,7 @@ a.details {
 		.title {
 			@include sm-sans;
 			font-weight: 700;
-			line-height: 1;
+			// line-height: 1;
 
 			// @include margin-bottom(2);
 		}

@@ -1,5 +1,5 @@
 
-<div class="blog-most-popular">
+<div class="blog-most-popular sidebar-section">
   <h3 class="sidebar-section-title">Most Popular</h3>
   <ul>
     <?php $n=0; ?>

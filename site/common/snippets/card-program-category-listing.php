@@ -17,8 +17,10 @@
     <div class="details col-sm-5">
       <div class="details-inner"><a href="<?= $card->url() ?>" class="high subtitle"><span class="light"><span class="er">
               <?php echo htmlspecialchars($card->subtitle(), ENT_QUOTES, 'UTF-8'); ?></span></span></a>
+        <?php if('' != $card->byline()): ?>
         <div class="byline">
           <?php echo $card->byline(); ?></div>
+        <?php endif; ?>
         <div class="description link-underline blurb">
           <?php echo $card->blurb()->kt(); ?></div>
         <?php snippet('more-link', array('link' => $card->url())); ?>

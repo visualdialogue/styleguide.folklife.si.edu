@@ -17,7 +17,9 @@ li.card.horizontal-card.col-xs-12
 		.details.col-sm-5
 			.details-inner
 				a.high(href="<?= $card->url() ?>").subtitle: span.light: span.er= $card->subtitle()
-				.byline!= $card->byline()
+				-if('' != $card->byline()):
+					.byline!= $card->byline()
+				-endif
 				
 				.description.link-underline.blurb!= $card->blurb()->kt()
 

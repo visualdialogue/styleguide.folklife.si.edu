@@ -14,8 +14,7 @@
       <?php echo htmlspecialchars($page->title(), ENT_QUOTES, 'UTF-8'); ?></h1>
     <?php endif; ?>
   </div>
-  <?php if (isset($subtitle)): ?>
-  <hr class="thin-hr"/>
+  <?php if (isset($subtitle)): ?><img src="/assets/images/icons/cfch_thinline.svg" class="thin-hr-svg svg"/>
   <div class="container subtitle-height">
     <div class="page-subtitle">
       <?php echo htmlspecialchars($subtitle, ENT_QUOTES, 'UTF-8'); ?></div>

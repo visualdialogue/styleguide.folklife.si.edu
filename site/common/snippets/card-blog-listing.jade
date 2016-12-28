@@ -23,7 +23,7 @@ li.card.horizontal-card.col-xs-12.top-border-card
 
 				a.high(href="<?= $card->url() ?>").title: span.light: span.er= $card->title()
 
-				.date!= $card->date('F jS, Y'), e('' != $card->author(), ' | ' . $card->author()), ' | 0 comments'
+				.byline!= $card->date('F jS, Y'), e('' != $card->author(), ' | ' . $card->author()), ' | 0 comments'
 				
 				.description.link-underline
 					p!= excerpt($card->copy()->kt(), 25, 'words')
