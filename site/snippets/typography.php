@@ -33,7 +33,7 @@
   <!-- Typefaces-->
   <div class="sub-section">
     <div class="typeface codeblock"><a id="serif" class="anchor-link"></a>
-      <div class="row type-title-wrapper">
+      <div class="row type-title-wrapper first-type-title-wrapper">
         <hr/>
         <div class="col-sm-10 lg-serif type-title">Large Serif Title</div>
         <?php snippet('show-sass'); ?>
@@ -148,7 +148,7 @@
   </div>
   <div class="sub-section">
     <div class="typeface codeblock"><a id="sans" class="anchor-link"></a>
-      <div class="row type-title-wrapper">
+      <div class="row type-title-wrapper first-type-title-wrapper">
         <hr/>
         <div class="col-sm-10 xl-sans-semi type-title">Extra Large Sans Title</div>
         <?php snippet('show-sass'); ?>
@@ -415,7 +415,7 @@
       </div>
     </div>
     <div class="typeface codeblock">
-      <div class="row type-title-wrapper">
+      <div class="row type-title-wrapper first-type-title-wrapper">
         <hr/>
         <div class="col-sm-10 lg-magazine-title type-title">Large Folkways Magazine Title</div>
         <?php snippet('show-sass'); ?>
@@ -523,7 +523,7 @@
           </div>
         </div>
         <div class="typeface codeblock">
-          <div class="row type-title-wrapper">
+          <div class="row type-title-wrapper first-type-title-wrapper">
             <hr/>
             <div class="col-sm-10 body-serif type-title">Serif Body</div>
             <?php snippet('show-sass'); ?>
@@ -565,8 +565,8 @@
           </div>
         </div>
         <!-- HWT Unit Gothic-->
-        <div class="typeface codeblock">
-          <div class="row type-title-wrapper">
+        <div class="typeface codeblock"><a id="slab" class="anchor-link"></a>
+          <div class="row type-title-wrapper first-type-title-wrapper">
             <hr/>
             <div class="col-sm-10 xl-slab type-title">Extra Large Slab</div>
             <?php snippet('show-sass'); ?>
@@ -675,7 +675,7 @@
           </div>
         </div>
         <div class="typeface codeblock">
-          <div class="row type-title-wrapper">
+          <div class="row type-title-wrapper first-type-title-wrapper">
             <hr/>
             <div class="col-sm-10 type-title category-tag-type">Category Tag</div>
             <?php snippet('show-sass'); ?>

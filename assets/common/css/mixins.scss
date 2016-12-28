@@ -115,10 +115,10 @@
  //  }
 
  @mixin sidebarBorderTop { 
- 	border-top: 1px solid $black65; // formerly $black50 
+ 	border-top: 1px solid $black50;
  }
  @mixin sidebarBorderBottom { 
- 	border-bottom: 1px solid $black65; // formerly $black50 
+ 	border-bottom: 1px solid $black50;
  }
 
  /* Clear left for correct alignment of cards in rows

@@ -7,7 +7,7 @@
 }
 
 .border {
-	border-top: 1px solid $black40; // formerly $black30
+	border-top: 1px solid $black30;
 }
 .inset-border {
 	margin-left:2rem;
@@ -253,8 +253,8 @@ a.details {
 				left:$small-gutter;
 				right:$small-gutter;
 				@include respond-to(break2) {
-					// left:$medium-gutter;
-					// right:$medium-gutter;
+					left:$medium-gutter;
+					right:$medium-gutter;
 				}
 				@include respond-to(fullwidth) {
 					left:2rem; // folklife talkstory
@@ -333,7 +333,8 @@ a.details {
 	}
 	.half-section .more-link {
 		// right: 2.7%; // double that of parent padding as percent
-		@include right(4);
+		// @include right(4);
+		@include right(2);
 	}
 
 /* #category
@@ -508,7 +509,7 @@ a.details {
 		}
 		.price {
 			@include sm-sans;
-			color: $black65; // formerly $black70
+			color: $black70;
 			text-align: center;
 		}
 	}
@@ -528,7 +529,7 @@ a.details {
 	.top-border-card {
 		&:before {
 			content: '';
-			border-top: 1px solid $black40; // formerly $black30
+			border-top: 1px solid $black30; // formerly
 			// border-top: 1px solid blue;
 			width: 100%;
 			display: block;
@@ -540,7 +541,7 @@ a.details {
 			padding-bottom: 0;
 		}
 		.details-inner {
-			border: 2px solid $black20; // formerly $black15
+			border: 2px solid $black15;
 			@include padding-left(2); // padding on left by default
 			// @include padding-le
 			@include padding-bottom(2); // padding on left by default

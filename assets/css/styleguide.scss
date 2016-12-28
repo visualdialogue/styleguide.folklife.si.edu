@@ -34,7 +34,6 @@
   @import "../common/css/cards.scss";
   @import "../common/css/audio.scss";
 
-
 /* #links
 -------------------------------------------------- */
 	a {
@@ -44,11 +43,10 @@
 		}
 	}
 
-
 /* #general
 -------------------------------------------------- */
 	.sub-section {
-		@include border(top);
+		// @include border(top);
 		@include margin-top(4);
 	}
 
@@ -74,9 +72,10 @@
 -------------------------------------------------- */
 	.grid-item {
 		&-inner {
-			background-color: $black80;
+			// background-color: $black80;
+			background-color: $black50;
 			@include height(9);
-			@include margin-bottom(2);
+			@include margin-bottom(4);
 
 			// Reveal more info
 			&.hidden-content:hover {
@@ -116,7 +115,11 @@
 		}
 	}
 	.custom-grid-item-inner {
-		background-color: $black40;
+		// background-color: $black40;
+		background-color: $black20;
+		.copy {
+			color: $copy;
+		}
 	}
 	.custom-grid-container {
 		@include margin-bottom(4);
@@ -187,7 +190,6 @@
 	.color-ffe06a { background-color: #ffe06a;}
 	.color-eea557 { background-color: #eea557;}
 	.color-de4049 { background-color: #de4049;}
-
 
 /* #code
 -------------------------------------------------- */
@@ -295,6 +297,10 @@
 	}
 	.type-title-wrapper {
 		@include margin-top(4);
+		@include border(top);
+	}
+	.first-type-title-wrapper {
+		@include border(top, 4px);
 	}
 	.type-title {
 		@include margin-bottom(2);
@@ -317,7 +323,7 @@
 -------------------------------------------------- */
 	.cards-section {
 		.codeblock {
-			@include border(top);
+			// @include border(top);
 			@include margin-bottom(4);
 		}
 		.show-code {

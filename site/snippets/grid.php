@@ -5,7 +5,7 @@
 </section>
 <div class="grid-item">
   <div class="grid-item-inner">
-    <div class="copy">Full width</div>
+    <div class="copy">Full banner width</div>
   </div>
 </div>
 <!-- Bootstrap grids-->
@@ -153,17 +153,17 @@
       <div class="row">
         <div class="col-thirds">
           <div class="grid-item-inner custom-grid-item-inner hidden-content">
-            <div data-hover="(FL home Teach)" class="copy">.col-thirds</div>
+            <div data-hover="(FL home Teach)   (FW&nbsp;Magazine home)" class="copy">.col-thirds</div>
           </div>
         </div>
         <div class="col-thirds">
           <div class="grid-item-inner custom-grid-item-inner hidden-content">
-            <div data-hover="(FL home Teach)" class="copy">.col-thirds</div>
+            <div data-hover="(FL home Teach)   (FW&nbsp;Magazine home)" class="copy">.col-thirds</div>
           </div>
         </div>
         <div class="col-thirds">
           <div class="grid-item-inner custom-grid-item-inner hidden-content">
-            <div data-hover="(FL home Teach)" class="copy">.col-thirds</div>
+            <div data-hover="(FL home Teach)   (FW&nbsp;Magazine home)" class="copy">.col-thirds</div>
           </div>
         </div>
       </div>

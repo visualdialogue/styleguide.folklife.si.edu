@@ -38,51 +38,23 @@
   <div id="header-nav" class="header-nav">
     <div class="container">
       <ul class="header-nav-row row">
-        <li class="header-nav-main-item col-sm-2"> <a href="/colors" class="header-nav-title">Colors</a>
+        <li class="header-nav-main-item col-sm-2"> <a href="#grid" class="header-nav-title">Grid</a></li>
+        <li class="header-nav-main-item col-sm-2"> <a href="#colors" class="header-nav-title">Colors</a>
           <ul class="header-nav-list">
-            <li class="header-nav-sub-item"><a href="/colors#folklife">Folklife</a></li>
-            <li class="header-nav-sub-item"><a href="/colors#festival">Festival</a></li>
-            <li class="header-nav-sub-item"><a href="/colors#folkways">Folkways</a></li>
-            <li class="header-nav-sub-item"><a href="/colors#shades-of-black">Shades of Black</a></li>
+            <li class="header-nav-sub-item"><a href="#gray-palette">Grays</a></li>
+            <li class="header-nav-sub-item"><a href="#folklife-palette">Folklife Palette</a></li>
+            <li class="header-nav-sub-item"><a href="#folkways-palette">Folkways Palette</a></li>
+            <li class="header-nav-sub-item"><a href="#festival-palette">Festival Palette</a></li>
           </ul>
         </li>
-        <li class="header-nav-main-item col-sm-2"> <a href="/typography" class="header-nav-title">Typography</a>
+        <li class="header-nav-main-item col-sm-2"> <a href="#typography" class="header-nav-title">Typography</a>
           <ul class="header-nav-list">
-            <li class="header-nav-sub-item"><a href="/typography#serif">Serif</a></li>
-            <li class="header-nav-sub-item"><a href="/typography#sans">Sans</a></li>
-            <li class="header-nav-sub-item"><a href="/typography#slab-serif">Slab Serif</a></li>
+            <li class="header-nav-sub-item"><a href="#serif">Serif</a></li>
+            <li class="header-nav-sub-item"><a href="#sans">Sans</a></li>
+            <li class="header-nav-sub-item"><a href="#slab">Slab</a></li>
           </ul>
         </li>
-        <li class="header-nav-main-item col-sm-2"> <a href="/cards" class="header-nav-title">Cards</a>
-          <ul class="header-nav-list">
-            <li class="header-nav-sub-item">Video Standard</li>
-            <li class="header-nav-sub-item">Video Horizontal</li>
-            <li class="header-nav-sub-item">Audio</li>
-            <li class="header-nav-sub-item">Card Vertical</li>
-            <li class="header-nav-sub-item">Card Horizontal				</li>
-          </ul>
-        </li>
-        <li class="header-nav-main-item col-sm-2"> <a href="/specials" class="header-nav-title">Specials</a>
-          <ul class="header-nav-list">
-            <li class="header-nav-sub-item"><a href="/specials#email-signup">Email Signup</a></li>
-            <li class="header-nav-sub-item"><a href="/specials#become-a-member">Become a Member</a></li>
-            <li class="header-nav-sub-item"><a href="/specials#support">Support</a></li>
-          </ul>
-        </li>
-        <li class="header-nav-main-item col-sm-2"> <a href="/structure" class="header-nav-title">Structure</a>
-          <ul class="header-nav-list">
-            <li class="header-nav-sub-item"><a href="/framework#sections">Sections</a></li>
-            <li class="header-nav-sub-item"><a href="/framework#half-sections">Half Sections</a></li>
-            <li class="header-nav-sub-item"><a href="/framework#margins">Margins</a></li>
-            <li class="header-nav-sub-item"><a href="/framework#padding">Padding</a></li>
-          </ul>
-        </li>
-        <li class="header-nav-main-item col-sm-2"> <a href="/libraries" class="header-nav-title">Libraries</a>
-          <ul class="header-nav-list">
-            <li class="header-nav-sub-item"><a href="/libraries#bootstrap">Bootstrap</a></li>
-            <li class="header-nav-sub-item"><a href="/libraries#sass">SASS</a></li>
-          </ul>
-        </li>
+        <li class="header-nav-main-item col-sm-2"> <a href="#cards" class="header-nav-title">Cards</a></li>
       </ul>
     </div>
   </div>

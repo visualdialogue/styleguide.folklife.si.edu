@@ -21,7 +21,7 @@
 			padding: 0 40px;
 		}
 		.highlight-inner {
-			background-color: $black40; // formerly $black30
+			background-color: $black30;
 			// show highlight on mobile
 			padding: 15px;
 
@@ -233,11 +233,11 @@
 		}
 	}
 	.sidebar {
-		color: $black65; // formerly $black70	
+		color: $black70;
 		@include margin-bottom(6); // keep from footer
 		h3, &-section-title {
 			@include lg-sans;
-			color: $black65; // formerly $black50
+			color: $black50;
 			margin-top: 0;
 			// @include margin-bottom(1.1);
 			@include margin-bottom(0); // override default h3
@@ -247,7 +247,7 @@
 		h4, &-item-title {
 			@include mini-sans;
 			@include margin-top(0.6);
-			color: $black65; // formerly $black50
+			color: $black50;
 			margin: 0;
 		}
 		&-item {
@@ -263,7 +263,7 @@
 			}
 			// text stays same
 			a:hover {
-				color: $black65; // formerly $black70
+				color: $black70;
 			}
 		}
 	}
@@ -482,7 +482,7 @@
 		&-copy {
 			@include respond-to(break2max) {
 				font-size: 2.8vw;
-				// font-size: 3vw;
+				height: 10.5rem;
 			}
 			@include respond-to(break2) {
 				width: 46.45%; // 314px / 676px
@@ -509,6 +509,9 @@
 			padding: 3vw;
 			color: white;
 			text-align: center;
+			@include respond-to(break2max) {
+				height: 10.5rem;
+			}
 			@include respond-to(break2) {
 				padding: 0;
 				@include vertically-align-parent;
@@ -667,7 +670,6 @@
 		bottom: 0;
 		left: 0;
 		color: white;
-		// background-color: $black65; // formerly $black50
 		background-color: rgba($black65, 0.9);
 		@include sm-sans;
 		width: 100%;
@@ -688,7 +690,7 @@
 			position: absolute;
 			bottom: 0;
 			right: 0;
-			background-color: $black65; // formerly $black50
+			background-color: $black50;
 			color: white;
 			// @include padding-top(0);
 			@include padding-right(0.5);
@@ -716,7 +718,6 @@
 			bottom: 0;
 			right: 0;
 			@include right(0.5);
-			// background-color: $black65; // formerly $black50
 			color: white;
 			// @include padding-top(0);
 			@include padding-right(0.2);

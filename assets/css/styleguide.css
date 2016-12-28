@@ -4179,7 +4179,7 @@ iframe {
   font-size: 4.325rem; }
   @media only screen and (min-width: 53.25em) {
     .lg-serif {
-      font-size: 5.474rem; } }
+      font-size: 3.5vw; } }
   @media only screen and (min-width: 1560px) {
     .lg-serif {
       font-size: 6.158rem; } }
@@ -4187,14 +4187,14 @@ iframe {
 .md-serif {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
-  line-height: 0.95;
+  line-height: 1.1;
   font-size: 2.7rem; }
   @media only screen and (min-width: 53.25em) {
     .md-serif {
-      font-size: 3.844rem; } }
+      font-size: 2.5vw; } }
   @media only screen and (min-width: 1560px) {
     .md-serif {
-      font-size: 4.325rem; } }
+      font-size: 4.2rem; } }
 
 .sm-serif {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
@@ -4205,10 +4205,10 @@ iframe {
   @media only screen and (min-width: 53.25em) {
     .sm-serif {
       line-height: 1.143;
-      font-size: 2.4rem; } }
+      font-size: 1.8vw; } }
   @media only screen and (min-width: 1560px) {
     .sm-serif {
-      font-size: 2.7rem; } }
+      font-size: 2.8rem; } }
   @media only screen and (min-width: 53.25em) {
     .sm-serif {
       margin-bottom: 0.64vw; } }
@@ -4226,10 +4226,10 @@ iframe {
   @media only screen and (min-width: 53.25em) {
     .sm-serif-italic {
       line-height: 1.143;
-      font-size: 2.4rem; } }
+      font-size: 1.8vw; } }
   @media only screen and (min-width: 1560px) {
     .sm-serif-italic {
-      font-size: 2.7rem; } }
+      font-size: 2.8rem; } }
   @media only screen and (min-width: 53.25em) {
     .sm-serif-italic {
       margin-bottom: 0.64vw; } }
@@ -4244,7 +4244,7 @@ iframe {
   font-size: 1.896rem; }
   @media only screen and (min-width: 53.25em) {
     .body-serif {
-      font-size: 2.133rem; } }
+      font-size: 1.5vw; } }
   @media only screen and (min-width: 1560px) {
     .body-serif {
       font-size: 2.4rem; } }
@@ -4259,7 +4259,7 @@ iframe {
   font-size: 2.37rem; }
   @media only screen and (min-width: 53.25em) {
     .xl-sans {
-      font-size: 3rem;
+      font-size: 1.9vw;
       line-height: 1.2; } }
   @media only screen and (min-width: 1560px) {
     .xl-sans {
@@ -4272,7 +4272,7 @@ iframe {
   font-weight: 600; }
   @media only screen and (min-width: 53.25em) {
     .xl-sans-semi {
-      font-size: 3rem;
+      font-size: 1.9vw;
       line-height: 1.2; } }
   @media only screen and (min-width: 1560px) {
     .xl-sans-semi {
@@ -4285,7 +4285,7 @@ iframe {
   font-size: 2.107rem; }
   @media only screen and (min-width: 53.25em) {
     .lg-sans {
-      font-size: 2.667rem; } }
+      font-size: 1.9vw; } }
   @media only screen and (min-width: 1560px) {
     .lg-sans {
       font-size: 3rem; } }
@@ -4298,7 +4298,7 @@ iframe {
   font-weight: 600; }
   @media only screen and (min-width: 53.25em) {
     .lg-sans-semi {
-      font-size: 2.667rem; } }
+      font-size: 1.9vw; } }
   @media only screen and (min-width: 1560px) {
     .lg-sans-semi {
       font-size: 3rem; } }
@@ -4310,7 +4310,7 @@ iframe {
   font-size: 1.873rem; }
   @media only screen and (min-width: 53.25em) {
     .md-sans {
-      font-size: 2.107rem; } }
+      font-size: 1.6vw; } }
   @media only screen and (min-width: 1560px) {
     .md-sans {
       font-size: 2.37rem; } }
@@ -4323,7 +4323,7 @@ iframe {
   font-weight: 600; }
   @media only screen and (min-width: 53.25em) {
     .md-sans-semi {
-      font-size: 2.107rem; } }
+      font-size: 1.6vw; } }
   @media only screen and (min-width: 1560px) {
     .md-sans-semi {
       font-size: 2.37rem; } }
@@ -4335,7 +4335,7 @@ iframe {
   font-size: 1.48rem; }
   @media only screen and (min-width: 53.25em) {
     .sm-sans {
-      font-size: 1.665rem; } }
+      font-size: 1.2vw; } }
   @media only screen and (min-width: 1560px) {
     .sm-sans {
       font-size: 1.873rem; } }
@@ -4347,7 +4347,7 @@ iframe {
   font-size: 1.48rem; }
   @media only screen and (min-width: 53.25em) {
     .caption-sans {
-      font-size: 1.665rem; } }
+      font-size: 1.2vw; } }
   @media only screen and (min-width: 1560px) {
     .caption-sans {
       font-size: 1.873rem; } }
@@ -4360,7 +4360,7 @@ iframe {
   font-weight: 600; }
   @media only screen and (min-width: 53.25em) {
     .sm-sans-semi {
-      font-size: 1.665rem; } }
+      font-size: 1.2vw; } }
   @media only screen and (min-width: 1560px) {
     .sm-sans-semi {
       font-size: 1.873rem; } }
@@ -4368,11 +4368,14 @@ iframe {
 .body-sans {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
-  line-height: 1.35;
+  line-height: 1.4;
   font-size: 1.873rem; }
+  @media only screen and (min-width: 53.25em) {
+    .body-sans {
+      font-size: 1.25vw; } }
   @media only screen and (min-width: 1560px) {
     .body-sans {
-      font-size: 2.107rem; } }
+      font-size: 2rem; } }
 
 .mini-sans {
   font-family: "acumin-pro", Arial, sans-serif;
@@ -4381,11 +4384,11 @@ iframe {
   text-transform: uppercase; }
   @media only screen and (min-width: 53.25em) {
     .mini-sans {
-      line-height: 1.3;
-      font-size: 1.316rem; } }
+      font-size: 1vw;
+      line-height: 1.3; } }
   @media only screen and (min-width: 1560px) {
     .mini-sans {
-      font-size: 1.665rem; } }
+      font-size: 1.6rem; } }
 
 /* Slab
 * Unit Gothic 717 and 718 from Typekit
@@ -4457,7 +4460,8 @@ iframe {
   font-size: 2.622rem; }
   @media only screen and (min-width: 53.25em) {
     .lg-magazine-title {
-      font-size: 3.319rem; } }
+      font-size: 3.319rem;
+      font-size: 2.95vw; } }
   @media only screen and (min-width: 1560px) {
     .lg-magazine-title {
       font-size: 4.2rem;
@@ -4470,7 +4474,7 @@ iframe {
   font-size: 1.842rem; }
   @media only screen and (min-width: 53.25em) {
     .md-magazine-title {
-      font-size: 2.95rem; } }
+      font-size: 2.4vw; } }
   @media only screen and (min-width: 1560px) {
     .md-magazine-title {
       font-size: 3.733rem; } }
@@ -4489,7 +4493,7 @@ iframe {
       margin-bottom: 1rem; } }
   @media only screen and (min-width: 53.25em) {
     .sm-magazine-title {
-      font-size: 2.33rem; } }
+      font-size: 1.9vw; } }
   @media only screen and (min-width: 1560px) {
     .sm-magazine-title {
       font-size: 2.95rem; } }
@@ -4524,13 +4528,12 @@ iframe {
   @media only screen and (min-width: 53.25em) {
     .category-tag-type {
       line-height: 1.4;
-      font-size: 1.4rem;
+      font-size: 1.05vw;
       margin-bottom: 0.4vw; } }
   @media only screen and (min-width: 1560px) {
     .category-tag-type {
       font-size: 1.665rem;
-      margin-bottom: 0;
-      line-height: 1.4; } }
+      margin-bottom: 0; } }
 
 .category-tag-bold-type {
   text-transform: uppercase;
@@ -4546,13 +4549,12 @@ iframe {
   @media only screen and (min-width: 53.25em) {
     .category-tag-bold-type {
       line-height: 1.4;
-      font-size: 1.4rem;
+      font-size: 1.05vw;
       margin-bottom: 0.4vw; } }
   @media only screen and (min-width: 1560px) {
     .category-tag-bold-type {
       font-size: 1.665rem;
-      margin-bottom: 0;
-      line-height: 1.4; } }
+      margin-bottom: 0; } }
 
 /* CSS type helper classes
 -------------------------------------------------- */
@@ -4564,18 +4566,31 @@ body {
   position: relative; }
   .content h2, .text-card h2 {
     font-weight: 600;
-    margin-bottom: 0; }
+    margin-bottom: 0.64rem; }
+    @media only screen and (min-width: 53.25em) {
+      .content h2, .text-card h2 {
+        margin-bottom: 1.024vw; } }
+    @media only screen and (min-width: 1560px) {
+      .content h2, .text-card h2 {
+        margin-bottom: 1.6rem; } }
   .content h3, .text-card h3 {
     font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
     font-weight: 700;
-    line-height: 0.95;
-    font-size: 2.7rem; }
+    line-height: 1.1;
+    font-size: 2.7rem;
+    margin-bottom: 0.52rem; }
     @media only screen and (min-width: 53.25em) {
       .content h3, .text-card h3 {
-        font-size: 3.844rem; } }
+        font-size: 2.5vw; } }
     @media only screen and (min-width: 1560px) {
       .content h3, .text-card h3 {
-        font-size: 4.325rem; } }
+        font-size: 4.2rem; } }
+    @media only screen and (min-width: 53.25em) {
+      .content h3, .text-card h3 {
+        margin-bottom: 0.832vw; } }
+    @media only screen and (min-width: 1560px) {
+      .content h3, .text-card h3 {
+        margin-bottom: 1.3rem; } }
   .content h4, .text-card h4 {
     font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
     font-weight: 700;
@@ -4586,10 +4601,10 @@ body {
     @media only screen and (min-width: 53.25em) {
       .content h4, .text-card h4 {
         line-height: 1.143;
-        font-size: 2.4rem; } }
+        font-size: 1.8vw; } }
     @media only screen and (min-width: 1560px) {
       .content h4, .text-card h4 {
-        font-size: 2.7rem; } }
+        font-size: 2.8rem; } }
     @media only screen and (min-width: 53.25em) {
       .content h4, .text-card h4 {
         margin-bottom: 0.64vw; } }
@@ -4611,7 +4626,7 @@ body {
     margin-bottom: 0.2rem; }
     @media only screen and (min-width: 53.25em) {
       .content h5, .text-card h5 {
-        font-size: 1.665rem; } }
+        font-size: 1.2vw; } }
     @media only screen and (min-width: 1560px) {
       .content h5, .text-card h5 {
         font-size: 1.873rem; } }
@@ -4629,7 +4644,7 @@ body {
     padding-bottom: 0.8em; }
     @media only screen and (min-width: 53.25em) {
       .content p, .text-card p {
-        font-size: 2.133rem; } }
+        font-size: 1.5vw; } }
     @media only screen and (min-width: 1560px) {
       .content p, .text-card p {
         font-size: 2.4rem; } }
@@ -4659,7 +4674,7 @@ body {
     font-weight: 600; }
     @media only screen and (min-width: 53.25em) {
       .content .title, .text-card .title {
-        font-size: 1.665rem; } }
+        font-size: 1.2vw; } }
     @media only screen and (min-width: 1560px) {
       .content .title, .text-card .title {
         font-size: 1.873rem; } }
@@ -4759,7 +4774,7 @@ body {
 
 @media only screen and (min-width: 53.25em) {
   .main-nav-icon:hover {
-    color: #999999; } }
+    color: #b3b3b3; } }
 
 .social-icons {
   display: none;
@@ -4799,7 +4814,7 @@ body {
     .social-icon {
       padding: 1rem; } }
   .social-icon:hover {
-    color: #999999;
+    color: #b3b3b3;
     text-decoration: none; }
 
 .icon-play-button .icon-circle {
@@ -4849,7 +4864,7 @@ body {
     line-height: 1.1; }
     @media only screen and (min-width: 53.25em) {
       .more-link-text {
-        font-size: 1.665rem; } }
+        font-size: 1.2vw; } }
     @media only screen and (min-width: 1560px) {
       .more-link-text {
         font-size: 1.873rem; } }
@@ -5120,11 +5135,11 @@ a:hover {
   line-height: 1; }
   @media only screen and (min-width: 53.25em) {
     .site-toggle {
-      line-height: 1.3;
-      font-size: 1.316rem; } }
+      font-size: 1vw;
+      line-height: 1.3; } }
   @media only screen and (min-width: 1560px) {
     .site-toggle {
-      font-size: 1.665rem; } }
+      font-size: 1.6rem; } }
   @media only screen and (min-width: 53.25em) {
     .site-toggle {
       display: block;
@@ -5140,7 +5155,7 @@ a:hover {
 
 .tagline {
   display: none;
-  color: #595959; }
+  color: gray; }
   @media only screen and (min-width: 62.5em) {
     .tagline {
       display: inline-block; } }
@@ -5474,7 +5489,7 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
     font-size: 1.7rem;
     line-height: 2;
     font-weight: 400;
-    color: #595959;
+    color: #666666;
     cursor: pointer; }
     @media only screen and (min-width: 53.25em) {
       .header-nav-sub-item, .footer-nav-sub-item {
@@ -5485,7 +5500,7 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
         font-size: 1.6rem;
         line-height: 1.8; } }
     .header-nav-sub-item a, .footer-nav-sub-item a {
-      color: #595959;
+      color: #666666;
       display: block; }
       .header-nav-sub-item a:hover, .footer-nav-sub-item a:hover {
         color: black; }
@@ -5679,7 +5694,7 @@ select {
     .highlight-container {
       padding: 0 40px; } }
   .highlight-container .highlight-inner {
-    background-color: #999999;
+    background-color: #b3b3b3;
     padding: 15px;
     position: relative;
     z-index: 0; }
@@ -5725,12 +5740,12 @@ select {
     padding-right: 7.5px; }
     @media only screen and (min-width: 53.25em) {
       .col-half:nth-of-type(2n + 1) {
-        padding-right: 1.36%; } }
+        padding-right: 1.25vw; } }
   .col-half:nth-of-type(2n) {
     padding-left: 7.5px; }
     @media only screen and (min-width: 53.25em) {
       .col-half:nth-of-type(2n) {
-        padding-left: 1.36%; } }
+        padding-left: 1.25vw; } }
   .col-half:nth-of-type(2n + 1) {
     clear: left; }
 
@@ -5741,21 +5756,21 @@ select {
     padding-right: 7.5px; }
     @media only screen and (min-width: 53.25em) {
       .col-thirds:nth-of-type(3n + 1) {
-        padding-right: 1.36%; } }
+        padding-right: 1.25vw; } }
   .col-thirds:nth-of-type(3n + 2) {
     padding-left: 7.5px;
     padding-right: 7.5px; }
     @media only screen and (min-width: 53.25em) {
       .col-thirds:nth-of-type(3n + 2) {
-        padding-left: 1.36%; } }
+        padding-left: 1.25vw; } }
     @media only screen and (min-width: 53.25em) {
       .col-thirds:nth-of-type(3n + 2) {
-        padding-right: 1.36%; } }
+        padding-right: 1.25vw; } }
   .col-thirds:nth-of-type(3n + 3) {
     padding-left: 7.5px; }
     @media only screen and (min-width: 53.25em) {
       .col-thirds:nth-of-type(3n + 3) {
-        padding-left: 1.36%; } }
+        padding-left: 1.25vw; } }
   .col-thirds:nth-of-type(3n + 1) {
     clear: left; }
 
@@ -5766,8 +5781,8 @@ select {
   margin-right: -7.5px; }
   @media only screen and (min-width: 53.25em) {
     .row {
-      margin-left: -1.36%;
-      margin-right: -1.36%; } }
+      margin-left: -1.25vw;
+      margin-right: -1.25vw; } }
   @media only screen and (min-width: 1560px) {
     .row {
       margin-left: -20px;
@@ -5779,8 +5794,8 @@ select {
   padding-right: 7.5px; }
   @media only screen and (min-width: 53.25em) {
     [class*="col-"] {
-      padding-left: 1.36%;
-      padding-right: 1.36%; } }
+      padding-left: 1.25vw;
+      padding-right: 1.25vw; } }
   @media only screen and (min-width: 1560px) {
     [class*="col-"] {
       padding-left: 20px;
@@ -5832,7 +5847,7 @@ body {
   font-size: 1.896rem; }
   @media only screen and (min-width: 53.25em) {
     body {
-      font-size: 2.133rem; } }
+      font-size: 1.5vw; } }
   @media only screen and (min-width: 1560px) {
     body {
       font-size: 2.4rem; } }
@@ -5897,7 +5912,7 @@ ul {
       margin-bottom: 2.2rem; } }
 
 .sidebar {
-  color: #595959;
+  color: #4d4d4d;
   margin-bottom: 2.4rem; }
   @media only screen and (min-width: 53.25em) {
     .sidebar {
@@ -5910,14 +5925,14 @@ ul {
     font-weight: 300;
     line-height: 1.166667;
     font-size: 2.107rem;
-    color: #595959;
+    color: gray;
     margin-top: 0;
     margin-bottom: 0rem;
     padding-bottom: 0.4em;
     border-bottom: 1px solid #999999; }
     @media only screen and (min-width: 53.25em) {
       .sidebar h3, .sidebar-section-title {
-        font-size: 2.667rem; } }
+        font-size: 1.9vw; } }
     @media only screen and (min-width: 1560px) {
       .sidebar h3, .sidebar-section-title {
         font-size: 3rem; } }
@@ -5939,15 +5954,15 @@ ul {
     line-height: 1.4;
     text-transform: uppercase;
     margin-top: 0.24em;
-    color: #595959;
+    color: gray;
     margin: 0; }
     @media only screen and (min-width: 53.25em) {
       .sidebar h4, .sidebar-item-title {
-        line-height: 1.3;
-        font-size: 1.316rem; } }
+        font-size: 1vw;
+        line-height: 1.3; } }
     @media only screen and (min-width: 1560px) {
       .sidebar h4, .sidebar-item-title {
-        font-size: 1.665rem; } }
+        font-size: 1.6rem; } }
     @media only screen and (min-width: 53.25em) {
       .sidebar h4, .sidebar-item-title {
         margin-top: 0.384vw; } }
@@ -5968,7 +5983,7 @@ ul {
   .sidebar .sidebar-highlight.active, .sidebar .sidebar-highlight:hover {
     background-color: #e6e6e6; }
   .sidebar .sidebar-highlight a:hover {
-    color: #595959; }
+    color: #4d4d4d; }
 
 .sidebar-section {
   margin-bottom: 1.6rem; }
@@ -6101,7 +6116,7 @@ a .page-title {
     line-height: 1 !important; }
     @media only screen and (min-width: 53.25em) {
       .sidebar-audio .sidebar-title {
-        font-size: 3rem;
+        font-size: 1.9vw;
         line-height: 1.2; } }
     @media only screen and (min-width: 1560px) {
       .sidebar-audio .sidebar-title {
@@ -6137,7 +6152,7 @@ a .page-title {
     font-size: 1.48rem; }
     @media only screen and (min-width: 53.25em) {
       .sidebar-audio .track {
-        font-size: 1.665rem; } }
+        font-size: 1.2vw; } }
     @media only screen and (min-width: 1560px) {
       .sidebar-audio .track {
         font-size: 1.873rem; } }
@@ -6151,11 +6166,11 @@ a .page-title {
     text-transform: none; }
     @media only screen and (min-width: 53.25em) {
       .sidebar-audio .track-action {
-        line-height: 1.3;
-        font-size: 1.316rem; } }
+        font-size: 1vw;
+        line-height: 1.3; } }
     @media only screen and (min-width: 1560px) {
       .sidebar-audio .track-action {
-        font-size: 1.665rem; } }
+        font-size: 1.6rem; } }
 
 .sidebar-video .title, .sidebar-album .title {
   font-family: "acumin-pro", Arial, sans-serif;
@@ -6164,7 +6179,7 @@ a .page-title {
   font-weight: 600; }
   @media only screen and (min-width: 53.25em) {
     .sidebar-video .title, .sidebar-album .title {
-      font-size: 3rem;
+      font-size: 1.9vw;
       line-height: 1.2; } }
   @media only screen and (min-width: 1560px) {
     .sidebar-video .title, .sidebar-album .title {
@@ -6179,7 +6194,7 @@ a .page-title {
   font-size: 1.873rem; }
   @media only screen and (min-width: 53.25em) {
     .remodal-description {
-      font-size: 2.107rem; } }
+      font-size: 1.6vw; } }
   @media only screen and (min-width: 1560px) {
     .remodal-description {
       font-size: 2.37rem; } }
@@ -6261,7 +6276,7 @@ a .page-title {
     text-align: center; }
     @media only screen and (min-width: 53.25em) {
       .become-a-member .copy {
-        font-size: 2.667rem; } }
+        font-size: 1.9vw; } }
     @media only screen and (min-width: 1560px) {
       .become-a-member .copy {
         font-size: 3rem; } }
@@ -6308,7 +6323,8 @@ a .page-title {
     padding-left: 0.8em; }
     @media only screen and (max-width: 53.25em) {
       .support-copy {
-        font-size: 2.8vw; } }
+        font-size: 2.8vw;
+        height: 10.5rem; } }
     @media only screen and (min-width: 53.25em) {
       .support-copy {
         width: 46.45%;
@@ -6365,6 +6381,9 @@ a .page-title {
     @media only screen and (min-width: 1560px) {
       .support-button {
         font-size: 3rem; } }
+    @media only screen and (max-width: 53.25em) {
+      .support-button {
+        height: 10.5rem; } }
     @media only screen and (min-width: 53.25em) {
       .support-button {
         padding: 0;
@@ -6406,7 +6425,7 @@ a .page-title {
   font-size: 1.48rem; }
   @media only screen and (min-width: 53.25em) {
     .newsletter-signup-section, .support-section, .support-folkways {
-      font-size: 1.665rem; } }
+      font-size: 1.2vw; } }
   @media only screen and (min-width: 1560px) {
     .newsletter-signup-section, .support-section, .support-folkways {
       font-size: 1.873rem; } }
@@ -6453,7 +6472,7 @@ a .page-title {
       padding-bottom: 2rem; } }
   @media only screen and (min-width: 53.25em) {
     .newsletter-signup-copy {
-      font-size: 1.665rem; } }
+      font-size: 1.2vw; } }
   @media only screen and (min-width: 1560px) {
     .newsletter-signup-copy {
       font-size: 1.873rem; } }
@@ -6535,7 +6554,7 @@ a .page-title {
     padding-bottom: 0.8em; }
     @media only screen and (min-width: 53.25em) {
       .short-newsletter-signup .newsletter-signup-copy {
-        font-size: 1.665rem; } }
+        font-size: 1.2vw; } }
     @media only screen and (min-width: 1560px) {
       .short-newsletter-signup .newsletter-signup-copy {
         font-size: 1.873rem; } }
@@ -6654,7 +6673,7 @@ figcaption {
       padding-left: 2rem; } }
   @media only screen and (min-width: 53.25em) {
     figcaption {
-      font-size: 1.665rem; } }
+      font-size: 1.2vw; } }
   @media only screen and (min-width: 1560px) {
     figcaption {
       font-size: 1.873rem; } }
@@ -6667,7 +6686,7 @@ figcaption {
     position: absolute;
     bottom: 0;
     right: 0;
-    background-color: #595959;
+    background-color: gray;
     color: white;
     padding-right: 0.2em;
     padding-bottom: 0.32em;
@@ -6801,7 +6820,7 @@ figcaption {
     .footer {
       padding-top: 2rem; } }
   .footer-logo {
-    color: #999999;
+    color: #b3b3b3;
     margin-bottom: 1vw; }
     .footer-logo-active {
       color: white; }
@@ -7010,7 +7029,7 @@ figcaption {
   margin-top: 0.8em; }
   @media only screen and (min-width: 53.25em) {
     .article-page figcaption {
-      font-size: 1.665rem; } }
+      font-size: 1.2vw; } }
   @media only screen and (min-width: 1560px) {
     .article-page figcaption {
       font-size: 1.873rem; } }
@@ -7048,7 +7067,7 @@ figcaption {
   margin-bottom: 0.4rem; }
   @media only screen and (min-width: 53.25em) {
     .blog-article-card .title {
-      font-size: 5.474rem; } }
+      font-size: 3.5vw; } }
   @media only screen and (min-width: 1560px) {
     .blog-article-card .title {
       font-size: 6.158rem; } }
@@ -7068,7 +7087,7 @@ figcaption {
   margin-bottom: 0.8rem; }
   @media only screen and (min-width: 53.25em) {
     .blog-article-card .date {
-      font-size: 1.665rem; } }
+      font-size: 1.2vw; } }
   @media only screen and (min-width: 1560px) {
     .blog-article-card .date {
       font-size: 1.873rem; } }
@@ -7082,9 +7101,9 @@ figcaption {
 /* Sidebar
 -------------------------------------------------- */
 .blog-sidebar {
-  color: #595959; }
+  color: #4d4d4d; }
   .blog-sidebar a {
-    color: #595959; }
+    color: #4d4d4d; }
 
 .card {
   margin-bottom: 1.6rem;
@@ -7103,7 +7122,7 @@ figcaption {
       margin-bottom: 4rem; } }
 
 .border {
-  border-top: 1px solid #999999; }
+  border-top: 1px solid #b3b3b3; }
 
 .inset-border {
   margin-left: 2rem;
@@ -7164,13 +7183,12 @@ a.details {
   @media only screen and (min-width: 53.25em) {
     .tag {
       line-height: 1.4;
-      font-size: 1.4rem;
+      font-size: 1.05vw;
       margin-bottom: 0.4vw; } }
   @media only screen and (min-width: 1560px) {
     .tag {
       font-size: 1.665rem;
-      margin-bottom: 0;
-      line-height: 1.4; } }
+      margin-bottom: 0; } }
 
 .date {
   text-transform: uppercase;
@@ -7186,13 +7204,12 @@ a.details {
   @media only screen and (min-width: 53.25em) {
     .date {
       line-height: 1.4;
-      font-size: 1.4rem;
+      font-size: 1.05vw;
       margin-bottom: 0.4vw; } }
   @media only screen and (min-width: 1560px) {
     .date {
       font-size: 1.665rem;
-      margin-bottom: 0;
-      line-height: 1.4; } }
+      margin-bottom: 0; } }
 
 .date-sm {
   text-transform: uppercase;
@@ -7210,13 +7227,12 @@ a.details {
   @media only screen and (min-width: 53.25em) {
     .date-sm {
       line-height: 1.4;
-      font-size: 1.4rem;
+      font-size: 1.05vw;
       margin-bottom: 0.4vw; } }
   @media only screen and (min-width: 1560px) {
     .date-sm {
       font-size: 1.665rem;
-      margin-bottom: 0;
-      line-height: 1.4; } }
+      margin-bottom: 0; } }
   @media only screen and (min-width: 53.25em) {
     .date-sm {
       margin-top: 0.32vw; } }
@@ -7272,10 +7288,10 @@ a.details {
   @media only screen and (min-width: 53.25em) {
     .card-program .title {
       line-height: 1.143;
-      font-size: 2.4rem; } }
+      font-size: 1.8vw; } }
   @media only screen and (min-width: 1560px) {
     .card-program .title {
-      font-size: 2.7rem; } }
+      font-size: 2.8rem; } }
   @media only screen and (min-width: 53.25em) {
     .card-program .title {
       margin-bottom: 0.64vw; } }
@@ -7397,7 +7413,7 @@ a.details {
   font-size: 1.48rem; }
   @media only screen and (min-width: 53.25em) {
     .remodal-title {
-      font-size: 1.665rem; } }
+      font-size: 1.2vw; } }
   @media only screen and (min-width: 1560px) {
     .remodal-title {
       font-size: 1.873rem; } }
@@ -7418,6 +7434,10 @@ a.details {
     z-index: -1;
     left: 7.5px;
     right: 7.5px; }
+    @media only screen and (min-width: 53.25em) {
+      .background-card:after {
+        left: 1.25vw;
+        right: 1.25vw; } }
     @media only screen and (min-width: 1560px) {
       .background-card:after {
         left: 2rem;
@@ -7455,13 +7475,13 @@ a.details {
       display: inline-block; } }
 
 .half-section .more-link {
-  right: 1.6em; }
+  right: 0.8em; }
   @media only screen and (min-width: 53.25em) {
     .half-section .more-link {
-      right: 2.56vw; } }
+      right: 1.28vw; } }
   @media only screen and (min-width: 1560px) {
     .half-section .more-link {
-      right: 4rem; } }
+      right: 2rem; } }
 
 /* #category
 -------------------------------------------------- */
@@ -7487,7 +7507,7 @@ a.details {
   padding-left: 7.5px; }
   @media only screen and (min-width: 53.25em) {
     .horizontal-card .details-inner {
-      padding-left: 2.72%; } }
+      padding-left: 2.5vw; } }
   @media only screen and (min-width: 1560px) {
     .horizontal-card .details-inner {
       padding-left: 0; } }
@@ -7560,7 +7580,7 @@ a.details {
     margin-bottom: 1rem; }
     @media only screen and (min-width: 53.25em) {
       .full-feature-card .title {
-        font-size: 5.474rem; } }
+        font-size: 3.5vw; } }
     @media only screen and (min-width: 1560px) {
       .full-feature-card .title {
         font-size: 6.158rem; } }
@@ -7595,7 +7615,7 @@ a.details {
     font-size: 2.107rem; }
     @media only screen and (min-width: 53.25em) {
       .full-feature-card .description {
-        font-size: 2.667rem; } }
+        font-size: 1.9vw; } }
     @media only screen and (min-width: 1560px) {
       .full-feature-card .description {
         font-size: 3rem; } }
@@ -7619,7 +7639,7 @@ a.details {
     font-size: 1.48rem; }
     @media only screen and (min-width: 53.25em) {
       .sidebar-card .details {
-        font-size: 1.665rem; } }
+        font-size: 1.2vw; } }
     @media only screen and (min-width: 1560px) {
       .sidebar-card .details {
         font-size: 1.873rem; } }
@@ -7670,7 +7690,7 @@ a.details {
   line-height: 1; }
   @media only screen and (min-width: 53.25em) {
     .album-card .title, .vinyl-card .title, .books-card .title {
-      font-size: 1.665rem; } }
+      font-size: 1.2vw; } }
   @media only screen and (min-width: 1560px) {
     .album-card .title, .vinyl-card .title, .books-card .title {
       font-size: 1.873rem; } }
@@ -7682,7 +7702,7 @@ a.details {
   font-size: 1.48rem; }
   @media only screen and (min-width: 53.25em) {
     .album-card .artist, .vinyl-card .artist, .books-card .artist {
-      font-size: 1.665rem; } }
+      font-size: 1.2vw; } }
   @media only screen and (min-width: 1560px) {
     .album-card .artist, .vinyl-card .artist, .books-card .artist {
       font-size: 1.873rem; } }
@@ -7721,7 +7741,7 @@ a.details {
   margin-bottom: 0.2rem; }
   @media only screen and (min-width: 53.25em) {
     .merchandise-card .title {
-      font-size: 1.665rem; } }
+      font-size: 1.2vw; } }
   @media only screen and (min-width: 1560px) {
     .merchandise-card .title {
       font-size: 1.873rem; } }
@@ -7737,11 +7757,11 @@ a.details {
   font-weight: 300;
   line-height: 1.2;
   font-size: 1.48rem;
-  color: #595959;
+  color: #4d4d4d;
   text-align: center; }
   @media only screen and (min-width: 53.25em) {
     .merchandise-card .price {
-      font-size: 1.665rem; } }
+      font-size: 1.2vw; } }
   @media only screen and (min-width: 1560px) {
     .merchandise-card .price {
       font-size: 1.873rem; } }
@@ -7761,7 +7781,7 @@ a.details {
 -------------------------------------------------- */
 .top-border-card:before {
   content: '';
-  border-top: 1px solid #999999;
+  border-top: 1px solid #b3b3b3;
   width: 100%;
   display: block; }
 
@@ -7769,7 +7789,7 @@ a.details {
   padding-bottom: 0; }
 
 .full-border-card .details-inner {
-  border: 2px solid #cccccc;
+  border: 2px solid #d9d9d9;
   padding-left: 0.8em;
   padding-bottom: 0.8em;
   padding-left: 1rem; }
@@ -7822,7 +7842,7 @@ a.details {
   margin-bottom: 0; }
   @media only screen and (min-width: 53.25em) {
     .audio-card .title {
-      font-size: 2.107rem; } }
+      font-size: 1.6vw; } }
   @media only screen and (min-width: 1560px) {
     .audio-card .title {
       font-size: 2.37rem; } }
@@ -7834,7 +7854,7 @@ a.details {
   font-size: 1.48rem; }
   @media only screen and (min-width: 53.25em) {
     .audio-card .subtitle, .audio-card .artist {
-      font-size: 1.665rem; } }
+      font-size: 1.2vw; } }
   @media only screen and (min-width: 1560px) {
     .audio-card .subtitle, .audio-card .artist {
       font-size: 1.873rem; } }
@@ -7912,7 +7932,7 @@ a.details {
   font-size: 4vw; }
   @media only screen and (min-width: 53.25em) {
     .audio-time {
-      font-size: 1.665rem; } }
+      font-size: 1.2vw; } }
   @media only screen and (min-width: 1560px) {
     .audio-time {
       font-size: 1.873rem; } }
@@ -7930,7 +7950,6 @@ a {
 /* #general
 -------------------------------------------------- */
 .sub-section {
-  border-top: 1px solid #999999;
   margin-top: 1.6em; }
   @media only screen and (min-width: 53.25em) {
     .sub-section {
@@ -7949,7 +7968,7 @@ a {
   margin-top: 0; }
   @media only screen and (min-width: 53.25em) {
     .intro-title {
-      font-size: 5.474rem; } }
+      font-size: 3.5vw; } }
   @media only screen and (min-width: 1560px) {
     .intro-title {
       font-size: 6.158rem; } }
@@ -7964,10 +7983,10 @@ a {
   @media only screen and (min-width: 53.25em) {
     .intro-copy {
       line-height: 1.143;
-      font-size: 2.4rem; } }
+      font-size: 1.8vw; } }
   @media only screen and (min-width: 1560px) {
     .intro-copy {
-      font-size: 2.7rem; } }
+      font-size: 2.8rem; } }
   @media only screen and (min-width: 53.25em) {
     .intro-copy {
       margin-bottom: 0.64vw; } }
@@ -7996,9 +8015,9 @@ h3.sidebar-section-title {
 /* #grid
 -------------------------------------------------- */
 .grid-item-inner {
-  background-color: #333333;
+  background-color: gray;
   height: 3.6em;
-  margin-bottom: 0.8rem; }
+  margin-bottom: 1.6rem; }
   @media only screen and (min-width: 53.25em) {
     .grid-item-inner {
       height: 5.76vw; } }
@@ -8007,10 +8026,10 @@ h3.sidebar-section-title {
       height: 9rem; } }
   @media only screen and (min-width: 53.25em) {
     .grid-item-inner {
-      margin-bottom: 1.28vw; } }
+      margin-bottom: 2.56vw; } }
   @media only screen and (min-width: 1560px) {
     .grid-item-inner {
-      margin-bottom: 2rem; } }
+      margin-bottom: 4rem; } }
   .grid-item-inner.hidden-content:hover {
     background-color: #595959;
     cursor: zoom-in; }
@@ -8039,7 +8058,7 @@ h3.sidebar-section-title {
     transform: translateY(-50%); }
     @media only screen and (min-width: 53.25em) {
       .grid-item-inner .copy {
-        font-size: 1.665rem; } }
+        font-size: 1.2vw; } }
     @media only screen and (min-width: 1560px) {
       .grid-item-inner .copy {
         font-size: 1.873rem; } }
@@ -8048,7 +8067,9 @@ h3.sidebar-section-title {
   visibility: hidden; }
 
 .custom-grid-item-inner {
-  background-color: #999999; }
+  background-color: #cccccc; }
+  .custom-grid-item-inner .copy {
+    color: #333333; }
 
 .custom-grid-container {
   margin-bottom: 1.6rem; }
@@ -8069,7 +8090,7 @@ h3.sidebar-section-title {
   margin-bottom: 0 !important; }
   @media only screen and (min-width: 53.25em) {
     .color {
-      font-size: 1.665rem; } }
+      font-size: 1.2vw; } }
   @media only screen and (min-width: 1560px) {
     .color {
       font-size: 1.873rem; } }
@@ -8275,10 +8296,10 @@ code.hljs {
   @media only screen and (min-width: 53.25em) {
     .section-subtitle {
       line-height: 1.143;
-      font-size: 2.4rem; } }
+      font-size: 1.8vw; } }
   @media only screen and (min-width: 1560px) {
     .section-subtitle {
-      font-size: 2.7rem; } }
+      font-size: 2.8rem; } }
   @media only screen and (min-width: 53.25em) {
     .section-subtitle {
       margin-bottom: 0.64vw; } }
@@ -8329,11 +8350,11 @@ code.hljs {
   padding-left: 0.4em; }
   @media only screen and (min-width: 53.25em) {
     .show-code {
-      line-height: 1.3;
-      font-size: 1.316rem; } }
+      font-size: 1vw;
+      line-height: 1.3; } }
   @media only screen and (min-width: 1560px) {
     .show-code {
-      font-size: 1.665rem; } }
+      font-size: 1.6rem; } }
   @media only screen and (min-width: 53.25em) {
     .show-code {
       height: 2.176vw; } }
@@ -8416,13 +8437,17 @@ code.hljs {
       margin-bottom: 2rem; } }
 
 .type-title-wrapper {
-  margin-top: 1.6em; }
+  margin-top: 1.6em;
+  border-top: 1px solid #999999; }
   @media only screen and (min-width: 53.25em) {
     .type-title-wrapper {
       margin-top: 2.56vw; } }
   @media only screen and (min-width: 1560px) {
     .type-title-wrapper {
       margin-top: 4rem; } }
+
+.first-type-title-wrapper {
+  border-top: 4px solid #999999; }
 
 .type-title {
   margin-bottom: 0.8rem; }
@@ -8449,7 +8474,7 @@ code.hljs {
   font-size: 1.48rem; }
   @media only screen and (min-width: 53.25em) {
     .type-details {
-      font-size: 1.665rem; } }
+      font-size: 1.2vw; } }
   @media only screen and (min-width: 1560px) {
     .type-details {
       font-size: 1.873rem; } }
@@ -8461,7 +8486,7 @@ code.hljs {
   font-weight: 600; }
   @media only screen and (min-width: 53.25em) {
     .extra-large-sans-title-type {
-      font-size: 3rem;
+      font-size: 1.9vw;
       line-height: 1.2; } }
   @media only screen and (min-width: 1560px) {
     .extra-large-sans-title-type {
@@ -8473,7 +8498,7 @@ code.hljs {
   font-size: 2.37rem; }
   @media only screen and (min-width: 53.25em) {
     .extra-large-sans-title-type-light {
-      font-size: 3rem;
+      font-size: 1.9vw;
       line-height: 1.2; } }
   @media only screen and (min-width: 1560px) {
     .extra-large-sans-title-type-light {
@@ -8487,7 +8512,7 @@ code.hljs {
   font-weight: 600; }
   @media only screen and (min-width: 53.25em) {
     .large-sans-title-type {
-      font-size: 2.667rem; } }
+      font-size: 1.9vw; } }
   @media only screen and (min-width: 1560px) {
     .large-sans-title-type {
       font-size: 3rem; } }
@@ -8499,7 +8524,7 @@ code.hljs {
   font-size: 2.107rem; }
   @media only screen and (min-width: 53.25em) {
     .large-sans-title-type-light {
-      font-size: 2.667rem; } }
+      font-size: 1.9vw; } }
   @media only screen and (min-width: 1560px) {
     .large-sans-title-type-light {
       font-size: 3rem; } }
@@ -8512,7 +8537,7 @@ code.hljs {
   font-weight: 600; }
   @media only screen and (min-width: 53.25em) {
     .medium-sans-title-type {
-      font-size: 2.107rem; } }
+      font-size: 1.6vw; } }
   @media only screen and (min-width: 1560px) {
     .medium-sans-title-type {
       font-size: 2.37rem; } }
@@ -8524,7 +8549,7 @@ code.hljs {
   font-size: 1.873rem; }
   @media only screen and (min-width: 53.25em) {
     .medium-sans-title-type-light {
-      font-size: 2.107rem; } }
+      font-size: 1.6vw; } }
   @media only screen and (min-width: 1560px) {
     .medium-sans-title-type-light {
       font-size: 2.37rem; } }
@@ -8536,7 +8561,7 @@ code.hljs {
   font-size: 1.48rem; }
   @media only screen and (min-width: 53.25em) {
     .small-sans-title-type, .small-sans-title-type-light {
-      font-size: 1.665rem; } }
+      font-size: 1.2vw; } }
   @media only screen and (min-width: 1560px) {
     .small-sans-title-type, .small-sans-title-type-light {
       font-size: 1.873rem; } }
@@ -8544,7 +8569,6 @@ code.hljs {
 /* #cards
 -------------------------------------------------- */
 .cards-section .codeblock {
-  border-top: 1px solid #999999;
   margin-bottom: 1.6rem; }
   @media only screen and (min-width: 53.25em) {
     .cards-section .codeblock {
@@ -8572,10 +8596,10 @@ code.hljs {
   @media only screen and (min-width: 53.25em) {
     .video-card .title {
       line-height: 1.143;
-      font-size: 2.4rem; } }
+      font-size: 1.8vw; } }
   @media only screen and (min-width: 1560px) {
     .video-card .title {
-      font-size: 2.7rem; } }
+      font-size: 2.8rem; } }
   @media only screen and (min-width: 53.25em) {
     .video-card .title {
       margin-bottom: 0.64vw; } }
@@ -8590,7 +8614,8 @@ code.hljs {
   font-size: 2.622rem; }
   @media only screen and (min-width: 53.25em) {
     .horizontal-card .title {
-      font-size: 3.319rem; } }
+      font-size: 3.319rem;
+      font-size: 2.95vw; } }
   @media only screen and (min-width: 1560px) {
     .horizontal-card .title {
       font-size: 4.2rem;
@@ -8603,7 +8628,8 @@ code.hljs {
   font-size: 2.622rem; }
   @media only screen and (min-width: 53.25em) {
     .feature .title {
-      font-size: 3.319rem; } }
+      font-size: 3.319rem;
+      font-size: 2.95vw; } }
   @media only screen and (min-width: 1560px) {
     .feature .title {
       font-size: 4.2rem;
@@ -8614,14 +8640,14 @@ code.hljs {
 .video-section .title {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
-  line-height: 0.95;
+  line-height: 1.1;
   font-size: 2.7rem; }
   @media only screen and (min-width: 53.25em) {
     .video-section .title {
-      font-size: 3.844rem; } }
+      font-size: 2.5vw; } }
   @media only screen and (min-width: 1560px) {
     .video-section .title {
-      font-size: 4.325rem; } }
+      font-size: 4.2rem; } }
 
 .video-section .subtitle {
   font-family: "acumin-pro", Arial, sans-serif;
@@ -8630,7 +8656,7 @@ code.hljs {
   font-size: 1.873rem; }
   @media only screen and (min-width: 53.25em) {
     .video-section .subtitle {
-      font-size: 2.107rem; } }
+      font-size: 1.6vw; } }
   @media only screen and (min-width: 1560px) {
     .video-section .subtitle {
       font-size: 2.37rem; } }

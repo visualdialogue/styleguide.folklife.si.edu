@@ -1,13 +1,16 @@
 /* Gutters
 -------------------------------------------------- */
 
-// $medium-gutter: 1.35%;
-$small-gutter: 7.5px;
-// $medium-gutter: 1.35%;
-$medium-gutter: 1.36%;
+  // $medium-gutter: 1.35%;
+  $small-gutter: 7.5px;
+  // $medium-gutter: 1.35%;
+  // $medium-gutter: 1.36%;
+  // $medium-gutter: 1vw;
+  $medium-gutter: 1.25vw;
 
-$full-gutter: 2.72%;
-// $medium-gutter: %;
+  // $full-gutter: 2.72%;
+  $full-gutter: 2.5vw;
+  // $medium-gutter: %;
 
 /* Sizes
 -------------------------------------------------- */
@@ -55,9 +58,10 @@ $full-gutter: 2.72%;
   $desktop-subpage-headerHeight:#{$desktop-navbarHeight} + #{$desktop-navbarSiteToggle} + #{$desktop-logoSpacer};
 
   // tab heights for Festival on homepage so can peek from bottom
-  $mobile-tabHeight:12rem;
-  $tablet-tabHeight:4.7vw;
-  $desktop-tabHeight:94px;
+  // $mobile-tabHeight:12rem;
+  $mobile-tabHeight:6rem;
+  $tablet-tabHeight:4.6vw;
+  $desktop-tabHeight:7.2rem;
 
   // toggle nav and navbar height for navspacer
   @mixin home-navbarHeight {

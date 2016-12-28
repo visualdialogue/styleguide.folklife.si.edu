@@ -415,7 +415,6 @@ $(document).ready(function () {
 * from https://github.com/liabru/jquery-match-height
 **********/
 	$('.audio-card .details-inner').matchHeight();
-	$('.mh-support').matchHeight();
 
 
 });

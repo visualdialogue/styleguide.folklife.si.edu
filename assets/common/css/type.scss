@@ -15,7 +15,8 @@
 		// line-height: 1;
 		font-size: 4.325rem;
 		@include respond-to(break2) {
-			font-size: 5.474rem;			
+			// font-size: 5.474rem;
+			font-size: 3.5vw;
 		}
 		@include respond-to(fullwidth) {
 			font-size: 6.158rem;
@@ -27,15 +28,16 @@
 	@mixin md-serif {
 		font-family: $serif;
 		font-weight: 700;
-		line-height: 0.95; // smaller for folklife dive deep
+		// line-height: 0.95; // smaller for folklife dive deep
+		line-height: 1.1; // 42/46
 		font-size: 2.7rem;
 		@include respond-to(break2) {
-			// font-size: 2.6vw;
-			font-size: 3.844rem;
+			font-size: 2.5vw;
+			// font-size: 3.844rem;
 		}
 		@include respond-to(fullwidth) {
-			// font-size: 4.2rem;
-			font-size: 4.325rem;
+			font-size: 4.2rem; // layout
+			// font-size: 4.325rem;
 		}
 	}
 	.md-serif {@include md-serif;}
@@ -51,11 +53,12 @@
 	  	font-size: 1.896rem;
 		@include respond-to(break2) {
 			line-height: 1.143; // 28/32
-	  		// font-size: 1.8vw;
-	  		font-size: 2.4rem;
+	  		font-size: 1.8vw;
+	  		// font-size: 2.4rem;
 		}
 		@include respond-to(fullwidth) {
-	  		font-size: 2.7rem;
+	  		// font-size: 2.7rem;
+	  		font-size: 2.8rem; // layout
 		}
 		@include margin-bottom(1);
 	}
@@ -69,7 +72,8 @@
 		line-height: 1.333333; // 24/32
 	  	font-size: 1.896rem; // 18px on medium.com mobile, 1.896 on modular scale
 		@include respond-to(break2) {
-	  		font-size: 2.133rem; // close to 24px at top
+	  		// font-size: 2.133rem; // close to 24px at top
+	  		font-size: 1.5vw;
 		}
 		@include respond-to(fullwidth) {
 	  		font-size: 2.4rem;
@@ -90,8 +94,8 @@
 		// font-size: 5vw;
 		font-size: 2.37rem;
 		@include respond-to(break2) {
-			// font-size: 1.9vw;
-			font-size: 3rem;
+			font-size: 1.9vw;
+			// font-size: 3rem;
 			line-height: 1.2;
 		}
 		@include respond-to(fullwidth) {
@@ -112,7 +116,8 @@
 		font-size: 2.107rem;
 
 		@include respond-to(break2) {
-	  		font-size: 2.667rem;
+	  		// font-size: 2.667rem;
+	  		font-size: 1.9vw;
 		}
 		@include respond-to(fullwidth) {
 	  		font-size: 3rem;
@@ -130,9 +135,9 @@
 	  	// font-size: 4vw;
 	  	font-size: 1.873rem;
 		@include respond-to(break2) {
-	  		// font-size: 1.6vw;
+	  		font-size: 1.6vw;
 			// line-height: 1.3;
-	  		font-size: 2.107rem;
+	  		// font-size: 2.107rem;
 		}
 		@include respond-to(fullwidth) {
 	  		// font-size: 2.5rem;
@@ -152,7 +157,8 @@
 	  	font-size: 1.48rem;
 		@include respond-to(break2) {
 			// font-size: 1.873rem;
-			font-size: 1.665rem;
+			// font-size: 1.665rem;
+			font-size: 1.2vw;
 		}
 		@include respond-to(fullwidth) {
 	  		// font-size: 2rem;
@@ -167,20 +173,16 @@
 	@mixin body-sans {
 		font-family: $sans;
 		font-weight: 300;
-		line-height: 1.35;
+		// line-height: 1.35;
+		line-height: 1.4;
 		// line-height: 1.3;
 	  	font-size: 1.873rem;
 		@include respond-to(break2) {
-	  		// font-size: 1vw;
-			// line-height: 1.3;
-	  		// font-size: 1.873rem;
+			font-size: 1.25vw;
 		}
 		@include respond-to(fullwidth) {
-			// line-height: 1.3;
-			// line-height: 1.6;
-	  		// font-size: 1.6rem; // oct 19 for fritz
-	  		// font-size: 1.48rem;
-	  		font-size: 2.107rem;
+	  		// font-size: 2.107rem; // fits with scale
+	  		font-size: 2rem; // because of talk story on folklife homepage
 		}
 	}
 	.body-sans {@include body-sans;}
@@ -189,19 +191,15 @@
 		font-family: $sans;
 		font-weight: 300;
 		line-height: 1.4;
-	  	// font-size: 3.8vw;
 	  	text-transform: uppercase;
 		@include respond-to(break2) {
-	  		// font-size: 1vw;
+	  		font-size: 1vw;
 			line-height: 1.3;
-	  		font-size: 1.316rem;
+	  		// font-size: 1.316rem;
 		}
 		@include respond-to(fullwidth) {
-			// line-height: 1.3;
-			// line-height: 1.6;
-	  		// font-size: 1.6rem; // oct 19 for fritz
-	  		// font-size: 1.48rem;
-	  		font-size: 1.665rem;
+	  		// font-size: 1.665rem; // fits with scale
+	  		font-size: 1.6rem; // because of talk story on folklife homepage
 		}
 	}
 	.mini-sans {@include mini-sans;}
@@ -364,6 +362,7 @@
 		font-size: 2.622rem;
 		@include respond-to(break2) {
 			font-size: 3.319rem;
+			font-size: 2.95vw;
 		}
 		@include respond-to(fullwidth) {
 			font-size: 4.2rem;
@@ -382,7 +381,8 @@
 		font-size: 1.842rem;
 		@include respond-to(break2) {
 			// font-size: 3.319rem;
-			font-size: 2.95rem;
+			// font-size: 2.95rem;
+			font-size: 2.4vw;
 		}
 		@include respond-to(fullwidth) {
 			font-size: 3.733rem;
@@ -399,7 +399,8 @@
 		font-size: 1.841rem;
 		@include margin-bottom(1);
 		@include respond-to(break2) {
-			font-size: 2.33rem;
+			// font-size: 2.33rem;
+			font-size: 1.9vw;
 		}
 		@include respond-to(fullwidth) {
 			font-size: 2.95rem;
@@ -441,14 +442,14 @@
 		line-height: 1.1;
 		@include respond-to(break2) {
 			line-height: 1.4;
-			font-size: 1.4rem;
+			// font-size: 1.4rem;
+			font-size: 1.05vw;
 			margin-bottom: 0.4vw;
 		}
 		@include respond-to(fullwidth) {
 			// font-size: 1.4rem;
 			font-size: 1.665rem;
 			margin-bottom: 0;
-			line-height: 1.4;
 		}
 	}
 	.category-tag-type {@include sans-tag;}
@@ -464,10 +465,12 @@
 		position: relative; // hold abs images that live inside ol or ul
 		h2 {
 			font-weight: 600;
-			margin-bottom:0; // reset
+			// margin-bottom:0; // reset
+			@include margin-bottom(1.6);
 		}
 		h3 {
 			@include md-serif;
+			@include margin-bottom(1.3);
 		}
 		h4 {
 			@include sm-serif;

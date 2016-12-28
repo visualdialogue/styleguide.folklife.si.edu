@@ -478,9 +478,9 @@
 		&-sub-item {
 			display: block;
 			@include link-font;
-			color:$black65; // 12.12
+			color:$black60;
 			a {
-				color: $black65;
+				color: $black60;
 				display: block;
 				&:hover {
 					color: black;

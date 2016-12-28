@@ -1,6 +1,6 @@
 //- use thumbnail if it’s set in panel
--if ('' != $card->thumbnail_img()):
-	-$image = $card->image($card->thumbnail_img())
+-if ('' != $card->banner_img()):
+	-$image = $card->image($card->banner_img())
 - elseif($src = $card->image()):
 	-$image = $src
 -endif
@@ -8,14 +8,14 @@
 li.card.col-xs-12
 	.image
 		figure
-			img.ms-header-image(src="<?= $src->url() ?>")
+			img.ms-header-image(src="<?= $image->url() ?>")
 			//- show caption if it exists
-			-if($caption = $page->img_caption()->kt()):
+			-if($caption = $page->img_caption()):
 				figcaption!= $caption
 			-endif
 	.details
 		.details-inner
-			.title!= $card->title()
+			.title!= $card->subtitle()
 			.byline!= $card->byline()
 			
 			.description.link-underline.blurb!= $card->blurb()->kt()

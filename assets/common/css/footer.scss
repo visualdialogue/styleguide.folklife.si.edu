@@ -13,7 +13,7 @@
 		@include respond-to(break2max) { padding-top:2rem; }
 
 		&-logo {
-			color: $black40; // formerly $black30
+			color: $black30;
 			margin-bottom: 1vw;
 			&-active {
 				color: white;

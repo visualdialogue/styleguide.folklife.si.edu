@@ -28,7 +28,6 @@
 	.nav-icon {
 		// color: white; // old
 		color: $black65; // new
-		// color: $black40; // formerly $black30 // new off state
 		// font-size: 7vw;
 		font-size: 2.3rem;
 		// margin: 5px 2px;
@@ -62,7 +61,7 @@
 		&:hover {
 			@include respond-to(break2) {
 			// color: $black40;
-			color: $black40; // formerly $black30 // new
+			color: $black30;
 			}
 		}
 	}
@@ -105,7 +104,7 @@
 		@include padding(1);
 		&:hover {
 			// color: white;
-			color: $black40; // formerly $black30 // new
+			color: $black30;
 			text-decoration: none;
 		}
 	}
