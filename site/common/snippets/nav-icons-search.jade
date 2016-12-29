@@ -1,10 +1,10 @@
 // Search Bar
 //- form.search-bar.desktop-search-bar.form.col-sm-6.col-lg-offset-2(action=".")
-form.search-bar.desktop-search-bar.col-sm-offset-1.col-sm-5.col-md-5.col-md-offset-1.col-lg-offset-2.col-lg-6(action=".")
-	input(placeholder="Search..." type="search")
+form.search-bar.desktop-search-bar.col-sm-offset-1.col-sm-5.col-md-5.col-md-offset-1.col-lg-offset-2.col-lg-6(action="/search")
+	input(placeholder="Search..." type="search" name="q" value="<? if(isset($query)) echo esc($query) ?>")
 
 // Main Navigation Icons
-.nav-icons.col-sm-3.col-lg-2							
+.nav-icons.col-sm-3.col-lg-2
 	.icon-search.nav-icon.main-nav-icon#search-icon(aria-hidden="true")
 	.icon-share.nav-icon.main-nav-icon#share-icon(aria-hidden="true")
 	//- .icon-menu-1.nav-icon.main-nav-icon#menu-icon(aria-hidden="true")

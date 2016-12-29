@@ -76,7 +76,7 @@
 	}
 
 	.ms-header {
-		@include margin-bottom(4);
+		@include margin-bottom(3.2);
 		.title-bar {
 			// height:195px;
 			// @include respond-to(break2) {height:17vw;}
@@ -147,7 +147,7 @@
 		@include margin-bottom(3);
 		.section-title {
 			color: $basque-red;
-			@include margin-bottom(3.1);
+			@include margin-bottom(2.6);
 		}
 		&-blurb {
 			@include lg-sans;
@@ -186,6 +186,7 @@
 				@include sm-sans;
 				color: $black50;
 				text-transform: uppercase;
+				@include padding-top(0.3);
 			}
 			&:last-of-type {
 				@include border(bottom, 1px, $basque-green)
@@ -193,10 +194,11 @@
 			}
 			a {
 				display: block;
-				@include padding-top(0.8);
-				@include padding-bottom(0.8);
+				@include padding-top(0.6);
+				@include padding-bottom(0.6);
 				@include padding-left(1.5);
 			}
+			@include height(4.1);
 		}
 		.top-border-card:before {
 			border-color: $basque-green;
@@ -205,7 +207,7 @@
 	}
 	.sidebar-card {
 		.details-inner {
-			@include padding-top(1);
+			@include padding-top(1.4);
 		}
 
 	}
@@ -220,6 +222,7 @@
 		}
 		.section-title {
 			color: $basque-red;
+			@include margin-bottom(1.5);
 		}
 		.subtitle {
 			@include md-serif;
@@ -258,5 +261,6 @@
 		}
 		.blurb {
 			@include sm-sans;
+			line-height: 1.33 !important;
 		}
 	}

@@ -29,7 +29,9 @@
     <ul class="row">
       <!-- Logo-->
       <div class="logo-wrapper col-sm-2">
-        <div id="logo-wrapper" class="logo"><a href="/"><img id="block-logo" src="/assets/images/logo/folklife-block-logo_2016.12.17.png" class="block-logo folkways-block-logo"/><img id="one-line-logo" src="/assets/images/logo/folklife-one-line-logo_2016.12.22.png" class="one-line-logo folklife-one-line-logo"/></a></div>
+        <div class="logo"><a href="/">
+            <div class="one-line-logos"><img src="/assets/images/logo/mobile-folklife-one-line-logo_2016.12.23.png" class="one-line-logo mobile-one-line-logo visible-xs visible-sm"/><img src="/assets/images/logo/tablet-folklife-one-line-logo_2016.12.23.png" class="one-line-logo tablet-one-line-logo visible-md"/><img src="/assets/images/logo/desktop-folklife-one-line-logo_2016.12.23.png" class="one-line-logo desktop-one-line-logo visible-lg"/></div>
+            <div class="block-logos"><img src="/assets/images/logo/mobile-folklife-block-logo_2016.12.23.png" class="block-logo mobile-block-logo visible-xs visible-sm"/><img src="/assets/images/logo/tablet-folklife-block-logo_2016.12.23.png" class="block-logo tablet-block-logo visible-md"/><img src="/assets/images/logo/desktop-folklife-block-logo_2016.12.23.png" class="block-logo desktop-block-logo visible-lg"/></div></a></div>
       </div>
       <?php snippet('nav-icons-search'); ?>
     </ul>
@@ -55,6 +57,7 @@
           </ul>
         </li>
         <li class="header-nav-main-item col-sm-2"> <a href="#cards" class="header-nav-title">Cards</a></li>
+        <li class="header-nav-main-item col-sm-2"> <a href="#classes" class="header-nav-title">Classes</a></li>
       </ul>
     </div>
   </div>

@@ -26,7 +26,7 @@
       <div class="title">
         <?php echo $card->title(); ?></div>
       <?php endif; ?>
-      <div class="date">
+      <div class="byline">
         <?php echo $card->date('F jS, Y'), e('' != $card->author(), ' | ' . $card->author()), ' | 0 comments'; ?></div>
     </div>
   </div>

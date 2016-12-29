@@ -33,7 +33,7 @@ li.card(class="<?= $card_classes ?><? if ($card->type() == 'video') echo ' video
 				-endif
 
 				-if (isset($date) && isset($time)):
-					.tag!= $card->date('M d, Y'), '<br />', $card->time()
+					.tag!= $card->date('M d, Y'), '<br />', $card->time(), ' PM'
 				-elseif (isset($date)):
 					.tag!= $card->date('F j, Y')
 				-endif

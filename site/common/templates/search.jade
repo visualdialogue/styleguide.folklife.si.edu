@@ -1,0 +1,344 @@
+-snippet('header')
+
+#navspacer.navspacer
+
+.container
+	.search-message
+		.tag Showing 798 Results For
+		-snippet('svg-thin-hr')
+		.search-query-title!= $query
+
+// Filter
+.highlight-bar
+	.container
+		.row
+			.col-sm-12
+				.filter-by-title Filter By		
+		ul.row.dropdown-wrapper
+			li.col-sm-2
+				// inside so 100% width takes bootstrap padding into account
+				.dropdown 
+					.dropdown-title Content type
+					ul.first-level-dropdown
+						li Album
+						li Artist
+						li Merchandise
+						li Vinyl
+						li Lesson Plan
+			li.col-sm-2
+				.dropdown
+					.dropdown-title Genre
+					ul.first-level-dropdown
+						li African American Music
+						li African American Spoken
+						li American Folk
+						li American History
+						li American Indian
+						li American Popular
+						li Bluegrass
+						li Blues
+						li Cajun
+						li Caribbean
+						li Celtic
+						li Central Asia
+						li Children's
+						li Classical
+						li Contemporary &amp; Electronic
+						li Country
+						li Documentary
+						li Drama
+						li Gospel
+						li Hawai'i
+						li Historical Song
+						li Holiday
+						li Humor
+						li India
+						li Islamica
+						li Jazz &amp; Ragtime
+						li Judaica
+						li Language Instruction
+						li Latin
+						li Miscellany
+						li Music Instruction
+						li Old Time
+						li Oral History &amp; Biography
+						li Poetry
+						li Prose
+						li Psychology &amp; Health
+						li Sacred
+						li Science &amp; Nature
+						li Sounds
+						li Soundtracks &amp; Musicals
+						li Spoken Word
+						li Struggle &amp; Protest
+						li World
+						li World History
+			li.col-sm-2
+				.dropdown
+					.dropdown-title Artist
+					ul.first-level-dropdown
+						li 
+						li 
+						li 
+						li 
+						li 
+			li.col-sm-2
+				.dropdown
+					.dropdown-title Geography
+					ul.first-level-dropdown
+						li Africa
+							ul.second-level-dropdown.sub-dropdown
+								li Eastern Africa
+									ul.third-level-dropdown.sub-dropdown
+										li Eritrea
+										li Ethiopia
+										li Kenya
+										li Madagascar
+										li Malawi
+										li Mozambique
+										li Rwanda
+										li Somalia
+										li Tanzania
+										li Uganda
+										li Zambia
+										li Zimbabwe
+								li Middle Africa
+									ul.third-level-dropdown.sub-dropdown
+										li Angola
+										li Cameroon
+										li Central African Republic
+										li Chad
+										li Congo (Democratic Republic)
+										li Equatorial Guinea
+										li Gabon
+								li Northern Africa
+									ul.third-level-dropdown.sub-dropdown
+										li Algeria
+										li Egypt
+										li Libya
+										li Morocco
+										li Sudan
+										li Tunisia
+								li Southern Africa
+									ul.third-level-dropdown.sub-dropdown
+										li Botswana
+										li Lesotho
+										li Namibia
+										li South Africa
+										li Swaziland
+								li Western Africa
+									ul.third-level-dropdown.sub-dropdown
+										li Benin
+										li Burkina Faso
+										li Cote d'Ivoire
+										li Gambia
+										li Ghana
+										li Guinea
+										li Guinea-Bissau
+										li Liberia
+										li Mali
+										li Niger
+										li Nigeria
+										li Senegal
+										li Sierra Leone
+										li Togo
+						li Americas
+							ul.second-level-dropdown.sub-dropdown
+								li 
+									ul.third-level-dropdown.sub-dropdown
+										li Antigua and Barbuda
+										li Bahamas
+										li Barbados
+										li British Virgin Islands
+										li Cuba
+										li Dominican Republic
+										li Grenada
+										li Guadeloupe
+										li Haiti
+										li Jamaica
+										li Martinique
+										li Puerto Rico
+										li Saint Kitts and Nevis
+										li Saint Lucia
+										li Trinidad and Tobago
+										li Virgin Islands of the United States
+								li Central America
+									ul.third-level-dropdown.sub-dropdown
+										li Belize
+										li Costa Rica
+										li El Salvador
+										li Guatemala
+										li Honduras
+										li Nicaragua
+										li Panama
+								li Northern America
+									ul.third-level-dropdown.sub-dropdown
+										li Bermuda
+										li Canada
+										li Greenland
+										li Mexico
+										li United States
+								li Southern America
+									ul.third-level-dropdown.sub-dropdown
+										li Argentina
+										li Bolivia
+										li Brazil
+										li Chile
+										li Colombia
+										li Ecuador
+										li French Guiana
+										li Guyana
+										li Paraguay
+										li Peru
+										li Suriname
+										li Uruguay
+										li Venezuela
+						li Asia
+							ul.second-level-dropdown.sub-dropdown
+								li Central Asia
+									ul.third-level-dropdown.sub-dropdown
+										li Kazakhstan
+										li Kyrgyzstan
+										li Tajikistan
+										li Turkmenistan
+										li Uzbekistan
+								li Northeastern Asia
+									ul.third-level-dropdown.sub-dropdown
+										li China
+										li Hong Kong
+										li Japan
+										li Korea, North
+										li Korea, South
+										li Mongolia
+										li Taiwan
+								li Southeastern Asia
+									ul.third-level-dropdown.sub-dropdown
+										li Cambodia
+										li Indonesia
+										li Laos
+										li Malaysia
+										li Myanmar
+										li Philippines
+										li Thailand
+										li Vietnam
+								li Southern Asia
+									ul.third-level-dropdown.sub-dropdown
+										li Afghanistan
+										li Bangladesh
+										li Bhutan
+										li India
+										li Iran
+										li Nepal
+										li Pakistan
+										li Palestinian Territory
+										li Sri Lanka
+								li Western Asia
+									ul.third-level-dropdown.sub-dropdown
+										li Armenia
+										li Azerbaijan
+										li Cyprus
+										li Iraq
+										li Israel
+										li Jordan
+										li Lebanon
+										li Oman
+										li Saudi Arabia
+										li Syria
+										li Turkey
+										li Yemen
+						li Europe
+							ul.second-level-dropdown.sub-dropdown
+								li Eastern Europe
+									ul.third-level-dropdown.sub-dropdown
+										li Belarus
+										li Bulgaria
+										li Byelorussia
+										li Czech Republic
+										li Hungary
+										li Moldova
+										li Poland
+										li Romania
+										li Russia
+										li Slovakia
+										li Ukraine
+										li USSR (former)
+								li Northern Europe
+									ul.third-level-dropdown.sub-dropdown
+										li Denmark
+										li England
+										li Estonia
+										li Finland
+										li Iceland
+										li Ireland
+										li Latvia
+										li Lithuania
+										li Northern Ireland
+										li Norway
+										li Scotland
+										li Sweden
+										li United Kingdom
+										li Wales
+								li Southern Europe
+									ul.third-level-dropdown.sub-dropdown
+										li Albania
+										li Croatia
+										li Greece
+										li Italy
+										li Macedonia
+										li Malta
+										li Portugal
+										li Slovenia
+										li Spain
+										li Yugoslavia (former)
+								li Western Europe
+									ul.third-level-dropdown.sub-dropdown
+										li Austria
+										li Belgium
+										li France
+										li Germany
+										li Netherlands
+										li Switzerland
+						li Oceania
+							ul.second-level-dropdown.sub-dropdown
+								li Australia &amp; New Zealand
+									ul.third-level-dropdown.sub-dropdown
+										li Australia
+										li New Zealand
+										li Papua New Guinea
+										li Solomon Islands
+										li Vanuatu
+										li French Polynesia
+										li Samoa
+										li Tonga
+			li.col-sm-2
+				.dropdown
+					.dropdown-title Label/Archive
+					ul.first-level-dropdown
+						li 
+						li 
+						li 
+						li 
+						li 
+			li.col-sm-2
+				.dropdown
+					.dropdown-title 
+					ul.first-level-dropdown
+						li 
+						li 
+						li 
+						li 
+						li 
+
+
+.container
+	.row.content
+		section.first-section.article-section.col-sm-12
+			ul
+				-foreach($results as $result):
+					li
+						a(href="<?php echo $result->url() ?>")
+							!= $result->title()->html() ?>
+				-endforeach
+
+
+-snippet('footer')

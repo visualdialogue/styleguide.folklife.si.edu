@@ -246,7 +246,7 @@
 		}
 		h4, &-item-title {
 			@include mini-sans;
-			@include margin-top(0.6);
+			@include margin-top(0.8);
 			color: $black50;
 			margin: 0;
 		}
@@ -285,6 +285,7 @@
 	.thick-hr {
 		height:11px;
 		background-image:url(/assets/images/hr/hr.jpg);
+		background-image:url(/assets/images/hr/hr.png);
 		@include respond-to(break2) {
 			margin-top:0;
 		}
@@ -318,6 +319,7 @@
 	.thin-hr-svg {
 		// make inline with js, from http://stackoverflow.com/questions/24933430/img-src-svg-changing-the-fill-color
 		// color: blue;
+		font-size: 1px; // make smaller
 		path {
 			fill: $fs-teal;
 			fill: white;
@@ -474,6 +476,9 @@
 
 /* #Support Us
 -------------------------------------------------- */
+	.above-support-hr {
+		@include margin-bottom(3);
+	}
 	.support-folkways {
 		.support {
 			border: none;
@@ -493,25 +498,30 @@
 		}
 		&-copy {
 			@include respond-to(break2max) {
-				font-size: 2.8vw;
-				height: 10.5rem;
+				font-size: 2.5vw;
+				// font-size: 1.2rem;
+				// height: 10.5rem;
+				// height: 8.5rem;
+				height: 5vw; // responsive for text
+				padding-top: 1.2vw; // responsive for sizing at mobile
 			}
 			@include respond-to(break2) {
 				width: 46.45%; // 314px / 676px
 				line-height: 1.25;
-				height: 9.6vw;
+				height: 9vw;
+				padding-top: 1vw;
 			}
 			@include respond-to(break2full) {
 				font-size: 1.2vw;
 			}
-			@include padding-top(1.4);
-			padding-top: 1.2vw; // responsive for sizing at mobile
+			@include respond-to(fullwidth) {
+				height: 15rem;
+				padding-top: 0.9rem;
+			}
 			@include padding-right(2);
 			@include padding-bottom(2);
 			@include padding-left(2);
-			@include respond-to(fullwidth) {
-				height: 14rem;
-			}
+			
 
 		}
 		&-button {
@@ -522,7 +532,8 @@
 			color: white;
 			text-align: center;
 			@include respond-to(break2max) {
-				height: 10.5rem;
+				// height: 8.5rem;
+				height: 17vw; // responsive for text
 			}
 			@include respond-to(break2) {
 				padding: 0;
@@ -541,9 +552,9 @@
 	}
 	.button-inner {
 		@include respond-to(break2max) {
-			// font-size: 4vw;
+			font-size: 4vw;
 			// font-size: 3.8vw;
-			font-size: 1.3rem;
+			// font-size: 1.3rem;
 		}
 		@include respond-to(break2) {
 			// line-height: 1.5;
@@ -555,7 +566,7 @@
 /* #Newsletter Signup
 -------------------------------------------------- */
 	.newsletter-signup-section, .support-section, .support-folkways {
-		@include sm-sans;
+		@include body-sans;
 	}
 	.newsletter-signup-section, .support-section {
 		margin-bottom: 2rem;
@@ -590,10 +601,10 @@
 		@include email-newsletter;
 		height: 5rem;
 		@include respond-to(break2) {
-			height: 4.5vw;
+			height: 3.9vw;
 		}
 		@include respond-to(fullwidth) {
-			height: 6.1rem;
+			height: 7.5rem;
 			padding-bottom: 2rem;
 		}
 	}
@@ -633,39 +644,7 @@
 /* #Custom select dropdown
 * from http://hernansartorio.com/jquery-nice-select/
 -------------------------------------------------- */
-	.nice-select:after {
-		content: '\62';
-  		font-family: "vd-icons" !important;
-  		border: none; // remove default arrow
-  		transform: rotate(90deg);
-  		font-size: 2.5rem;
-  		// override nice-select defaults
-  		height: auto;
-  		// top:0.8rem;
-  		@include top(0.8);
-  		// @include right(1.8);
-  		transform-origin: 15px 15px;
-  		@include margin-top(0);
-  		@include respond-to(break2) {
-  			top: 0.8rem;
-  			right:2rem;
-  		}
-  		@include respond-to(fullwidth) {
-  			top: 0.8rem;
-  			right:1.8rem;
-  		}
-	}
-	.nice-select.open:after {
-  		-webkit-transform: rotate(-90deg);
-  		-moz-transform: rotate(-90deg);
-  		transform: rotate(-90deg);
-	}
-	.nice-select .list {
-		margin-top:0;
-	}
-	.nice-select .option:hover {
-		background-color: $black20;
-	}
+	
 
 /* Plus icons for figures with figcaptions
 -------------------------------------------------- */
@@ -754,3 +733,174 @@
 	// 		@include margin-left(-5);
 	// 	}
 	// }
+
+/* Dropdown Select
+* multi level select, from http://stackoverflow.com/a/9101168
+-------------------------------------------------- */
+	.dropdown-wrapper {
+		@include sm-sans;
+		font-weight: 600;
+		color: $black60;
+	}
+	.dropdown:hover, .first-level-dropdown li:hover {
+		background-color: $black20;
+		// show next menu on hover
+		& > ul {
+			display: block;
+		}
+		.dropdown-title:after {
+			-webkit-transform: rotate(-90deg);
+			-moz-transform: rotate(-90deg);
+			transform: rotate(-90deg);
+		}
+	}
+	.dropdown {
+		background-color: white;
+		position: relative;
+		cursor: pointer;
+		
+	}
+	.first-level-dropdown {
+		display: none; // initial hide
+		position: absolute;
+		z-index: 2;
+		width: 100%;
+		background-color: white;
+		font-weight: 400;
+		line-height: 1.7;
+		li {
+			position: relative; // contain arrow
+			@include padding-left(1);
+		}
+		
+	}
+	.second-level-dropdown, .third-level-dropdown {
+		display: none;
+		background-color: white;
+		position: absolute;
+		top:0;
+		right: -100%;
+		width: 100%;
+	}
+	.third-level-dropdown {
+		li:after {
+			display:none;
+		}
+	}
+	li.has-sub {
+		&:after {
+			content: '\62';
+			display: block;
+			position: absolute;
+			font-family: "vd-icons" !important;
+			// transform: rotate(90deg);
+			color: $black40;
+			font-size: 2rem;
+			// top:0.8rem;
+			@include top(0.8);
+			// @include right(1.8);
+			transform-origin: 15px 15px;
+			@include margin-top(0);
+			@include respond-to(break2) {
+				top: 0.8rem;
+				right:2rem;
+			}
+			@include respond-to(fullwidth) {
+				top: -0.3rem;
+				right: 1rem;
+			}
+		}
+	}
+	.dropdown-title {
+		background-color: white;
+		@include padding-top(0.7);
+		@include margin-top(1.5); // 19px
+		@include height(3.7); // 35px
+		@include padding-left(1);
+
+		&:after {
+			content: '\62';
+			display: block;
+			position: absolute;
+	  		font-family: "vd-icons" !important;
+	  		border: none; // remove default arrow
+	  		transform: rotate(90deg);
+	  		font-size: 2.5rem;
+	  		// override nice-select defaults
+	  		height: auto;
+	  		// top:0.8rem;
+	  		@include top(0.8);
+	  		// @include right(1.8);
+	  		transform-origin: 15px 15px;
+	  		@include margin-top(0);
+	  		@include respond-to(break2) {
+	  			top: 0.8rem;
+	  			right:2rem;
+	  		}
+	  		@include respond-to(fullwidth) {
+	  			top: 0.5rem;
+	  			right: 1rem;
+	  		}
+		}
+		.list {
+			margin-top:0;
+		}
+		.option:hover {
+			background-color: $black20;
+		}
+	}
+	.dropdown-select {
+		@include sm-sans;
+		@include padding-top(0.2);
+		@include padding-left(1);
+		@include margin-top(1.5); // 19px
+		@include height(3.7); // 35px
+		border: none;
+		border-radius: 0;
+		width: 100%;
+		.current {
+			@include sm-sans;
+			line-height: 1.8 !important; // 18/32
+		}
+		.list {
+			width: 100%;
+			border-radius:0;
+			color: $black65;
+		}
+		// arrow icon
+		&:after {
+			@include top(0.6);
+			@include right(2.8);
+		}
+
+		// multi level select, from http://stackoverflow.com/a/9101168
+	}
+/* Search
+-------------------------------------------------*/
+	.search-page {
+		.thin-hr-svg {
+			padding:0;
+			margin-top:0;
+			@include margin-bottom(0.5);
+			path {
+				fill: $black30;
+			}
+		}
+		.search-query-title {
+			@include xl-slab;
+			text-transform: capitalize;
+			@include margin-bottom(2);
+		}
+		.highlight-bar {
+			background-color: $black10;
+			@include padding-top(1.6); // 20px with line height
+			@include padding-bottom(1.6);
+		}
+		.filter-by-title {
+			@include nav-header;
+			color: $black60;
+			font-size:5vw;
+			@include respond-to(break2) {font-size:1.15vw;}
+			@include respond-to(fullwidth) {font-size:1.8rem;}
+		}
+	}

@@ -31,7 +31,7 @@
         <?php endif; ?>
         <?php if (isset($date) && isset($time)): ?>
         <div class="tag">
-          <?php echo $card->date('M d, Y'), '<br />', $card->time(); ?></div>
+          <?php echo $card->date('M d, Y'), '<br />', $card->time(), ' PM'; ?></div>
         <?php elseif (isset($date)): ?>
         <div class="tag">
           <?php echo $card->date('F j, Y'); ?></div>

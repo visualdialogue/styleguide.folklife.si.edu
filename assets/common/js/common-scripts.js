@@ -95,26 +95,24 @@ $(document).ready(function () {
 
 
 	var gapNavHeight = $siteToggle.outerHeight();
+	if(site.isMobile) {
+		gapNavHeight = 0; // activate next condition immediately
+	}
 
 	// console.log('gapNavHeight', gapNavHeight);
 	$(window).scroll(function() {
 		// close all if on phone
 		if(site.isMobile) {
 			navCloseAll(); // close anything else that's open by default
-			gapNavHeight = 0; // activate next condition immediately
 		}
 
 		// when user scrolls past height of site toggle, make smaller
 		if (($(this).scrollTop() > gapNavHeight) && (isNavOpen == false)) {  
 			site.navbar.addClass("is-smaller");
-			$('.block-logos').fadeOut('30');
-			setTimeout(function(){ 
-				$('.one-line-logos').fadeIn('30');
-			}, 30);
+			switchLogo('inline');
 
 			isNavOpen = true;
 			if(!site.isMobile) {
-				// $navspacer.addClass("navspacer-\-taller"); // open right away
 				$navspacer.addClass("navspacer-open"); // open right away
 			}
 		}
@@ -123,15 +121,27 @@ $(document).ready(function () {
 			isNavOpen = false;
 			if(!site.isMobile)
 				$navspacer.removeClass("navspacer-open"); // gracefully cloase
-
-			$('.one-line-logos').fadeOut('30');
-			setTimeout(function(){ 
-				$('.block-logos').fadeIn('30');
-			}, 30);
+			switchLogo('block');
 			
 		}
 
 	});
+
+	function switchLogo(direction) {
+
+		// only show block if at top of viewport and nav isn't already open
+		if(direction == 'block' && $(window).scrollTop() < gapNavHeight && menuClosed) {
+			$('.one-line-logos').fadeOut('30');
+			setTimeout(function(){ 
+				$('.block-logos').fadeIn('30');
+			}, 30);
+		} else {
+			$('.block-logos').fadeOut('30');
+			setTimeout(function(){ 
+				$('.one-line-logos').fadeIn('30');
+			}, 30);
+		}
+	}
 
 /***************************
 * NAVBAR
@@ -166,7 +176,9 @@ $(document).ready(function () {
 			navCloseAll(); // after we've determined that menu is closed, close anything else that's open by default
 			site.navbar.addClass('is-open');
 			// if(site.isMobile) // switch to one-line logo in mobile view
-			site.navbar.addClass('has-one-line-logo'); // switch to one-line logo
+			// site.navbar.addClass('has-one-line-logo'); // switch to one-line logo
+			switchLogo('inline');
+
 			$navbarOutside.css('position', 'fixed'); // activate navbarOutside
 			// console.log('one line logo');				
 			$notMenuIcon.addClass('lighter-nav-icons'); // grey out other icons
@@ -176,6 +188,7 @@ $(document).ready(function () {
 			$folkwaysNav.hide(); // hide folkways nav
 		} else {
 			navCloseAll(); // close anything else that's open by default
+			switchLogo('block');
 			menuClosed = true;
 		}
 		
@@ -278,9 +291,9 @@ $(document).ready(function () {
 	/*********************
 	* search
 	*********************/
-		$searchBar.on('submit', function() {
-			alert('We are looking into it...');
-		});
+		// $searchBar.on('submit', function() {
+			// alert('We are looking into it...');
+		// });
 
 /*********************
 * Video
@@ -400,7 +413,7 @@ $(document).ready(function () {
 * When click +
 *********************/
 	// for any program page image
-	if (site.$body.hasClass('program-page') || site.$body.hasClass('program-category-page') || site.$body.hasClass('lesson-plan-page')) {
+	if (site.$body.hasClass('program-page') || site.$body.hasClass('program-category-page') || site.$body.hasClass('lesson-plan-page') || site.$body.hasClass('blog-article-page')) {
 		var $figcaption = $('.container').find('figcaption'); // get all figures on the page
 		console.log('figure loaded');
 		// if click on figure, show figcaption
@@ -426,6 +439,12 @@ $(document).ready(function () {
 **********/
 	$('.audio-card .details-inner').matchHeight();
 
+/**********
+* Custom dropdowns
+**********/
+	// $('.dropdown-select').niceSelect();
+	// add class for dropdown arrows, from http://stackoverflow.com/a/21253034
+	$('.dropdown li:has(ul.sub-dropdown)').addClass('has-sub');
 
 /**********
 * Replace all SVG images with inline SVG

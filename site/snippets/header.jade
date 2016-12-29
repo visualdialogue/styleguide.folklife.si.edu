@@ -50,10 +50,16 @@ nav.navbar#navbar
 		ul.row
 			// Logo
 			.logo-wrapper.col-sm-2
-				#logo-wrapper.logo
+				.logo
 					a(href="/")
-						img#block-logo.block-logo.folkways-block-logo(src="/assets/images/logo/folklife-block-logo_2016.12.17.png")
-						img#one-line-logo.one-line-logo.folklife-one-line-logo(src="/assets/images/logo/folklife-one-line-logo_2016.12.22.png")
+						.one-line-logos
+							img.one-line-logo.mobile-one-line-logo.visible-xs.visible-sm(src="/assets/images/logo/mobile-folklife-one-line-logo_2016.12.23.png")
+							img.one-line-logo.tablet-one-line-logo.visible-md(src="/assets/images/logo/tablet-folklife-one-line-logo_2016.12.23.png")
+							img.one-line-logo.desktop-one-line-logo.visible-lg(src="/assets/images/logo/desktop-folklife-one-line-logo_2016.12.23.png")
+						.block-logos
+							img.block-logo.mobile-block-logo.visible-xs.visible-sm(src="/assets/images/logo/mobile-folklife-block-logo_2016.12.23.png")
+							img.block-logo.tablet-block-logo.visible-md(src="/assets/images/logo/tablet-folklife-block-logo_2016.12.23.png")
+							img.block-logo.desktop-block-logo.visible-lg(src="/assets/images/logo/desktop-folklife-block-logo_2016.12.23.png")
 			-snippet('nav-icons-search')
 
 
@@ -78,8 +84,8 @@ nav.navbar#navbar
 						li.header-nav-sub-item: a(href="#slab") Slab
 				li.header-nav-main-item.col-sm-2 
 					a.header-nav-title(href="#cards") Cards
-				//- li.header-nav-main-item.col-sm-2 
-				//- 	a.header-nav-title(href="/structure") Structure
+				li.header-nav-main-item.col-sm-2 
+					a.header-nav-title(href="#classes") Classes
 				//- 	ul.header-nav-list
 				//- 		li.header-nav-sub-item: a(href="/framework#sections") Sections
 				//- 		li.header-nav-sub-item: a(href="/framework#half-sections") Half Sections

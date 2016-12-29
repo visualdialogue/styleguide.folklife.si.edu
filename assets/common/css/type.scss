@@ -141,9 +141,10 @@
 	  		// font-size: 2.107rem;
 		}
 		@include respond-to(fullwidth) {
-	  		// font-size: 2.5rem;
+	  		font-size: 2.5rem;
+	  		line-height: 1.28; // 25/32
 	  		// font-size: 2.4rem; // 12.18
-	  		font-size: 2.37rem; // 12.19
+	  		// font-size: 2.37rem; // 12.19
 		}
 	}
 	.md-sans {@include md-sans;}
@@ -177,15 +178,16 @@
 		font-family: $sans;
 		font-weight: 300;
 		// line-height: 1.35;
-		line-height: 1.4;
+		// line-height: 1.4;
 		// line-height: 1.3;
+		line-height: 1.2;
 	  	font-size: 1.873rem;
 		@include respond-to(break2) {
 			font-size: 1.25vw;
 		}
 		@include respond-to(fullwidth) {
-	  		// font-size: 2.107rem; // fits with scale
-	  		font-size: 2rem; // because of talk story on folklife homepage
+	  		font-size: 2.107rem; // fits with scale and folklife education page layout
+	  		// font-size: 2.1rem; // because of talk story on folklife homepage
 		}
 	}
 	.body-sans {@include body-sans;}
@@ -344,7 +346,7 @@
 		font-weight: 800;
 		font-size: 5vw;
 		@include respond-to(break2) {
-			font-size: 1.15vw;
+			font-size: 1.09vw;
 			line-height: 1.2;
 		}
 		@include respond-to(fullwidth) {
@@ -491,7 +493,7 @@
 		}
 		p {
 			@include body-serif;
-			@include padding-bottom(2); // not margin because then when using columns, the margin carries over!!!, from http://stackoverflow.com/a/12503808
+			@include padding-bottom(1.6); // 30 - not margin because then when using columns, the margin carries over!!!, from http://stackoverflow.com/a/12503808
 		}
 		// common to ul and ol
 		li {

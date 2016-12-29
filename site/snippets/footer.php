@@ -19,6 +19,7 @@
         </ul>
       </li>
       <li class="footer-nav-main-item col-sm-2"> <a href="#cards" class="footer-nav-title">Cards</a></li>
+      <li class="footer-nav-main-item col-sm-2"> <a href="#classes" class="footer-nav-title">Classes</a></li>
     </ul>
     <?php snippet('footer-common'); ?>
   </div>

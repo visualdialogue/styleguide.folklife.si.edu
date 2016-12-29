@@ -1,6 +1,6 @@
 
 <div class="container">
-  <hr class="thick-hr"/>
+  <hr class="thick-hr above-support-hr"/>
 </div>
 <div class="container">
   <div class="row">

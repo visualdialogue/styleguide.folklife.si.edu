@@ -27,4 +27,4 @@ li.card.blog-article-card.col-xs-12(class="<? if ($card->type() == 'video') echo
 				.title!= $card->title()
 			-endif
 
-			.date!= $card->date('F jS, Y'), e('' != $card->author(), ' | ' . $card->author()), ' | 0 comments'
+			.byline!= $card->date('F jS, Y'), e('' != $card->author(), ' | ' . $card->author()), ' | 0 comments'

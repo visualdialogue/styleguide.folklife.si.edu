@@ -1,0 +1,12 @@
+-snippet('header')
+
+#navspacer.navspacer
+
+-snippet('title-bar', array('title' => 'Not Found', 'link' => $page->parent()->url()))
+
+.container
+	.row.content
+		section.first-section.article-section.col-sm-12
+			h1 Sorry, this page doesn’t exist. Please go back <a href="/">home</a>.
+
+-snippet('footer')

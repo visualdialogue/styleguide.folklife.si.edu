@@ -166,6 +166,8 @@ gulp.task('jade-common', function() {
 gulp.task('copy', function() {
     gulp.src('../../styleguide.folklife.si.edu/code/site/common/blueprints/*.yml')
       .pipe(gulp.dest('./site/blueprints/'))
+    gulp.src('../../styleguide.folklife.si.edu/code/site/common/controllers/*.php')
+      .pipe(gulp.dest('./site/controllers/'))
     gulp.src('../../styleguide.folklife.si.edu/code/site/common/**/*.php')
       .pipe(gulp.dest('./site'));
 });

@@ -8,6 +8,6 @@ fields:
   title:
     label: Title
     type:  text
-  copy:
+  intro:
     label: Introduction
     type: textarea
