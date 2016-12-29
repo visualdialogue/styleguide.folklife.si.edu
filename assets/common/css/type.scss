@@ -11,8 +11,8 @@
 	@mixin lg-serif {
 		font-family: $serif;
 		font-weight: 700;
-		line-height: 1.1;
-		// line-height: 1;
+		// line-height: 1.1;
+		line-height: 1;
 		font-size: 4.325rem;
 		@include respond-to(break2) {
 			// font-size: 5.474rem;

@@ -320,6 +320,7 @@
 		// make inline with js, from http://stackoverflow.com/questions/24933430/img-src-svg-changing-the-fill-color
 		// color: blue;
 		font-size: 1px; // make smaller
+		height: 5px; // for older ie
 		path {
 			fill: $fs-teal;
 			fill: white;
@@ -737,6 +738,38 @@
 /* Dropdown Select
 * multi level select, from http://stackoverflow.com/a/9101168
 -------------------------------------------------- */
+	@mixin dropdown-arrow {
+		content: '\62';
+		display: block;
+		position: absolute;
+		font-family: "vd-icons" !important;
+		border: none; // remove default arrow
+		-webkit-transform: rotate(90deg);
+		-moz-transform: rotate(90deg);
+		transform: rotate(90deg);
+		font-size: 2.5rem;
+		// override nice-select defaults
+		height: auto;
+		// top:0.8rem;
+		@include top(0.8);
+		// @include right(1.8);
+		@include margin-top(0);
+		top: -0.1rem;
+		right:1rem;
+		
+		@include respond-to(break2) {
+			transform-origin: 0.9vw;
+			font-size: 1.5vw;
+			top: 0.4vw;
+			right:0.6vw;
+		}
+		@include respond-to(fullwidth) {
+			transform-origin: 15px 15px;
+			font-size: 2.5rem;
+			top: 0.5rem;
+			right: 1rem;
+		}
+	}
 	.dropdown-wrapper {
 		@include sm-sans;
 		font-weight: 600;
@@ -744,14 +777,16 @@
 	}
 	.dropdown:hover, .first-level-dropdown li:hover {
 		background-color: $black20;
-		// show next menu on hover
-		& > ul {
-			display: block;
-		}
-		.dropdown-title:after {
-			-webkit-transform: rotate(-90deg);
-			-moz-transform: rotate(-90deg);
-			transform: rotate(-90deg);
+		@include respond-to(break2) {
+			// show next menu on hover
+			& > ul {
+				display: block;
+			}
+			.first-level-dropdown-title:after {
+				-webkit-transform: rotate(-90deg);
+				-moz-transform: rotate(-90deg);
+				transform: rotate(-90deg);
+			}	
 		}
 	}
 	.dropdown {
@@ -772,108 +807,69 @@
 			position: relative; // contain arrow
 			@include padding-left(1);
 		}
-		
 	}
 	.second-level-dropdown, .third-level-dropdown {
 		display: none;
 		background-color: white;
-		position: absolute;
-		top:0;
-		right: -100%;
-		width: 100%;
+		@include respond-to(break2) {
+			position: absolute;
+			top:0;
+			right: -100%;
+			width: 100%;	
+		}
 	}
 	.third-level-dropdown {
 		li:after {
 			display:none;
 		}
 	}
-	li.has-sub {
+	
+	.first-level-dropdown-title, .filter-more-button {
+		@include padding-top(0.7);
+		@include margin-top(1.5); // 19px
+		@include height(3.7); // 35px
+		height: 3rem; // mobile override
+		@include padding-left(1);
+	}
+	.first-level-dropdown-title {
 		&:after {
-			content: '\62';
-			display: block;
-			position: absolute;
-			font-family: "vd-icons" !important;
-			// transform: rotate(90deg);
+			@include dropdown-arrow;
+		}
+	}
+	.second-level-dropdown-title, .third-level-dropdown-title {
+		&:after {
+			@include dropdown-arrow;
+			-webkit-transform: rotate(0deg);
+			-moz-transform: rotate(0deg);
+			transform: rotate(0deg);
 			color: $black40;
-			font-size: 2rem;
+			// font-size: 2rem;
 			// top:0.8rem;
-			@include top(0.8);
+			// @include top(0.8);
 			// @include right(1.8);
-			transform-origin: 15px 15px;
-			@include margin-top(0);
+			// transform-origin: 15px 15px;
+			// @include margin-top(0);
+			font-size: 2rem;
+			top:-0.5rem;
+			right:1rem;
 			@include respond-to(break2) {
-				top: 0.8rem;
-				right:2rem;
+				font-size: 1.3vw;
+				top: 0vw;
+				right:0.6vw;
 			}
 			@include respond-to(fullwidth) {
+				font-size: 2rem;
 				top: -0.3rem;
 				right: 1rem;
 			}
 		}
 	}
-	.dropdown-title {
-		background-color: white;
-		@include padding-top(0.7);
-		@include margin-top(1.5); // 19px
-		@include height(3.7); // 35px
-		@include padding-left(1);
-
+	.dropdown-title-is-open {
 		&:after {
-			content: '\62';
-			display: block;
-			position: absolute;
-	  		font-family: "vd-icons" !important;
-	  		border: none; // remove default arrow
-	  		transform: rotate(90deg);
-	  		font-size: 2.5rem;
-	  		// override nice-select defaults
-	  		height: auto;
-	  		// top:0.8rem;
-	  		@include top(0.8);
-	  		// @include right(1.8);
-	  		transform-origin: 15px 15px;
-	  		@include margin-top(0);
-	  		@include respond-to(break2) {
-	  			top: 0.8rem;
-	  			right:2rem;
-	  		}
-	  		@include respond-to(fullwidth) {
-	  			top: 0.5rem;
-	  			right: 1rem;
-	  		}
-		}
-		.list {
-			margin-top:0;
-		}
-		.option:hover {
-			background-color: $black20;
-		}
-	}
-	.dropdown-select {
-		@include sm-sans;
-		@include padding-top(0.2);
-		@include padding-left(1);
-		@include margin-top(1.5); // 19px
-		@include height(3.7); // 35px
-		border: none;
-		border-radius: 0;
-		width: 100%;
-		.current {
-			@include sm-sans;
-			line-height: 1.8 !important; // 18/32
-		}
-		.list {
-			width: 100%;
-			border-radius:0;
-			color: $black65;
-		}
-		// arrow icon
-		&:after {
-			@include top(0.6);
-			@include right(2.8);
-		}
-
-		// multi level select, from http://stackoverflow.com/a/9101168
+			-webkit-transform: rotate(-90deg);
+			-moz-transform: rotate(-90deg);
+			transform: rotate(-90deg);
+		}	
 	}
 /* Search
 -------------------------------------------------*/
@@ -889,12 +885,16 @@
 		.search-query-title {
 			@include xl-slab;
 			text-transform: capitalize;
-			@include margin-bottom(2);
+			@include margin-bottom(2.4);
 		}
 		.highlight-bar {
 			background-color: $black10;
 			@include padding-top(1.6); // 20px with line height
-			@include padding-bottom(1.6);
+			@include padding-bottom(4);
+			@include margin-bottom(4);
+			// for click outside
+			position: relative;
+			z-index: 10;
 		}
 		.filter-by-title {
 			@include nav-header;
@@ -902,5 +902,18 @@
 			font-size:5vw;
 			@include respond-to(break2) {font-size:1.15vw;}
 			@include respond-to(fullwidth) {font-size:1.8rem;}
+		}
+		.filter-more-button {
+			background-color: $black20;
+			@include border;
+			text-align: center;
+			cursor: pointer;
+			padding-left:0;
+		}
+		.filter-more-band {
+			display: none; // initial hide
+			@include respond-to(break2) {
+				@include padding-top(2);
+			}
 		}
 	}

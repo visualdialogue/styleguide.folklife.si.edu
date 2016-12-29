@@ -9,6 +9,7 @@
 		.search-query-title!= $query
 
 // Filter
+.filter-outside
 .highlight-bar
 	.container
 		.row
@@ -18,7 +19,7 @@
 			li.col-sm-2
 				// inside so 100% width takes bootstrap padding into account
 				.dropdown 
-					.dropdown-title Content type
+					.first-level-dropdown-title Content type
 					ul.first-level-dropdown
 						li Album
 						li Artist
@@ -27,7 +28,7 @@
 						li Lesson Plan
 			li.col-sm-2
 				.dropdown
-					.dropdown-title Genre
+					.first-level-dropdown-title Genre
 					ul.first-level-dropdown
 						li African American Music
 						li African American Spoken
@@ -75,21 +76,59 @@
 						li World History
 			li.col-sm-2
 				.dropdown
-					.dropdown-title Artist
+					.first-level-dropdown-title Artist
 					ul.first-level-dropdown
-						li 
-						li 
-						li 
-						li 
-						li 
+						li Ella Jenkins (500)
+						li Lead Belly (403)
+						li Lightnin' Hopkins (229)
+						li Various Artists (175)
+						li Mary Lou Williams (137)
+						li John Jackson (134)
+						li Big Joe Williams (107)
+						li Mance Lipscomb (94)
+						li Brownie McGhee (79)
+						li Snooks Eaglin (75)
+						li Bilal Abdurahman (73)
+						li Sonny Terry (70)
+						li Memphis Slim (68)
+						li Robert Pete Williams (60)
+						li Big Mama Thornton (56)
+						li Elizabeth Cotten (55)
+						li Fred McDowell (54)
+						li Little Brother Montgomery (54)
+						li Pete Seeger (52)
+						li K.C. Douglas (49)
+						li Lizzie Miles (47)
+						li James P. Johnson (45)
+						li Moving Star Hall Singers (45)
+						li Child Development Group of Mississippi (42)
+						li Grupo de Capoeira Angola Pelourinho (41)
+						li Bernice Johnson Reagon (39)
+						li Big Bill Broonzy (38)
+						li Francis Clay (38)
+						li J.C. Burris (38)
+						li Horace Sprott (37)
+						li Josh White (37)
+						li Sam "Lightning" Hopkins (37)
+						li Earl Hooker (33)
+						li Paul Robeson (33)
+						li Reverend Gary Davis (33)
+						li Arbee Stidham (32)
+						li Langston Hughes (32)
+						li Lonnie Johnson (32)
+						li Michel LaRue (32)
+						li Jesse Fuller (30)
+
 			li.col-sm-2
 				.dropdown
-					.dropdown-title Geography
+					.first-level-dropdown-title Geography
 					ul.first-level-dropdown
-						li Africa
-							ul.second-level-dropdown.sub-dropdown
-								li Eastern Africa
-									ul.third-level-dropdown.sub-dropdown
+						li 
+							.second-level-dropdown-title Africa
+							ul.second-level-dropdown
+								li 
+									.third-level-dropdown-title Eastern Africa
+									ul.third-level-dropdown
 										li Eritrea
 										li Ethiopia
 										li Kenya
@@ -102,8 +141,9 @@
 										li Uganda
 										li Zambia
 										li Zimbabwe
-								li Middle Africa
-									ul.third-level-dropdown.sub-dropdown
+								li 
+									.third-level-dropdown-title Middle Africa
+									ul.third-level-dropdown
 										li Angola
 										li Cameroon
 										li Central African Republic
@@ -111,23 +151,26 @@
 										li Congo (Democratic Republic)
 										li Equatorial Guinea
 										li Gabon
-								li Northern Africa
-									ul.third-level-dropdown.sub-dropdown
+								li 
+									.third-level-dropdown-title Northern Africa
+									ul.third-level-dropdown
 										li Algeria
 										li Egypt
 										li Libya
 										li Morocco
 										li Sudan
 										li Tunisia
-								li Southern Africa
-									ul.third-level-dropdown.sub-dropdown
+								li 
+									.third-level-dropdown-title Southern Africa
+									ul.third-level-dropdown
 										li Botswana
 										li Lesotho
 										li Namibia
 										li South Africa
 										li Swaziland
-								li Western Africa
-									ul.third-level-dropdown.sub-dropdown
+								li 
+									.third-level-dropdown-title Western Africa
+									ul.third-level-dropdown
 										li Benin
 										li Burkina Faso
 										li Cote d'Ivoire
@@ -142,10 +185,12 @@
 										li Senegal
 										li Sierra Leone
 										li Togo
-						li Americas
-							ul.second-level-dropdown.sub-dropdown
-								li 
-									ul.third-level-dropdown.sub-dropdown
+						li 
+							.second-level-dropdown-title Americas
+							ul.second-level-dropdown
+								li
+									.third-level-dropdown-title  
+									ul.third-level-dropdown
 										li Antigua and Barbuda
 										li Bahamas
 										li Barbados
@@ -162,8 +207,9 @@
 										li Saint Lucia
 										li Trinidad and Tobago
 										li Virgin Islands of the United States
-								li Central America
-									ul.third-level-dropdown.sub-dropdown
+								li 
+									.third-level-dropdown-title Central America
+									ul.third-level-dropdown
 										li Belize
 										li Costa Rica
 										li El Salvador
@@ -171,15 +217,17 @@
 										li Honduras
 										li Nicaragua
 										li Panama
-								li Northern America
-									ul.third-level-dropdown.sub-dropdown
+								li 
+									.third-level-dropdown-title Northern America
+									ul.third-level-dropdown
 										li Bermuda
 										li Canada
 										li Greenland
 										li Mexico
 										li United States
-								li Southern America
-									ul.third-level-dropdown.sub-dropdown
+								li 
+									.third-level-dropdown-title Southern America
+									ul.third-level-dropdown
 										li Argentina
 										li Bolivia
 										li Brazil
@@ -193,17 +241,20 @@
 										li Suriname
 										li Uruguay
 										li Venezuela
-						li Asia
-							ul.second-level-dropdown.sub-dropdown
-								li Central Asia
-									ul.third-level-dropdown.sub-dropdown
+						li 
+							.second-level-dropdown-title Asia
+							ul.second-level-dropdown
+								li 
+									.third-level-dropdown-title Central Asia
+									ul.third-level-dropdown
 										li Kazakhstan
 										li Kyrgyzstan
 										li Tajikistan
 										li Turkmenistan
 										li Uzbekistan
-								li Northeastern Asia
-									ul.third-level-dropdown.sub-dropdown
+								li 
+									.third-level-dropdown-title Northeastern Asia
+									ul.third-level-dropdown
 										li China
 										li Hong Kong
 										li Japan
@@ -211,8 +262,9 @@
 										li Korea, South
 										li Mongolia
 										li Taiwan
-								li Southeastern Asia
-									ul.third-level-dropdown.sub-dropdown
+								li 
+									.third-level-dropdown-title Southeastern Asia
+									ul.third-level-dropdown
 										li Cambodia
 										li Indonesia
 										li Laos
@@ -221,8 +273,9 @@
 										li Philippines
 										li Thailand
 										li Vietnam
-								li Southern Asia
-									ul.third-level-dropdown.sub-dropdown
+								li 
+									.third-level-dropdown-title Southern Asia
+									ul.third-level-dropdown
 										li Afghanistan
 										li Bangladesh
 										li Bhutan
@@ -232,8 +285,9 @@
 										li Pakistan
 										li Palestinian Territory
 										li Sri Lanka
-								li Western Asia
-									ul.third-level-dropdown.sub-dropdown
+								li 
+									.third-level-dropdown-title Western Asia
+									ul.third-level-dropdown
 										li Armenia
 										li Azerbaijan
 										li Cyprus
@@ -246,10 +300,12 @@
 										li Syria
 										li Turkey
 										li Yemen
-						li Europe
-							ul.second-level-dropdown.sub-dropdown
-								li Eastern Europe
-									ul.third-level-dropdown.sub-dropdown
+						li 
+							.second-level-dropdown-title Europe
+							ul.second-level-dropdown
+								li 
+									.third-level-dropdown-title Eastern Europe
+									ul.third-level-dropdown
 										li Belarus
 										li Bulgaria
 										li Byelorussia
@@ -262,8 +318,9 @@
 										li Slovakia
 										li Ukraine
 										li USSR (former)
-								li Northern Europe
-									ul.third-level-dropdown.sub-dropdown
+								li 
+									.third-level-dropdown-title Northern Europe
+									ul.third-level-dropdown
 										li Denmark
 										li England
 										li Estonia
@@ -278,8 +335,9 @@
 										li Sweden
 										li United Kingdom
 										li Wales
-								li Southern Europe
-									ul.third-level-dropdown.sub-dropdown
+								li 
+									.third-level-dropdown-title Southern Europe
+									ul.third-level-dropdown
 										li Albania
 										li Croatia
 										li Greece
@@ -290,18 +348,21 @@
 										li Slovenia
 										li Spain
 										li Yugoslavia (former)
-								li Western Europe
-									ul.third-level-dropdown.sub-dropdown
+								li 
+									.third-level-dropdown-title Western Europe
+									ul.third-level-dropdown
 										li Austria
 										li Belgium
 										li France
 										li Germany
 										li Netherlands
 										li Switzerland
-						li Oceania
-							ul.second-level-dropdown.sub-dropdown
-								li Australia &amp; New Zealand
-									ul.third-level-dropdown.sub-dropdown
+						li 
+							.second-level-dropdown-title Oceania
+							ul.second-level-dropdown
+								li 
+									.third-level-dropdown-title Australia &amp; New Zealand
+									ul.third-level-dropdown
 										li Australia
 										li New Zealand
 										li Papua New Guinea
@@ -312,33 +373,219 @@
 										li Tonga
 			li.col-sm-2
 				.dropdown
-					.dropdown-title Label/Archive
+					.first-level-dropdown-title Label/Archive
 					ul.first-level-dropdown
-						li 
-						li 
-						li 
-						li 
-						li 
+						li Folkways Records (257)
+						li Smithsonian Folkways Recordings (121)
+						li Arhoolie Records (66)
+						li Blue Ridge Institute (5)
+						li Paredon Records (5)
+						li Cook Records (4)
+						li Monitor Records (3)
+						li Fast Folk Musical Magazine (2)
+						li Mickey Hart Collection (2)
+						li A.R.C.E. (1)
+						li Collector Records (1)
+						li Smithsonian Folkways Special Series (1)
+						li UNESCO (1)
+			li.col-sm-2.hidden-xs
+				.filter-more-button More
+		ul.row.dropdown-wrapper.filter-more-band
+			li.col-sm-2
+				// inside so 100% width takes bootstrap padding into account
+				.dropdown 
+					.first-level-dropdown-title Culture Group
+					ul.first-level-dropdown
+						li African American (4,070)
+						li Anglo-American (149)
+						li European American (46)
+						li African Brazilian (42)
+						li Cajun (37)
+						li Hispanic (33)
+						li Gullah (30)
+						li American (26)
+						li Maroon (20)
+						li Pikilio (20)
+						li African (18)
+						li Creole (14)
+						li African Caribbean (11)
+						li Jewish (10)
+						li Yoruba (7)
+						li Zulu (7)
+						li Wolof (6)
+						li Bantu (5)
+						li Irish (5)
+						li Kpelle (5)
+						li Scottish (5)
+						li Baule (4)
+						li Lucumi (4)
+						li Muslim (4)
+						li Pende (4)
+						li Tutsi (4)
+						li Apache (3)
+						li Bahamian (3)
+						li Basa (3)
+						li Czech-American (3)
+						li Ewe (3)
+						li Igbo (3)
+						li Japanese-American (3)
+						li Luhya (3)
+						li Mahafaly (3)
+						li Mbala (3)
+						li Mexican-American (3)
+						li Puerto Rican (3)
+						li Shona (3)
+						li Swazi (3)
 			li.col-sm-2
 				.dropdown
-					.dropdown-title 
+					.first-level-dropdown-title Language
 					ul.first-level-dropdown
-						li 
-						li 
-						li 
-						li 
-						li 
-
+						li English (2,325)
+						li Spanish (46)
+						li Portuguese (45)
+						li French (16)
+						li Yiddish (9)
+						li Russian (5)
+						li Afrikaans (4)
+						li Arabic (4)
+						li Shona (4)
+						li Wolof (4)
+						li Chinese (3)
+						li German (3)
+						li Haitian French Creole (3)
+						li Hebrew (modern) (3)
+						li Italian (3)
+						li Luhya (3)
+						li Swahili (3)
+						li Zulu (3)
+						li Cree (2)
+						li French Creole (2)
+						li Ga (2)
+						li Indonesian (2)
+						li Korean (2)
+						li Tai (2)
+						li Yoruba (2)
+						li Albanian (1)
+						li Bantu (1)
+						li Gaelic-Scots (1)
+						li Georgian (1)
+						li Greek (1)
+						li Hebrew (1)
+						li Hindi (1)
+						li Inuktitut, Eastern Canadian (1)
+						li Inuktitut, Western Canadian (1)
+						li Inupiatun, North Alaskan (1)
+						li Lingala (1)
+						li Michif (1)
+						li Nootka (1)
+						li Pashto (1)
+						li Persian (1)
+			li.col-sm-2
+				.dropdown
+					.first-level-dropdown-title Instrument
+					ul.first-level-dropdown
+						li Guitar (2,525)
+						li Vocals (2,423)
+						li Piano (1,249)
+						li Harmonica (582)
+						li Bass (546)
+						li Drum (528)
+						li Drums (333)
+						li Trumpet (322)
+						li Banjo (304)
+						li Trombone (263)
+						li Clarinet (237)
+						li Saxophone (197)
+						li Fiddle (120)
+						li Mandolin (80)
+						li Kazoo (79)
+						li Organ (75)
+						li Violin (62)
+						li Accordion (59)
+						li Tuba (59)
+						li Saxophone, tenor (56)
+						li Cornet (52)
+						li Viola (49)
+						li Washboard (49)
+						li Washboard band music (46)
+						li Tambourine (Drum) (43)
+						li Agogo (42)
+						li Organ (Musical instrument) (42)
+						li Pandeiro (Drum) (42)
+						li Atabaque (41)
+						li Gunga (40)
+						li Medio (40)
+						li Reco-reco (Musical instrument) (40)
+						li Maraca (38)
+						li Vocals, group (37)
+						li Drum kit (35)
+						li Bones (34)
+						li Flute (34)
+						li Ukulele (31)
+						li Bass guitar (30)
+						li Cowbells (27)
+			li.col-sm-2
+				.dropdown
+					.first-level-dropdown-title Format
+					ul.first-level-dropdown
+						li Digital Download (378)
+						li Custom CD (295)
+						li Custom Cassette (271)
+						li CD (154)
+						li LP (26)
+						li 7-inch (3)
+						li Box Set (2)
+						li DVD (1)
+			li.col-sm-2
+				.dropdown
+					.first-level-dropdown-title Decade
+					ul.first-level-dropdown
+						li 1990s (2,263)
+						li 1960s (958)
+						li 1950s (897)
+						li 1970s (813)
+						li 1980s (617)
+						li 2000s (578)
+						li 2010s (263)
+			li.col-sm-2
+				.dropdown
+					.first-level-dropdown-title Grade Level
+					ul.first-level-dropdown
+						li K-2 (5)
+						li 6-8 (4)
+						li 9-12 (4)
+						li 3-5|6-8 (3)
+						li 6-8|9-12 (3)
+						li 3-5|6-8|9-12 (2)
+						li K-2|3-5|6-8|9-12 (2)
+						li 1-2 (1)
+						li 3-5 (1)
+						li 3-5|5-6 (1)
+						li 3-5|9-12 (1)
+						li 3-6 (1)
+						li 3-8 (1)
+						li 4-5|6-8|9-12 (1)
+						li 4-8 (1)
+						li 5-6|7-8 (1)
+						li 5-6|7-12 (1)
+						li 7-12 (1)
+		ul.row.dropdown-wrapper.visible-xs
+			li.col-sm-2
+				.filter-more-button More
 
 .container
-	.row.content
-		section.first-section.article-section.col-sm-12
-			ul
-				-foreach($results as $result):
-					li
-						a(href="<?php echo $result->url() ?>")
-							!= $result->title()->html() ?>
-				-endforeach
+	section.first-section
+		ul.row
+			-foreach($pages->find('explore')->children()->find('sounds')->children()->visible() as $card):
+				-snippet('card-album', array('card' => $card ))
+			-endforeach
+			//- -foreach($results as $result):
+				li
+					a(href="<?php echo $result->url() ?>")
+						!= $result->title()->html() ?>
+			//- -endforeach
+
+
 
 
 -snippet('footer')

@@ -10,18 +10,16 @@
 		width: 100%;
 		min-height: initial;
 		min-height: auto;
+		z-index: 11; // one over search page filter, 2 over background click
 		@include subpage-navbarHeight;	
 		@include respond-to(break2max) {
 			// position: fixed;
 			width: 100%;
-			z-index: 10;
 			// height: $mobile-subpage-navbarHeight;
 		}
 		@include respond-to(break2) {
 			// top: 60px;
 			top: $tablet-navbarSiteToggle;
-			// z-index: 2;
-			z-index: 10;
 			// height: $tablet-subpage-navbarHeight;
 		}
 		@include respond-to(fullwidth) {
@@ -105,12 +103,15 @@
 	}
 
 	// OUTSIDE NAVBAR CLICKING TO CLOSE
-	.navbar-outside {
+	.navbar-outside, .filter-outside {
 		top: 0;
 		right: 0;
 		bottom: 0;
 		left: 0;
 		z-index: 9; // just below navbar
+		// background-color: rgba(red, 0.2);
+	}
+	.filter-outside {
 		// background-color: rgba(red, 0.2);
 	}
 
