@@ -27,4 +27,4 @@ li.card.blog-article-card.col-xs-12(class="<? if ($card->type() == 'video') echo
 				.title!= $card->title()
 			-endif
 
-			.author!= $card->author()
+			.author!= 'by ', $card->author()

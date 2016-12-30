@@ -105,11 +105,14 @@
 		.tag {
 			// override full-feature-card default
 			display: block; 
-			@include margin-top(4)
+			@include margin-top(3.5)
 			margin-top: 0; // mobile
 		}
 		.title {
 			@include lg-magazine-title;
+			@include respond-to(fullwidth) {
+				font-size: 4.6rem;
+			}
 		}
 		.details-inner {
 			// @include padding-left(2);
@@ -127,6 +130,8 @@
 			background-color: white;
 		}
 		.details-inner {
+			position: relative;
+			@include padding-top(2);
 			@include padding-left(2);
 			@include padding-bottom(2);
 		}
@@ -134,6 +139,10 @@
 			@include md-sans;
 		}
 		.more-link {
+			position: absolute;
+			top: auto;
+			@include bottom(2);
+			@include left(2);
 			@include margin-top(1);
 		}
 	}
@@ -154,9 +163,13 @@
 			@include sm-magazine-title;
 		}
 		.details-inner {
+			@include padding-top(0);
 			@include padding-left(2);
 			@include padding-bottom(2);
 			@include md-sans;
+		}
+		.more-link {
+			display: none;
 		}
 	}
 	.from-the-collection-section {
@@ -171,6 +184,11 @@
 		}
 	}
 	.back-issues-section {
+		background-color: white;
+		.section-title {
+			@include padding-top(1.2);
+			@include margin-bottom(1.4);
+		}
 		@include margin-bottom(4);
 		.band {
 			background-color: $black65;
@@ -255,14 +273,19 @@
 				background-color: white;
 				@include padding-top(4);
 				@include padding-left(4);
-				@include padding-bottom(2);
+				@include padding-bottom(1.2);
 
 			}
 			.title {
 				@include lg-magazine-title;
 				@include padding-right(4); // smaller width from design
+				@include respond-to(fullwidth) {
+					font-size: 4.6rem;
+					line-height: 1;
+				}
 			}
 			.author {
+				@include margin-top(1.5);
 				@include md-sans;
 			}
 		}
@@ -277,6 +300,7 @@
 			}
 			p {
 				@include body-sans;
+				@include padding-bottom(1.2);
 			}
 			.references {
 				color: $black40;
@@ -284,5 +308,8 @@
 					@include sm-sans;
 				}
 			}
+		}
+		.related-content-title {
+			@include margin-bottom(2)
 		}
 	}

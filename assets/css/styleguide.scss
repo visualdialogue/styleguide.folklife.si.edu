@@ -46,7 +46,6 @@
 /* #general
 -------------------------------------------------- */
 	.sub-section {
-		// @include border(top);
 		@include margin-top(4);
 	}
 
@@ -65,7 +64,6 @@
 	}
 	h3.sidebar-section-title { // spec war
 		@include margin-top(0.5);
-		// display: none;
 	}
 
 /* #grid
@@ -222,7 +220,6 @@
 		@include respond-to(fullwidth) {
 			margin-bottom:8rem;
 		}
-		// @include margin-top(1);
 
 		-moz-tab-size: 4; /* Code for Firefox */
 		-o-tab-size: 4; /* Code for Opera 10.6-12.1 */

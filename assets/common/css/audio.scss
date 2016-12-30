@@ -11,7 +11,6 @@
 		}
 		.title {
 			@include md-sans;
-			// font-weight: 500;
 			font-weight: 600;
 			@include margin-bottom(0.7);
 		}
@@ -21,10 +20,8 @@
 		.details-inner {
 			position: relative; // hold player
 			// bottom padding for abs positioned audio player
-			padding-bottom:7rem;
-			padding-bottom:15vw;
-			@include respond-to(break2) {padding-bottom:7vw;}
-			@include respond-to(fullwidth) {padding-bottom:10rem;}
+			@include padding-bottom(10)
+			padding-bottom:15vw; // mobile
 		}
 	}
 

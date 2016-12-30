@@ -116,98 +116,100 @@
   * set margins with scales
   *******/
   $tablet-scale: 0.64; // just a little down from full width size
-  $mobile-scale: 2.5; // major 2nd * major 2nd
+  // $mobile-scale: 2.5; // major 2nd * major 2nd
+  // $mobile-scale: 1.125; // major 2nd * major 2nd
+  $mobile-scale: 1.4238; // major 2nd * major 2nd
   @mixin right($distance) {
-    right:#{$distance / $mobile-scale }em; // eg. 5rem
+    right:#{$distance / $mobile-scale }rem; // eg. 5rem
     @include respond-to(break2) {right:#{$distance * $tablet-scale}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {right:#{$distance}rem;} // eg 4rem
   }
   @mixin left($distance) {
-    left:#{$distance / $mobile-scale }em; // eg. 5rem
+    left:#{$distance / $mobile-scale }rem; // eg. 5rem
     @include respond-to(break2) {left:#{$distance * $tablet-scale}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {left:#{$distance}rem;} // eg 4rem
   }
   @mixin margin($margin) {
-    margin:#{$margin / $mobile-scale }em; // eg. 5rem
+    margin:#{$margin / $mobile-scale }rem; // eg. 5rem
     @include respond-to(break2) {margin:#{$margin * $tablet-scale}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {margin:#{$margin}rem;} // eg 4rem
   }
   @mixin margin-top($margin) {
-    margin-top:#{$margin / $mobile-scale }em; // eg. 5rem
+    margin-top:#{$margin / $mobile-scale }rem; // eg. 5rem
     @include respond-to(break2) {margin-top:#{$margin * $tablet-scale}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {margin-top:#{$margin}rem;} // eg 4rem
   }
   @mixin margin-right($margin) {
-    margin-right:#{$margin / $mobile-scale }em; // eg. 5rem
+    margin-right:#{$margin / $mobile-scale }rem; // eg. 5rem
     @include respond-to(break2) {margin-right:#{$margin * $tablet-scale}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {margin-right:#{$margin}rem;} // eg 4rem
   }
   @mixin margin-bottom($margin) {
-    // margin-bottom:#{$margin / $mobile-scale }em; // eg. 5rem
+    // margin-bottom:#{$margin / $mobile-scale }rem; // eg. 5rem
     margin-bottom:#{$margin / $mobile-scale}rem; // eg. 5rem
     @include respond-to(break2) {margin-bottom:#{$margin * $tablet-scale}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {margin-bottom:#{$margin}rem;} // eg 4rem
   }
   @mixin margin-left($margin) {
-    margin-left:#{$margin / $mobile-scale }em; // eg. 5rem
+    margin-left:#{$margin / $mobile-scale }rem; // eg. 5rem
     @include respond-to(break2) {margin-left:#{$margin * $tablet-scale}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {margin-left:#{$margin}rem;} // eg 4rem
   }
 
   @mixin padding($padding) {
-    // padding:#{$padding / $mobile-scale }em; // eg. 5rem
-    padding:#{$padding / $mobile-scale }em; // eg. 5rem
+    // padding:#{$padding / $mobile-scale }rem; // eg. 5rem
+    padding:#{$padding / $mobile-scale }rem; // eg. 5rem
     @include respond-to(break2) {padding:#{$padding * $tablet-scale}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {padding:#{$padding}rem;} // eg 4rem
   }
   @mixin padding-top($padding) {
-    // padding-top:#{$padding / $mobile-scale }em; // eg. 5rem
-    padding-top:#{$padding / $mobile-scale }em; // eg. 5rem
+    // padding-top:#{$padding / $mobile-scale }rem; // eg. 5rem
+    padding-top:#{$padding / $mobile-scale }rem; // eg. 5rem
     @include respond-to(break2) {padding-top:#{$padding * $tablet-scale}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {padding-top:#{$padding}rem;} // eg 4rem
   }
   @mixin padding-right($padding) {
-    // padding-right:#{$padding / $mobile-scale }em; // eg. 5rem
-    padding-right:#{$padding / $mobile-scale }em; // eg. 5rem
+    // padding-right:#{$padding / $mobile-scale }rem; // eg. 5rem
+    padding-right:#{$padding / $mobile-scale }rem; // eg. 5rem
     @include respond-to(break2) {padding-right:#{$padding * $tablet-scale}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {padding-right:#{$padding}rem;} // eg 4rem
   }
   @mixin padding-bottom($padding) {
-    // padding-bottom:#{$padding / $mobile-scale }em; // eg. 5rem
-    padding-bottom:#{$padding / $mobile-scale }em; // eg. 5rem
+    // padding-bottom:#{$padding / $mobile-scale }rem; // eg. 5rem
+    padding-bottom:#{$padding / $mobile-scale }rem; // eg. 5rem
     // padding-bottom:1em; // eg. 5rem
     @include respond-to(break2) {padding-bottom:#{$padding * $tablet-scale}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {padding-bottom:#{$padding}rem;} // eg 4rem
   }
   @mixin padding-left($padding) {
-    padding-left:#{$padding / $mobile-scale }em; // eg. 5rem
+    padding-left:#{$padding / $mobile-scale }rem; // eg. 5rem
     @include respond-to(break2) {padding-left:#{$padding * $tablet-scale}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {padding-left:#{$padding}rem;} // eg 4rem
   }
   @mixin top($top) {
-    top:#{$top / $mobile-scale }em; // eg. 5rem
+    top:#{$top / $mobile-scale }rem; // eg. 5rem
     @include respond-to(break2) {top:#{$top * $tablet-scale}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {top:#{$top}rem;} // eg 4rem
   }
   @mixin bottom($bottom) {
-    bottom:#{$bottom / $mobile-scale }em; // eg. 5rem
+    bottom:#{$bottom / $mobile-scale }rem; // eg. 5rem
     @include respond-to(break2) {bottom:#{$bottom * $tablet-scale}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {bottom:#{$bottom}rem;} // eg 4rem
   }
   @mixin width($width) {
-    width:#{$width / $mobile-scale }em; // eg. 5rem
+    width:#{$width / $mobile-scale }rem; // eg. 5rem
     // width:#{$width * 2.5}vw; // eg. 5rem
     @include respond-to(break2) {width:#{$width * $tablet-scale}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {width:#{$width}rem;} // eg 4rem
   }
   @mixin height($height) {
-    height:#{$height / $mobile-scale }em; // eg. 5rem
+    height:#{$height / $mobile-scale }rem; // eg. 5rem
     // height:#{$height * 2.5}vw; // eg. 5rem
     @include respond-to(break2) {height:#{$height * $tablet-scale}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {height:#{$height}rem;} // eg 4rem
   }
   @mixin min-height($height) {
-    min-height:#{$height / $mobile-scale }em; // eg. 5rem
+    min-height:#{$height / $mobile-scale }rem; // eg. 5rem
     // min-height:#{$height * 2.5}vw; // eg. 5rem
     @include respond-to(break2) {min-height:#{$height * $tablet-scale}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {min-height:#{$height}rem;} // eg 4rem

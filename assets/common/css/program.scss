@@ -43,7 +43,6 @@
 			@include margin-bottom(2);
 		}
 		figcaption {
-			// color: $black65;
 			color: white;
 			@include sm-sans;
 			@include margin-top(2);
@@ -52,7 +51,6 @@
 			@include padding-top(1);
 		}
 		.program-resources {
-			// @include margin-top(12.7);
 			.title {
 				@include md-sans;
 				font-weight: 600;
@@ -70,24 +68,16 @@
 	.program-page, .program-category-page {
 
 		.page-title {
-			@include padding-top(2);
+			@include padding-top(2.5);
 			padding-top: 0.5vw;
 		}
 	}
 
 	.ms-header {
 		@include margin-bottom(3.2);
-		.title-bar {
-			// height:195px;
-			// @include respond-to(break2) {height:17vw;}
-			// @include respond-to(fullwidth) {height:19.5rem;}
-		}
 		.title-height {
-			// height:6rem;
-			height: auto;
-			@include respond-to(break2) {height:8.7vw;}
-			// @include respond-to(fullwidth) {height:13.7rem;}
-			@include respond-to(fullwidth) {height:12rem;}
+			@include height(13.9);
+			height: auto; // mobile
 		}
 		.page-title {
 			color: white;
@@ -95,16 +85,12 @@
 		.thin-hr {
 			margin: 0;
 			background-image:url(/assets/images/hr/hr--thin4.png);
-			// width: 50%;
 		}
 		.thin-hr-svg {
 			margin: 0;
 		}
 		.subtitle-height {
-			// height:5rem;
-			// @include respond-to(break2) {height:3.2vw;}
-			// @include respond-to(fullwidth) {height:5rem;}
-			@include height(5);
+			@include height(5.3);
 			height: auto;
 		}
 		.page-subtitle {
@@ -112,25 +98,11 @@
 			font-weight: 600;
 			color: $basque-green;
 			text-transform: uppercase;
-			// margin-top: -1px; // eyeball center
-			@include margin-top(0.5);
 			@include padding-bottom(2);
-			margin-top:1vw;
-			@include respond-to(break2) {margin-top:0.2vw;}
-			@include respond-to(fullwidth) {margin-top:0.5rem;}
+			@include margin-top(0.5);
 		}
-		// .thin-hr-svg {
-		// 	// make inline with js, from http://stackoverflow.com/questions/24933430/img-src-svg-changing-the-fill-color
-		// 	// color: blue;
-		// 	path {
-		// 		fill: $basque-green;
-		// 	}
-		// }
 		.basque {
 			background-color: $basque-red;
-		}
-		&-image {
-			// @include margin-top(4);
 		}
 		&-inner {
 			position: relative; // contain caption
@@ -139,12 +111,11 @@
 				@include padding-right(2);
 				@include padding-bottom(1);
 				@include padding-left(2);
-				// background-color: rgba($black70, 0.9);
 			}
 		}
 	}
 	.ms-introduction {
-		@include margin-bottom(3);
+		@include margin-bottom(1);
 		.section-title {
 			color: $basque-red;
 			@include margin-bottom(2.6);
@@ -153,25 +124,23 @@
 			@include lg-sans;
 			@include margin-bottom(2);
 		}
-		&-credits {
-			@include sm-sans;
+		&-credits p {
+			@include mini-sans;
+			text-transform: capitalize;
 			color: $black50;
-			// @include margin-top(5);
+			@include margin-top(3.5);
 		}
 		img {
-			@include margin-top(2.7);
+			@include margin-top(1.2);
 			@include margin-bottom(3.3);
-		}
-		p {
-			// @include margin-bottom(1.4);
 		}
 	}
 	.ms-sidebar {
 		&-logo {
+			@include margin-bottom(4.2);
 			@include respond-to(break2max) {
 				margin-top: 2rem;
 			}
-			@include margin-bottom(4.2);
 		}
 		&-nav {
 			@include margin-bottom(4);
@@ -183,10 +152,10 @@
 			border-color: $fs-green;
 			font-weight: 600;
 			&.small {
-				@include sm-sans;
+				@include mini-sans;
 				color: $black50;
 				text-transform: uppercase;
-				@include padding-top(0.3);
+				@include padding-top(0.7);
 			}
 			&:last-of-type {
 				@include border(bottom, 1px, $basque-green)
@@ -194,7 +163,7 @@
 			}
 			a {
 				display: block;
-				@include padding-top(0.6);
+				@include padding-top(0.4);
 				@include padding-bottom(0.6);
 				@include padding-left(1.5);
 			}
@@ -203,16 +172,13 @@
 		.top-border-card:before {
 			border-color: $basque-green;
 		}
-
 	}
 	.sidebar-card {
 		.details-inner {
 			@include padding-top(1.4);
 		}
-
 	}
 	.ms-section {
-		// @include margin-bottom(4);
 		margin-bottom:0;
 		.card {
 			@include margin-bottom(2.5);
@@ -222,6 +188,7 @@
 		}
 		.section-title {
 			color: $basque-red;
+			@include margin-top(1.5);
 			@include margin-bottom(1.5);
 		}
 		.subtitle {
@@ -232,7 +199,7 @@
 		.byline {
 			@include md-sans;
 			font-weight: 600;
-			@include margin-bottom(4);
+			@include margin-bottom(3.5);
 		}
 		.blurb {
 			@include lg-sans;
@@ -242,9 +209,23 @@
 		}
 		.image {
 			cursor: initial;
+			@include respond-to(break2max) {
+				margin-bottom: 1rem;
+			}
 		}
 		.details-inner {
 			padding-top:0 !important;
+		}
+		.description {
+			h3 {
+				@include margin-top(4);
+				&:first-of-type {
+					margin-top:0;
+				}
+			}
+			p {
+				@include margin-bottom(1);
+			}
 		}
 		.thin-hr-svg {
 			@include margin-bottom(0.5);
@@ -252,7 +233,9 @@
 				fill: $basque-green;
 			}
 		}
-
+		.more-link {
+			@include margin-top(1);
+		}
 	}
 	.participants-section {
 		h3 {

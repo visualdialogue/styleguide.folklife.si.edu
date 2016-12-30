@@ -1,9 +1,7 @@
 .card {
 	// for consistency with rows of cards and next sections
+	// margin-bottom:1.5rem;
 	@include margin-bottom(4);
-	margin-bottom:1.5rem;
-	@include respond-to(break2) {margin-bottom:3.2vw;}
-	@include respond-to(fullwidth) {margin-bottom:4rem;}
 }
 
 .border {
@@ -410,12 +408,14 @@ a.details {
 		}
 		.title {
 			@include lg-serif;
-			margin-bottom:1rem;
-			@include respond-to(break2) {margin-bottom:1.15vw;}
-			@include respond-to(fullwidth) {
-				margin-bottom:1.8rem;
-				margin-bottom:3rem;
-			}
+			// margin-bottom:1rem;
+			// @include respond-to(break2) {margin-bottom:1.15vw;}
+			// @include respond-to(fullwidth) {
+			// 	margin-bottom:1.8rem;
+			// 	margin-bottom:3rem;
+
+			// }
+			@include margin-bottom(2);
 		}
 		.details-inner {
 			@include padding-top(0);
@@ -468,10 +468,7 @@ a.details {
 		
 		.details-inner {
 			padding:0;
-			@include padding-top(2);
-		}
-		.tag {
-			// display: none;
+			@include padding-top(1.7);
 		}
 		.description {
 			display: none; // hide copy on cards
@@ -481,7 +478,7 @@ a.details {
 			font-weight: 700;
 			// line-height: 1;
 
-			// @include margin-bottom(2);
+			@include margin-bottom(0.5);
 		}
 		.artist {
 			@include sm-sans;
@@ -537,7 +534,6 @@ a.details {
 		&:before {
 			content: '';
 			border-top: 1px solid $black30; // formerly
-			// border-top: 1px solid blue;
 			width: 100%;
 			display: block;
 		}
@@ -549,12 +545,8 @@ a.details {
 		}
 		.details-inner {
 			border: 2px solid $black15;
-			@include padding-left(2); // padding on left by default
-			// @include padding-le
 			@include padding-bottom(2); // padding on left by default
-			padding-left:1rem;
-			@include respond-to(break2) {padding-left:1rem;}
-			@include respond-to(fullwidth) {padding-left:2rem;}
+			@include padding-left(2);
 		}
 	}
 

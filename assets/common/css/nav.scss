@@ -551,7 +551,10 @@
 		}
 		@include respond-to(fullwidth) {
 			padding: 5rem 0 2rem;
+			padding: rem 0 2rem;
 		}
+		@include padding-top(3.5);
+		@include padding-bottom(3);
 	}
 	
 	.browsenav-title {

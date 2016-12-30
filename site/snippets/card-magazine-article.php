@@ -27,7 +27,7 @@
         <?php echo $card->title(); ?></div>
       <?php endif; ?>
       <div class="author">
-        <?php echo $card->author(); ?></div>
+        <?php echo 'by ', $card->author(); ?></div>
     </div>
   </div>
 </li>
