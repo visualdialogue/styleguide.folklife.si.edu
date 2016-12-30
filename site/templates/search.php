@@ -454,7 +454,7 @@
         </div>
       </li>
       <li class="col-sm-2 hidden-xs">
-        <div class="filter-more-button">More</div>
+        <div class="filter-button filter-more-button">More</div>
       </li>
     </ul>
     <ul class="row dropdown-wrapper filter-more-band">
@@ -657,7 +657,7 @@
     </ul>
     <ul class="row dropdown-wrapper visible-xs">
       <li class="col-sm-2">
-        <div class="filter-more-button">More</div>
+        <div class="filter-button filter-more-button">More</div>
       </li>
     </ul>
   </div>

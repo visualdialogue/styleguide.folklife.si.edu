@@ -200,6 +200,10 @@
 	.code_gutter {
 		display:none;
 	}
+	.codeblock {
+		@include border(top);
+		@include margin-top(4);
+	}
 	pre {
 		display: none; // start hidden
 		
@@ -296,8 +300,6 @@
 		@include margin-bottom(2);
 	}
 	.type-title-wrapper {
-		@include margin-top(4);
-		@include border(top);
 	}
 	.first-type-title-wrapper {
 		@include border(top, 4px);

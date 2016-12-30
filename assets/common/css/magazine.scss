@@ -6,13 +6,21 @@
 	.magazine-title-bar-wrapper {
 		position: relative; // hold abs child
 	}
+	.folkways-magazine-logo-wrapper {
+		background-color: black;
+		height:19vw;
+		@include respond-to(break2) {height:7.5vw;}
+		@include respond-to(fullwidth) {height:11.7rem;} // from layout
+	}
 	.magazine-title-bar {
 		// background-color: black;
 		// Split background colors for backdrop behind color grid
 		@include margin-bottom(4);
 		
 		@include respond-to(break2) {
-			height:11.7rem; // from layout
+			height:19vw;
+			@include respond-to(break2) {height:7.5vw;}
+			@include respond-to(fullwidth) {height:11.7rem;} // from layout
 		}
 		&:before, &:after {
 			content: '';
@@ -44,35 +52,40 @@
 		}
 		.black-spacer {
 			background-color: black;
-			height:11.7rem; // from layout
+			height:19vw;
+			@include respond-to(break2) {height:7.5vw;}
+			@include respond-to(fullwidth) {height:11.7rem;} // from layout
 		}
 		.issue-title-wrapper {
 			@include respond-to(break2max) {
 				// full width yellow
 				padding: 0 !important;
-				margin-left: -1rem;
-				margin-right: -1rem;
+				margin-left: -0.75rem;
+				margin-right: -0.75rem;
 			}
 		}
 		.issue-title {
 			color: black;
 			background-color: $fw-magazine;
+			// height:19vw;
+			height:6.5rem;
+			padding-left: 1.5rem;
 			@include respond-to(break2) {
+				height:7.5vw;
 				position: absolute;
 				top:0;
 				right: 0;
 				bottom:0;
-				left:-2rem;
 				z-index: 2;
-				height: 11.7rem;
-				left:-2rem;
+				left:-1vw;
+				padding-left: 2.56vw;
 			}
-			
-			@include respond-to(break2) {left:-2rem;}
-			@include respond-to(fullwidth) {left:-2rem;}
-
+			@include respond-to(fullwidth) {
+				left:-2rem;
+				height:11.7rem; // from layout
+				padding-left: 4rem;
+			} 
 			@include padding-top(3);
-			@include padding-left(4);
 			// mobile
 			padding-top: 1rem;
 			padding-bottom: 1rem;
@@ -178,12 +191,36 @@
 			font-weight: 700;
 		}
 		li:last-of-type {
-			@include border(right);
+			@include respond-to(break2) {
+				@include border(right);
+			}
 		}
 		.view-all-issues {
-			.title {
-				@include padding-bottom(0.5);
-				border-bottom: 2px solid white;
+			.first-level-dropdown-title {
+				@include lg-sans;
+				font-weight: 700;
+				color: white;
+				background-color: $black65;
+				padding-left:0;
+				@include padding-top(0.3);
+				@include padding-bottom(4);
+				@include border(bottom, 1px, white);
+				&:after {
+					top:0;
+					@include respond-to(break2) {top:0.8vw;}
+					@include respond-to(fullwidth) {top:1rem;}
+				}
+			}
+			ul {
+				// display: block; // testing
+			}
+			li {
+				@include sm-sans;
+				font-weight: 400;
+				color: $black60;
+				line-height:1.9;
+				@include respond-to(break2) {line-height:1.9;}
+				@include respond-to(fullwidth) {line-height:1.9;}
 			}
 		}
 	}

@@ -556,7 +556,7 @@
           </div>
           <div class="row">
             <div class="col-md-5">
-              <div class="type-details">Typeface: Acumin Pro<br/>Weight: Light<br/>Maximum Font Size:</div>
+              <div class="type-details">Typeface: Acumin Pro<br/>Weight: Light<br/>Maximum Font Size:<br/>Usage: Festival Blog page listing copy</div>
             </div>
             <div class="col-md-7">
               <pre class="sass"><code>.body-sans {@include sm-sans;}

@@ -4409,7 +4409,7 @@ iframe {
       line-height: 1; } }
   @media only screen and (min-width: 1560px) {
     .xl-slab {
-      font-size: 4.5rem;
+      font-size: 4.8rem;
       line-height: 1; } }
 
 .lg-slab {
@@ -5554,7 +5554,8 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
   font-size: 5vw;
   font-family: "unit-gothic-718", Arial, sans-serif;
   color: #595959;
-  margin-bottom: 2vw; }
+  margin-bottom: 2vw;
+  margin-top: 1em; }
   @media only screen and (min-width: 53.25em) {
     .browsenav-title {
       font-size: 1.09vw;
@@ -5566,122 +5567,13 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
   @media only screen and (min-width: 53.25em) {
     .browsenav-title {
       text-align: right;
-      margin-bottom: 1.5vw; } }
+      margin-bottom: 0; } }
+  @media only screen and (min-width: 53.25em) {
+    .browsenav-title {
+      margin-top: 1.6vw; } }
   @media only screen and (min-width: 1560px) {
     .browsenav-title {
-      margin-bottom: 2rem; } }
-  .browsenav-title .vertically-align-grandparent {
-    height: 7vw; }
-    @media only screen and (min-width: 53.25em) {
-      .browsenav-title .vertically-align-grandparent {
-        height: 34px; } }
-  .browsenav-title .vertically-align {
-    top: 5vw;
-    left: 0; }
-    @media only screen and (min-width: 53.25em) {
-      .browsenav-title .vertically-align {
-        top: 50%;
-        right: 0; } }
-
-.browsenav-item {
-  margin-bottom: 2rem; }
-  @media only screen and (min-width: 53.25em) {
-    .browsenav-item {
-      margin-bottom: 0; } }
-
-select {
-  /* make arrow and background */
-  background-repeat: no-repeat;
-  /* reset */
-  background: transparent;
-  border: 0;
-  border-radius: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  cursor: pointer;
-  outline: none;
-  border-radius: 0;
-  padding-top: 0em;
-  padding-right: 0.6em;
-  padding-bottom: 0.2em;
-  padding-left: 0.6em;
-  width: 100%;
-  font-family: "acumin-pro", Arial, sans-serif;
-  font-size: 1.7rem;
-  line-height: 2;
-  font-weight: 400;
-  line-height: 1 !important;
-  font-weight: 600;
-  width: 100%;
-  height: 34px; }
-  @media only screen and (min-width: 53.25em) {
-    select {
-      padding-top: 0vw; } }
-  @media only screen and (min-width: 1560px) {
-    select {
-      padding-top: 0rem; } }
-  @media only screen and (min-width: 53.25em) {
-    select {
-      padding-right: 0.96vw; } }
-  @media only screen and (min-width: 1560px) {
-    select {
-      padding-right: 1.5rem; } }
-  @media only screen and (min-width: 53.25em) {
-    select {
-      padding-bottom: 0.32vw; } }
-  @media only screen and (min-width: 1560px) {
-    select {
-      padding-bottom: 0.5rem; } }
-  @media only screen and (min-width: 53.25em) {
-    select {
-      padding-left: 0.96vw; } }
-  @media only screen and (min-width: 1560px) {
-    select {
-      padding-left: 1.5rem; } }
-  @media only screen and (min-width: 53.25em) {
-    select {
-      font-size: 1.1vw;
-      line-height: 1.45; } }
-  @media only screen and (min-width: 1560px) {
-    select {
-      font-size: 1.6rem;
-      line-height: 1.8; } }
-
-.select {
-  width: 100%;
-  margin-bottom: 0;
-  background-color: white;
-  color: #595959; }
-  .select:after {
-    content: "\6f";
-    font-family: "vd-icons";
-    font-size: 3rem;
-    vertical-align: top;
-    color: #595959;
-    position: absolute;
-    right: 3rem;
-    top: 0;
-    line-height: 5vw;
-    text-align: center;
-    width: 10%;
-    height: 100%;
-    pointer-events: none;
-    box-sizing: border-box;
-    font-size: 3rem; }
-    @media only screen and (min-width: 53.25em) {
-      .select:after {
-        line-height: 2.5rem; } }
-    @media only screen and (min-width: 1560px) {
-      .select:after {
-        line-height: 0.7; } }
-    @media only screen and (min-width: 53.25em) {
-      .select:after {
-        font-size: 2.5vw; } }
-    @media only screen and (min-width: 1560px) {
-      .select:after {
-        font-size: 3rem; } }
-  .select:hover:after {
-    color: #e7f1de; }
+      margin-top: 2.5rem; } }
 
 /* Bootstrap overrides
 -------------------------------------------------*/
@@ -6100,7 +5992,7 @@ hr {
       line-height: 1; } }
   @media only screen and (min-width: 1560px) {
     .page-title {
-      font-size: 4.5rem;
+      font-size: 4.8rem;
       line-height: 1; } }
   @media only screen and (min-width: 53.25em) {
     .page-title {
@@ -6854,35 +6746,35 @@ figcaption {
 .third-level-dropdown li:after {
   display: none; }
 
-.first-level-dropdown-title, .filter-more-button {
+.first-level-dropdown-title, .filter-button {
   padding-top: 0.28em;
   margin-top: 0.6em;
   height: 1.48em;
   height: 3rem;
   padding-left: 0.4em; }
   @media only screen and (min-width: 53.25em) {
-    .first-level-dropdown-title, .filter-more-button {
+    .first-level-dropdown-title, .filter-button {
       padding-top: 0.448vw; } }
   @media only screen and (min-width: 1560px) {
-    .first-level-dropdown-title, .filter-more-button {
+    .first-level-dropdown-title, .filter-button {
       padding-top: 0.7rem; } }
   @media only screen and (min-width: 53.25em) {
-    .first-level-dropdown-title, .filter-more-button {
+    .first-level-dropdown-title, .filter-button {
       margin-top: 0.96vw; } }
   @media only screen and (min-width: 1560px) {
-    .first-level-dropdown-title, .filter-more-button {
+    .first-level-dropdown-title, .filter-button {
       margin-top: 1.5rem; } }
   @media only screen and (min-width: 53.25em) {
-    .first-level-dropdown-title, .filter-more-button {
+    .first-level-dropdown-title, .filter-button {
       height: 2.368vw; } }
   @media only screen and (min-width: 1560px) {
-    .first-level-dropdown-title, .filter-more-button {
+    .first-level-dropdown-title, .filter-button {
       height: 3.7rem; } }
   @media only screen and (min-width: 53.25em) {
-    .first-level-dropdown-title, .filter-more-button {
+    .first-level-dropdown-title, .filter-button {
       padding-left: 0.64vw; } }
   @media only screen and (min-width: 1560px) {
-    .first-level-dropdown-title, .filter-more-button {
+    .first-level-dropdown-title, .filter-button {
       padding-left: 1rem; } }
 
 .first-level-dropdown-title:after {
@@ -6987,43 +6879,43 @@ figcaption {
   -moz-transform: rotate(-90deg);
   transform: rotate(-90deg); }
 
-/* Search
+/* Search, Festival Past Festival Programs
 -------------------------------------------------*/
-.search-page .thin-hr-svg {
+.search-page .thin-hr-svg, .past-festivals-page .thin-hr-svg {
   padding: 0;
   margin-top: 0;
   margin-bottom: 0.2rem; }
   @media only screen and (min-width: 53.25em) {
-    .search-page .thin-hr-svg {
+    .search-page .thin-hr-svg, .past-festivals-page .thin-hr-svg {
       margin-bottom: 0.32vw; } }
   @media only screen and (min-width: 1560px) {
-    .search-page .thin-hr-svg {
+    .search-page .thin-hr-svg, .past-festivals-page .thin-hr-svg {
       margin-bottom: 0.5rem; } }
-  .search-page .thin-hr-svg path {
+  .search-page .thin-hr-svg path, .past-festivals-page .thin-hr-svg path {
     fill: #b3b3b3; }
 
-.search-page .search-query-title {
+.search-page .search-query-title, .past-festivals-page .search-query-title {
   font-family: "unit-gothic-717", Arial, sans-serif;
   text-transform: uppercase;
   font-size: 8vw;
   text-transform: capitalize;
   margin-bottom: 0.96rem; }
   @media only screen and (min-width: 53.25em) {
-    .search-page .search-query-title {
+    .search-page .search-query-title, .past-festivals-page .search-query-title {
       font-size: 2.9vw;
       line-height: 1; } }
   @media only screen and (min-width: 1560px) {
-    .search-page .search-query-title {
-      font-size: 4.5rem;
+    .search-page .search-query-title, .past-festivals-page .search-query-title {
+      font-size: 4.8rem;
       line-height: 1; } }
   @media only screen and (min-width: 53.25em) {
-    .search-page .search-query-title {
+    .search-page .search-query-title, .past-festivals-page .search-query-title {
       margin-bottom: 1.536vw; } }
   @media only screen and (min-width: 1560px) {
-    .search-page .search-query-title {
+    .search-page .search-query-title, .past-festivals-page .search-query-title {
       margin-bottom: 2.4rem; } }
 
-.search-page .highlight-bar {
+.search-page .highlight-bar, .past-festivals-page .highlight-bar {
   background-color: #e6e6e6;
   padding-top: 0.64em;
   padding-bottom: 1.6em;
@@ -7031,25 +6923,37 @@ figcaption {
   position: relative;
   z-index: 10; }
   @media only screen and (min-width: 53.25em) {
-    .search-page .highlight-bar {
+    .search-page .highlight-bar, .past-festivals-page .highlight-bar {
       padding-top: 1.024vw; } }
   @media only screen and (min-width: 1560px) {
-    .search-page .highlight-bar {
+    .search-page .highlight-bar, .past-festivals-page .highlight-bar {
       padding-top: 1.6rem; } }
   @media only screen and (min-width: 53.25em) {
-    .search-page .highlight-bar {
+    .search-page .highlight-bar, .past-festivals-page .highlight-bar {
       padding-bottom: 2.56vw; } }
   @media only screen and (min-width: 1560px) {
-    .search-page .highlight-bar {
+    .search-page .highlight-bar, .past-festivals-page .highlight-bar {
       padding-bottom: 4rem; } }
   @media only screen and (min-width: 53.25em) {
-    .search-page .highlight-bar {
+    .search-page .highlight-bar, .past-festivals-page .highlight-bar {
       margin-bottom: 2.56vw; } }
   @media only screen and (min-width: 1560px) {
-    .search-page .highlight-bar {
+    .search-page .highlight-bar, .past-festivals-page .highlight-bar {
       margin-bottom: 4rem; } }
 
-.search-page .filter-by-title {
+.search-page .filter-more-band, .past-festivals-page .filter-more-band {
+  display: none; }
+  @media only screen and (min-width: 53.25em) {
+    .search-page .filter-more-band, .past-festivals-page .filter-more-band {
+      padding-top: 0.8em; } }
+  @media only screen and (min-width: 53.25em) and (min-width: 53.25em) {
+    .search-page .filter-more-band, .past-festivals-page .filter-more-band {
+      padding-top: 1.28vw; } }
+  @media only screen and (min-width: 53.25em) and (min-width: 1560px) {
+    .search-page .filter-more-band, .past-festivals-page .filter-more-band {
+      padding-top: 2rem; } }
+
+.search-page .filter-by-title, .past-festivals-page .filter-by-title {
   font-family: "unit-gothic-718", Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 800;
@@ -7057,38 +6961,26 @@ figcaption {
   color: #666666;
   font-size: 5vw; }
   @media only screen and (min-width: 53.25em) {
-    .search-page .filter-by-title {
+    .search-page .filter-by-title, .past-festivals-page .filter-by-title {
       font-size: 1.09vw;
       line-height: 1.2; } }
   @media only screen and (min-width: 1560px) {
-    .search-page .filter-by-title {
+    .search-page .filter-by-title, .past-festivals-page .filter-by-title {
       line-height: 1.2353;
       font-size: 1.7rem; } }
   @media only screen and (min-width: 53.25em) {
-    .search-page .filter-by-title {
+    .search-page .filter-by-title, .past-festivals-page .filter-by-title {
       font-size: 1.15vw; } }
   @media only screen and (min-width: 1560px) {
-    .search-page .filter-by-title {
+    .search-page .filter-by-title, .past-festivals-page .filter-by-title {
       font-size: 1.8rem; } }
 
-.search-page .filter-more-button {
+.search-page .filter-button, .past-festivals-page .filter-button {
   background-color: #cccccc;
   border: 1px solid #999999;
   text-align: center;
   cursor: pointer;
   padding-left: 0; }
-
-.search-page .filter-more-band {
-  display: none; }
-  @media only screen and (min-width: 53.25em) {
-    .search-page .filter-more-band {
-      padding-top: 0.8em; } }
-  @media only screen and (min-width: 53.25em) and (min-width: 53.25em) {
-    .search-page .filter-more-band {
-      padding-top: 1.28vw; } }
-  @media only screen and (min-width: 53.25em) and (min-width: 1560px) {
-    .search-page .filter-more-band {
-      padding-top: 2rem; } }
 
 /* #footer
 -------------------------------------------------- */
@@ -8580,6 +8472,16 @@ h3.sidebar-section-title {
 .code_gutter {
   display: none; }
 
+.codeblock {
+  border-top: 1px solid #999999;
+  margin-top: 1.6em; }
+  @media only screen and (min-width: 53.25em) {
+    .codeblock {
+      margin-top: 2.56vw; } }
+  @media only screen and (min-width: 1560px) {
+    .codeblock {
+      margin-top: 4rem; } }
+
 pre {
   display: none;
   float: left;
@@ -8768,16 +8670,6 @@ code.hljs {
   @media only screen and (min-width: 1560px) {
     .typography-section pre {
       margin-bottom: 2rem; } }
-
-.type-title-wrapper {
-  margin-top: 1.6em;
-  border-top: 1px solid #999999; }
-  @media only screen and (min-width: 53.25em) {
-    .type-title-wrapper {
-      margin-top: 2.56vw; } }
-  @media only screen and (min-width: 1560px) {
-    .type-title-wrapper {
-      margin-top: 4rem; } }
 
 .first-type-title-wrapper {
   border-top: 4px solid #999999; }

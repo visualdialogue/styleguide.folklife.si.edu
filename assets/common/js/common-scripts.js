@@ -115,9 +115,7 @@ $(document).ready(function () {
 			if(!site.isMobile)
 				$navspacer.removeClass("navspacer-open"); // gracefully close
 			switchLogo('block');
-			
 		}
-
 	});
 
 	function switchLogo(direction) {
@@ -217,8 +215,10 @@ $(document).ready(function () {
 		if(shareClosed) {
 			navCloseAll(); // close anything else that's open by default, only after we've determined that share is Closed
 			site.navbar.addClass('is-open');
-			if(site.isMobile) // switch to one-line logo in mobile view
+			if(site.isMobile) { // switch to one-line logo in mobile view
 				site.navbar.addClass('has-one-line-logo'); 
+				switchLogo('one-line');
+			}
 			$navbarOutside.css('position', 'fixed'); // activate navbarOutside			
 			$notShareIcon.addClass('lighter-nav-icons'); // grey out other icons
 			shareClosed = false; // flag for closing	
@@ -227,6 +227,7 @@ $(document).ready(function () {
 		} else {
 			navCloseAll(); // close anything else that's open by default
 			shareClosed = true; // flag for closing	
+			switchLogo('block');
 		}
 	});
 
@@ -244,8 +245,10 @@ $(document).ready(function () {
 		// if not yet open
 		if(searchClosed) {
 			navCloseAll(); // after we've determined that search is closed, close anything else that's open by default
-			if(site.isMobile) // switch to one-line logo in mobile view
+			if(site.isMobile) { // switch to one-line logo in mobile view
 				site.navbar.addClass('has-one-line-logo'); 
+				switchLogo('one-line');
+			}
 			site.navbar.addClass('is-open');
 			$navbarOutside.css('position', 'fixed'); // activate navbarOutside
 			$notSearchIcon.addClass('lighter-nav-icons'); // grey out other icons
@@ -255,6 +258,7 @@ $(document).ready(function () {
 		} else {
 			navCloseAll(); // close anything else that's open by default
 			searchClosed = true; // flag for closing	
+			switchLogo('block');
 		}
 	});
 
@@ -550,9 +554,9 @@ $(document).ready(function () {
 			site.isMobile = true;
 			// prevent destroying variables that haven't yet been defined, later on in js file
 			if(!firstTimeCheck) {
-				dropdownToggleDestroy(); // remove duplicate in case
-				firstTimeCheck = false;
-				dropdownToggleInit();
+				// dropdownToggleDestroy(); // remove duplicate in case
+				// firstTimeCheck = false;
+				// dropdownToggleInit();
 			}
 		// only check if already mobile and bigger
 		} else if (site.screenSize > site.break2) {

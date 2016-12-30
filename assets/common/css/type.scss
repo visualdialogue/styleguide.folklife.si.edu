@@ -302,7 +302,8 @@
 			line-height: 1;
 		}
 		@include respond-to(fullwidth) {
-			font-size: 4.5rem;
+			// font-size: 4.5rem;
+			font-size: 4.8rem; // past festivals year
 			line-height: 1;
 		}
 	}

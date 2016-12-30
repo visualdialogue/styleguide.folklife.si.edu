@@ -824,7 +824,7 @@
 		}
 	}
 	
-	.first-level-dropdown-title, .filter-more-button {
+	.first-level-dropdown-title, .filter-button {
 		@include padding-top(0.7);
 		@include margin-top(1.5); // 19px
 		@include height(3.7); // 35px
@@ -843,12 +843,6 @@
 			-moz-transform: rotate(0deg);
 			transform: rotate(0deg);
 			color: $black40;
-			// font-size: 2rem;
-			// top:0.8rem;
-			// @include top(0.8);
-			// @include right(1.8);
-			// transform-origin: 15px 15px;
-			// @include margin-top(0);
 			font-size: 2rem;
 			top:-0.5rem;
 			right:1rem;
@@ -871,9 +865,12 @@
 			transform: rotate(-90deg);
 		}	
 	}
-/* Search
+/* Search, Festival Past Festival Programs
 -------------------------------------------------*/
-	.search-page {
+	
+
+	// Search only
+	.search-page, .past-festivals-page {
 		.thin-hr-svg {
 			padding:0;
 			margin-top:0;
@@ -896,6 +893,12 @@
 			position: relative;
 			z-index: 10;
 		}
+		.filter-more-band {
+			display: none; // initial hide
+			@include respond-to(break2) {
+				@include padding-top(2);
+			}
+		}
 		.filter-by-title {
 			@include nav-header;
 			color: $black60;
@@ -903,17 +906,11 @@
 			@include respond-to(break2) {font-size:1.15vw;}
 			@include respond-to(fullwidth) {font-size:1.8rem;}
 		}
-		.filter-more-button {
+		.filter-button {
 			background-color: $black20;
 			@include border;
 			text-align: center;
 			cursor: pointer;
 			padding-left:0;
-		}
-		.filter-more-band {
-			display: none; // initial hide
-			@include respond-to(break2) {
-				@include padding-top(2);
-			}
 		}
 	}

@@ -21,7 +21,7 @@ li.card(class="<? if (isset($card_classes)) echo $card_classes . ' ' ?><? if ($c
 		.image
 			-if (null != $card->url()):
 			a(href="<?= $card->url() ?>")
-				img(src="<?= $image->url() ?>")
+				img(src="<?= $image->url() ?>" class="<? if (isset($image_class)) echo $image_class ?>")
 			-else:
 			a(href="#")
 				img(src="<?= $image->url() ?>")
@@ -38,6 +38,9 @@ li.card(class="<? if (isset($card_classes)) echo $card_classes . ' ' ?><? if ($c
 				.tag!= $card->date('M d, Y'), '<br />', $card->time()
 			-elseif (isset($date)):
 				.tag!= $card->date('F j')
+			-elseif (isset($year)):
+				//- year for past festival program page
+				.tag.year!= $year
 			-endif
 
 			//- if subtitle, group with title for correct highlighting
@@ -53,6 +56,8 @@ li.card(class="<? if (isset($card_classes)) echo $card_classes . ' ' ?><? if ($c
 			-if('' != $card->audio_album()):
 				.subtitle!= $card->audio_album()
 			-endif
+
+			
 
 			//- blurb
 			-if (isset($blurb)):
