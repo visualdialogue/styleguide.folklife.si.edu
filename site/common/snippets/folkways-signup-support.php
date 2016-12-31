@@ -1,7 +1,7 @@
 
 <?php if($page->intendedTemplate() != 'magazine'): ?>
 <div class="container">
-  <hr class="thick-hr"/>
+  <hr class="thick-hr above-support-hr"/>
 </div>
 <?php endif; ?>
 <div class="newsletter-signup-wrapper container">

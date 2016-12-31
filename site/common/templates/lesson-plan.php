@@ -27,59 +27,81 @@
         <div class="lesson-info sidebar-section col-sm-12">
           <h3 class="sidebar-section-title">Lesson Info</h3>
           <?php if('' != $page->year_released()): ?>
-          <h4 class="year-released">Year Released</h4>
-          <div class="copy">
-            <?php echo $page->year_released(); ?></div>
+          <div class="sidebar-item">
+            <h4 class="year-released">Year Released</h4>
+            <div class="copy">
+              <?php echo $page->year_released(); ?></div>
+          </div>
           <?php endif; ?>
           <?php if('' != $page->suggested_grade_levels()): ?>
-          <h4>Suggested Grade Levels</h4>
-          <div class="copy">
-            <?php echo $page->suggested_grade_levels(); ?></div>
+          <div class="sidebar-item">
+            <h4>Suggested Grade Levels</h4>
+            <div class="copy">
+              <?php echo $page->suggested_grade_levels(); ?></div>
+          </div>
           <?php endif; ?>
           <?php if('' != $page->country()): ?>
-          <h4>Country</h4>
-          <div class="copy">
-            <?php echo $page->country(); ?></div>
+          <div class="sidebar-item">
+            <h4>Country</h4>
+            <div class="copy">
+              <?php echo $page->country(); ?></div>
+          </div>
           <?php endif; ?>
           <?php if('' != $page->region()): ?>
-          <h4>Region</h4>
-          <div class="copy">
-            <?php echo $page->region(); ?></div>
+          <div class="sidebar-item">
+            <h4>Region</h4>
+            <div class="copy">
+              <?php echo $page->region(); ?></div>
+          </div>
           <?php endif; ?>
           <?php if('' != $page->culture_group()): ?>
-          <h4>Culture Group</h4>
-          <div class="copy">
-            <?php echo $page->culture_group(); ?></div>
+          <div class="sidebar-item">
+            <h4>Culture Group</h4>
+            <div class="copy">
+              <?php echo $page->culture_group(); ?></div>
+          </div>
           <?php endif; ?>
           <?php if('' != $page->genre()): ?>
-          <h4>Genre</h4>
-          <div class="copy">
-            <?php echo $page->genre(); ?></div>
+          <div class="sidebar-item">
+            <h4>Genre</h4>
+            <div class="copy">
+              <?php echo $page->genre(); ?></div>
+          </div>
           <?php endif; ?>
           <?php if('' != $page->instruments()): ?>
-          <h4>Instruments</h4>
-          <div class="copy">
-            <?php echo $page->instruments(); ?></div>
+          <div class="sidebar-item">
+            <h4>Instruments</h4>
+            <div class="copy">
+              <?php echo $page->instruments(); ?></div>
+          </div>
           <?php endif; ?>
           <?php if('' != $page->language()): ?>
-          <h4>Language</h4>
-          <div class="copy">
-            <?php echo $page->language(); ?></div>
+          <div class="sidebar-item">
+            <h4>Language</h4>
+            <div class="copy">
+              <?php echo $page->language(); ?></div>
+          </div>
           <?php endif; ?>
           <?php if('' != $page->co_curricular_areas()): ?>
-          <h4>Co-curricular Areas</h4>
-          <div class="copy">
-            <?php echo $page->co_curricular_areas(); ?></div>
+          <div class="sidebar-item">
+            <h4>Co-curricular Areas</h4>
+            <div class="copy">
+              <?php echo $page->co_curricular_areas(); ?></div>
+          </div>
           <?php endif; ?>
           <?php if('' != $page->national_standards()): ?>
-          <h4>National Standards</h4>
-          <div class="copy">
-            <?php echo $page->national_standards(); ?></div>
+          <div class="sidebar-item">
+            <h4>National Standards</h4>
+            <div class="copy">
+              <?php echo $page->national_standards(); ?></div>
+          </div>
           <?php endif; ?>
           <?php if('' != $page->prerequisites()): ?>
-          <h4>Prerequisites</h4>
-          <div class="copy">
-            <?php echo $page->prerequisites(); ?></div>
+          <div class="sidebar-item">
+            <h4>Prerequisites</h4>
+            <div class="copy">
+              <?php echo $page->prerequisites(); ?></div>
+          </div>
           <?php endif; ?>
         </div>
       </div>

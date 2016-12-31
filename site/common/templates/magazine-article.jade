@@ -9,7 +9,7 @@
 		section.first-section.article-section.col-sm-8
 			article.article
 				// use card for correct video/image header
-				ul.row.cards.blog-feature
+				ul.row.cards
 					-snippet('card-magazine-article', array('card' => $page, 'card_classes' => 'magazine-article-top' ))
 
 				.content
@@ -21,7 +21,7 @@
 					-snippet('disqus')         
 
 
-		aside.sidebar.col-sm-4.blog-sidebar
+		aside.sidebar.col-sm-4
 
 			-snippet('sidebar-audio')
 

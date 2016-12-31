@@ -7,7 +7,7 @@
     <section class="first-section article-section col-sm-8">
       <article class="article">
         <!-- use card for correct video/image header-->
-        <ul class="row cards blog-feature">
+        <ul class="row cards">
           <?php snippet('card-magazine-article', array('card' => $page, 'card_classes' => 'magazine-article-top' )); ?>
         </ul>
         <div class="content">
@@ -20,7 +20,7 @@
         </div>
       </article>
     </section>
-    <aside class="sidebar col-sm-4 blog-sidebar">
+    <aside class="sidebar col-sm-4">
       <?php snippet('sidebar-audio'); ?>
       <?php snippet('card', array('card' => $pages->find('explore')->children()->find('videos')->children()->find('music-of-central-asia-and-the-aga-khan-music-initiative'), 'card_classes' => 'sidebar-video' )); ?>
       <?php snippet('card', array('card' => $pages->find('explore')->children()->find('sounds')->children()->find('album-covers'), 'card_classes' => 'sidebar-album' )); ?>

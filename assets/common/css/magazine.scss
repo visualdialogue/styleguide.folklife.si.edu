@@ -137,12 +137,15 @@
 		}
 		.description {
 			@include md-sans;
+			@include padding-bottom(8); // space for more link
 		}
 		.more-link {
 			position: absolute;
 			top: auto;
 			@include bottom(2);
+			bottom:0; // mobile
 			@include left(2);
+			left:0; // mobile
 			@include margin-top(1);
 		}
 	}
@@ -263,7 +266,7 @@
 
 /* Folkways Magazine Article Page
 -------------------------------------------------- */
-	.magazine-article-page {
+	.magazine-article-page {		
 		.magazine-article-top {
 			margin-bottom: 0; // remove default card margins
 			.image {
@@ -303,11 +306,21 @@
 				@include padding-bottom(1.2);
 			}
 			.references {
-				color: $black40;
+				h2 {
+					font-weight: 600;
+					color: $black60;
+				}
 				p {
+					color: $black40;
 					@include sm-sans;
 				}
 			}
+		}
+		.sidebar {
+			color: black;
+		}
+		.related-content {
+			@include margin-top(7);
 		}
 		.related-content-title {
 			@include margin-bottom(2)

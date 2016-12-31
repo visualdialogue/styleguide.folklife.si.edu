@@ -27,48 +27,59 @@
 				.lesson-info.sidebar-section.col-sm-12
 					h3.sidebar-section-title Lesson Info
 					-if('' != $page->year_released()):
-						h4.year-released Year Released
-						.copy!= $page->year_released()
+						.sidebar-item
+							h4.year-released Year Released
+							.copy!= $page->year_released()
 					-endif
 					-if('' != $page->suggested_grade_levels()):
-						h4 Suggested Grade Levels
-						.copy!= $page->suggested_grade_levels()
+						.sidebar-item
+							h4 Suggested Grade Levels
+							.copy!= $page->suggested_grade_levels()
 					-endif
 					-if('' != $page->country()):
-						h4 Country
-						.copy!= $page->country()
+						.sidebar-item
+							h4 Country
+							.copy!= $page->country()
 					-endif
 					-if('' != $page->region()):
-						h4 Region
-						.copy!= $page->region()
+						.sidebar-item
+							h4 Region
+							.copy!= $page->region()
 					-endif
 					-if('' != $page->culture_group()):
-						h4 Culture Group
-						.copy!= $page->culture_group()
+						.sidebar-item
+							h4 Culture Group
+							.copy!= $page->culture_group()
 					-endif
 					-if('' != $page->genre()):
-						h4 Genre
-						.copy!= $page->genre()
+						.sidebar-item
+							h4 Genre
+							.copy!= $page->genre()
 					-endif
 					-if('' != $page->instruments()):
-						h4 Instruments
-						.copy!= $page->instruments()
+						.sidebar-item
+							h4 Instruments
+							.copy!= $page->instruments()
 					-endif
 					-if('' != $page->language()):
-						h4 Language
-						.copy!= $page->language()
+						.sidebar-item
+							h4 Language
+							.copy!= $page->language()
 					-endif
 					-if('' != $page->co_curricular_areas()):
-						h4 Co-curricular Areas
-						.copy!= $page->co_curricular_areas()
+						.sidebar-item
+							h4 Co-curricular Areas
+							.copy!= $page->co_curricular_areas()
 					-endif
 					-if('' != $page->national_standards()):
-						h4 National Standards
-						.copy!= $page->national_standards()
+						.sidebar-item
+							h4 National Standards
+							.copy!= $page->national_standards()
 					-endif
 					-if('' != $page->prerequisites()):
-						h4 Prerequisites
-						.copy!= $page->prerequisites()
+						.sidebar-item
+							h4 Prerequisites
+							.copy!= $page->prerequisites()
 					-endif
 
 			-snippet('sidebar-audio', array('title' => 'Traditional Music of Botswana'))

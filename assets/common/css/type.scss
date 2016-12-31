@@ -42,10 +42,10 @@
 	@mixin album-serif {
 		font-family: $serif;
 		font-weight: 600;
-		line-height: 1;
+		line-height: 1.33;
+		// line-height: 1;
 	  	font-size: 1.896rem;
 		@include respond-to(break2) {
-			line-height: 1.33;
 	  		font-size: 2.2vw;
 		}
 		@include respond-to(fullwidth) {
@@ -483,8 +483,8 @@
 		position: relative; // hold abs images that live inside ol or ul
 		h2 {
 			font-weight: 600;
-			// margin-bottom:0; // reset
-			@include margin-bottom(1.6);
+			// @include margin-bottom(1.6);
+			@include margin-bottom(1); // lesson plans page
 		}
 		h3 {
 			@include md-serif;

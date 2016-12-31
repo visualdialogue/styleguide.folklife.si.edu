@@ -4199,12 +4199,11 @@ iframe {
 .album-serif {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 600;
-  line-height: 1;
+  line-height: 1.33;
   font-size: 1.896rem;
   margin-bottom: 0.70235rem; }
   @media only screen and (min-width: 53.25em) {
     .album-serif {
-      line-height: 1.33;
       font-size: 2.2vw; } }
   @media only screen and (min-width: 1560px) {
     .album-serif {
@@ -4595,13 +4594,13 @@ body {
   position: relative; }
   .content h2, .text-card h2 {
     font-weight: 600;
-    margin-bottom: 1.12375rem; }
+    margin-bottom: 0.70235rem; }
     @media only screen and (min-width: 53.25em) {
       .content h2, .text-card h2 {
-        margin-bottom: 1.024vw; } }
+        margin-bottom: 0.64vw; } }
     @media only screen and (min-width: 1560px) {
       .content h2, .text-card h2 {
-        margin-bottom: 1.6rem; } }
+        margin-bottom: 1rem; } }
   .content h3, .text-card h3 {
     font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
     font-weight: 700;
@@ -6067,7 +6066,7 @@ a .page-title {
     font-weight: 300;
     font-size: 2.37rem;
     font-weight: 600;
-    margin-bottom: 1.40469rem;
+    margin-bottom: 2.59868rem;
     line-height: 1 !important; }
     @media only screen and (min-width: 53.25em) {
       .sidebar-audio .sidebar-title {
@@ -6078,10 +6077,10 @@ a .page-title {
         font-size: 3.375rem; } }
     @media only screen and (min-width: 53.25em) {
       .sidebar-audio .sidebar-title {
-        margin-bottom: 1.28vw; } }
+        margin-bottom: 2.368vw; } }
     @media only screen and (min-width: 1560px) {
       .sidebar-audio .sidebar-title {
-        margin-bottom: 2rem; } }
+        margin-bottom: 3.7rem; } }
   .sidebar-audio .sidebar-card {
     margin-bottom: 2.80938rem; }
     @media only screen and (min-width: 53.25em) {
@@ -6108,6 +6107,8 @@ a .page-title {
           margin-bottom: 0.2rem; } }
     .sidebar-audio .sidebar-card .details-inner {
       padding-top: 0; }
+  .sidebar-audio .table-hover > tbody > tr:hover {
+    background-color: #cccccc; }
   .sidebar-audio .track {
     font-family: "acumin-pro", Arial, sans-serif;
     font-weight: 300;
@@ -6136,6 +6137,15 @@ a .page-title {
     @media only screen and (min-width: 1560px) {
       .sidebar-audio .track-action {
         font-size: 1.6rem; } }
+
+.sidebar-video .details-inner, .sidebar-album .details-inner {
+  padding-top: 1.40469rem; }
+  @media only screen and (min-width: 53.25em) {
+    .sidebar-video .details-inner, .sidebar-album .details-inner {
+      padding-top: 1.28vw; } }
+  @media only screen and (min-width: 1560px) {
+    .sidebar-video .details-inner, .sidebar-album .details-inner {
+      padding-top: 2rem; } }
 
 .sidebar-video .title, .sidebar-album .title {
   font-family: "acumin-pro", Arial, sans-serif;
@@ -6525,7 +6535,13 @@ a .page-title {
     .short-newsletter-signup {
       height: 8rem; } }
   .short-newsletter-signup form, .short-newsletter-signup input {
-    height: 7rem; }
+    height: 4.91642rem; }
+    @media only screen and (min-width: 53.25em) {
+      .short-newsletter-signup form, .short-newsletter-signup input {
+        height: 4.48vw; } }
+    @media only screen and (min-width: 1560px) {
+      .short-newsletter-signup form, .short-newsletter-signup input {
+        height: 7rem; } }
   .short-newsletter-signup input {
     font-weight: 500; }
   @media only screen and (min-width: 53.25em) {

@@ -270,6 +270,7 @@
 	}
 	.sidebar-section {
 		@include margin-bottom(2.4);
+		// @include margin-bottom(3.2);
 	}
 	hr {
 		margin: 0; // bootstrap reset
@@ -376,7 +377,7 @@
 		.sidebar-title {
 			@include xl-sans;
 			font-weight: 600;
-			@include margin-bottom(2);
+			@include margin-bottom(3.7);
 			line-height: 1 !important; // mq override
 		}
 		.sidebar-card {
@@ -389,6 +390,9 @@
 			.details-inner {
 				padding-top:0;
 			}
+		}
+		.table-hover > tbody > tr:hover {
+			background-color: $black20; // bootstrap override
 		}
 		.track {
 			@include sm-sans;
@@ -404,6 +408,9 @@
 
 	// Sidebar Video
 	.sidebar-video, .sidebar-album {
+		.details-inner {
+			@include padding-top(2);
+		}
 		.title {
 			@include xl-sans;
 			font-weight: 600;
@@ -635,7 +642,7 @@
 			height: 8rem;
 		}
 		form, input {
-			height: 7rem;
+			@include height(7);
 		}
 		input {
 			font-weight: 500;
