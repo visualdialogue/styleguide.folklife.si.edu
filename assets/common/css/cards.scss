@@ -142,6 +142,23 @@ a.details {
 		.image {
 			display: none;
 		}
+		.video-icon-play-button {
+			left: 50%;
+			@include respond-to(break2max) {
+				width: 15vw;
+				height: 15vw;
+				margin-left: -8vw;
+				.icon-circle:before, .icon-play:before {
+					font-size: 15vw;
+				}
+			}
+			@include respond-to(break2) {
+				margin-left: -2vw;
+			}
+			@include respond-to(fullwidth) {
+				margin-left:-3.2rem;
+			}
+		}
 	}
 
 	// hover effect on entire video card and on audio player play button
@@ -159,8 +176,13 @@ a.details {
 	}
 	.video-icon-play-button {
 		@include vertically-align;
-		left: 50%;
-		margin-left: -3rem;
+		left: 0.7rem;
+		@include respond-to(break2) {
+			left: 0.5vw;
+		}
+		@include respond-to(fullwidth) {
+			left: 0.4rem;
+		}
 	}
 	.center-box {
 		@include vertically-align-parent;

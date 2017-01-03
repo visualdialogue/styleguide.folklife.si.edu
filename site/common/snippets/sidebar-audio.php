@@ -17,8 +17,14 @@
       <?php $n = 0; ?>
       <?php foreach($album->children()->visible() as $track): $n++; ?>
       <tr class="track">
-        <td class="track-number">
-          <?php echo $n; ?></td>
+        <td class="track-number-play-button">
+          <div class="track-number">
+            <?php echo $n; ?></div>
+          <div class="icon-play-button video-icon-play-button icon-stack track-play-button">
+            <div class="icon-circle"></div>
+            <div class="icon-play"></div>
+          </div>
+        </td>
         <td class="track-title">
           <?php echo $track->title(); ?></td>
         <td class="track-action">More Info</td>

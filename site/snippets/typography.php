@@ -33,14 +33,14 @@
   <!-- Typefaces-->
   <div class="sub-section">
     <div class="typeface codeblock"><a id="serif" class="anchor-link"></a>
-      <div class="row type-title-wrapper first-type-title-wrapper">
+      <div class="row type-title-wrapper">
         <hr/>
         <div class="col-sm-10 lg-serif type-title">Large Serif Title</div>
         <?php snippet('show-sass'); ?>
       </div>
       <div class="row">
         <div class="col-md-5">
-          <div class="type-details">Typeface: Freight Text<br/>Weight: Bold<br/>Maximum Font Size: 6.158rem<br/>Maximum Line Height: 6.738rem</div>
+          <div class="type-details">Typeface: Freight Text<br/>Weight: Bold<br/>Maximum Font Size: 6.158rem<br/>Maximum Line Height: 6.738rem<br/>Usage: Folkways Shop</div>
         </div>
         <div class="col-md-7">
           <pre class="sass"><code>@mixin serif-lg {
@@ -148,7 +148,7 @@
   </div>
   <div class="sub-section">
     <div class="typeface codeblock"><a id="sans" class="anchor-link"></a>
-      <div class="row type-title-wrapper first-type-title-wrapper">
+      <div class="row type-title-wrapper">
         <hr/>
         <div class="col-sm-10 xl-sans-semi type-title">Extra Large Sans Title</div>
         <?php snippet('show-sass'); ?>
@@ -314,7 +314,7 @@
       </div>
       <div class="row">
         <div class="col-md-5">
-          <div class="type-details">Typeface: Acumin Pro<br/>Weight: Semibold<br/>Maximum Font Size: 1.873rem<br/>Maximum Line Height: 2.248rem</div>
+          <div class="type-details">Typeface: Acumin Pro<br/>Weight: Semibold<br/>Maximum Font Size: 1.873rem<br/>Maximum Line Height: 2.248rem<br/>Usage: Past Festivals listings (Medium weight)</div>
         </div>
         <div class="col-md-7">
           <pre class="sass"><code>@mixin sans-sm {
@@ -415,7 +415,7 @@
       </div>
     </div>
     <div class="typeface codeblock">
-      <div class="row type-title-wrapper first-type-title-wrapper">
+      <div class="row type-title-wrapper">
         <hr/>
         <div class="col-sm-10 lg-magazine-title type-title">Large Folkways Magazine Title</div>
         <?php snippet('show-sass'); ?>
@@ -522,18 +522,21 @@
 }</code></pre>
           </div>
         </div>
-        <div class="typeface codeblock">
-          <div class="row type-title-wrapper first-type-title-wrapper">
-            <hr/>
-            <div class="col-sm-10 body-serif type-title">Serif Body</div>
-            <?php snippet('show-sass'); ?>
+      </div>
+    </div>
+    <div class="sub-section">
+      <div class="typeface codeblock">
+        <div class="row type-title-wrapper">
+          <hr/>
+          <div class="col-sm-10 body-serif type-title">Serif Intro Text</div>
+          <?php snippet('show-sass'); ?>
+        </div>
+        <div class="row">
+          <div class="col-md-5">
+            <div class="type-details">Typeface: Freight Text<br/>Weight: Book<br/>Maximum Font Size: 2.4rem</div>
           </div>
-          <div class="row">
-            <div class="col-md-5">
-              <div class="type-details">Typeface: Freight Text<br/>Weight: Book<br/>Maximum Font Size: 2.4rem</div>
-            </div>
-            <div class="col-md-7">
-              <pre class="sass"><code>@mixin body-serif {
+          <div class="col-md-7">
+            <pre class="sass"><code>@mixin body-serif {
 	font-family: $serif;
 	font-weight: 400;
 	line-height: 1.333333;
@@ -545,38 +548,81 @@
   		font-size: 2.4rem;
 	}
 }</code></pre>
-            </div>
           </div>
         </div>
-        <div class="typeface codeblock">
-          <div class="row type-title-wrapper">
-            <hr/>
-            <div class="col-sm-10 body-sans type-title">Sans Body</div>
-            <?php snippet('show-sass'); ?>
+      </div>
+      <div class="typeface codeblock">
+        <div class="row type-title-wrapper">
+          <hr/>
+          <div class="col-sm-10 body-serif type-title">Serif Body</div>
+          <?php snippet('show-sass'); ?>
+        </div>
+        <div class="row">
+          <div class="col-md-5">
+            <div class="type-details">Typeface: Freight Text<br/>Weight: Book<br/>Maximum Font Size: 2.4rem</div>
           </div>
-          <div class="row">
-            <div class="col-md-5">
-              <div class="type-details">Typeface: Acumin Pro<br/>Weight: Light<br/>Maximum Font Size:<br/>Usage: Festival Blog page listing copy</div>
-            </div>
-            <div class="col-md-7">
-              <pre class="sass"><code>.body-sans {@include sm-sans;}
+          <div class="col-md-7">
+            <pre class="sass"><code>@mixin body-serif {
+	font-family: $serif;
+	font-weight: 400;
+	line-height: 1.333333;
+  	font-size: 1.896rem;
+	@include respond-to(break2) {
+  		font-size: 2.133rem;
+	}
+	@include respond-to(fullwidth) {
+  		font-size: 2.4rem;
+	}
+}</code></pre>
+          </div>
+        </div>
+      </div>
+      <div class="typeface codeblock">
+        <div class="row type-title-wrapper">
+          <hr/>
+          <div class="col-sm-10 body-sans type-title">Sans Intro Text</div>
+          <?php snippet('show-sass'); ?>
+        </div>
+        <div class="row">
+          <div class="col-md-5">
+            <div class="type-details">Typeface: Acumin Pro<br/>Weight: Light<br/>Maximum Font Size:<br/>Usage: Festival Blog page listing copy</div>
+          </div>
+          <div class="col-md-7">
+            <pre class="sass"><code>.body-sans {@include body-sans;}</code></pre>
+          </div>
+        </div>
+      </div>
+      <div class="typeface codeblock">
+        <div class="row type-title-wrapper">
+          <hr/>
+          <div class="col-sm-10 body-sans type-title">Sans Body</div>
+          <?php snippet('show-sass'); ?>
+        </div>
+        <div class="row">
+          <div class="col-md-5">
+            <div class="type-details">Typeface: Acumin Pro<br/>Weight: Light<br/>Maximum Font Size:<br/>Usage: Festival Blog page listing copy</div>
+          </div>
+          <div class="col-md-7">
+            <pre class="sass"><code>.body-sans {@include body-sans;}
 </code></pre>
-            </div>
           </div>
         </div>
-        <!-- HWT Unit Gothic-->
-        <div class="typeface codeblock"><a id="slab" class="anchor-link"></a>
-          <div class="row type-title-wrapper first-type-title-wrapper">
-            <hr/>
-            <div class="col-sm-10 xl-slab type-title">Extra Large Slab</div>
-            <?php snippet('show-sass'); ?>
+      </div>
+    </div>
+    <!-- HWT Unit Gothic-->
+    <div class="sub-section">
+      <div class="typeface codeblock"><a id="slab" class="anchor-link"></a>
+        <div class="row type-title-wrapper">
+          <hr/>
+          <div class="col-sm-10 xl-slab type-title">Extra Large Slab</div>
+          <?php snippet('show-sass'); ?>
+        </div>
+        <div class="row">
+          <div class="col-md-5">
+            <div class="type-details">Typeface: HWT Unit Gothic<br/>Weight: L717<br/>Maximum Font Size: 4.5rem<br/>Usage: Subpage titles, Festival-ON homepage tabs</div>
           </div>
-          <div class="row">
-            <div class="col-md-5">
-              <div class="type-details">Typeface: HWT Unit Gothic<br/>Weight: L717<br/>Maximum Font Size: 4.5rem<br/>Usage: Subpage titles, Festival-ON homepage tabs</div>
-            </div>
-            <div class="col-md-7">
-              <pre class="sass"><code>@mixin slab-xl {
+          <div class="col-md-7">
+            <pre class="sass"><code>@mixin slab-xl {
 	font-family: $slabWide;
 	text-transform: uppercase;
 	font-size: 8vw;
@@ -589,21 +635,21 @@
 		line-height: 1;
 	}
 }</code></pre>
-            </div>
           </div>
         </div>
-        <div class="typeface codeblock">
-          <div class="row type-title-wrapper">
-            <hr/>
-            <div class="col-sm-10 lg-slab type-title">Large Slab</div>
-            <?php snippet('show-sass'); ?>
+      </div>
+      <div class="typeface codeblock">
+        <div class="row type-title-wrapper">
+          <hr/>
+          <div class="col-sm-10 lg-slab type-title">Large Slab</div>
+          <?php snippet('show-sass'); ?>
+        </div>
+        <div class="row">
+          <div class="col-md-5">
+            <div class="type-details">Typeface: HWT Unit Gothic<br/>Weight: 717<br/>Maximum Font Size: 3.8rem<br/>Usage: Festival OFF homepage tab</div>
           </div>
-          <div class="row">
-            <div class="col-md-5">
-              <div class="type-details">Typeface: HWT Unit Gothic<br/>Weight: 717<br/>Maximum Font Size: 3.8rem<br/>Usage: Festival OFF homepage tab</div>
-            </div>
-            <div class="col-md-7">
-              <pre class="sass"><code>@mixin slab-lg {
+          <div class="col-md-7">
+            <pre class="sass"><code>@mixin slab-lg {
 	font-family: $slabWide;
 	text-transform: uppercase;
 	@include respond-to(break2) {
@@ -615,21 +661,21 @@
 		line-height: 1;
 	}
 }</code></pre>
-            </div>
           </div>
         </div>
-        <div class="typeface codeblock">
-          <div class="row type-title-wrapper">
-            <hr/>
-            <div class="col-sm-10 md-slab type-title">Medium Slab</div>
-            <?php snippet('show-sass'); ?>
+      </div>
+      <div class="typeface codeblock">
+        <div class="row type-title-wrapper">
+          <hr/>
+          <div class="col-sm-10 md-slab type-title">Medium Slab</div>
+          <?php snippet('show-sass'); ?>
+        </div>
+        <div class="row">
+          <div class="col-md-5">
+            <div class="type-details">Typeface: HWT Unit Gothic<br/>Weight: 717<br/>Maximum Font Size: 3rem<br/>Usage: Section Title, etc.</div>
           </div>
-          <div class="row">
-            <div class="col-md-5">
-              <div class="type-details">Typeface: HWT Unit Gothic<br/>Weight: 717<br/>Maximum Font Size: 3rem<br/>Usage: Section Title, etc.</div>
-            </div>
-            <div class="col-md-7">
-              <pre class="sass"><code>@mixin slab-lg {
+          <div class="col-md-7">
+            <pre class="sass"><code>@mixin slab-lg {
 	font-family: $slabWide;
 	text-transform: uppercase;
 	@include respond-to(break2) {
@@ -641,21 +687,21 @@
 		line-height: 1;
 	}
 }</code></pre>
-            </div>
           </div>
         </div>
-        <div class="typeface codeblock">
-          <div class="row type-title-wrapper">
-            <hr/>
-            <div class="col-sm-10 type-title nav-header">Nav Header</div>
-            <?php snippet('show-sass'); ?>
+      </div>
+      <div class="typeface codeblock">
+        <div class="row type-title-wrapper">
+          <hr/>
+          <div class="col-sm-10 type-title nav-header">Nav Header</div>
+          <?php snippet('show-sass'); ?>
+        </div>
+        <div class="row">
+          <div class="col-md-5">
+            <div class="type-details">Typeface: HWT Unit Gothic<br/>Weight: 718<br/>Maximum Font Size: 1.7rem</div>
           </div>
-          <div class="row">
-            <div class="col-md-5">
-              <div class="type-details">Typeface: HWT Unit Gothic<br/>Weight: 718<br/>Maximum Font Size: 1.7rem</div>
-            </div>
-            <div class="col-md-7">
-              <pre class="sass"><code>@mixin slab-md {
+          <div class="col-md-7">
+            <pre class="sass"><code>@mixin slab-md {
 	font-family: $slabWide;
 	text-transform: uppercase;
 	font-size: 6vw;
@@ -671,21 +717,21 @@
 		font-size: 3rem;
 	}
 }</code></pre>
-            </div>
           </div>
         </div>
-        <div class="typeface codeblock">
-          <div class="row type-title-wrapper first-type-title-wrapper">
-            <hr/>
-            <div class="col-sm-10 type-title category-tag-type">Category Tag</div>
-            <?php snippet('show-sass'); ?>
+      </div>
+      <div class="typeface codeblock">
+        <div class="row type-title-wrapper">
+          <hr/>
+          <div class="col-sm-10 type-title category-tag-type">Category Tag</div>
+          <?php snippet('show-sass'); ?>
+        </div>
+        <div class="row">
+          <div class="col-md-5">
+            <div class="type-details">Typeface: Acumin Pro Wide<br/>Weight: 300<br/>Maximum Font Size: 1.665rem<br/>Usage: Category Tag, Date</div>
           </div>
-          <div class="row">
-            <div class="col-md-5">
-              <div class="type-details">Typeface: Acumin Pro Wide<br/>Weight: 300<br/>Maximum Font Size: 1.665rem<br/>Usage: Category Tag, Date</div>
-            </div>
-            <div class="col-md-7">
-              <pre class="sass"><code>@mixin sans-tag {
+          <div class="col-md-7">
+            <pre class="sass"><code>@mixin sans-tag {
 	text-transform: uppercase;
 	font-family: $sansWide;
 	color: $black65;
@@ -705,21 +751,21 @@
 		line-height: 1.4;
 	}
 }</code></pre>
-            </div>
           </div>
         </div>
-        <div class="typeface codeblock">
-          <div class="row type-title-wrapper">
-            <hr/>
-            <div class="col-sm-10 type-title category-tag-bold-type">Category Tag Bold</div>
-            <?php snippet('show-sass'); ?>
+      </div>
+      <div class="typeface codeblock">
+        <div class="row type-title-wrapper">
+          <hr/>
+          <div class="col-sm-10 type-title category-tag-bold-type">Category Tag Bold</div>
+          <?php snippet('show-sass'); ?>
+        </div>
+        <div class="row">
+          <div class="col-md-5">
+            <div class="type-details">Typeface: Acumin Pro Wide<br/>Weight: 700<br/>Maximum Font Size: 1.665rem<br/>Usage:</div>
           </div>
-          <div class="row">
-            <div class="col-md-5">
-              <div class="type-details">Typeface: Acumin Pro Wide<br/>Weight: 700<br/>Maximum Font Size: 1.665rem<br/>Usage:</div>
-            </div>
-            <div class="col-md-7">
-              <pre class="sass"><code>@mixin sans-tag {
+          <div class="col-md-7">
+            <pre class="sass"><code>@mixin sans-tag {
 	text-transform: uppercase;
 	font-family: $sansWide;
 	color: $black65;
@@ -739,7 +785,6 @@
 		line-height: 1.4;
 	}
 }</code></pre>
-            </div>
           </div>
         </div>
       </div>

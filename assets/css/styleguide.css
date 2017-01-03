@@ -5256,10 +5256,10 @@ a:hover {
   height: calc(4.5rem + 0px + 8.5rem); }
   @media only screen and (min-width: 53.25em) {
     .navspacer {
-      height: calc(7rem + 3.4rem + 12.5rem); } }
+      height: calc(7rem + 3.4rem + 11.5rem); } }
   @media only screen and (min-width: 1560px) {
     .navspacer {
-      height: calc(8rem + 36px + 15.5rem); } }
+      height: calc(8rem + 36px + 14rem); } }
   .navspacer-open {
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -5295,13 +5295,13 @@ a:hover {
   @media only screen and (min-width: 53.25em) {
     .block-logo {
       margin-top: 1.5rem;
-      width: 150px;
-      height: 150px; } }
+      width: 140px;
+      height: 140px; } }
   @media only screen and (min-width: 1560px) {
     .block-logo {
       margin-top: 2rem;
-      width: 175px;
-      height: 175px; } }
+      width: 160px;
+      height: 160px; } }
 
 .block-logo {
   top: 0;
@@ -5316,11 +5316,12 @@ a:hover {
     .one-line-logo {
       margin-top: 0.5rem;
       margin-top: 0.8rem;
-      width: 150px; } }
+      width: 150px;
+      width: 140px; } }
   @media only screen and (min-width: 1560px) {
     .one-line-logo {
-      margin-top: 1rem;
-      width: 175px; } }
+      margin-top: 1.2rem;
+      width: 160px; } }
 
 .one-line-logos, .block-logos {
   position: absolute; }
@@ -5685,30 +5686,44 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
   .col-half:nth-of-type(2n + 1) {
     clear: left; }
 
-.col-thirds {
+.col-xs-thirds {
   width: 33.33333%;
   float: left; }
-  .col-thirds:nth-of-type(3n + 1) {
+  .col-xs-thirds:nth-of-type(3n + 1) {
     padding-right: 7.5px; }
     @media only screen and (min-width: 53.25em) {
-      .col-thirds:nth-of-type(3n + 1) {
+      .col-xs-thirds:nth-of-type(3n + 1) {
         padding-right: 1.25vw; } }
-  .col-thirds:nth-of-type(3n + 2) {
+  .col-xs-thirds:nth-of-type(3n + 2) {
     padding-left: 7.5px;
     padding-right: 7.5px; }
     @media only screen and (min-width: 53.25em) {
-      .col-thirds:nth-of-type(3n + 2) {
+      .col-xs-thirds:nth-of-type(3n + 2) {
         padding-left: 1.25vw; } }
     @media only screen and (min-width: 53.25em) {
-      .col-thirds:nth-of-type(3n + 2) {
+      .col-xs-thirds:nth-of-type(3n + 2) {
         padding-right: 1.25vw; } }
-  .col-thirds:nth-of-type(3n + 3) {
+  .col-xs-thirds:nth-of-type(3n + 3) {
     padding-left: 7.5px; }
     @media only screen and (min-width: 53.25em) {
-      .col-thirds:nth-of-type(3n + 3) {
+      .col-xs-thirds:nth-of-type(3n + 3) {
         padding-left: 1.25vw; } }
-  .col-thirds:nth-of-type(3n + 1) {
+  .col-xs-thirds:nth-of-type(3n + 1) {
     clear: left; }
+
+@media only screen and (min-width: 53.25em) {
+  .col-sm-thirds {
+    width: 33.33333%;
+    float: left; }
+    .col-sm-thirds:nth-of-type(3n + 1) {
+      padding-right: 1.25vw; }
+    .col-sm-thirds:nth-of-type(3n + 2) {
+      padding-left: 1.25vw;
+      padding-right: 1.25vw; }
+    .col-sm-thirds:nth-of-type(3n + 3) {
+      padding-left: 1.25vw; }
+    .col-sm-thirds:nth-of-type(3n + 1) {
+      clear: left; } }
 
 /* Grid System
 -------------------------------------------------- */
@@ -6105,10 +6120,11 @@ a .page-title {
       @media only screen and (min-width: 1560px) {
         .sidebar-audio .sidebar-card .title {
           margin-bottom: 0.2rem; } }
-    .sidebar-audio .sidebar-card .details-inner {
-      padding-top: 0; }
+    @media only screen and (min-width: 53.25em) {
+      .sidebar-audio .sidebar-card .details-inner {
+        padding-top: 0; } }
   .sidebar-audio .table-hover > tbody > tr:hover {
-    background-color: #cccccc; }
+    background-color: #e6e6e6; }
   .sidebar-audio .track {
     font-family: "acumin-pro", Arial, sans-serif;
     font-weight: 300;
@@ -6121,6 +6137,14 @@ a .page-title {
       .sidebar-audio .track {
         line-height: 1.12;
         font-size: 1.8rem; } }
+  .sidebar-audio .track-play-button {
+    left: 1.40469rem; }
+    @media only screen and (min-width: 53.25em) {
+      .sidebar-audio .track-play-button {
+        left: 1.28vw; } }
+    @media only screen and (min-width: 1560px) {
+      .sidebar-audio .track-play-button {
+        left: 2rem; } }
   .sidebar-audio .track-title {
     font-weight: 600; }
   .sidebar-audio .track-action {
@@ -6315,7 +6339,7 @@ a .page-title {
     padding-left: 1.40469rem; }
     @media only screen and (max-width: 53.25em) {
       .support-copy {
-        font-size: 2.8vw;
+        font-size: 2.6vw;
         height: 5vw;
         padding-top: 1.2vw; } }
     @media only screen and (min-width: 53.25em) {
@@ -7063,6 +7087,27 @@ figcaption {
   cursor: pointer;
   padding-left: 0; }
 
+/* Hide Ios Play button
+-------------------------------------------------*/
+video::-webkit-media-controls {
+  display: none !important; }
+
+/* This used to work for parent element of button divs */
+/* But it is not enough now, below dont hide play button parent div */
+*::-webkit-media-controls-panel {
+  display: none !important;
+  -webkit-appearance: none; }
+
+/* Old shadow dom for play button */
+*::--webkit-media-controls-play-button {
+  display: none !important;
+  -webkit-appearance: none; }
+
+/* New shadow dom for play button */
+*::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none; }
+
 /* #footer
 -------------------------------------------------- */
 .footer {
@@ -7604,6 +7649,22 @@ a.details {
 .video-card .image {
   display: none; }
 
+.video-card .video-icon-play-button {
+  left: 50%; }
+  @media only screen and (max-width: 53.25em) {
+    .video-card .video-icon-play-button {
+      width: 15vw;
+      height: 15vw;
+      margin-left: -8vw; }
+      .video-card .video-icon-play-button .icon-circle:before, .video-card .video-icon-play-button .icon-play:before {
+        font-size: 15vw; } }
+  @media only screen and (min-width: 53.25em) {
+    .video-card .video-icon-play-button {
+      margin-left: -2vw; } }
+  @media only screen and (min-width: 1560px) {
+    .video-card .video-icon-play-button {
+      margin-left: -3.2rem; } }
+
 .video:hover .icon-circle:before, .icon-play-button:hover .icon-circle:before {
   color: #e7f1de; }
 
@@ -7616,8 +7677,13 @@ a.details {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  left: 50%;
-  margin-left: -3rem; }
+  left: 0.7rem; }
+  @media only screen and (min-width: 53.25em) {
+    .video-icon-play-button {
+      left: 0.5vw; } }
+  @media only screen and (min-width: 1560px) {
+    .video-icon-play-button {
+      left: 0.4rem; } }
 
 .center-box {
   position: relative;
@@ -8256,18 +8322,31 @@ a {
 
 /* #intro
 -------------------------------------------------- */
-.intro-title {
+h2.intro-title {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1;
   font-size: 4.325rem;
-  margin-top: 0; }
+  margin-top: 0.35117rem;
+  margin-bottom: 1.75586rem; }
   @media only screen and (min-width: 53.25em) {
-    .intro-title {
+    h2.intro-title {
       font-size: 3.5vw; } }
   @media only screen and (min-width: 1560px) {
-    .intro-title {
+    h2.intro-title {
       font-size: 6.158rem; } }
+  @media only screen and (min-width: 53.25em) {
+    h2.intro-title {
+      margin-top: 0.32vw; } }
+  @media only screen and (min-width: 1560px) {
+    h2.intro-title {
+      margin-top: 0.5rem; } }
+  @media only screen and (min-width: 53.25em) {
+    h2.intro-title {
+      margin-bottom: 1.6vw; } }
+  @media only screen and (min-width: 1560px) {
+    h2.intro-title {
+      margin-bottom: 2.5rem; } }
 
 .intro-copy {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
@@ -8275,6 +8354,7 @@ a {
   line-height: 1;
   font-size: 1.896rem;
   margin-bottom: 0.70235rem;
+  line-height: 1.35 !important;
   font-weight: 500; }
   @media only screen and (min-width: 53.25em) {
     .intro-copy {
@@ -8694,9 +8774,6 @@ code.hljs {
   @media only screen and (min-width: 1560px) {
     .show-code {
       padding-left: 1rem; } }
-  @media only screen and (min-width: 53.25em) and (max-width: 1560px) {
-    .show-code {
-      font-size: 1.25vw; } }
   .show-code:hover {
     color: #cccccc;
     background-color: #282c34; }
@@ -8745,7 +8822,7 @@ code.hljs {
     .typography-section pre {
       margin-bottom: 2rem; } }
 
-.first-type-title-wrapper {
+.sub-section > div:first-of-type {
   border-top: 4px solid #999999; }
 
 .type-title {

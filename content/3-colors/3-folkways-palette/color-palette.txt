@@ -5,19 +5,19 @@ Title: Folkways Palette
 Colors: 
 
 - 
-  name: Light Blue
-  hex: '#cfdcf1 '
-  r: "209"
-  g: "219"
-  b: "240"
-  sass: $fw-light-blue
-- 
   name: Blue
   hex: '#b0d5de'
   r: "186"
   g: "212"
   b: "221"
   sass: $fw-blue
+- 
+  name: Light Purple
+  hex: '#cfdcf1 '
+  r: "209"
+  g: "219"
+  b: "240"
+  sass: $fw-light-purple
 - 
   name: Purple
   hex: '#a499bc'
@@ -27,39 +27,39 @@ Colors:
   sass: $fw-purple
 - 
   name: Light Green
-  hex: '#fff2df'
-  r: "252"
-  g: "242"
-  b: "223"
-  sass: $fw-light-green
-- 
-  name: Green
   hex: '#c2e1b7'
   r: "202"
   g: "224"
   b: "184"
-  sass: $fw-green
+  sass: $fw-light-green
 - 
-  name: Teal
+  name: Green
   hex: '#94a094'
   r: "150"
   g: "158"
   b: "147"
-  sass: $fw-teal
+  sass: $fw-green
 - 
-  name: Yellow
+  name: Light Cream
   hex: '#fbf6f0'
   r: "249"
   g: "246"
   b: "240"
-  sass: $fw-yellow
+  sass: $fw-cream
 - 
-  name: Orange
+  name: Cream
+  hex: '#fff2df'
+  r: "252"
+  g: "242"
+  b: "223"
+  sass: $fw-cream
+- 
+  name: Brown
   hex: '#cdc4b3'
   r: "201"
   g: "195"
   b: "178"
-  sass: $fw-orange
+  sass: $fw-brown
 - 
   name: Red
   hex: '#ec837a'

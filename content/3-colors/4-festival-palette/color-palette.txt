@@ -26,13 +26,6 @@ Colors:
   b: "157"
   sass: $fs-purple
 - 
-  name: Light Green
-  hex: '#d5bf90'
-  r: "206"
-  g: "190"
-  b: "145"
-  sass: $fs-light-green
-- 
   name: Green
   hex: '#3ea6ae'
   r: "105"
@@ -53,6 +46,13 @@ Colors:
   g: "223"
   b: "114"
   sass: $fs-yellow
+- 
+  name: Tan
+  hex: '#d5bf90'
+  r: "206"
+  g: "190"
+  b: "145"
+  sass: $fs-tan
 - 
   name: Orange
   hex: '#eea557'

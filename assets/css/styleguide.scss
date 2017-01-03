@@ -51,12 +51,14 @@
 
 /* #intro
 -------------------------------------------------- */
-	.intro-title {
+	h2.intro-title { // for specificity override
 		@include lg-serif;
-		margin-top:0;
+		@include margin-top(0.5);
+		@include margin-bottom(2.5);
 	}
 	.intro-copy {
 		@include sm-serif;
+		line-height: 1.35 !important;
 		font-weight: 500;
 	}
 	.intro-section {
@@ -113,7 +115,6 @@
 		}
 	}
 	.custom-grid-item-inner {
-		// background-color: $black40;
 		background-color: $black20;
 		.copy {
 			color: $copy;
@@ -249,15 +250,11 @@
 		background-color: $black10;
 		@include mini-sans;
 		text-transform: initial;
-		// font-weight: 600;
 		@include height(3.4);
 		@include padding-top(0.6);
 		@include padding-right(1);
 		@include padding-bottom(1);
 		@include padding-left(1);
-		@include respond-to(break2full) {
-			font-size: 1.25vw; // for button responsive sizing
-		}
 		&:hover {
 			color: $black20;
 			background-color: #282c34; // from highlight.js atom dark theme
@@ -298,7 +295,7 @@
 	}
 	.type-title-wrapper {
 	}
-	.first-type-title-wrapper {
+	.sub-section > div:first-of-type {
 		@include border(top, 4px);
 	}
 	.type-title {
@@ -369,6 +366,4 @@
 /* Helpers II
 -------------------------------------------------- */
 	.visually-hidden {display:none;}
-	// .displayBlockImportant {display: block !important;} // because jQuery doesn't understand important
-	// .hidden {display:none;} // in bootstrap with !important
 	

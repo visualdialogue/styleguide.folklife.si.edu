@@ -276,6 +276,7 @@
 				background-color: white;
 				@include padding-top(4);
 				@include padding-left(4);
+				padding-left:$full-gutter; // mobile
 				@include padding-bottom(1.2);
 
 			}
@@ -296,6 +297,7 @@
 			background-color: white;
 			@include padding-right(4);
 			@include padding-left(4);
+			padding-left:$full-gutter; // mobile
 			@include padding-bottom(2);
 			@include margin-bottom(4);
 			h2 {

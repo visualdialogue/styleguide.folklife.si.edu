@@ -213,15 +213,19 @@
 			// width: 100px;
 			// height: 100px;
 			margin-top: 1.5rem;			
-			width: 150px;
-			height: 150px;
+			// width: 150px;
+			// height: 150px;
+			width: 140px;
+			height: 140px;
 		}
 		@include respond-to(fullwidth) {
 			// width: 420px;
 			// height: 70px;
 			margin-top: 2rem;			
-			width: 175px;
-			height: 175px;
+			// width: 175px;
+			// height: 175px;
+			width: 160px;
+			height: 160px;
 		}
 	}
 	.block-logo {
@@ -252,23 +256,15 @@
 			// width:11vw; // too blurry
 			// width: 100px;
 			width:150px;
+			width:140px;
 		}
 		@include respond-to(fullwidth) {
-			margin-top: 1rem;
-			width:175px;
+			// margin-top: 1rem;
+			margin-top: 1.2rem;
+			// width: 175px;
+			width: 160px;
 		}
 	}
-	// .tablet-one-line-logo {
-	// 	@include respond-to(fullwidth) {
-	// 		display: none;
-	// 	}
-	// }
-	// .desktop-one-line-logo {
-	// 	display: none;
-	// 	@include respond-to(fullwidth) {
-	// 		display: block;
-	// 	}
-	// }
 	.one-line-logos, .block-logos {
 		position: absolute;
 	}

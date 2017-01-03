@@ -101,7 +101,7 @@ $(document).ready(function () {
 		// when user scrolls past height of site toggle, make smaller
 		if (($(this).scrollTop() > gapNavHeight) && (smallerNav == false)) {  
 			site.navbar.addClass("is-smaller");
-			switchLogo('inline');
+			// switchLogo('inline');
 
 			smallerNav = true;
 			if(!site.isMobile) {
@@ -114,7 +114,7 @@ $(document).ready(function () {
 			smallerNav = false;
 			if(!site.isMobile)
 				$navspacer.removeClass("navspacer-open"); // gracefully close
-			switchLogo('block');
+			// switchLogo('block');
 		}
 	});
 

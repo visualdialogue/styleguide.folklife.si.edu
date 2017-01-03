@@ -46,8 +46,10 @@
   $mobile-logoSpacer:8.5rem;
   // $tablet-logoSpacer:12rem;
   $tablet-logoSpacer:12.5rem;
+  $tablet-logoSpacer:11.5rem;
   // $desktop-logoSpacer:13.5rem; // from layout
-  $desktop-logoSpacer:15.5rem; // from layout
+  // $desktop-logoSpacer:15.5rem; // for 175px wide logo
+  $desktop-logoSpacer:14rem; // from layout, for 160px wide logo
 
   // height of toggle, navbar, and spacer
   $mobile-home-headerHeight: 4.5rem; // temp for mobile

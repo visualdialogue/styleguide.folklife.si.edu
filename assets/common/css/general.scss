@@ -90,7 +90,7 @@
 	}
 
 	// folklife teach
-	.col-thirds {
+	.col-xs-thirds {
 		width: 33.33333%;
 		float: left;
 		&:nth-of-type(3n + 1) {
@@ -110,6 +110,26 @@
 		// break every 3 cards so cards don't get hung
 		&:nth-of-type(3n + 1) {
 			clear:left;
+		}
+	}
+	.col-sm-thirds {
+		@include respond-to(break2) {
+			width: 33.33333%;
+			float: left;
+			&:nth-of-type(3n + 1) {
+				padding-right:$medium-gutter;
+			}
+			&:nth-of-type(3n + 2) {
+				padding-left:$medium-gutter;
+				padding-right:$medium-gutter;
+			}
+			&:nth-of-type(3n + 3) {
+				padding-left:$medium-gutter;
+			}
+			// break every 3 cards so cards don't get hung
+			&:nth-of-type(3n + 1) {
+				clear:left;
+			}
 		}
 	}
 
@@ -388,14 +408,19 @@
 				@include margin-bottom(0.2);
 			}
 			.details-inner {
-				padding-top:0;
+				@include respond-to(break2) {
+					padding-top:0; // horizontal card
+				}
 			}
 		}
 		.table-hover > tbody > tr:hover {
-			background-color: $black20; // bootstrap override
+			background-color: $black10; // bootstrap override
 		}
 		.track {
 			@include sm-sans;
+		}
+		.track-play-button {
+			@include left(2);
 		}
 		.track-title {
 			font-weight: 600;
@@ -517,12 +542,13 @@
 		}
 		&-copy {
 			@include respond-to(break2max) {
-				font-size: 2.8vw;
+				font-size: 2.6vw;
 				// font-size: 1.35rem;
 				// height: 10.5rem;
 				// height: 8.5rem;
 				height: 5vw; // responsive for text
 				padding-top: 1.2vw; // responsive for sizing at mobile
+				// padding-left: 2vw; // responsive for sizing at mobile
 			}
 			@include respond-to(break2) {
 				width: 46.45%; // 314px / 676px
@@ -939,4 +965,36 @@
 			cursor: pointer;
 			padding-left:0;
 		}
+	}
+
+/* Hide Ios Play button
+-------------------------------------------------*/
+	// .home-video iframe {width:100%;height:100%;position: absolute;top:0;right:0;bottom:0;left:0;}
+	// hide iOS play button from http://stackoverflow.com/questions/8911247/hide-iphone-html5-video-play-button
+	video::-webkit-media-controls {
+	  display:none !important;
+	}
+
+	// Apple play button changed again
+	// from http://stackoverflow.com/a/37553385
+	/* This used to work for parent element of button divs */
+	/* But it is not enough now, below dont hide play button parent div */
+
+	*::-webkit-media-controls-panel {
+	  display: none!important;
+	  -webkit-appearance: none;
+	}
+
+	/* Old shadow dom for play button */
+
+	*::--webkit-media-controls-play-button {
+	  display: none!important;
+	  -webkit-appearance: none;
+	}
+
+	/* New shadow dom for play button */
+
+	*::-webkit-media-controls-start-playback-button {
+	  display: none!important;
+	  -webkit-appearance: none;
 	}
