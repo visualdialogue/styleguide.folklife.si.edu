@@ -6,7 +6,6 @@
 /* Serif
 * Freight Text Pro from typekit
 -------------------------------------------------- */
-	// Large Serif Title
 	@mixin lg-serif {
 		font-family: $serif;
 		font-weight: 700;
@@ -19,9 +18,7 @@
 			font-size: 6.158rem;
 		}
 	}
-	.lg-serif {@include lg-serif;}
 
-	// Medium Serif Title
 	@mixin md-serif {
 		font-family: $serif;
 		font-weight: 700;
@@ -34,9 +31,7 @@
 			font-size: 4.2rem;
 		}
 	}
-	.md-serif {@include md-serif;}
 
-	// Album Serif Intro
 	@mixin album-serif {
 		font-family: $serif;
 		font-weight: 600;
@@ -50,9 +45,7 @@
 		}
 		@include margin-bottom(1);
 	}
-	.album-serif {@include album-serif;}
 
-	// Small Serif Title
 	@mixin sm-serif {
 		font-family: $serif;
 		font-weight: 700;
@@ -67,10 +60,7 @@
 		}
 		@include margin-bottom(1);
 	}
-	.sm-serif {@include sm-serif;}
-	.sm-serif-italic {@include sm-serif;font-style: italic;}
 
-	// Small Serif Title
 	@mixin body-serif {
 		font-family: $serif;
 		font-weight: 400;
@@ -83,7 +73,6 @@
 	  		font-size: 2.4rem;
 		}
 	}
-	.body-serif {@include body-serif;}
 
 
 
@@ -91,7 +80,6 @@
 * Acumin Pro from Typekit
 * minor second (1.125) based on 3rem?
 -------------------------------------------------- */
-	// Extra Large Sans (Folkways)
 	@mixin xl-sans {
 		font-family: $sans;
 		font-weight: 300;
@@ -104,11 +92,7 @@
 			font-size: 3.375rem;
 		}
 	}
-	.xl-sans {@include xl-sans;}
-	.xl-sans-semi {@include xl-sans;font-weight: 600;}
 
-
-	// Large Sans
 	@mixin lg-sans {
 		font-family: $sans;
 		font-weight: 300;
@@ -122,11 +106,7 @@
 	  		font-size: 3rem;
 		}
 	}
-	.lg-sans {@include lg-sans;}
-	.lg-sans-semi {@include lg-sans;font-weight: 600;}
 
-
-	// Medium Sans
 	@mixin md-sans {
 		font-family: $sans;
 		font-weight: 300;
@@ -140,10 +120,7 @@
 	  		line-height: 1.28; // 25/32
 		}
 	}
-	.md-sans {@include md-sans;}
-	.md-sans-semi {@include md-sans;font-weight: 600;}
 
-	// Small Sans
 	@mixin sm-sans {
 		font-family: $sans;
 		font-weight: 300;
@@ -157,10 +134,7 @@
 	  		font-size: 1.8rem;
 		}
 	}
-	.sm-sans {@include sm-sans;}
-	.caption-sans {@include sm-sans;}
-	.sm-sans-semi {@include sm-sans;font-weight: 600;}
-
+	
 	@mixin body-sans {
 		font-family: $sans;
 		font-weight: 300;
@@ -171,10 +145,8 @@
 		}
 		@include respond-to(fullwidth) {
 	  		font-size: 2.107rem; // fits with scale and folklife education page layout
-	  		// font-size: 2.1rem; // because of talk story on folklife homepage
 		}
 	}
-	.body-sans {@include body-sans;}
 
 	@mixin mini-sans {
 		font-family: $sans;
@@ -191,7 +163,6 @@
 	  		font-size: 1.6rem; // because of talk story on folklife homepage
 		}
 	}
-	.mini-sans {@include mini-sans;}
 
 	@mixin date {
 		@include sans-tag;
@@ -287,7 +258,6 @@
 			line-height: 1;
 		}
 	}
-	.xl-slab {@include xl-slab;}
 	@mixin lg-slab {
 		font-family: $slabWide;
 		text-transform: uppercase;
@@ -300,7 +270,7 @@
 			line-height: 1;
 		}
 	}
-	.lg-slab {@include lg-slab;}
+	
 	@mixin md-slab {
 		font-family: $slabWide;
 		text-transform: uppercase;
@@ -318,7 +288,6 @@
 			font-size: 3rem;
 		}
 	}
-	.md-slab {@include md-slab;}
 
 	@mixin nav-header {
 		text-transform: uppercase;
@@ -336,10 +305,6 @@
 			font-size: 1.7rem;
 		}
 	}
-	.nav-header {@include nav-header;}
-
-
-
 
 /* Sans serif - wide
 * Acumin Pro Wide from Typekit
@@ -359,7 +324,6 @@
 			// font-size: 4.6rem; // new layout
 		}
 	}
-	.lg-magazine-title {@include lg-magazine-title;}
 
 	@mixin md-magazine-title {
 		font-family: $sansWide;
@@ -373,9 +337,6 @@
 			font-size: 3.733rem;
 		}
 	}
-	.md-magazine-title {@include md-magazine-title;}
-
-	// 
 
 	@mixin sm-magazine-title {
 		font-family: $sansWide;
@@ -390,7 +351,6 @@
 			font-size: 2.95rem;
 		}
 	}
-	.sm-magazine-title {@include sm-magazine-title;}
 
 	@mixin program-subtitle {
 		font-family: $sansWide;
@@ -406,7 +366,6 @@
 		}
 	}
 
-	// 
 	@mixin buy-button {
 		text-transform: uppercase;
 		font-family: $sansWide;
@@ -424,7 +383,6 @@
 			line-height: 1.4;
 		}
 	}
-	.buy-button {@include buy-button;}
 
 	@mixin sans-tag {
 		text-transform: uppercase;
@@ -448,8 +406,7 @@
 			margin-bottom: 0;
 		}
 	}
-	.category-tag-type {@include sans-tag;}
-	.category-tag-bold-type {@include sans-tag;font-weight: 700;}
+	
 
 /* CSS type helper classes
 -------------------------------------------------- */

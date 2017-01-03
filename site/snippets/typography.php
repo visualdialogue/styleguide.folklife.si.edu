@@ -40,7 +40,7 @@
       </div>
       <div class="row">
         <div class="col-md-5">
-          <div class="type-details">Typeface: Freight Text<br/>Weight: Bold<br/>Maximum Font Size: 6.158rem<br/>Maximum Line Height: 6.738rem<br/>Usage: Folkways Shop</div>
+          <div class="type-details">Typeface: Freight Text<br/>Weight: Bold<br/>Maximum Font Size: 6.158rem<br/>Usage: Folkways Shop</div>
         </div>
         <div class="col-md-7">
           <pre class="sass"><code>@mixin serif-lg {

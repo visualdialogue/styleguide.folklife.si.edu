@@ -305,13 +305,43 @@
 	.type-details {
 		@include sm-sans;
 	}
-	.extra-large-sans-title-type {@include xl-sans;font-weight: 600;}
-	.extra-large-sans-title-type-light {@include xl-sans;}
-	.large-sans-title-type {@include lg-sans;font-weight: 600;}
-	.large-sans-title-type-light {@include lg-sans;}
-	.medium-sans-title-type {@include md-sans;font-weight: 600;}
-	.medium-sans-title-type-light {@include md-sans;}
-	.small-sans-title-type,.small-sans-title-type-light {@include sm-sans;}
+
+	// Serif
+	.lg-serif {@include lg-serif;}
+	.md-serif {@include md-serif;}
+	.album-serif {@include album-serif;}
+	.sm-serif {@include sm-serif;}
+	.sm-serif-italic {@include sm-serif;font-style: italic;}
+	.body-serif {@include body-serif;}
+
+	// Sans
+	.xl-sans {@include xl-sans;}
+	.xl-sans-semi {@include xl-sans;font-weight: 600;}
+	.lg-sans {@include lg-sans;}
+	.lg-sans-semi {@include lg-sans;font-weight: 600;}
+	.md-sans {@include md-sans;}
+	.md-sans-semi {@include md-sans;font-weight: 600;}
+	.sm-sans {@include sm-sans;}
+	.caption-sans {@include sm-sans;}
+	.sm-sans-semi {@include sm-sans;font-weight: 600;}
+	.body-sans {@include body-sans;}
+	.mini-sans {@include mini-sans;}
+
+	// Slab
+	.xl-slab {@include xl-slab;}
+	.lg-slab {@include lg-slab;}
+	.md-slab {@include md-slab;}
+	.nav-header {@include nav-header;}
+
+	// Magazine
+	.lg-magazine-title {@include lg-magazine-title;}
+	.md-magazine-title {@include md-magazine-title;}
+	.sm-magazine-title {@include sm-magazine-title;}
+
+	.program-subtitle {@include program-subtitle}
+	.buy-button {@include buy-button;}
+	.category-tag-type {@include sans-tag;}
+	.category-tag-bold-type {@include sans-tag;font-weight: 700;}
 
 /* #cards
 -------------------------------------------------- */
