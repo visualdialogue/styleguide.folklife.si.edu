@@ -16,7 +16,7 @@
 li.card.album-card(class="<?= $col ?>")
 	.image
 		a(href="<?= $card->url() ?>")
-			img(src="<?= $image->url() ?>")
+			img(src="<?= $image->url() ?>" alt="<?= $card->title() ?>")
 	.details
 		.details-inner
 			a.high(href="<?= $card->url() ?>").title: span.light: span.er= $card->title()

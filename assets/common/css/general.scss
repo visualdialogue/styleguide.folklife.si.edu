@@ -151,7 +151,6 @@
 	}
 	// bootstrap override default padding. Make it more responsive. Be specific enough to apply to our card system with 2 selectors
 	// 3 selectors to win specificity war
-	// [class*="col-"], .cards .card, .cards .image, .cards .details {
 	[class*="col-"] {
 		padding-left: $small-gutter;
 		padding-right: $small-gutter;
@@ -227,9 +226,6 @@
 		margin: 0;
 	}
 	.first-section {
-		// padding-top:1.5rem;
-		// @include respond-to(break2) {padding-top:2.6vw;}
-		// @include respond-to(fullwidth) {margin-top:0;}
 		.section-title {
 			@include margin-top(-0.8);
 		}
@@ -259,7 +255,6 @@
 			@include lg-sans;
 			color: $black50;
 			margin-top: 0;
-			// @include margin-bottom(1.1);
 			@include margin-bottom(0); // override default h3
 			@include padding-bottom(0.8);
 			@include border(bottom);
@@ -276,7 +271,6 @@
 		}
 		li:last-of-type {
 			border-bottom: none;
-			// @include margin-bottom(1.7);
 		}
 		.sidebar-highlight {
 			&.active, &:hover {
@@ -290,7 +284,6 @@
 	}
 	.sidebar-section {
 		@include margin-bottom(2.4);
-		// @include margin-bottom(3.2);
 	}
 	hr {
 		margin: 0; // bootstrap reset
@@ -311,7 +304,6 @@
 			margin-top:0;
 		}
 		@include margin-bottom(5.2);
-		// margin-bottom:2rem;
 	}
 	.half-hr {
 		margin-bottom:2.5vw;
@@ -339,7 +331,6 @@
 	}
 	.thin-hr-svg {
 		// make inline with js, from http://stackoverflow.com/questions/24933430/img-src-svg-changing-the-fill-color
-		// color: blue;
 		font-size: 1px; // make smaller
 		height: 5px; // for older ie
 		path {
@@ -358,11 +349,6 @@
 		margin: 0;
 		border: none;
 		background-color: $black65; // default
-		.title-height {
-			// height:12vw;
-			// @include respond-to(break2) {height:4.2vw;}
-			// @include respond-to(fullwidth) {height:66px;}	
-		}
 		&-hr {
 			margin-top: -1.6rem;
 		}
@@ -371,9 +357,6 @@
 	.page-title {
 		color: white;
 		@include xl-slab;
-		// margin-top:1.4vw;
-		// @include respond-to(break2) {margin-top:0.6vw;}
-		// @include respond-to(fullwidth) {margin-top:0.9rem;}
 		@include margin-top(1.3);
 		@include margin-bottom(1.3);
 	}
@@ -555,12 +538,8 @@
 		&-copy {
 			@include respond-to(break2max) {
 				font-size: 2.6vw;
-				// font-size: 1.35rem;
-				// height: 10.5rem;
-				// height: 8.5rem;
 				height: 5vw; // responsive for text
 				padding-top: 1.2vw; // responsive for sizing at mobile
-				// padding-left: 2vw; // responsive for sizing at mobile
 			}
 			@include respond-to(break2) {
 				width: 46.45%; // 314px / 676px
@@ -588,14 +567,12 @@
 			color: white;
 			text-align: center;
 			@include respond-to(break2max) {
-				// height: 8.5rem;
 				height: 19vw; // responsive for text
 			}
 			@include respond-to(break2) {
 				padding: 0;
 				@include vertically-align-parent;
 				width: 53.55%; // 100 - 46.45%
-				// height: 100%;
 				position: absolute;
 				top: 0;
 				right: 0;
@@ -609,12 +586,8 @@
 	.button-inner {
 		@include respond-to(break2max) {
 			font-size: 4vw;
-			// font-size: 3.8vw;
-			// font-size: 1.3rem;
 		}
 		@include respond-to(break2) {
-			// line-height: 1.5;
-			// @include vertically-align;
 			line-height: 1.1;
 		}
 	}
@@ -723,7 +696,6 @@
 		left: 0;
 		color: white;
 		background-color: rgba($black65, 0.9);
-		// @include sm-sans;
 		@include mini-sans;
 		text-transform: capitalize;
 		line-height: 1.4 !important;
@@ -732,9 +704,6 @@
 		cursor: pointer;
 
 		visibility: hidden; // initial hide
-		// @include width(2); // only show enough for plus sign
-		// @include height(2); // only show enough for plus sign
-		// display: none; // initial hide
 		// plus sign
 		@include respond-to(break2max) {
 			min-height: 4rem;
@@ -747,7 +716,6 @@
 			right: 0;
 			background-color: $black50;
 			color: white;
-			// @include padding-top(0);
 			@include padding-right(0.5);
 			@include padding-bottom(0.8);
 			@include padding-left(0.5);
@@ -791,12 +759,6 @@
 			}
 		}
 	}
-	// ol, ul {
-	// 	figure {
-	// 		// position: absolute;
-	// 		@include margin-left(-5);
-	// 	}
-	// }
 
 /* Dropdown Select
 * multi level select, from http://stackoverflow.com/a/9101168
@@ -813,9 +775,7 @@
 		font-size: 2.5rem;
 		// override nice-select defaults
 		height: auto;
-		// top:0.8rem;
 		@include top(0.8);
-		// @include right(1.8);
 		@include margin-top(0);
 		top: -0.1rem;
 		right:1rem;
@@ -930,7 +890,6 @@
 	}
 /* Search, Festival Past Festival Programs
 -------------------------------------------------*/
-	
 
 	// Search only
 	.search-page, .past-festivals-page {

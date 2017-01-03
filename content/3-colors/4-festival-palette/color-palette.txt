@@ -7,63 +7,63 @@ Colors:
 - 
   name: Light Blue
   hex: '#75bee9'
-  r: "142"
-  g: "189"
-  b: "231"
+  r: "113"
+  g: "182"
+  b: "217"
   sass: $fs-light-blue
 - 
   name: Blue
   hex: '#4e72b8'
-  r: "90"
-  g: "113"
-  b: "180"
+  r: "73"
+  g: "103"
+  b: "163"
   sass: $fs-blue
 - 
   name: Purple
   hex: '#7c51a1'
-  r: "113"
-  g: "82"
-  b: "157"
+  r: "111"
+  g: "73"
+  b: "141"
   sass: $fs-purple
 - 
   name: Green
   hex: '#3ea6ae'
-  r: "105"
-  g: "165"
-  b: "172"
+  r: "0"
+  g: "167"
+  b: "101"
   sass: $fs-green
 - 
   name: Teal
   hex: '#00b26b'
-  r: "98"
-  g: "177"
-  b: "110"
+  r: "64"
+  g: "159"
+  b: "161"
   sass: $fs-teal
 - 
   name: Yellow
   hex: '#ffe06a'
-  r: "249"
-  g: "223"
-  b: "114"
+  r: "253"
+  g: "221"
+  b: "107"
   sass: $fs-yellow
 - 
   name: Tan
   hex: '#d5bf90'
-  r: "206"
-  g: "190"
-  b: "145"
+  r: "207"
+  g: "187"
+  b: "138"
   sass: $fs-tan
 - 
   name: Orange
   hex: '#eea557'
-  r: "220"
-  g: "164"
-  b: "92"
+  r: "229"
+  g: "160"
+  b: "88"
   sass: $fs-orange
 - 
   name: Red
   hex: '#de4049'
-  r: "192"
-  g: "66"
-  b: "74"
+  r: "206"
+  g: "60"
+  b: "69"
   sass: $fs-red

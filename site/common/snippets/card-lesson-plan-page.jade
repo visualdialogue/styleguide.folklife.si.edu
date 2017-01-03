@@ -21,11 +21,11 @@ li.card.blog-article-card.col-xs-12(class="<? if ($card->type() == 'video') echo
 			.author.author-location University of Washington
 	.image
 		a(href="<?= $card->url() ?>")
-			img(src="<?= $image->url() ?>")
+			img(src="<?= $image->url() ?>" alt="<?= $card->title() ?>")
 	.video(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= excerpt($card->copy(), 25, "words") ?> <a href=\'#\'>more</a>')
 		.center-box
 			.modal-trigger
-				img(src="<?= $image->url() ?>")
+				img(src="<?= $image->url() ?>" alt="<?= $card->title() ?>")
 			.icon-play-button.video-icon-play-button.icon-stack
 				.icon-circle
 				.icon-play

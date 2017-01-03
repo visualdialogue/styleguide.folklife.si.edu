@@ -404,7 +404,6 @@
 		display: block;
 	}
 
-
 	// BROWSENAV
 	.browsenav {
 		display: none; // initial hide
@@ -414,9 +413,6 @@
 		top: 1rem;
 		@include respond-to(break2) {
 			padding: 2.8vw 0 2vw; // really 40 px with line-height
-			top: 0;
-		}
-		@include respond-to(breaksearch) {
 			top: 0;
 		}
 		@include respond-to(fullwidth) {

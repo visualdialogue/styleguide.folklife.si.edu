@@ -7,19 +7,12 @@
 			color: $link;
 		}
 	}
-	// a:hover, .main-copy h2 a:hover  { color: $hover; }
-	// .main-copy a { color: $copylinks; }
-	// .title a:hover {
-		// color: $copy;
-	// }
-
 	// prevent the above
 	.footer-title, .logo-mask, .site-toggle-link {
 		&:hover {
 			background-color: transparent; // prevent highlighting color
 		}
 	}
-
 	/* inspired by links on medium.com */
 	.content a {
 		color: $copy;

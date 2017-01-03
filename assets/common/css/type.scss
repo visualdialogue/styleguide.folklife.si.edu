@@ -1,8 +1,7 @@
 // fonts used:
 // Acumin light, regular, semibold, bold
-// using modular scale of major second, starting at 24px for serif body copy and
+// based on layouts and when in doubt, uses the modular scale of major second, starting at 24px for serif body copy and
 // serif line-height of 1.3333 from body text of 24/32
-
 	
 /* Serif
 * Freight Text Pro from typekit
@@ -26,8 +25,7 @@
 	@mixin md-serif {
 		font-family: $serif;
 		font-weight: 700;
-		// line-height: 1.1; // 42/46
-		line-height: 1; // dec 2
+		line-height: 1;
 		font-size: 2.7rem;
 		@include respond-to(break2) {
 			font-size: 2.5vw;
@@ -43,7 +41,6 @@
 		font-family: $serif;
 		font-weight: 600;
 		line-height: 1.33;
-		// line-height: 1;
 	  	font-size: 1.896rem;
 		@include respond-to(break2) {
 	  		font-size: 2.2vw;
@@ -60,9 +57,7 @@
 		font-family: $serif;
 		font-weight: 700;
 		line-height: 1;
-	  	// font-size: 1.896rem;
-	  	// font-size: 2.212rem; // folklife education
-	  	font-size: 2.489rem; // folklife education
+	  	font-size: 2.489rem;
 		@include respond-to(break2) {
 			line-height: 1.143;
 	  		font-size: 1.8vw;
@@ -82,7 +77,6 @@
 		line-height: 1.333333; // 24/32
 	  	font-size: 1.896rem; // 18px on medium.com mobile, 1.896 on modular scale
 		@include respond-to(break2) {
-	  		// font-size: 2.133rem; // close to 24px at top
 	  		font-size: 1.5vw;
 		}
 		@include respond-to(fullwidth) {
@@ -101,15 +95,12 @@
 	@mixin xl-sans {
 		font-family: $sans;
 		font-weight: 300;
-		// font-size: 5vw;
 		font-size: 2.37rem;
 		@include respond-to(break2) {
 			font-size: 1.9vw;
-			// font-size: 3rem;
 			line-height: 1.2;
 		}
 		@include respond-to(fullwidth) {
-			// font-size: 3.5rem;
 			font-size: 3.375rem;
 		}
 	}
@@ -122,11 +113,9 @@
 		font-family: $sans;
 		font-weight: 300;
 		line-height: 1.166667; // tighter for festival/learn page // 35px
-	  	// font-size: 2.37rem;
 		font-size: 2.107rem;
 
 		@include respond-to(break2) {
-	  		// font-size: 2.667rem;
 	  		font-size: 1.9vw;
 		}
 		@include respond-to(fullwidth) {
@@ -142,18 +131,13 @@
 		font-family: $sans;
 		font-weight: 300;
 		line-height: 1.2;
-	  	// font-size: 4vw;
 	  	font-size: 1.873rem;
 		@include respond-to(break2) {
 	  		font-size: 1.6vw;
-			// line-height: 1.3;
-	  		// font-size: 2.107rem;
 		}
 		@include respond-to(fullwidth) {
 	  		font-size: 2.5rem;
 	  		line-height: 1.28; // 25/32
-	  		// font-size: 2.4rem; // 12.18
-	  		// font-size: 2.37rem; // 12.19
 		}
 	}
 	.md-sans {@include md-sans;}
@@ -164,18 +148,12 @@
 		font-family: $sans;
 		font-weight: 300;
 		line-height: 1.2;
-	  	// font-size: 1.665rem;
 	  	font-size: 1.48rem;
 		@include respond-to(break2) {
-			// font-size: 1.873rem;
-			// font-size: 1.665rem;
 			font-size: 1.2vw;
 		}
 		@include respond-to(fullwidth) {
 			line-height: 1.12; // 18/20
-	  		// font-size: 2rem;
-	  		// font-size: 2.107rem;
-	  		// font-size: 1.873rem;
 	  		font-size: 1.8rem;
 		}
 	}
@@ -186,9 +164,6 @@
 	@mixin body-sans {
 		font-family: $sans;
 		font-weight: 300;
-		// line-height: 1.35;
-		// line-height: 1.4;
-		// line-height: 1.3;
 		line-height: 1.35; // fw magazine article
 	  	font-size: 1.873rem;
 		@include respond-to(break2) {
@@ -210,7 +185,6 @@
 		@include respond-to(break2) {
 	  		font-size: 1vw;
 			line-height: 1.3;
-	  		// font-size: 1.316rem;
 		}
 		@include respond-to(fullwidth) {
 	  		// font-size: 1.665rem; // fits with scale
@@ -272,7 +246,6 @@
 		font-family: $sans;
 		font-size: 1.6rem;
 		line-height: 1.7;
-		// font-weight: 300;
 		@include respond-to(break2) {
 			font-size: 1.1vw;
 			line-height: 1.8;
@@ -309,7 +282,6 @@
 			line-height: 1;
 		}
 		@include respond-to(fullwidth) {
-			// font-size: 4.5rem;
 			// font-size: 4.8rem; // past festivals year
 			font-size: 4rem; // folkways explore title bar
 			line-height: 1;
@@ -337,7 +309,6 @@
 		letter-spacing: 0.5px;
 		margin-top: 0; // bootstrap reset
 		margin-bottom: 1.5rem; // section title
-		// margin-bottom: 5vw;
 		line-height: 1.2; // section title
 		@include respond-to(break2) {
 			font-size: 1.9vw;
@@ -394,13 +365,8 @@
 		font-family: $sansWide;
 		font-weight: 800;
 		line-height: 1.095237;
-		// font-size: 2.622rem;
-		// font-size: 2.331rem;
-		// font-size: 2.072rem;
 		font-size: 1.842rem;
 		@include respond-to(break2) {
-			// font-size: 3.319rem;
-			// font-size: 2.95rem;
 			font-size: 2.4vw;
 		}
 		@include respond-to(fullwidth) {
@@ -418,7 +384,6 @@
 		font-size: 1.841rem;
 		@include margin-bottom(1);
 		@include respond-to(break2) {
-			// font-size: 2.33rem;
 			font-size: 1.9vw;
 		}
 		@include respond-to(fullwidth) {
@@ -443,13 +408,11 @@
 
 	// 
 	@mixin buy-button {
-		// @include sans-tag;
 		text-transform: uppercase;
 		font-family: $sansWide;
 		font-weight: 800;
 		margin-bottom: 0.5rem;
 		margin-bottom: 0;
-		// font-size: 1.48rem;
 		font-size: 1.376rem;
 		@include respond-to(break2) {
 			font-size: 1.376rem;
@@ -498,7 +461,6 @@
 		position: relative; // hold abs images that live inside ol or ul
 		h2 {
 			font-weight: 600;
-			// @include margin-bottom(1.6);
 			@include margin-bottom(1); // lesson plans page
 		}
 		h3 {
@@ -520,9 +482,7 @@
 		}
 		// common to ul and ol
 		li {
-			// line-height: 2;
 			list-style-position: inside;
-			// @include margin-bottom(1.5);
 			@include margin-bottom(0.8); // archives detail page
 		}
 		.title {

@@ -12,7 +12,7 @@ li.card(class="<?= $card_classes ?><? if ($card->type() == 'video') echo ' video
 			.video(class="<?= $image_col ?>" data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= excerpt($card->copy(), 25, "words") ?> <a href=\'#\'>more</a>')
 				.center-box
 					.modal-trigger
-						img(src="<?= $image->url() ?>")
+						img(src="<?= $image->url() ?>" alt="<?= $card->title() ?>")
 					.icon-play-button.video-icon-play-button.icon-stack
 						.icon-circle
 						.icon-play
@@ -20,10 +20,10 @@ li.card(class="<?= $card_classes ?><? if ($card->type() == 'video') echo ' video
 			.image(class="<?= $image_col ?>")
 				-if (null != $card->url()):
 				a(href="<?= $card->url() ?>")
-					img(src="<?= $image->url() ?>")
+					img(src="<?= $image->url() ?>" alt="<?= $card->title() ?>")
 				-else:
 				a(href="#")
-					img(src="<?= $image->url() ?>")
+					img(src="<?= $image->url() ?>" alt="<?= $card->title() ?>")
 				-endif
 		-endif
 		.details(class="<?= $details_col ?>")

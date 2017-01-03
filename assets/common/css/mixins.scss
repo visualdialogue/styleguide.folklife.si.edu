@@ -35,12 +35,6 @@
 	  } @else {
 		font-family: "klinic_slab_medium", $seriffallback;
 	  }
-	// } @else if $weight == 700 {
-	//   @if $style == "italic"{
-	//     font-family: "klinic_slab_boldit";
-	//   } @else {
-	//     font-family: "klinic_slab_bold", $seriffallback;
-	//   }
 	}
   }
 
@@ -49,78 +43,65 @@
   }
 
 
-  // lookup http://stackoverflow.com/questions/13545737/need-help-creating-a-percentage-based-sass-grid-system
-  // accepts number of columns a block should span
-  // returns a percentage width for that block
+	// lookup http://stackoverflow.com/questions/13545737/need-help-creating-a-percentage-based-sass-grid-system
+	// accepts number of columns a block should span
+	// returns a percentage width for that block
 
-  @mixin two-columns($gap, $columns: 2) {
-	-webkit-columns: $columns;
-	   -moz-columns: $columns;
-			columns: $columns;
-	-webkit-column-gap: $gap; /* Chrome, Safari, Opera */
-	   -moz-column-gap: $gap; /* Firefox */
-			column-gap: $gap;
-  }
-  @mixin break-inside($which) {
-	-webkit-column-break-inside: $which;
-			  page-break-inside: $which;
-				   break-inside: $which;
-  }
+	@mixin two-columns($gap, $columns: 2) {
+		-webkit-columns: $columns;
+		-moz-columns: $columns;
+		columns: $columns;
+		-webkit-column-gap: $gap; /* Chrome, Safari, Opera */
+		-moz-column-gap: $gap; /* Firefox */
+		column-gap: $gap;
+	}
+	@mixin break-inside($which) {
+		-webkit-column-break-inside: $which;
+		page-break-inside: $which;
+		break-inside: $which;
+	}
 
-  // vertical align
-  @mixin vertically-align-grandparent {
-  	display: table;
-  	width: 100%;
-  }
+	// vertical align
+	@mixin vertically-align-grandparent {
+		display: table;
+		width: 100%;
+	}
 
-  @mixin vertically-align-parent {
-	position: relative; 
-	-webkit-transform-style : preserve-3d;
-	-moz-transform-style    : preserve-3d;
-	-ms-transform-style    : preserve-3d;
-	-o-transform-style    : preserve-3d;
-	transform-style         : preserve-3d;
-	
-	// for unknown heights
-	display: table-cell;
-	width: 100%;
-	height: 100%;
-	
-	// position: absolute; // for ie
-  }
-  // vertical align from http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/ 
-  // @mixin vertical-align($position: relative) {
-  @mixin vertically-align($position: absolute, $offset: 50%) {
-  	position: $position;
-  	top: $offset;
-  	-webkit-transform: translateY(-$offset);
-  	-ms-transform: translateY(-$offset);
-  	transform: translateY(-$offset);
-  }
+	@mixin vertically-align-parent {
+		position: relative; 
+		-webkit-transform-style : preserve-3d;
+		-moz-transform-style    : preserve-3d;
+		-ms-transform-style    : preserve-3d;
+		-o-transform-style    : preserve-3d;
+		transform-style         : preserve-3d;
 
-  .vertically-align-grandparent {@include vertically-align-grandparent;height: 100%;}
+		// for unknown heights
+		display: table-cell;
+		width: 100%;
+		height: 100%;
+	}
+	// vertical align from http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/ 
+	@mixin vertically-align($position: absolute, $offset: 50%) {
+		position: $position;
+		top: $offset;
+		-webkit-transform: translateY(-$offset);
+		-ms-transform: translateY(-$offset);
+		transform: translateY(-$offset);
+	}
+
+	.vertically-align-grandparent {@include vertically-align-grandparent;height: 100%;}
 	.vertically-align-uncle{display: table-row;}
-  .vertically-align-parent {@include vertically-align-parent;}
-  .vertically-align {@include vertically-align;}
+	.vertically-align-parent {@include vertically-align-parent;}
+	.vertically-align {@include vertically-align;}
 
- //  @mixin vertical-align($position: absolute) {
-	// position: $position;
-	// top: 50%;
-	// -webkit-transform: translateY(-50%);
-	// -moz-transform: translateY(-50%);
-	// -ms-transform: translateY(-50%);
-	// -o-transform: translateY(-50%);
-	// transform: translateY(-50%);
-	// width:100%;
- //  }
 
  /* Clear left for correct alignment of cards in rows
  -------------------------------------------------- */
 
 	 @mixin clear-2 {
-	 		&:nth-of-type(2n + 1) {
-	 			clear:left;
-	 		}
+ 		&:nth-of-type(2n + 1) {
+ 			clear:left;
+ 		}
 	 }
 	 @mixin clear-3 {
 	 	// reset

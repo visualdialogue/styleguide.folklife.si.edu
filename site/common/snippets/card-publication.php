@@ -6,7 +6,7 @@
 <?php endif; ?>
 <li class="card col-sm-6 publication-card top-border-card">
   <div class="row">
-    <div class="image col-xs-4"><a href="<?= $card->url() ?>"><img src="<?= $image->url() ?>"/></a></div>
+    <div class="image col-xs-4"><a href="<?= $card->url() ?>"><img src="<?= $image->url() ?>" alt="<?= $card->title() ?>"/></a></div>
     <div class="details col-xs-8">
       <div class="details-inner"><a href="<?= $card->url() ?>" class="high title"><span class="light"><span class="er">
               <?php echo htmlspecialchars($card->title(), ENT_QUOTES, 'UTF-8'); ?></span></span></a>

@@ -7,7 +7,7 @@
 <?php $image = null; ?>
 <?php endif; ?>
 <li class="card news-card <? if (isset($card_classes)) echo $card_classes . ' ' ?>">
-  <div class="image"><a href="<?= $card->url() ?>"><img src="<?= $image->url() ?>"/></a></div>
+  <div class="image"><a href="<?= $card->url() ?>"><img src="<?= $image->url() ?>" alt="<?= $card->title() ?>"/></a></div>
   <div class="details">
     <div class="details-inner">
       <div class="date">

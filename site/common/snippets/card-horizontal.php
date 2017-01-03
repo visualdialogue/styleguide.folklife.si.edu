@@ -9,7 +9,7 @@
     <?php if ($card->type() == 'video'): ?>
     <div data-video-id="<?= $card->video_id() ?>" data-title="<?= $card->title() ?>" data-description="<?= excerpt($card->copy(), 25, "words") ?> <a href='#'>more</a>" class="video <?= $image_col ?>">
       <div class="center-box">
-        <div class="modal-trigger"><img src="<?= $image->url() ?>"/></div>
+        <div class="modal-trigger"><img src="<?= $image->url() ?>" alt="<?= $card->title() ?>"/></div>
         <div class="icon-play-button video-icon-play-button icon-stack">
           <div class="icon-circle"></div>
           <div class="icon-play"></div>
@@ -18,8 +18,8 @@
     </div>
     <?php else: ?>
     <div class="image <?= $image_col ?>">
-      <?php if (null != $card->url()): ?><a href="<?= $card->url() ?>"><img src="<?= $image->url() ?>"/></a>
-      <?php else: ?><a href="#"><img src="<?= $image->url() ?>"/></a>
+      <?php if (null != $card->url()): ?><a href="<?= $card->url() ?>"><img src="<?= $image->url() ?>" alt="<?= $card->title() ?>"/></a>
+      <?php else: ?><a href="#"><img src="<?= $image->url() ?>" alt="<?= $card->title() ?>"/></a>
       <?php endif; ?>
     </div>
     <?php endif; ?>

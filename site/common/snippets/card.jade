@@ -13,7 +13,7 @@ li.card(class="<? if (isset($card_classes)) echo $card_classes . ' ' ?><? if ($c
 		.video(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= excerpt($card->copy(), 25, "words") ?> <a href=\'#\'>more</a>')
 			.center-box
 				.modal-trigger
-					img(src="<?= $image->url() ?>")
+					img(src="<?= $image->url() ?>" alt="<?= $card->title() ?>")
 				.icon-play-button.video-icon-play-button.icon-stack
 					.icon-circle
 					.icon-play
@@ -21,10 +21,10 @@ li.card(class="<? if (isset($card_classes)) echo $card_classes . ' ' ?><? if ($c
 		.image
 			-if (null != $card->url()):
 			a(href="<?= $card->url() ?>")
-				img(src="<?= $image->url() ?>" class="<? if (isset($image_class)) echo $image_class ?>")
+				img(src="<?= $image->url() ?>" alt="<?= $card->title() ?>" class="<? if (isset($image_class)) echo $image_class ?>")
 			-else:
 			a(href="#")
-				img(src="<?= $image->url() ?>")
+				img(src="<?= $image->url() ?>" alt="<?= $card->title() ?>")
 			-endif
 	-endif
 	.details
@@ -88,7 +88,7 @@ li.card(class="<? if (isset($card_classes)) echo $card_classes . ' ' ?><? if ($c
 						.icon-play
 					.audio-player-details
 						.audio-progress-bar
-							img(src="/assets/images/icons/audio-progress-bar.png")
+							img(src="/assets/images/icons/audio-progress-bar.png" alt="audio progress bar")
 						.audio-time
 							|0:00 &vert;&nbsp;
 							!= $card->audio_length()

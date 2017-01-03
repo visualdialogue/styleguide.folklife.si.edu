@@ -3,23 +3,23 @@
 <ul class="footer-row footer-row-2 row">
   <li class="footer-main-item col-sm-3">
     <div class="footer-logo active-footer-logo">
-      <?php if (c::get('isFolklife') || c::get('isStyleguide')): ?><a href="<? if (c::get('isDev')) echo 'http://localhost:3001'; else echo 'http://folklife.lukehatfield.com' ?>"><img src="/assets/images/logo/smithsonian_center_for_folklife_and_cultural_heritage.png?v=2016.10.21" class="footer-logo-img folklife-footer-logo-img"/></a>
-      <?php elseif (c::get('isFestival')): ?><a href="<? if (c::get('isDev')) echo 'http://localhost:3003'; else echo 'http://on.festival.lukehatfield.com' ?>"><img src="/assets/images/logo/smithsonian_folklife_festival.png?v=2016.10.21" class="footer-logo-img"/></a>
-      <?php elseif (c::get('isFolkways')): ?><a href="<? if (c::get('isDev')) echo 'http://localhost:3005'; else echo 'http://folkways.lukehatfield.com' ?>"><img src="/assets/images/logo/smithsonian_folkways_recordings.png?v=2016.10.21" class="footer-logo-img"/></a>
+      <?php if (c::get('isFolklife') || c::get('isStyleguide')): ?><a href="<? if (c::get('isDev')) echo 'http://localhost:3001'; else echo 'http://folklife.lukehatfield.com' ?>"><img src="/assets/images/logo/smithsonian_center_for_folklife_and_cultural_heritage.png?v=2016.10.21" alt="Smithsonian Center for Folklife and Cultural Heritage" class="footer-logo-img folklife-footer-logo-img"/></a>
+      <?php elseif (c::get('isFestival')): ?><a href="<? if (c::get('isDev')) echo 'http://localhost:3003'; else echo 'http://on.festival.lukehatfield.com' ?>"><img src="/assets/images/logo/smithsonian_folklife_festival.png?v=2016.10.21" alt="Smithsonian Folklife Festival" class="footer-logo-img"/></a>
+      <?php elseif (c::get('isFolkways')): ?><a href="<? if (c::get('isDev')) echo 'http://localhost:3005'; else echo 'http://folkways.lukehatfield.com' ?>"><img src="/assets/images/logo/smithsonian_folkways_recordings.png?v=2016.10.21" alt="Smithsonian Folkways Recordings" class="footer-logo-img"/></a>
       <?php endif; ?>
     </div>
   </li>
   <li class="footer-main-item col-sm-3"> 
     <div class="footer-logo">
-      <?php if (c::get('isFolklife') || c::get('isStyleguide')): ?><a href="<? if (c::get('isDev')) echo 'http://localhost:3005'; else echo 'http://folkways.lukehatfield.com' ?>"><img src="/assets/images/logo/smithsonian_folkways_recordings.png?v=2016.10.21" class="footer-logo-img"/></a>
-      <?php elseif (c::get('isFestival') || c::get('isFolkways')): ?><a href="<? if (c::get('isDev')) echo 'http://localhost:3001'; else echo 'http://folklife.lukehatfield.com' ?>"><img src="/assets/images/logo/smithsonian_center_for_folklife_and_cultural_heritage.png?v=2016.10.21" class="footer-logo-img folklife-footer-logo-img"/></a>
+      <?php if (c::get('isFolklife') || c::get('isStyleguide')): ?><a href="<? if (c::get('isDev')) echo 'http://localhost:3005'; else echo 'http://folkways.lukehatfield.com' ?>"><img src="/assets/images/logo/smithsonian_folkways_recordings.png?v=2016.10.21" alt="Smithsonian Folkways Recordings" class="footer-logo-img"/></a>
+      <?php elseif (c::get('isFestival') || c::get('isFolkways')): ?><a href="<? if (c::get('isDev')) echo 'http://localhost:3001'; else echo 'http://folklife.lukehatfield.com' ?>"><img src="/assets/images/logo/smithsonian_center_for_folklife_and_cultural_heritage.png?v=2016.10.21" alt="Smithsonian Center for Folklife and Cultural Heritage" class="footer-logo-img folklife-footer-logo-img"/></a>
       <?php endif; ?>
     </div>
   </li>
   <li class="footer-main-item col-sm-3"> 
     <div class="footer-logo">
-      <?php if (c::get('isFolklife') || c::get('isFolkways') || c::get('isStyleguide')): ?><a href="<? if (c::get('isDev')) echo 'http://localhost:3003'; else echo 'http://on.festival.lukehatfield.com' ?>"><img src="/assets/images/logo/smithsonian_folklife_festival.png?v=2016.10.21" class="footer-logo-img"/></a>
-      <?php elseif (c::get('isFestival')): ?><a href="<? if (c::get('isDev')) echo 'http://localhost:3005'; else echo 'http://folkways.lukehatfield.com' ?>"><img src="/assets/images/logo/smithsonian_folkways_recordings.png?v=2016.10.21" class="footer-logo-img"/></a>
+      <?php if (c::get('isFolklife') || c::get('isFolkways') || c::get('isStyleguide')): ?><a href="<? if (c::get('isDev')) echo 'http://localhost:3003'; else echo 'http://on.festival.lukehatfield.com' ?>"><img src="/assets/images/logo/smithsonian_folklife_festival.png?v=2016.10.21" alt="Smithsonian Folklife Festival" class="footer-logo-img"/></a>
+      <?php elseif (c::get('isFestival')): ?><a href="<? if (c::get('isDev')) echo 'http://localhost:3005'; else echo 'http://folkways.lukehatfield.com' ?>"><img src="/assets/images/logo/smithsonian_folkways_recordings.png?v=2016.10.21" alt="Smithsonian Folkways Recordings" class="footer-logo-img"/></a>
       <?php endif; ?>
     </div>
   </li>
@@ -44,7 +44,7 @@
 </ul>
 <ul class="footer-row footer-row-3 row">
   <li class="footer-main-item col-sm-3">
-    <div class="smithsonian-institution-logo"><img src="/assets/images/logo/smithsonian_institution.png"/></div>
+    <div class="smithsonian-institution-logo"><img src="/assets/images/logo/smithsonian_institution.png" alt="Smithsonian Institution"/></div>
   </li>
   <li class="footer-main-item col-sm-4">
     <div class="copyright">&copy; 2016 Smithsonian Institution</div>

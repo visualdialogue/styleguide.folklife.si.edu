@@ -10,7 +10,7 @@
 li.card.merchandise-card.col-xs-6.col-sm-2
 	.image
 		a(href="<?= $card->url() ?>")
-			img(src="<?= $image->url() ?>")
+			img(src="<?= $image->url() ?>" alt="<?= $card->title() ?>")
 	.details
 		.details-inner
 			a.high(href="<?= $card->url() ?>").title: span.light: span.er= $card->title()

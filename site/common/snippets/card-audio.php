@@ -5,7 +5,7 @@
 <?php $image = $src; ?>
 <?php endif; ?>
 <li class="card audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border-card">
-  <div class="image"><a href="<?= $card->url() ?>"><img src="<?= $image->url() ?>"/></a></div>
+  <div class="image"><a href="<?= $card->url() ?>"><img src="<?= $image->url() ?>" alt="<?= $card->title() ?>"/></a></div>
   <div class="details">
     <div class="details-inner">
       <div class="tag">

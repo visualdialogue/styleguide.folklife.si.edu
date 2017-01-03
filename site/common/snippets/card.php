@@ -10,7 +10,7 @@
   <?php if ($card->type() == 'video'): ?>
   <div data-video-id="<?= $card->video_id() ?>" data-title="<?= $card->title() ?>" data-description="<?= excerpt($card->copy(), 25, "words") ?> <a href='#'>more</a>" class="video">
     <div class="center-box">
-      <div class="modal-trigger"><img src="<?= $image->url() ?>"/></div>
+      <div class="modal-trigger"><img src="<?= $image->url() ?>" alt="<?= $card->title() ?>"/></div>
       <div class="icon-play-button video-icon-play-button icon-stack">
         <div class="icon-circle"></div>
         <div class="icon-play"></div>
@@ -19,8 +19,8 @@
   </div>
   <?php elseif($image): ?>
   <div class="image">
-    <?php if (null != $card->url()): ?><a href="<?= $card->url() ?>"><img src="<?= $image->url() ?>" class="<? if (isset($image_class)) echo $image_class ?>"/></a>
-    <?php else: ?><a href="#"><img src="<?= $image->url() ?>"/></a>
+    <?php if (null != $card->url()): ?><a href="<?= $card->url() ?>"><img src="<?= $image->url() ?>" alt="<?= $card->title() ?>" class="<? if (isset($image_class)) echo $image_class ?>"/></a>
+    <?php else: ?><a href="#"><img src="<?= $image->url() ?>" alt="<?= $card->title() ?>"/></a>
     <?php endif; ?>
   </div>
   <?php endif; ?>
@@ -80,7 +80,7 @@
           <div class="icon-play"></div>
         </div>
         <div class="audio-player-details">
-          <div class="audio-progress-bar"><img src="/assets/images/icons/audio-progress-bar.png"/></div>
+          <div class="audio-progress-bar"><img src="/assets/images/icons/audio-progress-bar.png" alt="audio progress bar"/></div>
           <div class="audio-time">0:00 &vert;&nbsp;
             <?php echo $card->audio_length(); ?>
           </div>

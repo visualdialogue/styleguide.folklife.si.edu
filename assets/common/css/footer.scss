@@ -1,6 +1,3 @@
-
-
-
 /* #footer
 -------------------------------------------------- */
 	.footer {
@@ -22,7 +19,6 @@
 		&-row-1 {
 			@include respond-to(break2max) {
 				margin-bottom: 4rem;
-				// margin-bottom: 3.4rem;
 			}
 		}
 		&-row-2 {
@@ -77,9 +73,7 @@
 		@include respond-to(break2max) {margin-top: 1rem;}
 	}
 	.copyright-list-item {
-		// @include link-font-xs;
 		@include link-font;
-		// line-height: 1.9 !important;
 		a {
 			color: $black65;
 			&:hover {

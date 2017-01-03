@@ -5,9 +5,9 @@ section.container.typography-section
 			h2.section-title Typography
 			a.anchor-link#typography
 			.intro-copy.link-underline
-				p Fonts are stored as SASS <em>mixins</em> so they can be used anywhere in the .scss files without fear of cascading styles overriding them. You can easily implement the mixin by targeting a specific .title, or other, class as seen in the following lines:
+				p Fonts are stored as SASS <em>mixins</em> so they can be used anywhere in the .scss files without fear of cascading styles overriding them (unlike @extend). You can easily implement the mixin by targeting a specific .title or other class as seen in the following lines:
 
-				pre: code.
+				pre.sass: code.
 					.archives-page {
 						.title {
 							@include sans-lg;

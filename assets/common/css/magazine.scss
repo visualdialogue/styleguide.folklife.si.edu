@@ -13,7 +13,6 @@
 		@include respond-to(fullwidth) {height:11.7rem;} // from layout
 	}
 	.magazine-title-bar {
-		// background-color: black;
 		// Split background colors for backdrop behind color grid
 		@include margin-bottom(4);
 		
@@ -35,7 +34,6 @@
 			background-color: black;
 			@include respond-to(break2) {
 				right: 50vw; // go to middle of screen, behind grid
-
 			}
 		}
 		&:after {
@@ -45,10 +43,8 @@
 				left: 50vw; // go to middle of screen, behind grid
 			}
 		}
-
 		.folkways-magazine-logo {
 			@include padding-top(2.8);
-			// @include padding-bottom(0.2);	
 		}
 		.black-spacer {
 			background-color: black;
@@ -67,7 +63,6 @@
 		.issue-title {
 			color: black;
 			background-color: $fw-magazine;
-			// height:19vw;
 			height:6.5rem;
 			padding-left: 1.5rem;
 			@include respond-to(break2) {
@@ -89,7 +84,6 @@
 			// mobile
 			padding-top: 1rem;
 			padding-bottom: 1rem;
-
 			.title {
 				@include md-serif;
 				@include margin-top(0.4);
@@ -115,7 +109,6 @@
 			}
 		}
 		.details-inner {
-			// @include padding-left(2);
 			@include respond-to(break2max) {
 				padding-left: 1.5rem;
 			}
@@ -234,9 +227,6 @@
 					@include respond-to(fullwidth) {top:1rem;}
 				}
 			}
-			ul {
-				// display: block; // testing
-			}
 			li {
 				@include sm-sans;
 				font-weight: 400;
@@ -248,7 +238,6 @@
 		}
 	}
 	.back-issues-select {
-		// @include sm-sans;
 		@include margin-top(1.8);
 		@include padding-left(0);
 		@include height(4.2);
@@ -258,7 +247,6 @@
 		@include respond-to(break2) {
 			@include border(bottom, 2px, white);
 		}
-
 		.current {
 			@include lg-sans;
 			font-weight: 700;

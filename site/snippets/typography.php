@@ -5,8 +5,8 @@
     <main class="content col-sm-7">
       <h2 class="section-title">Typography</h2><a id="typography" class="anchor-link"></a>
       <div class="intro-copy link-underline">
-        <p>Fonts are stored as SASS <em>mixins</em> so they can be used anywhere in the .scss files without fear of cascading styles overriding them. You can easily implement the mixin by targeting a specific .title, or other, class as seen in the following lines:</p>
-        <pre><code>.archives-page {
+        <p>Fonts are stored as SASS <em>mixins</em> so they can be used anywhere in the .scss files without fear of cascading styles overriding them (unlike @extend). You can easily implement the mixin by targeting a specific .title or other class as seen in the following lines:</p>
+        <pre class="sass"><code>.archives-page {
 	.title {
 		@include sans-lg;
 	}

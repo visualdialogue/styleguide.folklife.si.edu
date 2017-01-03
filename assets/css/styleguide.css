@@ -4087,57 +4087,6 @@ iframe {
   *******/
 /* #Media Queries
 -------------------------------------------------- */
-/* Class helpers
--------------------------------------------------- */
-.no-mobile, .no-mobile-inline {
-  display: none; }
-
-.tablet-only {
-  display: none; }
-
-.desktop-only {
-  display: none !important; }
-
-.desktop-only-inline {
-  display: none; }
-
-.break-2-only-inline {
-  display: none; }
-
-@media only screen and (min-width: 40em) {
-  .mobile-only {
-    display: none; }
-  .no-mobile {
-    display: block; }
-  .no-mobile-inline {
-    display: inline-block; }
-  .no-tablet {
-    display: none; }
-  .tablet-only {
-    display: block; } }
-
-@media only screen and (min-width: 53.25em) {
-  .break-2-only-inline {
-    display: inline-block; }
-  .mobile-tablet-only {
-    display: none; }
-  .no-tablet {
-    display: block; }
-  .no-tablet-inline {
-    display: inline-block; }
-  .tablet-only {
-    display: none; }
-  .showroom-narrow {
-    display: none; }
-  .manufacturer-narrow {
-    display: none; }
-  .no-desktop {
-    display: none !important; }
-  .desktop-only {
-    display: block !important; }
-  .desktop-only-inline {
-    display: inline-block !important; } }
-
 /* 
 
 
@@ -5040,71 +4989,6 @@ a:hover {
 .first-anchor-link {
   top: -20rem; }
 
-/* #Helpers
--------------------------------------------------- */
-.sans {
-  font-family: "acumin-pro", Arial, sans-serif; }
-
-.cf:after {
-  content: "";
-  display: table;
-  clear: both; }
-
-.tablet-only {
-  display: none; }
-
-.desktop-only {
-  display: none !important; }
-
-.desktop-only-inline {
-  display: none; }
-
-.break-2-only-inline {
-  display: none; }
-
-@media only screen and (min-width: 40em) {
-  .mobile-only {
-    display: none; }
-  .no-tablet {
-    display: none; }
-  .tablet-only {
-    display: block; } }
-
-@media only screen and (min-width: 53.25em) {
-  .break-2-only-inline {
-    display: inline-block; }
-  .mobile-tablet-only {
-    display: none; }
-  .no-tablet {
-    display: block; }
-  .no-tablet-inline {
-    display: inline-block; }
-  .tablet-only {
-    display: none; }
-  .showroom-narrow {
-    display: none; }
-  .manufacturer-narrow {
-    display: none; }
-  .no-desktop {
-    display: none !important; }
-  .desktop-only {
-    display: block !important; }
-  .desktop-only-inline {
-    display: inline-block !important; } }
-
-.no-margin {
-  margin: 0 !important; }
-
-@media only screen and (min-width: 53.25em) {
-  .table {
-    display: table;
-    height: 100%; }
-  .table-row {
-    display: table-row; }
-  .table-cell {
-    display: table-cell;
-    height: 100%; } }
-
 /* Mixins
 -------------------------------------------------- */
 .vertically-align-grandparent {
@@ -5583,9 +5467,6 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
   @media only screen and (min-width: 53.25em) {
     .browsenav {
       padding: 2.8vw 0 2vw;
-      top: 0; } }
-  @media only screen and (min-width: 74.25em) {
-    .browsenav {
       top: 0; } }
   @media only screen and (min-width: 1560px) {
     .browsenav {

@@ -10,7 +10,7 @@
 li.card.news-card(class="<? if (isset($card_classes)) echo $card_classes . ' ' ?>")
 	.image
 		a(href="<?= $card->url() ?>")
-			img(src="<?= $image->url() ?>")
+			img(src="<?= $image->url() ?>" alt="<?= $card->title() ?>")
 	.details
 		.details-inner
 			.date!= $card->date('n.j.Y')

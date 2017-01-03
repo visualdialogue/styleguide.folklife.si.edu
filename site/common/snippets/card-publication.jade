@@ -9,7 +9,7 @@ li.card.col-sm-6.publication-card.top-border-card
 	.row
 		.image.col-xs-4
 			a(href="<?= $card->url() ?>")
-				img(src="<?= $image->url() ?>")
+				img(src="<?= $image->url() ?>" alt="<?= $card->title() ?>")
 		.details.col-xs-8
 			.details-inner
 

@@ -8,7 +8,7 @@
 li.card.audio-card.col-xs-6.col-sm-3.card-xs-break-2.full-border-card
 		.image
 			a(href="<?= $card->url() ?>")
-				img(src="<?= $image->url() ?>")
+				img(src="<?= $image->url() ?>" alt="<?= $card->title() ?>")
 		.details
 			.details-inner
 				.tag!= $card->category() 
