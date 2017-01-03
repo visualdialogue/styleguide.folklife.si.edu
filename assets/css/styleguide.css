@@ -4219,7 +4219,7 @@ iframe {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1;
-  font-size: 1.896rem;
+  font-size: 2.489rem;
   margin-bottom: 0.70235rem; }
   @media only screen and (min-width: 53.25em) {
     .sm-serif {
@@ -4239,7 +4239,7 @@ iframe {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1;
-  font-size: 1.896rem;
+  font-size: 2.489rem;
   margin-bottom: 0.70235rem;
   font-style: italic; }
   @media only screen and (min-width: 53.25em) {
@@ -4623,7 +4623,7 @@ body {
     font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
     font-weight: 700;
     line-height: 1;
-    font-size: 1.896rem;
+    font-size: 2.489rem;
     margin-bottom: 0.70235rem;
     margin-bottom: 1.40469rem; }
     @media only screen and (min-width: 53.25em) {
@@ -5896,7 +5896,7 @@ ul {
     line-height: 1.4;
     text-transform: uppercase;
     font-size: 1.316rem;
-    margin-top: 0.56188rem;
+    padding-top: 0.56188rem;
     color: gray;
     margin: 0; }
     @media only screen and (min-width: 53.25em) {
@@ -5908,10 +5908,10 @@ ul {
         font-size: 1.6rem; } }
     @media only screen and (min-width: 53.25em) {
       .sidebar h4, .sidebar-item-title {
-        margin-top: 0.512vw; } }
+        padding-top: 0.512vw; } }
     @media only screen and (min-width: 1560px) {
       .sidebar h4, .sidebar-item-title {
-        margin-top: 0.8rem; } }
+        padding-top: 0.8rem; } }
   .sidebar-item {
     border-bottom: 1px solid #999999;
     padding-bottom: 0.70235rem; }
@@ -7599,7 +7599,7 @@ a.details {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1;
-  font-size: 1.896rem;
+  font-size: 2.489rem;
   margin-bottom: 0.70235rem;
   display: block; }
   @media only screen and (min-width: 53.25em) {
@@ -8343,7 +8343,7 @@ h2.intro-title {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1;
-  font-size: 1.896rem;
+  font-size: 2.489rem;
   margin-bottom: 0.70235rem;
   line-height: 1.35 !important;
   font-weight: 500; }
@@ -8667,7 +8667,7 @@ code.hljs {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1;
-  font-size: 1.896rem;
+  font-size: 2.489rem;
   margin-bottom: 0.70235rem;
   padding-top: 1.40469rem;
   margin-top: 2.10704rem;
@@ -8961,7 +8961,7 @@ code.hljs {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1;
-  font-size: 1.896rem;
+  font-size: 2.489rem;
   margin-bottom: 0.70235rem;
   font-weight: 600; }
   @media only screen and (min-width: 53.25em) {

@@ -266,7 +266,7 @@
 		}
 		h4, &-item-title {
 			@include mini-sans;
-			@include margin-top(0.8);
+			@include padding-top(0.8);
 			color: $black50;
 			margin: 0;
 		}

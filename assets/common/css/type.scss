@@ -60,7 +60,9 @@
 		font-family: $serif;
 		font-weight: 700;
 		line-height: 1;
-	  	font-size: 1.896rem;
+	  	// font-size: 1.896rem;
+	  	// font-size: 2.212rem; // folklife education
+	  	font-size: 2.489rem; // folklife education
 		@include respond-to(break2) {
 			line-height: 1.143;
 	  		font-size: 1.8vw;
