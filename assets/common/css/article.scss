@@ -33,12 +33,8 @@
 	.image {
 		@include margin-bottom(2);
 	}
-	.tag {
-		// @include margin-bottom(1);
-	}
 	.title {
 		@include lg-serif;
-		// @include margin-bottom(0.5);
 		@include margin-bottom(1);
 	}
 	.date {

@@ -668,9 +668,6 @@
       <?php foreach($pages->find('explore')->children()->find('sounds')->children()->visible() as $card): ?>
       <?php snippet('card-album', array('card' => $card )); ?>
       <?php endforeach; ?>
-      
-      
-      
     </ul>
   </section>
 </div>

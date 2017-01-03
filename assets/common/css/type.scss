@@ -257,16 +257,13 @@
 		font-family: $sans;
 		font-size: 1.7rem;
 		line-height: 2;
-		// font-weight: 300;
 		font-weight: 400;
 		@include respond-to(break2) {
 			font-size: 1.1vw;
 			line-height: 1.45;
 		}
 		@include respond-to(fullwidth) {
-			// font-size: 2rem;
 			font-size: 1.6rem;
-			// line-height: 1.25;
 			line-height: 1.8; // 16 px
 		}
 	}
@@ -353,16 +350,18 @@
 	.md-slab {@include md-slab;}
 
 	@mixin nav-header {
-		font-family: $slabNarrow;
 		text-transform: uppercase;
+		font-family: $sansWide;
 		font-weight: 800;
+		line-height: 1.2;
 		font-size: 5vw;
+		font-size: 1.7rem;
 		@include respond-to(break2) {
-			font-size: 1.09vw;
 			line-height: 1.2;
+			font-size: 1.09vw;
 		}
 		@include respond-to(fullwidth) {
-			line-height: 1.2353; // 21px
+			line-height: 1.4353;
 			font-size: 1.7rem;
 		}
 	}
@@ -427,6 +426,20 @@
 		}
 	}
 	.sm-magazine-title {@include sm-magazine-title;}
+
+	@mixin program-subtitle {
+		font-family: $sansWide;
+		font-weight: 700;
+		line-height: 1.2;
+		font-size: 1.841rem;
+		@include margin-bottom(1);
+		@include respond-to(break2) {
+			font-size: 1.9vw;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 3rem;
+		}
+	}
 
 	// 
 	@mixin buy-button {
@@ -509,7 +522,8 @@
 		li {
 			// line-height: 2;
 			list-style-position: inside;
-			@include margin-bottom(1.5);
+			// @include margin-bottom(1.5);
+			@include margin-bottom(0.8); // archives detail page
 		}
 		.title {
 			@include sm-sans;
@@ -552,5 +566,15 @@
 					@include padding-left(4);
 				}
 			}
+		}
+	}
+	.content-footer {
+		position: relative;
+		h2 {
+			@include md-sans;
+			font-weight: 600;
+		}
+		p, ul {
+			@include body-sans;
 		}
 	}

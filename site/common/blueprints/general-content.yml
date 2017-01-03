@@ -1,0 +1,25 @@
+title: Collection
+pages: 
+  template: 
+    - collection
+    - card
+files: true
+fields:
+  title:
+    label: Title
+    type:  text
+  img:
+    label: Image
+    type: select
+    options: images
+    width: 1/2
+    icon: image
+  intro:
+    label: Introduction
+    type: textarea
+  copy:
+    label: Copy
+    type: textarea
+  footer:
+    label: Footer
+    type: textarea

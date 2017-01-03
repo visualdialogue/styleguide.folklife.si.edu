@@ -10,6 +10,16 @@
 			@include margin-bottom(2);
 		}
 	}
+	.basque-page {
+		.ms-section {
+			.thin-hr-svg {
+				@include margin-bottom(0.5);
+				path {
+					fill: $basque-green;
+				}
+			}
+		}
+	}
 	.program-category-page {
 		.section-title {
 			@include margin-top(-0.8);
@@ -76,7 +86,7 @@
 	.ms-header {
 		@include margin-bottom(3.2);
 		.title-height {
-			@include height(13.9);
+			@include height(13.7);
 			height: auto; // mobile
 		}
 		.page-title {
@@ -90,16 +100,15 @@
 			margin: 0;
 		}
 		.subtitle-height {
-			@include height(5.3);
+			@include height(5.5);
 			height: auto;
 		}
 		.page-subtitle {
-			@include lg-sans;
-			font-weight: 600;
+			@include program-subtitle;
 			color: $basque-green;
 			text-transform: uppercase;
-			@include padding-bottom(2);
-			@include margin-top(0.5);
+			// @include padding-bottom();
+			@include margin-top(0.7);
 		}
 		.basque {
 			background-color: $basque-red;
@@ -225,12 +234,6 @@
 			}
 			p {
 				@include margin-bottom(1);
-			}
-		}
-		.thin-hr-svg {
-			@include margin-bottom(0.5);
-			path {
-				fill: $basque-green;
 			}
 		}
 		.more-link {

@@ -125,6 +125,7 @@
 	.magazine-feature {
 		.title {
 			@include sm-magazine-title;
+			font-weight: 700; // one weight down for pc rendering
 		}
 		.details {
 			background-color: white;
@@ -164,6 +165,7 @@
 		}
 		.title {
 			@include sm-magazine-title;
+			font-weight: 700; // one weight down for pc rendering
 		}
 		.details-inner {
 			@include padding-top(0);

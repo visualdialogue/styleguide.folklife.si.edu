@@ -1,0 +1,25 @@
+.sidebar-quote
+	.image
+		img(src="")
+
+	ul.row
+		-snippet('card-horizontal', array('card' => $album, 'card_classes' => 'col-xs-12 sidebar-card', 'image_col' => 'col-sm-6', 'details_col' => 'col-sm-6', 'artist' => true ))
+
+	// track listing
+	//- bootstrap class to make table go vertical on mobile
+	.table-responsive
+		table.table.table-hover.track-listing 
+
+			//- set track listing start number
+			- $n = 0
+			-foreach($album->children()->visible() as $track): $n++
+				tr.track
+					td.track-number-play-button
+						.track-number!= $n
+						.icon-play-button.video-icon-play-button.icon-stack.track-play-button
+							.icon-circle
+							.icon-play
+					td.track-title!= $track->title()
+					td.track-action More Info
+			-endforeach
+

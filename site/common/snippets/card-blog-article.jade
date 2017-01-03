@@ -18,7 +18,9 @@ li.card.blog-article-card.col-xs-12(class="<? if ($card->type() == 'video') echo
 				.icon-play
 	.details
 		.details-inner
+			-if(isset($type) && $type != 'general-content'):
 			.tag!= $card->festival(), ', ', $card->program();
+			-endif
 
 			//- if subtitle, group with title for correct highlighting
 			-if('' != $card->subtitle()):	
@@ -27,4 +29,6 @@ li.card.blog-article-card.col-xs-12(class="<? if ($card->type() == 'video') echo
 				.title!= $card->title()
 			-endif
 
+			-if(isset($type) && $type != 'general-content'):
 			.byline!= $card->date('F jS, Y'), e('' != $card->author(), ' | ' . $card->author()), ' | 0 comments'
+			-endif

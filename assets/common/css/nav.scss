@@ -13,18 +13,13 @@
 		z-index: 11; // one over search page filter, 2 over background click
 		@include subpage-navbarHeight;	
 		@include respond-to(break2max) {
-			// position: fixed;
 			width: 100%;
-			// height: $mobile-subpage-navbarHeight;
 		}
 		@include respond-to(break2) {
-			// top: 60px;
 			top: $tablet-navbarSiteToggle;
-			// height: $tablet-subpage-navbarHeight;
 		}
 		@include respond-to(fullwidth) {
 			top: $desktop-navbarSiteToggle;
-			// height: $tablet-subpage-navbarHeight; // need height b/c fixed??
 		}
 
 		// if open, go light
@@ -34,10 +29,7 @@
 			height: auto !important; // so will expand with menu when needed
 		}
 
-		// set height to match with navbar
-		// @include subpage-headerHeight;
-
-		// shadow, from 
+		// shadow below navbar
 		box-shadow: 0px 17px 41px -8px rgba(0,0,0,0.20);
 		-webkit-box-shadow: 0px 17px 41px -8px rgba(0,0,0,0.20);
 		-moz-box-shadow: 0px 17px 41px -8px rgba(0,0,0,0.20);
@@ -45,27 +37,21 @@
 		box-shadow: 0px 10px 41px -8px rgba(0,0,0,0.08);
 		-webkit-box-shadow: 0px 10px 41px -8px rgba(0,0,0,0.08);
 		-moz-box-shadow: 0px 10px 41px -8px rgba(0,0,0,0.08);
-
 	}
 	.home-page {
 		.navbar {
 			// set height to match with navbar
-			// @include home-headerHeight;
 			@include home-navbarHeight;
 		}
 	}
 
-
-
 	// SITE TOGGLE BANNER
-
 	.site-toggle {
 		// new
 		display: none;
 		background-color: $black80; // new
 		text-align:right;
 		line-height:2vw;
-		// line-height:2rem;
 		@include mini-sans;
 		font-weight: 500;
 		line-height: 1;
@@ -86,7 +72,6 @@
 		display: none;
 		color: $tagline;
 		@include respond-to(breakTagline) {
-		// @include respond-to(break2) {
 			display: inline-block;
 		}
 	}
@@ -109,10 +94,6 @@
 		bottom: 0;
 		left: 0;
 		z-index: 9; // just below navbar
-		// background-color: rgba(red, 0.2);
-	}
-	.filter-outside {
-		// background-color: rgba(red, 0.2);
 	}
 
 	.navbar-header {
@@ -131,11 +112,8 @@
 		}
 	}
 	.navbar-header-inner {
-		// @include vertically-align-parent;
 		position: relative;
 		z-index: 100;
-
-		// new header
 	}
 
 	.logo-wrapper {
@@ -143,12 +121,10 @@
 		height: auto; // bootstrap override
 		margin-left: 0 !important; // bootstrap override
 		font-size: 10px; // prevent gap to sunsplash
-		// @include padding-top(2);
 		margin-top: 1rem;
 		@include respond-to(break2full) {
 			margin-top: 1.5rem;
 			margin-top: 1rem;
-			// width: 175px;
 			width: 195px;
 		}
 
@@ -158,20 +134,13 @@
 		}
 	}
 	.home-page {
-		.logo-wrapper {
-			// @include home-navbarHeight;
-		}
-	}
-	.home-page {
 		.navbar.is-smaller {
 			@include home-smaller-navbarHeight;
 		}
 	}
 	.navspacer {
 		@include subpage-headerHeight;
-		// background-color: $black80;
 		&-open {
-			// height: 132px !important;
 			-webkit-transition: all 0.3s ease;
 			-moz-transition: all 0.3s ease;
 			-ms-transition: all 0.3s ease;
@@ -198,32 +167,16 @@
 	}
 	.block-logo {
 		max-width: initial; // otherwise will shrink to a tag above when absolutely positioned
-		// width: 193px;
-		// height: 32px;
-		// width: 25vw;
-		// height: 25vw;
 		margin-top: 1rem;			
 		width: 100px;
 		height: 100px;
 		@include respond-to(break2) {
-			// width: 420px;
-			// height: 70px;
-			// width: 11vw;
-			// height: 11vw;
-			// width: 100px;
-			// height: 100px;
 			margin-top: 1.5rem;			
-			// width: 150px;
-			// height: 150px;
 			width: 140px;
 			height: 140px;
 		}
 		@include respond-to(fullwidth) {
-			// width: 420px;
-			// height: 70px;
 			margin-top: 2rem;			
-			// width: 175px;
-			// height: 175px;
 			width: 160px;
 			height: 160px;
 		}
@@ -243,25 +196,16 @@
 	.one-line-logo {
 		max-width: initial; // otherwise will shrink to a tag above when absolutely positioned
 		display: none;
-		// width:25vw;
-		// width:5rem;
-		// @include respond-to(break2max) {
-			// margin-top: 0.2rem;
-		// }
 		width: 100px;
 		margin-top:0.5rem;
 		@include respond-to(break2) {
 			margin-top:0.5rem;
 			margin-top:0.8rem;
-			// width:11vw; // too blurry
-			// width: 100px;
 			width:150px;
 			width:140px;
 		}
 		@include respond-to(fullwidth) {
-			// margin-top: 1rem;
 			margin-top: 1.2rem;
-			// width: 175px;
 			width: 160px;
 		}
 	}
@@ -277,40 +221,7 @@
 	.navbar.is-smaller, .one-line-logo, .has-one-line-logo {
 		.logo-wrapper {
 			margin-top: 0;
-			// padding-top:0.8rem;
-			// padding-top:0.2rem;
-			// @include respond-to(break2) {padding-top:1rem;}
-			// @include respond-to(fullwidth) {padding-top:1rem;}
 		}	
-		// show logo container and logos inside will have rules on when to show or not
-		.one-line-logos {
-			// display: block;
-		}
-	}
-	.navbar.is-smaller, .navbar.has-one-line-logo {
-		.block-logos {
-			// display: none;
-		}
-	}
-
-	.navbar.has-one-line-logo, .navbar.is-smaller {
-		.block-logo	{
-			// display: none;
-		}
-		// .one-line-logo {display: block;}
-		// @include respond-to(break2) {
-		// 	.block-logo { top: -45%; }
-		// 	.folkways-logo { top: -35%; }
-		// 	.block-logo { top: -115%; }
-		// }
-		// @include respond-to(fullwidth) {
-		// 	.tablet-one-line-logo {
-		// 		display: none;
-		// 	}
-		// 	.desktop-one-line-logo {
-		// 		display: block;
-		// 	}
-		// }
 	}
 	.is-smaller {
 		// new logo
@@ -319,24 +230,10 @@
 		top:0;
 		width: 100%;
 		background-color: $navbar; // duplicate from navbar-open because sometimes close navbar when smaller header and need to keep the opacity
-		.block-logo {
-			// display: none;
-		}
-		.tablet-one-line-logo {
-			// display: block;
-		}
 		@include respond-to(break2) {
 			.block-logo { top: -45%; }
 			.folkways-logo { top: -35%; }
 			.block-logo { top: -115%; }
-		}
-		@include respond-to(fullwidth) {
-			.tablet-one-line-logo {
-				// display: none;
-			}
-			.desktop-one-line-logo {
-				// display: block;
-			}
 		}
 		& + .banner-section.container {
 			position: relative;
@@ -347,13 +244,10 @@
 	body:not(.home-page) {
 		.is-smaller, .has-one-line-logo {
 			@include subpage-smaller-navbarHeight;
-			// .logo-wrapper {
-			// }
 		}
 	}
 
 	.nav-icons {
-		// position: absolute;
 		right: 0;
 		text-align:right;
 		@include respond-to(break2) {
@@ -387,17 +281,14 @@
 	.social-icons, .search-bar {
 		@include respond-to(break2max) {
 			height: 5rem;
-			// height: 15vw; // responsive with responsive social icons
 		}
 	}
 	.social-icon-link {
 		display: inline-block;
 		@include respond-to(break2max) {
 			padding: 10px;
-			// padding: 2vw; // responsive with responsive icon font
 		}
 	}
-	
 
 	// SEARCH BAR
 	.search-bar {
@@ -411,9 +302,7 @@
 			width: 100%; // 3/4ish of col-8 to be half of page
 		}
 		@include respond-to(break2) {
-			// margin-top: 12px;
 			margin-top: 1vw;
-			// margin-top: 1rem;
 		}
 		@include respond-to(fullwidth) {
 			margin-top: 2.4rem;
@@ -450,7 +339,6 @@
 	}
 
 	.header-nav, .footer-nav {
-
 		// keep above outside click div
 		position: relative;
 
@@ -468,7 +356,7 @@
 			@include respond-to(break2) {
 				padding: 0;
 			}
-			@include padding-bottom(0.4);
+			@include padding-bottom(0.5);
 		}
 		&-list {
 			display: none;
@@ -484,9 +372,9 @@
 		&-sub-item {
 			display: block;
 			@include link-font;
-			color:$black60;
+			color:$black50;
 			a {
-				color: $black60;
+				color: $black50;
 				display: block;
 				&:hover {
 					color: black;
@@ -500,9 +388,6 @@
 	}
 	.header-nav {
 		display: none;
-		// background-color: $black65;
-		// background-color: $black40; // formerly $black30
-		// background-color: rgba(white, 0.95);
 		z-index: 10;
 	}
 	.footer-nav {
@@ -515,11 +400,7 @@
 			}
 		}
 	}
-	.footer-nav-sub-item {
-		// @include link-font-sm;
-	}
 	.nav-show-mobile {
-		// display: inline-block;
 		display: block;
 	}
 
@@ -527,19 +408,12 @@
 	// BROWSENAV
 	.browsenav {
 		display: none; // initial hide
-		// background-color: $black40;
-		// background-color: $black65; // formerly $black50
-		// background-color: $black40; // formerly $black30 // 12.12
 		background-color: $black10; // 12.16
 		position: relative;
-		// z-index: 10;
 		z-index: 9; // just below logo
 		top: 1rem;
-		// color: white;
-		// padding: 3rem 0 1rem; // really 40 px with line-height
 		@include respond-to(break2) {
 			padding: 2.8vw 0 2vw; // really 40 px with line-height
-			// top: 3rem;
 			top: 0;
 		}
 		@include respond-to(breaksearch) {
@@ -564,6 +438,9 @@
 		}
 		@include margin-top(2.5);
 	}
+	/*
+	* Select styling for before built with dropdown hover and divs
+	*/
 	// select {
 	// 	background-repeat: no-repeat;
 

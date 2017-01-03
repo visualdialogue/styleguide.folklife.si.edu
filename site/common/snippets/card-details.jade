@@ -15,9 +15,6 @@
 	-endif
 
 	//- put date and title below image by default
-	//- -if(!$titlePositionTop):
-
-	//- date
 	-if('' != $card->date() && $date && $type != 'blog' ):
 		-if($type == 'news'):
 			.date!= $card->date('n.j.Y')
@@ -72,19 +69,15 @@
 	-if (isset($excerpt)):
 		.description.link-underline
 			p!= excerpt($card->copy()->kt(), $excerpt, 'words')
-	//- -elseif('' != $card->copy() && $card->type() != 'video'):
-		.description.link-underline!= $card->copy()->kt()
 	-endif
 
 	//- order1
 	-if('' != $card->order1()):	
-		//- text, non-breaking space, right arrow
 		a.high.buy-now-button(href="#"): span.light: span.er!= $card->order1(), '&nbsp;&#x2192';
 	-endif
 
 	//- order2
 	-if('' != $card->order2()):	
-		//- text, non-breaking space, right arrow
 		.buy-now-button(href="#"): span.light: span.er!= $card->order2(), '&nbsp;&#x2192';
 	-endif
 

@@ -1,16 +1,9 @@
 /* Gutters
 -------------------------------------------------- */
 
-  // $medium-gutter: 1.35%;
   $small-gutter: 7.5px;
-  // $medium-gutter: 1.35%;
-  // $medium-gutter: 1.36%;
-  // $medium-gutter: 1vw;
   $medium-gutter: 1.25vw;
-
-  // $full-gutter: 2.72%;
   $full-gutter: 2.5vw;
-  // $medium-gutter: %;
 
 /* Sizes
 -------------------------------------------------- */
@@ -41,14 +34,10 @@
   $desktop-navbarHeight: 8rem;
 
   // spacer for logo
-  // $mobile-logoSpacer:19vw;
   $mobile-logoSpacer:8rem;
   $mobile-logoSpacer:8.5rem;
-  // $tablet-logoSpacer:12rem;
   $tablet-logoSpacer:12.5rem;
   $tablet-logoSpacer:11.5rem;
-  // $desktop-logoSpacer:13.5rem; // from layout
-  // $desktop-logoSpacer:15.5rem; // for 175px wide logo
   $desktop-logoSpacer:14rem; // from layout, for 160px wide logo
 
   // height of toggle, navbar, and spacer
@@ -60,7 +49,6 @@
   $desktop-subpage-headerHeight:#{$desktop-navbarHeight} + #{$desktop-navbarSiteToggle} + #{$desktop-logoSpacer};
 
   // tab heights for Festival on homepage so can peek from bottom
-  // $mobile-tabHeight:12rem;
   $mobile-tabHeight:6rem;
   $tablet-tabHeight:4.6vw;
   $desktop-tabHeight:7.2rem;
@@ -147,7 +135,6 @@
     @include respond-to(fullwidth) {margin-right:#{$margin}rem;} // eg 4rem
   }
   @mixin margin-bottom($margin) {
-    // margin-bottom:#{$margin / $mobile-scale }rem; // eg. 5rem
     margin-bottom:#{$margin / $mobile-scale}rem; // eg. 5rem
     @include respond-to(break2) {margin-bottom:#{$margin * $tablet-scale}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {margin-bottom:#{$margin}rem;} // eg 4rem
@@ -159,19 +146,16 @@
   }
 
   @mixin padding($padding) {
-    // padding:#{$padding / $mobile-scale }rem; // eg. 5rem
     padding:#{$padding / $mobile-scale }rem; // eg. 5rem
     @include respond-to(break2) {padding:#{$padding * $tablet-scale}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {padding:#{$padding}rem;} // eg 4rem
   }
   @mixin padding-top($padding) {
-    // padding-top:#{$padding / $mobile-scale }rem; // eg. 5rem
     padding-top:#{$padding / $mobile-scale }rem; // eg. 5rem
     @include respond-to(break2) {padding-top:#{$padding * $tablet-scale}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {padding-top:#{$padding}rem;} // eg 4rem
   }
   @mixin padding-right($padding) {
-    // padding-right:#{$padding / $mobile-scale }rem; // eg. 5rem
     padding-right:#{$padding / $mobile-scale }rem; // eg. 5rem
     @include respond-to(break2) {padding-right:#{$padding * $tablet-scale}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {padding-right:#{$padding}rem;} // eg 4rem
@@ -179,7 +163,6 @@
   @mixin padding-bottom($padding) {
     // padding-bottom:#{$padding / $mobile-scale }rem; // eg. 5rem
     padding-bottom:#{$padding / $mobile-scale }rem; // eg. 5rem
-    // padding-bottom:1em; // eg. 5rem
     @include respond-to(break2) {padding-bottom:#{$padding * $tablet-scale}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {padding-bottom:#{$padding}rem;} // eg 4rem
   }
@@ -200,19 +183,16 @@
   }
   @mixin width($width) {
     width:#{$width / $mobile-scale }rem; // eg. 5rem
-    // width:#{$width * 2.5}vw; // eg. 5rem
     @include respond-to(break2) {width:#{$width * $tablet-scale}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {width:#{$width}rem;} // eg 4rem
   }
   @mixin height($height) {
     height:#{$height / $mobile-scale }rem; // eg. 5rem
-    // height:#{$height * 2.5}vw; // eg. 5rem
     @include respond-to(break2) {height:#{$height * $tablet-scale}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {height:#{$height}rem;} // eg 4rem
   }
   @mixin min-height($height) {
     min-height:#{$height / $mobile-scale }rem; // eg. 5rem
-    // min-height:#{$height * 2.5}vw; // eg. 5rem
     @include respond-to(break2) {min-height:#{$height * $tablet-scale}vw;} // eg 2.5vw
     @include respond-to(fullwidth) {min-height:#{$height}rem;} // eg 4rem
   }

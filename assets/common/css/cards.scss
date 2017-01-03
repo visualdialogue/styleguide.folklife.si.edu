@@ -1,6 +1,5 @@
 .card {
 	// for consistency with rows of cards and next sections
-	// margin-bottom:1.5rem;
 	@include margin-bottom(4);
 }
 
@@ -205,7 +204,6 @@ a.details {
 	  }
 	}
 	.remodal-overlay {
-	  // background: rgba(43, 46, 56, 0.9) none repeat scroll 0% 0%; // original
 	  background: rgba(0, 0, 0, 0.8) none repeat scroll 0% 0%;
 	}
 	.remodal-close {
@@ -283,56 +281,6 @@ a.details {
 				}
 			}
 		}
-		// .image {
-			// margin-left: -1px; // cover white line that shows sometimes. From rounding error?
-		// }
-
-
-	// vertical backgrounds apply color to .details-inner
-
-		// test cases??
-	// vertical backgrounds
-	// .vertical-background-card {
-	// 	position: relative;
-	// 	height: 100%; // fill gaps
-	// 	&:after {
-	// 		background-color: white;
-	// 		// background-color: red;
-	// 		content:"";
-	// 		display: block;
-	// 		position: absolute;
-	// 		top:0;
-	// 		bottom:0;
-	// 		z-index:-1; // put behind image and details
-	// 		left:0; // talkstory
-	// 		right:0;
-	// 		// dive deep
-	// 		left:$medium-gutter;
-	// 		right:$medium-gutter;
-	// 		// left:$small-gutter;
-	// 		// right:$small-gutter;
-	// 		bottom: 3.75vw; // 3rem responsive at mobile
-	// 		@include respond-to(break2) {
-	// 			// folklife dive deep
-	// 			left:$medium-gutter;
-	// 			right:$medium-gutter;
-	// 			// left: 0;
-	// 			// right: 0;
-	// 			bottom: 0; // back to horizontal
-	// 			// bottom: 2rem;
-	// 		}
-	// 		@include respond-to(fullwidth) {
-	// 			// folklife dive deep
-	// 			left:2rem; 
-	// 			right:2rem; 
-	// 			// dive deep
-	// 			// left: 0; 
-	// 			// right: 0;
-	// 		}
-	// 	}
-	// }
-
-
 
 	.full-feature-card, .details, .ms-section__copy {
 		.more-link {
@@ -353,8 +301,6 @@ a.details {
 		}
 	}
 	.half-section .more-link {
-		// right: 2.7%; // double that of parent padding as percent
-		// @include right(4);
 		@include right(2);
 	}
 
@@ -363,7 +309,6 @@ a.details {
 	.tag {
 		// counteract line height of first line for padding
 		// due to line height. to make spacing accurate with padding above
-		// margin-top:-0.5rem;
 		@include respond-to(break2) {margin-top:-0.28125vw;}
 		@include respond-to(fullwidth) {margin-top:-0.5rem;}
 	}
@@ -373,13 +318,11 @@ a.details {
 -------------------------------------------------- */
 	.horizontal-cards-section {
 		@include respond-to(break2) {margin-bottom:2.5vw;}
-		// @include respond-to(fullwidth) {margin-bottom:4rem;}
 		@include respond-to(fullwidth) {margin-bottom:6rem;}
 	}
 	.horizontal-card {
 		.details-inner {
 			padding-left:$small-gutter;
-			// @include respond-to(break2) {padding-left:$full-gutter;}
 			@include respond-to(break2) {padding-left:0;}
 			@include respond-to(fullwidth) {padding-left:0;}
 		}
@@ -398,12 +341,10 @@ a.details {
 			@include margin-top(1); // add margin back if have border b/c no title above in horizontal layout
 		}
 		.details-inner {
-			// padding-left: 0;
 			@include padding(0); // start with no padding, need media queries to win specificity 
 			@include padding-top(2);
 			@include padding-right(1);
 		}
-
 	}
 
 
@@ -430,13 +371,6 @@ a.details {
 		}
 		.title {
 			@include lg-serif;
-			// margin-bottom:1rem;
-			// @include respond-to(break2) {margin-bottom:1.15vw;}
-			// @include respond-to(fullwidth) {
-			// 	margin-bottom:1.8rem;
-			// 	margin-bottom:3rem;
-
-			// }
 			@include margin-bottom(2);
 		}
 		.details-inner {
@@ -464,7 +398,6 @@ a.details {
 				padding-left:0;
 			}
 		}
-		
 		.author, .date {
 			display: none;
 		}
@@ -498,15 +431,11 @@ a.details {
 		.title {
 			@include sm-sans;
 			font-weight: 700;
-			// line-height: 1;
-
 			@include margin-bottom(0.5);
 		}
 		.artist {
 			@include sm-sans;
-			// @include margin-top(-0.2); // close the gap a bit
 		}
-
 		@include clear-2;
 		@include respond-to(break2) {@include clear-6;}
 	}

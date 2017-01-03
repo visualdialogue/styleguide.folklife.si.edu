@@ -4461,17 +4461,19 @@ iframe {
       font-size: 3rem; } }
 
 .nav-header {
-  font-family: "unit-gothic-718", Arial, sans-serif;
   text-transform: uppercase;
+  font-family: "acumin-pro-wide", Arial, sans-serif;
   font-weight: 800;
-  font-size: 5vw; }
+  line-height: 1.2;
+  font-size: 5vw;
+  font-size: 1.7rem; }
   @media only screen and (min-width: 53.25em) {
     .nav-header {
-      font-size: 1.09vw;
-      line-height: 1.2; } }
+      line-height: 1.2;
+      font-size: 1.09vw; } }
   @media only screen and (min-width: 1560px) {
     .nav-header {
-      line-height: 1.2353;
+      line-height: 1.4353;
       font-size: 1.7rem; } }
 
 /* Sans serif - wide
@@ -4685,13 +4687,13 @@ body {
         padding-bottom: 1.6rem; } }
   .content li, .text-card li {
     list-style-position: inside;
-    margin-bottom: 1.05352rem; }
+    margin-bottom: 0.56188rem; }
     @media only screen and (min-width: 53.25em) {
       .content li, .text-card li {
-        margin-bottom: 0.96vw; } }
+        margin-bottom: 0.512vw; } }
     @media only screen and (min-width: 1560px) {
       .content li, .text-card li {
-        margin-bottom: 1.5rem; } }
+        margin-bottom: 0.8rem; } }
   .content .title, .text-card .title {
     font-family: "acumin-pro", Arial, sans-serif;
     font-weight: 300;
@@ -4761,6 +4763,33 @@ body {
     @media only screen and (min-width: 1560px) {
       .content ol ol li, .text-card ol ol li {
         padding-left: 4rem; } }
+
+.content-footer {
+  position: relative; }
+  .content-footer h2 {
+    font-family: "acumin-pro", Arial, sans-serif;
+    font-weight: 300;
+    line-height: 1.2;
+    font-size: 1.873rem;
+    font-weight: 600; }
+    @media only screen and (min-width: 53.25em) {
+      .content-footer h2 {
+        font-size: 1.6vw; } }
+    @media only screen and (min-width: 1560px) {
+      .content-footer h2 {
+        font-size: 2.5rem;
+        line-height: 1.28; } }
+  .content-footer p, .content-footer ul {
+    font-family: "acumin-pro", Arial, sans-serif;
+    font-weight: 300;
+    line-height: 1.35;
+    font-size: 1.873rem; }
+    @media only screen and (min-width: 53.25em) {
+      .content-footer p, .content-footer ul {
+        font-size: 1.25vw; } }
+    @media only screen and (min-width: 1560px) {
+      .content-footer p, .content-footer ul {
+        font-size: 2.107rem; } }
 
 /* Icons
 -------------------------------------------------- */
@@ -5462,21 +5491,23 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
     .active .header-nav-title, .active .footer-nav-title {
       color: white; } }
   .header-nav-title, .footer-nav-title {
-    font-family: "unit-gothic-718", Arial, sans-serif;
     text-transform: uppercase;
+    font-family: "acumin-pro-wide", Arial, sans-serif;
     font-weight: 800;
+    line-height: 1.2;
     font-size: 5vw;
+    font-size: 1.7rem;
     cursor: pointer;
     padding: 10px 0 0;
     display: block;
-    padding-bottom: 0.28094rem; }
+    padding-bottom: 0.35117rem; }
     @media only screen and (min-width: 53.25em) {
       .header-nav-title, .footer-nav-title {
-        font-size: 1.09vw;
-        line-height: 1.2; } }
+        line-height: 1.2;
+        font-size: 1.09vw; } }
     @media only screen and (min-width: 1560px) {
       .header-nav-title, .footer-nav-title {
-        line-height: 1.2353;
+        line-height: 1.4353;
         font-size: 1.7rem; } }
     .header-nav-title:hover, .footer-nav-title:hover {
       color: #595959; }
@@ -5485,10 +5516,10 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
         padding: 0; } }
     @media only screen and (min-width: 53.25em) {
       .header-nav-title, .footer-nav-title {
-        padding-bottom: 0.256vw; } }
+        padding-bottom: 0.32vw; } }
     @media only screen and (min-width: 1560px) {
       .header-nav-title, .footer-nav-title {
-        padding-bottom: 0.4rem; } }
+        padding-bottom: 0.5rem; } }
   .header-nav-list, .footer-nav-list {
     display: none;
     margin-bottom: 1.54516rem; }
@@ -5510,7 +5541,7 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
     font-size: 1.7rem;
     line-height: 2;
     font-weight: 400;
-    color: #666666;
+    color: gray;
     cursor: pointer; }
     @media only screen and (min-width: 53.25em) {
       .header-nav-sub-item, .footer-nav-sub-item {
@@ -5521,7 +5552,7 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
         font-size: 1.6rem;
         line-height: 1.8; } }
     .header-nav-sub-item a, .footer-nav-sub-item a {
-      color: #666666;
+      color: gray;
       display: block; }
       .header-nav-sub-item a:hover, .footer-nav-sub-item a:hover {
         color: black; }
@@ -5574,21 +5605,23 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
       padding-bottom: 3rem; } }
 
 .browsenav-title {
-  font-family: "unit-gothic-718", Arial, sans-serif;
   text-transform: uppercase;
+  font-family: "acumin-pro-wide", Arial, sans-serif;
   font-weight: 800;
+  line-height: 1.2;
   font-size: 5vw;
+  font-size: 1.7rem;
   font-family: "unit-gothic-718", Arial, sans-serif;
   color: #595959;
   margin-bottom: 2vw;
   margin-top: 1.75586rem; }
   @media only screen and (min-width: 53.25em) {
     .browsenav-title {
-      font-size: 1.09vw;
-      line-height: 1.2; } }
+      line-height: 1.2;
+      font-size: 1.09vw; } }
   @media only screen and (min-width: 1560px) {
     .browsenav-title {
-      line-height: 1.2353;
+      line-height: 1.4353;
       font-size: 1.7rem; } }
   @media only screen and (min-width: 53.25em) {
     .browsenav-title {
@@ -5601,6 +5634,9 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
     .browsenav-title {
       margin-top: 2.5rem; } }
 
+/*
+	* Select styling for before built with dropdown hover and divs
+	*/
 /* Bootstrap overrides
 -------------------------------------------------*/
 .navbar-header {
@@ -6174,6 +6210,27 @@ a .page-title {
   @media only screen and (min-width: 1560px) {
     .sidebar-video .title, .sidebar-album .title {
       font-size: 3.375rem; } }
+
+/* Collection page
+ * as seen at Folklife Archives page
+ -------------------------------------------------- */
+.collection-page .blog-article-card {
+  margin-bottom: 0.56188rem; }
+  @media only screen and (min-width: 53.25em) {
+    .collection-page .blog-article-card {
+      margin-bottom: 0.512vw; } }
+  @media only screen and (min-width: 1560px) {
+    .collection-page .blog-article-card {
+      margin-bottom: 0.8rem; } }
+
+.collection-page .details-inner {
+  padding-top: 0.56188rem; }
+  @media only screen and (min-width: 53.25em) {
+    .collection-page .details-inner {
+      padding-top: 0.512vw; } }
+  @media only screen and (min-width: 1560px) {
+    .collection-page .details-inner {
+      padding-top: 0.8rem; } }
 
 /* #remodal
 -------------------------------------------------- */
@@ -7050,19 +7107,21 @@ figcaption {
       padding-top: 2rem; } }
 
 .search-page .filter-by-title, .past-festivals-page .filter-by-title {
-  font-family: "unit-gothic-718", Arial, sans-serif;
   text-transform: uppercase;
+  font-family: "acumin-pro-wide", Arial, sans-serif;
   font-weight: 800;
+  line-height: 1.2;
   font-size: 5vw;
+  font-size: 1.7rem;
   color: #666666;
   font-size: 5vw; }
   @media only screen and (min-width: 53.25em) {
     .search-page .filter-by-title, .past-festivals-page .filter-by-title {
-      font-size: 1.09vw;
-      line-height: 1.2; } }
+      line-height: 1.2;
+      font-size: 1.09vw; } }
   @media only screen and (min-width: 1560px) {
     .search-page .filter-by-title, .past-festivals-page .filter-by-title {
-      line-height: 1.2353;
+      line-height: 1.4353;
       font-size: 1.7rem; } }
   @media only screen and (min-width: 53.25em) {
     .search-page .filter-by-title, .past-festivals-page .filter-by-title {

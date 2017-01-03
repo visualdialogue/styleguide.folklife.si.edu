@@ -26,16 +26,10 @@
 			}
 		}
 		&-row-2 {
-			// margin-top: 4vw;
-			// @include respond-to(break2) { margin-top: 1.6vw; }
-			// @include respond-to(fullwidth) { margin-top: 2.5rem; }
 			@include margin-top(3);
 		}
 		&-row-3 {
 			color: $black20;
-			// margin-top: 8vw;
-			// @include respond-to(break2) { margin-top: 2.3vw; }
-			// @include respond-to(fullwidth) { margin-top: 5rem; }
 			@include margin-top(3.8);
 		}
 		&-list {
@@ -98,7 +92,6 @@
 		font-weight: 400;
 		text-transform: uppercase;
 		color: $black65;
-		// @include margin-top(-0.4); // align sibling menu list
 		@include margin-bottom(0.6); // align sibling menu list
 		@include margin-left(0.3); // align with facebook icon
 	}

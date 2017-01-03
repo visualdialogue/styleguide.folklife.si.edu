@@ -581,13 +581,5 @@
 			-foreach($pages->find('explore')->children()->find('sounds')->children()->visible() as $card):
 				-snippet('card-album', array('card' => $card ))
 			-endforeach
-			//- -foreach($results as $result):
-				li
-					a(href="<?php echo $result->url() ?>")
-						!= $result->title()->html() ?>
-			//- -endforeach
-
-
-
 
 -snippet('footer')

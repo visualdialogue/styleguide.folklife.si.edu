@@ -442,6 +442,18 @@
 		}
 	}
 
+/* Collection page
+ * as seen at Folklife Archives page
+ -------------------------------------------------- */
+	.collection-page {
+		.blog-article-card {
+			@include margin-bottom(0.8);
+		}
+		.details-inner {
+			@include padding-top(0.8);
+		}
+	}
+
 /* #remodal
 -------------------------------------------------- */
 	.remodal-description {
@@ -694,7 +706,6 @@
 /* #Custom select dropdown
 * from http://hernansartorio.com/jquery-nice-select/
 -------------------------------------------------- */
-	
 
 /* Plus icons for figures with figcaptions
 -------------------------------------------------- */

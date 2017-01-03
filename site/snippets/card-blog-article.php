@@ -17,8 +17,10 @@
   </div>
   <div class="details">
     <div class="details-inner">
+      <?php if(isset($type) && $type != 'general-content'): ?>
       <div class="tag">
         <?php echo $card->festival(), ', ', $card->program(); ?></div>
+      <?php endif; ?>
       <?php if('' != $card->subtitle()):	 ?>
       <div class="title">
         <?php echo $card->title(), ': ', $card->subtitle(); ?></div>
@@ -26,8 +28,10 @@
       <div class="title">
         <?php echo $card->title(); ?></div>
       <?php endif; ?>
+      <?php if(isset($type) && $type != 'general-content'): ?>
       <div class="byline">
         <?php echo $card->date('F jS, Y'), e('' != $card->author(), ' | ' . $card->author()), ' | 0 comments'; ?></div>
+      <?php endif; ?>
     </div>
   </div>
 </li>

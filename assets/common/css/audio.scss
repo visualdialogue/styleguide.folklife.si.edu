@@ -74,12 +74,3 @@
 			font-size: 1.2vw;
 		}
 	}
-
-
-// // for all 1/2 width columns on the phone, break every 2nd one starting at 3!!!
-// @include respond-to(break2max) {
-// 	// line 'em up!!!
-// 	&:nth-of-type(2n + 1) {
-// 		clear:left;
-// 	}
-// }
