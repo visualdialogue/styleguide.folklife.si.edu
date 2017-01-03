@@ -5340,10 +5340,6 @@ a:hover {
   top: 0;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.97); }
-  .is-smaller .block-logo {
-    display: none; }
-  .is-smaller .tablet-one-line-logo {
-    display: block; }
   @media only screen and (min-width: 53.25em) {
     .is-smaller .block-logo {
       top: -45%; }
@@ -5351,11 +5347,6 @@ a:hover {
       top: -35%; }
     .is-smaller .block-logo {
       top: -115%; } }
-  @media only screen and (min-width: 1560px) {
-    .is-smaller .tablet-one-line-logo {
-      display: none; }
-    .is-smaller .desktop-one-line-logo {
-      display: block; } }
   .is-smaller + .banner-section.container {
     position: relative;
     top: 142px; }

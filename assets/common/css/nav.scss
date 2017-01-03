@@ -320,10 +320,10 @@
 		width: 100%;
 		background-color: $navbar; // duplicate from navbar-open because sometimes close navbar when smaller header and need to keep the opacity
 		.block-logo {
-			display: none;
+			// display: none;
 		}
 		.tablet-one-line-logo {
-			display: block;
+			// display: block;
 		}
 		@include respond-to(break2) {
 			.block-logo { top: -45%; }
@@ -332,10 +332,10 @@
 		}
 		@include respond-to(fullwidth) {
 			.tablet-one-line-logo {
-				display: none;
+				// display: none;
 			}
 			.desktop-one-line-logo {
-				display: block;
+				// display: block;
 			}
 		}
 		& + .banner-section.container {
