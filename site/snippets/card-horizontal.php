@@ -4,7 +4,7 @@
 <?php elseif($src = $card->image()): ?>
 <?php $image = $src; ?>
 <?php endif; ?>
-<li class="card <?= $card_classes ?><? if ($card->type() == 'video') echo ' video-card' ?>">
+<li class="card horizontal-card <?= $card_classes ?><? if ($card->type() == 'video') echo ' video-card' ?>">
   <div class="row">
     <?php if ($card->type() == 'video'): ?>
     <div data-video-id="<?= $card->video_id() ?>" data-title="<?= $card->title() ?>" data-description="<?= excerpt($card->copy(), 25, "words") ?> <a href='#'>more</a>" class="video <?= $image_col ?>">

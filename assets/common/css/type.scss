@@ -27,20 +27,6 @@
 		}
 	}
 
-	@mixin album-serif {
-		font-family: $serif;
-		font-weight: 600;
-		line-height: 1.3333;
-	  	font-size: 1.896rem;
-		@include respond-to(break2) {
-	  		font-size: 2.2vw;
-		}
-		@include respond-to(fullwidth) {
-	  		font-size: 3rem;
-		}
-		@include margin-bottom(1);
-	}
-
 	@mixin sm-serif {
 		font-family: $serif;
 		font-weight: 700;
@@ -311,16 +297,17 @@
 /* Body type
 -------------------------------------------------- */
 	@mixin intro-serif {
-		// font-family: $serif;
-		// font-weight: 400;
-		// line-height: 1.333333; // 24/32
-	 //  	font-size: 1.896rem; // 18px on medium.com mobile, 1.896 on modular scale
-		// @include respond-to(break2) {
-	 //  		font-size: 1.5vw;
-		// }
-		// @include respond-to(fullwidth) {
-	 //  		font-size: 2.4rem;
-		// }
+		font-family: $serif;
+		font-weight: 600;
+		line-height: 1.3333;
+	  	font-size: 1.896rem;
+		@include respond-to(break2) {
+	  		font-size: 2.2vw;
+		}
+		@include respond-to(fullwidth) {
+	  		font-size: 3rem;
+		}
+		@include margin-bottom(1);
 	}
 	@mixin body-serif {
 		font-family: $serif;
@@ -335,16 +322,7 @@
 		}
 	}
 	@mixin intro-sans {
-		// font-family: $sans;
-		// font-weight: 300;
-		// line-height: 1.35; // fw magazine article
-	 //  	font-size: 1.873rem;
-		// @include respond-to(break2) {
-		// 	font-size: 1.25vw;
-		// }
-		// @include respond-to(fullwidth) {
-	 //  		font-size: 2.107rem; // fits with scale and folklife education page layout
-		// }
+		// same as lg-sans
 	}
 	@mixin body-sans {
 		font-family: $sans;

@@ -312,7 +312,6 @@
 	// Serif
 	.lg-serif {@include lg-serif;}
 	.md-serif {@include md-serif;}
-	.album-serif {@include album-serif;}
 	.sm-serif {@include sm-serif;}
 	.sm-serif-italic {@include sm-serif;font-style: italic;}
 
@@ -329,7 +328,7 @@
 
 	// body type
 	.body-serif {@include body-serif;}
-	.intro-serif {@include album-serif;}
+	.intro-serif {@include intro-serif;}
 	.body-sans {@include body-sans;}
 	.intro-sans {@include lg-sans;}
 

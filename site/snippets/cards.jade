@@ -7,204 +7,7 @@ section.container.cards-section
 			.intro-copy.content.link-underline
 				p Cards are the smallest component pieces on the site besides UI elements. They usually consist of an image, a tag or date, a title, and the first few words of the copy. Some cards contain audio players or video buttons. Some cards lie horizontally. Here you'll find code to study and copy.
 	
-	.codeblock
-		.row
-			.col-sm-8
-				h3.section-subtitle Audio Card
-			-snippet('show-html')
-			-snippet('show-sass')
-		.row
-			li.card.audio-card.col-xs-6.col-sm-3.card-xs-break-2.full-border-card
-					.image
-						a(href="#")
-							!= $section->image('audio.png')
-					.details
-						.details-inner
-							.tag New Release
-							.title-wrapper
-								a.high.title(href="#"): span.light: span.er Quelbe!
-								.artist Stanley and the Ten Sleepless Nights
-							.audio-player
-								.icon-play-button.icon-stack
-									.icon-circle
-									.icon-play
-								.audio-player-details
-									.audio-progress-bar
-										img(src="/assets/images/icons/audio-progress-bar.png")
-									.audio-time
-										|0:00 &vert;&nbsp;23:01
-									.volume.icon-volume-up
-			.col-md-9
-				pre.html: code.
-					&lt;li class="card audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border-card"&gt;
-						&lt;div class="image"&gt;	
-							&lt;a href="#"&gt;
-								&lt;img src="/320x320.jpg"&gt;
-							&lt;/a&gt;
-						&lt;/div&gt;
-						&lt;div class="details"&gt;
-							&lt;div class="details-inner"&gt;
-								&lt;div class="tag"&gt;New Release&lt;/div&gt;
-								&lt;a class="high title" href="#"&gt;
-									&lt;span class="light"&gt;
-										&lt;span class="er"&gt;
-											Quelbe!
-										&lt;/span&gt;
-									&lt;/span&gt;
-								&lt;/a&gt;
-								&lt;div class="artist"&gt;
-									Stanley and the Ten Sleepless Nights
-								&lt;/div&gt;
-								&lt;div class="audio-player"&gt;
-									&lt;div class="icon-play-button icon-stack"&gt;
-										&lt;div class="icon-circle"&gt;
-											&lt;div class="icon-play"&gt;
-									&lt;div class="audio-player-details"&gt;
-										&lt;div class="audio-progress-bar"&gt;
-											&lt;img src="/assets/images/icons/audio-progress-bar.png"&gt;
-										&lt;div class="audio-time"&gt;0:00 &vert;&nbsp;23:01&lt;/div&gt;
-										&lt;div class="volume.icon-volume-up"&gt;&lt;/div&gt;
-									&lt;/div&gt;
-								&lt;/div&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-					&lt;/li&gt;
-
-			.col-md-9
-				pre.sass: code.
-					// audio styles are default, and controlled with audio.scss
-
-	.codeblock
-		.row
-			.col-sm-8
-				h3.section-subtitle Video Card
-			-snippet('show-html')
-			-snippet('show-sass')
-
-		.row
-			li.card.video-card.col-sm-4
-				.row
-					.video.col-sm-12(data-video-id='190599898' data-title='Festival 101' data-description='Lorem ipsum... <a>more</a>')
-						.center-box
-							.modal-trigger
-								!=$section->image('video.png')
-							.icon-play-button.video-icon-play-button.icon-stack
-								.icon-circle
-								.icon-play
-					.details.col-sm-12
-						.details-inner
-							.tag Festival 2017
-							a.high(href="#").title: span.light: span.er Circus Arts 2017
-							.description.link-underline
-								p See the culture and history of circus arts across the U.S.
-
-			.col-md-8
-				pre.sass: code.
-					// As video cards can have different looks, we set the title font based on the section via the CSS
-					.folkways-learn-section {
-						.title {
-							@include serif-sm;
-							font-weight: 600;
-						}
-					}
-			.col-md-8
-				pre.html: code.
-					&lt;li class="card video-card col-sm-4"&gt;
-						&lt;div class="row"&gt;
-							&lt;div class="video col-xs-12" data-video-id="190599898" data-title="Festival 101" data-description="Lorem ipsum... &lt;a&gt;more&lt;/a&gt;"&gt;
-								&lt;div class="center-box"&gt;
-									&lt;div class="modal-trigger"&gt;
-										&lt;img src="video.png"&gt;
-									&lt;/div&gt;
-									&lt;div class="icon-play-button video-icon-play-button icon-stack"&gt;
-										&lt;div class="icon-circle"&gt;&lt;/div&gt;
-										&lt;div class="icon-play"&gt;&lt;/div&gt;
-									&lt;/div&gt;
-							&lt;div class="details col-xs-12"&gt;
-								&lt;div class="details-inner"&gt;
-									&lt;div class="tag"&gt;Festival 2017&lt;/div&gt;
-									&lt;a class="high title" href="#"&gt;
-										&lt;span class="light"&gt;
-											&lt;span class="er"&gt;
-												Circus Arts 2017
-											&lt;/span&gt;
-										&lt;/span&gt;
-									&lt;/a&gt;
-									&lt;div class="description link-underline"&gt;
-										&lt;p&gt;See the culture and history of circus arts across the U.S.&lt;/p&gt;
-									&lt;/div&gt;
-								&lt;/div&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-					&lt;/li&gt;
-
-					// The pop-up uses the remodal.js plugin (http://vodkabears.github.io/remodal)
-					// The following code should be in the footer and is used by all video pop-ups on the page
-					&lt;button class="remodal-close visually-hidden" data-remodal-action="close"&gt;
-					&lt;div data-remodal-id="modal"&gt;
-						&lt;div class="remodal-iframe" id="remodal-iframe"&gt;
-						&lt;div class="remodal-copy"&gt;
-							&lt;h3 class="remodal-title"&gt;
-							&lt;div class="remodal-description"&gt;
-								&lt;p&gt;&lt;/p&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-					&lt;/div&gt;
-
-	.codeblock
-		.row
-			.col-sm-8
-				h3.section-subtitle Horizontal Card
-			-snippet('show-html')
-			-snippet('show-sass')
-		.row
-			.card.horizontal-card.col-xs-6.top-border-card
-				.row
-					.image.col-sm-6
-						a(href="#")
-							!=$section->image('horizontal.png')
-					.details.col-sm-6
-						.details-inner
-							.tag Recording Spotlight
-							a.high(href="#").title: span.light: span.er Rasta Sounds
-							
-							.description.link-underline
-								p The global African Diaspora has often searched through music for a “post-racist utopia.”
-
-			.col-sm-6
-				pre.sass: code.
-					.folkways-magazine-card {
-						.title {
-							@include magazinetitle;
-						}
-					}
-			.col-sm-6
-				pre.html: code.
-					&lt;li class="card horizontal-card col-xs-6 top-border"&gt;
-						&lt;div class="row"&gt;
-							&lt;div class="image col-sm-6"&gt;
-								&lt;a href="#"&gt;
-									&lt;img src="horizontal.png"&gt;
-								&lt;/a&gt;
-							&lt;/div&gt;
-							&lt;div class="details col-sm-6"&gt;
-								&lt;div class="details-inner"&gt;
-									&lt;div class="tag"&gt; Recording Spotlight&lt;/div&gt;
-									&lt;a class="high title" href="#"&gt; 
-										&lt;span class="light"&gt;
-											&lt;span class="er"&gt;
-												Rasta Sounds
-											&lt;/span&gt;
-										&lt;/span&gt;
-									&lt;/a&gt;
-									&lt;div class="description link-underline"&gt;
-										&lt;p&gt;The global African Diaspora has often searched through music for a “post-racist utopia.”&lt;p&gt;
-									&lt;/div&gt;
-								&lt;/div&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-					&lt;/li&gt;
-
+	// Full Feature Card
 	.codeblock
 		.row
 			.col-sm-8
@@ -280,6 +83,283 @@ section.container.cards-section
 							&lt;/div&gt;
 						&lt;/div&gt;  
 					&lt;/div&gt;
+
+	// Publication Card
+	.codeblock
+		.row
+			.col-sm-8
+				h3.section-subtitle Publication Card
+			-snippet('show-html')
+			-snippet('show-sass')
+		.row
+			.card.col-sm-6.publication-card.top-border-card
+				.row
+					.image.col-xs-4
+						a(href="#")
+							img(src="curatorial-conversations.jpg" alt="Curatorial Conversations")
+					.details.col-xs-8
+						.details-inner
+							a.high(href="#").title: span.light: span.er Curatorial Conversations: Cultural Representation and the Smithsonian Folklife Festival
+							.author Edited by Olivia Cadaval, Sojin Kim, and Diana Baird N’Diaye
+							a.high.buy-now-button(href="#"): span.light: span.er Order from University Press of Mississippi&nbsp;&#x2192
+		.row
+			.col-sm-12
+				pre.sass: code.
+					.full-feature-card {
+						@include margin-bottom(0);
+						.tag {
+							display: none;
+						}
+						.image {
+							@include respond-to(break2max) {
+								padding-bottom: 2.5vw;
+							}
+						}
+						.title {
+							@include lg-serif;
+							@include margin-bottom(2);
+						}
+						.details-inner {
+							@include padding-top(0);
+							@include padding-right(2);
+							@include respond-to(break2max) {
+								padding-left:0; // for full width detail copy
+							}
+						}
+						.description {
+							@include lg-sans;
+						}
+					}
+			.col-sm-12
+				pre.html: code.
+					&lt;div class="row"&gt;
+						&lt;div class="card col-xs-12 full-feature-card"&gt;
+							&lt;div class="row"&gt;
+								&lt;div class="image col-md-6 col-lg-7"&gt;
+									&lt;a href="#"&gt;&lt;img src="ralphRinzler.jpg" alt="Ralph Rinzler Folklife Archives and Collections"&gt;&lt;/a&gt;
+								&lt;/div&gt;
+								&lt;div class="details col-md-6 col-lg-5"&gt;
+									&lt;div class="details-inner"&gt;
+										&lt;a href="#" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;Ralph Rinzler Folklife Archives and Collections&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
+										&lt;div class="description link-underline"&gt;
+											&lt;p&gt;The Center for Folklife and Cultural Heritage is home to the Ralph Rinzler Folklife Archives and Collections, a public resource named for the founding director of the Smithsonian Folklife Festival.&lt;/p&gt;
+										&lt;/div&gt;
+										&lt;a href="#" class="high more-link "&gt;
+											&lt;div class="light"&gt;
+												&lt;div class="er"&gt;
+													&lt;div class="more-link-text"&gt;more&lt;/div&gt;&lt;div class="more-link-arrow icon-arrow2"&gt;&lt;/div&gt;
+												&lt;/div&gt;
+											&lt;/div&gt;
+										&lt;/a&gt;                      
+									&lt;/div&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;  
+					&lt;/div&gt;
+
+	// Horizontal Card
+	.codeblock
+		.row
+			.col-sm-8
+				h3.section-subtitle Horizontal Card
+			-snippet('show-html')
+			-snippet('show-sass')
+		.row
+			.card.horizontal-card.col-xs-6.top-border-card
+				.row
+					.image.col-sm-6
+						a(href="#")
+							!=$section->image('horizontal.png')
+					.details.col-sm-6
+						.details-inner
+							.tag Recording Spotlight
+							a.high(href="#").title: span.light: span.er Rasta Sounds
+							
+							.description.link-underline
+								p The global African Diaspora has often searched through music for a “post-racist utopia.”
+
+			.col-sm-6
+				pre.sass: code.
+					.folkways-magazine-card {
+						.title {
+							@include magazinetitle;
+						}
+					}
+			.col-sm-6
+				pre.html: code.
+					&lt;li class="card horizontal-card col-xs-6 top-border"&gt;
+						&lt;div class="row"&gt;
+							&lt;div class="image col-sm-6"&gt;
+								&lt;a href="#"&gt;
+									&lt;img src="horizontal.png"&gt;
+								&lt;/a&gt;
+							&lt;/div&gt;
+							&lt;div class="details col-sm-6"&gt;
+								&lt;div class="details-inner"&gt;
+									&lt;div class="tag"&gt; Recording Spotlight&lt;/div&gt;
+									&lt;a class="high title" href="#"&gt; 
+										&lt;span class="light"&gt;
+											&lt;span class="er"&gt;
+												Rasta Sounds
+											&lt;/span&gt;
+										&lt;/span&gt;
+									&lt;/a&gt;
+									&lt;div class="description link-underline"&gt;
+										&lt;p&gt;The global African Diaspora has often searched through music for a “post-racist utopia.”&lt;p&gt;
+									&lt;/div&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/li&gt;
+
+	// Video Card
+	.codeblock
+		.row
+			.col-sm-8
+				h3.section-subtitle Video Card
+			-snippet('show-html')
+			-snippet('show-sass')
+
+		.row
+			li.card.video-card.col-sm-4
+				.row
+					.video.col-sm-12(data-video-id='190599898' data-title='Festival 101' data-description='Lorem ipsum... <a>more</a>')
+						.center-box
+							.modal-trigger
+								!=$section->image('video.png')
+							.icon-play-button.video-icon-play-button.icon-stack
+								.icon-circle
+								.icon-play
+					.details.col-sm-12
+						.details-inner
+							.tag Festival 2017
+							a.high(href="#").title: span.light: span.er Circus Arts 2017
+							.description.link-underline
+								p See the culture and history of circus arts across the U.S.
+			.col-md-8
+				pre.sass: code.
+					// As video cards can have different looks, we set the title font based on the section via the CSS
+					.folkways-learn-section {
+						.title {
+							@include serif-sm;
+							font-weight: 600;
+						}
+					}
+			.col-md-8
+				pre.html: code.
+					&lt;li class="card video-card col-sm-4"&gt;
+						&lt;div class="row"&gt;
+							&lt;div class="video col-xs-12" data-video-id="190599898" data-title="Festival 101" data-description="Lorem ipsum... &lt;a&gt;more&lt;/a&gt;"&gt;
+								&lt;div class="center-box"&gt;
+									&lt;div class="modal-trigger"&gt;
+										&lt;img src="video.png"&gt;
+									&lt;/div&gt;
+									&lt;div class="icon-play-button video-icon-play-button icon-stack"&gt;
+										&lt;div class="icon-circle"&gt;&lt;/div&gt;
+										&lt;div class="icon-play"&gt;&lt;/div&gt;
+									&lt;/div&gt;
+							&lt;div class="details col-xs-12"&gt;
+								&lt;div class="details-inner"&gt;
+									&lt;div class="tag"&gt;Festival 2017&lt;/div&gt;
+									&lt;a class="high title" href="#"&gt;
+										&lt;span class="light"&gt;
+											&lt;span class="er"&gt;
+												Circus Arts 2017
+											&lt;/span&gt;
+										&lt;/span&gt;
+									&lt;/a&gt;
+									&lt;div class="description link-underline"&gt;
+										&lt;p&gt;See the culture and history of circus arts across the U.S.&lt;/p&gt;
+									&lt;/div&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/li&gt;
+
+					// The pop-up uses the remodal.js plugin (http://vodkabears.github.io/remodal)
+					// The following code should be in the footer and is used by all video pop-ups on the page
+					&lt;button class="remodal-close visually-hidden" data-remodal-action="close"&gt;
+					&lt;div data-remodal-id="modal"&gt;
+						&lt;div class="remodal-iframe" id="remodal-iframe"&gt;
+						&lt;div class="remodal-copy"&gt;
+							&lt;h3 class="remodal-title"&gt;
+							&lt;div class="remodal-description"&gt;
+								&lt;p&gt;&lt;/p&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+
+	// Audio Card
+	.codeblock
+		.row
+			.col-sm-8
+				h3.section-subtitle Audio Card
+			-snippet('show-html')
+			-snippet('show-sass')
+		.row
+			li.card.audio-card.col-xs-6.col-sm-3.card-xs-break-2.full-border-card
+					.image
+						a(href="#")
+							!= $section->image('audio.png')
+					.details
+						.details-inner
+							.tag New Release
+							.title-wrapper
+								a.high.title(href="#"): span.light: span.er Quelbe!
+								.artist Stanley and the Ten Sleepless Nights
+							.audio-player
+								.icon-play-button.icon-stack
+									.icon-circle
+									.icon-play
+								.audio-player-details
+									.audio-progress-bar
+										img(src="/assets/images/icons/audio-progress-bar.png")
+									.audio-time
+										|0:00 &vert;&nbsp;23:01
+									.volume.icon-volume-up
+			.col-md-9
+				pre.html: code.
+					&lt;li class="card audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border-card"&gt;
+						&lt;div class="image"&gt;	
+							&lt;a href="#"&gt;
+								&lt;img src="/320x320.jpg"&gt;
+							&lt;/a&gt;
+						&lt;/div&gt;
+						&lt;div class="details"&gt;
+							&lt;div class="details-inner"&gt;
+								&lt;div class="tag"&gt;New Release&lt;/div&gt;
+								&lt;a class="high title" href="#"&gt;
+									&lt;span class="light"&gt;
+										&lt;span class="er"&gt;
+											Quelbe!
+										&lt;/span&gt;
+									&lt;/span&gt;
+								&lt;/a&gt;
+								&lt;div class="artist"&gt;
+									Stanley and the Ten Sleepless Nights
+								&lt;/div&gt;
+								&lt;div class="audio-player"&gt;
+									&lt;div class="icon-play-button icon-stack"&gt;
+										&lt;div class="icon-circle"&gt;
+											&lt;div class="icon-play"&gt;
+									&lt;div class="audio-player-details"&gt;
+										&lt;div class="audio-progress-bar"&gt;
+											&lt;img src="/assets/images/icons/audio-progress-bar.png"&gt;
+										&lt;div class="audio-time"&gt;0:00 &vert;&nbsp;23:01&lt;/div&gt;
+										&lt;div class="volume.icon-volume-up"&gt;&lt;/div&gt;
+									&lt;/div&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/li&gt;
+
+			.col-md-9
+				pre.sass: code.
+					// audio styles are default, and controlled with audio.scss
+
+	
+
+	// Vinyl Card
 	.codeblock
 		.row
 			.col-sm-8

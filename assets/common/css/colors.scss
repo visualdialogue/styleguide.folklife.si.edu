@@ -27,31 +27,74 @@
 
 /* Folklife
 -------------------------------------------------- */
-	$fl-light-blue: #a1c4e9;
-	$fl-blue: #6494ce;
-	$fl-purple: #9e569d;
-	$fl-light-green: #e7f1de;
-	$fl-green: #71bbac;
-	$fl-teal: #508295;
-	$fl-yellow: #fceec7;
-	$fl-orange: #c77659;
-	$fl-red: #ad4c38;
+	// $fl-light-blue: #a1c4e9;
+	$fl-light-blue: #adbedd;
+	// $fl-blue: #6494ce;
+	$fl-blue: #418abd;
+	// $fl-purple: #9e569d;
+	$fl-purple: #a34d8f;
+	// $fl-light-green: #e7f1de;
+	$fl-light-green: #e2f0d8;
+	// $fl-green: #71bbac;
+	$fl-green: #31b3a0;
+	// $fl-teal: #508295;
+	$fl-teal: #277b89;
+	// $fl-yellow: #fceec7;
+	$fl-yellow: #fdefc3;
+	// $fl-orange: #c77659;
+	$fl-orange: #ce6e52;
+	// $fl-red: #ad4c38;
+	$fl-red: #b44435;
 
 	// application
 	$fl-hover: $fl-light-green;
 
+/* Folkways
+-------------------------------------------------- */
+	// $fw-light-blue: #d1dbf0;
+	$fw-light-blue: #cad9e7;
+	// $fw-blue: #bad4dd;
+	$fw-blue: #acd1d4;
+	// $fw-purple: #a098b9;
+	$fw-purple: #9e93ae;
+	// $fw-light-green: #cae0b8;
+	$fw-light-green: #bedcaf;
+	// $fw-green: #969e93;
+	$fw-green: #8c988a;
+	// $fw-light-cream: #f9f6f0;
+	$fw-light-cream: #fcf8f1;
+	// $fw-cream: #fcf2df;
+	$fw-cream: #fef3db;
+	// $fw-brown: #c9c3b2;
+	$fw-brown: #c9c1ae;
+	// $fw-red: #d48279;
+	$fw-red: #df7c72;
+
+	$fw-magazine: #ffd51d;
+
+	// application
+	$fw-hover: $fw-light-blue;
 
 /* Festival
 -------------------------------------------------- */
-	$fs-light-blue: #8ebde7;
-	$fs-blue: #5a71b4;
-	$fs-purple: #71529d;
-	$fs-tan: #cebe91;
-	$fs-green: #69a5ac;
-	$fs-teal: #62b16e;
-	$fs-yellow: #f9df72;
-	$fs-orange: #dca45c;
-	$fs-red: #c0424a;
+	// $fs-light-blue: #8ebde7;
+	$fs-light-blue: #71b6d9;
+	// $fs-blue: #5a71b4;
+	$fs-blue: #4967a3;
+	// $fs-purple: #71529d;
+	$fs-purple: #6f498d;
+	// $fs-green: #69a5ac;
+	$fs-green: #00a765;
+	// $fs-teal: #62b16e;
+	$fs-teal: #409fa1;
+	// $fs-yellow: #f9df72;
+	$fs-yellow: #fddd6b;
+	// $fs-tan: #cebe91;
+	$fs-tan: #cfbb8a;
+	// $fs-orange: #dca45c;
+	$fs-orange: #e5a058;
+	// $fs-red: #c0424a;
+	$fs-red: #ce3c45;
 
 	// application
 	$fs-hover: $fs-yellow;
@@ -60,24 +103,6 @@
 	$basque-red: #cd181f;
 	$basque-green: #79b93e;
 	.basque-child-page .section-title {color: $basque-red;}
-
-
-/* Folkways
--------------------------------------------------- */
-	$fw-light-blue: #d1dbf0;
-	$fw-blue: #bad4dd;
-	$fw-purple: #a098b9;
-	$fw-cream: #fcf2df;
-	$fw-light-green: #cae0b8;
-	$fw-green: #969e93;
-	$fw-light-cream: #f9f6f0;
-	$fw-brown: #c9c3b2;
-	$fw-red: #d48279;
-
-	$fw-magazine: #ffd51d;
-
-	// application
-	$fw-hover: $fw-light-blue;
 
 
 /* General

@@ -89,34 +89,6 @@
     <div class="typeface codeblock">
       <div class="row type-title-wrapper">
         <hr/>
-        <div class="col-sm-10 md-serif type-title">Album Serif</div>
-        <?php snippet('show-sass'); ?>
-      </div>
-      <div class="row">
-        <div class="col-md-5">
-          <div class="type-details">Typeface: Freight Text<br/>Weight: Semibold<br/>Maximum Font Size: 3rem</div>
-        </div>
-        <div class="col-md-7">
-          <pre class="sass"><code>@mixin album-serif {
-	font-family: $serif;
-	font-weight: 600;
-	line-height: 1.33;
-  	font-size: 1.896rem;
-	@include respond-to(break2) {
-  		font-size: 2.2vw;
-	}
-	@include respond-to(fullwidth) {
-  		font-size: 3rem;
-	}
-	@include margin-bottom(1);
-}
-</code></pre>
-        </div>
-      </div>
-    </div>
-    <div class="typeface codeblock">
-      <div class="row type-title-wrapper">
-        <hr/>
         <div class="col-sm-10 sm-serif type-title">Small Serif Title</div>
         <?php snippet('show-sass'); ?>
       </div>
@@ -633,7 +605,7 @@
         </div>
         <div class="row">
           <div class="col-md-5">
-            <div class="type-details">Typeface: Acumin Pro Wide<br/>Weight: 700<br/>Maximum Font Size: 1.665rem<br/>Usage:</div>
+            <div class="type-details">Typeface: Acumin Pro Wide<br/>Weight: 700<br/>Maximum Font Size: 1.665rem</div>
           </div>
           <div class="col-md-7">
             <pre class="sass"><code>@mixin sans-tag {
@@ -667,10 +639,11 @@
       <div class="typeface codeblock">
         <div class="row type-title-wrapper">
           <hr/>
-          <div class="col-sm-10 intro-serif type-title">
+          <div class="col-sm-7 intro-serif type-title">
              
             Serif Intro Text<br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           </div>
+          <div class="col-sm-3"></div>
           <?php snippet('show-sass'); ?>
         </div>
         <div class="row">
@@ -678,14 +651,27 @@
             <div class="type-details">Typeface: Freight Text<br/>Weight: Semibold<br/>Maximum Font Size: 3rem<br/>Maximum Line Height: 4rem</div>
           </div>
           <div class="col-md-7">
-            <pre class="sass"><code>@include album-serif;</code></pre>
+            <pre class="sass"><code>@mixin intro-serif {
+	font-family: $serif;
+	font-weight: 600;
+	line-height: 1.3333;
+  	font-size: 1.896rem;
+	@include respond-to(break2) {
+  		font-size: 2.2vw;
+	}
+	@include respond-to(fullwidth) {
+  		font-size: 3rem;
+	}
+	@include margin-bottom(1);
+}</code></pre>
           </div>
         </div>
       </div>
       <div class="typeface codeblock">
         <div class="row type-title-wrapper">
           <hr/>
-          <div class="col-sm-10 body-serif type-title">Serif Body<br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+          <div class="col-sm-6 body-serif type-title">Serif Body<br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+          <div class="col-sm-4"></div>
           <?php snippet('show-sass'); ?>
         </div>
         <div class="row">
@@ -711,10 +697,11 @@
       <div class="typeface codeblock">
         <div class="row type-title-wrapper">
           <hr/>
-          <div class="col-sm-10 intro-sans type-title">
+          <div class="col-sm-7 intro-sans type-title">
              
             Sans Intro Text<br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           </div>
+          <div class="col-sm-3"></div>
           <?php snippet('show-sass'); ?>
         </div>
         <div class="row">
@@ -730,7 +717,8 @@
       <div class="typeface codeblock">
         <div class="row type-title-wrapper">
           <hr/>
-          <div class="col-sm-10 body-sans type-title">Sans Body<br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+          <div class="col-sm-6 body-sans type-title">Sans Body<br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+          <div class="col-sm-4"></div>
           <?php snippet('show-sass'); ?>
         </div>
         <div class="row">

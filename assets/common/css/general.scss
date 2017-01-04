@@ -810,7 +810,9 @@
 		background-color: #fff;
 		position: relative;
 		cursor: pointer;
-		
+	}
+	.dropdown, .filter-button {
+		@include margin-top(1.5); // 19px
 	}
 	.first-level-dropdown {
 		display: none; // initial hide
@@ -843,7 +845,7 @@
 	
 	.first-level-dropdown-title, .filter-button {
 		@include padding-top(0.7);
-		@include margin-top(1.5); // 19px
+		
 		@include height(3.7); // 35px
 		height: 3rem; // mobile override
 		@include padding-left(1);
