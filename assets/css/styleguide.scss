@@ -228,8 +228,11 @@
 	code.hljs {
 		@include padding(3);
 	}
+	.col-sm-12 code {
+		@include margin-top(4);
+	}
 	.html code {
-		width: 300%; // prevent code breaking on html code
+		width: 400%; // prevent code breaking on html code
 	}
 
 	.section-subtitle {
@@ -326,12 +329,14 @@
 
 	// body type
 	.body-serif {@include body-serif;}
+	.intro-serif {@include album-serif;}
+	.body-sans {@include body-sans;}
 	.intro-sans {@include lg-sans;}
 
 	// Slab
-	.xl-slab {@include xl-slab;}
 	.lg-slab {@include lg-slab;}
 	.md-slab {@include md-slab;}
+	.sm-slab {@include sm-slab;}
 	.nav-header {@include nav-header;}
 
 	// Magazine

@@ -231,7 +231,7 @@
 		}
 	}
 	.section-title {
-		@include md-slab;
+		@include sm-slab;
 		color: $black65;
 		margin-bottom: 1.5rem;
 		@include respond-to(break2) {
@@ -356,7 +356,7 @@
 	}
 	.page-title {
 		color: #fff;
-		@include xl-slab;
+		@include lg-slab;
 		@include margin-top(1.3);
 		@include margin-bottom(1.3);
 	}
@@ -461,7 +461,7 @@
 		}
 		.image {
 			position: relative; // contain vert child
-			@include md-slab;
+			@include sm-slab;
 			@include margin-bottom(0);
 			color: #fff;
 			text-align: center;
@@ -555,7 +555,7 @@
 		}
 		&-button {
 			background-color: $black50;
-			@include md-slab;
+			@include sm-slab;
 			margin-bottom:0;
 			padding: 3vw;
 			color: #fff;
@@ -896,7 +896,7 @@
 			}
 		}
 		.search-query-title {
-			@include xl-slab;
+			@include lg-slab;
 			text-transform: capitalize;
 			@include margin-bottom(2.4);
 		}

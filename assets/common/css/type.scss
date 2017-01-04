@@ -30,7 +30,7 @@
 	@mixin album-serif {
 		font-family: $serif;
 		font-weight: 600;
-		line-height: 1.33;
+		line-height: 1.3333;
 	  	font-size: 1.896rem;
 		@include respond-to(break2) {
 	  		font-size: 2.2vw;
@@ -205,7 +205,6 @@
 		}
 	}
 
-
 /* Sans serif - wide
 * Acumin Pro Wide from Typekit
 * We use the 1.125 modular scale based on 4.2rem
@@ -360,11 +359,10 @@
 		}
 	}
 	
-	
 /* Slab
 * Unit Gothic 717 and 718 from Typekit
 -------------------------------------------------- */
-	@mixin xl-slab {
+	@mixin lg-slab {
 		font-family: $slabWide;
 		text-transform: uppercase;
 		font-size: 8vw;
@@ -378,7 +376,7 @@
 			line-height: 1;
 		}
 	}
-	@mixin lg-slab {
+	@mixin md-slab {
 		font-family: $slabWide;
 		text-transform: uppercase;
 		@include respond-to(break2) {
@@ -390,8 +388,7 @@
 			line-height: 1;
 		}
 	}
-	
-	@mixin md-slab {
+	@mixin sm-slab {
 		font-family: $slabWide;
 		text-transform: uppercase;
 		font-size: 5vw;
@@ -408,8 +405,6 @@
 			font-size: 3rem;
 		}
 	}
-
-	
 
 /* CSS type helper classes
 -------------------------------------------------- */

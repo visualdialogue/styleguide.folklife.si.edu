@@ -11,6 +11,7 @@
 		@include sans-lg;
 	}
 }</code></pre>
+        <p>You won't find any &lt;h1&gt; or &lt;h2&gt; tags here because those are strictly semantic, without styles. The typefaces stand by themselves and can be applied to different heading levels.</p>
         <p>Font sizes were determined by the design. When needed, the major second modular scale was applied mainly for responsive sizes (1.125). See <a href="http://www.modularscale.com" target="_blank">www.modularscale.com</a>.</p>
       </div>
     </main>
@@ -666,12 +667,30 @@
       <div class="typeface codeblock">
         <div class="row type-title-wrapper">
           <hr/>
-          <div class="col-sm-10 body-serif type-title">Serif Intro Text</div>Lorem
+          <div class="col-sm-10 intro-serif type-title">
+             
+            Serif Intro Text<br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </div>
           <?php snippet('show-sass'); ?>
         </div>
         <div class="row">
           <div class="col-md-5">
-            <div class="type-details">Typeface: Freight Text<br/>Weight: Book<br/>Maximum Font Size: 2.4rem</div>
+            <div class="type-details">Typeface: Freight Text<br/>Weight: Semibold<br/>Maximum Font Size: 3rem<br/>Maximum Line Height: 4rem</div>
+          </div>
+          <div class="col-md-7">
+            <pre class="sass"><code>@include album-serif;</code></pre>
+          </div>
+        </div>
+      </div>
+      <div class="typeface codeblock">
+        <div class="row type-title-wrapper">
+          <hr/>
+          <div class="col-sm-10 body-serif type-title">Serif Body<br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+          <?php snippet('show-sass'); ?>
+        </div>
+        <div class="row">
+          <div class="col-md-5">
+            <div class="type-details">Typeface: Freight Text<br/>Weight: Book<br/>Maximum Font Size: 2.4rem<br/>Maximum Line Height: 3.2rem</div>
           </div>
           <div class="col-md-7">
             <pre class="sass"><code>@mixin body-serif {
@@ -680,7 +699,7 @@
 	line-height: 1.333333;
   	font-size: 1.896rem;
 	@include respond-to(break2) {
-  		font-size: 2.133rem;
+  		font-size: 1.5vw;
 	}
 	@include respond-to(fullwidth) {
   		font-size: 2.4rem;
@@ -692,39 +711,15 @@
       <div class="typeface codeblock">
         <div class="row type-title-wrapper">
           <hr/>
-          <div class="col-sm-10 body-serif type-title">Serif Body</div>
+          <div class="col-sm-10 intro-sans type-title">
+             
+            Sans Intro Text<br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </div>
           <?php snippet('show-sass'); ?>
         </div>
         <div class="row">
           <div class="col-md-5">
-            <div class="type-details">Typeface: Freight Text<br/>Weight: Book<br/>Maximum Font Size: 2.4rem</div>
-          </div>
-          <div class="col-md-7">
-            <pre class="sass"><code>@mixin body-serif {
-	font-family: $serif;
-	font-weight: 400;
-	line-height: 1.333333;
-  	font-size: 1.896rem;
-	@include respond-to(break2) {
-  		font-size: 2.133rem;
-	}
-	@include respond-to(fullwidth) {
-  		font-size: 2.4rem;
-	}
-}</code></pre>
-          </div>
-        </div>
-      </div>
-      <div class="typeface codeblock">
-        <div class="row type-title-wrapper">
-          <hr/>
-          <div class="col-sm-10 intro-sans type-title">Sans Intro Text</div>
-          <div class="intro-sans">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
-          <?php snippet('show-sass'); ?>
-        </div>
-        <div class="row">
-          <div class="col-md-5">
-            <div class="type-details">Typeface: Acumin Pro<br/>Weight: Light<br/>Maximum Font Size: 3rem<br/>Usage: Festival Blog page listing copy</div>
+            <div class="type-details">Typeface: Acumin Pro<br/>Weight: Light<br/>Maximum Font Size: 3rem<br/>Maximum Line Height: 3.5rem</div>
           </div>
           <div class="col-md-7">
             <pre class="sass"><code>@include lg-sans;
@@ -735,15 +730,26 @@
       <div class="typeface codeblock">
         <div class="row type-title-wrapper">
           <hr/>
-          <div class="col-sm-10 body-sans type-title">Sans Body</div>
+          <div class="col-sm-10 body-sans type-title">Sans Body<br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
           <?php snippet('show-sass'); ?>
         </div>
         <div class="row">
           <div class="col-md-5">
-            <div class="type-details">Typeface: Acumin Pro<br/>Weight: Light<br/>Maximum Font Size:<br/>Usage: Festival Blog page listing copy</div>
+            <div class="type-details">Typeface: Acumin Pro<br/>Weight: Light<br/>Maximum Font Size: 2.107rem<br/>Maximum Line Height: 28.444rem</div>
           </div>
           <div class="col-md-7">
-            <pre class="sass"><code>.body-sans {@include body-sans;}
+            <pre class="sass"><code>@mixin body-sans {
+	font-family: $sans;
+	font-weight: 300;
+	line-height: 1.35;
+  	font-size: 1.873rem;
+	@include respond-to(break2) {
+		font-size: 1.25vw;
+	}
+	@include respond-to(fullwidth) {
+  		font-size: 2.107rem;
+	}
+}
 </code></pre>
           </div>
         </div>
@@ -754,15 +760,15 @@
       <div class="typeface codeblock"><a id="slab" class="anchor-link"></a>
         <div class="row type-title-wrapper">
           <hr/>
-          <div class="col-sm-10 xl-slab type-title">Extra Large Slab</div>
+          <div class="col-sm-10 lg-slab type-title">Large Slab</div>
           <?php snippet('show-sass'); ?>
         </div>
         <div class="row">
           <div class="col-md-5">
-            <div class="type-details">Typeface: HWT Unit Gothic<br/>Weight: L717<br/>Maximum Font Size: 4.5rem<br/>Usage: Subpage titles, Festival-ON homepage tabs</div>
+            <div class="type-details">Typeface: HWT Unit Gothic<br/>Weight: L717<br/>Maximum Font Size: 4rem<br/>Usage: Subpage titles, Festival-ON homepage tabs</div>
           </div>
           <div class="col-md-7">
-            <pre class="sass"><code>@mixin slab-xl {
+            <pre class="sass"><code>@mixin lg-slab {
 	font-family: $slabWide;
 	text-transform: uppercase;
 	font-size: 8vw;
@@ -771,33 +777,7 @@
 		line-height: 1;
 	}
 	@include respond-to(fullwidth) {
-		font-size: 4.5rem;
-		line-height: 1;
-	}
-}</code></pre>
-          </div>
-        </div>
-      </div>
-      <div class="typeface codeblock">
-        <div class="row type-title-wrapper">
-          <hr/>
-          <div class="col-sm-10 lg-slab type-title">Large Slab</div>
-          <?php snippet('show-sass'); ?>
-        </div>
-        <div class="row">
-          <div class="col-md-5">
-            <div class="type-details">Typeface: HWT Unit Gothic<br/>Weight: 717<br/>Maximum Font Size: 3.8rem<br/>Usage: Festival OFF homepage tab</div>
-          </div>
-          <div class="col-md-7">
-            <pre class="sass"><code>@mixin slab-lg {
-	font-family: $slabWide;
-	text-transform: uppercase;
-	@include respond-to(break2) {
-		font-size: 2.4vw;
-		line-height: 1;
-	}
-	@include respond-to(fullwidth) {
-		font-size: 3.8rem;
+		font-size: 4rem;
 		line-height: 1;
 	}
 }</code></pre>
@@ -812,10 +792,10 @@
         </div>
         <div class="row">
           <div class="col-md-5">
-            <div class="type-details">Typeface: HWT Unit Gothic<br/>Weight: 717<br/>Maximum Font Size: 3rem<br/>Usage: Section Title, etc.</div>
+            <div class="type-details">Typeface: HWT Unit Gothic<br/>Weight: 717<br/>Maximum Font Size: 3.8rem<br/>Usage: Festival OFF homepage tab</div>
           </div>
           <div class="col-md-7">
-            <pre class="sass"><code>@mixin slab-lg {
+            <pre class="sass"><code>@mixin md-slab {
 	font-family: $slabWide;
 	text-transform: uppercase;
 	@include respond-to(break2) {
@@ -825,6 +805,36 @@
 	@include respond-to(fullwidth) {
 		font-size: 3.8rem;
 		line-height: 1;
+	}
+}</code></pre>
+          </div>
+        </div>
+      </div>
+      <div class="typeface codeblock">
+        <div class="row type-title-wrapper">
+          <hr/>
+          <div class="col-sm-10 sm-slab type-title">Small Slab</div>
+          <?php snippet('show-sass'); ?>
+        </div>
+        <div class="row">
+          <div class="col-md-5">
+            <div class="type-details">Typeface: HWT Unit Gothic<br/>Weight: 717<br/>Maximum Font Size: 3rem<br/>Usage: Section Title, etc.</div>
+          </div>
+          <div class="col-md-7">
+            <pre class="sass"><code>@mixin sm-slab {
+	font-family: $slabWide;
+	text-transform: uppercase;
+	font-size: 6vw;
+	line-height: 1.2;
+	letter-spacing: 0.5px;
+	margin-top: 0;
+	margin-bottom: 1.5rem;
+	@include respond-to(break2) {
+		font-size: 1.9vw;
+		margin-bottom: 0;
+	}
+	@include respond-to(fullwidth) {
+		font-size: 3rem;
 	}
 }</code></pre>
           </div>

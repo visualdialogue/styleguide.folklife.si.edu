@@ -56,7 +56,7 @@
           </ul>
         </li>
         <li class="header-nav-main-item col-sm-2"> <a href="#cards" class="header-nav-title">Cards</a></li>
-        <li class="header-nav-main-item col-sm-2"> <a href="#classes" class="header-nav-title">Classes</a></li>
+        <li class="header-nav-main-item col-sm-2"> <a href="#components" class="header-nav-title">Components</a></li>
       </ul>
     </div>
   </div>

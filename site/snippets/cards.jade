@@ -7,7 +7,7 @@ section.container.cards-section
 			.intro-copy.content.link-underline
 				p Cards are the smallest component pieces on the site besides UI elements. They usually consist of an image, a tag or date, a title, and the first few words of the copy. Some cards contain audio players or video buttons. Some cards lie horizontally. Here you'll find code to study and copy.
 	
-	.codeblock			
+	.codeblock
 		.row
 			.col-sm-8
 				h3.section-subtitle Audio Card
@@ -74,7 +74,7 @@ section.container.cards-section
 				pre.sass: code.
 					// audio styles are default, and controlled with audio.scss
 
-	.codeblock			
+	.codeblock
 		.row
 			.col-sm-8
 				h3.section-subtitle Video Card
@@ -151,7 +151,7 @@ section.container.cards-section
 						&lt;/div&gt;
 					&lt;/div&gt;
 
-	.codeblock			
+	.codeblock
 		.row
 			.col-sm-8
 				h3.section-subtitle Horizontal Card
@@ -200,6 +200,130 @@ section.container.cards-section
 									&lt;div class="description link-underline"&gt;
 										&lt;p&gt;The global African Diaspora has often searched through music for a “post-racist utopia.”&lt;p&gt;
 									&lt;/div&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/li&gt;
+
+	.codeblock
+		.row
+			.col-sm-8
+				h3.section-subtitle Full Feature Card
+			-snippet('show-html')
+			-snippet('show-sass')
+		.row
+			.card.col-xs-12.full-feature-card
+				.row
+					.image.col-md-6.col-lg-7
+						a(href="#")
+							!=$section->image('ralphRinzler.jpg')
+					.details.col-md-6.col-lg-5
+						.details-inner
+							a.high(href="#").title: span.light: span.er Ralph Rinzler Folklife Archives and Collections
+							
+							.description.link-underline
+								p The Center for Folklife and Cultural Heritage is home to the Ralph Rinzler Folklife Archives and Collections, a public resource named for the founding director of the Smithsonian Folklife Festival.
+							a.high.more-link: .light: .er
+								.more-link-text more
+								.more-link-arrow.icon-arrow2
+		.row
+			.col-sm-12
+				pre.sass: code.
+					.full-feature-card {
+						@include margin-bottom(0);
+						.tag {
+							display: none;
+						}
+						.image {
+							@include respond-to(break2max) {
+								padding-bottom: 2.5vw;
+							}
+						}
+						.title {
+							@include lg-serif;
+							@include margin-bottom(2);
+						}
+						.details-inner {
+							@include padding-top(0);
+							@include padding-right(2);
+							@include respond-to(break2max) {
+								padding-left:0; // for full width detail copy
+							}
+						}
+						.description {
+							@include lg-sans;
+						}
+					}
+			.col-sm-12
+				pre.html: code.
+					&lt;div class="row"&gt;
+						&lt;div class="card col-xs-12 full-feature-card"&gt;
+							&lt;div class="row"&gt;
+								&lt;div class="image col-md-6 col-lg-7"&gt;
+									&lt;a href="#"&gt;&lt;img src="ralphRinzler.jpg" alt="Ralph Rinzler Folklife Archives and Collections"&gt;&lt;/a&gt;
+								&lt;/div&gt;
+								&lt;div class="details col-md-6 col-lg-5"&gt;
+									&lt;div class="details-inner"&gt;
+										&lt;a href="#" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;Ralph Rinzler Folklife Archives and Collections&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
+										&lt;div class="description link-underline"&gt;
+											&lt;p&gt;The Center for Folklife and Cultural Heritage is home to the Ralph Rinzler Folklife Archives and Collections, a public resource named for the founding director of the Smithsonian Folklife Festival.&lt;/p&gt;
+										&lt;/div&gt;
+										&lt;a href="#" class="high more-link "&gt;
+											&lt;div class="light"&gt;
+												&lt;div class="er"&gt;
+													&lt;div class="more-link-text"&gt;more&lt;/div&gt;&lt;div class="more-link-arrow icon-arrow2"&gt;&lt;/div&gt;
+												&lt;/div&gt;
+											&lt;/div&gt;
+										&lt;/a&gt;                      
+									&lt;/div&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;  
+					&lt;/div&gt;
+	.codeblock
+		.row
+			.col-sm-8
+				h3.section-subtitle Vinyl Card
+			-snippet('show-html')
+			-snippet('show-sass')
+		.row
+			.card.vinyl-card.col-xs-5.col-sm-3
+				.image
+					a(href="#")
+						!=$section->image('fannie-lou-hamer.png')
+				.details
+					.details-inner
+						a.high(href="#").title: span.light: span.er Songs My Mother Taught Me
+						.artist Fannie Lou Hamer
+			.col-sm-9
+				pre.sass: code.
+					.album-card, .vinyl-card, .books-card {
+						.details-inner {
+							padding:0;
+							@include padding-top(1.7);
+						}
+						.title {
+							@include sm-sans;
+							font-weight: 700;
+							@include margin-bottom(0.5);
+						}
+						.artist {
+							@include sm-sans;
+						}
+						@include clear-2; // display cards side-by-side on mobile, clearing every 2nd + 1 cards to the left
+						@include respond-to(break2) {@include clear-6;} // display 6 across, clearing every 6th + 1 cards
+					}
+			.col-sm-9
+				pre.html: code.
+					&lt;li class="card vinyl-card col-xs-6 col-sm-3"&gt;
+						&lt;div class="image"&gt;
+							&lt;a href="#"&gt;&lt;img src="fannie-lou-hamer.png" alt="Songs My Mother Taught Me"&gt;&lt;/a&gt;
+						&lt;/div&gt;
+						&lt;div class="details"&gt;
+							&lt;div class="details-inner"&gt;
+								&lt;a href="#" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;Songs My Mother Taught Me&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
+								&lt;div class="artist"&gt;
+									&lt;p&gt;Fannie Lou Hamer&lt;/p&gt;
 								&lt;/div&gt;
 							&lt;/div&gt;
 						&lt;/div&gt;
