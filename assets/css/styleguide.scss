@@ -96,7 +96,7 @@
 
 			.copy {
 				@include sm-sans;
-				color: white;
+				color: #fff;
 				text-align: center;
 				// vertically align
 				position: relative;
@@ -191,7 +191,7 @@
 /* #code
 -------------------------------------------------- */
 	.title-bar {
-		color: white;
+		color: #fff;
 		background-color: $fl-blue;
 	}
 	.code_gutter {
@@ -246,7 +246,7 @@
 		cursor: pointer;
 		float: right;
 		background-color: $black10;
-		@include mini-sans;
+		@include caption-sans;
 		text-transform: initial;
 		@include height(3.4);
 		@include padding-top(0.6);
@@ -312,7 +312,6 @@
 	.album-serif {@include album-serif;}
 	.sm-serif {@include sm-serif;}
 	.sm-serif-italic {@include sm-serif;font-style: italic;}
-	.body-serif {@include body-serif;}
 
 	// Sans
 	.xl-sans {@include xl-sans;}
@@ -322,10 +321,12 @@
 	.md-sans {@include md-sans;}
 	.md-sans-semi {@include md-sans;font-weight: 600;}
 	.sm-sans {@include sm-sans;}
-	.caption-sans {@include sm-sans;}
 	.sm-sans-semi {@include sm-sans;font-weight: 600;}
-	.body-sans {@include body-sans;}
-	.mini-sans {@include mini-sans;}
+	.caption-sans {@include caption-sans;}
+
+	// body type
+	.body-serif {@include body-serif;}
+	.intro-sans {@include lg-sans;}
 
 	// Slab
 	.xl-slab {@include xl-slab;}
@@ -338,7 +339,6 @@
 	.md-magazine-title {@include md-magazine-title;}
 	.sm-magazine-title {@include sm-magazine-title;}
 
-	.program-subtitle {@include program-subtitle}
 	.buy-button {@include buy-button;}
 	.category-tag-type {@include sans-tag;}
 	.category-tag-bold-type {@include sans-tag;font-weight: 700;}
@@ -386,12 +386,7 @@
 -------------------------------------------------- */
 	.structure-page {
 		.title-bar {
-			color: white;
+			color: #fff;
 			background-color: $fs-blue;
 		}
 	}
-
-/* Helpers II
--------------------------------------------------- */
-	.visually-hidden {display:none;}
-	

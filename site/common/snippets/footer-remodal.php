@@ -1,5 +1,5 @@
 
-<button data-remodal-action="close" class="remodal-close visually-hidden"></button>
+<button data-remodal-action="close" class="remodal-close"></button>
 <div data-remodal-id="modal">
   <div id="remodal-iframe" class="remodal-iframe"></div>
   <div class="remodal-copy">

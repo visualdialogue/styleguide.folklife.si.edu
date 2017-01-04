@@ -7,7 +7,7 @@
 		position: relative; // hold abs child
 	}
 	.folkways-magazine-logo-wrapper {
-		background-color: black;
+		background-color: #000;
 		height:19vw;
 		@include respond-to(break2) {height:7.5vw;}
 		@include respond-to(fullwidth) {height:11.7rem;} // from layout
@@ -31,7 +31,7 @@
 		&:before {
 			left:0;
 			right:0;
-			background-color: black;
+			background-color: #000;
 			@include respond-to(break2) {
 				right: 50vw; // go to middle of screen, behind grid
 			}
@@ -47,7 +47,7 @@
 			@include padding-top(2.8);
 		}
 		.black-spacer {
-			background-color: black;
+			background-color: #000;
 			height:19vw;
 			@include respond-to(break2) {height:7.5vw;}
 			@include respond-to(fullwidth) {height:11.7rem;} // from layout
@@ -61,7 +61,7 @@
 			}
 		}
 		.issue-title {
-			color: black;
+			color: #000;
 			background-color: $fw-magazine;
 			height:6.5rem;
 			padding-left: 1.5rem;
@@ -94,7 +94,7 @@
 	.cover-story-section {
 		@include margin-bottom(4); // horizontal-cards override b/c no hr below
 		.card:after {
-				background-color: white;
+				background-color: #fff;
 			}
 		.tag {
 			// override full-feature-card default
@@ -118,10 +118,9 @@
 	.magazine-feature {
 		.title {
 			@include sm-magazine-title;
-			font-weight: 700; // one weight down for pc rendering
 		}
 		.details {
-			background-color: white;
+			background-color: #fff;
 		}
 		.details-inner {
 			position: relative;
@@ -147,18 +146,17 @@
 	.video-spotlight-section {
 		.card {
 			&:after {
-				background-color: black
+				background-color: #000
 			}
 		}
 		.video {
 			@include padding(2);
 		}
 		.tag, .title, .description, .more-link {
-			color: white;
+			color: #fff;
 		}
 		.title {
 			@include sm-magazine-title;
-			font-weight: 700; // one weight down for pc rendering
 		}
 		.details-inner {
 			@include padding-top(0);
@@ -182,7 +180,7 @@
 		}
 	}
 	.back-issues-section {
-		background-color: white;
+		background-color: #fff;
 		.section-title {
 			@include padding-top(1.2);
 			@include margin-bottom(1.4);
@@ -202,7 +200,7 @@
 			color: $black30;
 		}
 		.title {
-			color: white;
+			color: #fff;
 			@include lg-sans;
 			font-weight: 700;
 		}
@@ -215,7 +213,7 @@
 			.first-level-dropdown-title {
 				@include lg-sans;
 				font-weight: 700;
-				color: white;
+				color: #fff;
 				background-color: $black65;
 				padding-left:0;
 				@include padding-top(0.3);
@@ -243,7 +241,7 @@
 		@include height(4.2);
 		padding-left:0; // nice-select override
 		background-color: $black65;
-		color: white;
+		color: #fff;
 		@include respond-to(break2) {
 			@include border(bottom, 2px, white);
 		}
@@ -263,7 +261,7 @@
 				margin-bottom:0;
 			}
 			.details-inner {
-				background-color: white;
+				background-color: #fff;
 				@include padding-top(4);
 				@include padding-left(4);
 				padding-left:$full-gutter; // mobile
@@ -284,7 +282,7 @@
 			}
 		}
 		.content {
-			background-color: white;
+			background-color: #fff;
 			@include padding-right(4);
 			@include padding-left(4);
 			padding-left:$full-gutter; // mobile
@@ -309,7 +307,7 @@
 			}
 		}
 		.sidebar {
-			color: black;
+			color: #000;
 		}
 		.related-content {
 			@include margin-top(7);

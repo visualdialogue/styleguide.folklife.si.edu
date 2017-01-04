@@ -209,7 +209,7 @@ var less = require('gulp-less');
 var path = require('path');
  
 gulp.task('less', function () {
-  return gulp.src('assets/common/bower_components/bootstrap/less/bootstrap.less')
+  return gulp.src('assets/bower_components/bootstrap/less/bootstrap.less')
     .pipe(less())
     .pipe(rename('bootstrap.scss'))
     .pipe(gulp.dest('assets/common/css/'));

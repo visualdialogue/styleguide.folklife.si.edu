@@ -53,7 +53,7 @@
 			@include margin-bottom(2);
 		}
 		figcaption {
-			color: white;
+			color: #fff;
 			@include sm-sans;
 			@include margin-top(2);
 		}
@@ -90,7 +90,7 @@
 			height: auto; // mobile
 		}
 		.page-title {
-			color: white;
+			color: #fff;
 		}
 		.thin-hr {
 			margin: 0;
@@ -104,7 +104,7 @@
 			height: auto;
 		}
 		.page-subtitle {
-			@include program-subtitle;
+			@include sm-magazine-title;
 			color: $basque-green;
 			text-transform: uppercase;
 			// @include padding-bottom();
@@ -134,7 +134,7 @@
 			@include margin-bottom(2);
 		}
 		&-credits p {
-			@include mini-sans;
+			@include caption-sans;
 			text-transform: capitalize;
 			color: $black50;
 			@include margin-top(3.5);
@@ -161,7 +161,7 @@
 			border-color: $fs-green;
 			font-weight: 600;
 			&.small {
-				@include mini-sans;
+				@include caption-sans;
 				color: $black50;
 				text-transform: uppercase;
 				@include padding-top(0.7);
@@ -202,7 +202,7 @@
 		}
 		.subtitle {
 			@include md-serif;
-			color: black;
+			color: #000;
 			@include margin-bottom(0.5);
 		}
 		.byline {

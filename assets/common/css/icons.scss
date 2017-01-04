@@ -55,7 +55,7 @@
 		text-align: right;
 		@include respond-to(break2max) {
 			display: none;
-			background-color: white;
+			background-color: #fff;
 			background-color: $black10;
 			width: 100%;
 			left: 0;

@@ -23,7 +23,7 @@
 		}
 
 		// if open, go light
-		background-color: white; // only go less opacity here otherwise folklife banner movement will show below
+		background-color: #fff; // only go less opacity here otherwise folklife banner movement will show below
 		&.is-open {
 			background-color: $navbar; // only go less opacity here otherwise folklife banner movement will show below
 			height: auto !important; // so will expand with menu when needed
@@ -52,7 +52,7 @@
 		background-color: $black80; // new
 		text-align:right;
 		line-height:2vw;
-		@include mini-sans;
+		@include caption-sans;
 		font-weight: 500;
 		line-height: 1;
 		@include respond-to(break2) {
@@ -79,7 +79,7 @@
 		color: $sitelinks;
 		margin-left: 2.5rem;
 		&:hover {
-			color: white;
+			color: #fff;
 			text-decoration: none;
 		}
 		&.active {
@@ -275,8 +275,8 @@
 		z-index: 2;
 	}
 	.navbar-toggle .icon-bar {
-		color: white;
-		background-color: white;
+		color: #fff;
+		background-color: #fff;
 	}
 	.social-icons, .search-bar {
 		@include respond-to(break2max) {
@@ -343,7 +343,7 @@
 		position: relative;
 
 		.active &-title {
-			@include respond-to(break2max) {color: white;}
+			@include respond-to(break2max) {color: #fff;}
 		}
 		&-title {
 			@include nav-header;
@@ -377,12 +377,12 @@
 				color: $black50;
 				display: block;
 				&:hover {
-					color: black;
+					color: #000;
 				}
 			}
 			cursor: pointer;
 			&:hover {
-				color: black;
+				color: #000;
 			}
 		}
 	}
@@ -474,7 +474,7 @@
 	// 	width: 100%;
 	// 	margin-bottom:0;
 	// 	// background-color: $black20;
-	// 	background-color: white;
+	// 	background-color: #fff;
 	// 	color: $black65;
 
 	// 	&:after {

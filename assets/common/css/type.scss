@@ -1,10 +1,5 @@
-// fonts used:
-// Acumin light, regular, semibold, bold
-// based on layouts and when in doubt, uses the modular scale of major second, starting at 24px for serif body copy and
-// serif line-height of 1.3333 from body text of 24/32
-	
 /* Serif
-* Freight Text Pro from typekit
+ * Freight Text Pro from Typekit
 -------------------------------------------------- */
 	@mixin lg-serif {
 		font-family: $serif;
@@ -61,24 +56,9 @@
 		@include margin-bottom(1);
 	}
 
-	@mixin body-serif {
-		font-family: $serif;
-		font-weight: 400;
-		line-height: 1.333333; // 24/32
-	  	font-size: 1.896rem; // 18px on medium.com mobile, 1.896 on modular scale
-		@include respond-to(break2) {
-	  		font-size: 1.5vw;
-		}
-		@include respond-to(fullwidth) {
-	  		font-size: 2.4rem;
-		}
-	}
-
-
-
 /* Sans serif
 * Acumin Pro from Typekit
-* minor second (1.125) based on 3rem?
+* minor second (1.125) based on 3rem when needed
 -------------------------------------------------- */
 	@mixin xl-sans {
 		font-family: $sans;
@@ -98,7 +78,6 @@
 		font-weight: 300;
 		line-height: 1.166667; // tighter for festival/learn page // 35px
 		font-size: 2.107rem;
-
 		@include respond-to(break2) {
 	  		font-size: 1.9vw;
 		}
@@ -134,21 +113,8 @@
 	  		font-size: 1.8rem;
 		}
 	}
-	
-	@mixin body-sans {
-		font-family: $sans;
-		font-weight: 300;
-		line-height: 1.35; // fw magazine article
-	  	font-size: 1.873rem;
-		@include respond-to(break2) {
-			font-size: 1.25vw;
-		}
-		@include respond-to(fullwidth) {
-	  		font-size: 2.107rem; // fits with scale and folklife education page layout
-		}
-	}
 
-	@mixin mini-sans {
+	@mixin caption-sans {
 		font-family: $sans;
 		font-weight: 300;
 		line-height: 1.4;
@@ -159,8 +125,7 @@
 			line-height: 1.3;
 		}
 		@include respond-to(fullwidth) {
-	  		// font-size: 1.665rem; // fits with scale
-	  		font-size: 1.6rem; // because of talk story on folklife homepage
+	  		font-size: 1.6rem;
 		}
 	}
 
@@ -239,6 +204,161 @@
 			font-size: 4rem;
 		}
 	}
+
+
+/* Sans serif - wide
+* Acumin Pro Wide from Typekit
+* We use the 1.125 modular scale based on 4.2rem
+-------------------------------------------------- */
+	@mixin lg-magazine-title {
+		font-family: $sansWide;
+		font-weight: 800;
+		line-height: 1.095237;
+		font-size: 2.622rem;
+		@include respond-to(break2) {
+			font-size: 3.319rem;
+			font-size: 2.95vw;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 4.2rem;
+			// font-size: 4.6rem; // new layout
+		}
+	}
+
+	@mixin md-magazine-title {
+		font-family: $sansWide;
+		font-weight: 800;
+		line-height: 1.095237;
+		font-size: 1.842rem;
+		@include respond-to(break2) {
+			font-size: 2.4vw;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 3.733rem;
+		}
+	}
+
+	@mixin sm-magazine-title {
+		font-family: $sansWide;
+		font-weight: 700; // one weight down for pc rendering
+		line-height: 1.2;
+		font-size: 1.841rem;
+		@include margin-bottom(1);
+		@include respond-to(break2) {
+			font-size: 1.9vw;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 2.95rem;
+		}
+	}
+
+	@mixin buy-button {
+		text-transform: uppercase;
+		font-family: $sansWide;
+		font-weight: 800;
+		font-size: 1.376rem;
+		margin-bottom: 0;
+		@include respond-to(break2) {
+			font-size: 1.376rem;
+			margin-bottom: 0.4vw;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 1.72rem;
+			line-height: 1.4;
+			margin-bottom: 0.5rem;
+		}
+	}
+
+	@mixin sans-tag {
+		text-transform: uppercase;
+		font-family: $sansWide;
+		color: $black65;
+		font-weight: 300;
+		position: relative; // keep from being hidden under highlighted title
+		font-size: 1.2rem;
+		line-height: 1.1;
+		letter-spacing: 0.5px;
+		margin-bottom: 0.5rem;
+		@include respond-to(break2) {
+			font-size: 1.05vw;
+			line-height: 1.4;
+			letter-spacing: 0.5px;
+			margin-bottom: 0.4vw;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 1.665rem;
+			letter-spacing: 1px;
+			margin-bottom: 0;
+		}
+	}
+
+	@mixin nav-header {
+		text-transform: uppercase;
+		font-family: $sansWide;
+		font-weight: 800;
+		line-height: 1.2;
+		font-size: 5vw;
+		font-size: 1.7rem;
+		@include respond-to(break2) {
+			line-height: 1.2;
+			font-size: 1.09vw;
+		}
+		@include respond-to(fullwidth) {
+			line-height: 1.4353;
+			font-size: 1.7rem;
+		}
+	}
+
+/* Body type
+-------------------------------------------------- */
+	@mixin intro-serif {
+		// font-family: $serif;
+		// font-weight: 400;
+		// line-height: 1.333333; // 24/32
+	 //  	font-size: 1.896rem; // 18px on medium.com mobile, 1.896 on modular scale
+		// @include respond-to(break2) {
+	 //  		font-size: 1.5vw;
+		// }
+		// @include respond-to(fullwidth) {
+	 //  		font-size: 2.4rem;
+		// }
+	}
+	@mixin body-serif {
+		font-family: $serif;
+		font-weight: 400;
+		line-height: 1.333333; // 24/32
+	  	font-size: 1.896rem; // 18px on medium.com mobile, 1.896 on modular scale
+		@include respond-to(break2) {
+	  		font-size: 1.5vw;
+		}
+		@include respond-to(fullwidth) {
+	  		font-size: 2.4rem;
+		}
+	}
+	@mixin intro-sans {
+		// font-family: $sans;
+		// font-weight: 300;
+		// line-height: 1.35; // fw magazine article
+	 //  	font-size: 1.873rem;
+		// @include respond-to(break2) {
+		// 	font-size: 1.25vw;
+		// }
+		// @include respond-to(fullwidth) {
+	 //  		font-size: 2.107rem; // fits with scale and folklife education page layout
+		// }
+	}
+	@mixin body-sans {
+		font-family: $sans;
+		font-weight: 300;
+		line-height: 1.35; // fw magazine article
+	  	font-size: 1.873rem;
+		@include respond-to(break2) {
+			font-size: 1.25vw;
+		}
+		@include respond-to(fullwidth) {
+	  		font-size: 2.107rem; // fits with scale and folklife education page layout
+		}
+	}
 	
 	
 /* Slab
@@ -289,123 +409,6 @@
 		}
 	}
 
-	@mixin nav-header {
-		text-transform: uppercase;
-		font-family: $sansWide;
-		font-weight: 800;
-		line-height: 1.2;
-		font-size: 5vw;
-		font-size: 1.7rem;
-		@include respond-to(break2) {
-			line-height: 1.2;
-			font-size: 1.09vw;
-		}
-		@include respond-to(fullwidth) {
-			line-height: 1.4353;
-			font-size: 1.7rem;
-		}
-	}
-
-/* Sans serif - wide
-* Acumin Pro Wide from Typekit
-* We use the 1.125 modular scale based on 4.2rem
--------------------------------------------------- */
-	@mixin lg-magazine-title {
-		font-family: $sansWide;
-		font-weight: 800;
-		line-height: 1.095237;
-		font-size: 2.622rem;
-		@include respond-to(break2) {
-			font-size: 3.319rem;
-			font-size: 2.95vw;
-		}
-		@include respond-to(fullwidth) {
-			font-size: 4.2rem;
-			// font-size: 4.6rem; // new layout
-		}
-	}
-
-	@mixin md-magazine-title {
-		font-family: $sansWide;
-		font-weight: 800;
-		line-height: 1.095237;
-		font-size: 1.842rem;
-		@include respond-to(break2) {
-			font-size: 2.4vw;
-		}
-		@include respond-to(fullwidth) {
-			font-size: 3.733rem;
-		}
-	}
-
-	@mixin sm-magazine-title {
-		font-family: $sansWide;
-		font-weight: 800;
-		line-height: 1.2;
-		font-size: 1.841rem;
-		@include margin-bottom(1);
-		@include respond-to(break2) {
-			font-size: 1.9vw;
-		}
-		@include respond-to(fullwidth) {
-			font-size: 2.95rem;
-		}
-	}
-
-	@mixin program-subtitle {
-		font-family: $sansWide;
-		font-weight: 700;
-		line-height: 1.2;
-		font-size: 1.841rem;
-		@include margin-bottom(1);
-		@include respond-to(break2) {
-			font-size: 1.9vw;
-		}
-		@include respond-to(fullwidth) {
-			font-size: 3rem;
-		}
-	}
-
-	@mixin buy-button {
-		text-transform: uppercase;
-		font-family: $sansWide;
-		font-weight: 800;
-		margin-bottom: 0.5rem;
-		margin-bottom: 0;
-		font-size: 1.376rem;
-		@include respond-to(break2) {
-			font-size: 1.376rem;
-			margin-bottom: 0.4vw;
-		}
-		@include respond-to(fullwidth) {
-			font-size: 1.72rem;
-			margin-bottom: 0.5rem;
-			line-height: 1.4;
-		}
-	}
-
-	@mixin sans-tag {
-		text-transform: uppercase;
-		font-family: $sansWide;
-		color: $black65;
-		font-weight: 300;
-		margin-bottom: 0.5rem;
-		font-size: 1.2rem;
-		position: relative; // keep from being hidden under highlighted title
-		line-height: 1.1;
-		letter-spacing: 0.5px;
-		@include respond-to(break2) {
-			line-height: 1.4;
-			font-size: 1.05vw;
-			margin-bottom: 0.4vw;
-			letter-spacing: 0.5px;
-		}
-		@include respond-to(fullwidth) {
-			letter-spacing: 1px;
-			font-size: 1.665rem;
-			margin-bottom: 0;
-		}
-	}
 	
 
 /* CSS type helper classes

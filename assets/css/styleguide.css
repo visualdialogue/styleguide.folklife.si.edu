@@ -596,7 +596,7 @@ _____/  _| _| \___| _|\_\     _____/  _| _| \__,_| \___| _|        _____|
     font-family: "slick";
     font-size: 20px;
     line-height: 1;
-    color: white;
+    color: #fff;
     opacity: 0.75;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
@@ -669,12 +669,12 @@ _____/  _| _| \___| _|\_\     _____/  _| _| \__,_| \___| _|        _____|
         font-size: 6px;
         line-height: 20px;
         text-align: center;
-        color: black;
+        color: #000;
         opacity: 0.25;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale; }
     .slick-dots li.slick-active button:before {
-      color: black;
+      color: #000;
       opacity: 0.75; }
 
 /*!
@@ -4116,21 +4116,23 @@ iframe {
 /* Helper classes
 -------------------------------------------------- */
 .black {
-  color: black; }
+  color: #000; }
 
 /* Serif
-* Freight Text Pro from typekit
+ * Freight Text Pro from Typekit
 -------------------------------------------------- */
 /* Sans serif
 * Acumin Pro from Typekit
-* minor second (1.125) based on 3rem?
--------------------------------------------------- */
-/* Slab
-* Unit Gothic 717 and 718 from Typekit
+* minor second (1.125) based on 3rem when needed
 -------------------------------------------------- */
 /* Sans serif - wide
 * Acumin Pro Wide from Typekit
 * We use the 1.125 modular scale based on 4.2rem
+-------------------------------------------------- */
+/* Body type
+-------------------------------------------------- */
+/* Slab
+* Unit Gothic 717 and 718 from Typekit
 -------------------------------------------------- */
 /* CSS type helper classes
 -------------------------------------------------- */
@@ -4387,7 +4389,7 @@ body {
   @media only screen and (max-width: 53.25em) {
     .social-icons {
       display: none;
-      background-color: white;
+      background-color: #fff;
       background-color: #e6e6e6;
       width: 100%;
       left: 0; } }
@@ -4628,7 +4630,7 @@ a:hover {
   min-height: auto;
   z-index: 11;
   height: 4.5rem;
-  background-color: white;
+  background-color: #fff;
   box-shadow: 0px 17px 41px -8px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0px 17px 41px -8px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 17px 41px -8px rgba(0, 0, 0, 0.2);
@@ -4706,7 +4708,7 @@ a:hover {
   color: #999999;
   margin-left: 2.5rem; }
   .site-toggle-link:hover {
-    color: white;
+    color: #fff;
     text-decoration: none; }
   .site-toggle-link.active {
     color: #cccccc; }
@@ -4898,8 +4900,8 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
   z-index: 2; }
 
 .navbar-toggle .icon-bar {
-  color: white;
-  background-color: white; }
+  color: #fff;
+  background-color: #fff; }
 
 @media only screen and (max-width: 53.25em) {
   .social-icons, .search-bar {
@@ -4970,7 +4972,7 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
   position: relative; }
   @media only screen and (max-width: 53.25em) {
     .active .header-nav-title, .active .footer-nav-title {
-      color: white; } }
+      color: #fff; } }
   .header-nav-title, .footer-nav-title {
     text-transform: uppercase;
     font-family: "acumin-pro-wide", Arial, sans-serif;
@@ -5036,9 +5038,9 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
       color: gray;
       display: block; }
       .header-nav-sub-item a:hover, .footer-nav-sub-item a:hover {
-        color: black; }
+        color: #000; }
     .header-nav-sub-item:hover, .footer-nav-sub-item:hover {
-      color: black; }
+      color: #000; }
 
 .header-nav {
   display: none;
@@ -5529,7 +5531,7 @@ hr {
       margin-bottom: 4rem; } }
 
 .page-title {
-  color: white;
+  color: #fff;
   font-family: "unit-gothic-717", Arial, sans-serif;
   text-transform: uppercase;
   font-size: 8vw;
@@ -5557,7 +5559,7 @@ hr {
       margin-bottom: 1.3rem; } }
 
 a .page-title {
-  color: white; }
+  color: #fff; }
   a .page-title:hover {
     color: #e7f1de; }
 
@@ -5710,21 +5712,6 @@ a .page-title {
     .collection-page .details-inner {
       padding-top: 0.8rem; } }
 
-/* #remodal
--------------------------------------------------- */
-.remodal-description {
-  font-family: "acumin-pro", Arial, sans-serif;
-  font-weight: 300;
-  line-height: 1.2;
-  font-size: 1.873rem; }
-  @media only screen and (min-width: 53.25em) {
-    .remodal-description {
-      font-size: 1.6vw; } }
-  @media only screen and (min-width: 1560px) {
-    .remodal-description {
-      font-size: 2.5rem;
-      line-height: 1.28; } }
-
 /* #Become a Member
 -------------------------------------------------- */
 .highlight-bar {
@@ -5759,7 +5746,7 @@ a .page-title {
       margin-bottom: 5vw; } }
   .become-a-member-inner {
     position: relative;
-    background-color: white; }
+    background-color: #fff; }
   .become-a-member .image, .become-a-member .copy {
     float: left; }
   .become-a-member .image {
@@ -5773,7 +5760,7 @@ a .page-title {
     margin-bottom: 1.5rem;
     line-height: 1.2;
     margin-bottom: 0rem;
-    color: white;
+    color: #fff;
     text-align: center;
     width: 50%; }
     @media only screen and (min-width: 53.25em) {
@@ -5848,7 +5835,7 @@ a .page-title {
     height: 15.6rem; } }
 
 .support {
-  background-color: white;
+  background-color: #fff;
   border: 2px solid #999999;
   position: relative; }
   .support-copy, .support-button {
@@ -5915,7 +5902,7 @@ a .page-title {
     line-height: 1.2;
     margin-bottom: 0;
     padding: 3vw;
-    color: white;
+    color: #fff;
     text-align: center; }
     @media only screen and (min-width: 53.25em) {
       .support-button {
@@ -6025,7 +6012,7 @@ a .page-title {
       font-size: 1.2vw; } }
 
 .magazine-page .newsletter-signup-copy, .magazine-article-page .newsletter-signup-copy {
-  background-color: white; }
+  background-color: #fff; }
 
 .newsletter-signup-form {
   width: 100%; }
@@ -6151,7 +6138,7 @@ figcaption {
   padding-left: 1.40469rem;
   bottom: 0;
   left: 0;
-  color: white;
+  color: #fff;
   background-color: rgba(89, 89, 89, 0.9);
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
@@ -6204,7 +6191,7 @@ figcaption {
     bottom: 0;
     right: 0;
     background-color: gray;
-    color: white;
+    color: #fff;
     padding-right: 0.35117rem;
     padding-bottom: 0.56188rem;
     padding-left: 0.35117rem;
@@ -6259,7 +6246,7 @@ figcaption {
     bottom: 0;
     right: 0;
     right: 0.35117rem;
-    color: white;
+    color: #fff;
     padding-right: 0.14047rem;
     padding-bottom: 0.56188rem;
     padding-left: 0.35117rem;
@@ -6342,7 +6329,7 @@ figcaption {
       transform: rotate(-90deg); } }
 
 .dropdown {
-  background-color: white;
+  background-color: #fff;
   position: relative;
   cursor: pointer; }
 
@@ -6351,7 +6338,7 @@ figcaption {
   position: absolute;
   z-index: 2;
   width: 100%;
-  background-color: white;
+  background-color: #fff;
   font-weight: 400;
   line-height: 1.7; }
   .first-level-dropdown li {
@@ -6366,7 +6353,7 @@ figcaption {
 
 .second-level-dropdown, .third-level-dropdown {
   display: none;
-  background-color: white; }
+  background-color: #fff; }
   @media only screen and (min-width: 53.25em) {
     .second-level-dropdown, .third-level-dropdown {
       position: absolute;
@@ -6663,7 +6650,7 @@ video::-webkit-media-controls {
     color: #b3b3b3;
     margin-bottom: 1vw; }
     .footer-logo-active {
-      color: white; }
+      color: #fff; }
   @media only screen and (max-width: 53.25em) {
     .footer-row-1 {
       margin-bottom: 4rem; } }
@@ -6828,17 +6815,12 @@ video::-webkit-media-controls {
     .copyright {
       padding-top: 1px; } }
 
-/* Helpers II
--------------------------------------------------- */
-.visually-hidden {
-  display: none; }
-
 /* Blog Article Styles
 ************************/
 /* Article page
 -------------------------------------------------- */
 .article-page .title-bar {
-  color: white;
+  color: #fff;
   background-color: #71529d; }
 
 .article-page .blog-feature figure {
@@ -7010,21 +6992,21 @@ a.details {
   font-family: "acumin-pro-wide", Arial, sans-serif;
   color: #595959;
   font-weight: 300;
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
   position: relative;
+  font-size: 1.2rem;
   line-height: 1.1;
-  letter-spacing: 0.5px; }
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem; }
   @media only screen and (min-width: 53.25em) {
     .tag {
-      line-height: 1.4;
       font-size: 1.05vw;
-      margin-bottom: 0.4vw;
-      letter-spacing: 0.5px; } }
+      line-height: 1.4;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.4vw; } }
   @media only screen and (min-width: 1560px) {
     .tag {
-      letter-spacing: 1px;
       font-size: 1.665rem;
+      letter-spacing: 1px;
       margin-bottom: 0; } }
 
 .date {
@@ -7032,22 +7014,22 @@ a.details {
   font-family: "acumin-pro-wide", Arial, sans-serif;
   color: #595959;
   font-weight: 300;
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
   position: relative;
+  font-size: 1.2rem;
   line-height: 1.1;
   letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
   font-weight: 700; }
   @media only screen and (min-width: 53.25em) {
     .date {
-      line-height: 1.4;
       font-size: 1.05vw;
-      margin-bottom: 0.4vw;
-      letter-spacing: 0.5px; } }
+      line-height: 1.4;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.4vw; } }
   @media only screen and (min-width: 1560px) {
     .date {
-      letter-spacing: 1px;
       font-size: 1.665rem;
+      letter-spacing: 1px;
       margin-bottom: 0; } }
 
 .date-sm {
@@ -7055,24 +7037,24 @@ a.details {
   font-family: "acumin-pro-wide", Arial, sans-serif;
   color: #595959;
   font-weight: 300;
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
   position: relative;
+  font-size: 1.2rem;
   line-height: 1.1;
   letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
   letter-spacing: normal;
   text-transform: initial;
   margin-top: 0.35117rem; }
   @media only screen and (min-width: 53.25em) {
     .date-sm {
-      line-height: 1.4;
       font-size: 1.05vw;
-      margin-bottom: 0.4vw;
-      letter-spacing: 0.5px; } }
+      line-height: 1.4;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.4vw; } }
   @media only screen and (min-width: 1560px) {
     .date-sm {
-      letter-spacing: 1px;
       font-size: 1.665rem;
+      letter-spacing: 1px;
       margin-bottom: 0; } }
   @media only screen and (min-width: 53.25em) {
     .date-sm {
@@ -7243,13 +7225,13 @@ a.details {
   background: rgba(0, 0, 0, 0.8) none repeat scroll 0% 0%; }
 
 .remodal-close {
+  display: none;
   position: fixed;
   top: 0;
   right: 10px;
   left: auto;
-  display: block;
   z-index: 10001;
-  color: white;
+  color: #fff;
   width: 50px;
   height: 50px; }
 
@@ -7257,7 +7239,7 @@ a.details {
   color: #cccccc; }
 
 .remodal-close::before {
-  font-size: 40px;
+  font-size: 4rem;
   width: 50px;
   height: 50px;
   line-height: 50px; }
@@ -7294,6 +7276,19 @@ a.details {
       line-height: 1.12;
       font-size: 1.8rem; } }
 
+.remodal-description {
+  font-family: "acumin-pro", Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+  font-size: 1.873rem; }
+  @media only screen and (min-width: 53.25em) {
+    .remodal-description {
+      font-size: 1.6vw; } }
+  @media only screen and (min-width: 1560px) {
+    .remodal-description {
+      font-size: 2.5rem;
+      line-height: 1.28; } }
+
 /* #background
 * the following rules apply a background color to the :after element
 * if color was applied to the card itself, it would show through the padding on the edges
@@ -7301,7 +7296,7 @@ a.details {
 .background-card {
   position: relative; }
   .background-card:after {
-    background-color: white;
+    background-color: #fff;
     content: "";
     display: block;
     position: absolute;
@@ -7621,7 +7616,7 @@ a.details {
   font-weight: 300;
   line-height: 1.2;
   font-size: 1.48rem;
-  color: white;
+  color: #fff;
   font-weight: bold;
   text-align: center;
   margin-bottom: 0.35117rem; }
@@ -7953,7 +7948,7 @@ h3.sidebar-section-title {
     font-weight: 300;
     line-height: 1.2;
     font-size: 1.48rem;
-    color: white;
+    color: #fff;
     text-align: center;
     position: relative;
     top: 50%;
@@ -8147,7 +8142,7 @@ h3.sidebar-section-title {
 /* #code
 -------------------------------------------------- */
 .title-bar {
-  color: white;
+  color: #fff;
   background-color: #6494ce; }
 
 .code_gutter {
@@ -8468,18 +8463,6 @@ code.hljs {
     .sm-serif-italic {
       margin-bottom: 1rem; } }
 
-.body-serif {
-  font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
-  font-weight: 400;
-  line-height: 1.333333;
-  font-size: 1.896rem; }
-  @media only screen and (min-width: 53.25em) {
-    .body-serif {
-      font-size: 1.5vw; } }
-  @media only screen and (min-width: 1560px) {
-    .body-serif {
-      font-size: 2.4rem; } }
-
 .xl-sans {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
@@ -8570,19 +8553,6 @@ code.hljs {
       line-height: 1.12;
       font-size: 1.8rem; } }
 
-.caption-sans {
-  font-family: "acumin-pro", Arial, sans-serif;
-  font-weight: 300;
-  line-height: 1.2;
-  font-size: 1.48rem; }
-  @media only screen and (min-width: 53.25em) {
-    .caption-sans {
-      font-size: 1.2vw; } }
-  @media only screen and (min-width: 1560px) {
-    .caption-sans {
-      line-height: 1.12;
-      font-size: 1.8rem; } }
-
 .sm-sans-semi {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
@@ -8597,31 +8567,43 @@ code.hljs {
       line-height: 1.12;
       font-size: 1.8rem; } }
 
-.body-sans {
-  font-family: "acumin-pro", Arial, sans-serif;
-  font-weight: 300;
-  line-height: 1.35;
-  font-size: 1.873rem; }
-  @media only screen and (min-width: 53.25em) {
-    .body-sans {
-      font-size: 1.25vw; } }
-  @media only screen and (min-width: 1560px) {
-    .body-sans {
-      font-size: 2.107rem; } }
-
-.mini-sans {
+.caption-sans {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.4;
   text-transform: uppercase;
   font-size: 1.316rem; }
   @media only screen and (min-width: 53.25em) {
-    .mini-sans {
+    .caption-sans {
       font-size: 1vw;
       line-height: 1.3; } }
   @media only screen and (min-width: 1560px) {
-    .mini-sans {
+    .caption-sans {
       font-size: 1.6rem; } }
+
+.body-serif {
+  font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: 400;
+  line-height: 1.333333;
+  font-size: 1.896rem; }
+  @media only screen and (min-width: 53.25em) {
+    .body-serif {
+      font-size: 1.5vw; } }
+  @media only screen and (min-width: 1560px) {
+    .body-serif {
+      font-size: 2.4rem; } }
+
+.intro-sans {
+  font-family: "acumin-pro", Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.166667;
+  font-size: 2.107rem; }
+  @media only screen and (min-width: 53.25em) {
+    .intro-sans {
+      font-size: 1.9vw; } }
+  @media only screen and (min-width: 1560px) {
+    .intro-sans {
+      font-size: 3rem; } }
 
 .xl-slab {
   font-family: "unit-gothic-717", Arial, sans-serif;
@@ -8708,7 +8690,7 @@ code.hljs {
 
 .sm-magazine-title {
   font-family: "acumin-pro-wide", Arial, sans-serif;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.2;
   font-size: 1.841rem;
   margin-bottom: 0.70235rem; }
@@ -8725,32 +8707,12 @@ code.hljs {
     .sm-magazine-title {
       font-size: 2.95rem; } }
 
-.program-subtitle {
-  font-family: "acumin-pro-wide", Arial, sans-serif;
-  font-weight: 700;
-  line-height: 1.2;
-  font-size: 1.841rem;
-  margin-bottom: 0.70235rem; }
-  @media only screen and (min-width: 53.25em) {
-    .program-subtitle {
-      margin-bottom: 0.64vw; } }
-  @media only screen and (min-width: 1560px) {
-    .program-subtitle {
-      margin-bottom: 1rem; } }
-  @media only screen and (min-width: 53.25em) {
-    .program-subtitle {
-      font-size: 1.9vw; } }
-  @media only screen and (min-width: 1560px) {
-    .program-subtitle {
-      font-size: 3rem; } }
-
 .buy-button {
   text-transform: uppercase;
   font-family: "acumin-pro-wide", Arial, sans-serif;
   font-weight: 800;
-  margin-bottom: 0.5rem;
-  margin-bottom: 0;
-  font-size: 1.376rem; }
+  font-size: 1.376rem;
+  margin-bottom: 0; }
   @media only screen and (min-width: 53.25em) {
     .buy-button {
       font-size: 1.376rem;
@@ -8758,29 +8720,29 @@ code.hljs {
   @media only screen and (min-width: 1560px) {
     .buy-button {
       font-size: 1.72rem;
-      margin-bottom: 0.5rem;
-      line-height: 1.4; } }
+      line-height: 1.4;
+      margin-bottom: 0.5rem; } }
 
 .category-tag-type {
   text-transform: uppercase;
   font-family: "acumin-pro-wide", Arial, sans-serif;
   color: #595959;
   font-weight: 300;
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
   position: relative;
+  font-size: 1.2rem;
   line-height: 1.1;
-  letter-spacing: 0.5px; }
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem; }
   @media only screen and (min-width: 53.25em) {
     .category-tag-type {
-      line-height: 1.4;
       font-size: 1.05vw;
-      margin-bottom: 0.4vw;
-      letter-spacing: 0.5px; } }
+      line-height: 1.4;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.4vw; } }
   @media only screen and (min-width: 1560px) {
     .category-tag-type {
-      letter-spacing: 1px;
       font-size: 1.665rem;
+      letter-spacing: 1px;
       margin-bottom: 0; } }
 
 .category-tag-bold-type {
@@ -8788,22 +8750,22 @@ code.hljs {
   font-family: "acumin-pro-wide", Arial, sans-serif;
   color: #595959;
   font-weight: 300;
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
   position: relative;
+  font-size: 1.2rem;
   line-height: 1.1;
   letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
   font-weight: 700; }
   @media only screen and (min-width: 53.25em) {
     .category-tag-bold-type {
-      line-height: 1.4;
       font-size: 1.05vw;
-      margin-bottom: 0.4vw;
-      letter-spacing: 0.5px; } }
+      line-height: 1.4;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.4vw; } }
   @media only screen and (min-width: 1560px) {
     .category-tag-bold-type {
-      letter-spacing: 1px;
       font-size: 1.665rem;
+      letter-spacing: 1px;
       margin-bottom: 0; } }
 
 /* #cards
@@ -8903,10 +8865,5 @@ code.hljs {
 /* #structure page
 -------------------------------------------------- */
 .structure-page .title-bar {
-  color: white;
+  color: #fff;
   background-color: #5a71b4; }
-
-/* Helpers II
--------------------------------------------------- */
-.visually-hidden {
-  display: none; }
