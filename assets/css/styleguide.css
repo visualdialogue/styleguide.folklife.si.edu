@@ -5465,7 +5465,6 @@ hr {
 
 .thick-hr {
   height: 11px;
-  background-image: url(/assets/images/hr/hr.jpg);
   background-image: url(/assets/images/hr/hr.png);
   margin-bottom: 3.6522rem; }
   @media only screen and (min-width: 53.25em) {
@@ -5487,30 +5486,21 @@ hr {
     .half-hr {
       margin-bottom: 2rem; } }
 
-.thin-hr, .thin-hr-svg {
+.svg-thin-hr {
+  font-size: 1px;
+  height: 5px;
   margin-top: 1vw;
   margin-bottom: 3vw; }
+  .svg-thin-hr path {
+    fill: gray; }
   @media only screen and (min-width: 53.25em) {
-    .thin-hr, .thin-hr-svg {
+    .svg-thin-hr {
       margin-top: 0.5vw;
       margin-bottom: 2.4vw; } }
   @media only screen and (min-width: 1560px) {
-    .thin-hr, .thin-hr-svg {
+    .svg-thin-hr {
       margin-top: 0.8rem;
       margin-bottom: 3.75rem; } }
-
-.thin-hr {
-  height: 5px;
-  background-image: url(/assets/images/hr/hr--thin.png);
-  background-repeat: no-repeat;
-  background-size: 100%; }
-
-.thin-hr-svg {
-  font-size: 1px;
-  height: 5px; }
-  .thin-hr-svg path {
-    fill: #409fa1;
-    fill: white; }
 
 .mobile-only-hr {
   margin-bottom: 1rem; }
@@ -6501,17 +6491,17 @@ figcaption {
 
 /* Search, Festival Past Festival Programs
 -------------------------------------------------*/
-.search-page .thin-hr-svg, .past-festivals-page .thin-hr-svg {
+.search-page .svg-thin-hr, .past-festivals-page .svg-thin-hr {
   padding: 0;
   margin-top: 0;
   margin-bottom: 0.35117rem; }
   @media only screen and (min-width: 53.25em) {
-    .search-page .thin-hr-svg, .past-festivals-page .thin-hr-svg {
+    .search-page .svg-thin-hr, .past-festivals-page .svg-thin-hr {
       margin-bottom: 0.32vw; } }
   @media only screen and (min-width: 1560px) {
-    .search-page .thin-hr-svg, .past-festivals-page .thin-hr-svg {
+    .search-page .svg-thin-hr, .past-festivals-page .svg-thin-hr {
       margin-bottom: 0.5rem; } }
-  .search-page .thin-hr-svg path, .past-festivals-page .thin-hr-svg path {
+  .search-page .svg-thin-hr path, .past-festivals-page .svg-thin-hr path {
     fill: #b3b3b3; }
 
 .search-page .search-query-title, .past-festivals-page .search-query-title {

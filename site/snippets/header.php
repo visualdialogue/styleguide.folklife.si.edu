@@ -9,7 +9,8 @@
   <?php snippet('header-fonts'); ?>
   <?php snippet('header-shim'); ?>
   <?php snippet('header-favicons'); ?>
-  <!-- highlightjs.org for code syntax highlighting--><link href="/assets/css/highlight/styles/atom-one-dark.css" type="text/css" rel="stylesheet"><script src="/assets/js/highlight.pack.js"></script><link href="/assets/css/styleguide.css?v=<?= time() ?>" type="text/css" rel="stylesheet">
+  <!-- highlightjs.org for code syntax highlighting--><link href="/assets/css/highlight/styles/atom-one-dark.css" type="text/css" rel="stylesheet">
+  <script src="/assets/js/highlight.pack.js"></script><link href="/assets/css/styleguide.css?v=<?= time() ?>" type="text/css" rel="stylesheet">
 </head><body class="folklife-site">
 <div id="site-toggle" class="site-toggle">
   <div class="container"><a href="/" class="site-toggle-link festival-site-toggle-link active">Festival</a>

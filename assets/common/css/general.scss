@@ -298,7 +298,6 @@
 	}
 	.thick-hr {
 		height:11px;
-		background-image:url(/assets/images/hr/hr.jpg);
 		background-image:url(/assets/images/hr/hr.png);
 		@include respond-to(break2) {
 			margin-top:0;
@@ -310,8 +309,15 @@
 		@include respond-to(break2) {margin-bottom:1.3vw;}
 		@include respond-to(fullwidth) {margin-bottom:2rem;}
 	}
-	.thin-hr, .thin-hr-svg {
-		
+	.svg-thin-hr {
+		// make inline with js, from http://stackoverflow.com/questions/24933430/img-src-svg-changing-the-fill-color
+		font-size: 1px; // make smaller
+		height: 5px; // for older ie
+		path {
+			// fill: $fs-teal;
+			// fill: white;
+			fill: $black50; // default
+		}
 		margin-top: 1vw;
 		margin-bottom: 3vw;
 		@include respond-to(break2) {
@@ -321,21 +327,6 @@
 		@include respond-to(fullwidth) {
 			margin-top:0.8rem;
 			margin-bottom:3.75rem;
-		}
-	}
-	.thin-hr {
-		height:5px;
-		background-image:url(/assets/images/hr/hr--thin.png);
-		background-repeat: no-repeat;
-		background-size: 100%;
-	}
-	.thin-hr-svg {
-		// make inline with js, from http://stackoverflow.com/questions/24933430/img-src-svg-changing-the-fill-color
-		font-size: 1px; // make smaller
-		height: 5px; // for older ie
-		path {
-			fill: $fs-teal;
-			fill: white;
 		}
 	}
 	.mobile-only-hr {
@@ -889,7 +880,7 @@
 
 	// Search only
 	.search-page, .past-festivals-page {
-		.thin-hr-svg {
+		.svg-thin-hr {
 			padding:0;
 			margin-top:0;
 			@include margin-bottom(0.5);

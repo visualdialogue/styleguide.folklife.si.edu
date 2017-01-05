@@ -1,7 +1,5 @@
 -snippet('header')
-
 #navspacer.navspacer
-
 -snippet('title-bar', array('title' => 'Styleguide'))
 
 // Sections
@@ -10,9 +8,7 @@
 	-if ($n != 1):
 		.container: hr.thick-hr
 	-endif
-	//- call each visible section, so can reorder, and pass relevant data to templates
 	-snippet($section->uid(), array('section' => $section))
-
 
 -endforeach
 

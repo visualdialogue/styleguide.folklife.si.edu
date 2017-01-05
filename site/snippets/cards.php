@@ -413,7 +413,7 @@
       <?php snippet('show-sass'); ?>
     </div>
     <div class="row">
-      <div class="card vinyl-card col-xs-5 col-sm-3">
+      <div class="card vinyl-card col-xs-6 col-sm-3">
         <div class="image"><a href="#">
             <?php echo $section->image('fannie-lou-hamer.png'); ?></a></div>
         <div class="details">

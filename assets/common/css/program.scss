@@ -8,11 +8,11 @@
 	.program-page {
 		.section-title {
 			@include margin-bottom(2);
-		}
+		}		
 	}
 	.basque-page {
 		.ms-section {
-			.thin-hr-svg {
+			.svg-thin-hr {
 				@include margin-bottom(0.5);
 				path {
 					fill: $basque-green;
@@ -76,10 +76,14 @@
 		}
 	}
 	.program-page, .program-category-page {
-
 		.page-title {
 			@include padding-top(2.3);
 			padding-top: 0.5vw;
+		}
+		.svg-thin-hr {
+			path {
+				fill: white;
+			}
 		}
 	}
 
@@ -96,7 +100,7 @@
 			margin: 0;
 			background-image:url(/assets/images/hr/hr--thin4.png);
 		}
-		.thin-hr-svg {
+		.svg-thin-hr {
 			margin: 0;
 		}
 		.subtitle-height {
