@@ -70,7 +70,6 @@
 -------------------------------------------------- */
 	.grid-item {
 		&-inner {
-			// background-color: $black80;
 			background-color: $black50;
 			@include height(9);
 			@include margin-bottom(4);
@@ -203,7 +202,6 @@
 	}
 	pre {
 		display: none; // start hidden
-		
 		float: left; // stay under show-code button
 		width: 100%;
 		font-size:16px;
