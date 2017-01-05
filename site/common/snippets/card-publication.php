@@ -13,10 +13,10 @@
         <div class="author">
           <?php echo $card->author(); ?></div>
         <?php if('' != $card->order1()):	 ?><a href="#" class="high buy-now-button"><span class="light"><span class="er">
-              <?php echo $card->order1(), '&nbsp;&#x2192'; ?></span></span></a>
+              <?php echo $card->order1(), '&nbsp;&#x2192;'; ?></span></span></a>
         <?php endif; ?>
         <?php if('' != $card->order2()):	 ?><a href="#" class="high buy-now-button"><span class="light"><span class="er">
-              <?php echo $card->order2(), '&nbsp;&#x2192'; ?></span></span></a>
+              <?php echo $card->order2(), '&nbsp;&#x2192;'; ?></span></span></a>
         <?php endif; ?>
       </div>
     </div>

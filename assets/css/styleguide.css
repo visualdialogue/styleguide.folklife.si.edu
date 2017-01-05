@@ -7104,14 +7104,89 @@ a.details {
 
 /* #publication card
 -------------------------------------------------- */
-.publication-card .title {
-  margin-top: -0.56188rem; }
+.publication-card {
+  margin-bottom: 2.80938rem; }
   @media only screen and (min-width: 53.25em) {
-    .publication-card .title {
-      margin-top: -0.512vw; } }
+    .publication-card {
+      margin-bottom: 2.56vw; } }
   @media only screen and (min-width: 1560px) {
-    .publication-card .title {
-      margin-top: -0.8rem; } }
+    .publication-card {
+      margin-bottom: 4rem; } }
+  .publication-card .card:nth-of-type(2n + 1) {
+    clear: left; }
+  .publication-card .title {
+    margin-top: -0.56188rem;
+    font-family: "acumin-pro", Arial, sans-serif;
+    font-weight: 300;
+    line-height: 1.166667;
+    font-size: 2.107rem; }
+    @media only screen and (min-width: 53.25em) {
+      .publication-card .title {
+        margin-top: -0.512vw; } }
+    @media only screen and (min-width: 1560px) {
+      .publication-card .title {
+        margin-top: -0.8rem; } }
+    @media only screen and (min-width: 53.25em) {
+      .publication-card .title {
+        font-size: 1.9vw; } }
+    @media only screen and (min-width: 1560px) {
+      .publication-card .title {
+        font-size: 3rem; } }
+  .publication-card .author {
+    font-family: "acumin-pro", Arial, sans-serif;
+    font-weight: 300;
+    line-height: 1.2;
+    font-size: 1.48rem;
+    margin-top: 0.70235rem;
+    margin-bottom: 2.10704rem; }
+    @media only screen and (min-width: 53.25em) {
+      .publication-card .author {
+        font-size: 1.2vw; } }
+    @media only screen and (min-width: 1560px) {
+      .publication-card .author {
+        line-height: 1.12;
+        font-size: 1.8rem; } }
+    @media only screen and (min-width: 53.25em) {
+      .publication-card .author {
+        margin-top: 0.64vw; } }
+    @media only screen and (min-width: 1560px) {
+      .publication-card .author {
+        margin-top: 1rem; } }
+    @media only screen and (min-width: 53.25em) {
+      .publication-card .author {
+        margin-bottom: 1.92vw; } }
+    @media only screen and (min-width: 1560px) {
+      .publication-card .author {
+        margin-bottom: 3rem; } }
+  .publication-card .details-inner {
+    padding-top: 1.40469rem; }
+    @media only screen and (min-width: 53.25em) {
+      .publication-card .details-inner {
+        padding-top: 1.28vw; } }
+    @media only screen and (min-width: 1560px) {
+      .publication-card .details-inner {
+        padding-top: 2rem; } }
+  .publication-card .more-link {
+    display: none; }
+  .publication-card .buy-now-button {
+    text-transform: uppercase;
+    font-family: "acumin-pro-wide", Arial, sans-serif;
+    font-weight: 800;
+    font-size: 1.376rem;
+    margin-bottom: 0;
+    text-transform: initial;
+    color: #595959;
+    font-weight: 400;
+    display: block; }
+    @media only screen and (min-width: 53.25em) {
+      .publication-card .buy-now-button {
+        font-size: 1.376rem;
+        margin-bottom: 0.4vw; } }
+    @media only screen and (min-width: 1560px) {
+      .publication-card .buy-now-button {
+        font-size: 1.72rem;
+        line-height: 1.4;
+        margin-bottom: 0.5rem; } }
 
 /* #program highlight (on.festival/learn 1/4 card)
 * before audio card because audio title needs to override

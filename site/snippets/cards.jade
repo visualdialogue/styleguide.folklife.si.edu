@@ -84,79 +84,6 @@ section.container.cards-section
 						&lt;/div&gt;  
 					&lt;/div&gt;
 
-	// Publication Card
-	.codeblock
-		.row
-			.col-sm-8
-				h3.section-subtitle Publication Card
-			-snippet('show-html')
-			-snippet('show-sass')
-		.row
-			.card.col-sm-6.publication-card.top-border-card
-				.row
-					.image.col-xs-4
-						a(href="#")
-							img(src="curatorial-conversations.jpg" alt="Curatorial Conversations")
-					.details.col-xs-8
-						.details-inner
-							a.high(href="#").title: span.light: span.er Curatorial Conversations: Cultural Representation and the Smithsonian Folklife Festival
-							.author Edited by Olivia Cadaval, Sojin Kim, and Diana Baird N’Diaye
-							a.high.buy-now-button(href="#"): span.light: span.er Order from University Press of Mississippi&nbsp;&#x2192
-		.row
-			.col-sm-12
-				pre.sass: code.
-					.full-feature-card {
-						@include margin-bottom(0);
-						.tag {
-							display: none;
-						}
-						.image {
-							@include respond-to(break2max) {
-								padding-bottom: 2.5vw;
-							}
-						}
-						.title {
-							@include lg-serif;
-							@include margin-bottom(2);
-						}
-						.details-inner {
-							@include padding-top(0);
-							@include padding-right(2);
-							@include respond-to(break2max) {
-								padding-left:0; // for full width detail copy
-							}
-						}
-						.description {
-							@include lg-sans;
-						}
-					}
-			.col-sm-12
-				pre.html: code.
-					&lt;div class="row"&gt;
-						&lt;div class="card col-xs-12 full-feature-card"&gt;
-							&lt;div class="row"&gt;
-								&lt;div class="image col-md-6 col-lg-7"&gt;
-									&lt;a href="#"&gt;&lt;img src="ralphRinzler.jpg" alt="Ralph Rinzler Folklife Archives and Collections"&gt;&lt;/a&gt;
-								&lt;/div&gt;
-								&lt;div class="details col-md-6 col-lg-5"&gt;
-									&lt;div class="details-inner"&gt;
-										&lt;a href="#" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;Ralph Rinzler Folklife Archives and Collections&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
-										&lt;div class="description link-underline"&gt;
-											&lt;p&gt;The Center for Folklife and Cultural Heritage is home to the Ralph Rinzler Folklife Archives and Collections, a public resource named for the founding director of the Smithsonian Folklife Festival.&lt;/p&gt;
-										&lt;/div&gt;
-										&lt;a href="#" class="high more-link "&gt;
-											&lt;div class="light"&gt;
-												&lt;div class="er"&gt;
-													&lt;div class="more-link-text"&gt;more&lt;/div&gt;&lt;div class="more-link-arrow icon-arrow2"&gt;&lt;/div&gt;
-												&lt;/div&gt;
-											&lt;/div&gt;
-										&lt;/a&gt;                      
-									&lt;/div&gt;
-								&lt;/div&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;  
-					&lt;/div&gt;
-
 	// Horizontal Card
 	.codeblock
 		.row
@@ -211,6 +138,82 @@ section.container.cards-section
 							&lt;/div&gt;
 						&lt;/div&gt;
 					&lt;/li&gt;
+
+	// Publication Card
+	.codeblock
+		.row
+			.col-sm-8
+				h3.section-subtitle Publication Card
+			-snippet('show-html')
+			-snippet('show-sass')
+		.row
+			.card.col-sm-6.publication-card.top-border-card
+				.row
+					.image.col-xs-4
+						a(href="#")
+							!=$section->image('curatorial-conversations.jpg')
+					.details.col-xs-8
+						.details-inner
+							a.high(href="#").title: span.light: span.er Curatorial Conversations: Cultural Representation and the Smithsonian Folklife Festival
+							.author Edited by Olivia Cadaval, Sojin Kim, and Diana Baird N’Diaye
+							a.high.buy-now-button(href="#"): span.light: span.er Order from University Press of Mississippi&nbsp;&#x2192
+		.row
+			.col-sm-12
+				pre.sass: code.
+					.publication-card {
+						@include margin-bottom(4); // add back to horizontal cards section
+						.card:nth-of-type(2n + 1) {
+							clear:left; // keep cards 1, 3, 5, 7, etc cleared left so don't hang on previous card
+						}
+						.title {
+							@include margin-top(-0.8);
+							@include lg-sans;
+						}
+						.author {
+							@include sm-sans;
+							@include margin-top(1);
+							@include margin-bottom(3);
+						}
+						.details-inner {
+							@include padding-top(2);
+						}
+						.more-link {
+							display: none;
+						}
+						.buy-now-button {
+							@include buy-button;
+							text-transform: initial;
+							color: $black65;
+							font-weight: 400;
+							display: block; // force new line for multiple buttons
+						}
+					}
+			.col-sm-12
+				pre.html: code.
+					&lt;div class="row"&gt;
+						&lt;div class="card col-xs-12 full-feature-card"&gt;
+							&lt;div class="row"&gt;
+								&lt;div class="image col-md-6 col-lg-7"&gt;
+									&lt;a href="#"&gt;&lt;img src="ralphRinzler.jpg" alt="Ralph Rinzler Folklife Archives and Collections"&gt;&lt;/a&gt;
+								&lt;/div&gt;
+								&lt;div class="details col-md-6 col-lg-5"&gt;
+									&lt;div class="details-inner"&gt;
+										&lt;a href="#" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;Ralph Rinzler Folklife Archives and Collections&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
+										&lt;div class="description link-underline"&gt;
+											&lt;p&gt;The Center for Folklife and Cultural Heritage is home to the Ralph Rinzler Folklife Archives and Collections, a public resource named for the founding director of the Smithsonian Folklife Festival.&lt;/p&gt;
+										&lt;/div&gt;
+										&lt;a href="#" class="high more-link "&gt;
+											&lt;div class="light"&gt;
+												&lt;div class="er"&gt;
+													&lt;div class="more-link-text"&gt;more&lt;/div&gt;&lt;div class="more-link-arrow icon-arrow2"&gt;&lt;/div&gt;
+												&lt;/div&gt;
+											&lt;/div&gt;
+										&lt;/a&gt;                      
+									&lt;/div&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;  
+					&lt;/div&gt;
 
 	// Video Card
 	.codeblock

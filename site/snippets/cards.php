@@ -96,84 +96,6 @@
       </div>
     </div>
   </div>
-  <!-- Publication Card-->
-  <div class="codeblock">
-    <div class="row">
-      <div class="col-sm-8">
-        <h3 class="section-subtitle">Publication Card</h3>
-      </div>
-      <?php snippet('show-html'); ?>
-      <?php snippet('show-sass'); ?>
-    </div>
-    <div class="row">
-      <div class="card col-sm-6 publication-card top-border-card">
-        <div class="row">
-          <div class="image col-xs-4"><a href="#"><img src="curatorial-conversations.jpg" alt="Curatorial Conversations"/></a></div>
-          <div class="details col-xs-8">
-            <div class="details-inner"><a href="#" class="high title"><span class="light"><span class="er">Curatorial Conversations: Cultural Representation and the Smithsonian Folklife Festival</span></span></a>
-              <div class="author">Edited by Olivia Cadaval, Sojin Kim, and Diana Baird N’Diaye</div><a href="#" class="high buy-now-button"><span class="light"><span class="er">Order from University Press of Mississippi&nbsp;&#x2192</span></span></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-12">
-        <pre class="sass"><code>.full-feature-card {
-	@include margin-bottom(0);
-	.tag {
-		display: none;
-	}
-	.image {
-		@include respond-to(break2max) {
-			padding-bottom: 2.5vw;
-		}
-	}
-	.title {
-		@include lg-serif;
-		@include margin-bottom(2);
-	}
-	.details-inner {
-		@include padding-top(0);
-		@include padding-right(2);
-		@include respond-to(break2max) {
-			padding-left:0; // for full width detail copy
-		}
-	}
-	.description {
-		@include lg-sans;
-	}
-}</code></pre>
-      </div>
-      <div class="col-sm-12">
-        <pre class="html"><code>&lt;div class="row"&gt;
-	&lt;div class="card col-xs-12 full-feature-card"&gt;
-		&lt;div class="row"&gt;
-			&lt;div class="image col-md-6 col-lg-7"&gt;
-				&lt;a href="#"&gt;&lt;img src="ralphRinzler.jpg" alt="Ralph Rinzler Folklife Archives and Collections"&gt;&lt;/a&gt;
-			&lt;/div&gt;
-			&lt;div class="details col-md-6 col-lg-5"&gt;
-				&lt;div class="details-inner"&gt;
-					&lt;a href="#" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;Ralph Rinzler Folklife Archives and Collections&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
-					&lt;div class="description link-underline"&gt;
-						&lt;p&gt;The Center for Folklife and Cultural Heritage is home to the Ralph Rinzler Folklife Archives and Collections, a public resource named for the founding director of the Smithsonian Folklife Festival.&lt;/p&gt;
-					&lt;/div&gt;
-					&lt;a href="#" class="high more-link "&gt;
-						&lt;div class="light"&gt;
-							&lt;div class="er"&gt;
-								&lt;div class="more-link-text"&gt;more&lt;/div&gt;&lt;div class="more-link-arrow icon-arrow2"&gt;&lt;/div&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-					&lt;/a&gt;                      
-				&lt;/div&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;  
-&lt;/div&gt;
-</code></pre>
-      </div>
-    </div>
-  </div>
   <!-- Horizontal Card-->
   <div class="codeblock">
     <div class="row">
@@ -230,6 +152,88 @@
 		&lt;/div&gt;
 	&lt;/div&gt;
 &lt;/li&gt;
+</code></pre>
+      </div>
+    </div>
+  </div>
+  <!-- Publication Card-->
+  <div class="codeblock">
+    <div class="row">
+      <div class="col-sm-8">
+        <h3 class="section-subtitle">Publication Card</h3>
+      </div>
+      <?php snippet('show-html'); ?>
+      <?php snippet('show-sass'); ?>
+    </div>
+    <div class="row">
+      <div class="card col-sm-6 publication-card top-border-card">
+        <div class="row">
+          <div class="image col-xs-4"><a href="#">
+              <?php echo $section->image('curatorial-conversations.jpg'); ?></a></div>
+          <div class="details col-xs-8">
+            <div class="details-inner"><a href="#" class="high title"><span class="light"><span class="er">Curatorial Conversations: Cultural Representation and the Smithsonian Folklife Festival</span></span></a>
+              <div class="author">Edited by Olivia Cadaval, Sojin Kim, and Diana Baird N’Diaye</div><a href="#" class="high buy-now-button"><span class="light"><span class="er">Order from University Press of Mississippi&nbsp;&#x2192</span></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <pre class="sass"><code>.publication-card {
+	@include margin-bottom(4); // add back to horizontal cards section
+	.card:nth-of-type(2n + 1) {
+		clear:left; // keep cards 1, 3, 5, 7, etc cleared left so don't hang on previous card
+	}
+	.title {
+		@include margin-top(-0.8);
+		@include lg-sans;
+	}
+	.author {
+		@include sm-sans;
+		@include margin-top(1);
+		@include margin-bottom(3);
+	}
+	.details-inner {
+		@include padding-top(2);
+	}
+	.more-link {
+		display: none;
+	}
+	.buy-now-button {
+		@include buy-button;
+		text-transform: initial;
+		color: $black65;
+		font-weight: 400;
+		display: block; // force new line for multiple buttons
+	}
+}</code></pre>
+      </div>
+      <div class="col-sm-12">
+        <pre class="html"><code>&lt;div class="row"&gt;
+	&lt;div class="card col-xs-12 full-feature-card"&gt;
+		&lt;div class="row"&gt;
+			&lt;div class="image col-md-6 col-lg-7"&gt;
+				&lt;a href="#"&gt;&lt;img src="ralphRinzler.jpg" alt="Ralph Rinzler Folklife Archives and Collections"&gt;&lt;/a&gt;
+			&lt;/div&gt;
+			&lt;div class="details col-md-6 col-lg-5"&gt;
+				&lt;div class="details-inner"&gt;
+					&lt;a href="#" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;Ralph Rinzler Folklife Archives and Collections&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
+					&lt;div class="description link-underline"&gt;
+						&lt;p&gt;The Center for Folklife and Cultural Heritage is home to the Ralph Rinzler Folklife Archives and Collections, a public resource named for the founding director of the Smithsonian Folklife Festival.&lt;/p&gt;
+					&lt;/div&gt;
+					&lt;a href="#" class="high more-link "&gt;
+						&lt;div class="light"&gt;
+							&lt;div class="er"&gt;
+								&lt;div class="more-link-text"&gt;more&lt;/div&gt;&lt;div class="more-link-arrow icon-arrow2"&gt;&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/a&gt;                      
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;  
+&lt;/div&gt;
 </code></pre>
       </div>
     </div>

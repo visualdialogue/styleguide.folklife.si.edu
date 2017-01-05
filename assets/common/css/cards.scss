@@ -91,8 +91,31 @@ a.details {
 /* #publication card
 -------------------------------------------------- */
 	.publication-card {
+		@include margin-bottom(4); // add back to horizontal cards section
+		.card:nth-of-type(2n + 1) {
+			clear:left; // keep cards 1, 3, 5, 7, etc cleared left so don't hang on previous card
+		}
 		.title {
 			@include margin-top(-0.8);
+			@include lg-sans;
+		}
+		.author {
+			@include sm-sans;
+			@include margin-top(1);
+			@include margin-bottom(3);
+		}
+		.details-inner {
+			@include padding-top(2);
+		}
+		.more-link {
+			display: none;
+		}
+		.buy-now-button {
+			@include buy-button;
+			text-transform: initial;
+			color: $black65;
+			font-weight: 400;
+			display: block; // force new line for multiple buttons
 		}
 	}
 

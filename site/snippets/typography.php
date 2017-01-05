@@ -639,11 +639,11 @@
       <div class="typeface codeblock">
         <div class="row type-title-wrapper">
           <hr/>
-          <div class="col-sm-7 intro-serif type-title">
+          <div class="col-sm-6 intro-serif type-title">
              
             Serif Intro Text<br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           </div>
-          <div class="col-sm-3"></div>
+          <div class="col-sm-4"></div>
           <?php snippet('show-sass'); ?>
         </div>
         <div class="row">
@@ -697,11 +697,11 @@
       <div class="typeface codeblock">
         <div class="row type-title-wrapper">
           <hr/>
-          <div class="col-sm-7 intro-sans type-title">
+          <div class="col-sm-6 intro-sans type-title">
              
             Sans Intro Text<br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           </div>
-          <div class="col-sm-3"></div>
+          <div class="col-sm-4"></div>
           <?php snippet('show-sass'); ?>
         </div>
         <div class="row">
