@@ -62,7 +62,8 @@
 	@mixin lg-sans {
 		font-family: $sans;
 		font-weight: 300;
-		line-height: 1.166667; // tighter for festival/learn page // 35px
+		line-height: 1.267; // taller per discussion on 1.4 at shop // 38px
+
 		font-size: 2.107rem;
 		@include respond-to(break2) {
 	  		font-size: 1.9vw;
@@ -299,7 +300,7 @@
 	@mixin intro-serif {
 		font-family: $serif;
 		font-weight: 600;
-		line-height: 1.3333;
+		line-height: 1.267; // 38px
 	  	font-size: 1.896rem;
 		@include respond-to(break2) {
 	  		font-size: 2.2vw;
@@ -424,6 +425,9 @@
 			width: initial;
 			width: auto;
 			font-weight: 600;
+		}
+		ul, ol {
+			@include padding-left(2);
 		}
 		ul {
 			@include padding-bottom(2); // not margin because then when using columns, the margin carries over!!!, from http://stackoverflow.com/a/12503808

@@ -648,7 +648,7 @@
         </div>
         <div class="row">
           <div class="col-md-5">
-            <div class="type-details">Typeface: Freight Text<br/>Weight: Semibold<br/>Maximum Font Size: 3rem<br/>Maximum Line Height: 4rem</div>
+            <div class="type-details">Typeface: Freight Text<br/>Weight: Semibold<br/>Maximum Font Size: 3rem<br/>Maximum Line Height: 3.8rem</div>
           </div>
           <div class="col-md-7">
             <pre class="sass"><code>@mixin intro-serif {
@@ -706,7 +706,7 @@
         </div>
         <div class="row">
           <div class="col-md-5">
-            <div class="type-details">Typeface: Acumin Pro<br/>Weight: Light<br/>Maximum Font Size: 3rem<br/>Maximum Line Height: 3.5rem</div>
+            <div class="type-details">Typeface: Acumin Pro<br/>Weight: Light<br/>Maximum Font Size: 3rem<br/>Maximum Line Height: 3.8rem</div>
           </div>
           <div class="col-md-7">
             <pre class="sass"><code>@include lg-sans;

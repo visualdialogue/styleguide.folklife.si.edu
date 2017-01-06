@@ -406,6 +406,12 @@ $(document).ready(function () {
 		};
 	};
 
+/*********
+* Sound card - Media Element JS
+*********/
+	// wrap time elements together after load. They don't come togethery by default and it is impossible to line them up according to the layout without having a parent wrapper.
+	$('.mejs-time').wrapAll('<div class="mejs-time-wrapper">');
+
 /*********************
 * Show figcaption
 * When click +
@@ -443,7 +449,6 @@ $(document).ready(function () {
 	// $('.dropdown-select').niceSelect();
 	// add class for dropdown arrows, from http://stackoverflow.com/a/21253034
 	$('.dropdown-title ~ ul.title-has-dropdown').addClass('has-sub');
-
 
 /*********************
 * Search page Filter
@@ -540,7 +545,6 @@ $(document).ready(function () {
 	// init
 	if(site.isMobile)
 		dropdownToggleInit();
-
 
 /**********
 * Check Mobile every time resize the browser

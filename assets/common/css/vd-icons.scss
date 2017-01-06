@@ -21,7 +21,8 @@
 }
 
 [class^="icon-"]:before,
-[class*=" icon-"]:before {
+[class*=" icon-"]:before,
+.mejs-controls .mejs-button button { // mediaelement icon
   font-family: "vd-icons" !important;
   font-style: normal !important;
   font-weight: normal !important;

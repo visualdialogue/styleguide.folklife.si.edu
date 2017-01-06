@@ -25,6 +25,7 @@ gulp.task('vendor', function() {
     './assets/bower_components/remodal/dist/remodal.min.js',
     './assets/bower_components/vimeo-player-js/dist/player.min.js',
     // './assets/bower_components/loadcss/src/loadCSS.js',
+    './assets/bower_components/mediaelement/build/mediaelement-and-player.min.js',
     './assets/bower_components/matchHeight/dist/jquery.matchHeight-min.js',
     './assets/bower_components/jquery-nice-select/js/jquery.nice-select.min.js', // for customizing dropdowns (eg. folkways magazine)
     // '/bower_components/bxslider-4/jquery3-patch/jquery.bxslider.js',
@@ -191,6 +192,7 @@ gulp.task('styles', function() {
         .pipe(plumber())
         .pipe(sass({
             errLogToConsole: true,
+            outputStyle: 'expanded'
             // outputStyle: 'compressed'
         }))
         // .pipe(uncss({
@@ -242,7 +244,6 @@ gulp.task('serve', ['jade', 'styles', 'js'], function() {
 
   browserSync.init({
       proxy     : "styleguide.folklife.loc:3000",
-      // port      : 3000,
       open      : false,
       notify    : false,
       ghostMode : false,
@@ -254,8 +255,7 @@ gulp.task('serve', ['jade', 'styles', 'js'], function() {
     gulp.watch('bower_components/bootstrap/less/*.less',['less']);
     gulp.watch('site/common/blueprints/*.yml',['copy']);
     gulp.watch('site/common/**/*.php',['copy']);
-    gulp.watch('assets/css/*.scss',['styles']);
-    gulp.watch('assets/common/css/*.scss',['styles']);
+    gulp.watch('assets/**/*.scss',['styles']);
     gulp.watch('assets/common/*.scss',['styles']);
     gulp.watch('assets/js/scripts.js',['js-watch']);
     gulp.watch('assets/common/js/common-scripts.js',['js-watch']);

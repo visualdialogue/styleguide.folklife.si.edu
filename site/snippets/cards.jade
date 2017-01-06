@@ -311,15 +311,17 @@ section.container.cards-section
 								a.high.title(href="#"): span.light: span.er Quelbe!
 								.artist Stanley and the Ten Sleepless Nights
 							.audio-player
-								.icon-play-button.icon-stack
-									.icon-circle
-									.icon-play
-								.audio-player-details
-									.audio-progress-bar
-										img(src="/assets/images/icons/audio-progress-bar.png")
-									.audio-time
-										|0:00 &vert;&nbsp;23:01
-									.volume.icon-volume-up
+								//- audio.mejs-player(src="/assets/audio/solo-cup.mp3" data-mejsoptions='{audioVolume: "vertical"}')
+								<audio class="mejs-player" src="/assets/audio/solo-cup.mp3" data-mejsoptions='{"startVolume": 0.2, "setDimensions": false}'>
+								//- .icon-play-button.icon-stack
+								//- 	.icon-circle
+								//- 	.icon-play
+								//- .audio-player-details
+								//- 	.audio-progress-bar
+								//- 		img(src="/assets/images/icons/audio-progress-bar.png")
+								//- 	.audio-time
+								//- 		|0:00 &vert;&nbsp;23:01
+								//- 	.volume.icon-volume-up
 			.col-md-9
 				pre.html: code.
 					&lt;li class="card audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border-card"&gt;

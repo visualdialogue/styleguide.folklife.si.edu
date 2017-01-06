@@ -345,16 +345,7 @@
             <div class="title-wrapper"><a href="#" class="high title"><span class="light"><span class="er">Quelbe!</span></span></a>
               <div class="artist">Stanley and the Ten Sleepless Nights</div>
             </div>
-            <div class="audio-player">
-              <div class="icon-play-button icon-stack">
-                <div class="icon-circle"></div>
-                <div class="icon-play"></div>
-              </div>
-              <div class="audio-player-details">
-                <div class="audio-progress-bar"><img src="/assets/images/icons/audio-progress-bar.png"/></div>
-                <div class="audio-time">0:00 &vert;&nbsp;23:01</div>
-                <div class="volume icon-volume-up"></div>
-              </div>
+            <div class="audio-player"><audio class="mejs-player" src="/assets/audio/solo-cup.mp3" data-mejsoptions='{"startVolume": 0.2, "setDimensions": false}'>
             </div>
           </div>
         </div>
