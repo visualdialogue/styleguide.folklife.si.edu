@@ -244,6 +244,7 @@ gulp.task('serve', ['jade', 'styles', 'js'], function() {
 
   browserSync.init({
       proxy     : "styleguide.folklife.loc:3000",
+      xip       : true,
       open      : false,
       notify    : false,
       ghostMode : false,

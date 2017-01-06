@@ -245,7 +245,7 @@
 		font-size: 1.376rem;
 		margin-bottom: 0;
 		@include respond-to(break2) {
-			font-size: 1.376rem;
+			font-size: 1.1vw;
 			margin-bottom: 0.4vw;
 		}
 		@include respond-to(fullwidth) {

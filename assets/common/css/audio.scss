@@ -88,12 +88,13 @@
 		.mejs-controls {
 			background: none;
 			position: relative; // contain timer slider
-			width: initial;
-			height: initial;
+			width: auto;
+			height: auto;
 			// @include margin-bottom(-0.8); // line height compensation, from http://stackoverflow.com/a/11754317
 			div {
 				// @include caption-sans;
 				@include sans-tag;
+				font-size: 3vw;
 				line-height: 1 !important; // type override for all media queries
 				letter-spacing: initial !important;
 				float: none;
@@ -150,13 +151,20 @@
 				bottom:0;
 				@include left(8.2);
 				left: 12.5vw;
+				width: 75%;
+				@include respond-to(break2) {
+					width: 50%;
+				}
 			}
 			.mejs-time {
 				color: $copy;
 				text-align: left;
 				color: $black65;
-				@include height(1.7);
+				// @include height(1.7);
+				height: auto;
 				bottom: 0;
+				@include padding-top(1);
+				padding-top:0;
 			}
 			.mejs-currenttime-container {
 				display: inline-block;
@@ -183,6 +191,7 @@
 			.mejs-time-rail {
 				position: absolute;
 				top:2vw;
+				top:1.5vw;
 				width: 65% !important;
 				left: 13vw;
 				@include respond-to(break1) {
@@ -216,6 +225,13 @@
 				right:0;
 				margin-right:0;
 			}
+			.mejs-time-float {
+				border:none;
+				background-color: transparent;
+			}
+			.mejs-time-float-corner {
+				display:none;
+			}
 			.mejs-horizontal-volume-slider {
 				display: none;
 				position: absolute;
@@ -225,19 +241,18 @@
 				@include respond-to(break1) {
 					display:block;
 					margin-bottom: 0;
+					height: 1vw;
+				}
+				@include respond-to(break2) {
+					height: 25%;
 				}
 				@include respond-to(fullwidth) {
-					// height: 6rem;
-					// margin-bottom: 0.3rem;
+					height: 1.2rem;
 				}
-				@include height(1.2);
+
 				.mejs-horizontal-volume-total, .mejs-horizontal-volume-current {
 					top: auto;
-					// @include bottom(0.9);
 					@include width(3);
-					// bottom:0.9rem;
-					// @include respond-to(break2) {bottom:0.5rem;}
-					// @include respond-to(fullwidth) {bottom:0.9rem;}
 				}
 			}
 			.mejs-volume-button {

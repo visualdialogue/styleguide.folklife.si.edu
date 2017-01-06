@@ -3,6 +3,7 @@
 	var site = {};
 
 	site.screenSize = $( window ).width();
+	site.screenHeight = $( window ).height();
 	site.$body = $('body');
 	// site.isMobile = false;
 	site.break1 = 640; // first media query break

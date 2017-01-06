@@ -109,6 +109,7 @@
   // $mobile-scale: 2.5; // major 2nd * major 2nd
   // $mobile-scale: 1.125; // major 2nd * major 2nd
   $mobile-scale: 1.4238; // major 2nd * major 2nd
+  $mobile-scale: 1.601775; // major 2nd * major 2nd * major 2nd
   @mixin right($distance) {
     right:#{$distance / $mobile-scale }rem; // eg. 5rem
     @include respond-to(break2) {right:#{$distance * $tablet-scale}vw;} // eg 2.5vw
