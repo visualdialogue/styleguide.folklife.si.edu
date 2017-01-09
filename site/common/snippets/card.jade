@@ -14,9 +14,7 @@ li.card(class="<? if (isset($card_classes)) echo $card_classes . ' ' ?><? if ($c
 			.center-box
 				.modal-trigger
 					img(src="<?= $image->url() ?>" alt="<?= $card->title() ?>")
-				.icon-play-button.video-icon-play-button.icon-stack
-					.icon-circle
-					.icon-play
+				.icon-play-button
 	-elseif($image):
 		.image
 			-if (null != $card->url()):
@@ -57,8 +55,6 @@ li.card(class="<? if (isset($card_classes)) echo $card_classes . ' ' ?><? if ($c
 				.subtitle!= $card->audio_album()
 			-endif
 
-			
-
 			//- blurb
 			-if (isset($blurb)):
 				.description.link-underline.blurb!= $card->blurb()->kt()
@@ -84,15 +80,4 @@ li.card(class="<? if (isset($card_classes)) echo $card_classes . ' ' ?><? if ($c
 			-if ($card->type() == 'audio'):
 				.audio-player
 					<audio class="mejs-player" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'>
-				//- .audio-player
-				//- 	.icon-play-button.icon-stack
-				//- 		.icon-circle
-				//- 		.icon-play
-				//- 	.audio-player-details
-				//- 		.audio-progress-bar
-				//- 			img(src="/assets/images/icons/audio-progress-bar.png" alt="audio progress bar")
-				//- 		.audio-time
-				//- 			|0:00 &vert;&nbsp;
-				//- 			!= $card->audio_length()
-				//- 		.volume.icon-volume-up
 			-endif

@@ -13,9 +13,7 @@ li.card.blog-article-card.col-xs-12(class="<? if ($card->type() == 'video') echo
 		.center-box
 			.modal-trigger
 				img(src="<?= $image->url() ?>" alt="<?= $card->title() ?>")
-			.icon-play-button.video-icon-play-button.icon-stack
-				.icon-circle
-				.icon-play
+			.icon-play-button
 	.details
 		.details-inner
 			-if(isset($type) && $type != 'general-content'):

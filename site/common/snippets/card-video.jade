@@ -11,9 +11,7 @@ li.card.video-card(class="<?= $card_classes ?>")
 			.center-box
 				.modal-trigger
 					img(src="<?= $image->url() ?>" alt="<?= $card->title() ?>")
-				.icon-play-button.video-icon-play-button.icon-stack
-					.icon-circle
-					.icon-play
+				.icon-play-button
 		.details(class="<?= $details_col ?>")
 			.details-inner
 				.tag!= $card->category()

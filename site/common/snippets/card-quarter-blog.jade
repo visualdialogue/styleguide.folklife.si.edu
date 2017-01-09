@@ -17,9 +17,7 @@ li.card.col-sm-3.top-border-card.blog-card(class="<? if ($card->type() == 'video
 				.center-box
 					.modal-trigger
 						img(src="<?= $image->url() ?>" alt="<?= $card->title() ?>")
-					.icon-play-button.video-icon-play-button.icon-stack
-						.icon-circle
-						.icon-play
+					.icon-play-button
 		-else:
 			.image
 				a(href="<?= $card->url() ?>")

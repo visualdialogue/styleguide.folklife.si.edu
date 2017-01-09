@@ -37,6 +37,7 @@
 		line-height: 1;
 	  	@include respond-to(break2max) {
 	  		font-size: 2.489rem;
+	  		font-size: 2.212rem;
 	  	}
 		@include respond-to(break2) {
 			line-height: 1.143;
@@ -301,7 +302,8 @@
 			margin-bottom: 0.4vw;
 		}
 		@include respond-to(fullwidth) {
-			font-size: 1.665rem;
+			// font-size: 1.665rem;
+			font-size: 1.6rem;
 			letter-spacing: 1px;
 			margin-bottom: 0;
 		}
@@ -456,7 +458,7 @@
 		}
 		// common to ul and ol
 		li {
-			list-style-position: inside;
+			// list-style-position: outside;
 			@include margin-bottom(0.8); // archives detail page
 		}
 		.title {
@@ -473,22 +475,27 @@
 			@include padding-bottom(2); // not margin because then when using columns, the margin carries over!!!, from http://stackoverflow.com/a/12503808
 			@include margin-bottom(1);
 			li:not(.card) {
+				// inset
+				margin-left: 2rem;
+				position: relative;
 				// bullets
 				&:before {
 					content: '\61';
 					font-family: 'vd-icons';
-					font-size:0.7rem;
 					display: inline-block;
 					position: relative;
 					bottom: 2px;
 					@include padding-right(1);
+					@include margin-left(-1.7);
+					@include respond-to(break2max) {
+						font-size:0.7rem;
+					}
 					@include respond-to(break2) {
-						font-size:1rem;
+						font-size:0.5vw;
 					}
 					@include respond-to(fullwidth) {
 						font-size:0.7rem;
-						bottom: 5px;
-
+						bottom: 0.5rem;
 					}
 				}
 			}

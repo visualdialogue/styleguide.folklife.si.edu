@@ -330,6 +330,9 @@
 		.sidebar {
 			color: #000;
 		}
+		.sidebar-card:before {
+			border-color: $black50; // default top border color same as bg in magazine
+		}
 		.related-content {
 			@include margin-top(7);
 		}

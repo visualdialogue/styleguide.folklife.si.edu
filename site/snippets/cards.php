@@ -255,10 +255,7 @@
               <div class="modal-trigger">
                 <?php echo $section->image('video.png'); ?>
               </div>
-              <div class="icon-play-button video-icon-play-button icon-stack">
-                <div class="icon-circle"></div>
-                <div class="icon-play"></div>
-              </div>
+              <div class="icon-play-button"></div>
             </div>
           </div>
           <div class="details col-sm-12">
@@ -288,10 +285,7 @@
 				&lt;div class="modal-trigger"&gt;
 					&lt;img src="video.png"&gt;
 				&lt;/div&gt;
-				&lt;div class="icon-play-button video-icon-play-button icon-stack"&gt;
-					&lt;div class="icon-circle"&gt;&lt;/div&gt;
-					&lt;div class="icon-play"&gt;&lt;/div&gt;
-				&lt;/div&gt;
+				&lt;div class="icon-play-button"&gt;&lt;/div&gt;
 		&lt;div class="details col-xs-12"&gt;
 			&lt;div class="details-inner"&gt;
 				&lt;div class="tag"&gt;Festival 2017&lt;/div&gt;

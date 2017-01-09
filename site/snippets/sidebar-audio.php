@@ -20,10 +20,7 @@
         <td class="track-number-play-button">
           <div class="track-number">
             <?php echo $n; ?></div>
-          <div class="icon-play-button video-icon-play-button icon-stack track-play-button">
-            <div class="icon-circle"></div>
-            <div class="icon-play"></div>
-          </div>
+          <div class="icon-play-button sidebar-icon-play-button track-play-button"></div>
         </td>
         <td class="track-title">
           <?php echo $track->title(); ?></td>

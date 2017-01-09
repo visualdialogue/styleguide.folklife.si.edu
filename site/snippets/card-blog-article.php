@@ -9,10 +9,7 @@
   <div data-video-id="<?= $card->video_id() ?>" data-title="<?= $card->title() ?>" data-description="<?= excerpt($card->copy(), 25, "words") ?> <a href='#'>more</a>" class="video">
     <div class="center-box">
       <div class="modal-trigger"><img src="<?= $image->url() ?>" alt="<?= $card->title() ?>"/></div>
-      <div class="icon-play-button video-icon-play-button icon-stack">
-        <div class="icon-circle"></div>
-        <div class="icon-play"></div>
-      </div>
+      <div class="icon-play-button"></div>
     </div>
   </div>
   <div class="details">

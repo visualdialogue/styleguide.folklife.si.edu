@@ -22,7 +22,10 @@
 
 [class^="icon-"]:before,
 [class*=" icon-"]:before,
-.mejs-controls .mejs-button button { // mediaelement icon
+[class^="icon-"]:after,
+[class*=" icon-"]:after,
+.mejs-controls .mejs-button button, // mediaelement icon
+.content li:before { 
   font-family: "vd-icons" !important;
   font-style: normal !important;
   font-weight: normal !important;

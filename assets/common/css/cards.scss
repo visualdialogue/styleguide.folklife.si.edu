@@ -159,25 +159,15 @@ a.details {
 		.image {
 			display: none;
 		}
-		.video-icon-play-button {
+		.icon-play-button {
 			left: 50%;
-			@include respond-to(break2max) {
-				width: 15vw;
-				height: 15vw;
-				margin-left: -8vw;
-				.icon-circle:before, .icon-play:before {
+			&:before, &:after {
+				@include respond-to(break2max) {
 					font-size: 15vw;
 				}
 			}
-			@include respond-to(break2) {
-				margin-left: -2vw;
-			}
-			@include respond-to(fullwidth) {
-				margin-left:-3.2rem;
-			}
 		}
 	}
-
 	// hover effect on entire video card and on audio player play button
 	.video, .icon-play-button  {
 		&:hover .icon-circle:before {
@@ -187,15 +177,9 @@ a.details {
 			color: $black80;
 		}
 	}
-	.video-icon-play-button {
-		@include vertically-align;
-	}
-	.center-box {
-		@include vertically-align-parent;
-	}
 	// modal
 	.remodal {
-	  padding:2px 2px 20px;
+	  padding:0.2rem;
 	  text-align: left;
 	  position: relative;
 	  // trade gpu acceleration for correct placement of close button
@@ -252,7 +236,7 @@ a.details {
 	  z-index: 2;
 	}
 	.remodal-copy {
-	  padding:10px 20px;
+	  padding:10px 20px 30px;
 	}
 	.remodal-title {
 		margin-bottom:10px;

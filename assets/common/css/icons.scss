@@ -89,35 +89,36 @@
 			text-decoration: none;
 		}
 	}
+	.center-box {
+		position: relative;
+	}
 	.icon-play-button {
-		.icon-circle {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		cursor: pointer;
+		// horizontally center
+		-webkit-transform: translateX(-50%) translateY(-50%);
+		-ms-transform: translateX(-50%) translateY(-50%);
+		transform: translateX(-50%) translateY(-50%);
+		&:before {
+			position: absolute;
+			z-index: -1;
+  			content: "\61";
 			color: $black20;
 		}
-		.icon-play {
+		&:hover:before {
+			color: $hover;
+		}
+		&:after {
+  			content: "\62";
 			color: $black80;
-			cursor: pointer;
+  			display: block;
 		}
 	}
-	.icon-play-button, .icon-circle, .icon-play, .mejs-controls .mejs-button button {
-		@include respond-to(break2max) {
-			width: 7vw;
-			// height: 7vw;
-		}
-		@include respond-to(break2) {
-			width: 4vw;
-			// height: 4vw;
-		}
-		@include respond-to(fullwidth) {
-			width: 6rem;
-			// height: 6rem;
-		}
-	}
-	.icon-circle:before, .icon-play:before, .mejs-controls .mejs-playpause-button button:before, .mejs-controls .mejs-playpause-button button:after {
+	.icon-play-button:before, .icon-play-button:after, .mejs-controls .mejs-playpause-button button:before, .mejs-controls .mejs-playpause-button button:after {
 		@include respond-to(break2max) {
 			font-size: 10vw;
-			// font-size: 7vw;
-			// font-size: 4rem;
-			// font-size: 6vw;
 		}
 		@include respond-to(break2) {
 			font-size: 4vw;

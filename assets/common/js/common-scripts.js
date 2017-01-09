@@ -316,7 +316,6 @@ $(document).ready(function () {
 	  	remodalInstance.open();
 	  	console.log('opened remodal');
 
-
 		$video_id = $(this).data('video-id');
 		// set title
 		$title = $(this).data('title');
@@ -367,6 +366,31 @@ $(document).ready(function () {
 	// close remodal with X
 	$remodalClose.on('click', function() {
 		remodalInstance.close();
+	});
+
+/*********************
+* Image Gallery Popup
+* dependencies: remodal.js
+*********************/
+	// on playing a video in the gallery...
+	$('.popup-image').on('click', function() {
+		// console.log('click');
+	  	var $remodalImage = $('.remodal-image img');
+
+		$popupImage = $(this).attr('src');
+		console.log($popupImage);
+		// manually open remodal because sometimes just doesn't do it
+		remodalInstance.open();
+		console.log('opened remodal');
+
+		// add an image tag inside default iframe div, from http://stackoverflow.com/a/941239
+		// $remodal.prepend('<img id="theImg" class="remodal-image" src="' + $popupImage + '" />');
+		$remodalImage.attr('src', $popupImage);
+
+		// http://stackoverflow.com/a/540355
+
+
+		// Start
 	});
 
 /********************
@@ -462,7 +486,6 @@ $(document).ready(function () {
 /*********************
 * Search page Filter
 *********************/
-
 	// More/Less button
 	var secondFilterRowIsClosed = true;
 	// class selectors b/c mobile and desktop buttons

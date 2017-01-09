@@ -58,7 +58,10 @@ _|   \___/  _|  _| \__| ____/
 
 [class^="icon-"]:before,
 [class*=" icon-"]:before,
-.mejs-controls .mejs-button button {
+[class^="icon-"]:after,
+[class*=" icon-"]:after,
+.mejs-controls .mejs-button button,
+.content li:before {
   font-family: "vd-icons" !important;
   font-style: normal !important;
   font-weight: normal !important;
@@ -6203,6 +6206,7 @@ body {
 @media only screen and (max-width: 53.25em) {
   .content h4, .text-card h4 {
     font-size: 2.489rem;
+    font-size: 2.212rem;
   }
 }
 
@@ -6341,10 +6345,6 @@ body {
   }
 }
 
-.content li, .text-card li {
-  list-style-position: inside;
-}
-
 @media only screen and (max-width: 53.25em) {
   .content li, .text-card li {
     margin-bottom: 0.2963rem;
@@ -6463,10 +6463,14 @@ body {
   }
 }
 
+.content ul li:not(.card), .text-card ul li:not(.card) {
+  margin-left: 2rem;
+  position: relative;
+}
+
 .content ul li:not(.card):before, .text-card ul li:not(.card):before {
   content: '\61';
   font-family: 'vd-icons';
-  font-size: 0.7rem;
   display: inline-block;
   position: relative;
   bottom: 2px;
@@ -6490,16 +6494,40 @@ body {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  .content ul li:not(.card):before, .text-card ul li:not(.card):before {
+    margin-left: -0.62963rem;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   .content ul li:not(.card):before, .text-card ul li:not(.card):before {
-    font-size: 1rem;
+    margin-left: -1.088vw;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .content ul li:not(.card):before, .text-card ul li:not(.card):before {
+    margin-left: -1.7rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .content ul li:not(.card):before, .text-card ul li:not(.card):before {
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (min-width: 53.25em) {
+  .content ul li:not(.card):before, .text-card ul li:not(.card):before {
+    font-size: 0.5vw;
   }
 }
 
 @media only screen and (min-width: 1560px) {
   .content ul li:not(.card):before, .text-card ul li:not(.card):before {
     font-size: 0.7rem;
-    bottom: 5px;
+    bottom: 0.5rem;
   }
 }
 
@@ -6712,47 +6740,51 @@ body {
   text-decoration: none;
 }
 
-.icon-play-button .icon-circle {
+.center-box {
+  position: relative;
+}
+
+.icon-play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  cursor: pointer;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.icon-play-button:before {
+  position: absolute;
+  z-index: -1;
+  content: "\61";
   color: #cccccc;
 }
 
-.icon-play-button .icon-play {
+.icon-play-button:hover:before {
+  color: #e2f0d8;
+}
+
+.icon-play-button:after {
+  content: "\62";
   color: #333333;
-  cursor: pointer;
+  display: block;
 }
 
 @media only screen and (max-width: 53.25em) {
-  .icon-play-button, .icon-circle, .icon-play, .mejs-controls .mejs-button button {
-    width: 7vw;
-  }
-}
-
-@media only screen and (min-width: 53.25em) {
-  .icon-play-button, .icon-circle, .icon-play, .mejs-controls .mejs-button button {
-    width: 4vw;
-  }
-}
-
-@media only screen and (min-width: 1560px) {
-  .icon-play-button, .icon-circle, .icon-play, .mejs-controls .mejs-button button {
-    width: 6rem;
-  }
-}
-
-@media only screen and (max-width: 53.25em) {
-  .icon-circle:before, .icon-play:before, .mejs-controls .mejs-playpause-button button:before, .mejs-controls .mejs-playpause-button button:after {
+  .icon-play-button:before, .icon-play-button:after, .mejs-controls .mejs-playpause-button button:before, .mejs-controls .mejs-playpause-button button:after {
     font-size: 10vw;
   }
 }
 
 @media only screen and (min-width: 53.25em) {
-  .icon-circle:before, .icon-play:before, .mejs-controls .mejs-playpause-button button:before, .mejs-controls .mejs-playpause-button button:after {
+  .icon-play-button:before, .icon-play-button:after, .mejs-controls .mejs-playpause-button button:before, .mejs-controls .mejs-playpause-button button:after {
     font-size: 4vw;
   }
 }
 
 @media only screen and (min-width: 1560px) {
-  .icon-circle:before, .icon-play:before, .mejs-controls .mejs-playpause-button button:before, .mejs-controls .mejs-playpause-button button:after {
+  .icon-play-button:before, .icon-play-button:after, .mejs-controls .mejs-playpause-button button:before, .mejs-controls .mejs-playpause-button button:after {
     font-size: 6rem;
   }
 }
@@ -7905,6 +7937,12 @@ a:hover {
 }
 
 @media only screen and (max-width: 53.25em) {
+  .highlight-container .highlight-inner {
+    padding: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
   .highlight-container .section-title {
     margin-bottom: 1.25926rem;
   }
@@ -8837,24 +8875,6 @@ a .page-title:hover {
   }
 }
 
-@media only screen and (max-width: 53.25em) {
-  .sidebar-audio .track-play-button {
-    left: 0.74074rem;
-  }
-}
-
-@media only screen and (min-width: 53.25em) {
-  .sidebar-audio .track-play-button {
-    left: 1.28vw;
-  }
-}
-
-@media only screen and (min-width: 1560px) {
-  .sidebar-audio .track-play-button {
-    left: 2rem;
-  }
-}
-
 .sidebar-audio .track-title {
   font-weight: 600;
 }
@@ -8929,8 +8949,7 @@ a .page-title:hover {
   }
 }
 
-/* Collection page
- * as seen at Folklife Archives page
+/* Collection page (Folklife Archives page)
  -------------------------------------------------- */
 @media only screen and (max-width: 53.25em) {
   .collection-page .blog-article-card {
@@ -9166,6 +9185,184 @@ a .page-title:hover {
   }
 }
 
+/* Buttons
+-------------------------------------------------*/
+.button {
+  cursor: pointer;
+  clear: left;
+  background-color: #666666;
+}
+
+.button .button-inner {
+  position: static;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .button .button-inner {
+    padding-top: 0.42141rem;
+  }
+}
+
+@media only screen and (min-width: 53.25em) {
+  .button .button-inner {
+    padding-top: 0.384vw;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .button .button-inner {
+    padding-top: 0.6rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .button .button-inner {
+    padding-right: 0.70235rem;
+  }
+}
+
+@media only screen and (min-width: 53.25em) {
+  .button .button-inner {
+    padding-right: 0.64vw;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .button .button-inner {
+    padding-right: 1rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .button .button-inner {
+    padding-bottom: 0.56188rem;
+  }
+}
+
+@media only screen and (min-width: 53.25em) {
+  .button .button-inner {
+    padding-bottom: 0.512vw;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .button .button-inner {
+    padding-bottom: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .button .button-inner {
+    padding-left: 0.70235rem;
+  }
+}
+
+@media only screen and (min-width: 53.25em) {
+  .button .button-inner {
+    padding-left: 0.64vw;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .button .button-inner {
+    padding-left: 1rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .button .button-inner {
+    margin-bottom: 0.44444rem;
+  }
+}
+
+@media only screen and (min-width: 53.25em) {
+  .button .button-inner {
+    margin-bottom: 0.768vw;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .button .button-inner {
+    margin-bottom: 1.2rem;
+  }
+}
+
+.button .title {
+  text-transform: uppercase;
+  font-family: "acumin-pro-wide", Arial, sans-serif;
+  font-weight: 800;
+  margin-bottom: 0;
+  color: #fff;
+  font-weight: 700;
+  margin: 0 !important;
+  width: auto;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .button .title {
+    font-size: 1.376rem;
+  }
+}
+
+@media only screen and (min-width: 53.25em) {
+  .button .title {
+    font-size: 1.1vw;
+    margin-bottom: 0.4vw;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .button .title {
+    font-size: 1.72rem;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.button .price {
+  color: #fff;
+  font-family: "acumin-pro", Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .button .price {
+    font-size: 1.48rem;
+  }
+}
+
+@media only screen and (min-width: 53.25em) {
+  .button .price {
+    font-size: 1.2vw;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .button .price {
+    line-height: 1.12;
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .button .price {
+    margin-left: 0rem;
+  }
+}
+
+@media only screen and (min-width: 53.25em) {
+  .button .price {
+    margin-left: 0vw;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .button .price {
+    margin-left: 0rem;
+  }
+}
+
 /* #Support Us
 -------------------------------------------------- */
 @media only screen and (max-width: 53.25em) {
@@ -9224,7 +9421,7 @@ a .page-title:hover {
   .support-copy {
     font-size: 2.6vw;
     height: 5vw;
-    padding-top: 1.2vw;
+    padding-top: 1.1vw;
   }
 }
 
@@ -9242,24 +9439,6 @@ a .page-title:hover {
     font-size: 2rem;
     height: 15rem;
     padding-top: 0.9rem;
-  }
-}
-
-@media only screen and (max-width: 53.25em) {
-  .support-copy {
-    padding-top: 1.05352rem;
-  }
-}
-
-@media only screen and (min-width: 53.25em) {
-  .support-copy {
-    padding-top: 0.96vw;
-  }
-}
-
-@media only screen and (min-width: 1560px) {
-  .support-copy {
-    padding-top: 1.5rem;
   }
 }
 
@@ -9328,6 +9507,7 @@ a .page-title:hover {
   margin-bottom: 0;
   color: #fff;
   text-align: center;
+  clear: none;
 }
 
 @media only screen and (max-width: 53.25em) {
@@ -10342,10 +10522,7 @@ figcaption.minus-sign:before {
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   transform: rotate(90deg);
-  font-size: 2.5rem;
   height: auto;
-  top: -0.1rem;
-  right: 1rem;
 }
 
 @media only screen and (max-width: 53.25em) {
@@ -10384,6 +10561,14 @@ figcaption.minus-sign:before {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  .first-level-dropdown-title:after {
+    font-size: 2rem;
+    top: 0rem;
+    right: 0.5rem;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   .first-level-dropdown-title:after {
     transform-origin: 0.9vw;
@@ -10411,10 +10596,7 @@ figcaption.minus-sign:before {
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   transform: rotate(90deg);
-  font-size: 2.5rem;
   height: auto;
-  top: -0.1rem;
-  right: 1rem;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   transform: rotate(0deg);
@@ -10457,6 +10639,14 @@ figcaption.minus-sign:before {
 @media only screen and (min-width: 1560px) {
   .second-level-dropdown-title:after, .third-level-dropdown-title:after {
     margin-top: 0rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .second-level-dropdown-title:after, .third-level-dropdown-title:after {
+    font-size: 2rem;
+    top: 0rem;
+    right: 0.5rem;
   }
 }
 
@@ -10732,6 +10922,12 @@ video::-webkit-media-controls {
 *::-webkit-media-controls-start-playback-button {
   display: none !important;
   -webkit-appearance: none;
+}
+
+/* Image popup
+-------------------------------------------------*/
+.remodal-image ~ .remodal-iframe, .remodal-image ~ .remodal-copy {
+  display: none;
 }
 
 /* #footer
@@ -11458,7 +11654,7 @@ a.details {
 
 @media only screen and (min-width: 1560px) {
   .tag {
-    font-size: 1.665rem;
+    font-size: 1.6rem;
     letter-spacing: 1px;
     margin-bottom: 0;
   }
@@ -11493,7 +11689,7 @@ a.details {
 
 @media only screen and (min-width: 1560px) {
   .date {
-    font-size: 1.665rem;
+    font-size: 1.6rem;
     letter-spacing: 1px;
     margin-bottom: 0;
   }
@@ -11529,7 +11725,7 @@ a.details {
 
 @media only screen and (min-width: 1560px) {
   .date-sm {
-    font-size: 1.665rem;
+    font-size: 1.6rem;
     letter-spacing: 1px;
     margin-bottom: 0;
   }
@@ -11817,6 +12013,7 @@ a.details {
 @media only screen and (max-width: 53.25em) {
   .card-program .title {
     font-size: 2.489rem;
+    font-size: 2.212rem;
   }
 }
 
@@ -11884,30 +12081,13 @@ a.details {
   display: none;
 }
 
-.video-card .video-icon-play-button {
+.video-card .icon-play-button {
   left: 50%;
 }
 
 @media only screen and (max-width: 53.25em) {
-  .video-card .video-icon-play-button {
-    width: 15vw;
-    height: 15vw;
-    margin-left: -8vw;
-  }
-  .video-card .video-icon-play-button .icon-circle:before, .video-card .video-icon-play-button .icon-play:before {
+  .video-card .icon-play-button:before, .video-card .icon-play-button:after {
     font-size: 15vw;
-  }
-}
-
-@media only screen and (min-width: 53.25em) {
-  .video-card .video-icon-play-button {
-    margin-left: -2vw;
-  }
-}
-
-@media only screen and (min-width: 1560px) {
-  .video-card .video-icon-play-button {
-    margin-left: -3.2rem;
   }
 }
 
@@ -11919,28 +12099,8 @@ a.details {
   color: #333333;
 }
 
-.video-icon-play-button {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.center-box {
-  position: relative;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  display: table-cell;
-  width: 100%;
-  height: 100%;
-}
-
 .remodal {
-  padding: 2px 2px 20px;
+  padding: 0.2rem;
   text-align: left;
   position: relative;
   -webkit-transform: none;
@@ -12012,7 +12172,7 @@ a.details {
 }
 
 .remodal-copy {
-  padding: 10px 20px;
+  padding: 10px 20px 30px;
 }
 
 .remodal-title {
@@ -13141,7 +13301,7 @@ a.details {
 
 @media only screen and (min-width: 1560px) {
   .mejs-container .mejs-controls div {
-    font-size: 1.665rem;
+    font-size: 1.6rem;
     letter-spacing: 1px;
     margin-bottom: 0;
   }
@@ -13741,6 +13901,7 @@ h2.intro-title {
 @media only screen and (max-width: 53.25em) {
   .intro-copy {
     font-size: 2.489rem;
+    font-size: 2.212rem;
   }
 }
 
@@ -14306,6 +14467,7 @@ pre {
 @media only screen and (max-width: 53.25em) {
   .section-subtitle {
     font-size: 2.489rem;
+    font-size: 2.212rem;
   }
 }
 
@@ -14737,6 +14899,7 @@ pre {
 @media only screen and (max-width: 53.25em) {
   .sm-serif {
     font-size: 2.489rem;
+    font-size: 2.212rem;
   }
 }
 
@@ -14781,6 +14944,7 @@ pre {
 @media only screen and (max-width: 53.25em) {
   .sm-serif-italic {
     font-size: 2.489rem;
+    font-size: 2.212rem;
   }
 }
 
@@ -15401,7 +15565,7 @@ pre {
 
 @media only screen and (min-width: 1560px) {
   .category-tag-type {
-    font-size: 1.665rem;
+    font-size: 1.6rem;
     letter-spacing: 1px;
     margin-bottom: 0;
   }
@@ -15436,7 +15600,7 @@ pre {
 
 @media only screen and (min-width: 1560px) {
   .category-tag-bold-type {
-    font-size: 1.665rem;
+    font-size: 1.6rem;
     letter-spacing: 1px;
     margin-bottom: 0;
   }
@@ -15490,6 +15654,7 @@ pre {
 @media only screen and (max-width: 53.25em) {
   .video-card .title {
     font-size: 2.489rem;
+    font-size: 2.212rem;
   }
 }
 

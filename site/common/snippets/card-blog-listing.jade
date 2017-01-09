@@ -14,9 +14,7 @@ li.card.horizontal-card.col-xs-12.top-border-card
 			.center-box
 				.modal-trigger
 					img(src="<?= $image->url() ?>" alt="<?= $card->title() ?>")
-				.icon-play-button.video-icon-play-button.icon-stack
-					.icon-circle
-					.icon-play
+				.icon-play-button
 		.details.col-sm-6
 			.details-inner
 				.tag!= $card->festival(), ', ', $card->program();
