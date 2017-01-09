@@ -33,4 +33,7 @@
     @else if $media == fullwidth {
       @media only screen and (min-width: $fullWidth) { @content; }
     }
+    @else if $media == fullwidthmax {
+      @media only screen and (max-width: $fullWidth) { @content; }
+    }
   }

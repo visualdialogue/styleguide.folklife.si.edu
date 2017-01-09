@@ -1,14 +1,17 @@
 /* Folkways Magazine Homepage
 -------------------------------------------------- */
 	body.magazine-page, body.magazine-article-page {
-		background-color: $black05;
+		// background-color: $black05;
+		background-color: $black30;
 	}
 	.magazine-title-bar-wrapper {
 		position: relative; // hold abs child
 	}
 	.folkways-magazine-logo-wrapper {
 		background-color: #000;
-		height:19vw;
+		@include respond-to(break2max) {
+			height:19vw;
+		}
 		@include respond-to(break2) {height:7.5vw;}
 		@include respond-to(fullwidth) {height:11.7rem;} // from layout
 	}
@@ -17,7 +20,9 @@
 		@include margin-bottom(4);
 		
 		@include respond-to(break2) {
-			height:19vw;
+			@include respond-to(break2max) {
+				height:19vw;
+			}
 			@include respond-to(break2) {height:7.5vw;}
 			@include respond-to(fullwidth) {height:11.7rem;} // from layout
 		}
@@ -48,7 +53,9 @@
 		}
 		.black-spacer {
 			background-color: #000;
-			height:19vw;
+			@include respond-to(break2max) {
+				height:19vw;
+			}
 			@include respond-to(break2) {height:7.5vw;}
 			@include respond-to(fullwidth) {height:11.7rem;} // from layout
 		}
@@ -173,7 +180,10 @@
 			@include margin-bottom(3);
 		}
 		.card {
-			@include clear-3; // don't hang on cards that are taller
+			@include clear-2; // don't hang on cards that are taller
+			@include respond-to(break2) {
+				@include clear-3; // don't hang on cards that are taller
+			}
 		}
 		.more-link {
 			display: none;

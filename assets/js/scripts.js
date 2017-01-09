@@ -28,8 +28,6 @@ $(document).ready(function () {
 			$(this).closest('.codeblock').find('pre.sass').toggle();
 		});
 
-
-
 /* Syntax Highlighting
  * from highlightjs.org */
  	// start highlighter on page load

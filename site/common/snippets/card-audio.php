@@ -19,19 +19,7 @@
         <div class="artist">
           <?php echo $card->artist()->kt(); ?></div>
       </div>
-      <div class="audio-player">
-        <div class="icon-play-button icon-stack">
-          <div class="icon-circle"></div>
-          <div class="icon-play"></div>
-        </div>
-        <div class="audio-player-details">
-          <div class="audio-progress-bar"><img src="/assets/images/icons/audio-progress-bar.png" alt="Audio Progress Bar"/></div>
-          <div class="audio-time">0:00 &vert;&nbsp;
-            <?php echo $card->audio_length(); ?>
-          </div>
-          <div class="volume icon-volume-up"></div>
-        </div>
-      </div>
+      <div class="audio-player"><audio class="mejs-player" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'></div>
     </div>
   </div>
 </li>

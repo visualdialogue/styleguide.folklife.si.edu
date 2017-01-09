@@ -345,8 +345,7 @@
             <div class="title-wrapper"><a href="#" class="high title"><span class="light"><span class="er">Quelbe!</span></span></a>
               <div class="artist">Stanley and the Ten Sleepless Nights</div>
             </div>
-            <div class="audio-player"><audio class="mejs-player" src="/assets/audio/solo-cup.mp3" data-mejsoptions='{"startVolume": 0.2, "setDimensions": false}'>
-            </div>
+            <div class="audio-player"><audio class="mejs-player" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'></div>
           </div>
         </div>
       </li>
@@ -444,7 +443,59 @@
 			&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
-&lt;/li&gt;
+&lt;/li&gt;</code></pre>
+      </div>
+    </div>
+  </div>
+  <!-- Album Card-->
+  <div class="codeblock">
+    <div class="row">
+      <div class="col-sm-8">
+        <h3 class="section-subtitle">Album Card</h3>
+      </div>
+      <?php snippet('show-html'); ?>
+      <?php snippet('show-sass'); ?>
+    </div>
+    <div class="row">
+      <div class="card album-card col-xs-2 col-sm-2">
+        <div class="image"><a href="#">
+            <?php echo $section->image('SFW40568.jpeg'); ?></a></div>
+        <div class="details">
+          <div class="details-inner"><a href="#" class="high title"><span class="light"><span class="er">Quelbe! Music of the U.S. Virgin Islands</span></span></a>
+            <div class="artist">Stanley and the Ten Sleepless Nights</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-9">
+        <pre class="sass"><code>.album-card, .vinyl-card, .books-card {
+	.details-inner {
+		padding:0;
+		@include padding-top(1.7);
+	}
+	.title {
+		@include sm-sans;
+		font-weight: 700;
+		@include margin-bottom(0.5);
+	}
+	.artist {
+		@include sm-sans;
+	}
+	@include clear-2; // display cards side-by-side on mobile, clearing every 2nd + 1 cards to the left
+	@include respond-to(break2) {@include clear-6;} // display 6 across, clearing every 6th + 1 cards
+}</code></pre>
+      </div>
+      <div class="col-sm-9">
+        <pre class="html"><code>&lt;div class="card album-card col-xs-2 col-sm-2"&gt;
+	&lt;div class="image"&gt;
+		&lt;a href="#"&gt;&lt;img src="SFW40568.jpeg" alt=""&gt;&lt;/a&gt;
+	&lt;/div&gt;
+	&lt;div class="details"&gt;
+		&lt;div class="details-inner"&gt;
+			&lt;a href="#" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;Quelbe! Music of the U.S. Virgin Islands&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
+			&lt;div class="artist"&gt;Stanley and the Ten Sleepless Nights&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
 
 </code></pre>
       </div>

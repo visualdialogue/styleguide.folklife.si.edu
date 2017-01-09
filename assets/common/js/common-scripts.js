@@ -44,10 +44,8 @@ $(document).ready(function () {
 	 	// check if this nav item has as ul as next sibling, from http://stackoverflow.com/a/7678513
 	 	if($(this).next('ul').length) {
 	 		var hasChildren = true;
-	 		// console.log('link has children');
 	 	}
 	 	else {
-	 		// console.log('link has NO children');
 	 		var hasChildren = false;
 	 	}
 
@@ -58,7 +56,6 @@ $(document).ready(function () {
 	 	}
 
 		var $this = $(this);
-
 	 	var $thisUl = $this.next('ul');
 
 		// if you are already open, close all
@@ -84,12 +81,11 @@ $(document).ready(function () {
 	var $siteToggle = $('#site-toggle');
 	var $navBarHeader = $('.navbar-header');
 	var $navspacer = $('#navspacer');
-
-	console.log('site.isFolkways', site.isFolkways);
+	var $logoSwitchTimer;
 
 	var gapNavHeight = $siteToggle.outerHeight();
-	if(site.isMobile && !site.isFolkways) {
-		gapNavHeight = 2; // activate next condition immediately
+	if(site.isMobile) {
+		gapNavHeight = 0; // activate next condition immediately
 	}
 
 	// console.log('gapNavHeight', gapNavHeight);
@@ -103,7 +99,6 @@ $(document).ready(function () {
 		if (($(this).scrollTop() > gapNavHeight) && (smallerNav == false)) {  
 			site.navbar.addClass("is-smaller");
 			switchLogo('inline');
-
 			smallerNav = true;
 			if(!site.isMobile) {
 				$navspacer.addClass("navspacer-open"); // open right away
@@ -119,16 +114,17 @@ $(document).ready(function () {
 	});
 
 	function switchLogo(direction) {
-
+		// clear timeout so prevent multiple firings
+		clearTimeout($logoSwitchTimer);
 		// only show block if at top of viewport and nav isn't already open
 		if(direction == 'block' && $(window).scrollTop() <= gapNavHeight && menuClosed) {
 			$('.one-line-logos').fadeOut('30');
-			setTimeout(function(){ 
+			$logoSwitchTimer = setTimeout(function(){ 
 				$('.block-logos').fadeIn('30');
 			}, 30);
 		} else {
 			$('.block-logos').fadeOut('30');
-			setTimeout(function(){ 
+			$logoSwitchTimer = setTimeout(function(){ 
 				$('.one-line-logos').fadeIn('30');
 			}, 30);
 		}
@@ -150,7 +146,6 @@ $(document).ready(function () {
 		$menuIcon.add($shareIcon).add($searchIcon).show(); // show just the main icons again
 	});
 
-
 /*********************
 * Menu
 *********************/
@@ -168,7 +163,7 @@ $(document).ready(function () {
 			site.navbar.addClass('is-open');
 			// if(site.isMobile) // switch to one-line logo in mobile view
 			// site.navbar.addClass('has-one-line-logo'); // switch to one-line logo
-			switchLogo('inline');
+			switchLogo('one-line');
 
 			$navbarOutside.css('position', 'fixed'); // activate navbarOutside
 			// console.log('one line logo');				
@@ -411,7 +406,20 @@ $(document).ready(function () {
 * Sound card - Media Element JS
 *********/
 	// wrap time elements together after load. They don't come togethery by default and it is impossible to line them up according to the layout without having a parent wrapper.
-	$('.mejs-time').wrapAll('<div class="mejs-time-wrapper">');
+	// find currenttime containers and wrap them with closest duration container
+	$('.mejs-currenttime-container').each(function() {
+		// get closest duration time
+		var $durationTime = $(this).siblings('.mejs-duration-container');
+		// wrap current time and duration time in new div for correct positioning
+		$(this).add($durationTime).wrapAll('<div class="mejs-time-wrapper">');
+	});
+
+	// change to pause icon when click play
+	// var audio = $('audio.mejs-player');
+
+	// audio.on('play', function() {
+	//     $(this).closest('.mejs-inner').find('.mejs-playpause-button button').addClass('isPlaying');
+	// });
 
 /*********************
 * Show figcaption

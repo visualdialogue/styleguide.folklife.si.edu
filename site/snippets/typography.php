@@ -47,7 +47,9 @@
 	font-family: $serif;
 	font-weight: 700;
 	line-height: 1;
-	font-size: 4.325rem;
+	@include respond-to(break2max) {
+		font-size: 4.325rem;
+	}
 	@include respond-to(break2) {
 		font-size: 3.5vw;
 	}
@@ -74,7 +76,9 @@
 	font-family: $serif;
 	font-weight: 700;
 	line-height: 1;
-	font-size: 2.7rem;
+	@include respond-to(break2max) {
+		font-size: 2.7rem;
+	}
 	@include respond-to(break2) {
 		font-size: 2.5vw;
 	}
@@ -101,7 +105,9 @@
 	font-family: $serif;
 	font-weight: 700;
 	line-height: 1;
-  	font-size: 2.489rem;
+  	@include respond-to(break2max) {
+  		font-size: 2.489rem;
+  	}
 	@include respond-to(break2) {
 		line-height: 1.143;
   		font-size: 1.8vw;
@@ -132,8 +138,10 @@
 	font-family: $serif;
 	font-weight: 700;
 	line-height: 1;
-  	font-size: 2.489rem;
-  	text-style: italic;
+	text-style: italic;
+  	@include respond-to(break2max) {
+  		font-size: 2.489rem;
+  	}
 	@include respond-to(break2) {
 		line-height: 1.143;
   		font-size: 1.8vw;
@@ -163,7 +171,9 @@
           <pre class="sass"><code>@mixin xl-sans {
 	font-family: $sans;
 	font-weight: 600;
-	font-size: 2.37rem;
+	@include respond-to(break2max) {
+		font-size: 2.37rem;
+	}
 	@include respond-to(break2) {
 		font-size: 1.9vw;
 		line-height: 1.2;
@@ -190,7 +200,9 @@
           <pre class="sass"><code>@mixin xl-sans {
 	font-family: $sans;
 	font-weight: 300;
-	font-size: 2.37rem;
+	@include respond-to(break2max) {
+		font-size: 2.37rem;
+	}
 	@include respond-to(break2) {
 		font-size: 1.9vw;
 		line-height: 1.2;
@@ -217,8 +229,10 @@
           <pre class="sass"><code>@mixin lg-sans {
 	font-family: $sans;
 	font-weight: 600;
-	line-height: 1.166667;
-	font-size: 2.107rem;
+	line-height: 1.267; // taller per discussion on 1.4 at shop // 38px
+	@include respond-to(break2max) {
+		font-size: 2.107rem;
+	}
 	@include respond-to(break2) {
   		font-size: 1.9vw;
 	}
@@ -244,8 +258,10 @@
           <pre class="sass"><code>@mixin lg-sans {
 	font-family: $sans;
 	font-weight: 300;
-	line-height: 1.166667;
-	font-size: 2.107rem;
+	line-height: 1.267; // taller per discussion on 1.4 at shop // 38px
+	@include respond-to(break2max) {
+		font-size: 2.107rem;
+	}
 	@include respond-to(break2) {
   		font-size: 1.9vw;
 	}
@@ -272,13 +288,15 @@
 	font-family: $sans;
 	font-weight: 600;
 	line-height: 1.2;
-  	font-size: 1.873rem;
+	@include respond-to(break2max) {
+  		font-size: 1.873rem;
+	}
 	@include respond-to(break2) {
   		font-size: 1.6vw;
 	}
 	@include respond-to(fullwidth) {
-  		line-height: 1.28;
   		font-size: 2.5rem;
+  		line-height: 1.28; // 25/32
 	}
 }
 </code></pre>
@@ -300,13 +318,15 @@
 	font-family: $sans;
 	font-weight: 300;
 	line-height: 1.2;
-  	font-size: 1.873rem;
+	@include respond-to(break2max) {
+  		font-size: 1.873rem;
+	}
 	@include respond-to(break2) {
   		font-size: 1.6vw;
 	}
 	@include respond-to(fullwidth) {
-  		line-height: 1.28;
   		font-size: 2.5rem;
+  		line-height: 1.28; // 25/32
 	}
 }
 </code></pre>
@@ -328,12 +348,14 @@
 	font-family: $sans;
 	font-weight: 600;
 	line-height: 1.2;
-  	font-size: 1.48rem;
+	@include respond-to(break2max) {
+  		font-size: 1.48rem;
+	}
 	@include respond-to(break2) {
 		font-size: 1.2vw;
 	}
 	@include respond-to(fullwidth) {
-		line-height: 1.12;
+		line-height: 1.12; // 18/20
   		font-size: 1.8rem;
 	}
 }
@@ -356,12 +378,14 @@
 	font-family: $sans;
 	font-weight: 300;
 	line-height: 1.2;
-  	font-size: 1.48rem;
+	@include respond-to(break2max) {
+  		font-size: 1.48rem;
+	}
 	@include respond-to(break2) {
 		font-size: 1.2vw;
 	}
 	@include respond-to(fullwidth) {
-		line-height: 1.12;
+		line-height: 1.12; // 18/20
   		font-size: 1.8rem;
 	}
 }
@@ -385,7 +409,9 @@
 	font-weight: 300;
 	line-height: 1.4;
   	text-transform: uppercase;
-  	font-size: 1.316rem;
+  	@include respond-to(break2max) {
+  		font-size: 1.316rem;
+  	}
 	@include respond-to(break2) {
   		font-size: 1vw;
 		line-height: 1.3;
@@ -413,7 +439,9 @@
 	font-family: $sansWide;
 	font-weight: 800;
 	line-height: 1.095237;
-	font-size: 2.622rem;
+	@include respond-to(break2max) {
+		font-size: 2.622rem;
+	}
 	@include respond-to(break2) {
 		font-size: 3.319rem;
 		font-size: 2.95vw;
@@ -439,7 +467,9 @@
 	font-family: $sansWide;
 	font-weight: 800;
 	line-height: 1.095237;
-	font-size: 1.842rem;
+	@include respond-to(break2max) {
+		font-size: 1.842rem;
+	}
 	@include respond-to(break2) {
 		font-size: 2.4vw;
 	}
@@ -463,10 +493,12 @@
           <div class="col-md-7">
             <pre class="sass"><code>@mixin sm-magazine-title {
 	font-family: $sansWide;
-	font-weight: 700;
+	font-weight: 700; // one weight down for pc rendering
 	line-height: 1.2;
-	font-size: 1.841rem;
 	@include margin-bottom(1);
+	@include respond-to(break2max) {
+		font-size: 1.841rem;
+	}
 	@include respond-to(break2) {
 		font-size: 1.9vw;
 	}
@@ -493,39 +525,17 @@
 	font-family: $sansWide;
 	font-weight: 800;
 	margin-bottom: 0;
-	font-size: 1.376rem;
-	@include respond-to(break2) {
-		margin-bottom: 0.4vw;
+	@include respond-to(break2max) {
 		font-size: 1.376rem;
 	}
+	@include respond-to(break2) {
+		font-size: 1.1vw;
+		margin-bottom: 0.4vw;
+	}
 	@include respond-to(fullwidth) {
+		font-size: 1.72rem;
 		line-height: 1.4;
 		margin-bottom: 0.5rem;
-		font-size: 1.72rem;
-	}
-}
-
-
-@mixin sans-tag {
-	text-transform: uppercase;
-	font-family: $sansWide;
-	color: $black65;
-	font-weight: 300;
-	margin-bottom: 0.5rem;
-	font-size: 1.2rem;
-	position: relative; // keep from being hidden under highlighted title
-	line-height: 1.1;
-	letter-spacing: 0.5px;
-	@include respond-to(break2) {
-		line-height: 1.4;
-		font-size: 1.05vw;
-		margin-bottom: 0.4vw;
-		letter-spacing: 0.5px;
-	}
-	@include respond-to(fullwidth) {
-		letter-spacing: 1px;
-		font-size: 1.665rem;
-		margin-bottom: 0;
 	}
 }</code></pre>
           </div>
@@ -548,10 +558,50 @@
 	color: $black65;
 	font-weight: 300;
 	position: relative; // keep from being hidden under highlighted title
-	font-size: 1.2rem;
 	line-height: 1.1;
 	letter-spacing: 0.5px;
 	margin-bottom: 0.5rem;
+	@include respond-to(break2max) {
+		font-size: 1.2rem;
+	}
+	@include respond-to(break2) {
+		font-size: 1.05vw;
+		line-height: 1.4;
+		letter-spacing: 0.5px;
+		margin-bottom: 0.4vw;
+	}
+	@include respond-to(fullwidth) {
+		font-size: 1.665rem;
+		letter-spacing: 1px;
+		margin-bottom: 0;
+	}
+}</code></pre>
+          </div>
+        </div>
+      </div>
+      <div class="typeface codeblock">
+        <div class="row type-title-wrapper">
+          <hr/>
+          <div class="col-sm-10 type-title category-tag-bold-type">Category Tag Bold</div>
+          <?php snippet('show-sass'); ?>
+        </div>
+        <div class="row">
+          <div class="col-md-5">
+            <div class="type-details">Typeface: Acumin Pro Wide<br/>Weight: 700<br/>Maximum Font Size: 1.665rem</div>
+          </div>
+          <div class="col-md-7">
+            <pre class="sass"><code>@mixin sans-tag {
+	text-transform: uppercase;
+	font-family: $sansWide;
+	color: $black65;
+	font-weight: 700;
+	position: relative; // keep from being hidden under highlighted title
+	line-height: 1.1;
+	letter-spacing: 0.5px;
+	margin-bottom: 0.5rem;
+	@include respond-to(break2max) {
+		font-size: 1.2rem;
+	}
 	@include respond-to(break2) {
 		font-size: 1.05vw;
 		line-height: 1.4;
@@ -583,53 +633,19 @@
 	font-family: $sansWide;
 	font-weight: 800;
 	line-height: 1.2;
-	font-size: 5vw;
-	font-size: 1.7rem;
-	@include respond-to(break2) {
-		font-size: 1.09vw;
-		line-height: 1.2;
-	}
-	@include respond-to(fullwidth) {
+	@include respond-to(break2max) {
 		font-size: 1.7rem;
-		line-height: 1.4353;
 	}
-}</code></pre>
-          </div>
-        </div>
-      </div>
-      <div class="typeface codeblock">
-        <div class="row type-title-wrapper">
-          <hr/>
-          <div class="col-sm-10 type-title category-tag-bold-type">Category Tag Bold</div>
-          <?php snippet('show-sass'); ?>
-        </div>
-        <div class="row">
-          <div class="col-md-5">
-            <div class="type-details">Typeface: Acumin Pro Wide<br/>Weight: 700<br/>Maximum Font Size: 1.665rem</div>
-          </div>
-          <div class="col-md-7">
-            <pre class="sass"><code>@mixin sans-tag {
-	text-transform: uppercase;
-	font-family: $sansWide;
-	color: $black65;
-	font-weight: 300;
-	position: relative;
-	font-size: 1.2rem;
-	line-height: 1.1;
-	letter-spacing: 0.5px;
-	margin-bottom: 0.5rem;
 	@include respond-to(break2) {
-		font-size: 1.05vw;
-		line-height: 1.4;
-		letter-spacing: 0.5px;
-		margin-bottom: 0.4vw;
+		line-height: 1.2;
+		font-size: 1.09vw;
 	}
 	@include respond-to(fullwidth) {
-		font-size: 1.665rem;
-		letter-spacing: 1px;
-		margin-bottom: 0;
+		line-height: 1.4353;
+		font-size: 1.7rem;
 	}
-}</code></pre>
+}
+</code></pre>
           </div>
         </div>
       </div>
@@ -654,8 +670,10 @@
             <pre class="sass"><code>@mixin intro-serif {
 	font-family: $serif;
 	font-weight: 600;
-	line-height: 1.3333;
-  	font-size: 1.896rem;
+	line-height: 1.267; // 38px
+	@include respond-to(break2max) {
+  		font-size: 1.896rem;
+  	}
 	@include respond-to(break2) {
   		font-size: 2.2vw;
 	}
@@ -682,8 +700,10 @@
             <pre class="sass"><code>@mixin body-serif {
 	font-family: $serif;
 	font-weight: 400;
-	line-height: 1.333333;
-  	font-size: 1.896rem;
+	line-height: 1.333333; // 24/32
+	@include respond-to(break2max) {
+  		font-size: 1.896rem; // 18px on medium.com mobile, 1.896 on modular scale
+  	}
 	@include respond-to(break2) {
   		font-size: 1.5vw;
 	}
@@ -729,13 +749,15 @@
             <pre class="sass"><code>@mixin body-sans {
 	font-family: $sans;
 	font-weight: 300;
-	line-height: 1.35;
-  	font-size: 1.873rem;
+	line-height: 1.35; // fw magazine article
+	@include respond-to(break2max) {
+  		font-size: 1.873rem;
+  	}
 	@include respond-to(break2) {
 		font-size: 1.25vw;
 	}
 	@include respond-to(fullwidth) {
-  		font-size: 2.107rem;
+  		font-size: 2.107rem; // fits with scale and folklife education page layout
 	}
 }
 </code></pre>
@@ -759,13 +781,16 @@
             <pre class="sass"><code>@mixin lg-slab {
 	font-family: $slabWide;
 	text-transform: uppercase;
-	font-size: 8vw;
+	@include respond-to(break2max) {
+		font-size: 8vw;
+	}
 	@include respond-to(break2) {
 		font-size: 2.9vw;
 		line-height: 1;
 	}
 	@include respond-to(fullwidth) {
-		font-size: 4rem;
+		// font-size: 4.8rem; // past festivals year
+		font-size: 4rem; // folkways explore title bar
 		line-height: 1;
 	}
 }</code></pre>
@@ -812,11 +837,13 @@
             <pre class="sass"><code>@mixin sm-slab {
 	font-family: $slabWide;
 	text-transform: uppercase;
-	font-size: 6vw;
-	line-height: 1.2;
 	letter-spacing: 0.5px;
-	margin-top: 0;
-	margin-bottom: 1.5rem;
+	margin-top: 0; // bootstrap reset
+	margin-bottom: 1.5rem; // section title
+	line-height: 1.2; // section title
+	@include respond-to(break2max) {
+		font-size: 6vw;
+	}
 	@include respond-to(break2) {
 		font-size: 1.9vw;
 		margin-bottom: 0;

@@ -41,7 +41,6 @@ a.details {
 
 // TITLE
 .title {
-	// display: inline-block; // so a tag doesn't get rid of margins
 	display: block; // so space above is consistent, unline inline-block with 2 lines vs 2 line
 	width: 100%; // text align center does exactly that
 }
@@ -68,7 +67,6 @@ a.details {
 		}
 		@include respond-to(fullwidth) {
 			left: 4rem;
-
 		}
 		@include bottom(4);
 	}
@@ -92,9 +90,7 @@ a.details {
 -------------------------------------------------- */
 	.publication-card {
 		@include margin-bottom(4); // add back to horizontal cards section
-		.card:nth-of-type(2n + 1) {
-			clear:left; // keep cards 1, 3, 5, 7, etc cleared left so don't hang on previous card
-		}
+		@include clear-2;
 		.title {
 			@include margin-top(-0.8);
 			@include lg-sans;
@@ -157,7 +153,6 @@ a.details {
 	.video-card.horizontal-card {
 		.video {
 			display: block;
-			
 		}
 	}
 	.video-card {
@@ -191,20 +186,9 @@ a.details {
 		&:hover .icon-play:before {
 			color: $black80;
 		}
-		// @include padding-bottom(2);
-	}
-	.modal-trigger {
-		// cursor: pointer; // set in links
 	}
 	.video-icon-play-button {
 		@include vertically-align;
-		left: 0.7rem;
-		@include respond-to(break2) {
-			left: 0.5vw;
-		}
-		@include respond-to(fullwidth) {
-			left: 0.4rem;
-		}
 	}
 	.center-box {
 		@include vertically-align-parent;
@@ -213,6 +197,7 @@ a.details {
 	.remodal {
 	  padding:2px 2px 20px;
 	  text-align: left;
+	  position: relative;
 	  // trade gpu acceleration for correct placement of close button
 	  -webkit-transform: none;
 	  -moz-transform: none;
@@ -230,17 +215,17 @@ a.details {
 	  background: rgba(0, 0, 0, 0.8) none repeat scroll 0% 0%;
 	}
 	.remodal-close {
-		display: none; // initial hide
-		position: fixed;
-		top:0;
-		right:10px;
+		position: absolute;
+		top:-4.5rem;
+		right:-1rem;
 		left:auto;
-		// display: block;
 		z-index: 10001;
 		color: #fff;
 		width:50px;
 		height:50px;
-		// pointer:cursor;
+		@include respond-to(break2) {
+			right: -4.5rem;
+		}
 	}
 	.remodal-close:hover {
 	  color: $black20;
@@ -270,14 +255,12 @@ a.details {
 	  padding:10px 20px;
 	}
 	.remodal-title {
-		// font-size:1.4rem; // 28px
 		margin-bottom:10px;
 		@include sm-sans;
 	}
 	.remodal-description {
 		@include md-sans;
 	}
-
 
 /* #background
 * the following rules apply a background color to the :after element
@@ -287,7 +270,6 @@ a.details {
 	// horizontal backgrounds
 		.background-card {
 			position: relative;
-			// z-index: 1;
 			&:after {
 				background-color: #fff;
 				content:"";
@@ -308,7 +290,6 @@ a.details {
 				}
 			}
 		}
-
 	.full-feature-card, .details, .ms-section__copy {
 		.more-link {
 			position: static;
@@ -339,7 +320,6 @@ a.details {
 		@include respond-to(break2) {margin-top:-0.28125vw;}
 		@include respond-to(fullwidth) {margin-top:-0.5rem;}
 	}
-
 
 /* #horizontal
 -------------------------------------------------- */
@@ -382,7 +362,6 @@ a.details {
 			margin-bottom: 0;
 		}
 	}
-
 
 /* Full feature cards
 -------------------------------------------------- */
@@ -470,7 +449,6 @@ a.details {
 
 /* Merchandise
 -------------------------------------------------- */
-
 	.merchandise-card {
 		&:nth-of-type(2n + 1) {
 			@include respond-to(break2max) {
@@ -516,7 +494,6 @@ a.details {
 			display: block;
 		}
 	}
-
 	.full-border-card {
 		.image, .video {
 			padding-bottom: 0;
@@ -531,7 +508,6 @@ a.details {
 
 /* Card stacking
 -------------------------------------------------- */
-
 	.card-xs-break-2 {
 		&:nth-of-type(2n + 1) {
 			@include respond-to(break2max) {

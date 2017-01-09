@@ -305,7 +305,9 @@
 		@include margin-bottom(5.2);
 	}
 	.half-hr {
-		margin-bottom:2.5vw;
+		@include respond-to(break2max) {
+			margin-bottom:2.5vw;
+		}
 		@include respond-to(break2) {margin-bottom:1.3vw;}
 		@include respond-to(fullwidth) {margin-bottom:2rem;}
 	}
@@ -314,12 +316,12 @@
 		font-size: 1px; // make smaller
 		height: 5px; // for older ie
 		path {
-			// fill: $fs-teal;
-			// fill: white;
 			fill: $black50; // default
 		}
-		margin-top: 1vw;
-		margin-bottom: 3vw;
+		@include respond-to(break2max) {
+			margin-top: 1vw;
+			margin-bottom: 3vw;
+		}
 		@include respond-to(break2) {
 			margin-top:0.5vw;
 			margin-bottom: 2.4vw;
@@ -362,6 +364,10 @@
 	.subcollection {
 		@include padding-bottom(1.5); // not margin b/c margin carries over on column breaks
 		display: inline-block; // prevent column overhang
+		ul, ol {
+			// counter default list indendation
+			padding-left: 0;
+		}
 	}
 
 /* Folkways Magazine Article and Lesson Plans Sidebar
@@ -548,10 +554,10 @@
 			background-color: $black50;
 			@include sm-slab;
 			margin-bottom:0;
-			padding: 3vw;
 			color: #fff;
 			text-align: center;
 			@include respond-to(break2max) {
+				padding: 3vw;
 				height: 19vw; // responsive for text
 			}
 			@include respond-to(break2) {
@@ -613,8 +619,12 @@
 		@include padding-right(2);
 		@include padding-left(2);
 		@include email-newsletter;
-		height: 5rem;
+		@include respond-to(break2max) {
+			height: 5rem;
+		}
 		@include respond-to(break2) {
+			min-height: initial;
+			min-height: auto;
 			height: 4.8vw;
 		}
 		@include respond-to(fullwidth) {
@@ -638,6 +648,9 @@
 			height: 8rem;
 		}
 		form, input {
+			@include respond-to(break2max) {
+				height: 5rem;
+			}
 			@include height(7);
 		}
 		input {
@@ -658,6 +671,11 @@
 			@include respond-to(fullwidth) {
 				font-size: 2rem;
 			}
+		}
+	}
+	.short-newsletter-signup-form-wrapper, .newsletter-input {
+		@include respond-to(break2max) {
+			height: 5rem;
 		}
 	}
 
@@ -685,9 +703,7 @@
 		text-transform: capitalize;
 		line-height: 1.4 !important;
 		width: 100%;
-
 		cursor: pointer;
-
 		visibility: hidden; // initial hide
 		// plus sign
 		@include respond-to(break2max) {
@@ -711,7 +727,6 @@
 			@include respond-to(break2max) {
 				width: 4rem;
 				height: 4rem;
-				font-size: 3rem;
 				text-align: center;
 				padding-top: 0.5rem;
 			}
@@ -912,7 +927,9 @@
 		.filter-by-title {
 			@include nav-header;
 			color: $black60;
-			font-size:5vw;
+			@include respond-to(break2max) {
+				font-size:5vw;
+			}
 			@include respond-to(break2) {font-size:1.15vw;}
 			@include respond-to(fullwidth) {font-size:1.8rem;}
 		}

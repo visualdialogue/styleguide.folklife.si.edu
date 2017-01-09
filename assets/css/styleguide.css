@@ -166,6 +166,10 @@ _|   \___/  _|  _| \__| ____/
   content: "\66";
 }
 
+.icon-pause:before {
+  content: "\6b";
+}
+
 /*
 
 
@@ -6128,7 +6132,12 @@ body {
 
 .content h2, .text-card h2 {
   font-weight: 600;
-  margin-bottom: 0.62431rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .content h2, .text-card h2 {
+    margin-bottom: 0.37037rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -6147,8 +6156,12 @@ body {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1;
-  font-size: 2.7rem;
-  margin-bottom: 0.8116rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .content h3, .text-card h3 {
+    font-size: 2.7rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -6160,6 +6173,12 @@ body {
 @media only screen and (min-width: 1560px) {
   .content h3, .text-card h3 {
     font-size: 4.2rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .content h3, .text-card h3 {
+    margin-bottom: 0.48148rem;
   }
 }
 
@@ -6179,9 +6198,12 @@ body {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1;
-  font-size: 2.489rem;
-  margin-bottom: 0.62431rem;
-  margin-bottom: 1.24861rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .content h4, .text-card h4 {
+    font-size: 2.489rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -6197,6 +6219,12 @@ body {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  .content h4, .text-card h4 {
+    margin-bottom: 0.37037rem;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   .content h4, .text-card h4 {
     margin-bottom: 0.64vw;
@@ -6206,6 +6234,12 @@ body {
 @media only screen and (min-width: 1560px) {
   .content h4, .text-card h4 {
     margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .content h4, .text-card h4 {
+    margin-bottom: 0.74074rem;
   }
 }
 
@@ -6225,9 +6259,13 @@ body {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 1.48rem;
   font-weight: 500;
-  margin-bottom: 0.31215rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .content h5, .text-card h5 {
+    font-size: 1.48rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -6240,6 +6278,12 @@ body {
   .content h5, .text-card h5 {
     line-height: 1.12;
     font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .content h5, .text-card h5 {
+    margin-bottom: 0.18519rem;
   }
 }
 
@@ -6259,8 +6303,12 @@ body {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 400;
   line-height: 1.333333;
-  font-size: 1.896rem;
-  padding-bottom: 0.99889rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .content p, .text-card p {
+    font-size: 1.896rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -6272,6 +6320,12 @@ body {
 @media only screen and (min-width: 1560px) {
   .content p, .text-card p {
     font-size: 2.4rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .content p, .text-card p {
+    padding-bottom: 0.59259rem;
   }
 }
 
@@ -6289,7 +6343,12 @@ body {
 
 .content li, .text-card li {
   list-style-position: inside;
-  margin-bottom: 0.49945rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .content li, .text-card li {
+    margin-bottom: 0.2963rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -6308,11 +6367,15 @@ body {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 1.48rem;
-  margin-bottom: 0.18729rem;
   width: initial;
   width: auto;
   font-weight: 600;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .content .title, .text-card .title {
+    font-size: 1.48rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -6328,6 +6391,12 @@ body {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  .content .title, .text-card .title {
+    margin-bottom: 0.11111rem;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   .content .title, .text-card .title {
     margin-bottom: 0.192vw;
@@ -6340,8 +6409,10 @@ body {
   }
 }
 
-.content ul, .content ol, .text-card ul, .text-card ol {
-  padding-left: 1.24861rem;
+@media only screen and (max-width: 53.25em) {
+  .content ul, .content ol, .text-card ul, .text-card ol {
+    padding-left: 0.74074rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -6356,9 +6427,10 @@ body {
   }
 }
 
-.content ul, .text-card ul {
-  padding-bottom: 1.24861rem;
-  margin-bottom: 0.62431rem;
+@media only screen and (max-width: 53.25em) {
+  .content ul, .text-card ul {
+    padding-bottom: 0.74074rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -6370,6 +6442,12 @@ body {
 @media only screen and (min-width: 1560px) {
   .content ul, .text-card ul {
     padding-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .content ul, .text-card ul {
+    margin-bottom: 0.37037rem;
   }
 }
 
@@ -6392,7 +6470,12 @@ body {
   display: inline-block;
   position: relative;
   bottom: 2px;
-  padding-right: 0.62431rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .content ul li:not(.card):before, .text-card ul li:not(.card):before {
+    padding-right: 0.37037rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -6426,7 +6509,12 @@ body {
 
 .content ol ol li, .text-card ol ol li {
   list-style-type: upper-alpha;
-  padding-left: 2.49723rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .content ol ol li, .text-card ol ol li {
+    padding-left: 1.48148rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -6449,8 +6537,13 @@ body {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 1.873rem;
   font-weight: 600;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .content-footer h2 {
+    font-size: 1.873rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -6470,7 +6563,12 @@ body {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.35;
-  font-size: 1.873rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .content-footer p, .content-footer ul {
+    font-size: 1.873rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -6512,9 +6610,14 @@ body {
 -------------------------------------------------- */
 .nav-icon {
   color: #595959;
-  font-size: 2.3rem;
   line-height: 0.9;
   margin: 0;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .nav-icon {
+    font-size: 2.3rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -6585,7 +6688,12 @@ body {
 
 .social-icon {
   color: #595959;
-  padding: 0.62431rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .social-icon {
+    padding: 0.37037rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -6614,9 +6722,11 @@ body {
   cursor: pointer;
 }
 
-.icon-play-button, .icon-circle, .icon-play, .mejs-controls .mejs-button button {
-  width: 10vw;
-  height: 10vw;
+@media only screen and (max-width: 53.25em) {
+  .icon-play-button, .icon-circle, .icon-play, .mejs-controls .mejs-button button {
+    width: 7vw;
+    height: 7vw;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -6633,8 +6743,10 @@ body {
   }
 }
 
-.icon-circle:before, .icon-play:before, .mejs-controls .mejs-playpause-button button:before, .mejs-controls .mejs-playpause-button button:after {
-  font-size: 10vw;
+@media only screen and (max-width: 53.25em) {
+  .icon-circle:before, .icon-play:before, .mejs-controls .mejs-playpause-button button:before, .mejs-controls .mejs-playpause-button button:after {
+    font-size: 10vw;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -6666,10 +6778,15 @@ body {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 1.48rem;
   display: inline-block;
   vertical-align: top;
   line-height: 1.1;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .more-link-text {
+    font-size: 1.48rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -6733,7 +6850,12 @@ body {
 .icon-mail {
   color: #999999;
   float: right;
-  margin-left: 3vw;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .icon-mail {
+    margin-left: 3vw;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -6748,8 +6870,10 @@ body {
   }
 }
 
-.icon-mail:before {
-  font-size: 2rem;
+@media only screen and (max-width: 53.25em) {
+  .icon-mail:before {
+    font-size: 2rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -6817,8 +6941,10 @@ a:hover {
   }
 }
 
-.more-link .er {
-  padding: 0.12486rem;
+@media only screen and (max-width: 53.25em) {
+  .more-link .er {
+    padding: 0.07407rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -6897,11 +7023,11 @@ a:hover {
   border: 0;
   border-radius: 0;
   position: absolute;
+  top: 0;
   width: 100%;
   min-height: initial;
   min-height: auto;
   z-index: 11;
-  height: 4.5rem;
   background-color: #fff;
   box-shadow: 0px 17px 41px -8px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0px 17px 41px -8px rgba(0, 0, 0, 0.2);
@@ -6909,6 +7035,12 @@ a:hover {
   box-shadow: 0px 10px 41px -8px rgba(0, 0, 0, 0.08);
   -webkit-box-shadow: 0px 10px 41px -8px rgba(0, 0, 0, 0.08);
   -moz-box-shadow: 0px 10px 41px -8px rgba(0, 0, 0, 0.08);
+}
+
+@media only screen and (max-width: 53.25em) {
+  .navbar {
+    height: 4.5rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -6931,7 +7063,7 @@ a:hover {
 
 @media only screen and (min-width: 53.25em) {
   .navbar {
-    top: 3.4rem;
+    top: 3rem;
   }
 }
 
@@ -6946,8 +7078,10 @@ a:hover {
   height: auto !important;
 }
 
-.home-page .navbar {
-  height: 4.5rem;
+@media only screen and (max-width: 53.25em) {
+  .home-page .navbar {
+    height: 4.5rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -6965,15 +7099,23 @@ a:hover {
 .site-toggle {
   display: none;
   background-color: #333333;
-  text-align: right;
-  line-height: 2vw;
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.4;
   text-transform: uppercase;
-  font-size: 1.316rem;
+  text-align: right;
   font-weight: 500;
   line-height: 1;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .site-toggle {
+    font-size: 1.316rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -6991,16 +7133,16 @@ a:hover {
 
 @media only screen and (min-width: 53.25em) {
   .site-toggle {
+    font-size: 1.1rem;
     display: block;
-    position: absolute;
-    width: 100%;
     padding-top: 0.8rem;
-    height: 3.4rem;
+    height: 3rem;
   }
 }
 
 @media only screen and (min-width: 1560px) {
   .site-toggle {
+    font-size: 1.6rem;
     line-height: 3.5rem !important;
     padding: 0;
     height: 36px;
@@ -7090,8 +7232,10 @@ a:hover {
   }
 }
 
-.home-page .navbar.is-smaller {
-  height: 4.5rem;
+@media only screen and (max-width: 53.25em) {
+  .home-page .navbar.is-smaller {
+    height: 4.5rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -7106,13 +7250,15 @@ a:hover {
   }
 }
 
-.navspacer {
-  height: calc(4.5rem + 0px + 8.5rem);
+@media only screen and (max-width: 53.25em) {
+  .navspacer {
+    height: calc(4.5rem + 0px + 8.5rem);
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
   .navspacer {
-    height: calc(7rem + 3.4rem + 11.5rem);
+    height: calc(7rem + 3rem + 11.5rem);
   }
 }
 
@@ -7130,13 +7276,15 @@ a:hover {
   transition: all 0.3s ease;
 }
 
-.home-page .navspacer {
-  height: 4.5rem;
+@media only screen and (max-width: 53.25em) {
+  .home-page .navspacer {
+    height: 4.5rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
   .home-page .navspacer {
-    height: calc(7rem + 3.4rem);
+    height: calc(7rem + 3rem);
   }
 }
 
@@ -7252,8 +7400,10 @@ a:hover {
   top: 142px;
 }
 
-body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
-  height: 4.5rem;
+@media only screen and (max-width: 53.25em) {
+  body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
+    height: 4.5rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -7386,9 +7536,10 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
   }
 }
 
-.header-nav {
-  padding-top: 2.12265rem;
-  padding-bottom: 1.6232rem;
+@media only screen and (max-width: 53.25em) {
+  .header-nav {
+    padding-top: 1.25926rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -7400,6 +7551,12 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
 @media only screen and (min-width: 1560px) {
   .header-nav {
     padding-top: 3.4rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .header-nav {
+    padding-bottom: 0.96296rem;
   }
 }
 
@@ -7430,12 +7587,15 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
   font-family: "acumin-pro-wide", Arial, sans-serif;
   font-weight: 800;
   line-height: 1.2;
-  font-size: 5vw;
-  font-size: 1.7rem;
   cursor: pointer;
   padding: 10px 0 0;
   display: block;
-  padding-bottom: 0.31215rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .header-nav-title, .footer-nav-title {
+    font-size: 1.7rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -7462,6 +7622,12 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  .header-nav-title, .footer-nav-title {
+    padding-bottom: 0.18519rem;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   .header-nav-title, .footer-nav-title {
     padding-bottom: 0.32vw;
@@ -7476,7 +7642,12 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
 
 .header-nav-list, .footer-nav-list {
   display: none;
-  margin-bottom: 1.37348rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .header-nav-list, .footer-nav-list {
+    margin-bottom: 0.81481rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -7506,11 +7677,16 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
 .header-nav-sub-item, .footer-nav-sub-item {
   display: block;
   font-family: "acumin-pro", Arial, sans-serif;
-  font-size: 1.7rem;
   line-height: 2;
   font-weight: 400;
   color: gray;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .header-nav-sub-item, .footer-nav-sub-item {
+    font-size: 1.7rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -7563,8 +7739,6 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
   position: relative;
   z-index: 9;
   top: 1rem;
-  padding-top: 2.18508rem;
-  padding-bottom: 1.87292rem;
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -7581,6 +7755,12 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  .browsenav {
+    padding-top: 1.2963rem;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   .browsenav {
     padding-top: 2.24vw;
@@ -7590,6 +7770,12 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
 @media only screen and (min-width: 1560px) {
   .browsenav {
     padding-top: 3.5rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .browsenav {
+    padding-bottom: 1.11111rem;
   }
 }
 
@@ -7610,12 +7796,14 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
   font-family: "acumin-pro-wide", Arial, sans-serif;
   font-weight: 800;
   line-height: 1.2;
-  font-size: 5vw;
-  font-size: 1.7rem;
   font-family: "unit-gothic-718", Arial, sans-serif;
   color: #595959;
-  margin-bottom: 2vw;
-  margin-top: 1.56077rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .browsenav-title {
+    font-size: 1.7rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -7632,10 +7820,22 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  .browsenav-title {
+    margin-bottom: 2vw;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   .browsenav-title {
     text-align: right;
     margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .browsenav-title {
+    margin-top: 0.92593rem;
   }
 }
 
@@ -7697,8 +7897,10 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
   }
 }
 
-.highlight-container .section-title {
-  margin-bottom: 2.12265rem;
+@media only screen and (max-width: 53.25em) {
+  .highlight-container .section-title {
+    margin-bottom: 1.25926rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -7944,7 +8146,12 @@ body {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 400;
   line-height: 1.333333;
-  font-size: 1.896rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  body {
+    font-size: 1.896rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -7961,7 +8168,12 @@ body {
 
 section {
   position: relative;
-  margin-bottom: 1.24861rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  section {
+    margin-bottom: 0.74074rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -7984,8 +8196,10 @@ ul {
   margin: 0;
 }
 
-.first-section .section-title {
-  margin-top: -0.49945rem;
+@media only screen and (max-width: 53.25em) {
+  .first-section .section-title {
+    margin-top: -0.2963rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -8003,14 +8217,18 @@ ul {
 .section-title {
   font-family: "unit-gothic-717", Arial, sans-serif;
   text-transform: uppercase;
-  font-size: 5vw;
-  font-size: 6vw;
   letter-spacing: 0.5px;
   margin-top: 0;
   margin-bottom: 1.5rem;
   line-height: 1.2;
   color: #595959;
   margin-bottom: 1.5rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .section-title {
+    font-size: 6vw;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -8056,7 +8274,12 @@ ul {
 
 .sidebar {
   color: #4d4d4d;
-  margin-bottom: 3.74584rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .sidebar {
+    margin-bottom: 2.22222rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -8075,12 +8298,15 @@ ul {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.267;
-  font-size: 2.107rem;
   color: gray;
   margin-top: 0;
-  margin-bottom: 0rem;
-  padding-bottom: 0.49945rem;
   border-bottom: 1px solid #999999;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .sidebar h3, .sidebar-section-title {
+    font-size: 2.107rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -8095,6 +8321,12 @@ ul {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  .sidebar h3, .sidebar-section-title {
+    margin-bottom: 0rem;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   .sidebar h3, .sidebar-section-title {
     margin-bottom: 0vw;
@@ -8104,6 +8336,12 @@ ul {
 @media only screen and (min-width: 1560px) {
   .sidebar h3, .sidebar-section-title {
     margin-bottom: 0rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .sidebar h3, .sidebar-section-title {
+    padding-bottom: 0.2963rem;
   }
 }
 
@@ -8124,10 +8362,14 @@ ul {
   font-weight: 300;
   line-height: 1.4;
   text-transform: uppercase;
-  font-size: 1.316rem;
-  padding-top: 0.49945rem;
   color: gray;
   margin: 0;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .sidebar h4, .sidebar-item-title {
+    font-size: 1.316rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -8140,6 +8382,12 @@ ul {
 @media only screen and (min-width: 1560px) {
   .sidebar h4, .sidebar-item-title {
     font-size: 1.6rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .sidebar h4, .sidebar-item-title {
+    padding-top: 0.2963rem;
   }
 }
 
@@ -8157,7 +8405,12 @@ ul {
 
 .sidebar-item {
   border-bottom: 1px solid #999999;
-  padding-bottom: 0.62431rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .sidebar-item {
+    padding-bottom: 0.37037rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -8184,8 +8437,10 @@ ul {
   color: #4d4d4d;
 }
 
-.sidebar-section {
-  margin-bottom: 1.49834rem;
+@media only screen and (max-width: 53.25em) {
+  .sidebar-section {
+    margin-bottom: 0.88889rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -8215,12 +8470,17 @@ hr {
 .thick-hr {
   height: 11px;
   background-image: url(/assets/images/hr/hr.png);
-  margin-bottom: 3.2464rem;
 }
 
 @media only screen and (min-width: 53.25em) {
   .thick-hr {
     margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .thick-hr {
+    margin-bottom: 1.92593rem;
   }
 }
 
@@ -8236,8 +8496,10 @@ hr {
   }
 }
 
-.half-hr {
-  margin-bottom: 2.5vw;
+@media only screen and (max-width: 53.25em) {
+  .half-hr {
+    margin-bottom: 2.5vw;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -8255,12 +8517,17 @@ hr {
 .svg-thin-hr {
   font-size: 1px;
   height: 5px;
-  margin-top: 1vw;
-  margin-bottom: 3vw;
 }
 
 .svg-thin-hr path {
   fill: gray;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .svg-thin-hr {
+    margin-top: 1vw;
+    margin-bottom: 3vw;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -8286,11 +8553,16 @@ hr {
   margin: 0;
   border: none;
   background-color: #595959;
-  margin-bottom: 2.49723rem;
 }
 
 .title-bar-hr {
   margin-top: -1.6rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .title-bar {
+    margin-bottom: 1.48148rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -8309,9 +8581,12 @@ hr {
   color: #fff;
   font-family: "unit-gothic-717", Arial, sans-serif;
   text-transform: uppercase;
-  font-size: 8vw;
-  margin-top: 0.8116rem;
-  margin-bottom: 0.8116rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .page-title {
+    font-size: 8vw;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -8328,6 +8603,12 @@ hr {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  .page-title {
+    margin-top: 0.48148rem;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   .page-title {
     margin-top: 0.832vw;
@@ -8337,6 +8618,12 @@ hr {
 @media only screen and (min-width: 1560px) {
   .page-title {
     margin-top: 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .page-title {
+    margin-bottom: 0.48148rem;
   }
 }
 
@@ -8361,8 +8648,13 @@ a .page-title:hover {
 }
 
 .subcollection {
-  padding-bottom: 0.93646rem;
   display: inline-block;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .subcollection {
+    padding-bottom: 0.55556rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -8377,10 +8669,16 @@ a .page-title:hover {
   }
 }
 
+.subcollection ul, .subcollection ol {
+  padding-left: 0;
+}
+
 /* Folkways Magazine Article and Lesson Plans Sidebar
 -------------------------------------------------- */
-.sidebar-audio {
-  margin-bottom: 2.49723rem;
+@media only screen and (max-width: 53.25em) {
+  .sidebar-audio {
+    margin-bottom: 1.48148rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -8398,10 +8696,14 @@ a .page-title:hover {
 .sidebar-audio .sidebar-title {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
-  font-size: 2.37rem;
   font-weight: 600;
-  margin-bottom: 2.30994rem;
   line-height: 1 !important;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .sidebar-audio .sidebar-title {
+    font-size: 2.37rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -8417,6 +8719,12 @@ a .page-title:hover {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  .sidebar-audio .sidebar-title {
+    margin-bottom: 1.37037rem;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   .sidebar-audio .sidebar-title {
     margin-bottom: 2.368vw;
@@ -8429,8 +8737,10 @@ a .page-title:hover {
   }
 }
 
-.sidebar-audio .sidebar-card {
-  margin-bottom: 2.49723rem;
+@media only screen and (max-width: 53.25em) {
+  .sidebar-audio .sidebar-card {
+    margin-bottom: 1.48148rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -8446,9 +8756,13 @@ a .page-title:hover {
 }
 
 .sidebar-audio .sidebar-card .title {
-  margin-top: 0rem;
   line-height: 1.3;
-  margin-bottom: 0.12486rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .sidebar-audio .sidebar-card .title {
+    margin-top: 0rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -8460,6 +8774,12 @@ a .page-title:hover {
 @media only screen and (min-width: 1560px) {
   .sidebar-audio .sidebar-card .title {
     margin-top: 0rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .sidebar-audio .sidebar-card .title {
+    margin-bottom: 0.07407rem;
   }
 }
 
@@ -8489,7 +8809,12 @@ a .page-title:hover {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 1.48rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .sidebar-audio .track {
+    font-size: 1.48rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -8505,8 +8830,10 @@ a .page-title:hover {
   }
 }
 
-.sidebar-audio .track-play-button {
-  left: 1.24861rem;
+@media only screen and (max-width: 53.25em) {
+  .sidebar-audio .track-play-button {
+    left: 0.74074rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -8530,8 +8857,13 @@ a .page-title:hover {
   font-weight: 300;
   line-height: 1.4;
   text-transform: uppercase;
-  font-size: 1.316rem;
   text-transform: none;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .sidebar-audio .track-action {
+    font-size: 1.316rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -8547,8 +8879,10 @@ a .page-title:hover {
   }
 }
 
-.sidebar-video .details-inner, .sidebar-album .details-inner {
-  padding-top: 1.24861rem;
+@media only screen and (max-width: 53.25em) {
+  .sidebar-video .details-inner, .sidebar-album .details-inner {
+    padding-top: 0.74074rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -8566,8 +8900,13 @@ a .page-title:hover {
 .sidebar-video .title, .sidebar-album .title {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
-  font-size: 2.37rem;
   font-weight: 600;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .sidebar-video .title, .sidebar-album .title {
+    font-size: 2.37rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -8586,8 +8925,10 @@ a .page-title:hover {
 /* Collection page
  * as seen at Folklife Archives page
  -------------------------------------------------- */
-.collection-page .blog-article-card {
-  margin-bottom: 0.49945rem;
+@media only screen and (max-width: 53.25em) {
+  .collection-page .blog-article-card {
+    margin-bottom: 0.2963rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -8602,8 +8943,10 @@ a .page-title:hover {
   }
 }
 
-.collection-page .details-inner {
-  padding-top: 0.49945rem;
+@media only screen and (max-width: 53.25em) {
+  .collection-page .details-inner {
+    padding-top: 0.2963rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -8622,9 +8965,12 @@ a .page-title:hover {
 -------------------------------------------------- */
 .highlight-bar {
   background-color: #cccccc;
-  padding-top: 2.49723rem;
-  padding-bottom: 2.49723rem;
-  margin-bottom: 4.49501rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .highlight-bar {
+    padding-top: 1.48148rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -8639,6 +8985,12 @@ a .page-title:hover {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  .highlight-bar {
+    padding-bottom: 1.48148rem;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   .highlight-bar {
     padding-bottom: 2.56vw;
@@ -8648,6 +9000,12 @@ a .page-title:hover {
 @media only screen and (min-width: 1560px) {
   .highlight-bar {
     padding-bottom: 4rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .highlight-bar {
+    margin-bottom: 2.66667rem;
   }
 }
 
@@ -8687,16 +9045,19 @@ a .page-title:hover {
   position: relative;
   font-family: "unit-gothic-717", Arial, sans-serif;
   text-transform: uppercase;
-  font-size: 5vw;
-  font-size: 6vw;
   letter-spacing: 0.5px;
   margin-top: 0;
   margin-bottom: 1.5rem;
   line-height: 1.2;
-  margin-bottom: 0rem;
   color: #fff;
   text-align: center;
   width: 50%;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .become-a-member .image {
+    font-size: 6vw;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -8709,6 +9070,12 @@ a .page-title:hover {
 @media only screen and (min-width: 1560px) {
   .become-a-member .image {
     font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .become-a-member .image {
+    margin-bottom: 0rem;
   }
 }
 
@@ -8738,8 +9105,13 @@ a .page-title:hover {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.267;
-  font-size: 2.107rem;
   text-align: center;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .become-a-member .copy {
+    font-size: 2.107rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -8789,8 +9161,10 @@ a .page-title:hover {
 
 /* #Support Us
 -------------------------------------------------- */
-.above-support-hr {
-  margin-bottom: 1.87292rem;
+@media only screen and (max-width: 53.25em) {
+  .above-support-hr {
+    margin-bottom: 1.11111rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -8839,13 +9213,6 @@ a .page-title:hover {
   }
 }
 
-.support-copy {
-  padding-top: 0.93646rem;
-  padding-right: 1.24861rem;
-  padding-bottom: 1.24861rem;
-  padding-left: 1.24861rem;
-}
-
 @media only screen and (max-width: 53.25em) {
   .support-copy {
     font-size: 2.6vw;
@@ -8871,6 +9238,12 @@ a .page-title:hover {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  .support-copy {
+    padding-top: 0.55556rem;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   .support-copy {
     padding-top: 0.96vw;
@@ -8880,6 +9253,12 @@ a .page-title:hover {
 @media only screen and (min-width: 1560px) {
   .support-copy {
     padding-top: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .support-copy {
+    padding-right: 0.74074rem;
   }
 }
 
@@ -8895,6 +9274,12 @@ a .page-title:hover {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  .support-copy {
+    padding-bottom: 0.74074rem;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   .support-copy {
     padding-bottom: 1.28vw;
@@ -8904,6 +9289,12 @@ a .page-title:hover {
 @media only screen and (min-width: 1560px) {
   .support-copy {
     padding-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .support-copy {
+    padding-left: 0.74074rem;
   }
 }
 
@@ -8923,16 +9314,19 @@ a .page-title:hover {
   background-color: gray;
   font-family: "unit-gothic-717", Arial, sans-serif;
   text-transform: uppercase;
-  font-size: 5vw;
-  font-size: 6vw;
   letter-spacing: 0.5px;
   margin-top: 0;
   margin-bottom: 1.5rem;
   line-height: 1.2;
   margin-bottom: 0;
-  padding: 3vw;
   color: #fff;
   text-align: center;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .support-button {
+    font-size: 6vw;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -8950,6 +9344,7 @@ a .page-title:hover {
 
 @media only screen and (max-width: 53.25em) {
   .support-button {
+    padding: 3vw;
     height: 19vw;
   }
 }
@@ -9000,7 +9395,12 @@ a .page-title:hover {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.35;
-  font-size: 1.873rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .newsletter-signup-section, .support-section, .support-folkways {
+    font-size: 1.873rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -9027,14 +9427,15 @@ a .page-title:hover {
 
 .newsletter-signup-copy {
   background-color: #e6e6e6;
-  padding-top: 1.18618rem;
-  padding-right: 1.24861rem;
-  padding-left: 1.24861rem;
-  padding-bottom: 1.24861rem;
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 1.48rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .newsletter-signup-copy {
+    padding-top: 0.7037rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -9046,6 +9447,12 @@ a .page-title:hover {
 @media only screen and (min-width: 1560px) {
   .newsletter-signup-copy {
     padding-top: 1.9rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .newsletter-signup-copy {
+    padding-right: 0.74074rem;
   }
 }
 
@@ -9061,6 +9468,12 @@ a .page-title:hover {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  .newsletter-signup-copy {
+    padding-left: 0.74074rem;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   .newsletter-signup-copy {
     padding-left: 1.28vw;
@@ -9073,6 +9486,12 @@ a .page-title:hover {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  .newsletter-signup-copy {
+    padding-bottom: 0.74074rem;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   .newsletter-signup-copy {
     padding-bottom: 1.28vw;
@@ -9082,6 +9501,12 @@ a .page-title:hover {
 @media only screen and (min-width: 1560px) {
   .newsletter-signup-copy {
     padding-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .newsletter-signup-copy {
+    font-size: 1.48rem;
   }
 }
 
@@ -9115,11 +9540,13 @@ a .page-title:hover {
 .newsletter-input {
   background-color: #cccccc;
   width: 100%;
-  padding-right: 1.24861rem;
-  padding-left: 1.24861rem;
   font-family: "acumin-pro", Arial, sans-serif;
-  font-size: 5vw;
-  height: 5rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .newsletter-input {
+    padding-right: 0.74074rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -9134,6 +9561,12 @@ a .page-title:hover {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  .newsletter-input {
+    padding-left: 0.74074rem;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   .newsletter-input {
     padding-left: 1.28vw;
@@ -9143,6 +9576,12 @@ a .page-title:hover {
 @media only screen and (min-width: 1560px) {
   .newsletter-input {
     padding-left: 2rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .newsletter-input {
+    font-size: 5vw;
   }
 }
 
@@ -9159,8 +9598,16 @@ a .page-title:hover {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  .newsletter-input {
+    height: 5rem;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   .newsletter-input {
+    min-height: initial;
+    min-height: auto;
     height: 4.8vw;
   }
 }
@@ -9172,8 +9619,10 @@ a .page-title:hover {
   }
 }
 
-.newsletter-signup-wrapper {
-  margin-bottom: 2.49723rem;
+@media only screen and (max-width: 53.25em) {
+  .newsletter-signup-wrapper {
+    margin-bottom: 1.48148rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -9206,8 +9655,16 @@ a .page-title:hover {
   }
 }
 
-.short-newsletter-signup form, .short-newsletter-signup input {
-  height: 4.37015rem;
+@media only screen and (max-width: 53.25em) {
+  .short-newsletter-signup form, .short-newsletter-signup input {
+    height: 5rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .short-newsletter-signup form, .short-newsletter-signup input {
+    height: 3.12779rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -9236,9 +9693,12 @@ a .page-title:hover {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.35;
-  font-size: 1.873rem;
-  padding-top: 0.93646rem;
-  padding-bottom: 1.24861rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .short-newsletter-signup .newsletter-signup-copy {
+    font-size: 1.873rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -9250,6 +9710,12 @@ a .page-title:hover {
 @media only screen and (min-width: 1560px) {
   .short-newsletter-signup .newsletter-signup-copy {
     font-size: 2.107rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .short-newsletter-signup .newsletter-signup-copy {
+    padding-top: 0.55556rem;
   }
 }
 
@@ -9265,6 +9731,12 @@ a .page-title:hover {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  .short-newsletter-signup .newsletter-signup-copy {
+    padding-bottom: 0.74074rem;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   .short-newsletter-signup .newsletter-signup-copy {
     padding-bottom: 1.28vw;
@@ -9277,9 +9749,9 @@ a .page-title:hover {
   }
 }
 
-@media only screen and (min-width: 53.25em) {
+@media only screen and (min-width: 53.25em) and (max-width: 53.25em) {
   .short-newsletter-signup .newsletter-signup-copy {
-    padding-bottom: 0.62431rem;
+    padding-bottom: 0.37037rem;
   }
 }
 
@@ -9301,6 +9773,12 @@ a .page-title:hover {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  .short-newsletter-signup-form-wrapper, .newsletter-input {
+    height: 5rem;
+  }
+}
+
 /* #Custom select dropdown
 * from http://hernansartorio.com/jquery-nice-select/
 -------------------------------------------------- */
@@ -9312,10 +9790,6 @@ figure {
 
 figcaption {
   position: absolute;
-  padding-top: 0.93646rem;
-  padding-right: 0.62431rem;
-  padding-bottom: 0.93646rem;
-  padding-left: 1.24861rem;
   bottom: 0;
   left: 0;
   color: #fff;
@@ -9324,12 +9798,17 @@ figcaption {
   font-weight: 300;
   line-height: 1.4;
   text-transform: uppercase;
-  font-size: 1.316rem;
   text-transform: capitalize;
   line-height: 1.4 !important;
   width: 100%;
   cursor: pointer;
   visibility: hidden;
+}
+
+@media only screen and (max-width: 53.25em) {
+  figcaption {
+    padding-top: 0.55556rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -9341,6 +9820,12 @@ figcaption {
 @media only screen and (min-width: 1560px) {
   figcaption {
     padding-top: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  figcaption {
+    padding-right: 0.37037rem;
   }
 }
 
@@ -9356,6 +9841,12 @@ figcaption {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  figcaption {
+    padding-bottom: 0.55556rem;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   figcaption {
     padding-bottom: 0.96vw;
@@ -9368,6 +9859,12 @@ figcaption {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  figcaption {
+    padding-left: 0.74074rem;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   figcaption {
     padding-left: 1.28vw;
@@ -9377,6 +9874,12 @@ figcaption {
 @media only screen and (min-width: 1560px) {
   figcaption {
     padding-left: 2rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  figcaption {
+    font-size: 1.316rem;
   }
 }
 
@@ -9407,14 +9910,15 @@ figcaption:after {
   right: 0;
   background-color: gray;
   color: #fff;
-  padding-right: 0.31215rem;
-  padding-bottom: 0.49945rem;
-  padding-left: 0.31215rem;
-  margin-top: -3.12154rem;
   font-family: "acumin-pro", Arial, sans-serif;
-  font-size: 5vw;
   line-height: 0.8 !important;
   visibility: visible;
+}
+
+@media only screen and (max-width: 53.25em) {
+  figcaption:after {
+    padding-right: 0.18519rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -9426,6 +9930,12 @@ figcaption:after {
 @media only screen and (min-width: 1560px) {
   figcaption:after {
     padding-right: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  figcaption:after {
+    padding-bottom: 0.2963rem;
   }
 }
 
@@ -9441,6 +9951,12 @@ figcaption:after {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  figcaption:after {
+    padding-left: 0.18519rem;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   figcaption:after {
     padding-left: 0.32vw;
@@ -9453,6 +9969,12 @@ figcaption:after {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  figcaption:after {
+    margin-top: -1.85185rem;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   figcaption:after {
     margin-top: -3.2vw;
@@ -9462,6 +9984,12 @@ figcaption:after {
 @media only screen and (min-width: 1560px) {
   figcaption:after {
     margin-top: -5rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  figcaption:after {
+    font-size: 3rem;
   }
 }
 
@@ -9482,7 +10010,6 @@ figcaption:after {
   figcaption:after {
     width: 4rem;
     height: 4rem;
-    font-size: 3rem;
     text-align: center;
     padding-top: 0.5rem;
   }
@@ -9497,16 +10024,16 @@ figcaption.minus-sign:before {
   position: absolute;
   bottom: 0;
   right: 0;
-  right: 0.31215rem;
   color: #fff;
-  padding-right: 0.12486rem;
-  padding-bottom: 0.49945rem;
-  padding-left: 0.31215rem;
-  margin-top: -3.12154rem;
   font-family: "acumin-pro", Arial, sans-serif;
-  font-size: 5vw;
   line-height: 0.8 !important;
   visibility: visible;
+}
+
+@media only screen and (max-width: 53.25em) {
+  figcaption.minus-sign:before {
+    right: 0.18519rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -9518,6 +10045,12 @@ figcaption.minus-sign:before {
 @media only screen and (min-width: 1560px) {
   figcaption.minus-sign:before {
     right: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  figcaption.minus-sign:before {
+    padding-right: 0.07407rem;
   }
 }
 
@@ -9533,6 +10066,12 @@ figcaption.minus-sign:before {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  figcaption.minus-sign:before {
+    padding-bottom: 0.2963rem;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   figcaption.minus-sign:before {
     padding-bottom: 0.512vw;
@@ -9542,6 +10081,12 @@ figcaption.minus-sign:before {
 @media only screen and (min-width: 1560px) {
   figcaption.minus-sign:before {
     padding-bottom: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  figcaption.minus-sign:before {
+    padding-left: 0.18519rem;
   }
 }
 
@@ -9557,6 +10102,12 @@ figcaption.minus-sign:before {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  figcaption.minus-sign:before {
+    margin-top: -1.85185rem;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   figcaption.minus-sign:before {
     margin-top: -3.2vw;
@@ -9566,6 +10117,12 @@ figcaption.minus-sign:before {
 @media only screen and (min-width: 1560px) {
   figcaption.minus-sign:before {
     margin-top: -5rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  figcaption.minus-sign:before {
+    font-size: 3rem;
   }
 }
 
@@ -9599,9 +10156,14 @@ figcaption.minus-sign:before {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 1.48rem;
   font-weight: 600;
   color: #666666;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .dropdown-wrapper {
+    font-size: 1.48rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -9638,8 +10200,10 @@ figcaption.minus-sign:before {
   cursor: pointer;
 }
 
-.dropdown, .filter-button {
-  margin-top: 0.93646rem;
+@media only screen and (max-width: 53.25em) {
+  .dropdown, .filter-button {
+    margin-top: 0.55556rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -9666,7 +10230,12 @@ figcaption.minus-sign:before {
 
 .first-level-dropdown li {
   position: relative;
-  padding-left: 0.62431rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .first-level-dropdown li {
+    padding-left: 0.37037rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -9700,10 +10269,13 @@ figcaption.minus-sign:before {
 }
 
 .first-level-dropdown-title, .filter-button {
-  padding-top: 0.43702rem;
-  height: 2.30994rem;
   height: 3rem;
-  padding-left: 0.62431rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .first-level-dropdown-title, .filter-button {
+    padding-top: 0.25926rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -9718,6 +10290,12 @@ figcaption.minus-sign:before {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  .first-level-dropdown-title, .filter-button {
+    height: 1.65326rem;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   .first-level-dropdown-title, .filter-button {
     height: 2.368vw;
@@ -9727,6 +10305,12 @@ figcaption.minus-sign:before {
 @media only screen and (min-width: 1560px) {
   .first-level-dropdown-title, .filter-button {
     height: 3.7rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .first-level-dropdown-title, .filter-button {
+    padding-left: 0.37037rem;
   }
 }
 
@@ -9753,10 +10337,14 @@ figcaption.minus-sign:before {
   transform: rotate(90deg);
   font-size: 2.5rem;
   height: auto;
-  top: 0.49945rem;
-  margin-top: 0rem;
   top: -0.1rem;
   right: 1rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .first-level-dropdown-title:after {
+    top: 0.2963rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -9768,6 +10356,12 @@ figcaption.minus-sign:before {
 @media only screen and (min-width: 1560px) {
   .first-level-dropdown-title:after {
     top: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .first-level-dropdown-title:after {
+    margin-top: 0rem;
   }
 }
 
@@ -9812,8 +10406,6 @@ figcaption.minus-sign:before {
   transform: rotate(90deg);
   font-size: 2.5rem;
   height: auto;
-  top: 0.49945rem;
-  margin-top: 0rem;
   top: -0.1rem;
   right: 1rem;
   -webkit-transform: rotate(0deg);
@@ -9825,6 +10417,12 @@ figcaption.minus-sign:before {
   right: 1rem;
 }
 
+@media only screen and (max-width: 53.25em) {
+  .second-level-dropdown-title:after, .third-level-dropdown-title:after {
+    top: 0.2963rem;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   .second-level-dropdown-title:after, .third-level-dropdown-title:after {
     top: 0.512vw;
@@ -9834,6 +10432,12 @@ figcaption.minus-sign:before {
 @media only screen and (min-width: 1560px) {
   .second-level-dropdown-title:after, .third-level-dropdown-title:after {
     top: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .second-level-dropdown-title:after, .third-level-dropdown-title:after {
+    margin-top: 0rem;
   }
 }
 
@@ -9894,7 +10498,12 @@ figcaption.minus-sign:before {
 .search-page .svg-thin-hr, .past-festivals-page .svg-thin-hr {
   padding: 0;
   margin-top: 0;
-  margin-bottom: 0.31215rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .search-page .svg-thin-hr, .past-festivals-page .svg-thin-hr {
+    margin-bottom: 0.18519rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -9916,9 +10525,13 @@ figcaption.minus-sign:before {
 .search-page .search-query-title, .past-festivals-page .search-query-title {
   font-family: "unit-gothic-717", Arial, sans-serif;
   text-transform: uppercase;
-  font-size: 8vw;
   text-transform: capitalize;
-  margin-bottom: 1.49834rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .search-page .search-query-title, .past-festivals-page .search-query-title {
+    font-size: 8vw;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -9932,6 +10545,12 @@ figcaption.minus-sign:before {
   .search-page .search-query-title, .past-festivals-page .search-query-title {
     font-size: 4rem;
     line-height: 1;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .search-page .search-query-title, .past-festivals-page .search-query-title {
+    margin-bottom: 0.88889rem;
   }
 }
 
@@ -9949,11 +10568,14 @@ figcaption.minus-sign:before {
 
 .search-page .highlight-bar, .past-festivals-page .highlight-bar {
   background-color: #e6e6e6;
-  padding-top: 0.99889rem;
-  padding-bottom: 2.49723rem;
-  margin-bottom: 2.49723rem;
   position: relative;
   z-index: 10;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .search-page .highlight-bar, .past-festivals-page .highlight-bar {
+    padding-top: 0.59259rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -9968,6 +10590,12 @@ figcaption.minus-sign:before {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  .search-page .highlight-bar, .past-festivals-page .highlight-bar {
+    padding-bottom: 1.48148rem;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   .search-page .highlight-bar, .past-festivals-page .highlight-bar {
     padding-bottom: 2.56vw;
@@ -9977,6 +10605,12 @@ figcaption.minus-sign:before {
 @media only screen and (min-width: 1560px) {
   .search-page .highlight-bar, .past-festivals-page .highlight-bar {
     padding-bottom: 4rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .search-page .highlight-bar, .past-festivals-page .highlight-bar {
+    margin-bottom: 1.48148rem;
   }
 }
 
@@ -9996,9 +10630,9 @@ figcaption.minus-sign:before {
   display: none;
 }
 
-@media only screen and (min-width: 53.25em) {
+@media only screen and (min-width: 53.25em) and (max-width: 53.25em) {
   .search-page .filter-more-band, .past-festivals-page .filter-more-band {
-    padding-top: 1.24861rem;
+    padding-top: 0.74074rem;
   }
 }
 
@@ -10019,10 +10653,13 @@ figcaption.minus-sign:before {
   font-family: "acumin-pro-wide", Arial, sans-serif;
   font-weight: 800;
   line-height: 1.2;
-  font-size: 5vw;
-  font-size: 1.7rem;
   color: #666666;
-  font-size: 5vw;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .search-page .filter-by-title, .past-festivals-page .filter-by-title {
+    font-size: 1.7rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -10036,6 +10673,12 @@ figcaption.minus-sign:before {
   .search-page .filter-by-title, .past-festivals-page .filter-by-title {
     line-height: 1.4353;
     font-size: 1.7rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .search-page .filter-by-title, .past-festivals-page .filter-by-title {
+    font-size: 5vw;
   }
 }
 
@@ -10087,11 +10730,15 @@ video::-webkit-media-controls {
 /* #footer
 -------------------------------------------------- */
 .footer {
-  padding-top: 1.6232rem;
-  padding-bottom: 1.18618rem;
   background-color: #333333;
   color: #cccccc;
   z-index: 1;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .footer {
+    padding-top: 0.96296rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -10103,6 +10750,12 @@ video::-webkit-media-controls {
 @media only screen and (min-width: 1560px) {
   .footer {
     padding-top: 2.6rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .footer {
+    padding-bottom: 0.7037rem;
   }
 }
 
@@ -10139,8 +10792,10 @@ video::-webkit-media-controls {
   }
 }
 
-.footer-row-2 {
-  margin-top: 1.87292rem;
+@media only screen and (max-width: 53.25em) {
+  .footer-row-2 {
+    margin-top: 1.11111rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -10157,7 +10812,12 @@ video::-webkit-media-controls {
 
 .footer-row-3 {
   color: #cccccc;
-  margin-top: 2.37237rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .footer-row-3 {
+    margin-top: 1.40741rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -10182,8 +10842,10 @@ video::-webkit-media-controls {
   }
 }
 
-.footer-nav-news {
-  margin-top: 0.68674rem;
+@media only screen and (max-width: 53.25em) {
+  .footer-nav-news {
+    margin-top: 0.40741rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -10250,9 +10912,14 @@ video::-webkit-media-controls {
 
 .copyright-list-item {
   font-family: "acumin-pro", Arial, sans-serif;
-  font-size: 1.7rem;
   line-height: 2;
   font-weight: 400;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .copyright-list-item {
+    font-size: 1.7rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -10279,14 +10946,17 @@ video::-webkit-media-controls {
 
 .social-media-title {
   font-family: "acumin-pro", Arial, sans-serif;
-  font-size: 1.7rem;
   line-height: 2;
   font-weight: 400;
   font-weight: 400;
   text-transform: uppercase;
   color: #595959;
-  margin-bottom: 0.37458rem;
-  margin-left: 0.18729rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .social-media-title {
+    font-size: 1.7rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -10303,6 +10973,12 @@ video::-webkit-media-controls {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  .social-media-title {
+    margin-bottom: 0.22222rem;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   .social-media-title {
     margin-bottom: 0.384vw;
@@ -10312,6 +10988,12 @@ video::-webkit-media-controls {
 @media only screen and (min-width: 1560px) {
   .social-media-title {
     margin-bottom: 0.6rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .social-media-title {
+    margin-left: 0.11111rem;
   }
 }
 
@@ -10364,12 +11046,17 @@ video::-webkit-media-controls {
 
 .copyright {
   font-family: "acumin-pro", Arial, sans-serif;
-  font-size: 1.7rem;
   line-height: 2;
   font-weight: 400;
   color: #595959;
   padding-top: 2vw;
   font-weight: 300;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .copyright {
+    font-size: 1.7rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -10411,9 +11098,10 @@ video::-webkit-media-controls {
   margin: 0;
 }
 
-.article-page figure {
-  margin-top: 2.49723rem;
-  margin-bottom: 2.49723rem;
+@media only screen and (max-width: 53.25em) {
+  .article-page figure {
+    margin-top: 1.48148rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -10425,6 +11113,12 @@ video::-webkit-media-controls {
 @media only screen and (min-width: 1560px) {
   .article-page figure {
     margin-top: 4rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .article-page figure {
+    margin-bottom: 1.48148rem;
   }
 }
 
@@ -10445,8 +11139,12 @@ video::-webkit-media-controls {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 1.48rem;
-  margin-top: 1.24861rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .article-page figcaption {
+    font-size: 1.48rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -10459,6 +11157,12 @@ video::-webkit-media-controls {
   .article-page figcaption {
     line-height: 1.12;
     font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .article-page figcaption {
+    margin-top: 0.74074rem;
   }
 }
 
@@ -10476,7 +11180,12 @@ video::-webkit-media-controls {
 
 .article-page .related-content h2 {
   border-bottom: 1px solid #999999;
-  margin-bottom: 1.24861rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .article-page .related-content h2 {
+    margin-bottom: 0.74074rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -10491,8 +11200,10 @@ video::-webkit-media-controls {
   }
 }
 
-.blog-article-card .image {
-  margin-bottom: 1.24861rem;
+@media only screen and (max-width: 53.25em) {
+  .blog-article-card .image {
+    margin-bottom: 0.74074rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -10511,8 +11222,12 @@ video::-webkit-media-controls {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1;
-  font-size: 4.325rem;
-  margin-bottom: 0.62431rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .blog-article-card .title {
+    font-size: 4.325rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -10524,6 +11239,12 @@ video::-webkit-media-controls {
 @media only screen and (min-width: 1560px) {
   .blog-article-card .title {
     font-size: 6.158rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .blog-article-card .title {
+    margin-bottom: 0.37037rem;
   }
 }
 
@@ -10543,9 +11264,13 @@ video::-webkit-media-controls {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 1.48rem;
   font-weight: 300;
-  margin-bottom: 1.24861rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .blog-article-card .date {
+    font-size: 1.48rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -10558,6 +11283,12 @@ video::-webkit-media-controls {
   .blog-article-card .date {
     line-height: 1.12;
     font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .blog-article-card .date {
+    margin-bottom: 0.74074rem;
   }
 }
 
@@ -10583,8 +11314,10 @@ video::-webkit-media-controls {
   color: #4d4d4d;
 }
 
-.card {
-  margin-bottom: 2.49723rem;
+@media only screen and (max-width: 53.25em) {
+  .card {
+    margin-bottom: 1.48148rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -10623,8 +11356,6 @@ video::-webkit-media-controls {
 }
 
 .details-inner {
-  padding-top: 1.24861rem;
-  padding-right: 0.62431rem;
   padding-top: 1.3rem;
 }
 
@@ -10632,6 +11363,12 @@ video::-webkit-media-controls {
   .details-inner {
     min-height: initial;
     min-height: auto;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .details-inner {
+    padding-top: 0.74074rem;
   }
 }
 
@@ -10644,6 +11381,12 @@ video::-webkit-media-controls {
 @media only screen and (min-width: 1560px) {
   .details-inner {
     padding-top: 2rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .details-inner {
+    padding-right: 0.37037rem;
   }
 }
 
@@ -10686,10 +11429,15 @@ a.details {
   color: #595959;
   font-weight: 300;
   position: relative;
-  font-size: 1.2rem;
   line-height: 1.1;
   letter-spacing: 0.5px;
   margin-bottom: 0.5rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .tag {
+    font-size: 1.2rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -10715,11 +11463,16 @@ a.details {
   color: #595959;
   font-weight: 300;
   position: relative;
-  font-size: 1.2rem;
   line-height: 1.1;
   letter-spacing: 0.5px;
   margin-bottom: 0.5rem;
   font-weight: 700;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .date {
+    font-size: 1.2rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -10745,13 +11498,17 @@ a.details {
   color: #595959;
   font-weight: 300;
   position: relative;
-  font-size: 1.2rem;
   line-height: 1.1;
   letter-spacing: 0.5px;
   margin-bottom: 0.5rem;
   letter-spacing: normal;
   text-transform: initial;
-  margin-top: 0.31215rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .date-sm {
+    font-size: 1.2rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -10771,6 +11528,12 @@ a.details {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  .date-sm {
+    margin-top: 0.18519rem;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   .date-sm {
     margin-top: 0.32vw;
@@ -10787,7 +11550,12 @@ a.details {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 1.48rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .byline {
+    font-size: 1.48rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -10807,8 +11575,10 @@ a.details {
 -------------------------------------------------- */
 /* #text card, folklfe/learn or collectiom
 -------------------------------------------------- */
-.text-card {
-  margin-bottom: 0rem;
+@media only screen and (max-width: 53.25em) {
+  .text-card {
+    margin-bottom: 0rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -10828,8 +11598,10 @@ a.details {
   box-shadow: none;
 }
 
-.text-card .details-inner {
-  padding-top: 0rem;
+@media only screen and (max-width: 53.25em) {
+  .text-card .details-inner {
+    padding-top: 0rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -10846,8 +11618,10 @@ a.details {
 
 /* #publication card
 -------------------------------------------------- */
-.publication-card {
-  margin-bottom: 2.49723rem;
+@media only screen and (max-width: 53.25em) {
+  .publication-card {
+    margin-bottom: 1.48148rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -10862,16 +11636,20 @@ a.details {
   }
 }
 
-.publication-card .card:nth-of-type(2n + 1) {
+.publication-card:nth-of-type(2n + 1) {
   clear: left;
 }
 
 .publication-card .title {
-  margin-top: -0.49945rem;
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.267;
-  font-size: 2.107rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .publication-card .title {
+    margin-top: -0.2963rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -10883,6 +11661,12 @@ a.details {
 @media only screen and (min-width: 1560px) {
   .publication-card .title {
     margin-top: -0.8rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .publication-card .title {
+    font-size: 2.107rem;
   }
 }
 
@@ -10902,9 +11686,12 @@ a.details {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 1.48rem;
-  margin-top: 0.62431rem;
-  margin-bottom: 1.87292rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .publication-card .author {
+    font-size: 1.48rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -10920,6 +11707,12 @@ a.details {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  .publication-card .author {
+    margin-top: 0.37037rem;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   .publication-card .author {
     margin-top: 0.64vw;
@@ -10929,6 +11722,12 @@ a.details {
 @media only screen and (min-width: 1560px) {
   .publication-card .author {
     margin-top: 1rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .publication-card .author {
+    margin-bottom: 1.11111rem;
   }
 }
 
@@ -10944,8 +11743,10 @@ a.details {
   }
 }
 
-.publication-card .details-inner {
-  padding-top: 1.24861rem;
+@media only screen and (max-width: 53.25em) {
+  .publication-card .details-inner {
+    padding-top: 0.74074rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -10968,12 +11769,17 @@ a.details {
   text-transform: uppercase;
   font-family: "acumin-pro-wide", Arial, sans-serif;
   font-weight: 800;
-  font-size: 1.376rem;
   margin-bottom: 0;
   text-transform: initial;
   color: #595959;
   font-weight: 400;
   display: block;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .publication-card .buy-now-button {
+    font-size: 1.376rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -10998,9 +11804,13 @@ a.details {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1;
-  font-size: 2.489rem;
-  margin-bottom: 0.62431rem;
   display: block;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .card-program .title {
+    font-size: 2.489rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -11013,6 +11823,12 @@ a.details {
 @media only screen and (min-width: 1560px) {
   .card-program .title {
     font-size: 2.8rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .card-program .title {
+    margin-bottom: 0.37037rem;
   }
 }
 
@@ -11102,19 +11918,6 @@ a.details {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  left: 0.7rem;
-}
-
-@media only screen and (min-width: 53.25em) {
-  .video-icon-play-button {
-    left: 0.5vw;
-  }
-}
-
-@media only screen and (min-width: 1560px) {
-  .video-icon-play-button {
-    left: 0.4rem;
-  }
 }
 
 .center-box {
@@ -11132,6 +11935,7 @@ a.details {
 .remodal {
   padding: 2px 2px 20px;
   text-align: left;
+  position: relative;
   -webkit-transform: none;
   -moz-transform: none;
   -ms-transform: none;
@@ -11156,15 +11960,20 @@ a.details {
 }
 
 .remodal-close {
-  display: none;
-  position: fixed;
-  top: 0;
-  right: 10px;
+  position: absolute;
+  top: -4.5rem;
+  right: -1rem;
   left: auto;
   z-index: 10001;
   color: #fff;
   width: 50px;
   height: 50px;
+}
+
+@media only screen and (min-width: 53.25em) {
+  .remodal-close {
+    right: -4.5rem;
+  }
 }
 
 .remodal-close:hover {
@@ -11204,7 +12013,12 @@ a.details {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 1.48rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .remodal-title {
+    font-size: 1.48rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -11224,7 +12038,12 @@ a.details {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 1.873rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .remodal-description {
+    font-size: 1.873rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -11277,9 +12096,12 @@ a.details {
 .full-feature-card .more-link, .details .more-link, .ms-section__copy .more-link {
   position: static;
   float: right;
-  margin-top: 1.24861rem;
-  margin-bottom: 1.24861rem;
-  margin-left: 1.24861rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .full-feature-card .more-link, .details .more-link, .ms-section__copy .more-link {
+    margin-top: 0.74074rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -11294,6 +12116,12 @@ a.details {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  .full-feature-card .more-link, .details .more-link, .ms-section__copy .more-link {
+    margin-bottom: 0.74074rem;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   .full-feature-card .more-link, .details .more-link, .ms-section__copy .more-link {
     margin-bottom: 1.28vw;
@@ -11303,6 +12131,12 @@ a.details {
 @media only screen and (min-width: 1560px) {
   .full-feature-card .more-link, .details .more-link, .ms-section__copy .more-link {
     margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .full-feature-card .more-link, .details .more-link, .ms-section__copy .more-link {
+    margin-left: 0.74074rem;
   }
 }
 
@@ -11327,8 +12161,10 @@ a.details {
   }
 }
 
-.half-section .more-link {
-  right: 1.24861rem;
+@media only screen and (max-width: 53.25em) {
+  .half-section .more-link {
+    right: 0.74074rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -11397,8 +12233,10 @@ a.details {
   }
 }
 
-.horizontal-card .details.hasborder {
-  margin-top: 0.62431rem;
+@media only screen and (max-width: 53.25em) {
+  .horizontal-card .details.hasborder {
+    margin-top: 0.37037rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -11413,10 +12251,10 @@ a.details {
   }
 }
 
-.horizontal-card .details-inner {
-  padding: 0rem;
-  padding-top: 1.24861rem;
-  padding-right: 0.62431rem;
+@media only screen and (max-width: 53.25em) {
+  .horizontal-card .details-inner {
+    padding: 0rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -11431,6 +12269,12 @@ a.details {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  .horizontal-card .details-inner {
+    padding-top: 0.74074rem;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   .horizontal-card .details-inner {
     padding-top: 1.28vw;
@@ -11440,6 +12284,12 @@ a.details {
 @media only screen and (min-width: 1560px) {
   .horizontal-card .details-inner {
     padding-top: 2rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .horizontal-card .details-inner {
+    padding-right: 0.37037rem;
   }
 }
 
@@ -11465,8 +12315,10 @@ a.details {
 
 /* Full feature cards
 -------------------------------------------------- */
-.full-feature-card {
-  margin-bottom: 0rem;
+@media only screen and (max-width: 53.25em) {
+  .full-feature-card {
+    margin-bottom: 0rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -11495,8 +12347,12 @@ a.details {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1;
-  font-size: 4.325rem;
-  margin-bottom: 1.24861rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .full-feature-card .title {
+    font-size: 4.325rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -11508,6 +12364,12 @@ a.details {
 @media only screen and (min-width: 1560px) {
   .full-feature-card .title {
     font-size: 6.158rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .full-feature-card .title {
+    margin-bottom: 0.74074rem;
   }
 }
 
@@ -11523,9 +12385,10 @@ a.details {
   }
 }
 
-.full-feature-card .details-inner {
-  padding-top: 0rem;
-  padding-right: 1.24861rem;
+@media only screen and (max-width: 53.25em) {
+  .full-feature-card .details-inner {
+    padding-top: 0rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -11537,6 +12400,12 @@ a.details {
 @media only screen and (min-width: 1560px) {
   .full-feature-card .details-inner {
     padding-top: 0rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .full-feature-card .details-inner {
+    padding-right: 0.74074rem;
   }
 }
 
@@ -11562,7 +12431,12 @@ a.details {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.267;
-  font-size: 2.107rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .full-feature-card .description {
+    font-size: 2.107rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -11579,8 +12453,10 @@ a.details {
 
 /* Sidebar cards
 -------------------------------------------------- */
-.sidebar-card {
-  margin-bottom: 2.49723rem;
+@media only screen and (max-width: 53.25em) {
+  .sidebar-card {
+    margin-bottom: 1.48148rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -11603,7 +12479,12 @@ a.details {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 1.48rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .sidebar-card .details {
+    font-size: 1.48rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -11631,8 +12512,13 @@ a.details {
 
 .sidebar-card .title {
   font-weight: 600;
-  margin-top: -0.31215rem;
   line-height: 1.33 !important;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .sidebar-card .title {
+    margin-top: -0.18519rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -11667,7 +12553,12 @@ a.details {
 -------------------------------------------------- */
 .album-card .details-inner, .vinyl-card .details-inner, .books-card .details-inner {
   padding: 0;
-  padding-top: 1.06132rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .album-card .details-inner, .vinyl-card .details-inner, .books-card .details-inner {
+    padding-top: 0.62963rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -11690,9 +12581,13 @@ a.details {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 1.48rem;
   font-weight: 700;
-  margin-bottom: 0.31215rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .album-card .title, .vinyl-card .title, .books-card .title {
+    font-size: 1.48rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -11705,6 +12600,12 @@ a.details {
   .album-card .title, .vinyl-card .title, .books-card .title {
     line-height: 1.12;
     font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .album-card .title, .vinyl-card .title, .books-card .title {
+    margin-bottom: 0.18519rem;
   }
 }
 
@@ -11724,7 +12625,12 @@ a.details {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 1.48rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .album-card .artist, .vinyl-card .artist, .books-card .artist {
+    font-size: 1.48rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -11777,11 +12683,15 @@ a.details {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 1.48rem;
   color: #fff;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 0.31215rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .merchandise-card .title {
+    font-size: 1.48rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -11794,6 +12704,12 @@ a.details {
   .merchandise-card .title {
     line-height: 1.12;
     font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .merchandise-card .title {
+    margin-bottom: 0.18519rem;
   }
 }
 
@@ -11813,9 +12729,14 @@ a.details {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 1.48rem;
   color: #4d4d4d;
   text-align: center;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .merchandise-card .price {
+    font-size: 1.48rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -11833,8 +12754,10 @@ a.details {
 
 /* Inverse cards (titles above images)
 -------------------------------------------------- */
-.inverse-card .image {
-  margin-top: 1.24861rem;
+@media only screen and (max-width: 53.25em) {
+  .inverse-card .image {
+    margin-top: 0.74074rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -11864,8 +12787,12 @@ a.details {
 
 .full-border-card .details-inner {
   border: 2px solid #d9d9d9;
-  padding-bottom: 1.24861rem;
-  padding-left: 1.24861rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .full-border-card .details-inner {
+    padding-bottom: 0.74074rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -11877,6 +12804,12 @@ a.details {
 @media only screen and (min-width: 1560px) {
   .full-border-card .details-inner {
     padding-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .full-border-card .details-inner {
+    padding-left: 0.74074rem;
   }
 }
 
@@ -11925,9 +12858,13 @@ a.details {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 1.873rem;
   font-weight: 600;
-  margin-bottom: 0.43702rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .audio-card .title {
+    font-size: 1.873rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -11940,6 +12877,12 @@ a.details {
   .audio-card .title {
     font-size: 2.5rem;
     line-height: 1.28;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .audio-card .title {
+    margin-bottom: 0.25926rem;
   }
 }
 
@@ -11959,7 +12902,12 @@ a.details {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 1.48rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .audio-card .subtitle, .audio-card .artist {
+    font-size: 1.48rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -11977,8 +12925,12 @@ a.details {
 
 .audio-card .details-inner {
   position: relative;
-  padding-bottom: 6.24307rem;
-  padding-bottom: 15vw;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .audio-card .details-inner {
+    padding-bottom: 3.7037rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -11990,6 +12942,12 @@ a.details {
 @media only screen and (min-width: 1560px) {
   .audio-card .details-inner {
     padding-bottom: 10rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .audio-card .details-inner {
+    padding-bottom: 15vw;
   }
 }
 
@@ -12006,8 +12964,12 @@ a.details {
   left: 0;
   width: 100%;
   right: 0;
-  padding: 1.24861rem;
-  padding-left: 1rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .audio-player {
+    padding: 0.74074rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -12022,11 +12984,16 @@ a.details {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  .audio-player {
+    padding-left: 1rem;
+    padding-top: 0;
+  }
+}
+
 .audio-player-details {
   line-height: 1;
-  width: 67%;
   width: 65%;
-  padding-left: 0.62431rem;
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -12038,6 +13005,12 @@ a.details {
 @media only screen and (min-width: 1560px) {
   .audio-player-details {
     width: 75%;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .audio-player-details {
+    padding-left: 0.37037rem;
   }
 }
 
@@ -12080,8 +13053,12 @@ a.details {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 1.48rem;
-  font-size: 4vw;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .audio-time {
+    font-size: 1.48rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -12094,6 +13071,12 @@ a.details {
   .audio-time {
     line-height: 1.12;
     font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .audio-time {
+    font-size: 4vw;
   }
 }
 
@@ -12122,7 +13105,6 @@ a.details {
   color: #595959;
   font-weight: 300;
   position: relative;
-  font-size: 1.2rem;
   line-height: 1.1;
   letter-spacing: 0.5px;
   margin-bottom: 0.5rem;
@@ -12133,6 +13115,12 @@ a.details {
   width: initial;
   height: initial;
   margin-bottom: 0 !important;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .mejs-container .mejs-controls div {
+    font-size: 1.2rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -12156,12 +13144,12 @@ a.details {
   position: relative;
   display: inline-block;
   vertical-align: bottom;
-  margin-right: 1.24861rem;
-  margin-right: 2vw;
-  width: 3.74584rem;
-  height: 3.74584rem;
-  width: 10vw;
-  height: 10vw;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .mejs-container .mejs-controls .mejs-playpause-button {
+    margin-right: 0.74074rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -12176,6 +13164,12 @@ a.details {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  .mejs-container .mejs-controls .mejs-playpause-button {
+    width: 2.68097rem;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   .mejs-container .mejs-controls .mejs-playpause-button {
     width: 3.84vw;
@@ -12188,6 +13182,12 @@ a.details {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  .mejs-container .mejs-controls .mejs-playpause-button {
+    height: 2.68097rem;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   .mejs-container .mejs-controls .mejs-playpause-button {
     height: 3.84vw;
@@ -12197,6 +13197,14 @@ a.details {
 @media only screen and (min-width: 1560px) {
   .mejs-container .mejs-controls .mejs-playpause-button {
     height: 6rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .mejs-container .mejs-controls .mejs-playpause-button {
+    margin-right: 2vw;
+    width: 10vw;
+    height: 10vw;
   }
 }
 
@@ -12206,10 +13214,12 @@ a.details {
   left: 0;
   bottom: 0;
   z-index: 10;
-  width: 3.74584rem;
-  height: 3.74584rem;
-  width: 10vw;
-  height: 10vw;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .mejs-container .mejs-controls .mejs-playpause-button button {
+    width: 2.68097rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -12224,6 +13234,12 @@ a.details {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  .mejs-container .mejs-controls .mejs-playpause-button button {
+    height: 2.68097rem;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   .mejs-container .mejs-controls .mejs-playpause-button button {
     height: 3.84vw;
@@ -12233,19 +13249,27 @@ a.details {
 @media only screen and (min-width: 1560px) {
   .mejs-container .mejs-controls .mejs-playpause-button button {
     height: 6rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .mejs-container .mejs-controls .mejs-playpause-button button {
+    width: 10vw;
+    height: 10vw;
   }
 }
 
 .mejs-container .mejs-controls .mejs-playpause-button button:before, .mejs-container .mejs-controls .mejs-playpause-button button:after {
   display: block;
   left: 0;
-  width: 100%;
   text-align: center;
   line-height: 1;
-  width: 3.74584rem;
-  height: 3.74584rem;
-  width: 10vw;
-  height: 10vw;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .mejs-container .mejs-controls .mejs-playpause-button button:before, .mejs-container .mejs-controls .mejs-playpause-button button:after {
+    width: 2.68097rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -12260,6 +13284,12 @@ a.details {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  .mejs-container .mejs-controls .mejs-playpause-button button:before, .mejs-container .mejs-controls .mejs-playpause-button button:after {
+    height: 2.68097rem;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   .mejs-container .mejs-controls .mejs-playpause-button button:before, .mejs-container .mejs-controls .mejs-playpause-button button:after {
     height: 3.84vw;
@@ -12269,6 +13299,14 @@ a.details {
 @media only screen and (min-width: 1560px) {
   .mejs-container .mejs-controls .mejs-playpause-button button:before, .mejs-container .mejs-controls .mejs-playpause-button button:after {
     height: 6rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .mejs-container .mejs-controls .mejs-playpause-button button:before, .mejs-container .mejs-controls .mejs-playpause-button button:after {
+    width: 100%;
+    width: 10vw;
+    height: 10vw;
   }
 }
 
@@ -12280,17 +13318,55 @@ a.details {
   color: #cccccc;
 }
 
+.mejs-container .mejs-controls .mejs-playpause-button button:hover:before {
+  color: #e2f0d8;
+}
+
 .mejs-container .mejs-controls .mejs-playpause-button button:after {
   content: "\62";
   position: relative;
 }
 
+.mejs-container .mejs-controls .mejs-playpause-button button[title="Pause"] {
+  text-align: center;
+}
+
+.mejs-container .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
+  content: "\6b";
+  font-size: 7vw;
+  line-height: 1.45;
+  text-align: center;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .mejs-container .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
+    padding-left: 0.3vw;
+  }
+}
+
+@media only screen and (min-width: 53.25em) {
+  .mejs-container .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
+    font-size: 2.8vw;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .mejs-container .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
+    font-size: 4rem;
+    padding-left: 0.1rem;
+  }
+}
+
 .mejs-container .mejs-controls .mejs-time-wrapper {
   position: absolute;
   bottom: 0;
-  left: 5.11932rem;
-  left: 12.5vw;
   width: 75%;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .mejs-container .mejs-controls .mejs-time-wrapper {
+    left: 3.03704rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -12302,6 +13378,12 @@ a.details {
 @media only screen and (min-width: 1560px) {
   .mejs-container .mejs-controls .mejs-time-wrapper {
     left: 8.2rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .mejs-container .mejs-controls .mejs-time-wrapper {
+    left: 11.5vw;
   }
 }
 
@@ -12317,8 +13399,12 @@ a.details {
   color: #595959;
   height: auto;
   bottom: 0;
-  padding-top: 0.62431rem;
-  padding-top: 0;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .mejs-container .mejs-controls .mejs-time {
+    padding-top: 0.37037rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -12333,10 +13419,22 @@ a.details {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  .mejs-container .mejs-controls .mejs-time {
+    padding-top: 0;
+    padding-left: 0;
+  }
+}
+
 .mejs-container .mejs-controls .mejs-currenttime-container {
   display: inline-block;
-  min-width: 3vw;
   margin-left: 0;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .mejs-container .mejs-controls .mejs-currenttime-container {
+    min-width: 3vw;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -12358,7 +13456,12 @@ a.details {
 .mejs-container .mejs-controls .mejs-duration:before {
   content: "\0007C";
   display: inline-block;
-  margin-right: 0.31215rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .mejs-container .mejs-controls .mejs-duration:before {
+    margin-right: 0.18519rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -12375,32 +13478,35 @@ a.details {
 
 .mejs-container .mejs-controls .mejs-time-rail {
   position: absolute;
-  top: 2vw;
-  top: 1.5vw;
-  width: 65% !important;
-  left: 13vw;
-  height: 1.24861rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .mejs-container .mejs-controls .mejs-time-rail {
+    top: 2vw;
+    top: 1.5vw;
+    width: 65% !important;
+    left: 12vw;
+  }
 }
 
 @media only screen and (min-width: 40em) {
   .mejs-container .mejs-controls .mejs-time-rail {
-    top: 3vw;
+    top: 1rem;
     width: 70.25% !important;
   }
 }
 
 @media only screen and (min-width: 53.25em) {
   .mejs-container .mejs-controls .mejs-time-rail {
-    top: 0.5vw;
-    left: 5.4vw;
     width: 66.25% !important;
+    left: 5.5vw;
   }
 }
 
 @media only screen and (min-width: 62em) {
   .mejs-container .mejs-controls .mejs-time-rail {
     top: 20%;
-    width: 69.75% !important;
+    width: 68.5% !important;
   }
 }
 
@@ -12408,6 +13514,13 @@ a.details {
   .mejs-container .mejs-controls .mejs-time-rail {
     top: 1.5rem;
     left: 8.4rem;
+    width: 69.75% !important;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .mejs-container .mejs-controls .mejs-time-rail {
+    height: 0.89366rem;
   }
 }
 
@@ -12452,7 +13565,12 @@ a.details {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 1.87292rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .mejs-container .mejs-controls .mejs-horizontal-volume-slider {
+    width: 1.34048rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -12489,7 +13607,12 @@ a.details {
 
 .mejs-container .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total, .mejs-container .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
   top: auto;
-  width: 1.87292rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .mejs-container .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total, .mejs-container .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+    width: 1.34048rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -12520,8 +13643,10 @@ a:hover {
 
 /* #general
 -------------------------------------------------- */
-.sub-section {
-  margin-top: 2.49723rem;
+@media only screen and (max-width: 53.25em) {
+  .sub-section {
+    margin-top: 1.48148rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -12542,9 +13667,12 @@ h2.intro-title {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1;
-  font-size: 4.325rem;
-  margin-top: 0.31215rem;
-  margin-bottom: 1.56077rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  h2.intro-title {
+    font-size: 4.325rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -12559,6 +13687,12 @@ h2.intro-title {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  h2.intro-title {
+    margin-top: 0.18519rem;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   h2.intro-title {
     margin-top: 0.32vw;
@@ -12568,6 +13702,12 @@ h2.intro-title {
 @media only screen and (min-width: 1560px) {
   h2.intro-title {
     margin-top: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  h2.intro-title {
+    margin-bottom: 0.92593rem;
   }
 }
 
@@ -12587,10 +13727,14 @@ h2.intro-title {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1;
-  font-size: 2.489rem;
-  margin-bottom: 0.62431rem;
   line-height: 1.35 !important;
   font-weight: 500;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .intro-copy {
+    font-size: 2.489rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -12606,6 +13750,12 @@ h2.intro-title {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  .intro-copy {
+    margin-bottom: 0.37037rem;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   .intro-copy {
     margin-bottom: 0.64vw;
@@ -12618,8 +13768,10 @@ h2.intro-title {
   }
 }
 
-.intro-section {
-  margin-bottom: 2.49723rem;
+@media only screen and (max-width: 53.25em) {
+  .intro-section {
+    margin-bottom: 1.48148rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -12634,8 +13786,10 @@ h2.intro-title {
   }
 }
 
-h3.sidebar-section-title {
-  margin-top: 0.31215rem;
+@media only screen and (max-width: 53.25em) {
+  h3.sidebar-section-title {
+    margin-top: 0.18519rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -12654,9 +13808,13 @@ h3.sidebar-section-title {
 -------------------------------------------------- */
 .grid-item-inner {
   background-color: gray;
-  height: 5.61877rem;
-  margin-bottom: 2.49723rem;
   margin-bottom: 1.5rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .grid-item-inner {
+    height: 4.02145rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -12668,6 +13826,12 @@ h3.sidebar-section-title {
 @media only screen and (min-width: 1560px) {
   .grid-item-inner {
     height: 9rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .grid-item-inner {
+    margin-bottom: 1.48148rem;
   }
 }
 
@@ -12707,7 +13871,6 @@ h3.sidebar-section-title {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 1.48rem;
   color: #fff;
   text-align: center;
   position: relative;
@@ -12715,6 +13878,12 @@ h3.sidebar-section-title {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+@media only screen and (max-width: 53.25em) {
+  .grid-item-inner .copy {
+    font-size: 1.48rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -12742,8 +13911,10 @@ h3.sidebar-section-title {
   color: #333333;
 }
 
-.custom-grid-container {
-  margin-bottom: 2.49723rem;
+@media only screen and (max-width: 53.25em) {
+  .custom-grid-container {
+    margin-bottom: 1.48148rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -12764,8 +13935,13 @@ h3.sidebar-section-title {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 1.48rem;
   margin-bottom: 0 !important;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .color {
+    font-size: 1.48rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -12789,9 +13965,10 @@ h3.sidebar-section-title {
   font-weight: 600;
 }
 
-.color-square {
-  height: 12.48615rem;
-  margin-bottom: 0.62431rem;
+@media only screen and (max-width: 53.25em) {
+  .color-square {
+    height: 8.93655rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -12803,6 +13980,12 @@ h3.sidebar-section-title {
 @media only screen and (min-width: 1560px) {
   .color-square {
     height: 20rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .color-square {
+    margin-bottom: 0.37037rem;
   }
 }
 
@@ -12819,9 +14002,13 @@ h3.sidebar-section-title {
 }
 
 .color code.hljs {
-  margin-top: 0.31215rem;
-  padding: 0.62431rem;
   font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .color code.hljs {
+    margin-top: 0.18519rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -12833,6 +14020,12 @@ h3.sidebar-section-title {
 @media only screen and (min-width: 1560px) {
   .color code.hljs {
     margin-top: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .color code.hljs {
+    padding: 0.37037rem;
   }
 }
 
@@ -13005,7 +14198,12 @@ h3.sidebar-section-title {
 
 .codeblock {
   border-top: 1px solid #999999;
-  margin-top: 2.49723rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .codeblock {
+    margin-top: 1.48148rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -13052,8 +14250,10 @@ pre {
   }
 }
 
-code.hljs {
-  padding: 1.87292rem;
+@media only screen and (max-width: 53.25em) {
+  code.hljs {
+    padding: 1.11111rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -13068,8 +14268,10 @@ code.hljs {
   }
 }
 
-.col-sm-12 code {
-  margin-top: 2.49723rem;
+@media only screen and (max-width: 53.25em) {
+  .col-sm-12 code {
+    margin-top: 1.48148rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -13092,11 +14294,12 @@ code.hljs {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1;
-  font-size: 2.489rem;
-  margin-bottom: 0.62431rem;
-  padding-top: 1.24861rem;
-  margin-top: 1.87292rem;
-  margin-bottom: 1.24861rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .section-subtitle {
+    font-size: 2.489rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -13112,6 +14315,12 @@ code.hljs {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  .section-subtitle {
+    margin-bottom: 0.37037rem;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   .section-subtitle {
     margin-bottom: 0.64vw;
@@ -13121,6 +14330,12 @@ code.hljs {
 @media only screen and (min-width: 1560px) {
   .section-subtitle {
     margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .section-subtitle {
+    padding-top: 0.74074rem;
   }
 }
 
@@ -13136,6 +14351,12 @@ code.hljs {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  .section-subtitle {
+    margin-top: 1.11111rem;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   .section-subtitle {
     margin-top: 1.92vw;
@@ -13145,6 +14366,12 @@ code.hljs {
 @media only screen and (min-width: 1560px) {
   .section-subtitle {
     margin-top: 3rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .section-subtitle {
+    margin-bottom: 0.74074rem;
   }
 }
 
@@ -13160,8 +14387,10 @@ code.hljs {
   }
 }
 
-.section__description {
-  margin-bottom: 2.49723rem;
+@media only screen and (max-width: 53.25em) {
+  .section__description {
+    margin-bottom: 1.48148rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -13184,13 +14413,13 @@ code.hljs {
   font-weight: 300;
   line-height: 1.4;
   text-transform: uppercase;
-  font-size: 1.316rem;
   text-transform: initial;
-  height: 2.12265rem;
-  padding-top: 0.37458rem;
-  padding-right: 0.62431rem;
-  padding-bottom: 0.62431rem;
-  padding-left: 0.62431rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .show-code {
+    font-size: 1.316rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -13206,6 +14435,12 @@ code.hljs {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  .show-code {
+    height: 1.51921rem;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   .show-code {
     height: 2.176vw;
@@ -13215,6 +14450,12 @@ code.hljs {
 @media only screen and (min-width: 1560px) {
   .show-code {
     height: 3.4rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .show-code {
+    padding-top: 0.22222rem;
   }
 }
 
@@ -13230,6 +14471,12 @@ code.hljs {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  .show-code {
+    padding-right: 0.37037rem;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   .show-code {
     padding-right: 0.64vw;
@@ -13242,6 +14489,12 @@ code.hljs {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  .show-code {
+    padding-bottom: 0.37037rem;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   .show-code {
     padding-bottom: 0.64vw;
@@ -13251,6 +14504,12 @@ code.hljs {
 @media only screen and (min-width: 1560px) {
   .show-code {
     padding-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .show-code {
+    padding-left: 0.37037rem;
   }
 }
 
@@ -13284,8 +14543,10 @@ code.hljs {
 
 /* #color
 -------------------------------------------------- */
-.color {
-  margin-bottom: 2.49723rem;
+@media only screen and (max-width: 53.25em) {
+  .color {
+    margin-bottom: 1.48148rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -13311,8 +14572,10 @@ code.hljs {
 
 /* #typography
 -------------------------------------------------- */
-.typography-section {
-  margin-bottom: 3.74584rem;
+@media only screen and (max-width: 53.25em) {
+  .typography-section {
+    margin-bottom: 2.22222rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -13327,8 +14590,10 @@ code.hljs {
   }
 }
 
-.typography-section pre {
-  margin-bottom: 1.24861rem;
+@media only screen and (max-width: 53.25em) {
+  .typography-section pre {
+    margin-bottom: 0.74074rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -13347,8 +14612,10 @@ code.hljs {
   border-top: 4px solid #999999;
 }
 
-.type-title {
-  margin-bottom: 1.24861rem;
+@media only screen and (max-width: 53.25em) {
+  .type-title {
+    margin-bottom: 0.74074rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -13363,8 +14630,10 @@ code.hljs {
   }
 }
 
-.type-title, .show-code {
-  margin-top: 1.24861rem;
+@media only screen and (max-width: 53.25em) {
+  .type-title, .show-code {
+    margin-top: 0.74074rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -13383,7 +14652,12 @@ code.hljs {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 1.48rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .type-details {
+    font-size: 1.48rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -13403,7 +14677,12 @@ code.hljs {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1;
-  font-size: 4.325rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .lg-serif {
+    font-size: 4.325rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -13422,7 +14701,12 @@ code.hljs {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1;
-  font-size: 2.7rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .md-serif {
+    font-size: 2.7rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -13441,8 +14725,12 @@ code.hljs {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1;
-  font-size: 2.489rem;
-  margin-bottom: 0.62431rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .sm-serif {
+    font-size: 2.489rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -13455,6 +14743,12 @@ code.hljs {
 @media only screen and (min-width: 1560px) {
   .sm-serif {
     font-size: 2.8rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .sm-serif {
+    margin-bottom: 0.37037rem;
   }
 }
 
@@ -13474,9 +14768,13 @@ code.hljs {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1;
-  font-size: 2.489rem;
-  margin-bottom: 0.62431rem;
   font-style: italic;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .sm-serif-italic {
+    font-size: 2.489rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -13489,6 +14787,12 @@ code.hljs {
 @media only screen and (min-width: 1560px) {
   .sm-serif-italic {
     font-size: 2.8rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .sm-serif-italic {
+    margin-bottom: 0.37037rem;
   }
 }
 
@@ -13507,7 +14811,12 @@ code.hljs {
 .xl-sans {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
-  font-size: 2.37rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .xl-sans {
+    font-size: 2.37rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -13526,8 +14835,13 @@ code.hljs {
 .xl-sans-semi {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
-  font-size: 2.37rem;
   font-weight: 600;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .xl-sans-semi {
+    font-size: 2.37rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -13547,7 +14861,12 @@ code.hljs {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.267;
-  font-size: 2.107rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .lg-sans {
+    font-size: 2.107rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -13566,8 +14885,13 @@ code.hljs {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.267;
-  font-size: 2.107rem;
   font-weight: 600;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .lg-sans-semi {
+    font-size: 2.107rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -13586,7 +14910,12 @@ code.hljs {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 1.873rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .md-sans {
+    font-size: 1.873rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -13606,8 +14935,13 @@ code.hljs {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 1.873rem;
   font-weight: 600;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .md-sans-semi {
+    font-size: 1.873rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -13627,7 +14961,12 @@ code.hljs {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 1.48rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .sm-sans {
+    font-size: 1.48rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -13647,8 +14986,13 @@ code.hljs {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 1.48rem;
   font-weight: 600;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .sm-sans-semi {
+    font-size: 1.48rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -13669,7 +15013,12 @@ code.hljs {
   font-weight: 300;
   line-height: 1.4;
   text-transform: uppercase;
-  font-size: 1.316rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .caption-sans {
+    font-size: 1.316rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -13689,7 +15038,12 @@ code.hljs {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 400;
   line-height: 1.333333;
-  font-size: 1.896rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .body-serif {
+    font-size: 1.896rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -13708,8 +15062,12 @@ code.hljs {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 600;
   line-height: 1.267;
-  font-size: 1.896rem;
-  margin-bottom: 0.62431rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .intro-serif {
+    font-size: 1.896rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -13721,6 +15079,12 @@ code.hljs {
 @media only screen and (min-width: 1560px) {
   .intro-serif {
     font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .intro-serif {
+    margin-bottom: 0.37037rem;
   }
 }
 
@@ -13740,7 +15104,12 @@ code.hljs {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.35;
-  font-size: 1.873rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .body-sans {
+    font-size: 1.873rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -13759,7 +15128,12 @@ code.hljs {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.267;
-  font-size: 2.107rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .intro-sans {
+    font-size: 2.107rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -13777,7 +15151,12 @@ code.hljs {
 .lg-slab {
   font-family: "unit-gothic-717", Arial, sans-serif;
   text-transform: uppercase;
-  font-size: 8vw;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .lg-slab {
+    font-size: 8vw;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -13816,12 +15195,16 @@ code.hljs {
 .sm-slab {
   font-family: "unit-gothic-717", Arial, sans-serif;
   text-transform: uppercase;
-  font-size: 5vw;
-  font-size: 6vw;
   letter-spacing: 0.5px;
   margin-top: 0;
   margin-bottom: 1.5rem;
   line-height: 1.2;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .sm-slab {
+    font-size: 6vw;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -13842,8 +15225,12 @@ code.hljs {
   font-family: "acumin-pro-wide", Arial, sans-serif;
   font-weight: 800;
   line-height: 1.2;
-  font-size: 5vw;
-  font-size: 1.7rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .nav-header {
+    font-size: 1.7rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -13864,7 +15251,12 @@ code.hljs {
   font-family: "acumin-pro-wide", Arial, sans-serif;
   font-weight: 800;
   line-height: 1.095237;
-  font-size: 2.622rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .lg-magazine-title {
+    font-size: 2.622rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -13884,7 +15276,12 @@ code.hljs {
   font-family: "acumin-pro-wide", Arial, sans-serif;
   font-weight: 800;
   line-height: 1.095237;
-  font-size: 1.842rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .md-magazine-title {
+    font-size: 1.842rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -13903,8 +15300,12 @@ code.hljs {
   font-family: "acumin-pro-wide", Arial, sans-serif;
   font-weight: 700;
   line-height: 1.2;
-  font-size: 1.841rem;
-  margin-bottom: 0.62431rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .sm-magazine-title {
+    margin-bottom: 0.37037rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -13916,6 +15317,12 @@ code.hljs {
 @media only screen and (min-width: 1560px) {
   .sm-magazine-title {
     margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .sm-magazine-title {
+    font-size: 1.841rem;
   }
 }
 
@@ -13935,8 +15342,13 @@ code.hljs {
   text-transform: uppercase;
   font-family: "acumin-pro-wide", Arial, sans-serif;
   font-weight: 800;
-  font-size: 1.376rem;
   margin-bottom: 0;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .buy-button {
+    font-size: 1.376rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -13960,10 +15372,15 @@ code.hljs {
   color: #595959;
   font-weight: 300;
   position: relative;
-  font-size: 1.2rem;
   line-height: 1.1;
   letter-spacing: 0.5px;
   margin-bottom: 0.5rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .category-tag-type {
+    font-size: 1.2rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -13989,11 +15406,16 @@ code.hljs {
   color: #595959;
   font-weight: 300;
   position: relative;
-  font-size: 1.2rem;
   line-height: 1.1;
   letter-spacing: 0.5px;
   margin-bottom: 0.5rem;
   font-weight: 700;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .category-tag-bold-type {
+    font-size: 1.2rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -14015,8 +15437,10 @@ code.hljs {
 
 /* #cards
 -------------------------------------------------- */
-.cards-section .codeblock {
-  margin-bottom: 2.49723rem;
+@media only screen and (max-width: 53.25em) {
+  .cards-section .codeblock {
+    margin-bottom: 1.48148rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -14031,8 +15455,10 @@ code.hljs {
   }
 }
 
-.cards-section .show-code {
-  margin-top: 3.12154rem;
+@media only screen and (max-width: 53.25em) {
+  .cards-section .show-code {
+    margin-top: 1.85185rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -14051,9 +15477,13 @@ code.hljs {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1;
-  font-size: 2.489rem;
-  margin-bottom: 0.62431rem;
   font-weight: 600;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .video-card .title {
+    font-size: 2.489rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -14066,6 +15496,12 @@ code.hljs {
 @media only screen and (min-width: 1560px) {
   .video-card .title {
     font-size: 2.8rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .video-card .title {
+    margin-bottom: 0.37037rem;
   }
 }
 
@@ -14085,7 +15521,12 @@ code.hljs {
   font-family: "acumin-pro-wide", Arial, sans-serif;
   font-weight: 800;
   line-height: 1.095237;
-  font-size: 2.622rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .horizontal-card .title {
+    font-size: 2.622rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -14105,7 +15546,12 @@ code.hljs {
   font-family: "acumin-pro-wide", Arial, sans-serif;
   font-weight: 800;
   line-height: 1.095237;
-  font-size: 2.622rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .feature .title {
+    font-size: 2.622rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -14127,7 +15573,12 @@ code.hljs {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;
   line-height: 1;
-  font-size: 2.7rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .video-section .title {
+    font-size: 2.7rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -14146,7 +15597,12 @@ code.hljs {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.2;
-  font-size: 1.873rem;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .video-section .subtitle {
+    font-size: 1.873rem;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {

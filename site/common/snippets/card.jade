@@ -83,14 +83,16 @@ li.card(class="<? if (isset($card_classes)) echo $card_classes . ' ' ?><? if ($c
 
 			-if ($card->type() == 'audio'):
 				.audio-player
-					.icon-play-button.icon-stack
-						.icon-circle
-						.icon-play
-					.audio-player-details
-						.audio-progress-bar
-							img(src="/assets/images/icons/audio-progress-bar.png" alt="audio progress bar")
-						.audio-time
-							|0:00 &vert;&nbsp;
-							!= $card->audio_length()
-						.volume.icon-volume-up
+					<audio class="mejs-player" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'>
+				//- .audio-player
+				//- 	.icon-play-button.icon-stack
+				//- 		.icon-circle
+				//- 		.icon-play
+				//- 	.audio-player-details
+				//- 		.audio-progress-bar
+				//- 			img(src="/assets/images/icons/audio-progress-bar.png" alt="audio progress bar")
+				//- 		.audio-time
+				//- 			|0:00 &vert;&nbsp;
+				//- 			!= $card->audio_length()
+				//- 		.volume.icon-volume-up
 			-endif

@@ -28,7 +28,7 @@ gulp.task('vendor', function() {
     './assets/bower_components/mediaelement/build/mediaelement-and-player.min.js',
     './assets/bower_components/matchHeight/dist/jquery.matchHeight-min.js',
     './assets/bower_components/jquery-nice-select/js/jquery.nice-select.min.js', // for customizing dropdowns (eg. folkways magazine)
-    // '/bower_components/bxslider-4/jquery3-patch/jquery.bxslider.js',
+    './assets/bower_components/viewport-units-buggyfill/viewport-units-buggyfill.js', // for customizing dropdowns (eg. folkways magazine)
     // './assets/js/throttle.js',
     // '/js/modernizr-custom.js',
     ])

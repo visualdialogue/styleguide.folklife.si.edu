@@ -25,12 +25,15 @@
 -------------------------------------------------- */
 	.nav-icon {
 		color: $black65; // new
-		font-size: 2.3rem;
 		line-height: 0.9; // for center alignment
 		margin: 0;
+		@include respond-to(break2max) {
+			font-size: 2.3rem;
+		}
 		@include respond-to(break2) {
 			font-size: 2.3rem; // new, not responsive
 			padding: 1.3vw;
+			
 			line-height: 0.7; // for center alignment
 		}
 		@include respond-to(fullwidth) {
@@ -96,8 +99,10 @@
 		}
 	}
 	.icon-play-button, .icon-circle, .icon-play, .mejs-controls .mejs-button button {
-		width: 10vw;
-		height: 10vw;
+		@include respond-to(break2max) {
+			width: 7vw;
+			height: 7vw;
+		}
 		@include respond-to(break2) {
 			width: 4vw;
 			height: 4vw;
@@ -108,7 +113,12 @@
 		}
 	}
 	.icon-circle:before, .icon-play:before, .mejs-controls .mejs-playpause-button button:before, .mejs-controls .mejs-playpause-button button:after {
-		font-size: 10vw;
+		@include respond-to(break2max) {
+			font-size: 10vw;
+			// font-size: 7vw;
+			// font-size: 4rem;
+			// font-size: 6vw;
+		}
 		@include respond-to(break2) {
 			font-size: 4vw;
 		}
@@ -164,7 +174,9 @@
 	.icon-mail {
 		color: $black40;
 		float: right;
-		margin-left: 3vw;
+		@include respond-to(break2max) {
+			margin-left: 3vw;
+		}
 		@include respond-to(break2) {
 			margin-left: 1.9vw;
 		}
@@ -173,7 +185,9 @@
 		}
 	}
 	.icon-mail:before {
-		font-size: 2rem;
+		@include respond-to(break2max) {
+			font-size: 2rem;
+		}
 		@include respond-to(break2) {
 			font-size: 4vw;
 			padding-right: 0.2vw; 

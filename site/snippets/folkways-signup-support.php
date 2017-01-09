@@ -13,7 +13,7 @@
       </div>
     </div>
   </div>
-  <div class="short-newsletter-signup">
+  <div class="short-newsletter-signup short-newsletter-signup-form-wrapper">
     <form action="/" class="newsletter-signup-form newsletter">
       <input type="email" placeholder="Enter your email" class="newsletter-input"/>
     </form>
