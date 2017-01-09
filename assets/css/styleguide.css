@@ -6325,7 +6325,7 @@ body {
 
 @media only screen and (max-width: 53.25em) {
   .content p, .text-card p {
-    padding-bottom: 0.59259rem;
+    padding-bottom: 1.12375rem;
   }
 }
 
@@ -6411,7 +6411,7 @@ body {
 
 @media only screen and (max-width: 53.25em) {
   .content ul, .content ol, .text-card ul, .text-card ol {
-    padding-left: 0.74074rem;
+    padding-left: 1.40469rem;
   }
 }
 
@@ -6429,7 +6429,7 @@ body {
 
 @media only screen and (max-width: 53.25em) {
   .content ul, .text-card ul {
-    padding-bottom: 0.74074rem;
+    padding-bottom: 1.40469rem;
   }
 }
 
@@ -6474,7 +6474,7 @@ body {
 
 @media only screen and (max-width: 53.25em) {
   .content ul li:not(.card):before, .text-card ul li:not(.card):before {
-    padding-right: 0.37037rem;
+    padding-right: 0.70235rem;
   }
 }
 
@@ -6513,7 +6513,7 @@ body {
 
 @media only screen and (max-width: 53.25em) {
   .content ol ol li, .text-card ol ol li {
-    padding-left: 1.48148rem;
+    padding-left: 2.80938rem;
   }
 }
 
@@ -6594,7 +6594,6 @@ body {
   position: relative;
   display: inline-block;
   width: 2em;
-  height: 2em;
   line-height: 2em;
   vertical-align: middle;
 }
@@ -6692,7 +6691,7 @@ body {
 
 @media only screen and (max-width: 53.25em) {
   .social-icon {
-    padding: 0.37037rem;
+    padding: 0.70235rem;
   }
 }
 
@@ -6725,21 +6724,18 @@ body {
 @media only screen and (max-width: 53.25em) {
   .icon-play-button, .icon-circle, .icon-play, .mejs-controls .mejs-button button {
     width: 7vw;
-    height: 7vw;
   }
 }
 
 @media only screen and (min-width: 53.25em) {
   .icon-play-button, .icon-circle, .icon-play, .mejs-controls .mejs-button button {
     width: 4vw;
-    height: 4vw;
   }
 }
 
 @media only screen and (min-width: 1560px) {
   .icon-play-button, .icon-circle, .icon-play, .mejs-controls .mejs-button button {
     width: 6rem;
-    height: 6rem;
   }
 }
 
@@ -6943,7 +6939,7 @@ a:hover {
 
 @media only screen and (max-width: 53.25em) {
   .more-link .er {
-    padding: 0.07407rem;
+    padding: 0.14047rem;
   }
 }
 
@@ -7538,7 +7534,7 @@ a:hover {
 
 @media only screen and (max-width: 53.25em) {
   .header-nav {
-    padding-top: 1.25926rem;
+    padding-top: 2.38798rem;
   }
 }
 
@@ -7556,7 +7552,7 @@ a:hover {
 
 @media only screen and (max-width: 53.25em) {
   .header-nav {
-    padding-bottom: 0.96296rem;
+    padding-bottom: 1.8261rem;
   }
 }
 
@@ -7624,7 +7620,7 @@ a:hover {
 
 @media only screen and (max-width: 53.25em) {
   .header-nav-title, .footer-nav-title {
-    padding-bottom: 0.18519rem;
+    padding-bottom: 0.35117rem;
   }
 }
 
@@ -7757,7 +7753,7 @@ a:hover {
 
 @media only screen and (max-width: 53.25em) {
   .browsenav {
-    padding-top: 1.2963rem;
+    padding-top: 2.45821rem;
   }
 }
 
@@ -7775,7 +7771,7 @@ a:hover {
 
 @media only screen and (max-width: 53.25em) {
   .browsenav {
-    padding-bottom: 1.11111rem;
+    padding-bottom: 2.10704rem;
   }
 }
 
@@ -7886,14 +7882,25 @@ a:hover {
 
 .highlight-container .highlight-inner {
   background-color: #b3b3b3;
-  padding: 15px;
   position: relative;
   z-index: 0;
 }
 
+@media only screen and (max-width: 53.25em) {
+  .highlight-container .highlight-inner {
+    padding: 2.80938rem;
+  }
+}
+
 @media only screen and (min-width: 53.25em) {
   .highlight-container .highlight-inner {
-    padding: 40px 40px;
+    padding: 2.56vw;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .highlight-container .highlight-inner {
+    padding: 4rem;
   }
 }
 
@@ -8341,7 +8348,7 @@ ul {
 
 @media only screen and (max-width: 53.25em) {
   .sidebar h3, .sidebar-section-title {
-    padding-bottom: 0.2963rem;
+    padding-bottom: 0.56188rem;
   }
 }
 
@@ -8387,7 +8394,7 @@ ul {
 
 @media only screen and (max-width: 53.25em) {
   .sidebar h4, .sidebar-item-title {
-    padding-top: 0.2963rem;
+    padding-top: 0.56188rem;
   }
 }
 
@@ -8409,7 +8416,7 @@ ul {
 
 @media only screen and (max-width: 53.25em) {
   .sidebar-item {
-    padding-bottom: 0.37037rem;
+    padding-bottom: 0.70235rem;
   }
 }
 
@@ -8653,7 +8660,7 @@ a .page-title:hover {
 
 @media only screen and (max-width: 53.25em) {
   .subcollection {
-    padding-bottom: 0.55556rem;
+    padding-bottom: 1.05352rem;
   }
 }
 
@@ -8881,7 +8888,7 @@ a .page-title:hover {
 
 @media only screen and (max-width: 53.25em) {
   .sidebar-video .details-inner, .sidebar-album .details-inner {
-    padding-top: 0.74074rem;
+    padding-top: 1.40469rem;
   }
 }
 
@@ -8945,7 +8952,7 @@ a .page-title:hover {
 
 @media only screen and (max-width: 53.25em) {
   .collection-page .details-inner {
-    padding-top: 0.2963rem;
+    padding-top: 0.56188rem;
   }
 }
 
@@ -8969,7 +8976,7 @@ a .page-title:hover {
 
 @media only screen and (max-width: 53.25em) {
   .highlight-bar {
-    padding-top: 1.48148rem;
+    padding-top: 2.80938rem;
   }
 }
 
@@ -8987,7 +8994,7 @@ a .page-title:hover {
 
 @media only screen and (max-width: 53.25em) {
   .highlight-bar {
-    padding-bottom: 1.48148rem;
+    padding-bottom: 2.80938rem;
   }
 }
 
@@ -9240,7 +9247,7 @@ a .page-title:hover {
 
 @media only screen and (max-width: 53.25em) {
   .support-copy {
-    padding-top: 0.55556rem;
+    padding-top: 1.05352rem;
   }
 }
 
@@ -9258,7 +9265,7 @@ a .page-title:hover {
 
 @media only screen and (max-width: 53.25em) {
   .support-copy {
-    padding-right: 0.74074rem;
+    padding-right: 1.40469rem;
   }
 }
 
@@ -9276,7 +9283,7 @@ a .page-title:hover {
 
 @media only screen and (max-width: 53.25em) {
   .support-copy {
-    padding-bottom: 0.74074rem;
+    padding-bottom: 1.40469rem;
   }
 }
 
@@ -9294,7 +9301,7 @@ a .page-title:hover {
 
 @media only screen and (max-width: 53.25em) {
   .support-copy {
-    padding-left: 0.74074rem;
+    padding-left: 1.40469rem;
   }
 }
 
@@ -9434,7 +9441,7 @@ a .page-title:hover {
 
 @media only screen and (max-width: 53.25em) {
   .newsletter-signup-copy {
-    padding-top: 0.7037rem;
+    padding-top: 1.33446rem;
   }
 }
 
@@ -9452,7 +9459,7 @@ a .page-title:hover {
 
 @media only screen and (max-width: 53.25em) {
   .newsletter-signup-copy {
-    padding-right: 0.74074rem;
+    padding-right: 1.40469rem;
   }
 }
 
@@ -9470,7 +9477,7 @@ a .page-title:hover {
 
 @media only screen and (max-width: 53.25em) {
   .newsletter-signup-copy {
-    padding-left: 0.74074rem;
+    padding-left: 1.40469rem;
   }
 }
 
@@ -9488,7 +9495,7 @@ a .page-title:hover {
 
 @media only screen and (max-width: 53.25em) {
   .newsletter-signup-copy {
-    padding-bottom: 0.74074rem;
+    padding-bottom: 1.40469rem;
   }
 }
 
@@ -9545,7 +9552,7 @@ a .page-title:hover {
 
 @media only screen and (max-width: 53.25em) {
   .newsletter-input {
-    padding-right: 0.74074rem;
+    padding-right: 1.40469rem;
   }
 }
 
@@ -9563,7 +9570,7 @@ a .page-title:hover {
 
 @media only screen and (max-width: 53.25em) {
   .newsletter-input {
-    padding-left: 0.74074rem;
+    padding-left: 1.40469rem;
   }
 }
 
@@ -9663,7 +9670,7 @@ a .page-title:hover {
 
 @media only screen and (max-width: 53.25em) {
   .short-newsletter-signup form, .short-newsletter-signup input {
-    height: 3.12779rem;
+    height: 4.91642rem;
   }
 }
 
@@ -9715,7 +9722,7 @@ a .page-title:hover {
 
 @media only screen and (max-width: 53.25em) {
   .short-newsletter-signup .newsletter-signup-copy {
-    padding-top: 0.55556rem;
+    padding-top: 1.05352rem;
   }
 }
 
@@ -9733,7 +9740,7 @@ a .page-title:hover {
 
 @media only screen and (max-width: 53.25em) {
   .short-newsletter-signup .newsletter-signup-copy {
-    padding-bottom: 0.74074rem;
+    padding-bottom: 1.40469rem;
   }
 }
 
@@ -9751,7 +9758,7 @@ a .page-title:hover {
 
 @media only screen and (min-width: 53.25em) and (max-width: 53.25em) {
   .short-newsletter-signup .newsletter-signup-copy {
-    padding-bottom: 0.37037rem;
+    padding-bottom: 0.70235rem;
   }
 }
 
@@ -9807,7 +9814,7 @@ figcaption {
 
 @media only screen and (max-width: 53.25em) {
   figcaption {
-    padding-top: 0.55556rem;
+    padding-top: 1.05352rem;
   }
 }
 
@@ -9825,7 +9832,7 @@ figcaption {
 
 @media only screen and (max-width: 53.25em) {
   figcaption {
-    padding-right: 0.37037rem;
+    padding-right: 0.70235rem;
   }
 }
 
@@ -9843,7 +9850,7 @@ figcaption {
 
 @media only screen and (max-width: 53.25em) {
   figcaption {
-    padding-bottom: 0.55556rem;
+    padding-bottom: 1.05352rem;
   }
 }
 
@@ -9861,7 +9868,7 @@ figcaption {
 
 @media only screen and (max-width: 53.25em) {
   figcaption {
-    padding-left: 0.74074rem;
+    padding-left: 1.40469rem;
   }
 }
 
@@ -9917,7 +9924,7 @@ figcaption:after {
 
 @media only screen and (max-width: 53.25em) {
   figcaption:after {
-    padding-right: 0.18519rem;
+    padding-right: 0.35117rem;
   }
 }
 
@@ -9935,7 +9942,7 @@ figcaption:after {
 
 @media only screen and (max-width: 53.25em) {
   figcaption:after {
-    padding-bottom: 0.2963rem;
+    padding-bottom: 0.56188rem;
   }
 }
 
@@ -9953,7 +9960,7 @@ figcaption:after {
 
 @media only screen and (max-width: 53.25em) {
   figcaption:after {
-    padding-left: 0.18519rem;
+    padding-left: 0.35117rem;
   }
 }
 
@@ -10050,7 +10057,7 @@ figcaption.minus-sign:before {
 
 @media only screen and (max-width: 53.25em) {
   figcaption.minus-sign:before {
-    padding-right: 0.07407rem;
+    padding-right: 0.14047rem;
   }
 }
 
@@ -10068,7 +10075,7 @@ figcaption.minus-sign:before {
 
 @media only screen and (max-width: 53.25em) {
   figcaption.minus-sign:before {
-    padding-bottom: 0.2963rem;
+    padding-bottom: 0.56188rem;
   }
 }
 
@@ -10086,7 +10093,7 @@ figcaption.minus-sign:before {
 
 @media only screen and (max-width: 53.25em) {
   figcaption.minus-sign:before {
-    padding-left: 0.18519rem;
+    padding-left: 0.35117rem;
   }
 }
 
@@ -10234,7 +10241,7 @@ figcaption.minus-sign:before {
 
 @media only screen and (max-width: 53.25em) {
   .first-level-dropdown li {
-    padding-left: 0.37037rem;
+    padding-left: 0.70235rem;
   }
 }
 
@@ -10274,7 +10281,7 @@ figcaption.minus-sign:before {
 
 @media only screen and (max-width: 53.25em) {
   .first-level-dropdown-title, .filter-button {
-    padding-top: 0.25926rem;
+    padding-top: 0.49164rem;
   }
 }
 
@@ -10292,7 +10299,7 @@ figcaption.minus-sign:before {
 
 @media only screen and (max-width: 53.25em) {
   .first-level-dropdown-title, .filter-button {
-    height: 1.65326rem;
+    height: 2.59868rem;
   }
 }
 
@@ -10310,7 +10317,7 @@ figcaption.minus-sign:before {
 
 @media only screen and (max-width: 53.25em) {
   .first-level-dropdown-title, .filter-button {
-    padding-left: 0.37037rem;
+    padding-left: 0.70235rem;
   }
 }
 
@@ -10574,7 +10581,7 @@ figcaption.minus-sign:before {
 
 @media only screen and (max-width: 53.25em) {
   .search-page .highlight-bar, .past-festivals-page .highlight-bar {
-    padding-top: 0.59259rem;
+    padding-top: 1.12375rem;
   }
 }
 
@@ -10592,7 +10599,7 @@ figcaption.minus-sign:before {
 
 @media only screen and (max-width: 53.25em) {
   .search-page .highlight-bar, .past-festivals-page .highlight-bar {
-    padding-bottom: 1.48148rem;
+    padding-bottom: 2.80938rem;
   }
 }
 
@@ -10632,7 +10639,7 @@ figcaption.minus-sign:before {
 
 @media only screen and (min-width: 53.25em) and (max-width: 53.25em) {
   .search-page .filter-more-band, .past-festivals-page .filter-more-band {
-    padding-top: 0.74074rem;
+    padding-top: 1.40469rem;
   }
 }
 
@@ -10737,7 +10744,7 @@ video::-webkit-media-controls {
 
 @media only screen and (max-width: 53.25em) {
   .footer {
-    padding-top: 0.96296rem;
+    padding-top: 1.8261rem;
   }
 }
 
@@ -10755,7 +10762,7 @@ video::-webkit-media-controls {
 
 @media only screen and (max-width: 53.25em) {
   .footer {
-    padding-bottom: 0.7037rem;
+    padding-bottom: 1.33446rem;
   }
 }
 
@@ -11368,7 +11375,7 @@ video::-webkit-media-controls {
 
 @media only screen and (max-width: 53.25em) {
   .details-inner {
-    padding-top: 0.74074rem;
+    padding-top: 1.40469rem;
   }
 }
 
@@ -11386,7 +11393,7 @@ video::-webkit-media-controls {
 
 @media only screen and (max-width: 53.25em) {
   .details-inner {
-    padding-right: 0.37037rem;
+    padding-right: 0.70235rem;
   }
 }
 
@@ -11745,7 +11752,7 @@ a.details {
 
 @media only screen and (max-width: 53.25em) {
   .publication-card .details-inner {
-    padding-top: 0.74074rem;
+    padding-top: 1.40469rem;
   }
 }
 
@@ -12271,7 +12278,7 @@ a.details {
 
 @media only screen and (max-width: 53.25em) {
   .horizontal-card .details-inner {
-    padding-top: 0.74074rem;
+    padding-top: 1.40469rem;
   }
 }
 
@@ -12289,7 +12296,7 @@ a.details {
 
 @media only screen and (max-width: 53.25em) {
   .horizontal-card .details-inner {
-    padding-right: 0.37037rem;
+    padding-right: 0.70235rem;
   }
 }
 
@@ -12405,7 +12412,7 @@ a.details {
 
 @media only screen and (max-width: 53.25em) {
   .full-feature-card .details-inner {
-    padding-right: 0.74074rem;
+    padding-right: 1.40469rem;
   }
 }
 
@@ -12557,7 +12564,7 @@ a.details {
 
 @media only screen and (max-width: 53.25em) {
   .album-card .details-inner, .vinyl-card .details-inner, .books-card .details-inner {
-    padding-top: 0.62963rem;
+    padding-top: 1.19399rem;
   }
 }
 
@@ -12791,7 +12798,7 @@ a.details {
 
 @media only screen and (max-width: 53.25em) {
   .full-border-card .details-inner {
-    padding-bottom: 0.74074rem;
+    padding-bottom: 1.40469rem;
   }
 }
 
@@ -12809,7 +12816,7 @@ a.details {
 
 @media only screen and (max-width: 53.25em) {
   .full-border-card .details-inner {
-    padding-left: 0.74074rem;
+    padding-left: 1.40469rem;
   }
 }
 
@@ -12929,7 +12936,7 @@ a.details {
 
 @media only screen and (max-width: 53.25em) {
   .audio-card .details-inner {
-    padding-bottom: 3.7037rem;
+    padding-bottom: 7.02346rem;
   }
 }
 
@@ -12968,7 +12975,7 @@ a.details {
 
 @media only screen and (max-width: 53.25em) {
   .audio-player {
-    padding: 0.74074rem;
+    padding: 1.40469rem;
   }
 }
 
@@ -13010,7 +13017,7 @@ a.details {
 
 @media only screen and (max-width: 53.25em) {
   .audio-player-details {
-    padding-left: 0.37037rem;
+    padding-left: 0.70235rem;
   }
 }
 
@@ -13166,7 +13173,7 @@ a.details {
 
 @media only screen and (max-width: 53.25em) {
   .mejs-container .mejs-controls .mejs-playpause-button {
-    width: 2.68097rem;
+    width: 4.21408rem;
   }
 }
 
@@ -13184,7 +13191,7 @@ a.details {
 
 @media only screen and (max-width: 53.25em) {
   .mejs-container .mejs-controls .mejs-playpause-button {
-    height: 2.68097rem;
+    height: 4.21408rem;
   }
 }
 
@@ -13218,7 +13225,7 @@ a.details {
 
 @media only screen and (max-width: 53.25em) {
   .mejs-container .mejs-controls .mejs-playpause-button button {
-    width: 2.68097rem;
+    width: 4.21408rem;
   }
 }
 
@@ -13236,7 +13243,7 @@ a.details {
 
 @media only screen and (max-width: 53.25em) {
   .mejs-container .mejs-controls .mejs-playpause-button button {
-    height: 2.68097rem;
+    height: 4.21408rem;
   }
 }
 
@@ -13268,7 +13275,7 @@ a.details {
 
 @media only screen and (max-width: 53.25em) {
   .mejs-container .mejs-controls .mejs-playpause-button button:before, .mejs-container .mejs-controls .mejs-playpause-button button:after {
-    width: 2.68097rem;
+    width: 4.21408rem;
   }
 }
 
@@ -13286,7 +13293,7 @@ a.details {
 
 @media only screen and (max-width: 53.25em) {
   .mejs-container .mejs-controls .mejs-playpause-button button:before, .mejs-container .mejs-controls .mejs-playpause-button button:after {
-    height: 2.68097rem;
+    height: 4.21408rem;
   }
 }
 
@@ -13403,7 +13410,7 @@ a.details {
 
 @media only screen and (max-width: 53.25em) {
   .mejs-container .mejs-controls .mejs-time {
-    padding-top: 0.37037rem;
+    padding-top: 0.70235rem;
   }
 }
 
@@ -13520,7 +13527,7 @@ a.details {
 
 @media only screen and (max-width: 53.25em) {
   .mejs-container .mejs-controls .mejs-time-rail {
-    height: 0.89366rem;
+    height: 1.40469rem;
   }
 }
 
@@ -13569,7 +13576,7 @@ a.details {
 
 @media only screen and (max-width: 53.25em) {
   .mejs-container .mejs-controls .mejs-horizontal-volume-slider {
-    width: 1.34048rem;
+    width: 2.10704rem;
   }
 }
 
@@ -13611,7 +13618,7 @@ a.details {
 
 @media only screen and (max-width: 53.25em) {
   .mejs-container .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total, .mejs-container .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
-    width: 1.34048rem;
+    width: 2.10704rem;
   }
 }
 
@@ -13813,7 +13820,7 @@ h2.intro-title {
 
 @media only screen and (max-width: 53.25em) {
   .grid-item-inner {
-    height: 4.02145rem;
+    height: 6.32111rem;
   }
 }
 
@@ -13967,7 +13974,7 @@ h2.intro-title {
 
 @media only screen and (max-width: 53.25em) {
   .color-square {
-    height: 8.93655rem;
+    height: 14.04692rem;
   }
 }
 
@@ -14025,7 +14032,7 @@ h2.intro-title {
 
 @media only screen and (max-width: 53.25em) {
   .color code.hljs {
-    padding: 0.37037rem;
+    padding: 0.70235rem;
   }
 }
 
@@ -14252,7 +14259,7 @@ pre {
 
 @media only screen and (max-width: 53.25em) {
   code.hljs {
-    padding: 1.11111rem;
+    padding: 2.10704rem;
   }
 }
 
@@ -14335,7 +14342,7 @@ pre {
 
 @media only screen and (max-width: 53.25em) {
   .section-subtitle {
-    padding-top: 0.74074rem;
+    padding-top: 1.40469rem;
   }
 }
 
@@ -14437,7 +14444,7 @@ pre {
 
 @media only screen and (max-width: 53.25em) {
   .show-code {
-    height: 1.51921rem;
+    height: 2.38798rem;
   }
 }
 
@@ -14455,7 +14462,7 @@ pre {
 
 @media only screen and (max-width: 53.25em) {
   .show-code {
-    padding-top: 0.22222rem;
+    padding-top: 0.42141rem;
   }
 }
 
@@ -14473,7 +14480,7 @@ pre {
 
 @media only screen and (max-width: 53.25em) {
   .show-code {
-    padding-right: 0.37037rem;
+    padding-right: 0.70235rem;
   }
 }
 
@@ -14491,7 +14498,7 @@ pre {
 
 @media only screen and (max-width: 53.25em) {
   .show-code {
-    padding-bottom: 0.37037rem;
+    padding-bottom: 0.70235rem;
   }
 }
 
@@ -14509,7 +14516,7 @@ pre {
 
 @media only screen and (max-width: 53.25em) {
   .show-code {
-    padding-left: 0.37037rem;
+    padding-left: 0.70235rem;
   }
 }
 

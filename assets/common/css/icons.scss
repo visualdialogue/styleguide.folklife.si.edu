@@ -10,7 +10,7 @@
 		position: relative;
 		display: inline-block;
 		width: 2em;
-		height: 2em;
+		// height: 2em;
 		line-height: 2em;
 		vertical-align: middle;
 		div {
@@ -101,15 +101,15 @@
 	.icon-play-button, .icon-circle, .icon-play, .mejs-controls .mejs-button button {
 		@include respond-to(break2max) {
 			width: 7vw;
-			height: 7vw;
+			// height: 7vw;
 		}
 		@include respond-to(break2) {
 			width: 4vw;
-			height: 4vw;
+			// height: 4vw;
 		}
 		@include respond-to(fullwidth) {
 			width: 6rem;
-			height: 6rem;
+			// height: 6rem;
 		}
 	}
 	.icon-circle:before, .icon-play:before, .mejs-controls .mejs-playpause-button button:before, .mejs-controls .mejs-playpause-button button:after {

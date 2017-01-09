@@ -159,32 +159,6 @@
 	@include respond-to(break2) {left:#{$distance * $tablet-scale}vw;} // eg 2.5vw
 	@include respond-to(fullwidth) {left:#{$distance}rem;} // eg 4rem
   }
-	@mixin padding($padding) {
-		@include respond-to(break2max) {padding:#{$padding / $standard-mobile-scale }rem;} // eg. 5rem
-		@include respond-to(break2) {padding:#{$padding * $tablet-scale}vw;} // eg 2.5vw
-		@include respond-to(fullwidth) {padding:#{$padding}rem;} // eg 4rem
-	}
-	@mixin padding-top($padding) {
-		@include respond-to(break2max) {padding-top:#{$padding / $standard-mobile-scale }rem;} // eg. 5rem
-		@include respond-to(break2) {padding-top:#{$padding * $tablet-scale}vw;} // eg 2.5vw
-		@include respond-to(fullwidth) {padding-top:#{$padding}rem;} // eg 4rem
-	}
-	@mixin padding-right($padding) {
-		@include respond-to(break2max) {padding-right:#{$padding / $standard-mobile-scale }rem;} // eg. 5rem
-		@include respond-to(break2) {padding-right:#{$padding * $tablet-scale}vw;} // eg 2.5vw
-		@include respond-to(fullwidth) {padding-right:#{$padding}rem;} // eg 4rem
-	}
-	@mixin padding-bottom($padding) {
-	// padding-bottom:#{$padding / $standard-mobile-scale }rem; // eg. 5rem
-		@include respond-to(break2max) {padding-bottom:#{$padding / $standard-mobile-scale }rem;} // eg. 5rem
-		@include respond-to(break2) {padding-bottom:#{$padding * $tablet-scale}vw;} // eg 2.5vw
-		@include respond-to(fullwidth) {padding-bottom:#{$padding}rem;} // eg 4rem
-	}
-	@mixin padding-left($padding) {
-		@include respond-to(break2max) {padding-left:#{$padding / $standard-mobile-scale }rem;} // eg. 5rem
-		@include respond-to(break2) {padding-left:#{$padding * $tablet-scale}vw;} // eg 2.5vw
-		@include respond-to(fullwidth) {padding-left:#{$padding}rem;} // eg 4rem
-	}
   @mixin margin($margin) {
 	@include respond-to(break2max) {margin:#{$margin / $standard-mobile-scale }rem;} // eg. 5rem
 	@include respond-to(break2) {margin:#{$margin * $tablet-scale}vw;} // eg 2.5vw
@@ -228,7 +202,7 @@
 
  	// $mobile-scale: 1.801996875; // major 2nd * major 2nd * major 2nd * major 2nd
   	$width-mobile-scale: 1.4238; // major 2nd * major 2nd
-  	$width-mobile-scale: 2.238; // major 2nd * major 2nd
+  	// $width-mobile-scale: 2.238; // major 2nd * major 2nd
   	@mixin height($height) {
   		@include respond-to(break2max) {height:#{$height / $width-mobile-scale }rem;} // eg. 5rem
   		@include respond-to(break2) {height:#{$height * $tablet-scale}vw;} // eg 2.5vw
@@ -243,6 +217,32 @@
 		@include respond-to(break2max) {width:#{$width / $width-mobile-scale }rem;} // eg. 5rem
 		@include respond-to(break2) {width:#{$width * $tablet-scale}vw;} // eg 2.5vw
 		@include respond-to(fullwidth) {width:#{$width}rem;} // eg 4rem
+	}
+	@mixin padding($padding) {
+		@include respond-to(break2max) {padding:#{$padding / $width-mobile-scale }rem;} // eg. 5rem
+		@include respond-to(break2) {padding:#{$padding * $tablet-scale}vw;} // eg 2.5vw
+		@include respond-to(fullwidth) {padding:#{$padding}rem;} // eg 4rem
+	}
+	@mixin padding-top($padding) {
+		@include respond-to(break2max) {padding-top:#{$padding / $width-mobile-scale }rem;} // eg. 5rem
+		@include respond-to(break2) {padding-top:#{$padding * $tablet-scale}vw;} // eg 2.5vw
+		@include respond-to(fullwidth) {padding-top:#{$padding}rem;} // eg 4rem
+	}
+	@mixin padding-right($padding) {
+		@include respond-to(break2max) {padding-right:#{$padding / $width-mobile-scale }rem;} // eg. 5rem
+		@include respond-to(break2) {padding-right:#{$padding * $tablet-scale}vw;} // eg 2.5vw
+		@include respond-to(fullwidth) {padding-right:#{$padding}rem;} // eg 4rem
+	}
+	@mixin padding-bottom($padding) {
+	// padding-bottom:#{$padding / $width-mobile-scale }rem; // eg. 5rem
+		@include respond-to(break2max) {padding-bottom:#{$padding / $width-mobile-scale }rem;} // eg. 5rem
+		@include respond-to(break2) {padding-bottom:#{$padding * $tablet-scale}vw;} // eg 2.5vw
+		@include respond-to(fullwidth) {padding-bottom:#{$padding}rem;} // eg 4rem
+	}
+	@mixin padding-left($padding) {
+		@include respond-to(break2max) {padding-left:#{$padding / $width-mobile-scale }rem;} // eg. 5rem
+		@include respond-to(break2) {padding-left:#{$padding * $tablet-scale}vw;} // eg 2.5vw
+		@include respond-to(fullwidth) {padding-left:#{$padding}rem;} // eg 4rem
 	}
 	  
 

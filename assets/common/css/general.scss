@@ -22,17 +22,11 @@
 		}
 		.highlight-inner {
 			background-color: $black30;
-			// show highlight on mobile
-			padding: 15px;
-
 			// go below card colors
 			position: relative;
 			z-index: 0;
+			@include padding(4);
 			
-			@include respond-to(break2) {
-				// show highlight color around box
-				padding: 40px 40px;
-			}
 		}
 		.section-title {
 			@include margin-bottom(3.4);
