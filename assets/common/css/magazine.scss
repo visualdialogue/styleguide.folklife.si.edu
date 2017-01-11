@@ -148,7 +148,9 @@
 			top: auto;
 			@include bottom(2);
 			@include left(2);
+			@include width(8);
 			@include respond-to(break2max) {
+				width: 6rem;
 				bottom:0; // mobile
 				left:0; // mobile
 			}

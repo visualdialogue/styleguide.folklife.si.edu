@@ -182,6 +182,9 @@ a.details {
 		}
 	}
 	// modal
+	body {
+		padding-right:0 !important; // weird padding addied by remodal sometimes
+	}
 	.remodal {
 	  padding:0.2rem;
 	  text-align: left;
@@ -209,6 +212,9 @@ a.details {
 	}
 	.remodal-overlay {
 	  background: rgba(0, 0, 0, 0.8) none repeat scroll 0% 0%;
+	}
+	.remodal-wrapper {
+		// overflow-y: scroll; // ie jumps without it because no scroll on overlay, but scrollbar on body
 	}
 	.remodal-close {
 		position: absolute;
@@ -270,8 +276,9 @@ a.details {
 			padding: 0 !important; // remove excess bootstrap padding when images in remodal
 		}
 	}
-	.remodal-gallery-is-open {
+	.remodal-gallery-is-open, .remodal-gallery-is-open img {
 		max-width: 70vh;
+		// max-height: 70vh;
 	}
 	.remodal-gallery-is-open .remodal-gallery {
 		// hide iframe and video copy if gallery is not hidden

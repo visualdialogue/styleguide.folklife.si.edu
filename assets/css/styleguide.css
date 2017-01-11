@@ -7134,7 +7134,7 @@ a:hover {
   font-weight: 500;
   line-height: 1;
   position: absolute;
-  z-index: 4;
+  z-index: 11;
   top: 0;
   width: 100%;
 }
@@ -9496,7 +9496,7 @@ a .page-title:hover {
 }
 
 .support-button {
-  background-color: gray;
+  background-color: #666666;
   font-family: "unit-gothic-717", Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -9565,7 +9565,7 @@ a .page-title:hover {
 
 @media only screen and (max-width: 53.25em) {
   .button-inner {
-    font-size: 4vw;
+    font-size: 3.7vw;
   }
 }
 
@@ -10971,13 +10971,14 @@ figcaption.minus-sign:before {
   }
 }
 
-.slick-next {
-  right: 3.4vw;
+@media only screen and (max-width: 53.25em) {
+  .slick-next {
+    right: 3.4vw;
+  }
 }
 
 @media only screen and (min-width: 53.25em) {
   .slick-next {
-    right: 3.4vw;
     right: 40px;
   }
 }
@@ -12191,6 +12192,10 @@ a.details {
   color: #333333;
 }
 
+body {
+  padding-right: 0 !important;
+}
+
 .remodal {
   padding: 0.2rem;
   text-align: left;
@@ -12330,7 +12335,7 @@ a.details {
   padding: 0 !important;
 }
 
-.remodal-gallery-is-open {
+.remodal-gallery-is-open, .remodal-gallery-is-open img {
   max-width: 70vh;
 }
 

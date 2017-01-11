@@ -560,7 +560,7 @@
 		@include padding-left(2);
 	}
 	.support-button {
-		background-color: $black50;
+		background-color: $black60;
 		@include sm-slab;
 		margin-bottom:0;
 		color: #fff;
@@ -585,7 +585,7 @@
 	}
 	.button-inner {
 		@include respond-to(break2max) {
-			font-size: 4vw;
+			font-size: 3.7vw;
 		}
 		@include respond-to(break2) {
 			line-height: 1.1;
@@ -1013,9 +1013,10 @@
 		}
 	}
 	.slick-next {
-		right: 3.4vw;
-		@include respond-to(break2) {
+		@include respond-to(break2max) {
 			right: 3.4vw;
+		}
+		@include respond-to(break2) {
 			// right: calc((100vw - 1415px) / 2); // screen width, minus width of center area, divided by 2 because just one side
 			right: 40px;
 		}

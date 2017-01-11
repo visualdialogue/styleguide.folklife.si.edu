@@ -1,7 +1,7 @@
 
 <?php snippet('header'); ?>
 <div id="navspacer" class="navspacer"></div>
-<div class="container">
+<div class="container first-container">
   <div class="search-message">
     <div class="tag">Showing 798 Results For</div>
     <?php snippet('svg-thin-hr'); ?>
