@@ -6071,7 +6071,7 @@ iframe {
 /*******
   * set margins with scales
   *******/
-/* #Media Queries
+/* Media Queries
 -------------------------------------------------- */
 /* 
 
@@ -6745,20 +6745,17 @@ body {
 }
 
 .icon-play-button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  position: relative;
   cursor: pointer;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
 }
 
 .icon-play-button:before {
   position: absolute;
-  z-index: -1;
+  top: 0;
+  left: 0;
+  z-index: 0;
   content: "\61";
-  color: #cccccc;
+  color: #bfbfbf;
 }
 
 .icon-play-button:hover:before {
@@ -6766,6 +6763,8 @@ body {
 }
 
 .icon-play-button:after {
+  position: relative;
+  z-index: 1;
   content: "\62";
   color: #333333;
   display: block;
@@ -6920,7 +6919,7 @@ body {
   }
 }
 
-/* #Links
+/* Links
 -------------------------------------------------- */
 a {
   color: #333333;
@@ -7135,7 +7134,7 @@ a:hover {
   font-weight: 500;
   line-height: 1;
   position: absolute;
-  z-index: 2;
+  z-index: 4;
   top: 0;
   width: 100%;
 }
@@ -8128,7 +8127,7 @@ a:hover {
   }
 }
 
-/* #half sections
+/* half sections
 -------------------------------------------------- */
 @media only screen and (min-width: 53.25em) {
   .half-section:nth-of-type(1) {
@@ -8987,7 +8986,7 @@ a .page-title:hover {
   }
 }
 
-/* #Become a Member
+/* Become a Member
 -------------------------------------------------- */
 .highlight-bar {
   background-color: #cccccc;
@@ -9190,10 +9189,10 @@ a .page-title:hover {
 .button {
   cursor: pointer;
   clear: left;
-  background-color: #666666;
 }
 
 .button .button-inner {
+  background-color: #666666;
   position: static;
 }
 
@@ -9363,7 +9362,7 @@ a .page-title:hover {
   }
 }
 
-/* #Support Us
+/* Support Us
 -------------------------------------------------- */
 @media only screen and (max-width: 53.25em) {
   .above-support-hr {
@@ -9576,7 +9575,7 @@ a .page-title:hover {
   }
 }
 
-/* #Newsletter Signup
+/* Newsletter Signup
 -------------------------------------------------- */
 .newsletter-signup-section, .support-section, .support-folkways {
   font-family: "acumin-pro", Arial, sans-serif;
@@ -9806,6 +9805,28 @@ a .page-title:hover {
   }
 }
 
+.newsletter-input::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #666666;
+}
+
+.newsletter-input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #666666;
+  opacity: 1;
+}
+
+.newsletter-input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #666666;
+  opacity: 1;
+}
+
+.newsletter-input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #666666;
+}
+
 @media only screen and (max-width: 53.25em) {
   .newsletter-signup-wrapper {
     margin-bottom: 1.48148rem;
@@ -9839,30 +9860,6 @@ a .page-title:hover {
 @media only screen and (min-width: 1560px) {
   .short-newsletter-signup {
     height: 8rem;
-  }
-}
-
-@media only screen and (max-width: 53.25em) {
-  .short-newsletter-signup form, .short-newsletter-signup input {
-    height: 5rem;
-  }
-}
-
-@media only screen and (max-width: 53.25em) {
-  .short-newsletter-signup form, .short-newsletter-signup input {
-    height: 4.91642rem;
-  }
-}
-
-@media only screen and (min-width: 53.25em) {
-  .short-newsletter-signup form, .short-newsletter-signup input {
-    height: 4.48vw;
-  }
-}
-
-@media only screen and (min-width: 1560px) {
-  .short-newsletter-signup form, .short-newsletter-signup input {
-    height: 7rem;
   }
 }
 
@@ -9966,7 +9963,7 @@ a .page-title:hover {
   }
 }
 
-/* #Custom select dropdown
+/* Custom select dropdown
 * from http://hernansartorio.com/jquery-nice-select/
 -------------------------------------------------- */
 /* Plus icons for figures with figcaptions
@@ -10926,11 +10923,7 @@ video::-webkit-media-controls {
 
 /* Image popup
 -------------------------------------------------*/
-.remodal-image ~ .remodal-iframe, .remodal-image ~ .remodal-copy {
-  display: none;
-}
-
-/* #footer
+/* footer
 -------------------------------------------------- */
 .footer {
   background-color: #333333;
@@ -11774,9 +11767,9 @@ a.details {
   }
 }
 
-/* #textbox
+/* textbox
 -------------------------------------------------- */
-/* #text card, folklfe/learn or collectiom
+/* text card, folklfe/learn or collectiom
 -------------------------------------------------- */
 @media only screen and (max-width: 53.25em) {
   .text-card {
@@ -11819,7 +11812,7 @@ a.details {
   }
 }
 
-/* #publication card
+/* publication card
 -------------------------------------------------- */
 @media only screen and (max-width: 53.25em) {
   .publication-card {
@@ -12000,7 +11993,7 @@ a.details {
   }
 }
 
-/* #program highlight (on.festival/learn 1/4 card)
+/* program highlight (on.festival/learn 1/4 card)
 * before audio card because audio title needs to override
 -------------------------------------------------- */
 .card-program .title {
@@ -12054,7 +12047,7 @@ a.details {
   }
 }
 
-/* #blog on festival on and off pages
+/* blog on festival on and off pages
 -------------------------------------------------- */
 @media only screen and (max-width: 53.25em) {
   .blog-card {
@@ -12062,7 +12055,7 @@ a.details {
   }
 }
 
-/* #video
+/* video
 -------------------------------------------------- */
 .video {
   display: none;
@@ -12082,6 +12075,12 @@ a.details {
 }
 
 .video-card .icon-play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
   left: 50%;
 }
 
@@ -12226,7 +12225,7 @@ a.details {
   }
 }
 
-/* #background
+/* background
 * the following rules apply a background color to the :after element
 * if color was applied to the card itself, it would show through the padding on the edges
 -------------------------------------------------- */
@@ -12346,7 +12345,7 @@ a.details {
   }
 }
 
-/* #category
+/* category
 -------------------------------------------------- */
 @media only screen and (min-width: 53.25em) {
   .tag {
@@ -12360,7 +12359,7 @@ a.details {
   }
 }
 
-/* #horizontal
+/* horizontal
 -------------------------------------------------- */
 @media only screen and (min-width: 53.25em) {
   .horizontal-cards-section {
@@ -12476,7 +12475,7 @@ a.details {
 -------------------------------------------------- */
 @media only screen and (min-width: 53.25em) {
   .feature-card {
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
   }
 }
 
@@ -13009,7 +13008,7 @@ a.details {
   }
 }
 
-/* #audio card
+/* audio card
 -------------------------------------------------- */
 @media only screen and (min-width: 53.25em) {
   .audio-card .card {
@@ -13118,7 +13117,7 @@ a.details {
   }
 }
 
-/* #audio player
+/* audio player
 -------------------------------------------------- */
 .audio-player-details, .audio-progress-bar, .audio-time, .volume {
   display: inline-block;
@@ -13253,7 +13252,7 @@ a.details {
   }
 }
 
-/* #media element js - overrides
+/* media element js - overrides
 -------------------------------------------------- */
 .mejs-container {
   background: white;
@@ -13798,7 +13797,7 @@ a.details {
   display: none;
 }
 
-/* #links
+/* links
 -------------------------------------------------- */
 a {
   color: #333333;
@@ -13808,7 +13807,7 @@ a:hover {
   color: #999999;
 }
 
-/* #general
+/* general
 -------------------------------------------------- */
 @media only screen and (max-width: 53.25em) {
   .sub-section {
@@ -13828,7 +13827,7 @@ a:hover {
   }
 }
 
-/* #intro
+/* intro
 -------------------------------------------------- */
 h2.intro-title {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
@@ -13972,7 +13971,7 @@ h2.intro-title {
   }
 }
 
-/* #grid
+/* grid
 -------------------------------------------------- */
 .grid-item-inner {
   background-color: gray;
@@ -14097,7 +14096,7 @@ h2.intro-title {
   }
 }
 
-/* #colors
+/* colors
 -------------------------------------------------- */
 .color {
   font-family: "acumin-pro", Arial, sans-serif;
@@ -14353,7 +14352,7 @@ h2.intro-title {
   background-color: #de4049;
 }
 
-/* #code
+/* code
 -------------------------------------------------- */
 .title-bar {
   color: #fff;
@@ -14710,7 +14709,7 @@ pre {
   color: #595959;
 }
 
-/* #color
+/* color
 -------------------------------------------------- */
 @media only screen and (max-width: 53.25em) {
   .color {
@@ -14739,7 +14738,7 @@ pre {
   }
 }
 
-/* #typography
+/* typography
 -------------------------------------------------- */
 @media only screen and (max-width: 53.25em) {
   .typography-section {
@@ -15606,7 +15605,7 @@ pre {
   }
 }
 
-/* #cards
+/* cards
 -------------------------------------------------- */
 @media only screen and (max-width: 53.25em) {
   .cards-section .codeblock {
@@ -15739,7 +15738,7 @@ pre {
   }
 }
 
-/* #video
+/* video
 -------------------------------------------------- */
 .video-section .title {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
@@ -15790,7 +15789,7 @@ pre {
   }
 }
 
-/* #structure page
+/* structure page
 -------------------------------------------------- */
 .structure-page .title-bar {
   color: #fff;

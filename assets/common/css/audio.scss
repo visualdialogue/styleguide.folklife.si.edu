@@ -1,4 +1,4 @@
-/* #audio card
+/* audio card
 -------------------------------------------------- */
 	.audio-card {
 		.card {
@@ -27,7 +27,7 @@
 		}
 	}
 
-/* #audio player
+/* audio player
 -------------------------------------------------- */
 	.audio-player-details, .audio-progress-bar, .audio-time, .volume {
 		display: inline-block;
@@ -80,7 +80,7 @@
 	}
 
 
-/* #media element js - overrides
+/* media element js - overrides
 -------------------------------------------------- */
 	$mobilePlayWidth: 10vw;
 	$mobilePlayHeight: 10vw;

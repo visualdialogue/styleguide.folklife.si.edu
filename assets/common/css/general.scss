@@ -156,7 +156,7 @@
 		}
 	}
 
-/* #half sections
+/* half sections
 -------------------------------------------------- */
 	$half-padding-mobile-section: 4rem;
 	$half-padding-tablet-section: 2.7%;
@@ -417,7 +417,7 @@
 		}
 	}
 
-/* #Become a Member
+/* Become a Member
 -------------------------------------------------- */
 	// as seen on folkways homepage for becoming a member and support
 	.highlight-bar {
@@ -484,8 +484,8 @@
 		// @include padding(1);
 		cursor: pointer;
 		clear: left;
-		background-color: $black60;
 		.button-inner {
+			background-color: $black60;
 			position: static;
 			@include padding-top(0.6);
 			@include padding-right(1);
@@ -507,7 +507,7 @@
 		}
 	}
 	
-/* #Support Us
+/* Support Us
 -------------------------------------------------- */
 	.above-support-hr {
 		@include margin-bottom(3);
@@ -592,7 +592,7 @@
 		}
 	}
 
-/* #Newsletter Signup
+/* Newsletter Signup
 -------------------------------------------------- */
 	.newsletter-signup-section, .support-section, .support-folkways {
 		@include body-sans;
@@ -640,6 +640,22 @@
 			height: 7.5rem;
 			padding-bottom: 2rem;
 		}
+
+		// placeholder text color, from http://stackoverflow.com/a/2610741
+		&::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+		    color:    $black60;
+		}
+		&:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+		   color:    $black60;
+		   opacity:  1;
+		}
+		&::-moz-placeholder { /* Mozilla Firefox 19+ */
+		   color:    $black60;
+		   opacity:  1;
+		}
+		&:-ms-input-placeholder { /* Internet Explorer 10-11 */
+		   color:    $black60;
+		}
 	}
 
 	// Short version 12.18
@@ -658,9 +674,9 @@
 		}
 		form, input {
 			@include respond-to(break2max) {
-				height: 5rem;
+				// height: 5rem;
 			}
-			@include height(7);
+			// @include height(7);
 		}
 		input {
 			font-weight: 500;
@@ -688,7 +704,7 @@
 		}
 	}
 
-/* #Custom select dropdown
+/* Custom select dropdown
 * from http://hernansartorio.com/jquery-nice-select/
 -------------------------------------------------- */
 
@@ -981,6 +997,6 @@
 /* Image popup
 -------------------------------------------------*/
 	// hide video divs
-	.remodal-image ~ .remodal-iframe, .remodal-image ~ .remodal-copy {
-		display:none;
-	}
+	// .remodal-image ~ .remodal-iframe, .remodal-image ~ .remodal-copy {
+		// display:none;
+	// }

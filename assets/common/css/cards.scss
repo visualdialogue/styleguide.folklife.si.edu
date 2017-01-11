@@ -2,7 +2,6 @@
 	// for consistency with rows of cards and next sections
 	@include margin-bottom(4);
 }
-
 .border {
 	border-top: 1px solid $black30;
 }
@@ -18,7 +17,6 @@
 		margin-right:2rem;
 	}
 }
-
 // details only include top padding
 .details-inner {
 	@include respond-to(break2) {
@@ -38,7 +36,6 @@
 a.details {
 	display: inline-block; // for anchor tags that are .details
 }
-
 // TITLE
 .title {
 	display: block; // so space above is consistent, unline inline-block with 2 lines vs 2 line
@@ -51,8 +48,7 @@ a.details {
 .date-sm {@include date-sm;}
 .byline {@include byline;}
 
-
-/* #textbox
+/* textbox
 -------------------------------------------------- */
 	@mixin textbox {
 		background-color: #fff;
@@ -71,7 +67,7 @@ a.details {
 		@include bottom(4);
 	}
 
-/* #text card, folklfe/learn or collectiom
+/* text card, folklfe/learn or collectiom
 -------------------------------------------------- */
 	.text-card {
 		// cards that are more text-based need to be closer together, and have no image, FL-learn page
@@ -86,7 +82,7 @@ a.details {
 		}
 	}
 
-/* #publication card
+/* publication card
 -------------------------------------------------- */
 	.publication-card {
 		@include margin-bottom(4); // add back to horizontal cards section
@@ -115,7 +111,7 @@ a.details {
 		}
 	}
 
-/* #program highlight (on.festival/learn 1/4 card)
+/* program highlight (on.festival/learn 1/4 card)
 * before audio card because audio title needs to override
 -------------------------------------------------- */
 	.card-program {
@@ -128,8 +124,7 @@ a.details {
 		}
 	}
 
-
-/* #blog on festival on and off pages
+/* blog on festival on and off pages
 -------------------------------------------------- */
 	.blog-card {
 		@include respond-to(break2max) {
@@ -137,7 +132,7 @@ a.details {
 		}
 	}
 
-/* #video
+/* video
 -------------------------------------------------- */
 	// onlye show video if video card. card-video class dynamically from server, eg festival blog post listing with video on on.festival homepage
 	.video {
@@ -160,6 +155,15 @@ a.details {
 			display: none;
 		}
 		.icon-play-button {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			
+			// horizontally center
+			-webkit-transform: translateX(-50%) translateY(-50%);
+			-ms-transform: translateX(-50%) translateY(-50%);
+			transform: translateX(-50%) translateY(-50%);
+
 			left: 50%;
 			&:before, &:after {
 				@include respond-to(break2max) {
@@ -246,11 +250,10 @@ a.details {
 		@include md-sans;
 	}
 
-/* #background
+/* background
 * the following rules apply a background color to the :after element
 * if color was applied to the card itself, it would show through the padding on the edges
 -------------------------------------------------- */
-
 	// horizontal backgrounds
 		.background-card {
 			position: relative;
@@ -296,7 +299,7 @@ a.details {
 		@include right(2);
 	}
 
-/* #category
+/* category
 -------------------------------------------------- */
 	.tag {
 		// counteract line height of first line for padding
@@ -305,7 +308,7 @@ a.details {
 		@include respond-to(fullwidth) {margin-top:-0.5rem;}
 	}
 
-/* #horizontal
+/* horizontal
 -------------------------------------------------- */
 	.horizontal-cards-section {
 		@include respond-to(break2) {margin-bottom:2.5vw;}
@@ -338,12 +341,11 @@ a.details {
 		}
 	}
 
-
 /* Feature cards
 -------------------------------------------------- */
 	.feature-card {
 		@include respond-to(break2) {
-			margin-bottom: 0;
+			margin-bottom: 0 !important;
 		}
 	}
 

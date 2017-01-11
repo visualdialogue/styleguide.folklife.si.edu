@@ -33,7 +33,7 @@
   @import "../common/css/cards.scss";
   @import "../common/css/audio.scss";
 
-/* #links
+/* links
 -------------------------------------------------- */
 	a {
 		color: $copy;
@@ -42,13 +42,13 @@
 		}
 	}
 
-/* #general
+/* general
 -------------------------------------------------- */
 	.sub-section {
 		@include margin-top(4);
 	}
 
-/* #intro
+/* intro
 -------------------------------------------------- */
 	h2.intro-title { // for specificity override
 		@include lg-serif;
@@ -67,7 +67,7 @@
 		@include margin-top(0.5);
 	}
 
-/* #grid
+/* grid
 -------------------------------------------------- */
 	.grid-item {
 		&-inner {
@@ -123,7 +123,7 @@
 		@include margin-bottom(4);
 	}
 
-/* #colors
+/* colors
 -------------------------------------------------- */
 	.color {
 		@include sm-sans;
@@ -189,7 +189,7 @@
 	.color-eea557 { background-color: #eea557;}
 	.color-de4049 { background-color: #de4049;}
 
-/* #code
+/* code
 -------------------------------------------------- */
 	.title-bar {
 		color: #fff;
@@ -271,7 +271,7 @@
 		color: $black65;
 	}
 
-/* #color
+/* color
 -------------------------------------------------- */
 	.color {
 		@include margin-bottom(4)
@@ -285,7 +285,7 @@
 		}
 	}
 
-/* #typography
+/* typography
 -------------------------------------------------- */
 
 	.typography-section {
@@ -347,7 +347,7 @@
 	.category-tag-type {@include sans-tag;}
 	.category-tag-bold-type {@include sans-tag;font-weight: 700;}
 
-/* #cards
+/* cards
 -------------------------------------------------- */
 	.cards-section {
 		.codeblock {
@@ -375,7 +375,7 @@
 		}
 	}
 
-/* #video
+/* video
 -------------------------------------------------- */
 	.video-section {
 		.title {
@@ -386,7 +386,7 @@
 		}
 	}
 
-/* #structure page
+/* structure page
 -------------------------------------------------- */
 	.structure-page {
 		.title-bar {

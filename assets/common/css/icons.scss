@@ -93,24 +93,22 @@
 		position: relative;
 	}
 	.icon-play-button {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		cursor: pointer;
-		// horizontally center
-		-webkit-transform: translateX(-50%) translateY(-50%);
-		-ms-transform: translateX(-50%) translateY(-50%);
-		transform: translateX(-50%) translateY(-50%);
+		position: relative; // contain absolute pseudo icons
+		cursor: pointer;		
 		&:before {
 			position: absolute;
-			z-index: -1;
+			top:0;
+			left:0;
+			z-index: 0;
   			content: "\61";
-			color: $black20;
+			color: $black25;
 		}
 		&:hover:before {
 			color: $hover;
 		}
 		&:after {
+			position: relative;
+			z-index: 1;
   			content: "\62";
 			color: $black80;
   			display: block;
