@@ -10896,6 +10896,99 @@ figcaption.minus-sign:before {
   padding-left: 0;
 }
 
+/* Slideshow/Gallery arrows, from Folklife homepage banner
+-------------------------------------------------*/
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+}
+
+.slick-prev:before, .slick-next:before {
+  font-family: 'vd-icons';
+  -webkit-transform: translateY(-49%);
+  -ms-transform: translateY(-49%);
+  transform: translateY(-49%);
+  color: #999999;
+  position: absolute;
+  left: 0;
+  opacity: 1;
+  line-height: 0.6;
+  font-size: 6rem;
+}
+
+@media only screen and (min-width: 1560px) {
+  .slick-prev:before, .slick-next:before {
+    font-size: 8rem;
+  }
+}
+
+.slick-prev:hover::before, .slick-next:hover::before {
+  color: #fff;
+}
+
+.slick-prev:before {
+  content: "\65";
+}
+
+.slick-prev:before {
+  content: "\6e";
+}
+
+.slick-next:before {
+  content: "\66";
+}
+
+.slick-next:before {
+  content: "\79";
+}
+
+.slick-prev, .slick-next {
+  z-index: 1;
+  width: 6rem;
+  height: 6rem;
+}
+
+@media only screen and (min-width: 1560px) {
+  .slick-prev, .slick-next {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+.slick-prev {
+  left: 3.4vw;
+}
+
+@media only screen and (min-width: 53.25em) {
+  .slick-prev {
+    left: 40px;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .slick-prev {
+    left: auto;
+    margin-left: -5.4rem;
+  }
+}
+
+.slick-next {
+  right: 3.4vw;
+}
+
+@media only screen and (min-width: 53.25em) {
+  .slick-next {
+    right: 3.4vw;
+    right: 40px;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .slick-next {
+    right: calc((100vw - 1415px) / 2);
+    margin-right: -4.8rem;
+  }
+}
+
 /* Hide Ios Play button
 -------------------------------------------------*/
 video::-webkit-media-controls {
@@ -12111,13 +12204,19 @@ a.details {
 
 @media only screen and (min-width: 40em) {
   .remodal {
-    max-width: 70%;
+    max-width: 100vh;
   }
 }
 
 @media only screen and (min-width: 1560px) {
   .remodal {
     max-width: 1080px;
+  }
+}
+
+@media only screen and (min-width: 40em) {
+  .remodal-is-gallery {
+    max-width: 80vh;
   }
 }
 
@@ -12225,7 +12324,21 @@ a.details {
   }
 }
 
-/* background
+/* Image/Gallery popup
+-------------------------------------------------*/
+.remodal-gallery [class*="col-"] {
+  padding: 0 !important;
+}
+
+.remodal-gallery-is-open {
+  max-width: 70vh;
+}
+
+.remodal-gallery-is-open .remodal-gallery ~ .remodal-iframe, .remodal-gallery-is-open .remodal-gallery ~ .remodal-copy {
+  display: none;
+}
+
+/* #background
 * the following rules apply a background color to the :after element
 * if color was applied to the card itself, it would show through the padding on the edges
 -------------------------------------------------- */

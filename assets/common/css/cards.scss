@@ -193,11 +193,19 @@ a.details {
 	  -o-transform: none;
 	  transform: none;
 	  @include respond-to(break1) {
-		max-width: 70%;
+		// max-width: 70%;
+		// max-width: 80vh;
+		max-width: 100vh;
 	  }
 	  @include respond-to(fullwidth) {
 		max-width: 1080px;
 	  }
+	}
+	.remodal-is-gallery {
+		@include respond-to(break1) {
+			max-width: 80vh;
+			// max-height: 90vh;
+		}
 	}
 	.remodal-overlay {
 	  background: rgba(0, 0, 0, 0.8) none repeat scroll 0% 0%;
@@ -250,7 +258,30 @@ a.details {
 		@include md-sans;
 	}
 
-/* background
+/* Image/Gallery popup
+-------------------------------------------------*/
+	// if image present, hide other 
+	// .remodal-image ~ .remodal-gallery, .remodal-image ~ .remodal-iframe, .remodal-image ~ .remodal-copy {
+	// 	display:none;
+	// }
+	.remodal-gallery { 
+		// display: none; // initial hide, until called for
+		[class*="col-"] {
+			padding: 0 !important; // remove excess bootstrap padding when images in remodal
+		}
+	}
+	.remodal-gallery-is-open {
+		max-width: 70vh;
+	}
+	.remodal-gallery-is-open .remodal-gallery {
+		// hide iframe and video copy if gallery is not hidden
+		& ~ .remodal-iframe, & ~ .remodal-copy {
+			display: none;
+		}
+	}
+
+
+/* #background
 * the following rules apply a background color to the :after element
 * if color was applied to the card itself, it would show through the padding on the edges
 -------------------------------------------------- */

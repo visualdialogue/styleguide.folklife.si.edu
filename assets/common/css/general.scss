@@ -965,6 +965,68 @@
 		}
 	}
 
+/* Slideshow/Gallery arrows, from Folklife homepage banner
+-------------------------------------------------*/
+	$arrowSizeBreak2: 6rem;
+	$arrowSizeFullwidth: 8rem;
+
+	// slick default overrride
+	.slick-dots li.slick-active button:before {opacity: 1;}
+
+	.slick-prev:before, .slick-next:before {
+		font-family: 'vd-icons';
+		-webkit-transform: translateY(-49%);
+		-ms-transform: translateY(-49%);
+		transform: translateY(-49%);
+		color: $black40;
+		position: absolute;
+		left:0;
+	    opacity: 1;
+	    line-height: 0.6; // so will align more centered vertically
+	    font-size:$arrowSizeBreak2;
+	    @include respond-to(fullwidth) {font-size:$arrowSizeFullwidth;}
+	}
+	.slick-prev:hover::before, .slick-next:hover::before {
+		color: #fff;
+	}
+	.slick-prev:before {content: "\65";}
+	.slick-prev:before {content: "\6e";}
+	.slick-next:before {content: "\66";}
+	.slick-next:before {content: "\79";}
+	.slick-prev, .slick-next {
+		z-index: 1;
+		width: $arrowSizeBreak2;
+		height: $arrowSizeBreak2;
+		@include respond-to(fullwidth) {
+			width: $arrowSizeFullwidth;
+			height: $arrowSizeFullwidth;
+		}
+	}
+	.slick-prev {
+		left: 3.4vw;
+  		@include respond-to(break2) {
+			left: 40px;
+  		}
+  		@include respond-to(fullwidth) {
+  			left: auto;
+  			margin-left: -5.4rem;
+		}
+	}
+	.slick-next {
+		right: 3.4vw;
+		@include respond-to(break2) {
+			right: 3.4vw;
+			// right: calc((100vw - 1415px) / 2); // screen width, minus width of center area, divided by 2 because just one side
+			right: 40px;
+		}
+		@include respond-to(fullwidth) {
+			// right: calc((100vw - 1400px) / 2); // screen width, minus width of center area, divided by 2 because just one side
+			right: calc((100vw - 1415px) / 2); // screen width, minus width of center area, divided by 2 because just one side
+			// margin-right: -5.5rem;
+			margin-right: -4.8rem;
+		}
+	}
+
 /* Hide Ios Play button
 -------------------------------------------------*/
 	// .home-video iframe {width:100%;height:100%;position: absolute;top:0;right:0;bottom:0;left:0;}
@@ -972,7 +1034,6 @@
 	video::-webkit-media-controls {
 	  display:none !important;
 	}
-
 	// Apple play button changed again
 	// from http://stackoverflow.com/a/37553385
 	/* This used to work for parent element of button divs */
@@ -981,13 +1042,11 @@
 	  display: none!important;
 	  -webkit-appearance: none;
 	}
-
 	/* Old shadow dom for play button */
 	*::--webkit-media-controls-play-button {
 	  display: none!important;
 	  -webkit-appearance: none;
 	}
-
 	/* New shadow dom for play button */
 	*::-webkit-media-controls-start-playback-button {
 	  display: none!important;
