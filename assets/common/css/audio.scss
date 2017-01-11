@@ -41,7 +41,7 @@
 		right: 0;
 		@include padding(2);
 		@include respond-to(break2max) {
-			padding-left:1rem;
+			padding-left:0.7rem;
 			padding-top:0;
 		}
 	}

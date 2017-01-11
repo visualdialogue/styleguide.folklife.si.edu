@@ -74,6 +74,7 @@
 		line-height: 1.267; // taller per discussion on 1.4 at shop // 38px
 		@include respond-to(break2max) {
 			font-size: 2.107rem;
+			// font-size: 1.873rem; // smaller for festival program sub-section copy to match "A space for sports, music..."
 		}
 		@include respond-to(break2) {
 	  		font-size: 1.9vw;
@@ -349,7 +350,7 @@
 		font-weight: 400;
 		line-height: 1.333333; // 24/32
 		@include respond-to(break2max) {
-	  		font-size: 1.896rem; // 18px on medium.com mobile, 1.896 on modular scale
+	  		font-size: 1.9rem;
 	  	}
 		@include respond-to(break2) {
 	  		font-size: 1.5vw;
@@ -366,13 +367,14 @@
 		font-weight: 300;
 		line-height: 1.35; // fw magazine article
 		@include respond-to(break2max) {
-	  		font-size: 1.873rem;
+	  		// font-size: 1.873rem;
+	  		font-size: 1.7rem;
 	  	}
 		@include respond-to(break2) {
 			font-size: 1.25vw;
 		}
 		@include respond-to(fullwidth) {
-	  		font-size: 2.107rem; // fits with scale and folklife education page layout
+	  		font-size: 2.1rem;
 		}
 	}
 	
@@ -476,8 +478,10 @@
 			@include margin-bottom(1);
 			li:not(.card) {
 				// inset
-				margin-left: 2rem;
 				position: relative;
+				@include respond-to(break2max) {margin-left:0rem;}
+				@include respond-to(break2) {margin-left:1vw;}
+				@include respond-to(fullwidth) {margin-left:2rem;}
 				// bullets
 				&:before {
 					content: '\61';
@@ -489,12 +493,15 @@
 					@include margin-left(-1.7);
 					@include respond-to(break2max) {
 						font-size:0.7rem;
+						font-size:0.5rem;
 					}
 					@include respond-to(break2) {
 						font-size:0.5vw;
+						font-size:0.32vw;
 					}
 					@include respond-to(fullwidth) {
 						font-size:0.7rem;
+						font-size:0.5rem; // smaller bullet
 						bottom: 0.5rem;
 					}
 				}

@@ -31,13 +31,20 @@
 		}
 
 		// shadow below navbar
-		box-shadow: 0px 17px 41px -8px rgba(0,0,0,0.20);
-		-webkit-box-shadow: 0px 17px 41px -8px rgba(0,0,0,0.20);
-		-moz-box-shadow: 0px 17px 41px -8px rgba(0,0,0,0.20);
+		// box-shadow: 0px 17px 41px -8px rgba(0,0,0,0.20);
+		// -webkit-box-shadow: 0px 17px 41px -8px rgba(0,0,0,0.20);
+		// -moz-box-shadow: 0px 17px 41px -8px rgba(0,0,0,0.20);
 
-		box-shadow: 0px 10px 41px -8px rgba(0,0,0,0.08);
-		-webkit-box-shadow: 0px 10px 41px -8px rgba(0,0,0,0.08);
-		-moz-box-shadow: 0px 10px 41px -8px rgba(0,0,0,0.08);
+		box-shadow: 0px 10px 41px -8px rgba(0,0,0,0.16);
+		-webkit-box-shadow: 0px 10px 41px -8px rgba(0,0,0,0.16);
+		-moz-box-shadow: 0px 10px 41px -8px rgba(0,0,0,0.16);	
+
+		@include respond-to(break2) {
+			box-shadow: 0px 10px 41px -8px rgba(0,0,0,0.08);
+			-webkit-box-shadow: 0px 10px 41px -8px rgba(0,0,0,0.08);
+			-moz-box-shadow: 0px 10px 41px -8px rgba(0,0,0,0.08);	
+		}
+		
 	}
 	.home-page {
 		.navbar {

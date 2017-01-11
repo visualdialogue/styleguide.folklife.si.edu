@@ -318,10 +318,13 @@ a.details {
 	.full-feature-card, .details, .ms-section__copy {
 		.more-link {
 			position: static;
-			float: right;
 			@include margin-top(2);
 			@include margin-bottom(2);
 			@include margin-left(2);
+			@include respond-to(break2max) {
+				// float: right;
+				padding-left: 0.7rem;
+			}
 			@include respond-to(break2) {
 				margin: 0;
 				float: none;
@@ -332,6 +335,9 @@ a.details {
 				margin-top: 2rem;
 			}
 		}
+	}
+	.details .more-link {
+
 	}
 	.half-section .more-link {
 		@include right(2);
@@ -526,6 +532,9 @@ a.details {
 			border: 2px solid $black15;
 			@include padding-bottom(2); // padding on left by default
 			@include padding-left(2);
+			@include respond-to(break2max) {
+				padding-left: 0.7rem;
+			}
 		}
 	}
 

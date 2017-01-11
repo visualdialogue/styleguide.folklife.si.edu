@@ -21,6 +21,9 @@
 		}
 	}
 	.program-category-page {
+		main {
+			@include margin-bottom(4);
+		}
 		.section-title {
 			@include margin-top(-0.8);
 			@include margin-bottom(0);
@@ -221,7 +224,8 @@
 			@include margin-bottom(3.5);
 		}
 		.blurb {
-			@include lg-sans;
+			// @include lg-sans;
+			@include md-sans;
 		}
 		.anchor-link {
 			@include top(-5);

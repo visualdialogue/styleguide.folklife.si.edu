@@ -531,17 +531,17 @@
 		position: relative; // contain support button
 	}
 	.support-copy, .support-button {
-		width: 50%;
-		float: left;
 		@include respond-to(break2) {
+			float: left;
+			width: 50%;
 			display: inline-block;
 			vertical-align: top;
 		}
 	}
 	.support-copy {
 		@include respond-to(break2max) {
-			font-size: 2.6vw;
-			height: 5vw; // responsive for text
+			// font-size: 2.6vw;
+			// height: 5vw; // responsive for text
 			padding-top: 1.1vw; // responsive for sizing at mobile
 		}
 		@include respond-to(break2) {
@@ -551,7 +551,7 @@
 			padding-top: 1vw;
 		}
 		@include respond-to(fullwidth) {
-			font-size: 2rem;
+			// font-size: 2rem;
 			height: 15rem;
 			padding-top: 0.9rem;
 		}
@@ -568,7 +568,8 @@
 		clear:none;
 		@include respond-to(break2max) {
 			padding: 3vw;
-			height: 19vw; // responsive for text
+			// height: 19vw; // responsive for text
+			height: auto;
 		}
 		@include respond-to(break2) {
 			padding: 0;
@@ -580,12 +581,14 @@
 			bottom: 0;
 		}
 		.button-inner {
-			@include vertically-align;
+			@include respond-to(break2) {
+				@include vertically-align;
+			}
 		}
 	}
 	.button-inner {
 		@include respond-to(break2max) {
-			font-size: 3.7vw;
+			// font-size: 3.7vw;
 		}
 		@include respond-to(break2) {
 			line-height: 1.1;
@@ -609,7 +612,7 @@
 		@include padding-right(2);
 		@include padding-left(2);
 		@include padding-bottom(2);
-		@include sm-sans;
+		// @include sm-sans;
 		@include respond-to(break2full) {
 			font-size: 1.2vw;
 		}
