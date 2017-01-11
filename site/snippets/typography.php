@@ -165,7 +165,7 @@
       </div>
       <div class="row">
         <div class="col-md-5">
-          <div class="type-details">Typeface: Acumin Pro<br/>Weight: Semibold<br/>Maximum Font Size: 3.375rem</div>
+          <div class="type-details">Typeface: Acumin Pro<br/>Weight: Semibold<br/>Maximum Font Size: 3.375rem<br/>Usage: Folkways: Album page artist, track title. Lesson plan title. Membership subtitle.</div>
         </div>
         <div class="col-md-7">
           <pre class="sass"><code>@mixin xl-sans {
@@ -281,7 +281,7 @@
       </div>
       <div class="row">
         <div class="col-md-5">
-          <div class="type-details">Typeface: Acumin Pro<br/>Weight: Semibold<br/>Maximum Font Size: 2.5rem</div>
+          <div class="type-details">Typeface: Acumin Pro<br/>Weight: Semibold<br/>Maximum Font Size: 2.5rem<br/>Usage: </div>
         </div>
         <div class="col-md-7">
           <pre class="sass"><code>@mixin md-sans {

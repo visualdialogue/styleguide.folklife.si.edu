@@ -288,6 +288,7 @@
 	.thick-hr {
 		height:11px;
 		background-image:url(/assets/images/hr/hr.png);
+		background-size: 100% 100%; // scrunch for mobile
 		@include respond-to(break2) {
 			margin-top:0;
 		}
@@ -506,11 +507,22 @@
 			@include margin-left(0);
 		}
 	}
-	
+
+/* Support and Signup
+-------------------------------------------------- */
+	.newsletter-signup-copy, .support-copy {
+		@include padding-top(1);
+		@include padding-bottom(2);
+		@include padding-right(2);
+		@include padding-left(2);
+	}
+
 /* Support Us
 -------------------------------------------------- */
 	.above-support-hr {
-		@include margin-bottom(3);
+		@include respond-to(break2) {
+			@include margin-bottom(3);
+		}
 	}
 	.support-folkways {
 		.support {
@@ -539,25 +551,17 @@
 		}
 	}
 	.support-copy {
-		@include respond-to(break2max) {
-			// font-size: 2.6vw;
-			// height: 5vw; // responsive for text
-			padding-top: 1.1vw; // responsive for sizing at mobile
-		}
 		@include respond-to(break2) {
 			width: 46.45%; // 314px / 676px
 			line-height: 1.2;
 			height: 9.8vw;
-			padding-top: 1vw;
+		}
+		@include respond-to(break2full) { // don't override common css above for full width
+			padding-top: 1.1vw;
 		}
 		@include respond-to(fullwidth) {
-			// font-size: 2rem;
 			height: 15rem;
-			padding-top: 0.9rem;
 		}
-		@include padding-right(2);
-		@include padding-bottom(2);
-		@include padding-left(2);
 	}
 	.support-button {
 		background-color: $black60;
@@ -608,10 +612,6 @@
 	}
 	.newsletter-signup-copy {
 		background-color: $black10;
-		@include padding-top(1.9);
-		@include padding-right(2);
-		@include padding-left(2);
-		@include padding-bottom(2);
 		// @include sm-sans;
 		@include respond-to(break2full) {
 			font-size: 1.2vw;
@@ -640,7 +640,8 @@
 			height: 4.8vw;
 		}
 		@include respond-to(fullwidth) {
-			height: 7.5rem;
+			// height: 7.5rem;
+			height: 6.9rem;
 			padding-bottom: 2rem;
 		}
 

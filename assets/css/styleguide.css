@@ -6205,8 +6205,7 @@ body {
 
 @media only screen and (max-width: 53.25em) {
   .content h4, .text-card h4 {
-    font-size: 2.489rem;
-    font-size: 2.212rem;
+    font-size: 2.2rem;
   }
 }
 
@@ -6268,7 +6267,7 @@ body {
 
 @media only screen and (max-width: 53.25em) {
   .content h5, .text-card h5 {
-    font-size: 1.48rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -6374,7 +6373,7 @@ body {
 
 @media only screen and (max-width: 53.25em) {
   .content .title, .text-card .title {
-    font-size: 1.48rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -6590,7 +6589,7 @@ body {
 
 @media only screen and (max-width: 53.25em) {
   .content-footer h2 {
-    font-size: 1.873rem;
+    font-size: 1.9rem;
   }
 }
 
@@ -6832,7 +6831,7 @@ body {
 
 @media only screen and (max-width: 53.25em) {
   .more-link-text {
-    font-size: 1.48rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -7166,7 +7165,7 @@ a:hover {
 
 @media only screen and (max-width: 53.25em) {
   .site-toggle {
-    font-size: 1.316rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -7653,7 +7652,7 @@ a:hover {
 @media only screen and (min-width: 53.25em) {
   .header-nav-title, .footer-nav-title {
     line-height: 1.2;
-    font-size: 1.09vw;
+    font-size: 1vw;
   }
 }
 
@@ -7861,7 +7860,7 @@ a:hover {
 @media only screen and (min-width: 53.25em) {
   .browsenav-title {
     line-height: 1.2;
-    font-size: 1.09vw;
+    font-size: 1vw;
   }
 }
 
@@ -8374,7 +8373,7 @@ ul {
 
 @media only screen and (max-width: 53.25em) {
   .sidebar h3, .sidebar-section-title {
-    font-size: 2.107rem;
+    font-size: 2.1rem;
   }
 }
 
@@ -8437,7 +8436,7 @@ ul {
 
 @media only screen and (max-width: 53.25em) {
   .sidebar h4, .sidebar-item-title {
-    font-size: 1.316rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -8539,6 +8538,7 @@ hr {
 .thick-hr {
   height: 11px;
   background-image: url(/assets/images/hr/hr.png);
+  background-size: 100% 100%;
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -8771,7 +8771,7 @@ a .page-title:hover {
 
 @media only screen and (max-width: 53.25em) {
   .sidebar-audio .sidebar-title {
-    font-size: 2.37rem;
+    font-size: 2.4rem;
   }
 }
 
@@ -8784,7 +8784,7 @@ a .page-title:hover {
 
 @media only screen and (min-width: 1560px) {
   .sidebar-audio .sidebar-title {
-    font-size: 3.375rem;
+    font-size: 3.5rem;
   }
 }
 
@@ -8882,7 +8882,7 @@ a .page-title:hover {
 
 @media only screen and (max-width: 53.25em) {
   .sidebar-audio .track {
-    font-size: 1.48rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -8913,7 +8913,7 @@ a .page-title:hover {
 
 @media only screen and (max-width: 53.25em) {
   .sidebar-audio .track-action {
-    font-size: 1.316rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -8956,7 +8956,7 @@ a .page-title:hover {
 
 @media only screen and (max-width: 53.25em) {
   .sidebar-video .title, .sidebar-album .title {
-    font-size: 2.37rem;
+    font-size: 2.4rem;
   }
 }
 
@@ -8969,7 +8969,7 @@ a .page-title:hover {
 
 @media only screen and (min-width: 1560px) {
   .sidebar-video .title, .sidebar-album .title {
-    font-size: 3.375rem;
+    font-size: 3.5rem;
   }
 }
 
@@ -9160,7 +9160,7 @@ a .page-title:hover {
 
 @media only screen and (max-width: 53.25em) {
   .become-a-member .copy {
-    font-size: 2.107rem;
+    font-size: 2.1rem;
   }
 }
 
@@ -9324,7 +9324,7 @@ a .page-title:hover {
 
 @media only screen and (max-width: 53.25em) {
   .button .title {
-    font-size: 1.376rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -9337,7 +9337,7 @@ a .page-title:hover {
 
 @media only screen and (min-width: 1560px) {
   .button .title {
-    font-size: 1.72rem;
+    font-size: 1.8rem;
     line-height: 1.4;
     margin-bottom: 0.5rem;
   }
@@ -9352,7 +9352,7 @@ a .page-title:hover {
 
 @media only screen and (max-width: 53.25em) {
   .button .price {
-    font-size: 1.48rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -9387,21 +9387,95 @@ a .page-title:hover {
   }
 }
 
-/* Support Us
+/* Support and Signup
 -------------------------------------------------- */
 @media only screen and (max-width: 53.25em) {
+  .newsletter-signup-copy, .support-copy {
+    padding-top: 0.70235rem;
+  }
+}
+
+@media only screen and (min-width: 53.25em) {
+  .newsletter-signup-copy, .support-copy {
+    padding-top: 0.64vw;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .newsletter-signup-copy, .support-copy {
+    padding-top: 1rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .newsletter-signup-copy, .support-copy {
+    padding-bottom: 1.40469rem;
+  }
+}
+
+@media only screen and (min-width: 53.25em) {
+  .newsletter-signup-copy, .support-copy {
+    padding-bottom: 1.28vw;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .newsletter-signup-copy, .support-copy {
+    padding-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .newsletter-signup-copy, .support-copy {
+    padding-right: 1.40469rem;
+  }
+}
+
+@media only screen and (min-width: 53.25em) {
+  .newsletter-signup-copy, .support-copy {
+    padding-right: 1.28vw;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .newsletter-signup-copy, .support-copy {
+    padding-right: 2rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .newsletter-signup-copy, .support-copy {
+    padding-left: 1.40469rem;
+  }
+}
+
+@media only screen and (min-width: 53.25em) {
+  .newsletter-signup-copy, .support-copy {
+    padding-left: 1.28vw;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .newsletter-signup-copy, .support-copy {
+    padding-left: 2rem;
+  }
+}
+
+/* Support Us
+-------------------------------------------------- */
+@media only screen and (min-width: 53.25em) and (max-width: 53.25em) {
   .above-support-hr {
     margin-bottom: 1.11111rem;
   }
 }
 
-@media only screen and (min-width: 53.25em) {
+@media only screen and (min-width: 53.25em) and (min-width: 53.25em) {
   .above-support-hr {
     margin-bottom: 1.92vw;
   }
 }
 
-@media only screen and (min-width: 1560px) {
+@media only screen and (min-width: 53.25em) and (min-width: 1560px) {
   .above-support-hr {
     margin-bottom: 3rem;
   }
@@ -9438,79 +9512,23 @@ a .page-title:hover {
   }
 }
 
-@media only screen and (max-width: 53.25em) {
-  .support-copy {
-    padding-top: 1.1vw;
-  }
-}
-
 @media only screen and (min-width: 53.25em) {
   .support-copy {
     width: 46.45%;
     line-height: 1.2;
     height: 9.8vw;
-    padding-top: 1vw;
+  }
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1560px) {
+  .support-copy {
+    padding-top: 1.1vw;
   }
 }
 
 @media only screen and (min-width: 1560px) {
   .support-copy {
     height: 15rem;
-    padding-top: 0.9rem;
-  }
-}
-
-@media only screen and (max-width: 53.25em) {
-  .support-copy {
-    padding-right: 1.40469rem;
-  }
-}
-
-@media only screen and (min-width: 53.25em) {
-  .support-copy {
-    padding-right: 1.28vw;
-  }
-}
-
-@media only screen and (min-width: 1560px) {
-  .support-copy {
-    padding-right: 2rem;
-  }
-}
-
-@media only screen and (max-width: 53.25em) {
-  .support-copy {
-    padding-bottom: 1.40469rem;
-  }
-}
-
-@media only screen and (min-width: 53.25em) {
-  .support-copy {
-    padding-bottom: 1.28vw;
-  }
-}
-
-@media only screen and (min-width: 1560px) {
-  .support-copy {
-    padding-bottom: 2rem;
-  }
-}
-
-@media only screen and (max-width: 53.25em) {
-  .support-copy {
-    padding-left: 1.40469rem;
-  }
-}
-
-@media only screen and (min-width: 53.25em) {
-  .support-copy {
-    padding-left: 1.28vw;
-  }
-}
-
-@media only screen and (min-width: 1560px) {
-  .support-copy {
-    padding-left: 2rem;
   }
 }
 
@@ -9630,78 +9648,6 @@ a .page-title:hover {
   background-color: #e6e6e6;
 }
 
-@media only screen and (max-width: 53.25em) {
-  .newsletter-signup-copy {
-    padding-top: 1.33446rem;
-  }
-}
-
-@media only screen and (min-width: 53.25em) {
-  .newsletter-signup-copy {
-    padding-top: 1.216vw;
-  }
-}
-
-@media only screen and (min-width: 1560px) {
-  .newsletter-signup-copy {
-    padding-top: 1.9rem;
-  }
-}
-
-@media only screen and (max-width: 53.25em) {
-  .newsletter-signup-copy {
-    padding-right: 1.40469rem;
-  }
-}
-
-@media only screen and (min-width: 53.25em) {
-  .newsletter-signup-copy {
-    padding-right: 1.28vw;
-  }
-}
-
-@media only screen and (min-width: 1560px) {
-  .newsletter-signup-copy {
-    padding-right: 2rem;
-  }
-}
-
-@media only screen and (max-width: 53.25em) {
-  .newsletter-signup-copy {
-    padding-left: 1.40469rem;
-  }
-}
-
-@media only screen and (min-width: 53.25em) {
-  .newsletter-signup-copy {
-    padding-left: 1.28vw;
-  }
-}
-
-@media only screen and (min-width: 1560px) {
-  .newsletter-signup-copy {
-    padding-left: 2rem;
-  }
-}
-
-@media only screen and (max-width: 53.25em) {
-  .newsletter-signup-copy {
-    padding-bottom: 1.40469rem;
-  }
-}
-
-@media only screen and (min-width: 53.25em) {
-  .newsletter-signup-copy {
-    padding-bottom: 1.28vw;
-  }
-}
-
-@media only screen and (min-width: 1560px) {
-  .newsletter-signup-copy {
-    padding-bottom: 2rem;
-  }
-}
-
 @media only screen and (min-width: 53.25em) and (max-width: 1560px) {
   .newsletter-signup-copy {
     font-size: 1.2vw;
@@ -9761,6 +9707,7 @@ a .page-title:hover {
 @media only screen and (max-width: 53.25em) {
   .newsletter-input {
     font-size: 5vw;
+    font-size: 7vw;
   }
 }
 
@@ -9793,7 +9740,7 @@ a .page-title:hover {
 
 @media only screen and (min-width: 1560px) {
   .newsletter-input {
-    height: 7.5rem;
+    height: 6.9rem;
     padding-bottom: 2rem;
   }
 }
@@ -10056,7 +10003,7 @@ figcaption {
 
 @media only screen and (max-width: 53.25em) {
   figcaption {
-    font-size: 1.316rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -10339,7 +10286,7 @@ figcaption.minus-sign:before {
 
 @media only screen and (max-width: 53.25em) {
   .dropdown-wrapper {
-    font-size: 1.48rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -10852,7 +10799,7 @@ figcaption.minus-sign:before {
 @media only screen and (min-width: 53.25em) {
   .search-page .filter-by-title, .past-festivals-page .filter-by-title {
     line-height: 1.2;
-    font-size: 1.09vw;
+    font-size: 1vw;
   }
 }
 
@@ -11426,7 +11373,7 @@ video::-webkit-media-controls {
 
 @media only screen and (max-width: 53.25em) {
   .article-page figcaption {
-    font-size: 1.48rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -11509,7 +11456,7 @@ video::-webkit-media-controls {
 
 @media only screen and (max-width: 53.25em) {
   .blog-article-card .title {
-    font-size: 4.325rem;
+    font-size: 4.2rem;
   }
 }
 
@@ -11552,7 +11499,7 @@ video::-webkit-media-controls {
 
 @media only screen and (max-width: 53.25em) {
   .blog-article-card .date {
-    font-size: 1.48rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -11725,7 +11672,7 @@ a.details {
 
 @media only screen and (min-width: 53.25em) {
   .tag {
-    font-size: 1.05vw;
+    font-size: 1vw;
     line-height: 1.4;
     letter-spacing: 0.5px;
     margin-bottom: 0.4vw;
@@ -11760,7 +11707,7 @@ a.details {
 
 @media only screen and (min-width: 53.25em) {
   .date {
-    font-size: 1.05vw;
+    font-size: 1vw;
     line-height: 1.4;
     letter-spacing: 0.5px;
     margin-bottom: 0.4vw;
@@ -11796,7 +11743,7 @@ a.details {
 
 @media only screen and (min-width: 53.25em) {
   .date-sm {
-    font-size: 1.05vw;
+    font-size: 1vw;
     line-height: 1.4;
     letter-spacing: 0.5px;
     margin-bottom: 0.4vw;
@@ -11837,7 +11784,7 @@ a.details {
 
 @media only screen and (max-width: 53.25em) {
   .byline {
-    font-size: 1.48rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -11949,7 +11896,7 @@ a.details {
 
 @media only screen and (max-width: 53.25em) {
   .publication-card .title {
-    font-size: 2.107rem;
+    font-size: 2.1rem;
   }
 }
 
@@ -11973,7 +11920,7 @@ a.details {
 
 @media only screen and (max-width: 53.25em) {
   .publication-card .author {
-    font-size: 1.48rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -12061,7 +12008,7 @@ a.details {
 
 @media only screen and (max-width: 53.25em) {
   .publication-card .buy-now-button {
-    font-size: 1.376rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -12074,7 +12021,7 @@ a.details {
 
 @media only screen and (min-width: 1560px) {
   .publication-card .buy-now-button {
-    font-size: 1.72rem;
+    font-size: 1.8rem;
     line-height: 1.4;
     margin-bottom: 0.5rem;
   }
@@ -12092,8 +12039,7 @@ a.details {
 
 @media only screen and (max-width: 53.25em) {
   .card-program .title {
-    font-size: 2.489rem;
-    font-size: 2.212rem;
+    font-size: 2.2rem;
   }
 }
 
@@ -12280,7 +12226,7 @@ body {
 
 @media only screen and (max-width: 53.25em) {
   .remodal-title {
-    font-size: 1.48rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -12305,7 +12251,7 @@ body {
 
 @media only screen and (max-width: 53.25em) {
   .remodal-description {
-    font-size: 1.873rem;
+    font-size: 1.9rem;
   }
 }
 
@@ -12633,7 +12579,7 @@ body {
 
 @media only screen and (max-width: 53.25em) {
   .full-feature-card .title {
-    font-size: 4.325rem;
+    font-size: 4.2rem;
   }
 }
 
@@ -12717,7 +12663,7 @@ body {
 
 @media only screen and (max-width: 53.25em) {
   .full-feature-card .description {
-    font-size: 2.107rem;
+    font-size: 2.1rem;
   }
 }
 
@@ -12765,7 +12711,7 @@ body {
 
 @media only screen and (max-width: 53.25em) {
   .sidebar-card .details {
-    font-size: 1.48rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -12868,7 +12814,7 @@ body {
 
 @media only screen and (max-width: 53.25em) {
   .album-card .title, .vinyl-card .title, .books-card .title {
-    font-size: 1.48rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -12911,7 +12857,7 @@ body {
 
 @media only screen and (max-width: 53.25em) {
   .album-card .artist, .vinyl-card .artist, .books-card .artist {
-    font-size: 1.48rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -12972,7 +12918,7 @@ body {
 
 @media only screen and (max-width: 53.25em) {
   .merchandise-card .title {
-    font-size: 1.48rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -13017,7 +12963,7 @@ body {
 
 @media only screen and (max-width: 53.25em) {
   .merchandise-card .price {
-    font-size: 1.48rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -13151,7 +13097,7 @@ body {
 
 @media only screen and (max-width: 53.25em) {
   .audio-card .title {
-    font-size: 1.873rem;
+    font-size: 1.9rem;
   }
 }
 
@@ -13194,7 +13140,7 @@ body {
 
 @media only screen and (max-width: 53.25em) {
   .audio-card .subtitle, .audio-card .artist {
-    font-size: 1.48rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -13345,7 +13291,7 @@ body {
 
 @media only screen and (max-width: 53.25em) {
   .audio-time {
-    font-size: 1.48rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -13413,7 +13359,7 @@ body {
 
 @media only screen and (min-width: 53.25em) {
   .mejs-container .mejs-controls div {
-    font-size: 1.05vw;
+    font-size: 1vw;
     line-height: 1.4;
     letter-spacing: 0.5px;
     margin-bottom: 0.4vw;
@@ -13959,7 +13905,7 @@ h2.intro-title {
 
 @media only screen and (max-width: 53.25em) {
   h2.intro-title {
-    font-size: 4.325rem;
+    font-size: 4.2rem;
   }
 }
 
@@ -14021,8 +13967,7 @@ h2.intro-title {
 
 @media only screen and (max-width: 53.25em) {
   .intro-copy {
-    font-size: 2.489rem;
-    font-size: 2.212rem;
+    font-size: 2.2rem;
   }
 }
 
@@ -14171,7 +14116,7 @@ h2.intro-title {
 
 @media only screen and (max-width: 53.25em) {
   .grid-item-inner .copy {
-    font-size: 1.48rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -14229,7 +14174,7 @@ h2.intro-title {
 
 @media only screen and (max-width: 53.25em) {
   .color {
-    font-size: 1.48rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -14587,8 +14532,7 @@ pre {
 
 @media only screen and (max-width: 53.25em) {
   .section-subtitle {
-    font-size: 2.489rem;
-    font-size: 2.212rem;
+    font-size: 2.2rem;
   }
 }
 
@@ -14708,7 +14652,7 @@ pre {
 
 @media only screen and (max-width: 53.25em) {
   .show-code {
-    font-size: 1.316rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -14946,7 +14890,7 @@ pre {
 
 @media only screen and (max-width: 53.25em) {
   .type-details {
-    font-size: 1.48rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -14971,7 +14915,7 @@ pre {
 
 @media only screen and (max-width: 53.25em) {
   .lg-serif {
-    font-size: 4.325rem;
+    font-size: 4.2rem;
   }
 }
 
@@ -15019,8 +14963,7 @@ pre {
 
 @media only screen and (max-width: 53.25em) {
   .sm-serif {
-    font-size: 2.489rem;
-    font-size: 2.212rem;
+    font-size: 2.2rem;
   }
 }
 
@@ -15064,8 +15007,7 @@ pre {
 
 @media only screen and (max-width: 53.25em) {
   .sm-serif-italic {
-    font-size: 2.489rem;
-    font-size: 2.212rem;
+    font-size: 2.2rem;
   }
 }
 
@@ -15107,7 +15049,7 @@ pre {
 
 @media only screen and (max-width: 53.25em) {
   .xl-sans {
-    font-size: 2.37rem;
+    font-size: 2.4rem;
   }
 }
 
@@ -15120,7 +15062,7 @@ pre {
 
 @media only screen and (min-width: 1560px) {
   .xl-sans {
-    font-size: 3.375rem;
+    font-size: 3.5rem;
   }
 }
 
@@ -15132,7 +15074,7 @@ pre {
 
 @media only screen and (max-width: 53.25em) {
   .xl-sans-semi {
-    font-size: 2.37rem;
+    font-size: 2.4rem;
   }
 }
 
@@ -15145,7 +15087,7 @@ pre {
 
 @media only screen and (min-width: 1560px) {
   .xl-sans-semi {
-    font-size: 3.375rem;
+    font-size: 3.5rem;
   }
 }
 
@@ -15157,7 +15099,7 @@ pre {
 
 @media only screen and (max-width: 53.25em) {
   .lg-sans {
-    font-size: 2.107rem;
+    font-size: 2.1rem;
   }
 }
 
@@ -15182,7 +15124,7 @@ pre {
 
 @media only screen and (max-width: 53.25em) {
   .lg-sans-semi {
-    font-size: 2.107rem;
+    font-size: 2.1rem;
   }
 }
 
@@ -15206,7 +15148,7 @@ pre {
 
 @media only screen and (max-width: 53.25em) {
   .md-sans {
-    font-size: 1.873rem;
+    font-size: 1.9rem;
   }
 }
 
@@ -15232,7 +15174,7 @@ pre {
 
 @media only screen and (max-width: 53.25em) {
   .md-sans-semi {
-    font-size: 1.873rem;
+    font-size: 1.9rem;
   }
 }
 
@@ -15257,7 +15199,7 @@ pre {
 
 @media only screen and (max-width: 53.25em) {
   .sm-sans {
-    font-size: 1.48rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -15283,7 +15225,7 @@ pre {
 
 @media only screen and (max-width: 53.25em) {
   .sm-sans-semi {
-    font-size: 1.48rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -15309,7 +15251,7 @@ pre {
 
 @media only screen and (max-width: 53.25em) {
   .caption-sans {
-    font-size: 1.316rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -15358,7 +15300,7 @@ pre {
 
 @media only screen and (max-width: 53.25em) {
   .intro-serif {
-    font-size: 1.896rem;
+    font-size: 1.9rem;
   }
 }
 
@@ -15424,7 +15366,7 @@ pre {
 
 @media only screen and (max-width: 53.25em) {
   .intro-sans {
-    font-size: 2.107rem;
+    font-size: 2.1rem;
   }
 }
 
@@ -15528,7 +15470,7 @@ pre {
 @media only screen and (min-width: 53.25em) {
   .nav-header {
     line-height: 1.2;
-    font-size: 1.09vw;
+    font-size: 1vw;
   }
 }
 
@@ -15547,13 +15489,13 @@ pre {
 
 @media only screen and (max-width: 53.25em) {
   .lg-magazine-title {
-    font-size: 2.622rem;
+    font-size: 2.6rem;
   }
 }
 
 @media only screen and (min-width: 53.25em) {
   .lg-magazine-title {
-    font-size: 3.319rem;
+    font-size: 3.3rem;
     font-size: 2.95vw;
   }
 }
@@ -15572,7 +15514,7 @@ pre {
 
 @media only screen and (max-width: 53.25em) {
   .md-magazine-title {
-    font-size: 1.842rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -15584,7 +15526,7 @@ pre {
 
 @media only screen and (min-width: 1560px) {
   .md-magazine-title {
-    font-size: 3.733rem;
+    font-size: 3.7rem;
   }
 }
 
@@ -15614,7 +15556,7 @@ pre {
 
 @media only screen and (max-width: 53.25em) {
   .sm-magazine-title {
-    font-size: 1.841rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -15626,7 +15568,7 @@ pre {
 
 @media only screen and (min-width: 1560px) {
   .sm-magazine-title {
-    font-size: 2.95rem;
+    font-size: 3rem;
   }
 }
 
@@ -15639,7 +15581,7 @@ pre {
 
 @media only screen and (max-width: 53.25em) {
   .buy-button {
-    font-size: 1.376rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -15652,7 +15594,7 @@ pre {
 
 @media only screen and (min-width: 1560px) {
   .buy-button {
-    font-size: 1.72rem;
+    font-size: 1.8rem;
     line-height: 1.4;
     margin-bottom: 0.5rem;
   }
@@ -15677,7 +15619,7 @@ pre {
 
 @media only screen and (min-width: 53.25em) {
   .category-tag-type {
-    font-size: 1.05vw;
+    font-size: 1vw;
     line-height: 1.4;
     letter-spacing: 0.5px;
     margin-bottom: 0.4vw;
@@ -15712,7 +15654,7 @@ pre {
 
 @media only screen and (min-width: 53.25em) {
   .category-tag-bold-type {
-    font-size: 1.05vw;
+    font-size: 1vw;
     line-height: 1.4;
     letter-spacing: 0.5px;
     margin-bottom: 0.4vw;
@@ -15774,8 +15716,7 @@ pre {
 
 @media only screen and (max-width: 53.25em) {
   .video-card .title {
-    font-size: 2.489rem;
-    font-size: 2.212rem;
+    font-size: 2.2rem;
   }
 }
 
@@ -15818,13 +15759,13 @@ pre {
 
 @media only screen and (max-width: 53.25em) {
   .horizontal-card .title {
-    font-size: 2.622rem;
+    font-size: 2.6rem;
   }
 }
 
 @media only screen and (min-width: 53.25em) {
   .horizontal-card .title {
-    font-size: 3.319rem;
+    font-size: 3.3rem;
     font-size: 2.95vw;
   }
 }
@@ -15843,13 +15784,13 @@ pre {
 
 @media only screen and (max-width: 53.25em) {
   .feature .title {
-    font-size: 2.622rem;
+    font-size: 2.6rem;
   }
 }
 
 @media only screen and (min-width: 53.25em) {
   .feature .title {
-    font-size: 3.319rem;
+    font-size: 3.3rem;
     font-size: 2.95vw;
   }
 }
@@ -15894,7 +15835,7 @@ pre {
 
 @media only screen and (max-width: 53.25em) {
   .video-section .subtitle {
-    font-size: 1.873rem;
+    font-size: 1.9rem;
   }
 }
 

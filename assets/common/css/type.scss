@@ -6,7 +6,8 @@
 		font-weight: 700;
 		line-height: 1;
 		@include respond-to(break2max) {
-			font-size: 4.325rem;
+			// font-size: 4.325rem;
+			font-size: 4.2rem;
 		}
 		@include respond-to(break2) {
 			font-size: 3.5vw;
@@ -15,7 +16,6 @@
 			font-size: 6.158rem;
 		}
 	}
-
 	@mixin md-serif {
 		font-family: $serif;
 		font-weight: 700;
@@ -30,14 +30,13 @@
 			font-size: 4.2rem;
 		}
 	}
-
 	@mixin sm-serif {
 		font-family: $serif;
 		font-weight: 700;
 		line-height: 1;
 	  	@include respond-to(break2max) {
-	  		font-size: 2.489rem;
-	  		font-size: 2.212rem;
+	  		// font-size: 2.489rem;
+	  		font-size: 2.2rem;
 	  	}
 		@include respond-to(break2) {
 			line-height: 1.143;
@@ -57,24 +56,22 @@
 		font-family: $sans;
 		font-weight: 300;
 		@include respond-to(break2max) {
-			font-size: 2.37rem;
+			font-size: 2.4rem;
 		}
 		@include respond-to(break2) {
 			font-size: 1.9vw;
 			line-height: 1.2;
 		}
 		@include respond-to(fullwidth) {
-			font-size: 3.375rem;
+			font-size: 3.5rem;
 		}
 	}
-
 	@mixin lg-sans {
 		font-family: $sans;
 		font-weight: 300;
 		line-height: 1.267; // taller per discussion on 1.4 at shop // 38px
 		@include respond-to(break2max) {
-			font-size: 2.107rem;
-			// font-size: 1.873rem; // smaller for festival program sub-section copy to match "A space for sports, music..."
+			font-size: 2.1rem;
 		}
 		@include respond-to(break2) {
 	  		font-size: 1.9vw;
@@ -83,13 +80,12 @@
 	  		font-size: 3rem;
 		}
 	}
-
 	@mixin md-sans {
 		font-family: $sans;
 		font-weight: 300;
 		line-height: 1.2;
 		@include respond-to(break2max) {
-	  		font-size: 1.873rem;
+	  		font-size: 1.9rem;
 		}
 		@include respond-to(break2) {
 	  		font-size: 1.6vw;
@@ -99,13 +95,12 @@
 	  		line-height: 1.28; // 25/32
 		}
 	}
-
 	@mixin sm-sans {
 		font-family: $sans;
 		font-weight: 300;
 		line-height: 1.2;
 		@include respond-to(break2max) {
-	  		font-size: 1.48rem;
+	  		font-size: 1.5rem;
 		}
 		@include respond-to(break2) {
 			font-size: 1.2vw;
@@ -115,14 +110,13 @@
 	  		font-size: 1.8rem;
 		}
 	}
-
 	@mixin caption-sans {
 		font-family: $sans;
 		font-weight: 300;
 		line-height: 1.4;
 	  	text-transform: uppercase;
 	  	@include respond-to(break2max) {
-	  		font-size: 1.316rem;
+	  		font-size: 1.3rem;
 	  	}
 		@include respond-to(break2) {
 	  		font-size: 1vw;
@@ -132,7 +126,6 @@
 	  		font-size: 1.6rem;
 		}
 	}
-
 	@mixin date {
 		@include sans-tag;
 		font-weight: 700;
@@ -146,7 +139,6 @@
 	@mixin byline {
 		@include sm-sans;
 	}
-
 	// search bar
 	@mixin search-title {
 	  font-family: $sans;
@@ -154,11 +146,11 @@
 	  line-height: 1.7;
 	  font-size: 2.5rem;
 	}
-
 	@mixin email-newsletter {
 		font-family: $sans;
 		@include respond-to(break2max) {
 			font-size: 5vw;
+			font-size: 7vw;
 		}
 		@include respond-to(break2) {
 			font-size: 2.2vw;
@@ -168,7 +160,6 @@
 			padding-top: 1.5rem;
 		}
 	}
-
 	@mixin link-font {
 		font-family: $sans;
 		line-height: 2;
@@ -185,7 +176,6 @@
 			line-height: 1.8; // 16 px
 		}
 	}
-
 	@mixin link-font-sm {
 		font-family: $sans;
 		line-height: 1.7;
@@ -201,7 +191,6 @@
 			line-height: 1.5;
 		}
 	}
-
 	// Plus icon
 	@mixin sans-plus-icon {
 		font-family: $sans;
@@ -226,10 +215,10 @@
 		font-weight: 800;
 		line-height: 1.095237;
 		@include respond-to(break2max) {
-			font-size: 2.622rem;
+			font-size: 2.6rem;
 		}
 		@include respond-to(break2) {
-			font-size: 3.319rem;
+			font-size: 3.3rem;
 			font-size: 2.95vw;
 		}
 		@include respond-to(fullwidth) {
@@ -242,13 +231,14 @@
 		font-weight: 800;
 		line-height: 1.095237;
 		@include respond-to(break2max) {
-			font-size: 1.842rem;
+			font-size: 1.8rem;
 		}
 		@include respond-to(break2) {
 			font-size: 2.4vw;
 		}
 		@include respond-to(fullwidth) {
-			font-size: 3.733rem;
+			// font-size: 3.733rem;
+			font-size: 3.7rem;
 		}
 	}
 	@mixin sm-magazine-title {
@@ -257,13 +247,13 @@
 		line-height: 1.2;
 		@include margin-bottom(1);
 		@include respond-to(break2max) {
-			font-size: 1.841rem;
+			font-size: 1.8rem;
 		}
 		@include respond-to(break2) {
 			font-size: 1.9vw;
 		}
 		@include respond-to(fullwidth) {
-			font-size: 2.95rem;
+			font-size: 3rem;
 		}
 	}
 	@mixin buy-button {
@@ -272,14 +262,14 @@
 		font-weight: 800;
 		margin-bottom: 0;
 		@include respond-to(break2max) {
-			font-size: 1.376rem;
+			font-size: 1.4rem;
 		}
 		@include respond-to(break2) {
 			font-size: 1.1vw;
 			margin-bottom: 0.4vw;
 		}
 		@include respond-to(fullwidth) {
-			font-size: 1.72rem;
+			font-size: 1.8rem;
 			line-height: 1.4;
 			margin-bottom: 0.5rem;
 		}
@@ -297,7 +287,7 @@
 			font-size: 1.2rem;
 		}
 		@include respond-to(break2) {
-			font-size: 1.05vw;
+			font-size: 1vw;
 			line-height: 1.4;
 			letter-spacing: 0.5px;
 			margin-bottom: 0.4vw;
@@ -314,13 +304,12 @@
 		font-family: $sansWide;
 		font-weight: 800;
 		line-height: 1.2;
-		// font-size: 5vw;
 		@include respond-to(break2max) {
 			font-size: 1.7rem;
 		}
 		@include respond-to(break2) {
 			line-height: 1.2;
-			font-size: 1.09vw;
+			font-size: 1vw;
 		}
 		@include respond-to(fullwidth) {
 			line-height: 1.4353;
@@ -335,7 +324,7 @@
 		font-weight: 600;
 		line-height: 1.267; // 38px
 		@include respond-to(break2max) {
-	  		font-size: 1.896rem;
+	  		font-size: 1.9rem;
 	  	}
 		@include respond-to(break2) {
 	  		font-size: 2.2vw;
