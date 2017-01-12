@@ -218,14 +218,16 @@ a.details {
 	}
 	.remodal-close {
 		position: absolute;
-		top:-4.5rem;
-		right:-1rem;
+		
 		left:auto;
 		z-index: 10001;
 		color: #fff;
-		width:50px;
-		height:50px;
+		width:5rem;
+		height:5rem;
+		top:-1rem;
+		right:-1rem;
 		@include respond-to(break2) {
+			top:-4.5rem;
 			right: -4.5rem;
 		}
 	}
@@ -234,9 +236,9 @@ a.details {
 	}
 	.remodal-close::before {
 	  font-size: 4rem;
-	  width:50px;
-	  height:50px;
-	  line-height: 50px;
+	  width:5rem;
+	  height:5rem;
+	  line-height: 5rem;
 	}
 	.remodal-iframe {
 	  position: relative;
@@ -321,10 +323,6 @@ a.details {
 			@include margin-top(2);
 			@include margin-bottom(2);
 			@include margin-left(2);
-			@include respond-to(break2max) {
-				// float: right;
-				padding-left: 0.7rem;
-			}
 			@include respond-to(break2) {
 				margin: 0;
 				float: none;
@@ -362,7 +360,6 @@ a.details {
 		.details-inner {
 			padding-left:$small-gutter;
 			@include respond-to(break2) {padding-left:0;}
-			@include respond-to(fullwidth) {padding-left:0;}
 		}
 	}
 	.horizontal-card {
@@ -382,6 +379,11 @@ a.details {
 			@include padding(0); // start with no padding, need media queries to win specificity 
 			@include padding-top(2);
 			@include padding-right(1);
+			@include respond-to(break2max) {
+				// off.folkways festival videos
+				padding-top: 0;
+				margin-bottom: 1rem;
+			}
 		}
 	}
 
@@ -458,8 +460,7 @@ a.details {
 	.album-card, .vinyl-card, .books-card {
 		
 		.details-inner {
-			padding:0;
-			@include padding-top(1.7);
+			@include padding-top(1);
 		}
 		.description {
 			display: none; // hide copy on cards
@@ -507,9 +508,9 @@ a.details {
 
 /* Inverse cards (titles above images)
 -------------------------------------------------- */
-	.inverse-card {
-		// need to add space below title after gets matchHeight. apply margin to image because matchHeight ignores it
-		.image {
+	.blog-card, .inverse-card {
+		// need to add space below title after gets matchHeight. apply margin to image instead of title because matchHeight ignores it
+		.image, .video {
 			@include margin-top(2);
 		}
 	}

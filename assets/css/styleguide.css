@@ -6759,6 +6759,8 @@ body {
   text-decoration: none;
 }
 
+/* Play button
+-------------------------------------------------- */
 .center-box {
   position: relative;
 }
@@ -6807,6 +6809,8 @@ body {
   }
 }
 
+/* More Link
+-------------------------------------------------- */
 .more-link-wrapper {
   position: relative;
 }
@@ -6893,6 +6897,61 @@ body {
   }
 }
 
+/* Slider dots
+-------------------------------------------------- */
+.slick-dots li button:before {
+  font-family: 'vd-icons';
+  content: "p";
+  opacity: 1;
+  width: 14px;
+  height: 14px;
+  display: block;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .slick-dots li button:before {
+    font-size: 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 53.25em) {
+  .slick-dots li button:before {
+    font-size: 1vw;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .slick-dots li button:before {
+    font-size: 1.7rem;
+  }
+}
+
+@media only screen and (min-width: 53.25em) {
+  .slick-dots li button:hover:before {
+    content: "a";
+    font-size: 0.8vw;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .slick-dots li button:hover:before {
+    font-size: 1.5rem;
+    padding-left: 1px;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  li[aria-hidden="false"] button:before {
+    content: "\61";
+    font-size: 1.3rem;
+    font-size: 1rem;
+    padding-left: 0;
+  }
+}
+
+/* Footer
+-------------------------------------------------- */
 .icon-mail {
   color: #999999;
   float: right;
@@ -12170,17 +12229,18 @@ body {
 
 .remodal-close {
   position: absolute;
-  top: -4.5rem;
-  right: -1rem;
   left: auto;
   z-index: 10001;
   color: #fff;
-  width: 50px;
-  height: 50px;
+  width: 5rem;
+  height: 5rem;
+  top: -1rem;
+  right: -1rem;
 }
 
 @media only screen and (min-width: 53.25em) {
   .remodal-close {
+    top: -4.5rem;
     right: -4.5rem;
   }
 }
@@ -12191,9 +12251,9 @@ body {
 
 .remodal-close::before {
   font-size: 4rem;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
+  width: 5rem;
+  height: 5rem;
+  line-height: 5rem;
 }
 
 .remodal-iframe {
@@ -12374,12 +12434,6 @@ body {
   }
 }
 
-@media only screen and (max-width: 53.25em) {
-  .full-feature-card .more-link, .details .more-link, .ms-section__copy .more-link {
-    padding-left: 0.7rem;
-  }
-}
-
 @media only screen and (min-width: 53.25em) {
   .full-feature-card .more-link, .details .more-link, .ms-section__copy .more-link {
     margin: 0;
@@ -12440,12 +12494,6 @@ body {
 }
 
 @media only screen and (min-width: 53.25em) {
-  .horizontal-card .details-inner {
-    padding-left: 0;
-  }
-}
-
-@media only screen and (min-width: 1560px) {
   .horizontal-card .details-inner {
     padding-left: 0;
   }
@@ -12530,6 +12578,13 @@ body {
 @media only screen and (min-width: 1560px) {
   .horizontal-card .details-inner {
     padding-right: 1rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .horizontal-card .details-inner {
+    padding-top: 0;
+    margin-bottom: 1rem;
   }
 }
 
@@ -12779,25 +12834,21 @@ body {
 
 /* Albums & Vinyl
 -------------------------------------------------- */
-.album-card .details-inner, .vinyl-card .details-inner, .books-card .details-inner {
-  padding: 0;
-}
-
 @media only screen and (max-width: 53.25em) {
   .album-card .details-inner, .vinyl-card .details-inner, .books-card .details-inner {
-    padding-top: 1.19399rem;
+    padding-top: 0.70235rem;
   }
 }
 
 @media only screen and (min-width: 53.25em) {
   .album-card .details-inner, .vinyl-card .details-inner, .books-card .details-inner {
-    padding-top: 1.088vw;
+    padding-top: 0.64vw;
   }
 }
 
 @media only screen and (min-width: 1560px) {
   .album-card .details-inner, .vinyl-card .details-inner, .books-card .details-inner {
-    padding-top: 1.7rem;
+    padding-top: 1rem;
   }
 }
 
@@ -12983,19 +13034,19 @@ body {
 /* Inverse cards (titles above images)
 -------------------------------------------------- */
 @media only screen and (max-width: 53.25em) {
-  .inverse-card .image {
+  .blog-card .image, .blog-card .video, .inverse-card .image, .inverse-card .video {
     margin-top: 0.74074rem;
   }
 }
 
 @media only screen and (min-width: 53.25em) {
-  .inverse-card .image {
+  .blog-card .image, .blog-card .video, .inverse-card .image, .inverse-card .video {
     margin-top: 1.28vw;
   }
 }
 
 @media only screen and (min-width: 1560px) {
-  .inverse-card .image {
+  .blog-card .image, .blog-card .video, .inverse-card .image, .inverse-card .video {
     margin-top: 2rem;
   }
 }

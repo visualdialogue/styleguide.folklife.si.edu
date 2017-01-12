@@ -89,6 +89,9 @@
 			text-decoration: none;
 		}
 	}
+
+/* Play button
+-------------------------------------------------- */
 	.center-box {
 		position: relative;
 	}
@@ -125,6 +128,9 @@
 			font-size: 6rem;
 		}
 	}
+
+/* More Link
+-------------------------------------------------- */
 	.more-link-wrapper {
 		position: relative;
 	}
@@ -170,6 +176,55 @@
 			}
 		}
 	}
+
+/* Slider dots
+-------------------------------------------------- */
+	$filledInCircle: "\61";
+	$hollowCircle: "\70";
+	$mobileSize: 1rem;
+
+	.slick-dots li button:before {
+		font-family: 'vd-icons';
+		content: $hollowCircle;
+		opacity: 1;
+		width: 14px; 
+		height: 14px;
+		display: block;
+		@include respond-to(break2max) {
+			font-size:1.5rem;
+			font-size:$mobileSize;
+		}
+		@include respond-to(break2) {
+			font-size:1vw;
+		}
+		@include respond-to(fullwidth) {
+			font-size:1.7rem;
+		}
+	}
+	.slick-dots li button:hover:before {
+		@include respond-to(break2) {
+			content: $filledInCircle;
+			font-size:0.8vw;
+		}
+		@include respond-to(fullwidth) {
+			font-size:1.5rem;
+			padding-left:1px;
+		}
+	}
+
+	// nth slide, nth dot is active because default slick dot activation doesn't work with multiple dot instances
+	// mobile only
+	@include respond-to(break2max) {
+		li[aria-hidden="false"] button:before {
+			content: "\61";
+			font-size:1.3rem;
+			font-size:1rem;
+			padding-left:0;
+		}
+	}
+
+/* Footer
+-------------------------------------------------- */
 	.icon-mail {
 		color: $black40;
 		float: right;

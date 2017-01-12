@@ -222,6 +222,7 @@
 			@include md-sans;
 			font-weight: 600;
 			@include margin-bottom(3.5);
+			@include margin-bottom(2.5);
 		}
 		.blurb {
 			// @include lg-sans;
