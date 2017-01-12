@@ -273,6 +273,9 @@
 	}
 	.sidebar-section {
 		@include margin-bottom(2.4);
+		@include respond-to(break2max) {
+			margin-bottom: 3rem;
+		}
 	}
 	hr {
 		margin: 0; // bootstrap reset
@@ -484,16 +487,7 @@
 	.button {
 		// @include padding(1);
 		cursor: pointer;
-		clear: left;
-		.button-inner {
-			background-color: $black60;
-			position: static;
-			@include padding-top(0.6);
-			@include padding-right(1);
-			@include padding-bottom(0.8);
-			@include padding-left(1);
-			@include margin-bottom(1.2);
-		}
+		clear: left;		
 		.title {
 			@include buy-button;
 			color: #fff;
@@ -505,6 +499,17 @@
 			color: #fff;
 			@include sm-sans;
 			@include margin-left(0);
+		}
+	}
+	.button-inner {
+		background-color: $black60;
+		position: static;
+		@include padding-top(0.6);
+		@include padding-right(1);
+		@include padding-bottom(0.8);
+		@include padding-left(1);
+		&:hover {
+			background-color: black;
 		}
 	}
 

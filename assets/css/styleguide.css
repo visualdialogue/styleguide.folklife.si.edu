@@ -8582,6 +8582,12 @@ ul {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  .sidebar-section {
+    margin-bottom: 3rem;
+  }
+}
+
 hr {
   margin: 0;
   border: none;
@@ -9275,101 +9281,6 @@ a .page-title:hover {
   clear: left;
 }
 
-.button .button-inner {
-  background-color: #666666;
-  position: static;
-}
-
-@media only screen and (max-width: 53.25em) {
-  .button .button-inner {
-    padding-top: 0.42141rem;
-  }
-}
-
-@media only screen and (min-width: 53.25em) {
-  .button .button-inner {
-    padding-top: 0.384vw;
-  }
-}
-
-@media only screen and (min-width: 1560px) {
-  .button .button-inner {
-    padding-top: 0.6rem;
-  }
-}
-
-@media only screen and (max-width: 53.25em) {
-  .button .button-inner {
-    padding-right: 0.70235rem;
-  }
-}
-
-@media only screen and (min-width: 53.25em) {
-  .button .button-inner {
-    padding-right: 0.64vw;
-  }
-}
-
-@media only screen and (min-width: 1560px) {
-  .button .button-inner {
-    padding-right: 1rem;
-  }
-}
-
-@media only screen and (max-width: 53.25em) {
-  .button .button-inner {
-    padding-bottom: 0.56188rem;
-  }
-}
-
-@media only screen and (min-width: 53.25em) {
-  .button .button-inner {
-    padding-bottom: 0.512vw;
-  }
-}
-
-@media only screen and (min-width: 1560px) {
-  .button .button-inner {
-    padding-bottom: 0.8rem;
-  }
-}
-
-@media only screen and (max-width: 53.25em) {
-  .button .button-inner {
-    padding-left: 0.70235rem;
-  }
-}
-
-@media only screen and (min-width: 53.25em) {
-  .button .button-inner {
-    padding-left: 0.64vw;
-  }
-}
-
-@media only screen and (min-width: 1560px) {
-  .button .button-inner {
-    padding-left: 1rem;
-  }
-}
-
-@media only screen and (max-width: 53.25em) {
-  .button .button-inner {
-    margin-bottom: 0.44444rem;
-  }
-}
-
-@media only screen and (min-width: 53.25em) {
-  .button .button-inner {
-    margin-bottom: 0.768vw;
-  }
-}
-
-@media only screen and (min-width: 1560px) {
-  .button .button-inner {
-    margin-bottom: 1.2rem;
-  }
-}
-
 .button .title {
   text-transform: uppercase;
   font-family: "acumin-pro-wide", Arial, sans-serif;
@@ -9444,6 +9355,87 @@ a .page-title:hover {
   .button .price {
     margin-left: 0rem;
   }
+}
+
+.button-inner {
+  background-color: #666666;
+  position: static;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .button-inner {
+    padding-top: 0.42141rem;
+  }
+}
+
+@media only screen and (min-width: 53.25em) {
+  .button-inner {
+    padding-top: 0.384vw;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .button-inner {
+    padding-top: 0.6rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .button-inner {
+    padding-right: 0.70235rem;
+  }
+}
+
+@media only screen and (min-width: 53.25em) {
+  .button-inner {
+    padding-right: 0.64vw;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .button-inner {
+    padding-right: 1rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .button-inner {
+    padding-bottom: 0.56188rem;
+  }
+}
+
+@media only screen and (min-width: 53.25em) {
+  .button-inner {
+    padding-bottom: 0.512vw;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .button-inner {
+    padding-bottom: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .button-inner {
+    padding-left: 0.70235rem;
+  }
+}
+
+@media only screen and (min-width: 53.25em) {
+  .button-inner {
+    padding-left: 0.64vw;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .button-inner {
+    padding-left: 1rem;
+  }
+}
+
+.button-inner:hover {
+  background-color: black;
 }
 
 /* Support and Signup
