@@ -69,7 +69,7 @@ Colors:
 - 
   name: Red
   hex: '#ec837a'
-  r: "200"
-  g: "99"
-  b: "90"
+  r: "180"
+  g: "75"
+  b: "65"
   sass: $fw-red

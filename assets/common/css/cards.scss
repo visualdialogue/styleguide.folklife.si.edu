@@ -102,7 +102,6 @@ a.details {
 		.more-link {
 			display: none;
 		}
-		
 	}
 	.buy-now-button, .link-button {
 		@include buy-button;
@@ -197,8 +196,6 @@ a.details {
 	  -o-transform: none;
 	  transform: none;
 	  @include respond-to(break1) {
-		// max-width: 70%;
-		// max-width: 80vh;
 		max-width: 100vh;
 	  }
 	  @include respond-to(fullwidth) {
@@ -208,18 +205,13 @@ a.details {
 	.remodal-is-gallery {
 		@include respond-to(break1) {
 			max-width: 80vh;
-			// max-height: 90vh;
 		}
 	}
 	.remodal-overlay {
 	  background: rgba(0, 0, 0, 0.8) none repeat scroll 0% 0%;
 	}
-	.remodal-wrapper {
-		// overflow-y: scroll; // ie jumps without it because no scroll on overlay, but scrollbar on body
-	}
 	.remodal-close {
 		position: absolute;
-		
 		left:auto;
 		z-index: 10001;
 		color: #fff;
@@ -334,9 +326,6 @@ a.details {
 				margin-top: 2rem;
 			}
 		}
-	}
-	.details .more-link {
-
 	}
 	.half-section .more-link {
 		@include right(2);
@@ -589,7 +578,6 @@ a.details {
 		}
 	}
 
-
 /* Card stacking
 -------------------------------------------------- */
 	.card-xs-break-2 {
@@ -598,7 +586,6 @@ a.details {
 				clear:left;
 			}
 		}
-	
 	}
 	.card-sm-break-6 {
 		@include respond-to(break2) {
