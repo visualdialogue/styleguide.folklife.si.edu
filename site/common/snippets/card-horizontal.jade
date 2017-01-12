@@ -61,6 +61,20 @@ li.card.horizontal-card(class="<?= $card_classes ?><? if ($card->type() == 'vide
 						p!= excerpt($card->contents()->kt(), $excerpt, 'words') 
 				-endif
 
+				//- link1
+				-if('' != $card->link1()):	
+					//- text, non-breaking space, right arrow
+					a.high.link-button(href="#"): span.light: span.er!= $card->link1(), '&nbsp;&#x2192;';
+				-endif
+
+				//- link2
+				-if('' != $card->link2()):	
+					//- text, non-breaking space, right arrow
+					a.high.link-button(href="#"): span.light: span.er!= $card->link2(), '&nbsp;&#x2192;';
+				-endif
+
+
+
 				-if (isset($more_link)):
 					-snippet('more-link', array('link' => $card->url()))
 				-endif

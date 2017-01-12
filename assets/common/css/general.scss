@@ -411,13 +411,54 @@
 	}
 
 /* Collection page (Folklife Archives page)
- -------------------------------------------------- */
+-------------------------------------------------- */
 	.collection-page {
 		.blog-article-card {
 			@include margin-bottom(0.8);
 		}
 		.details-inner {
 			@include padding-top(0.8);
+		}
+	}
+
+/* General Content page
+-------------------------------------------------- */
+	.general-content {
+		.intro-content {
+			margin-bottom:0;
+			p {
+				@include intro-serif;
+				margin-bottom: 0 !important;
+			}
+		}
+	}
+	// Mission page
+	.sidebar-image {
+		@include margin-bottom(4);
+	}
+	.sidebar-pull-quote {
+		.copy {
+			@include sm-sans;
+			line-height: 1.3 !important;
+			font-weight: 600;
+			@include margin-top(1);	
+		}
+		p {
+			@include margin-bottom(1.5);
+		}
+
+	}
+	.sidebar-pagination {
+		.sidebar-section-title a {
+			color: inherit; // keep sidebar title although a link
+		}
+		.image {
+			@include margin-top(2);
+		}
+		.title {
+			@include sm-serif;
+			@include margin-top(2);
+			color: black;
 		}
 	}
 
@@ -713,10 +754,6 @@
 		}
 	}
 
-/* Custom select dropdown
-* from http://hernansartorio.com/jquery-nice-select/
--------------------------------------------------- */
-
 /* Plus icons for figures with figcaptions
 -------------------------------------------------- */
 	// Images with captions
@@ -794,8 +831,7 @@
 		}
 	}
 
-/* Dropdown Select
-* multi level select, from http://stackoverflow.com/a/9101168
+/* Dropdown Select, multi level select, from http://stackoverflow.com/a/9101168
 -------------------------------------------------- */
 	@mixin dropdown-arrow {
 		content: '\62';

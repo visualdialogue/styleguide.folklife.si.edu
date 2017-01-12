@@ -6427,6 +6427,12 @@ body {
 }
 
 @media only screen and (max-width: 53.25em) {
+  .content ul, .content ol, .text-card ul, .text-card ol {
+    padding-left: 1rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
   .content ul, .text-card ul {
     padding-bottom: 1.40469rem;
   }
@@ -6464,24 +6470,6 @@ body {
 
 .content ul li:not(.card), .text-card ul li:not(.card) {
   position: relative;
-}
-
-@media only screen and (max-width: 53.25em) {
-  .content ul li:not(.card), .text-card ul li:not(.card) {
-    margin-left: 0rem;
-  }
-}
-
-@media only screen and (min-width: 53.25em) {
-  .content ul li:not(.card), .text-card ul li:not(.card) {
-    margin-left: 1vw;
-  }
-}
-
-@media only screen and (min-width: 1560px) {
-  .content ul li:not(.card), .text-card ul li:not(.card) {
-    margin-left: 2rem;
-  }
 }
 
 .content ul li:not(.card):before, .text-card ul li:not(.card):before {
@@ -9039,7 +9027,7 @@ a .page-title:hover {
 }
 
 /* Collection page (Folklife Archives page)
- -------------------------------------------------- */
+-------------------------------------------------- */
 @media only screen and (max-width: 53.25em) {
   .collection-page .blog-article-card {
     margin-bottom: 0.2963rem;
@@ -9073,6 +9061,220 @@ a .page-title:hover {
 @media only screen and (min-width: 1560px) {
   .collection-page .details-inner {
     padding-top: 0.8rem;
+  }
+}
+
+/* General Content page
+-------------------------------------------------- */
+.general-content .intro-content {
+  margin-bottom: 0;
+}
+
+.general-content .intro-content p {
+  font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: 600;
+  line-height: 1.267;
+  margin-bottom: 0 !important;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .general-content .intro-content p {
+    font-size: 1.9rem;
+  }
+}
+
+@media only screen and (min-width: 53.25em) {
+  .general-content .intro-content p {
+    font-size: 2.2vw;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .general-content .intro-content p {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .general-content .intro-content p {
+    margin-bottom: 0.37037rem;
+  }
+}
+
+@media only screen and (min-width: 53.25em) {
+  .general-content .intro-content p {
+    margin-bottom: 0.64vw;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .general-content .intro-content p {
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .sidebar-image {
+    margin-bottom: 1.48148rem;
+  }
+}
+
+@media only screen and (min-width: 53.25em) {
+  .sidebar-image {
+    margin-bottom: 2.56vw;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .sidebar-image {
+    margin-bottom: 4rem;
+  }
+}
+
+.sidebar-pull-quote .copy {
+  font-family: "acumin-pro", Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+  line-height: 1.3 !important;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .sidebar-pull-quote .copy {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 53.25em) {
+  .sidebar-pull-quote .copy {
+    font-size: 1.2vw;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .sidebar-pull-quote .copy {
+    line-height: 1.12;
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .sidebar-pull-quote .copy {
+    margin-top: 0.37037rem;
+  }
+}
+
+@media only screen and (min-width: 53.25em) {
+  .sidebar-pull-quote .copy {
+    margin-top: 0.64vw;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .sidebar-pull-quote .copy {
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .sidebar-pull-quote p {
+    margin-bottom: 0.55556rem;
+  }
+}
+
+@media only screen and (min-width: 53.25em) {
+  .sidebar-pull-quote p {
+    margin-bottom: 0.96vw;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .sidebar-pull-quote p {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.sidebar-pagination .sidebar-section-title a {
+  color: inherit;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .sidebar-pagination .image {
+    margin-top: 0.74074rem;
+  }
+}
+
+@media only screen and (min-width: 53.25em) {
+  .sidebar-pagination .image {
+    margin-top: 1.28vw;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .sidebar-pagination .image {
+    margin-top: 2rem;
+  }
+}
+
+.sidebar-pagination .title {
+  font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: 700;
+  line-height: 1;
+  color: black;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .sidebar-pagination .title {
+    font-size: 2.2rem;
+  }
+}
+
+@media only screen and (min-width: 53.25em) {
+  .sidebar-pagination .title {
+    line-height: 1.143;
+    font-size: 1.8vw;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .sidebar-pagination .title {
+    font-size: 2.8rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .sidebar-pagination .title {
+    margin-bottom: 0.37037rem;
+  }
+}
+
+@media only screen and (min-width: 53.25em) {
+  .sidebar-pagination .title {
+    margin-bottom: 0.64vw;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .sidebar-pagination .title {
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .sidebar-pagination .title {
+    margin-top: 0.74074rem;
+  }
+}
+
+@media only screen and (min-width: 53.25em) {
+  .sidebar-pagination .title {
+    margin-top: 1.28vw;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .sidebar-pagination .title {
+    margin-top: 2rem;
   }
 }
 
@@ -9286,6 +9488,7 @@ a .page-title:hover {
   font-family: "acumin-pro-wide", Arial, sans-serif;
   font-weight: 800;
   margin-bottom: 0;
+  line-height: 1.2;
   color: #fff;
   font-weight: 700;
   margin: 0 !important;
@@ -9308,7 +9511,6 @@ a .page-title:hover {
 @media only screen and (min-width: 1560px) {
   .button .title {
     font-size: 1.8rem;
-    line-height: 1.4;
     margin-bottom: 0.5rem;
   }
 }
@@ -9954,9 +10156,6 @@ a .page-title:hover {
   }
 }
 
-/* Custom select dropdown
-* from http://hernansartorio.com/jquery-nice-select/
--------------------------------------------------- */
 /* Plus icons for figures with figcaptions
 -------------------------------------------------- */
 figure {
@@ -10324,8 +10523,7 @@ figcaption.minus-sign:before {
   }
 }
 
-/* Dropdown Select
-* multi level select, from http://stackoverflow.com/a/9101168
+/* Dropdown Select, multi level select, from http://stackoverflow.com/a/9101168
 -------------------------------------------------- */
 .dropdown-wrapper {
   font-family: "acumin-pro", Arial, sans-serif;
@@ -11481,110 +11679,6 @@ video::-webkit-media-controls {
   }
 }
 
-@media only screen and (max-width: 53.25em) {
-  .blog-article-card .image {
-    margin-bottom: 0.74074rem;
-  }
-}
-
-@media only screen and (min-width: 53.25em) {
-  .blog-article-card .image {
-    margin-bottom: 1.28vw;
-  }
-}
-
-@media only screen and (min-width: 1560px) {
-  .blog-article-card .image {
-    margin-bottom: 2rem;
-  }
-}
-
-.blog-article-card .title {
-  font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
-  font-weight: 700;
-  line-height: 1;
-}
-
-@media only screen and (max-width: 53.25em) {
-  .blog-article-card .title {
-    font-size: 4.2rem;
-  }
-}
-
-@media only screen and (min-width: 53.25em) {
-  .blog-article-card .title {
-    font-size: 3.5vw;
-  }
-}
-
-@media only screen and (min-width: 1560px) {
-  .blog-article-card .title {
-    font-size: 6.158rem;
-  }
-}
-
-@media only screen and (max-width: 53.25em) {
-  .blog-article-card .title {
-    margin-bottom: 0.37037rem;
-  }
-}
-
-@media only screen and (min-width: 53.25em) {
-  .blog-article-card .title {
-    margin-bottom: 0.64vw;
-  }
-}
-
-@media only screen and (min-width: 1560px) {
-  .blog-article-card .title {
-    margin-bottom: 1rem;
-  }
-}
-
-.blog-article-card .date {
-  font-family: "acumin-pro", Arial, sans-serif;
-  font-weight: 300;
-  line-height: 1.2;
-  font-weight: 300;
-}
-
-@media only screen and (max-width: 53.25em) {
-  .blog-article-card .date {
-    font-size: 1.5rem;
-  }
-}
-
-@media only screen and (min-width: 53.25em) {
-  .blog-article-card .date {
-    font-size: 1.2vw;
-  }
-}
-
-@media only screen and (min-width: 1560px) {
-  .blog-article-card .date {
-    line-height: 1.12;
-    font-size: 1.8rem;
-  }
-}
-
-@media only screen and (max-width: 53.25em) {
-  .blog-article-card .date {
-    margin-bottom: 0.74074rem;
-  }
-}
-
-@media only screen and (min-width: 53.25em) {
-  .blog-article-card .date {
-    margin-bottom: 1.28vw;
-  }
-}
-
-@media only screen and (min-width: 1560px) {
-  .blog-article-card .date {
-    margin-bottom: 2rem;
-  }
-}
-
 /* Sidebar
 -------------------------------------------------- */
 .blog-sidebar {
@@ -12046,11 +12140,12 @@ a.details {
   display: none;
 }
 
-.publication-card .buy-now-button {
+.buy-now-button, .link-button {
   text-transform: uppercase;
   font-family: "acumin-pro-wide", Arial, sans-serif;
   font-weight: 800;
   margin-bottom: 0;
+  line-height: 1.2;
   text-transform: initial;
   color: #595959;
   font-weight: 400;
@@ -12058,22 +12153,21 @@ a.details {
 }
 
 @media only screen and (max-width: 53.25em) {
-  .publication-card .buy-now-button {
+  .buy-now-button, .link-button {
     font-size: 1.4rem;
   }
 }
 
 @media only screen and (min-width: 53.25em) {
-  .publication-card .buy-now-button {
+  .buy-now-button, .link-button {
     font-size: 1.1vw;
     margin-bottom: 0.4vw;
   }
 }
 
 @media only screen and (min-width: 1560px) {
-  .publication-card .buy-now-button {
+  .buy-now-button, .link-button {
     font-size: 1.8rem;
-    line-height: 1.4;
     margin-bottom: 0.5rem;
   }
 }
@@ -12824,6 +12918,85 @@ body {
   }
 }
 
+.sidebar-card-with-links .title {
+  display: none;
+}
+
+.sidebar-card-with-links .details-inner {
+  padding-top: 0;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .sidebar-card-with-links .details-inner {
+    padding-left: 1.40469rem;
+  }
+}
+
+@media only screen and (min-width: 53.25em) {
+  .sidebar-card-with-links .details-inner {
+    padding-left: 1.28vw;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .sidebar-card-with-links .details-inner {
+    padding-left: 2rem;
+  }
+}
+
+.sidebar-card-with-links .description {
+  font-family: "acumin-pro", Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.4;
+  text-transform: uppercase;
+  text-transform: initial;
+  line-height: 1.1 !important;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .sidebar-card-with-links .description {
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (min-width: 53.25em) {
+  .sidebar-card-with-links .description {
+    font-size: 1vw;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .sidebar-card-with-links .description {
+    font-size: 1.6rem;
+  }
+}
+
+.sidebar-card-with-links .link-button {
+  color: #666666;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .sidebar-card-with-links .link-button {
+    margin-top: 0.74074rem;
+  }
+}
+
+@media only screen and (min-width: 53.25em) {
+  .sidebar-card-with-links .link-button {
+    margin-top: 1.28vw;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .sidebar-card-with-links .link-button {
+    margin-top: 2rem;
+  }
+}
+
 /* Albums & Vinyl
 -------------------------------------------------- */
 @media only screen and (max-width: 53.25em) {
@@ -13040,6 +13213,138 @@ body {
 @media only screen and (min-width: 1560px) {
   .blog-card .image, .blog-card .video, .inverse-card .image, .inverse-card .video {
     margin-top: 2rem;
+  }
+}
+
+/* Blog Card - general rules
+-------------------------------------------------- */
+.blog-article-card {
+  margin-bottom: 0 !important;
+}
+
+.blog-article-card h1 {
+  margin-top: 0;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .blog-article-card .image {
+    margin-bottom: 0.37037rem;
+  }
+}
+
+@media only screen and (min-width: 53.25em) {
+  .blog-article-card .image {
+    margin-bottom: 0.64vw;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .blog-article-card .image {
+    margin-bottom: 1rem;
+  }
+}
+
+.blog-article-card .title {
+  font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: 700;
+  line-height: 1;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .blog-article-card .title {
+    font-size: 4.2rem;
+  }
+}
+
+@media only screen and (min-width: 53.25em) {
+  .blog-article-card .title {
+    font-size: 3.5vw;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .blog-article-card .title {
+    font-size: 6.158rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .blog-article-card .title {
+    margin-bottom: 0.37037rem;
+  }
+}
+
+@media only screen and (min-width: 53.25em) {
+  .blog-article-card .title {
+    margin-bottom: 0.64vw;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .blog-article-card .title {
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .blog-article-card .no-image-title {
+    margin-top: -0.37037rem;
+  }
+}
+
+@media only screen and (min-width: 53.25em) {
+  .blog-article-card .no-image-title {
+    margin-top: -0.64vw;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .blog-article-card .no-image-title {
+    margin-top: -1rem;
+  }
+}
+
+.blog-article-card .date {
+  font-family: "acumin-pro", Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+  font-weight: 300;
+}
+
+@media only screen and (max-width: 53.25em) {
+  .blog-article-card .date {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 53.25em) {
+  .blog-article-card .date {
+    font-size: 1.2vw;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .blog-article-card .date {
+    line-height: 1.12;
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .blog-article-card .date {
+    margin-bottom: 0.74074rem;
+  }
+}
+
+@media only screen and (min-width: 53.25em) {
+  .blog-article-card .date {
+    margin-bottom: 1.28vw;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .blog-article-card .date {
+    margin-bottom: 2rem;
   }
 }
 
@@ -15620,6 +15925,7 @@ pre {
   font-family: "acumin-pro-wide", Arial, sans-serif;
   font-weight: 800;
   margin-bottom: 0;
+  line-height: 1.2;
 }
 
 @media only screen and (max-width: 53.25em) {
@@ -15638,7 +15944,6 @@ pre {
 @media only screen and (min-width: 1560px) {
   .buy-button {
     font-size: 1.8rem;
-    line-height: 1.4;
     margin-bottom: 0.5rem;
   }
 }

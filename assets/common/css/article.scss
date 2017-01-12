@@ -29,20 +29,6 @@
 		}
 	}
 }
-.blog-article-card {
-	.image {
-		@include margin-bottom(2);
-	}
-	.title {
-		@include lg-serif;
-		@include margin-bottom(1);
-	}
-	.date {
-		@include sm-sans;
-		font-weight: 300;
-		@include margin-bottom(2);
-	}
-}
 
 /* Sidebar
 -------------------------------------------------- */

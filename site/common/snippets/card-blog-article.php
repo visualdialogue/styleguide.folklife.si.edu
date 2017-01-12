@@ -19,11 +19,11 @@
         <?php echo $card->festival(), ', ', $card->program(); ?></div>
       <?php endif; ?>
       <?php if('' != $card->subtitle()):	 ?>
-      <div class="title">
-        <?php echo $card->title(), ': ', $card->subtitle(); ?></div>
+      <h1 class="title">
+        <?php echo $card->title(), ': ', $card->subtitle(); ?></h1>
       <?php else: ?>
-      <div class="title">
-        <?php echo $card->title(); ?></div>
+      <h1 class="title">
+        <?php echo $card->title(); ?></h1>
       <?php endif; ?>
       <?php if(isset($type) && $type != 'general-content'): ?>
       <div class="byline">

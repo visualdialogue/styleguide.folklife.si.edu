@@ -23,3 +23,16 @@ fields:
   footer:
     label: Footer
     type: textarea
+  sidebarsection:
+    label: Sidebar
+    type: headline
+  pullquote_img:
+    label: Pullquote Image
+    type: select
+    options: images
+    width: 1/2
+    icon: image
+  pullquote:
+    label: Pullquote
+    type: textarea
+    width: 1/2

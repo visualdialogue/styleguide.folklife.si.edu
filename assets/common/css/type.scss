@@ -261,6 +261,7 @@
 		font-family: $sansWide;
 		font-weight: 800;
 		margin-bottom: 0;
+		line-height: 1.2;
 		@include respond-to(break2max) {
 			font-size: 1.4rem;
 		}
@@ -270,7 +271,7 @@
 		}
 		@include respond-to(fullwidth) {
 			font-size: 1.8rem;
-			line-height: 1.4;
+			// line-height: 1.4;
 			margin-bottom: 0.5rem;
 		}
 	}
@@ -461,6 +462,9 @@
 		}
 		ul, ol {
 			@include padding-left(2);
+			@include respond-to(break2max) {
+				padding-left: 1rem;
+			}
 		}
 		ul {
 			@include padding-bottom(2); // not margin because then when using columns, the margin carries over!!!, from http://stackoverflow.com/a/12503808
@@ -468,9 +472,9 @@
 			li:not(.card) {
 				// inset
 				position: relative;
-				@include respond-to(break2max) {margin-left:0rem;}
-				@include respond-to(break2) {margin-left:1vw;}
-				@include respond-to(fullwidth) {margin-left:2rem;}
+				// @include respond-to(break2max) {margin-left:0rem;}
+				// @include respond-to(break2) {margin-left:1vw;}
+				// @include respond-to(fullwidth) {margin-left:2rem;}
 				// bullets
 				&:before {
 					content: '\61';

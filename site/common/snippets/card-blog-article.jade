@@ -22,9 +22,9 @@ li.card.blog-article-card.col-xs-12(class="<? if ($card->type() == 'video') echo
 
 			//- if subtitle, group with title for correct highlighting
 			-if('' != $card->subtitle()):	
-				.title!= $card->title(), ': ', $card->subtitle()
+				h1.title!= $card->title(), ': ', $card->subtitle()
 			-else:
-				.title!= $card->title()
+				h1.title!= $card->title()
 			-endif
 
 			-if(isset($type) && $type != 'general-content'):

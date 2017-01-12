@@ -126,3 +126,15 @@ fields:
     type: checkbox
     text: Smaller font?
     width: 1/2
+
+  link_heading:
+    label: General Content Sidebar
+    type: headline
+  link1:
+    label: Link 1
+    type: text
+    icon: external-link
+  link2:
+    label: Link 2
+    type: text
+    icon: external-link

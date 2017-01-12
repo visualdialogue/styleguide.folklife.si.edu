@@ -57,6 +57,12 @@
             <?php echo excerpt($card->contents()->kt(), $excerpt, 'words') ; ?></p>
         </div>
         <?php endif; ?>
+        <?php if('' != $card->link1()):	 ?><a href="#" class="high link-button"><span class="light"><span class="er">
+              <?php echo $card->link1(), '&nbsp;&#x2192;'; ?></span></span></a>
+        <?php endif; ?>
+        <?php if('' != $card->link2()):	 ?><a href="#" class="high link-button"><span class="light"><span class="er">
+              <?php echo $card->link2(), '&nbsp;&#x2192;'; ?></span></span></a>
+        <?php endif; ?>
         <?php if (isset($more_link)): ?>
         <?php snippet('more-link', array('link' => $card->url())); ?>
         <?php endif; ?>

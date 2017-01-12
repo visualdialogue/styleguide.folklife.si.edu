@@ -102,13 +102,14 @@ a.details {
 		.more-link {
 			display: none;
 		}
-		.buy-now-button {
-			@include buy-button;
-			text-transform: initial;
-			color: $black65;
-			font-weight: 400;
-			display: block; // force new line for multiple buttons
-		}
+		
+	}
+	.buy-now-button, .link-button {
+		@include buy-button;
+		text-transform: initial;
+		color: $black65;
+		font-weight: 400;
+		display: block; // force new line for multiple buttons
 	}
 
 /* program highlight (on.festival/learn 1/4 card)
@@ -453,6 +454,28 @@ a.details {
 			}
 		}
 	}
+	.sidebar-card-with-links {
+		.title {
+			display: none; // folkways mission page
+		}
+		.details-inner {
+			padding-top: 0;
+			@include padding-left(2);
+		}
+		.description {
+			@include caption-sans;
+			text-transform: initial;
+			line-height: 1.1 !important;
+			// add hyphens to justify
+			-webkit-hyphens: auto;
+			-ms-hyphens: auto;
+			hyphens: auto;
+		}
+		.link-button {
+			@include margin-top(2);
+			color: $black60;
+		}
+	}
 
 
 /* Albums & Vinyl
@@ -512,6 +535,30 @@ a.details {
 		// need to add space below title after gets matchHeight. apply margin to image instead of title because matchHeight ignores it
 		.image, .video {
 			@include margin-top(2);
+		}
+	}
+
+/* Blog Card - general rules
+-------------------------------------------------- */
+	.blog-article-card {
+		margin-bottom: 0 !important;
+		h1 {
+			margin-top:0; // default override
+		}
+		.image {
+			@include margin-bottom(1);
+		}
+		.title {
+			@include lg-serif;
+			@include margin-bottom(1);
+		}
+		.no-image-title {
+			@include margin-top(-1);
+		}
+		.date {
+			@include sm-sans;
+			font-weight: 300;
+			@include margin-bottom(2);
 		}
 	}
 

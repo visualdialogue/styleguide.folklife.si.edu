@@ -2,28 +2,85 @@
 
 #navspacer.navspacer
 
--snippet('title-bar', array('title' => 'Archives', 'link' => '/archives'))
+-if($page->uid() == 'mission-and-history'):
+	-snippet('title-bar', array('title' => 'About Us'))
+-else:
+	-snippet('title-bar', array('title' => 'Archives', 'link' => '/archives'))
+-endif
 
-.container
+.container.general-content
 	.row
-		section.first-section.article-section.col-sm-8
+		section.first-section.article-section(class="<? if($page->uid() == 'mission-and-history') echo 'col-sm-7'; else echo 'col-sm-8' ?>")
 			article.article
-				// use card for correct video/image header
-				ul.row.cards.blog-feature
-					-snippet('card-blog-article', array('card' => $page, 'type' => 'general-content' ))
+				-if('' != $page->img()):
+					// use card for correct video/image header
+					ul.row.cards.blog-feature
+						-snippet('card-blog-article', array('card' => $page, 'type' => 'general-content' ))
+				-else:
+					.blog-article-card
+						h1.title.no-image-title!= $page->title()
+				-endif
 
+				.content.intro-content
+					!= $page->intro()->kt()
 				.content
 					!= $page->copy()->kt()
 				.content.content-footer
 					!= $page->footer()->kt()
 				
 		div.col-sm-1.spacer
-		aside.sidebar.col-sm-3.blog-sidebar
 
-			//- -snippet('blog-related-content', array('orientation' => 'horizontal', 'limit' => 5))
+		//- mission & history page
+		-if($page->uid() == 'mission-and-history'):
+			aside.sidebar.col-sm-4.blog-sidebar
+				.sidebar-section.sidebar-images
+					-foreach($page->images() as $image):
+						.sidebar-image
+							!= $image;
+					-endforeach
 
-			//- -snippet('blog-most-popular')
-			
-			//- -snippet('blog-categories')
+				-foreach($page->children()->visible() as $sidebar_section):
+					.sidebar-section
+						h2.sidebar-section-title!= $sidebar_section->title()
+
+					// magazine article sidebar
+					ul.row
+						-snippet('card-horizontal', array('card' => $sidebar_section, 'card_classes' => 'col-xs-12 sidebar-card horizontal-card sidebar-card-with-links', 'image_col' => 'col-xs-6', 'details_col' => 'col-xs-6', 'blurb' => true ))
+				-endforeach
+
+		//- don't show on mission & history page
+		-else:
+			aside.sidebar.col-sm-3.blog-sidebar
+				.sidebar-pull-quote.sidebar-section
+					.image
+						!= $page->image()
+					.copy
+						!= $page->pullquote()->kt()
+
+				-if($page->hasNext()):
+				-$nextpage = $page->next()
+				.sidebar-section.sidebar-pagination.sidebar-next-archives
+					h2.sidebar-section-title
+						a.high(href="<?= $nextpage->url() ?>")
+							span.light: span.er Next in Archives
+					.image
+						!= $nextpage->image()
+					a.high(href="<?= $nextpage->url() ?>")
+						.title: span.light: span.er= $nextpage->title()
+				-endif
+
+
+				-if($page->hasPrev()):
+				-$previouspage = $page->prev()
+				.sidebar-section.sidebar-pagination.sidebar-previous-archives
+					h2.sidebar-section-title
+						a.high(href="<?= $previouspage->url() ?>")
+							span.light: span.er Previous in Archives
+					.image
+						!= $previouspage->image()
+					a.high(href="<?= $previouspage->url() ?>")
+						.title: span.light: span.er= $previouspage->title()
+				-endif
+		-endif
 
 -snippet('footer')
