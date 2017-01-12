@@ -63,7 +63,7 @@
 					h2.sidebar-section-title
 						a.high(href="<?= $nextpage->url() ?>")
 							span.light: span.er Next in Archives
-					.image
+					a.image(href="<?= $nextpage->url() ?>")
 						!= $nextpage->image()
 					a.high(href="<?= $nextpage->url() ?>")
 						.title: span.light: span.er= $nextpage->title()
@@ -76,7 +76,7 @@
 					h2.sidebar-section-title
 						a.high(href="<?= $previouspage->url() ?>")
 							span.light: span.er Previous in Archives
-					.image
+					a.image(href="<?= $previouspage->url() ?>")
 						!= $previouspage->image()
 					a.high(href="<?= $previouspage->url() ?>")
 						.title: span.light: span.er= $previouspage->title()

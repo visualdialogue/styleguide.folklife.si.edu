@@ -12944,6 +12944,12 @@ body {
   }
 }
 
+@media only screen and (max-width: 53.25em) {
+  .sidebar-card-with-links .details-inner {
+    padding-left: 0;
+  }
+}
+
 .sidebar-card-with-links .description {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;

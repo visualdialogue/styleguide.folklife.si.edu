@@ -66,10 +66,8 @@
       <?php if($page->hasNext()): ?>
       <?php $nextpage = $page->next(); ?>
       <div class="sidebar-section sidebar-pagination sidebar-next-archives">
-        <h2 class="sidebar-section-title"><a href="<?= $nextpage->url() ?>" class="high"><span class="light"><span class="er">Next in Archives</span></span></a></h2>
-        <div class="image">
-          <?php echo $nextpage->image(); ?>
-        </div><a href="<?= $nextpage->url() ?>" class="high">
+        <h2 class="sidebar-section-title"><a href="<?= $nextpage->url() ?>" class="high"><span class="light"><span class="er">Next in Archives</span></span></a></h2><a href="<?= $nextpage->url() ?>" class="image">
+          <?php echo $nextpage->image(); ?></a><a href="<?= $nextpage->url() ?>" class="high">
           <div class="title"><span class="light"><span class="er">
                 <?php echo htmlspecialchars($nextpage->title(), ENT_QUOTES, 'UTF-8'); ?></span></span></div></a>
       </div>
@@ -77,10 +75,8 @@
       <?php if($page->hasPrev()): ?>
       <?php $previouspage = $page->prev(); ?>
       <div class="sidebar-section sidebar-pagination sidebar-previous-archives">
-        <h2 class="sidebar-section-title"><a href="<?= $previouspage->url() ?>" class="high"><span class="light"><span class="er">Previous in Archives</span></span></a></h2>
-        <div class="image">
-          <?php echo $previouspage->image(); ?>
-        </div><a href="<?= $previouspage->url() ?>" class="high">
+        <h2 class="sidebar-section-title"><a href="<?= $previouspage->url() ?>" class="high"><span class="light"><span class="er">Previous in Archives</span></span></a></h2><a href="<?= $previouspage->url() ?>" class="image">
+          <?php echo $previouspage->image(); ?></a><a href="<?= $previouspage->url() ?>" class="high">
           <div class="title"><span class="light"><span class="er">
                 <?php echo htmlspecialchars($previouspage->title(), ENT_QUOTES, 'UTF-8'); ?></span></span></div></a>
       </div>

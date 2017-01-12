@@ -461,6 +461,9 @@ a.details {
 		.details-inner {
 			padding-top: 0;
 			@include padding-left(2);
+			@include respond-to(break2max) {
+				padding-left: 0;
+			}
 		}
 		.description {
 			@include caption-sans;
