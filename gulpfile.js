@@ -15,26 +15,24 @@ var  browserSync = require('browser-sync').create(),
           reload = browserSync.reload; // Save a reference to the `reload` method
 
 // uglify and concat all js library dependancies
-gulp.task('vendor', function() {  
+gulp.task('plugins', function() {  
   return gulp.src([
-    // '/bower_components/jquery/dist/jquery.min.js',
-    // '/bower_components/jquery.scrollTo/jquery.scrollTo.min.js',
-    // '/bower_components/jquery.localScroll/jquery.localScroll.min.js',
-    // './assets/bower_components/bootstrap/dist/js/bootstrap.min.js',
-    './assets/bower_components/slick-carousel/slick/slick.min.js',
-    './assets/bower_components/remodal/dist/remodal.min.js',
-    './assets/bower_components/vimeo-player-js/dist/player.min.js',
-    // './assets/bower_components/loadcss/src/loadCSS.js',
-    './assets/bower_components/mediaelement/build/mediaelement-and-player.min.js',
-    './assets/bower_components/matchHeight/dist/jquery.matchHeight-min.js',
-    './assets/bower_components/jquery-nice-select/js/jquery.nice-select.min.js', // for customizing dropdowns (eg. folkways magazine)
-    './assets/bower_components/viewport-units-buggyfill/viewport-units-buggyfill.js', // for customizing dropdowns (eg. folkways magazine)
-    // './assets/js/throttle.js',
-    // '/js/modernizr-custom.js',
+      // '/bower_components/jquery/dist/jquery.min.js',
+      // '/bower_components/jquery.scrollTo/jquery.scrollTo.min.js',
+      // '/bower_components/jquery.localScroll/jquery.localScroll.min.js',
+      // './assets/bower_components/bootstrap/dist/js/bootstrap.min.js',
+      // './assets/bower_components/loadcss/src/loadCSS.js',
+      // './assets/bower_components/jquery-nice-select/js/jquery.nice-select.min.js', // for customizing dropdowns (eg. folkways magazine)
+      // './assets/js/throttle.js',
+      // '/js/modernizr-custom.js',
+      './assets/bower_components/slick-carousel/slick/slick.min.js',
+      './assets/bower_components/remodal/dist/remodal.min.js',
+      './assets/bower_components/vimeo-player-js/dist/player.min.js',
+      './assets/bower_components/mediaelement/build/mediaelement-and-player.min.js',
+      './assets/bower_components/matchHeight/dist/jquery.matchHeight-min.js',
+      './assets/bower_components/viewport-units-buggyfill/viewport-units-buggyfill.min.js', // for customizing dropdowns (eg. folkways magazine)
     ])
-    .pipe(concat('vendor.js'))
-    // .pipe(uglify())
-    .pipe(rename('common-vendor.js'))
+    .pipe(concat('common-plugins.js'))
     .pipe(gulp.dest('./assets/common/js/'))
 });
 
@@ -173,17 +171,6 @@ gulp.task('copy', function() {
       .pipe(gulp.dest('./site'));
 });
 
-// php
-// gulp.task('templates', function() {
-//   gulp.src('./views/**/*.jade')
-//     .pipe(jade({
-//         locals: {
-//           title: 'OMG THIS IS THE TITLE'
-//         }
-//      }))
-//      .pipe(gulp.dest('./dist'));
-// });
-
 // sass
 gulp.task('styles', function() {
     gulp.src([
@@ -221,15 +208,11 @@ gulp.task('less', function () {
 gulp.task('js', function() {
   // return gulp.src('/bdc/js/scripts.js')
   return gulp.src([
-      './assets/common/js/common-vendor.js',
-      './assets/js/vendor.js',
+      './assets/common/js/common-plugins.js',
       './assets/common/js/common-scripts.js',
       './assets/js/scripts.js'
     ])
-    .pipe(concat('scripts.js'))
-    // .pipe(concat('../../../../bower_components/jquery/dist/jquery.js'))
-    // .pipe(uglify())
-    .pipe(rename('scripts.min.js'))
+    .pipe(concat('styleguide-scripts.js'))
     .pipe(gulp.dest('./assets/js/'));
     // gulp.watch('/js/scripts.js',['scripts']);
 });

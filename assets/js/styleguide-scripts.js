@@ -1,11 +1,14 @@
 /*
-     _ _      _       _
- ___| (_) ___| | __  (_)___
-/ __| | |/ __| |/ /  | / __|
-\__ \ | | (__|   < _ | \__ \
-|___/_|_|\___|_|\_(_)/ |___/
-                   |__/
 
+  ___|                                                  _ \   |               _)              
+ |       _ \   __ `__ \   __ `__ \    _ \   __ \       |   |  |  |   |   _` |  |  __ \    __| 
+ |      (   |  |   |   |  |   |   |  (   |  |   |      ___/   |  |   |  (   |  |  |   | \__ \ 
+\____| \___/  _|  _|  _| _|  _|  _| \___/  _|  _|     _|     _| \__,_| \__, | _| _|  _| ____/ 
+                                                                       |___/                  
+*/
+
+/*
+ Slick.js
  Version: 1.6.0
   Author: Ken Wheeler
  Website: http://kenwheeler.github.io
@@ -85,484 +88,28 @@ r._afterUpdate=null,r._rows=a,r._parse=i,r._parseOptions=n,r._apply=function(e,o
 display:i};a[s.property]="",e.css(a),e.outerHeight(!1)>n&&(n=e.outerHeight(!1)),o?e.attr("style",o):e.css("display","")})}a.each(function(){var e=t(this),o=0;s.target&&e.is(s.target)||("border-box"!==e.css("box-sizing")&&(o+=i(e.css("border-top-width"))+i(e.css("border-bottom-width")),o+=i(e.css("padding-top"))+i(e.css("padding-bottom"))),e.css(s.property,n-o+"px"))})}),d.each(function(){var e=t(this);e.attr("style",e.data("style-cache")||null)}),r._maintainScroll&&t(window).scrollTop(c/p*t("html").outerHeight(!0)),
 this},r._applyDataApi=function(){var e={};t("[data-match-height], [data-mh]").each(function(){var o=t(this),i=o.attr("data-mh")||o.attr("data-match-height");i in e?e[i]=e[i].add(o):e[i]=o}),t.each(e,function(){this.matchHeight(!0)})};var s=function(e){r._beforeUpdate&&r._beforeUpdate(e,r._groups),t.each(r._groups,function(){r._apply(this.elements,this.options)}),r._afterUpdate&&r._afterUpdate(e,r._groups)};r._update=function(i,a){if(a&&"resize"===a.type){var n=t(window).width();if(n===e)return;e=n;
 }i?-1===o&&(o=setTimeout(function(){s(a),o=-1},r._throttle)):s(a)},t(r._applyDataApi),t(window).bind("load",function(t){r._update(!1,t)}),t(window).bind("resize orientationchange",function(t){r._update(!0,t)})});
-/*  jQuery Nice Select - v1.0
-    https://github.com/hernansartorio/jquery-nice-select
-    Made by Hernán Sartorio  */
-!function(e){e.fn.niceSelect=function(t){function s(t){t.after(e("<div></div>").addClass("nice-select").addClass(t.attr("class")||"").addClass(t.attr("disabled")?"disabled":"").attr("tabindex",t.attr("disabled")?null:"0").html('<span class="current"></span><ul class="list"></ul>'));var s=t.next(),n=t.find("option"),i=t.find("option:selected");s.find(".current").html(i.data("display")||i.text()),n.each(function(t){var n=e(this),i=n.data("display");s.find("ul").append(e("<li></li>").attr("data-value",n.val()).attr("data-display",i||null).addClass("option"+(n.is(":selected")?" selected":"")+(n.is(":disabled")?" disabled":"")).html(n.text()))})}if("string"==typeof t)return"update"==t?this.each(function(){var t=e(this),n=e(this).next(".nice-select"),i=n.hasClass("open");n.length&&(n.remove(),s(t),i&&t.next().trigger("click"))}):"destroy"==t?(this.each(function(){var t=e(this),s=e(this).next(".nice-select");s.length&&(s.remove(),t.css("display",""))}),0==e(".nice-select").length&&e(document).off(".nice_select")):console.log('Method "'+t+'" does not exist.'),this;this.hide(),this.each(function(){var t=e(this);t.next().hasClass("nice-select")||s(t)}),e(document).off(".nice_select"),e(document).on("click.nice_select",".nice-select",function(t){var s=e(this);e(".nice-select").not(s).removeClass("open"),s.toggleClass("open"),s.hasClass("open")?(s.find(".option"),s.find(".focus").removeClass("focus"),s.find(".selected").addClass("focus")):s.focus()}),e(document).on("click.nice_select",function(t){0===e(t.target).closest(".nice-select").length&&e(".nice-select").removeClass("open").find(".option")}),e(document).on("click.nice_select",".nice-select .option:not(.disabled)",function(t){var s=e(this),n=s.closest(".nice-select");n.find(".selected").removeClass("selected"),s.addClass("selected");var i=s.data("display")||s.text();n.find(".current").text(i),n.prev("select").val(s.data("value")).trigger("change")}),e(document).on("keydown.nice_select",".nice-select",function(t){var s=e(this),n=e(s.find(".focus")||s.find(".list .option.selected"));if(32==t.keyCode||13==t.keyCode)return s.hasClass("open")?n.trigger("click"):s.trigger("click"),!1;if(40==t.keyCode){if(s.hasClass("open")){var i=n.nextAll(".option:not(.disabled)").first();i.length>0&&(s.find(".focus").removeClass("focus"),i.addClass("focus"))}else s.trigger("click");return!1}if(38==t.keyCode){if(s.hasClass("open")){var l=n.prevAll(".option:not(.disabled)").first();l.length>0&&(s.find(".focus").removeClass("focus"),l.addClass("focus"))}else s.trigger("click");return!1}if(27==t.keyCode)s.hasClass("open")&&s.trigger("click");else if(9==t.keyCode&&s.hasClass("open"))return!1});var n=document.createElement("a").style;return n.cssText="pointer-events:auto","auto"!==n.pointerEvents&&e("html").addClass("no-csspointerevents"),this}}(jQuery);
-/*!
- * viewport-units-buggyfill v0.6.0
- * @web: https://github.com/rodneyrehm/viewport-units-buggyfill/
- * @author: Rodney Rehm - http://rodneyrehm.de/en/
- */
 
-(function (root, factory) {
-  'use strict';
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define([], factory);
-  } else if (typeof exports === 'object') {
-    // Node. Does not work with strict CommonJS, but
-    // only CommonJS-like enviroments that support module.exports,
-    // like Node.
-    module.exports = factory();
-  } else {
-    // Browser globals (root is window)
-    root.viewportUnitsBuggyfill = factory();
-  }
-}(this, function () {
-  'use strict';
-  /*global document, window, navigator, location, XMLHttpRequest, XDomainRequest, CustomEvent*/
 
-  var initialized = false;
-  var options;
-  var userAgent = window.navigator.userAgent;
-  var viewportUnitExpression = /([+-]?[0-9.]+)(vh|vw|vmin|vmax)/g;
-  var forEach = [].forEach;
-  var dimensions;
-  var declarations;
-  var styleNode;
-  var isBuggyIE = /MSIE [0-9]\./i.test(userAgent);
-  var isOldIE = /MSIE [0-8]\./i.test(userAgent);
-  var isOperaMini = userAgent.indexOf('Opera Mini') > -1;
 
-  var isMobileSafari = /(iPhone|iPod|iPad).+AppleWebKit/i.test(userAgent) && (function() {
-    // Regexp for iOS-version tested against the following userAgent strings:
-    // Example WebView UserAgents:
-    // * iOS Chrome on iOS8: "Mozilla/5.0 (iPad; CPU OS 8_1 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) CriOS/39.0.2171.50 Mobile/12B410 Safari/600.1.4"
-    // * iOS Facebook on iOS7: "Mozilla/5.0 (iPhone; CPU iPhone OS 7_1_1 like Mac OS X) AppleWebKit/537.51.2 (KHTML, like Gecko) Mobile/11D201 [FBAN/FBIOS;FBAV/12.1.0.24.20; FBBV/3214247; FBDV/iPhone6,1;FBMD/iPhone; FBSN/iPhone OS;FBSV/7.1.1; FBSS/2; FBCR/AT&T;FBID/phone;FBLC/en_US;FBOP/5]"
-    // Example Safari UserAgents:
-    // * Safari iOS8: "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0 like Mac OS X) AppleWebKit/600.1.3 (KHTML, like Gecko) Version/8.0 Mobile/12A4345d Safari/600.1.4"
-    // * Safari iOS7: "Mozilla/5.0 (iPhone; CPU iPhone OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11A4449d Safari/9537.53"
-    var iOSversion = userAgent.match(/OS (\d)/);
-    // viewport units work fine in mobile Safari and webView on iOS 8+
-    return iOSversion && iOSversion.length>1 && parseInt(iOSversion[1]) < 10;
-  })();
 
-  var isBadStockAndroid = (function() {
-    // Android stock browser test derived from
-    // http://stackoverflow.com/questions/24926221/distinguish-android-chrome-from-stock-browser-stock-browsers-user-agent-contai
-    var isAndroid = userAgent.indexOf(' Android ') > -1;
-    if (!isAndroid) {
-      return false;
-    }
+/*
 
-    var isStockAndroid = userAgent.indexOf('Version/') > -1;
-    if (!isStockAndroid) {
-      return false;
-    }
+  ___|                                                  ___|              _)         |         
+ |       _ \   __ `__ \   __ `__ \    _ \   __ \      \___ \    __|   __|  |  __ \   __|   __| 
+ |      (   |  |   |   |  |   |   |  (   |  |   |           |  (     |     |  |   |  |   \__ \ 
+\____| \___/  _|  _|  _| _|  _|  _| \___/  _|  _|     _____/  \___| _|    _|  .__/  \__| ____/ 
+                                                                             _|                
 
-    var versionNumber = parseFloat((userAgent.match('Android ([0-9.]+)') || [])[1]);
-    // anything below 4.4 uses WebKit without *any* viewport support,
-    // 4.4 has issues with viewport units within calc()
-    return versionNumber <= 4.4;
-  })();
+*/
 
-  // added check for IE10, IE11 and Edge < 20, since it *still* doesn't understand vmax
-  // http://caniuse.com/#feat=viewport-units
-  if (!isBuggyIE) {
-    isBuggyIE = !!navigator.userAgent.match(/Trident.*rv[ :]*1[01]\.| Edge\/1\d\./);
-  }
-
-  // Polyfill for creating CustomEvents on IE9/10/11
-  // from https://github.com/krambuhl/custom-event-polyfill
-  try {
-    new CustomEvent('test');
-  } catch(e) {
-    var CustomEvent = function(event, params) {
-      var evt;
-      params = params || {
-        bubbles: false,
-        cancelable: false,
-        detail: undefined
-      };
-
-      evt = document.createEvent('CustomEvent');
-      evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
-      return evt;
-    };
-    CustomEvent.prototype = window.Event.prototype;
-    window.CustomEvent = CustomEvent; // expose definition to window
-  }
-
-  function debounce(func, wait) {
-    var timeout;
-    return function() {
-      var context = this;
-      var args = arguments;
-      var callback = function() {
-        func.apply(context, args);
-      };
-
-      clearTimeout(timeout);
-      timeout = setTimeout(callback, wait);
-    };
-  }
-
-  // from http://stackoverflow.com/questions/326069/how-to-identify-if-a-webpage-is-being-loaded-inside-an-iframe-or-directly-into-t
-  function inIframe() {
-    try {
-      return window.self !== window.top;
-    } catch (e) {
-      return true;
-    }
-  }
-
-  function initialize(initOptions) {
-    if (initialized) {
-      return;
-    }
-
-    if (initOptions === true) {
-      initOptions = {
-        force: true
-      };
-    }
-
-    options = initOptions || {};
-    options.isMobileSafari = isMobileSafari;
-    options.isBadStockAndroid = isBadStockAndroid;
-
-    if (options.ignoreVmax && !options.force && !isOldIE) {
-      // modern IE (10 and up) do not support vmin/vmax,
-      // but chances are this unit is not even used, so
-      // allow overwriting the "hacktivation"
-      // https://github.com/rodneyrehm/viewport-units-buggyfill/issues/56
-      isBuggyIE = false;
-    }
-
-    if (isOldIE || (!options.force && !isMobileSafari && !isBuggyIE && !isBadStockAndroid && !isOperaMini && (!options.hacks || !options.hacks.required(options)))) {
-      // this buggyfill only applies to mobile safari, IE9-10 and the Stock Android Browser.
-      if (window.console && isOldIE) {
-        console.info('viewport-units-buggyfill requires a proper CSSOM and basic viewport unit support, which are not available in IE8 and below');
-      }
-
-      return {
-        init: function () {}
-      };
-    }
-
-    // fire a custom event that buggyfill was initialize
-    window.dispatchEvent(new CustomEvent('viewport-units-buggyfill-init'));
-
-    options.hacks && options.hacks.initialize(options);
-
-    initialized = true;
-    styleNode = document.createElement('style');
-    styleNode.id = 'patched-viewport';
-    document.head.appendChild(styleNode);
-
-    // Issue #6: Cross Origin Stylesheets are not accessible through CSSOM,
-    // therefore download and inject them as <style> to circumvent SOP.
-    importCrossOriginLinks(function() {
-      var _refresh = debounce(refresh, options.refreshDebounceWait || 100);
-      // doing a full refresh rather than updateStyles because an orientationchange
-      // could activate different stylesheets
-      window.addEventListener('orientationchange', _refresh, true);
-      // orientationchange might have happened while in a different window
-      window.addEventListener('pageshow', _refresh, true);
-
-      if (options.force || isBuggyIE || inIframe()) {
-        window.addEventListener('resize', _refresh, true);
-        options._listeningToResize = true;
-      }
-
-      options.hacks && options.hacks.initializeEvents(options, refresh, _refresh);
-
-      refresh();
-    });
-  }
-
-  function updateStyles() {
-    styleNode.textContent = getReplacedViewportUnits();
-    // move to the end in case inline <style>s were added dynamically
-    styleNode.parentNode.appendChild(styleNode);
-    // fire a custom event that styles were updated
-    window.dispatchEvent(new CustomEvent('viewport-units-buggyfill-style'));
-  }
-
-  function refresh() {
-    if (!initialized) {
-      return;
-    }
-
-    findProperties();
-
-    // iOS Safari will report window.innerWidth and .innerHeight as 0 unless a timeout is used here.
-    // TODO: figure out WHY innerWidth === 0
-    setTimeout(function() {
-      updateStyles();
-    }, 1);
-  }
-  
-  // http://stackoverflow.com/a/23613052
-  function processStylesheet(ss) {
-    // cssRules respects same-origin policy, as per
-    // https://code.google.com/p/chromium/issues/detail?id=49001#c10.
-    try {
-      if (!ss.cssRules) { return; }
-    } catch(e) {
-      if (e.name !== 'SecurityError') { throw e; }
-      return;
-    }
-    // ss.cssRules is available, so proceed with desired operations.
-    var rules = [];
-    for (var i = 0; i < ss.cssRules.length; i++) {
-      var rule = ss.cssRules[i];
-      rules.push(rule);
-    }
-    return rules;
-  }
-
-  function findProperties() {
-    declarations = [];
-    forEach.call(document.styleSheets, function(sheet) {
-      var cssRules = processStylesheet(sheet);
-
-      if (!cssRules || sheet.ownerNode.id === 'patched-viewport' || sheet.ownerNode.getAttribute('data-viewport-units-buggyfill') === 'ignore') {
-        // skip entire sheet because no rules are present, it's supposed to be ignored or it's the target-element of the buggyfill
-        return;
-      }
-
-      if (sheet.media && sheet.media.mediaText && window.matchMedia && !window.matchMedia(sheet.media.mediaText).matches) {
-        // skip entire sheet because media attribute doesn't match
-        return;
-      }
-
-      forEach.call(cssRules, findDeclarations);
-    });
-
-    return declarations;
-  }
-
-  function findDeclarations(rule) {
-    if (rule.type === 7) {
-      var value;
-
-      // there may be a case where accessing cssText throws an error.
-      // I could not reproduce this issue, but the worst that can happen
-      // this way is an animation not running properly.
-      // not awesome, but probably better than a script error
-      // see https://github.com/rodneyrehm/viewport-units-buggyfill/issues/21
-      try {
-        value = rule.cssText;
-      } catch(e) {
-        return;
-      }
-
-      viewportUnitExpression.lastIndex = 0;
-      if (viewportUnitExpression.test(value)) {
-        // KeyframesRule does not have a CSS-PropertyName
-        declarations.push([rule, null, value]);
-        options.hacks && options.hacks.findDeclarations(declarations, rule, null, value);
-      }
-
-      return;
-    }
-
-    if (!rule.style) {
-      if (!rule.cssRules) {
-        return;
-      }
-
-      forEach.call(rule.cssRules, function(_rule) {
-        findDeclarations(_rule);
-      });
-
-      return;
-    }
-
-    forEach.call(rule.style, function(name) {
-      var value = rule.style.getPropertyValue(name);
-      // preserve those !important rules
-      if (rule.style.getPropertyPriority(name)) {
-        value += ' !important';
-      }
-
-      viewportUnitExpression.lastIndex = 0;
-      if (viewportUnitExpression.test(value)) {
-        declarations.push([rule, name, value]);
-        options.hacks && options.hacks.findDeclarations(declarations, rule, name, value);
-      }
-    });
-  }
-
-  function getReplacedViewportUnits() {
-    dimensions = getViewport();
-
-    var css = [];
-    var buffer = [];
-    var open;
-    var close;
-
-    declarations.forEach(function(item) {
-      var _item = overwriteDeclaration.apply(null, item);
-      var _open = _item.selector.length ? (_item.selector.join(' {\n') + ' {\n') : '';
-      var _close = new Array(_item.selector.length + 1).join('\n}');
-
-      if (!_open || _open !== open) {
-        if (buffer.length) {
-          css.push(open + buffer.join('\n') + close);
-          buffer.length = 0;
-        }
-
-        if (_open) {
-          open = _open;
-          close = _close;
-          buffer.push(_item.content);
-        } else {
-          css.push(_item.content);
-          open = null;
-          close = null;
-        }
-
-        return;
-      }
-
-      if (_open && !open) {
-        open = _open;
-        close = _close;
-      }
-
-      buffer.push(_item.content);
-    });
-
-    if (buffer.length) {
-      css.push(open + buffer.join('\n') + close);
-    }
-
-    // Opera Mini messes up on the content hack (it replaces the DOM node's innerHTML with the value).
-    // This fixes it. We test for Opera Mini only since it is the most expensive CSS selector
-    // see https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors
-    if (isOperaMini) {
-      css.push('* { content: normal !important; }');
-    }
-
-    return css.join('\n\n');
-  }
-
-  function overwriteDeclaration(rule, name, value) {
-    var _value;
-    var _selectors = [];
-
-    _value = value.replace(viewportUnitExpression, replaceValues);
-
-    if (options.hacks) {
-      _value = options.hacks.overwriteDeclaration(rule, name, _value);
-    }
-
-    if (name) {
-      // skipping KeyframesRule
-      _selectors.push(rule.selectorText);
-      _value = name + ': ' + _value + ';';
-    }
-
-    var _rule = rule.parentRule;
-    while (_rule) {
-      _selectors.unshift('@media ' + _rule.media.mediaText);
-      _rule = _rule.parentRule;
-    }
-
-    return {
-      selector: _selectors,
-      content: _value
-    };
-  }
-
-  function replaceValues(match, number, unit) {
-    var _base = dimensions[unit];
-    var _number = parseFloat(number) / 100;
-    return (_number * _base) + 'px';
-  }
-
-  function getViewport() {
-    var vh = window.innerHeight;
-    var vw = window.innerWidth;
-
-    return {
-      vh: vh,
-      vw: vw,
-      vmax: Math.max(vw, vh),
-      vmin: Math.min(vw, vh)
-    };
-  }
-
-  function importCrossOriginLinks(next) {
-    var _waiting = 0;
-    var decrease = function() {
-      _waiting--;
-      if (!_waiting) {
-        next();
-      }
-    };
-
-    forEach.call(document.styleSheets, function(sheet) {
-      if (!sheet.href || origin(sheet.href) === origin(location.href) || sheet.ownerNode.getAttribute('data-viewport-units-buggyfill') === 'ignore') {
-        // skip <style> and <link> from same origin or explicitly declared to ignore
-        return;
-      }
-
-      _waiting++;
-      convertLinkToStyle(sheet.ownerNode, decrease);
-    });
-
-    if (!_waiting) {
-      next();
-    }
-  }
-
-  function origin(url) {
-    return url.slice(0, url.indexOf('/', url.indexOf('://') + 3));
-  }
-
-  function convertLinkToStyle(link, next) {
-    getCors(link.href, function() {
-      var style = document.createElement('style');
-      style.media = link.media;
-      style.setAttribute('data-href', link.href);
-      style.textContent = this.responseText;
-      link.parentNode.replaceChild(style, link);
-      next();
-    }, next);
-  }
-
-  function getCors(url, success, error) {
-    var xhr = new XMLHttpRequest();
-    if ('withCredentials' in xhr) {
-      // XHR for Chrome/Firefox/Opera/Safari.
-      xhr.open('GET', url, true);
-    } else if (typeof XDomainRequest !== 'undefined') {
-      // XDomainRequest for IE.
-      xhr = new XDomainRequest();
-      xhr.open('GET', url);
-    } else {
-      throw new Error('cross-domain XHR not supported');
-    }
-
-    xhr.onload = success;
-    xhr.onerror = error;
-    xhr.send();
-    return xhr;
-  }
-
-  return {
-    version: '0.6.0',
-    findProperties: findProperties,
-    getCss: getReplacedViewportUnits,
-    init: initialize,
-    refresh: refresh
-  };
-
-}));
-
-
-// globals, for use in common and unique script documents
-// from http://stackoverflow.com/a/7048295
+/***************************
+* globals, for use in common and unique script documents
+* from http://stackoverflow.com/a/7048295
+***************************/
 	var site = {};
-
 	site.screenSize = $( window ).width();
 	site.screenHeight = $( window ).height();
 	site.$body = $('body');
-	// site.isMobile = false;
 	site.break1 = 640; // first media query break
 	site.break2 = 852; // break to 6 across
 	site.fullwidth = 1480; // break to 6 across
@@ -590,9 +137,7 @@ $(document).ready(function () {
 /*********************
 * Mobile dropdown menu
 *********************/
-	// var $navItem = $('.header-nav-main-item');
 	 var $navItem = $('.header-nav-title').add($('.footer-nav-title'));
-	// var $footerNavItem = $('.footer-main-item');
 	var $navLists = $('.header-nav-list').add($('.footer-nav-list'));
 
 	// when click a main list item
@@ -619,7 +164,6 @@ $(document).ready(function () {
 		if($thisUl.hasClass('nav-show-mobile')) {
 			$navLists.removeClass('nav-show-mobile'); // close all other open nav lists
 			$navItem.removeClass('active'); // remove all active titles
-			
 		}
 		// else close all and open yourself
 		else {
@@ -639,13 +183,12 @@ $(document).ready(function () {
 	var $navBarHeader = $('.navbar-header');
 	var $navspacer = $('#navspacer');
 	var $logoSwitchTimer;
-
 	var gapNavHeight = $siteToggle.outerHeight();
+
 	if(site.isMobile) {
 		gapNavHeight = 0; // activate next condition immediately
 	}
 
-	// console.log('gapNavHeight', gapNavHeight);
 	$(window).scroll(function() {
 		// close all if on phone
 		if(site.isMobile) {
@@ -728,15 +271,10 @@ $(document).ready(function () {
 		if(menuClosed) {
 			navCloseAll(); // after we've determined that menu is closed, close anything else that's open by default
 			site.navbar.addClass('is-open');
-			// if(site.isMobile) // switch to one-line logo in mobile view
-			// site.navbar.addClass('has-one-line-logo'); // switch to one-line logo
 			switchLogo('one-line');
-
 			$navbarOutside.css('position', 'fixed'); // activate navbarOutside
-			// console.log('one line logo');				
 			$notMenuIcon.addClass('lighter-nav-icons'); // grey out other icons
 			$megaNav.css('display', 'block'); // show social media icons
-			// $navBarHeader.css('z-index', '0'); // make navbar clickable to close
 			menuClosed = false; // flag for closing	
 			$folkwaysNav.hide(); // hide folkways nav
 		} else {
@@ -749,7 +287,6 @@ $(document).ready(function () {
 
 	// hide menu when go to internal anchor link
 	$megaNavItem.on('click', function() {
-		// console.log('header-navitem clicked');
 		navCloseAll();
 	});
 
@@ -766,8 +303,6 @@ $(document).ready(function () {
 
 	// when click share icon
 	$shareIcon.on('click', function() {
-		// console.log('close all');
-
 		// if not yet open
 		if(shareClosed) {
 			navCloseAll(); // close anything else that's open by default, only after we've determined that share is Closed
@@ -780,7 +315,6 @@ $(document).ready(function () {
 			$notShareIcon.addClass('lighter-nav-icons'); // grey out other icons
 			shareClosed = false; // flag for closing	
 			$socialMediaIcons.show();
-			// $folkwaysNav.hide(); // hide folkways nav
 		} else {
 			navCloseAll(); // close anything else that's open by default
 			shareClosed = true; // flag for closing	
@@ -834,21 +368,12 @@ $(document).ready(function () {
 		site.navbar.removeClass('is-open');
 		$allIcons.removeClass('lighter-nav-icons');
 		$megaNav.add($searchBar).add($browsenav).add($socialMediaIcons).hide(); // close auxiliaries
-		// console.log('all closed');
 		menuClosed = true;
 		searchClosed = true;
 		shareClosed = true;
-
 		site.navbar.removeClass('has-one-line-logo'); // switch back to block logo
 	}
 
-
-	/*********************
-	* search
-	*********************/
-		// $searchBar.on('submit', function() {
-			// alert('We are looking into it...');
-		// });
 
 /*********************
 * Video
@@ -861,21 +386,19 @@ $(document).ready(function () {
 	var remodalInstance = $('[data-remodal-id=modal]').remodal(remodalInstanceOptions);
 
 
-	  var $remodal = $('.remodal');
-	  var $remodalIframe = $remodal.find('.remodal-iframe');
-	  var $remodalTitle = $remodal.find('.remodal-title');
-	  var $remodalDescription = $remodal.find('.remodal-description');
-	  var $remodalClose = $remodal.find('.remodal-close');
-	  var videoPlayerIsOpen = false;
-	  // var $remodalOverlay = $('.remodal-overlay');
-	  var player; // global for playing, pausing
-	  var playerLoaded = false;
+	var $remodal = $('.remodal');
+	var $remodalIframe = $remodal.find('.remodal-iframe');
+	var $remodalTitle = $remodal.find('.remodal-title');
+	var $remodalDescription = $remodal.find('.remodal-description');
+	var $remodalClose = $remodal.find('.remodal-close');
+	var videoPlayerIsOpen = false;
+	var player; // global for playing, pausing
+	var playerLoaded = false;
 
-	  // on playing a video in the gallery...
-	  $('.video').on('click', function() {
+	// on playing a video in the gallery...
+	$('.video').on('click', function() {
 	  	// manually open remodal because sometimes just doesn't do it
 	  	remodalInstance.open();
-	  	console.log('opened remodal');
 
 	  	// flag for checking against image gallery
 	  	videoPlayerIsOpen = true;
@@ -894,23 +417,19 @@ $(document).ready(function () {
 
 		// if first time loading a video...
 		if(!playerLoaded) {
-			console.log('first time play');
-		  var options = {
-			  id: $video_id,
-			  width: 640,
-			  autoplay: true,
-		  }
+			var options = {
+				id: $video_id,
+				width: 640,
+				autoplay: true,
+			}
 
-		  player = new Vimeo.Player('remodal-iframe', options);
-		
-		  if(player)
+		player = new Vimeo.Player('remodal-iframe', options);
+
+		if(player)
 			playerLoaded = true;
 		}
 		// else just reload the player
 		else {
-			console.log('NOT first time play');
-		  	// player = new Vimeo.Player('remodal-iframe', options);
-
 	  		player.loadVideo($video_id).then(function() {
 	  			player.play();
 	  		});
@@ -931,7 +450,6 @@ $(document).ready(function () {
 	  	}
 
 	  	$remodalClose.addClass('visually-hidden');
-		// player.pause();
 	  });
 
 	// close remodal with X
@@ -960,7 +478,6 @@ $(document).ready(function () {
 
 		// get initial slide
 		var initialSlide = $(this).data('slide-index');
-		// console.log(initialSlide);
 
 		// build gallery
 		// get images for gallery by going up to grandparent, then finding all classed images, then copying them for use in remodal
@@ -980,17 +497,12 @@ $(document).ready(function () {
 
 		// show gallery when all set
 		$remodal.addClass('remodal-gallery-is-open');
-
-
-		// image swap
-		// http://stackoverflow.com/a/540355
 	});
 
 /********************
 * Smooth Scrolling
 * from https://www.abeautifulsite.net/smoothly-scroll-to-an-element-without-a-jquery-plugin-2
 ********************/
-
 	$('a[href^="#"]').on('click', function(event) {
 	    var target = $(this.getAttribute('href'));
 	    if( target.length ) {
@@ -1030,13 +542,6 @@ $(document).ready(function () {
 		// wrap current time and duration time in new div for correct positioning
 		$(this).add($durationTime).wrapAll('<div class="mejs-time-wrapper">');
 	});
-
-	// change to pause icon when click play
-	// var audio = $('audio.mejs-player');
-
-	// audio.on('play', function() {
-	//     $(this).closest('.mejs-inner').find('.mejs-playpause-button button').addClass('isPlaying');
-	// });
 
 /*********************
 * Show figcaption
@@ -1104,7 +609,6 @@ $(document).ready(function () {
 
 	// set it up, even on window resizing
 	function dropdownToggleInit() {
-
 		// open or close first level dropdown
 		$firstLevelDropdownTitles.on('click', function() {
 			dropdownToggle($(this), 'first');
@@ -1127,7 +631,6 @@ $(document).ready(function () {
 		$secondLevelDropdownTitles.unbind();
 		$thirdLevelDropdownTitles.unbind();
 	}
-
 
 	// dropdown toggle for mobile shows and hides child dropdowns
 	// @param $this is element that was clicked
@@ -1174,20 +677,12 @@ $(document).ready(function () {
 /**********
 * Check Mobile every time resize the browser
 **********/
-	
-	
 	// set mobile flag
 	function checkMobile() {
 		site.screenSize = $( window ).width();
 		// only do it if already not mobile or initial
 		if(site.screenSize < site.break2) {
 			site.isMobile = true;
-			// prevent destroying variables that haven't yet been defined, later on in js file
-			if(!firstTimeCheck) {
-				// dropdownToggleDestroy(); // remove duplicate in case
-				// firstTimeCheck = false;
-				// dropdownToggleInit();
-			}
 		// only check if already mobile and bigger
 		} else if (site.screenSize > site.break2) {
 			site.isMobile = false;
@@ -1201,11 +696,19 @@ $(document).ready(function () {
 
 
 });
-$(document).ready(function () {
+/*
 
-/***************************
-* Common scripts defined in styleguide.folklife.si.edu/code/assets/common/js/common-scripts.js
-***************************/
+
+  ___|   |           |                     _)      |             ___|              _)         |         
+\___ \   __|  |   |  |   _ \   _` |  |   |  |   _` |   _ \     \___ \    __|   __|  |  __ \   __|   __| 
+      |  |    |   |  |   __/  (   |  |   |  |  (   |   __/           |  (     |     |  |   |  |   \__ \ 
+_____/  \__| \__, | _| \___| \__, | \__,_| _| \__,_| \___|     _____/  \___| _|    _|  .__/  \__| ____/ 
+             ____/           |___/                                                    _|                
+
+
+*/
+
+$(document).ready(function () {
 
 /***************************
 * Show Code
@@ -1215,26 +718,22 @@ $(document).ready(function () {
 	var $showSASS = $('.show-sass');
 
 	// show on click
-	// if($showCode).
+	$showHTML.on('click', function () {
+		$(this).toggleClass('active');
+		$(this).closest('.codeblock').find('pre.sass').hide();
+		$(this).closest('.codeblock').find('pre.html').toggle();
+	});
+	$showSASS.on('click', function () {
+		$(this).toggleClass('active');
+		$(this).closest('.codeblock').find('pre.html').hide();
+		$(this).closest('.codeblock').find('pre.sass').toggle();
+	});
 
-		// $showCode.on('click', function () {
-		// 	$(this).closest('.codeblock').find('pre').toggle();
-		// });
-		$showHTML.on('click', function () {
-			$(this).toggleClass('active');
-			$(this).closest('.codeblock').find('pre.sass').hide();
-			$(this).closest('.codeblock').find('pre.html').toggle();
-		});
-		$showSASS.on('click', function () {
-			$(this).toggleClass('active');
-			$(this).closest('.codeblock').find('pre.html').hide();
-			$(this).closest('.codeblock').find('pre.sass').toggle();
-		});
-
+/***************************
 /* Syntax Highlighting
- * from highlightjs.org */
+ * from highlightjs.org
+***************************/
  	// start highlighter on page load
 	// hljs.configure({tabReplace: ' '});
 	hljs.initHighlightingOnLoad();
-	console.log(hljs.listLanguages());
 });

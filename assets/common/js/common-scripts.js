@@ -1,11 +1,25 @@
-// globals, for use in common and unique script documents
-// from http://stackoverflow.com/a/7048295
-	var site = {};
 
+
+
+
+/*
+
+  ___|                                                  ___|              _)         |         
+ |       _ \   __ `__ \   __ `__ \    _ \   __ \      \___ \    __|   __|  |  __ \   __|   __| 
+ |      (   |  |   |   |  |   |   |  (   |  |   |           |  (     |     |  |   |  |   \__ \ 
+\____| \___/  _|  _|  _| _|  _|  _| \___/  _|  _|     _____/  \___| _|    _|  .__/  \__| ____/ 
+                                                                             _|                
+
+*/
+
+/***************************
+* globals, for use in common and unique script documents
+* from http://stackoverflow.com/a/7048295
+***************************/
+	var site = {};
 	site.screenSize = $( window ).width();
 	site.screenHeight = $( window ).height();
 	site.$body = $('body');
-	// site.isMobile = false;
 	site.break1 = 640; // first media query break
 	site.break2 = 852; // break to 6 across
 	site.fullwidth = 1480; // break to 6 across
@@ -33,9 +47,7 @@ $(document).ready(function () {
 /*********************
 * Mobile dropdown menu
 *********************/
-	// var $navItem = $('.header-nav-main-item');
 	 var $navItem = $('.header-nav-title').add($('.footer-nav-title'));
-	// var $footerNavItem = $('.footer-main-item');
 	var $navLists = $('.header-nav-list').add($('.footer-nav-list'));
 
 	// when click a main list item
@@ -62,7 +74,6 @@ $(document).ready(function () {
 		if($thisUl.hasClass('nav-show-mobile')) {
 			$navLists.removeClass('nav-show-mobile'); // close all other open nav lists
 			$navItem.removeClass('active'); // remove all active titles
-			
 		}
 		// else close all and open yourself
 		else {
@@ -82,13 +93,12 @@ $(document).ready(function () {
 	var $navBarHeader = $('.navbar-header');
 	var $navspacer = $('#navspacer');
 	var $logoSwitchTimer;
-
 	var gapNavHeight = $siteToggle.outerHeight();
+
 	if(site.isMobile) {
 		gapNavHeight = 0; // activate next condition immediately
 	}
 
-	// console.log('gapNavHeight', gapNavHeight);
 	$(window).scroll(function() {
 		// close all if on phone
 		if(site.isMobile) {
@@ -171,15 +181,10 @@ $(document).ready(function () {
 		if(menuClosed) {
 			navCloseAll(); // after we've determined that menu is closed, close anything else that's open by default
 			site.navbar.addClass('is-open');
-			// if(site.isMobile) // switch to one-line logo in mobile view
-			// site.navbar.addClass('has-one-line-logo'); // switch to one-line logo
 			switchLogo('one-line');
-
 			$navbarOutside.css('position', 'fixed'); // activate navbarOutside
-			// console.log('one line logo');				
 			$notMenuIcon.addClass('lighter-nav-icons'); // grey out other icons
 			$megaNav.css('display', 'block'); // show social media icons
-			// $navBarHeader.css('z-index', '0'); // make navbar clickable to close
 			menuClosed = false; // flag for closing	
 			$folkwaysNav.hide(); // hide folkways nav
 		} else {
@@ -192,7 +197,6 @@ $(document).ready(function () {
 
 	// hide menu when go to internal anchor link
 	$megaNavItem.on('click', function() {
-		// console.log('header-navitem clicked');
 		navCloseAll();
 	});
 
@@ -209,8 +213,6 @@ $(document).ready(function () {
 
 	// when click share icon
 	$shareIcon.on('click', function() {
-		// console.log('close all');
-
 		// if not yet open
 		if(shareClosed) {
 			navCloseAll(); // close anything else that's open by default, only after we've determined that share is Closed
@@ -223,7 +225,6 @@ $(document).ready(function () {
 			$notShareIcon.addClass('lighter-nav-icons'); // grey out other icons
 			shareClosed = false; // flag for closing	
 			$socialMediaIcons.show();
-			// $folkwaysNav.hide(); // hide folkways nav
 		} else {
 			navCloseAll(); // close anything else that's open by default
 			shareClosed = true; // flag for closing	
@@ -277,21 +278,12 @@ $(document).ready(function () {
 		site.navbar.removeClass('is-open');
 		$allIcons.removeClass('lighter-nav-icons');
 		$megaNav.add($searchBar).add($browsenav).add($socialMediaIcons).hide(); // close auxiliaries
-		// console.log('all closed');
 		menuClosed = true;
 		searchClosed = true;
 		shareClosed = true;
-
 		site.navbar.removeClass('has-one-line-logo'); // switch back to block logo
 	}
 
-
-	/*********************
-	* search
-	*********************/
-		// $searchBar.on('submit', function() {
-			// alert('We are looking into it...');
-		// });
 
 /*********************
 * Video
@@ -304,21 +296,19 @@ $(document).ready(function () {
 	var remodalInstance = $('[data-remodal-id=modal]').remodal(remodalInstanceOptions);
 
 
-	  var $remodal = $('.remodal');
-	  var $remodalIframe = $remodal.find('.remodal-iframe');
-	  var $remodalTitle = $remodal.find('.remodal-title');
-	  var $remodalDescription = $remodal.find('.remodal-description');
-	  var $remodalClose = $remodal.find('.remodal-close');
-	  var videoPlayerIsOpen = false;
-	  // var $remodalOverlay = $('.remodal-overlay');
-	  var player; // global for playing, pausing
-	  var playerLoaded = false;
+	var $remodal = $('.remodal');
+	var $remodalIframe = $remodal.find('.remodal-iframe');
+	var $remodalTitle = $remodal.find('.remodal-title');
+	var $remodalDescription = $remodal.find('.remodal-description');
+	var $remodalClose = $remodal.find('.remodal-close');
+	var videoPlayerIsOpen = false;
+	var player; // global for playing, pausing
+	var playerLoaded = false;
 
-	  // on playing a video in the gallery...
-	  $('.video').on('click', function() {
+	// on playing a video in the gallery...
+	$('.video').on('click', function() {
 	  	// manually open remodal because sometimes just doesn't do it
 	  	remodalInstance.open();
-	  	console.log('opened remodal');
 
 	  	// flag for checking against image gallery
 	  	videoPlayerIsOpen = true;
@@ -337,23 +327,19 @@ $(document).ready(function () {
 
 		// if first time loading a video...
 		if(!playerLoaded) {
-			console.log('first time play');
-		  var options = {
-			  id: $video_id,
-			  width: 640,
-			  autoplay: true,
-		  }
+			var options = {
+				id: $video_id,
+				width: 640,
+				autoplay: true,
+			}
 
-		  player = new Vimeo.Player('remodal-iframe', options);
-		
-		  if(player)
+		player = new Vimeo.Player('remodal-iframe', options);
+
+		if(player)
 			playerLoaded = true;
 		}
 		// else just reload the player
 		else {
-			console.log('NOT first time play');
-		  	// player = new Vimeo.Player('remodal-iframe', options);
-
 	  		player.loadVideo($video_id).then(function() {
 	  			player.play();
 	  		});
@@ -374,7 +360,6 @@ $(document).ready(function () {
 	  	}
 
 	  	$remodalClose.addClass('visually-hidden');
-		// player.pause();
 	  });
 
 	// close remodal with X
@@ -403,7 +388,6 @@ $(document).ready(function () {
 
 		// get initial slide
 		var initialSlide = $(this).data('slide-index');
-		// console.log(initialSlide);
 
 		// build gallery
 		// get images for gallery by going up to grandparent, then finding all classed images, then copying them for use in remodal
@@ -423,17 +407,12 @@ $(document).ready(function () {
 
 		// show gallery when all set
 		$remodal.addClass('remodal-gallery-is-open');
-
-
-		// image swap
-		// http://stackoverflow.com/a/540355
 	});
 
 /********************
 * Smooth Scrolling
 * from https://www.abeautifulsite.net/smoothly-scroll-to-an-element-without-a-jquery-plugin-2
 ********************/
-
 	$('a[href^="#"]').on('click', function(event) {
 	    var target = $(this.getAttribute('href'));
 	    if( target.length ) {
@@ -473,13 +452,6 @@ $(document).ready(function () {
 		// wrap current time and duration time in new div for correct positioning
 		$(this).add($durationTime).wrapAll('<div class="mejs-time-wrapper">');
 	});
-
-	// change to pause icon when click play
-	// var audio = $('audio.mejs-player');
-
-	// audio.on('play', function() {
-	//     $(this).closest('.mejs-inner').find('.mejs-playpause-button button').addClass('isPlaying');
-	// });
 
 /*********************
 * Show figcaption
@@ -547,7 +519,6 @@ $(document).ready(function () {
 
 	// set it up, even on window resizing
 	function dropdownToggleInit() {
-
 		// open or close first level dropdown
 		$firstLevelDropdownTitles.on('click', function() {
 			dropdownToggle($(this), 'first');
@@ -570,7 +541,6 @@ $(document).ready(function () {
 		$secondLevelDropdownTitles.unbind();
 		$thirdLevelDropdownTitles.unbind();
 	}
-
 
 	// dropdown toggle for mobile shows and hides child dropdowns
 	// @param $this is element that was clicked
@@ -617,20 +587,12 @@ $(document).ready(function () {
 /**********
 * Check Mobile every time resize the browser
 **********/
-	
-	
 	// set mobile flag
 	function checkMobile() {
 		site.screenSize = $( window ).width();
 		// only do it if already not mobile or initial
 		if(site.screenSize < site.break2) {
 			site.isMobile = true;
-			// prevent destroying variables that haven't yet been defined, later on in js file
-			if(!firstTimeCheck) {
-				// dropdownToggleDestroy(); // remove duplicate in case
-				// firstTimeCheck = false;
-				// dropdownToggleInit();
-			}
 		// only check if already mobile and bigger
 		} else if (site.screenSize > site.break2) {
 			site.isMobile = false;

@@ -1,8 +1,16 @@
-$(document).ready(function () {
+/*
 
-/***************************
-* Common scripts defined in styleguide.folklife.si.edu/code/assets/common/js/common-scripts.js
-***************************/
+
+  ___|   |           |                     _)      |             ___|              _)         |         
+\___ \   __|  |   |  |   _ \   _` |  |   |  |   _` |   _ \     \___ \    __|   __|  |  __ \   __|   __| 
+      |  |    |   |  |   __/  (   |  |   |  |  (   |   __/           |  (     |     |  |   |  |   \__ \ 
+_____/  \__| \__, | _| \___| \__, | \__,_| _| \__,_| \___|     _____/  \___| _|    _|  .__/  \__| ____/ 
+             ____/           |___/                                                    _|                
+
+
+*/
+
+$(document).ready(function () {
 
 /***************************
 * Show Code
@@ -12,26 +20,22 @@ $(document).ready(function () {
 	var $showSASS = $('.show-sass');
 
 	// show on click
-	// if($showCode).
+	$showHTML.on('click', function () {
+		$(this).toggleClass('active');
+		$(this).closest('.codeblock').find('pre.sass').hide();
+		$(this).closest('.codeblock').find('pre.html').toggle();
+	});
+	$showSASS.on('click', function () {
+		$(this).toggleClass('active');
+		$(this).closest('.codeblock').find('pre.html').hide();
+		$(this).closest('.codeblock').find('pre.sass').toggle();
+	});
 
-		// $showCode.on('click', function () {
-		// 	$(this).closest('.codeblock').find('pre').toggle();
-		// });
-		$showHTML.on('click', function () {
-			$(this).toggleClass('active');
-			$(this).closest('.codeblock').find('pre.sass').hide();
-			$(this).closest('.codeblock').find('pre.html').toggle();
-		});
-		$showSASS.on('click', function () {
-			$(this).toggleClass('active');
-			$(this).closest('.codeblock').find('pre.html').hide();
-			$(this).closest('.codeblock').find('pre.sass').toggle();
-		});
-
+/***************************
 /* Syntax Highlighting
- * from highlightjs.org */
+ * from highlightjs.org
+***************************/
  	// start highlighter on page load
 	// hljs.configure({tabReplace: ' '});
 	hljs.initHighlightingOnLoad();
-	console.log(hljs.listLanguages());
 });
