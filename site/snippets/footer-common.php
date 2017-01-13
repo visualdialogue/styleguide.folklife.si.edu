@@ -34,11 +34,29 @@
   <li class="footer-main-item col-sm-2 social-media">
     <div class="footer-sub-item social-media-title">Connect with us</div>
     <ul class="footer-list">
+      <!-- Folklife or Festival-->
+      <?php if (c::get('isFolklife')): ?>
       <li class="social-media-icon"><a href="https://www.facebook.com/smithsonianfolklifefestival" target="_blank" class="icon-facebook"></a></li>
       <li class="social-media-icon"><a href="https://twitter.com/smithsonianfolk" target="_blank" class="icon-twitter"></a></li>
       <li class="social-media-icon"><a href="http://smithsonianfolklife.tumblr.com/" target="_blank" class="icon-tumblr"></a></li>
       <li class="social-media-icon"><a href="https://www.flickr.com/groups/2016folklifefestival" target="_blank" class="icon-flickr"></a></li>
       <li class="social-media-icon"><a href="https://www.instagram.com/smithsonianfolklife/" target="_blank" class="icon-instagrem"></a></li>
+      <!-- Festival-->
+      <?php elseif (c::get('isFestival')): ?>
+      <li class="social-media-icon"><a href="https://www.facebook.com/smithsonianfolklifefestival" target="_blank" class="icon-facebook"></a></li>
+      <li class="social-media-icon"><a href="https://twitter.com/smithsonianfolk" target="_blank" class="icon-twitter"></a></li>
+      <li class="social-media-icon"><a href="https://www.flickr.com/groups/2016folklifefestival" target="_blank" class="icon-flickr"></a></li>
+      <li class="social-media-icon"><a href="https://www.youtube.com/user/SmithsonianFolklife" target="_blank" class="icon-youtube"></a></li>
+      <li class="social-media-icon"><a href="https://www.instagram.com/smithsonianfolklife/" target="_blank" class="icon-instagrem"></a></li>
+      <!-- Folkways-->
+      <?php else: ?>
+      <li class="social-media-icon"><a href="http://www.facebook.com/smithsonianfolkwaysrecordings" target="_blank" class="icon-facebook"></a></li>
+      <li class="social-media-icon"><a href="https://twitter.com/folkways" target="_blank" class="icon-twitter"></a></li>
+      <li class="social-media-icon"><a href="https://www.youtube.com/user/SmithsonianFolkways" target="_blank" class="icon-youtube"></a></li>
+      <li class="social-media-icon"><a href="https://www.pinterest.com/smithsofolkways/" target="_blank" class="icon-pinterest"></a></li>
+      <li class="social-media-icon"><a href="https://www.instagram.com/smithsonianfolkways/" target="_blank" class="icon-instagrem"></a></li>
+      <li class="social-media-icon"><a href="https://soundcloud.com/smithsonian-folkways" target="_blank" class="icon-soundcloud"></a></li>
+      <?php endif; ?>
     </ul>
   </li>
 </ul>
