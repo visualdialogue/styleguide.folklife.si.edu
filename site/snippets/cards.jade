@@ -14,6 +14,27 @@ section.container.cards-section
 				h3.section-subtitle Full Feature Card
 			-snippet('show-html')
 			-snippet('show-sass')
+
+		.row
+			.card.col-xs-12.full-feature-card
+				.row
+					.image.col-md-6.col-lg-7
+						a(href="#")
+							!=$section->image('ralphRinzler.jpg')
+					.details.col-md-6.col-lg-5
+						.details-inner
+							a.high(href="#").title: span.light: span.er Ralph Rinzler Folklife Archives and Collections
+							
+							.description.link-underline
+								p The Center for Folklife and Cultural Heritage is home to the Ralph Rinzler Folklife Archives and Collections, a public resource named for the founding director of the Smithsonian Folklife Festival.
+							a.high.more-link: .light: .er
+								.more-link-text more
+								.more-link-arrow.icon-arrow2
+				.row
+					.col-sm-12.visible-xs
+						-snippet('show-html-mobile')
+						-snippet('show-sass-mobile')
+
 		.row
 			.col-sm-12
 				pre.sass: code.
@@ -68,22 +89,6 @@ section.container.cards-section
 							&lt;/div&gt;
 						&lt;/div&gt;  
 					&lt;/div&gt;
-
-		.row
-			.card.col-xs-12.full-feature-card
-				.row
-					.image.col-md-6.col-lg-7
-						a(href="#")
-							!=$section->image('ralphRinzler.jpg')
-					.details.col-md-6.col-lg-5
-						.details-inner
-							a.high(href="#").title: span.light: span.er Ralph Rinzler Folklife Archives and Collections
-							
-							.description.link-underline
-								p The Center for Folklife and Cultural Heritage is home to the Ralph Rinzler Folklife Archives and Collections, a public resource named for the founding director of the Smithsonian Folklife Festival.
-							a.high.more-link: .light: .er
-								.more-link-text more
-								.more-link-arrow.icon-arrow2
 	// Horizontal Card
 	.codeblock
 		.row
@@ -105,8 +110,10 @@ section.container.cards-section
 							.description.link-underline
 								p The global African Diaspora has often searched through music for a “post-racist utopia.”
 
-				-snippet('show-html-mobile')
-				-snippet('show-sass-mobile')
+				.row
+					.col-sm-12.visible-xs
+						-snippet('show-html-mobile')
+						-snippet('show-sass-mobile')
 			.col-sm-6
 				pre.sass: code.
 					.folkways-magazine-card {
@@ -140,7 +147,6 @@ section.container.cards-section
 							&lt;/div&gt;
 						&lt;/div&gt;
 					&lt;/li&gt;
-
 	// Publication Card
 	.codeblock
 		.row
@@ -159,6 +165,10 @@ section.container.cards-section
 							a.high(href="#").title: span.light: span.er Curatorial Conversations: Cultural Representation and the Smithsonian Folklife Festival
 							.author Edited by Olivia Cadaval, Sojin Kim, and Diana Baird N’Diaye
 							a.high.buy-now-button(href="#"): span.light: span.er Order from University Press of Mississippi&nbsp;&#x2192
+				.row
+					.col-sm-12.visible-xs
+						-snippet('show-html-mobile')
+						-snippet('show-sass-mobile')
 		.row
 			.col-sm-12
 				pre.sass: code.
@@ -239,6 +249,10 @@ section.container.cards-section
 							a.high(href="#").title: span.light: span.er Circus Arts 2017
 							.description.link-underline
 								p See the culture and history of circus arts across the U.S.
+				.row
+					.col-sm-12.visible-xs
+						-snippet('show-html-mobile')
+						-snippet('show-sass-mobile')
 			.col-md-8
 				pre.sass: code.
 					// As video cards can have different looks, we set the title font based on the section via the CSS
@@ -298,17 +312,21 @@ section.container.cards-section
 			-snippet('show-sass')
 		.row
 			li.card.audio-card.col-xs-6.col-sm-3.card-xs-break-2.full-border-card
-					.image
-						a(href="#")
-							!= $section->image('audio.png')
-					.details
-						.details-inner
-							.tag New Release
-							.title-wrapper
-								a.high.title(href="#"): span.light: span.er Quelbe!
-								.artist Stanley and the Ten Sleepless Nights
-							.audio-player
-								<audio class="mejs-player" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'>
+				.image
+					a(href="#")
+						!= $section->image('audio.png')
+				.details
+					.details-inner
+						.tag New Release
+						.title-wrapper
+							a.high.title(href="#"): span.light: span.er Quelbe!
+							.artist Stanley and the Ten Sleepless Nights
+						.audio-player
+							<audio class="mejs-player" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'>
+				.row
+					.col-sm-12.visible-xs
+						-snippet('show-html-mobile')
+						-snippet('show-sass-mobile')
 			.col-md-9
 				pre.html: code.
 					&lt;li class="card audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border-card"&gt;
@@ -367,6 +385,10 @@ section.container.cards-section
 					.details-inner
 						a.high(href="#").title: span.light: span.er Songs My Mother Taught Me
 						.artist Fannie Lou Hamer
+				.row
+					.col-sm-12.visible-xs
+						-snippet('show-html-mobile')
+						-snippet('show-sass-mobile')
 			.col-sm-9
 				pre.sass: code.
 					.album-card, .vinyl-card, .books-card {
@@ -408,7 +430,7 @@ section.container.cards-section
 			-snippet('show-html')
 			-snippet('show-sass')
 		.row
-			.card.album-card.col-xs-2.col-sm-2
+			.card.album-card.col-xs-6.col-sm-2
 				.image
 					a(href="#")
 						!=$section->image('SFW40568.jpeg')
@@ -416,7 +438,11 @@ section.container.cards-section
 					.details-inner
 						a.high(href="#").title: span.light: span.er Quelbe! Music of the U.S. Virgin Islands
 						.artist Stanley and the Ten Sleepless Nights
-			.col-sm-9
+				.row
+					.col-sm-12.visible-xs
+						-snippet('show-html-mobile')
+						-snippet('show-sass-mobile')
+			.col-sm-10
 				pre.sass: code.
 					.album-card, .vinyl-card, .books-card {
 						.details-inner {
@@ -434,7 +460,7 @@ section.container.cards-section
 						@include clear-2; // display cards side-by-side on mobile, clearing every 2nd + 1 cards to the left
 						@include respond-to(break2) {@include clear-6;} // display 6 across, clearing every 6th + 1 cards
 					}
-			.col-sm-9
+			.col-sm-10
 				pre.html: code.
 					&lt;div class="card album-card col-xs-2 col-sm-2"&gt;
 						&lt;div class="image"&gt;

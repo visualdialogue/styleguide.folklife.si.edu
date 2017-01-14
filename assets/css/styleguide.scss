@@ -44,6 +44,11 @@
 
 /* general
 -------------------------------------------------- */
+	.styleguide-site {
+		.icon-share, .icon-search {
+			display: none;
+		}
+	}
 	.sub-section {
 		@include margin-top(4);
 	}
@@ -277,6 +282,9 @@
 		@include respond-to(break2) {
 			line-height: 0.8;
 		}
+		@include respond-to(fullwidth) {
+			line-height: 1.4;
+		}
 	}
 
 /* color
@@ -369,6 +377,9 @@
 		}
 		.show-code {
 			@include margin-top(5);
+		}
+		code {
+			margin-top:0;
 		}
 	}
 	.video-card {

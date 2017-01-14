@@ -11,7 +11,7 @@
   <?php snippet('header-favicons'); ?>
   <!-- highlightjs.org for code syntax highlighting--><link href="/assets/css/highlight/styles/atom-one-dark.css" type="text/css" rel="stylesheet">
   <script src="/assets/js/highlight.pack.js"></script><link href="/assets/css/styleguide.css?v=<?= time() ?>" type="text/css" rel="stylesheet">
-</head><body class="folklife-site">
+</head><body class="styleguide-site">
 <div id="site-toggle" class="site-toggle">
   <div class="container"><a href="/" class="site-toggle-link festival-site-toggle-link active">Festival</a>
     <?php if (c::get('isDev')): ?><a href="http://localhost:3001" class="site-toggle-link folklife-site-toggle-link">Folklife</a>
@@ -43,7 +43,7 @@
         <li class="header-nav-main-item col-sm-2"> <a href="#grid" class="header-nav-title">Grid</a></li>
         <li class="header-nav-main-item col-sm-2"> <a href="#colors" class="header-nav-title">Colors</a>
           <ul class="header-nav-list">
-            <li class="header-nav-sub-item"><a href="#gray-palette">Grays</a></li>
+            <li class="header-nav-sub-item"><a href="#grays">Grays</a></li>
             <li class="header-nav-sub-item"><a href="#folklife-palette">Folklife Palette</a></li>
             <li class="header-nav-sub-item"><a href="#folkways-palette">Folkways Palette</a></li>
             <li class="header-nav-sub-item"><a href="#festival-palette">Festival Palette</a></li>

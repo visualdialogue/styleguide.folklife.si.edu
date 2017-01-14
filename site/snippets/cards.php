@@ -19,6 +19,33 @@
       <?php snippet('show-sass'); ?>
     </div>
     <div class="row">
+      <div class="card col-xs-12 full-feature-card">
+        <div class="row">
+          <div class="image col-md-6 col-lg-7"><a href="#">
+              <?php echo $section->image('ralphRinzler.jpg'); ?></a></div>
+          <div class="details col-md-6 col-lg-5">
+            <div class="details-inner"><a href="#" class="high title"><span class="light"><span class="er">Ralph Rinzler Folklife Archives and Collections</span></span></a>
+              <div class="description link-underline">
+                <p>The Center for Folklife and Cultural Heritage is home to the Ralph Rinzler Folklife Archives and Collections, a public resource named for the founding director of the Smithsonian Folklife Festival.</p>
+              </div><a class="high more-link">
+                <div class="light">
+                  <div class="er">
+                    <div class="more-link-text">more</div>
+                    <div class="more-link-arrow icon-arrow2"></div>
+                  </div>
+                </div></a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 visible-xs">
+            <?php snippet('show-html-mobile'); ?>
+            <?php snippet('show-sass-mobile'); ?>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
       <div class="col-sm-12">
         <pre class="sass"><code>.full-feature-card {
 	@include margin-bottom(0);
@@ -70,29 +97,7 @@
 			&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;  
-&lt;/div&gt;
-</code></pre>
-      </div>
-    </div>
-    <div class="row">
-      <div class="card col-xs-12 full-feature-card">
-        <div class="row">
-          <div class="image col-md-6 col-lg-7"><a href="#">
-              <?php echo $section->image('ralphRinzler.jpg'); ?></a></div>
-          <div class="details col-md-6 col-lg-5">
-            <div class="details-inner"><a href="#" class="high title"><span class="light"><span class="er">Ralph Rinzler Folklife Archives and Collections</span></span></a>
-              <div class="description link-underline">
-                <p>The Center for Folklife and Cultural Heritage is home to the Ralph Rinzler Folklife Archives and Collections, a public resource named for the founding director of the Smithsonian Folklife Festival.</p>
-              </div><a class="high more-link">
-                <div class="light">
-                  <div class="er">
-                    <div class="more-link-text">more</div>
-                    <div class="more-link-arrow icon-arrow2"></div>
-                  </div>
-                </div></a>
-            </div>
-          </div>
-        </div>
+&lt;/div&gt;</code></pre>
       </div>
     </div>
   </div>
@@ -119,8 +124,12 @@
             </div>
           </div>
         </div>
-        <?php snippet('show-html-mobile'); ?>
-        <?php snippet('show-sass-mobile'); ?>
+        <div class="row">
+          <div class="col-sm-12 visible-xs">
+            <?php snippet('show-html-mobile'); ?>
+            <?php snippet('show-sass-mobile'); ?>
+          </div>
+        </div>
       </div>
       <div class="col-sm-6">
         <pre class="sass"><code>.folkways-magazine-card {
@@ -153,8 +162,7 @@
 			&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
-&lt;/li&gt;
-</code></pre>
+&lt;/li&gt;</code></pre>
       </div>
     </div>
   </div>
@@ -176,6 +184,12 @@
             <div class="details-inner"><a href="#" class="high title"><span class="light"><span class="er">Curatorial Conversations: Cultural Representation and the Smithsonian Folklife Festival</span></span></a>
               <div class="author">Edited by Olivia Cadaval, Sojin Kim, and Diana Baird N’Diaye</div><a href="#" class="high buy-now-button"><span class="light"><span class="er">Order from University Press of Mississippi&nbsp;&#x2192</span></span></a>
             </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 visible-xs">
+            <?php snippet('show-html-mobile'); ?>
+            <?php snippet('show-sass-mobile'); ?>
           </div>
         </div>
       </div>
@@ -269,6 +283,12 @@
             </div>
           </div>
         </div>
+        <div class="row">
+          <div class="col-sm-12 visible-xs">
+            <?php snippet('show-html-mobile'); ?>
+            <?php snippet('show-sass-mobile'); ?>
+          </div>
+        </div>
       </li>
       <div class="col-md-8">
         <pre class="sass"><code>// As video cards can have different looks, we set the title font based on the section via the CSS
@@ -344,6 +364,12 @@
             <div class="audio-player"><audio class="mejs-player" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'></div>
           </div>
         </div>
+        <div class="row">
+          <div class="col-sm-12 visible-xs">
+            <?php snippet('show-html-mobile'); ?>
+            <?php snippet('show-sass-mobile'); ?>
+          </div>
+        </div>
       </li>
       <div class="col-md-9">
         <pre class="html"><code>&lt;li class="card audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border-card"&gt;
@@ -407,6 +433,12 @@
             <div class="artist">Fannie Lou Hamer</div>
           </div>
         </div>
+        <div class="row">
+          <div class="col-sm-12 visible-xs">
+            <?php snippet('show-html-mobile'); ?>
+            <?php snippet('show-sass-mobile'); ?>
+          </div>
+        </div>
       </div>
       <div class="col-sm-9">
         <pre class="sass"><code>.album-card, .vinyl-card, .books-card {
@@ -453,7 +485,7 @@
       <?php snippet('show-sass'); ?>
     </div>
     <div class="row">
-      <div class="card album-card col-xs-2 col-sm-2">
+      <div class="card album-card col-xs-6 col-sm-2">
         <div class="image"><a href="#">
             <?php echo $section->image('SFW40568.jpeg'); ?></a></div>
         <div class="details">
@@ -461,8 +493,14 @@
             <div class="artist">Stanley and the Ten Sleepless Nights</div>
           </div>
         </div>
+        <div class="row">
+          <div class="col-sm-12 visible-xs">
+            <?php snippet('show-html-mobile'); ?>
+            <?php snippet('show-sass-mobile'); ?>
+          </div>
+        </div>
       </div>
-      <div class="col-sm-9">
+      <div class="col-sm-10">
         <pre class="sass"><code>.album-card, .vinyl-card, .books-card {
 	.details-inner {
 		padding:0;
@@ -480,7 +518,7 @@
 	@include respond-to(break2) {@include clear-6;} // display 6 across, clearing every 6th + 1 cards
 }</code></pre>
       </div>
-      <div class="col-sm-9">
+      <div class="col-sm-10">
         <pre class="html"><code>&lt;div class="card album-card col-xs-2 col-sm-2"&gt;
 	&lt;div class="image"&gt;
 		&lt;a href="#"&gt;&lt;img src="SFW40568.jpeg" alt=""&gt;&lt;/a&gt;

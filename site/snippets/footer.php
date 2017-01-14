@@ -5,7 +5,7 @@
       <li class="footer-nav-main-item col-sm-2"> <a href="#grid" class="footer-nav-title">Grid</a></li>
       <li class="footer-nav-main-item col-sm-2"> <a href="#colors" class="footer-nav-title">Colors</a>
         <ul class="footer-nav-list">
-          <li class="footer-nav-sub-item"><a href="#gray-palette">Grays</a></li>
+          <li class="footer-nav-sub-item"><a href="#grays">Grays</a></li>
           <li class="footer-nav-sub-item"><a href="#folklife-palette">Folklife Palette</a></li>
           <li class="footer-nav-sub-item"><a href="#folkways-palette">Folkways Palette</a></li>
           <li class="footer-nav-sub-item"><a href="#festival-palette">Festival Palette</a></li>
