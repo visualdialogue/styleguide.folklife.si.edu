@@ -16111,6 +16111,18 @@ pre {
   margin-top: 0;
 }
 
+@media only screen and (min-width: 53.25em) {
+  .full-feature-card {
+    margin-bottom: 2.5vw !important;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .full-feature-card {
+    margin-bottom: 4rem !important;
+  }
+}
+
 .video-card .title {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 700;

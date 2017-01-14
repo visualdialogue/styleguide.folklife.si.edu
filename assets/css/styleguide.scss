@@ -382,6 +382,12 @@
 			margin-top:0;
 		}
 	}
+	.full-feature-card {
+		// override styleguide default
+		// margin-bottom:1.5rem !important;
+		@include respond-to(break2) {margin-bottom:2.5vw !important;}
+		@include respond-to(fullwidth) {margin-bottom:4rem !important;}
+	}
 	.video-card {
 		.title {
 			@include sm-serif;
