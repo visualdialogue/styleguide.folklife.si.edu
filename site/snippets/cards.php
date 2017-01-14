@@ -19,27 +19,6 @@
       <?php snippet('show-sass'); ?>
     </div>
     <div class="row">
-      <div class="card col-xs-12 full-feature-card">
-        <div class="row">
-          <div class="image col-md-6 col-lg-7"><a href="#">
-              <?php echo $section->image('ralphRinzler.jpg'); ?></a></div>
-          <div class="details col-md-6 col-lg-5">
-            <div class="details-inner"><a href="#" class="high title"><span class="light"><span class="er">Ralph Rinzler Folklife Archives and Collections</span></span></a>
-              <div class="description link-underline">
-                <p>The Center for Folklife and Cultural Heritage is home to the Ralph Rinzler Folklife Archives and Collections, a public resource named for the founding director of the Smithsonian Folklife Festival.</p>
-              </div><a class="high more-link">
-                <div class="light">
-                  <div class="er">
-                    <div class="more-link-text">more</div>
-                    <div class="more-link-arrow icon-arrow2"></div>
-                  </div>
-                </div></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
       <div class="col-sm-12">
         <pre class="sass"><code>.full-feature-card {
 	@include margin-bottom(0);
@@ -93,6 +72,27 @@
 	&lt;/div&gt;  
 &lt;/div&gt;
 </code></pre>
+      </div>
+    </div>
+    <div class="row">
+      <div class="card col-xs-12 full-feature-card">
+        <div class="row">
+          <div class="image col-md-6 col-lg-7"><a href="#">
+              <?php echo $section->image('ralphRinzler.jpg'); ?></a></div>
+          <div class="details col-md-6 col-lg-5">
+            <div class="details-inner"><a href="#" class="high title"><span class="light"><span class="er">Ralph Rinzler Folklife Archives and Collections</span></span></a>
+              <div class="description link-underline">
+                <p>The Center for Folklife and Cultural Heritage is home to the Ralph Rinzler Folklife Archives and Collections, a public resource named for the founding director of the Smithsonian Folklife Festival.</p>
+              </div><a class="high more-link">
+                <div class="light">
+                  <div class="er">
+                    <div class="more-link-text">more</div>
+                    <div class="more-link-arrow icon-arrow2"></div>
+                  </div>
+                </div></a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

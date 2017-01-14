@@ -6613,7 +6613,7 @@ body {
 .content-footer p, .content-footer ul {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
-  line-height: 1.35;
+  line-height: 1.3333;
 }
 
 @media only screen and (max-width: 53.25em) {
@@ -8729,15 +8729,15 @@ hr {
 
 @media only screen and (min-width: 53.25em) {
   .page-title {
-    font-size: 2.9vw;
     line-height: 1;
+    font-size: 2.9vw;
   }
 }
 
 @media only screen and (min-width: 1560px) {
   .page-title {
-    font-size: 4rem;
     line-height: 1;
+    font-size: 4rem;
   }
 }
 
@@ -8847,7 +8847,6 @@ a .page-title:hover {
 @media only screen and (min-width: 53.25em) {
   .sidebar-audio .sidebar-title {
     font-size: 1.9vw;
-    line-height: 1.2;
   }
 }
 
@@ -9032,7 +9031,6 @@ a .page-title:hover {
 @media only screen and (min-width: 53.25em) {
   .sidebar-video .title, .sidebar-album .title {
     font-size: 1.9vw;
-    line-height: 1.2;
   }
 }
 
@@ -9882,7 +9880,7 @@ a .page-title:hover {
 .newsletter-signup-section, .support-section, .support-folkways {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
-  line-height: 1.35;
+  line-height: 1.3333;
 }
 
 @media only screen and (max-width: 53.25em) {
@@ -10085,7 +10083,7 @@ a .page-title:hover {
 .short-newsletter-signup .newsletter-signup-copy {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
-  line-height: 1.35;
+  line-height: 1.3333;
 }
 
 @media only screen and (max-width: 53.25em) {
@@ -10935,15 +10933,15 @@ figcaption.minus-sign:before {
 
 @media only screen and (min-width: 53.25em) {
   .search-page .search-query-title, .past-festivals-page .search-query-title {
-    font-size: 2.9vw;
     line-height: 1;
+    font-size: 2.9vw;
   }
 }
 
 @media only screen and (min-width: 1560px) {
   .search-page .search-query-title, .past-festivals-page .search-query-title {
-    font-size: 4rem;
     line-height: 1;
+    font-size: 4rem;
   }
 }
 
@@ -12748,7 +12746,7 @@ body {
 
 @media only screen and (min-width: 1560px) {
   .full-feature-card .title {
-    font-size: 6.158rem;
+    font-size: 6.2rem;
   }
 }
 
@@ -13286,7 +13284,7 @@ body {
 
 @media only screen and (min-width: 1560px) {
   .blog-article-card .title {
-    font-size: 6.158rem;
+    font-size: 6.2rem;
   }
 }
 
@@ -14287,7 +14285,7 @@ h2.intro-title {
 
 @media only screen and (min-width: 1560px) {
   h2.intro-title {
-    font-size: 6.158rem;
+    font-size: 6.2rem;
   }
 }
 
@@ -15143,6 +15141,13 @@ pre {
   float: right;
   font-size: 1.4rem;
   color: #595959;
+  line-height: 1;
+}
+
+@media only screen and (min-width: 53.25em) {
+  .icon-down-arrow {
+    line-height: 0.8;
+  }
 }
 
 /* color
@@ -15297,7 +15302,7 @@ pre {
 
 @media only screen and (min-width: 1560px) {
   .lg-serif {
-    font-size: 6.158rem;
+    font-size: 6.2rem;
   }
 }
 
@@ -15426,7 +15431,6 @@ pre {
 @media only screen and (min-width: 53.25em) {
   .xl-sans {
     font-size: 1.9vw;
-    line-height: 1.2;
   }
 }
 
@@ -15451,7 +15455,6 @@ pre {
 @media only screen and (min-width: 53.25em) {
   .xl-sans-semi {
     font-size: 1.9vw;
-    line-height: 1.2;
   }
 }
 
@@ -15707,7 +15710,7 @@ pre {
 .body-sans {
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
-  line-height: 1.35;
+  line-height: 1.3333;
 }
 
 @media only screen and (max-width: 53.25em) {
@@ -15765,15 +15768,15 @@ pre {
 
 @media only screen and (min-width: 53.25em) {
   .lg-slab {
-    font-size: 2.9vw;
     line-height: 1;
+    font-size: 2.9vw;
   }
 }
 
 @media only screen and (min-width: 1560px) {
   .lg-slab {
-    font-size: 4rem;
     line-height: 1;
+    font-size: 4rem;
   }
 }
 
@@ -15784,15 +15787,15 @@ pre {
 
 @media only screen and (min-width: 53.25em) {
   .md-slab {
-    font-size: 2.4vw;
     line-height: 1;
+    font-size: 2.4vw;
   }
 }
 
 @media only screen and (min-width: 1560px) {
   .md-slab {
-    font-size: 3.8rem;
     line-height: 1;
+    font-size: 3.8rem;
   }
 }
 
@@ -15865,7 +15868,6 @@ pre {
 
 @media only screen and (min-width: 53.25em) {
   .lg-magazine-title {
-    font-size: 3.3rem;
     font-size: 2.95vw;
   }
 }
@@ -16135,7 +16137,6 @@ pre {
 
 @media only screen and (min-width: 53.25em) {
   .horizontal-card .title {
-    font-size: 3.3rem;
     font-size: 2.95vw;
   }
 }
@@ -16160,7 +16161,6 @@ pre {
 
 @media only screen and (min-width: 53.25em) {
   .feature .title {
-    font-size: 3.3rem;
     font-size: 2.95vw;
   }
 }

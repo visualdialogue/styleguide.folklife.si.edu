@@ -15,21 +15,6 @@ section.container.cards-section
 			-snippet('show-html')
 			-snippet('show-sass')
 		.row
-			.card.col-xs-12.full-feature-card
-				.row
-					.image.col-md-6.col-lg-7
-						a(href="#")
-							!=$section->image('ralphRinzler.jpg')
-					.details.col-md-6.col-lg-5
-						.details-inner
-							a.high(href="#").title: span.light: span.er Ralph Rinzler Folklife Archives and Collections
-							
-							.description.link-underline
-								p The Center for Folklife and Cultural Heritage is home to the Ralph Rinzler Folklife Archives and Collections, a public resource named for the founding director of the Smithsonian Folklife Festival.
-							a.high.more-link: .light: .er
-								.more-link-text more
-								.more-link-arrow.icon-arrow2
-		.row
 			.col-sm-12
 				pre.sass: code.
 					.full-feature-card {
@@ -84,6 +69,21 @@ section.container.cards-section
 						&lt;/div&gt;  
 					&lt;/div&gt;
 
+		.row
+			.card.col-xs-12.full-feature-card
+				.row
+					.image.col-md-6.col-lg-7
+						a(href="#")
+							!=$section->image('ralphRinzler.jpg')
+					.details.col-md-6.col-lg-5
+						.details-inner
+							a.high(href="#").title: span.light: span.er Ralph Rinzler Folklife Archives and Collections
+							
+							.description.link-underline
+								p The Center for Folklife and Cultural Heritage is home to the Ralph Rinzler Folklife Archives and Collections, a public resource named for the founding director of the Smithsonian Folklife Festival.
+							a.high.more-link: .light: .er
+								.more-link-text more
+								.more-link-arrow.icon-arrow2
 	// Horizontal Card
 	.codeblock
 		.row

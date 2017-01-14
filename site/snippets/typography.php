@@ -40,7 +40,7 @@
       </div>
       <div class="row">
         <div class="col-md-5">
-          <div class="type-details">Typeface: Freight Text<br/>Weight: Bold<br/>Maximum Font Size: 6.158rem<br/>Usage: Folkways Shop Page</div>
+          <div class="type-details">Typeface: Freight Text<br/>Weight: Bold<br/>Maximum Font Size: 6.2rem<br/>Usage: Folkways Shop Page</div>
         </div>
         <div class="col-md-7">
           <pre class="sass"><code>@mixin lg-serif {
@@ -48,13 +48,13 @@
 	font-weight: 700;
 	line-height: 1;
 	@include respond-to(break2max) {
-		font-size: 4.325rem;
+		font-size: 4.2rem;
 	}
 	@include respond-to(break2) {
 		font-size: 3.5vw;
 	}
 	@include respond-to(fullwidth) {
-		font-size: 6.158rem;
+		font-size: 6.2rem;
 	}
 }
 </code></pre>
@@ -106,7 +106,7 @@
 	font-weight: 700;
 	line-height: 1;
   	@include respond-to(break2max) {
-  		font-size: 2.489rem;
+  		font-size: 2.2rem;
   	}
 	@include respond-to(break2) {
 		line-height: 1.143;
@@ -131,7 +131,7 @@
       </div>
       <div class="row">
         <div class="col-md-5">
-          <div class="type-details">Typeface: Freight Text<br/>Weight: Bold Italic<br/>Maximum Font Size: 2.7rem</div>
+          <div class="type-details">Typeface: Freight Text<br/>Weight: Bold Italic<br/>Maximum Font Size: 2.8rem</div>
         </div>
         <div class="col-md-7">
           <pre class="sass"><code>@mixin sm-serif {
@@ -140,7 +140,7 @@
 	line-height: 1;
 	text-style: italic;
   	@include respond-to(break2max) {
-  		font-size: 2.489rem;
+  		font-size: 2.2rem;
   	}
 	@include respond-to(break2) {
 		line-height: 1.143;
@@ -150,12 +150,12 @@
   		font-size: 2.8rem;
 	}
 	@include margin-bottom(1);
-}
-</code></pre>
+}</code></pre>
         </div>
       </div>
     </div>
   </div>
+  <!-- Sans-->
   <div class="sub-section">
     <div class="typeface codeblock"><a id="sans" class="anchor-link"></a>
       <div class="row type-title-wrapper">
@@ -165,21 +165,20 @@
       </div>
       <div class="row">
         <div class="col-md-5">
-          <div class="type-details">Typeface: Acumin Pro<br/>Weight: Semibold<br/>Maximum Font Size: 3.375rem<br/>Usage: Folkways: Album page artist, track title. Lesson plan title. Membership subtitle.</div>
+          <div class="type-details">Typeface: Acumin Pro<br/>Weight: Semibold<br/>Maximum Font Size: 3.5rem<br/>Usage: Folkways: Album page artist, track title. Lesson plan title. Membership subtitle.</div>
         </div>
         <div class="col-md-7">
           <pre class="sass"><code>@mixin xl-sans {
 	font-family: $sans;
 	font-weight: 600;
 	@include respond-to(break2max) {
-		font-size: 2.37rem;
+		font-size: 2.4rem;
 	}
 	@include respond-to(break2) {
 		font-size: 1.9vw;
-		line-height: 1.2;
 	}
 	@include respond-to(fullwidth) {
-		font-size: 3.375rem;
+		font-size: 3.5rem;
 	}
 }
 </code></pre>
@@ -194,21 +193,20 @@
       </div>
       <div class="row">
         <div class="col-md-5">
-          <div class="type-details">Typeface: Acumin Pro<br/>Weight: Light<br/>Maximum Font Size: 3.375rem</div>
+          <div class="type-details">Typeface: Acumin Pro<br/>Weight: Light<br/>Maximum Font Size: 3.5rem</div>
         </div>
         <div class="col-md-7">
           <pre class="sass"><code>@mixin xl-sans {
 	font-family: $sans;
 	font-weight: 300;
 	@include respond-to(break2max) {
-		font-size: 2.37rem;
+		font-size: 2.4rem;
 	}
 	@include respond-to(break2) {
 		font-size: 1.9vw;
-		line-height: 1.2;
 	}
 	@include respond-to(fullwidth) {
-		font-size: 3.375rem;
+		font-size: 3.5rem;
 	}
 }
 </code></pre>
@@ -229,9 +227,9 @@
           <pre class="sass"><code>@mixin lg-sans {
 	font-family: $sans;
 	font-weight: 600;
-	line-height: 1.267; // taller per discussion on 1.4 at shop // 38px
+	line-height: 1.267;
 	@include respond-to(break2max) {
-		font-size: 2.107rem;
+		font-size: 2.1rem;
 	}
 	@include respond-to(break2) {
   		font-size: 1.9vw;
@@ -258,9 +256,9 @@
           <pre class="sass"><code>@mixin lg-sans {
 	font-family: $sans;
 	font-weight: 300;
-	line-height: 1.267; // taller per discussion on 1.4 at shop // 38px
+	line-height: 1.267;
 	@include respond-to(break2max) {
-		font-size: 2.107rem;
+		font-size: 2.1rem;
 	}
 	@include respond-to(break2) {
   		font-size: 1.9vw;
@@ -289,14 +287,14 @@
 	font-weight: 600;
 	line-height: 1.2;
 	@include respond-to(break2max) {
-  		font-size: 1.873rem;
+  		font-size: 1.9rem;
 	}
 	@include respond-to(break2) {
   		font-size: 1.6vw;
 	}
 	@include respond-to(fullwidth) {
-  		font-size: 2.5rem;
   		line-height: 1.28; // 25/32
+  		font-size: 2.5rem;
 	}
 }
 </code></pre>
@@ -319,14 +317,14 @@
 	font-weight: 300;
 	line-height: 1.2;
 	@include respond-to(break2max) {
-  		font-size: 1.873rem;
+  		font-size: 1.9rem;
 	}
 	@include respond-to(break2) {
   		font-size: 1.6vw;
 	}
 	@include respond-to(fullwidth) {
-  		font-size: 2.5rem;
   		line-height: 1.28; // 25/32
+  		font-size: 2.5rem;
 	}
 }
 </code></pre>
@@ -349,7 +347,7 @@
 	font-weight: 600;
 	line-height: 1.2;
 	@include respond-to(break2max) {
-  		font-size: 1.48rem;
+  		font-size: 1.5rem;
 	}
 	@include respond-to(break2) {
 		font-size: 1.2vw;
@@ -358,8 +356,7 @@
 		line-height: 1.12; // 18/20
   		font-size: 1.8rem;
 	}
-}
-</code></pre>
+}</code></pre>
         </div>
       </div>
     </div>
@@ -379,7 +376,7 @@
 	font-weight: 300;
 	line-height: 1.2;
 	@include respond-to(break2max) {
-  		font-size: 1.48rem;
+  		font-size: 1.5rem;
 	}
 	@include respond-to(break2) {
 		font-size: 1.2vw;
@@ -388,8 +385,7 @@
 		line-height: 1.12; // 18/20
   		font-size: 1.8rem;
 	}
-}
-</code></pre>
+}</code></pre>
         </div>
       </div>
     </div>
@@ -410,20 +406,20 @@
 	line-height: 1.4;
   	text-transform: uppercase;
   	@include respond-to(break2max) {
-  		font-size: 1.316rem;
+  		font-size: 1.3rem;
   	}
 	@include respond-to(break2) {
-  		font-size: 1vw;
 		line-height: 1.3;
+  		font-size: 1vw;
 	}
 	@include respond-to(fullwidth) {
   		font-size: 1.6rem;
 	}
-}
-</code></pre>
+}</code></pre>
         </div>
       </div>
     </div>
+    <!-- Folkways Magazine-->
     <div class="typeface codeblock">
       <div class="row type-title-wrapper">
         <hr/>
@@ -440,10 +436,9 @@
 	font-weight: 800;
 	line-height: 1.095237;
 	@include respond-to(break2max) {
-		font-size: 2.622rem;
+		font-size: 2.6rem;
 	}
 	@include respond-to(break2) {
-		font-size: 3.319rem;
 		font-size: 2.95vw;
 	}
 	@include respond-to(fullwidth) {
@@ -460,7 +455,7 @@
         </div>
         <div class="row">
           <div class="col-md-5">
-            <div class="type-details">Typeface: Acumin Pro Wide<br/>Weight: Black<br/>Maximum Font Size: 3.733rem</div>
+            <div class="type-details">Typeface: Acumin Pro Wide<br/>Weight: Black<br/>Maximum Font Size: 3.7rem</div>
           </div>
           <div class="col-md-7">
             <pre class="sass"><code>@mixin md-magazine-title {
@@ -468,13 +463,13 @@
 	font-weight: 800;
 	line-height: 1.095237;
 	@include respond-to(break2max) {
-		font-size: 1.842rem;
+		font-size: 1.8rem;
 	}
 	@include respond-to(break2) {
 		font-size: 2.4vw;
 	}
 	@include respond-to(fullwidth) {
-		font-size: 3.733rem;
+		font-size: 3.7rem;
 	}
 }</code></pre>
           </div>
@@ -488,22 +483,22 @@
         </div>
         <div class="row">
           <div class="col-md-5">
-            <div class="type-details">Typeface: Acumin Pro Wide<br/>Weight: Bold<br/>Maximum Font Size: 2.95rem<br/>Usage: Folkways Magazine homepage feature titles</div>
+            <div class="type-details">Typeface: Acumin Pro Wide<br/>Weight: Bold<br/>Maximum Font Size: 3rem<br/>Usage: Folkways Magazine homepage feature titles</div>
           </div>
           <div class="col-md-7">
             <pre class="sass"><code>@mixin sm-magazine-title {
 	font-family: $sansWide;
-	font-weight: 700; // one weight down for pc rendering
+	font-weight: 700;
 	line-height: 1.2;
 	@include margin-bottom(1);
 	@include respond-to(break2max) {
-		font-size: 1.841rem;
+		font-size: 1.8rem;
 	}
 	@include respond-to(break2) {
 		font-size: 1.9vw;
 	}
 	@include respond-to(fullwidth) {
-		font-size: 2.95rem;
+		font-size: 3rem;
 	}
 }</code></pre>
           </div>
@@ -517,7 +512,7 @@
         </div>
         <div class="row">
           <div class="col-md-5">
-            <div class="type-details">Typeface: Acumin Pro Wide<br/>Weight: Black<br/>Maximum Font Size: 1.72rem<br/>Usage: Buy now buttons, subscribe button</div>
+            <div class="type-details">Typeface: Acumin Pro Wide<br/>Weight: Black<br/>Maximum Font Size: 1.8rem<br/>Usage: Buy now buttons, subscribe button</div>
           </div>
           <div class="col-md-7">
             <pre class="sass"><code>@mixin buy-button {
@@ -525,16 +520,16 @@
 	font-family: $sansWide;
 	font-weight: 800;
 	margin-bottom: 0;
+	line-height: 1.2;
 	@include respond-to(break2max) {
-		font-size: 1.376rem;
+		font-size: 1.4rem;
 	}
 	@include respond-to(break2) {
 		font-size: 1.1vw;
 		margin-bottom: 0.4vw;
 	}
 	@include respond-to(fullwidth) {
-		font-size: 1.72rem;
-		line-height: 1.4;
+		font-size: 1.8rem;
 		margin-bottom: 0.5rem;
 	}
 }</code></pre>
@@ -549,7 +544,7 @@
         </div>
         <div class="row">
           <div class="col-md-5">
-            <div class="type-details">Typeface: Acumin Pro Wide<br/>Weight: 300<br/>Maximum Font Size: 1.665rem<br/>Usage: Category Tag, Date</div>
+            <div class="type-details">Typeface: Acumin Pro Wide<br/>Weight: 300<br/>Maximum Font Size: 1.6rem<br/>Usage: Category Tag, Date</div>
           </div>
           <div class="col-md-7">
             <pre class="sass"><code>@mixin sans-tag {
@@ -565,13 +560,13 @@
 		font-size: 1.2rem;
 	}
 	@include respond-to(break2) {
-		font-size: 1.05vw;
+		font-size: 1vw;
 		line-height: 1.4;
 		letter-spacing: 0.5px;
 		margin-bottom: 0.4vw;
 	}
 	@include respond-to(fullwidth) {
-		font-size: 1.665rem;
+		font-size: 1.6rem;
 		letter-spacing: 1px;
 		margin-bottom: 0;
 	}
@@ -587,7 +582,7 @@
         </div>
         <div class="row">
           <div class="col-md-5">
-            <div class="type-details">Typeface: Acumin Pro Wide<br/>Weight: 700<br/>Maximum Font Size: 1.665rem</div>
+            <div class="type-details">Typeface: Acumin Pro Wide<br/>Weight: 700<br/>Maximum Font Size: 1.6rem</div>
           </div>
           <div class="col-md-7">
             <pre class="sass"><code>@mixin sans-tag {
@@ -603,13 +598,13 @@
 		font-size: 1.2rem;
 	}
 	@include respond-to(break2) {
-		font-size: 1.05vw;
+		font-size: 1vw;
 		line-height: 1.4;
 		letter-spacing: 0.5px;
 		margin-bottom: 0.4vw;
 	}
 	@include respond-to(fullwidth) {
-		font-size: 1.665rem;
+		font-size: 1.6rem;
 		letter-spacing: 1px;
 		margin-bottom: 0;
 	}
@@ -638,14 +633,13 @@
 	}
 	@include respond-to(break2) {
 		line-height: 1.2;
-		font-size: 1.09vw;
+		font-size: 1vw;
 	}
 	@include respond-to(fullwidth) {
 		line-height: 1.4353;
 		font-size: 1.7rem;
 	}
-}
-</code></pre>
+}</code></pre>
           </div>
         </div>
       </div>
@@ -672,7 +666,7 @@
 	font-weight: 600;
 	line-height: 1.267; // 38px
 	@include respond-to(break2max) {
-  		font-size: 1.896rem;
+  		font-size: 1.9rem;
   	}
 	@include respond-to(break2) {
   		font-size: 2.2vw;
@@ -702,7 +696,7 @@
 	font-weight: 400;
 	line-height: 1.333333; // 24/32
 	@include respond-to(break2max) {
-  		font-size: 1.896rem; // 18px on medium.com mobile, 1.896 on modular scale
+  		font-size: 1.9rem; // 18px on medium.com mobile, 1.896 on modular scale
   	}
 	@include respond-to(break2) {
   		font-size: 1.5vw;
@@ -743,21 +737,21 @@
         </div>
         <div class="row">
           <div class="col-md-5">
-            <div class="type-details">Typeface: Acumin Pro<br/>Weight: Light<br/>Maximum Font Size: 2.107rem<br/>Maximum Line Height: 28.444rem</div>
+            <div class="type-details">Typeface: Acumin Pro<br/>Weight: Light<br/>Maximum Font Size: 2.1rem<br/>Maximum Line Height: 2.8rem<br/>Usage: Folkways magazine article, Support us box</div>
           </div>
           <div class="col-md-7">
             <pre class="sass"><code>@mixin body-sans {
 	font-family: $sans;
 	font-weight: 300;
-	line-height: 1.35; // fw magazine article
+	line-height: 1.3333; // fw magazine article 21/28
 	@include respond-to(break2max) {
-  		font-size: 1.873rem;
+  		font-size: 1.7rem;
   	}
 	@include respond-to(break2) {
 		font-size: 1.25vw;
 	}
 	@include respond-to(fullwidth) {
-  		font-size: 2.107rem; // fits with scale and folklife education page layout
+  		font-size: 2.1rem;
 	}
 }
 </code></pre>
@@ -775,7 +769,7 @@
         </div>
         <div class="row">
           <div class="col-md-5">
-            <div class="type-details">Typeface: HWT Unit Gothic<br/>Weight: L717<br/>Maximum Font Size: 4rem<br/>Usage: Subpage titles, Festival-ON homepage tabs</div>
+            <div class="type-details">Typeface: HWT Unit Gothic<br/>Weight: L717<br/>Maximum Font Size: 4rem<br/>Usage: Subpage titles, Festival-ON homepage tabs, Folkways explore title bar</div>
           </div>
           <div class="col-md-7">
             <pre class="sass"><code>@mixin lg-slab {
@@ -785,13 +779,12 @@
 		font-size: 8vw;
 	}
 	@include respond-to(break2) {
-		font-size: 2.9vw;
 		line-height: 1;
+		font-size: 2.9vw;
 	}
 	@include respond-to(fullwidth) {
-		// font-size: 4.8rem; // past festivals year
-		font-size: 4rem; // folkways explore title bar
 		line-height: 1;
+		font-size: 4rem;
 	}
 }</code></pre>
           </div>
@@ -812,12 +805,12 @@
 	font-family: $slabWide;
 	text-transform: uppercase;
 	@include respond-to(break2) {
-		font-size: 2.4vw;
 		line-height: 1;
+		font-size: 2.4vw;
 	}
 	@include respond-to(fullwidth) {
-		font-size: 3.8rem;
 		line-height: 1;
+		font-size: 3.8rem;
 	}
 }</code></pre>
           </div>

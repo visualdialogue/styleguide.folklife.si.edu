@@ -269,6 +269,10 @@
 		float: right;
 		font-size: 1.4rem;
 		color: $black65;
+		line-height: 1;
+		@include respond-to(break2) {
+			line-height: 0.8;
+		}
 	}
 
 /* color

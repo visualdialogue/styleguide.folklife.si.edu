@@ -19,10 +19,10 @@
       </div>
       <div class="col-sm-6 support-folkways">
         <div class="support clearfix">
-          <div class="support-copy mh-member-support">
+          <div class="support-copy">
             <?php echo htmlspecialchars($site->support_text(), ENT_QUOTES, 'UTF-8'); ?>
           </div>
-          <div class="support-button button mh-member-support">
+          <div class="support-button button">
             <div class="button-inner">
               <?php echo htmlspecialchars($site->support_button_text(), ENT_QUOTES, 'UTF-8'); ?>
             </div>
