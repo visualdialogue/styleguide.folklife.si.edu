@@ -97,7 +97,7 @@ section.container.cards-section
 			-snippet('show-html')
 			-snippet('show-sass')
 		.row
-			.card.horizontal-card.col-xs-12.col-sm-6.top-border-card
+			.card.horizontal-card.folkways-magazine-card.col-xs-12.col-sm-6.top-border-card
 				.row
 					.image.col-xs-6
 						a(href="#")
@@ -117,13 +117,24 @@ section.container.cards-section
 			.col-sm-6
 				pre.sass: code.
 					.folkways-magazine-card {
+						.tag {
+							// mobile only
+							@include respond-to(break2max) {
+								padding-top: 1.5rem;
+							}
+						}
 						.title {
-							@include magazinetitle;
+							@include lg-magazine-title;
+							// mobile-only
+							@include respond-to(break2max) {
+								// smaller for longer titles
+								@include sm-magazine-title;
+							}
 						}
 					}
 			.col-sm-6
 				pre.html: code.
-					&lt;li class="card horizontal-card col-xs-6 top-border"&gt;
+					&lt;li class="card horizontal-card folkways-magazine-card col-xs-6 top-border"&gt;
 						&lt;div class="row"&gt;
 							&lt;div class="image col-sm-6"&gt;
 								&lt;a href="#"&gt;
@@ -365,7 +376,7 @@ section.container.cards-section
 
 			.col-md-9
 				pre.sass: code.
-					// audio styles are default, and controlled with audio.scss
+					// audio styles are too long to list here and have their own SASS file called audio.scss
 
 	
 

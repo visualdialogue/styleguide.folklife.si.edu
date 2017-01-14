@@ -16167,27 +16167,77 @@ pre {
   }
 }
 
-.horizontal-card .title {
+@media only screen and (max-width: 53.25em) {
+  .folkways-magazine-card .tag {
+    padding-top: 1.5rem;
+  }
+}
+
+.folkways-magazine-card .title {
   font-family: "acumin-pro-wide", Arial, sans-serif;
   font-weight: 800;
   line-height: 1.095237;
 }
 
 @media only screen and (max-width: 53.25em) {
-  .horizontal-card .title {
+  .folkways-magazine-card .title {
     font-size: 2.6rem;
   }
 }
 
 @media only screen and (min-width: 53.25em) {
-  .horizontal-card .title {
+  .folkways-magazine-card .title {
     font-size: 2.95vw;
   }
 }
 
 @media only screen and (min-width: 1560px) {
-  .horizontal-card .title {
+  .folkways-magazine-card .title {
     font-size: 4.2rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
+  .folkways-magazine-card .title {
+    font-family: "acumin-pro-wide", Arial, sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+}
+
+@media only screen and (max-width: 53.25em) and (max-width: 53.25em) {
+  .folkways-magazine-card .title {
+    margin-bottom: 0.37037rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) and (min-width: 53.25em) {
+  .folkways-magazine-card .title {
+    margin-bottom: 0.64vw;
+  }
+}
+
+@media only screen and (max-width: 53.25em) and (min-width: 1560px) {
+  .folkways-magazine-card .title {
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) and (max-width: 53.25em) {
+  .folkways-magazine-card .title {
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) and (min-width: 53.25em) {
+  .folkways-magazine-card .title {
+    font-size: 1.9vw;
+  }
+}
+
+@media only screen and (max-width: 53.25em) and (min-width: 1560px) {
+  .folkways-magazine-card .title {
+    font-size: 3rem;
   }
 }
 

@@ -111,7 +111,7 @@
       <?php snippet('show-sass'); ?>
     </div>
     <div class="row">
-      <div class="card horizontal-card col-xs-12 col-sm-6 top-border-card">
+      <div class="card horizontal-card folkways-magazine-card col-xs-12 col-sm-6 top-border-card">
         <div class="row">
           <div class="image col-xs-6"><a href="#">
               <?php echo $section->image('horizontal.png'); ?></a></div>
@@ -133,13 +133,24 @@
       </div>
       <div class="col-sm-6">
         <pre class="sass"><code>.folkways-magazine-card {
+	.tag {
+		// mobile only
+		@include respond-to(break2max) {
+			padding-top: 1.5rem;
+		}
+	}
 	.title {
-		@include magazinetitle;
+		@include lg-magazine-title;
+		// mobile-only
+		@include respond-to(break2max) {
+			// smaller for longer titles
+			@include sm-magazine-title;
+		}
 	}
 }</code></pre>
       </div>
       <div class="col-sm-6">
-        <pre class="html"><code>&lt;li class="card horizontal-card col-xs-6 top-border"&gt;
+        <pre class="html"><code>&lt;li class="card horizontal-card folkways-magazine-card col-xs-6 top-border"&gt;
 	&lt;div class="row"&gt;
 		&lt;div class="image col-sm-6"&gt;
 			&lt;a href="#"&gt;
@@ -408,7 +419,7 @@
 </code></pre>
       </div>
       <div class="col-md-9">
-        <pre class="sass"><code>// audio styles are default, and controlled with audio.scss
+        <pre class="sass"><code>// audio styles are too long to list here and have their own SASS file called audio.scss
 
 
 </code></pre>

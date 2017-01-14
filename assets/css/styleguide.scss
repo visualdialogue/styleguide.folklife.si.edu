@@ -394,10 +394,19 @@
 			font-weight: 600;
 		}
 	}
-	.horizontal-card {
+	.folkways-magazine-card {
+		.tag {
+			@include respond-to(break2max) {
+				padding-top: 1.5rem;
+			}
+		}
 		.title {
 			@include lg-magazine-title;
+			@include respond-to(break2max) {
+				@include sm-magazine-title;
+			}
 		}
+
 	}
 	.feature {
 		.title {
