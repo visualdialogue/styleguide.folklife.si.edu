@@ -13,6 +13,14 @@ _____/  \__| \__, | _| \___| \__, | \__,_| _| \__,_| \___|     _____/  \___| _| 
 $(document).ready(function () {
 
 /***************************
+* Nav
+***************************/
+	// hide in-page nav on click
+	$('.header-nav a').on('click', function() {
+		site.navCloseAll();
+	})
+
+/***************************
 * Show Code
 ***************************/
 	// var $showCode = $('.show-code');

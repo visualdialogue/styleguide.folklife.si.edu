@@ -419,10 +419,7 @@
 </code></pre>
       </div>
       <div class="col-md-9">
-        <pre class="sass"><code>// audio styles are too long to list here and have their own SASS file called audio.scss
-
-
-</code></pre>
+        <pre class="sass"><code>// audio styles are too long to list here and have their own SASS file called audio.scss</code></pre>
       </div>
     </div>
   </div>

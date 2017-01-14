@@ -30,7 +30,6 @@
 	else
 		site.isFolkways = false;
 
-
 $(document).ready(function () {
 
 /***************************
@@ -102,7 +101,7 @@ $(document).ready(function () {
 	$(window).scroll(function() {
 		// close all if on phone
 		if(site.isMobile) {
-			navCloseAll(); // close anything else that's open by default
+			site.navCloseAll(); // close anything else that's open by default
 		}
 
 		// when user scrolls past height of site toggle, make smaller
@@ -162,7 +161,7 @@ $(document).ready(function () {
 
 	// close nav if clicked
 	$navbarOutside.on('click', function() {
-		navCloseAll(); // close all auxiliary nav
+		site.navCloseAll(); // close all auxiliary nav
 		$navbarOutside.css('position', 'static'); // not fixed so not active
 		$menuIcon.add($shareIcon).add($searchIcon).show(); // show just the main icons again
 	});
@@ -179,7 +178,7 @@ $(document).ready(function () {
 
 		// if not yet open
 		if(menuClosed) {
-			navCloseAll(); // after we've determined that menu is closed, close anything else that's open by default
+			site.navCloseAll(); // after we've determined that menu is closed, close anything else that's open by default
 			site.navbar.addClass('is-open');
 			switchLogo('one-line');
 			$navbarOutside.css('position', 'fixed'); // activate navbarOutside
@@ -188,7 +187,7 @@ $(document).ready(function () {
 			menuClosed = false; // flag for closing	
 			$folkwaysNav.hide(); // hide folkways nav
 		} else {
-			navCloseAll(); // close anything else that's open by default
+			site.navCloseAll(); // close anything else that's open by default
 			switchLogo('block');
 			menuClosed = true;
 		}
@@ -197,7 +196,7 @@ $(document).ready(function () {
 
 	// hide menu when go to internal anchor link
 	$megaNavItem.on('click', function() {
-		navCloseAll();
+		site.navCloseAll();
 	});
 
 	
@@ -215,7 +214,7 @@ $(document).ready(function () {
 	$shareIcon.on('click', function() {
 		// if not yet open
 		if(shareClosed) {
-			navCloseAll(); // close anything else that's open by default, only after we've determined that share is Closed
+			site.navCloseAll(); // close anything else that's open by default, only after we've determined that share is Closed
 			site.navbar.addClass('is-open');
 			if(site.isMobile) { // switch to one-line logo in mobile view
 				site.navbar.addClass('has-one-line-logo'); 
@@ -226,7 +225,7 @@ $(document).ready(function () {
 			shareClosed = false; // flag for closing	
 			$socialMediaIcons.show();
 		} else {
-			navCloseAll(); // close anything else that's open by default
+			site.navCloseAll(); // close anything else that's open by default
 			shareClosed = true; // flag for closing	
 			switchLogo('block');
 		}
@@ -245,7 +244,7 @@ $(document).ready(function () {
 	$searchIcon.on('click', function() {
 		// if not yet open
 		if(searchClosed) {
-			navCloseAll(); // after we've determined that search is closed, close anything else that's open by default
+			site.navCloseAll(); // after we've determined that search is closed, close anything else that's open by default
 			if(site.isMobile) { // switch to one-line logo in mobile view
 				site.navbar.addClass('has-one-line-logo'); 
 				switchLogo('one-line');
@@ -258,16 +257,17 @@ $(document).ready(function () {
 			$folkwaysNav.hide(); // hide folkways nav
 			$searchInput.focus();// focus in field
 		} else {
-			navCloseAll(); // close anything else that's open by default
+			site.navCloseAll(); // close anything else that's open by default
 			searchClosed = true; // flag for closing	
 			switchLogo('block');
 		}
 	});
 
 /*********************
-* close nav
+* global close nav
+* for access by local site script files
 *********************/
-	function navCloseAll() {
+	site.navCloseAll = function() {
 		// close other icons
 		if (site.isMobile)
 	 		$navLists.removeClass('nav-show-mobile'); // close all other open nav lists - mobile only
