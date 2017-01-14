@@ -139,13 +139,9 @@
 		@include height(20);
 		@include margin-bottom(1);
 	}
-
 	.color code.hljs {
 		@include margin-top(0.5);
 		@include padding(1);
-		font-size:1.2rem;
-		@include respond-to(break2) {font-size:1.4rem;}
-		@include respond-to(fullwidth) {font-size:1.4rem;}
 	}
 
 	// Grays
@@ -227,6 +223,11 @@
 	// highlight.js code block
 	code.hljs {
 		@include padding(3);
+		@include respond-to(break2max) {
+			font-size:1.2rem;
+		}
+		@include respond-to(break2) {font-size:1vw;}
+		@include respond-to(fullwidth) {font-size:1.4rem;}
 	}
 	.col-sm-12 code {
 		@include margin-top(4);
@@ -247,7 +248,6 @@
 
 	.show-code {
 		cursor: pointer;
-		float: right;
 		background-color: $black10;
 		@include caption-sans;
 		text-transform: initial;
@@ -256,6 +256,10 @@
 		@include padding-right(1);
 		@include padding-bottom(1);
 		@include padding-left(1);
+		float: left;
+		@include respond-to(break2) {
+			float: right;
+		}
 		&:hover {
 			color: $black20;
 			background-color: #282c34; // from highlight.js atom dark theme
@@ -291,14 +295,11 @@
 
 /* typography
 -------------------------------------------------- */
-
 	.typography-section {
 		@include margin-bottom(6);
 	}
 	.typography-section pre  {
 		@include margin-bottom(2);
-	}
-	.type-title-wrapper {
 	}
 	.sub-section > div:first-of-type {
 		@include border(top, 4px);
@@ -354,9 +355,17 @@
 /* cards
 -------------------------------------------------- */
 	.cards-section {
+		.card {
+			@include respond-to(break2max) {
+				margin-bottom: 0; // don't push show code titles down
+			}
+		}
 		.codeblock {
 			// @include border(top);
 			@include margin-bottom(4);
+			& > .row > [class*="col-"] {
+				min-height:0;
+			}
 		}
 		.show-code {
 			@include margin-top(5);

@@ -14603,10 +14603,6 @@ h2.intro-title {
   }
 }
 
-.color code.hljs {
-  font-size: 1.2rem;
-}
-
 @media only screen and (max-width: 53.25em) {
   .color code.hljs {
     margin-top: 0.18519rem;
@@ -14640,18 +14636,6 @@ h2.intro-title {
 @media only screen and (min-width: 1560px) {
   .color code.hljs {
     padding: 1rem;
-  }
-}
-
-@media only screen and (min-width: 53.25em) {
-  .color code.hljs {
-    font-size: 1.4rem;
-  }
-}
-
-@media only screen and (min-width: 1560px) {
-  .color code.hljs {
-    font-size: 1.4rem;
   }
 }
 
@@ -14871,6 +14855,24 @@ pre {
 }
 
 @media only screen and (max-width: 53.25em) {
+  code.hljs {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 53.25em) {
+  code.hljs {
+    font-size: 1vw;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  code.hljs {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
   .col-sm-12 code {
     margin-top: 1.48148rem;
   }
@@ -15009,13 +15011,13 @@ pre {
 
 .show-code {
   cursor: pointer;
-  float: right;
   background-color: #e6e6e6;
   font-family: "acumin-pro", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.4;
   text-transform: uppercase;
   text-transform: initial;
+  float: left;
 }
 
 @media only screen and (max-width: 53.25em) {
@@ -15124,6 +15126,12 @@ pre {
 @media only screen and (min-width: 1560px) {
   .show-code {
     padding-left: 1rem;
+  }
+}
+
+@media only screen and (min-width: 53.25em) {
+  .show-code {
+    float: right;
   }
 }
 
@@ -16044,6 +16052,12 @@ pre {
 /* cards
 -------------------------------------------------- */
 @media only screen and (max-width: 53.25em) {
+  .cards-section .card {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 53.25em) {
   .cards-section .codeblock {
     margin-bottom: 1.48148rem;
   }
@@ -16059,6 +16073,10 @@ pre {
   .cards-section .codeblock {
     margin-bottom: 4rem;
   }
+}
+
+.cards-section .codeblock > .row > [class*="col-"] {
+  min-height: 0;
 }
 
 @media only screen and (max-width: 53.25em) {

@@ -92,12 +92,12 @@ section.container.cards-section
 			-snippet('show-html')
 			-snippet('show-sass')
 		.row
-			.card.horizontal-card.col-xs-6.top-border-card
+			.card.horizontal-card.col-xs-12.col-sm-6.top-border-card
 				.row
-					.image.col-sm-6
+					.image.col-xs-6
 						a(href="#")
 							!=$section->image('horizontal.png')
-					.details.col-sm-6
+					.details.col-xs-6
 						.details-inner
 							.tag Recording Spotlight
 							a.high(href="#").title: span.light: span.er Rasta Sounds
@@ -105,6 +105,8 @@ section.container.cards-section
 							.description.link-underline
 								p The global African Diaspora has often searched through music for a “post-racist utopia.”
 
+				-snippet('show-html-mobile')
+				-snippet('show-sass-mobile')
 			.col-sm-6
 				pre.sass: code.
 					.folkways-magazine-card {

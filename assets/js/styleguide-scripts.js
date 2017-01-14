@@ -727,11 +727,13 @@ $(document).ready(function () {
 	// show on click
 	$showHTML.on('click', function () {
 		$(this).toggleClass('active');
+		$showSASS.removeClass('active');
 		$(this).closest('.codeblock').find('pre.sass').hide();
 		$(this).closest('.codeblock').find('pre.html').toggle();
 	});
 	$showSASS.on('click', function () {
 		$(this).toggleClass('active');
+		$showHTML.removeClass('active');
 		$(this).closest('.codeblock').find('pre.html').hide();
 		$(this).closest('.codeblock').find('pre.sass').toggle();
 	});

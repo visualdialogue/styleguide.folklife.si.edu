@@ -106,11 +106,11 @@
       <?php snippet('show-sass'); ?>
     </div>
     <div class="row">
-      <div class="card horizontal-card col-xs-6 top-border-card">
+      <div class="card horizontal-card col-xs-12 col-sm-6 top-border-card">
         <div class="row">
-          <div class="image col-sm-6"><a href="#">
+          <div class="image col-xs-6"><a href="#">
               <?php echo $section->image('horizontal.png'); ?></a></div>
-          <div class="details col-sm-6">
+          <div class="details col-xs-6">
             <div class="details-inner">
               <div class="tag">Recording Spotlight</div><a href="#" class="high title"><span class="light"><span class="er">Rasta Sounds</span></span></a>
               <div class="description link-underline">
@@ -119,6 +119,8 @@
             </div>
           </div>
         </div>
+        <?php snippet('show-html-mobile'); ?>
+        <?php snippet('show-sass-mobile'); ?>
       </div>
       <div class="col-sm-6">
         <pre class="sass"><code>.folkways-magazine-card {

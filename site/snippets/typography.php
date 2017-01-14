@@ -39,10 +39,11 @@
         <?php snippet('show-sass'); ?>
       </div>
       <div class="row">
-        <div class="col-md-5">
+        <div class="col-sm-5">
           <div class="type-details">Typeface: Freight Text<br/>Weight: Bold<br/>Maximum Font Size: 6.2rem<br/>Usage: Folkways Shop Page</div>
         </div>
-        <div class="col-md-7">
+        <div class="col-sm-7">
+          <?php snippet('show-sass-mobile'); ?>
           <pre class="sass"><code>@mixin lg-serif {
 	font-family: $serif;
 	font-weight: 700;
@@ -68,10 +69,11 @@
         <?php snippet('show-sass'); ?>
       </div>
       <div class="row">
-        <div class="col-md-5">
+        <div class="col-sm-5">
           <div class="type-details">Typeface: Freight Text<br/>Weight: Bold<br/>Maximum Font Size: 4.2rem</div>
         </div>
-        <div class="col-md-7">
+        <div class="col-sm-7">
+          <?php snippet('show-sass-mobile'); ?>
           <pre class="sass"><code>@mixin md-serif {
 	font-family: $serif;
 	font-weight: 700;
@@ -97,10 +99,11 @@
         <?php snippet('show-sass'); ?>
       </div>
       <div class="row">
-        <div class="col-md-5">
+        <div class="col-sm-5">
           <div class="type-details">Typeface: Freight Text<br/>Weight: Bold<br/>Maximum Font Size: 2.8rem</div>
         </div>
-        <div class="col-md-7">
+        <div class="col-sm-7">
+          <?php snippet('show-sass-mobile'); ?>
           <pre class="sass"><code>@mixin sm-serif {
 	font-family: $serif;
 	font-weight: 700;
@@ -130,10 +133,11 @@
         <?php snippet('show-sass'); ?>
       </div>
       <div class="row">
-        <div class="col-md-5">
+        <div class="col-sm-5">
           <div class="type-details">Typeface: Freight Text<br/>Weight: Bold Italic<br/>Maximum Font Size: 2.8rem</div>
         </div>
-        <div class="col-md-7">
+        <div class="col-sm-7">
+          <?php snippet('show-sass-mobile'); ?>
           <pre class="sass"><code>@mixin sm-serif {
 	font-family: $serif;
 	font-weight: 700;
@@ -164,10 +168,11 @@
         <?php snippet('show-sass'); ?>
       </div>
       <div class="row">
-        <div class="col-md-5">
+        <div class="col-sm-5">
           <div class="type-details">Typeface: Acumin Pro<br/>Weight: Semibold<br/>Maximum Font Size: 3.5rem<br/>Usage: Folkways: Album page artist, track title. Lesson plan title. Membership subtitle.</div>
         </div>
-        <div class="col-md-7">
+        <div class="col-sm-7">
+          <?php snippet('show-sass-mobile'); ?>
           <pre class="sass"><code>@mixin xl-sans {
 	font-family: $sans;
 	font-weight: 600;
@@ -192,10 +197,11 @@
         <?php snippet('show-sass'); ?>
       </div>
       <div class="row">
-        <div class="col-md-5">
+        <div class="col-sm-5">
           <div class="type-details">Typeface: Acumin Pro<br/>Weight: Light<br/>Maximum Font Size: 3.5rem</div>
         </div>
-        <div class="col-md-7">
+        <div class="col-sm-7">
+          <?php snippet('show-sass-mobile'); ?>
           <pre class="sass"><code>@mixin xl-sans {
 	font-family: $sans;
 	font-weight: 300;
@@ -220,10 +226,11 @@
         <?php snippet('show-sass'); ?>
       </div>
       <div class="row">
-        <div class="col-md-5">
+        <div class="col-sm-5">
           <div class="type-details">Typeface: Acumin Pro<br/>Weight: Semibold<br/>Maximum Font Size: 3rem</div>
         </div>
-        <div class="col-md-7">
+        <div class="col-sm-7">
+          <?php snippet('show-sass-mobile'); ?>
           <pre class="sass"><code>@mixin lg-sans {
 	font-family: $sans;
 	font-weight: 600;
@@ -249,10 +256,11 @@
         <?php snippet('show-sass'); ?>
       </div>
       <div class="row">
-        <div class="col-md-5">
+        <div class="col-sm-5">
           <div class="type-details">Typeface: Acumin Pro<br/>Weight: Light<br/>Maximum Font Size: 3rem</div>
         </div>
-        <div class="col-md-7">
+        <div class="col-sm-7">
+          <?php snippet('show-sass-mobile'); ?>
           <pre class="sass"><code>@mixin lg-sans {
 	font-family: $sans;
 	font-weight: 300;
@@ -278,10 +286,11 @@
         <?php snippet('show-sass'); ?>
       </div>
       <div class="row">
-        <div class="col-md-5">
+        <div class="col-sm-5">
           <div class="type-details">Typeface: Acumin Pro<br/>Weight: Semibold<br/>Maximum Font Size: 2.5rem<br/>Usage: </div>
         </div>
-        <div class="col-md-7">
+        <div class="col-sm-7">
+          <?php snippet('show-sass-mobile'); ?>
           <pre class="sass"><code>@mixin md-sans {
 	font-family: $sans;
 	font-weight: 600;
@@ -308,10 +317,11 @@
         <?php snippet('show-sass'); ?>
       </div>
       <div class="row">
-        <div class="col-md-5">
+        <div class="col-sm-5">
           <div class="type-details">Typeface: Acumin Pro<br/>Weight: Light<br/>Maximum Font Size: 2.5rem</div>
         </div>
-        <div class="col-md-7">
+        <div class="col-sm-7">
+          <?php snippet('show-sass-mobile'); ?>
           <pre class="sass"><code>@mixin md-sans {
 	font-family: $sans;
 	font-weight: 300;
@@ -338,10 +348,11 @@
         <?php snippet('show-sass'); ?>
       </div>
       <div class="row">
-        <div class="col-md-5">
+        <div class="col-sm-5">
           <div class="type-details">Typeface: Acumin Pro<br/>Weight: Semibold<br/>Maximum Font Size: 1.8rem<br/>Usage: Past Festivals listings (Medium weight)</div>
         </div>
-        <div class="col-md-7">
+        <div class="col-sm-7">
+          <?php snippet('show-sass-mobile'); ?>
           <pre class="sass"><code>@mixin sm-sans {
 	font-family: $sans;
 	font-weight: 600;
@@ -367,10 +378,11 @@
         <?php snippet('show-sass'); ?>
       </div>
       <div class="row">
-        <div class="col-md-5">
+        <div class="col-sm-5">
           <div class="type-details">Typeface: Acumin Pro<br/>Weight: Light<br/>Maximum Font Size: 1.8rem</div>
         </div>
-        <div class="col-md-7">
+        <div class="col-sm-7">
+          <?php snippet('show-sass-mobile'); ?>
           <pre class="sass"><code>@mixin sm-sans {
 	font-family: $sans;
 	font-weight: 300;
@@ -396,10 +408,11 @@
         <?php snippet('show-sass'); ?>
       </div>
       <div class="row">
-        <div class="col-md-5">
+        <div class="col-sm-5">
           <div class="type-details">Typeface: Acumin Pro<br/>Weight: Light<br/>Maximum Font Size: 1.6rem</div>
         </div>
-        <div class="col-md-7">
+        <div class="col-sm-7">
+          <?php snippet('show-sass-mobile'); ?>
           <pre class="sass"><code>@mixin caption-sans {
 	font-family: $sans;
 	font-weight: 300;
@@ -427,10 +440,11 @@
         <?php snippet('show-sass'); ?>
       </div>
       <div class="row">
-        <div class="col-md-5">
+        <div class="col-sm-5">
           <div class="type-details">Typeface: Acumin Pro Wide<br/>Weight: Black<br/>Maximum Font Size: 4.2rem</div>
         </div>
-        <div class="col-md-7">
+        <div class="col-sm-7">
+          <?php snippet('show-sass-mobile'); ?>
           <pre class="sass"><code>@mixin lg-magazine-title {
 	font-family: $sansWide;
 	font-weight: 800;
@@ -454,10 +468,11 @@
           <?php snippet('show-sass'); ?>
         </div>
         <div class="row">
-          <div class="col-md-5">
+          <div class="col-sm-5">
             <div class="type-details">Typeface: Acumin Pro Wide<br/>Weight: Black<br/>Maximum Font Size: 3.7rem</div>
           </div>
           <div class="col-md-7">
+            <?php snippet('show-sass-mobile'); ?>
             <pre class="sass"><code>@mixin md-magazine-title {
 	font-family: $sansWide;
 	font-weight: 800;
@@ -482,10 +497,11 @@
           <?php snippet('show-sass'); ?>
         </div>
         <div class="row">
-          <div class="col-md-5">
+          <div class="col-sm-5">
             <div class="type-details">Typeface: Acumin Pro Wide<br/>Weight: Bold<br/>Maximum Font Size: 3rem<br/>Usage: Folkways Magazine homepage feature titles</div>
           </div>
           <div class="col-md-7">
+            <?php snippet('show-sass-mobile'); ?>
             <pre class="sass"><code>@mixin sm-magazine-title {
 	font-family: $sansWide;
 	font-weight: 700;
@@ -511,10 +527,11 @@
           <?php snippet('show-sass'); ?>
         </div>
         <div class="row">
-          <div class="col-md-5">
+          <div class="col-sm-5">
             <div class="type-details">Typeface: Acumin Pro Wide<br/>Weight: Black<br/>Maximum Font Size: 1.8rem<br/>Usage: Buy now buttons, subscribe button</div>
           </div>
           <div class="col-md-7">
+            <?php snippet('show-sass-mobile'); ?>
             <pre class="sass"><code>@mixin buy-button {
 	text-transform: uppercase;
 	font-family: $sansWide;
@@ -543,10 +560,11 @@
           <?php snippet('show-sass'); ?>
         </div>
         <div class="row">
-          <div class="col-md-5">
+          <div class="col-sm-5">
             <div class="type-details">Typeface: Acumin Pro Wide<br/>Weight: 300<br/>Maximum Font Size: 1.6rem<br/>Usage: Category Tag, Date</div>
           </div>
           <div class="col-md-7">
+            <?php snippet('show-sass-mobile'); ?>
             <pre class="sass"><code>@mixin sans-tag {
 	text-transform: uppercase;
 	font-family: $sansWide;
@@ -581,10 +599,11 @@
           <?php snippet('show-sass'); ?>
         </div>
         <div class="row">
-          <div class="col-md-5">
+          <div class="col-sm-5">
             <div class="type-details">Typeface: Acumin Pro Wide<br/>Weight: 700<br/>Maximum Font Size: 1.6rem</div>
           </div>
           <div class="col-md-7">
+            <?php snippet('show-sass-mobile'); ?>
             <pre class="sass"><code>@mixin sans-tag {
 	text-transform: uppercase;
 	font-family: $sansWide;
@@ -619,10 +638,11 @@
           <?php snippet('show-sass'); ?>
         </div>
         <div class="row">
-          <div class="col-md-5">
+          <div class="col-sm-5">
             <div class="type-details">Typeface: HWT Unit Gothic<br/>Weight: 718<br/>Maximum Font Size: 1.7rem</div>
           </div>
           <div class="col-md-7">
+            <?php snippet('show-sass-mobile'); ?>
             <pre class="sass"><code>@mixin nav-header {
 	text-transform: uppercase;
 	font-family: $sansWide;
@@ -657,10 +677,11 @@
           <?php snippet('show-sass'); ?>
         </div>
         <div class="row">
-          <div class="col-md-5">
+          <div class="col-sm-5">
             <div class="type-details">Typeface: Freight Text<br/>Weight: Semibold<br/>Maximum Font Size: 3rem<br/>Maximum Line Height: 3.8rem</div>
           </div>
           <div class="col-md-7">
+            <?php snippet('show-sass-mobile'); ?>
             <pre class="sass"><code>@mixin intro-serif {
 	font-family: $serif;
 	font-weight: 600;
@@ -687,10 +708,11 @@
           <?php snippet('show-sass'); ?>
         </div>
         <div class="row">
-          <div class="col-md-5">
+          <div class="col-sm-5">
             <div class="type-details">Typeface: Freight Text<br/>Weight: Book<br/>Maximum Font Size: 2.4rem<br/>Maximum Line Height: 3.2rem</div>
           </div>
           <div class="col-md-7">
+            <?php snippet('show-sass-mobile'); ?>
             <pre class="sass"><code>@mixin body-serif {
 	font-family: $serif;
 	font-weight: 400;
@@ -719,10 +741,11 @@
           <?php snippet('show-sass'); ?>
         </div>
         <div class="row">
-          <div class="col-md-5">
+          <div class="col-sm-5">
             <div class="type-details">Typeface: Acumin Pro<br/>Weight: Light<br/>Maximum Font Size: 3rem<br/>Maximum Line Height: 3.8rem</div>
           </div>
           <div class="col-md-7">
+            <?php snippet('show-sass-mobile'); ?>
             <pre class="sass"><code>@include lg-sans;
 </code></pre>
           </div>
@@ -736,10 +759,11 @@
           <?php snippet('show-sass'); ?>
         </div>
         <div class="row">
-          <div class="col-md-5">
+          <div class="col-sm-5">
             <div class="type-details">Typeface: Acumin Pro<br/>Weight: Light<br/>Maximum Font Size: 2.1rem<br/>Maximum Line Height: 2.8rem<br/>Usage: Folkways magazine article, Support us box</div>
           </div>
           <div class="col-md-7">
+            <?php snippet('show-sass-mobile'); ?>
             <pre class="sass"><code>@mixin body-sans {
 	font-family: $sans;
 	font-weight: 300;
@@ -768,10 +792,11 @@
           <?php snippet('show-sass'); ?>
         </div>
         <div class="row">
-          <div class="col-md-5">
+          <div class="col-sm-5">
             <div class="type-details">Typeface: HWT Unit Gothic<br/>Weight: L717<br/>Maximum Font Size: 4rem<br/>Usage: Subpage titles, Festival-ON homepage tabs, Folkways explore title bar</div>
           </div>
           <div class="col-md-7">
+            <?php snippet('show-sass-mobile'); ?>
             <pre class="sass"><code>@mixin lg-slab {
 	font-family: $slabWide;
 	text-transform: uppercase;
@@ -797,10 +822,11 @@
           <?php snippet('show-sass'); ?>
         </div>
         <div class="row">
-          <div class="col-md-5">
+          <div class="col-sm-5">
             <div class="type-details">Typeface: HWT Unit Gothic<br/>Weight: 717<br/>Maximum Font Size: 3.8rem<br/>Usage: Festival OFF homepage tab</div>
           </div>
           <div class="col-md-7">
+            <?php snippet('show-sass-mobile'); ?>
             <pre class="sass"><code>@mixin md-slab {
 	font-family: $slabWide;
 	text-transform: uppercase;
@@ -823,10 +849,11 @@
           <?php snippet('show-sass'); ?>
         </div>
         <div class="row">
-          <div class="col-md-5">
+          <div class="col-sm-5">
             <div class="type-details">Typeface: HWT Unit Gothic<br/>Weight: 717<br/>Maximum Font Size: 3rem<br/>Usage: Section Title, etc.</div>
           </div>
           <div class="col-md-7">
+            <?php snippet('show-sass-mobile'); ?>
             <pre class="sass"><code>@mixin sm-slab {
 	font-family: $slabWide;
 	text-transform: uppercase;

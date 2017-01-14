@@ -30,7 +30,6 @@ section.container.typography-section
 					a(href="http://www.modularscale.com/?3&rem&1.125&web&text" target="_blank")
 						h4.sidebar-item-title Sans Scale (base 3rem, 1.125, major second)
 						.info modularscale.com
-					
 	// Typefaces
 	.sub-section
 		.typeface.codeblock
@@ -40,7 +39,7 @@ section.container.typography-section
 				.col-sm-10.lg-serif.type-title Large Serif Title
 				-snippet('show-sass')
 			.row
-				.col-md-5
+				.col-sm-5
 					.type-details
 						|Typeface: Freight Text
 						br
@@ -49,8 +48,8 @@ section.container.typography-section
 						|Maximum Font Size: 6.2rem
 						br
 						|Usage: Folkways Shop Page
-
-				.col-md-7
+				.col-sm-7
+					-snippet('show-sass-mobile')
 					pre.sass: code.
 						@mixin lg-serif {
 							font-family: $serif;
@@ -73,15 +72,15 @@ section.container.typography-section
 				.col-sm-10.md-serif.type-title Medium Serif Title
 				-snippet('show-sass')
 			.row
-				.col-md-5
+				.col-sm-5
 					.type-details
 						|Typeface: Freight Text
 						br
 						|Weight: Bold
 						br
 						|Maximum Font Size: 4.2rem
-
-				.col-md-7
+				.col-sm-7
+					-snippet('show-sass-mobile')
 					pre.sass: code.
 						@mixin md-serif {
 							font-family: $serif;
@@ -104,15 +103,15 @@ section.container.typography-section
 				.col-sm-10.sm-serif.type-title Small Serif Title
 				-snippet('show-sass')
 			.row
-				.col-md-5
+				.col-sm-5
 					.type-details
 						|Typeface: Freight Text
 						br
 						|Weight: Bold
 						br
 						|Maximum Font Size: 2.8rem
-
-				.col-md-7
+				.col-sm-7
+					-snippet('show-sass-mobile')
 					pre.sass: code.
 						@mixin sm-serif {
 							font-family: $serif;
@@ -137,15 +136,15 @@ section.container.typography-section
 				.col-sm-10.sm-serif-italic.type-title: Small Small Serif Title Italic
 				-snippet('show-sass')
 			.row
-				.col-md-5
+				.col-sm-5
 					.type-details
 						|Typeface: Freight Text
 						br
 						|Weight: Bold Italic
 						br
 						|Maximum Font Size: 2.8rem
-
-				.col-md-7
+				.col-sm-7
+					-snippet('show-sass-mobile')
 					pre.sass: code.
 						@mixin sm-serif {
 							font-family: $serif;
@@ -173,7 +172,7 @@ section.container.typography-section
 				.col-sm-10.xl-sans-semi.type-title Extra Large Sans Title
 				-snippet('show-sass')
 			.row
-				.col-md-5
+				.col-sm-5
 					.type-details
 						|Typeface: Acumin Pro
 						br
@@ -182,8 +181,8 @@ section.container.typography-section
 						|Maximum Font Size: 3.5rem
 						br
 						|Usage: Folkways: Album page artist, track title. Lesson plan title. Membership subtitle.
-
-				.col-md-7
+				.col-sm-7
+					-snippet('show-sass-mobile')
 					pre.sass: code.
 						@mixin xl-sans {
 							font-family: $sans;
@@ -205,15 +204,15 @@ section.container.typography-section
 				.col-sm-10.xl-sans.type-title Extra Large Sans Title Light
 				-snippet('show-sass')
 			.row
-				.col-md-5
+				.col-sm-5
 					.type-details
 						|Typeface: Acumin Pro
 						br
 						|Weight: Light
 						br
 						|Maximum Font Size: 3.5rem
-
-				.col-md-7
+				.col-sm-7
+					-snippet('show-sass-mobile')
 					pre.sass: code.
 						@mixin xl-sans {
 							font-family: $sans;
@@ -235,15 +234,15 @@ section.container.typography-section
 				.col-sm-10.lg-sans-semi.type-title Large Sans Title
 				-snippet('show-sass')
 			.row
-				.col-md-5
+				.col-sm-5
 					.type-details
 						|Typeface: Acumin Pro
 						br
 						|Weight: Semibold
 						br
 						|Maximum Font Size: 3rem
-
-				.col-md-7
+				.col-sm-7
+					-snippet('show-sass-mobile')
 					pre.sass: code.
 						@mixin lg-sans {
 							font-family: $sans;
@@ -266,15 +265,15 @@ section.container.typography-section
 				.col-sm-10.lg-sans.type-title Large Sans Title Light
 				-snippet('show-sass')
 			.row
-				.col-md-5
+				.col-sm-5
 					.type-details
 						|Typeface: Acumin Pro
 						br
 						|Weight: Light
 						br
 						|Maximum Font Size: 3rem
-
-				.col-md-7
+				.col-sm-7
+					-snippet('show-sass-mobile')
 					pre.sass: code.
 						@mixin lg-sans {
 							font-family: $sans;
@@ -297,7 +296,7 @@ section.container.typography-section
 				.col-sm-10.md-sans-semi.type-title Medium Sans Title
 				-snippet('show-sass')
 			.row
-				.col-md-5
+				.col-sm-5
 					.type-details
 						|Typeface: Acumin Pro
 						br
@@ -306,8 +305,8 @@ section.container.typography-section
 						|Maximum Font Size: 2.5rem
 						br
 						|Usage: 
-
-				.col-md-7
+				.col-sm-7
+					-snippet('show-sass-mobile')
 					pre.sass: code.
 						@mixin md-sans {
 							font-family: $sans;
@@ -331,15 +330,15 @@ section.container.typography-section
 				.col-sm-10.md-sans.type-title Medium Sans Title Light
 				-snippet('show-sass')
 			.row
-				.col-md-5
+				.col-sm-5
 					.type-details
 						|Typeface: Acumin Pro
 						br
 						|Weight: Light
 						br
 						|Maximum Font Size: 2.5rem
-
-				.col-md-7
+				.col-sm-7
+					-snippet('show-sass-mobile')
 					pre.sass: code.
 						@mixin md-sans {
 							font-family: $sans;
@@ -363,7 +362,7 @@ section.container.typography-section
 				.col-sm-10.sm-sans-semi.type-title Small Sans Title
 				-snippet('show-sass')
 			.row
-				.col-md-5
+				.col-sm-5
 					.type-details
 						|Typeface: Acumin Pro
 						br
@@ -372,8 +371,8 @@ section.container.typography-section
 						|Maximum Font Size: 1.8rem
 						br 
 						|Usage: Past Festivals listings (Medium weight)
-
-				.col-md-7
+				.col-sm-7
+					-snippet('show-sass-mobile')
 					pre.sass: code.
 						@mixin sm-sans {
 							font-family: $sans;
@@ -396,15 +395,15 @@ section.container.typography-section
 				.col-sm-10.sm-sans.type-title Small Sans Title Light
 				-snippet('show-sass')
 			.row
-				.col-md-5
+				.col-sm-5
 					.type-details
 						|Typeface: Acumin Pro
 						br
 						|Weight: Light
 						br
 						|Maximum Font Size: 1.8rem
-
-				.col-md-7
+				.col-sm-7
+					-snippet('show-sass-mobile')
 					pre.sass: code.
 						@mixin sm-sans {
 							font-family: $sans;
@@ -427,14 +426,15 @@ section.container.typography-section
 				.col-sm-10.caption-sans.type-title Sans Caption
 				-snippet('show-sass')
 			.row
-				.col-md-5
+				.col-sm-5
 					.type-details
 						|Typeface: Acumin Pro
 						br
 						|Weight: Light
 						br
 						|Maximum Font Size: 1.6rem
-				.col-md-7
+				.col-sm-7
+					-snippet('show-sass-mobile')
 					pre.sass: code.
 						@mixin caption-sans {
 							font-family: $sans;
@@ -459,15 +459,15 @@ section.container.typography-section
 				.col-sm-10.lg-magazine-title.type-title Large Folkways Magazine Title
 				-snippet('show-sass')
 			.row
-				.col-md-5
+				.col-sm-5
 					.type-details
 						|Typeface: Acumin Pro Wide
 						br
 						|Weight: Black
 						br
 						|Maximum Font Size: 4.2rem
-
-				.col-md-7
+				.col-sm-7
+					-snippet('show-sass-mobile')
 					pre.sass: code.
 						@mixin lg-magazine-title {
 							font-family: $sansWide;
@@ -489,7 +489,7 @@ section.container.typography-section
 					.col-sm-10.md-magazine-title.type-title Medium Folkways Magazine Title
 					-snippet('show-sass')
 				.row
-					.col-md-5
+					.col-sm-5
 						.type-details
 							|Typeface: Acumin Pro Wide
 							br
@@ -497,6 +497,7 @@ section.container.typography-section
 							br
 							|Maximum Font Size: 3.7rem
 					.col-md-7
+						-snippet('show-sass-mobile')
 						pre.sass: code.
 							@mixin md-magazine-title {
 								font-family: $sansWide;
@@ -518,7 +519,7 @@ section.container.typography-section
 					.col-sm-10.sm-magazine-title.type-title Small Folkways Magazine Title
 					-snippet('show-sass')
 				.row
-					.col-md-5
+					.col-sm-5
 						.type-details
 							|Typeface: Acumin Pro Wide
 							br
@@ -529,6 +530,7 @@ section.container.typography-section
 							|Usage: Folkways Magazine homepage feature titles
 
 					.col-md-7
+						-snippet('show-sass-mobile')
 						pre.sass: code.
 							@mixin sm-magazine-title {
 								font-family: $sansWide;
@@ -551,7 +553,7 @@ section.container.typography-section
 					.col-sm-10.sm-magazine-title.type-title Buttons
 					-snippet('show-sass')
 				.row
-					.col-md-5
+					.col-sm-5
 						.type-details
 							|Typeface: Acumin Pro Wide
 							br
@@ -562,6 +564,7 @@ section.container.typography-section
 							|Usage: Buy now buttons, subscribe button
 
 					.col-md-7
+						-snippet('show-sass-mobile')
 						pre.sass: code.
 							@mixin buy-button {
 								text-transform: uppercase;
@@ -587,7 +590,7 @@ section.container.typography-section
 					.col-sm-10.type-title.category-tag-type Category Tag
 					-snippet('show-sass')
 				.row
-					.col-md-5
+					.col-sm-5
 						.type-details
 							|Typeface: Acumin Pro Wide
 							br
@@ -598,6 +601,7 @@ section.container.typography-section
 							|Usage: Category Tag, Date
 
 					.col-md-7
+						-snippet('show-sass-mobile')
 						pre.sass: code.
 							@mixin sans-tag {
 								text-transform: uppercase;
@@ -629,7 +633,7 @@ section.container.typography-section
 					.col-sm-10.type-title.category-tag-bold-type Category Tag Bold
 					-snippet('show-sass')
 				.row
-					.col-md-5
+					.col-sm-5
 						.type-details
 							|Typeface: Acumin Pro Wide
 							br
@@ -638,6 +642,7 @@ section.container.typography-section
 							|Maximum Font Size: 1.6rem
 
 					.col-md-7
+						-snippet('show-sass-mobile')
 						pre.sass: code.
 							@mixin sans-tag {
 								text-transform: uppercase;
@@ -669,7 +674,7 @@ section.container.typography-section
 					.col-sm-10.type-title.nav-header Nav Header
 					-snippet('show-sass')
 				.row
-					.col-md-5
+					.col-sm-5
 						.type-details
 							|Typeface: HWT Unit Gothic
 							br
@@ -678,6 +683,7 @@ section.container.typography-section
 							|Maximum Font Size: 1.7rem
 
 					.col-md-7
+						-snippet('show-sass-mobile')
 						pre.sass: code.
 							@mixin nav-header {
 								text-transform: uppercase;
@@ -708,7 +714,7 @@ section.container.typography-section
 					.col-sm-4
 					-snippet('show-sass')
 				.row
-					.col-md-5
+					.col-sm-5
 						.type-details
 							|Typeface: Freight Text
 							br
@@ -718,6 +724,7 @@ section.container.typography-section
 							br
 							|Maximum Line Height: 3.8rem
 					.col-md-7
+						-snippet('show-sass-mobile')
 						pre.sass: code.
 							@mixin intro-serif {
 								font-family: $serif;
@@ -744,7 +751,7 @@ section.container.typography-section
 					.col-sm-4
 					-snippet('show-sass')
 				.row
-					.col-md-5
+					.col-sm-5
 						.type-details
 							|Typeface: Freight Text
 							br
@@ -754,6 +761,7 @@ section.container.typography-section
 							br
 							|Maximum Line Height: 3.2rem
 					.col-md-7
+						-snippet('show-sass-mobile')
 						pre.sass: code.
 							@mixin body-serif {
 								font-family: $serif;
@@ -779,7 +787,7 @@ section.container.typography-section
 					.col-sm-4
 					-snippet('show-sass')
 				.row
-					.col-md-5
+					.col-sm-5
 						.type-details
 							|Typeface: Acumin Pro
 							br
@@ -789,6 +797,7 @@ section.container.typography-section
 							br
 							|Maximum Line Height: 3.8rem
 					.col-md-7
+						-snippet('show-sass-mobile')
 						pre.sass: code.
 							@include lg-sans;
 
@@ -802,7 +811,7 @@ section.container.typography-section
 					.col-sm-4
 					-snippet('show-sass')
 				.row
-					.col-md-5
+					.col-sm-5
 						.type-details
 							|Typeface: Acumin Pro
 							br
@@ -814,6 +823,7 @@ section.container.typography-section
 							br
 							|Usage: Folkways magazine article, Support us box
 					.col-md-7
+						-snippet('show-sass-mobile')
 						pre.sass: code.
 							@mixin body-sans {
 								font-family: $sans;
@@ -839,7 +849,7 @@ section.container.typography-section
 					.col-sm-10.lg-slab.type-title Large Slab
 					-snippet('show-sass')
 				.row
-					.col-md-5
+					.col-sm-5
 						.type-details
 							|Typeface: HWT Unit Gothic
 							br
@@ -850,6 +860,7 @@ section.container.typography-section
 							|Usage: Subpage titles, Festival-ON homepage tabs, Folkways explore title bar
 
 					.col-md-7
+						-snippet('show-sass-mobile')
 						pre.sass: code.
 							@mixin lg-slab {
 								font-family: $slabWide;
@@ -872,7 +883,7 @@ section.container.typography-section
 					.col-sm-10.md-slab.type-title Medium Slab
 					-snippet('show-sass')
 				.row
-					.col-md-5
+					.col-sm-5
 						.type-details
 							|Typeface: HWT Unit Gothic
 							br
@@ -883,6 +894,7 @@ section.container.typography-section
 							|Usage: Festival OFF homepage tab
 
 					.col-md-7
+						-snippet('show-sass-mobile')
 						pre.sass: code.
 							@mixin md-slab {
 								font-family: $slabWide;
@@ -902,7 +914,7 @@ section.container.typography-section
 					.col-sm-10.sm-slab.type-title Small Slab
 					-snippet('show-sass')
 				.row
-					.col-md-5
+					.col-sm-5
 						.type-details
 							|Typeface: HWT Unit Gothic
 							br
@@ -913,6 +925,7 @@ section.container.typography-section
 							|Usage: Section Title, etc.
 
 					.col-md-7
+						-snippet('show-sass-mobile')
 						pre.sass: code.
 							@mixin sm-slab {
 								font-family: $slabWide;
