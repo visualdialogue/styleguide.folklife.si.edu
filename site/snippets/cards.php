@@ -375,13 +375,11 @@
             <div class="audio-player"><audio class="mejs-player" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'></div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-sm-12 visible-xs">
-            <?php snippet('show-html-mobile'); ?>
-            <?php snippet('show-sass-mobile'); ?>
-          </div>
-        </div>
       </li>
+      <div class="col-xs-12 visible-xs">
+        <?php snippet('show-html-mobile'); ?>
+        <?php snippet('show-sass-mobile'); ?>
+      </div>
       <div class="col-md-9">
         <pre class="html"><code>&lt;li class="card audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border-card"&gt;
 	&lt;div class="image"&gt;	
@@ -441,12 +439,10 @@
             <div class="artist">Fannie Lou Hamer</div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-sm-12 visible-xs">
-            <?php snippet('show-html-mobile'); ?>
-            <?php snippet('show-sass-mobile'); ?>
-          </div>
-        </div>
+      </div>
+      <div class="col-xs-12 visible-xs">
+        <?php snippet('show-html-mobile'); ?>
+        <?php snippet('show-sass-mobile'); ?>
       </div>
       <div class="col-sm-9">
         <pre class="sass"><code>.album-card, .vinyl-card, .books-card {
@@ -501,12 +497,10 @@
             <div class="artist">Stanley and the Ten Sleepless Nights</div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-sm-12 visible-xs">
-            <?php snippet('show-html-mobile'); ?>
-            <?php snippet('show-sass-mobile'); ?>
-          </div>
-        </div>
+      </div>
+      <div class="col-xs-12 visible-xs">
+        <?php snippet('show-html-mobile'); ?>
+        <?php snippet('show-sass-mobile'); ?>
       </div>
       <div class="col-sm-10">
         <pre class="sass"><code>.album-card, .vinyl-card, .books-card {
