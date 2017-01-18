@@ -19,7 +19,7 @@
     <div class="col-sm-1 spacer"></div>
     <aside class="sidebar col-sm-4 blog-sidebar">
       <div class="row">
-        <div class="buy-button col-sm-7">
+        <div class="button buy-button col-sm-7">
           <div class="button-inner"><span class="title">Download PDF</span></div>
         </div>
       </div>

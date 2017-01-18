@@ -216,7 +216,9 @@
 		background-color: transparent;
 		white-space: initial;
 		margin-bottom:4rem;
-		@include respond-to(break2) {margin-bottom:2.55vw;}
+		@include respond-to(break2full) {
+			margin-bottom:2.55vw;
+		}
 		@include respond-to(fullwidth) {
 			margin-bottom:8rem;
 		}
@@ -231,7 +233,7 @@
 		@include respond-to(break2max) {
 			font-size:1.2rem;
 		}
-		@include respond-to(break2) {font-size:1vw;}
+		@include respond-to(break2full) {font-size:1vw;}
 		@include respond-to(fullwidth) {font-size:1.4rem;}
 	}
 	.col-sm-12 code {
@@ -385,7 +387,7 @@
 	.full-feature-card {
 		// override styleguide default
 		// margin-bottom:1.5rem !important;
-		@include respond-to(break2) {margin-bottom:2.5vw !important;}
+		@include respond-to(break2full) {margin-bottom:2.5vw !important;}
 		@include respond-to(fullwidth) {margin-bottom:4rem !important;}
 	}
 	.video-card {

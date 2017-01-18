@@ -1,6 +1,6 @@
 
 <!-- Fonts-->
-<script src="https://use.typekit.net/roi1emx.js"></script><script>try{Typekit.load();}catch(e){}</script>
+<script src="https://use.typekit.net/roi1emx.js"></script><script>try{Typekit.load({active: function() {console.log('typekit loaded')}});}catch(e){}</script>
 
 <!--“Entypo pictograms by Daniel Bruce — www.entypo.com” -->
 <!--Font Awesome icons by Dave Gandy-->

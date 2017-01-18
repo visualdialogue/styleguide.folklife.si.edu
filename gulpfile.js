@@ -208,11 +208,11 @@ gulp.task('less', function () {
 gulp.task('js', function() {
   // return gulp.src('/bdc/js/scripts.js')
   return gulp.src([
-      './assets/common/js/common-plugins.js',
-      './assets/common/js/common-scripts.js',
+      '../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/js/common-plugins.js',
+      '../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/js/common-scripts.js',
       './assets/js/scripts.js'
     ])
-    .pipe(concat('styleguide-scripts.js'))
+    .pipe(concat('styleguide.js'))
     .pipe(gulp.dest('./assets/js/'));
     // gulp.watch('/js/scripts.js',['scripts']);
 });
