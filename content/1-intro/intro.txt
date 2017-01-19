@@ -4,8 +4,7 @@ Title: Intro
 
 Copy: 
 
-Mi, sus est aborenist re nonem andicaborum volestis esedi consectat aceaqua sperio de pel ea sum repra voluptur, simusciis et audignimpor magnam, tetur, nus, quia volor accabor epedis doloratum hicid quiam, optaquam ut faccuscimos dicil in rent evenitistota dolupti onserrovid ut optate dolupti nihillicid quiducipsam aut eatusda ventusa sequia vente omniassiment quam, quid ulliquis inihil ipsae nusam quassum dictecatur repudis maiorerorum as volupta qui as magniet milles delit vellorrum ipsant pra iderum quat.
-Berum isquis evere, ommolum simoluptam laborem quam, quiasperum raerrov itemporro quae officia nos volorem
+This style guide outlines the page design templates that will be applied to the responsive websites for the Smithsonian Center for Folklife and Cultural Heritage, Smithsonian Folklife Festival, and Smithsonian Folkways Recordings. The design is intended to increase the cross-relationships between the sites, create a framework to streamline development and site updates, allow users to easily access a variety of content, and ulimately increase audience engagement. The style guide below is divided into the following sections: grid, colors, typography, and commonly used modules called “cards”—with code samples included for each component. When programming and updating the sites it’s important to re-size the browser window and check the pages on different devices to ensure the site displays correctly on all screen sizes. Note that this style guide should be kept up to date to be used as a reference tool as the sites evolve.
 
 ----
 

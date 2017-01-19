@@ -45,13 +45,11 @@
         <div class="col-sm-7">
           <?php snippet('show-sass-mobile'); ?>
           <pre class="sass"><code>@mixin lg-serif {
-	font-family: $serif;
 	font-weight: 700;
+	font-family: $serif;
 	line-height: 1;
-	@include respond-to(break2max) {
-		font-size: 4.2rem;
-	}
-	@include respond-to(break2) {
+	font-size: 4.2rem;
+	@include respond-to(break2full) {
 		font-size: 3.5vw;
 	}
 	@include respond-to(fullwidth) {
@@ -75,13 +73,11 @@
         <div class="col-sm-7">
           <?php snippet('show-sass-mobile'); ?>
           <pre class="sass"><code>@mixin md-serif {
-	font-family: $serif;
 	font-weight: 700;
+	font-family: $serif;
 	line-height: 1;
-	@include respond-to(break2max) {
-		font-size: 2.7rem;
-	}
-	@include respond-to(break2) {
+	font-size: 2.7rem;
+	@include respond-to(break2full) {
 		font-size: 2.5vw;
 	}
 	@include respond-to(fullwidth) {
@@ -105,14 +101,14 @@
         <div class="col-sm-7">
           <?php snippet('show-sass-mobile'); ?>
           <pre class="sass"><code>@mixin sm-serif {
-	font-family: $serif;
 	font-weight: 700;
+	font-family: $serif;
 	line-height: 1;
-  	@include respond-to(break2max) {
-  		font-size: 2.2rem;
+  	font-size: 2.2rem;
+  	@include respond-to(break2) {
+  		line-height: 1.143;
   	}
-	@include respond-to(break2) {
-		line-height: 1.143;
+	@include respond-to(break2full) {
   		font-size: 1.8vw;
 	}
 	@include respond-to(fullwidth) {
@@ -139,19 +135,19 @@
         <div class="col-sm-7">
           <?php snippet('show-sass-mobile'); ?>
           <pre class="sass"><code>@mixin sm-serif {
-	font-family: $serif;
 	font-weight: 700;
-	line-height: 1;
 	text-style: italic;
-  	@include respond-to(break2max) {
-  		font-size: 2.2rem;
-  	}
+	font-family: $serif;
+	line-height: 1;
+	font-size: 2.2rem;
 	@include respond-to(break2) {
 		line-height: 1.143;
-  		font-size: 1.8vw;
+	}
+	@include respond-to(break2full) {
+		font-size: 1.8vw;
 	}
 	@include respond-to(fullwidth) {
-  		font-size: 2.8rem;
+		font-size: 2.8rem;
 	}
 	@include margin-bottom(1);
 }</code></pre>
@@ -174,12 +170,11 @@
         <div class="col-sm-7">
           <?php snippet('show-sass-mobile'); ?>
           <pre class="sass"><code>@mixin xl-sans {
-	font-family: $sans;
 	font-weight: 600;
-	@include respond-to(break2max) {
-		font-size: 2.4rem;
-	}
-	@include respond-to(break2) {
+	font-family: $sans;
+	font-size: 2.4rem;
+	line-height: 1;
+	@include respond-to(break2full) {
 		font-size: 1.9vw;
 	}
 	@include respond-to(fullwidth) {
@@ -203,12 +198,11 @@
         <div class="col-sm-7">
           <?php snippet('show-sass-mobile'); ?>
           <pre class="sass"><code>@mixin xl-sans {
-	font-family: $sans;
 	font-weight: 300;
-	@include respond-to(break2max) {
-		font-size: 2.4rem;
-	}
-	@include respond-to(break2) {
+	font-family: $sans;
+	font-size: 2.4rem;
+	line-height: 1;
+	@include respond-to(break2full) {
 		font-size: 1.9vw;
 	}
 	@include respond-to(fullwidth) {
@@ -232,13 +226,11 @@
         <div class="col-sm-7">
           <?php snippet('show-sass-mobile'); ?>
           <pre class="sass"><code>@mixin lg-sans {
-	font-family: $sans;
 	font-weight: 600;
+	font-family: $sans;
 	line-height: 1.267;
-	@include respond-to(break2max) {
-		font-size: 2.1rem;
-	}
-	@include respond-to(break2) {
+	font-size: 2.1rem;
+	@include respond-to(break2full) {
   		font-size: 1.9vw;
 	}
 	@include respond-to(fullwidth) {
@@ -262,13 +254,11 @@
         <div class="col-sm-7">
           <?php snippet('show-sass-mobile'); ?>
           <pre class="sass"><code>@mixin lg-sans {
-	font-family: $sans;
 	font-weight: 300;
+	font-family: $sans;
 	line-height: 1.267;
-	@include respond-to(break2max) {
-		font-size: 2.1rem;
-	}
-	@include respond-to(break2) {
+	font-size: 2.1rem;
+	@include respond-to(break2full) {
   		font-size: 1.9vw;
 	}
 	@include respond-to(fullwidth) {
@@ -292,18 +282,16 @@
         <div class="col-sm-7">
           <?php snippet('show-sass-mobile'); ?>
           <pre class="sass"><code>@mixin md-sans {
-	font-family: $sans;
 	font-weight: 600;
+	font-family: $sans;
 	line-height: 1.2;
-	@include respond-to(break2max) {
-  		font-size: 1.9rem;
-	}
-	@include respond-to(break2) {
+  	font-size: 1.9rem;
+	@include respond-to(break2full) {
   		font-size: 1.6vw;
 	}
 	@include respond-to(fullwidth) {
-  		line-height: 1.28; // 25/32
   		font-size: 2.5rem;
+  		line-height: 1.28; // 25/32
 	}
 }
 </code></pre>
@@ -323,18 +311,16 @@
         <div class="col-sm-7">
           <?php snippet('show-sass-mobile'); ?>
           <pre class="sass"><code>@mixin md-sans {
-	font-family: $sans;
 	font-weight: 300;
+	font-family: $sans;
 	line-height: 1.2;
-	@include respond-to(break2max) {
-  		font-size: 1.9rem;
-	}
-	@include respond-to(break2) {
+  	font-size: 1.9rem;
+	@include respond-to(break2full) {
   		font-size: 1.6vw;
 	}
 	@include respond-to(fullwidth) {
-  		line-height: 1.28; // 25/32
   		font-size: 2.5rem;
+  		line-height: 1.28; // 25/32
 	}
 }
 </code></pre>
@@ -354,18 +340,16 @@
         <div class="col-sm-7">
           <?php snippet('show-sass-mobile'); ?>
           <pre class="sass"><code>@mixin sm-sans {
-	font-family: $sans;
 	font-weight: 600;
+	font-family: $sans;
 	line-height: 1.2;
-	@include respond-to(break2max) {
-  		font-size: 1.5rem;
-	}
-	@include respond-to(break2) {
+	font-size: 1.5rem;
+	@include respond-to(break2full) {
 		font-size: 1.2vw;
 	}
 	@include respond-to(fullwidth) {
 		line-height: 1.12; // 18/20
-  		font-size: 1.8rem;
+		font-size: 1.8rem;
 	}
 }</code></pre>
         </div>
@@ -384,18 +368,16 @@
         <div class="col-sm-7">
           <?php snippet('show-sass-mobile'); ?>
           <pre class="sass"><code>@mixin sm-sans {
-	font-family: $sans;
 	font-weight: 300;
+	font-family: $sans;
 	line-height: 1.2;
-	@include respond-to(break2max) {
-  		font-size: 1.5rem;
-	}
-	@include respond-to(break2) {
+	font-size: 1.5rem;
+	@include respond-to(break2full) {
 		font-size: 1.2vw;
 	}
 	@include respond-to(fullwidth) {
 		line-height: 1.12; // 18/20
-  		font-size: 1.8rem;
+		font-size: 1.8rem;
 	}
 }</code></pre>
         </div>
@@ -414,19 +396,20 @@
         <div class="col-sm-7">
           <?php snippet('show-sass-mobile'); ?>
           <pre class="sass"><code>@mixin caption-sans {
-	font-family: $sans;
 	font-weight: 300;
+	font-family: $sans;
 	line-height: 1.4;
-  	text-transform: uppercase;
-  	@include respond-to(break2max) {
-  		font-size: 1.3rem;
-  	}
+	text-transform: uppercase;
+	font-size: 1.3rem;
 	@include respond-to(break2) {
 		line-height: 1.3;
-  		font-size: 1vw;
+	}
+	@include respond-to(break2full) {
+		font-size: 1vw;
 	}
 	@include respond-to(fullwidth) {
-  		font-size: 1.6rem;
+		line-height: 1.3;
+		font-size: 1.6rem;
 	}
 }</code></pre>
         </div>
@@ -446,13 +429,11 @@
         <div class="col-sm-7">
           <?php snippet('show-sass-mobile'); ?>
           <pre class="sass"><code>@mixin lg-magazine-title {
-	font-family: $sansWide;
 	font-weight: 800;
+	font-family: $sansWide;
 	line-height: 1.095237;
-	@include respond-to(break2max) {
-		font-size: 2.6rem;
-	}
-	@include respond-to(break2) {
+	font-size: 2.6rem;
+	@include respond-to(break2full) {
 		font-size: 2.95vw;
 	}
 	@include respond-to(fullwidth) {
@@ -474,13 +455,11 @@
           <div class="col-md-7">
             <?php snippet('show-sass-mobile'); ?>
             <pre class="sass"><code>@mixin md-magazine-title {
-	font-family: $sansWide;
 	font-weight: 800;
+	font-family: $sansWide;
 	line-height: 1.095237;
-	@include respond-to(break2max) {
-		font-size: 1.8rem;
-	}
-	@include respond-to(break2) {
+	font-size: 1.8rem;
+	@include respond-to(break2full) {
 		font-size: 2.4vw;
 	}
 	@include respond-to(fullwidth) {
@@ -503,14 +482,12 @@
           <div class="col-md-7">
             <?php snippet('show-sass-mobile'); ?>
             <pre class="sass"><code>@mixin sm-magazine-title {
+	font-weight: 700; // one weight down for pc rendering at smaller sizes
 	font-family: $sansWide;
-	font-weight: 700;
 	line-height: 1.2;
 	@include margin-bottom(1);
-	@include respond-to(break2max) {
-		font-size: 1.8rem;
-	}
-	@include respond-to(break2) {
+	font-size: 1.8rem;
+	@include respond-to(break2full) {
 		font-size: 1.9vw;
 	}
 	@include respond-to(fullwidth) {
@@ -533,15 +510,13 @@
           <div class="col-md-7">
             <?php snippet('show-sass-mobile'); ?>
             <pre class="sass"><code>@mixin buy-button {
+	font-weight: 800;
 	text-transform: uppercase;
 	font-family: $sansWide;
-	font-weight: 800;
 	margin-bottom: 0;
 	line-height: 1.2;
-	@include respond-to(break2max) {
-		font-size: 1.4rem;
-	}
-	@include respond-to(break2) {
+	font-size: 1.4rem;
+	@include respond-to(break2full) {
 		font-size: 1.1vw;
 		margin-bottom: 0.4vw;
 	}
@@ -566,20 +541,20 @@
           <div class="col-md-7">
             <?php snippet('show-sass-mobile'); ?>
             <pre class="sass"><code>@mixin sans-tag {
+	font-weight: 300;
 	text-transform: uppercase;
 	font-family: $sansWide;
 	color: $black65;
-	font-weight: 300;
 	position: relative; // keep from being hidden under highlighted title
 	line-height: 1.1;
 	letter-spacing: 0.5px;
 	margin-bottom: 0.5rem;
-	@include respond-to(break2max) {
-		font-size: 1.2rem;
-	}
+	font-size: 1.2rem;
 	@include respond-to(break2) {
-		font-size: 1vw;
 		line-height: 1.4;
+	}
+	@include respond-to(break2full) {
+		font-size: 1vw;
 		letter-spacing: 0.5px;
 		margin-bottom: 0.4vw;
 	}
@@ -605,20 +580,20 @@
           <div class="col-md-7">
             <?php snippet('show-sass-mobile'); ?>
             <pre class="sass"><code>@mixin sans-tag {
+	font-weight: 700;
 	text-transform: uppercase;
 	font-family: $sansWide;
 	color: $black65;
-	font-weight: 700;
 	position: relative; // keep from being hidden under highlighted title
 	line-height: 1.1;
 	letter-spacing: 0.5px;
 	margin-bottom: 0.5rem;
-	@include respond-to(break2max) {
-		font-size: 1.2rem;
-	}
+	font-size: 1.2rem;
 	@include respond-to(break2) {
-		font-size: 1vw;
 		line-height: 1.4;
+	}
+	@include respond-to(break2full) {
+		font-size: 1vw;
 		letter-spacing: 0.5px;
 		margin-bottom: 0.4vw;
 	}
@@ -644,14 +619,12 @@
           <div class="col-md-7">
             <?php snippet('show-sass-mobile'); ?>
             <pre class="sass"><code>@mixin nav-header {
+	font-weight: 800;
 	text-transform: uppercase;
 	font-family: $sansWide;
-	font-weight: 800;
 	line-height: 1.2;
-	@include respond-to(break2max) {
-		font-size: 1.7rem;
-	}
-	@include respond-to(break2) {
+	font-size: 1.7rem;
+	@include respond-to(break2full) {
 		line-height: 1.2;
 		font-size: 1vw;
 	}
@@ -683,17 +656,15 @@
           <div class="col-md-7">
             <?php snippet('show-sass-mobile'); ?>
             <pre class="sass"><code>@mixin intro-serif {
-	font-family: $serif;
 	font-weight: 600;
+	font-family: $serif;
 	line-height: 1.267; // 38px
-	@include respond-to(break2max) {
-  		font-size: 1.9rem;
-  	}
-	@include respond-to(break2) {
-  		font-size: 2.2vw;
+	font-size: 1.9rem;
+	@include respond-to(break2full) {
+		font-size: 2.2vw;
 	}
 	@include respond-to(fullwidth) {
-  		font-size: 3rem;
+		font-size: 3rem;
 	}
 	@include margin-bottom(1);
 }</code></pre>
@@ -714,17 +685,15 @@
           <div class="col-md-7">
             <?php snippet('show-sass-mobile'); ?>
             <pre class="sass"><code>@mixin body-serif {
-	font-family: $serif;
 	font-weight: 400;
+	font-family: $serif;
 	line-height: 1.333333; // 24/32
-	@include respond-to(break2max) {
-  		font-size: 1.9rem; // 18px on medium.com mobile, 1.896 on modular scale
-  	}
-	@include respond-to(break2) {
-  		font-size: 1.5vw;
+	font-size: 1.9rem;
+	@include respond-to(break2full) {
+		font-size: 1.5vw;
 	}
 	@include respond-to(fullwidth) {
-  		font-size: 2.4rem;
+		font-size: 2.4rem;
 	}
 }</code></pre>
           </div>
@@ -765,17 +734,15 @@
           <div class="col-md-7">
             <?php snippet('show-sass-mobile'); ?>
             <pre class="sass"><code>@mixin body-sans {
-	font-family: $sans;
 	font-weight: 300;
+	font-family: $sans;
 	line-height: 1.3333; // fw magazine article 21/28
-	@include respond-to(break2max) {
-  		font-size: 1.7rem;
-  	}
-	@include respond-to(break2) {
+	font-size: 1.7rem;
+	@include respond-to(break2full) {
 		font-size: 1.25vw;
 	}
 	@include respond-to(fullwidth) {
-  		font-size: 2.1rem;
+		font-size: 2.1rem;
 	}
 }
 </code></pre>
@@ -785,10 +752,10 @@
     </div>
     <!-- HWT Unit Gothic-->
     <div class="sub-section">
-      <div class="typeface codeblock"><a id="slab" class="anchor-link"></a>
+      <div class="typeface codeblock"><a id="woodtype-extended" class="anchor-link"></a>
         <div class="row type-title-wrapper">
           <hr/>
-          <div class="col-sm-10 lg-slab type-title">Large Slab</div>
+          <div class="col-sm-10 lg-woodtype-extended type-title">Large Woodtype Extended</div>
           <?php snippet('show-sass'); ?>
         </div>
         <div class="row">
@@ -797,19 +764,18 @@
           </div>
           <div class="col-md-7">
             <?php snippet('show-sass-mobile'); ?>
-            <pre class="sass"><code>@mixin lg-slab {
-	font-family: $slabWide;
+            <pre class="sass"><code>@mixin lg-woodtype-extended {
+	font-family: $woodtypeExtended;
 	text-transform: uppercase;
-	@include respond-to(break2max) {
+	line-height: 1;
+	@include respond-to(break2max) { // contain for buggyfill
 		font-size: 8vw;
 	}
-	@include respond-to(break2) {
-		line-height: 1;
+	@include respond-to(break2full) {
 		font-size: 2.9vw;
 	}
 	@include respond-to(fullwidth) {
-		line-height: 1;
-		font-size: 4rem;
+		font-size: 4rem; // folkways explore title bar
 	}
 }</code></pre>
           </div>
@@ -818,7 +784,7 @@
       <div class="typeface codeblock">
         <div class="row type-title-wrapper">
           <hr/>
-          <div class="col-sm-10 md-slab type-title">Medium Slab</div>
+          <div class="col-sm-10 md-woodtype-extended type-title">Medium Woodtype Extended</div>
           <?php snippet('show-sass'); ?>
         </div>
         <div class="row">
@@ -827,15 +793,14 @@
           </div>
           <div class="col-md-7">
             <?php snippet('show-sass-mobile'); ?>
-            <pre class="sass"><code>@mixin md-slab {
-	font-family: $slabWide;
+            <pre class="sass"><code>@mixin md-woodtype-extended {
+	font-family: $woodtypeExtended;
 	text-transform: uppercase;
-	@include respond-to(break2) {
-		line-height: 1;
+	line-height: 1;
+	@include respond-to(break2full) {
 		font-size: 2.4vw;
 	}
 	@include respond-to(fullwidth) {
-		line-height: 1;
 		font-size: 3.8rem;
 	}
 }</code></pre>
@@ -845,7 +810,7 @@
       <div class="typeface codeblock">
         <div class="row type-title-wrapper">
           <hr/>
-          <div class="col-sm-10 sm-slab type-title">Small Slab</div>
+          <div class="col-sm-10 sm-woodtype-extended type-title">Small Woodtype Extended</div>
           <?php snippet('show-sass'); ?>
         </div>
         <div class="row">
@@ -854,19 +819,21 @@
           </div>
           <div class="col-md-7">
             <?php snippet('show-sass-mobile'); ?>
-            <pre class="sass"><code>@mixin sm-slab {
-	font-family: $slabWide;
+            <pre class="sass"><code>@mixin sm-woodtype-extended {
+	font-family: $woodtypeExtended;
 	text-transform: uppercase;
 	letter-spacing: 0.5px;
 	margin-top: 0; // bootstrap reset
 	margin-bottom: 1.5rem; // section title
 	line-height: 1.2; // section title
-	@include respond-to(break2max) {
-		font-size: 6vw;
+	@include respond-to(break2max) { // contain for buggyfill
+		font-size: 5vw;
 	}
 	@include respond-to(break2) {
-		font-size: 1.9vw;
 		margin-bottom: 0;
+	}
+	@include respond-to(break2full) {
+		font-size: 1.9vw;
 	}
 	@include respond-to(fullwidth) {
 		font-size: 3rem;

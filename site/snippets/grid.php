@@ -139,7 +139,7 @@
       <div class="row">
         <div class="col-half">
           <div class="grid-item-inner custom-grid-item-inner hidden-content">
-            <div data-hover="(FL home Explore Collections)" class="copy">.col-half (316px</div>
+            <div data-hover="(FL home Explore Collections)" class="copy">.col-half (316px)</div>
           </div>
         </div>
         <div class="col-half">

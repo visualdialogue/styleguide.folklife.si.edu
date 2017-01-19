@@ -53,7 +53,7 @@
           <ul class="header-nav-list">
             <li class="header-nav-sub-item"><a href="#serif">Serif</a></li>
             <li class="header-nav-sub-item"><a href="#sans">Sans</a></li>
-            <li class="header-nav-sub-item"><a href="#slab">Slab</a></li>
+            <li class="header-nav-sub-item"><a href="#woodtype-extended">Woodtype Extended</a></li>
           </ul>
         </li>
         <li class="header-nav-main-item col-sm-2"> <a href="#cards" class="header-nav-title">Cards</a></li>

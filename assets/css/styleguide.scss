@@ -8,30 +8,31 @@
 
 /* Imports
 -------------------------------------------------- */
-  @charset "UTF-8";
-  @import "../common/css/fonts.scss";
-  @import "../common/css/vd-icons.scss";
-  @import "../bower_components/remodal/dist/remodal.scss";
-  @import "../bower_components/remodal/dist/remodal-default-theme.scss";
-  @import "../bower_components/slick-carousel/slick/slick.scss";
-  @import "../bower_components/slick-carousel/slick/slick-theme.scss";
-  @import "../bower_components/mediaelement/build/mediaelementplayer.min.scss";
-  @import "../common/css/bootstrap.scss"; // get custom bootstrap built with less
-  @import "../common/css/reset.scss";
-  @import "../common/css/dimensions.scss";
-  @import "../common/css/media-queries.scss";
-  @import "../common/css/colors.scss"; // colors may be used in type.scss
-  $hover: $fl-hover;
-  @import "../common/css/type.scss";
-  @import "../common/css/icons.scss";
-  @import "../common/css/links.scss";
-  @import "../common/css/mixins.scss";
-  @import "../common/css/nav.scss";
-  @import "../common/css/general.scss";
-  @import "../common/css/footer.scss";
-  @import "../common/css/article.scss";
-  @import "../common/css/cards.scss";
-  @import "../common/css/audio.scss";
+	@charset "UTF-8";
+	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/fonts.scss";
+	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/vd-icons.scss";
+	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/plugins/remodal/dist/remodal.scss";
+	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/plugins/remodal/dist/remodal-default-theme.scss";
+	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/plugins/slick-carousel/slick/slick.scss";
+	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/plugins/slick-carousel/slick/slick-theme.scss";
+	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/plugins/mediaelement/build/mediaelementplayer.min.scss";
+	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/bootstrap.scss"; // get custom bootstrap built with less
+	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/reset.scss";
+	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/dimensions.scss";
+	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/media-queries.scss";
+	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/colors.scss";
+	$hover: $fs-hover; // local colors must be set to this site after inherit global colors and before apply to global rules
+	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/type.scss";
+	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/icons.scss";
+	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/links.scss";
+	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/mixins.scss";
+	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/nav.scss";
+	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/general.scss";
+	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/footer.scss";
+	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/article.scss";
+	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/cards.scss";
+	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/program.scss";
+	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/audio.scss"; // after cards for cascading overrides
 
 /* links
 -------------------------------------------------- */
@@ -347,10 +348,10 @@
 	.body-sans {@include body-sans;}
 	.intro-sans {@include lg-sans;}
 
-	// Slab
-	.lg-slab {@include lg-slab;}
-	.md-slab {@include md-slab;}
-	.sm-slab {@include sm-slab;}
+	// Woodtype Extended
+	.lg-woodtype-extended {@include lg-woodtype-extended;}
+	.md-woodtype-extended {@include md-woodtype-extended;}
+	.sm-woodtype-extended {@include sm-woodtype-extended;@include margin-top(1);}
 	.nav-header {@include nav-header;}
 
 	// Magazine

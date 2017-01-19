@@ -15,7 +15,7 @@
         <ul class="footer-nav-list">
           <li class="footer-nav-sub-item"><a href="#serif">Serif</a></li>
           <li class="footer-nav-sub-item"><a href="#sans">Sans</a></li>
-          <li class="footer-nav-sub-item"><a href="#slab">Slab</a></li>
+          <li class="footer-nav-sub-item"><a href="#woodtype-extended">Woodtype Extended</a></li>
         </ul>
       </li>
       <li class="footer-nav-main-item col-sm-2"> <a href="#cards" class="footer-nav-title">Cards</a></li>
