@@ -12,7 +12,6 @@
 	}
 }</code></pre>
         <p>You won't find any &lt;h1&gt; or &lt;h2&gt; tags here because those are strictly semantic, without styles. The typefaces stand by themselves and can be applied to different heading levels.</p>
-        <p>Font sizes were determined by the design. When needed, the major second modular scale was applied mainly for responsive sizes (1.125). See <a href="http://www.modularscale.com" target="_blank">www.modularscale.com</a>.</p>
       </div>
     </main>
     <aside class="sidebar col-sm-4 col-sm-offset-1">
