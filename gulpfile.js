@@ -210,7 +210,7 @@ gulp.task('js', function() {
   return gulp.src([
       '../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/js/common-plugins.js',
       '../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/js/common-scripts.js',
-      './assets/js/scripts.js'
+      './assets/js/styleguide-scripts.js'
     ])
     .pipe(concat('styleguide.js'))
     .pipe(gulp.dest('./assets/js/'));
@@ -241,7 +241,7 @@ gulp.task('serve', ['jade', 'styles', 'js'], function() {
     gulp.watch('site/common/**/*.php',['copy']);
     gulp.watch('assets/**/*.scss',['styles']);
     gulp.watch('assets/common/*.scss',['styles']);
-    gulp.watch('assets/js/scripts.js',['js-watch']);
+    gulp.watch('assets/js/*.js',['js-watch']);
     gulp.watch('assets/common/js/common-scripts.js',['js-watch']);
     // gulp.watch('*.html').on('change', browserSync.reload);
     gulp.watch('site/**/*.jade').on('change', browserSync.reload);
