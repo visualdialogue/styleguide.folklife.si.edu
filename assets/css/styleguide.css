@@ -8295,6 +8295,7 @@ body {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   line-height: 1.333333;
   font-size: 1.9rem;
+  overflow-y: scroll;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1560px) {
