@@ -536,7 +536,7 @@
     </div>
   </div>
   <!-- Image Gallery Card-->
-  <div class="codeblock">
+  <div class="codeblock"><a id="image-gallery" class="anchor-link"></a>
     <div class="row">
       <div class="col-sm-8">
         <h3 class="section-subtitle">Image Gallery</h3>
@@ -548,6 +548,7 @@
       <?php $image_gallery_page = $pages->find('cards')->children()->find('image-gallery'); ?>
       <?php $gallery_img = $image_gallery_page->image('slide1.jpg'); ?>
       <div class="image-gallery col-sm-5">
+        <!-- first slide visible with gallery icon-->
         <div class="center-box">
           <div class="modal-trigger"><img src="<?= $gallery_img->url() ?>" alt="Gallery image" class="gallery-thumbnail"/></div>
           <div class="icon-gallery"></div>
@@ -577,119 +578,169 @@
     </div>
     <div class="row">
       <div class="col-sm-12">
-        <pre class="sass"><code>/* from ../common/css/general.scss 
+        <pre class="sass"><code>/* icon font characters (fontastic.me) from ../common/css/vd-icons.scss 
+-------------------------------------------------- */
+.icon-gallery:before {
+    content: "\44";
+}
+.icon-gallery:after {
+  content: "\42";
+}
+
+/* icon stacking/sizing from ../common/css/icons.scss 
+-------------------------------------------------- */
+.icon-gallery {
+	cursor: pointer;
+	position: absolute;
+	@include left(1);
+	@include bottom(1);
+	&:before {
+		z-index: 0;
+		color: $black25;
+	}
+	&:hover:before {
+		color: $hover;
+	}
+	&:after {
+		position: absolute;
+		z-index: 1;
+		color: $black80;
+		display: block;
+		@include respond-to(break2max) {
+			font-size: 6vw;
+			top: 2vw;
+			left: 1.8vw;
+		}
+		@include respond-to(break2full) {
+			font-size: 2.6vw;
+			top: 0.7vw;
+			left: 0.6vw;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 4rem;
+			top: 1rem;
+			left: 0.9rem;
+		}
+	}
+}
+
+/* popup gallery styles from ../common/css/general.scss 
 -------------------------------------------------- */
 .image-gallery {
-		.icon-play-button {
-			&:before, &:after {
-				@include respond-to(break2max) {
-					font-size: 15vw;
-				}
-				@include respond-to(break2full) {
-					font-size: 6vw;
-				}
-				@include respond-to(fullwidth) {
-					font-size: 10rem;
-				}
-			}
-		}
-	}
-	.gallery-list, .gallery-list-captions {
-		display: none; // initial hide
-	}
-	.remodal-captions {
-		display: none;
-	}
-	.image-gallery-remodal {
-		max-width: none !important;
-		background-color: transparent;
-		.remodal-close {
-			right: 0 !important;
+	.icon-play-button {
+		&:before, &:after {
 			@include respond-to(break2max) {
-				top: -4.5rem;
+				font-size: 15vw;
 			}
-		}
-		.remodal-captions {
-			display: block;
-		}
-	}
-	.remodal-gallery {
-		.slick-track {
-			height: initial;
-		}
-		.slick-slide {
-			height: auto;
-			max-width: 100vw;
-			@include padding-right(4);
-			@include padding-left(4);
-		}
-		.slick-slide img {
-			max-height: 70vh;
-			width: auto;
-		}
-		.gallery-image-inner {
-			position: relative; // contain gray overlay
-			&:after {
-				@include respond-to(break2) {
-					content: '';
-					display: block;
-					position: absolute;
-					top: 0;right: 0;bottom: 0;left: 0;
-					background-color: rgba(0,0,0,0.8);
-				}	
-			}
-		}
-		.slick-active .gallery-image-inner:after {
-			display: none;
-		}		
-		.slick-arrow {
-			@include respond-to(break2max) {
-				display: none !important;
-			}
-		}
-		.slick-prev {
-			@include respond-to(break2) {
-				left: 1vw;
-			}
-			@include respond-to(fullwidth) {
-				left: 5rem;
-			}
-		}
-		.slick-next {
 			@include respond-to(break2full) {
-				right: 1vw;
+				font-size: 6vw;
 			}
 			@include respond-to(fullwidth) {
-				right: 5rem;
+				font-size: 10rem;
 			}
-		}		
+		}
+	}
+}
+.gallery-list, .gallery-list-captions {
+	display: none; // initial hide
+}
+.remodal-captions {
+	display: none;
+}
+.image-gallery-remodal {
+	max-width: none !important;
+	background-color: transparent;
+	.remodal-close {
+		right: 0 !important;
+		@include respond-to(break2max) {
+			top: -4.5rem;
+		}
 	}
 	.remodal-captions {
-		@include margin-top(4);
-		// turn down non-active captions
-		.slick-slide:not(.slick-active) {
-			.remodal-description, .remodal-credit {
-				color: $black80;
-			}
+		display: block;
+	}
+}
+.remodal-gallery {
+	.slick-track {
+		height: initial;
+	}
+	.slick-slide {
+		height: auto;
+		max-width: 100vw;
+		@include padding-right(4);
+		@include padding-left(4);
+	}
+	.slick-slide img {
+		max-height: 70vh;
+		width: auto;
+	}
+	.gallery-image-inner {
+		position: relative; // contain gray overlay
+		&:after {
+			@include respond-to(break2) {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;right: 0;bottom: 0;left: 0;
+				background-color: rgba(0,0,0,0.8);
+			}	
 		}
-		.remodal-description {
-			@include padding(2);			
-			padding-bottom: 0 !important;
-			color: white;
+	}
+	.slick-active .gallery-image-inner:after {
+		display: none;
+	}		
+	.slick-arrow {
+		@include respond-to(break2max) {
+			display: none !important;
 		}
-		.remodal-credit {
-			@include padding(2);
-			color: $black50;
-			@include caption-sans;
+	}
+	.slick-prev {
+		@include respond-to(break2) {
+			left: 1vw;
 		}
-	}</code></pre>
+		@include respond-to(fullwidth) {
+			left: 5rem;
+		}
+	}
+	.slick-next {
+		@include respond-to(break2full) {
+			right: 1vw;
+		}
+		@include respond-to(fullwidth) {
+			right: 5rem;
+		}
+	}		
+}
+.remodal-captions {
+	@include margin-top(4);
+	// turn down non-active captions
+	.slick-slide:not(.slick-active) {
+		.remodal-description, .remodal-credit {
+			color: $black80;
+		}
+	}
+	.remodal-description {
+		@include padding(2);			
+		padding-bottom: 0 !important;
+		color: white;
+	}
+	.remodal-credit {
+		@include padding(2);
+		color: $black50;
+		@include caption-sans;
+	}
+}
+
+/* ...all other styles inherited from video popup */</code></pre>
       </div>
       <div class="col-sm-12">
         <pre class="html"><code>&lt;div class="image-gallery col-sm-5"&gt;
+	&lt;!--first slide visible, gallery icon--&gt;
 	&lt;div class="center-box"&gt;
 		&lt;div class="modal-trigger"&gt;&lt;img src="//localhost:3007/content/5-cards/1-image-gallery/slide1.jpg" alt="Gallery image" class="gallery-thumbnail"&gt;&lt;/div&gt;
 		&lt;div class="icon-gallery"&gt;&lt;/div&gt;
 	&lt;/div&gt;
+	&lt;!--gallery images--&gt;
 	&lt;ul class="gallery-list"&gt;
 		&lt;div class="gallery-image"&gt;
 			&lt;div class="gallery-image-inner"&gt;
@@ -732,6 +783,7 @@
 			&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/ul&gt;
+	&lt;!--gallery captions--&gt;
 	&lt;ul class="gallery-list-captions"&gt;
 		&lt;div class="gallery-caption"&gt;
 			&lt;div class="remodal-description"&gt;A shoemaker at La Maison Prodiso’s workshop uses an industrial sewing machine to hem the canvas that forms the upper part of the espadrille.&lt;/div&gt;
