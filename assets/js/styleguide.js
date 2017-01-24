@@ -509,6 +509,9 @@ $(document).ready(function () {
 		$remodalGallery.empty();
 		$remodalCaptions.empty();
 
+		// temp hide until loaded
+		$remodalGallery.css('visibility', 'hidden');
+
 		// build gallery
 		// get images for gallery by going up to grandparent, then finding all classed images, then copying them for use in remodal
 		$('.gallery-list').children().clone().appendTo($remodalGallery);
@@ -567,6 +570,10 @@ $(document).ready(function () {
 				}
 			]
 		})
+
+		// show it now
+		$remodalGallery.css('visibility', 'visible');
+
 	});
 
 /*********************
