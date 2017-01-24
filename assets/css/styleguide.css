@@ -12116,11 +12116,7 @@ body {
 }
 
 .remodal-overlay {
-  background: rgba(0, 0, 0, 0.9) none repeat scroll 0% 0%;
-}
-
-.remodal-overlay.is-black {
-  background-color: #000;
+  background: rgba(0, 0, 0, 0.95) none repeat scroll 0% 0%;
 }
 
 .remodal-close {
