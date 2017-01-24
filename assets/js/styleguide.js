@@ -494,6 +494,7 @@ $(document).ready(function () {
 *********************/
 	var $remodalGallery = $remodal.find('.remodal-gallery');
 	var $remodalCaptions = $remodal.find('.remodal-captions');
+	var $remodalOverlay = $('.remodal-overlay');
 	var galleryIsSlick = false;
 
 	// @param $initialSlide is number of slide that was clicked so can show up first in gallery
@@ -527,6 +528,9 @@ $(document).ready(function () {
 
 		// show gallery before call slick because needs to be right size or visible or something?
 		$remodal.addClass('remodal-gallery-is-open image-gallery-remodal');
+
+		// make background darker for images
+		$remodalOverlay.addClass('is-black');
 
 		// initiate slick gallery on images
 		$remodalGallery.slick({

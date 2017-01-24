@@ -12119,6 +12119,10 @@ body {
   background: rgba(0, 0, 0, 0.9) none repeat scroll 0% 0%;
 }
 
+.remodal-overlay.is-black {
+  background-color: #000;
+}
+
 .remodal-close {
   position: absolute;
   left: auto;
