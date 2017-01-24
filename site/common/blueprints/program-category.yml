@@ -1,9 +1,12 @@
 title: Card
-pages: false
+pages: card
 files: true
   fields:
     caption:
       label: Caption
+      type: textarea
+    credit:
+      label: Credit
       type: textarea
 fields:
   title:
@@ -46,6 +49,12 @@ fields:
     icon: image
   banner_img:
     label: Banner Image
+    type: select
+    options: images
+    width: 1/2
+    icon: image
+  gallery_img:
+    label: Gallery Image
     type: select
     options: images
     width: 1/2

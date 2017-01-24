@@ -25,6 +25,6 @@
 </footer>
 <?php snippet('footer-remodal'); ?>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="/assets/js/styleguide-scripts.js?v=<?= time() ?>"></script>
+<script src="/assets/js/styleguide.js?v=<?= time() ?>"></script>
 </body>
 </html>

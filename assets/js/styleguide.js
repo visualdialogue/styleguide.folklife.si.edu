@@ -181,13 +181,15 @@ $(document).ready(function () {
 	});
 
 /***************************
-* Mobile Header Animation from http://www.webdesignerdepot.com/2014/05/how-to-create-an-animated-sticky-header-with-css3-and-jquery/
+* Mobile Header Animation 
+* from http://www.webdesignerdepot.com/2014/05/how-to-create-an-animated-sticky-header-with-css3-and-jquery/
 ***************************/
 	var isNavOpen = false;
 	var smallerNav = false;
 	var $siteToggle = $('#site-toggle');
 	var $navBarHeader = $('.navbar-header');
 	var $navspacer = $('#navspacer');
+	var $logo = $('#logo');	
 	var $logoSwitchTimer;
 	var gapNavHeight = $siteToggle.outerHeight();
 
@@ -219,25 +221,51 @@ $(document).ready(function () {
 		}
 	});
 
+	/********* 
+	* Switch Logo - pure CSS
+	* @param direction dictates which logo to switch to, block or inline
+	**********/
 	function switchLogo(direction) {
 		// clear timeout so prevent multiple firings
-		clearTimeout($logoSwitchTimer);
 		// only show block if at top of viewport and nav isn't already open
 		if(direction == 'block' && $(window).scrollTop() <= gapNavHeight && menuClosed) {
-			$('.one-line-logos').fadeOut('30');
-			$logoSwitchTimer = setTimeout(function(){ 
-				$('.block-logos').fadeIn('30');
-			}, 30);
+			// $('.one-line-logos').fadeOut('30');
+			// $('.block-logos').fadeIn('30');
+			// CSS only
+			$logo.removeClass('logo-is-one-line');
+			$logo.addClass('logo-is-block');
 		} else {
-			$('.block-logos').fadeOut('30');
-			$logoSwitchTimer = setTimeout(function(){ 
-				$('.one-line-logos').fadeIn('30');
-			}, 30);
+			// $('.block-logos').fadeOut('30');
+			// $('.one-line-logos').fadeIn('30');
+			// CSS only
+			$logo.removeClass('logo-is-block');
+			$logo.addClass('logo-is-one-line');
 		}
 	}
 
+	/********* 
+	* Switch Logo with jQuery animation
+	* @param direction dictates which logo to switch to, block or inline
+	**********/
+	// function switchLogo(direction) {
+	// 	// clear timeout so prevent multiple firings
+	// 	clearTimeout($logoSwitchTimer);
+	// 	// only show block if at top of viewport and nav isn't already open
+	// 	if(direction == 'block' && $(window).scrollTop() <= gapNavHeight && menuClosed) {
+	// 		$('.one-line-logos').fadeOut('30');
+	// 		$logoSwitchTimer = setTimeout(function(){ 
+	// 			$('.block-logos').fadeIn('30');
+	// 		}, 30);
+	// 	} else {
+	// 		$('.block-logos').fadeOut('30');
+	// 		$logoSwitchTimer = setTimeout(function(){ 
+	// 			$('.one-line-logos').fadeIn('30');
+	// 		}, 30);
+	// 	}
+	// }
+
 /***************************
-* NAVBAR
+* Navbar
 **************************/
 
 	// CLICK OUTSIDE MENU
@@ -295,8 +323,6 @@ $(document).ready(function () {
 	$megaNavItem.on('click', function() {
 		site.navCloseAll();
 	});
-
-	
 
 /*********************
 * Social Media Icons
@@ -381,7 +407,6 @@ $(document).ready(function () {
 		site.navbar.removeClass('has-one-line-logo'); // switch back to block logo
 	}
 
-
 /*********************
 * Video
 * dependencies: remodal.js, vimeo-player-js
@@ -391,7 +416,6 @@ $(document).ready(function () {
 		hashTracking: true
 	}
 	var remodalInstance = $('[data-remodal-id=modal]').remodal(remodalInstanceOptions);
-
 
 	var $remodal = $('.remodal');
 	var $remodalIframe = $remodal.find('.remodal-iframe');
@@ -465,7 +489,89 @@ $(document).ready(function () {
 	});
 
 /*********************
-* Image Gallery Popup
+* Image Gallery
+* dependencies: remodal.js
+*********************/
+	var $remodalGallery = $remodal.find('.remodal-gallery');
+	var $remodalCaptions = $remodal.find('.remodal-captions');
+	var galleryIsSlick = false;
+
+	// on clicking an image with the class .popup-gallery...
+	// @param $initialSlide is number of slide that was clicked so can show up first in gallery
+	$('.image-gallery').on('click', function() {
+		// cancel last slick so can start a new one on same class?
+		// adds something to dom, so called before empty(), but necessary to be able to call again
+		if(galleryIsSlick) {
+			$remodalGallery.slick('unslick');
+			$remodalCaptions.slick('unslick');
+		}
+
+		// clear remodal gallery of old images
+		$remodalGallery.empty();
+		$remodalCaptions.empty();
+
+		// build gallery
+		// get images for gallery by going up to grandparent, then finding all classed images, then copying them for use in remodal
+		$('.gallery-list').children().clone().appendTo($remodalGallery);
+
+		// build captions
+		$('.gallery-list-captions').children().clone().appendTo($remodalCaptions);
+		
+		// manually open remodal because sometimes just doesn't do it
+		remodalInstance.open();
+
+		// flag to destroy
+		galleryIsSlick = true;
+
+		// show gallery before call slick because needs to be right size or visible or something?
+		$remodal.addClass('remodal-gallery-is-open image-gallery-remodal');
+
+		// initiate slick gallery on images
+		$remodalGallery.slick({
+			speed: 0,
+			mobileFirst: true,
+			centerMode: true,
+			centerPadding: '40px',
+			variableWidth: true,
+			slidesToShow: 1,
+			asNavFor: '.remodal-captions',
+			adaptiveHeight: true,
+			centerPadding: '0',
+			responsive: [
+				{
+					breakpoint: site.break2,
+					settings: {
+						speed: 300,
+						centerPadding: '40px',
+					}
+
+				}
+			]
+		});
+		// initiate captions
+		$remodalCaptions.slick({
+			mobileFirst: true,
+			speed: 0,
+			centerMode: true,
+			centerPadding: '0',
+			slidesToShow: 1,
+			asNavFor: '.remodal-gallery',
+			arrows: false,
+			responsive: [
+				{
+					breakpoint: site.break2,
+					settings: {
+						speed: 300,
+						centerPadding: '40px',
+					}
+
+				}
+			]
+		})
+	});
+
+/*********************
+* Cover Art Popup
 * dependencies: remodal.js
 *********************/
 	var $remodalGallery = $remodal.find('.remodal-gallery');
@@ -489,21 +595,34 @@ $(document).ready(function () {
 		// build gallery
 		// get images for gallery by going up to grandparent, then finding all classed images, then copying them for use in remodal
 		$(this).closest('.cover-art-list').children().clone().appendTo($remodalGallery);
-
 		
 		// manually open remodal because sometimes just doesn't do it
 		remodalInstance.open();
 
-		// initiate slick gallery on images
-		$remodalGallery.slick({
-			"initialSlide": initialSlide
-		});
-
 		// flag to destroy
 		galleryIsSlick = true;
 
-		// show gallery when all set
-		$remodal.addClass('remodal-gallery-is-open');
+		// show gallery before initiate slick so can open correctly
+		$remodal.addClass('remodal-gallery-is-open image-gallery-remodal');
+
+		// initiate slick gallery on images
+		$remodalGallery.slick({
+			"initialSlide": initialSlide,
+			speed: 0,
+			centerMode: true,
+			centerPadding: '0',
+			slidesToShow: 1,
+			responsive: [
+				{
+					breakpoint: site.break2,
+					settings: {
+						speed: 300,
+						centerPadding: '40px',
+					}
+
+				}
+			]
+		});
 	});
 
 /********************
@@ -700,7 +819,6 @@ $(document).ready(function () {
 	$(window).on('resize', function() {
 		checkMobile();
 	});
-
 
 });
 /*

@@ -175,6 +175,7 @@ gulp.task('copy', function() {
 gulp.task('styles', function() {
     gulp.src([
           'assets/css/styleguide.scss',
+          // '../../toby/festival/src/Orchard.Web/Themes/Festival/Styles/festival.scss'
         ])
         .pipe(plumber())
         .pipe(sass({
@@ -240,9 +241,9 @@ gulp.task('serve', ['jade', 'styles', 'js'], function() {
     gulp.watch('site/common/blueprints/*.yml',['copy']);
     gulp.watch('site/common/**/*.php',['copy']);
     gulp.watch('assets/**/*.scss',['styles']);
-    gulp.watch('assets/common/*.scss',['styles']);
+    gulp.watch('../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/*.scss',['styles']);
     gulp.watch('assets/js/*.js',['js-watch']);
-    gulp.watch('assets/common/js/common-scripts.js',['js-watch']);
+    gulp.watch('../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/js/common-scripts.js',['js-watch']);
     // gulp.watch('*.html').on('change', browserSync.reload);
     gulp.watch('site/**/*.jade').on('change', browserSync.reload);
     gulp.watch('assets/js/scripts-min.js').on('change', browserSync.reload);
