@@ -496,7 +496,6 @@ $(document).ready(function () {
 	var $remodalCaptions = $remodal.find('.remodal-captions');
 	var galleryIsSlick = false;
 
-	// on clicking an image with the class .popup-gallery...
 	// @param $initialSlide is number of slide that was clicked so can show up first in gallery
 	$('.image-gallery').on('click', function() {
 		// cancel last slick so can start a new one on same class?
@@ -577,9 +576,9 @@ $(document).ready(function () {
 	var $remodalGallery = $remodal.find('.remodal-gallery');
 	var galleryIsSlick = false;
 
-	// on clicking an image with the class .popup-gallery...
+	// on clicking an image with the class .cover art...
 	// @param $initialSlide is number of slide that was clicked so can show up first in gallery
-	$('.popup-gallery').on('click', function() {
+	$('.cover-art').on('click', function() {
 		// cancel last slick so can start a new one on same class?
 		// adds something to dom, so called before empty(), but necessary to be able to call again
 		if(galleryIsSlick) {
@@ -594,7 +593,7 @@ $(document).ready(function () {
 
 		// build gallery
 		// get images for gallery by going up to grandparent, then finding all classed images, then copying them for use in remodal
-		$(this).closest('.cover-art-list').children().clone().appendTo($remodalGallery);
+		$('.cover-art-popup').clone().appendTo($remodalGallery);
 		
 		// manually open remodal because sometimes just doesn't do it
 		remodalInstance.open();
@@ -607,11 +606,15 @@ $(document).ready(function () {
 
 		// initiate slick gallery on images
 		$remodalGallery.slick({
+			mobileFirst: true,
+			variableWidth: true,
+			adaptiveHeight: true,
 			"initialSlide": initialSlide,
 			speed: 0,
 			centerMode: true,
-			centerPadding: '0',
+			centerPadding: '40px',
 			slidesToShow: 1,
+			infinite: false,
 			responsive: [
 				{
 					breakpoint: site.break2,

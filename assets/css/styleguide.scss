@@ -372,7 +372,6 @@
 			}
 		}
 		.codeblock {
-			// @include border(top);
 			@include margin-bottom(4);
 			& > .row > [class*="col-"] {
 				min-height:0;
@@ -415,6 +414,9 @@
 		.title {
 			@include lg-magazine-title;
 		}
+	}
+	.image-gallery {
+		@include margin-bottom(4);
 	}
 
 /* video

@@ -1,5 +1,6 @@
 title: Card
-pages: false
+pages:
+  template: code-card
 files: true
   fields:
     caption:

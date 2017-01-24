@@ -29,7 +29,7 @@
     <ul class="row">
       <!-- Logo-->
       <div class="logo-wrapper col-sm-2">
-        <div class="logo"><a href="/">
+        <div id="logo" class="logo"><a href="/">
             <div class="one-line-logos"><img src="/assets/images/logo/mobile-folklife-one-line-logo_2016.12.23.png" class="one-line-logo mobile-one-line-logo visible-xs visible-sm"/><img src="/assets/images/logo/tablet-folklife-one-line-logo_2017.1.2.png" class="one-line-logo tablet-one-line-logo visible-md"/><img src="/assets/images/logo/desktop-folklife-one-line-logo_2017.1.2.png" class="one-line-logo desktop-one-line-logo visible-lg"/></div>
             <div class="block-logos"><img src="/assets/images/logo/mobile-folklife-block-logo_2016.12.23.png" class="block-logo mobile-block-logo visible-xs visible-sm"/><img src="/assets/images/logo/tablet-folklife-block-logo_2017.1.2.png" class="block-logo tablet-block-logo visible-md"/><img src="/assets/images/logo/desktop-folklife-block-logo_2017.1.2.png" class="block-logo desktop-block-logo visible-lg"/></div></a></div>
       </div>

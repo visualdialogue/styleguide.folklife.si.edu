@@ -531,9 +531,242 @@
 			&lt;div class="artist"&gt;Stanley and the Ten Sleepless Nights&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
-&lt;/div&gt;
-
-</code></pre>
+&lt;/div&gt;</code></pre>
+      </div>
+    </div>
+  </div>
+  <!-- Image Gallery Card-->
+  <div class="codeblock">
+    <div class="row">
+      <div class="col-sm-8">
+        <h3 class="section-subtitle">Image Gallery</h3>
+      </div>
+      <?php snippet('show-html'); ?>
+      <?php snippet('show-sass'); ?>
+    </div>
+    <div class="row">
+      <?php $image_gallery_page = $pages->find('cards')->children()->find('image-gallery'); ?>
+      <?php $gallery_img = $image_gallery_page->image('slide1.jpg'); ?>
+      <div class="image-gallery col-sm-5">
+        <div class="center-box">
+          <div class="modal-trigger"><img src="<?= $gallery_img->url() ?>" alt="Gallery image" class="gallery-thumbnail"/></div>
+          <div class="icon-gallery"></div>
+        </div>
+        <ul class="gallery-list">
+          <?php foreach($image_gallery_page->images()->filterBy('filename', '*=', 'slide') as $image): ?>
+          <div class="gallery-image">
+            <div class="gallery-image-inner"><img src="<?= $image->url() ?>" alt="Gallery image"/></div>
+          </div>
+          <?php endforeach; ?>
+        </ul>
+        <ul class="gallery-list-captions">
+          <?php foreach($image_gallery_page->images()->filterBy('filename', '*=', 'slide') as $image): ?>
+          <div class="gallery-caption">
+            <div class="remodal-description">
+              <?php echo $image->caption(); ?></div>
+            <div class="remodal-credit">
+              <?php echo $image->credit(); ?></div>
+          </div>
+          <?php endforeach; ?>
+        </ul>
+      </div>
+      <div class="col-xs-12 visible-xs">
+        <?php snippet('show-html-mobile'); ?>
+        <?php snippet('show-sass-mobile'); ?>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <pre class="sass"><code>/* from ../common/css/general.scss 
+-------------------------------------------------- */
+.image-gallery {
+		.icon-play-button {
+			&:before, &:after {
+				@include respond-to(break2max) {
+					font-size: 15vw;
+				}
+				@include respond-to(break2full) {
+					font-size: 6vw;
+				}
+				@include respond-to(fullwidth) {
+					font-size: 10rem;
+				}
+			}
+		}
+	}
+	.gallery-list, .gallery-list-captions {
+		display: none; // initial hide
+	}
+	.remodal-captions {
+		display: none;
+	}
+	.image-gallery-remodal {
+		max-width: none !important;
+		background-color: transparent;
+		.remodal-close {
+			right: 0 !important;
+			@include respond-to(break2max) {
+				top: -4.5rem;
+			}
+		}
+		.remodal-captions {
+			display: block;
+		}
+	}
+	.remodal-gallery {
+		.slick-track {
+			height: initial;
+		}
+		.slick-slide {
+			height: auto;
+			max-width: 100vw;
+			@include padding-right(4);
+			@include padding-left(4);
+		}
+		.slick-slide img {
+			max-height: 70vh;
+			width: auto;
+		}
+		.gallery-image-inner {
+			position: relative; // contain gray overlay
+			&:after {
+				@include respond-to(break2) {
+					content: '';
+					display: block;
+					position: absolute;
+					top: 0;right: 0;bottom: 0;left: 0;
+					background-color: rgba(0,0,0,0.8);
+				}	
+			}
+		}
+		.slick-active .gallery-image-inner:after {
+			display: none;
+		}		
+		.slick-arrow {
+			@include respond-to(break2max) {
+				display: none !important;
+			}
+		}
+		.slick-prev {
+			@include respond-to(break2) {
+				left: 1vw;
+			}
+			@include respond-to(fullwidth) {
+				left: 5rem;
+			}
+		}
+		.slick-next {
+			@include respond-to(break2full) {
+				right: 1vw;
+			}
+			@include respond-to(fullwidth) {
+				right: 5rem;
+			}
+		}		
+	}
+	.remodal-captions {
+		@include margin-top(4);
+		// turn down non-active captions
+		.slick-slide:not(.slick-active) {
+			.remodal-description, .remodal-credit {
+				color: $black80;
+			}
+		}
+		.remodal-description {
+			@include padding(2);			
+			padding-bottom: 0 !important;
+			color: white;
+		}
+		.remodal-credit {
+			@include padding(2);
+			color: $black50;
+			@include caption-sans;
+		}
+	}</code></pre>
+      </div>
+      <div class="col-sm-12">
+        <pre class="html"><code>&lt;div class="image-gallery col-sm-5"&gt;
+	&lt;div class="center-box"&gt;
+		&lt;div class="modal-trigger"&gt;&lt;img src="//localhost:3007/content/5-cards/1-image-gallery/slide1.jpg" alt="Gallery image" class="gallery-thumbnail"&gt;&lt;/div&gt;
+		&lt;div class="icon-gallery"&gt;&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;ul class="gallery-list"&gt;
+		&lt;div class="gallery-image"&gt;
+			&lt;div class="gallery-image-inner"&gt;
+				&lt;img src="//localhost:3007/content/5-cards/1-image-gallery/slide1.jpg" alt="Gallery image"&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class="gallery-image"&gt;
+			&lt;div class="gallery-image-inner"&gt;
+				&lt;img src="//localhost:3007/content/5-cards/1-image-gallery/slide2.jpg" alt="Gallery image"&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class="gallery-image"&gt;
+			&lt;div class="gallery-image-inner"&gt;
+				&lt;img src="//localhost:3007/content/5-cards/1-image-gallery/slide3.jpg" alt="Gallery image"&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class="gallery-image"&gt;
+			&lt;div class="gallery-image-inner"&gt;
+				&lt;img src="//localhost:3007/content/5-cards/1-image-gallery/slide4.jpg" alt="Gallery image"&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class="gallery-image"&gt;
+			&lt;div class="gallery-image-inner"&gt;
+				&lt;img src="//localhost:3007/content/5-cards/1-image-gallery/slide5.jpg" alt="Gallery image"&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class="gallery-image"&gt;
+			&lt;div class="gallery-image-inner"&gt;
+				&lt;img src="//localhost:3007/content/5-cards/1-image-gallery/slide6.jpg" alt="Gallery image"&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class="gallery-image"&gt;
+			&lt;div class="gallery-image-inner"&gt;
+				&lt;img src="//localhost:3007/content/5-cards/1-image-gallery/slide7.jpg" alt="Gallery image"&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class="gallery-image"&gt;
+			&lt;div class="gallery-image-inner"&gt;
+				&lt;img src="//localhost:3007/content/5-cards/1-image-gallery/slide8.jpg" alt="Gallery image"&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/ul&gt;
+	&lt;ul class="gallery-list-captions"&gt;
+		&lt;div class="gallery-caption"&gt;
+			&lt;div class="remodal-description"&gt;A shoemaker at La Maison Prodiso’s workshop uses an industrial sewing machine to hem the canvas that forms the upper part of the espadrille.&lt;/div&gt;
+			&lt;div class="remodal-credit"&gt;Photo by Josué Castilleja, Ralph Rinzler Folklife Archives&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class="gallery-caption"&gt;
+			&lt;div class="remodal-description"&gt;La Maison Prodiso is filled with stacks of handmade espadrille shoes in bright solid colors or festive stripes.&lt;/div&gt;
+			&lt;div class="remodal-credit"&gt;Photo by Josué Castilleja, Ralph Rinzler Folklife Archives&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class="gallery-caption"&gt;
+			&lt;div class="remodal-description"&gt;Jesus Maria Lazkano in his studio in Urdaibai.&lt;/div&gt;
+			&lt;div class="remodal-credit"&gt;Photo by Cristina Díaz-Carrera, Ralph Rinzler Folklife Archives&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class="gallery-caption"&gt;
+			&lt;div class="remodal-description"&gt;Master potter Blanka Gomez de Segura demonstrates how to throw a traditional Basque pot.&lt;/div&gt;
+			&lt;div class="remodal-credit"&gt;Photo by Josué Castilleja, Ralph Rinzler Folklife Archives&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class="gallery-caption"&gt;
+			&lt;div class="remodal-description"&gt;Blanka Gomez de Segura’s workshop is next to a 900-year-old kiln.&lt;/div&gt;
+			&lt;div class="remodal-credit"&gt;Photo by Mary S. Linn, Ralph Rinzler Folklife Archives&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class="gallery-caption"&gt;
+			&lt;div class="remodal-description"&gt;Master stone carver Bernat Vidal poses with an example of his work featuring traditional Basque motifs of the sun in sandstone.&lt;/div&gt;
+			&lt;div class="remodal-credit"&gt;Photo by Agustin Sagasti&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class="gallery-caption"&gt;
+			&lt;div class="remodal-description"&gt;Although weaving was once a large industry in her native Durango (Bizkaia), Olga Uribe Salaberria is one of the few to carry forward the tradition.&lt;/div&gt;
+			&lt;div class="remodal-credit"&gt;Photo by Eneko Uribe&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class="gallery-caption"&gt;
+			&lt;div class="remodal-description"&gt;Olga Uribe Salaberria weaves linen cloth on one of her looms.&lt;/div&gt;
+			&lt;div class="remodal-credit"&gt;Photo by Eneko Uribe&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;</code></pre>
       </div>
     </div>
   </div>
