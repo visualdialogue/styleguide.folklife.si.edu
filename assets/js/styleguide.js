@@ -527,7 +527,7 @@ $(document).ready(function () {
 		galleryIsSlick = true;
 
 		// show gallery before call slick because needs to be right size or visible or something?
-		$remodal.addClass('remodal-gallery-is-open image-gallery-remodal');
+		$remodal.addClass('remodal-gallery-is-open remodal-image-gallery');
 
 		// make background darker for images
 		$remodalOverlay.addClass('is-black');
@@ -613,7 +613,7 @@ $(document).ready(function () {
 		galleryIsSlick = true;
 
 		// show gallery before initiate slick so can open correctly
-		$remodal.addClass('remodal-gallery-is-open image-gallery-remodal');
+		$remodal.addClass('remodal-gallery-is-open remodal-image-gallery');
 
 		// initiate slick gallery on images
 		$remodalGallery.slick({

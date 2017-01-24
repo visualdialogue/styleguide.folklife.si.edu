@@ -647,7 +647,7 @@
 .remodal-captions {
 	display: none;
 }
-.image-gallery-remodal {
+.remodal-image-gallery {
 	max-width: none !important;
 	background-color: transparent;
 	.remodal-close {

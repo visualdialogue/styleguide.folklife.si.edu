@@ -8295,7 +8295,6 @@ body {
   font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
   line-height: 1.333333;
   font-size: 1.9rem;
-  overflow-y: scroll;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1560px) {
@@ -10923,22 +10922,22 @@ video::-webkit-media-controls {
   display: none;
 }
 
-.image-gallery-remodal {
+.remodal-image-gallery {
   max-width: none !important;
   background-color: transparent;
 }
 
-.image-gallery-remodal .remodal-close {
+.remodal-image-gallery .remodal-close {
   right: 0 !important;
 }
 
 @media only screen and (max-width: 53.25em) {
-  .image-gallery-remodal .remodal-close {
+  .remodal-image-gallery .remodal-close {
     top: -4.5rem;
   }
 }
 
-.image-gallery-remodal .remodal-captions {
+.remodal-image-gallery .remodal-captions {
   display: block;
 }
 
@@ -12281,7 +12280,7 @@ body {
 
 /* Image/Gallery popup
 -------------------------------------------------*/
-.remodal-gallery ~ .remodal-iframe, .remodal-gallery ~ .remodal-copy {
+.remodal-image-gallery .remodal-iframe, .remodal-image-gallery .remodal-copy {
   display: none;
 }
 
