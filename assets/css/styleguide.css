@@ -12277,7 +12277,7 @@ body {
 
 /* Image/Gallery popup
 -------------------------------------------------*/
-.remodal-gallery-is-open .remodal-gallery ~ .remodal-iframe, .remodal-gallery-is-open .remodal-gallery ~ .remodal-copy {
+.remodal-gallery ~ .remodal-iframe, .remodal-gallery ~ .remodal-copy {
   display: none;
 }
 
