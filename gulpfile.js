@@ -180,8 +180,9 @@ gulp.task('styles', function() {
         .pipe(plumber())
         .pipe(sass({
             errLogToConsole: true,
-            outputStyle: 'expanded'
-            // outputStyle: 'compressed'
+            outputStyle: 'expanded',
+            indentType: 'tab',
+            indentWidth: '1'
         }))
         // .pipe(uncss({
         //     // get representative pages

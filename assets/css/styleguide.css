@@ -6085,12 +6085,12 @@ iframe {
 /* Sizes
 -------------------------------------------------- */
 /**********
-  * Calculate height of full screen banner
-  * Accomplished by taking full height and subtracting height of navbar
-  **********/
+	* Calculate height of full screen banner
+	* Accomplished by taking full height and subtracting height of navbar
+	**********/
 /*******
-  * set margins with scales
-  *******/
+	* set margins with scales
+	*******/
 /* Media Queries
 -------------------------------------------------- */
 /* 
@@ -7386,7 +7386,7 @@ a:hover {
 }
 
 .navspacer {
-  height: calc(4.5rem + 0px + 8.5rem);
+  height: calc(4.5rem + 8.5rem);
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1560px) {
