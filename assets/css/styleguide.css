@@ -8243,10 +8243,6 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
 
 /* half sections
 -------------------------------------------------- */
-.half-section:nth-of-type(1) {
-  padding-right: 4rem;
-}
-
 @media only screen and (min-width: 53.25em) {
   .half-section:nth-of-type(1) {
     padding-right: 2.7%;
@@ -8257,10 +8253,6 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
   .half-section:nth-of-type(1) {
     padding-right: 4rem;
   }
-}
-
-.half-section:nth-of-type(2) {
-  padding-left: 4rem;
 }
 
 @media only screen and (min-width: 53.25em) {
