@@ -359,7 +359,7 @@
 	.md-magazine-title {@include md-magazine-title;}
 	.sm-magazine-title {@include sm-magazine-title;}
 
-	.buy-button {@include buy-button;}
+	.button-title {@include button-title;}
 	.category-tag-type {@include sans-tag;}
 	.category-tag-bold-type {@include sans-tag;font-weight: 700;}
 
@@ -417,6 +417,14 @@
 	}
 	.image-gallery {
 		@include margin-bottom(4);
+	}
+
+/* components
+-------------------------------------------------- */
+	.buy-button {
+		.title {
+			// display: inline-block;
+		}
 	}
 
 /* video

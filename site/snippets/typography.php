@@ -499,7 +499,7 @@
       <div class="typeface codeblock">
         <div class="row type-title-wrapper">
           <hr/>
-          <div class="col-sm-10 sm-magazine-title type-title">Buttons</div>
+          <div class="col-sm-10 button-title type-title">Button Title</div>
           <?php snippet('show-sass'); ?>
         </div>
         <div class="row">
@@ -508,7 +508,7 @@
           </div>
           <div class="col-md-7">
             <?php snippet('show-sass-mobile'); ?>
-            <pre class="sass"><code>@mixin buy-button {
+            <pre class="sass"><code>@mixin button-title {
 	font-weight: 800;
 	text-transform: uppercase;
 	font-family: $sansWide;

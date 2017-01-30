@@ -30,8 +30,8 @@
       <!-- Logo-->
       <div class="logo-wrapper col-sm-2">
         <div id="logo" class="logo"><a href="/">
-            <div class="one-line-logos"><img src="/assets/images/logo/mobile-folklife-one-line-logo_2016.12.23.png" class="one-line-logo mobile-one-line-logo visible-xs visible-sm"/><img src="/assets/images/logo/tablet-folklife-one-line-logo_2017.1.2.png" class="one-line-logo tablet-one-line-logo visible-md"/><img src="/assets/images/logo/desktop-folklife-one-line-logo_2017.1.2.png" class="one-line-logo desktop-one-line-logo visible-lg"/></div>
-            <div class="block-logos"><img src="/assets/images/logo/mobile-folklife-block-logo_2016.12.23.png" class="block-logo mobile-block-logo visible-xs visible-sm"/><img src="/assets/images/logo/tablet-folklife-block-logo_2017.1.2.png" class="block-logo tablet-block-logo visible-md"/><img src="/assets/images/logo/desktop-folklife-block-logo_2017.1.2.png" class="block-logo desktop-block-logo visible-lg"/></div></a></div>
+            <div class="one-line-logos"><img src="/assets/images/logo/navbar/folklife_oneLine_160.png?v=<?= time() ?>" alt="Folklife Logo" class="one-line-logo mobile-one-line-logo visible-xs"/><img src="/assets/images/logo/navbar/folklife_oneLine_224.png?v=<?= time() ?>" alt="Folklife Logo" class="one-line-logo tablet-one-line-logo visible-sm visible-md"/><img src="/assets/images/logo/navbar/folklife_oneLine_258.png?v=<?= time() ?>" alt="Folklife Logo" class="one-line-logo desktop-one-line-logo visible-lg"/></div>
+            <div class="block-logos"><img src="/assets/images/logo/navbar/folklife_logo_200x200.png?v=<?= time() ?>" alt="Folklife Logo" class="block-logo mobile-block-logo visible-xs visible-sm"/><img src="/assets/images/logo/navbar/folklife_logo_280x280.png?v=<?= time() ?>" alt="Folklife Logo" class="block-logo tablet-block-logo visible-md"/><img src="/assets/images/logo/navbar/folklife_logo_320x320.png?v=<?= time() ?>" alt="Folklife Logo" class="block-logo desktop-block-logo visible-lg"/></div></a></div>
       </div>
       <?php snippet('nav-icons-search'); ?>
     </ul>
@@ -57,6 +57,7 @@
           </ul>
         </li>
         <li class="header-nav-main-item col-sm-2"> <a href="#cards" class="header-nav-title">Cards</a></li>
+        <li class="header-nav-main-item col-sm-2"> <a href="#components" class="header-nav-title">Components</a></li>
       </ul>
     </div>
   </div>
