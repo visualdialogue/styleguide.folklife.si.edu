@@ -13211,19 +13211,15 @@ body {
 }
 
 .basque-page .language-buttons .button .button-inner, .basque-child-page .language-buttons .button .button-inner {
-	background-color: #79b93e;
-}
-
-.basque-page .language-buttons .button .title, .basque-child-page .language-buttons .button .title {
-	color: #cd181f;
-}
-
-.basque-page .language-buttons .button ~ .button .button-inner, .basque-child-page .language-buttons .button ~ .button .button-inner {
 	background-color: #cd181f;
 }
 
-.basque-page .language-buttons .button ~ .button .title, .basque-child-page .language-buttons .button ~ .button .title {
-	color: #79b93e;
+.basque-page .language-buttons .button ~ .button .button-inner, .basque-child-page .language-buttons .button ~ .button .button-inner {
+	background-color: #79b93e;
+}
+
+.basque-page .language-buttons .button ~ .button .button-inner:hover, .basque-child-page .language-buttons .button ~ .button .button-inner:hover {
+	background-color: gray;
 }
 
 /* Festival Program page
