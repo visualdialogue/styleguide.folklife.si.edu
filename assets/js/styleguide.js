@@ -811,6 +811,23 @@ $(document).ready(function () {
 	if(site.isMobile)
 		dropdownToggleInit();
 
+/***************************
+* Language Buttons
+**************************/
+	var $languageButtons = $('.language-buttons')
+	var $allLanguageButtons = $languageButtons.find('.button');
+	var numLanguages = $allLanguageButtons.length / 2;
+	console.log(numLanguages);
+
+	// when click any language button...
+	$allLanguageButtons.click(function() {
+		$allLanguageButtons.removeClass('is-active'); // reset all
+		var $buttonIndex = $(this).index(); // get position of this button so can change mobile or desktop buttons too
+		console.log($buttonIndex);
+		// $languageButtons.children().eq($buttonIndex).addClass('is-active'); // change all
+		$languageButtons.children().eq(2).hide();
+	});
+
 /**********
 * Check Mobile every time resize the browser
 **********/

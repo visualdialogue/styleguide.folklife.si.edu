@@ -13210,16 +13210,12 @@ body {
 	fill: #79b93e;
 }
 
-.basque-page .language-buttons .button .button-inner, .basque-child-page .language-buttons .button .button-inner {
-	background-color: #cd181f;
-}
-
-.basque-page .language-buttons .button ~ .button .button-inner, .basque-child-page .language-buttons .button ~ .button .button-inner {
+.basque-page .language-buttons .button-inner, .basque-child-page .language-buttons .button-inner {
 	background-color: #79b93e;
 }
 
-.basque-page .language-buttons .button ~ .button .button-inner:hover, .basque-child-page .language-buttons .button ~ .button .button-inner:hover {
-	background-color: gray;
+.basque-page .language-buttons .button.is-active .button-inner, .basque-child-page .language-buttons .button.is-active .button-inner {
+	background-color: #cd181f;
 }
 
 /* Festival Program page
@@ -14110,6 +14106,18 @@ body {
 	.language-buttons {
 		margin-bottom: 2rem;
 	}
+}
+
+.language-buttons div:nth-of-type(1) {
+	padding-right: 2px;
+}
+
+.language-buttons div:nth-of-type(2) {
+	padding-left: 2px;
+}
+
+.language-buttons .button:hover .button-inner {
+	background-color: gray !important;
 }
 
 .sidebar-card .details-inner {
