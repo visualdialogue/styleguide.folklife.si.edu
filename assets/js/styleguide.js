@@ -825,7 +825,8 @@ $(document).ready(function () {
 		var $buttonIndex = $(this).index(); // get position of this button so can change mobile or desktop buttons too
 		console.log($buttonIndex);
 		// $languageButtons.children().eq($buttonIndex).addClass('is-active'); // change all
-		$languageButtons.children().eq(2).hide();
+		$languageButtons.children().eq($buttonIndex).addClass('is-active'); // activate desktop and mobile buttons for this language
+		$languageButtons.children().eq($buttonIndex + numLanguages).addClass('is-active'); // activate desktop and mobile buttons for this language
 	});
 
 /**********

@@ -14055,18 +14055,18 @@ body {
 }
 
 .ms-sidebar-logo {
-	margin-bottom: 1.11111rem;
+	margin-bottom: 1.48148rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1560px) {
 	.ms-sidebar-logo {
-		margin-bottom: 1.92vw;
+		margin-bottom: 2.56vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
 	.ms-sidebar-logo {
-		margin-bottom: 3rem;
+		margin-bottom: 4rem;
 	}
 }
 
@@ -14093,18 +14093,18 @@ body {
 }
 
 .language-buttons {
-	margin-bottom: 0.74074rem;
+	margin-bottom: 1.48148rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1560px) {
 	.language-buttons {
-		margin-bottom: 1.28vw;
+		margin-bottom: 2.56vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
 	.language-buttons {
-		margin-bottom: 2rem;
+		margin-bottom: 4rem;
 	}
 }
 
