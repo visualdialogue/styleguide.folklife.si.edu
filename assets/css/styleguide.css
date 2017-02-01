@@ -6658,6 +6658,9 @@ body {
 .social-icons {
 	display: none;
 	text-align: right;
+	padding: 0;
+	position: relative;
+	z-index: 10;
 }
 
 @media only screen and (max-width: 53.25em) {
@@ -6668,12 +6671,6 @@ body {
 		width: 100%;
 		left: 0;
 	}
-}
-
-.mobile-social-icons {
-	padding: 0;
-	position: relative;
-	z-index: 10;
 }
 
 .desktop-social-icons {
