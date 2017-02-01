@@ -858,12 +858,12 @@ $(document).ready(function () {
 		var oldHref = $(this).attr('href'); // get old href
 		var newHref = oldHref.replace('#PageURL', pageURL); // replace #PageURL with real one
 		$(this).attr('href', newHref);// set url to newHref
-	})
+	});
 
 	// get facebook sdk
 	window.fbAsyncInit = function() {
 		FB.init({
-			appId      : '1451828684827581',
+			appId      : '405718899770730',
 			xfbml      : true,
 			version    : 'v2.8'
 		});

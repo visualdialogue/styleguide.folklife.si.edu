@@ -10329,6 +10329,34 @@ figcaption.minus-sign:before {
 	}
 }
 
+.caption {
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.4;
+	text-transform: uppercase;
+	font-size: 1.3rem;
+	text-transform: initial;
+}
+
+@media only screen and (min-width: 53.25em) {
+	.caption {
+		line-height: 1.3;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1560px) {
+	.caption {
+		font-size: 1vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.caption {
+		line-height: 1.3;
+		font-size: 1.6rem;
+	}
+}
+
 /* Dropdown Select, multi level select, from http://stackoverflow.com/a/9101168
 -------------------------------------------------- */
 .dropdown-wrapper {
