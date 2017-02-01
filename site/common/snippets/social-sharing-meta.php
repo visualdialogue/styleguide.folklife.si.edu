@@ -12,7 +12,6 @@
 <meta property="og:description" content="<?= $og_description ?>"/>
 <meta property="og:image" content="<?= $home_image ?>"/>
 <?php foreach($page->images() as $image): ?>
-<meta property="og:image" content="<?= $image->url() ?>"/>
 <?php endforeach; ?>
 <?php elseif($page->intendedTemplate() == 'blog'): ?>
 <meta property="og:type" content="website"/>

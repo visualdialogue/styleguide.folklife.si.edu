@@ -13,7 +13,7 @@ meta(name="twitter:site" content="@smithsonianfolk")
 	meta(property="og:description" content="<?= $og_description ?>")
 	meta(property="og:image" content="<?= $home_image ?>")
 	-foreach($page->images() as $image):
-		meta(property="og:image" content="<?= $image->url() ?>")
+		//- meta(property="og:image" content="<?= $image->url() ?>")
 	-endforeach
 
 -elseif($page->intendedTemplate() == 'blog'):
