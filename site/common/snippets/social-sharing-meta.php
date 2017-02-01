@@ -3,15 +3,19 @@
 <meta property="og:site_name" content="<?= $og_site_name ?>"/>
 <meta property="fb:app_id" content="1451828684827581"/>
 <meta property="og:url" content="<?= $page->url() ?>"/>
+<?php if($page->intendedTemplate() == 'home'): ?>
+<meta property="og:title" content="<?= $og_site_name ?>"/>
+<?php else: ?>
 <meta property="og:title" content="<?= $page->title() ?>"/>
+<?php endif; ?>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:site" content="@smithsonianfolk"/>
 <?php if($page->intendedTemplate() == 'home'): ?>
 <meta property="og:type" content="website"/>
-<meta property="og:title" content="<?= $og_site_name ?>"/>
 <meta property="og:description" content="<?= $og_description ?>"/>
 <meta property="og:image" content="<?= $home_image ?>"/>
 <?php foreach($page->images() as $image): ?>
+<meta property="og:image" content="<?= $image->url() ?>"/>
 <?php endforeach; ?>
 <?php elseif($page->intendedTemplate() == 'blog'): ?>
 <meta property="og:type" content="website"/>

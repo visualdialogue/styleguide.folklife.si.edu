@@ -849,6 +849,43 @@ $(document).ready(function () {
 		checkMobile();
 	});
 
+/***************************
+* Social Sharing
+**************************/
+	// Set correct href for social sharing, for Orchard CMS
+	var pageURL = window.location.href;
+	$('.social-icons a').each(function() {
+		var oldHref = $(this).attr('href'); // get old href
+		var newHref = oldHref.replace('#PageURL', pageURL); // replace #PageURL with real one
+		$(this).attr('href', newHref);// set url to newHref
+	})
+
+	// get facebook sdk
+	window.fbAsyncInit = function() {
+		FB.init({
+			appId      : '1451828684827581',
+			xfbml      : true,
+			version    : 'v2.8'
+		});
+		FB.AppEvents.logPageView();
+	};
+
+	(function(d, s, id){
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) {return;}
+			js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/en_US/sdk.js";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+
+	// set button
+	document.getElementById('share-facebook').onclick = function() {
+		FB.ui({
+			method: 'share',
+			display: 'popup',
+			href: pageURL,
+		}, function(response){});
+	}
 });
 /*
 

@@ -1,38 +1,7 @@
 .social-icons.container
 	.social-icon-link#share-facebook: .icon-facebook.social-icon.nav-icon(aria-hidden="true")
-	//- twitter link, from https://dev.twitter.com/web/tweet-button/parameters
-	a.social-icon-link(href="https://twitter.com/share?url=<?= $page->url() ?>&via=smithsonianfolk&text=<?= $page->title() ?>" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=225,width=500');return false;"): .icon-twitter.social-icon.nav-icon(aria-hidden="true")
-	a.social-icon-link(href="https://plus.google.com/share?url=<?= $page->url() ?>" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"): .icon-gplus.social-icon.nav-icon(aria-hidden="true")
-	a.social-icon-link(href="https://www.pinterest.com/pin/create/button?url=<?= $page->url() ?>" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=800');return false;"): .icon-pinterest.social-icon.nav-icon(aria-hidden="true")
-	a.social-icon-link(href="https://www.tumblr.com/widgets/share/tool?url=<?= $page->url() ?>" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=540');return false;"): .icon-tumblr.social-icon.nav-icon(aria-hidden="true")
+	a.social-icon-link(href="https://twitter.com/share?url=#PageURL&via=smithsonianfolk&text=<?= $page->title() ?>" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=225,width=500');return false;"): .icon-twitter.social-icon.nav-icon(aria-hidden="true")
+	a.social-icon-link(href="https://plus.google.com/share?url=#PageURL" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"): .icon-gplus.social-icon.nav-icon(aria-hidden="true")
+	a.social-icon-link(href="https://www.pinterest.com/pin/create/button?url=#PageURL" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=800');return false;"): .icon-pinterest.social-icon.nav-icon(aria-hidden="true")
+	a.social-icon-link(href="https://www.tumblr.com/widgets/share/tool?url=#PageURL" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=540');return false;"): .icon-tumblr.social-icon.nav-icon(aria-hidden="true")
 	a.social-icon-link(href="mailto:?Subject=<?= str::encode($page->title())?>&body=%0D%0A%0D%0Afrom%20<?= str::encode($page->url()) ?>"): .icon-mail.social-icon.nav-icon(aria-hidden="true")
-	//- a.social-icon-link(href="https://www.flickr.com/groups/2016folklifefestival" target="_blank"): .icon-flickr.social-icon.nav-icon(aria-hidden="true")
-	//- a.social-icon-link(href="https://www.instagram.com/smithsonianfolklife/" target="_blank"): .icon-instagrem.social-icon.nav-icon(aria-hidden="true")
-// Facebook SDK
-script.
-	// get sdk
-		window.fbAsyncInit = function() {
-			FB.init({
-				appId      : '1451828684827581',
-				xfbml      : true,
-				version    : 'v2.8'
-			});
-			FB.AppEvents.logPageView();
-		};
-
-		(function(d, s, id){
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) {return;}
-				js = d.createElement(s); js.id = id;
-			js.src = "//connect.facebook.net/en_US/sdk.js";
-			fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
-
-	// set button
-	document.getElementById('share-facebook').onclick = function() {
-		FB.ui({
-			method: 'share',
-			display: 'popup',
-			href: '<?= $page->url() ?>',
-		}, function(response){});
-	}
