@@ -20,7 +20,7 @@
         </div>
       </article>
     </section>
-    <?php snippet('currentsidebar'); ?>
+    <?php snippet('current-sidebar'); ?>
     <aside class="sidebar col-sm-4">
       <?php snippet('sidebar-audio'); ?>
       <?php snippet('card', array('card' => $pages->find('explore')->children()->find('videos')->children()->find('music-of-central-asia-and-the-aga-khan-music-initiative'), 'card_classes' => 'sidebar-video' )); ?>

@@ -6076,7 +6076,7 @@ html {
 	overflow: hidden;
 }
 
-iframe {
+.iframe-wrapper iframe {
 	width: 100%;
 	position: absolute;
 	top: 0;

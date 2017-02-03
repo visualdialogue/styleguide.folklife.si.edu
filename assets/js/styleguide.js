@@ -879,13 +879,13 @@ $(document).ready(function () {
 	}(document, 'script', 'facebook-jssdk'));
 
 	// set button
-	document.getElementById('share-facebook').onclick = function() {
+	$('#share-facebook').click(function() {
 		FB.ui({
 			method: 'share',
 			display: 'popup',
 			href: pageURL,
 		}, function(response){});
-	}
+	})
 });
 /*
 
