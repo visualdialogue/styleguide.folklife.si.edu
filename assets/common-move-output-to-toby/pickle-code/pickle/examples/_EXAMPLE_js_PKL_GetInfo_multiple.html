@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<!-- IMPORTANT: 
+
+The line above that begins with "DOCTYPE" must be included in order for Apple products (safari, ipod, etc) to display properly.
+
+-->
+
+<html>
+<head>
+<title>Pickle Player - PKL_GetInfo - Advanced</title>
+
+<!-- START - PICKLE FILES  -->
+<script language="javascript" src="pickle.js"></script>
+<link href="skins/basic_audio_player/_stylesheet.css" rel="stylesheet" type="text/css">
+<!-- END - PICKLE FILES -->
+
+<!-- PICKLE EXAMPLE COMMON JAVASCRIPT FUNCTIONS -->
+<script language="javascript" src="pickle_examples_common.js"></script>
+
+</head>
+<body bgcolor="#FFFFFF">
+
+
+
+
+<TABLE>
+<TR>
+	<TD>
+
+
+		<p>
+		<a href="javascript:;" onclick="AlertObj(PKL_GetInfo('MyPlayer1'));">Get info from "MyPlayer1"</a>
+		</p>
+
+		<p>
+		<!-- START - PICKLE PLAYER  -->
+		<div id="MyPlayer1" data-media="song1.mp3"></div>
+		<!-- END - PICKLE PLAYER  -->
+		</p>
+
+	
+	</TD>
+</TR>
+<TR>
+	<TD>
+	
+		<p>
+		<a href="javascript:;" onclick="AlertObj(PKL_GetInfo('MyPlayer2'));">Get info from "MyPlayer2"</a>
+		</p>
+
+		<p>
+		<!-- START - PICKLE PLAYER  -->
+		<div id="MyPlayer2" data-media="song2.mp3"></div>
+		<!-- END - PICKLE PLAYER  -->
+		</p>
+
+	
+	</TD>
+</TR>
+
+</TABLE>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

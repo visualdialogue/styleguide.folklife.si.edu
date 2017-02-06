@@ -574,7 +574,7 @@
         </div>
         <div class="row">
           <div class="col-sm-5">
-            <div class="type-details">Typeface: Acumin Pro Wide<br/>Weight: 700<br/>Maximum Font Size: 1.6rem</div>
+            <div class="type-details">Typeface: Acumin Pro Wide<br/>Weight: 700<br/>Maximum Font Size: 1.6rem<br/>Usage: Festival Micro Site Section Header</div>
           </div>
           <div class="col-md-7">
             <?php snippet('show-sass-mobile'); ?>

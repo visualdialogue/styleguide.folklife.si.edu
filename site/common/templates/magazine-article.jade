@@ -19,18 +19,14 @@
 						!= $page->references()->kt()
 
 					-snippet('disqus')         
-
-		-snippet('current-sidebar')
-
-		aside.sidebar.col-sm-4
-
-			-snippet('sidebar-audio')
-
-			-snippet('card', array('card' => $pages->find('explore')->children()->find('videos')->children()->find('music-of-central-asia-and-the-aga-khan-music-initiative'), 'card_classes' => 'sidebar-video' ))
-			
-			-snippet('card', array('card' => $pages->find('explore')->children()->find('sounds')->children()->find('album-covers'), 'card_classes' => 'sidebar-album' ))
-
-			-snippet('blog-related-content', array('orientation' => 'vertical', 'limit' => 3))
-			
+		-if($page->uid() == 'education-and-musical-diversity'):
+			-snippet('current-sidebar')
+		-else:
+			aside.sidebar.col-sm-4
+				-snippet('sidebar-audio')
+				-snippet('card', array('card' => $pages->find('explore')->children()->find('videos')->children()->find('music-of-central-asia-and-the-aga-khan-music-initiative'), 'card_classes' => 'sidebar-video' ))
+				-snippet('card', array('card' => $pages->find('explore')->children()->find('sounds')->children()->find('album-covers'), 'card_classes' => 'sidebar-album' ))
+				-snippet('blog-related-content', array('orientation' => 'vertical', 'limit' => 3))
+		-endif
 
 -snippet('footer')

@@ -1,0 +1,20 @@
+<playlist>
+	<item>
+		<filename>video1.m4v</filename>
+		<image>video1.jpg</image>
+		<artist>Mike Gieson</artist>
+		<title>Video 1</title>
+	</item>
+	<item>
+		<filename>video2.m4v</filename>
+		<image>video2.jpg</image>
+		<artist>Mike Gieson</artist>
+		<title>Video 2</title>
+	</item>
+	<item>
+		<filename>video3.m4v</filename>
+		<image>video3.jpg</image>
+		<artist>Mike Gieson</artist>
+		<title>Video 3</title>
+	</item>
+</playlist>

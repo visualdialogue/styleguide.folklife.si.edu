@@ -1,0 +1,364 @@
+/*************************** PLAYER WRAPPER */
+.PKL_wrapper{
+	left:0px;
+	top:0px;
+	width:305px;
+	float:left;
+	position:relative;
+	z-index:1;
+	display:block;
+	height:217px;
+}
+
+/*************************** CONTROLS BKGD */
+.PKL_controlsBkgd{
+	background-image:url("g_controlsBkgd.png");
+	left:0px;
+	background-repeat:no-repeat;
+	top:0px;
+	width:293px;
+	font-size:0px;
+	float:left;
+	position:absolute;
+	z-index:6;
+	display:block;
+	height:66px;
+}
+
+/*************************** PLAY */
+.PKL_playpause, .PKL_play{
+	background-image:url("b_play.png");
+	left:11px;
+	background-repeat:no-repeat;
+	top:6px;
+	cursor:pointer;
+	width:52px;
+	font-size:0px;
+	float:left;
+	position:absolute;
+	z-index:6;
+	display:block;
+	height:49px;
+}
+div.PKL_playpause:hover, div.PKL_play:hover{
+	background-image:url("b_play_over.png");
+}
+div.PKL_playpause:active, div.PKL_play:active{
+	background-image:url("b_play_down.png");
+}
+div.PKL_playpause.pause, div.PKL_play.pause{
+	background-image:url("b_pause.png");
+}
+div.PKL_playpause.pause:hover, div.PKL_play.pause:hover{
+	background-image:url("b_pause_over.png");
+}
+div.PKL_playpause.pause:active, div.PKL_play.pause:active{
+	background-image:url("b_pause_down.png");
+}
+
+/*************************** MUTE */
+.PKL_mute{
+	background-image:url("b_mute.png");
+	left:253px;
+	background-repeat:no-repeat;
+	top:6px;
+	cursor:pointer;
+	width:27px;
+	font-size:0px;
+	float:left;
+	position:absolute;
+	z-index:5;
+	display:block;
+	height:26px;
+}
+div.PKL_mute:hover{
+	background-image:url("b_mute_over.png");
+}
+div.PKL_mute:active{
+	background-image:url("b_mute_down.png");
+}
+div.PKL_mute.on{
+	background-image:url("b_mute_down.png");
+}
+div.PKL_mute.on:hover{
+	background-image:url("b_mute_over.png");
+}
+div.PKL_mute.on:active{
+	background-image:url("b_mute.png");
+}
+
+/*************************** INFO BKGD */
+.PKL_infoBkgd{
+	background-image:url("g_infoBkgd.png");
+	left:65px;
+	background-repeat:no-repeat;
+	top:2px;
+	width:186px;
+	position:absolute;
+	z-index:4;
+	display:block;
+	height:34px;
+}
+
+/*************************** INFO */
+.PKL_info{
+	color:#1d007d;
+	left:74px;
+	vertical-align:middle;
+	text-align:left;
+	font-family:Arial;
+	top:10px;
+	white-space:nowrap;
+	width:119px;
+	font-size:13px;
+	position:absolute;
+	z-index:6;
+	display:block;
+	font-weight:normal;
+	height:19px;
+}
+
+/*************************** TIME */
+.PKL_time{
+	color:#1d007d;
+	left:196px;
+	vertical-align:middle;
+	text-align:center;
+	font-family:Arial;
+	top:11px;
+	white-space:nowrap;
+	width:44px;
+	font-size:13px;
+	font-weight:normal;
+	position:absolute;
+	z-index:6;
+	display:block;
+	overflow:hidden;
+	height:19px;
+}
+
+/*************************** SCRUB BKGD */
+.PKL_scrubBkgd{
+	background-image:url("g_scrubBkgd.png");
+	left:70px;
+	background-repeat:no-repeat;
+	top:40px;
+	cursor:pointer;
+	width:179px;
+	font-size:0px;
+	float:left;
+	position:absolute;
+	z-index:5;
+	display:block;
+	height:13px;
+}
+
+/*************************** SCRUB BAR */
+.PKL_scrubBar{
+	background-image:url("g_scrubBar.png");
+	overflow:hidden;
+	left:0px;
+	background-repeat:no-repeat;
+	top:0px;
+	cursor:pointer;
+	width:45px;
+	font-size:0px;
+	float:left;
+	position:absolute;
+	z-index:1;
+	display:block;
+	height:13px;
+}
+
+/*************************** LOADING */
+.PKL_loading{
+	background-image:url("g_scrubLoading.png");
+	overflow:hidden;
+	left:0px;
+	background-repeat:no-repeat;
+	top:0px;
+	width:45px;
+	font-size:0px;
+	float:right;
+	position:relative;
+	background-position:right;
+	z-index:1;
+	display:block;
+	height:13px;
+}
+
+/*************************** SCRUB HANDLE */
+.PKL_scrubHandle{
+	background-image:url("b_scrubHandle.png");
+	left:0px;
+	background-repeat:no-repeat;
+	top:-9px;
+	cursor:pointer;
+	width:35px;
+	font-size:0px;
+	float:left;
+	position:absolute;
+	z-index:6;
+	display:block;
+	height:33px;
+}
+div.PKL_scrubHandle:hover{
+	background-image:url("b_scrubHandle_over.png");
+}
+div.PKL_scrubHandle:active{
+	background-image:url("b_scrubHandle_down.png");
+}
+
+/*************************** THINKER */
+.PKL_thinker{
+	background-image:url("g_thinker.gif");
+	left:260px;
+	background-repeat:no-repeat;
+	top:39px;
+	width:19px;
+	font-size:0px;
+	position:absolute;
+	z-index:10;
+	display:block;
+	height:20px;
+}
+div.PKL_thinker.off{
+	background-image:none;
+}
+
+/*************************** PLAYLIST */
+.PKL_playlist{
+	overflow:hidden;
+	left:1px;
+	top:75px;
+	width:256px;
+	position:absolute;
+	z-index:5;
+	display:block;
+	height:129px;
+}
+
+/*************************** PLAYLIST ITEM */
+.PKL_playlistItemBkgd{
+	background-image:url("g_playlistItemBkgd.png");
+	left:0px;
+	background-repeat:no-repeat;
+	top:0px;
+	cursor:pointer;
+	width:256px;
+	float:left;
+	position:relative;
+	display:block;
+	height:43px;
+}
+div.PKL_playlistItemBkgd:hover{
+	background-image:url("g_playlistItemBkgd_over.png");
+}
+div.PKL_playlistItemBkgd:active{
+	background-image:url("g_playlistItemBkgd_down.png");
+}
+div.PKL_playlistItemBkgd.alt{
+	background-image:url("g_playlistItemBkgd.png");
+}
+div.PKL_playlistItemBkgd.alt:hover{
+	background-image:url("g_playlistItemBkgd_over.png");
+}
+div.PKL_playlistItemBkgd.alt:active{
+	background-image:url("g_playlistItemBkgd_down.png");
+}
+div.PKL_playlistItemBkgd.playing{
+	background-image:url("g_playlistItemBkgd_down.png");
+}
+div.PKL_playlistItemBkgd.playing:hover{
+	background-image:url("g_playlistItemBkgd_over.png");
+}
+div.PKL_playlistItemBkgd.playing:active{
+	background-image:url("g_playlistItemBkgd_down.png");
+}
+
+/*************************** PLAYLIST ITEM IMAGE */
+.PKL_playlistItemImage{
+	background-image:url("playlist_example_image.png");
+	left:6px;
+	background-repeat:no-repeat;
+	top:6px;
+	cursor:pointer;
+	width:33px;
+	position:absolute;
+	z-index:7;
+	height:32px;
+}
+
+/*************************** PLAYLIST ITEM ARTIST */
+.PKL_playlistItemArtist{
+	font-weight:normal;
+	left:49px;
+	text-align:left;
+	font-family:Arial;
+	top:22px;
+	cursor:pointer;
+	white-space:nowrap;
+	width:197px;
+	font-size:13px;
+	z-index:7;
+	position:absolute;
+	color:#b5b6b5;
+	overflow:hidden;
+	height:18px;
+}
+
+/*************************** PLAYLIST ITEM TITLE */
+.PKL_playlistItemTitle{
+	font-weight:bold;
+	left:49px;
+	text-align:left;
+	font-family:Arial;
+	top:2px;
+	cursor:pointer;
+	white-space:nowrap;
+	width:198px;
+	font-size:18px;
+	z-index:7;
+	position:absolute;
+	color:#e0dfdf;
+	overflow:hidden;
+	height:25px;
+}
+
+/*************************** PLAYLIST SCROLL BKGD */
+.PKL_playlistScrollBkgd{
+	background-image:url("g_playlistScrollBkgd.png");
+	left:265px;
+	background-repeat:no-repeat;
+	top:72px;
+	cursor:pointer;
+	width:30px;
+	font-size:0px;
+	position:absolute;
+	z-index:8;
+	display:block;
+	height:138px;
+}
+
+/*************************** PLAYLIST SCROLL HANDLE */
+.PKL_playlistScrollHandle{
+	background-image:url("g_playlistScrollHandle.png");
+	left:-3px;
+	background-repeat:no-repeat;
+	top:0px;
+	cursor:pointer;
+	width:38px;
+	font-size:0px;
+	position:absolute;
+	z-index:9;
+	display:block;
+	height:35px;
+}
+
+.PKL_preloader{
+	width:1px;
+	height:1px;
+	background-repeat:no-repeat;
+	background-image:url("b_play_over.png#b_play_down.png#b_pause.png#b_pause_over.png#b_pause_down.png#b_scrubHandle_over.png#b_scrubHandle_down.png#b_mute_over.png#b_mute_down.png#b_mute_down.png#b_mute_over.png#b_mute.png#background-image:none#b_scrubHandle_over.png#b_scrubHandle_down.png#g_playlistItemBkgd_over.png#g_playlistItemBkgd_down.png#g_playlistItemBkgd.png#g_playlistItemBkgd_over.png#g_playlistItemBkgd_down.png#g_playlistItemBkgd_down.png#g_playlistItemBkgd_over.png#g_playlistItemBkgd_down.png");
+	display:none;
+}

@@ -265,11 +265,11 @@
       </div>
     </div>
   </div>
-  <!-- Video Card-->
+  <!-- Video Card - YouTube-->
   <div class="codeblock">
     <div class="row">
       <div class="col-sm-8">
-        <h3 class="section-subtitle">Video Card</h3>
+        <h3 class="section-subtitle">Video Card &mdash; YouTube</h3>
       </div>
       <?php snippet('show-html'); ?>
       <?php snippet('show-sass'); ?>
@@ -277,7 +277,7 @@
     <div class="row">
       <li class="card video-card col-sm-4">
         <div class="row">
-          <div data-video-id="190599898" data-title="Festival 101" data-description="Lorem ipsum... <a>more</a>" class="video col-sm-12">
+          <div data-id="9U1WBi2kTNY" data-type="youtube" data-title="Bristoff Family Circus" data-description="Lorem ipsum... <a>more</a>" class="video col-sm-12">
             <div class="center-box">
               <div class="modal-trigger">
                 <?php echo $section->image('video.png'); ?>
@@ -313,7 +313,95 @@
       <div class="col-md-8">
         <pre class="html"><code>&lt;li class="card video-card col-sm-4"&gt;
 	&lt;div class="row"&gt;
-		&lt;div class="video col-xs-12" data-video-id="190599898" data-title="Festival 101" data-description="Lorem ipsum... &lt;a&gt;more&lt;/a&gt;"&gt;
+		&lt;div class="video col-xs-12" data-id="190599898" data-title="Festival 101" data-description="Lorem ipsum... &lt;a&gt;more&lt;/a&gt;"&gt;
+			&lt;div class="center-box"&gt;
+				&lt;div class="modal-trigger"&gt;
+					&lt;img src="video.png"&gt;
+				&lt;/div&gt;
+				&lt;div class="icon-play-button"&gt;&lt;/div&gt;
+		&lt;div class="details col-xs-12"&gt;
+			&lt;div class="details-inner"&gt;
+				&lt;div class="tag"&gt;Festival 2017&lt;/div&gt;
+				&lt;a class="high title" href="#"&gt;
+					&lt;span class="light"&gt;
+						&lt;span class="er"&gt;
+							Circus Arts 2017
+						&lt;/span&gt;
+					&lt;/span&gt;
+				&lt;/a&gt;
+				&lt;div class="description link-underline"&gt;
+					&lt;p&gt;See the culture and history of circus arts across the U.S.&lt;/p&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/li&gt;
+
+// The pop-up uses the remodal.js plugin (http://vodkabears.github.io/remodal)
+// The following code should be in the footer and is used by all video pop-ups on the page
+&lt;button class="remodal-close visually-hidden" data-remodal-action="close"&gt;
+&lt;div data-remodal-id="modal"&gt;
+	&lt;div class="remodal-iframe" id="remodal-iframe"&gt;
+	&lt;div class="remodal-copy"&gt;
+		&lt;h3 class="remodal-title"&gt;
+		&lt;div class="remodal-description"&gt;
+			&lt;p&gt;&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+      </div>
+    </div>
+  </div>
+  <!-- Video Card - Vimeo-->
+  <div class="codeblock">
+    <div class="row">
+      <div class="col-sm-8">
+        <h3 class="section-subtitle">Video Card &mdash; Vimeo</h3>
+      </div>
+      <?php snippet('show-html'); ?>
+      <?php snippet('show-sass'); ?>
+    </div>
+    <div class="row">
+      <li class="card video-card col-sm-4">
+        <div class="row">
+          <div data-id="190599898" data-type="vimeo" data-title="Festival 101" data-description="Lorem ipsum... <a>more</a>" class="video col-sm-12">
+            <div class="center-box">
+              <div class="modal-trigger">
+                <?php echo $section->image('video.png'); ?>
+              </div>
+              <div class="icon-play-button"></div>
+            </div>
+          </div>
+          <div class="details col-sm-12">
+            <div class="details-inner">
+              <div class="tag">Festival 2017</div><a href="#" class="high title"><span class="light"><span class="er">Circus Arts 2017</span></span></a>
+              <div class="description link-underline">
+                <p>See the culture and history of circus arts across the U.S.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 visible-xs">
+            <?php snippet('show-html-mobile'); ?>
+            <?php snippet('show-sass-mobile'); ?>
+          </div>
+        </div>
+      </li>
+      <div class="col-md-8">
+        <pre class="sass"><code>// As video cards can have different looks, we set the title font based on the section via the CSS
+.folkways-learn-section {
+	.title {
+		@include serif-sm;
+		font-weight: 600;
+	}
+}</code></pre>
+      </div>
+      <div class="col-md-8">
+        <pre class="html"><code>&lt;li class="card video-card col-sm-4"&gt;
+	&lt;div class="row"&gt;
+		&lt;div class="video col-xs-12" data-id="190599898" data-title="Festival 101" data-description="Lorem ipsum... &lt;a&gt;more&lt;/a&gt;"&gt;
 			&lt;div class="center-box"&gt;
 				&lt;div class="modal-trigger"&gt;
 					&lt;img src="video.png"&gt;

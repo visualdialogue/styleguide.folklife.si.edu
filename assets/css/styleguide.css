@@ -8440,113 +8440,6 @@ ul {
 	}
 }
 
-.sidebar h3, .sidebar-section-title {
-	font-weight: 300;
-	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.267;
-	font-size: 2.1rem;
-	color: gray;
-	margin-top: 0;
-	margin-bottom: 0rem;
-	padding-bottom: 0.56188rem;
-	border-bottom: 1px solid #999999;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1560px) {
-	.sidebar h3, .sidebar-section-title {
-		font-size: 1.9vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.sidebar h3, .sidebar-section-title {
-		font-size: 3rem;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1560px) {
-	.sidebar h3, .sidebar-section-title {
-		margin-bottom: 0vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.sidebar h3, .sidebar-section-title {
-		margin-bottom: 0rem;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1560px) {
-	.sidebar h3, .sidebar-section-title {
-		padding-bottom: 0.512vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.sidebar h3, .sidebar-section-title {
-		padding-bottom: 0.8rem;
-	}
-}
-
-.sidebar h4, .sidebar-item-title {
-	font-weight: 300;
-	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.4;
-	text-transform: uppercase;
-	font-size: 1.3rem;
-	padding-top: 0.56188rem;
-	color: gray;
-	margin: 0;
-}
-
-@media only screen and (min-width: 53.25em) {
-	.sidebar h4, .sidebar-item-title {
-		line-height: 1.3;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1560px) {
-	.sidebar h4, .sidebar-item-title {
-		font-size: 1vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.sidebar h4, .sidebar-item-title {
-		line-height: 1.3;
-		font-size: 1.6rem;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1560px) {
-	.sidebar h4, .sidebar-item-title {
-		padding-top: 0.512vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.sidebar h4, .sidebar-item-title {
-		padding-top: 0.8rem;
-	}
-}
-
-.sidebar-item {
-	border-bottom: 1px solid #999999;
-	padding-bottom: 0.70235rem;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1560px) {
-	.sidebar-item {
-		padding-bottom: 0.64vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.sidebar-item {
-		padding-bottom: 1rem;
-	}
-}
-
 .sidebar li:last-of-type {
 	border-bottom: none;
 }
@@ -8569,6 +8462,113 @@ ul {
 
 .sidebar .sidebar-highlight a:hover {
 	color: #4d4d4d;
+}
+
+.sidebar h3, .sidebar-section-title, #related-content-mag:before {
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.267;
+	font-size: 2.1rem;
+	color: gray;
+	margin-top: 0;
+	margin-bottom: 0rem;
+	padding-bottom: 0.56188rem;
+	border-bottom: 1px solid #999999;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1560px) {
+	.sidebar h3, .sidebar-section-title, #related-content-mag:before {
+		font-size: 1.9vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.sidebar h3, .sidebar-section-title, #related-content-mag:before {
+		font-size: 3rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1560px) {
+	.sidebar h3, .sidebar-section-title, #related-content-mag:before {
+		margin-bottom: 0vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.sidebar h3, .sidebar-section-title, #related-content-mag:before {
+		margin-bottom: 0rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1560px) {
+	.sidebar h3, .sidebar-section-title, #related-content-mag:before {
+		padding-bottom: 0.512vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.sidebar h3, .sidebar-section-title, #related-content-mag:before {
+		padding-bottom: 0.8rem;
+	}
+}
+
+.sidebar h4, .sidebar -item-title {
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.4;
+	text-transform: uppercase;
+	font-size: 1.3rem;
+	padding-top: 0.56188rem;
+	color: gray;
+	margin: 0;
+}
+
+@media only screen and (min-width: 53.25em) {
+	.sidebar h4, .sidebar -item-title {
+		line-height: 1.3;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1560px) {
+	.sidebar h4, .sidebar -item-title {
+		font-size: 1vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.sidebar h4, .sidebar -item-title {
+		line-height: 1.3;
+		font-size: 1.6rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1560px) {
+	.sidebar h4, .sidebar -item-title {
+		padding-top: 0.512vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.sidebar h4, .sidebar -item-title {
+		padding-top: 0.8rem;
+	}
+}
+
+.sidebar-item, #related-content-mag li {
+	border-bottom: 1px solid #999999;
+	padding-bottom: 0.70235rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1560px) {
+	.sidebar-item, #related-content-mag li {
+		padding-bottom: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.sidebar-item, #related-content-mag li {
+		padding-bottom: 1rem;
+	}
 }
 
 .sidebar-section {
@@ -12098,8 +12098,13 @@ a.details {
 
 /* video
 -------------------------------------------------- */
-.video {
+.video, #youtube-iframe {
 	display: none;
+}
+
+#youtube-iframe {
+	width: 100%;
+	height: 100%;
 }
 
 .video-card:not(.horizontal-card) .video {
@@ -13423,7 +13428,7 @@ body {
 	}
 }
 
-.program-resources .title {
+.program-resources .title, #related-content-mag li {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
 	line-height: 1.2;
@@ -13436,50 +13441,50 @@ body {
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1560px) {
-	.program-resources .title {
+	.program-resources .title, #related-content-mag li {
 		font-size: 1.6vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.program-resources .title {
+	.program-resources .title, #related-content-mag li {
 		font-size: 2.5rem;
 		line-height: 1.28;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1560px) {
-	.program-resources .title {
+	.program-resources .title, #related-content-mag li {
 		padding-top: 0.64vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.program-resources .title {
+	.program-resources .title, #related-content-mag li {
 		padding-top: 1rem;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1560px) {
-	.program-resources .title {
+	.program-resources .title, #related-content-mag li {
 		padding-bottom: 0.64vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.program-resources .title {
+	.program-resources .title, #related-content-mag li {
 		padding-bottom: 1rem;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1560px) {
-	.program-resources .title {
+	.program-resources .title, #related-content-mag li {
 		padding-left: 0.96vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.program-resources .title {
+	.program-resources .title, #related-content-mag li {
 		padding-left: 1.5rem;
 	}
 }
@@ -13901,7 +13906,7 @@ body {
 	}
 }
 
-.ms-sidebar .ms-sidebar-section-title {
+.ms-sidebar-section-title {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
 	line-height: 1.2;
@@ -13910,23 +13915,26 @@ body {
 	border-color: #00a765;
 	font-weight: 600;
 	min-height: 3rem;
-	height: 2.87962rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1560px) {
-	.ms-sidebar .ms-sidebar-section-title {
+	.ms-sidebar-section-title {
 		font-size: 1.6vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.ms-sidebar .ms-sidebar-section-title {
+	.ms-sidebar-section-title {
 		font-size: 2.5rem;
 		line-height: 1.28;
 	}
 }
 
-.ms-sidebar .ms-sidebar-section-title.small {
+.ms-sidebar-section-title.active .ms-sidebar-sub-nav {
+	display: block;
+}
+
+.ms-sidebar-section-title.small {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
 	line-height: 1.4;
@@ -13938,47 +13946,47 @@ body {
 }
 
 @media only screen and (min-width: 53.25em) {
-	.ms-sidebar .ms-sidebar-section-title.small {
+	.ms-sidebar-section-title.small {
 		line-height: 1.3;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1560px) {
-	.ms-sidebar .ms-sidebar-section-title.small {
+	.ms-sidebar-section-title.small {
 		font-size: 1vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.ms-sidebar .ms-sidebar-section-title.small {
+	.ms-sidebar-section-title.small {
 		line-height: 1.3;
 		font-size: 1.6rem;
 	}
 }
 
 @media only screen and (max-width: 53.25em) {
-	.ms-sidebar .ms-sidebar-section-title.small {
+	.ms-sidebar-section-title.small {
 		padding-top: 0.5rem;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1560px) {
-	.ms-sidebar .ms-sidebar-section-title.small {
+	.ms-sidebar-section-title.small {
 		padding-top: 0.448vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.ms-sidebar .ms-sidebar-section-title.small {
+	.ms-sidebar-section-title.small {
 		padding-top: 0.7rem;
 	}
 }
 
-.ms-sidebar .ms-sidebar-section-title:last-of-type {
+.ms-sidebar-section-title:last-of-type {
 	border-color: #00a765;
 }
 
-.ms-sidebar .ms-sidebar-section-title a {
+.ms-sidebar-section-title a {
 	display: block;
 	padding-top: 0.28094rem;
 	padding-bottom: 0.42141rem;
@@ -13986,50 +13994,38 @@ body {
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1560px) {
-	.ms-sidebar .ms-sidebar-section-title a {
+	.ms-sidebar-section-title a {
 		padding-top: 0.256vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.ms-sidebar .ms-sidebar-section-title a {
+	.ms-sidebar-section-title a {
 		padding-top: 0.4rem;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1560px) {
-	.ms-sidebar .ms-sidebar-section-title a {
+	.ms-sidebar-section-title a {
 		padding-bottom: 0.384vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.ms-sidebar .ms-sidebar-section-title a {
+	.ms-sidebar-section-title a {
 		padding-bottom: 0.6rem;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1560px) {
-	.ms-sidebar .ms-sidebar-section-title a {
+	.ms-sidebar-section-title a {
 		padding-left: 0.96vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.ms-sidebar .ms-sidebar-section-title a {
+	.ms-sidebar-section-title a {
 		padding-left: 1.5rem;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1560px) {
-	.ms-sidebar .ms-sidebar-section-title {
-		height: 2.624vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.ms-sidebar .ms-sidebar-section-title {
-		height: 4.1rem;
 	}
 }
 
@@ -14068,6 +14064,24 @@ body {
 @media only screen and (min-width: 1560px) {
 	.ms-sidebar-nav {
 		margin-bottom: 4rem;
+	}
+}
+
+.ms-sidebar-sub-nav {
+	display: none;
+	padding-left: 1.40469rem;
+	font-weight: 500;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1560px) {
+	.ms-sidebar-sub-nav {
+		padding-left: 1.28vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.ms-sidebar-sub-nav {
+		padding-left: 2rem;
 	}
 }
 

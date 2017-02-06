@@ -1,0 +1,281 @@
+/*************************** PLAYER WRAPPER */
+.PKL_wrapper{
+	left:0px;
+	display:block;
+	top:0px;
+	width:320px;
+	float:left;
+	position:relative;
+	z-index:1;
+	height:240px;
+}
+
+/*************************** POSTER */
+.PKL_poster{
+	left:0px;
+	background-color:#000000;
+	background-repeat:no-repeat;
+	top:0px;
+	background-image:url("poster.png");
+	display:block;
+	width:320px;
+	position:absolute;
+	background-position:center center;
+	z-index:2;
+	font-size:0px;
+	height:240px;
+}
+
+/*************************** PLAY SCREEN */
+.PKL_screen_play{
+	background-image:url("b_screen_play.png");
+	display:block;
+	background-repeat:no-repeat;
+	top:0px;
+	left:0px;
+	width:320px;
+	cursor:pointer;
+	position:absolute;
+	background-position:center center;
+	z-index:5;
+	height:240px;
+}
+div.PKL_screen_play:hover{
+	background-image:url("b_screen_play_over.png");
+}
+div.PKL_screen_play:active{
+	background-image:url("b_screen_play_down.png");
+}
+div.PKL_screen_play.pause{
+	background-image:url("b_screen_play_pause.png");
+}
+div.PKL_screen_play.pause:hover{
+	background-image:url("b_screen_play_pause_over.png");
+}
+div.PKL_screen_play.pause:active{
+	background-image:url("b_screen_play_pause_down.png");
+}
+
+/*************************** CONTROLS BKGD */
+.PKL_controlsBkgd{
+	background-image:url("g_controlsBkgd.png");
+	display:block;
+	background-repeat:no-repeat;
+	top:201px;
+	left:9px;
+	width:300px;
+	font-size:0px;
+	position:absolute;
+	z-index:6;
+	float:left;
+	height:30px;
+}
+
+/*************************** PLAY */
+.PKL_playpause, .PKL_play{
+	background-image:url("b_play.png");
+	display:block;
+	background-repeat:no-repeat;
+	top:8px;
+	left:2px;
+	width:39px;
+	cursor:pointer;
+	font-size:0px;
+	position:absolute;
+	z-index:6;
+	float:left;
+	height:20px;
+}
+div.PKL_playpause:hover, div.PKL_play:hover{
+	background-image:url("b_play_over.png");
+}
+div.PKL_playpause:active, div.PKL_play:active{
+	background-image:url("b_play_down.png");
+}
+div.PKL_playpause.pause, div.PKL_play.pause{
+	background-image:url("b_pause.png");
+}
+div.PKL_playpause.pause:hover, div.PKL_play.pause:hover{
+	background-image:url("b_pause_over.png");
+}
+div.PKL_playpause.pause:active, div.PKL_play.pause:active{
+	background-image:url("b_pause_down.png");
+}
+
+/*************************** MUTE */
+.PKL_mute{
+	background-image:url("b_mute.png");
+	display:block;
+	background-repeat:no-repeat;
+	top:7px;
+	left:239px;
+	width:30px;
+	cursor:pointer;
+	font-size:0px;
+	position:absolute;
+	z-index:5;
+	float:left;
+	height:21px;
+}
+div.PKL_mute:hover{
+	background-image:url("b_mute_over.png");
+}
+div.PKL_mute:active{
+	background-image:url("b_mute_down.png");
+}
+div.PKL_mute.on{
+	background-image:url("b_mute_down.png");
+}
+div.PKL_mute.on:hover{
+	background-image:url("b_mute_over.png");
+}
+div.PKL_mute.on:active{
+	background-image:url("b_mute.png");
+}
+
+/*************************** FULL SCREEN */
+.PKL_fullscreen{
+	background-image:url("b_fullscreen.png");
+	display:block;
+	background-repeat:no-repeat;
+	top:7px;
+	left:267px;
+	width:30px;
+	cursor:pointer;
+	font-size:0px;
+	position:absolute;
+	z-index:5;
+	float:left;
+	height:21px;
+}
+div.PKL_fullscreen:hover{
+	background-image:url("b_fullscreen_over.png");
+}
+div.PKL_fullscreen:active{
+	background-image:url("b_fullscreen_down.png");
+}
+div.PKL_fullscreen.on{
+	background-image:url("b_fullscreen_down.png");
+}
+div.PKL_fullscreen.on:hover{
+	background-image:url("b_fullscreen_over.png");
+}
+div.PKL_fullscreen.on:active{
+	background-image:url("b_fullscreen.png");
+}
+
+/*************************** TIME */
+.PKL_time{
+	font-weight:normal;
+	left:155px;
+	display:block;
+	text-align:center;
+	font-family:Arial;
+	vertical-align:middle;
+	overflow:hidden;
+	width:86px;
+	top:9px;
+	font-size:12px;
+	position:absolute;
+	white-space:nowrap;
+	color:#e6e5e5;
+	z-index:6;
+	height:17px;
+}
+
+/*************************** SCRUB BKGD */
+.PKL_scrubBkgd{
+	background-image:url("g_scrubBkgd.png");
+	display:block;
+	background-repeat:no-repeat;
+	top:0px;
+	left:0px;
+	width:300px;
+	cursor:pointer;
+	font-size:0px;
+	position:absolute;
+	z-index:5;
+	float:left;
+	height:7px;
+}
+
+/*************************** SCRUB BAR */
+.PKL_scrubBar{
+	background-image:url("g_scrubBar.png");
+	display:block;
+	background-repeat:no-repeat;
+	top:0px;
+	left:0px;
+	overflow:hidden;
+	width:75px;
+	cursor:pointer;
+	font-size:0px;
+	position:absolute;
+	z-index:1;
+	float:left;
+	height:7px;
+}
+
+/*************************** LOADING */
+.PKL_loading{
+	background-image:url("g_scrubLoading.png");
+	display:block;
+	background-repeat:no-repeat;
+	top:0px;
+	left:0px;
+	overflow:hidden;
+	width:75px;
+	font-size:0px;
+	position:relative;
+	background-position:right;
+	z-index:1;
+	float:right;
+	height:7px;
+}
+
+/*************************** SCRUB HANDLE */
+.PKL_scrubHandle{
+	background-image:url("b_scrubHandle.png");
+	display:block;
+	background-repeat:no-repeat;
+	top:0px;
+	left:0px;
+	width:11px;
+	cursor:pointer;
+	font-size:0px;
+	position:absolute;
+	z-index:6;
+	float:left;
+	height:7px;
+}
+div.PKL_scrubHandle:hover{
+	background-image:url("b_scrubHandle_over.png");
+}
+div.PKL_scrubHandle:active{
+	background-image:url("b_scrubHandle_down.png");
+}
+
+/*************************** THINKER */
+.PKL_thinker{
+	background-image:url("g_thinker.gif");
+	display:block;
+	background-repeat:no-repeat;
+	top:152px;
+	left:13px;
+	width:19px;
+	font-size:0px;
+	position:absolute;
+	z-index:10;
+	height:20px;
+}
+div.PKL_thinker.off{
+	background-image:none;
+}
+
+.PKL_preloader{
+	width:1px;
+	height:1px;
+	background-repeat:no-repeat;
+	background-image:url("b_play_over.png#b_play_down.png#b_pause.png#b_pause_over.png#b_pause_down.png#b_fullscreen_over.png#b_fullscreen_down.png#b_fullscreen_down.png#b_fullscreen_over.png#b_fullscreen.png#b_scrubHandle_over.png#b_scrubHandle_down.png#b_screen_play_over.png#b_screen_play_down.png#b_screen_play_pause.png#b_screen_play_pause_over.png#b_screen_play_pause_down.png#b_mute_over.png#b_mute_down.png#b_mute_down.png#b_mute_over.png#b_mute.png#background-image:none#b_scrubHandle_over.png#b_scrubHandle_down.png#b_screen_play_over.png#b_screen_play_down.png#b_screen_play_pause.png#b_screen_play_pause_over.png#b_screen_play_pause_down.png");
+	display:none;
+}

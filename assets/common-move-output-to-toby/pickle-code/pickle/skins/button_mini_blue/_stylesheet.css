@@ -1,0 +1,50 @@
+/*************************** PLAYER WRAPPER */
+.PKL_wrapper{
+	left:0px;
+	top:0px;
+	z-index:1;
+	width:22px;
+	float:left;
+	position:relative;
+	display:block;
+	height:22px;
+}
+
+/*************************** PLAY */
+.PKL_playpause, .PKL_play{
+	left:0px;
+	display:block;
+	background-image:url("b_play.png");
+	z-index:6;
+	background-repeat:no-repeat;
+	width:22px;
+	top:0px;
+	cursor:pointer;
+	position:absolute;
+	font-size:0px;
+	float:left;
+	height:22px;
+}
+div.PKL_playpause:hover, div.PKL_play:hover{
+	background-image:url("b_play_over.png");
+}
+div.PKL_playpause:active, div.PKL_play:active{
+	background-image:url("b_play_down.png");
+}
+div.PKL_playpause.pause, div.PKL_play.pause{
+	background-image:url("b_pause.png");
+}
+div.PKL_playpause.pause:hover, div.PKL_play.pause:hover{
+	background-image:url("b_pause_over.png");
+}
+div.PKL_playpause.pause:active, div.PKL_play.pause:active{
+	background-image:url("b_pause_down.png");
+}
+
+.PKL_preloader{
+	width:1px;
+	height:1px;
+	background-repeat:no-repeat;
+	background-image:url("b_play_over.png#b_play_down.png#b_pause.png#b_pause_over.png#b_pause_down.png");
+	display:none;
+}

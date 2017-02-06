@@ -2,8 +2,14 @@ div(data-remodal-id="modal")
 	button(data-remodal-action="close" class="remodal-close")
 	//- image gallery when needed (folkways membership page)
 	ul.remodal-gallery
+	//- iframe if youtube video
+	//- <iframe id="youtube-iframe" frameborder="0" allowfullscreen></iframe>
 	ul.remodal-captions
-	.remodal-iframe#remodal-iframe
+	// Vimeo iframe target get child
+	.remodal-iframe#vimeo-iframe
+	// YouTube iframe gets replaced
+	.remodal-iframe#youtube-iframe-wrapper
+		#youtube-iframe
 	.remodal-copy
 		h3.remodal-title .
 		.remodal-description

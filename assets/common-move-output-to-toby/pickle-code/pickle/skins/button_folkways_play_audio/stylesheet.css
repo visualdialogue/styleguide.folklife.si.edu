@@ -1,0 +1,50 @@
+/*************************** PLAYER WRAPPER */
+.PKL_wrapper{
+	left:0px;
+	top:0px;
+	z-index:1;
+	width:110px;
+	float:left;
+	position:relative;
+	display:block;
+	height:13px;
+}
+
+/*************************** PLAY */
+.PKL_playpause, .PKL_play{
+	left:0px;
+	display:block;
+	background-image:url("../button_folkways_play_audio/button_play_audio_blue.png");
+	z-index:6;
+	background-repeat:no-repeat;
+	width:110px;
+	top:0px;
+	cursor:pointer;
+	position:relative;
+	font-size:0px;
+	float:left;
+	height:13px;
+}
+div.PKL_playpause:hover, div.PKL_play:hover{
+	background-image:url("../button_folkways_play_audio/button_play_audio_orange.png");
+}
+div.PKL_playpause:active, div.PKL_play:active{
+	background-image:url("../button_folkways_play_audio/button_play_audio_blue.png");
+}
+div.PKL_playpause.pause, div.PKL_play.pause{
+	background-image:url("../button_folkways_play_audio/button_pause_audio_orange.png");
+}
+div.PKL_playpause.pause:hover, div.PKL_play.pause:hover{
+	background-image:url("../button_folkways_play_audio/button_pause_audio_orange.png");
+}
+div.PKL_playpause.pause:active, div.PKL_play.pause:active{
+	background-image:url("../button_folkways_play_audio/button_pause_audio_orange.png"); 
+}
+
+.PKL_preloader{
+	width:1px;
+	height:1px;
+	background-repeat:no-repeat;
+	background-image:url("button_play_audio_blue.png#button_play_audio_orange.png#button_pause_audio_orange.png");
+	display:none;
+}

@@ -20,13 +20,16 @@
         </div>
       </article>
     </section>
+    <?php if($page->uid() == 'education-and-musical-diversity'): ?>
     <?php snippet('current-sidebar'); ?>
+    <?php else: ?>
     <aside class="sidebar col-sm-4">
       <?php snippet('sidebar-audio'); ?>
       <?php snippet('card', array('card' => $pages->find('explore')->children()->find('videos')->children()->find('music-of-central-asia-and-the-aga-khan-music-initiative'), 'card_classes' => 'sidebar-video' )); ?>
       <?php snippet('card', array('card' => $pages->find('explore')->children()->find('sounds')->children()->find('album-covers'), 'card_classes' => 'sidebar-album' )); ?>
       <?php snippet('blog-related-content', array('orientation' => 'vertical', 'limit' => 3)); ?>
     </aside>
+    <?php endif; ?>
   </div>
 </div>
 <?php snippet('footer'); ?>

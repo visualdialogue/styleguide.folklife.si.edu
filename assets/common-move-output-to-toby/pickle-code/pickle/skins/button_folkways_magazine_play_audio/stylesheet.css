@@ -1,0 +1,50 @@
+/*************************** PLAYER WRAPPER */
+.PKL_wrapper{
+	left:0px;
+	top:3px;
+	z-index:1;
+	width:110px;
+	float:left;
+	position:relative;
+	display:block;
+	height:13px
+}
+
+/*************************** PLAY */
+.PKL_playpause, .PKL_play{
+	left:0px;
+	display:block;
+	background-image:url("play-audio-blue.png");
+	z-index:6;
+	background-repeat:no-repeat;
+	width:110px;
+	top:3px;
+	cursor:pointer;
+	position:absolute;
+	font-size:0px;
+	float:left;
+	height:13px;
+}
+div.PKL_playpause:hover, div.PKL_play:hover{
+	background-image:url("play-audio-yellow.png");
+}
+div.PKL_playpause:active, div.PKL_play:active{
+	background-image:url("play-audio-blue.png");
+}
+div.PKL_playpause.pause, div.PKL_play.pause{
+	background-image:url("pause-audio-yellow.png");
+}
+div.PKL_playpause.pause:hover, div.PKL_play.pause:hover{
+	background-image:url("pause-audio-yellow.png");
+}
+div.PKL_playpause.pause:active, div.PKL_play.pause:active{
+	background-image:url("pause-audio-yellow.png");
+}
+
+.PKL_preloader{
+	width:1px;
+	height:1px;
+	background-repeat:no-repeat;
+	background-image:url("play-audio-blue.png#play-audio-yellow.png#pause-audio-yellow.png");
+	display:none;
+}

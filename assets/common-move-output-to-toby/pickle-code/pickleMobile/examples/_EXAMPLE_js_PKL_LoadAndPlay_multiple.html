@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<!-- IMPORTANT: 
+
+The line above that begins with "DOCTYPE" must be included in order for Apple products (safari, ipod, etc) to display properly.
+
+-->
+
+<html>
+<head>
+<title>Pickle Player - PKL_LoadAndPlay - Multiple Players</title>
+
+
+<!-- START - PICKLE FILES  -->
+<script language="javascript" src="pickle.js"></script>
+<link href="skins/basic_audio_player/_stylesheet.css" rel="stylesheet" type="text/css">
+<!-- END - PICKLE FILES -->
+
+
+</head>
+<body bgcolor="#FFFFFF">
+
+
+
+<p>
+<a href="javascript:;" onclick="PKL_LoadAndPlay( { player:'MyPlayer1', file:'song1.mp3' } );">Load And Play song1.mp3 into Player 1</a>
+<br>
+<a href="javascript:;" onclick="PKL_LoadAndPlay( { player:'MyPlayer2', file:'song2.mp3' } );">Load And Play song2.mp3 into Player 2</a>
+<br>
+<a href="javascript:;" onclick="PKL_LoadAndPlay( { player:'MyPlayer3', file:'song3.mp3' } );">Load And Play song3.mp3 into Player 3</a>
+</p>
+
+
+
+<TABLE>
+<TR>
+	<TD>
+		Player 1<br>
+		<!-- START - PICKLE PLAYER -->
+		<div id="MyPlayer1" data-media=""></div>
+		<!-- END - PICKLE PLAYER -->
+	
+	</TD>
+</TR>
+<TR>
+	<TD>
+		Player 2<br>
+		<!-- START - PICKLE PLAYER -->
+		<div id="MyPlayer2" data-media=""></div>
+		<!-- END - PICKLE PLAYER -->
+	
+	</TD>
+</TR>
+<TR>
+	<TD>
+		Player 3<br>
+		<!-- START - PICKLE PLAYER -->
+		<div id="MyPlayer3" data-media=""></div>
+		<!-- END - PICKLE PLAYER -->
+	
+	</TD>
+</TR>
+</TABLE>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

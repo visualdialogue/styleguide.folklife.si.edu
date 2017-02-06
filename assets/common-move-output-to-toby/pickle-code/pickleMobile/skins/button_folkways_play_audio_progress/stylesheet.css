@@ -1,0 +1,160 @@
+/*************************** PLAYER WRAPPER */
+.PKL_wrapper{
+	left:0px;
+	display:block;
+	top:0px;
+	width:130px;
+	float:left;
+	position:relative;
+	z-index:1;
+	height:13px;
+}
+
+/*************************** CONTROLS BKGD */
+.PKL_controlsBkgd{
+	background-image:url("../button_folkways_play_audio_progress/controlsBkgd.png");
+	display:block;
+	background-repeat:no-repeat;
+	top:0px;
+	left:0px;
+	width:130px;
+	font-size:0px;
+	position:absolute;
+	z-index:6;
+	float:left;
+	height:13px;
+}
+
+/*************************** PLAY */
+.PKL_playpause, .PKL_play{
+	background-image:url("../button_folkways_play_audio_progress/play.png");
+	display:block;
+	background-repeat:no-repeat;
+	top:1px;
+	left:1px;
+	width:13px;
+	cursor:pointer;
+	font-size:0px;
+	position:absolute;
+	z-index:6;
+	float:left;
+	height:13px;
+}
+div.PKL_playpause:hover, div.PKL_play:hover{
+	background-image:url("../button_folkways_play_audio_progress/play_over.png");
+}
+div.PKL_playpause:active, div.PKL_play:active{
+	background-image:url("../button_folkways_play_audio_progress/play_down.png");
+}
+div.PKL_playpause.pause, div.PKL_play.pause{
+	background-image:url("../button_folkways_play_audio_progress/pause.png");
+}
+div.PKL_playpause.pause:hover, div.PKL_play.pause:hover{
+	background-image:url("../button_folkways_play_audio_progress/pause_over.png");
+}
+div.PKL_playpause.pause:active, div.PKL_play.pause:active{
+	background-image:url("../button_folkways_play_audio_progress/pause_down.png");
+}
+
+/*************************** SCRUB BKGD */
+.PKL_scrubBkgd{
+	background-image:url("../button_folkways_play_audio_progress/scrubBkgd.png");
+	display:block;
+	background-repeat:no-repeat;
+	top:4px;
+	left:22px;
+	width:100px;
+	cursor:pointer;
+	font-size:0px;
+	position:absolute;
+	z-index:5;
+	float:left;
+	height:8px;
+}
+
+/*************************** SCRUB BAR */
+.PKL_scrubBar{
+	background-image:url("../button_folkways_play_audio_progress/scrubBar.png");
+	display:block;
+	background-repeat:no-repeat;
+	top:0px;
+	left:0px;
+	overflow:hidden;
+	width:100px;
+	cursor:pointer;
+	font-size:0px;
+	position:absolute;
+	z-index:1;
+	float:left;
+	height:8px;
+}
+
+/*************************** LOADING */
+.PKL_loading{
+	background-image:url("../button_folkways_play_audio_progress/scrubLoading.png");
+	display:block;
+	background-repeat:no-repeat;
+	top:0px;
+	left:0px;
+	overflow:hidden;
+	width:100px;
+	font-size:0px;
+	position:relative;
+	background-position:right;
+	z-index:1;
+	float:right;
+	height:8px;
+}
+
+/*************************** SCRUB HANDLE */
+.PKL_scrubHandle{
+	background-image:url("../button_folkways_play_audio_progress/scrubHandle.png");
+	display:block;
+	background-repeat:no-repeat;
+	top:-1px;
+	left:0px;
+	width:4px;
+	cursor:pointer;
+	font-size:0px;
+	position:absolute;
+	z-index:6;
+	float:left;
+	height:10px;
+}
+div.PKL_scrubHandle:hover{
+	background-image:url("../button_folkways_play_audio_progress/scrubHandle_over.png");
+}
+div.PKL_scrubHandle:active{
+	background-image:url("../button_folkways_play_audio_progress/scrubHandle_down.png");
+}
+
+
+.PKL_preloader{
+	width:1px;
+	height:1px;
+	background-repeat:no-repeat;
+	background-image:url("play_over.png#play_down.png#pause.png#pause_over.png#pause_down.png#scrubHandle_over.png#scrubHandle_down.png#background-image:none#scrubHandle_over.png#scrubHandle_down.png");
+	display:none;
+}
+
+
+@media (max-width: 767px) {
+.PKL_wrapper {height:40px;}
+.PKL_playpause, .PKL_play{background-image:url("play-button-blue-mobile.png");height:40px; width:40px;}
+div.PKL_playpause:hover, div.PKL_play:hover{
+	background-image:url("play-button-orange-mobile.png");
+}
+div.PKL_playpause:active, div.PKL_play:active{
+	background-image:url("play-button-blue-mobile.png");
+}
+div.PKL_playpause.pause, div.PKL_play.pause{
+	background-image:url("pause-button-orange-mobile.png");
+}
+div.PKL_playpause.pause:hover, div.PKL_play.pause:hover{
+	background-image:url("pause-button-orange-mobile.png");
+}
+div.PKL_playpause.pause:active, div.PKL_play.pause:active{
+	background-image:url("pause-button-orange-mobile.png");
+}
+.PKL_scrubBkgd{ left:50px; top:16px}
+}

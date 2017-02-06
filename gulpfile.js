@@ -31,9 +31,10 @@ gulp.task('plugins', function() {
       './assets/bower_components/mediaelement/build/mediaelement-and-player.min.js',
       './assets/bower_components/matchHeight/dist/jquery.matchHeight-min.js',
       './assets/bower_components/viewport-units-buggyfill/viewport-units-buggyfill.min.js', // for customizing dropdowns (eg. folkways magazine)
+      './assets/js/pickle.js'
     ])
     .pipe(concat('common-plugins.js'))
-    .pipe(gulp.dest('./assets/common/js/'))
+    .pipe(gulp.dest('./assets/common-move-output-to-toby/js/'))
 });
 
 gulp.task('usedCSS', function() {

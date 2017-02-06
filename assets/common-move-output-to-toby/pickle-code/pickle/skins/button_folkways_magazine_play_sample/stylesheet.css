@@ -1,0 +1,52 @@
+/*************************** PLAYER WRAPPER */
+.PKL_wrapper{
+	left:0px;
+	top:0px;
+	bottom:5px;
+	z-index:1;
+	width:120px;
+	float:left;
+	position:relative;
+	display:block;
+	height:13px
+}
+
+/*************************** PLAY */
+.PKL_playpause, .PKL_play{
+	left:0px;
+	display:block;
+	background-image:url("play-sample-blue.png");
+	z-index:6;
+	background-repeat:no-repeat;
+	width:120px;
+	top:0px;
+	cursor:pointer;
+	position:absolute;
+	font-size:0px;
+	float:left;
+	height:13px;
+	bottom:5px;
+}
+div.PKL_playpause:hover, div.PKL_play:hover{
+	background-image:url("play-sample-orange.png");
+}
+div.PKL_playpause:active, div.PKL_play:active{
+	background-image:url("play-sample-blue.png");
+}
+div.PKL_playpause.pause, div.PKL_play.pause{
+	background-image:url("pause-sample-orange.png");
+}
+div.PKL_playpause.pause:hover, div.PKL_play.pause:hover{
+	background-image:url("pause-sample-orange.png");
+}
+div.PKL_playpause.pause:active, div.PKL_play.pause:active{
+	background-image:url("pause-sample-orange.png");
+}
+
+.PKL_preloader{
+	width:1px;
+	height:1px;
+	background-repeat:no-repeat;
+	background-image:url("play-sample-blue.png#play-sample-orange.png#pause-sample-orange.png");
+	display:none;
+}

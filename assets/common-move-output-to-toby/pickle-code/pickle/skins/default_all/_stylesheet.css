@@ -1,0 +1,538 @@
+/*************************** PLAYER WRAPPER */
+.PKL_wrapper{
+	left:0px;
+	top:0px;
+	width:537px;
+	float:left;
+	position:relative;
+	z-index:1;
+	display:block;
+	height:249px;
+}
+
+/*************************** POSTER */
+.PKL_poster{
+	background-image:url("poster.png");
+	background-color:#000000;
+	left:7px;
+	background-repeat:no-repeat;
+	top:2px;
+	width:292px;
+	font-size:0px;
+	position:absolute;
+	background-position:center center;
+	z-index:2;
+	display:block;
+	height:167px;
+}
+
+/*************************** PLAY SCREEN */
+.PKL_screen_play{
+	background-image:url("b_screen_play.png");
+	left:7px;
+	background-repeat:no-repeat;
+	top:2px;
+	cursor:pointer;
+	width:292px;
+	position:absolute;
+	background-position:center center;
+	z-index:5;
+	display:block;
+	height:167px;
+}
+div.PKL_screen_play:hover{
+	background-image:url("b_screen_play_over.png");
+}
+div.PKL_screen_play:active{
+	background-image:url("b_screen_play_down.png");
+}
+div.PKL_screen_play.pause{
+	background-image:url("b_screen_play_pause.png");
+}
+div.PKL_screen_play.pause:hover{
+	background-image:url("b_screen_play_pause_over.png");
+}
+div.PKL_screen_play.pause:active{
+	background-image:url("b_screen_play_pause_down.png");
+}
+
+/*************************** CONTROLS BKGD */
+.PKL_controlsBkgd{
+	background-image:url("g_controlsBkgd.png");
+	left:0px;
+	background-repeat:no-repeat;
+	top:171px;
+	width:303px;
+	font-size:0px;
+	float:left;
+	position:absolute;
+	z-index:6;
+	display:block;
+	height:72px;
+}
+
+/*************************** PLAY */
+.PKL_playpause, .PKL_play{
+	background-image:url("b_play.png");
+	left:64px;
+	background-repeat:no-repeat;
+	top:12px;
+	cursor:pointer;
+	width:28px;
+	font-size:0px;
+	float:left;
+	position:absolute;
+	z-index:6;
+	display:block;
+	height:26px;
+}
+div.PKL_playpause:hover, div.PKL_play:hover{
+	background-image:url("b_play_over.png");
+}
+div.PKL_playpause:active, div.PKL_play:active{
+	background-image:url("b_play_down.png");
+}
+div.PKL_playpause.pause, div.PKL_play.pause{
+	background-image:url("b_pause.png");
+}
+div.PKL_playpause.pause:hover, div.PKL_play.pause:hover{
+	background-image:url("b_pause_over.png");
+}
+div.PKL_playpause.pause:active, div.PKL_play.pause:active{
+	background-image:url("b_pause_down.png");
+}
+
+/*************************** PAUSE */
+.PKL_pause{
+	background-image:url("b_pause.png");
+	left:38px;
+	background-repeat:no-repeat;
+	top:12px;
+	cursor:pointer;
+	width:27px;
+	font-size:0px;
+	float:left;
+	position:absolute;
+	z-index:5;
+	display:block;
+	height:26px;
+}
+div.PKL_pause:hover{
+	background-image:url("b_pause_over.png");
+}
+div.PKL_pause:active{
+	background-image:url("b_pause_down.png");
+}
+
+/*************************** REWIND */
+.PKL_rewind{
+	background-image:url("b_rewind.png");
+	left:11px;
+	background-repeat:no-repeat;
+	top:12px;
+	cursor:pointer;
+	width:27px;
+	font-size:0px;
+	float:left;
+	position:absolute;
+	z-index:5;
+	display:block;
+	height:26px;
+}
+div.PKL_rewind:hover{
+	background-image:url("b_rewind_over.png");
+}
+div.PKL_rewind:active{
+	background-image:url("b_rewind_down.png");
+}
+
+/*************************** NEXT */
+.PKL_next{
+	background-image:url("b_next.png");
+	left:92px;
+	background-repeat:no-repeat;
+	top:12px;
+	cursor:pointer;
+	width:27px;
+	font-size:0px;
+	float:left;
+	position:absolute;
+	z-index:5;
+	display:block;
+	height:26px;
+}
+div.PKL_next:hover{
+	background-image:url("b_next_over.png");
+}
+div.PKL_next:active{
+	background-image:url("b_next_down.png");
+}
+
+/*************************** MUTE */
+.PKL_mute{
+	background-image:url("b_mute.png");
+	left:209px;
+	background-repeat:no-repeat;
+	top:42px;
+	cursor:pointer;
+	width:27px;
+	font-size:0px;
+	float:left;
+	position:absolute;
+	z-index:5;
+	display:block;
+	height:23px;
+}
+div.PKL_mute:hover{
+	background-image:url("b_mute_over.png");
+}
+div.PKL_mute:active{
+	background-image:url("b_mute_down.png");
+}
+div.PKL_mute.on{
+	background-image:url("b_mute_down.png");
+}
+div.PKL_mute.on:hover{
+	background-image:url("b_mute_over.png");
+}
+div.PKL_mute.on:active{
+	background-image:url("b_mute.png");
+}
+
+/*************************** FULL SCREEN */
+.PKL_fullscreen{
+	background-image:url("b_fullscreen.png");
+	left:267px;
+	background-repeat:no-repeat;
+	top:41px;
+	cursor:pointer;
+	width:27px;
+	font-size:0px;
+	float:left;
+	position:absolute;
+	z-index:5;
+	display:block;
+	height:24px;
+}
+div.PKL_fullscreen:hover{
+	background-image:url("b_fullscreen_over.png");
+}
+div.PKL_fullscreen:active{
+	background-image:url("b_fullscreen_down.png");
+}
+div.PKL_fullscreen.on{
+	background-image:url("b_fullscreen_down.png");
+}
+div.PKL_fullscreen.on:hover{
+	background-image:url("b_fullscreen_over.png");
+}
+div.PKL_fullscreen.on:active{
+	background-image:url("b_fullscreen.png");
+}
+
+/*************************** LOOP */
+.PKL_loop{
+	background-image:url("b_loop.png");
+	left:237px;
+	background-repeat:no-repeat;
+	top:42px;
+	cursor:pointer;
+	width:27px;
+	font-size:0px;
+	float:left;
+	position:absolute;
+	z-index:5;
+	display:block;
+	height:23px;
+}
+div.PKL_loop:hover{
+	background-image:url("b_loop_over.png");
+}
+div.PKL_loop:active{
+	background-image:url("b_loop_down.png");
+}
+div.PKL_loop.on{
+	background-image:url("b_loop_down.png");
+}
+div.PKL_loop.on:hover{
+	background-image:url("b_loop_over.png");
+}
+div.PKL_loop.on:active{
+	background-image:url("b_loop.png");
+}
+
+/*************************** INFO BKGD */
+.PKL_infoBkgd{
+	background-image:url("g_infoBkgd.png");
+	left:120px;
+	background-repeat:no-repeat;
+	top:7px;
+	width:176px;
+	position:absolute;
+	z-index:4;
+	display:block;
+	height:34px;
+}
+
+/*************************** INFO */
+.PKL_info{
+	color:#111010;
+	left:128px;
+	vertical-align:middle;
+	text-align:left;
+	font-family:Arial;
+	top:15px;
+	white-space:nowrap;
+	width:116px;
+	font-size:13px;
+	position:absolute;
+	z-index:6;
+	display:block;
+	font-weight:normal;
+	height:19px;
+}
+
+/*************************** TIME */
+.PKL_time{
+	color:#111010;
+	left:244px;
+	vertical-align:middle;
+	text-align:center;
+	font-family:Arial;
+	top:16px;
+	white-space:nowrap;
+	width:44px;
+	font-size:14px;
+	font-weight:normal;
+	position:absolute;
+	z-index:6;
+	display:block;
+	overflow:hidden;
+	height:20px;
+}
+
+/*************************** SCRUB BKGD */
+.PKL_scrubBkgd{
+	background-image:url("g_scrubBkgd.png");
+	left:11px;
+	background-repeat:no-repeat;
+	top:46px;
+	cursor:pointer;
+	width:175px;
+	font-size:0px;
+	float:left;
+	position:absolute;
+	z-index:5;
+	display:block;
+	height:13px;
+}
+
+/*************************** SCRUB BAR */
+.PKL_scrubBar{
+	background-image:url("g_scrubBar.png");
+	overflow:hidden;
+	left:0px;
+	background-repeat:no-repeat;
+	top:0px;
+	cursor:pointer;
+	width:44px;
+	font-size:0px;
+	float:left;
+	position:absolute;
+	z-index:1;
+	display:block;
+	height:13px;
+}
+
+/*************************** LOADING */
+.PKL_loading{
+	background-image:url("g_scrubLoading.png");
+	overflow:hidden;
+	left:0px;
+	background-repeat:no-repeat;
+	top:0px;
+	width:44px;
+	font-size:0px;
+	float:right;
+	position:relative;
+	background-position:right;
+	z-index:1;
+	display:block;
+	height:13px;
+}
+
+/*************************** SCRUB HANDLE */
+.PKL_scrubHandle{
+	background-image:url("b_scrubHandle.png");
+	left:0px;
+	background-repeat:no-repeat;
+	top:-6px;
+	cursor:pointer;
+	width:28px;
+	font-size:0px;
+	float:left;
+	position:absolute;
+	z-index:6;
+	display:block;
+	height:27px;
+}
+div.PKL_scrubHandle:hover{
+	background-image:url("b_scrubHandle_over.png");
+}
+div.PKL_scrubHandle:active{
+	background-image:url("b_scrubHandle_down.png");
+}
+
+/*************************** THINKER */
+.PKL_thinker{
+	background-image:url("g_thinker.gif");
+	left:187px;
+	background-repeat:no-repeat;
+	top:214px;
+	width:19px;
+	font-size:0px;
+	position:absolute;
+	z-index:10;
+	display:block;
+	height:20px;
+}
+div.PKL_thinker.off{
+	background-image:none;
+}
+
+/*************************** PLAYLIST */
+.PKL_playlist{
+	width:193px;
+	z-index:5;
+	left:307px;
+	position:absolute;
+	overflow:hidden;
+	top:2px;
+	display:block;
+	height:240px;
+}
+
+/*************************** PLAYLIST ITEM */
+.PKL_playlistItemBkgd{
+	background-image:url("g_playlistItemBkgd.png");
+	left:0px;
+	background-repeat:no-repeat;
+	top:0px;
+	cursor:pointer;
+	width:193px;
+	float:left;
+	position:relative;
+	display:block;
+	height:48px;
+}
+div.PKL_playlistItemBkgd:hover{
+	background-image:url("g_playlistItemBkgd_over.png");
+}
+div.PKL_playlistItemBkgd:active{
+	background-image:url("g_playlistItemBkgd_down.png");
+}
+div.PKL_playlistItemBkgd.alt{
+	background-image:url("g_playlistItemBkgd.png");
+}
+div.PKL_playlistItemBkgd.alt:hover{
+	background-image:url("g_playlistItemBkgd_over.png");
+}
+div.PKL_playlistItemBkgd.alt:active{
+	background-image:url("g_playlistItemBkgd_down.png");
+}
+div.PKL_playlistItemBkgd.playing{
+	background-image:url("g_playlistItemBkgd_down.png");
+}
+div.PKL_playlistItemBkgd.playing:hover{
+	background-image:url("g_playlistItemBkgd_over.png");
+}
+div.PKL_playlistItemBkgd.playing:active{
+	background-image:url("g_playlistItemBkgd_down.png");
+}
+
+/*************************** PLAYLIST ITEM IMAGE */
+.PKL_playlistItemImage{
+	background-image:url("playlist_example_image.png");
+	left:9px;
+	background-repeat:no-repeat;
+	top:9px;
+	cursor:pointer;
+	width:32px;
+	position:absolute;
+	z-index:7;
+	height:32px;
+}
+
+/*************************** PLAYLIST ITEM ARTIST */
+.PKL_playlistItemArtist{
+	font-weight:normal;
+	left:50px;
+	text-align:left;
+	font-family:Arial;
+	top:26px;
+	cursor:pointer;
+	white-space:nowrap;
+	width:139px;
+	font-size:13px;
+	z-index:7;
+	position:absolute;
+	color:#000000;
+	overflow:hidden;
+	height:18px;
+}
+
+/*************************** PLAYLIST ITEM TITLE */
+.PKL_playlistItemTitle{
+	font-weight:bold;
+	left:49px;
+	text-align:left;
+	font-family:Arial;
+	top:4px;
+	cursor:pointer;
+	white-space:nowrap;
+	width:139px;
+	font-size:20px;
+	z-index:7;
+	position:absolute;
+	color:#000000;
+	overflow:hidden;
+	height:28px;
+}
+
+/*************************** PLAYLIST SCROLL BKGD */
+.PKL_playlistScrollBkgd{
+	background-image:url("g_playlistScrollBkgd.png");
+	left:508px;
+	background-repeat:no-repeat;
+	top:0px;
+	cursor:pointer;
+	width:22px;
+	font-size:0px;
+	position:absolute;
+	z-index:8;
+	display:block;
+	height:246px;
+}
+
+/*************************** PLAYLIST SCROLL HANDLE */
+.PKL_playlistScrollHandle{
+	background-image:url("g_playlistScrollHandle.png");
+	left:-4px;
+	background-repeat:no-repeat;
+	top:0px;
+	cursor:pointer;
+	width:29px;
+	font-size:0px;
+	position:absolute;
+	z-index:9;
+	display:block;
+	height:28px;
+}
+
+.PKL_preloader{
+	width:1px;
+	height:1px;
+	background-repeat:no-repeat;
+	background-image:url("b_rewind_over.png#b_rewind_down.png#b_play_over.png#b_play_down.png#b_pause.png#b_pause_over.png#b_pause_down.png#b_fullscreen_over.png#b_fullscreen_down.png#b_fullscreen_down.png#b_fullscreen_over.png#b_fullscreen.png#b_scrubHandle_over.png#b_scrubHandle_down.png#b_next_over.png#b_next_down.png#b_screen_play_over.png#b_screen_play_down.png#b_screen_play_pause.png#b_screen_play_pause_over.png#b_screen_play_pause_down.png#b_pause_over.png#b_pause_down.png#b_mute_over.png#b_mute_down.png#b_mute_down.png#b_mute_over.png#b_mute.png#b_loop_over.png#b_loop_down.png#b_loop_down.png#b_loop_over.png#b_loop.png#background-image:none#b_scrubHandle_over.png#b_scrubHandle_down.png#g_playlistItemBkgd_over.png#g_playlistItemBkgd_down.png#g_playlistItemBkgd.png#g_playlistItemBkgd_over.png#g_playlistItemBkgd_down.png#g_playlistItemBkgd_down.png#g_playlistItemBkgd_over.png#g_playlistItemBkgd_down.png#b_screen_play_over.png#b_screen_play_down.png#b_screen_play_pause.png#b_screen_play_pause_over.png#b_screen_play_pause_down.png");
+	display:none;
+}

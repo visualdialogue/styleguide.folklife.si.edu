@@ -1,0 +1,770 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+ <HEAD>
+  <TITLE>Pickle Player Setup</TITLE>
+
+<script src="pickle.js" language="javascript"></script>
+<script language="javascript">
+
+var CONF = new Object();
+CONF.def = new Object();
+CONF.cur = new Object();
+
+CONF.skinLister = "__SETUP_skin_lister.php";
+CONF.pickleCSSfileID = "PickleCSSdynaLoad";
+CONF.installpath = "";
+CONF.amLocal = false;
+
+CONF.skinThumbImagePadding = 10;
+CONF.skinThumbImageHeight = 125;
+
+CONF.skinlist = ["basic_audio_player", "black_float", "black_line", "blue_button", "button_mini_blue", "button_mini_grey", "clean_play", "clean_play_2", "cover_art_audio", "default", "default_all", "fat_finger", "grey_line", "grey_line_small", "iphonesc", "mini_player", "pickle_home_800", "plastic_player", "seagull", "slick", "smoothness", "woody"];
+
+function startup(){
+	setPath();
+	showWarningBox();
+
+	// Establish default settings
+	CONF.def.skin			= "plastic_player";
+	CONF.def.media			= CONF.installpath + "song1.mp3";
+	CONF.def.use_poster		= "";
+	CONF.def.poster			= CONF.installpath + "song1.jpg";
+	CONF.def.use_startuptext= "";
+	CONF.def.startuptext	= "Click To Start";
+	CONF.def.autoplay		= "";
+
+	// Copy to "current" settings
+
+	for(var prop in CONF.def) {
+		CONF.cur[prop] = CONF.def[prop];
+	}
+
+	applySettings();
+
+	if(!CONF.amLocal){
+		// HTMLimport includes a call to "finishSetup()" once the file is loaded.
+		HTMLimport (CONF.skinLister);
+	} else {
+		finishSetup();
+	}
+	
+}
+
+function finishSetup(){
+	loadSkinPreviews();
+	loadStyleSheet( "skins/" + CONF.cur.skin + "/_stylesheet.css", this.updateDisplay, this );
+}
+
+function setPath(){
+	var loc = document.location.href;
+	if( loc.indexOf("?") > -1) {
+		loc = loc.substr(0,loc.indexOf("?"));
+	}
+	var Aloc = loc.replace("\\", "/").split("/");
+	Aloc.pop();
+	var myLoc = Aloc.join("/");
+
+	var amLocal = false;
+
+	if(loc.substr(0,4) == "http"){
+		var Aloc = loc.split("://");
+		var Apath = Aloc[1].split("/");
+		Apath.pop();
+		Apath.shift();
+		var tackSlash = "/";
+		if(Apath.length < 1){
+			tackSlash = "";
+		}
+		myLoc = "/" + Apath.join("/") + tackSlash;
+	} else {
+		myLoc = "";
+		amLocal = true;
+	}
+
+	CONF.installpath = myLoc;
+	CONF.amLocal = amLocal;
+}
+
+
+function showWarningBox(){
+	var obj = document.getElementById("warningBox");
+	if(CONF.amLocal == true){
+		obj.style.display = "block";
+	} else {
+		obj.style.display = "none";
+	}
+}
+
+
+// loadStyleSheet derived from:
+// http://thudjs.tumblr.com/post/637855087/stylesheet-onload-or-lack-thereof
+var loadStyleSheetConf = new Object();
+function loadStyleSheet( path, fn, scope ) {
+
+	var cssFileRefs = document.getElementsByTagName('link');
+	var exists = false;
+	for(var i=0; i<cssFileRefs.length; i++){
+		var css = cssFileRefs[i];
+		if(css.getAttribute("id") == CONF.pickleCSSfileID){
+			exists = true;
+			break;
+		}
+	}
+
+	if(exists){
+		css.parentNode.removeChild(css);
+	}
+
+	var head = document.getElementsByTagName( 'head' )[0];
+	var link = document.createElement( 'link' );
+	link.setAttribute( 'href', path );
+	link.setAttribute( 'rel', 'stylesheet' );
+	link.setAttribute( 'type', 'text/css' );
+	link.setAttribute( 'id', CONF.pickleCSSfileID );
+
+	var sheet
+	var cssRules;
+
+	if ( 'sheet' in link ) {
+		sheet = 'sheet'; 
+		cssRules = 'cssRules';
+	} else {
+		sheet = 'styleSheet'; 
+		cssRules = 'rules';
+	}
+
+	var interval_id = setInterval( loadStyleSheetCheck, 1000 );
+	var timeout_id = setTimeout( loadStyleSheetTimeout, 15000 );
+
+	loadStyleSheetConf.sheet		= sheet;
+	loadStyleSheetConf.cssRules		= cssRules;
+	loadStyleSheetConf.link			= link;
+	loadStyleSheetConf.interval_id	= interval_id;
+	loadStyleSheetConf.timeout_id	= timeout_id;
+	loadStyleSheetConf.callback	= fn;
+
+	head.appendChild( link );
+	
+	return link;
+}
+
+function loadStyleSheetCheck(){
+
+	var sheet		= loadStyleSheetConf.sheet;
+	var cssRules	= loadStyleSheetConf.cssRules;
+	var link		= loadStyleSheetConf.link;
+	var interval_id = loadStyleSheetConf.interval_id;
+	var timeout_id	= loadStyleSheetConf.timeout_id;
+	var callback	= loadStyleSheetConf.callback;
+
+	try {
+		if ( link[sheet] && link[sheet][cssRules].length ) {
+			clearInterval( interval_id );
+			clearTimeout( timeout_id );
+			callback();
+		}
+		
+	} catch( e ) { } finally {}
+}
+
+function loadStyleSheetTimeout(){
+
+	var sheet		= loadStyleSheetConf.sheet;
+	var cssRules	= loadStyleSheetConf.cssRules;
+	var link		= loadStyleSheetConf.link;
+	var interval_id = loadStyleSheetConf.interval_id;
+	var timeout_id	= loadStyleSheetConf.timeout_id;
+	var callback	= loadStyleSheetConf.callback;
+
+	clearInterval( interval_id );
+	clearTimeout( timeout_id );
+
+	var head = document.getElementsByTagName( 'head' )[0];
+	head.removeChild( link );
+	callback();
+}
+
+
+var HTMLimportReq = null;
+
+function HTMLimport (url){
+	var err;
+	var err2;
+
+	if (window.XMLHttpRequest) {
+		// code for IE7+, Firefox, Chrome, Opera, Safari
+		HTMLimportReq = new XMLHttpRequest();
+	}  else if (window.ActiveXObject) {
+		// code for IE6, IE5
+		try {
+			HTMLimportReq = new ActiveXObject("Microsoft.XMLHTTP");
+		} catch (err){
+			try {
+				HTMLimportReq = new ActiveXObject("Msxml2.XMLHTTP");
+			} catch (err2){
+				HTMLimportReq = false;
+			}
+		}
+	}
+
+	if (HTMLimportReq) {
+
+		if (HTMLimportReq.overrideMimeType) {
+			HTMLimportReq.overrideMimeType('text/xml');
+		}
+
+		try{
+			HTMLimportReq.onreadystatechange = function(){
+
+				if(HTMLimportReq.readyState == 4 || HTMLimportReq.readyState == "4"){
+					DoHTMLimportParse(HTMLimportReq.responseText);
+				}
+
+			}
+			HTMLimportReq.open("GET", url, true);
+			HTMLimportReq.send("");
+		} catch (err){
+			DoHTMLimportParse("");
+		}
+	} else {
+		DoHTMLimportParse("");
+	}
+}
+
+function DoHTMLimportParse(theData){
+	if(theData.substr(0,5) == "<list"){
+		var temp =  theData.replace("</list>").split("list>");
+		CONF.skinlist = temp[1].split("|");
+	}
+	finishSetup();
+}
+
+function loadSkinPreviews(){
+
+	var imageTank = document.getElementById("skinBrowser");
+
+	var myDivContainer = document.createElement("div");
+	myDivContainer.style.cssText = "height:1%;width:" + (CONF.skinlist.length * imageTank.offsetHeight) + "px;";
+
+	for(var i=0;i<CONF.skinlist.length;i++){
+
+		var mySkinName = CONF.skinlist[i];
+		var myBlock = '<img onload="setImageThumb(this);" src="skins/' + mySkinName + '/_screenshot_thumb.png">';
+		myBlock += '<span class="ThumbText">' + mySkinName + '</span>';
+
+		var myDiv = document.createElement("div");
+		myDiv.id = mySkinName;
+		myDiv.className = "ThumbDiv";
+		myDiv.innerHTML = myBlock;
+
+		
+		myDiv.onmousedown = function(e){
+				selectSkin(this.id);
+		}
+
+		myDivContainer.appendChild(myDiv);
+	}
+
+	imageTank.appendChild(myDivContainer);
+}
+
+function updateDisplay(){
+
+	collectSettings();
+
+	/*
+	skin : plastic_player
+	media : song1.mp3
+	use_poster : 
+	poster : poster.jpg
+	use_startuptext : 
+	startuptext : Click To Start
+	autoplay : 
+	*/
+	
+	// media
+	var printPlayer = '<div data-media="' + CONF.cur.media + '"';
+
+	// poster
+	if(!isNull(CONF.cur.use_poster)){
+		printPlayer += ' data-image="' + CONF.cur.poster + '"';
+	}
+
+	// start up text
+	if(!isNull(CONF.cur.use_startuptext)){
+		printPlayer += ' data-startuptext="' + CONF.cur.startuptext + '"';
+	}
+
+	// auto play
+	if(!isNull(CONF.cur.autoplay)){
+		printPlayer += ' data-autoplay="true"';
+	}
+
+	printPlayer += '></div>';
+
+
+	// Render Code:
+	var theCode = new Array();
+	var theCodePickle = new Array();
+
+	theCode.push('<' + '!-- The following DOCTYPE line should be on the first line of your HTML page. If this line is not included ');
+	theCode.push('on the first line of your page, some browsers may not render pickle properly, namely, mobile Safari (e.g. iPad, iPhone).');
+	theCode.push('NOTE: Your page may already have a DOCTYPE, which may vary slightly from the DOCTYPE provided here. If you are experiencing ');
+	theCode.push('issues with the player rendering properly, try replacing your existing DOCTYPE line with this one --' + '>');
+	theCode.push('<' + '!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"' + '>');
+
+	theCode.push("");
+
+	theCode.push('<' + '!-- PICKLE ENGINE: This file is used to enable Pickle. You only need to include this line one time in your page, ');
+	theCode.push('preferably in the HEAD (anywhere between the opening &lt;HEAD&gt; and closing &lt;/HEAD&gt; tags in the HTML for your page).--' + '>');
+	theCode.push('<' + 'script src="' + CONF.installpath + 'pickle.js" language="javascript"></' + 'script' + '>');
+
+	theCode.push("");
+
+	theCode.push('<' + '!-- PICKLE SKIN: This file is used to set the look and feel of the player. You only need to include this line one time in your page, ');
+	theCode.push('preferably in the HEAD (anywhere between the opening &lt;HEAD&gt; and closing &lt;/HEAD&gt; tags in the HTML for your page). --' + '>');
+	theCode.push('<' + 'link href="' + CONF.installpath + "skins/" + CONF.cur.skin + '/_stylesheet.css" rel="stylesheet" type="text/css"' + ' />');
+
+	theCode.push("");
+
+	theCode.push('<!-- PICKLE CONTAINER: This line goes anywhere in the BODY (anywhere between the opening &lt;BODY&gt; and closing &lt;/BODY&gt;');
+	theCode.push('tags in the HTML for your page), and is used to render a player on the page. You can include as many players on the page as needed. ');
+	theCode.push('For example, to include multiple players on your page, simply copy and paste this line into another place on your page, ');
+	theCode.push('then change the URL to the media file.)--' + '>');
+
+	theCode.push(printPlayer);
+
+
+	// Write render code to page:
+	document.getElementById("skinPreviewCell").innerHTML = printPlayer;
+
+
+	// Write render code for copy and paste area:
+	var CodeTextObj = document.getElementById("CodeTextDiv");
+	var temp = theCode.join("__BR__").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\"/g, "&quot;");
+	temp = temp.replace(/__BR__/g, "<br />");
+	temp = temp.replace(/&lt;!--/g, '<span class="codeComment">&lt;!--');
+	temp = temp.replace(/--&gt;/g, '--&gt;</span>');
+
+	temp = temp.replace('src=&quot;', 'src=&quot;<span class="codeString">');
+	temp = temp.replace('&quot; language', '</span>&quot; language');
+
+	temp = temp.replace('href=&quot;', 'href=&quot;<span class="codeString">');
+	temp = temp.replace('&quot; rel', '</span>&quot; rel');
+
+	temp = temp.replace('media=&quot;', 'media=&quot;<span class="codeString">');
+	temp = temp.replace('&quot;&gt;&lt;/div&gt;', '</span>&quot;&gt;&lt;/div&gt;');
+
+	CodeTextObj.innerHTML = "<pre><p>" + temp + "</p></pre>";
+
+	PKL_Reboot();
+
+
+}
+
+
+function printArray (theArray, lineEnd){
+	var lineEnd = lineEnd || "\n";
+	var retval = "";
+	if( typeof theArray == "object"){
+		for(var prop in theArray){
+			var val = theArray[prop];
+			if( typeof val == "array" || typeof val == "object"){
+				retval += printArray(val, lineEnd);
+			} else {
+				retval += prop + " : " + theArray[prop] + lineEnd;
+			}
+		}
+	} else if( typeof theArray == "array"){
+		for(var i=0;i<theArray.length; i++){
+			var val = theArray[i];
+			if( typeof val == "array" || typeof val == "object"){
+				retval += printArray(val, lineEnd);
+			} else {
+				retval += i + " : " + theArray[i] + lineEnd;
+			}
+		}
+	} else {
+		retval += theArray;
+	}
+
+	return retval;
+
+}
+
+function selectSkin(theSkin){
+	setFormElement ("f_skin", theSkin);
+	loadStyleSheet( "skins/" + theSkin + "/_stylesheet.css", this.updateDisplay, this );
+	updateDisplay();
+}
+
+
+function setImageThumb(theImage){
+
+	var myImg = theImage;
+	var imgW = myImg.width;
+	var imgH = myImg.height;
+	var padding = CONF.skinThumbImagePadding;
+	var imageTankHeight = CONF.skinThumbImageHeight;
+
+	var top = ((imageTankHeight + (padding*2)) / 2) - (imgH / 2) - (padding/2);
+	var left = ((imageTankHeight + (padding*2)) / 2) - (imgW / 2);
+	myImg.style.cssText = "top:" + top + "px;left:" + left + "px;margin:auto;vertical-align:middle;position:absolute;display:block;";
+
+}
+
+function isNull (theValue) {
+	if (theValue == "" || theValue == undefined || theValue == "undefined" || theValue == null) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+function setFormElement (theID, theValue) {
+
+	var obj = document.getElementById(theID);
+
+	if(obj){
+
+		var type = obj.type.toLowerCase();
+		var val = theValue
+		if(isNull(val)){
+			val = "";
+		}
+
+		// Strings
+		if(type == "text" || type == "password" || type == "textarea" || type == "hidden"){
+			obj.value = val;
+
+		// Checkbox
+		} else if(type == "checkbox"){
+			if (val == "") {
+				obj.checked = false;
+			} else {
+				obj.checked = true;
+			}
+
+		// Radio
+		} else if(type == "radio"){
+			for (var i = 0; i < obj.length; i++) {
+				var myData = obj[i].value;
+				if (theValue == myData) {
+					obj[i].checked = true;
+					break;
+				}
+			}
+
+		// List (Single selection)
+		} else if(type == "select-one"){
+			var selectedIndex = 0;
+			for (var i = 0; i < obj.length; i++) {
+				var myData = obj.options[i].value;
+				if (theValue == myData) {
+					selectedIndex = i;
+					break;
+				}
+			}
+
+			obj.options[selectedIndex].selected = true;
+
+		// List (Multiple selection)
+		} else if(type == "select-multiple"){
+			// to do
+		}
+	}
+
+	return true;
+
+}
+
+
+
+function getFormValue (theID) {
+
+	var obj = document.getElementById(theID);
+
+	if(obj){
+
+		var retval = "";
+
+		var type = obj.type.toLowerCase();
+
+		// String
+		if(type == "text" || type == "password" || type == "textarea" || type == "hidden"){
+			retval = obj.value;
+
+		// Checkbox
+		} else if(type == "checkbox"){
+			if(obj.checked == true){
+				retval = obj.value;
+			}
+
+		// Radio
+		} else if(type == "radio"){
+
+			for (var i = 0; i < obj.length; i++) {
+				var myValue = obj[i].value;
+				var myCheck = obj[i].checked
+				if (myCheck) {
+					retval = myValue;
+				}
+			}
+
+		// List (single selection)
+		} else if(type == "select-one"){
+
+			var getval = obj[0].value;
+			for (var i = 0; i < obj.length; i++) {
+				if (obj[i].selected) {
+					getval = obj.options[i].value;
+					break;
+				}
+			}
+
+			retval = getval;
+
+		// List (multople selection)
+		} else if(type == "select-multiple"){
+			// to do
+		}
+
+		return retval;
+	}
+}
+
+
+
+function collectSettings(){
+	for(var prop in CONF.def) {
+		var key = "f_" + prop;
+		CONF.cur[prop] = getFormValue (key);
+	}
+}
+
+function applySettings(){
+	for(var prop in CONF.cur) {
+		var key = "f_" + prop;
+		var val = CONF.cur[prop];
+		setFormElement (key, val);
+	}
+}
+
+
+
+
+function getQueryString(){
+	var qsParm = new Array();
+	var q = window.location.search || document.location.hash;
+	var query = q.substring(1);
+	if(query.length < 1){
+		return false;
+	}
+	var parms = query.split('&');
+	for (var i=0; i<parms.length; i++) {
+		var pos = parms[i].indexOf('=');
+		if (pos > 0) {
+			var key = parms[i].substring(0,pos);
+			var val = parms[i].substring(pos+1);
+			qsParm[key] = val;
+		}
+	}
+	return qsParm;
+}
+
+</script>
+
+<style type="text/css">
+#pklDIV {
+	position:absolute;
+	width:462px;
+	height:214px;
+	z-index:2;
+	overflow: auto;
+}
+
+#skinBrowser {
+	position:relative;
+	width:400px;
+	height:175px;
+	z-index:1;
+	overflow: auto;
+	white-space: nowrap;
+	left: 0px;
+	top: 0px;
+	background-color: #EFEFEF;
+}
+.myIframe {
+	height: 300px;
+	width: 100%;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+
+.ThumbDiv {
+	cursor:pointer;
+	width:125px;
+	height:125px;
+	position:relative;
+	float:left;
+	display:block;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	white-space: nowrap;
+}
+
+div.ThumbDiv:hover{
+	background-color: #E3E3E3;
+}
+div.ThumbDiv:active{
+	background-color: #FFFFFF;
+}
+
+.TextLine {
+	height: 24px;
+	width: 100%;
+}
+
+.ThumbText {
+	left:0px;
+	width:100%;
+	bottom:0px;
+	position:absolute;
+	text-align:center;
+}
+.Clear {
+	clear:both;
+}
+.codeDisplay {
+	background-color: #EFEFEF;
+	padding: 5px;
+	border: 1px solid #CCCCCC;
+	font-family: "Courier New", Courier, mono;
+	font-size: 12px;
+	color: #03F;
+	white-space: pre;
+	display: block;
+	overflow: auto;
+	width: 100%;
+	height: 350px;
+}
+.codeString {
+	color: #F0F;
+}
+
+.codeComment {
+	color: #666;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+h1 {
+	font-size: 18px;
+	color: #666;
+}
+#pickleDisplayWrapper {
+	position: relative;
+}
+.codeDisplay1 {	background-color: #EFEFEF;
+	padding: 5px;
+	border: 1px solid #CCCCCC;
+	font-family: "Courier New", Courier, mono;
+	font-size: 12px;
+	color: #03F;
+	white-space: pre;
+	display: block;
+	overflow: scroll;
+	width: 95%;
+	height: 350px;
+}
+body {
+	margin: 0px;
+	padding: 0px;
+}
+.warning {
+	background-color: #FFC;
+	border-bottom-width: thin;
+	border-bottom-style: solid;
+	border-bottom-color: #900;
+	padding: 8px;
+	display: none;
+}
+</style>
+
+</HEAD>
+
+ <BODY>
+
+ <div id="warningBox" class="warning"><b>WARNING: </b>This setup utility should not be used<b></b> on a local PC. (The code generated uses &quot;relative&quot; URLs, which may or <b>may not work on your web site</b>). When this utility is run on a live web server, proper file URLs will be used in the output code. Plus, any new skin you upload to the  &quot;skins&quot; folder (on your site) will automatically be listed.</div>
+ <table width="100%" border="0" cellspacing="0" cellpadding="0">
+ 	<tr>
+ 		<td width="30%" align="left" valign="top"><table width="421" border="0" align="left" cellpadding="10" cellspacing="0">
+ 			<tr>
+ 				<td align="left" valign="top"><h1>Pickle Player Setup Utility</h1></td>
+ 				</tr>
+ 			<tr>
+ 				<td align="left" valign="top"><div id="skinBrowser"></div></td>
+ 				</tr>
+ 			<tr>
+ 				<td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="5">
+ 					<tr>
+ 						<td width="1%"><input type="hidden" name="f_skin" id="f_skin"></td>
+ 						<td width="1%" nowrap><b>Media File</b></td>
+ 						<td width="98%"><input type="text" class="TextLine" id="f_media" onChange="" value="http://path/to/file.mp3" ></td>
+ 						</tr>
+ 					<tr>
+ 						<td><input type="checkbox" id="f_use_poster" onChange="" value="yes"></td>
+ 						<td nowrap><b>Poster Image</b></td>
+ 						<td><input id="f_poster" type="text" class="TextLine" onChange="" value="http://path/to/file.jpg" ></td>
+ 						</tr>
+ 					<tr>
+ 						<td><input type="checkbox" id="f_use_startuptext" onChange="" value="yes"></td>
+ 						<td nowrap><b>Startup Text</b></td>
+ 						<td><input id="f_startuptext"  type="text" class="TextLine" onChange="" value="Click To Start" ></td>
+ 						</tr>
+ 					<tr>
+ 						<td><input type="checkbox" id="f_autoplay" onChange="" value="yes"></td>
+ 						<td nowrap><b>Auto Play</b></td>
+ 						<td>&nbsp;</td>
+ 						</tr>
+ 					</table></td>
+ 				</tr>
+		</table></td>
+ 		<td width="70%" align="center" valign="middle"><table width="20" border="0" cellspacing="0" cellpadding="0">
+ 			<tr>
+ 				<td id="skinPreviewCell">&nbsp;</td>
+ 				</tr>
+		</table>
+		<div id="waitingText">&nbsp;</div></td>
+	 </tr>
+ 	<tr>
+ 		<td align="left" valign="top">&nbsp;</td>
+ 		<td align="center" valign="top"><input type='submit' value='Refresh Preview' onClick='updateDisplay()' style='clear:both;'></td>
+	 </tr>
+ </table>
+ <table width="100%" border="0" align="left" cellpadding="10" cellspacing="0">
+ 	<tr>
+ 		<td align="left" valign="top"><p>Copy and paste the following code into your webpage. <a href="http://www.pickleplayer.com/docs/establish_overview.php" target="_blank">Click here</a> for more information (and example HTML code) for establishing a player in your webpage.</p>
+ 			<div class="codeDisplay1" id="CodeTextDiv">Content for New Div Tag Goes Here</div>
+ 			<p>&nbsp;</p></td>
+	 </tr>
+ 	<tr>
+ 		<td align="left" valign="top"><a href="http://www.pickleplayer.com">&copy;Copyright 2011 Plaino. Version 2.2</a></td>
+	 </tr>
+ </table>
+
+
+<script language="javascript">
+//DoOnLoad (window, startup);
+startup();
+</script>
+
+
+ </BODY>
+</HTML>

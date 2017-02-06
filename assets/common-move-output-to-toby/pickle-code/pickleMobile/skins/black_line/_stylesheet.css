@@ -1,0 +1,154 @@
+/*************************** PLAYER WRAPPER */
+.PKL_wrapper{
+	left:0px;
+	display:block;
+	top:0px;
+	width:176px;
+	float:left;
+	position:relative;
+	z-index:1;
+	height:20px;
+}
+
+/*************************** CONTROLS BKGD */
+.PKL_controlsBkgd{
+	background-image:url("g_controlsBkgd.png");
+	display:block;
+	background-repeat:no-repeat;
+	top:2px;
+	left:0px;
+	width:176px;
+	font-size:0px;
+	position:absolute;
+	z-index:6;
+	float:left;
+	height:14px;
+}
+
+/*************************** PLAY */
+.PKL_playpause, .PKL_play{
+	background-image:url("b_play.png");
+	display:block;
+	background-repeat:no-repeat;
+	top:-2px;
+	left:1px;
+	width:21px;
+	cursor:pointer;
+	font-size:0px;
+	position:absolute;
+	z-index:6;
+	float:left;
+	height:16px;
+}
+div.PKL_playpause:hover, div.PKL_play:hover{
+	background-image:url("b_play_over.png");
+}
+div.PKL_playpause:active, div.PKL_play:active{
+	background-image:url("b_play_down.png");
+}
+div.PKL_playpause.pause, div.PKL_play.pause{
+	background-image:url("b_pause.png");
+}
+div.PKL_playpause.pause:hover, div.PKL_play.pause:hover{
+	background-image:url("b_pause_over.png");
+}
+div.PKL_playpause.pause:active, div.PKL_play.pause:active{
+	background-image:url("b_pause_down.png");
+}
+
+/*************************** SCRUB BKGD */
+.PKL_scrubBkgd{
+	background-image:url("g_scrubBkgd.png");
+	display:block;
+	background-repeat:no-repeat;
+	top:4px;
+	left:22px;
+	width:135px;
+	cursor:pointer;
+	font-size:0px;
+	position:absolute;
+	z-index:5;
+	float:left;
+	height:4px;
+}
+
+/*************************** SCRUB BAR */
+.PKL_scrubBar{
+	background-image:url("g_scrubBar.png");
+	display:block;
+	background-repeat:no-repeat;
+	top:0px;
+	left:0px;
+	overflow:hidden;
+	width:34px;
+	cursor:pointer;
+	font-size:0px;
+	position:absolute;
+	z-index:1;
+	float:left;
+	height:4px;
+}
+
+/*************************** LOADING */
+.PKL_loading{
+	background-image:url("g_scrubLoading.png");
+	display:block;
+	background-repeat:no-repeat;
+	top:0px;
+	left:0px;
+	overflow:hidden;
+	width:34px;
+	font-size:0px;
+	position:relative;
+	background-position:right;
+	z-index:1;
+	float:right;
+	height:4px;
+}
+
+/*************************** SCRUB HANDLE */
+.PKL_scrubHandle{
+	background-image:url("b_scrubHandle.png");
+	display:block;
+	background-repeat:no-repeat;
+	top:-5px;
+	left:0px;
+	width:15px;
+	cursor:pointer;
+	font-size:0px;
+	position:absolute;
+	z-index:6;
+	float:left;
+	height:15px;
+}
+div.PKL_scrubHandle:hover{
+	background-image:url("b_scrubHandle_over.png");
+}
+div.PKL_scrubHandle:active{
+	background-image:url("b_scrubHandle_down.png");
+}
+
+/*************************** THINKER */
+.PKL_thinker{
+	background-image:url("g_thinker.gif");
+	display:block;
+	background-repeat:no-repeat;
+	top:4px;
+	left:161px;
+	width:12px;
+	font-size:0px;
+	position:absolute;
+	z-index:10;
+	height:11px;
+}
+div.PKL_thinker.off{
+	background-image:none;
+}
+
+.PKL_preloader{
+	width:1px;
+	height:1px;
+	background-repeat:no-repeat;
+	background-image:url("b_play_over.png#b_play_down.png#b_pause.png#b_pause_over.png#b_pause_down.png#b_scrubHandle_over.png#b_scrubHandle_down.png#background-image:none#b_scrubHandle_over.png#b_scrubHandle_down.png");
+	display:none;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<!-- IMPORTANT: 
+
+The line above that begins with "DOCTYPE" must be included in order for Apple products (safari, ipod, etc) to display properly.
+
+-->
+
+<html>
+<head>
+<title>Pickle Player - PKL_LoadPlaylist - Multiple</title>
+
+
+<!-- START - PICKLE FILES  -->
+<script language="javascript" src="pickle.js"></script>
+<link href="skins/default_all/_stylesheet.css" rel="stylesheet" type="text/css">
+<!-- END - PICKLE FILES -->
+
+
+</head>
+<body bgcolor="#FFFFFF">
+
+
+<TABLE>
+<TR>
+	<TD>
+	
+		<p>
+		<a href="javascript:;" onclick="PKL_LoadPlaylist( { player:'MyPlayer1', file:'_playlist_example_audio.xml'} );">Load _playlist_example_audio.xml into MyPlayer1</a>
+		</p>
+
+		<!-- START - PICKLE PLAYER -->
+		<div id="MyPlayer1" data-media=""></div>
+		<!-- END - PICKLE PLAYER -->
+	
+	
+	</TD>
+</TR>
+<TR>
+	<TD>
+	
+		<p>
+		<a href="javascript:;" onclick="PKL_LoadPlaylist( { player:'MyPlayer2', file:'_playlist_example_video.xml'} );">Load _playlist_example_video.xml into MyPlayer2</a>
+		</p>
+
+		<!-- START - PICKLE PLAYER -->
+		<div id="MyPlayer2" data-media=""></div>
+		<!-- END - PICKLE PLAYER -->
+	
+	</TD>
+</TR>
+</TABLE>
+
+
+
+
+
+
+
+</body>
+</html>

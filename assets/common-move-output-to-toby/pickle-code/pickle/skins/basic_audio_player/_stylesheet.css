@@ -1,0 +1,235 @@
+/*************************** PLAYER WRAPPER */
+.PKL_wrapper{
+	width:327px;
+	top:0px;
+	left:0px;
+	display:block;
+	float:left;
+	position:relative;
+	z-index:1;
+	height:94px;
+}
+
+/*************************** CONTROLS BKGD */
+.PKL_controlsBkgd{
+	background-image:url("g_controlsBkgd.png");
+	display:block;
+	background-repeat:no-repeat;
+	top:0px;
+	left:0px;
+	width:319px;
+	font-size:0px;
+	position:absolute;
+	z-index:6;
+	float:left;
+	height:87px;
+}
+
+/*************************** PLAY */
+.PKL_playpause, .PKL_play{
+	background-image:url("b_play.png");
+	display:block;
+	background-repeat:no-repeat;
+	top:45px;
+	left:21px;
+	width:30px;
+	cursor:pointer;
+	font-size:0px;
+	position:absolute;
+	z-index:6;
+	float:left;
+	height:30px;
+}
+div.PKL_playpause:hover, div.PKL_play:hover{
+	background-image:url("b_play_over.png");
+}
+div.PKL_playpause:active, div.PKL_play:active{
+	background-image:url("b_play_down.png");
+}
+div.PKL_playpause.pause, div.PKL_play.pause{
+	background-image:url("b_pause.png");
+}
+div.PKL_playpause.pause:hover, div.PKL_play.pause:hover{
+	background-image:url("b_pause_over.png");
+}
+div.PKL_playpause.pause:active, div.PKL_play.pause:active{
+	background-image:url("b_pause_down.png");
+}
+
+/*************************** MUTE */
+.PKL_mute{
+	background-image:url("b_mute.png");
+	display:block;
+	background-repeat:no-repeat;
+	top:45px;
+	left:267px;
+	width:30px;
+	cursor:pointer;
+	font-size:0px;
+	position:absolute;
+	z-index:5;
+	float:left;
+	height:30px;
+}
+div.PKL_mute:hover{
+	background-image:url("b_mute_over.png");
+}
+div.PKL_mute:active{
+	background-image:url("b_mute_down.png");
+}
+div.PKL_mute.on{
+	background-image:url("b_mute_down.png");
+}
+div.PKL_mute.on:hover{
+	background-image:url("b_mute_over.png");
+}
+div.PKL_mute.on:active{
+	background-image:url("b_mute.png");
+}
+
+/*************************** INFO BKGD */
+.PKL_infoBkgd{
+	width:289px;
+	background-image:url("g_infoBkgd.png");
+	z-index:4;
+	background-repeat:no-repeat;
+	position:absolute;
+	top:14px;
+	left:14px;
+	display:block;
+	height:29px;
+}
+
+/*************************** INFO */
+.PKL_info{
+	left:20px;
+	display:block;
+	text-align:left;
+	font-family:Arial;
+	vertical-align:middle;
+	font-weight:normal;
+	width:167px;
+	top:20px;
+	font-size:14px;
+	position:absolute;
+	white-space:nowrap;
+	color:#020302;
+	z-index:6;
+	height:20px;
+}
+
+/*************************** TIME */
+.PKL_time{
+	font-weight:normal;
+	left:213px;
+	display:block;
+	text-align:center;
+	font-family:Arial;
+	vertical-align:middle;
+	overflow:hidden;
+	width:91px;
+	top:20px;
+	font-size:13px;
+	position:absolute;
+	white-space:nowrap;
+	color:#000000;
+	z-index:6;
+	height:19px;
+}
+
+/*************************** SCRUB BKGD */
+.PKL_scrubBkgd{
+	background-image:url("g_scrubBkgd.png");
+	display:block;
+	background-repeat:no-repeat;
+	top:52px;
+	left:58px;
+	width:196px;
+	cursor:pointer;
+	font-size:0px;
+	position:absolute;
+	z-index:5;
+	float:left;
+	height:15px;
+}
+
+/*************************** SCRUB BAR */
+.PKL_scrubBar{
+	background-image:url("g_scrubBar.png");
+	display:block;
+	background-repeat:no-repeat;
+	top:0px;
+	left:0px;
+	overflow:hidden;
+	width:49px;
+	cursor:pointer;
+	font-size:0px;
+	position:absolute;
+	z-index:1;
+	float:left;
+	height:15px;
+}
+
+/*************************** LOADING */
+.PKL_loading{
+	background-image:url("g_scrubLoading.png");
+	display:block;
+	background-repeat:no-repeat;
+	top:0px;
+	left:0px;
+	overflow:hidden;
+	width:49px;
+	font-size:0px;
+	position:relative;
+	background-position:right;
+	z-index:1;
+	float:right;
+	height:15px;
+}
+
+/*************************** SCRUB HANDLE */
+.PKL_scrubHandle{
+	background-image:url("b_scrubHandle.png");
+	display:block;
+	background-repeat:no-repeat;
+	top:-6px;
+	left:0px;
+	width:27px;
+	cursor:pointer;
+	font-size:0px;
+	position:absolute;
+	z-index:6;
+	float:left;
+	height:27px;
+}
+div.PKL_scrubHandle:hover{
+	background-image:url("b_scrubHandle_over.png");
+}
+div.PKL_scrubHandle:active{
+	background-image:url("b_scrubHandle_down.png");
+}
+
+/*************************** THINKER */
+.PKL_thinker{
+	background-image:url("g_thinker.gif");
+	display:block;
+	background-repeat:no-repeat;
+	top:21px;
+	left:193px;
+	width:14px;
+	font-size:0px;
+	position:absolute;
+	z-index:10;
+	height:15px;
+}
+div.PKL_thinker.off{
+	background-image:none;
+}
+
+.PKL_preloader{
+	width:1px;
+	height:1px;
+	background-repeat:no-repeat;
+	background-image:url("b_play_over.png#b_play_down.png#b_pause.png#b_pause_over.png#b_pause_down.png#b_scrubHandle_over.png#b_scrubHandle_down.png#b_mute_over.png#b_mute_down.png#b_mute_down.png#b_mute_over.png#b_mute.png#background-image:none#b_scrubHandle_over.png#b_scrubHandle_down.png");
+	display:none;
+}

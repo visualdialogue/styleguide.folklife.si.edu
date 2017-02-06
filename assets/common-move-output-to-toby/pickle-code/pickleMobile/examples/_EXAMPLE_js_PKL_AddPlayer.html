@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<!-- IMPORTANT: 
+
+The line above that begins with "DOCTYPE" must be included in order for Apple products (safari, ipod, etc) to display properly.
+
+-->
+
+<html>
+<head>
+<title>Pickle Player - PKL_AddPlayer</title>
+
+<!-- PICKLE FILES START -->
+<script language="javascript" src="pickle.js"></script>
+<link href="skins/basic_audio_player/_stylesheet.css" rel="stylesheet" type="text/css">
+<!-- PICKLE FILES END -->
+
+</head>
+<body bgcolor="#FFFFFF">
+
+
+
+
+
+
+<!-- The manual link to render more players 
+Note that we aer using the "i" to create unique player ID's and file names.
+-->
+<p>
+<a href="javascript:;" onclick="PKL_AddPlayer( { target: 'MyTargetDiv', id: 'MyPlayer' + i++, media: 'test-audio.mp3?unique=' + i++ } );">Add Another Player</a>
+</p>
+
+
+
+
+
+<!-- A target DIV -->
+<div id="MyTargetDiv">Pickle Players will appear in this div<br></div>
+
+
+
+
+<script language="javascript">
+
+	// This "i" is used for the text links to create unique player ID's and media file names. (Media file names need ot be unique otherwise all the players will control the same audio file).
+
+	var i = 2;
+
+	// This function is called as the page loads, since we've assigned a "target" the player will get rendered into the <div> that has the the appropirate ID.
+	PKL_AddPlayer( { target: 'MyTargetDiv', id: 'MyPlayer1', media: 'test-audio.mp3' } );
+
+</script>
+
+
+
+
+</body>
+</html>

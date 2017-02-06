@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<!-- IMPORTANT: 
+
+The line above that begins with "DOCTYPE" must be included in order for Apple products (safari, ipod, etc) to display properly.
+
+-->
+
+<html>
+<head>
+<title>Pickle Player - Play Pause Reset</title>
+
+
+<!-- START - PICKLE FILES  -->
+<script language="javascript" src="pickle.js"></script>
+<link href="skins/seagull/_stylesheet.css" rel="stylesheet" type="text/css">
+<!-- END - PICKLE FILES -->
+
+
+</head>
+<body bgcolor="#FFFFFF">
+
+
+
+
+
+<TABLE>
+<TR>
+	<TD width="113" align="left" valign="top" nowrap>
+	
+		<a href="javascript:;" onclick="PKL_Play();">Play</a><br>
+		<a href="javascript:;" onclick="PKL_Pause();">Pause</a><br>
+		<a href="javascript:;" onclick="PKL_Reset();">Reset</a><br>
+		<br>
+		<a href="javascript:;" onclick="PKL_AddPlayer( { target:'MyAdditionalPlayers', media:'song1.mp3?unique=' + Math.floor(Math.random()*100) } );">AddPlayer</a><br>
+		
+		<a href="javascript:;" onclick="PKL_LoadPlaylist('_playlist_example_audio.xml');">Load Playlist</a><br>
+
+		<a href="javascript:;" onclick="PKL_LoadAndPlay('song3.mp3');">Load And Play</a><br>
+		<a href="javascript:;" onclick="PKL_SetInfo( { artist:'Bob', title:'Pickle Rock' } );">Set Info</a><br>
+		<a href="javascript:;" onclick="PKL_SetPoster('song1.jpg');">Set Poster</a><br>
+		<br>
+		<a href="javascript:;" onclick="Alert(PKL_AmReady());">AmReady</a><br>
+		<a href="javascript:;" onclick="Alert(PKL_GetInfo());">GetInfo</a><br>
+
+
+	</TD>
+	<TD width="344" align="left" valign="top">
+		<!-- START - PICKLE PLAYER -->
+		<div data-media="song1.mp3"></div>
+		<!-- END - PICKLE PLAYER -->
+	
+	</TD>
+
+</TR>
+<TR>
+	<TD align="left" valign="top">&nbsp;</TD>
+	<TD align="left" valign="top">
+		
+		<div id="MyAdditionalPlayers">New Players (using he PKL_AddPlayer function) will appear here.</div>
+
+	</TD>
+</TR>
+</TABLE>
+
+
+</body>
+</html>

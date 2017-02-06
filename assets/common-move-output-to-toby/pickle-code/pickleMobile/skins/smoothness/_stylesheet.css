@@ -1,0 +1,109 @@
+/*************************** PLAYER WRAPPER */
+.PKL_wrapper{
+	left:0px;
+	top:0px;
+	width:155px;
+	float:left;
+	position:relative;
+	z-index:1;
+	display:block;
+	height:66px;
+}
+
+/*************************** CONTROLS BKGD */
+.PKL_controlsBkgd{
+	background-image:url("g_controlsBkgd.png");
+	left:0px;
+	background-repeat:no-repeat;
+	top:0px;
+	width:150px;
+	font-size:0px;
+	float:left;
+	position:absolute;
+	z-index:6;
+	display:block;
+	height:61px;
+}
+
+/*************************** PLAY */
+.PKL_playpause, .PKL_play{
+	background-image:url("b_play.png");
+	left:51px;
+	background-repeat:no-repeat;
+	top:9px;
+	cursor:pointer;
+	width:46px;
+	font-size:0px;
+	float:left;
+	position:absolute;
+	z-index:6;
+	display:block;
+	height:42px;
+}
+div.PKL_playpause:hover, div.PKL_play:hover{
+	background-image:url("b_play_over.png");
+}
+div.PKL_playpause:active, div.PKL_play:active{
+	background-image:url("b_play_down.png");
+}
+div.PKL_playpause.pause, div.PKL_play.pause{
+	background-image:url("b_pause.png");
+}
+div.PKL_playpause.pause:hover, div.PKL_play.pause:hover{
+	background-image:url("b_pause_over.png");
+}
+div.PKL_playpause.pause:active, div.PKL_play.pause:active{
+	background-image:url("b_pause_down.png");
+}
+
+/*************************** REWIND */
+.PKL_rewind{
+	background-image:url("b_rewind.png");
+	left:13px;
+	background-repeat:no-repeat;
+	top:14px;
+	cursor:pointer;
+	width:33px;
+	font-size:0px;
+	float:left;
+	position:absolute;
+	z-index:5;
+	display:block;
+	height:32px;
+}
+div.PKL_rewind:hover{
+	background-image:url("b_rewind_over.png");
+}
+div.PKL_rewind:active{
+	background-image:url("b_rewind_down.png");
+}
+
+/*************************** NEXT */
+.PKL_next{
+	background-image:url("b_next.png");
+	left:101px;
+	background-repeat:no-repeat;
+	top:14px;
+	cursor:pointer;
+	width:34px;
+	font-size:0px;
+	float:left;
+	position:absolute;
+	z-index:5;
+	display:block;
+	height:32px;
+}
+div.PKL_next:hover{
+	background-image:url("b_next_over.png");
+}
+div.PKL_next:active{
+	background-image:url("b_next_down.png");
+}
+
+.PKL_preloader{
+	width:1px;
+	height:1px;
+	background-repeat:no-repeat;
+	background-image:url("b_rewind_over.png#b_rewind_down.png#b_play_over.png#b_play_down.png#b_pause.png#b_pause_over.png#b_pause_down.png#b_next_over.png#b_next_down.png");
+	display:none;
+}

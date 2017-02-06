@@ -1,0 +1,70 @@
+/*************************** PLAYER WRAPPER */
+.PKL_wrapper{
+	left:0px;
+	top:0px;
+	z-index:1;
+	width:13px;
+	float:left;
+	position:relative;
+	display:block;
+	height:13px;
+}
+
+/*************************** PLAY */
+.PKL_playpause, .PKL_play{
+	left:0px;
+	display:block;
+	background-image:url("play-button-blue.png");
+	z-index:6;
+	background-repeat:no-repeat;
+	width:13px;
+	top:0px;
+	cursor:pointer;
+	position:absolute;
+	font-size:0px;
+	float:left;
+	height:13px;
+}
+div.PKL_playpause:hover, div.PKL_play:hover{
+	background-image:url("play-button-orange.png");
+}
+div.PKL_playpause:active, div.PKL_play:active{
+	background-image:url("play-button-blue.png");
+}
+div.PKL_playpause.pause, div.PKL_play.pause{
+	background-image:url("pause-button-orange.png");
+}
+div.PKL_playpause.pause:hover, div.PKL_play.pause:hover{
+	background-image:url("pause-button-orange.png");
+}
+div.PKL_playpause.pause:active, div.PKL_play.pause:active{
+	background-image:url("pause-button-orange.png");
+}
+
+.PKL_preloader{
+	width:1px;
+	height:1px;
+	background-repeat:no-repeat;
+	background-image:url("play-button-blue.png#play-button-orange.png#pause-button-orange.png");
+	display:none;
+}
+
+@media (max-width: 991px) {
+.PKL_wrapper {height:40px; width:40px;}
+.PKL_playpause, .PKL_play{background-image:url("play-button-blue-mobile.png");height:40px; width:40px;}
+div.PKL_playpause:hover, div.PKL_play:hover{
+	background-image:url("play-button-orange-mobile.png");
+}
+div.PKL_playpause:active, div.PKL_play:active{
+	background-image:url("play-button-blue-mobile.png");
+}
+div.PKL_playpause.pause, div.PKL_play.pause{
+	background-image:url("pause-button-orange-mobile.png");
+}
+div.PKL_playpause.pause:hover, div.PKL_play.pause:hover{
+	background-image:url("pause-button-orange-mobile.png");
+}
+div.PKL_playpause.pause:active, div.PKL_play.pause:active{
+	background-image:url("pause-button-orange-mobile.png");
+}
+}
