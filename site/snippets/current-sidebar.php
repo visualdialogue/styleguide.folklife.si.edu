@@ -1,4 +1,4 @@
-<div class="sidebar col-sm-4">
+<div class="sidebar col-sm-4" id="magazine-article-sidebar-js">
 	<div class="zone zone-aside-second">
 		<div class="visible-sm latest-issue-article">
 			<a href="/magazine-summer-fall-2016-education/smithsonian"><img src="http://www.folkways.si.edu/images/magazine/2016_summer_fall/leftcolhead-mobile.jpg" alt="Summer Fall 2016" width="100%"></a>

@@ -7,7 +7,7 @@ var  browserSync = require('browser-sync').create(),
           rename = require('gulp-rename'),
           uglify = require('gulp-uglify'),
          plumber = require('gulp-plumber'),
-           uncss = require('gulp-uncss'),
+           // uncss = require('gulp-uncss'),
         critical = require('critical'),
             jade = require('gulp-jade'),
          jadephp = require('gulp-jade-php'),
@@ -31,33 +31,35 @@ gulp.task('plugins', function() {
       './assets/bower_components/mediaelement/build/mediaelement-and-player.min.js',
       './assets/bower_components/matchHeight/dist/jquery.matchHeight-min.js',
       './assets/bower_components/viewport-units-buggyfill/viewport-units-buggyfill.min.js', // for customizing dropdowns (eg. folkways magazine)
-      './assets/js/pickle.js'
+      './assets/bower_components/preparetransition.min.js', // for customizing dropdowns (eg. folkways magazine)
+
+      // './assets/js/pickle.js'
     ])
     .pipe(concat('common-plugins.js'))
-    .pipe(gulp.dest('./assets/common-move-output-to-toby/js/'))
+    .pipe(gulp.dest('../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/js'))
 });
 
-gulp.task('usedCSS', function() {
-    return gulp.src('./assets/css/styleguide.css')
-        .pipe(uncss({
-            // get representative pages
-            html: [
-              // '_resources/testing/harvard.loc.html',
-              'http://folklife.loc:3000/',
-            ],
-            ignore: [
-              // '.icon-share',
-              // '.view-by-filter .usgrad-active line',
-              // '.view-by-filter .usgrad-active  path',
-              // '.view-by-filter .usgrad-active  polygon',
-              // '.view-by-filter .usgrad-active  polyline',
-              // '.view-by-filter .usgrad-active rect',
-              // '.view-by-filter ul li.usgrad-active',
-            ]
-        }))
-        .pipe(rename('folklife-opt.css'))
-        .pipe(gulp.dest('./assets/css'));
-});
+// gulp.task('usedCSS', function() {
+//     return gulp.src('./assets/css/styleguide.css')
+//         .pipe(uncss({
+//             // get representative pages
+//             html: [
+//               // '_resources/testing/harvard.loc.html',
+//               'http://folklife.loc:3000/',
+//             ],
+//             ignore: [
+//               // '.icon-share',
+//               // '.view-by-filter .usgrad-active line',
+//               // '.view-by-filter .usgrad-active  path',
+//               // '.view-by-filter .usgrad-active  polygon',
+//               // '.view-by-filter .usgrad-active  polyline',
+//               // '.view-by-filter .usgrad-active rect',
+//               // '.view-by-filter ul li.usgrad-active',
+//             ]
+//         }))
+//         .pipe(rename('folklife-opt.css'))
+//         .pipe(gulp.dest('./assets/css'));
+// });
 // gulp.task('imagemin', function () {
 //     return gulp.src('/images/*')
 //         .pipe(imagemin({
@@ -144,7 +146,7 @@ gulp.task('jade', function() {
         // title: 'OMG THIS IS THE TITLE'
       }
      }))
-     .pipe(gulp.dest('./site'));
+     .pipe(gulp.dest('./site'))
 });
 
 // common html
@@ -213,7 +215,7 @@ gulp.task('js', function() {
   return gulp.src([
       '../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/js/common-plugins.js',
       '../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/js/common-scripts.js',
-      './assets/js/styleguide-scripts.js'
+      './assets/js/scripts.js'
     ])
     .pipe(concat('styleguide.js'))
     .pipe(gulp.dest('./assets/js/'));
@@ -222,7 +224,7 @@ gulp.task('js', function() {
 // create a task that ensures the `templates` and `js` tasks are completed before
 
 // reloading browsers
-gulp.task('jade-watch', ['jade'], browserSync.reload);
+// gulp.task('jade-watch', ['jade'], browserSync.reload);
 gulp.task('js-watch', ['js'], browserSync.reload);
 
 // Static Server + watching scss/html files
@@ -237,7 +239,8 @@ gulp.task('serve', ['jade', 'styles', 'js'], function() {
       minify    : true,
   });
 
-    gulp.watch('site/**/*.jade',['jade-watch']);
+    // gulp.watch('site/**/*.jade',['jade-watch']);
+    gulp.watch('site/**/*.jade',['jade']);
     // gulp.watch('site/common/*.jade',['jade-common']);
     gulp.watch('bower_components/bootstrap/less/*.less',['less']);
     gulp.watch('site/common/blueprints/*.yml',['copy']);
@@ -247,8 +250,9 @@ gulp.task('serve', ['jade', 'styles', 'js'], function() {
     gulp.watch('assets/js/*.js',['js-watch']);
     gulp.watch('../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/js/common-scripts.js',['js-watch']);
     // gulp.watch('*.html').on('change', browserSync.reload);
-    gulp.watch('site/**/*.jade').on('change', browserSync.reload);
-    gulp.watch('assets/js/scripts-min.js').on('change', browserSync.reload);
+    // gulp.watch('site/**/*.jade',['jade-watch']);
+    gulp.watch('site/**/*.jade',['jade']);
+    // gulp.watch('assets/js/scripts-min.js').on('change', browserSync.reload);
     // gulp.watch("/bdc/**/*.html").on('change', browserSync.reload);
     // gulp.watch("content/**/*.txt").on('change', browserSync.reload);
     // gulp.watch("*.php").on('change', browserSync.reload);
