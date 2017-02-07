@@ -11622,6 +11622,99 @@ video::-webkit-media-controls {
 	color: #4d4d4d;
 }
 
+/* Article Sidebar Retrofit
+-------------------------------------------------- */
+.magazine-article-page .sidebar .caption {
+	margin-top: 0.37037rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.magazine-article-page .sidebar .caption {
+		margin-top: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.magazine-article-page .sidebar .caption {
+		margin-top: 1rem;
+	}
+}
+
+.magazine-article-page .sidebar
+iframe {
+	width: 100%;
+}
+
+.magazine-article-page img[alt="Audio"] {
+	display: none;
+}
+
+.magazine-article-page .top-forty {
+	margin-top: 1.48148rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.magazine-article-page .top-forty {
+		margin-top: 2.56vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.magazine-article-page .top-forty {
+		margin-top: 4rem;
+	}
+}
+
+.magazine-article-page img[alt="Related Content"] {
+	display: none;
+}
+
+.magazine-article-page #related-content-mag {
+	position: relative;
+	padding-top: 4.21408rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.magazine-article-page #related-content-mag {
+		padding-top: 3.84vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.magazine-article-page #related-content-mag {
+		padding-top: 6rem;
+	}
+}
+
+.magazine-article-page #related-content-mag:before {
+	content: "Related Content";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.magazine-article-page .audio-sample-grey p {
+	margin: 0 0 5px 80px;
+	padding: 0;
+}
+
+.magazine-article-page .audio-sample-grey div {
+	overflow: visible;
+}
+
+.magazine-article-page .PKL_wrapper {
+	left: 0px;
+	display: block;
+	top: 0px;
+	width: 130px;
+	float: left;
+	position: relative;
+	z-index: 1;
+	height: 13px;
+}
+
 .card {
 	margin-bottom: 1.48148rem;
 }
@@ -15164,6 +15257,7 @@ body {
 .horizontal-audio-card .details-inner {
 	padding-top: 0.70235rem;
 	padding-right: 1.05352rem;
+	padding-left: 0.70235rem;
 	padding-bottom: 0;
 	border: none;
 }
@@ -15189,6 +15283,18 @@ body {
 @media only screen and (min-width: 1560px) {
 	.horizontal-audio-card .details-inner {
 		padding-right: 1.5rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card .details-inner {
+		padding-left: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card .details-inner {
+		padding-left: 1rem;
 	}
 }
 

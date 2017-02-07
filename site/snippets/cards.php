@@ -510,7 +510,7 @@
     </div>
   </div>
   <!-- Horizontal Audio Card-->
-  <div class="codeblock">
+  <div class="codeblock"><a id="horizontal-audio-card" class="anchor-link"></a>
     <div class="row">
       <div class="col-sm-8">
         <h3 class="section-subtitle">Horizontal Audio Card (Folkways Magazine sidebar)</h3>
@@ -519,7 +519,7 @@
       <?php snippet('show-sass'); ?>
     </div>
     <div class="row">
-      <li class="card audio-card horizontal-audio-card background-card col-sm-4 full-border-card">
+      <li class="card audio-card horizontal-audio-card background-card col-sm-4">
         <div class="row">
           <div class="image col-xs-6"><a href="#">
               <?php echo $section->image('audio.png'); ?></a></div>
@@ -537,35 +537,19 @@
         <?php snippet('show-html-mobile'); ?>
         <?php snippet('show-sass-mobile'); ?>
       </div>
-      <div class="col-md-9">
-        <pre class="html"><code>&lt;li class="card audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border-card"&gt;
-	&lt;div class="image"&gt;	
-		&lt;a href="#"&gt;
-			&lt;img src="/320x320.jpg"&gt;
-		&lt;/a&gt;
-	&lt;/div&gt;
-	&lt;div class="details"&gt;
-		&lt;div class="details-inner"&gt;
-			&lt;div class="tag"&gt;New Release&lt;/div&gt;
-			&lt;a class="high title" href="#"&gt;
-				&lt;span class="light"&gt;
-					&lt;span class="er"&gt;
-						Quelbe!
-					&lt;/span&gt;
-				&lt;/span&gt;
-			&lt;/a&gt;
-			&lt;div class="artist"&gt;
-				Stanley and the Ten Sleepless Nights
-			&lt;/div&gt;
-			&lt;div class="audio-player"&gt;
-				&lt;div class="icon-play-button icon-stack"&gt;
-					&lt;div class="icon-circle"&gt;
-						&lt;div class="icon-play"&gt;
-				&lt;div class="audio-player-details"&gt;
-					&lt;div class="audio-progress-bar"&gt;
-						&lt;img src="/assets/images/icons/audio-progress-bar.png"&gt;
-					&lt;div class="audio-time"&gt;0:00 &vert;&nbsp;23:01&lt;/div&gt;
-					&lt;div class="volume.icon-volume-up"&gt;&lt;/div&gt;
+      <div class="col-md-8">
+        <pre class="html"><code>&lt;li class="card audio-card horizontal-audio-card background-card col-sm-4"&gt;
+	&lt;div class="row"&gt;
+		&lt;div class="image col-xs-6"&gt;
+			&lt;a href="#"&gt;&lt;img src="/210x210.jpg" alt=""&gt;&lt;/a&gt;&lt;/div&gt;
+			&lt;div class="details col-xs-6"&gt;
+				&lt;div class="details-inner" style=""&gt;
+				&lt;div class="title-wrapper"&gt;
+					&lt;a href="#" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;Quelbe!&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
+					&lt;div class="artist"&gt;Stanley and the Ten Sleepless Nights&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;div class="audio-player"&gt;
+					&lt;!-- mejs media player builds itself and we wrap a few key elements in common-scripts.js --&gt;
 				&lt;/div&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
@@ -573,7 +557,7 @@
 &lt;/li&gt;
 </code></pre>
       </div>
-      <div class="col-md-9">
+      <div class="col-md-8">
         <pre class="sass"><code>// audio styles are too long to list here and have their own SASS file called audio.scss</code></pre>
       </div>
     </div>
