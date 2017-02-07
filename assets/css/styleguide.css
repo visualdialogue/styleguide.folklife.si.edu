@@ -13303,6 +13303,42 @@ body {
 	}
 }
 
+.full-border-horizontal-card:before {
+	content: '';
+	border: 2px solid #d9d9d9;
+	display: block;
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	right: 0.74074rem;
+	bottom: 0;
+	left: 0.74074rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.full-border-horizontal-card:before {
+		right: 1.28vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.full-border-horizontal-card:before {
+		right: 2rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.full-border-horizontal-card:before {
+		left: 1.28vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.full-border-horizontal-card:before {
+		left: 2rem;
+	}
+}
+
 /* Card stacking
 -------------------------------------------------- */
 @media only screen and (max-width: 53.15em) {
@@ -15242,10 +15278,6 @@ body {
 
 /* Horizontal Audio Card
 -------------------------------------------------- */
-.horizontal-audio-card:after {
-	background-color: #c9c1ae;
-}
-
 .horizontal-audio-card .image {
 	padding-right: 0;
 }
@@ -15259,7 +15291,6 @@ body {
 	padding-right: 1.05352rem;
 	padding-left: 0.70235rem;
 	padding-bottom: 0;
-	border: none;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
@@ -15357,10 +15388,6 @@ body {
 	.horizontal-audio-card .audio-player {
 		margin-top: 1rem;
 	}
-}
-
-.horizontal-audio-card .mejs-container {
-	background-color: #c9c1ae;
 }
 
 .horizontal-audio-card .mejs-controls div {

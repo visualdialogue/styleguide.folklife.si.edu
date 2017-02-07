@@ -519,7 +519,7 @@
       <?php snippet('show-sass'); ?>
     </div>
     <div class="row">
-      <li class="card audio-card horizontal-audio-card background-card col-sm-4">
+      <li class="card audio-card horizontal-audio-card full-border-horizontal-card col-sm-4">
         <div class="row">
           <div class="image col-xs-6"><a href="#">
               <?php echo $section->image('audio.png'); ?></a></div>
