@@ -163,7 +163,7 @@ $(document).ready(function () {
 /*********************
 * Mobile dropdown menu
 *********************/
-	 var $navItem = $('.header-nav-title').add($('.footer-nav-title'));
+	var $navItem = $('.header-nav-title').add($('.footer-nav-title'));
 	var $navLists = $('.header-nav-list').add($('.footer-nav-list'));
 
 	// when click a main list item
@@ -507,21 +507,20 @@ $(document).ready(function () {
 			if(isVimeo) {
 				console.log('play vimeo');
 				console.log('vimeoPlayerIsLoaded: ', vimeoPlayerIsLoaded);
+				console.log('$videoID: ', $videoID);
 				$youTubeIframeWrapper.hide();
 				$vimeoIframe.show();
 				// if first time loading a video...
-				if(!vimeoPlayerIsLoaded) {
 					var options = {
 						id: $videoID,
 						width: 640,
 						autoplay: true,
 					}
-				}
+					console.log('id updated');		
 
-				vimeoPlayer = new Vimeo.Player('vimeo-iframe', options);
-
-				if(vimeoPlayer) {
-					console.log('is set');
+				// load vimeo player once
+				if(!vimeoPlayerIsLoaded) {
+					vimeoPlayer = new Vimeo.Player('vimeo-iframe', options);
 					vimeoPlayerIsLoaded = true;
 					vimeoPlayer.play();
 				}
@@ -529,7 +528,6 @@ $(document).ready(function () {
 				else {
 					vimeoPlayer.loadVideo($videoID).then(function() {
 						console.log('not set');
-						vimeoPlayerIsLoaded = true;
 						vimeoPlayer.play();
 					});
 				}
@@ -583,7 +581,6 @@ $(document).ready(function () {
 			if(isVimeo) {
 				vimeoPlayer.unload().then( function() {
 					console.log('unloaded video');
-					vimeoPlayerIsLoaded = false;
 				}); // reset iframe	
 			// is YouTube
 			} else {

@@ -12196,7 +12196,7 @@ a.details {
 
 /* video
 -------------------------------------------------- */
-.video, #youtube-iframe {
+.video {
 	display: none;
 }
 

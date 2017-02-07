@@ -8,7 +8,7 @@
 <?php endif; ?>
 <li class="card <? if (isset($card_classes)) echo $card_classes . ' ' ?><? if ($card->type() == 'audio') echo ' audio-card' ?><? if ($card->type() == 'video') echo ' video-card' ?>">
   <?php if ($card->type() == 'video'): ?>
-  <div data-video-id="<?= $card->video_id() ?>" data-title="<?= $card->title() ?>" data-description="<?= excerpt($card->copy(), 25, "words") ?> <a href='#'>more</a>" class="video">
+  <div data-id="<?= $card->video_id() ?>" data-title="<?= $card->title() ?>" data-description="<?= excerpt($card->copy(), 25, "words") ?> <a href='#'>more</a>" class="video">
     <div class="center-box">
       <div class="modal-trigger"><img src="<?= $image->url() ?>" alt="<?= $card->title() ?>"/></div>
       <div class="icon-play-button"></div>
