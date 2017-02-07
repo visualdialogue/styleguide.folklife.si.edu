@@ -509,17 +509,17 @@
       </div>
     </div>
   </div>
-  <!-- Horizontal Audio Card-->
-  <div class="codeblock"><a id="horizontal-audio-card" class="anchor-link"></a>
+  <!-- Horizontal Audio Card — Single-->
+  <div class="codeblock"><a id="horizontal-audio-card-single" class="anchor-link"></a>
     <div class="row">
       <div class="col-sm-8">
-        <h3 class="section-subtitle">Horizontal Audio Card (Folkways Magazine sidebar)</h3>
+        <h3 class="section-subtitle">Horizontal Audio Card — Single</h3>
       </div>
       <?php snippet('show-html'); ?>
       <?php snippet('show-sass'); ?>
     </div>
     <div class="row">
-      <li class="card audio-card horizontal-audio-card full-border-horizontal-card col-sm-4">
+      <li class="card audio-card horizontal-audio-card horizontal-audio-card-single full-border-horizontal-card col-sm-4">
         <div class="row">
           <div class="image col-xs-6"><a href="#">
               <?php echo $section->image('audio.png'); ?></a></div>
@@ -538,7 +538,7 @@
         <?php snippet('show-sass-mobile'); ?>
       </div>
       <div class="col-md-8">
-        <pre class="html"><code>&lt;li class="card audio-card horizontal-audio-card full-border-horizontal-card col-sm-4"&gt;
+        <pre class="html"><code>&lt;li class="card audio-card horizontal-audio-card horizontal-card-single full-border-horizontal-card col-sm-4"&gt;
 	&lt;div class="row"&gt;
 		&lt;div class="image col-xs-6"&gt;
 			&lt;a href="#"&gt;&lt;img src="/210x210.jpg" alt=""&gt;&lt;/a&gt;&lt;/div&gt;
@@ -549,7 +549,62 @@
 					&lt;div class="artist"&gt;Stanley and the Ten Sleepless Nights&lt;/div&gt;
 				&lt;/div&gt;
 				&lt;div class="audio-player"&gt;
-					&lt;!-- mejs media player builds itself and we wrap a few key elements in common-scripts.js --&gt;
+					&lt;audio class="mejs-player" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'&gt;
+					&lt;!-- mejs media player will build itself on page load and we wrap a few key elements in common-scripts.js --&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/li&gt;
+</code></pre>
+      </div>
+      <div class="col-md-8">
+        <pre class="sass"><code>// audio styles are too long to list here and have their own SASS file called audio.scss</code></pre>
+      </div>
+    </div>
+  </div>
+  <!-- Horizontal Audio Card — Playlist-->
+  <div class="codeblock"><a id="horizontal-audio-card-playlist" class="anchor-link"></a>
+    <div class="row">
+      <div class="col-sm-8">
+        <h3 class="section-subtitle">Horizontal Audio Card — Playlist</h3>
+      </div>
+      <?php snippet('show-html'); ?>
+      <?php snippet('show-sass'); ?>
+    </div>
+    <div class="row">
+      <li class="card audio-card horizontal-audio-card horizontal-audio-card-playlist full-border-horizontal-card col-sm-4">
+        <div class="row">
+          <div class="image col-xs-3"><a href="#">
+              <?php echo $section->image('audio.png'); ?></a></div>
+          <div class="details col-xs-9">
+            <div class="details-inner">
+              <div class="title-wrapper"><a href="#" class="high title"><span class="light"><span class="er">Quelbe!</span></span></a>
+                <div class="artist">Stanley and the Ten Sleepless Nights</div>
+              </div>
+              <div class="audio-player"><audio class="mejs-player" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'></div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <div class="col-xs-12 visible-xs">
+        <?php snippet('show-html-mobile'); ?>
+        <?php snippet('show-sass-mobile'); ?>
+      </div>
+      <div class="col-md-8">
+        <pre class="html"><code>&lt;li class="card audio-card horizontal-audio-card horizontal-audio-card-playlist full-border-horizontal-card col-sm-4"&gt;
+	&lt;div class="row"&gt;
+		&lt;div class="image col-xs-6"&gt;
+			&lt;a href="#"&gt;&lt;img src="/210x210.jpg" alt=""&gt;&lt;/a&gt;&lt;/div&gt;
+			&lt;div class="details col-xs-6"&gt;
+				&lt;div class="details-inner" style=""&gt;
+				&lt;div class="title-wrapper"&gt;
+					&lt;a href="#" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;Quelbe!&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
+					&lt;div class="artist"&gt;Stanley and the Ten Sleepless Nights&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;div class="audio-player"&gt;
+					&lt;audio class="mejs-player" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'&gt;
+					&lt;!-- mejs media player will build itself on page load and we wrap a few key elements in common-scripts.js --&gt;
 				&lt;/div&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;

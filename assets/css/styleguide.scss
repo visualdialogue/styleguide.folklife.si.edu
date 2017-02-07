@@ -419,6 +419,15 @@
 		@include margin-bottom(4);
 	}
 
+	// horizontal audio card
+	.full-border-horizontal-card {
+		&:before {
+			// need more padding for border because in col- element here
+			@include right(2);
+			@include left(2);
+		}
+	}
+
 /* components
 -------------------------------------------------- */
 	.buy-button {

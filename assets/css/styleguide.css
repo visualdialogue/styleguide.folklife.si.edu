@@ -11624,6 +11624,10 @@ video::-webkit-media-controls {
 
 /* Article Sidebar Retrofit
 -------------------------------------------------- */
+.audio-sample-grey {
+	display: none;
+}
+
 .magazine-article-page .sidebar .caption {
 	margin-top: 0.37037rem;
 }
@@ -11637,6 +11641,22 @@ video::-webkit-media-controls {
 @media only screen and (min-width: 1560px) {
 	.magazine-article-page .sidebar .caption {
 		margin-top: 1rem;
+	}
+}
+
+.magazine-article-page .sidebar .horizontal-audio-card-single {
+	margin-top: 1.48148rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.magazine-article-page .sidebar .horizontal-audio-card-single {
+		margin-top: 2.56vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.magazine-article-page .sidebar .horizontal-audio-card-single {
+		margin-top: 4rem;
 	}
 }
 
@@ -13310,33 +13330,9 @@ body {
 	position: absolute;
 	z-index: 2;
 	top: 0;
-	right: 0.74074rem;
+	right: 0;
 	bottom: 0;
-	left: 0.74074rem;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.full-border-horizontal-card:before {
-		right: 1.28vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.full-border-horizontal-card:before {
-		right: 2rem;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.full-border-horizontal-card:before {
-		left: 1.28vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.full-border-horizontal-card:before {
-		left: 2rem;
-	}
+	left: 0;
 }
 
 /* Card stacking
@@ -15278,6 +15274,10 @@ body {
 
 /* Horizontal Audio Card
 -------------------------------------------------- */
+.horizontal-audio-card {
+	position: relative;
+}
+
 .horizontal-audio-card .image {
 	padding-right: 0;
 }
@@ -15289,8 +15289,8 @@ body {
 .horizontal-audio-card .details-inner {
 	padding-top: 0.70235rem;
 	padding-right: 1.05352rem;
-	padding-left: 0.70235rem;
 	padding-bottom: 0;
+	padding-left: 7.5px;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
@@ -15319,7 +15319,7 @@ body {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.horizontal-audio-card .details-inner {
-		padding-left: 0.64vw;
+		padding-left: 7.5px;
 	}
 }
 
@@ -15330,7 +15330,7 @@ body {
 }
 
 .horizontal-audio-card .title-wrapper {
-	height: 24vw;
+	height: 30vw;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 61.9em) {
@@ -15390,8 +15390,8 @@ body {
 	}
 }
 
-.horizontal-audio-card .mejs-controls div {
-	font-size: 3vw;
+.horizontal-audio-card .mejs-container {
+	background-color: transparent;
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -15406,44 +15406,18 @@ body {
 	}
 }
 
-.horizontal-audio-card .mejs-controls .mejs-playpause-button, .horizontal-audio-card .mejs-controls .mejs-playpause-button button, .horizontal-audio-card .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card .mejs-controls .mejs-playpause-button button:after {
-	width: 3.16056rem;
-	height: 3.16056rem;
-}
-
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.horizontal-audio-card .mejs-controls .mejs-playpause-button, .horizontal-audio-card .mejs-controls .mejs-playpause-button button, .horizontal-audio-card .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card .mejs-controls .mejs-playpause-button button:after {
 		width: 2.88vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.horizontal-audio-card .mejs-controls .mejs-playpause-button, .horizontal-audio-card .mejs-controls .mejs-playpause-button button, .horizontal-audio-card .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card .mejs-controls .mejs-playpause-button button:after {
-		width: 4.5rem;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.horizontal-audio-card .mejs-controls .mejs-playpause-button, .horizontal-audio-card .mejs-controls .mejs-playpause-button button, .horizontal-audio-card .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card .mejs-controls .mejs-playpause-button button:after {
 		height: 2.88vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
 	.horizontal-audio-card .mejs-controls .mejs-playpause-button, .horizontal-audio-card .mejs-controls .mejs-playpause-button button, .horizontal-audio-card .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card .mejs-controls .mejs-playpause-button button:after {
+		width: 4.5rem;
 		height: 4.5rem;
 	}
-}
-
-@media only screen and (max-width: 53.15em) {
-	.horizontal-audio-card .mejs-controls .mejs-playpause-button, .horizontal-audio-card .mejs-controls .mejs-playpause-button button, .horizontal-audio-card .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card .mejs-controls .mejs-playpause-button button:after {
-		width: 8vw;
-		height: 8vw;
-	}
-}
-
-.horizontal-audio-card .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card .mejs-controls .mejs-playpause-button button:after {
-	font-size: 8vw;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
@@ -15458,13 +15432,9 @@ body {
 	}
 }
 
-.horizontal-audio-card .mejs-controls .mejs-playpause-button button[title='Pause']:after {
-	font-size: 6vw;
-}
-
-@media only screen and (min-width: 53.25em) {
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.horizontal-audio-card .mejs-controls .mejs-playpause-button button[title='Pause']:after {
-		font-size: 3.3rem;
+		font-size: 2.2vw;
 	}
 }
 
@@ -15474,45 +15444,33 @@ body {
 	}
 }
 
-.horizontal-audio-card .mejs-controls .mejs-time-rail {
-	left: 0.11111rem;
-	top: 7.5vw;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.horizontal-audio-card .mejs-controls .mejs-time-rail {
-		left: 0.192vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.horizontal-audio-card .mejs-controls .mejs-time-rail {
-		left: 0.3rem;
-	}
-}
-
 @media only screen and (min-width: 53.25em) and (max-width: 61.9em) {
 	.horizontal-audio-card .mejs-controls .mejs-time-rail {
 		top: 2.7vw;
+		left: 0.3vw;
 	}
 }
 
 @media only screen and (min-width: 62em) and (max-width: 1559px) {
 	.horizontal-audio-card .mejs-controls .mejs-time-rail {
 		top: 2.9vw;
+		left: 0.3vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
 	.horizontal-audio-card .mejs-controls .mejs-time-rail {
 		top: 4.5rem;
+		left: 0.3rem;
 	}
 }
 
-.horizontal-audio-card .mejs-controls .mejs-time-wrapper {
-	position: static;
-	width: 75%;
-	margin-top: 5vw;
+@media only screen and (min-width: 53.25em) {
+	.horizontal-audio-card .mejs-controls .mejs-time-wrapper {
+		position: static;
+		width: 75%;
+		margin-top: 5vw;
+	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 61.9em) {
@@ -15531,6 +15489,69 @@ body {
 	.horizontal-audio-card .mejs-controls .mejs-time-wrapper {
 		margin-top: 1rem;
 	}
+}
+
+.horizontal-audio-card-playlist .title-wrapper {
+	height: 12vw;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 61.9em) {
+	.horizontal-audio-card-playlist .title-wrapper {
+		height: 16vw;
+	}
+}
+
+@media only screen and (min-width: 62em) and (max-width: 1559px) {
+	.horizontal-audio-card-playlist .title-wrapper {
+		height: 3.2vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-playlist .title-wrapper {
+		height: 5rem;
+	}
+}
+
+.horizontal-audio-card-playlist .mejs-controls .mejs-playpause-button {
+	position: absolute;
+	top: -7vw;
+	left: -18vw;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 61.9em) {
+	.horizontal-audio-card-playlist .mejs-controls .mejs-playpause-button {
+		top: -4vw;
+		left: -2vw;
+	}
+}
+
+@media only screen and (min-width: 62em) and (max-width: 1559px) {
+	.horizontal-audio-card-playlist .mejs-controls .mejs-playpause-button {
+		top: -2.8vw;
+		left: -5.1vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-playlist .mejs-controls .mejs-playpause-button {
+		top: -4rem;
+		left: -8rem;
+	}
+}
+
+.horizontal-audio-card-playlist .mejs-controls .mejs-time-rail {
+	left: 0;
+}
+
+@media only screen and (min-width: 53.25em) {
+	.horizontal-audio-card-playlist .mejs-controls .mejs-time-rail {
+		top: 0;
+	}
+}
+
+.horizontal-audio-card-playlist .mejs-controls .mejs-time-wrapper, .horizontal-audio-card-playlist .mejs-controls .mejs-horizontal-volume-slider {
+	display: none;
 }
 
 /* links
@@ -17321,6 +17342,35 @@ code.hljs {
 @media only screen and (min-width: 1560px) {
 	.image-gallery {
 		margin-bottom: 4rem;
+	}
+}
+
+.full-border-horizontal-card:before {
+	right: 0.74074rem;
+	left: 0.74074rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.full-border-horizontal-card:before {
+		right: 1.28vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.full-border-horizontal-card:before {
+		right: 2rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.full-border-horizontal-card:before {
+		left: 1.28vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.full-border-horizontal-card:before {
+		left: 2rem;
 	}
 }
 

@@ -452,16 +452,16 @@ section.container.cards-section
 			.col-md-9
 				pre.sass: code.
 					// audio styles are too long to list here and have their own SASS file called audio.scss
-	// Horizontal Audio Card
+	// Horizontal Audio Card — Single
 	.codeblock
-		a.anchor-link#horizontal-audio-card
+		a.anchor-link#horizontal-audio-card-single
 		.row
 			.col-sm-8
-				h3.section-subtitle Horizontal Audio Card (Folkways Magazine sidebar)
+				h3.section-subtitle Horizontal Audio Card — Single
 			-snippet('show-html')
 			-snippet('show-sass')
 		.row
-			li.card.audio-card.horizontal-audio-card.full-border-horizontal-card.col-sm-4
+			li.card.audio-card.horizontal-audio-card.horizontal-audio-card-single.full-border-horizontal-card.col-sm-4
 				.row
 					.image.col-xs-6
 						a(href="#")
@@ -478,7 +478,7 @@ section.container.cards-section
 				-snippet('show-sass-mobile')
 			.col-md-8
 				pre.html: code.
-					&lt;li class="card audio-card horizontal-audio-card full-border-horizontal-card col-sm-4"&gt;
+					&lt;li class="card audio-card horizontal-audio-card horizontal-card-single full-border-horizontal-card col-sm-4"&gt;
 						&lt;div class="row"&gt;
 							&lt;div class="image col-xs-6"&gt;
 								&lt;a href="#"&gt;&lt;img src="/210x210.jpg" alt=""&gt;&lt;/a&gt;&lt;/div&gt;
@@ -489,7 +489,56 @@ section.container.cards-section
 										&lt;div class="artist"&gt;Stanley and the Ten Sleepless Nights&lt;/div&gt;
 									&lt;/div&gt;
 									&lt;div class="audio-player"&gt;
-										&lt;!-- mejs media player builds itself and we wrap a few key elements in common-scripts.js --&gt;
+										&lt;audio class="mejs-player" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'&gt;
+										&lt;!-- mejs media player will build itself on page load and we wrap a few key elements in common-scripts.js --&gt;
+									&lt;/div&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/li&gt;
+
+			.col-md-8
+				pre.sass: code.
+					// audio styles are too long to list here and have their own SASS file called audio.scss
+	// Horizontal Audio Card — Playlist
+	.codeblock
+		a.anchor-link#horizontal-audio-card-playlist
+		.row
+			.col-sm-8
+				h3.section-subtitle Horizontal Audio Card — Playlist
+			-snippet('show-html')
+			-snippet('show-sass')
+		.row
+			li.card.audio-card.horizontal-audio-card.horizontal-audio-card-playlist.full-border-horizontal-card.col-sm-4
+				.row
+					.image.col-xs-3
+						a(href="#")
+							!= $section->image('audio.png')
+					.details.col-xs-9
+						.details-inner
+							.title-wrapper
+								a.high.title(href="#"): span.light: span.er Quelbe!
+								.artist Stanley and the Ten Sleepless Nights
+							.audio-player
+								<audio class="mejs-player" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'>
+			.col-xs-12.visible-xs
+				-snippet('show-html-mobile')
+				-snippet('show-sass-mobile')
+			.col-md-8
+				pre.html: code.
+					&lt;li class="card audio-card horizontal-audio-card horizontal-audio-card-playlist full-border-horizontal-card col-sm-4"&gt;
+						&lt;div class="row"&gt;
+							&lt;div class="image col-xs-6"&gt;
+								&lt;a href="#"&gt;&lt;img src="/210x210.jpg" alt=""&gt;&lt;/a&gt;&lt;/div&gt;
+								&lt;div class="details col-xs-6"&gt;
+									&lt;div class="details-inner" style=""&gt;
+									&lt;div class="title-wrapper"&gt;
+										&lt;a href="#" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;Quelbe!&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
+										&lt;div class="artist"&gt;Stanley and the Ten Sleepless Nights&lt;/div&gt;
+									&lt;/div&gt;
+									&lt;div class="audio-player"&gt;
+										&lt;audio class="mejs-player" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'&gt;
+										&lt;!-- mejs media player will build itself on page load and we wrap a few key elements in common-scripts.js --&gt;
 									&lt;/div&gt;
 								&lt;/div&gt;
 							&lt;/div&gt;

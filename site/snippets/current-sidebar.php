@@ -29,6 +29,28 @@
 			<a href="/west-african-song-chants-childrens-ghana/music/tools-for-teaching/smithsonian"><img src="http://www.folkways.si.edu/images/magazine/2016_summer_fall/lesson-plan-wast-african-song.jpg" alt="West African Song and Chants - Children’s Music from Ghana" width="100%"></a>
 			<p class="caption">Lesson plan: <a href="/west-african-song-chants-childrens-ghana/music/tools-for-teaching/smithsonian">"West African Song and Chants - Children’s Music from Ghana"</a> by Karen Howard</p>
 		</div>
+
+		<!-- sidebar audio player test -->
+		<div class="card audio-card horizontal-audio-card full-border-horizontal-card">
+			<div class="row">
+				<div class="image col-xs-6">
+					<a href="#"><img src="<?= $pages->find('explore')->children()->find('sounds')->children()->find('quelbe-music-of-the-u-s-virgin-islands')->image()->url() ?>" alt=""></a></div>
+					<div class="details col-xs-6">
+						<div class="details-inner" style="">
+						<div class="title-wrapper">
+							<a href="#" class="high title"><span class="light"><span class="er">Quelbe!</span></span></a>
+							<div class="artist">Stanley and the Ten Sleepless Nights</div>
+						</div>
+						<div class="audio-player">
+							<audio class="mejs-player" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'>
+							<!-- mejs media player will build itself on page load and we wrap a few key elements in common-scripts.js -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
 		<!--PODCAST-->
 		<div class="hidden-xs top-twenty top-forty">
 			<div class="top-forty"><img class="block" src="http://www.folkways.si.edu/images/magazine/index/audio.png" alt="Audio" height="9" width="52"></div>
