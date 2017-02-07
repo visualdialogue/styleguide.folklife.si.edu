@@ -13328,7 +13328,6 @@ body {
 	border: 2px solid #d9d9d9;
 	display: block;
 	position: absolute;
-	z-index: 2;
 	top: 0;
 	right: 0;
 	bottom: 0;
@@ -15513,9 +15512,15 @@ body {
 	}
 }
 
+@media only screen and (max-width: 53.15em) {
+	.horizontal-audio-card-playlist .title {
+		margin-bottom: 0;
+	}
+}
+
 .horizontal-audio-card-playlist .mejs-controls .mejs-playpause-button {
 	position: absolute;
-	top: -7vw;
+	top: -8vw;
 	left: -18vw;
 }
 
