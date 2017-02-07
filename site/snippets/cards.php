@@ -538,7 +538,7 @@
         <?php snippet('show-sass-mobile'); ?>
       </div>
       <div class="col-md-8">
-        <pre class="html"><code>&lt;li class="card audio-card horizontal-audio-card background-card col-sm-4"&gt;
+        <pre class="html"><code>&lt;li class="card audio-card horizontal-audio-card full-border-horizontal-card col-sm-4"&gt;
 	&lt;div class="row"&gt;
 		&lt;div class="image col-xs-6"&gt;
 			&lt;a href="#"&gt;&lt;img src="/210x210.jpg" alt=""&gt;&lt;/a&gt;&lt;/div&gt;
