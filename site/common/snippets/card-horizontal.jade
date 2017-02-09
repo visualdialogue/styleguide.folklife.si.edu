@@ -9,7 +9,7 @@
 li.card.horizontal-card(class="<?= $card_classes ?><? if ($card->type() == 'video') echo ' video-card' ?>")
 	.row
 		-if ($card->type() == 'video'):
-			.video(class="<?= $image_col ?>" data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= excerpt($card->copy(), 25, "words") ?> <a href=\'#\'>more</a>')
+			.video(class="<?= $image_col ?>" data-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= excerpt($card->copy(), 25, "words") ?> <a href=\'#\'>more</a>')
 				.center-box
 					.modal-trigger
 						img(src="<?= $image->url() ?>" alt="<?= $card->title() ?>")

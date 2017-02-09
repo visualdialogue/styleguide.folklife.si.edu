@@ -6,7 +6,7 @@
 <?php endif; ?>
 <li class="card video-card <?= $card_classes ?>">
   <div class="row">
-    <div data-video-id="<?= $card->video_id() ?>" data-title="<?= $card->title() ?>" data-description="<?= excerpt($card->copy(), 25, "words") ?> <a href='#'>more</a>" class="video <?= $video_col ?>">
+    <div data-id="<?= $card->video_id() ?>" data-title="<?= $card->title() ?>" data-description="<?= excerpt($card->copy(), 25, "words") ?> <a href='#'>more</a>" class="video <?= $video_col ?>">
       <div class="center-box">
         <div class="modal-trigger"><img src="<?= $image->url() ?>" alt="<?= $card->title() ?>"/></div>
         <div class="icon-play-button"></div>

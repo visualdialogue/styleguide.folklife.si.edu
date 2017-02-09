@@ -380,6 +380,7 @@ $(document).ready(function () {
 		// on playing a video in the gallery...
 		// $('.video').on('click', function() {
 		$(video).on('click', function() {
+
 		  	// manually open remodal because sometimes just doesn't do it
 		  	remodalInstance.open();
 

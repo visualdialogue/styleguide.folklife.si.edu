@@ -9,7 +9,7 @@ li.card.feature.col-xs-12
 	.image
 		a(href="<?= $card->url() ?>")
 			img(src="<?= $image->url() ?>" alt="<?= $card->title() ?>")
-	.video(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= excerpt($card->copy(), 25, "words") ?> <a href=\'#\'>more</a>')
+	.video(data-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= excerpt($card->copy(), 25, "words") ?> <a href=\'#\'>more</a>')
 		.center-box
 			.modal-trigger
 				img(src="<?= $image->url() ?>" alt="<?= $card->title() ?>")

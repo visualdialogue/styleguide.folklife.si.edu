@@ -13,7 +13,7 @@ li.card.col-sm-3.top-border-card.blog-card(class="<? if ($card->type() == 'video
 				a.high(href="<?= $card->url() ?>").title: span.light: span.er= $card->title()
 
 		-if ($card->type() == 'video'):
-			.video(data-video-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= excerpt($card->copy(), 25, "words") ?> <a href=\'#\'>more</a>')
+			.video(data-id='<?= $card->video_id() ?>' data-title='<?= $card->title() ?>' data-description='<?= excerpt($card->copy(), 25, "words") ?> <a href=\'#\'>more</a>')
 				.center-box
 					.modal-trigger
 						img(src="<?= $image->url() ?>" alt="<?= $card->title() ?>")
