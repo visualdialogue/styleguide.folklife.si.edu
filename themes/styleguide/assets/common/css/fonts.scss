@@ -1,0 +1,45 @@
+/*
+
+
+  __|              |         
+ |     _ \   __ \   __|   __| 
+ __|  (   |  |   |  |   \__ \ 
+_|   \___/  _|  _| \__| ____/
+
+
+*/
+
+@font-face {
+	font-family: "slick";
+	src: url("fonts/slick.eot");
+	src: url("fonts/slick.eot?#iefix") format("embedded-opentype"), url("bower_components/slick-carousel/slick/fonts/slick.woff") format("woff"), url("bower_components/slick-carousel/slick/fonts/slick.ttf") format("truetype"), url("bower_components/slick-carousel/slick/fonts/slick.svg#slick") format("svg");
+	font-weight: normal;
+	font-style: normal; 
+}
+
+@font-face {
+	font-family: "vd-icons";
+	src:url("fonts/vd-icons.eot?v=<?= time() ?>");
+	src:url("fonts/vd-icons.eot?#iefix") format("embedded-opentype"),
+	  url("fonts/vd-icons.woff?v=<?= time() ?>") format("woff"),
+	  url("fonts/vd-icons.ttf?v=<?= time() ?>") format("truetype"),
+	  url("fonts/vd-icons.svg#vd-icons?v=<?= time() ?>") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+// fallbacks
+$sansFallback: Arial, sans-serif; 
+$seriffallback: Georgia, Cambria, "Times New Roman", Times, serif;
+
+// Serif
+$serif: "freight-text-pro", $seriffallback;
+
+// Sans
+$sans: 'acumin-pro', $sansFallback; // typekit
+$sansWide: 'acumin-pro-wide', $sansFallback; // typekit
+
+// Woodtype Extended
+$woodtypeExtended: "unit-gothic-717", $sansFallback; // widest HTW
+$woodtypeNarrow: "unit-gothic-718", $sansFallback; // widest HTW

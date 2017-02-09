@@ -8289,7 +8289,7 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
 		right: -4.5px;
 		height: 100%;
 		width: 9px;
-		background-image: url(/themes/festival/assets/images/hr/folklife-vr.png);
+		background-image: url(../../assets/images/hr/vertical-rule.png);
 		background-position: right;
 		background-repeat: no-repeat;
 		background-size: 9px 100%;
@@ -8469,6 +8469,10 @@ ul {
 	color: #333333;
 }
 
+.sidebar .sidebar-highlight li.active {
+	font-weight: 600;
+}
+
 .sidebar h3, .sidebar-section-title, #related-content-mag:before {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
@@ -8612,7 +8616,7 @@ hr {
 
 .thick-hr {
 	height: 11px;
-	background-image: url(/themes/festival/assets/images/hr/hr.png);
+	background-image: url(../../assets/images/hr/horizontal-rule.png);
 	background-size: 100% 100%;
 	margin-bottom: 1.92593rem;
 }
@@ -10001,7 +10005,7 @@ a .page-title:hover {
 	}
 }
 
-/* Plus icons for figures with figcaptions
+/* Plus icons for figures with figcaptions and General Captions
 -------------------------------------------------- */
 figure {
 	position: relative;
@@ -11001,6 +11005,10 @@ video::-webkit-media-controls {
 	display: none;
 }
 
+.remodal-captions a {
+	color: white;
+}
+
 .remodal-image-gallery {
 	max-width: none !important;
 	background-color: transparent;
@@ -11628,6 +11636,26 @@ video::-webkit-media-controls {
 	display: none;
 }
 
+.magazine-article-page .sidebar .latest-issue-article, .magazine-article-page .sidebar .latest-issue-footer, .magazine-article-page .sidebar img.head {
+	display: none !important;
+}
+
+.magazine-article-page .sidebar .tag {
+	margin-bottom: 0.37037rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.magazine-article-page .sidebar .tag {
+		margin-bottom: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.magazine-article-page .sidebar .tag {
+		margin-bottom: 1rem;
+	}
+}
+
 .magazine-article-page .sidebar .caption {
 	margin-top: 0.37037rem;
 }
@@ -11663,10 +11691,6 @@ video::-webkit-media-controls {
 .magazine-article-page .sidebar
 iframe {
 	width: 100%;
-}
-
-.magazine-article-page img[alt="Audio"] {
-	display: none;
 }
 
 .magazine-article-page .top-forty {
@@ -13323,15 +13347,24 @@ body {
 	}
 }
 
+.full-border-horizontal-card .details-inner {
+	z-index: 3;
+}
+
 .full-border-horizontal-card:before {
 	content: '';
 	border: 2px solid #d9d9d9;
 	display: block;
 	position: absolute;
+	z-index: 2;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
+}
+
+.magazine-article-page .full-border-horizontal-card:before {
+	border-color: #666666;
 }
 
 /* Card stacking
@@ -13806,6 +13839,45 @@ body {
 	}
 }
 
+.ms-header .page-tag {
+	font-weight: 300;
+	text-transform: uppercase;
+	font-family: "acumin-pro-wide", Arial, sans-serif;
+	color: #595959;
+	position: relative;
+	line-height: 1.1;
+	letter-spacing: 0.5px;
+	margin-bottom: 0.5rem;
+	font-size: 1.2rem;
+	font-weight: 700;
+}
+
+@media only screen and (min-width: 53.25em) {
+	.ms-header .page-tag {
+		line-height: 1.4;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.ms-header .page-tag {
+		font-size: 1vw;
+		letter-spacing: 0.5px;
+		margin-bottom: 0.4vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.ms-header .page-tag {
+		font-size: 1.6rem;
+		letter-spacing: 1px;
+		margin-bottom: 0;
+	}
+}
+
+.ms-header .page-tag a {
+	color: #666666;
+}
+
 .ms-header-inner {
 	position: relative;
 }
@@ -14158,6 +14230,10 @@ body {
 	}
 }
 
+.ms-sidebar-section-title:active, .program-page .ms-sidebar-nav li:first-of-type {
+	background-color: #e6e6e6;
+}
+
 .ms-sidebar-logo {
 	margin-bottom: 1.48148rem;
 }
@@ -14200,6 +14276,7 @@ body {
 	display: none;
 	padding-left: 1.40469rem;
 	font-weight: 500;
+	background-color: white;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
@@ -15273,6 +15350,10 @@ body {
 
 /* Horizontal Audio Card
 -------------------------------------------------- */
+.sidebar .audio-card .mejs-container {
+	background-color: transparent;
+}
+
 .horizontal-audio-card {
 	position: relative;
 }
@@ -15389,10 +15470,6 @@ body {
 	}
 }
 
-.horizontal-audio-card .mejs-container {
-	background-color: transparent;
-}
-
 @media only screen and (min-width: 53.25em) {
 	.horizontal-audio-card .mejs-controls div {
 		font-size: 0.9vw;
@@ -15454,6 +15531,7 @@ body {
 	.horizontal-audio-card .mejs-controls .mejs-time-rail {
 		top: 2.9vw;
 		left: 0.3vw;
+		width: 50% !important;
 	}
 }
 
@@ -15461,6 +15539,7 @@ body {
 	.horizontal-audio-card .mejs-controls .mejs-time-rail {
 		top: 4.5rem;
 		left: 0.3rem;
+		width: 50% !important;
 	}
 }
 
@@ -15496,7 +15575,7 @@ body {
 
 @media only screen and (min-width: 53.25em) and (max-width: 61.9em) {
 	.horizontal-audio-card-playlist .title-wrapper {
-		height: 16vw;
+		height: 3vw;
 	}
 }
 
@@ -15512,7 +15591,7 @@ body {
 	}
 }
 
-@media only screen and (max-width: 53.15em) {
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.horizontal-audio-card-playlist .title {
 		margin-bottom: 0;
 	}
@@ -15533,7 +15612,7 @@ body {
 
 @media only screen and (min-width: 62em) and (max-width: 1559px) {
 	.horizontal-audio-card-playlist .mejs-controls .mejs-playpause-button {
-		top: -2.8vw;
+		top: -2.7vw;
 		left: -5.1vw;
 	}
 }
@@ -15546,6 +15625,8 @@ body {
 }
 
 .horizontal-audio-card-playlist .mejs-controls .mejs-time-rail {
+	padding-top: 0;
+	position: relative;
 	left: 0;
 }
 
@@ -15555,7 +15636,23 @@ body {
 	}
 }
 
-.horizontal-audio-card-playlist .mejs-controls .mejs-time-wrapper, .horizontal-audio-card-playlist .mejs-controls .mejs-horizontal-volume-slider {
+.horizontal-audio-card-playlist .mejs-controls .mejs-horizontal-volume-slider {
+	bottom: 0.18519rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-playlist .mejs-controls .mejs-horizontal-volume-slider {
+		bottom: 0.32vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-playlist .mejs-controls .mejs-horizontal-volume-slider {
+		bottom: 0.5rem;
+	}
+}
+
+.horizontal-audio-card-playlist .mejs-controls .mejs-time-wrapper {
 	display: none;
 }
 

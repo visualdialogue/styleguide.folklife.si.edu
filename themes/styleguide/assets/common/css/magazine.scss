@@ -1,0 +1,349 @@
+/* Folkways Magazine Homepage
+-------------------------------------------------- */
+	body.magazine-page, body.magazine-article-page {
+		// background-color: $black05;
+		background-color: $black30;
+	}
+	.magazine-title-bar-wrapper {
+		position: relative; // hold abs child
+	}
+	.folkways-magazine-logo-wrapper {
+		background-color: #000;
+		@include respond-to(break2max) {
+			height:19vw;
+		}
+		@include respond-to(break2full) {height:7.5vw;}
+		@include respond-to(fullwidth) {height:11.7rem;} // from layout
+	}
+	.magazine-title-bar {
+		// Split background colors for backdrop behind color grid
+		@include margin-bottom(4);
+		@include respond-to(break2max) {
+			// height:19vw;
+		}
+		@include respond-to(break2full) {height:7.5vw;}
+		@include respond-to(fullwidth) {height:11.7rem;} // from layout
+		&:before, &:after {
+			content: '';
+			position: absolute;
+			top:0;
+			bottom:0;
+			z-index: -1;
+		}
+		&:before {
+			left:0;
+			background-color: #000;
+			@include respond-to(break2max) {
+				right:0;
+			}
+			@include respond-to(break2) {
+				right: 50vw; // go to middle of screen, behind grid
+			}
+		}
+		&:after {
+			right:0;
+			background-color: $fw-magazine;
+			@include respond-to(break2) {
+				left: 50vw; // go to middle of screen, behind grid
+			}
+		}
+		.folkways-magazine-logo {
+			@include padding-top(2.8);
+		}
+		.black-spacer {
+			background-color: #000;
+			@include respond-to(break2max) {
+				height:19vw;
+			}
+			@include respond-to(break2full) {height:7.5vw;}
+			@include respond-to(fullwidth) {height:11.7rem;} // from layout
+		}
+		.issue-title-wrapper {
+			@include respond-to(break2max) {
+				// full width yellow
+				padding: 0 !important;
+				margin-left: -0.75rem;
+				margin-right: -0.75rem;
+			}
+		}
+		.issue-title {
+			color: #000;
+			background-color: $fw-magazine;
+			@include padding-top(3);
+			@include respond-to(break2max) {
+				height:6.5rem;
+				padding-left: 1.5rem;
+				padding-top: 1rem;
+				padding-bottom: 1rem;
+			}
+			@include respond-to(break2) {
+				position: absolute;
+				top:0;
+				right: 0;
+				bottom:0;
+				z-index: 2;
+			}
+			@include respond-to(break2full) {
+				height:7.5vw;
+				left:-1vw;
+				padding-left: 2.56vw;
+			}
+			@include respond-to(fullwidth) {
+				left:-2rem;
+				height:11.7rem; // from layout
+				padding-left: 4rem;
+			} 
+			.title {
+				@include md-serif;
+				@include margin-top(0.4);
+			}
+		}
+
+	}
+	.cover-story-section {
+		@include margin-bottom(4); // horizontal-cards override b/c no hr below
+		.card:after {
+				background-color: #fff;
+			}
+		.tag {
+			// override full-feature-card default
+			display: block; 
+			@include margin-top(3.5)
+			@include respond-to(break2max) {
+				margin-top: 0; // mobile
+			}
+		}
+		.title {
+			@include lg-magazine-title;
+			@include respond-to(fullwidth) {
+				font-size: 4.6rem;
+			}
+		}
+		.details-inner {
+			@include respond-to(break2max) {
+				padding-left: 1.5rem;
+			}
+		}
+	}
+	// home page features
+	.magazine-feature {
+		.title {
+			@include sm-magazine-title;
+		}
+		.details {
+			background-color: #fff;
+		}
+		.details-inner {
+			position: relative;
+			@include padding-top(2);
+			@include padding-left(2);
+			@include padding-bottom(2);
+		}
+		.description {
+			@include md-sans;
+			@include padding-bottom(8); // space for more link
+			@include respond-to(break2max) {
+				padding-bottom: 0;
+			}
+		}
+		.more-link {
+			@include width(8);
+			display: inline-block;
+			@include margin-top(1);
+			@include respond-to(break2max) {
+				width: 7rem;
+				margin-left:0;
+				margin-top:1.5rem;
+				padding-left:0;
+			}
+			@include respond-to(break2) {
+				position: absolute;
+				top: auto;
+			}
+			@include bottom(2);
+			@include left(2);
+		}
+	}
+	// homepage video block
+	.video-spotlight-section {
+		.card {
+			&:after {
+				background-color: #000
+			}
+		}
+		.video {
+			@include padding(2);
+		}
+		.tag, .title, .description, .more-link {
+			color: #fff;
+		}
+		.title {
+			@include sm-magazine-title;
+		}
+		.details-inner {
+			@include padding-top(0);
+			@include padding-left(2);
+			@include padding-bottom(2);
+			@include md-sans;
+		}
+		.more-link {
+			display: none;
+		}
+	}
+	.from-the-collection-section {
+		hr {
+			@include margin-bottom(3);
+		}
+		.card {
+			@include clear-2; // don't hang on cards that are taller
+			@include respond-to(break2) {
+				@include clear-3; // don't hang on cards that are taller
+			}
+		}
+		.more-link {
+			display: none;
+		}
+	}
+	.back-issues-section {
+		background-color: #fff;
+		.section-title {
+			@include padding-top(1.2);
+			@include margin-bottom(1.4);
+		}
+		@include margin-bottom(4);
+		.band {
+			background-color: $black65;
+		}
+		.back-issues-column {
+			@include padding-top(2);
+			@include padding-bottom(2);
+			@include respond-to(break2) {
+				@include border(left);
+			}
+		}
+		.tag {
+			color: $black30;
+		}
+		.title {
+			color: #fff;
+			@include lg-sans;
+			font-weight: 700;
+		}
+		li:last-of-type {
+			@include respond-to(break2) {
+				@include border(right);
+			}
+		}
+		.view-all-issues {
+			.first-level-dropdown-title {
+				@include lg-sans;
+				font-weight: 700;
+				color: #fff;
+				background-color: $black65;
+				padding-left:0;
+				@include padding-top(0.3);
+				@include padding-bottom(4);
+				@include border(bottom, 1px, white);
+				&:after {
+					top:0;
+					@include respond-to(break2full) {top:0.8vw;}
+					@include respond-to(fullwidth) {top:1rem;}
+				}
+			}
+			li {
+				@include sm-sans;
+				font-weight: 400;
+				color: $black60;
+				line-height:1.9 !important; // sm-sans override
+			}
+		}
+	}
+	.back-issues-select {
+		@include margin-top(1.8);
+		@include padding-left(0);
+		@include height(4.2);
+		padding-left:0; // nice-select override
+		background-color: $black65;
+		color: #fff;
+		@include respond-to(break2) {
+			@include border(bottom, 2px, white);
+		}
+		.current {
+			@include lg-sans;
+			font-weight: 700;
+			line-height: 1.4 !important;
+		}
+	}
+
+/* Folkways Magazine Article Page
+-------------------------------------------------- */
+	.magazine-article-page {		
+		.magazine-article-top {
+			margin-bottom: 0; // remove default card margins
+			.image {
+				margin-bottom:0;
+			}
+			.details-inner {
+				background-color: #fff;
+				@include padding-top(4);
+				@include padding-left(4);
+				@include respond-to(break2max) {
+					padding-top:1.5rem;
+					padding-left:$full-gutter;
+				}
+				@include padding-bottom(1.2);
+
+			}
+			.title {
+				@include lg-magazine-title;
+				@include padding-right(4); // smaller width from design
+				@include respond-to(fullwidth) {
+					font-size: 4.6rem;
+					line-height: 1;
+				}
+			}
+			.author {
+				@include margin-top(1.5);
+				@include md-sans;
+			}
+		}
+		.content {
+			background-color: #fff;
+			@include padding-right(4);
+			@include padding-left(4);
+			@include respond-to(break2max) {
+				padding-left:$full-gutter; // mobile
+			}
+			@include padding-bottom(2);
+			@include margin-bottom(4);
+			h2 {
+				@include md-sans;
+			}
+			p {
+				@include body-sans;
+				@include padding-bottom(1.2);
+			}
+			.references {
+				h2 {
+					font-weight: 600;
+					color: $black60;
+				}
+				p {
+					color: $black40;
+					@include sm-sans;
+				}
+			}
+		}
+		.sidebar {
+			color: #000;
+		}
+		.sidebar-card:before {
+			border-color: $black50; // default top border color same as bg in magazine
+		}
+		.related-content {
+			@include margin-top(7);
+		}
+		.related-content-title {
+			@include margin-bottom(2)
+		}
+	}

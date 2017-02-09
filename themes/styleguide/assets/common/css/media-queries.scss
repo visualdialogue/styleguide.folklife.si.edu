@@ -1,0 +1,51 @@
+
+/* Media Queries
+-------------------------------------------------- */
+  $break1: 40em; // 640 px
+  $break2: 53.25em; // 852 px
+  $break3: 62em; // 992px from bootstrap's col-lg
+  $breakTagline: 62.5em; // 1000px
+  $fullWidth: $pageWidth; // use em for correct media query calculation
+  $minHeight: 600px;
+
+  @mixin respond-to($media) {
+    @if $media == break1 {
+      @media only screen and (min-width: $break1) { @content; }
+    }
+    @if $media == break1max {
+      @media only screen and (min-width: $break1) and (max-width: $break2 - 0.1em){ @content; }
+    }
+    @else if $media == break2 {
+      @media only screen and (min-width: $break2) { @content; }
+    }
+    @else if $media == break2max {
+      @media only screen and (max-width: $break2 - 0.1em) { @content; }
+    }
+    @else if $media == break23 {
+      @media only screen and (min-width: $break2) and (max-width: $break3 - 0.1em) { @content; }
+    }
+    @else if $media == break2full {
+      @media only screen and (min-width: $break2) and (max-width: $fullWidth - 1px) { @content; }
+    }
+    @else if $media == break3 {
+      @media only screen and (min-width: $break3) { @content; }
+    }
+    @else if $media == break3max {
+      @media only screen and (min-width: $break3) and (max-width: $fullWidth - 1px) { @content; }
+    }
+    @else if $media == break3full {
+      @media only screen and (min-width: $break3) and (max-width: $fullWidth - 1px) { @content; }
+    }
+    @else if $media == breakTagline {
+      @media only screen and (min-width: $breakTagline) { @content; }
+    }
+    @else if $media == minHeight {
+      @media only screen and (min-height: $minHeight) { @content; }
+    }
+    @else if $media == fullwidth {
+      @media only screen and (min-width: $fullWidth) { @content; }
+    }
+    @else if $media == fullwidthmax {
+      @media only screen and (max-width: $fullWidth - 1px) { @content; }
+    }
+  }

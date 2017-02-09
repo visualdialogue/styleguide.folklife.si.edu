@@ -1,0 +1,221 @@
+/* Gutters
+-------------------------------------------------- */
+	$small-gutter: 7.5px;
+	$medium-gutter: 1.25vw;
+	$full-gutter: 2rem;
+
+/* Sizes
+-------------------------------------------------- */
+	$pageWidth: 1560px; // 1400px + 80px + 80px = 1560px for desktop gutters on both sides
+
+	/**********
+	* Calculate height of full screen banner
+	* Accomplished by taking full height and subtracting height of navbar
+	**********/
+	// height of site toggle area
+	$mobile-navbarSiteToggle: 0px; // so don't include
+	$tablet-navbarSiteToggle: 3rem;
+	$desktop-navbarSiteToggle: 36px;
+
+	// mobile navbar height
+	$mobile-home-navbarHeight: 4.5rem; // new hamburger nav
+	$mobile-home-smaller-navbarHeight: 4.5rem; // new hamburger nav
+	$mobile-subpage-navbarHeight: 5.5rem;
+	$mobile-subpage-navbarHeight: 4.5rem;
+	$mobile-subpage-smaller-navbarHeight: 4.5rem;
+
+	// tablet navbar height
+	$tablet-home-navbarHeight: 7rem;
+	$tablet-home-smaller-navbarHeight: 7rem;
+	$tablet-subpage-navbarHeight: 7rem;
+	$tablet-subpage-smaller-navbarHeight: 7rem;
+
+	// desktop navbar height
+	$desktop-home-smaller-navbarHeight: 8rem;
+	$desktop-navbarHeight: 8rem;
+
+	// spacer for logo
+	$mobile-logoSpacer:8rem;
+	$mobile-logoSpacer:8.5rem;
+	$tablet-logoSpacer:12.5rem;
+	$tablet-logoSpacer:11.5rem;
+	$desktop-logoSpacer:14rem; // from layout, for 160px wide logo
+
+	// height of toggle, navbar, and spacer
+	$mobile-home-headerHeight: 4.5rem; // temp for mobile
+	$mobile-subpage-headerHeight:#{$mobile-subpage-navbarHeight} + #{$mobile-logoSpacer};
+	$tablet-home-headerHeight:#{$tablet-home-navbarHeight} + #{$tablet-navbarSiteToggle};
+	$tablet-subpage-headerHeight:#{$tablet-subpage-navbarHeight} + #{$tablet-navbarSiteToggle} + #{$tablet-logoSpacer};
+	$desktop-home-headerHeight:#{$desktop-navbarHeight} + #{$desktop-navbarSiteToggle};
+	$desktop-subpage-headerHeight:#{$desktop-navbarHeight} + #{$desktop-navbarSiteToggle} + #{$desktop-logoSpacer};
+
+	// tab heights for Festival on homepage so can peek from bottom
+	$mobile-tabHeight:5rem;
+	$tablet-tabHeight:4.6vw;
+	$desktop-tabHeight:6.8rem;
+
+	// toggle nav and navbar height for navspacer
+	@mixin home-navbarHeight {
+		height: $mobile-home-navbarHeight;
+		@include respond-to(break2full) {height: $tablet-home-navbarHeight;}
+		@include respond-to(fullwidth) {height: $desktop-navbarHeight;}
+	}
+	@mixin home-smaller-navbarHeight {
+		height: $mobile-home-smaller-navbarHeight;
+		@include respond-to(break2full) {height: $tablet-home-smaller-navbarHeight;}
+		@include respond-to(fullwidth) {height: $desktop-home-smaller-navbarHeight;}
+	}
+	@mixin subpage-navbarHeight {
+		height: $mobile-subpage-navbarHeight;
+		@include respond-to(break2full) {height: $tablet-subpage-navbarHeight;}
+		@include respond-to(fullwidth) {height: $desktop-navbarHeight;}
+
+	}
+	@mixin subpage-smaller-navbarHeight {
+		height: $mobile-subpage-smaller-navbarHeight;
+		@include respond-to(break2full) {height: $tablet-subpage-smaller-navbarHeight;}
+		@include respond-to(fullwidth) {height: $desktop-navbarHeight;}
+
+	}
+	@mixin home-headerHeight {
+		height:$mobile-home-headerHeight;
+		@include respond-to(break2full) {height:calc(#{$tablet-home-headerHeight});}
+		@include respond-to(fullwidth) {height:calc(#{$desktop-home-headerHeight});}
+	}
+
+	@mixin subpage-headerHeight {
+		height:calc(#{$mobile-subpage-headerHeight});
+		@include respond-to(break2full) {height:calc(#{$tablet-subpage-headerHeight});}
+		@include respond-to(fullwidth) {height:calc(#{$desktop-subpage-headerHeight});}
+	}
+
+	// calculate full height minus height of header, grouping media queries in mixin
+	@mixin bannerHeight {
+		height: calc(100vh - (#{$mobile-home-headerHeight}));
+		@include respond-to(break2full) {
+			height:calc(100vh);
+		}
+		@include respond-to(fullwidth) {
+			height:calc(100vh);
+		}
+	}
+	// tab top margin for on.festival homepage
+	// gets full screen height minus header height, minus tab height
+	// use 0px - to get negative number
+	@mixin negativeMarginHeader {
+		margin-top: calc(0px - (#{$mobile-home-headerHeight} + #{$mobile-tabHeight}));
+		@include respond-to(break2full) {
+			margin-top:calc(0px - (#{$tablet-home-headerHeight});
+		}
+		@include respond-to(fullwidth) {
+			margin-top:calc(0px - (#{$desktop-home-headerHeight} + #{$desktop-tabHeight});
+		}
+	}
+
+	// negativeMarginTabHeight
+	// calculates height of tabs for Festival ON and OFF states and makes into negative margin for peeking up from bottom
+	@mixin negativeMarginTabHeight {
+		margin-top: -$mobile-tabHeight;
+		@include respond-to(break2full) {
+			margin-top: -$tablet-tabHeight;
+		}
+		@include respond-to(fullwidth) {
+			margin-top: -$desktop-tabHeight;
+		}
+	}
+
+
+	/*******
+	* set margins with scales
+	*******/
+	$tablet-scale: 0.64; // just a little down from full width size
+	$standard-mobile-scale: 2.7; // to get 15px mobile
+	@mixin right($distance) {
+		right:#{$distance / $standard-mobile-scale }rem; // eg. 5re
+		@include respond-to(break2full) {right:#{$distance * $tablet-scale}vw;} // eg 2.5vw
+		@include respond-to(fullwidth) {right:#{$distance}rem;} // eg 4rem
+	}
+	@mixin left($distance) {
+		left:#{$distance / $standard-mobile-scale }rem; // eg. 5re
+		@include respond-to(break2full) {left:#{$distance * $tablet-scale}vw;} // eg 2.5vw
+		@include respond-to(fullwidth) {left:#{$distance}rem;} // eg 4rem
+	}
+	@mixin margin($margin) {
+		margin:#{$margin / $standard-mobile-scale }rem; // eg. 5re
+		@include respond-to(break2full) {margin:#{$margin * $tablet-scale}vw;} // eg 2.5vw
+		@include respond-to(fullwidth) {margin:#{$margin}rem;} // eg 4rem
+	}
+	@mixin margin-top($margin) {
+		margin-top:#{$margin / $standard-mobile-scale }rem; // eg. 5re
+		@include respond-to(break2full) {margin-top:#{$margin * $tablet-scale}vw;} // eg 2.5vw
+		@include respond-to(fullwidth) {margin-top:#{$margin}rem;} // eg 4rem
+	}
+	@mixin margin-right($margin) {
+		margin-right:#{$margin / $standard-mobile-scale }rem; // eg. 5re
+		@include respond-to(break2full) {margin-right:#{$margin * $tablet-scale}vw;} // eg 2.5vw
+		@include respond-to(fullwidth) {margin-right:#{$margin}rem;} // eg 4rem
+	}
+	@mixin margin-bottom($margin) {
+		margin-bottom:#{$margin / $standard-mobile-scale}rem; // eg. 5re
+		@include respond-to(break2full) {margin-bottom:#{$margin * $tablet-scale}vw;} // eg 2.5vw
+		@include respond-to(fullwidth) {margin-bottom:#{$margin}rem;} // eg 4rem
+	}
+	@mixin margin-left($margin) {
+		margin-left:#{$margin / $standard-mobile-scale }rem; // eg. 5re
+		@include respond-to(break2full) {margin-left:#{$margin * $tablet-scale}vw;} // eg 2.5vw
+		@include respond-to(fullwidth) {margin-left:#{$margin}rem;} // eg 4rem
+	}
+	@mixin top($top) {
+		top:#{$top / $standard-mobile-scale }rem; // eg. 5re
+		@include respond-to(break2full) {top:#{$top * $tablet-scale}vw;} // eg 2.5vw
+		@include respond-to(fullwidth) {top:#{$top}rem;} // eg 4rem
+	}
+	@mixin bottom($bottom) {
+		bottom:#{$bottom / $standard-mobile-scale }rem; // eg. 5re
+		@include respond-to(break2full) {bottom:#{$bottom * $tablet-scale}vw;} // eg 2.5vw
+		@include respond-to(fullwidth) {bottom:#{$bottom}rem;} // eg 4rem
+	}
+
+  	$height-mobile-scale: 2.565733832; // major 2nd * major 2nd * major 2nd * major 2nd
+  	$width-mobile-scale: 1.4238; // major 2nd * major 2nd
+  	@mixin height($height) {
+  		height:#{$height / $width-mobile-scale }rem; // eg. 5re
+  		@include respond-to(break2full) {height:#{$height * $tablet-scale}vw;} // eg 2.5vw
+  		@include respond-to(fullwidth) {height:#{$height}rem;} // eg 4rem
+  	}
+  	@mixin min-height($height) {
+  		min-height:#{$height / $width-mobile-scale }rem; // eg. 5re
+  		@include respond-to(break2full) {min-height:#{$height * $tablet-scale}vw;} // eg 2.5vw
+  		@include respond-to(fullwidth) {min-height:#{$height}rem;} // eg 4rem
+  	}
+	@mixin width($width) {
+		width:#{$width / $width-mobile-scale }rem; // eg. 5re
+		@include respond-to(break2full) {width:#{$width * $tablet-scale}vw;} // eg 2.5vw
+		@include respond-to(fullwidth) {width:#{$width}rem;} // eg 4rem
+	}
+	@mixin padding($padding) {
+		padding:#{$padding / $width-mobile-scale }rem; // eg. 5re
+		@include respond-to(break2full) {padding:#{$padding * $tablet-scale}vw;} // eg 2.5vw
+		@include respond-to(fullwidth) {padding:#{$padding}rem;} // eg 4rem
+	}
+	@mixin padding-top($padding) {
+		padding-top:#{$padding / $width-mobile-scale }rem; // eg. 5re
+		@include respond-to(break2full) {padding-top:#{$padding * $tablet-scale}vw;} // eg 2.5vw
+		@include respond-to(fullwidth) {padding-top:#{$padding}rem;} // eg 4rem
+	}
+	@mixin padding-right($padding) {
+		padding-right:#{$padding / $width-mobile-scale }rem; // eg. 5re
+		@include respond-to(break2full) {padding-right:#{$padding * $tablet-scale}vw;} // eg 2.5vw
+		@include respond-to(fullwidth) {padding-right:#{$padding}rem;} // eg 4rem
+	}
+	@mixin padding-bottom($padding) {
+	// padding-bottom:#{$padding / $width-mobile-scale }rem; // eg. 5rem
+		padding-bottom:#{$padding / $width-mobile-scale }rem; // eg. 5re
+		@include respond-to(break2full) {padding-bottom:#{$padding * $tablet-scale}vw;} // eg 2.5vw
+		@include respond-to(fullwidth) {padding-bottom:#{$padding}rem;} // eg 4rem
+	}
+	@mixin padding-left($padding) {
+		padding-left:#{$padding / $width-mobile-scale }rem; // eg. 5re
+		@include respond-to(break2full) {padding-left:#{$padding * $tablet-scale}vw;} // eg 2.5vw
+		@include respond-to(fullwidth) {padding-left:#{$padding}rem;} // eg 4rem
+	}

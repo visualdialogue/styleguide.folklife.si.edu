@@ -1,0 +1,482 @@
+/* Serif
+ * Freight Text Pro from Typekit
+-------------------------------------------------- */
+	@mixin lg-serif {
+		font-weight: 700;
+		font-family: $serif;
+		line-height: 1;
+		font-size: 4.2rem;
+		@include respond-to(break2full) {
+			font-size: 3.5vw;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 6.2rem;
+		}
+	}
+	@mixin md-serif {
+		font-weight: 700;
+		font-family: $serif;
+		line-height: 1;
+		font-size: 2.7rem;
+		@include respond-to(break2full) {
+			font-size: 2.5vw;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 4.2rem;
+		}
+	}
+	@mixin sm-serif {
+		font-weight: 700;
+		font-family: $serif;
+		line-height: 1;
+		font-size: 2.2rem;
+		@include respond-to(break2) {
+			line-height: 1.143;
+		}
+		@include respond-to(break2full) {
+			font-size: 1.8vw;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 2.8rem;
+		}
+		@include margin-bottom(1);
+	}
+
+/* Sans serif
+* Acumin Pro from Typekit
+* minor second (1.125) based on 3rem when needed
+-------------------------------------------------- */
+	@mixin xl-sans {
+		font-weight: 300;
+		font-family: $sans;
+		font-size: 2.4rem;
+		line-height: 1;
+		@include respond-to(break2full) {
+			font-size: 1.9vw;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 3.5rem;
+		}
+	}
+	@mixin lg-sans {
+		font-weight: 300;
+		font-family: $sans;
+		line-height: 1.267; // taller per discussion on 1.4 at shop // 38px
+		font-size: 2.1rem;
+		@include respond-to(break2full) {
+	  		font-size: 1.9vw;
+		}
+		@include respond-to(fullwidth) {
+	  		font-size: 3rem;
+		}
+	}
+	@mixin md-sans {
+		font-weight: 300;
+		font-family: $sans;
+		line-height: 1.2;
+	  	font-size: 1.9rem;
+		@include respond-to(break2full) {
+	  		font-size: 1.6vw;
+		}
+		@include respond-to(fullwidth) {
+	  		font-size: 2.5rem;
+	  		line-height: 1.28; // 25/32
+		}
+	}
+	@mixin sm-sans {
+		font-weight: 300;
+		font-family: $sans;
+		line-height: 1.2;
+		font-size: 1.5rem;
+		@include respond-to(break2full) {
+			font-size: 1.2vw;
+		}
+		@include respond-to(fullwidth) {
+			line-height: 1.12; // 18/20
+			font-size: 1.8rem;
+		}
+	}
+	@mixin caption-sans {
+		font-weight: 300;
+		font-family: $sans;
+		line-height: 1.4;
+		text-transform: uppercase;
+		font-size: 1.3rem;
+		@include respond-to(break2) {
+			line-height: 1.3;
+		}
+		@include respond-to(break2full) {
+			font-size: 1vw;
+		}
+		@include respond-to(fullwidth) {
+			line-height: 1.3;
+			font-size: 1.6rem;
+		}
+	}
+	@mixin date {
+		@include sans-tag;
+		font-weight: 700;
+	}
+	@mixin date-sm {
+		@include sans-tag;
+		letter-spacing: normal;
+		text-transform: initial;
+		@include margin-top(0.5);
+	}
+	@mixin byline {
+		@include sm-sans;
+	}
+	// search bar
+	@mixin search-title {
+	  font-weight: 500;
+	  font-family: $sans;
+	  line-height: 1.7;
+	  font-size: 2.5rem;
+	}
+	@mixin email-newsletter {
+		font-family: $sans;
+		@include respond-to(break2max) {
+			font-size: 7vw;
+		}
+		@include respond-to(break2full) {
+			font-size: 2.2vw;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 3.5rem;
+			padding-top: 1.5rem;
+		}
+	}
+	@mixin link-font {
+		font-weight: 400;
+		font-family: $sans;
+		line-height: 2;
+		font-size: 1.7rem;
+		@include respond-to(break2full) {
+			font-size: 1.1vw;
+			line-height: 1.45;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 1.6rem;
+			line-height: 1.8; // 16 px
+		}
+	}
+	@mixin link-font-sm {
+		font-family: $sans;
+		line-height: 1.7;
+		font-size: 1.6rem;
+		@include respond-to(break2full) {
+			font-size: 1.1vw;
+			line-height: 1.8;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 1.6rem;
+			line-height: 1.5;
+		}
+	}
+	// Plus icon
+	@mixin sans-plus-icon {
+		font-family: $sans;
+		font-size: 3rem;
+		@include respond-to(break2) {
+			line-height: 1.2;
+		}
+		@include respond-to(break2full) {
+			font-size: 2.5vw;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 4rem;
+		}
+	}
+
+/* Sans serif - wide
+* Acumin Pro Wide from Typekit
+* We use the 1.125 modular scale based on 4.2rem
+-------------------------------------------------- */
+	@mixin lg-magazine-title {
+		font-weight: 800;
+		font-family: $sansWide;
+		line-height: 1.095237;
+		font-size: 2.6rem;
+		@include respond-to(break2full) {
+			font-size: 2.95vw;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 4.2rem;
+		}
+	}
+	@mixin md-magazine-title {
+		font-weight: 800;
+		font-family: $sansWide;
+		line-height: 1.095237;
+		font-size: 1.8rem;
+		@include respond-to(break2full) {
+			font-size: 2.4vw;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 3.7rem;
+		}
+	}
+	@mixin sm-magazine-title {
+		font-weight: 700; // one weight down for pc rendering at smaller sizes
+		font-family: $sansWide;
+		line-height: 1.2;
+		@include margin-bottom(1);
+		font-size: 1.8rem;
+		@include respond-to(break2full) {
+			font-size: 1.9vw;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 3rem;
+		}
+	}
+	@mixin button-title {
+		font-weight: 800;
+		text-transform: uppercase;
+		font-family: $sansWide;
+		margin-bottom: 0;
+		line-height: 1.2;
+		font-size: 1.4rem;
+		@include respond-to(break2full) {
+			font-size: 1.1vw;
+			margin-bottom: 0.4vw;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 1.8rem;
+			margin-bottom: 0.5rem;
+		}
+	}
+	@mixin sans-tag {
+		font-weight: 300;
+		text-transform: uppercase;
+		font-family: $sansWide;
+		color: $black65;
+		position: relative; // keep from being hidden under highlighted title
+		line-height: 1.1;
+		letter-spacing: 0.5px;
+		margin-bottom: 0.5rem;
+		font-size: 1.2rem;
+		@include respond-to(break2) {
+			line-height: 1.4;
+		}
+		@include respond-to(break2full) {
+			font-size: 1vw;
+			letter-spacing: 0.5px;
+			margin-bottom: 0.4vw;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 1.6rem;
+			letter-spacing: 1px;
+			margin-bottom: 0;
+		}
+	}
+	@mixin nav-header {
+		font-weight: 800;
+		text-transform: uppercase;
+		font-family: $sansWide;
+		line-height: 1.2;
+		font-size: 1.7rem;
+		@include respond-to(break2full) {
+			line-height: 1.2;
+			font-size: 1vw;
+		}
+		@include respond-to(fullwidth) {
+			line-height: 1.4353;
+			font-size: 1.7rem;
+		}
+	}
+
+/* Body type
+-------------------------------------------------- */
+	@mixin intro-serif {
+		font-weight: 600;
+		font-family: $serif;
+		line-height: 1.267; // 38px
+		font-size: 1.9rem;
+		@include respond-to(break2full) {
+			font-size: 2.2vw;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 3rem;
+		}
+		@include margin-bottom(1);
+	}
+	@mixin body-serif {
+		font-weight: 400;
+		font-family: $serif;
+		line-height: 1.333333; // 24/32
+		font-size: 1.9rem;
+		@include respond-to(break2full) {
+			font-size: 1.5vw;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 2.4rem;
+		}
+	}
+	@mixin intro-sans {
+		// same as lg-sans
+	}
+	@mixin body-sans {
+		font-weight: 300;
+		font-family: $sans;
+		line-height: 1.3333; // fw magazine article 21/28
+		font-size: 1.7rem;
+		@include respond-to(break2full) {
+			font-size: 1.25vw;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 2.1rem;
+		}
+	}
+	
+/* Slab
+* Unit Gothic 717 and 718 from Typekit
+-------------------------------------------------- */
+	@mixin lg-woodtype-extended {
+		font-family: $woodtypeExtended;
+		text-transform: uppercase;
+		line-height: 1;
+		@include respond-to(break2max) { // contain for buggyfill
+			font-size: 8vw;
+		}
+		@include respond-to(break2full) {
+			font-size: 2.9vw;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 4rem; // folkways explore title bar
+		}
+	}
+	@mixin md-woodtype-extended {
+		font-family: $woodtypeExtended;
+		text-transform: uppercase;
+		line-height: 1;
+		@include respond-to(break2full) {
+			font-size: 2.4vw;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 3.8rem;
+		}
+	}
+	@mixin sm-woodtype-extended {
+		font-family: $woodtypeExtended;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+		margin-top: 0; // bootstrap reset
+		margin-bottom: 1.5rem; // section title
+		line-height: 1.2; // section title
+		@include respond-to(break2max) { // contain for buggyfill
+			font-size: 5vw;
+		}
+		@include respond-to(break2) {
+			margin-bottom: 0;
+		}
+		@include respond-to(break2full) {
+			font-size: 1.9vw;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 3rem;
+		}
+	}
+
+/* CSS type helper classes
+-------------------------------------------------- */
+	body {
+		font-family: $serif;
+		line-height: 1.333333; // 24/32
+	}
+	.content, .text-card {
+		position: relative; // hold abs images that live inside ol or ul
+		h2 {
+			font-weight: 600;
+			@include margin-bottom(1); // lesson plans page
+		}
+		h3 {
+			@include md-serif;
+			@include margin-bottom(1.3);
+		}
+		h4 {
+			@include sm-serif;
+			@include margin-bottom(2);
+		}
+		h5 {
+			@include sm-sans;
+			font-weight: 500;
+			@include margin-bottom(0.5);
+		}
+		p {
+			@include body-serif;
+			@include padding-bottom(1.6); // 30 - not margin because then when using columns, the margin carries over!!!, from http://stackoverflow.com/a/12503808
+		}
+		// common to ul and ol
+		li {
+			// list-style-position: outside;
+			@include margin-bottom(0.8); // archives detail page
+		}
+		.title {
+			@include sm-sans;
+			@include margin-bottom(0.3);
+			width: initial;
+			width: auto;
+			font-weight: 600;
+		}
+		ul {
+			@include padding-bottom(2); // not margin because then when using columns, the margin carries over!!!, from http://stackoverflow.com/a/12503808
+			@include padding-left(2);
+			@include respond-to(break2max) {
+				padding-left: 1rem;
+			}
+			@include margin-bottom(1);
+			li:not(.card) {
+				// inset
+				position: relative;
+				// bullets
+				&:before {
+					content: '\61';
+					font-family: 'vd-icons';
+					display: inline-block;
+					position: relative;
+					bottom: 2px;
+					@include padding-right(1);
+					@include margin-left(-1.7);
+					font-size:0.5rem;
+					@include respond-to(break2full) {
+						font-size:0.32vw;
+					}
+					@include respond-to(fullwidth) {
+						font-size:0.5rem; // smaller bullet
+						bottom: 0.5rem;
+					}
+				}
+			}
+		}
+		ol {
+			// needs more padding than ul for numbers
+			li {
+				list-style-type: decimal;
+				@include padding-left(1.5);
+				@include margin-left(2.5);
+				@include respond-to(break2max) {
+					padding-left: 0rem;
+					margin-left: 2.5rem;
+				}
+			}
+			ol {
+				li {
+					list-style-type: upper-alpha;
+					@include padding-left(1);
+					@include respond-to(break2max) {
+						padding-left: 0;
+					}
+				}
+			}
+		}
+	}
+	.content-footer {
+		position: relative;
+		h2 {
+			@include md-sans;
+			font-weight: 600;
+		}
+		p, ul {
+			@include body-sans;
+		}
+	}

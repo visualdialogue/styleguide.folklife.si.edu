@@ -390,15 +390,15 @@ section.container.cards-section
 						&lt;/div&gt;
 					&lt;/div&gt;
 
-	// Audio Card
+	// Tall Audio Card
 	.codeblock
 		.row
 			.col-sm-8
-				h3.section-subtitle Audio Card
+				h3.section-subtitle Tall Audio Card
 			-snippet('show-html')
 			-snippet('show-sass')
 		.row
-			li.card.audio-card.col-xs-6.col-sm-3.card-xs-break-2.full-border-card
+			.card.audio-card.col-xs-6.col-sm-3.card-xs-break-2.full-border-card
 				.image
 					a(href="#")
 						!= $section->image('audio.png')
@@ -415,7 +415,7 @@ section.container.cards-section
 				-snippet('show-sass-mobile')
 			.col-md-9
 				pre.html: code.
-					&lt;li class="card audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border-card"&gt;
+					&lt;div class="card audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border-card"&gt;
 						&lt;div class="image"&gt;	
 							&lt;a href="#"&gt;
 								&lt;img src="/320x320.jpg"&gt;
@@ -424,30 +424,25 @@ section.container.cards-section
 						&lt;div class="details"&gt;
 							&lt;div class="details-inner"&gt;
 								&lt;div class="tag"&gt;New Release&lt;/div&gt;
-								&lt;a class="high title" href="#"&gt;
-									&lt;span class="light"&gt;
-										&lt;span class="er"&gt;
-											Quelbe!
+								&lt;div class="title-wrapper" &gt;
+									&lt;a class="high title" href="#"&gt;
+										&lt;span class="light"&gt;
+											&lt;span class="er"&gt;
+												Quelbe!
+											&lt;/span&gt;
 										&lt;/span&gt;
-									&lt;/span&gt;
-								&lt;/a&gt;
-								&lt;div class="artist"&gt;
-									Stanley and the Ten Sleepless Nights
+									&lt;/a&gt;
+									&lt;div class="artist"&gt;
+										Stanley and the Ten Sleepless Nights
+									&lt;/div&gt;
 								&lt;/div&gt;
 								&lt;div class="audio-player"&gt;
-									&lt;div class="icon-play-button icon-stack"&gt;
-										&lt;div class="icon-circle"&gt;
-											&lt;div class="icon-play"&gt;
-									&lt;div class="audio-player-details"&gt;
-										&lt;div class="audio-progress-bar"&gt;
-											&lt;img src="/assets/images/icons/audio-progress-bar.png"&gt;
-										&lt;div class="audio-time"&gt;0:00 &vert;&nbsp;23:01&lt;/div&gt;
-										&lt;div class="volume.icon-volume-up"&gt;&lt;/div&gt;
-									&lt;/div&gt;
+									&lt;audio class="mejs-player" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'&gt;
+									&lt;!-- mejs media player will build itself on page load and we wrap a few key elements in common-scripts.js --&gt;
 								&lt;/div&gt;
 							&lt;/div&gt;
 						&lt;/div&gt;
-					&lt;/li&gt;
+					&lt;/div&gt;
 
 			.col-md-9
 				pre.sass: code.
@@ -461,7 +456,7 @@ section.container.cards-section
 			-snippet('show-html')
 			-snippet('show-sass')
 		.row
-			li.card.audio-card.horizontal-audio-card.horizontal-audio-card-single.full-border-horizontal-card.col-sm-4
+			.card.audio-card.horizontal-audio-card.horizontal-audio-card-single.full-border-horizontal-card.col-sm-4.visible-md.visible-lg
 				.row
 					.image.col-xs-6
 						a(href="#")
@@ -478,12 +473,13 @@ section.container.cards-section
 				-snippet('show-sass-mobile')
 			.col-md-8
 				pre.html: code.
-					&lt;li class="card audio-card horizontal-audio-card horizontal-card-single full-border-horizontal-card col-sm-4"&gt;
+					&lt;div class="card audio-card horizontal-audio-card horizontal-card-single full-border-horizontal-card col-sm-4"&gt;
 						&lt;div class="row"&gt;
 							&lt;div class="image col-xs-6"&gt;
-								&lt;a href="#"&gt;&lt;img src="/210x210.jpg" alt=""&gt;&lt;/a&gt;&lt;/div&gt;
-								&lt;div class="details col-xs-6"&gt;
-									&lt;div class="details-inner" style=""&gt;
+								&lt;a href="#"&gt;&lt;img src="/210x210.jpg" alt=""&gt;&lt;/a&gt;
+							&lt;/div&gt;
+							&lt;div class="details col-xs-6"&gt;
+								&lt;div class="details-inner" style=""&gt;
 									&lt;div class="title-wrapper"&gt;
 										&lt;a href="#" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;Quelbe!&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
 										&lt;div class="artist"&gt;Stanley and the Ten Sleepless Nights&lt;/div&gt;
@@ -495,7 +491,7 @@ section.container.cards-section
 								&lt;/div&gt;
 							&lt;/div&gt;
 						&lt;/div&gt;
-					&lt;/li&gt;
+					&lt;/div&gt;
 
 			.col-md-8
 				pre.sass: code.
@@ -508,8 +504,11 @@ section.container.cards-section
 				h3.section-subtitle Horizontal Audio Card — Playlist
 			-snippet('show-html')
 			-snippet('show-sass')
+		.row.visible-xs.visible-sm
+			.card.col-sm-4
+				p Swap horizontal card with tall card for this size
 		.row
-			li.card.audio-card.horizontal-audio-card.horizontal-audio-card-playlist.full-border-horizontal-card.col-sm-4
+			.card.audio-card.horizontal-audio-card.horizontal-audio-card-playlist.full-border-horizontal-card.col-sm-4.visible-md.visible-lg
 				.row
 					.image.col-xs-3
 						a(href="#")
@@ -526,12 +525,13 @@ section.container.cards-section
 				-snippet('show-sass-mobile')
 			.col-md-8
 				pre.html: code.
-					&lt;li class="card audio-card horizontal-audio-card horizontal-audio-card-playlist full-border-horizontal-card col-sm-4"&gt;
+					&lt;div class="card audio-card horizontal-audio-card horizontal-audio-card-playlist full-border-horizontal-card col-sm-4 visible-md visible-lg"&gt;
 						&lt;div class="row"&gt;
-							&lt;div class="image col-xs-6"&gt;
-								&lt;a href="#"&gt;&lt;img src="/210x210.jpg" alt=""&gt;&lt;/a&gt;&lt;/div&gt;
-								&lt;div class="details col-xs-6"&gt;
-									&lt;div class="details-inner" style=""&gt;
+							&lt;div class="image col-xs-3"&gt;
+								&lt;a href="#"&gt;&lt;img src="/210x210.jpg" alt=""&gt;&lt;/a&gt;
+							&lt;/div&gt;
+							&lt;div class="details col-xs-9"&gt;
+								&lt;div class="details-inner" style=""&gt;
 									&lt;div class="title-wrapper"&gt;
 										&lt;a href="#" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;Quelbe!&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
 										&lt;div class="artist"&gt;Stanley and the Ten Sleepless Nights&lt;/div&gt;
@@ -543,11 +543,67 @@ section.container.cards-section
 								&lt;/div&gt;
 							&lt;/div&gt;
 						&lt;/div&gt;
-					&lt;/li&gt;
+					&lt;/div&gt;
 
 			.col-md-8
 				pre.sass: code.
 					// audio styles are too long to list here and have their own SASS file called audio.scss
+					// the only difference here is the .horizontal-audio-card-playlist class overrides certain styles of the .horizontal-audio-card class
+	// Horizontal Audio Card — Playlist (Magazine)
+	.codeblock
+		a.anchor-link#horizontal-audio-card-playlist
+		.row
+			.col-sm-8
+				h3.section-subtitle Horizontal Audio Card — Playlist (Magazine)
+			-snippet('show-html')
+			-snippet('show-sass')
+		.row.visible-xs.visible-sm
+			.card.col-sm-4
+				p Swap horizontal card with tall card for this size
+		.row
+			div.magazine-article-page
+				.card.audio-card.horizontal-audio-card.horizontal-audio-card-playlist.full-border-horizontal-card.col-sm-4.visible-md.visible-lg
+					.row
+						.image.col-xs-3
+							a(href="#")
+								!= $section->image('audio.png')
+						.details.col-xs-9
+							.details-inner
+								.title-wrapper
+									a.high.title(href="#"): span.light: span.er Quelbe!
+									.artist Stanley and the Ten Sleepless Nights
+								.audio-player
+									<audio class="mejs-player" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'>
+			.col-xs-12.visible-xs
+				-snippet('show-html-mobile')
+				-snippet('show-sass-mobile')
+			.col-md-8
+				pre.html: code.
+					&lt;!-- this must come under the page with body class of .magazine-article-page --&gt;
+					&lt;div class="card audio-card horizontal-audio-card horizontal-audio-card-playlist full-border-horizontal-card col-sm-4 visible-md visible-lg"&gt;
+						&lt;div class="row"&gt;
+							&lt;div class="image col-xs-3"&gt;
+								&lt;a href="#"&gt;&lt;img src="/210x210.jpg" alt=""&gt;&lt;/a&gt;
+							&lt;/div&gt;
+							&lt;div class="details col-xs-9"&gt;
+								&lt;div class="details-inner" style=""&gt;
+									&lt;div class="title-wrapper"&gt;
+										&lt;a href="#" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;Quelbe!&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
+										&lt;div class="artist"&gt;Stanley and the Ten Sleepless Nights&lt;/div&gt;
+									&lt;/div&gt;
+									&lt;div class="audio-player"&gt;
+										&lt;audio class="mejs-player" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'&gt;
+										&lt;!-- mejs media player will build itself on page load and we wrap a few key elements in common-scripts.js --&gt;
+									&lt;/div&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+
+			.col-md-8
+				pre.sass: code.
+					// audio styles are too long to list here and have their own SASS file called audio.scss
+					// the border color is changed if this player exists on a page with a body class of .magazine-article-page
 	// Vinyl Card
 	.codeblock
 		.row

@@ -10,7 +10,7 @@
   <?php snippet('header-shim'); ?>
   <?php snippet('header-favicons'); ?>
   <!-- highlightjs.org for code syntax highlighting--><link href="/assets/css/highlight/styles/atom-one-dark.css" type="text/css" rel="stylesheet">
-  <script src="/assets/js/highlight.pack.js"></script><link href="/assets/css/styleguide.css?v=<?= time() ?>" type="text/css" rel="stylesheet">
+  <script src="/assets/js/highlight.pack.js"></script><link href="/themes/styleguide/assets/css/styleguide.css?v=<?= time() ?>" type="text/css" rel="stylesheet">
 </head><body class="styleguide-site">
 <div id="site-toggle" class="site-toggle">
   <div class="container"><a href="/" class="site-toggle-link festival-site-toggle-link active">Festival</a>
@@ -30,8 +30,8 @@
       <!-- Logo-->
       <div class="logo-wrapper col-sm-2">
         <div id="logo" class="logo"><a href="/">
-            <div class="one-line-logos"><img src="/assets/images/logo/navbar/folklife_oneLine_160.png?v=<?= time() ?>" alt="Folklife Logo" class="one-line-logo mobile-one-line-logo visible-xs"/><img src="/assets/images/logo/navbar/folklife_oneLine_224.png?v=<?= time() ?>" alt="Folklife Logo" class="one-line-logo tablet-one-line-logo visible-sm visible-md"/><img src="/assets/images/logo/navbar/folklife_oneLine_258.png?v=<?= time() ?>" alt="Folklife Logo" class="one-line-logo desktop-one-line-logo visible-lg"/></div>
-            <div class="block-logos"><img src="/assets/images/logo/navbar/folklife_logo_200x200.png?v=<?= time() ?>" alt="Folklife Logo" class="block-logo mobile-block-logo visible-xs visible-sm"/><img src="/assets/images/logo/navbar/folklife_logo_280x280.png?v=<?= time() ?>" alt="Folklife Logo" class="block-logo tablet-block-logo visible-md"/><img src="/assets/images/logo/navbar/folklife_logo_320x320.png?v=<?= time() ?>" alt="Folklife Logo" class="block-logo desktop-block-logo visible-lg"/></div></a></div>
+            <div class="one-line-logos"><img src="assets/images/logo/navbar/folklife_oneLine_160.png?v=<?= time() ?>" alt="Folklife Logo" class="one-line-logo mobile-one-line-logo visible-xs"/><img src="assets/images/logo/navbar/folklife_oneLine_224.png?v=<?= time() ?>" alt="Folklife Logo" class="one-line-logo tablet-one-line-logo visible-sm visible-md"/><img src="assets/images/logo/navbar/folklife_oneLine_258.png?v=<?= time() ?>" alt="Folklife Logo" class="one-line-logo desktop-one-line-logo visible-lg"/></div>
+            <div class="block-logos"><img src="assets/images/logo/navbar/folklife_logo_200x200.png?v=<?= time() ?>" alt="Folklife Logo" class="block-logo mobile-block-logo visible-xs visible-sm"/><img src="assets/images/logo/navbar/folklife_logo_280x280.png?v=<?= time() ?>" alt="Folklife Logo" class="block-logo tablet-block-logo visible-md"/><img src="assets/images/logo/navbar/folklife_logo_320x320.png?v=<?= time() ?>" alt="Folklife Logo" class="block-logo desktop-block-logo visible-lg"/></div></a></div>
       </div>
       <?php snippet('nav-icons-search'); ?>
     </ul>

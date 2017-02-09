@@ -26,20 +26,55 @@
 		</div>
 		<!-- LESSON PLAN 2-->
 		<div class="hidden-xs top-twenty top-forty">
+			<div class="tag">Lesson Plan</div>
 			<a href="/west-african-song-chants-childrens-ghana/music/tools-for-teaching/smithsonian"><img src="http://www.folkways.si.edu/images/magazine/2016_summer_fall/lesson-plan-wast-african-song.jpg" alt="West African Song and Chants - Children’s Music from Ghana" width="100%"></a>
 			<p class="caption">Lesson plan: <a href="/west-african-song-chants-childrens-ghana/music/tools-for-teaching/smithsonian">"West African Song and Chants - Children’s Music from Ghana"</a> by Karen Howard</p>
 		</div>
 
 		<!-- sidebar audio player test -->
-		<div class="card audio-card horizontal-audio-card full-border-horizontal-card">
-			<div class="row">
-				<div class="image col-xs-6">
-					<a href="#"><img src="<?= $pages->find('explore')->children()->find('sounds')->children()->find('quelbe-music-of-the-u-s-virgin-islands')->image()->url() ?>" alt=""></a></div>
-					<div class="details col-xs-6">
+		<div class="visible-md visible-lg top-forty">
+			<div class="tag">Podcast</div>
+			<div class="card audio-card horizontal-audio-card horizontal-audio-card-playlist full-border-horizontal-card">
+				<div class="row">
+					<div class="image col-xs-3">
+						<a href="#"><img src="<?= $pages->find('explore')->children()->find('sounds')->children()->find('quelbe-music-of-the-u-s-virgin-islands')->image()->url() ?>" alt=""></a>
+					</div>
+					<div class="details col-xs-9">
 						<div class="details-inner" style="">
-						<div class="title-wrapper">
-							<a href="#" class="high title"><span class="light"><span class="er">Quelbe!</span></span></a>
-							<div class="artist">Stanley and the Ten Sleepless Nights</div>
+							<div class="title-wrapper">
+								<a href="#" class="high title"><span class="light"><span class="er">Quelbe!</span></span></a>
+								<div class="artist">Stanley and the Ten Sleepless Nights</div>
+							</div>
+							<div class="audio-player">
+								<audio class="mejs-player" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'>
+								<!-- mejs media player will build itself on page load and we wrap a few key elements in common-scripts.js -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row visible-xs visible-sm top-forty">
+			<div class="card audio-card col-xs-6 col-sm-12 card-xs-break-2 full-border-card">
+				<div class="tag">Podcast</div>
+				<div class="image">	
+					<a href="#"><img src="<?= $pages->find('explore')->children()->find('sounds')->children()->find('quelbe-music-of-the-u-s-virgin-islands')->image()->url() ?>" alt=""></a>
+				</div>
+				<div class="details">
+					<div class="details-inner">
+						<div class="tag">New Release</div>
+						<div class="title-wrapper" >
+							<a class="high title" href="#">
+								<span class="light">
+									<span class="er">
+										Quelbe!
+									</span>
+								</span>
+							</a>
+							<div class="artist">
+								Stanley and the Ten Sleepless Nights
+							</div>
 						</div>
 						<div class="audio-player">
 							<audio class="mejs-player" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'>
@@ -49,6 +84,7 @@
 				</div>
 			</div>
 		</div>
+		
 
 
 		<!--PODCAST-->
@@ -75,12 +111,16 @@
 		</div>
 		<div class="hidden-xs">
 			<!-- SLIDES 1-->
-			<div class="slideshow top-twenty top-forty">
+			<!-- DELETE top-twenty and top-forty from .slideshow div because .tag above will push up too high -->
+			<!-- <div class="slideshow top-twenty top-forty"> -->
+			<? snippet('sidebar-gallery-demo') ?>
+			<!-- <div class="slideshow">
 				<a href="/images/galleries/magazine-childrens-music-around-the-world/index.html"> <img src="http://www.folkways.si.edu/images/galleries/magazine-childrens-music-around-the-world/thumb.jpg" alt="slide show of album covers - Children’s Music from Around the World" title="Slideshow: Album Covers" width="100%"> </a>
-			</div>
+			</div> -->
 			<p class="caption">Slideshow: Album covers</p>
 			<div class="clear"></div>
 			<div class="top-forty">
+				<div class="tag">Online Exhibition</div>
 				<!-- Musica del Pueblo ‘interactive feature’-->
 				<a href="http://www.musicadelpueblo.org/" target="_blank"><img src="http://www.folkways.si.edu/images/magazine/2016_summer_fall/Mural.jpg" alt="Musica del Pueblo interactive educational website" width="100%"></a>
 				<p class="caption">
