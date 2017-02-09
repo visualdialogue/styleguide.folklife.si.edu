@@ -56,7 +56,7 @@
 		</div>
 
 		<div class="row visible-xs visible-sm top-forty">
-			<div class="card audio-card col-xs-6 col-sm-12 card-xs-break-2 full-border-card">
+			<div class="card audio-card tall-audio-card col-xs-12 card-xs-break-2 full-border-card">
 				<div class="tag">Podcast</div>
 				<div class="image">	
 					<a href="#"><img src="<?= $pages->find('explore')->children()->find('sounds')->children()->find('quelbe-music-of-the-u-s-virgin-islands')->image()->url() ?>" alt=""></a>

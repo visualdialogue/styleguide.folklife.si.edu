@@ -15348,6 +15348,13 @@ body {
 	display: none;
 }
 
+/* Tall Audio Card
+-------------------------------------------------- */
+.tall-audio-card .image {
+	border: 2px solid #d9d9d9;
+	border-bottom: none;
+}
+
 /* Horizontal Audio Card
 -------------------------------------------------- */
 .sidebar .audio-card .mejs-container {
@@ -15575,6 +15582,10 @@ body {
 	.horizontal-audio-card .mejs-controls .mejs-time-wrapper {
 		margin-top: 1rem;
 	}
+}
+
+.horizontal-audio-card-single .details .mejs-controls .mejs-playpause-button {
+	display: inline-block;
 }
 
 .horizontal-audio-card-playlist .title-wrapper {

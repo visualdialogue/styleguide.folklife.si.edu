@@ -89,6 +89,40 @@ section.container.cards-section
 							&lt;/div&gt;
 						&lt;/div&gt;  
 					&lt;/div&gt;
+
+
+
+	// Figure with Caption
+	.codeblock
+		a.anchor-link#figure-with-caption
+		.row
+			.col-sm-8
+				h3.section-subtitle Figure with Caption
+			-snippet('show-html')
+			-snippet('show-sass')
+		.row
+			-$src = $section->image('figure-with-caption.jpg')
+			.col-sm-5
+				figure
+					img.ms-header-image(src="<?= $src->url() ?>" alt="<?= $page->title() ?>")
+					//- show caption if it exists and set $caption var
+					-if($caption = $src->caption()->kt()):
+						figcaption
+							!= $caption
+							-if($credit = $src->credit()->kt()):
+								.credit!= $credit
+							-endif
+					-endif
+			.col-xs-12.visible-xs
+				-snippet('show-html-mobile')
+				-snippet('show-sass-mobile')
+		.row
+			.col-sm-12
+				pre.sass: code.
+					/* icon font characters (fontastic.me) from ../common/css/vd-icons.scss 
+					-------------------------------------------------- */
+					.icon-gallery:before {
+			
 	// Horizontal Card
 	.codeblock
 		.row
@@ -398,7 +432,7 @@ section.container.cards-section
 			-snippet('show-html')
 			-snippet('show-sass')
 		.row
-			.card.audio-card.col-xs-6.col-sm-3.card-xs-break-2.full-border-card
+			.card.audio-card.tall-audio-card.col-xs-6.col-sm-3.card-xs-break-2.full-border-card
 				.image
 					a(href="#")
 						!= $section->image('audio.png')

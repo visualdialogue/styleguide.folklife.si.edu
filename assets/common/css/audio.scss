@@ -292,6 +292,17 @@
 		}
 	}
 
+/* Tall Audio Card
+-------------------------------------------------- */
+.tall-audio-card {
+	.image {
+		@include border(all, 2px, $black15);
+		border-bottom: none;
+	}
+	.details-inner {
+		// border-top: none;
+	}
+}
 /* Horizontal Audio Card
 -------------------------------------------------- */
 $horizontalMobilePlayWidth: 8vw;
@@ -395,6 +406,13 @@ $horizontalMobilePlayHeight: 8vw;
 		}
 	}
 }
+.horizontal-audio-card-single {
+	// don't hide play button
+	.details .mejs-controls .mejs-playpause-button {
+		display: inline-block;
+	}
+}
+
 // inherits many styles from .horizontal-audio-card
 .horizontal-audio-card-playlist {
 	.title-wrapper {

@@ -121,7 +121,7 @@ gulp.task('js', function() {
   return gulp.src([
 	  '../../styleguide.folklife.si.edu/code/assets/common/js/common-plugins.js',
 	  '../../styleguide.folklife.si.edu/code/assets/common/js/common-scripts.js',
-	  'assets/js/scripts.js'
+	  'themes/styleguide/assets/js/scripts.js'
 	])
 	.pipe(concat('styleguide.js'))
 	.pipe(gulp.dest('themes/styleguide/assets/js/'));
