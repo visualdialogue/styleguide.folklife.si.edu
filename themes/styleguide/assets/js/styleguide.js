@@ -479,6 +479,7 @@ $(document).ready(function () {
 		// on playing a video in the gallery...
 		// $('.video').on('click', function() {
 		$(video).on('click', function() {
+
 		  	// manually open remodal because sometimes just doesn't do it
 		  	remodalInstance.open();
 
@@ -1003,100 +1004,3 @@ $(document).ready(function () {
 	}
 
 }); // end document model ready
-/*
-
-
- ____|       |  |     | _)   _|             ___|              _)         |         
- |     _ \   |  |  /  |  |  |     _ \     \___ \    __|   __|  |  __ \   __|   __| 
- __|  (   |  |    <   |  |  __|   __/           |  (     |     |  |   |  |   \__ \ 
-_|   \___/  _| _|\_\ _| _| _|   \___|     _____/  \___| _|    _|  .__/  \__| ____/ 
-                                                                 _|                
-
-These are scripts specific to folklife.si.edu. Global or common scripts will be combined with this file during build.
-
-*/
-
-$(document).ready(function () {
-
-/*********************
-* Hero Carousel
-* Uses slick.js from Ken Wheeler at http://kenwheeler.github.io/slick/
-*********************/
-	// after banner created...
-	$('#banner-carousel').on('init', function() {
-
-		// cache arrows for selecting
-		var $slickArrow = $('.slick-arrow');
-
-		// add event handler to arrows to pause slider when clicked
-		$slickArrow.on('click', function() {
-			$('#banner-carousel').slick('slickPause');
-			console.log('banner paused');
-		});
-	});
-
-
-	// console.log('creating desktop banner...');
-	$('#banner-carousel').slick({
-		mobileFirst: 'true',
-		// combine with mobile
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		arrows: false,
-		asNavFor: '.mobile-banner-nav',
-		autoplaySpeed: 4000,
-		autoplay: true, // pause for testing
-		pauseOnHover: false,
-		responsive: [
-			{
-				breakpoint: 852,
-				settings: {
-					centerMode: true,
-					centerPadding: '80px',
-					arrows: true,
-					appendDots: '.dots',
-					appendArrows: '.slick-list',
-					dots: true,
-					autoplaySpeed: 5000,
-				}
-			},
-			{
-				breakpoint: 1560,
-				settings: {
-					centerMode: true,
-					// padding on both sides is screen width minus width of main area, divided by 2 for each side
-					centerPadding: 'calc((100vw - 1400px) / 2)',
-					arrows: true,
-					appendArrows: '.slick-list',
-					dots: true,
-					appendDots: '.dots',
-				}
-			}
-	   	]
-	});
-	$('.mobile-banner-nav').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		arrows: false,
-		asNavFor: '#banner-carousel',
-		dots: true,
-		appendDots: '.mobile-dots',
-	  	focusOnSelect: true,
-		// adaptiveHeight: true,
-	});
-
-/**********
-* Match Heights
-* from https://github.com/liabru/jquery-match-height
-* site-wide rules in common-scripts.js
-**********/
-
-	// Folklife Dive Deep
-	$('.mh-fl-dive-deep').matchHeight();
-
-	// Explore Collections & Teach
-	if(!site.isMobile)
-		$('.mh-fl-explore-teach .card').matchHeight({byRow:false});
-	else
-		$('.mh-fl-explore-teach .card').matchHeight({byRow:true});
-});

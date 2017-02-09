@@ -1,53 +1,4 @@
-
-<!-- Cards-->
-<section class="container cards-section">
-  <div class="row">
-    <main class="content col-sm-7">
-      <h2 class="section-title">Cards</h2><a id="cards" class="anchor-link"></a>
-      <div class="intro-copy content link-underline">
-        <p>Cards are the smallest component pieces on the site besides UI elements. They usually consist of an image, a tag or date, a title, and the first few words of the copy. Some cards contain audio players or video buttons. Some cards lie horizontally. Here you'll find code to study and copy.</p>
-      </div>
-    </main>
-  </div>
-  <!-- Full Feature Card-->
-  <div class="codeblock">
-    <div class="row">
-      <div class="col-sm-8">
-        <h3 class="section-subtitle">Full Feature Card</h3>
-      </div>
-      <?php snippet('show-html'); ?>
-      <?php snippet('show-sass'); ?>
-    </div>
-    <div class="row">
-      <div class="card col-xs-12 full-feature-card">
-        <div class="row">
-          <div class="image col-md-6 col-lg-7"><a href="#">
-              <?php echo $section->image('ralphRinzler.jpg'); ?></a></div>
-          <div class="details col-md-6 col-lg-5">
-            <div class="details-inner"><a href="#" class="high title"><span class="light"><span class="er">Ralph Rinzler Folklife Archives and Collections</span></span></a>
-              <div class="description link-underline">
-                <p>The Center for Folklife and Cultural Heritage is home to the Ralph Rinzler Folklife Archives and Collections, a public resource named for the founding director of the Smithsonian Folklife Festival.</p>
-              </div><a class="high more-link">
-                <div class="light">
-                  <div class="er">
-                    <div class="more-link-text">more</div>
-                    <div class="more-link-arrow icon-arrow2"></div>
-                  </div>
-                </div></a>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 visible-xs">
-            <?php snippet('show-html-mobile'); ?>
-            <?php snippet('show-sass-mobile'); ?>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-12">
-        <pre class="sass"><code>.full-feature-card {
+<!-- Cards--><section class="container cards-section"><div class="row"><main class="content col-sm-7"><h2 class="section-title">Cards</h2><a id="cards" class="anchor-link"></a><div class="intro-copy content link-underline"><p>Cards are the smallest component pieces on the site besides UI elements. They usually consist of an image, a tag or date, a title, and the first few words of the copy. Some cards contain audio players or video buttons. Some cards lie horizontally. Here you'll find code to study and copy.</p></div></main></div><!-- Full Feature Card--><div class="codeblock"><div class="row"><div class="col-sm-8"><h3 class="section-subtitle">Full Feature Card</h3></div><?php snippet('show-html'); ?><?php snippet('show-sass'); ?></div><div class="row"><div class="card col-xs-12 full-feature-card"><div class="row"><div class="image col-md-6 col-lg-7"><a href="#"><?php echo $section->image('ralphRinzler.jpg'); ?></a></div><div class="details col-md-6 col-lg-5"><div class="details-inner"><a href="#" class="high title"><span class="light"><span class="er">Ralph Rinzler Folklife Archives and Collections</span></span></a><div class="description link-underline"><p>The Center for Folklife and Cultural Heritage is home to the Ralph Rinzler Folklife Archives and Collections, a public resource named for the founding director of the Smithsonian Folklife Festival.</p></div><a class="high more-link"><div class="light"><div class="er"><div class="more-link-text">more</div><div class="more-link-arrow icon-arrow2"></div></div></div></a></div></div></div><div class="row"><div class="col-sm-12 visible-xs"><?php snippet('show-html-mobile'); ?><?php snippet('show-sass-mobile'); ?></div></div></div></div><div class="row"><div class="col-sm-12"><pre class="sass"><code>.full-feature-card {
 	@include margin-bottom(0);
 	.tag {
 		display: none;
@@ -71,10 +22,7 @@
 	.description {
 		@include lg-sans;
 	}
-}</code></pre>
-      </div>
-      <div class="col-sm-12">
-        <pre class="html"><code>&lt;div class="row"&gt;
+}</code></pre></div><div class="col-sm-12"><pre class="html"><code>&lt;div class="row"&gt;
 	&lt;div class="card col-xs-12 full-feature-card"&gt;
 		&lt;div class="row"&gt;
 			&lt;div class="image col-md-6 col-lg-7"&gt;
@@ -97,42 +45,7 @@
 			&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;  
-&lt;/div&gt;</code></pre>
-      </div>
-    </div>
-  </div>
-  <!-- Horizontal Card-->
-  <div class="codeblock">
-    <div class="row">
-      <div class="col-sm-8">
-        <h3 class="section-subtitle">Horizontal Card</h3>
-      </div>
-      <?php snippet('show-html'); ?>
-      <?php snippet('show-sass'); ?>
-    </div>
-    <div class="row">
-      <div class="card horizontal-card folkways-magazine-card col-xs-12 col-sm-6 top-border-card">
-        <div class="row">
-          <div class="image col-xs-6"><a href="#">
-              <?php echo $section->image('horizontal.png'); ?></a></div>
-          <div class="details col-xs-6">
-            <div class="details-inner">
-              <div class="tag">Recording Spotlight</div><a href="#" class="high title"><span class="light"><span class="er">Rasta Sounds</span></span></a>
-              <div class="description link-underline">
-                <p>The global African Diaspora has often searched through music for a “post-racist utopia.”</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 visible-xs">
-            <?php snippet('show-html-mobile'); ?>
-            <?php snippet('show-sass-mobile'); ?>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6">
-        <pre class="sass"><code>.folkways-magazine-card {
+&lt;/div&gt;</code></pre></div></div></div><!-- Horizontal Card--><div class="codeblock"><div class="row"><div class="col-sm-8"><h3 class="section-subtitle">Horizontal Card</h3></div><?php snippet('show-html'); ?><?php snippet('show-sass'); ?></div><div class="row"><div class="card horizontal-card folkways-magazine-card col-xs-12 col-sm-6 top-border-card"><div class="row"><div class="image col-xs-6"><a href="#"><?php echo $section->image('horizontal.png'); ?></a></div><div class="details col-xs-6"><div class="details-inner"><div class="tag">Recording Spotlight</div><a href="#" class="high title"><span class="light"><span class="er">Rasta Sounds</span></span></a><div class="description link-underline"><p>The global African Diaspora has often searched through music for a “post-racist utopia.”</p></div></div></div></div><div class="row"><div class="col-sm-12 visible-xs"><?php snippet('show-html-mobile'); ?><?php snippet('show-sass-mobile'); ?></div></div></div><div class="col-sm-6"><pre class="sass"><code>.folkways-magazine-card {
 	.tag {
 		// mobile only
 		@include respond-to(break2max) {
@@ -147,10 +60,7 @@
 			@include sm-magazine-title;
 		}
 	}
-}</code></pre>
-      </div>
-      <div class="col-sm-6">
-        <pre class="html"><code>&lt;li class="card horizontal-card folkways-magazine-card col-xs-6 top-border"&gt;
+}</code></pre></div><div class="col-sm-6"><pre class="html"><code>&lt;li class="card horizontal-card folkways-magazine-card col-xs-6 top-border"&gt;
 	&lt;div class="row"&gt;
 		&lt;div class="image col-sm-6"&gt;
 			&lt;a href="#"&gt;
@@ -173,41 +83,7 @@
 			&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
-&lt;/li&gt;</code></pre>
-      </div>
-    </div>
-  </div>
-  <!-- Publication Card-->
-  <div class="codeblock">
-    <div class="row">
-      <div class="col-sm-8">
-        <h3 class="section-subtitle">Publication Card</h3>
-      </div>
-      <?php snippet('show-html'); ?>
-      <?php snippet('show-sass'); ?>
-    </div>
-    <div class="row">
-      <div class="card col-sm-6 publication-card top-border-card">
-        <div class="row">
-          <div class="image col-xs-4"><a href="#">
-              <?php echo $section->image('curatorial-conversations.jpg'); ?></a></div>
-          <div class="details col-xs-8">
-            <div class="details-inner"><a href="#" class="high title"><span class="light"><span class="er">Curatorial Conversations: Cultural Representation and the Smithsonian Folklife Festival</span></span></a>
-              <div class="author">Edited by Olivia Cadaval, Sojin Kim, and Diana Baird N’Diaye</div><a href="#" class="high buy-now-button"><span class="light"><span class="er">Order from University Press of Mississippi&nbsp;&#x2192</span></span></a>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 visible-xs">
-            <?php snippet('show-html-mobile'); ?>
-            <?php snippet('show-sass-mobile'); ?>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-12">
-        <pre class="sass"><code>.publication-card {
+&lt;/li&gt;</code></pre></div></div></div><!-- Publication Card--><div class="codeblock"><div class="row"><div class="col-sm-8"><h3 class="section-subtitle">Publication Card</h3></div><?php snippet('show-html'); ?><?php snippet('show-sass'); ?></div><div class="row"><div class="card col-sm-6 publication-card top-border-card"><div class="row"><div class="image col-xs-4"><a href="#"><?php echo $section->image('curatorial-conversations.jpg'); ?></a></div><div class="details col-xs-8"><div class="details-inner"><a href="#" class="high title"><span class="light"><span class="er">Curatorial Conversations: Cultural Representation and the Smithsonian Folklife Festival</span></span></a><div class="author">Edited by Olivia Cadaval, Sojin Kim, and Diana Baird N’Diaye</div><a href="#" class="high buy-now-button"><span class="light"><span class="er">Order from University Press of Mississippi&nbsp;&#x2192</span></span></a></div></div></div><div class="row"><div class="col-sm-12 visible-xs"><?php snippet('show-html-mobile'); ?><?php snippet('show-sass-mobile'); ?></div></div></div></div><div class="row"><div class="col-sm-12"><pre class="sass"><code>.publication-card {
 	@include margin-bottom(4); // add back to horizontal cards section
 	.card:nth-of-type(2n + 1) {
 		clear:left; // keep cards 1, 3, 5, 7, etc cleared left so don't hang on previous card
@@ -234,10 +110,7 @@
 		font-weight: 400;
 		display: block; // force new line for multiple buttons
 	}
-}</code></pre>
-      </div>
-      <div class="col-sm-12">
-        <pre class="html"><code>&lt;div class="row"&gt;
+}</code></pre></div><div class="col-sm-12"><pre class="html"><code>&lt;div class="row"&gt;
 	&lt;div class="card col-xs-12 full-feature-card"&gt;
 		&lt;div class="row"&gt;
 			&lt;div class="image col-md-6 col-lg-7"&gt;
@@ -261,57 +134,13 @@
 		&lt;/div&gt;
 	&lt;/div&gt;  
 &lt;/div&gt;
-</code></pre>
-      </div>
-    </div>
-  </div>
-  <!-- Video Card - YouTube-->
-  <div class="codeblock">
-    <div class="row">
-      <div class="col-sm-8">
-        <h3 class="section-subtitle">Video Card &mdash; YouTube</h3>
-      </div>
-      <?php snippet('show-html'); ?>
-      <?php snippet('show-sass'); ?>
-    </div>
-    <div class="row">
-      <li class="card video-card col-sm-4">
-        <div class="row">
-          <div data-id="9U1WBi2kTNY" data-type="youtube" data-title="Bristoff Family Circus" data-description="Lorem ipsum... <a>more</a>" class="video col-sm-12">
-            <div class="center-box">
-              <div class="modal-trigger">
-                <?php echo $section->image('video.png'); ?>
-              </div>
-              <div class="icon-play-button"></div>
-            </div>
-          </div>
-          <div class="details col-sm-12">
-            <div class="details-inner">
-              <div class="tag">Festival 2017</div><a href="#" class="high title"><span class="light"><span class="er">Circus Arts 2017</span></span></a>
-              <div class="description link-underline">
-                <p>See the culture and history of circus arts across the U.S.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 visible-xs">
-            <?php snippet('show-html-mobile'); ?>
-            <?php snippet('show-sass-mobile'); ?>
-          </div>
-        </div>
-      </li>
-      <div class="col-md-8">
-        <pre class="sass"><code>// As video cards can have different looks, we set the title font based on the section via the CSS
+</code></pre></div></div></div><!-- Video Card - YouTube--><div class="codeblock"><div class="row"><div class="col-sm-8"><h3 class="section-subtitle">Video Card &mdash; YouTube</h3></div><?php snippet('show-html'); ?><?php snippet('show-sass'); ?></div><div class="row"><li class="card video-card col-sm-4"><div class="row"><div data-id="9U1WBi2kTNY" data-type="youtube" data-title="Bristoff Family Circus" data-description="Lorem ipsum... <a>more</a>" class="video col-sm-12"><div class="center-box"><div class="modal-trigger"><?php echo $section->image('video.png'); ?></div><div class="icon-play-button"></div></div></div><div class="details col-sm-12"><div class="details-inner"><div class="tag">Festival 2017</div><a href="#" class="high title"><span class="light"><span class="er">Circus Arts 2017</span></span></a><div class="description link-underline"><p>See the culture and history of circus arts across the U.S.</p></div></div></div></div><div class="row"><div class="col-sm-12 visible-xs"><?php snippet('show-html-mobile'); ?><?php snippet('show-sass-mobile'); ?></div></div></li><div class="col-md-8"><pre class="sass"><code>// As video cards can have different looks, we set the title font based on the section via the CSS
 .folkways-learn-section {
 	.title {
 		@include serif-sm;
 		font-weight: 600;
 	}
-}</code></pre>
-      </div>
-      <div class="col-md-8">
-        <pre class="html"><code>&lt;li class="card video-card col-sm-4"&gt;
+}</code></pre></div><div class="col-md-8"><pre class="html"><code>&lt;li class="card video-card col-sm-4"&gt;
 	&lt;div class="row"&gt;
 		&lt;div class="video col-xs-12" data-id="190599898" data-title="Festival 101" data-description="Lorem ipsum... &lt;a&gt;more&lt;/a&gt;"&gt;
 			&lt;div class="center-box"&gt;
@@ -349,57 +178,13 @@
 		&lt;/div&gt;
 	&lt;/div&gt;
 &lt;/div&gt;
-</code></pre>
-      </div>
-    </div>
-  </div>
-  <!-- Video Card - Vimeo-->
-  <div class="codeblock">
-    <div class="row">
-      <div class="col-sm-8">
-        <h3 class="section-subtitle">Video Card &mdash; Vimeo</h3>
-      </div>
-      <?php snippet('show-html'); ?>
-      <?php snippet('show-sass'); ?>
-    </div>
-    <div class="row">
-      <li class="card video-card col-sm-4">
-        <div class="row">
-          <div data-id="190599898" data-type="vimeo" data-title="Festival 101" data-description="Lorem ipsum... <a>more</a>" class="video col-sm-12">
-            <div class="center-box">
-              <div class="modal-trigger">
-                <?php echo $section->image('video.png'); ?>
-              </div>
-              <div class="icon-play-button"></div>
-            </div>
-          </div>
-          <div class="details col-sm-12">
-            <div class="details-inner">
-              <div class="tag">Festival 2017</div><a href="#" class="high title"><span class="light"><span class="er">Circus Arts 2017</span></span></a>
-              <div class="description link-underline">
-                <p>See the culture and history of circus arts across the U.S.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 visible-xs">
-            <?php snippet('show-html-mobile'); ?>
-            <?php snippet('show-sass-mobile'); ?>
-          </div>
-        </div>
-      </li>
-      <div class="col-md-8">
-        <pre class="sass"><code>// As video cards can have different looks, we set the title font based on the section via the CSS
+</code></pre></div></div></div><!-- Video Card - Vimeo--><div class="codeblock"><div class="row"><div class="col-sm-8"><h3 class="section-subtitle">Video Card &mdash; Vimeo</h3></div><?php snippet('show-html'); ?><?php snippet('show-sass'); ?></div><div class="row"><li class="card video-card col-sm-4"><div class="row"><div data-id="190599898" data-type="vimeo" data-title="Festival 101" data-description="Lorem ipsum... <a>more</a>" class="video col-sm-12"><div class="center-box"><div class="modal-trigger"><?php echo $section->image('video.png'); ?></div><div class="icon-play-button"></div></div></div><div class="details col-sm-12"><div class="details-inner"><div class="tag">Festival 2017</div><a href="#" class="high title"><span class="light"><span class="er">Circus Arts 2017</span></span></a><div class="description link-underline"><p>See the culture and history of circus arts across the U.S.</p></div></div></div></div><div class="row"><div class="col-sm-12 visible-xs"><?php snippet('show-html-mobile'); ?><?php snippet('show-sass-mobile'); ?></div></div></li><div class="col-md-8"><pre class="sass"><code>// As video cards can have different looks, we set the title font based on the section via the CSS
 .folkways-learn-section {
 	.title {
 		@include serif-sm;
 		font-weight: 600;
 	}
-}</code></pre>
-      </div>
-      <div class="col-md-8">
-        <pre class="html"><code>&lt;li class="card video-card col-sm-4"&gt;
+}</code></pre></div><div class="col-md-8"><pre class="html"><code>&lt;li class="card video-card col-sm-4"&gt;
 	&lt;div class="row"&gt;
 		&lt;div class="video col-xs-12" data-id="190599898" data-title="Festival 101" data-description="Lorem ipsum... &lt;a&gt;more&lt;/a&gt;"&gt;
 			&lt;div class="center-box"&gt;
@@ -437,39 +222,7 @@
 		&lt;/div&gt;
 	&lt;/div&gt;
 &lt;/div&gt;
-</code></pre>
-      </div>
-    </div>
-  </div>
-  <!-- Tall Audio Card-->
-  <div class="codeblock">
-    <div class="row">
-      <div class="col-sm-8">
-        <h3 class="section-subtitle">Tall Audio Card</h3>
-      </div>
-      <?php snippet('show-html'); ?>
-      <?php snippet('show-sass'); ?>
-    </div>
-    <div class="row">
-      <div class="card audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border-card">
-        <div class="image"><a href="#">
-            <?php echo $section->image('audio.png'); ?></a></div>
-        <div class="details">
-          <div class="details-inner">
-            <div class="tag">New Release</div>
-            <div class="title-wrapper"><a href="#" class="high title"><span class="light"><span class="er">Quelbe!</span></span></a>
-              <div class="artist">Stanley and the Ten Sleepless Nights</div>
-            </div>
-            <div class="audio-player"><audio class="mejs-player" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'></div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-12 visible-xs">
-        <?php snippet('show-html-mobile'); ?>
-        <?php snippet('show-sass-mobile'); ?>
-      </div>
-      <div class="col-md-9">
-        <pre class="html"><code>&lt;div class="card audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border-card"&gt;
+</code></pre></div></div></div><!-- Tall Audio Card--><div class="codeblock"><div class="row"><div class="col-sm-8"><h3 class="section-subtitle">Tall Audio Card</h3></div><?php snippet('show-html'); ?><?php snippet('show-sass'); ?></div><div class="row"><div class="card audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border-card"><div class="image"><a href="#"><?php echo $section->image('audio.png'); ?></a></div><div class="details"><div class="details-inner"><div class="tag">New Release</div><div class="title-wrapper"><a href="#" class="high title"><span class="light"><span class="er">Quelbe!</span></span></a><div class="artist">Stanley and the Ten Sleepless Nights</div></div><div class="audio-player"><audio class="mejs-player" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'></div></div></div></div><div class="col-xs-12 visible-xs"><?php snippet('show-html-mobile'); ?><?php snippet('show-sass-mobile'); ?></div><div class="col-md-9"><pre class="html"><code>&lt;div class="card audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border-card"&gt;
 	&lt;div class="image"&gt;	
 		&lt;a href="#"&gt;
 			&lt;img src="/320x320.jpg"&gt;
@@ -497,43 +250,7 @@
 		&lt;/div&gt;
 	&lt;/div&gt;
 &lt;/div&gt;
-</code></pre>
-      </div>
-      <div class="col-md-9">
-        <pre class="sass"><code>// audio styles are too long to list here and have their own SASS file called audio.scss</code></pre>
-      </div>
-    </div>
-  </div>
-  <!-- Horizontal Audio Card — Single-->
-  <div class="codeblock"><a id="horizontal-audio-card-single" class="anchor-link"></a>
-    <div class="row">
-      <div class="col-sm-8">
-        <h3 class="section-subtitle">Horizontal Audio Card — Single</h3>
-      </div>
-      <?php snippet('show-html'); ?>
-      <?php snippet('show-sass'); ?>
-    </div>
-    <div class="row">
-      <div class="card audio-card horizontal-audio-card horizontal-audio-card-single full-border-horizontal-card col-sm-4 visible-md visible-lg">
-        <div class="row">
-          <div class="image col-xs-6"><a href="#">
-              <?php echo $section->image('audio.png'); ?></a></div>
-          <div class="details col-xs-6">
-            <div class="details-inner">
-              <div class="title-wrapper"><a href="#" class="high title"><span class="light"><span class="er">Quelbe!</span></span></a>
-                <div class="artist">Stanley and the Ten Sleepless Nights</div>
-              </div>
-              <div class="audio-player"><audio class="mejs-player" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-12 visible-xs">
-        <?php snippet('show-html-mobile'); ?>
-        <?php snippet('show-sass-mobile'); ?>
-      </div>
-      <div class="col-md-8">
-        <pre class="html"><code>&lt;div class="card audio-card horizontal-audio-card horizontal-card-single full-border-horizontal-card col-sm-4"&gt;
+</code></pre></div><div class="col-md-9"><pre class="sass"><code>// audio styles are too long to list here and have their own SASS file called audio.scss</code></pre></div></div></div><!-- Horizontal Audio Card — Single--><div class="codeblock"><a id="horizontal-audio-card-single" class="anchor-link"></a><div class="row"><div class="col-sm-8"><h3 class="section-subtitle">Horizontal Audio Card — Single</h3></div><?php snippet('show-html'); ?><?php snippet('show-sass'); ?></div><div class="row"><div class="card audio-card horizontal-audio-card horizontal-audio-card-single full-border-horizontal-card col-sm-4 visible-md visible-lg"><div class="row"><div class="image col-xs-6"><?php echo $section->image('audio.png'); ?></div><div class="details col-xs-6"><div class="details-inner"><div class="title-wrapper"><a href="#" class="high title"><span class="light"><span class="er">Quelbe!</span></span></a><div class="artist">Stanley and the Ten Sleepless Nights</div></div><div class="audio-player"><audio class="mejs-player" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'></div></div></div></div></div><div class="col-xs-12 visible-xs"><?php snippet('show-html-mobile'); ?><?php snippet('show-sass-mobile'); ?></div><div class="col-md-8"><pre class="html"><code>&lt;div class="card audio-card horizontal-audio-card horizontal-card-single full-border-horizontal-card col-sm-4"&gt;
 	&lt;div class="row"&gt;
 		&lt;div class="image col-xs-6"&gt;
 			&lt;a href="#"&gt;&lt;img src="/210x210.jpg" alt=""&gt;&lt;/a&gt;
@@ -552,48 +269,7 @@
 		&lt;/div&gt;
 	&lt;/div&gt;
 &lt;/div&gt;
-</code></pre>
-      </div>
-      <div class="col-md-8">
-        <pre class="sass"><code>// audio styles are too long to list here and have their own SASS file called audio.scss</code></pre>
-      </div>
-    </div>
-  </div>
-  <!-- Horizontal Audio Card — Playlist-->
-  <div class="codeblock"><a id="horizontal-audio-card-playlist" class="anchor-link"></a>
-    <div class="row">
-      <div class="col-sm-8">
-        <h3 class="section-subtitle">Horizontal Audio Card — Playlist</h3>
-      </div>
-      <?php snippet('show-html'); ?>
-      <?php snippet('show-sass'); ?>
-    </div>
-    <div class="row visible-xs visible-sm">
-      <div class="card col-sm-4">
-        <p>Swap horizontal card with tall card for this size</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="card audio-card horizontal-audio-card horizontal-audio-card-playlist full-border-horizontal-card col-sm-4 visible-md visible-lg">
-        <div class="row">
-          <div class="image col-xs-3"><a href="#">
-              <?php echo $section->image('audio.png'); ?></a></div>
-          <div class="details col-xs-9">
-            <div class="details-inner">
-              <div class="title-wrapper"><a href="#" class="high title"><span class="light"><span class="er">Quelbe!</span></span></a>
-                <div class="artist">Stanley and the Ten Sleepless Nights</div>
-              </div>
-              <div class="audio-player"><audio class="mejs-player" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-12 visible-xs">
-        <?php snippet('show-html-mobile'); ?>
-        <?php snippet('show-sass-mobile'); ?>
-      </div>
-      <div class="col-md-8">
-        <pre class="html"><code>&lt;div class="card audio-card horizontal-audio-card horizontal-audio-card-playlist full-border-horizontal-card col-sm-4 visible-md visible-lg"&gt;
+</code></pre></div><div class="col-md-8"><pre class="sass"><code>// audio styles are too long to list here and have their own SASS file called audio.scss</code></pre></div></div></div><!-- Horizontal Audio Card — Playlist--><div class="codeblock"><a id="horizontal-audio-card-playlist" class="anchor-link"></a><div class="row"><div class="col-sm-8"><h3 class="section-subtitle">Horizontal Audio Card — Playlist</h3></div><?php snippet('show-html'); ?><?php snippet('show-sass'); ?></div><div class="row visible-xs visible-sm"><div class="card col-sm-4"><p>Swap horizontal card with tall card for this size</p></div></div><div class="row"><div class="card audio-card horizontal-audio-card horizontal-audio-card-playlist full-border-horizontal-card col-sm-4 visible-md visible-lg"><div class="row"><div class="image col-xs-3"><?php echo $section->image('audio.png'); ?></div><div class="details col-xs-9"><div class="details-inner"><div class="title-wrapper"><a href="#" class="high title"><span class="light"><span class="er">Quelbe!</span></span></a><div class="artist">Stanley and the Ten Sleepless Nights</div></div><div class="audio-player"><audio class="mejs-player" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'></div></div></div></div></div><div class="col-xs-12 visible-xs"><?php snippet('show-html-mobile'); ?><?php snippet('show-sass-mobile'); ?></div><div class="col-md-8"><pre class="html"><code>&lt;div class="card audio-card horizontal-audio-card horizontal-audio-card-playlist full-border-horizontal-card col-sm-4 visible-md visible-lg"&gt;
 	&lt;div class="row"&gt;
 		&lt;div class="image col-xs-3"&gt;
 			&lt;a href="#"&gt;&lt;img src="/210x210.jpg" alt=""&gt;&lt;/a&gt;
@@ -612,51 +288,8 @@
 		&lt;/div&gt;
 	&lt;/div&gt;
 &lt;/div&gt;
-</code></pre>
-      </div>
-      <div class="col-md-8">
-        <pre class="sass"><code>// audio styles are too long to list here and have their own SASS file called audio.scss
-// the only difference here is the .horizontal-audio-card-playlist class overrides certain styles of the .horizontal-audio-card class</code></pre>
-      </div>
-    </div>
-  </div>
-  <!-- Horizontal Audio Card — Playlist (Magazine)-->
-  <div class="codeblock"><a id="horizontal-audio-card-playlist" class="anchor-link"></a>
-    <div class="row">
-      <div class="col-sm-8">
-        <h3 class="section-subtitle">Horizontal Audio Card — Playlist (Magazine)</h3>
-      </div>
-      <?php snippet('show-html'); ?>
-      <?php snippet('show-sass'); ?>
-    </div>
-    <div class="row visible-xs visible-sm">
-      <div class="card col-sm-4">
-        <p>Swap horizontal card with tall card for this size</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="magazine-article-page">
-        <div class="card audio-card horizontal-audio-card horizontal-audio-card-playlist full-border-horizontal-card col-sm-4 visible-md visible-lg">
-          <div class="row">
-            <div class="image col-xs-3"><a href="#">
-                <?php echo $section->image('audio.png'); ?></a></div>
-            <div class="details col-xs-9">
-              <div class="details-inner">
-                <div class="title-wrapper"><a href="#" class="high title"><span class="light"><span class="er">Quelbe!</span></span></a>
-                  <div class="artist">Stanley and the Ten Sleepless Nights</div>
-                </div>
-                <div class="audio-player"><audio class="mejs-player" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-12 visible-xs">
-        <?php snippet('show-html-mobile'); ?>
-        <?php snippet('show-sass-mobile'); ?>
-      </div>
-      <div class="col-md-8">
-        <pre class="html"><code>&lt;!-- this must come under the page with body class of .magazine-article-page --&gt;
+</code></pre></div><div class="col-md-8"><pre class="sass"><code>// audio styles are too long to list here and have their own SASS file called audio.scss
+// the only difference here is the .horizontal-audio-card-playlist class overrides certain styles of the .horizontal-audio-card class</code></pre></div></div></div><!-- Horizontal Audio Card — Playlist (Magazine)--><div class="codeblock"><a id="horizontal-audio-card-playlist" class="anchor-link"></a><div class="row"><div class="col-sm-8"><h3 class="section-subtitle">Horizontal Audio Card — Playlist (Magazine)</h3></div><?php snippet('show-html'); ?><?php snippet('show-sass'); ?></div><div class="row visible-xs visible-sm"><div class="card col-sm-4"><p>Swap horizontal card with tall card for this size</p></div></div><div class="row"><div class="magazine-article-page"><div class="card audio-card horizontal-audio-card horizontal-audio-card-playlist full-border-horizontal-card col-sm-4 visible-md visible-lg"><div class="row"><div class="image col-xs-3"><a href="#"><?php echo $section->image('audio.png'); ?></a></div><div class="details col-xs-9"><div class="details-inner"><div class="title-wrapper"><a href="#" class="high title"><span class="light"><span class="er">Quelbe!</span></span></a><div class="artist">Stanley and the Ten Sleepless Nights</div></div><div class="audio-player"><audio class="mejs-player" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'></div></div></div></div></div></div><div class="col-xs-12 visible-xs"><?php snippet('show-html-mobile'); ?><?php snippet('show-sass-mobile'); ?></div><div class="col-md-8"><pre class="html"><code>&lt;!-- this must come under the page with body class of .magazine-article-page --&gt;
 &lt;div class="card audio-card horizontal-audio-card horizontal-audio-card-playlist full-border-horizontal-card col-sm-4 visible-md visible-lg"&gt;
 	&lt;div class="row"&gt;
 		&lt;div class="image col-xs-3"&gt;
@@ -676,39 +309,8 @@
 		&lt;/div&gt;
 	&lt;/div&gt;
 &lt;/div&gt;
-</code></pre>
-      </div>
-      <div class="col-md-8">
-        <pre class="sass"><code>// audio styles are too long to list here and have their own SASS file called audio.scss
-// the border color is changed if this player exists on a page with a body class of .magazine-article-page</code></pre>
-      </div>
-    </div>
-  </div>
-  <!-- Vinyl Card-->
-  <div class="codeblock">
-    <div class="row">
-      <div class="col-sm-8">
-        <h3 class="section-subtitle">Vinyl Card</h3>
-      </div>
-      <?php snippet('show-html'); ?>
-      <?php snippet('show-sass'); ?>
-    </div>
-    <div class="row">
-      <div class="card vinyl-card col-xs-6 col-sm-3">
-        <div class="image"><a href="#">
-            <?php echo $section->image('fannie-lou-hamer.png'); ?></a></div>
-        <div class="details">
-          <div class="details-inner"><a href="#" class="high title"><span class="light"><span class="er">Songs My Mother Taught Me</span></span></a>
-            <div class="artist">Fannie Lou Hamer</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-12 visible-xs">
-        <?php snippet('show-html-mobile'); ?>
-        <?php snippet('show-sass-mobile'); ?>
-      </div>
-      <div class="col-sm-9">
-        <pre class="sass"><code>.album-card, .vinyl-card, .books-card {
+</code></pre></div><div class="col-md-8"><pre class="sass"><code>// audio styles are too long to list here and have their own SASS file called audio.scss
+// the border color is changed if this player exists on a page with a body class of .magazine-article-page</code></pre></div></div></div><!-- Vinyl Card--><div class="codeblock"><div class="row"><div class="col-sm-8"><h3 class="section-subtitle">Vinyl Card</h3></div><?php snippet('show-html'); ?><?php snippet('show-sass'); ?></div><div class="row"><div class="card vinyl-card col-xs-6 col-sm-3"><div class="image"><a href="#"><?php echo $section->image('fannie-lou-hamer.png'); ?></a></div><div class="details"><div class="details-inner"><a href="#" class="high title"><span class="light"><span class="er">Songs My Mother Taught Me</span></span></a><div class="artist">Fannie Lou Hamer</div></div></div></div><div class="col-xs-12 visible-xs"><?php snippet('show-html-mobile'); ?><?php snippet('show-sass-mobile'); ?></div><div class="col-sm-9"><pre class="sass"><code>.album-card, .vinyl-card, .books-card {
 	.details-inner {
 		padding:0;
 		@include padding-top(1.7);
@@ -723,10 +325,7 @@
 	}
 	@include clear-2; // display cards side-by-side on mobile, clearing every 2nd + 1 cards to the left
 	@include respond-to(break2) {@include clear-6;} // display 6 across, clearing every 6th + 1 cards
-}</code></pre>
-      </div>
-      <div class="col-sm-9">
-        <pre class="html"><code>&lt;li class="card vinyl-card col-xs-6 col-sm-3"&gt;
+}</code></pre></div><div class="col-sm-9"><pre class="html"><code>&lt;li class="card vinyl-card col-xs-6 col-sm-3"&gt;
 	&lt;div class="image"&gt;
 		&lt;a href="#"&gt;&lt;img src="fannie-lou-hamer.png" alt="Songs My Mother Taught Me"&gt;&lt;/a&gt;
 	&lt;/div&gt;
@@ -738,35 +337,7 @@
 			&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
-&lt;/li&gt;</code></pre>
-      </div>
-    </div>
-  </div>
-  <!-- Album Card-->
-  <div class="codeblock">
-    <div class="row">
-      <div class="col-sm-8">
-        <h3 class="section-subtitle">Album Card</h3>
-      </div>
-      <?php snippet('show-html'); ?>
-      <?php snippet('show-sass'); ?>
-    </div>
-    <div class="row">
-      <div class="card album-card col-xs-6 col-sm-2">
-        <div class="image"><a href="#">
-            <?php echo $section->image('SFW40568.jpeg'); ?></a></div>
-        <div class="details">
-          <div class="details-inner"><a href="#" class="high title"><span class="light"><span class="er">Quelbe! Music of the U.S. Virgin Islands</span></span></a>
-            <div class="artist">Stanley and the Ten Sleepless Nights</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-12 visible-xs">
-        <?php snippet('show-html-mobile'); ?>
-        <?php snippet('show-sass-mobile'); ?>
-      </div>
-      <div class="col-sm-10">
-        <pre class="sass"><code>.album-card, .vinyl-card, .books-card {
+&lt;/li&gt;</code></pre></div></div></div><!-- Album Card--><div class="codeblock"><div class="row"><div class="col-sm-8"><h3 class="section-subtitle">Album Card</h3></div><?php snippet('show-html'); ?><?php snippet('show-sass'); ?></div><div class="row"><div class="card album-card col-xs-6 col-sm-2"><div class="image"><a href="#"><?php echo $section->image('SFW40568.jpeg'); ?></a></div><div class="details"><div class="details-inner"><a href="#" class="high title"><span class="light"><span class="er">Quelbe! Music of the U.S. Virgin Islands</span></span></a><div class="artist">Stanley and the Ten Sleepless Nights</div></div></div></div><div class="col-xs-12 visible-xs"><?php snippet('show-html-mobile'); ?><?php snippet('show-sass-mobile'); ?></div><div class="col-sm-10"><pre class="sass"><code>.album-card, .vinyl-card, .books-card {
 	.details-inner {
 		padding:0;
 		@include padding-top(1.7);
@@ -781,10 +352,7 @@
 	}
 	@include clear-2; // display cards side-by-side on mobile, clearing every 2nd + 1 cards to the left
 	@include respond-to(break2) {@include clear-6;} // display 6 across, clearing every 6th + 1 cards
-}</code></pre>
-      </div>
-      <div class="col-sm-10">
-        <pre class="html"><code>&lt;div class="card album-card col-xs-2 col-sm-2"&gt;
+}</code></pre></div><div class="col-sm-10"><pre class="html"><code>&lt;div class="card album-card col-xs-2 col-sm-2"&gt;
 	&lt;div class="image"&gt;
 		&lt;a href="#"&gt;&lt;img src="SFW40568.jpeg" alt=""&gt;&lt;/a&gt;
 	&lt;/div&gt;
@@ -794,54 +362,7 @@
 			&lt;div class="artist"&gt;Stanley and the Ten Sleepless Nights&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-      </div>
-    </div>
-  </div>
-  <!-- Image Gallery Card-->
-  <div class="codeblock"><a id="image-gallery" class="anchor-link"></a>
-    <div class="row">
-      <div class="col-sm-8">
-        <h3 class="section-subtitle">Image Gallery</h3>
-      </div>
-      <?php snippet('show-html'); ?>
-      <?php snippet('show-sass'); ?>
-    </div>
-    <div class="row">
-      <?php $image_gallery_page = $pages->find('cards')->children()->find('image-gallery'); ?>
-      <?php $gallery_img = $image_gallery_page->image('slide1.jpg'); ?>
-      <div class="image-gallery col-sm-5">
-        <!-- first slide visible with gallery icon-->
-        <div class="center-box">
-          <div class="modal-trigger"><img src="<?= $gallery_img->url() ?>" alt="Gallery image" class="gallery-thumbnail"/></div>
-          <div class="icon-gallery"></div>
-        </div>
-        <ul class="gallery-list">
-          <?php foreach($image_gallery_page->images()->filterBy('filename', '*=', 'slide') as $image): ?>
-          <div class="gallery-image">
-            <div class="gallery-image-inner"><img src="<?= $image->url() ?>" alt="Gallery image"/></div>
-          </div>
-          <?php endforeach; ?>
-        </ul>
-        <ul class="gallery-list-captions">
-          <?php foreach($image_gallery_page->images()->filterBy('filename', '*=', 'slide') as $image): ?>
-          <div class="gallery-caption">
-            <div class="remodal-description">
-              <?php echo $image->caption(); ?></div>
-            <div class="remodal-credit">
-              <?php echo $image->credit(); ?></div>
-          </div>
-          <?php endforeach; ?>
-        </ul>
-      </div>
-      <div class="col-xs-12 visible-xs">
-        <?php snippet('show-html-mobile'); ?>
-        <?php snippet('show-sass-mobile'); ?>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-12">
-        <pre class="sass"><code>/* icon font characters (fontastic.me) from ../common/css/vd-icons.scss 
+&lt;/div&gt;</code></pre></div></div></div><!-- Image Gallery Card--><div class="codeblock"><a id="image-gallery" class="anchor-link"></a><div class="row"><div class="col-sm-8"><h3 class="section-subtitle">Image Gallery</h3></div><?php snippet('show-html'); ?><?php snippet('show-sass'); ?></div><div class="row"><?php $image_gallery_page = $pages->find('cards')->children()->find('image-gallery'); ?><?php $gallery_img = $image_gallery_page->image('slide1.jpg'); ?><div class="image-gallery col-sm-5"><!-- first slide visible with gallery icon--><div class="center-box"><div class="modal-trigger"><img src="<?= $gallery_img->url() ?>" alt="Gallery image" class="gallery-thumbnail"/></div><div class="icon-gallery"></div></div><ul class="gallery-list"><?php foreach($image_gallery_page->images()->filterBy('filename', '*=', 'slide') as $image): ?><div class="gallery-image"><div class="gallery-image-inner"><img src="<?= $image->url() ?>" alt="Gallery image"/></div></div><?php endforeach; ?></ul><ul class="gallery-list-captions"><?php foreach($image_gallery_page->images()->filterBy('filename', '*=', 'slide') as $image): ?><div class="gallery-caption"><div class="remodal-description"><?php echo $image->caption(); ?></div><div class="remodal-credit"><?php echo $image->credit(); ?></div></div><?php endforeach; ?></ul></div><div class="col-xs-12 visible-xs"><?php snippet('show-html-mobile'); ?><?php snippet('show-sass-mobile'); ?></div></div><div class="row"><div class="col-sm-12"><pre class="sass"><code>/* icon font characters (fontastic.me) from ../common/css/vd-icons.scss 
 -------------------------------------------------- */
 .icon-gallery:before {
     content: "\44";
@@ -994,10 +515,7 @@
 	}
 }
 
-/* ...all other styles inherited from video popup */</code></pre>
-      </div>
-      <div class="col-sm-12">
-        <pre class="html"><code>&lt;div class="image-gallery col-sm-5"&gt;
+/* ...all other styles inherited from video popup */</code></pre></div><div class="col-sm-12"><pre class="html"><code>&lt;div class="image-gallery col-sm-5"&gt;
 	&lt;!--first slide visible, gallery icon--&gt;
 	&lt;div class="center-box"&gt;
 		&lt;div class="modal-trigger"&gt;&lt;img src="//localhost:3007/content/5-cards/1-image-gallery/slide1.jpg" alt="Gallery image" class="gallery-thumbnail"&gt;&lt;/div&gt;
@@ -1081,8 +599,4 @@
 			&lt;div class="remodal-credit"&gt;Photo by Eneko Uribe&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/ul&gt;
-&lt;/div&gt;</code></pre>
-      </div>
-    </div>
-  </div>
-</section>
+&lt;/div&gt;</code></pre></div></div></div></section>

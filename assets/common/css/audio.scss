@@ -304,6 +304,10 @@ $horizontalMobilePlayHeight: 8vw;
 }
 .horizontal-audio-card {
 	position: relative; // contain abs border
+	// show play button on card hover (timeline exempt because z-index above)
+	&:hover .details .mejs-controls .mejs-playpause-button {
+		display: inline-block;
+	}
 	.image {
 		padding-right: 0; // snuggle with details box
 	}
@@ -339,14 +343,10 @@ $horizontalMobilePlayHeight: 8vw;
 			@include respond-to(break2) {font-size:0.9vw;}
 			@include respond-to(fullwidth) {font-size:1.4rem;}
 		}
+		.mejs-playpause-button {
+			display: none;
+		}
 		.mejs-playpause-button, .mejs-playpause-button button, .mejs-playpause-button button:before, .mejs-playpause-button button:after {
-			// @include width(4.5);
-			// @include height(4.5);
-			// @include respond-to(break2max) {
-			// 	width: $horizontalMobilePlayWidth;
-			// 	height: $horizontalMobilePlayHeight;
-			// }
-
 			@include respond-to(break2full) {
 				width:2.88vw;
 				height:2.88vw;}

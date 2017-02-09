@@ -15358,6 +15358,10 @@ body {
 	position: relative;
 }
 
+.horizontal-audio-card:hover .details .mejs-controls .mejs-playpause-button {
+	display: inline-block;
+}
+
 .horizontal-audio-card .image {
 	padding-right: 0;
 }
@@ -15480,6 +15484,10 @@ body {
 	.horizontal-audio-card .mejs-controls div {
 		font-size: 1.4rem;
 	}
+}
+
+.horizontal-audio-card .mejs-controls .mejs-playpause-button {
+	display: none;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {

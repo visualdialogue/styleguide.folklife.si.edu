@@ -9,30 +9,30 @@
 /* Imports
 -------------------------------------------------- */
 	@charset "UTF-8";
-	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/fonts.scss";
-	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/vd-icons.scss";
-	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/plugins/remodal/dist/remodal.scss";
-	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/plugins/remodal/dist/remodal-default-theme.scss";
-	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/plugins/slick-carousel/slick/slick.scss";
-	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/plugins/slick-carousel/slick/slick-theme.scss";
-	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/plugins/mediaelement/build/mediaelementplayer.min.scss";
-	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/bootstrap.scss"; // get custom bootstrap built with less
-	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/reset.scss";
-	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/dimensions.scss";
-	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/media-queries.scss";
-	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/colors.scss";
+	@import "../../../../assets/common/css/fonts.scss";
+	@import "../../../../assets/common/css/vd-icons.scss";
+	@import "../../../../assets/plugins/remodal/dist/remodal.scss";
+	@import "../../../../assets/plugins/remodal/dist/remodal-default-theme.scss";
+	@import "../../../../assets/plugins/slick-carousel/slick/slick.scss";
+	@import "../../../../assets/plugins/slick-carousel/slick/slick-theme.scss";
+	@import "../../../../assets/plugins/mediaelement/build/mediaelementplayer.min.scss";
+	@import "../../../../assets/common/css/bootstrap.scss"; // get custom bootstrap built with less
+	@import "../../../../assets/common/css/reset.scss";
+	@import "../../../../assets/common/css/dimensions.scss";
+	@import "../../../../assets/common/css/media-queries.scss";
+	@import "../../../../assets/common/css/colors.scss";
 	$hover: $fs-hover; // local colors must be set to this site after inherit global colors and before apply to global rules
-	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/type.scss";
-	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/icons.scss";
-	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/links.scss";
-	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/mixins.scss";
-	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/nav.scss";
-	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/general.scss";
-	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/footer.scss";
-	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/article.scss";
-	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/cards.scss";
-	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/program.scss";
-	@import "../../../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/audio.scss"; // after cards for cascading overrides
+	@import "../../../../assets/common/css/type.scss";
+	@import "../../../../assets/common/css/icons.scss";
+	@import "../../../../assets/common/css/links.scss";
+	@import "../../../../assets/common/css/mixins.scss";
+	@import "../../../../assets/common/css/nav.scss";
+	@import "../../../../assets/common/css/general.scss";
+	@import "../../../../assets/common/css/footer.scss";
+	@import "../../../../assets/common/css/article.scss";
+	@import "../../../../assets/common/css/cards.scss";
+	@import "../../../../assets/common/css/program.scss";
+	@import "../../../../assets/common/css/audio.scss"; // after cards for cascading overrides
 
 /* links
 -------------------------------------------------- */

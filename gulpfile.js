@@ -1,80 +1,79 @@
 'use strict';
 var  browserSync = require('browser-sync').create(),
-            gulp = require('gulp'),
-            sass = require('gulp-sass'),
-          concat = require('gulp-concat'),
-          rename = require('gulp-rename'),
-          uglify = require('gulp-uglify'),
-         plumber = require('gulp-plumber'),
-            jade = require('gulp-jade'),
-         jadephp = require('gulp-jade-php'),
-         changed = require('gulp-changed'),
-          reload = browserSync.reload; // Save a reference to the `reload` method
+			gulp = require('gulp'),
+			sass = require('gulp-sass'),
+		  concat = require('gulp-concat'),
+		  rename = require('gulp-rename'),
+		  uglify = require('gulp-uglify'),
+		 plumber = require('gulp-plumber'),
+			jade = require('gulp-jade'),
+		 jadephp = require('gulp-jade-php'),
+		 changed = require('gulp-changed'),
+		  reload = browserSync.reload; // Save a reference to the `reload` method
 
 // uglify and concat all js library dependancies
 gulp.task('plugins', function() {  
   return gulp.src([
-      './assets/bower_components/slick-carousel/slick/slick.min.js',
-      './assets/bower_components/remodal/dist/remodal.min.js',
-      './assets/bower_components/vimeo-player-js/dist/player.min.js',
-      './assets/bower_components/mediaelement/build/mediaelement-and-player.min.js',
-      './assets/bower_components/matchHeight/dist/jquery.matchHeight-min.js',
-      './assets/bower_components/viewport-units-buggyfill/viewport-units-buggyfill.min.js', // for customizing dropdowns (eg. folkways magazine)
-      './assets/bower_components/preparetransition.min.js', // for customizing dropdowns (eg. folkways magazine)
-    ])
-    .pipe(concat('common-plugins.js'))
-    .pipe(gulp.dest([
-      '../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/js'
-    ]))
+	  './assets/bower_components/slick-carousel/slick/slick.min.js',
+	  './assets/bower_components/remodal/dist/remodal.min.js',
+	  './assets/bower_components/vimeo-player-js/dist/player.min.js',
+	  './assets/bower_components/mediaelement/build/mediaelement-and-player.min.js',
+	  './assets/bower_components/matchHeight/dist/jquery.matchHeight-min.js',
+	  './assets/bower_components/viewport-units-buggyfill/viewport-units-buggyfill.min.js', // for customizing dropdowns (eg. folkways magazine)
+	  './assets/bower_components/preparetransition.min.js', // for customizing dropdowns (eg. folkways magazine)
+	])
+	.pipe(concat('common-plugins.js'))
+	.pipe(gulp.dest([
+	  '../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/js'
+	]))
 });
 
 // html
 gulp.task('jade', function() {
   gulp.src('./site/**/*.jade')
-    .pipe(changed('./site', {extension: '.php'}))
-    .pipe(plumber())
-    .pipe(jadephp({
-      pretty: true,
-     }))
-     .pipe(gulp.dest('./site'))
+	.pipe(changed('./site', {extension: '.php'}))
+	.pipe(plumber())
+	.pipe(jadephp())
+	.pipe(gulp.dest('./site'))
+	.pipe(browserSync.stream())
 });
 
 // common html
 gulp.task('jade-common', function() {
   gulp.src('./site/common/*.jade')
   // gulp.src('./site/**/*.jade')
-    .pipe(changed('./site/common', {extension: '.php'}))
-    .pipe(plumber())
-    .pipe(jadephp({
-      pretty: true,
-     }))
-     .pipe(gulp.dest('./site/snippets'));
+	.pipe(changed('./site/common', {extension: '.php'}))
+	.pipe(plumber())
+	.pipe(jadephp({
+	  pretty: true,
+	 }))
+	 .pipe(gulp.dest('./site/snippets'));
 });
 
 // copy for keeping blueprint files similar
 gulp.task('copy', function() {
-    gulp.src('../../styleguide.folklife.si.edu/code/site/common/blueprints/*.yml')
-      .pipe(gulp.dest('./site/blueprints/'))
-    gulp.src('../../styleguide.folklife.si.edu/code/site/common/controllers/*.php')
-      .pipe(gulp.dest('./site/controllers/'))
-    gulp.src('../../styleguide.folklife.si.edu/code/site/common/**/*.php')
-      .pipe(gulp.dest('./site'));
+	gulp.src('../../styleguide.folklife.si.edu/code/site/common/blueprints/*.yml')
+	  .pipe(gulp.dest('./site/blueprints/'))
+	gulp.src('../../styleguide.folklife.si.edu/code/site/common/controllers/*.php')
+	  .pipe(gulp.dest('./site/controllers/'))
+	gulp.src('../../styleguide.folklife.si.edu/code/site/common/**/*.php')
+	  .pipe(gulp.dest('./site'));
 });
 
 /**********
 * compile styleguide sass
 **********/
 gulp.task('styles', function() {
-    gulp.src('assets/css/styleguide.scss')
-        .pipe(plumber())
-        .pipe(sass({
-            errLogToConsole: true,
-            outputStyle: 'expanded',
-            indentType: 'tab',
-            indentWidth: '1'
-        }))
-        .pipe(gulp.dest('themes/styleguide/assets/css/'))
-        .pipe(browserSync.stream());
+	gulp.src('themes/styleguide/assets/css/styleguide.scss')
+		.pipe(plumber())
+		.pipe(sass({
+			errLogToConsole: true,
+			outputStyle: 'expanded',
+			indentType: 'tab',
+			indentWidth: '1'
+		}))
+		.pipe(gulp.dest('themes/styleguide/assets/css/'))
+		.pipe(browserSync.stream());
 });
 
 /**********
@@ -85,10 +84,10 @@ gulp.task('styles', function() {
 **********/
 gulp.task('copy-sass', function() {
   gulp.src('assets/common/css/*.scss')
-    .pipe(plumber())
-    .pipe(gulp.dest('../../toby/folklife/src/Orchard.Web/Themes/Folklife/Assets/common/css'))
-    .pipe(gulp.dest('../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css'))
-    .pipe(gulp.dest('../../toby/folkways/src/Orchard.Web/Themes/Folkways/Assets/common/css'))
+	.pipe(plumber())
+	.pipe(gulp.dest('../../toby/folklife/src/Orchard.Web/Themes/Folklife/Assets/common/css'))
+	.pipe(gulp.dest('../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css'))
+	.pipe(gulp.dest('../../toby/folkways/src/Orchard.Web/Themes/Folkways/Assets/common/css'))
 })
 
 /**********
@@ -99,10 +98,10 @@ gulp.task('copy-sass', function() {
 **********/
 gulp.task('copy-js', function() {
   gulp.src('assets/common/js/*.js')
-    .pipe(plumber())
-    .pipe(gulp.dest('../../toby/folklife/src/Orchard.Web/Themes/Folklife/Assets/common/js'))
-    .pipe(gulp.dest('../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/js'))
-    .pipe(gulp.dest('../../toby/folkways/src/Orchard.Web/Themes/Folkways/Assets/common/js'))
+	.pipe(plumber())
+	.pipe(gulp.dest('../../toby/folklife/src/Orchard.Web/Themes/Folklife/Assets/common/js'))
+	.pipe(gulp.dest('../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/js'))
+	.pipe(gulp.dest('../../toby/folkways/src/Orchard.Web/Themes/Folkways/Assets/common/js'))
 })
 
 // less for bootstrap
@@ -111,23 +110,22 @@ var path = require('path');
  
 gulp.task('less', function () {
   return gulp.src('assets/bower_components/bootstrap/less/bootstrap.less')
-    .pipe(less())
-    .pipe(rename('bootstrap.scss'))
-    .pipe(gulp.dest('assets/common/css/'));
+	.pipe(less())
+	.pipe(rename('bootstrap.scss'))
+	.pipe(gulp.dest('assets/common/css/'));
 });
 
 // custom js
 gulp.task('js', function() {
   // return gulp.src('/bdc/js/scripts.js')
   return gulp.src([
-      '../../styleguide.folklife.si.edu/code/themes/styleguide/assets/common/js/common-plugins.js',
-      '../../styleguide.folklife.si.edu/code/themes/styleguide/assets/common/js/common-scripts.js',
-      '../../toby/folklife/src/Orchard.Web/Themes/Folklife/Scripts/scripts.js', // local scripts
-      './assets/js/scripts.js'
-    ])
-    .pipe(concat('styleguide.js'))
-    .pipe(gulp.dest('themes/styleguide/assets/js/'));
-    // gulp.watch('/js/scripts.js',['scripts']);
+	  '../../styleguide.folklife.si.edu/code/assets/common/js/common-plugins.js',
+	  '../../styleguide.folklife.si.edu/code/assets/common/js/common-scripts.js',
+	  'assets/js/scripts.js'
+	])
+	.pipe(concat('styleguide.js'))
+	.pipe(gulp.dest('themes/styleguide/assets/js/'));
+	// gulp.watch('/js/scripts.js',['scripts']);
 });
 // create a task that ensures the `templates` and `js` tasks are completed before
 
@@ -139,33 +137,34 @@ gulp.task('js-watch', ['js'], browserSync.reload);
 gulp.task('serve', ['jade', 'styles', 'js'], function() {
 
   browserSync.init({
-      proxy     : "styleguide.folklife.loc:3000",
-      xip       : true,
-      open      : false,
-      notify    : false,
-      ghostMode : false,
-      minify    : true,
+	  proxy     : "styleguide.folklife.loc:3000",
+	  xip       : true,
+	  open      : false,
+	  notify    : false,
+	  ghostMode : false,
+	  minify    : true,
   });
 
-    // gulp.watch('site/**/*.jade',['jade-watch']);
-    gulp.watch('site/**/*.jade',['jade']);
-    // gulp.watch('site/common/*.jade',['jade-common']);
-    gulp.watch('bower_components/bootstrap/less/*.less',['less']);
-    gulp.watch('site/common/blueprints/*.yml',['copy']);
-    gulp.watch('site/common/**/*.php',['copy']);
-    gulp.watch('assets/**/*.scss',['styles','copy-sass']);
-    // gulp.watch('../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/*.scss',['styles']);
-    gulp.watch('assets/js/*.js',['js-watch','copy-js']);
-    gulp.watch('../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/js/common-scripts.js',['js-watch']);
-    // gulp.watch('*.html').on('change', browserSync.reload);
-    // gulp.watch('site/**/*.jade',['jade-watch']);
-    // gulp.watch('site/**/*.jade',['jade']);
-    // gulp.watch('assets/js/scripts-min.js').on('change', browserSync.reload);
-    // gulp.watch("/bdc/**/*.html").on('change', browserSync.reload);
-    // gulp.watch("content/**/*.txt").on('change', browserSync.reload);
-    // gulp.watch("*.php").on('change', browserSync.reload);
-    // gulp.watch("content/**/*.txt").on('change', browserSync.reload);
-    // gulp.watch('/bdc/js/*.js').on('change', browserSync.reload);
+	// gulp.watch('site/**/*.jade',['jade-watch']);
+	gulp.watch('site/**/*.jade',['jade']);
+	// gulp.watch('site/common/*.jade',['jade-common']);
+	gulp.watch('bower_components/bootstrap/less/*.less',['less']);
+	gulp.watch('site/common/blueprints/*.yml',['copy']);
+	gulp.watch('site/common/**/*.php',['copy']);
+	gulp.watch('assets/common/css/*.scss',['styles','copy-sass']);
+	gulp.watch('themes/styleguide/assets/css/*.scss',['styles']);
+	// gulp.watch('../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/*.scss',['styles']);
+	gulp.watch('assets/js/*.js',['js-watch','copy-js']);
+	gulp.watch('../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/js/common-scripts.js',['js-watch']);
+	// gulp.watch('*.html').on('change', browserSync.reload);
+	// gulp.watch('site/**/*.jade',['jade-watch']);
+	// gulp.watch('site/**/*.jade',['jade']);
+	// gulp.watch('assets/js/scripts-min.js').on('change', browserSync.reload);
+	// gulp.watch("/bdc/**/*.html").on('change', browserSync.reload);
+	// gulp.watch("content/**/*.txt").on('change', browserSync.reload);
+	// gulp.watch("*.php").on('change', browserSync.reload);
+	// gulp.watch("content/**/*.txt").on('change', browserSync.reload);
+	// gulp.watch('/bdc/js/*.js').on('change', browserSync.reload);
 });
 
 // gulp.task('default', ['usedCSS', 'critical', 'imagemin']);
