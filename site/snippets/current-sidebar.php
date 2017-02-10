@@ -30,14 +30,36 @@
 			<a href="/west-african-song-chants-childrens-ghana/music/tools-for-teaching/smithsonian"><img src="http://www.folkways.si.edu/images/magazine/2016_summer_fall/lesson-plan-wast-african-song.jpg" alt="West African Song and Chants - Children’s Music from Ghana" width="100%"></a>
 			<p class="caption">Lesson plan: <a href="/west-african-song-chants-childrens-ghana/music/tools-for-teaching/smithsonian">"West African Song and Chants - Children’s Music from Ghana"</a> by Karen Howard</p>
 		</div>
+		
+		<!--PODCAST-->
+		<div class="hidden-xs top-twenty top-forty">
+			<div class="top-forty"><img class="block" src="http://www.folkways.si.edu/images/magazine/index/audio.png" alt="Audio" height="9" width="52"></div>
+			<div class="audio-sample-grey">
+				<div class="single" style="height: 70px">
+					<a href="/sounds-to-grow-on-childrens-music-program-21/music/podcast/smithsonian" target="_blank"><img src="http://www.folkways.si.edu/images/explore_folkways/podcasts/230-sounds.jpg" alt="" class="cover" height="70" width="70"></a>
+					<p>Sounds to Grow On - Children's Music (Program #21)</p>
+					<div id="__PKLOVERCOATID0" class="PKL_wrapper">
+						<div data-media="http://media.smithsonianfolkways.org/audio/podcasts/sounds_to_grow_on/ChildrensMusic(Program_21)Smithsonian_Folkways_Sounds_to_Grow_On.mp3" id="PKL_PLAYER" style="position: relative; float: left; display: block; width: 130px; height: 13px;">
+							<div class="PKL_controlsBkgd" id="__PKLDYNID0">
+								<div class="PKL_scrubBkgd" id="__PKLDYNID1">
+									<div class="PKL_scrubHandle" id="__PKLDYNID2" style="pointer-events: none; left: 0px;"></div>
+									<div class="PKL_loading" id="__PKLDYNID3" style="visibility: hidden;"></div>
+									<div class="PKL_scrubBar" id="__PKLDYNID4" style="pointer-events: none; width: 0%;"></div>
+								</div>
+								<div class="PKL_playpause" id="__PKLDYNID5"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<!-- sidebar audio player test -->
-		<div class="visible-md visible-lg top-forty">
-			<div class="tag">Podcast</div>
+		<div class="visible-md visible-lg">
 			<div class="card audio-card horizontal-audio-card horizontal-audio-card-playlist full-border-horizontal-card">
 				<div class="row">
 					<div class="image col-xs-3">
-						<a href="#"><img src="<?= $pages->find('explore')->children()->find('sounds')->children()->find('quelbe-music-of-the-u-s-virgin-islands')->image()->url() ?>" alt=""></a>
+						<img src="<?= $pages->find('explore')->children()->find('sounds')->children()->find('quelbe-music-of-the-u-s-virgin-islands')->image()->url() ?>" alt="">
 					</div>
 					<div class="details col-xs-9">
 						<div class="details-inner" style="">
@@ -55,11 +77,10 @@
 			</div>
 		</div>
 
-		<div class="row visible-xs visible-sm top-forty">
+		<div class="row visible-xs visible-sm">
 			<div class="card audio-card tall-audio-card col-xs-12 card-xs-break-2 full-border-card">
-				<div class="tag">Podcast</div>
 				<div class="image">	
-					<a href="#"><img src="<?= $pages->find('explore')->children()->find('sounds')->children()->find('quelbe-music-of-the-u-s-virgin-islands')->image()->url() ?>" alt=""></a>
+					<img src="<?= $pages->find('explore')->children()->find('sounds')->children()->find('quelbe-music-of-the-u-s-virgin-islands')->image()->url() ?>" alt="">
 				</div>
 				<div class="details">
 					<div class="details-inner">
@@ -84,31 +105,8 @@
 				</div>
 			</div>
 		</div>
-		
 
 
-		<!--PODCAST-->
-		<div class="hidden-xs top-twenty top-forty">
-			<div class="top-forty"><img class="block" src="http://www.folkways.si.edu/images/magazine/index/audio.png" alt="Audio" height="9" width="52"></div>
-			<div class="audio-sample-grey">
-				<div class="single" style="height: 70px">
-					<a href="/sounds-to-grow-on-childrens-music-program-21/music/podcast/smithsonian" target="_blank"><img src="http://www.folkways.si.edu/images/explore_folkways/podcasts/230-sounds.jpg" alt="" class="cover" height="70" width="70"></a>
-					<p>Sounds to Grow On - Children's Music (Program #21)</p>
-					<div id="__PKLOVERCOATID0" class="PKL_wrapper">
-						<div data-media="http://media.smithsonianfolkways.org/audio/podcasts/sounds_to_grow_on/ChildrensMusic(Program_21)Smithsonian_Folkways_Sounds_to_Grow_On.mp3" id="PKL_PLAYER" style="position: relative; float: left; display: block; width: 130px; height: 13px;">
-							<div class="PKL_controlsBkgd" id="__PKLDYNID0">
-								<div class="PKL_scrubBkgd" id="__PKLDYNID1">
-									<div class="PKL_scrubHandle" id="__PKLDYNID2" style="pointer-events: none; left: 0px;"></div>
-									<div class="PKL_loading" id="__PKLDYNID3" style="visibility: hidden;"></div>
-									<div class="PKL_scrubBar" id="__PKLDYNID4" style="pointer-events: none; width: 0%;"></div>
-								</div>
-								<div class="PKL_playpause" id="__PKLDYNID5"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 		<div class="hidden-xs">
 			<!-- SLIDES 1-->
 			<!-- DELETE top-twenty and top-forty from .slideshow div because .tag above will push up too high -->

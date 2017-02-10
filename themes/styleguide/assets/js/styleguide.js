@@ -799,7 +799,8 @@ $(document).ready(function () {
 * When click +
 *********************/
 	// for any program page image
-	if (site.$body.hasClass('program-page') || site.$body.hasClass('program-category-page') || site.$body.hasClass('general-page') || site.$body.hasClass('lesson-plan-page') || site.$body.hasClass('blog-article-page')) {
+	// if (site.$body.hasClass('program-page') || site.$body.hasClass('program-category-page') || site.$body.hasClass('general-page') || site.$body.hasClass('lesson-plan-page') || site.$body.hasClass('blog-article-page')) {
+	// work on all pages until run into conflict with figure tag
 		var $figcaption = $('.container').find('figcaption'); // get all figures on the page
 		// console.log('figure loaded');
 		// if click on figure, show figcaption
@@ -817,7 +818,7 @@ $(document).ready(function () {
 				$this.removeClass('minus-sign');// add minus sign
 			}
 		})
-	}
+	// }
 
 /**********
 * Match Heights

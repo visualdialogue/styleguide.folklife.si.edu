@@ -48,9 +48,17 @@
 &lt;/div&gt;
 
 
-</code></pre></div></div></div><!-- Figure with Caption--><div class="codeblock"><a id="figure-with-caption" class="anchor-link"></a><div class="row"><div class="col-sm-8"><h3 class="section-subtitle">Figure with Caption</h3></div><?php snippet('show-html'); ?><?php snippet('show-sass'); ?></div><div class="row"><?php $src = $section->image('figure-with-caption.jpg'); ?><div class="col-sm-5"><figure><img src="<?= $src->url() ?>" alt="<?= $page->title() ?>" class="ms-header-image"/><?php if($caption = $src->caption()->kt()): ?><figcaption><?php echo $caption; ?><?php if($credit = $src->credit()->kt()): ?><div class="credit"><?php echo $credit; ?></div><?php endif; ?></figcaption><?php endif; ?></figure></div><div class="col-xs-12 visible-xs"><?php snippet('show-html-mobile'); ?><?php snippet('show-sass-mobile'); ?></div></div><div class="row"><div class="col-sm-12"><pre class="sass"><code>/* icon font characters (fontastic.me) from ../common/css/vd-icons.scss 
--------------------------------------------------- */
-.icon-gallery:before {
+</code></pre></div></div></div><!-- Figure with Caption--><div class="codeblock"><a id="figure-with-caption" class="anchor-link"></a><div class="row"><div class="col-sm-8"><h3 class="section-subtitle">Figure with Caption</h3></div><?php snippet('show-html'); ?><?php snippet('show-sass'); ?></div><div class="row"><?php $src = $section->image('figure-with-caption.jpg'); ?><div class="col-sm-5"><figure><img src="<?= $src->url() ?>" alt="<?= $page->title() ?>" class="ms-header-image"/><?php if($caption = $src->caption()->kt()): ?><figcaption><?php echo $caption; ?><?php if($credit = $src->credit()->kt()): ?><div class="credit"><?php echo $credit; ?></div><?php endif; ?></figcaption><?php endif; ?></figure><div class="row"><div class="col-sm-12 visible-xs"><?php snippet('show-html-mobile'); ?><?php snippet('show-sass-mobile'); ?></div></div></div><div class="col-sm-7"><pre class="sass"><code>// too many rules to list. See general.scss</code></pre></div><div class="col-sm-7"><pre class="html"><code>&lt;div class="col-sm-5"&gt;
+	&lt;figure&gt;
+		&lt;img src="//127.0.0.1.xip.io:3007/content/5-cards/figure-with-caption.jpg" alt="Home" class="ms-header-image"&gt;
+		&lt;figcaption&gt;
+			&lt;p&gt;A blacksmith heats his iron in a traditional forge before demonstrating the technique for shaping the metal.&LT;/p&gt;
+			&lt;div class="credit"&gt;
+				&lt;p&gt;Photo by Anne Pedersen, Ralph Rinzler Folklife Archives&LT;/p&gt;
+			&lt;/div&gt;
+		&lt;/figcaption&gt;
+	&lt;/figure&gt;
+&lt;/div&gt;
 </code></pre></div></div></div><!-- Horizontal Card--><div class="codeblock"><div class="row"><div class="col-sm-8"><h3 class="section-subtitle">Horizontal Card</h3></div><?php snippet('show-html'); ?><?php snippet('show-sass'); ?></div><div class="row"><div class="card horizontal-card folkways-magazine-card col-xs-12 col-sm-6 top-border-card"><div class="row"><div class="image col-xs-6"><a href="#"><?php echo $section->image('horizontal.png'); ?></a></div><div class="details col-xs-6"><div class="details-inner"><div class="tag">Recording Spotlight</div><a href="#" class="high title"><span class="light"><span class="er">Rasta Sounds</span></span></a><div class="description link-underline"><p>The global African Diaspora has often searched through music for a “post-racist utopia.”</p></div></div></div></div><div class="row"><div class="col-sm-12 visible-xs"><?php snippet('show-html-mobile'); ?><?php snippet('show-sass-mobile'); ?></div></div></div><div class="col-sm-6"><pre class="sass"><code>.folkways-magazine-card {
 	.tag {
 		// mobile only
@@ -295,28 +303,7 @@
 	&lt;/div&gt;
 &lt;/div&gt;
 </code></pre></div><div class="col-md-8"><pre class="sass"><code>// audio styles are too long to list here and have their own SASS file called audio.scss
-// the only difference here is the .horizontal-audio-card-playlist class overrides certain styles of the .horizontal-audio-card class</code></pre></div></div></div><!-- Horizontal Audio Card — Playlist (Magazine)--><div class="codeblock"><a id="horizontal-audio-card-playlist" class="anchor-link"></a><div class="row"><div class="col-sm-8"><h3 class="section-subtitle">Horizontal Audio Card — Playlist (Magazine)</h3></div><?php snippet('show-html'); ?><?php snippet('show-sass'); ?></div><div class="row visible-xs visible-sm"><div class="card col-sm-4"><p>Swap horizontal card with tall card for this size</p></div></div><div class="row"><div class="magazine-article-page"><div class="card audio-card horizontal-audio-card horizontal-audio-card-playlist full-border-horizontal-card col-sm-4 visible-md visible-lg"><div class="row"><div class="image col-xs-3"><a href="#"><?php echo $section->image('audio.png'); ?></a></div><div class="details col-xs-9"><div class="details-inner"><div class="title-wrapper"><a href="#" class="high title"><span class="light"><span class="er">Quelbe!</span></span></a><div class="artist">Stanley and the Ten Sleepless Nights</div></div><div class="audio-player"><audio class="mejs-player" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'></div></div></div></div></div></div><div class="col-xs-12 visible-xs"><?php snippet('show-html-mobile'); ?><?php snippet('show-sass-mobile'); ?></div><div class="col-md-8"><pre class="html"><code>&lt;!-- this must come under the page with body class of .magazine-article-page --&gt;
-&lt;div class="card audio-card horizontal-audio-card horizontal-audio-card-playlist full-border-horizontal-card col-sm-4 visible-md visible-lg"&gt;
-	&lt;div class="row"&gt;
-		&lt;div class="image col-xs-3"&gt;
-			&lt;a href="#"&gt;&lt;img src="/210x210.jpg" alt=""&gt;&lt;/a&gt;
-		&lt;/div&gt;
-		&lt;div class="details col-xs-9"&gt;
-			&lt;div class="details-inner" style=""&gt;
-				&lt;div class="title-wrapper"&gt;
-					&lt;a href="#" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;Quelbe!&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
-					&lt;div class="artist"&gt;Stanley and the Ten Sleepless Nights&lt;/div&gt;
-				&lt;/div&gt;
-				&lt;div class="audio-player"&gt;
-					&lt;audio class="mejs-player" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'&gt;
-					&lt;!-- mejs media player will build itself on page load and we wrap a few key elements in common-scripts.js --&gt;
-				&lt;/div&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-</code></pre></div><div class="col-md-8"><pre class="sass"><code>// audio styles are too long to list here and have their own SASS file called audio.scss
-// the border color is changed if this player exists on a page with a body class of .magazine-article-page</code></pre></div></div></div><!-- Vinyl Card--><div class="codeblock"><div class="row"><div class="col-sm-8"><h3 class="section-subtitle">Vinyl Card</h3></div><?php snippet('show-html'); ?><?php snippet('show-sass'); ?></div><div class="row"><div class="card vinyl-card col-xs-6 col-sm-3"><div class="image"><a href="#"><?php echo $section->image('fannie-lou-hamer.png'); ?></a></div><div class="details"><div class="details-inner"><a href="#" class="high title"><span class="light"><span class="er">Songs My Mother Taught Me</span></span></a><div class="artist">Fannie Lou Hamer</div></div></div></div><div class="col-xs-12 visible-xs"><?php snippet('show-html-mobile'); ?><?php snippet('show-sass-mobile'); ?></div><div class="col-sm-9"><pre class="sass"><code>.album-card, .vinyl-card, .books-card {
+// the only difference here is the .horizontal-audio-card-playlist class overrides certain styles of the .horizontal-audio-card class</code></pre></div></div></div><!-- Vinyl Card--><div class="codeblock"><div class="row"><div class="col-sm-8"><h3 class="section-subtitle">Vinyl Card</h3></div><?php snippet('show-html'); ?><?php snippet('show-sass'); ?></div><div class="row"><div class="card vinyl-card col-xs-6 col-sm-3"><div class="image"><a href="#"><?php echo $section->image('fannie-lou-hamer.png'); ?></a></div><div class="details"><div class="details-inner"><a href="#" class="high title"><span class="light"><span class="er">Songs My Mother Taught Me</span></span></a><div class="artist">Fannie Lou Hamer</div></div></div></div><div class="col-xs-12 visible-xs"><?php snippet('show-html-mobile'); ?><?php snippet('show-sass-mobile'); ?></div><div class="col-sm-9"><pre class="sass"><code>.album-card, .vinyl-card, .books-card {
 	.details-inner {
 		padding:0;
 		@include padding-top(1.7);

@@ -52,6 +52,7 @@
 			}
 			.tag {
 				@include margin-bottom(0.5);
+				font-weight: 600;
 			}
 			.caption {
 				@include margin-top(1);

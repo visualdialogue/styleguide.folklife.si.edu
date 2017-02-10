@@ -1,3 +1,4 @@
+<div class="tag">Gallery</div>
 <div class="image-gallery">
 	<!--first slide visible, gallery icon-->
 	<div class="center-box">
