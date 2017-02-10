@@ -295,13 +295,6 @@
 /* Tall Audio Card
 -------------------------------------------------- */
 .tall-audio-card {
-	.image {
-		@include border(all, 2px, $black15);
-		border-bottom: none;
-	}
-	.details-inner {
-		// border-top: none;
-	}
 }
 /* Horizontal Audio Card
 -------------------------------------------------- */

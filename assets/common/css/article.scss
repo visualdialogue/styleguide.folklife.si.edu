@@ -51,7 +51,7 @@
 				display: none !important; // hide old design element
 			}
 			.tag {
-				@include margin-bottom(1);
+				@include margin-bottom(0.5);
 			}
 			.caption {
 				@include margin-top(1);

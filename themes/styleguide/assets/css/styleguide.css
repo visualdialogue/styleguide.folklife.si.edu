@@ -11641,18 +11641,18 @@ video::-webkit-media-controls {
 }
 
 .magazine-article-page .sidebar .tag {
-	margin-bottom: 0.37037rem;
+	margin-bottom: 0.18519rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.magazine-article-page .sidebar .tag {
-		margin-bottom: 0.64vw;
+		margin-bottom: 0.32vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
 	.magazine-article-page .sidebar .tag {
-		margin-bottom: 1rem;
+		margin-bottom: 0.5rem;
 	}
 }
 
@@ -15350,11 +15350,6 @@ body {
 
 /* Tall Audio Card
 -------------------------------------------------- */
-.tall-audio-card .image {
-	border: 2px solid #d9d9d9;
-	border-bottom: none;
-}
-
 /* Horizontal Audio Card
 -------------------------------------------------- */
 .sidebar .audio-card .mejs-container {
