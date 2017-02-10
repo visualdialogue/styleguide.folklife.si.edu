@@ -154,17 +154,11 @@ gulp.task('serve', ['jade', 'styles', 'js'], function() {
 	gulp.watch('assets/common/css/*.scss',['styles','copy-sass']);
 	gulp.watch('themes/styleguide/assets/css/*.scss',['styles']);
 	// gulp.watch('../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/*.scss',['styles']);
-	gulp.watch('assets/js/*.js',['js-watch','copy-js']);
-	gulp.watch('../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/js/common-scripts.js',['js-watch']);
-	// gulp.watch('*.html').on('change', browserSync.reload);
-	// gulp.watch('site/**/*.jade',['jade-watch']);
-	// gulp.watch('site/**/*.jade',['jade']);
-	// gulp.watch('assets/js/scripts-min.js').on('change', browserSync.reload);
-	// gulp.watch("/bdc/**/*.html").on('change', browserSync.reload);
-	// gulp.watch("content/**/*.txt").on('change', browserSync.reload);
-	// gulp.watch("*.php").on('change', browserSync.reload);
-	// gulp.watch("content/**/*.txt").on('change', browserSync.reload);
-	// gulp.watch('/bdc/js/*.js').on('change', browserSync.reload);
+	gulp.watch('assets/js/*.js',['js-watch','copy-js']); // copy common plugins and scripts to toby's 3 repos until he has centralized common elements
+	gulp.watch([ // JS
+		'../../styleguide.folklife.si.edu/code/assets/common/js/*.js',
+		'themes/styleguide/assets/js/*.js'
+		],['js']);
 });
 
 // gulp.task('default', ['usedCSS', 'critical', 'imagemin']);

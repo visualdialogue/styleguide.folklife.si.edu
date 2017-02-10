@@ -80,7 +80,7 @@ $(document).ready(function () {
 
 	 	// if have children, don't follow click on mobile, so can show dropdown sections
 	 	if(site.isMobile && hasChildren) {
-	 		console.log('dont follow link mobile');
+	 		// console.log('dont follow link mobile');
 			e.preventDefault ? e.preventDefault() : e.returnValue = false; // for windows too, from http://stackoverflow.com/a/1000606
 	 	}
 
@@ -361,11 +361,11 @@ $(document).ready(function () {
 	function playYTVideo() {
 		youTubePlayer.playVideo();
 	  // player.playVideo();
-	  console.log('video started');
+	  // console.log('video started');
 	}
 	function stopYTVideo() {
 		youTubePlayer.stopVideo();
-		console.log('video stopped');
+		// console.log('video stopped');
 	}
 	// 4. The API will call this function when the video player is ready.
 	function onYouTubePlayerReady(event) {
@@ -407,9 +407,9 @@ $(document).ready(function () {
 			$remodalClose.removeClass('visually-hidden');
 
 			if(isVimeo) {
-				console.log('play vimeo');
-				console.log('vimeoPlayerIsLoaded: ', vimeoPlayerIsLoaded);
-				console.log('$videoID: ', $videoID);
+				// console.log('play vimeo');
+				// console.log('vimeoPlayerIsLoaded: ', vimeoPlayerIsLoaded);
+				// console.log('$videoID: ', $videoID);
 				$youTubeIframeWrapper.hide();
 				$vimeoIframe.show();
 				// if first time loading a video...
@@ -418,7 +418,7 @@ $(document).ready(function () {
 						width: 640,
 						autoplay: true,
 					}
-					console.log('id updated');		
+					// console.log('id updated');		
 
 				// load vimeo player once
 				if(!vimeoPlayerIsLoaded) {
@@ -429,7 +429,7 @@ $(document).ready(function () {
 				// else just reload the vimeoPlayer
 				else {
 					vimeoPlayer.loadVideo($videoID).then(function() {
-						console.log('not set');
+						// console.log('not set');
 						vimeoPlayer.play();
 					});
 				}
@@ -456,7 +456,7 @@ $(document).ready(function () {
 
 				// youtube replaces passed div id with iframe, unlive vimeo which makes child element
 				// so need to target child here
-				console.log('play youtube');
+				// console.log('play youtube');
 				youTubePlayer = new YT.Player('youtube-iframe', {
 					// height: '390',
 					// width: '640',
@@ -482,7 +482,7 @@ $(document).ready(function () {
 		if(videoPlayerIsOpen) {
 			if(isVimeo) {
 				vimeoPlayer.unload().then( function() {
-					console.log('unloaded video');
+					// console.log('unloaded video');
 				}); // reset iframe	
 			// is YouTube
 			} else {
@@ -702,11 +702,11 @@ $(document).ready(function () {
 	// for any program page image
 	if (site.$body.hasClass('program-page') || site.$body.hasClass('program-category-page') || site.$body.hasClass('general-page') || site.$body.hasClass('lesson-plan-page') || site.$body.hasClass('blog-article-page')) {
 		var $figcaption = $('.container').find('figcaption'); // get all figures on the page
-		console.log('figure loaded');
+		// console.log('figure loaded');
 		// if click on figure, show figcaption
 		// important that pointer-events have been set to none for <figure> This allows us to listen to :after element
 		$figcaption.on('click', function() {
-			console.log('show caption');
+			// console.log('show caption');
 			$this = $(this); // cache var
 			if($this.css('visibility') == 'hidden') { // if hidden, show
 				$this.css('visibility', 'visible');
@@ -832,13 +832,13 @@ $(document).ready(function () {
 	var $languageButtons = $('.language-buttons')
 	var $allLanguageButtons = $languageButtons.find('.button');
 	var numLanguages = $allLanguageButtons.length / 2;
-	console.log(numLanguages);
+	// console.log(numLanguages);
 
 	// when click any language button...
 	$allLanguageButtons.click(function() {
 		$allLanguageButtons.removeClass('is-active'); // reset all
 		var $buttonIndex = $(this).index(); // get position of this button so can change mobile or desktop buttons too
-		console.log($buttonIndex);
+		// console.log($buttonIndex);
 		// $languageButtons.children().eq($buttonIndex).addClass('is-active'); // change all
 		$languageButtons.children().eq($buttonIndex).addClass('is-active'); // activate desktop and mobile buttons for this language
 		$languageButtons.children().eq($buttonIndex + numLanguages).addClass('is-active'); // activate desktop and mobile buttons for this language
