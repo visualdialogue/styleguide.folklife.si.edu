@@ -55,52 +55,25 @@
 		</div>
 
 		<!-- sidebar audio player test -->
-		<div class="visible-md visible-lg">
-			<div class="card audio-card horizontal-audio-card horizontal-audio-card-playlist full-border-horizontal-card">
-				<div class="row">
-					<div class="image col-xs-3">
-						<img src="<?= $pages->find('explore')->children()->find('sounds')->children()->find('quelbe-music-of-the-u-s-virgin-islands')->image()->url() ?>" alt="">
-					</div>
-					<div class="details col-xs-9">
-						<div class="details-inner" style="">
-							<div class="title-wrapper">
-								<a href="#" class="high title"><span class="light"><span class="er">Quelbe!</span></span></a>
-								<div class="artist">Stanley and the Ten Sleepless Nights</div>
-							</div>
-							<div class="audio-player">
-								<audio class="mejs-player" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'>
-								<!-- mejs media player will build itself on page load and we wrap a few key elements in common-scripts.js -->
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="row visible-xs visible-sm">
-			<div class="card audio-card tall-audio-card col-xs-12 card-xs-break-2 full-border-card">
-				<div class="image">	
-					<img src="<?= $pages->find('explore')->children()->find('sounds')->children()->find('quelbe-music-of-the-u-s-virgin-islands')->image()->url() ?>" alt="">
-				</div>
-				<div class="details">
-					<div class="details-inner">
-						<div class="tag">New Release</div>
-						<div class="title-wrapper" >
-							<a class="high title" href="#">
-								<span class="light">
-									<span class="er">
-										Quelbe!
-									</span>
+		<div class="card audio-card full-border-card">
+			<div class="details">
+				<div class="details-inner">
+					<div class="tag">New Release</div>
+					<div class="title-wrapper" >
+						<a class="high title" href="#">
+							<span class="light">
+								<span class="er">
+									Quelbe!
 								</span>
-							</a>
-							<div class="artist">
-								Stanley and the Ten Sleepless Nights
-							</div>
+							</span>
+						</a>
+						<div class="artist">
+							Stanley and the Ten Sleepless Nights
 						</div>
-						<div class="audio-player">
-							<audio class="mejs-player" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'>
-							<!-- mejs media player will build itself on page load and we wrap a few key elements in common-scripts.js -->
-						</div>
+					</div>
+					<div class="audio-player">
+						<audio class="mejs-player" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'>
+						<!-- mejs media player will build itself on page load and we wrap a few key elements in common-scripts.js -->
 					</div>
 				</div>
 			</div>

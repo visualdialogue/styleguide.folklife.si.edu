@@ -443,7 +443,7 @@ section.container.cards-section
 			-snippet('show-html')
 			-snippet('show-sass')
 		.row
-			.card.audio-card.tall-audio-card.col-xs-6.col-sm-3.card-xs-break-2.full-border-card
+			.card.audio-card.col-xs-6.col-sm-3.card-xs-break-2.full-border-card
 				.image
 					a(href="#")
 						!= $section->image('audio.png')
@@ -466,6 +466,55 @@ section.container.cards-section
 								&lt;img src="/320x320.jpg"&gt;
 							&lt;/a&gt;
 						&lt;/div&gt;
+						&lt;div class="details"&gt;
+							&lt;div class="details-inner"&gt;
+								&lt;div class="tag"&gt;New Release&lt;/div&gt;
+								&lt;div class="title-wrapper" &gt;
+									&lt;a class="high title" href="#"&gt;
+										&lt;span class="light"&gt;
+											&lt;span class="er"&gt;
+												Quelbe!
+											&lt;/span&gt;
+										&lt;/span&gt;
+									&lt;/a&gt;
+									&lt;div class="artist"&gt;
+										Stanley and the Ten Sleepless Nights
+									&lt;/div&gt;
+								&lt;/div&gt;
+								&lt;div class="audio-player"&gt;
+									&lt;audio class="mejs-player" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'&gt;
+									&lt;!-- mejs media player will build itself on page load and we wrap a few key elements in common-scripts.js --&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+
+			.col-md-9
+				pre.sass: code.
+					// audio styles are too long to list here and have their own SASS file called audio.scss
+	// Horizontal Text Audio Card
+	.codeblock
+		.row
+			.col-sm-8
+				h3.section-subtitle Horizontal Text Audio Card
+			-snippet('show-html')
+			-snippet('show-sass')
+		.row
+			.card.audio-card.col-xs-12.col-sm-3.card-xs-break-2.full-border-card
+				.details
+					.details-inner
+						.tag New Release
+						.title-wrapper
+							a.high.title(href="#"): span.light: span.er Quelbe!
+							.artist Stanley and the Ten Sleepless Nights
+						.audio-player
+							<audio class="mejs-player" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'>
+			.col-xs-12.visible-xs
+				-snippet('show-html-mobile')
+				-snippet('show-sass-mobile')
+			.col-md-9
+				pre.html: code.
+					&lt;div class="card audio-card col-xs-12 col-sm-3 full-border-card"&gt;
 						&lt;div class="details"&gt;
 							&lt;div class="details-inner"&gt;
 								&lt;div class="tag"&gt;New Release&lt;/div&gt;
