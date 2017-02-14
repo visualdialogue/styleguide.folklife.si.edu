@@ -406,6 +406,23 @@ $horizontalMobilePlayHeight: 8vw;
 }
 
 // inherits many styles from .horizontal-audio-card
+
+/* Audio Playlist controls
+-------------------------------------------------- */
+.playlist-audio {
+	// override mejs css
+	width: auto !important;
+	height: auto !important;
+}
+.playlist-controls {
+	// display: none;
+	position: absolute;
+	// height: 0;
+	div {
+		display: inline-block;
+		margin-right: 20px;
+	}
+}
 .horizontal-audio-card-playlist {
 	.title-wrapper {
 		height:12vw;

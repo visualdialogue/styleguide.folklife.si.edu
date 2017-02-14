@@ -12,6 +12,48 @@ _____/  \__| \__, | _| \___| \__, | \__,_| _| \__,_| \___|     _____/  \___| _| 
 
 $(document).ready(function () {
 
+
+/*********
+* Audio card - Playlist
+* plugin from duozersk
+* https://github.com/duozersk/mep-feature-playlist
+*********/
+
+	$('.playlist-audio').mediaelementplayer({
+		pluginPath: "/path/to/shims/", 
+		success: function(mediaElement, originalNode) {
+			console.log('mejs audio created');
+		}
+	});
+	// To access player after its creation through jQuery use:
+	var playerId = $('.playlist-audio').attr('id');
+	// or $('#mediaplayer').closest('.mejs-container').attr('id') in "legacy" stylesheet
+
+	var playlistPlayer = mejs.players[playerId];
+
+	$('#pause-button').click(function() {
+		// console.log(playlistPlayer);
+		// console.log($('.playlist-audio')[0]);
+		playlistPlayer.pause();
+	});
+	// Track Skipping
+	$('#previous-button').click(function() {
+		playlistPlayer.setSrc('/assets/audio/SFW40568/SFW40568_14.mp3');
+		playlistPlayer.play();
+	})
+	$('#next-button').click(function() {
+		playlistPlayer.setSrc('/assets/audio/SFW40568/SFW40568_15.mp3');
+		playlistPlayer.play();
+	})
+	// $('.playlist-audio').mediaelementplayer({
+	// 	loop: true,
+	// 	shuffle: true,
+	// 	playlist: true,
+	// 	audioHeight: 30,
+	// 	playlistposition: 'bottom',
+	// 	features: ['playlistfeature', 'prevtrack', 'playpause', 'nexttrack', 'loop', 'shuffle', 'playlist', 'current', 'progress', 'duration', 'volume'],
+	// });
+
 /***************************
 * Nav
 ***************************/

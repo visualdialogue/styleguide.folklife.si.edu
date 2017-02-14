@@ -703,16 +703,17 @@ $(document).ready(function () {
 	};
 
 /*********
-* Sound card - Media Element JS
+* Audio card - Media Element JS
 *********/
 	// wrap time elements together after load. They don't come togethery by default and it is impossible to line them up according to the layout without having a parent wrapper.
 	// find currenttime containers and wrap them with closest duration container
-	$('.mejs-currenttime-container').each(function() {
-		// get closest duration time
-		var $durationTime = $(this).siblings('.mejs-duration-container');
-		// wrap current time and duration time in new div for correct positioning
-		$(this).add($durationTime).wrapAll('<div class="mejs-time-wrapper">');
-	});
+	// $('.mejs-currenttime-container').each(function() {
+	// 	// get closest duration time
+	// 	var $durationTime = $(this).siblings('.mejs-duration-container');
+	// 	// wrap current time and duration time in new div for correct positioning
+	// 	$(this).add($durationTime).wrapAll('<div class="mejs-time-wrapper">');
+	// });
+
 
 /*********************
 * Show figcaption
