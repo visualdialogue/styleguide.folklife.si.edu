@@ -14,13 +14,15 @@ var  browserSync = require('browser-sync').create(),
 // uglify and concat all js library dependancies
 gulp.task('plugins', function() {  
   return gulp.src([
-	  './assets/bower_components/slick-carousel/slick/slick.min.js',
-	  './assets/bower_components/remodal/dist/remodal.min.js',
-	  './assets/bower_components/vimeo-player-js/dist/player.min.js',
-	  './assets/bower_components/mediaelement/build/mediaelement-and-player.min.js',
-	  './assets/bower_components/matchHeight/dist/jquery.matchHeight-min.js',
-	  './assets/bower_components/viewport-units-buggyfill/viewport-units-buggyfill.min.js', // for customizing dropdowns (eg. folkways magazine)
-	  './assets/bower_components/preparetransition.min.js', // for customizing dropdowns (eg. folkways magazine)
+	  './assets/common/js/plguins/plugins/slick-carousel/slick/slick.min.js',
+	  './assets/common/js/plguins/plugins/remodal/dist/remodal.min.js',
+	  './assets/common/js/plguins/plugins/vimeo-player-js/dist/player.min.js',
+	  './assets/common/js/plguins/plugins/mediaelement/build/mediaelement-and-player.min.js',
+	  './assets/common/js/plguins/plugins/matchHeight/dist/jquery.matchHeight-min.js',
+	  './assets/common/js/plguins/plugins/viewport-units-buggyfill/viewport-units-buggyfill.min.js', // for customizing dropdowns (eg. folkways magazine)
+	  './assets/common/js/plguins/plugins/preparetransition.min.js', // for customizing dropdowns (eg. folkways magazine)
+	  './assets/common/js/plguins/plugins/mep-feature-playlist-master/mep-feature-playlist.js', // for customizing dropdowns (eg. folkways magazine)
+	  './assets/common/js/plguins/mep-feature-playlist-master/mep-feature-playlist.js', // for customizing dropdowns (eg. folkways magazine)
 	])
 	.pipe(concat('common-plugins.js'))
 	.pipe(gulp.dest([
