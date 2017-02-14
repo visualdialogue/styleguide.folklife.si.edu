@@ -17,7 +17,7 @@
 					ul.row.cards.blog-feature
 						-snippet('card-blog-article', array('card' => $page, 'type' => 'general-content' ))
 				-else:
-					.blog-article-card
+					.general-content-card
 						h1.title.no-image-title!= $page->title()
 				-endif
 

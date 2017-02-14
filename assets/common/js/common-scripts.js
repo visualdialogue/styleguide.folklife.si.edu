@@ -381,6 +381,18 @@ $(document).ready(function () {
 		// $('.video').on('click', function() {
 		$(video).on('click', function() {
 
+			// close any slideshow that's open
+			if(galleryIsSlick) {
+				// hide remodal gallery
+				$remodalGallery.hide();
+				$remodalCaptions.hide();
+
+				// reset remodal gallery - may not be needed
+				// $remodalGallery.slick('unslick');
+				// $remodalCaptions.slick('unslick');
+				// galleryIsSlick = false; // reset flag for re-building
+			}
+
 		  	// manually open remodal because sometimes just doesn't do it
 		  	remodalInstance.open();
 
@@ -520,6 +532,13 @@ $(document).ready(function () {
 			$remodalGallery.slick('unslick');
 			$remodalCaptions.slick('unslick');
 		}
+
+		// hide videos
+		$youTubeIframeWrapper.hide();
+		$vimeoIframe.hide();
+		// show gallery in case was hidden by videos
+		$remodalGallery.show();
+		$remodalCaptions.show();
 
 		// clear remodal gallery of old images
 		$remodalGallery.empty();

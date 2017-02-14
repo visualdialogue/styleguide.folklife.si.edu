@@ -5,7 +5,8 @@
 	-$image = $src
 -endif
 
-li.card.blog-article-card.col-xs-12(class="<? if ($card->type() == 'video') echo 'video-card' ?> <? if (isset($card_classes)) echo $card_classes ?>")
+//- li.card.blog-article-card.col-xs-12(class="<? if ($card->type() == 'video') echo 'video-card' ?> <? if (isset($card_classes)) echo $card_classes ?>")
+li.card.general-content-card.col-xs-12(class="<? if ($card->type() == 'video') echo 'video-card' ?> <? if (isset($card_classes)) echo $card_classes ?>")
 	.image
 		a(href="<?= $card->url() ?>")
 			img(src="<?= $image->url() ?>" alt="<?= $card->title() ?>")

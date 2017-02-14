@@ -81,7 +81,8 @@
 		// 		}
 		// 	}
 		// }
-		.top-forty {
+		// for easier conversion. Moving forward all sidebar helper spacing will be .top-forty
+		.top-ten, .top-twenty, .top-forty {
 			@include margin-top(4);
 		}
 		img[alt="Related Content"] {
