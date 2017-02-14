@@ -23,6 +23,11 @@ $(document).ready(function () {
 		pluginPath: "/path/to/shims/", 
 		success: function(mediaElement, originalNode) {
 			console.log('mejs audio created');
+
+			// Event Listeners
+			mediaElement.addEventListener('ended', function (e) {
+				playNextTrack();
+			}, false);
 		}
 	});
 	// To access player after its creation through jQuery use:
@@ -31,20 +36,57 @@ $(document).ready(function () {
 
 	var playlistPlayer = mejs.players[playerId];
 
-	$('#pause-button').click(function() {
-		// console.log(playlistPlayer);
-		// console.log($('.playlist-audio')[0]);
-		playlistPlayer.pause();
-	});
+	var tracks = ['13','14','15','16','17'];
+
+	// index for current track
+	var currentTrack = 1;
+
+	// $('#pause-button').click(function() {
+	// 	// console.log(playlistPlayer);
+	// 	// console.log($('.playlist-audio')[0]);
+	// 	playlistPlayer.pause();
+	// });
 	// Track Skipping
 	$('#previous-button').click(function() {
-		playlistPlayer.setSrc('/assets/audio/SFW40568/SFW40568_14.mp3');
+		console.log('currentTrack: ', currentTrack);
+		
+		// update track
+		if(currentTrack == 0)
+			currentTrack = tracks.length - 1;
+		else
+			currentTrack--;
+		console.log('currentTrack now: ', currentTrack);
+
+		playlistPlayer.setSrc('/assets/audio/SFW40568/SFW40568_' + tracks[currentTrack] + '.mp3');
 		playlistPlayer.play();
 	})
 	$('#next-button').click(function() {
-		playlistPlayer.setSrc('/assets/audio/SFW40568/SFW40568_15.mp3');
-		playlistPlayer.play();
+		// console.log(tracks[1]);
+		// console.log(tracks.length)
+		console.log('currentTrack: ', currentTrack);
+
+		// update track
+		if(currentTrack == tracks.length - 1)
+			currentTrack = 0;
+		else
+			currentTrack++;
+		
+		console.log('currentTrack now: ', currentTrack);
+
+		playlistPlayer.setSrc('/assets/audio/SFW40568/SFW40568_' + tracks[currentTrack] + '.mp3'); // set new src
+		playlistPlayer.play(); // play track
+
 	})
+
+	function playNextTrack() {
+		if(currentTrack == tracks.length - 1)
+			currentTrack = 0;
+		else
+			currentTrack++;
+
+		playlistPlayer.setSrc('/assets/audio/SFW40568/SFW40568_' + tracks[currentTrack] + '.mp3'); // set new src
+		playlistPlayer.play(); // play track
+	}
 	// $('.playlist-audio').mediaelementplayer({
 	// 	loop: true,
 	// 	shuffle: true,

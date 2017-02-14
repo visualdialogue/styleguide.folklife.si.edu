@@ -15669,6 +15669,8 @@ body {
 
 .playlist-controls {
 	position: absolute;
+	left: 100px;
+	top: 65px;
 }
 
 .playlist-controls div {

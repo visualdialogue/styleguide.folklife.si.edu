@@ -417,6 +417,8 @@ $horizontalMobilePlayHeight: 8vw;
 .playlist-controls {
 	// display: none;
 	position: absolute;
+	left: 100px;
+	top: 65px;
 	// height: 0;
 	div {
 		display: inline-block;
