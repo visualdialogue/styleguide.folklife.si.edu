@@ -1110,6 +1110,7 @@ $(document).ready(function () {
 			currentTrack = 0;
 		else
 			currentTrack++;
+		console.log('currentTrack now: ', currentTrack);
 
 		playlistPlayer.setSrc('/assets/audio/SFW40568/SFW40568_' + tracks[currentTrack] + '.mp3'); // set new src
 		playlistPlayer.play(); // play track
