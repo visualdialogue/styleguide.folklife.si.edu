@@ -30,6 +30,11 @@ $(document).ready(function () {
 		pluginPath: "/path/to/shims/", 
 		success: function(mediaElement, originalNode) {
 			console.log('mejs audio created');
+			// better mejs html
+			var currentTimeContainer = $('.playlist-audio').find('.mejs-currenttime-container');
+			console.log(currentTimeContainer);
+			wrapTime(currentTimeContainer);
+
 			// initialize player because elements now exist
 			playlist = new Playlist(); 
 			// set first track

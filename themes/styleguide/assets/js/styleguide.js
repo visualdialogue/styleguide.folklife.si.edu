@@ -130,6 +130,9 @@ this},r._applyDataApi=function(){var e={};t("[data-match-height], [data-mh]").ea
 	else
 		site.isFolkways = false;
 
+	// global wrap time function that wraps mejs elemeents better. Make global so later mejs elements can call
+	var wrapTime;
+
 /**********************
  * youtube must be in GLOBAL scope
  * Must have ...?enablejsapi=1 added to youtube link
@@ -775,14 +778,20 @@ $(document).ready(function () {
 * Audio card - Media Element JS
 *********/
 	// wrap time elements together after load. They don't come togethery by default and it is impossible to line them up according to the layout without having a parent wrapper.
+	// set as var so can call when other mejs elements load, after page load
+	wrapTime = function($currentTime) {
+		console.log('$currentTime: ', $currentTime)
+		var $durationTime = $currentTime.siblings('.mejs-duration-container');
+		// wrap current time and duration time in new div for correct positioning
+		$currentTime.add($durationTime).wrapAll('<div class="mejs-time-wrapper">');
+		console.log('wrapped');
+	}
+	
 	// find currenttime containers and wrap them with closest duration container
-	// $('.mejs-currenttime-container').each(function() {
-	// 	// get closest duration time
-	// 	var $durationTime = $(this).siblings('.mejs-duration-container');
-	// 	// wrap current time and duration time in new div for correct positioning
-	// 	$(this).add($durationTime).wrapAll('<div class="mejs-time-wrapper">');
-	// });
-
+	$('.mejs-currenttime-container').each(function() {
+		// get closest duration time
+		wrapTime($(this));
+	});
 
 /*********************
 * Show figcaption
@@ -1027,6 +1036,11 @@ $(document).ready(function () {
 		pluginPath: "/path/to/shims/", 
 		success: function(mediaElement, originalNode) {
 			console.log('mejs audio created');
+			// better mejs html
+			var currentTimeContainer = $('.playlist-audio').find('.mejs-currenttime-container');
+			console.log(currentTimeContainer);
+			wrapTime(currentTimeContainer);
+
 			// initialize player because elements now exist
 			playlist = new Playlist(); 
 			// set first track
