@@ -514,13 +514,7 @@ section.container.cards-section
 							a.high.title(href="#"): span.light: span.er#playlist-title Quelbe!
 							.artist#playlist-artist Stanley and the Ten Sleepless Nights
 						.audio-player
-							//- <audio class="mejs-player playlist-audio" src="/assets/audio/SFW40568/SFW40568_14.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'>
 							<audio id="playlist-audio" class="playlist-audio" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'></audio>
-							//- audio.mejs-player(src="/assets/audio/Music2same.mp3" data-mejsoptions="{'startVolume': 0.5, 'setDimensions': false}" )
-							//- audio.mejs-player(src="/assets/audio/Music2same.mp3" data-mejsoptions='{\"startVolume\": 0.5, \"setDimensions\": false}' )
-								//- source( title="LaBega Carousel")
-								//- source(src="/assets/audio/SFW40568/SFW40568_15.mp3" title="Marie Bull")
-								//- |Your browser does not support the audio element.
 							.playlist-controls
 								#previous-button.icon-folklife-leftarrow
 								#next-button.icon-folklife-rightarrow
@@ -529,7 +523,7 @@ section.container.cards-section
 				-snippet('show-sass-mobile')
 			.col-md-9
 				pre.html: code.
-					&lt;div class="card audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border-card"&gt;
+					&lt;div class="card audio-card playlist-audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border-card"&gt;
 						&lt;div class="image"&gt;	
 							&lt;a href="#"&gt;
 								&lt;img id="playlist-cover" src="/320x320.jpg"&gt;
@@ -537,22 +531,25 @@ section.container.cards-section
 						&lt;/div&gt;
 						&lt;div class="details"&gt;
 							&lt;div class="details-inner"&gt;
-								&lt;div class="tag"&gt;New Release&lt;/div&gt;
 								&lt;div class="title-wrapper" &gt;
 									&lt;a class="high title" href="#"&gt;
 										&lt;span class="light"&gt;
-											&lt;span class="er"&gt;
+											&lt;span id="playlist-title" class="er"&gt;
 												Quelbe!
 											&lt;/span&gt;
 										&lt;/span&gt;
 									&lt;/a&gt;
-									&lt;div class="artist"&gt;
+									&lt;div id="playlist-artist" class="artist"&gt;
 										Stanley and the Ten Sleepless Nights
 									&lt;/div&gt;
 								&lt;/div&gt;
 								&lt;div class="audio-player"&gt;
-									&lt;audio class="mejs-player" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'&gt;
+									&lt;audio id="playlist-audio" class="playlist-audio" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'&gt;
 									&lt;!-- mejs media player will build itself on page load and we wrap a few key elements in common-scripts.js --&gt;
+									&lt;div class="playlist-controls"&gt;
+										&lt;div id="previous-button" class="icon-folklife-leftarrow"&gt;&lt;/div&gt;
+										&lt;div id="next-button" class="icon-folklife-rightarrow"&gt;&lt;/div&gt;
+									&lt;/div&gt;
 								&lt;/div&gt;
 							&lt;/div&gt;
 						&lt;/div&gt;
