@@ -409,16 +409,29 @@ $horizontalMobilePlayHeight: 8vw;
 
 /* Audio Playlist controls
 -------------------------------------------------- */
+.playlist-audio-card {
+	img {
+		@include width(32);
+		@include height(32);
+	}
+	.details-inner {
+		// min-height: 17.5rem;
+		@include padding-top(2);
+		@include min-height(22.5);
+	}
+}
 .playlist-audio {
 	// override mejs css
 	width: auto !important;
-	height: auto !important;
+	height: auto !important;	
 }
 .playlist-controls {
 	// display: none;
 	position: absolute;
-	left: 100px;
-	top: 65px;
+	// left: 80px;
+	right: -5px;
+	top: 0;
+	// bottom: 0;
 	// height: 0;
 	div {
 		display: inline-block;

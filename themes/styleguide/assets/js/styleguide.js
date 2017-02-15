@@ -1048,6 +1048,7 @@ $(document).ready(function () {
 			playlist.cover.attr('src', myPlaylist[0].cover); // update album cover
 			playlist.title.html(myPlaylist[0].title); // update album title
 			playlist.artist.html(myPlaylist[0].artist); // update album artist
+			playlist.audioElement[0].setSrc(myPlaylist[0].mp3); // set new track to play
 
 			// Event Listeners
 			mediaElement.addEventListener('ended', function (e) {

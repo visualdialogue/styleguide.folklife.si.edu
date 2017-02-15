@@ -1,5 +1,6 @@
 <!-- sidebar audio player -->
-<script src="/assets/audio/myplaylist.js" type="text/javascript"></script>
+<!-- <script src="/assets/audio/myplaylist.js" type="text/javascript"></script> -->
+<script src="/assets/audio/myplaylist-calypso.js" type="text/javascript"></script>
 <div class="sidebar col-sm-4" id="magazine-article-sidebar-js">
 	<div class="zone zone-aside-second">
 		<div class="visible-sm latest-issue-article">
