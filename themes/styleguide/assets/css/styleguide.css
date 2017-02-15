@@ -15662,30 +15662,32 @@ body {
 
 /* Audio Playlist controls
 -------------------------------------------------- */
-.playlist-audio-card img {
-	width: 22.47507rem;
-	height: 22.47507rem;
+@media only screen and (min-width: 53.25em) {
+	.playlist-audio-card img {
+		width: 22.47507rem;
+		height: 22.47507rem;
+	}
 }
 
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+@media only screen and (min-width: 53.25em) and (min-width: 53.25em) and (max-width: 1559px) {
 	.playlist-audio-card img {
 		width: 20.48vw;
 	}
 }
 
-@media only screen and (min-width: 1560px) {
+@media only screen and (min-width: 53.25em) and (min-width: 1560px) {
 	.playlist-audio-card img {
 		width: 32rem;
 	}
 }
 
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+@media only screen and (min-width: 53.25em) and (min-width: 53.25em) and (max-width: 1559px) {
 	.playlist-audio-card img {
 		height: 20.48vw;
 	}
 }
 
-@media only screen and (min-width: 1560px) {
+@media only screen and (min-width: 53.25em) and (min-width: 1560px) {
 	.playlist-audio-card img {
 		height: 32rem;
 	}
@@ -15727,8 +15729,32 @@ body {
 
 .playlist-controls {
 	position: absolute;
-	right: -5px;
-	top: 0;
+	right: -0.18519rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.playlist-controls {
+		right: -0.32vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.playlist-controls {
+		right: -0.5rem;
+	}
+}
+
+@media only screen and (max-width: 53.15em) {
+	.playlist-controls {
+		top: -0.5rem;
+		font-size: 1rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.playlist-controls {
+		top: 0;
+	}
 }
 
 .playlist-controls div {
