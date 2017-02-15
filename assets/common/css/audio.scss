@@ -423,6 +423,10 @@ $horizontalMobilePlayHeight: 8vw;
 	div {
 		display: inline-block;
 		margin-right: 20px;
+		cursor: pointer;
+		&:hover {
+			background-color: $fl-hover;
+		}
 	}
 }
 .horizontal-audio-card-playlist {

@@ -15676,6 +15676,11 @@ body {
 .playlist-controls div {
 	display: inline-block;
 	margin-right: 20px;
+	cursor: pointer;
+}
+
+.playlist-controls div:hover {
+	background-color: #e2f0d8;
 }
 
 .horizontal-audio-card-playlist .title-wrapper {

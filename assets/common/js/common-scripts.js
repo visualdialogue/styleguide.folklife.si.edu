@@ -386,11 +386,6 @@ $(document).ready(function () {
 				// hide remodal gallery
 				$remodalGallery.hide();
 				$remodalCaptions.hide();
-
-				// reset remodal gallery - may not be needed
-				// $remodalGallery.slick('unslick');
-				// $remodalCaptions.slick('unslick');
-				// galleryIsSlick = false; // reset flag for re-building
 			}
 
 		  	// manually open remodal because sometimes just doesn't do it
@@ -419,9 +414,6 @@ $(document).ready(function () {
 			$remodalClose.removeClass('visually-hidden');
 
 			if(isVimeo) {
-				// console.log('play vimeo');
-				// console.log('vimeoPlayerIsLoaded: ', vimeoPlayerIsLoaded);
-				// console.log('$videoID: ', $videoID);
 				$youTubeIframeWrapper.hide();
 				$vimeoIframe.show();
 				// if first time loading a video...
@@ -448,39 +440,17 @@ $(document).ready(function () {
 
 			// else is YouTube
 			} else {
-				// function onYouTubeIframeAPIReady() {
-				// 	player = new YT.Player('my-little-bakery-video');
-				// }
-				// remove any Vimeo players
-				// $remodalIframe.find('iframe').remove(); // remove iframe so can play youtube next
-				// vimeoPlayerIsLoaded = false;
-
 				$vimeoIframe.hide();
 				$youTubeIframeWrapper.show(); // unhide
-				// add iframe inside .remodal-iframe wrapper for youtube (vimeo does it automatically)
-				// load the IFrame Player API code asynchronously.
-				// var youtubeIframe = document.createElement('iframe');
-
-				// make iframe with youtube params and add to inside of .remodal-iframe
-				// $('<iframe src="https://www.youtube.com/embed/' + $videoID + '?autoplay=1&enablejsapi=1" frameborder="0" allowfullscreen></iframe>').appendTo($remodalIframe); // add to correct position
-				// player = new YT.Player($youtubeIframe);
-				// playYTVideo();
 
 				// youtube replaces passed div id with iframe, unlive vimeo which makes child element
 				// so need to target child here
-				// console.log('play youtube');
 				youTubePlayer = new YT.Player('youtube-iframe', {
-					// height: '390',
-					// width: '640',
 					videoId: $videoID,
 					events: {
 					'onReady': onYouTubePlayerReady,
-					// 'onStateChange': onPlayerStateChange
 					}
 				});
-				// play video
-				// player.playVideo();
-
 			}
 		})
 	}

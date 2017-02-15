@@ -485,11 +485,6 @@ $(document).ready(function () {
 				// hide remodal gallery
 				$remodalGallery.hide();
 				$remodalCaptions.hide();
-
-				// reset remodal gallery - may not be needed
-				// $remodalGallery.slick('unslick');
-				// $remodalCaptions.slick('unslick');
-				// galleryIsSlick = false; // reset flag for re-building
 			}
 
 		  	// manually open remodal because sometimes just doesn't do it
@@ -518,9 +513,6 @@ $(document).ready(function () {
 			$remodalClose.removeClass('visually-hidden');
 
 			if(isVimeo) {
-				// console.log('play vimeo');
-				// console.log('vimeoPlayerIsLoaded: ', vimeoPlayerIsLoaded);
-				// console.log('$videoID: ', $videoID);
 				$youTubeIframeWrapper.hide();
 				$vimeoIframe.show();
 				// if first time loading a video...
@@ -547,39 +539,17 @@ $(document).ready(function () {
 
 			// else is YouTube
 			} else {
-				// function onYouTubeIframeAPIReady() {
-				// 	player = new YT.Player('my-little-bakery-video');
-				// }
-				// remove any Vimeo players
-				// $remodalIframe.find('iframe').remove(); // remove iframe so can play youtube next
-				// vimeoPlayerIsLoaded = false;
-
 				$vimeoIframe.hide();
 				$youTubeIframeWrapper.show(); // unhide
-				// add iframe inside .remodal-iframe wrapper for youtube (vimeo does it automatically)
-				// load the IFrame Player API code asynchronously.
-				// var youtubeIframe = document.createElement('iframe');
-
-				// make iframe with youtube params and add to inside of .remodal-iframe
-				// $('<iframe src="https://www.youtube.com/embed/' + $videoID + '?autoplay=1&enablejsapi=1" frameborder="0" allowfullscreen></iframe>').appendTo($remodalIframe); // add to correct position
-				// player = new YT.Player($youtubeIframe);
-				// playYTVideo();
 
 				// youtube replaces passed div id with iframe, unlive vimeo which makes child element
 				// so need to target child here
-				// console.log('play youtube');
 				youTubePlayer = new YT.Player('youtube-iframe', {
-					// height: '390',
-					// width: '640',
 					videoId: $videoID,
 					events: {
 					'onReady': onYouTubePlayerReady,
-					// 'onStateChange': onPlayerStateChange
 					}
 				});
-				// play video
-				// player.playVideo();
-
 			}
 		})
 	}
@@ -1039,90 +1009,111 @@ _____/  \__| \__, | _| \___| \__, | \__,_| _| \__,_| \___|     _____/  \___| _| 
 
 $(document).ready(function () {
 
-
 /*********
 * Audio card - Playlist
 * plugin from duozersk
 * https://github.com/duozersk/mep-feature-playlist
 *********/
 
+	var playlist; // global playlist var so can access everywhere
+	console.log(myPlaylist[0]);
+
+	// initialize player so can get id for vars
+	/**********
+	* Start media element player
+	* after build, make new playlist with data from 
+	**********/
 	$('.playlist-audio').mediaelementplayer({
 		pluginPath: "/path/to/shims/", 
 		success: function(mediaElement, originalNode) {
 			console.log('mejs audio created');
+			// initialize player because elements now exist
+			playlist = new Playlist(); 
+			// set first track
+			// playlist.cover = 
+			playlist.cover.attr('src', myPlaylist[0].cover); // update album cover
+			playlist.title.html(myPlaylist[0].title); // update album title
+			playlist.artist.html(myPlaylist[0].artist); // update album artist
 
 			// Event Listeners
 			mediaElement.addEventListener('ended', function (e) {
-				playNextTrack();
+				playlist.playNextTrack();
 			}, false);
 		}
 	});
-	// To access player after its creation through jQuery use:
-	var playerId = $('.playlist-audio').attr('id');
-	// or $('#mediaplayer').closest('.mejs-container').attr('id') in "legacy" stylesheet
+	
 
-	var playlistPlayer = mejs.players[playerId];
+	/**********
+	* Playlist constructor function
+	* inspired by http://stackoverflow.com/a/15174529
+	* var myPlayList is array with playlist data, loaded from script tag in html
+	**********/
+	function Playlist() {
+		this.playerId = $('.playlist-audio').attr('id');
+		this.mejsPlayer = mejs.players[this.playerId];
+		this.player = this.mejsPlayer;
+		this.cover = $('#playlist-cover');
+		this.title = $('#playlist-title');
+		this.artist = $('#playlist-artist');
+		this.audioElement = $('#playlist-audio');
+		this.currentTrack = 0;
+		this.length = Object.keys(myPlaylist).length;
 
-	var tracks = ['13','14','15','16','17'];
+		/**********
+		* Update playlist player
+		* @param track is album json data
+		**********/
+		this.updatePlayer = function(track) {
+			// console.log($playlist.audioElement);
+			this.cover.attr('src', track.cover); // update album cover
+			this.title.html(track.title); // update album title
+			this.artist.html(track.artist); // update album artist
+			this.audioElement[0].setSrc(track.mp3); // set new track to play
+			this.player.play(); // play track
+		}
 
-	// index for current track
-	var currentTrack = 1;
+		/**********
+		* Play previous track
+		**********/
+		this.playPrevTrack = function() {
+			// if current track is 0, change to last track
+			if ( playlist.currentTrack == 0 )
+				playlist.currentTrack = playlist.length - 1;
+			// else play track - 1 
+			else
+				playlist.currentTrack--;
+			
+			// update player with image, src, play, etc.
+			playlist.updatePlayer(myPlaylist[this.currentTrack]);
+		}
 
-	// $('#pause-button').click(function() {
-	// 	// console.log(playlistPlayer);
-	// 	// console.log($('.playlist-audio')[0]);
-	// 	playlistPlayer.pause();
-	// });
-	// Track Skipping
-	$('#previous-button').click(function() {
-		console.log('currentTrack: ', currentTrack);
-		
-		// update track
-		if(currentTrack == 0)
-			currentTrack = tracks.length - 1;
-		else
-			currentTrack--;
-		console.log('currentTrack now: ', currentTrack);
+		/**********
+		* Play next track
+		**********/
+		this.playNextTrack = function() {
+			if(this.currentTrack == this.length - 1)
+				this.currentTrack = 0;
+			else
+				this.currentTrack++;
 
-		playlistPlayer.setSrc('/assets/audio/SFW40568/SFW40568_' + tracks[currentTrack] + '.mp3');
-		playlistPlayer.play();
-	})
-	$('#next-button').click(function() {
-		// console.log(tracks[1]);
-		// console.log(tracks.length)
-		console.log('currentTrack: ', currentTrack);
-
-		// update track
-		if(currentTrack == tracks.length - 1)
-			currentTrack = 0;
-		else
-			currentTrack++;
-		
-		console.log('currentTrack now: ', currentTrack);
-
-		playlistPlayer.setSrc('/assets/audio/SFW40568/SFW40568_' + tracks[currentTrack] + '.mp3'); // set new src
-		playlistPlayer.play(); // play track
-
-	})
-
-	function playNextTrack() {
-		if(currentTrack == tracks.length - 1)
-			currentTrack = 0;
-		else
-			currentTrack++;
-		console.log('currentTrack now: ', currentTrack);
-
-		playlistPlayer.setSrc('/assets/audio/SFW40568/SFW40568_' + tracks[currentTrack] + '.mp3'); // set new src
-		playlistPlayer.play(); // play track
+			// update player with image, src, play, etc.
+			playlist.updatePlayer(myPlaylist[this.currentTrack]);
+		}
 	}
-	// $('.playlist-audio').mediaelementplayer({
-	// 	loop: true,
-	// 	shuffle: true,
-	// 	playlist: true,
-	// 	audioHeight: 30,
-	// 	playlistposition: 'bottom',
-	// 	features: ['playlistfeature', 'prevtrack', 'playpause', 'nexttrack', 'loop', 'shuffle', 'playlist', 'current', 'progress', 'duration', 'volume'],
-	// });
+
+	/**********
+	* Track Skipping Buttons
+	**********/
+	// Previous Track
+	$('#previous-button').click(function() {
+		playlist.playPrevTrack();
+	})
+
+	// Next Track
+	$('#next-button').click(function() {
+		playlist.playNextTrack();
+	})
+
 
 /***************************
 * Nav
