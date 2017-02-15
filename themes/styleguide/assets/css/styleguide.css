@@ -15751,7 +15751,7 @@ body {
 	}
 }
 
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+@media only screen and (min-width: 53.25em) {
 	.playlist-controls {
 		top: 0;
 	}

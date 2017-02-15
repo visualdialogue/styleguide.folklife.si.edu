@@ -434,7 +434,7 @@ $horizontalMobilePlayHeight: 8vw;
 		top: -0.5rem;
 		font-size: 1rem;
 	}
-	@include respond-to(break2full) {
+	@include respond-to(break2) {
 		top: 0;
 	}
 
