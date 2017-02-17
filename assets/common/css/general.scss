@@ -315,6 +315,10 @@
 		@include border(bottom);
 		@include padding-bottom(1);
 	}
+	.last-sidebar-item {
+		display: block; // in case it's liner notes <a>
+		@include margin-bottom(3.2);
+	}
 	.sidebar-section {
 		@include margin-bottom(2.4);
 		@include respond-to(break2max) {

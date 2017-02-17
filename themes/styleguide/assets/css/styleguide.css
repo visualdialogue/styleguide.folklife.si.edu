@@ -8609,6 +8609,23 @@ ul {
 	}
 }
 
+.last-sidebar-item {
+	display: block;
+	margin-bottom: 1.18519rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.last-sidebar-item {
+		margin-bottom: 2.048vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.last-sidebar-item {
+		margin-bottom: 3.2rem;
+	}
+}
+
 .sidebar-section {
 	margin-bottom: 0.88889rem;
 }
