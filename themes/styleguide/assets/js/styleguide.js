@@ -582,6 +582,10 @@ $(document).ready(function () {
 		$remodalClose.addClass('visually-hidden');
 	});
 
+	// reset after image gallery
+	$remodal.removeClass('remodal-gallery-is-open remodal-image-gallery');
+	console.log('gallery classes removed');
+
 	// close remodal with X
 	$remodalClose.on('click', function() {
 		remodalInstance.close();

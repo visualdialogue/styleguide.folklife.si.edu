@@ -132,7 +132,7 @@ gulp.task('js', function() {
 
 // reloading browsers
 // gulp.task('jade-watch', ['jade'], browserSync.reload);
-gulp.task('js-watch', ['js'], browserSync.reload);
+// gulp.task('js-watch', ['js'], browserSync.reload);
 
 // Static Server + watching scss/html files
 gulp.task('serve', ['jade', 'styles', 'js'], function() {
@@ -155,11 +155,11 @@ gulp.task('serve', ['jade', 'styles', 'js'], function() {
 	gulp.watch('assets/common/css/*.scss',['styles','copy-sass']);
 	gulp.watch('themes/styleguide/assets/css/*.scss',['styles']);
 	// gulp.watch('../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/*.scss',['styles']);
-	gulp.watch('assets/js/*.js',['js-watch','copy-js']); // copy common plugins and scripts to toby's 3 repos until he has centralized common elements
+	gulp.watch('assets/common/js/*.js',['copy-js']); // copy common plugins and scripts to toby's 3 repos until he has centralized common elements
 	gulp.watch([ // JS
-		'../../styleguide.folklife.si.edu/code/assets/common/js/*.js',
 		'themes/styleguide/assets/js/*.js'
 		],['js']);
+
 });
 
 // gulp.task('default', ['usedCSS', 'critical', 'imagemin']);
