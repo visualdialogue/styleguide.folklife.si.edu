@@ -97,3 +97,215 @@ this},r._applyDataApi=function(){var e={};t("[data-match-height], [data-mh]").ea
  * Dual licensed under the MIT or GPL Version 2 licenses.
  */
 !function(a){a.extend(mejs.MepDefaults,{loopText:"Repeat On/Off",shuffleText:"Shuffle On/Off",nextText:"Next Track",prevText:"Previous Track",playlistText:"Show/Hide Playlist"}),a.extend(MediaElementPlayer.prototype,{buildloop:function(b,c,d,e){var f=this,g=a('<div class="mejs-button mejs-loop-button '+(b.options.loop?"mejs-loop-on":"mejs-loop-off")+'"><button type="button" aria-controls="'+b.id+'" title="'+b.options.loopText+'"></button></div>').appendTo(c).click(function(c){b.options.loop=!b.options.loop,a(e).trigger("mep-looptoggle",[b.options.loop]),b.options.loop?g.removeClass("mejs-loop-off").addClass("mejs-loop-on"):g.removeClass("mejs-loop-on").addClass("mejs-loop-off")});f.loopToggle=f.controls.find(".mejs-loop-button")},loopToggleClick:function(){var a=this;a.loopToggle.trigger("click")},buildshuffle:function(b,c,d,e){var f=this,g=a('<div class="mejs-button mejs-shuffle-button '+(b.options.shuffle?"mejs-shuffle-on":"mejs-shuffle-off")+'"><button type="button" aria-controls="'+b.id+'" title="'+b.options.shuffleText+'"></button></div>').appendTo(c).click(function(c){b.options.shuffle=!b.options.shuffle,a(e).trigger("mep-shuffletoggle",[b.options.shuffle]),b.options.shuffle?g.removeClass("mejs-shuffle-off").addClass("mejs-shuffle-on"):g.removeClass("mejs-shuffle-on").addClass("mejs-shuffle-off")});f.shuffleToggle=f.controls.find(".mejs-shuffle-button")},shuffleToggleClick:function(){var a=this;a.shuffleToggle.trigger("click")},buildprevtrack:function(b,c,d,e){var f=this;a('<div class="mejs-button mejs-prevtrack-button mejs-prevtrack"><button type="button" aria-controls="'+b.id+'" title="'+b.options.prevText+'"></button></div>').appendTo(c).click(function(c){a(e).trigger("mep-playprevtrack"),b.playPrevTrack()});f.prevTrack=f.controls.find(".mejs-prevtrack-button")},prevTrackClick:function(){var a=this;a.prevTrack.trigger("click")},buildnexttrack:function(b,c,d,e){var f=this;a('<div class="mejs-button mejs-nexttrack-button mejs-nexttrack"><button type="button" aria-controls="'+b.id+'" title="'+b.options.nextText+'"></button></div>').appendTo(c).click(function(c){a(e).trigger("mep-playnexttrack"),b.playNextTrack()});f.nextTrack=f.controls.find(".mejs-nexttrack-button")},nextTrackClick:function(){var a=this;a.nextTrack.trigger("click")},buildplaylist:function(b,c,d,e){var f=this,g=a('<div class="mejs-button mejs-playlist-button '+(b.options.playlist?"mejs-hide-playlist":"mejs-show-playlist")+'"><button type="button" aria-controls="'+b.id+'" title="'+b.options.playlistText+'"></button></div>').appendTo(c).click(function(c){b.options.playlist=!b.options.playlist,a(e).trigger("mep-playlisttoggle",[b.options.playlist]),b.options.playlist?(d.children(".mejs-playlist").show(),g.removeClass("mejs-show-playlist").addClass("mejs-hide-playlist")):(d.children(".mejs-playlist").hide(),g.removeClass("mejs-hide-playlist").addClass("mejs-show-playlist"))});f.playlistToggle=f.controls.find(".mejs-playlist-button")},playlistToggleClick:function(){var a=this;a.playlistToggle.trigger("click")},buildplaylistfeature:function(b,c,d,e){var f=a('<div class="mejs-playlist mejs-layer"><ul class="mejs"></ul></div>').appendTo(d);b.options.playlist||f.hide(),"bottom"==b.options.playlistposition?f.css("top",b.options.audioHeight+"px"):f.css("bottom",b.options.audioHeight+"px");var g=function(a){var b=a.split("/");return b.length>0?decodeURIComponent(b[b.length-1]):""},h=[];a("#"+b.id).find(".mejs-mediaelement source").each(function(b,c){if(""!=a.trim(this.src)){var d={};d.source=a.trim(this.src),""!=a.trim(this.title)?d.name=a.trim(this.title):d.name=g(d.source),h.push(d)}});for(var i in h)d.find(".mejs-playlist > ul").append('<li data-url="'+h[i].source+'" title="'+h[i].name+'">'+h[i].name+"</li>");d.find("li:first").addClass("current played"),d.find(".mejs-playlist > ul li").click(function(c){a(this).hasClass("current")?b.play():(a(this).addClass("played"),b.playTrack(a(this)))}),e.addEventListener("ended",function(a){b.playNextTrack()},!1)},playNextTrack:function(){var a=this,b=a.layers.find(".mejs-playlist > ul > li"),c=b.filter(".current"),d=b.not(".played");if(d.length<1&&(c.removeClass("played").siblings().removeClass("played"),d=b.not(".current")),a.options.shuffle)var e=Math.floor(Math.random()*d.length),f=d.eq(e);else{var f=c.next();f.length<1&&a.options.loop&&(f=c.siblings().first())}1==f.length&&(f.addClass("played"),a.playTrack(f))},playPrevTrack:function(){var a=this,b=a.layers.find(".mejs-playlist > ul > li"),c=b.filter(".current"),d=b.filter(".played").not(".current");if(d.length<1&&(c.removeClass("played"),d=b.not(".current")),a.options.shuffle)var e=Math.floor(Math.random()*d.length),f=d.eq(e);else{var f=c.prev();f.length<1&&a.options.loop&&(f=c.siblings().last())}1==f.length&&(c.removeClass("played"),a.playTrack(f))},playTrack:function(a){var b=this;b.pause(),b.setSrc(a.attr("data-url")),b.load(),b.play(),a.addClass("current").siblings().removeClass("current")},playTrackURL:function(a){var b=this,c=b.layers.find(".mejs-playlist > ul > li"),d=c.filter('[data-url="'+a+'"]');b.playTrack(d)}})}(mejs.$);
+/* ========================================================================
+ * Bootstrap: collapse.js v3.3.7
+ * http://getbootstrap.com/javascript/#collapse
+ * ========================================================================
+ * Copyright 2011-2016 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * ======================================================================== */
+
+/* jshint latedef: false */
+
++function ($) {
+  'use strict';
+
+  // COLLAPSE PUBLIC CLASS DEFINITION
+  // ================================
+
+  var Collapse = function (element, options) {
+    this.$element      = $(element)
+    this.options       = $.extend({}, Collapse.DEFAULTS, options)
+    this.$trigger      = $('[data-toggle="collapse"][href="#' + element.id + '"],' +
+                           '[data-toggle="collapse"][data-target="#' + element.id + '"]')
+    this.transitioning = null
+
+    if (this.options.parent) {
+      this.$parent = this.getParent()
+    } else {
+      this.addAriaAndCollapsedClass(this.$element, this.$trigger)
+    }
+
+    if (this.options.toggle) this.toggle()
+  }
+
+  Collapse.VERSION  = '3.3.7'
+
+  Collapse.TRANSITION_DURATION = 350
+
+  Collapse.DEFAULTS = {
+    toggle: true
+  }
+
+  Collapse.prototype.dimension = function () {
+    var hasWidth = this.$element.hasClass('width')
+    return hasWidth ? 'width' : 'height'
+  }
+
+  Collapse.prototype.show = function () {
+    if (this.transitioning || this.$element.hasClass('in')) return
+
+    var activesData
+    var actives = this.$parent && this.$parent.children('.panel').children('.in, .collapsing')
+
+    if (actives && actives.length) {
+      activesData = actives.data('bs.collapse')
+      if (activesData && activesData.transitioning) return
+    }
+
+    var startEvent = $.Event('show.bs.collapse')
+    this.$element.trigger(startEvent)
+    if (startEvent.isDefaultPrevented()) return
+
+    if (actives && actives.length) {
+      Plugin.call(actives, 'hide')
+      activesData || actives.data('bs.collapse', null)
+    }
+
+    var dimension = this.dimension()
+
+    this.$element
+      .removeClass('collapse')
+      .addClass('collapsing')[dimension](0)
+      .attr('aria-expanded', true)
+
+    this.$trigger
+      .removeClass('collapsed')
+      .attr('aria-expanded', true)
+
+    this.transitioning = 1
+
+    var complete = function () {
+      this.$element
+        .removeClass('collapsing')
+        .addClass('collapse in')[dimension]('')
+      this.transitioning = 0
+      this.$element
+        .trigger('shown.bs.collapse')
+    }
+
+    if (!$.support.transition) return complete.call(this)
+
+    var scrollSize = $.camelCase(['scroll', dimension].join('-'))
+
+    this.$element
+      .one('bsTransitionEnd', $.proxy(complete, this))
+      .emulateTransitionEnd(Collapse.TRANSITION_DURATION)[dimension](this.$element[0][scrollSize])
+  }
+
+  Collapse.prototype.hide = function () {
+    if (this.transitioning || !this.$element.hasClass('in')) return
+
+    var startEvent = $.Event('hide.bs.collapse')
+    this.$element.trigger(startEvent)
+    if (startEvent.isDefaultPrevented()) return
+
+    var dimension = this.dimension()
+
+    this.$element[dimension](this.$element[dimension]())[0].offsetHeight
+
+    this.$element
+      .addClass('collapsing')
+      .removeClass('collapse in')
+      .attr('aria-expanded', false)
+
+    this.$trigger
+      .addClass('collapsed')
+      .attr('aria-expanded', false)
+
+    this.transitioning = 1
+
+    var complete = function () {
+      this.transitioning = 0
+      this.$element
+        .removeClass('collapsing')
+        .addClass('collapse')
+        .trigger('hidden.bs.collapse')
+    }
+
+    if (!$.support.transition) return complete.call(this)
+
+    this.$element
+      [dimension](0)
+      .one('bsTransitionEnd', $.proxy(complete, this))
+      .emulateTransitionEnd(Collapse.TRANSITION_DURATION)
+  }
+
+  Collapse.prototype.toggle = function () {
+    this[this.$element.hasClass('in') ? 'hide' : 'show']()
+  }
+
+  Collapse.prototype.getParent = function () {
+    return $(this.options.parent)
+      .find('[data-toggle="collapse"][data-parent="' + this.options.parent + '"]')
+      .each($.proxy(function (i, element) {
+        var $element = $(element)
+        this.addAriaAndCollapsedClass(getTargetFromTrigger($element), $element)
+      }, this))
+      .end()
+  }
+
+  Collapse.prototype.addAriaAndCollapsedClass = function ($element, $trigger) {
+    var isOpen = $element.hasClass('in')
+
+    $element.attr('aria-expanded', isOpen)
+    $trigger
+      .toggleClass('collapsed', !isOpen)
+      .attr('aria-expanded', isOpen)
+  }
+
+  function getTargetFromTrigger($trigger) {
+    var href
+    var target = $trigger.attr('data-target')
+      || (href = $trigger.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '') // strip for ie7
+
+    return $(target)
+  }
+
+
+  // COLLAPSE PLUGIN DEFINITION
+  // ==========================
+
+  function Plugin(option) {
+    return this.each(function () {
+      var $this   = $(this)
+      var data    = $this.data('bs.collapse')
+      var options = $.extend({}, Collapse.DEFAULTS, $this.data(), typeof option == 'object' && option)
+
+      if (!data && options.toggle && /show|hide/.test(option)) options.toggle = false
+      if (!data) $this.data('bs.collapse', (data = new Collapse(this, options)))
+      if (typeof option == 'string') data[option]()
+    })
+  }
+
+  var old = $.fn.collapse
+
+  $.fn.collapse             = Plugin
+  $.fn.collapse.Constructor = Collapse
+
+
+  // COLLAPSE NO CONFLICT
+  // ====================
+
+  $.fn.collapse.noConflict = function () {
+    $.fn.collapse = old
+    return this
+  }
+
+
+  // COLLAPSE DATA-API
+  // =================
+
+  $(document).on('click.bs.collapse.data-api', '[data-toggle="collapse"]', function (e) {
+    var $this   = $(this)
+
+    if (!$this.attr('data-target')) e.preventDefault()
+
+    var $target = getTargetFromTrigger($this)
+    var data    = $target.data('bs.collapse')
+    var option  = data ? 'toggle' : $this.data()
+
+    Plugin.call($target, option)
+  })
+
+}(jQuery);

@@ -14,7 +14,7 @@ var  browserSync = require('browser-sync').create(),
 // uglify and concat all js library dependancies
 gulp.task('plugins', function() {  
   return gulp.src([
-	  './assets/common/js/plugins/common-plugins-title.js',
+	  './assets/common/js/plugins/common-plugins-title.js', // simply for showing title that proves these files compiled successfully
 	  './assets/common/js/plugins/slick-carousel/slick/slick.min.js',
 	  './assets/common/js/plugins/remodal/dist/remodal.min.js',
 	  './assets/common/js/plugins/vimeo-player-js/dist/player.min.js',
@@ -23,6 +23,7 @@ gulp.task('plugins', function() {
 	  './assets/common/js/plugins/viewport-units-buggyfill/viewport-units-buggyfill.min.js', // for customizing dropdowns (eg. folkways magazine)
 	  './assets/common/js/plugins/preparetransition.min.js', // for customizing dropdowns (eg. folkways magazine)
 	  './assets/common/js/plugins/mep-feature-playlist-master/mep-feature-playlist.min.js', // for customizing dropdowns (eg. folkways magazine)
+	  './assets/common/js/plugins/bootstrap/js/collapse.js', // bootstrap collapse
 	])
 	.pipe(concat('common-plugins.js'))
 	.pipe(gulp.dest('./assets/common/js'))
@@ -110,7 +111,7 @@ var less = require('gulp-less');
 var path = require('path');
  
 gulp.task('less', function () {
-  return gulp.src('assets/bower_components/bootstrap/less/bootstrap.less')
+  return gulp.src('assets/common/js/plugins/bootstrap/less/bootstrap.less')
 	.pipe(less())
 	.pipe(rename('bootstrap.scss'))
 	.pipe(gulp.dest('assets/common/css/'));

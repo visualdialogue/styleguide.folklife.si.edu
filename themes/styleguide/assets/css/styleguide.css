@@ -2132,7 +2132,7 @@ th {
 	}
 	.btn > .caret,
 	.dropup > .btn > .caret {
-		top-border-color: #000 !important;
+		border-top-color: #000 !important;
 	}
 	.label {
 		border: 1px solid #000;
@@ -4864,6 +4864,45 @@ input[type="button"].btn-block {
 	width: 100%;
 }
 
+.fade {
+	opacity: 0;
+	-webkit-transition: opacity 0.15s linear;
+	-o-transition: opacity 0.15s linear;
+	transition: opacity 0.15s linear;
+}
+
+.fade.in {
+	opacity: 1;
+}
+
+.collapse {
+	display: none;
+}
+
+.collapse.in {
+	display: block;
+}
+
+tr.collapse.in {
+	display: table-row;
+}
+
+tbody.collapse.in {
+	display: table-row-group;
+}
+
+.collapsing {
+	position: relative;
+	height: 0;
+	overflow: hidden;
+	-webkit-transition-property: height, visibility;
+	transition-property: height, visibility;
+	-webkit-transition-duration: 0.35s;
+	transition-duration: 0.35s;
+	-webkit-transition-timing-function: ease;
+	transition-timing-function: ease;
+}
+
 .nav {
 	margin-bottom: 0;
 	padding-left: 0;
@@ -5092,8 +5131,8 @@ input[type="button"].btn-block {
 
 .nav-tabs .dropdown-menu {
 	margin-top: -1px;
-	top-border-right-radius: 0;
-	top-border-left-radius: 0;
+	border-top-right-radius: 0;
+	border-top-left-radius: 0;
 }
 
 .navbar {
@@ -5410,14 +5449,14 @@ input[type="button"].btn-block {
 
 .navbar-nav > li > .dropdown-menu {
 	margin-top: 0;
-	top-border-right-radius: 0;
-	top-border-left-radius: 0;
+	border-top-right-radius: 0;
+	border-top-left-radius: 0;
 }
 
 .navbar-fixed-bottom .navbar-nav > li > .dropdown-menu {
 	margin-bottom: 0;
-	top-border-right-radius: 4px;
-	top-border-left-radius: 4px;
+	border-top-right-radius: 4px;
+	border-top-left-radius: 4px;
 	border-bottom-right-radius: 0;
 	border-bottom-left-radius: 0;
 }
@@ -6264,7 +6303,7 @@ body {
 .content h5, .text-card h5 {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.38;
+	line-height: 1.32;
 	font-size: 1.5rem;
 	font-weight: 500;
 	margin-bottom: 0.18519rem;
@@ -6278,7 +6317,7 @@ body {
 
 @media only screen and (min-width: 1560px) {
 	.content h5, .text-card h5 {
-		line-height: 1.38;
+		line-height: 1.32;
 		font-size: 1.8rem;
 	}
 }
@@ -6346,7 +6385,7 @@ body {
 .content .title, .text-card .title {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.38;
+	line-height: 1.32;
 	font-size: 1.5rem;
 	margin-bottom: 0.11111rem;
 	width: initial;
@@ -6362,7 +6401,7 @@ body {
 
 @media only screen and (min-width: 1560px) {
 	.content .title, .text-card .title {
-		line-height: 1.38;
+		line-height: 1.32;
 		font-size: 1.8rem;
 	}
 }
@@ -6850,7 +6889,7 @@ body {
 .more-link-text {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.38;
+	line-height: 1.32;
 	font-size: 1.5rem;
 	display: inline-block;
 	vertical-align: top;
@@ -6865,7 +6904,7 @@ body {
 
 @media only screen and (min-width: 1560px) {
 	.more-link-text {
-		line-height: 1.38;
+		line-height: 1.32;
 		font-size: 1.8rem;
 	}
 }
@@ -8952,7 +8991,7 @@ a .page-title:hover {
 .sidebar-audio .track {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.38;
+	line-height: 1.32;
 	font-size: 1.5rem;
 }
 
@@ -8964,7 +9003,7 @@ a .page-title:hover {
 
 @media only screen and (min-width: 1560px) {
 	.sidebar-audio .track {
-		line-height: 1.38;
+		line-height: 1.32;
 		font-size: 1.8rem;
 	}
 }
@@ -9129,7 +9168,7 @@ a .page-title:hover {
 .sidebar-pull-quote .copy {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.38;
+	line-height: 1.32;
 	font-size: 1.5rem;
 	line-height: 1.3 !important;
 	font-weight: 600;
@@ -9144,7 +9183,7 @@ a .page-title:hover {
 
 @media only screen and (min-width: 1560px) {
 	.sidebar-pull-quote .copy {
-		line-height: 1.38;
+		line-height: 1.32;
 		font-size: 1.8rem;
 	}
 }
@@ -9471,7 +9510,7 @@ a .page-title:hover {
 	color: #fff;
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.38;
+	line-height: 1.32;
 	font-size: 1.5rem;
 	margin-left: 0rem;
 }
@@ -9484,7 +9523,7 @@ a .page-title:hover {
 
 @media only screen and (min-width: 1560px) {
 	.button .price {
-		line-height: 1.38;
+		line-height: 1.32;
 		font-size: 1.8rem;
 	}
 }
@@ -10417,7 +10456,7 @@ figcaption.minus-sign:before {
 .dropdown-wrapper {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.38;
+	line-height: 1.32;
 	font-size: 1.5rem;
 	font-weight: 600;
 	color: #666666;
@@ -10431,7 +10470,7 @@ figcaption.minus-sign:before {
 
 @media only screen and (min-width: 1560px) {
 	.dropdown-wrapper {
-		line-height: 1.38;
+		line-height: 1.32;
 		font-size: 1.8rem;
 	}
 }
@@ -11623,7 +11662,7 @@ video::-webkit-media-controls {
 	color: #595959;
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.38;
+	line-height: 1.32;
 	font-size: 1.5rem;
 	margin-top: 0.74074rem;
 }
@@ -11636,7 +11675,7 @@ video::-webkit-media-controls {
 
 @media only screen and (min-width: 1560px) {
 	.article-page figcaption {
-		line-height: 1.38;
+		line-height: 1.32;
 		font-size: 1.8rem;
 	}
 }
@@ -12028,7 +12067,7 @@ a.details {
 .byline {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.38;
+	line-height: 1.32;
 	font-size: 1.5rem;
 }
 
@@ -12040,7 +12079,7 @@ a.details {
 
 @media only screen and (min-width: 1560px) {
 	.byline {
-		line-height: 1.38;
+		line-height: 1.32;
 		font-size: 1.8rem;
 	}
 }
@@ -12143,7 +12182,7 @@ a.details {
 .publication-card .author {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.38;
+	line-height: 1.32;
 	font-size: 1.5rem;
 	margin-top: 0.37037rem;
 	margin-bottom: 1.11111rem;
@@ -12157,7 +12196,7 @@ a.details {
 
 @media only screen and (min-width: 1560px) {
 	.publication-card .author {
-		line-height: 1.38;
+		line-height: 1.32;
 		font-size: 1.8rem;
 	}
 }
@@ -12919,7 +12958,7 @@ body {
 .sidebar-card .details {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.38;
+	line-height: 1.32;
 	font-size: 1.5rem;
 }
 
@@ -12931,7 +12970,7 @@ body {
 
 @media only screen and (min-width: 1560px) {
 	.sidebar-card .details {
-		line-height: 1.38;
+		line-height: 1.32;
 		font-size: 1.8rem;
 	}
 }
@@ -13081,7 +13120,7 @@ body {
 .album-card .title, .vinyl-card .title, .books-card .title {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.38;
+	line-height: 1.32;
 	font-size: 1.5rem;
 	font-weight: 700;
 	margin-bottom: 0.18519rem;
@@ -13095,7 +13134,7 @@ body {
 
 @media only screen and (min-width: 1560px) {
 	.album-card .title, .vinyl-card .title, .books-card .title {
-		line-height: 1.38;
+		line-height: 1.32;
 		font-size: 1.8rem;
 	}
 }
@@ -13115,7 +13154,7 @@ body {
 .album-card .artist, .vinyl-card .artist, .books-card .artist {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.38;
+	line-height: 1.32;
 	font-size: 1.5rem;
 }
 
@@ -13127,7 +13166,7 @@ body {
 
 @media only screen and (min-width: 1560px) {
 	.album-card .artist, .vinyl-card .artist, .books-card .artist {
-		line-height: 1.38;
+		line-height: 1.32;
 		font-size: 1.8rem;
 	}
 }
@@ -13168,7 +13207,7 @@ body {
 .merchandise-card .title {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.38;
+	line-height: 1.32;
 	font-size: 1.5rem;
 	color: #fff;
 	font-weight: bold;
@@ -13184,7 +13223,7 @@ body {
 
 @media only screen and (min-width: 1560px) {
 	.merchandise-card .title {
-		line-height: 1.38;
+		line-height: 1.32;
 		font-size: 1.8rem;
 	}
 }
@@ -13204,7 +13243,7 @@ body {
 .merchandise-card .price {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.38;
+	line-height: 1.32;
 	font-size: 1.5rem;
 	color: #4d4d4d;
 	text-align: center;
@@ -13218,7 +13257,7 @@ body {
 
 @media only screen and (min-width: 1560px) {
 	.merchandise-card .price {
-		line-height: 1.38;
+		line-height: 1.32;
 		font-size: 1.8rem;
 	}
 }
@@ -13318,7 +13357,7 @@ body {
 .general-content-card .date {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.38;
+	line-height: 1.32;
 	font-size: 1.5rem;
 	font-weight: 300;
 	margin-bottom: 0.74074rem;
@@ -13332,7 +13371,7 @@ body {
 
 @media only screen and (min-width: 1560px) {
 	.general-content-card .date {
-		line-height: 1.38;
+		line-height: 1.32;
 		font-size: 1.8rem;
 	}
 }
@@ -13595,7 +13634,7 @@ body {
 	color: #fff;
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.38;
+	line-height: 1.32;
 	font-size: 1.5rem;
 	margin-top: 0.74074rem;
 }
@@ -13608,7 +13647,7 @@ body {
 
 @media only screen and (min-width: 1560px) {
 	.program-category-main figcaption {
-		line-height: 1.38;
+		line-height: 1.32;
 		font-size: 1.8rem;
 	}
 }
@@ -14687,7 +14726,7 @@ body {
 .participants-section .blurb {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.38;
+	line-height: 1.32;
 	font-size: 1.5rem;
 	line-height: 1.33 !important;
 }
@@ -14700,7 +14739,7 @@ body {
 
 @media only screen and (min-width: 1560px) {
 	.participants-section .blurb {
-		line-height: 1.38;
+		line-height: 1.32;
 		font-size: 1.8rem;
 	}
 }
@@ -14830,7 +14869,7 @@ body {
 .audio-card .subtitle, .audio-card .artist {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.38;
+	line-height: 1.32;
 	font-size: 1.5rem;
 }
 
@@ -14842,7 +14881,7 @@ body {
 
 @media only screen and (min-width: 1560px) {
 	.audio-card .subtitle, .audio-card .artist {
-		line-height: 1.38;
+		line-height: 1.32;
 		font-size: 1.8rem;
 	}
 }
@@ -14961,7 +15000,7 @@ body {
 .audio-time {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.38;
+	line-height: 1.32;
 	font-size: 1.5rem;
 }
 
@@ -14973,7 +15012,7 @@ body {
 
 @media only screen and (min-width: 1560px) {
 	.audio-time {
-		line-height: 1.38;
+		line-height: 1.32;
 		font-size: 1.8rem;
 	}
 }
@@ -15567,7 +15606,7 @@ body {
 .horizontal-audio-card .title {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.38;
+	line-height: 1.32;
 	font-size: 1.5rem;
 	font-weight: 600;
 }
@@ -15580,7 +15619,7 @@ body {
 
 @media only screen and (min-width: 1560px) {
 	.horizontal-audio-card .title {
-		line-height: 1.38;
+		line-height: 1.32;
 		font-size: 1.8rem;
 	}
 }
@@ -16111,7 +16150,7 @@ h3.sidebar-section-title {
 .grid-item-inner .copy {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.38;
+	line-height: 1.32;
 	font-size: 1.5rem;
 	color: #fff;
 	text-align: center;
@@ -16130,7 +16169,7 @@ h3.sidebar-section-title {
 
 @media only screen and (min-width: 1560px) {
 	.grid-item-inner .copy {
-		line-height: 1.38;
+		line-height: 1.32;
 		font-size: 1.8rem;
 	}
 }
@@ -16168,7 +16207,7 @@ h3.sidebar-section-title {
 .color {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.38;
+	line-height: 1.32;
 	font-size: 1.5rem;
 	margin-bottom: 0 !important;
 }
@@ -16181,7 +16220,7 @@ h3.sidebar-section-title {
 
 @media only screen and (min-width: 1560px) {
 	.color {
-		line-height: 1.38;
+		line-height: 1.32;
 		font-size: 1.8rem;
 	}
 }
@@ -16822,7 +16861,7 @@ code.hljs {
 .type-details {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.38;
+	line-height: 1.32;
 	font-size: 1.5rem;
 }
 
@@ -16834,7 +16873,7 @@ code.hljs {
 
 @media only screen and (min-width: 1560px) {
 	.type-details {
-		line-height: 1.38;
+		line-height: 1.32;
 		font-size: 1.8rem;
 	}
 }
@@ -17076,7 +17115,7 @@ code.hljs {
 .sm-sans {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.38;
+	line-height: 1.32;
 	font-size: 1.5rem;
 }
 
@@ -17088,7 +17127,7 @@ code.hljs {
 
 @media only screen and (min-width: 1560px) {
 	.sm-sans {
-		line-height: 1.38;
+		line-height: 1.32;
 		font-size: 1.8rem;
 	}
 }
@@ -17096,7 +17135,7 @@ code.hljs {
 .sm-sans-semi {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.38;
+	line-height: 1.32;
 	font-size: 1.5rem;
 	font-weight: 600;
 }
@@ -17109,7 +17148,7 @@ code.hljs {
 
 @media only screen and (min-width: 1560px) {
 	.sm-sans-semi {
-		line-height: 1.38;
+		line-height: 1.32;
 		font-size: 1.8rem;
 	}
 }

@@ -135,13 +135,13 @@
 </code></pre></div></div></div><div class="typeface codeblock"><div class="row type-title-wrapper"><hr/><div class="col-sm-10 sm-sans-semi type-title">Small Sans Title</div><?php snippet('show-sass'); ?></div><div class="row"><div class="col-sm-5"><div class="type-details">Typeface: Acumin Pro<br/>Weight: Semibold<br/>Maximum Font Size: 1.8rem<br/>Usage: Past Festivals listings (Medium weight), Folkways album info sidebar</div></div><div class="col-sm-7"><?php snippet('show-sass-mobile'); ?><pre class="sass"><code>@mixin sm-sans {
 	font-weight: 300;
 	font-family: $sans;
-	line-height: 1.38; // album sidebar 2017.02.17
+	line-height: 1.32; // album sidebar 2017.02.17
 	font-size: 1.5rem;
 	@include respond-to(break2full) {
 		font-size: 1.3vw;
 	}
 	@include respond-to(fullwidth) {
-		line-height: 1.38; // album sidebar 2017.02.17
+		line-height: 1.32; // album sidebar 2017.02.17
 		font-size: 1.8rem;
 	}
 }</code></pre></div></div></div><div class="typeface codeblock"><div class="row type-title-wrapper"><hr/><div class="col-sm-10 sm-sans type-title">Small Sans Title Light</div><?php snippet('show-sass'); ?></div><div class="row"><div class="col-sm-5"><div class="type-details">Typeface: Acumin Pro<br/>Weight: Light<br/>Maximum Font Size: 1.8rem</div></div><div class="col-sm-7"><?php snippet('show-sass-mobile'); ?><pre class="sass"><code>@mixin sm-sans {
