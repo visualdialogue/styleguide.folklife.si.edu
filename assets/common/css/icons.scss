@@ -115,7 +115,7 @@
 			color: $black80;
   			display: block;
 		}
-	}
+	}	
 	.icon-gallery:before, .icon-gallery:after, .icon-play-button:before, .icon-play-button:after, .mejs-controls .mejs-playpause-button button:before, .mejs-controls .mejs-playpause-button button:after {
 		@include respond-to(break2max) {
 			font-size: 10vw;
@@ -127,6 +127,20 @@
 			font-size: 6rem;
 		}
 	}
+	// Album page track listing
+	// .track .mejs-controls button {
+	// 	&:before, &:after {
+	// 		@include respond-to(break2max) {
+	// 			font-size: 5vw;
+	// 		}
+	// 		@include respond-to(break2full) {
+	// 			font-size: 3vw;
+	// 		}
+	// 		@include respond-to(fullwidth) {
+	// 			font-size: 3rem;
+	// 		}
+	// 	}
+	// }
 
 /* Image Gallery
 -------------------------------------------------- */

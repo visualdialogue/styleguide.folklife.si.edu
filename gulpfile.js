@@ -153,7 +153,10 @@ gulp.task('serve', ['jade', 'styles', 'js'], function() {
 	gulp.watch('bower_components/bootstrap/less/*.less',['less']);
 	gulp.watch('site/common/blueprints/*.yml',['copy']);
 	gulp.watch('site/common/**/*.php',['copy']);
-	gulp.watch('assets/common/css/*.scss',['styles','copy-sass']);
+	gulp.watch([
+		'assets/common/css/*.scss',
+		'../../toby/folkways/src/Orchard.Web/Themes/Folkways/Styles/folkways.scss'
+		],['styles','copy-sass']);
 	gulp.watch('themes/styleguide/assets/css/*.scss',['styles']);
 	// gulp.watch('../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/*.scss',['styles']);
 	gulp.watch('assets/common/js/*.js',['js','copy-js']); // copy common plugins and scripts to toby's 3 repos until he has centralized common elements
