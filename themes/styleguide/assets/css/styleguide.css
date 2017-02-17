@@ -11203,9 +11203,13 @@ video::-webkit-media-controls {
 	}
 }
 
+.remodal-captions .remodal-description a:hover {
+	color: #b3b3b3;
+}
+
 .remodal-captions .remodal-credit {
 	padding: 1.40469rem;
-	color: gray;
+	color: #b3b3b3;
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
 	line-height: 1.4;
