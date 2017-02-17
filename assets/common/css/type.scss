@@ -86,16 +86,13 @@
 	@mixin sm-sans {
 		font-weight: 300;
 		font-family: $sans;
-		// line-height: 1.2;
-		// line-height: 1.3; // 2017.02.17
 		line-height: 1.38; // album sidebar 2017.02.17
 		font-size: 1.5rem;
 		@include respond-to(break2full) {
 			font-size: 1.3vw;
 		}
 		@include respond-to(fullwidth) {
-			// line-height: 1.12; // 18/20
-			// line-height: 1.22; // 18/20
+			line-height: 1.38; // album sidebar 2017.02.17
 			font-size: 1.8rem;
 		}
 	}

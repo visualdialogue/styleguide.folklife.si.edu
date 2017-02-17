@@ -132,16 +132,16 @@
   		line-height: 1.28; // 25/32
 	}
 }
-</code></pre></div></div></div><div class="typeface codeblock"><div class="row type-title-wrapper"><hr/><div class="col-sm-10 sm-sans-semi type-title">Small Sans Title</div><?php snippet('show-sass'); ?></div><div class="row"><div class="col-sm-5"><div class="type-details">Typeface: Acumin Pro<br/>Weight: Semibold<br/>Maximum Font Size: 1.8rem<br/>Usage: Past Festivals listings (Medium weight)</div></div><div class="col-sm-7"><?php snippet('show-sass-mobile'); ?><pre class="sass"><code>@mixin sm-sans {
-	font-weight: 600;
+</code></pre></div></div></div><div class="typeface codeblock"><div class="row type-title-wrapper"><hr/><div class="col-sm-10 sm-sans-semi type-title">Small Sans Title</div><?php snippet('show-sass'); ?></div><div class="row"><div class="col-sm-5"><div class="type-details">Typeface: Acumin Pro<br/>Weight: Semibold<br/>Maximum Font Size: 1.8rem<br/>Usage: Past Festivals listings (Medium weight), Folkways album info sidebar</div></div><div class="col-sm-7"><?php snippet('show-sass-mobile'); ?><pre class="sass"><code>@mixin sm-sans {
+	font-weight: 300;
 	font-family: $sans;
-	line-height: 1.2;
+	line-height: 1.38; // album sidebar 2017.02.17
 	font-size: 1.5rem;
 	@include respond-to(break2full) {
-		font-size: 1.2vw;
+		font-size: 1.3vw;
 	}
 	@include respond-to(fullwidth) {
-		line-height: 1.12; // 18/20
+		line-height: 1.38; // album sidebar 2017.02.17
 		font-size: 1.8rem;
 	}
 }</code></pre></div></div></div><div class="typeface codeblock"><div class="row type-title-wrapper"><hr/><div class="col-sm-10 sm-sans type-title">Small Sans Title Light</div><?php snippet('show-sass'); ?></div><div class="row"><div class="col-sm-5"><div class="type-details">Typeface: Acumin Pro<br/>Weight: Light<br/>Maximum Font Size: 1.8rem</div></div><div class="col-sm-7"><?php snippet('show-sass-mobile'); ?><pre class="sass"><code>@mixin sm-sans {
@@ -283,7 +283,7 @@
 	}
 }</code></pre></div></div></div></div><!-- Body type--><div class="sub-section"><div class="typeface codeblock"><a id="intro-serif" class="anchor-link"></a><div class="row type-title-wrapper"><hr/><div class="col-sm-6 intro-serif type-title"> 
 Serif Intro Text<br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div><div class="col-sm-4"></div><?php snippet('show-sass'); ?></div><div class="row"><div class="col-sm-5"><div class="type-details">Typeface: Freight Text<br/>Weight: Semibold<br/>Maximum Font Size: 3rem<br/>Maximum Line Height: 3.8rem<br/>Usage: Folkways album page</div></div><div class="col-md-7"><?php snippet('show-sass-mobile'); ?><pre class="sass"><code>@mixin intro-serif {
-	font-weight: 600;
+	font-weight: 500;
 	font-family: $serif;
 	line-height: 1.267; // 38px
 	font-size: 1.9rem;

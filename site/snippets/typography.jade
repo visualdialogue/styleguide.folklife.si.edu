@@ -355,20 +355,20 @@ section.container.typography-section
 						br
 						|Maximum Font Size: 1.8rem
 						br 
-						|Usage: Past Festivals listings (Medium weight)
+						|Usage: Past Festivals listings (Medium weight), Folkways album info sidebar
 				.col-sm-7
 					-snippet('show-sass-mobile')
 					pre.sass: code.
 						@mixin sm-sans {
-							font-weight: 600;
+							font-weight: 300;
 							font-family: $sans;
-							line-height: 1.2;
+							line-height: 1.38; // album sidebar 2017.02.17
 							font-size: 1.5rem;
 							@include respond-to(break2full) {
-								font-size: 1.2vw;
+								font-size: 1.3vw;
 							}
 							@include respond-to(fullwidth) {
-								line-height: 1.12; // 18/20
+								line-height: 1.38; // album sidebar 2017.02.17
 								font-size: 1.8rem;
 							}
 						}
@@ -704,7 +704,7 @@ section.container.typography-section
 						-snippet('show-sass-mobile')
 						pre.sass: code.
 							@mixin intro-serif {
-								font-weight: 600;
+								font-weight: 500;
 								font-family: $serif;
 								line-height: 1.267; // 38px
 								font-size: 1.9rem;

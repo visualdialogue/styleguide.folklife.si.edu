@@ -6278,6 +6278,7 @@ body {
 
 @media only screen and (min-width: 1560px) {
 	.content h5, .text-card h5 {
+		line-height: 1.38;
 		font-size: 1.8rem;
 	}
 }
@@ -6361,6 +6362,7 @@ body {
 
 @media only screen and (min-width: 1560px) {
 	.content .title, .text-card .title {
+		line-height: 1.38;
 		font-size: 1.8rem;
 	}
 }
@@ -6863,6 +6865,7 @@ body {
 
 @media only screen and (min-width: 1560px) {
 	.more-link-text {
+		line-height: 1.38;
 		font-size: 1.8rem;
 	}
 }
@@ -8961,6 +8964,7 @@ a .page-title:hover {
 
 @media only screen and (min-width: 1560px) {
 	.sidebar-audio .track {
+		line-height: 1.38;
 		font-size: 1.8rem;
 	}
 }
@@ -9140,6 +9144,7 @@ a .page-title:hover {
 
 @media only screen and (min-width: 1560px) {
 	.sidebar-pull-quote .copy {
+		line-height: 1.38;
 		font-size: 1.8rem;
 	}
 }
@@ -9479,6 +9484,7 @@ a .page-title:hover {
 
 @media only screen and (min-width: 1560px) {
 	.button .price {
+		line-height: 1.38;
 		font-size: 1.8rem;
 	}
 }
@@ -10425,6 +10431,7 @@ figcaption.minus-sign:before {
 
 @media only screen and (min-width: 1560px) {
 	.dropdown-wrapper {
+		line-height: 1.38;
 		font-size: 1.8rem;
 	}
 }
@@ -11625,6 +11632,7 @@ video::-webkit-media-controls {
 
 @media only screen and (min-width: 1560px) {
 	.article-page figcaption {
+		line-height: 1.38;
 		font-size: 1.8rem;
 	}
 }
@@ -12028,6 +12036,7 @@ a.details {
 
 @media only screen and (min-width: 1560px) {
 	.byline {
+		line-height: 1.38;
 		font-size: 1.8rem;
 	}
 }
@@ -12144,6 +12153,7 @@ a.details {
 
 @media only screen and (min-width: 1560px) {
 	.publication-card .author {
+		line-height: 1.38;
 		font-size: 1.8rem;
 	}
 }
@@ -12917,6 +12927,7 @@ body {
 
 @media only screen and (min-width: 1560px) {
 	.sidebar-card .details {
+		line-height: 1.38;
 		font-size: 1.8rem;
 	}
 }
@@ -13080,6 +13091,7 @@ body {
 
 @media only screen and (min-width: 1560px) {
 	.album-card .title, .vinyl-card .title, .books-card .title {
+		line-height: 1.38;
 		font-size: 1.8rem;
 	}
 }
@@ -13111,6 +13123,7 @@ body {
 
 @media only screen and (min-width: 1560px) {
 	.album-card .artist, .vinyl-card .artist, .books-card .artist {
+		line-height: 1.38;
 		font-size: 1.8rem;
 	}
 }
@@ -13167,6 +13180,7 @@ body {
 
 @media only screen and (min-width: 1560px) {
 	.merchandise-card .title {
+		line-height: 1.38;
 		font-size: 1.8rem;
 	}
 }
@@ -13200,6 +13214,7 @@ body {
 
 @media only screen and (min-width: 1560px) {
 	.merchandise-card .price {
+		line-height: 1.38;
 		font-size: 1.8rem;
 	}
 }
@@ -13313,6 +13328,7 @@ body {
 
 @media only screen and (min-width: 1560px) {
 	.general-content-card .date {
+		line-height: 1.38;
 		font-size: 1.8rem;
 	}
 }
@@ -13588,6 +13604,7 @@ body {
 
 @media only screen and (min-width: 1560px) {
 	.program-category-main figcaption {
+		line-height: 1.38;
 		font-size: 1.8rem;
 	}
 }
@@ -14679,6 +14696,7 @@ body {
 
 @media only screen and (min-width: 1560px) {
 	.participants-section .blurb {
+		line-height: 1.38;
 		font-size: 1.8rem;
 	}
 }
@@ -14820,6 +14838,7 @@ body {
 
 @media only screen and (min-width: 1560px) {
 	.audio-card .subtitle, .audio-card .artist {
+		line-height: 1.38;
 		font-size: 1.8rem;
 	}
 }
@@ -14950,6 +14969,7 @@ body {
 
 @media only screen and (min-width: 1560px) {
 	.audio-time {
+		line-height: 1.38;
 		font-size: 1.8rem;
 	}
 }
@@ -15556,6 +15576,7 @@ body {
 
 @media only screen and (min-width: 1560px) {
 	.horizontal-audio-card .title {
+		line-height: 1.38;
 		font-size: 1.8rem;
 	}
 }
@@ -16105,6 +16126,7 @@ h3.sidebar-section-title {
 
 @media only screen and (min-width: 1560px) {
 	.grid-item-inner .copy {
+		line-height: 1.38;
 		font-size: 1.8rem;
 	}
 }
@@ -16155,6 +16177,7 @@ h3.sidebar-section-title {
 
 @media only screen and (min-width: 1560px) {
 	.color {
+		line-height: 1.38;
 		font-size: 1.8rem;
 	}
 }
@@ -16807,6 +16830,7 @@ code.hljs {
 
 @media only screen and (min-width: 1560px) {
 	.type-details {
+		line-height: 1.38;
 		font-size: 1.8rem;
 	}
 }
@@ -17060,6 +17084,7 @@ code.hljs {
 
 @media only screen and (min-width: 1560px) {
 	.sm-sans {
+		line-height: 1.38;
 		font-size: 1.8rem;
 	}
 }
@@ -17080,6 +17105,7 @@ code.hljs {
 
 @media only screen and (min-width: 1560px) {
 	.sm-sans-semi {
+		line-height: 1.38;
 		font-size: 1.8rem;
 	}
 }
