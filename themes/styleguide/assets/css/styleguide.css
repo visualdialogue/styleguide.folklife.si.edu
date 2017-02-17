@@ -7231,6 +7231,24 @@ a:hover {
 	}
 }
 
+.smithsonian-logo {
+	float: left;
+	width: 100px;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.smithsonian-logo {
+		width: 140px;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.smithsonian-logo {
+		padding-top: 3px;
+		width: 160px;
+	}
+}
+
 .site-toggle {
 	display: none;
 	background-color: #333333;
@@ -7277,7 +7295,6 @@ a:hover {
 	.site-toggle {
 		font-size: 1.1rem;
 		display: block;
-		padding-top: 0.8rem;
 		height: 3rem;
 	}
 }
@@ -7288,6 +7305,18 @@ a:hover {
 		line-height: 3.5rem !important;
 		padding: 0;
 		height: 36px;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.right-site-toggle {
+		padding-top: 0.8rem;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.right-site-toggle {
+		padding: 0;
 	}
 }
 

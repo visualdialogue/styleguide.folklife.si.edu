@@ -57,6 +57,17 @@
 	}
 
 	// SITE TOGGLE BANNER
+	.smithsonian-logo {
+		float: left;
+		width: 100px;
+		@include respond-to(break2full) {
+			width: 140px;
+		}
+		@include respond-to(fullwidth) {
+			padding-top:3px;
+			width: 160px;
+		}
+	}
 	.site-toggle {
 		display: none;
 		background-color: $black80; // new
@@ -74,7 +85,6 @@
 		@include respond-to(break2full) {
 			font-size: 1.1rem;
 			display: block;
-			padding-top: 0.8rem;
 			height: $tablet-navbarSiteToggle;
 		}
 		@include respond-to(fullwidth) {
@@ -82,6 +92,15 @@
 			line-height:3.5rem !important;
 			padding: 0;
 			height: $desktop-navbarSiteToggle;
+		}
+	}
+	// tagline and site toggle links
+	.right-site-toggle {
+		@include respond-to(break2full) {
+			padding-top: 0.8rem;
+		}
+		@include respond-to(fullwidth) {
+			padding: 0;
 		}
 	}
 	.tagline {
