@@ -439,7 +439,7 @@ $(document).ready(function () {
 *********************/
 	// initialize here
 	var remodalInstanceOptions = {
-		hashTracking: true
+		hashTracking: false
 	}
 	var remodalInstance = $('[data-remodal-id=modal]').remodal(remodalInstanceOptions);
 
@@ -575,16 +575,20 @@ $(document).ready(function () {
 					youTubePlayer.stopVideo();
 					youTubePlayer.destroy(); // so can build again
 			}
-
 			// reset flag
 			videoPlayerIsOpen = false;
 		}
+
+		// reset after image gallery
+		if(galleryIsOpen) {
+			$remodal.removeClass('remodal-gallery-is-open remodal-image-gallery');
+			console.log('gallery classes removed');
+			// reset flag
+			galleryIsOpen = false;
+		}
+
 		$remodalClose.addClass('visually-hidden');
 	});
-
-	// reset after image gallery
-	$remodal.removeClass('remodal-gallery-is-open remodal-image-gallery');
-	console.log('gallery classes removed');
 
 	// close remodal with X
 	$remodalClose.on('click', function() {
@@ -598,6 +602,7 @@ $(document).ready(function () {
 	var $remodalGallery = $remodal.find('.remodal-gallery');
 	var $remodalCaptions = $remodal.find('.remodal-captions');
 	var $remodalOverlay = $('.remodal-overlay');
+	var galleryIsOpen = false;
 	var galleryIsSlick = false;
 
 	// @param $initialSlide is number of slide that was clicked so can show up first in gallery
@@ -608,6 +613,9 @@ $(document).ready(function () {
 			$remodalGallery.slick('unslick');
 			$remodalCaptions.slick('unslick');
 		}
+
+		// flag for closing
+		galleryIsOpen = true;
 
 		// hide videos
 		$youTubeIframeWrapper.hide();
@@ -625,10 +633,10 @@ $(document).ready(function () {
 
 		// build gallery
 		// get images for gallery by going up to grandparent, then finding all classed images, then copying them for use in remodal
-		$('.gallery-list').children().clone().appendTo($remodalGallery);
+		$(this).find('.gallery-list').children().clone().appendTo($remodalGallery);
 
 		// build captions
-		$('.gallery-list-captions').children().clone().appendTo($remodalCaptions);
+		$(this).find('.gallery-list-captions').children().clone().appendTo($remodalCaptions);
 		
 		// manually open remodal because sometimes just doesn't do it
 		remodalInstance.open();

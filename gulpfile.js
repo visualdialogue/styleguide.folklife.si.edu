@@ -155,7 +155,7 @@ gulp.task('serve', ['jade', 'styles', 'js'], function() {
 	gulp.watch('assets/common/css/*.scss',['styles','copy-sass']);
 	gulp.watch('themes/styleguide/assets/css/*.scss',['styles']);
 	// gulp.watch('../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/*.scss',['styles']);
-	gulp.watch('assets/common/js/*.js',['copy-js']); // copy common plugins and scripts to toby's 3 repos until he has centralized common elements
+	gulp.watch('assets/common/js/*.js',['js','copy-js']); // copy common plugins and scripts to toby's 3 repos until he has centralized common elements
 	gulp.watch([ // JS
 		'themes/styleguide/assets/js/*.js'
 		],['js']);
