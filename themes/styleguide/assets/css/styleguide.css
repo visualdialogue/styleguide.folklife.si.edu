@@ -9074,7 +9074,7 @@ a .page-title:hover {
 }
 
 .general-content .intro-content p {
-	font-weight: 600;
+	font-weight: 500;
 	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
 	line-height: 1.267;
 	font-size: 1.9rem;
@@ -17131,7 +17131,7 @@ code.hljs {
 }
 
 .intro-serif {
-	font-weight: 600;
+	font-weight: 500;
 	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
 	line-height: 1.267;
 	font-size: 1.9rem;
