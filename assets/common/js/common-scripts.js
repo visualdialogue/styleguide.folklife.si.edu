@@ -384,6 +384,8 @@ $(document).ready(function () {
 		// $('.video').on('click', function() {
 		$(video).on('click', function() {
 
+			console.log('play vimeo video');
+
 			// close any slideshow that's open
 			if(galleryIsSlick) {
 				// hide remodal gallery
