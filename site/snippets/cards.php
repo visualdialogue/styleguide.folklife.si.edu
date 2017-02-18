@@ -156,7 +156,7 @@
 	}
 }</code></pre></div><div class="col-md-8"><pre class="html"><code>&lt;li class="card video-card col-sm-4"&gt;
 	&lt;div class="row"&gt;
-		&lt;div class="video col-xs-12" data-id="190599898" data-title="Festival 101" data-description="Lorem ipsum... &lt;a&gt;more&lt;/a&gt;"&gt;
+		&lt;div class="video col-xs-12" data-id="204687018" data-title="Festival 101" data-description="Lorem ipsum... &lt;a&gt;more&lt;/a&gt;"&gt;
 			&lt;div class="center-box"&gt;
 				&lt;div class="modal-trigger"&gt;
 					&lt;img src="video.png"&gt;
@@ -192,7 +192,7 @@
 		&lt;/div&gt;
 	&lt;/div&gt;
 &lt;/div&gt;
-</code></pre></div></div></div><!-- Video Card - Vimeo--><div class="codeblock"><div class="row"><div class="col-sm-8"><h3 class="section-subtitle">Video Card &mdash; Vimeo</h3></div><?php snippet('show-html'); ?><?php snippet('show-sass'); ?></div><div class="row"><li class="card video-card col-sm-4"><div class="row"><div data-id="190599898" data-type="vimeo" data-title="Festival 101" data-description="Lorem ipsum... <a>more</a>" class="video col-sm-12"><div class="center-box"><div class="modal-trigger"><?php echo $section->image('video.png'); ?></div><div class="icon-play-button"></div></div></div><div class="details col-sm-12"><div class="details-inner"><div class="tag">Festival 2017</div><a href="#" class="high title"><span class="light"><span class="er">Circus Arts 2017</span></span></a><div class="description link-underline"><p>See the culture and history of circus arts across the U.S.</p></div></div></div></div><div class="row"><div class="col-sm-12 visible-xs"><?php snippet('show-html-mobile'); ?><?php snippet('show-sass-mobile'); ?></div></div></li><div class="col-md-8"><pre class="sass"><code>// As video cards can have different looks, we set the title font based on the section via the CSS
+</code></pre></div></div></div><!-- Video Card - Vimeo--><div class="codeblock"><div class="row"><div class="col-sm-8"><h3 class="section-subtitle">Video Card &mdash; Vimeo</h3></div><?php snippet('show-html'); ?><?php snippet('show-sass'); ?></div><div class="row"><li class="card video-card col-sm-4"><div class="row"><div data-id="204687018" data-type="vimeo" data-title="Festival 101" data-description="Lorem ipsum... <a>more</a>" class="video col-sm-12"><div class="center-box"><div class="modal-trigger"><?php echo $section->image('video.png'); ?></div><div class="icon-play-button"></div></div></div><div class="details col-sm-12"><div class="details-inner"><div class="tag">Festival 2017</div><a href="#" class="high title"><span class="light"><span class="er">Circus Arts 2017</span></span></a><div class="description link-underline"><p>See the culture and history of circus arts across the U.S.</p></div></div></div></div><div class="row"><div class="col-sm-12 visible-xs"><?php snippet('show-html-mobile'); ?><?php snippet('show-sass-mobile'); ?></div></div></li><div class="col-md-8"><pre class="sass"><code>// As video cards can have different looks, we set the title font based on the section via the CSS
 .folkways-learn-section {
 	.title {
 		@include serif-sm;
@@ -200,7 +200,7 @@
 	}
 }</code></pre></div><div class="col-md-8"><pre class="html"><code>&lt;li class="card video-card col-sm-4"&gt;
 	&lt;div class="row"&gt;
-		&lt;div class="video col-xs-12" data-id="190599898" data-title="Festival 101" data-description="Lorem ipsum... &lt;a&gt;more&lt;/a&gt;"&gt;
+		&lt;div class="video col-xs-12" data-id="204687018" data-title="Festival 101" data-description="Lorem ipsum... &lt;a&gt;more&lt;/a&gt;"&gt;
 			&lt;div class="center-box"&gt;
 				&lt;div class="modal-trigger"&gt;
 					&lt;img src="video.png"&gt;
