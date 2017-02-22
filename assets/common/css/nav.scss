@@ -79,6 +79,7 @@
 		z-index: 11; // above play buttons!
 		top: 0;
 		width: 100%;
+		padding-top: 0.8rem;
 		@include respond-to(break2) {
 			display: block;
 		}
@@ -323,6 +324,7 @@
 		}
 		@include respond-to(fullwidth) {
 			margin-top:1.3rem;
+			margin-right: -1.5rem;
 			// right: 0;
 		}
 	}

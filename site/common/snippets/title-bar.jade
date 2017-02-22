@@ -2,9 +2,10 @@
 	.container.title-height
 		// Program Year
 		-if (isset($year)):
-			.program-year-wrapper
-				.program-year
-					!= $year
+			.program-year-outer
+				.program-year-inner
+					.program-year
+						!= $year
 		-endif
 		
 		//- if custom title passed

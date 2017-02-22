@@ -124,7 +124,7 @@ $(document).ready(function () {
 	$(window).scroll(function() {
 		// close all if on phone
 		if(site.isMobile) {
-			site.navCloseAll(); // close anything else that's open by default
+			// site.navCloseAll(); // close anything else that's open by default // too confusing for long menu
 		}
 
 		// when user scrolls past height of site toggle, make smaller
@@ -695,11 +695,9 @@ $(document).ready(function () {
 	// wrap time elements together after load. They don't come togethery by default and it is impossible to line them up according to the layout without having a parent wrapper.
 	// set as var so can call when other mejs elements load, after page load
 	wrapTime = function($currentTime) {
-		// console.log('$currentTime: ', $currentTime)
 		var $durationTime = $currentTime.siblings('.mejs-duration-container');
 		// wrap current time and duration time in new div for correct positioning
 		$currentTime.add($durationTime).wrapAll('<div class="mejs-time-wrapper">');
-		// console.log('wrapped');
 	}
 	
 	// find currenttime containers and wrap them with closest duration container
@@ -709,9 +707,23 @@ $(document).ready(function () {
 	});
 	
 	// keep play button visible after click
+	var showPause = true;
 	$('.mejs-playpause-button button').click(function() {
 		console.log('clicked play');
-		$('.mejs-playpause-button').show();
+		var $trackNumber = $(this).closest('#track').find('.track-number'); // get closest so don't show all
+
+		console.log($trackNumber);
+
+		if(showPause) {
+			$trackNumber.addClass('hidden');
+			showPause = false;
+		}
+		else {
+			$trackNumber.removeClass('hidden');
+			showPause = true;
+		}
+		// console.log($(this).parent());
+		// $(this).parent().show();
 		// $(this).show();
 	})
 

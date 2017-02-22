@@ -7303,6 +7303,7 @@ a:hover {
 	z-index: 11;
 	top: 0;
 	width: 100%;
+	padding-top: 0.8rem;
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -7657,6 +7658,7 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
 @media only screen and (min-width: 1560px) {
 	.nav-icons {
 		margin-top: 1.3rem;
+		margin-right: -1.5rem;
 	}
 }
 
@@ -13927,24 +13929,25 @@ body {
 	}
 }
 
-.ms-header .program-year-wrapper {
+.ms-header .program-year-outer {
+	position: relative;
+}
+
+.ms-header .program-year-inner {
 	position: absolute;
-	z-index: 20;
-	top: 11.6rem;
-	right: 2rem;
+	right: 0;
+	top: -1.7rem;
 }
 
 @media only screen and (min-width: 53.25em) {
-	.ms-header .program-year-wrapper {
-		top: 19rem;
-		right: 8rem;
+	.ms-header .program-year-inner {
+		top: -2.5rem;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.ms-header .program-year-wrapper {
-		top: 19rem;
-		right: 8rem;
+	.ms-header .program-year-inner {
+		top: -3.5rem;
 	}
 }
 
@@ -23300,6 +23303,7 @@ a:hover {
 	z-index: 11;
 	top: 0;
 	width: 100%;
+	padding-top: 0.8rem;
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -23654,6 +23658,7 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
 @media only screen and (min-width: 1560px) {
 	.nav-icons {
 		margin-top: 1.3rem;
+		margin-right: -1.5rem;
 	}
 }
 
@@ -28299,24 +28304,25 @@ iframe {
 	}
 }
 
-.ms-header .program-year-wrapper {
+.ms-header .program-year-outer {
+	position: relative;
+}
+
+.ms-header .program-year-inner {
 	position: absolute;
-	z-index: 20;
-	top: 11.6rem;
-	right: 2rem;
+	right: 0;
+	top: -1.7rem;
 }
 
 @media only screen and (min-width: 53.25em) {
-	.ms-header .program-year-wrapper {
-		top: 19rem;
-		right: 8rem;
+	.ms-header .program-year-inner {
+		top: -2.5rem;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.ms-header .program-year-wrapper {
-		top: 19rem;
-		right: 8rem;
+	.ms-header .program-year-inner {
+		top: -3.5rem;
 	}
 }
 
@@ -34065,11 +34071,11 @@ body.magazine-page, body.magazine-article-page {
 @media only screen and (max-width: 53.15em) {
 	.track-listing .track .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
 		font-size: 1.5rem;
-		padding-left: 0vw;
+		padding-left: 0;
 	}
 }
 
-@media only screen and (min-width: 53.25em) {
+@media only screen and (min-width: 53.25em) and (max-width: 61.9em) {
 	.track-listing .track .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
 		padding-top: 0.1vw;
 		font-size: 1vw;
@@ -34085,12 +34091,18 @@ body.magazine-page, body.magazine-article-page {
 
 @media only screen and (min-width: 1560px) {
 	.track-listing .track .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
+		padding-top: 0.1rem;
+		padding-left: 0;
 		font-size: 2rem;
 	}
 }
 
 .track .track-play-button, .track .mejs-controls .mejs-playpause-button {
 	display: none;
+}
+
+.track .mejs-controls .mejs-playpause-button.mejs-pause {
+	display: block;
 }
 
 .track .track-play-button, .track .mejs-controls .mejs-playpause-button button {
