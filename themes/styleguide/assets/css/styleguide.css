@@ -33939,6 +33939,32 @@ body.magazine-page, body.magazine-article-page {
 	}
 }
 
+@media only screen and (max-width: 53.15em) {
+	.track-listing .track .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
+		font-size: 3vw;
+		padding-top: 0.3vw;
+		padding-left: 0.3vw;
+	}
+}
+
+@media only screen and (min-width: 53.25em) {
+	.track-listing .track .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
+		font-size: 1vw;
+	}
+}
+
+@media only screen and (min-width: 62em) and (max-width: 1559px) {
+	.track-listing .track .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
+		font-size: 1.2vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.track-listing .track .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
+		font-size: 2rem;
+	}
+}
+
 .track .track-play-button, .track .mejs-controls .mejs-playpause-button {
 	display: none;
 }
