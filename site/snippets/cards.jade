@@ -717,8 +717,8 @@ section.container.cards-section
 			-snippet('show-sass')
 		.row
 			//- needs to be on album page for this to work
-			.album-page
-				main.main.col-sm-7
+			.album-page.col-sm-7
+				main.main
 					//- bootstrap class to make table go vertical on mobile
 					.table-responsive 
 						table.table.table-hover.track-listing 
@@ -737,9 +737,29 @@ section.container.cards-section
 			.col-xs-12.visible-xs
 				-snippet('show-html-mobile')
 				-snippet('show-sass-mobile')
+		.row
 			.col-md-8
 				pre.html: code.
-					
+					&lt;div class="album-page"&gt;
+					    &lt;main class="main col-sm-7"&gt;
+					        &lt;div class="table-responsive"&gt;
+					            &lt;table class="table table-hover track-listing"&gt;
+					                &lt;tbody&gt;
+					                    &lt;tr class="track"&gt;
+					                        &lt;td class="track-number-play-button"&gt;
+					                            &lt;div class="track-number"&gt;100&lt;/div&gt;
+					                            &lt;audio class="mejs-player" src="/assets/audio/SFW40568/&lt;?= $track-&gt;track_1() ?&gt;" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'&gt;&lt;/audio&gt;
+					                        &lt;/td&gt;
+					                        &lt;td class="track-title"&gt;Cigar Win the Race&lt;/td&gt;
+					                        &lt;td class="track-artist"&gt;&lt;/td&gt;
+					                        &lt;td class="track-length"&gt;5:42&lt;/td&gt;
+					                        &lt;td class="track-buy"&gt;BUY&lt;/td&gt;
+					                    &lt;/tr&gt;
+					                &lt;/tbody&gt;
+					            &lt;/table&gt;
+					        &lt;/div&gt;
+					    &lt;/main&gt;
+					&lt;/div&gt;
 
 			.col-md-8
 				pre.sass: code.

@@ -357,7 +357,26 @@
 	&lt;/div&gt;
 &lt;/div&gt;
 </code></pre></div><div class="col-md-8"><pre class="sass"><code>// audio styles are too long to list here and have their own SASS file called audio.scss
-// the only difference here is the .horizontal-audio-card-playlist class overrides certain styles of the .horizontal-audio-card class</code></pre></div></div></div><!-- Track listing--><div class="codeblock"><a id="track-listing" class="anchor-link"></a><div class="row"><div class="col-sm-8"><h3 class="section-subtitle">Track Listing</h3></div><?php snippet('show-html'); ?><?php snippet('show-sass'); ?></div><div class="row"><div class="album-page"><main class="main col-sm-7"><div class="table-responsive"> <table class="table table-hover track-listing"> <?php $track = $section->children()->find('cigar-win-the-race'); ?><tr class="track"><td class="track-number-play-button"><div class="track-number"><?php echo '100'; ?></div><audio class="mejs-player" src="/assets/audio/SFW40568/<?= $track->track_1() ?>" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'></td><td class="track-title"><?php echo $track->title(); ?></td><td class="track-artist"><?php echo $page->artist(); ?></td><td class="track-length"><?php echo $track->length(); ?></td><td class="track-buy">BUY</td></tr></table></div></main></div><div class="col-xs-12 visible-xs"><?php snippet('show-html-mobile'); ?><?php snippet('show-sass-mobile'); ?></div><div class="col-md-8"><pre class="html"><code>
+// the only difference here is the .horizontal-audio-card-playlist class overrides certain styles of the .horizontal-audio-card class</code></pre></div></div></div><!-- Track listing--><div class="codeblock"><a id="track-listing" class="anchor-link"></a><div class="row"><div class="col-sm-8"><h3 class="section-subtitle">Track Listing</h3></div><?php snippet('show-html'); ?><?php snippet('show-sass'); ?></div><div class="row"><div class="album-page col-sm-7"><main class="main"><div class="table-responsive"> <table class="table table-hover track-listing"> <?php $track = $section->children()->find('cigar-win-the-race'); ?><tr class="track"><td class="track-number-play-button"><div class="track-number"><?php echo '100'; ?></div><audio class="mejs-player" src="/assets/audio/SFW40568/<?= $track->track_1() ?>" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'></td><td class="track-title"><?php echo $track->title(); ?></td><td class="track-artist"><?php echo $page->artist(); ?></td><td class="track-length"><?php echo $track->length(); ?></td><td class="track-buy">BUY</td></tr></table></div></main></div><div class="col-xs-12 visible-xs"><?php snippet('show-html-mobile'); ?><?php snippet('show-sass-mobile'); ?></div></div><div class="row"><div class="col-md-8"><pre class="html"><code>&lt;div class="album-page"&gt;
+    &lt;main class="main col-sm-7"&gt;
+        &lt;div class="table-responsive"&gt;
+            &lt;table class="table table-hover track-listing"&gt;
+                &lt;tbody&gt;
+                    &lt;tr class="track"&gt;
+                        &lt;td class="track-number-play-button"&gt;
+                            &lt;div class="track-number"&gt;100&lt;/div&gt;
+                            &lt;audio class="mejs-player" src="/assets/audio/SFW40568/&lt;?= $track-&gt;track_1() ?&gt;" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'&gt;&lt;/audio&gt;
+                        &lt;/td&gt;
+                        &lt;td class="track-title"&gt;Cigar Win the Race&lt;/td&gt;
+                        &lt;td class="track-artist"&gt;&lt;/td&gt;
+                        &lt;td class="track-length"&gt;5:42&lt;/td&gt;
+                        &lt;td class="track-buy"&gt;BUY&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/tbody&gt;
+            &lt;/table&gt;
+        &lt;/div&gt;
+    &lt;/main&gt;
+&lt;/div&gt;
 </code></pre></div><div class="col-md-8"><pre class="sass"><code>// audio styles are too long to list here and have their own SASS file called audio.scss
 // the border color is changed if this player exists on a page with a body class of .magazine-article-page</code></pre></div></div></div><!-- Vinyl Card--><div class="codeblock"><div class="row"><div class="col-sm-8"><h3 class="section-subtitle">Vinyl Card</h3></div><?php snippet('show-html'); ?><?php snippet('show-sass'); ?></div><div class="row"><div class="card vinyl-card col-xs-6 col-sm-3"><div class="image"><a href="#"><?php echo $section->image('fannie-lou-hamer.png'); ?></a></div><div class="details"><div class="details-inner"><a href="#" class="high title"><span class="light"><span class="er">Songs My Mother Taught Me</span></span></a><div class="artist">Fannie Lou Hamer</div></div></div></div><div class="col-xs-12 visible-xs"><?php snippet('show-html-mobile'); ?><?php snippet('show-sass-mobile'); ?></div><div class="col-sm-9"><pre class="sass"><code>.album-card, .vinyl-card, .books-card {
 	.details-inner {

@@ -1,5 +1,12 @@
 .title-bar
 	.container.title-height
+		// Program Year
+		-if (isset($year)):
+			.program-year-wrapper
+				.program-year
+					!= $year
+		-endif
+		
 		//- if custom title passed
 		-if (isset($title)):
 			//- if link passed
@@ -13,6 +20,8 @@
 		- else:
 			h1.page-title= $page->title()
 		-endif
+
+	// Program subtitles
 	-if (isset($subtitle)):
 	-snippet('svg-thin-hr')
 

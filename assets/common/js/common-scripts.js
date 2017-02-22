@@ -695,11 +695,11 @@ $(document).ready(function () {
 	// wrap time elements together after load. They don't come togethery by default and it is impossible to line them up according to the layout without having a parent wrapper.
 	// set as var so can call when other mejs elements load, after page load
 	wrapTime = function($currentTime) {
-		console.log('$currentTime: ', $currentTime)
+		// console.log('$currentTime: ', $currentTime)
 		var $durationTime = $currentTime.siblings('.mejs-duration-container');
 		// wrap current time and duration time in new div for correct positioning
 		$currentTime.add($durationTime).wrapAll('<div class="mejs-time-wrapper">');
-		console.log('wrapped');
+		// console.log('wrapped');
 	}
 	
 	// find currenttime containers and wrap them with closest duration container
@@ -707,6 +707,13 @@ $(document).ready(function () {
 		// get closest duration time
 		wrapTime($(this));
 	});
+	
+	// keep play button visible after click
+	$('.mejs-playpause-button button').click(function() {
+		console.log('clicked play');
+		$('.mejs-playpause-button').show();
+		// $(this).show();
+	})
 
 /*********************
 * Show figcaption

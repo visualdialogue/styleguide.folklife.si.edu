@@ -60,7 +60,7 @@
 			font-weight: 600;
 		}
 	}
-	.ms-header {
+	.ms-header {		
 		@include margin-bottom(3.2);
 		.title-height {
 			@include height(13.7);
@@ -88,6 +88,29 @@
 			@include sm-magazine-title;
 			text-transform: uppercase;
 			@include margin-top(0.7);
+		}
+		.program-year-wrapper {
+			// position: relative; // anchor year
+			// position this instead of text box so text can grow as vw and not change location
+			position: absolute;
+			z-index: 20;
+			top: 11.6rem;
+			right: 2rem;
+			@include respond-to(break2) {
+				top: 19rem;
+				right: 8rem;
+			}
+			@include respond-to(fullwidth) {
+				top: 19rem;
+				right: 8rem;
+			}
+		}
+		.program-year {
+			@include lg-woodtype-extended;
+			color: $black20;
+			position: absolute;
+			bottom: 0; // anchor to bottom so can grow up instead of down
+			right: 0;
 		}
         .page-tag {
             @include sans-tag;
