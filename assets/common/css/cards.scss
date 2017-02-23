@@ -178,7 +178,7 @@ a.details {
 		}
 	}
 	// hover effect on entire video card and on audio player play button
-	.video, .icon-play-button, .image-gallery, .icon-gallery  {
+	.video, .icon-play-button, .image-gallery, .icon-gallery, .icon-picture-o  {
 		cursor: pointer;
 		&:hover &:before {
 			color: $hover;

@@ -463,41 +463,6 @@ $(document).ready(function () {
 	// activate all videos that exist on page load
 	site.videoPopupBuilder($('.video'));
 
-	// listen for closing, from https://github.com/VodkaBears/Remodal
-	$(document).on('closing', '.remodal', function (e) {
-		// unload vidoe if video was open
-		if(videoPlayerIsOpen) {
-			if(isVimeo) {
-				vimeoPlayer.unload().then( function() {
-					// console.log('unloaded video');
-				}); // reset iframe	
-			// is YouTube
-			} else {
-				// stopYTVideo();
-				// if player had time to start
-					youTubePlayer.stopVideo();
-					youTubePlayer.destroy(); // so can build again
-			}
-			// reset flag
-			videoPlayerIsOpen = false;
-		}
-
-		// reset after image gallery
-		if(galleryIsOpen) {
-			$remodal.removeClass('remodal-gallery-is-open remodal-image-gallery');
-			console.log('gallery classes removed');
-			// reset flag
-			galleryIsOpen = false;
-		}
-
-		$remodalClose.addClass('visually-hidden');
-	});
-
-	// close remodal with X
-	$remodalClose.on('click', function() {
-		remodalInstance.close();
-	});
-
 /*********************
 * Image Gallery
 * dependencies: remodal.js
@@ -507,6 +472,7 @@ $(document).ready(function () {
 	var $remodalOverlay = $('.remodal-overlay');
 	var galleryIsOpen = false;
 	var galleryIsSlick = false;
+	var singleImage = false;
 
 	// @param $initialSlide is number of slide that was clicked so can show up first in gallery
 	$('.image-gallery').on('click', function() {
@@ -515,6 +481,13 @@ $(document).ready(function () {
 		if(galleryIsSlick) {
 			$remodalGallery.slick('unslick');
 			$remodalCaptions.slick('unslick');
+		}
+
+		// if single image
+		if($(this).hasClass('single-image-popup')) {
+			console.log('single image');
+			singleImage = true;
+			$remodalCaptions.addClass('single-image-caption');
 		}
 
 		// flag for closing
@@ -655,6 +628,52 @@ $(document).ready(function () {
 				}
 			]
 		});
+	});
+
+
+/********************
+* Closing the Remodal
+* listen for closing, from https://github.com/VodkaBears/Remodal
+********************/
+	$(document).on('closing', '.remodal', function (e) {
+		// unload vidoe if video was open
+		if(videoPlayerIsOpen) {
+			if(isVimeo) {
+				vimeoPlayer.unload().then( function() {
+					// console.log('unloaded video');
+				}); // reset iframe	
+			// is YouTube
+			} else {
+				// stopYTVideo();
+				// if player had time to start
+					youTubePlayer.stopVideo();
+					youTubePlayer.destroy(); // so can build again
+			}
+			// reset flag
+			videoPlayerIsOpen = false;
+		}
+
+		// reset after image gallery
+		if(galleryIsOpen) {
+			// delay to prevent flash of video bg
+			setTimeout( function(){
+				$remodal.removeClass('remodal-gallery-is-open remodal-image-gallery');
+				// console.log('gallery classes removed');			
+				galleryIsOpen = false; // reset flag
+			}, 500); // delay 500 ms
+
+			// remove single image designation so can show gallery captions next
+			$remodalCaptions.removeClass('single-image-caption');
+			// console.log('single-image-caption class removed');
+			singleImage = false; // reset
+		}
+
+		$remodalClose.addClass('visually-hidden');
+	});
+
+	// close remodal with X
+	$remodalClose.on('click', function() {
+		remodalInstance.close();
 	});
 
 /********************

@@ -1182,6 +1182,14 @@
 	}
 
 
+/* Single Image popup
+-------------------------------------------------*/
+	.single-image-caption {
+		 .slick-track {
+			transform: none !important; // otherwise only 1 caption will be pushed to left
+		}
+	}
+
 /* Image gallery
 -------------------------------------------------*/
 	.image-gallery {

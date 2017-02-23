@@ -1,4 +1,10 @@
 
+/* 
+* Font Awesome by Dave Gandy - http://fontawesome.io
+* Entypo pictograms by Daniel Bruce — www.entypo.com
+*/
+
+
 /* Icons
 -------------------------------------------------- */
 	[class^="icon-"]:before,
@@ -76,7 +82,6 @@
 	.social-icon-link {
 		vertical-align: middle;
 	}
-
 	.social-icon-link:hover, .social-icon-link:focus {
 		text-decoration: none;
 	}
@@ -116,7 +121,7 @@
   			display: block;
 		}
 	}	
-	.icon-gallery:before, .icon-gallery:after, .icon-play-button:before, .icon-play-button:after, .mejs-controls .mejs-playpause-button button:before, .mejs-controls .mejs-playpause-button button:after {
+	.icon-gallery:before, .icon-gallery:after, .icon-picture-o:before, .icon-picture-o:after, .icon-play-button:before, .icon-play-button:after, .mejs-controls .mejs-playpause-button button:before, .mejs-controls .mejs-playpause-button button:after {
 		@include respond-to(break2max) {
 			font-size: 10vw;
 		}
@@ -144,7 +149,7 @@
 
 /* Image Gallery
 -------------------------------------------------- */
-	.icon-gallery {
+	.icon-gallery, .icon-picture-o {
 		cursor: pointer;
 		position: absolute;
 		@include left(1);

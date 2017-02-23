@@ -10,12 +10,18 @@
 			<!-- LESSON PLAN-->
 			<a href="/lesson-plans/smithsonian"><img src="http://www.folkways.si.edu/images/magazine/2016_summer_fall/lesson-plans.jpg" alt="Smithsonian Folkways Lesson Plans" width="100%"></a>
 			<p class="caption"><a href="/lesson-plans/smithsonian">Smithsonian Folkways Lesson Plans</a></p>
+
+			<!-- NEW -->
+			<?php snippet('single-image-popup') ?>
+
 			<!-- PLAYLIST -->
 			<div class="top-twenty top-forty">
 				<img src="http://www.folkways.si.edu/images/magazine/index/audio.png" alt="Audio" height="9" width="52">
 				<iframe width="350" height="770" src="http://www.folkways.si.edu/radio/magazine-education-and-musical-diversity/index_embed.html" scrolling="no" frameborder="0"></iframe>
 			</div>
 		</div>
+
+
 		<!--VIDEO-->
 		<div class="visible-lg visible-md top-twenty top-forty">
 			<!--video-->

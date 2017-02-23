@@ -205,6 +205,10 @@ _|   \___/  _|  _| \__| ____/
 	content: "\45";
 }
 
+.icon-picture-o:before {
+	content: "\46";
+}
+
 /*
 
 
@@ -6622,6 +6626,10 @@ body {
 	}
 }
 
+/* 
+* Font Awesome by Dave Gandy - http://fontawesome.io
+* Entypo pictograms by Daniel Bruce — www.entypo.com
+*/
 /* Icons
 -------------------------------------------------- */
 [class^="icon-"]:before,
@@ -6781,26 +6789,26 @@ body {
 }
 
 @media only screen and (max-width: 53.15em) {
-	.icon-gallery:before, .icon-gallery:after, .icon-play-button:before, .icon-play-button:after, .mejs-controls .mejs-playpause-button button:before, .mejs-controls .mejs-playpause-button button:after {
+	.icon-gallery:before, .icon-gallery:after, .icon-picture-o:before, .icon-picture-o:after, .icon-play-button:before, .icon-play-button:after, .mejs-controls .mejs-playpause-button button:before, .mejs-controls .mejs-playpause-button button:after {
 		font-size: 10vw;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.icon-gallery:before, .icon-gallery:after, .icon-play-button:before, .icon-play-button:after, .mejs-controls .mejs-playpause-button button:before, .mejs-controls .mejs-playpause-button button:after {
+	.icon-gallery:before, .icon-gallery:after, .icon-picture-o:before, .icon-picture-o:after, .icon-play-button:before, .icon-play-button:after, .mejs-controls .mejs-playpause-button button:before, .mejs-controls .mejs-playpause-button button:after {
 		font-size: 4vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.icon-gallery:before, .icon-gallery:after, .icon-play-button:before, .icon-play-button:after, .mejs-controls .mejs-playpause-button button:before, .mejs-controls .mejs-playpause-button button:after {
+	.icon-gallery:before, .icon-gallery:after, .icon-picture-o:before, .icon-picture-o:after, .icon-play-button:before, .icon-play-button:after, .mejs-controls .mejs-playpause-button button:before, .mejs-controls .mejs-playpause-button button:after {
 		font-size: 6rem;
 	}
 }
 
 /* Image Gallery
 -------------------------------------------------- */
-.icon-gallery {
+.icon-gallery, .icon-picture-o {
 	cursor: pointer;
 	position: absolute;
 	left: 0.37037rem;
@@ -6808,39 +6816,39 @@ body {
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.icon-gallery {
+	.icon-gallery, .icon-picture-o {
 		left: 0.64vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.icon-gallery {
+	.icon-gallery, .icon-picture-o {
 		left: 1rem;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.icon-gallery {
+	.icon-gallery, .icon-picture-o {
 		bottom: 0.64vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.icon-gallery {
+	.icon-gallery, .icon-picture-o {
 		bottom: 1rem;
 	}
 }
 
-.icon-gallery:before {
+.icon-gallery:before, .icon-picture-o:before {
 	z-index: 0;
 	color: #bfbfbf;
 }
 
-.icon-gallery:hover:before {
+.icon-gallery:hover:before, .icon-picture-o:hover:before {
 	color: #fddd6b;
 }
 
-.icon-gallery:after {
+.icon-gallery:after, .icon-picture-o:after {
 	position: absolute;
 	z-index: 1;
 	color: #333333;
@@ -6848,7 +6856,7 @@ body {
 }
 
 @media only screen and (max-width: 53.15em) {
-	.icon-gallery:after {
+	.icon-gallery:after, .icon-picture-o:after {
 		font-size: 6vw;
 		top: 2vw;
 		left: 1.8vw;
@@ -6856,7 +6864,7 @@ body {
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.icon-gallery:after {
+	.icon-gallery:after, .icon-picture-o:after {
 		font-size: 2.6vw;
 		top: 0.7vw;
 		left: 0.6vw;
@@ -6864,7 +6872,7 @@ body {
 }
 
 @media only screen and (min-width: 1560px) {
-	.icon-gallery:after {
+	.icon-gallery:after, .icon-picture-o:after {
 		font-size: 4rem;
 		top: 1rem;
 		left: 0.9rem;
@@ -11062,6 +11070,12 @@ video::-webkit-media-controls {
 	display: none;
 }
 
+/* Single Image popup
+-------------------------------------------------*/
+.single-image-caption .slick-track {
+	transform: none !important;
+}
+
 /* Image gallery
 -------------------------------------------------*/
 @media only screen and (max-width: 53.15em) {
@@ -12368,11 +12382,11 @@ a.details {
 	}
 }
 
-.video, .icon-play-button, .image-gallery, .icon-gallery {
+.video, .icon-play-button, .image-gallery, .icon-gallery, .icon-picture-o {
 	cursor: pointer;
 }
 
-.video:hover .video:before, .icon-play-button:hover .video:before, .image-gallery:hover .video:before, .icon-gallery:hover .video:before, .video:hover .icon-play-button:before, .icon-play-button:hover .icon-play-button:before, .image-gallery:hover .icon-play-button:before, .icon-gallery:hover .icon-play-button:before, .video:hover .image-gallery:before, .icon-play-button:hover .image-gallery:before, .image-gallery:hover .image-gallery:before, .icon-gallery:hover .image-gallery:before, .video:hover .icon-gallery:before, .icon-play-button:hover .icon-gallery:before, .image-gallery:hover .icon-gallery:before, .icon-gallery:hover .icon-gallery:before {
+.video:hover .video:before, .icon-play-button:hover .video:before, .image-gallery:hover .video:before, .icon-gallery:hover .video:before, .icon-picture-o:hover .video:before, .video:hover .icon-play-button:before, .icon-play-button:hover .icon-play-button:before, .image-gallery:hover .icon-play-button:before, .icon-gallery:hover .icon-play-button:before, .icon-picture-o:hover .icon-play-button:before, .video:hover .image-gallery:before, .icon-play-button:hover .image-gallery:before, .image-gallery:hover .image-gallery:before, .icon-gallery:hover .image-gallery:before, .icon-picture-o:hover .image-gallery:before, .video:hover .icon-gallery:before, .icon-play-button:hover .icon-gallery:before, .image-gallery:hover .icon-gallery:before, .icon-gallery:hover .icon-gallery:before, .icon-picture-o:hover .icon-gallery:before, .video:hover .icon-picture-o:before, .icon-play-button:hover .icon-picture-o:before, .image-gallery:hover .icon-picture-o:before, .icon-gallery:hover .icon-picture-o:before, .icon-picture-o:hover .icon-picture-o:before {
 	color: #fddd6b;
 }
 
@@ -16203,6 +16217,10 @@ _|   \___/  _|  _| \__| ____/
 
 .icon-gplus:before {
 	content: "\45";
+}
+
+.icon-picture-o:before {
+	content: "\46";
 }
 
 /*
@@ -22622,6 +22640,10 @@ body {
 	}
 }
 
+/* 
+* Font Awesome by Dave Gandy - http://fontawesome.io
+* Entypo pictograms by Daniel Bruce — www.entypo.com
+*/
 /* Icons
 -------------------------------------------------- */
 [class^="icon-"]:before,
@@ -22781,26 +22803,26 @@ body {
 }
 
 @media only screen and (max-width: 53.15em) {
-	.icon-gallery:before, .icon-gallery:after, .icon-play-button:before, .icon-play-button:after, .mejs-controls .mejs-playpause-button button:before, .mejs-controls .mejs-playpause-button button:after {
+	.icon-gallery:before, .icon-gallery:after, .icon-picture-o:before, .icon-picture-o:after, .icon-play-button:before, .icon-play-button:after, .mejs-controls .mejs-playpause-button button:before, .mejs-controls .mejs-playpause-button button:after {
 		font-size: 10vw;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.icon-gallery:before, .icon-gallery:after, .icon-play-button:before, .icon-play-button:after, .mejs-controls .mejs-playpause-button button:before, .mejs-controls .mejs-playpause-button button:after {
+	.icon-gallery:before, .icon-gallery:after, .icon-picture-o:before, .icon-picture-o:after, .icon-play-button:before, .icon-play-button:after, .mejs-controls .mejs-playpause-button button:before, .mejs-controls .mejs-playpause-button button:after {
 		font-size: 4vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.icon-gallery:before, .icon-gallery:after, .icon-play-button:before, .icon-play-button:after, .mejs-controls .mejs-playpause-button button:before, .mejs-controls .mejs-playpause-button button:after {
+	.icon-gallery:before, .icon-gallery:after, .icon-picture-o:before, .icon-picture-o:after, .icon-play-button:before, .icon-play-button:after, .mejs-controls .mejs-playpause-button button:before, .mejs-controls .mejs-playpause-button button:after {
 		font-size: 6rem;
 	}
 }
 
 /* Image Gallery
 -------------------------------------------------- */
-.icon-gallery {
+.icon-gallery, .icon-picture-o {
 	cursor: pointer;
 	position: absolute;
 	left: 0.37037rem;
@@ -22808,39 +22830,39 @@ body {
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.icon-gallery {
+	.icon-gallery, .icon-picture-o {
 		left: 0.64vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.icon-gallery {
+	.icon-gallery, .icon-picture-o {
 		left: 1rem;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.icon-gallery {
+	.icon-gallery, .icon-picture-o {
 		bottom: 0.64vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.icon-gallery {
+	.icon-gallery, .icon-picture-o {
 		bottom: 1rem;
 	}
 }
 
-.icon-gallery:before {
+.icon-gallery:before, .icon-picture-o:before {
 	z-index: 0;
 	color: #bfbfbf;
 }
 
-.icon-gallery:hover:before {
+.icon-gallery:hover:before, .icon-picture-o:hover:before {
 	color: #c0d5e7;
 }
 
-.icon-gallery:after {
+.icon-gallery:after, .icon-picture-o:after {
 	position: absolute;
 	z-index: 1;
 	color: #333333;
@@ -22848,7 +22870,7 @@ body {
 }
 
 @media only screen and (max-width: 53.15em) {
-	.icon-gallery:after {
+	.icon-gallery:after, .icon-picture-o:after {
 		font-size: 6vw;
 		top: 2vw;
 		left: 1.8vw;
@@ -22856,7 +22878,7 @@ body {
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.icon-gallery:after {
+	.icon-gallery:after, .icon-picture-o:after {
 		font-size: 2.6vw;
 		top: 0.7vw;
 		left: 0.6vw;
@@ -22864,7 +22886,7 @@ body {
 }
 
 @media only screen and (min-width: 1560px) {
-	.icon-gallery:after {
+	.icon-gallery:after, .icon-picture-o:after {
 		font-size: 4rem;
 		top: 1rem;
 		left: 0.9rem;
@@ -27062,6 +27084,12 @@ video::-webkit-media-controls {
 	display: none;
 }
 
+/* Single Image popup
+-------------------------------------------------*/
+.single-image-caption .slick-track {
+	transform: none !important;
+}
+
 /* Image gallery
 -------------------------------------------------*/
 @media only screen and (max-width: 53.15em) {
@@ -29688,11 +29716,11 @@ a.details {
 	}
 }
 
-.video, .icon-play-button, .image-gallery, .icon-gallery {
+.video, .icon-play-button, .image-gallery, .icon-gallery, .icon-picture-o {
 	cursor: pointer;
 }
 
-.video:hover .video:before, .icon-play-button:hover .video:before, .image-gallery:hover .video:before, .icon-gallery:hover .video:before, .video:hover .icon-play-button:before, .icon-play-button:hover .icon-play-button:before, .image-gallery:hover .icon-play-button:before, .icon-gallery:hover .icon-play-button:before, .video:hover .image-gallery:before, .icon-play-button:hover .image-gallery:before, .image-gallery:hover .image-gallery:before, .icon-gallery:hover .image-gallery:before, .video:hover .icon-gallery:before, .icon-play-button:hover .icon-gallery:before, .image-gallery:hover .icon-gallery:before, .icon-gallery:hover .icon-gallery:before {
+.video:hover .video:before, .icon-play-button:hover .video:before, .image-gallery:hover .video:before, .icon-gallery:hover .video:before, .icon-picture-o:hover .video:before, .video:hover .icon-play-button:before, .icon-play-button:hover .icon-play-button:before, .image-gallery:hover .icon-play-button:before, .icon-gallery:hover .icon-play-button:before, .icon-picture-o:hover .icon-play-button:before, .video:hover .image-gallery:before, .icon-play-button:hover .image-gallery:before, .image-gallery:hover .image-gallery:before, .icon-gallery:hover .image-gallery:before, .icon-picture-o:hover .image-gallery:before, .video:hover .icon-gallery:before, .icon-play-button:hover .icon-gallery:before, .image-gallery:hover .icon-gallery:before, .icon-gallery:hover .icon-gallery:before, .icon-picture-o:hover .icon-gallery:before, .video:hover .icon-picture-o:before, .icon-play-button:hover .icon-picture-o:before, .image-gallery:hover .icon-picture-o:before, .icon-gallery:hover .icon-picture-o:before, .icon-picture-o:hover .icon-picture-o:before {
 	color: #c0d5e7;
 }
 

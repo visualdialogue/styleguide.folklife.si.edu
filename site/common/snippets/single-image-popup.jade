@@ -1,0 +1,34 @@
+// Current
+//- <div class="top-forty">
+//-     <a class="lightview" href="/images/magazine/2016_summer_fall/Theme-1-Tracks-1-20-Damos-gracias3-large.jpg" data-lightview-title="Drawing by children of Bell Gardens Elementary, Bell Gardens, California. " data-lightview-caption="Photo by Carla B. Herrera."><img src="/images/magazine/2016_summer_fall/Theme-1-Tracks-1-20-Damos-gracias3.jpg" alt="Drawing by children of Bell Gardens Elementary, Bell Gardens, California. " width="100%"></a>
+//-     <p class="verdana-ten gray-type top-five">Click image to enlarge.</p>
+//-     <div style="color: #fff;">
+//-         Drawing by children of Bell Gardens Elementary, Bell Gardens, California. <i>Photo by Lilia Sarmiento.</i>
+//-     </div>
+//- </div>
+
+// Current (Jade)
+//- .top-forty
+//- 	a.lightview(href="/assets/images/magazine/2016_summer_fall/Theme-1-Tracks-1-20-Damos-gracias3-large.jpg" data-lightview-title="Drawing by children of Bell Gardens Elementary, Bell Gardens, California. " data-lightview-caption="Photo by Carla B. Herrera.")
+//- 		img(src="/assets/images/magazine/2016_summer_fall/Theme-1-Tracks-1-20-Damos-gracias3.jpg" alt="Drawing by children of Bell Gardens Elementary, Bell Gardens, California. " width="100%")
+//- 	p.verdana-ten.gray-type.top-five Click image to enlarge.
+//- 	div(style="color: #fff;") Drawing by children of Bell Gardens Elementary, Bell Gardens, California. <i>Photo by Lilia Sarmiento.</i>
+
+// New
+.top-forty
+	.tag Image
+	.image-gallery.single-image-popup
+		// first slide visible with gallery icon
+		.center-box
+			.modal-trigger
+				img.gallery-thumbnail(src="/assets/images/magazine/2016_summer_fall/Theme-1-Tracks-1-20-Damos-gracias3.jpg" alt="Drawing by children of Bell Gardens Elementary, Bell Gardens, California.")
+			.icon-picture-o
+		ul.gallery-list
+			.gallery-image
+				.gallery-image-inner
+					img(src="/assets/images/magazine/2016_summer_fall/Theme-1-Tracks-1-20-Damos-gracias3-large.jpg" alt="Drawing by children of Bell Gardens Elementary, Bell Gardens, California.")
+		ul.gallery-list-captions
+			.gallery-caption
+				.remodal-description Photo by Carla B. Herrera.
+				.remodal-credit tbd
+	.caption Drawing by children of Bell Gardens Elementary, Bell Gardens, California. <i>Photo by Lilia Sarmiento.</i>
