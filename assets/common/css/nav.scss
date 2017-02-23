@@ -79,8 +79,9 @@
 		z-index: 11; // above play buttons!
 		top: 0;
 		width: 100%;
-		padding-top: 0.8rem;
+		// padding-top: 0.8rem;
 		@include respond-to(break2) {
+			padding-top: 0;
 			display: block;
 		}
 		@include respond-to(break2full) {

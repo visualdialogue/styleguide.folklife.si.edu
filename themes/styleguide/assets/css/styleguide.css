@@ -7303,7 +7303,6 @@ a:hover {
 	z-index: 11;
 	top: 0;
 	width: 100%;
-	padding-top: 0.8rem;
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -7327,6 +7326,7 @@ a:hover {
 
 @media only screen and (min-width: 53.25em) {
 	.site-toggle {
+		padding-top: 0;
 		display: block;
 	}
 }
@@ -23303,7 +23303,6 @@ a:hover {
 	z-index: 11;
 	top: 0;
 	width: 100%;
-	padding-top: 0.8rem;
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -23327,6 +23326,7 @@ a:hover {
 
 @media only screen and (min-width: 53.25em) {
 	.site-toggle {
+		padding-top: 0;
 		display: block;
 	}
 }

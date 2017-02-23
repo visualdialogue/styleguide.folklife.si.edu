@@ -1,0 +1,47 @@
+// Site Toggle
+#site-toggle.site-toggle
+	.container
+		.smithsonian-logo
+			//- img.visible-sm.visible-md(src="/assets/images/logo/smithsonian-logo_280x60.png" alt="Folklife Logo")
+			//- img.visible-sm.visible-md(src="/assets/images/logo/smithsonian-institution_logo_280x60.png" alt="Folklife Logo")
+			img.visible-sm.visible-md(src="/assets/images/logo/smithsonian-alt-logo_280x60.png" alt="Folklife Logo")
+			//- img.visible-lg(src="/assets/images/logo/smithsonian-logo_320x60.png" alt="Folklife Logo")
+			//- img.visible-lg(src="/assets/images/logo/smithsonian-institution-logo_320x60.png" alt="Folklife Logo")
+			img.visible-lg(src="/assets/images/logo/smithsonian-alt-logo_320x60.png" alt="Folklife Logo")
+		.right-site-toggle
+			.hidden-xs.site-toggle-text
+				.tagline!= $tagline
+				a.site-toggle-link.folklife-site-toggle-link.active(href="/") Folklife
+				-if (c::get('isDev')):
+					a.site-toggle-link.festival-site-toggle-link(href="http://localhost:3005") Folkways
+				- else:
+					a.site-toggle-link.folkways-site-toggle-link(href="http://folkways.lukehatfield.com") Folkways
+				-endif
+				-if (c::get('isDev')):
+					a.site-toggle-link.folklife-site-toggle-link(href="http://localhost:3003") Festival
+				- else:
+					a.site-toggle-link.festival-site-toggle-link(href="http://on.festival.lukehatfield.com") Festival
+				-endif
+
+			-if(isset($folkways)):
+			.folkways-icons
+				a.folkways-icon-link(href="/account" target="_blank"): .icon-user.folkways-icon.nav-icon(aria-hidden="true")
+				a.folkways-icon-link(href="/cart" target="_blank"): .icon-basket.folkways-icon.nav-icon(aria-hidden="true")
+			-endif
+
+		//- .hidden-xs.site-toggle-text
+			.tagline Music of the people, by the people, for the people
+			-if (c::get('isDev')):
+				a.site-toggle-link.folklife-site-toggle-link(href="http://localhost:3001") Folklife
+			- else:
+				a.site-toggle-link.folklife-site-toggle-link(href="http://folklife.lukehatfield.com") Folklife
+			-endif
+			a.site-toggle-link.folkways-site-toggle-link.active(href="/") Folkways
+			-if (c::get('isDev')):
+				a.site-toggle-link.festival-site-toggle-link(href="http://localhost:3003") Festival
+			- else:
+				a.site-toggle-link.festival-site-toggle-link(href="http://on.festival.lukehatfield.com") Festival
+			-endif
+		//- .folkways-icons
+			a.folkways-icon-link(href="/account" target="_blank"): .icon-user.folkways-icon.nav-icon(aria-hidden="true")
+			a.folkways-icon-link(href="/cart" target="_blank"): .icon-basket.folkways-icon.nav-icon(aria-hidden="true")
