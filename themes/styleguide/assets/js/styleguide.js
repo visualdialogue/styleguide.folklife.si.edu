@@ -1075,34 +1075,42 @@ $(document).ready(function () {
 	
 	// keep play button visible after click
 	var showPause = true;
-	$('.mejs-playpause-button button').click(function() {
-		console.log('clicked play');
-		var $track = $(this).closest('.track');
-		var $trackNumber = $track.find('.track-number'); // get closest so don't show all
 
-		console.log($trackNumber);
-
-		// check if this button is playing or not
-		if($track.find('.mejs-playpause-button').hasClass('mejs-play'))
-			$trackNumber.addClass('hidden');
-		else
-			$trackNumber.removeClass('hidden');
-
-		// if(showPause) {
-		// 	$trackNumber.addClass('hidden');
-		// 	showPause = false;
-		// }
-		// else {
-		// 	$trackNumber.removeClass('hidden');
-		// 	showPause = true;
-		// }
-		// console.log($(this).parent());
-		// $(this).parent().show();
-		// $(this).show();
-	})
+	var buttonControl = function($playButton) {
+		// console.log('buttonControl', $playButton);
+		$playButton.click(function() {
+			// console.log('audio clicked');
+			var $track = $(this).closest('.track');
+			var $trackNumber = $track.find('.track-number'); // get closest so don't show all
+			// check if this button is playing or not
+			if($track.find('.mejs-playpause-button').hasClass('mejs-play'))
+				$trackNumber.addClass('hidden');
+			else
+				$trackNumber.removeClass('hidden');
+		})
+	}
 
 	// manually init so can hear when pausing
-	$('.playlist-audio').mediaelementplayer({
+	$('.track-audio').mediaelementplayer({
+		startVolume: 0.5, 
+		setDimensions: false,
+		features: ["playpause"], // don't show time on track listing
+		pluginPath: "/path/to/shims/", 
+		success: function(mediaElement, originalNode) {
+			// $originalNode = $(originalNode); // jquery cache
+			// console.log('mediaElement', mediaElement);
+
+			// pass playpause button to get listener
+			buttonControl($(mediaElement.player.controls[0].firstChild));
+
+			// Bring Track number back when audio paused
+			mediaElement.addEventListener('pause', function (e) {
+				var $trackAudio = $(e.target);
+				var $track = $(this).closest('.track');
+				var $trackNumber = $track.find('.track-number'); // get closest so don't show all
+				$trackNumber.removeClass('hidden');
+			}, false);
+		}
 	});
 
 
