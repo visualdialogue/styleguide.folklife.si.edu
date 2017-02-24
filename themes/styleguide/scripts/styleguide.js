@@ -1440,7 +1440,32 @@ $(document).ready(function () {
 * Bootstrap accordian
 * http://v4-alpha.getbootstrap.com/components/collapse/#accordion-example
 **************************/
-$('.collapse').collapse()
+	$('.collapse').collapse()
+
+/*********************
+* Translation Button
+*********************/
+    $('.language-buttons').find('a').each(function (index) {
+        var elt = $(this);
+        var url = "" + window.location;
+        var normalizedURL = url.replace(/en-espanol\/smithsonian$/, 'smithsonian');
+        var spanishURL = normalizedURL.replace(/smithsonian$/, 'en-espanol/smithsonian');
+
+        var isSpanish = url.match(/en-espanol/);
+        var onIndex;
+        if (isSpanish)
+            onIndex = 1;
+        else
+            onIndex = 0
+
+        if (index == 0)
+            elt.attr('href', normalizedURL);
+        else
+            elt.attr('href', spanishURL);
+
+        if (index == onIndex)
+            elt.attr('class', 'is-active')
+    });
 
 
 }); // end document model ready
