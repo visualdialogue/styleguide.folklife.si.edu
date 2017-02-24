@@ -218,7 +218,7 @@
 			height: 100%;
 			width: 9px;
 		// right border as image from http://stackoverflow.com/a/7948532
-			background-image: url(../../assets/images/hr/vertical-rule.png);
+			background-image: url(../assets/images/hr/vertical-rule.png);
 			background-position: right;
 			background-repeat: no-repeat;
 			background-size: 9px 100%;
@@ -338,7 +338,7 @@
 	}
 	.thick-hr {
 		height:11px;
-		background-image:url(../../assets/images/hr/horizontal-rule.png);
+		background-image:url(../assets/images/hr/horizontal-rule.png);
 		background-size: 100% 100%; // scrunch for mobile
 		@include respond-to(break2) {
 			margin-top:0;

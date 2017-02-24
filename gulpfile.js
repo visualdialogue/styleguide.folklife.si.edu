@@ -66,7 +66,7 @@ gulp.task('copy', function() {
 * compile styleguide sass
 **********/
 gulp.task('styles', function() {
-	gulp.src('themes/styleguide/assets/css/styleguide.scss')
+	gulp.src('themes/styleguide/styles/styleguide.scss')
 		.pipe(plumber())
 		.pipe(sass({
 			errLogToConsole: true,
@@ -74,7 +74,7 @@ gulp.task('styles', function() {
 			indentType: 'tab',
 			indentWidth: '1'
 		}))
-		.pipe(gulp.dest('themes/styleguide/assets/css/'))
+		.pipe(gulp.dest('themes/styleguide/styles/'))
 		.pipe(browserSync.stream());
 });
 
@@ -123,10 +123,10 @@ gulp.task('js', function() {
   return gulp.src([
 	  '../../styleguide.folklife.si.edu/code/assets/common/js/common-plugins.js',
 	  '../../styleguide.folklife.si.edu/code/assets/common/js/common-scripts.js',
-	  'themes/styleguide/assets/js/scripts.js'
+	  'themes/styleguide/scripts/scripts.js'
 	])
 	.pipe(concat('styleguide.js'))
-	.pipe(gulp.dest('themes/styleguide/assets/js/'));
+	.pipe(gulp.dest('themes/styleguide/scripts/'));
 	// gulp.watch('/js/scripts.js',['scripts']);
 });
 // create a task that ensures the `templates` and `js` tasks are completed before
@@ -157,11 +157,11 @@ gulp.task('serve', ['jade', 'styles', 'js'], function() {
 		'assets/common/css/*.scss',
 		'../../toby/folkways/src/Orchard.Web/Themes/Folkways/Styles/folkways.scss'
 		],['styles','copy-sass']);
-	gulp.watch('themes/styleguide/assets/css/*.scss',['styles']);
+	gulp.watch('themes/styleguide/styles/*.scss',['styles']);
 	// gulp.watch('../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/*.scss',['styles']);
 	gulp.watch('assets/common/js/*.js',['js','copy-js']); // copy common plugins and scripts to toby's 3 repos until he has centralized common elements
 	gulp.watch([ // JS
-		'themes/styleguide/assets/js/*.js'
+		'themes/styleguide/scripts/*.js'
 		],['js']);
 
 });

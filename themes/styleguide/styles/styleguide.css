@@ -8365,7 +8365,7 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
 		right: -4.5px;
 		height: 100%;
 		width: 9px;
-		background-image: url(../../assets/images/hr/vertical-rule.png);
+		background-image: url(../assets/images/hr/vertical-rule.png);
 		background-position: right;
 		background-repeat: no-repeat;
 		background-size: 9px 100%;
@@ -8709,7 +8709,7 @@ hr {
 
 .thick-hr {
 	height: 11px;
-	background-image: url(../../assets/images/hr/horizontal-rule.png);
+	background-image: url(../assets/images/hr/horizontal-rule.png);
 	background-size: 100% 100%;
 	margin-bottom: 1.92593rem;
 }
@@ -24379,7 +24379,7 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
 		right: -4.5px;
 		height: 100%;
 		width: 9px;
-		background-image: url(../../assets/images/hr/vertical-rule.png);
+		background-image: url(../assets/images/hr/vertical-rule.png);
 		background-position: right;
 		background-repeat: no-repeat;
 		background-size: 9px 100%;
@@ -24723,7 +24723,7 @@ hr {
 
 .thick-hr {
 	height: 11px;
-	background-image: url(../../assets/images/hr/horizontal-rule.png);
+	background-image: url(../assets/images/hr/horizontal-rule.png);
 	background-size: 100% 100%;
 	margin-bottom: 1.92593rem;
 }
