@@ -821,13 +821,18 @@ $(document).ready(function () {
 		pluginPath: "/path/to/shims/", 
 		success: function(mediaElement, originalNode) {
 			console.log('mejs audio created');
+			console.log('mediaElement.player', mediaElement.player);
+			console.log('originalNode', originalNode);
+
 			// better mejs html
-			var currentTimeContainer = $('.playlist-audio').find('.mejs-currenttime-container');
-			console.log(currentTimeContainer);
-			wrapTime(currentTimeContainer);
+			// var currentTimeContainer = $('.playlist-audio').find('.mejs-currenttime-container');
+			// console.log(currentTimeContainer);
+			// wrapTime(currentTimeContainer);
+
+			var playerID = mediaElement.player.id;
 
 			// initialize player because elements now exist
-			playlist = new Playlist(); 
+			playlist = new Playlist(playerID); 
 			// set first track
 			// playlist.cover = 
 			playlist.cover.attr('src', myPlaylist[0].cover); // update album cover
@@ -848,14 +853,18 @@ $(document).ready(function () {
 	* inspired by http://stackoverflow.com/a/15174529
 	* var myPlayList is array with playlist data, loaded from script tag in html
 	**********/
-	function Playlist() {
-		this.playerId = $('.playlist-audio').attr('id');
-		this.mejsPlayer = mejs.players[this.playerId];
+	function Playlist(playerID) {
+		// get local audio card in case others on page
+		var $audioCard = $('#' + playerID).closest('.audio-card');
+		this.mejsPlayer = mejs.players[this.playerID];
 		this.player = this.mejsPlayer;
-		this.cover = $('#playlist-cover');
-		this.title = $('#playlist-title');
-		this.artist = $('#playlist-artist');
+		this.cover = $audioCard.find('.playlist-cover');
+		this.title = $audioCard.find('.playlist-title');
+		this.artist = $audioCard.find('.playlist-artist');
 		this.audioElement = $('#playlist-audio');
+		// this.audioElement = $audioCard.find('.playlist-audio');
+		// this.audioElement = this.player;
+		// this.audioElement = this.player.node;
 		this.currentTrack = 0;
 		this.length = Object.keys(myPlaylist).length;
 

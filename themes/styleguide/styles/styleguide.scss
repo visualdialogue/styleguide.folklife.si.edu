@@ -9,33 +9,33 @@
 /* Imports
 -------------------------------------------------- */
 	@charset "UTF-8";
-	@import "../../../../assets/common/css/fonts.scss";
-	@import "../../../../assets/common/css/vd-icons.scss";
-	@import "../../../../themes/styleguide/assets/plugins/remodal/dist/remodal.scss";
-	@import "../../../../themes/styleguide/assets/plugins/remodal/dist/remodal-default-theme.scss";
-	@import "../../../../themes/styleguide/assets/plugins/slick-carousel/slick/slick.scss";
-	@import "../../../../themes/styleguide/assets/plugins/slick-carousel/slick/slick-theme.scss";
-	@import "../../../../themes/styleguide/assets/plugins/mediaelement/build/mediaelementplayer.min.scss"; // audio player base
-	@import "../../../../assets/common/css/bootstrap.scss"; // get custom bootstrap built with less
-	@import "../../../../assets/common/css/reset.scss";
-	@import "../../../../assets/common/css/dimensions.scss";
-	@import "../../../../assets/common/css/media-queries.scss";
-	@import "../../../../assets/common/css/colors.scss";
+	@import "../../../assets/common/css/fonts.scss";
+	@import "../../../assets/common/css/vd-icons.scss";
+	@import "../../../themes/styleguide/assets/plugins/remodal/dist/remodal.scss";
+	@import "../../../themes/styleguide/assets/plugins/remodal/dist/remodal-default-theme.scss";
+	@import "../../../themes/styleguide/assets/plugins/slick-carousel/slick/slick.scss";
+	@import "../../../themes/styleguide/assets/plugins/slick-carousel/slick/slick-theme.scss";
+	@import "../../../themes/styleguide/assets/plugins/mediaelement/build/mediaelementplayer.min.scss"; // audio player base
+	@import "../../../assets/common/css/bootstrap.scss"; // get custom bootstrap built with less
+	@import "../../../assets/common/css/reset.scss";
+	@import "../../../assets/common/css/dimensions.scss";
+	@import "../../../assets/common/css/media-queries.scss";
+	@import "../../../assets/common/css/colors.scss";
 	$hover: $fs-hover; // local colors must be set to this site after inherit global colors and before apply to global rules
-	@import "../../../../assets/common/css/type.scss";
-	@import "../../../../assets/common/css/icons.scss";
-	@import "../../../../assets/common/css/links.scss";
-	@import "../../../../assets/common/css/mixins.scss";
-	@import "../../../../assets/common/css/nav.scss";
-	@import "../../../../assets/common/css/general.scss";
-	@import "../../../../assets/common/css/footer.scss";
-	@import "../../../../assets/common/css/article.scss";
-	@import "../../../../assets/common/css/cards.scss";
-	@import "../../../../assets/common/css/program.scss";
-	@import "../../../../assets/common/css/mep-feature-playlist.scss"; // audio playlist
-	@import "../../../../assets/common/css/audio.scss"; // after cards for cascading overrides
+	@import "../../../assets/common/css/type.scss";
+	@import "../../../assets/common/css/icons.scss";
+	@import "../../../assets/common/css/links.scss";
+	@import "../../../assets/common/css/mixins.scss";
+	@import "../../../assets/common/css/nav.scss";
+	@import "../../../assets/common/css/general.scss";
+	@import "../../../assets/common/css/footer.scss";
+	@import "../../../../../toby/folkways/src/Orchard.Web/Themes/Folkways/Styles/article.scss"; // Get folkways styles for articles
+	@import "../../../assets/common/css/cards.scss";
+	@import "../../../assets/common/css/program.scss";
+	@import "../../../assets/common/css/mep-feature-playlist.scss"; // audio playlist
+	@import "../../../assets/common/css/audio.scss"; // after cards for cascading overrides
 
-	@import "../../../../../../toby/folkways/src/Orchard.Web/Themes/Folkways/Styles/folkways.scss"; // Get folkways styles for track listing
+	@import "../../../../../toby/folkways/src/Orchard.Web/Themes/Folkways/Styles/folkways.scss"; // Get folkways styles for track listing
 
 /* links
 -------------------------------------------------- */

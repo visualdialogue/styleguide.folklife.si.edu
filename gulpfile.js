@@ -123,9 +123,9 @@ gulp.task('js', function() {
   return gulp.src([
 	  '../../styleguide.folklife.si.edu/code/assets/common/js/common-plugins.js',
 	  '../../styleguide.folklife.si.edu/code/assets/common/js/common-scripts.js',
-	  'themes/styleguide/scripts/scripts.js'
+	  'themes/styleguide/scripts/styleguide.js'
 	])
-	.pipe(concat('styleguide.js'))
+	.pipe(concat('styleguide.pkgd.js'))
 	.pipe(gulp.dest('themes/styleguide/scripts/'));
 	// gulp.watch('/js/scripts.js',['scripts']);
 });

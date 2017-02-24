@@ -66,6 +66,10 @@
 		@include respond-to(fullwidth) {
 			padding-top:3px;
 			width: 160px;
+			// 75% area of logo
+			// width: 410px;
+			// position: relative;
+			// left: -43px;
 		}
 	}
 	.site-toggle {

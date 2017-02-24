@@ -264,10 +264,10 @@
 		&lt;/div&gt;
 	&lt;/div&gt;
 &lt;/div&gt;
-</code></pre></div><div class="col-md-9"><pre class="sass"><code>// audio styles are too long to list here and have their own SASS file called audio.scss</code></pre></div></div></div><!-- Playlist Audio Card--><div class="codeblock"><a id="playlist-audio-card" class="anchor-link"></a><div class="row"><div class="col-sm-8"><h3 class="section-subtitle">Playlist Audio Card</h3></div><?php snippet('show-html'); ?><?php snippet('show-sass'); ?></div><div class="row"><script src="/assets/audio/myplaylist-calypso.js" type="text/javascript"></script><div class="card audio-card playlist-audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border-card"><div class="image"><a href="#"><img id="playlist-cover" src="<?= $section->image('audio.png')->url() ?>"/></a></div><div class="details"><div class="details-inner"><div class="title-wrapper"><a href="#" class="high title"><span class="light"><span id="playlist-title" class="er">Quelbe!</span></span></a><div id="playlist-artist" class="artist">Stanley and the Ten Sleepless Nights</div></div><div class="audio-player"><audio id="playlist-audio" class="playlist-audio" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'></audio><div class="playlist-controls"><div id="previous-button" class="icon-folklife-leftarrow"></div><div id="next-button" class="icon-folklife-rightarrow"></div></div></div></div></div></div><div class="col-xs-12 visible-xs"><?php snippet('show-html-mobile'); ?><?php snippet('show-sass-mobile'); ?></div><div class="col-md-9"><pre class="html"><code>&lt;div class="card audio-card playlist-audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border-card"&gt;
+</code></pre></div><div class="col-md-9"><pre class="sass"><code>// audio styles are too long to list here and have their own SASS file called audio.scss</code></pre></div></div></div><!-- Playlist Audio Card--><div class="codeblock"><a id="playlist-audio-card" class="anchor-link"></a><div class="row"><div class="col-sm-8"><h3 class="section-subtitle">Playlist Audio Card</h3></div><?php snippet('show-html'); ?><?php snippet('show-sass'); ?></div><div class="row"><script src="/assets/audio/myplaylist-calypso.js" type="text/javascript"></script><div class="card audio-card playlist-audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border-card"><div class="image"><a href="#"><img src="<?= $section->image('audio.png')->url() ?>" class="playlist-cover"/></a></div><div class="details"><div class="details-inner"><div class="title-wrapper"><a href="#" class="high title"><span class="light"><span class="er playlist-title">Quelbe!</span></span></a><div id="playlist-artist" class="artist">Stanley and the Ten Sleepless Nights</div></div><div class="audio-player"><audio id="playlist-audio" class="playlist-audio" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'></audio><div class="playlist-controls"><div id="previous-button" class="icon-folklife-leftarrow"></div><div id="next-button" class="icon-folklife-rightarrow"></div></div></div></div></div></div><div class="col-xs-12 visible-xs"><?php snippet('show-html-mobile'); ?><?php snippet('show-sass-mobile'); ?></div><div class="col-md-9"><pre class="html"><code>&lt;div class="card audio-card playlist-audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border-card"&gt;
 	&lt;div class="image"&gt;	
 		&lt;a href="#"&gt;
-			&lt;img id="playlist-cover" src="/320x320.jpg"&gt;
+			&lt;img class="playlist-cover" src="/320x320.jpg"&gt;
 		&lt;/a&gt;
 	&lt;/div&gt;
 	&lt;div class="details"&gt;
@@ -275,7 +275,38 @@
 			&lt;div class="title-wrapper" &gt;
 				&lt;a class="high title" href="#"&gt;
 					&lt;span class="light"&gt;
-						&lt;span id="playlist-title" class="er"&gt;
+						&lt;span class="playlist-title" class="er"&gt;
+							Quelbe!
+						&lt;/span&gt;
+					&lt;/span&gt;
+				&lt;/a&gt;
+				&lt;div id="playlist-artist" class="artist"&gt;
+					Stanley and the Ten Sleepless Nights
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class="audio-player"&gt;
+				&lt;audio id="playlist-audio" class="playlist-audio" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'&gt;
+				&lt;!-- mejs media player will build itself on page load and we wrap a few key elements in common-scripts.js --&gt;
+				&lt;div class="playlist-controls"&gt;
+					&lt;div id="previous-button" class="icon-folklife-leftarrow"&gt;&lt;/div&gt;
+					&lt;div id="next-button" class="icon-folklife-rightarrow"&gt;&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div><div class="col-md-9"><pre class="sass"><code>// audio styles are too long to list here and have their own SASS file called audio.scss</code></pre></div></div></div><!-- Horizontal Playlist--><div class="codeblock"><a id="horizontal-playlist" class="anchor-link"></a><div class="row"><div class="col-sm-8"><h3 class="section-subtitle">Horizontal Playlist</h3></div><?php snippet('show-html'); ?><?php snippet('show-sass'); ?></div><div class="row"><script src="/assets/audio/myplaylist-calypso.js" type="text/javascript"></script><div class="card audio-card playlist-audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border-card"><div class="image"><a href="#"><img src="<?= $section->image('audio.png')->url() ?>" class="playlist-cover"/></a></div><div class="details"><div class="details-inner"><div class="title-wrapper"><a href="#" class="high title"><span class="light"><span class="er playlist-title">Quelbe!</span></span></a><div id="playlist-artist" class="artist">Stanley and the Ten Sleepless Nights</div></div><div class="audio-player"><audio id="playlist-audio" class="playlist-audio" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'></audio><div class="playlist-controls"><div id="previous-button" class="icon-folklife-leftarrow"></div><div id="next-button" class="icon-folklife-rightarrow"></div></div></div></div></div></div><div class="col-xs-12 visible-xs"><?php snippet('show-html-mobile'); ?><?php snippet('show-sass-mobile'); ?></div><div class="col-md-9"><pre class="html"><code>&lt;div class="card audio-card playlist-audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border-card"&gt;
+	&lt;div class="image"&gt;	
+		&lt;a href="#"&gt;
+			&lt;img class="playlist-cover" src="/320x320.jpg"&gt;
+		&lt;/a&gt;
+	&lt;/div&gt;
+	&lt;div class="details"&gt;
+		&lt;div class="details-inner"&gt;
+			&lt;div class="title-wrapper" &gt;
+				&lt;a class="high title" href="#"&gt;
+					&lt;span class="light"&gt;
+						&lt;span class="playlist-title" class="er"&gt;
 							Quelbe!
 						&lt;/span&gt;
 					&lt;/span&gt;
