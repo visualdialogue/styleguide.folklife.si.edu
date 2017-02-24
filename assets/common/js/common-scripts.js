@@ -1124,4 +1124,11 @@ $(document).ready(function () {
 		})
 	}
 
+/***************************
+* Bootstrap accordian
+* http://v4-alpha.getbootstrap.com/components/collapse/#accordion-example
+**************************/
+$('.collapse').collapse()
+
+
 }); // end document model ready
