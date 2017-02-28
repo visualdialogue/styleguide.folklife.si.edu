@@ -547,15 +547,16 @@ $(document).ready(function () {
 	var menuClosed = true;
 
 	// when click share icon
-	$menuIcon.on('click', function() {
+	// $menuIcon.on('click', function() {
 		// openMenu();
-	});
+	// });
 
 	/*********************
-	* Accessibility, 
+	* Accessibility
 	* example at from https://nationalzoo.si.edu/ although zoo not work in firefox or safari b/c no tabindex="0"?
 	*********************/
 	$('.skip-main').on('click', function() {
+		$(this).blur();
 		$('#main-content').focus();
 	});
 	$menuIcon.focusin(function() {

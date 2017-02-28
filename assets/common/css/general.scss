@@ -7,6 +7,7 @@
 	a.skip-main {
 		left:-999px;
 		position:absolute;
+		position:fixed;
 		top:auto;
 		width:1px;
 		height:1px;
@@ -14,10 +15,13 @@
 		z-index:-999;
 	}
 	a.skip-main:focus, a.skip-main:active {
+		position: fixed;
+		// position: static;
 		color: $copy;
 		background-color:#fff;
 		left: auto;
-		top: auto;
+		// top: auto;
+		top: 10vh;
 		width: 30%;
 		height: auto;
 		overflow:auto;

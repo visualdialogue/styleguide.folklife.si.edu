@@ -8070,6 +8070,7 @@ a:focus {
 a.skip-main {
 	left: -999px;
 	position: absolute;
+	position: fixed;
 	top: auto;
 	width: 1px;
 	height: 1px;
@@ -8078,10 +8079,11 @@ a.skip-main {
 }
 
 a.skip-main:focus, a.skip-main:active {
+	position: fixed;
 	color: #333333;
 	background-color: #fff;
 	left: auto;
-	top: auto;
+	top: 10vh;
 	width: 30%;
 	height: auto;
 	overflow: auto;
@@ -24150,6 +24152,7 @@ a:focus {
 a.skip-main {
 	left: -999px;
 	position: absolute;
+	position: fixed;
 	top: auto;
 	width: 1px;
 	height: 1px;
@@ -24158,10 +24161,11 @@ a.skip-main {
 }
 
 a.skip-main:focus, a.skip-main:active {
+	position: fixed;
 	color: #333333;
 	background-color: #fff;
 	left: auto;
-	top: auto;
+	top: 10vh;
 	width: 30%;
 	height: auto;
 	overflow: auto;
@@ -33418,18 +33422,18 @@ body.magazine-page, body.magazine-article-page {
 
 .folkways-nav a {
 	color: #595959;
-	padding-right: 2.80938rem;
+	margin-right: 1.48148rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.folkways-nav a {
-		padding-right: 2.56vw;
+		margin-right: 2.56vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
 	.folkways-nav a {
-		padding-right: 4rem;
+		margin-right: 4rem;
 	}
 }
 
@@ -33450,22 +33454,9 @@ body.magazine-page, body.magazine-article-page {
 	float: none;
 	color: #cccccc;
 	position: relative;
-	margin-left: 1.11111rem;
 	padding: 0;
 	margin: 0;
 	padding-top: 0.7rem;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.folkways-icon.nav-icon {
-		margin-left: 1.92vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.folkways-icon.nav-icon {
-		margin-left: 3rem;
-	}
 }
 
 .folkways-icon.nav-icon:hover {
@@ -33492,6 +33483,22 @@ body.magazine-page, body.magazine-article-page {
 @media only screen and (min-width: 1560px) {
 	.folkways-icon.nav-icon {
 		font-size: 1.8rem;
+	}
+}
+
+.folkways-icon-link {
+	margin-left: 1.11111rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.folkways-icon-link {
+		margin-left: 1.92vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.folkways-icon-link {
+		margin-left: 3rem;
 	}
 }
 
