@@ -123,7 +123,7 @@
 			color: #fff;
 			text-decoration: none;
 		}
-		&.active {
+		&.active, &:focus {
 			color: $black20;
 		}
 	}
@@ -204,6 +204,9 @@
 		top:0;
 		a {
 			display: block;
+			&:focus {
+				@include outline;
+			}
 		}
 	}
 	// CSS only logo transition
@@ -336,7 +339,7 @@
 	.nav-icon {
 		display:inline-block;
 		cursor: pointer;
-		float: right;
+		// float: right;
 		opacity: 1; // so bright white on mobile
 	}
 	.lighter-nav-icons {
@@ -408,6 +411,11 @@
 	.header-nav {
 		@include padding-top(3.4);
 		@include padding-bottom(2.6);
+	}
+	.header-nav-sub-item {
+		&:focus {
+			@include outline;
+		}
 	}
 
 	.header-nav, .footer-nav {

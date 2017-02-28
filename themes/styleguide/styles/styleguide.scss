@@ -23,9 +23,9 @@
 	@import "../../../assets/common/css/colors.scss";
 	$hover: $fs-hover; // local colors must be set to this site after inherit global colors and before apply to global rules
 	@import "../../../assets/common/css/type.scss";
+	@import "../../../assets/common/css/mixins.scss";
 	@import "../../../assets/common/css/icons.scss";
 	@import "../../../assets/common/css/links.scss";
-	@import "../../../assets/common/css/mixins.scss";
 	@import "../../../assets/common/css/nav.scss";
 	@import "../../../assets/common/css/general.scss";
 	@import "../../../assets/common/css/footer.scss";

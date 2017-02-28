@@ -57,6 +57,9 @@
 			color: $black30;
 			}
 		}
+		&:focus {
+			@include outline;
+		}
 	}
 	.social-icons {
 		display: none; // initial hide

@@ -150,6 +150,7 @@ $(document).ready(function () {
 	* @param direction dictates which logo to switch to, block or inline
 	**********/
 	var $blockLogos = $('.block-logos');
+	var $oneLineLogos = $('.one-line-logos');
 
 	function switchLogo(direction) {
 		// toggle class '.is-transitioning' during transition, then add .hidden when done. Remove hidden when coming back.
@@ -158,15 +159,23 @@ $(document).ready(function () {
 		if(direction == 'block' && $(window).scrollTop() <= gapNavHeight && menuClosed) {
 			// $('.one-line-logos').fadeOut('30');
 			// $('.block-logos').fadeIn('30');
+			console.log('going to block');
 			// CSS only
 			$logo.removeClass('logo-is-one-line');
 			$logo.addClass('logo-is-block');
+			// accessibility prevent double tabbing for 2 logos
+			$blockLogos.find('a').attr('tabindex', "0");
+			$oneLineLogos.find('a').attr('tabindex', "-1");
+
 		} else {
 			// $('.block-logos').fadeOut('30');
 			// $('.one-line-logos').fadeIn('30');
 			// CSS only
 			$logo.removeClass('logo-is-block');
 			$logo.addClass('logo-is-one-line');			
+			$blockLogos.find('a').attr('tabindex', "-1");
+			$oneLineLogos.find('a').attr('tabindex', "0");
+
 		}
 	}
 
@@ -227,7 +236,43 @@ $(document).ready(function () {
 
 	// when click share icon
 	$menuIcon.on('click', function() {
+		// openMenu();
+	});
 
+	/*********************
+	* Accessibility, 
+	* example at from https://nationalzoo.si.edu/ although zoo not work in firefox or safari b/c no tabindex="0"?
+	*********************/
+	$('.skip-main').on('click', function() {
+		$('#main-content').focus();
+	});
+	$menuIcon.focusin(function() {
+		openMenu();
+		$megaNav.find('a').first().focus(); // go to first nav item otherwise will go to shareIcon
+	});
+	$megaNav.find('a').last().focusout(function() {
+		site.navCloseAll(); // close mega nav
+		$shareIcon.focus(); // go back to nav icons
+	});
+	$menuIcon.keydown(function(event) {
+	    // $(this).addClass('open');
+	});
+
+	// $('.header-nav-sub-item a').on({
+	//        focus : function() {
+	//            $(this).closest('.header-nav-sub-item').css('outline','1px dotted #000');
+	//        },
+	//        blur : function() {
+	//            $(this).closest('.header-nav-sub-item').css('outline','none');
+	//        }
+	//    });
+
+	// hide menu when go to internal anchor link
+	$megaNavItem.on('click', function() {
+		site.navCloseAll();
+	});
+
+	function openMenu() {
 		// if not yet open
 		if(menuClosed) {
 			site.navCloseAll(); // after we've determined that menu is closed, close anything else that's open by default
@@ -243,13 +288,7 @@ $(document).ready(function () {
 			switchLogo('block');
 			menuClosed = true;
 		}
-		
-	});
-
-	// hide menu when go to internal anchor link
-	$megaNavItem.on('click', function() {
-		site.navCloseAll();
-	});
+	}
 
 /*********************
 * Social Media Icons

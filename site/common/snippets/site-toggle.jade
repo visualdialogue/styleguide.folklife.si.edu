@@ -11,7 +11,11 @@
 		.right-site-toggle
 			.hidden-xs.site-toggle-text
 				.tagline!= $tagline
-				a.site-toggle-link.folklife-site-toggle-link.active(href="/") Folklife
+				-if (c::get('isDev')):
+					a.site-toggle-link.folklife-site-toggle-link.active(href="http://localhost:3001") Folklife
+				- else:
+					a.site-toggle-link.folkways-site-toggle-link(href="http://folklife.lukehatfield.com") Folklife
+				-endif
 				-if (c::get('isDev')):
 					a.site-toggle-link.festival-site-toggle-link(href="http://localhost:3005") Folkways
 				- else:

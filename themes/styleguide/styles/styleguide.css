@@ -834,18 +834,14 @@ _____/  _| _| \___| _|\_\     _____/  _| _| \__,_| \___| _|        _____|
 	border: 0;
 	background: transparent;
 	display: block;
-	height: 20px;
-	width: 20px;
+	height: 19px;
+	width: 13px;
 	outline: none;
 	line-height: 0px;
 	font-size: 0px;
 	color: transparent;
 	padding: 5px;
 	cursor: pointer;
-}
-
-.slick-dots li button:hover, .slick-dots li button:focus {
-	outline: none;
 }
 
 .slick-dots li button:hover:before, .slick-dots li button:focus:before {
@@ -6087,6 +6083,9 @@ footer, header, hgroup, main, nav, section, summary {
 a, a:focus {
 	text-decoration: none;
 	color: inherit;
+}
+
+a {
 	outline: none;
 }
 
@@ -6626,6 +6625,40 @@ body {
 	}
 }
 
+/* Mixins
+-------------------------------------------------- */
+.vertically-align-grandparent {
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+
+.vertically-align-uncle {
+	display: table-row;
+}
+
+.vertically-align-parent {
+	position: relative;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	display: table-cell;
+	width: 100%;
+	height: 100%;
+}
+
+.vertically-align {
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+/* Clear left for correct alignment of cards in rows
+ -------------------------------------------------- */
 /* 
 * Font Awesome by Dave Gandy - http://fontawesome.io
 * Entypo pictograms by Daniel Bruce — www.entypo.com
@@ -6696,6 +6729,12 @@ body {
 	.main-nav-icon:hover {
 		color: #b3b3b3;
 	}
+}
+
+.main-nav-icon:focus {
+	outline: 2px auto #cccccc;
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
 }
 
 .social-icons {
@@ -7160,40 +7199,6 @@ a:hover {
 	top: -20rem;
 }
 
-/* Mixins
--------------------------------------------------- */
-.vertically-align-grandparent {
-	display: table;
-	width: 100%;
-	height: 100%;
-}
-
-.vertically-align-uncle {
-	display: table-row;
-}
-
-.vertically-align-parent {
-	position: relative;
-	-webkit-transform-style: preserve-3d;
-	-moz-transform-style: preserve-3d;
-	-ms-transform-style: preserve-3d;
-	-o-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-	display: table-cell;
-	width: 100%;
-	height: 100%;
-}
-
-.vertically-align {
-	position: absolute;
-	top: 50%;
-	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
-}
-
-/* Clear left for correct alignment of cards in rows
- -------------------------------------------------- */
 /* Nav
 -------------------------------------------------- */
 .navbar {
@@ -7389,7 +7394,7 @@ a:hover {
 	text-decoration: none;
 }
 
-.site-toggle-link.active {
+.site-toggle-link.active, .site-toggle-link:focus {
 	color: #cccccc;
 }
 
@@ -7520,6 +7525,12 @@ a:hover {
 
 .logo a {
 	display: block;
+}
+
+.logo a:focus {
+	outline: 2px auto #cccccc;
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
 }
 
 .one-line-logos, .block-logos {
@@ -7673,7 +7684,6 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
 .nav-icon {
 	display: inline-block;
 	cursor: pointer;
-	float: right;
 	opacity: 1;
 }
 
@@ -7794,6 +7804,12 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
 	.header-nav {
 		padding-bottom: 2.6rem;
 	}
+}
+
+.header-nav-sub-item:focus {
+	outline: 2px auto #cccccc;
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
 }
 
 .header-nav, .footer-nav {
@@ -8043,6 +8059,40 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
 /*
 	* Select styling for before built with dropdown hover and divs
 	*/
+/* Accessibility, from https://accessibility.oit.ncsu.edu/it-accessibility-at-nc-state/developers/accessibility-handbook/mouse-and-keyboard-events/skip-to-main-content/
+-------------------------------------------------- */
+a:focus {
+	outline: 2px auto #cccccc;
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
+}
+
+a.skip-main {
+	left: -999px;
+	position: absolute;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	z-index: -999;
+}
+
+a.skip-main:focus, a.skip-main:active {
+	color: #333333;
+	background-color: #fff;
+	left: auto;
+	top: auto;
+	width: 30%;
+	height: auto;
+	overflow: auto;
+	margin: 10px 35%;
+	padding: 5px;
+	border: 4px solid #fddd6b;
+	text-align: center;
+	font-size: 1.2em;
+	z-index: 999;
+}
+
 /* Bootstrap overrides
 -------------------------------------------------*/
 .navbar-header {
@@ -10520,6 +10570,12 @@ figcaption.minus-sign:before {
 	}
 }
 
+.dropdown:focus, .filter-button:focus {
+	outline: 2px auto #cccccc;
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
+}
+
 .first-level-dropdown {
 	display: none;
 	position: absolute;
@@ -10945,6 +11001,12 @@ figcaption.minus-sign:before {
 
 /* Slideshow/Gallery arrows, from Folklife homepage banner
 -------------------------------------------------*/
+.slick-arrow:focus, .slick-dots button:focus {
+	outline: 2px auto #cccccc;
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
+}
+
 .slick-dots li.slick-active button:before {
 	opacity: 1;
 }
@@ -22101,6 +22163,9 @@ footer, header, hgroup, main, nav, section, summary {
 a, a:focus {
 	text-decoration: none;
 	color: inherit;
+}
+
+a {
 	outline: none;
 }
 
@@ -22640,6 +22705,40 @@ body {
 	}
 }
 
+/* Mixins
+-------------------------------------------------- */
+.vertically-align-grandparent {
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+
+.vertically-align-uncle {
+	display: table-row;
+}
+
+.vertically-align-parent {
+	position: relative;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	display: table-cell;
+	width: 100%;
+	height: 100%;
+}
+
+.vertically-align {
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+/* Clear left for correct alignment of cards in rows
+ -------------------------------------------------- */
 /* 
 * Font Awesome by Dave Gandy - http://fontawesome.io
 * Entypo pictograms by Daniel Bruce — www.entypo.com
@@ -22710,6 +22809,12 @@ body {
 	.main-nav-icon:hover {
 		color: #b3b3b3;
 	}
+}
+
+.main-nav-icon:focus {
+	outline: 2px auto #cccccc;
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
 }
 
 .social-icons {
@@ -23174,40 +23279,6 @@ a:hover {
 	top: -20rem;
 }
 
-/* Mixins
--------------------------------------------------- */
-.vertically-align-grandparent {
-	display: table;
-	width: 100%;
-	height: 100%;
-}
-
-.vertically-align-uncle {
-	display: table-row;
-}
-
-.vertically-align-parent {
-	position: relative;
-	-webkit-transform-style: preserve-3d;
-	-moz-transform-style: preserve-3d;
-	-ms-transform-style: preserve-3d;
-	-o-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-	display: table-cell;
-	width: 100%;
-	height: 100%;
-}
-
-.vertically-align {
-	position: absolute;
-	top: 50%;
-	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
-}
-
-/* Clear left for correct alignment of cards in rows
- -------------------------------------------------- */
 /* Nav
 -------------------------------------------------- */
 .navbar {
@@ -23403,7 +23474,7 @@ a:hover {
 	text-decoration: none;
 }
 
-.site-toggle-link.active {
+.site-toggle-link.active, .site-toggle-link:focus {
 	color: #cccccc;
 }
 
@@ -23534,6 +23605,12 @@ a:hover {
 
 .logo a {
 	display: block;
+}
+
+.logo a:focus {
+	outline: 2px auto #cccccc;
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
 }
 
 .one-line-logos, .block-logos {
@@ -23687,7 +23764,6 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
 .nav-icon {
 	display: inline-block;
 	cursor: pointer;
-	float: right;
 	opacity: 1;
 }
 
@@ -23808,6 +23884,12 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
 	.header-nav {
 		padding-bottom: 2.6rem;
 	}
+}
+
+.header-nav-sub-item:focus {
+	outline: 2px auto #cccccc;
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
 }
 
 .header-nav, .footer-nav {
@@ -24057,6 +24139,40 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
 /*
 	* Select styling for before built with dropdown hover and divs
 	*/
+/* Accessibility, from https://accessibility.oit.ncsu.edu/it-accessibility-at-nc-state/developers/accessibility-handbook/mouse-and-keyboard-events/skip-to-main-content/
+-------------------------------------------------- */
+a:focus {
+	outline: 2px auto #cccccc;
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
+}
+
+a.skip-main {
+	left: -999px;
+	position: absolute;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	z-index: -999;
+}
+
+a.skip-main:focus, a.skip-main:active {
+	color: #333333;
+	background-color: #fff;
+	left: auto;
+	top: auto;
+	width: 30%;
+	height: auto;
+	overflow: auto;
+	margin: 10px 35%;
+	padding: 5px;
+	border: 4px solid #c0d5e7;
+	text-align: center;
+	font-size: 1.2em;
+	z-index: 999;
+}
+
 /* Bootstrap overrides
 -------------------------------------------------*/
 .navbar-header {
@@ -26534,6 +26650,12 @@ figcaption.minus-sign:before {
 	}
 }
 
+.dropdown:focus, .filter-button:focus {
+	outline: 2px auto #cccccc;
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
+}
+
 .first-level-dropdown {
 	display: none;
 	position: absolute;
@@ -26959,6 +27081,12 @@ figcaption.minus-sign:before {
 
 /* Slideshow/Gallery arrows, from Folklife homepage banner
 -------------------------------------------------*/
+.slick-arrow:focus, .slick-dots button:focus {
+	outline: 2px auto #cccccc;
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
+}
+
 .slick-dots li.slick-active button:before {
 	opacity: 1;
 }

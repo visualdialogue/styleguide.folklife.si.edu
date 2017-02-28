@@ -1,3 +1,34 @@
+/* Accessibility, from https://accessibility.oit.ncsu.edu/it-accessibility-at-nc-state/developers/accessibility-handbook/mouse-and-keyboard-events/skip-to-main-content/
+-------------------------------------------------- */
+	a:focus {
+		@include outline;
+	}
+
+	a.skip-main {
+		left:-999px;
+		position:absolute;
+		top:auto;
+		width:1px;
+		height:1px;
+		overflow:hidden;
+		z-index:-999;
+	}
+	a.skip-main:focus, a.skip-main:active {
+		color: $copy;
+		background-color:#fff;
+		left: auto;
+		top: auto;
+		width: 30%;
+		height: auto;
+		overflow:auto;
+		margin: 10px 35%;
+		padding:5px;
+		border:4px solid $hover;
+		text-align:center;
+		font-size:1.2em;
+		z-index:999;
+	}
+
 /* Bootstrap overrides
 -------------------------------------------------*/
 	.navbar-header {
@@ -960,6 +991,9 @@
 	}
 	.dropdown, .filter-button {
 		@include margin-top(1.5); // 19px
+		&:focus {
+			@include outline;
+		}
 	}
 	.first-level-dropdown {
 		display: none; // initial hide
@@ -1084,6 +1118,13 @@
 -------------------------------------------------*/
 	$arrowSizeBreak2: 6rem;
 	$arrowSizeFullwidth: 8rem;
+
+	// accessible arrows
+	.slick-arrow, .slick-dots button {
+		&:focus {
+			@include outline;
+		}
+	}
 
 	// slick default overrride
 	.slick-dots li.slick-active button:before {opacity: 1;}
@@ -1258,7 +1299,7 @@
 		.slick-active .gallery-image-inner:after {
 			display: none;
 		}		
-		.slick-arrow {
+		.slick-arrow {			
 			@include respond-to(break2max) {
 				display: none !important;
 			}
