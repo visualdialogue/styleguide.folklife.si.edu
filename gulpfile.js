@@ -126,7 +126,8 @@ gulp.task('js', function() {
 	  'themes/styleguide/scripts/styleguide.js'
 	])
 	.pipe(concat('styleguide.pkgd.js'))
-	.pipe(gulp.dest('themes/styleguide/scripts/'));
+	.pipe(gulp.dest('themes/styleguide/scripts/'))
+	.pipe(browserSync.stream())
 	// gulp.watch('/js/scripts.js',['scripts']);
 });
 // create a task that ensures the `templates` and `js` tasks are completed before
@@ -161,7 +162,8 @@ gulp.task('serve', ['jade', 'styles', 'js'], function() {
 	// gulp.watch('../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/*.scss',['styles']);
 	gulp.watch('assets/common/js/*.js',['js','copy-js']); // copy common plugins and scripts to toby's 3 repos until he has centralized common elements
 	gulp.watch([ // JS
-		'themes/styleguide/scripts/*.js'
+		'themes/styleguide/scripts/*.js',
+		'/assets/common/js/*.js',
 		],['js']);
 
 });

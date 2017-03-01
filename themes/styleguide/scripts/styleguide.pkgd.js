@@ -1161,7 +1161,7 @@ $(document).ready(function () {
 * https://github.com/duozersk/mep-feature-playlist
 *********/
 
-	var playlist; // global playlist var so can access everywhere
+	var playlist = []; // global playlist var so can access everywhere
 	// console.log(myPlaylist[0]);
 
 	// initialize player so can get id for vars
@@ -1177,24 +1177,27 @@ $(document).ready(function () {
 			console.log('originalNode', originalNode);
 
 			// better mejs html
-			// var currentTimeContainer = $('.playlist-audio').find('.mejs-currenttime-container');
+			var currentTimeContainer = $(originalNode).find('.mejs-currenttime-container');
+
+			console.log('currentTimeContainer :', mediaElement.player.currenttime[0].parentNode);
 			// console.log(currentTimeContainer);
-			// wrapTime(currentTimeContainer);
+			wrapTime($(mediaElement.player.currenttime[0].parentNode));
 
 			var playerID = mediaElement.player.id;
+			console.log('playerID :', playerID);
 
 			// initialize player because elements now exist
-			playlist = new Playlist(playerID); 
+			playlist[playerID] = new Playlist(playerID); 
 			// set first track
 			// playlist.cover = 
-			playlist.cover.attr('src', myPlaylist[0].cover); // update album cover
-			playlist.title.html(myPlaylist[0].title); // update album title
-			playlist.artist.html(myPlaylist[0].artist); // update album artist
-			playlist.audioElement[0].setSrc(myPlaylist[0].mp3); // set new track to play
+			playlist[playerID].cover.attr('src', myPlaylist[0].cover); // update album cover
+			playlist[playerID].title.html(myPlaylist[0].title); // update album title
+			playlist[playerID].artist.html(myPlaylist[0].artist); // update album artist
+			playlist[playerID].audioElement[0].setSrc(myPlaylist[0].mp3); // set new track to play
 
 			// Event Listeners
 			mediaElement.addEventListener('ended', function (e) {
-				playlist.playNextTrack();
+				playlist[playerID].playNextTrack();
 			}, false);
 		}
 	});
@@ -1208,14 +1211,19 @@ $(document).ready(function () {
 	function Playlist(playerID) {
 		// get local audio card in case others on page
 		var $audioCard = $('#' + playerID).closest('.audio-card');
-		this.mejsPlayer = mejs.players[this.playerID];
+		// this.mejsPlayer = mejs.players[this.playerID];
+		this.mejsPlayer = mejs.players[playerID];
 		this.player = this.mejsPlayer;
+
+		console.log('this.player :', this.mejsPlayer);
 		this.cover = $audioCard.find('.playlist-cover');
 		this.title = $audioCard.find('.playlist-title');
-		this.artist = $audioCard.find('.playlist-artist');
-		this.audioElement = $('#playlist-audio');
+		this.artist = $audioCard.find('#playlist-artist');
+		// this.audioElement = $('#playlist-audio');
 		// this.audioElement = $audioCard.find('.playlist-audio');
-		// this.audioElement = this.player;
+		this.audioElement = this.player.$media;
+
+		console.log('this.audioElement :', this.audioElement);
 		// this.audioElement = this.player.node;
 		this.currentTrack = 0;
 		this.length = Object.keys(myPlaylist).length;
@@ -1236,29 +1244,32 @@ $(document).ready(function () {
 		/**********
 		* Play previous track
 		**********/
-		this.playPrevTrack = function() {
+		this.playPrevTrack = function($player) {
 			// if current track is 0, change to last track
-			if ( playlist.currentTrack == 0 )
-				playlist.currentTrack = playlist.length - 1;
+			if ( playlist[playerID].currentTrack == 0 )
+				playlist[playerID].currentTrack = playlist[playerID].length - 1;
 			// else play track - 1 
 			else
-				playlist.currentTrack--;
+				playlist[playerID].currentTrack--;
 			
 			// update player with image, src, play, etc.
-			playlist.updatePlayer(myPlaylist[this.currentTrack]);
+			playlist[playerID].updatePlayer(myPlaylist[this.currentTrack]);
 		}
 
 		/**********
 		* Play next track
 		**********/
-		this.playNextTrack = function() {
+		this.playNextTrack = function($player) {
 			if(this.currentTrack == this.length - 1)
 				this.currentTrack = 0;
 			else
 				this.currentTrack++;
 
+			console.log('$player :', $player);
+
 			// update player with image, src, play, etc.
-			playlist.updatePlayer(myPlaylist[this.currentTrack]);
+			// playlist.updatePlayer(myPlaylist[this.currentTrack]);
+			playlist[playerID].updatePlayer(myPlaylist[this.currentTrack]);
 		}
 	}
 
@@ -1266,13 +1277,18 @@ $(document).ready(function () {
 	* Track Skipping Buttons
 	**********/
 	// Previous Track
-	$('#previous-button').click(function() {
-		playlist.playPrevTrack();
+	$('.previous-button').click(function() {
+		$audio = $(this).parent().siblings('.playlist-audio');
+		currentPlayerID = $audio.attr('id');
+		playlist[currentPlayerID].playPrevTrack();
 	})
 
 	// Next Track
-	$('#next-button').click(function() {
-		playlist.playNextTrack();
+	$('.next-button').click(function() {
+		// get closest audio player
+		$audio = $(this).parent().siblings('.playlist-audio');
+		currentPlayerID = $audio.attr('id');
+		playlist[currentPlayerID].playNextTrack();
 	})
 
 /*********************

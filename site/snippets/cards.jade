@@ -516,8 +516,8 @@ section.container.cards-section
 						.audio-player
 							<audio id="playlist-audio" class="playlist-audio" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'></audio>
 							.playlist-controls
-								#previous-button.icon-folklife-leftarrow
-								#next-button.icon-folklife-rightarrow
+								.previous-button.icon-folklife-leftarrow
+								.next-button.icon-folklife-rightarrow
 			.col-xs-12.visible-xs
 				-snippet('show-html-mobile')
 				-snippet('show-sass-mobile')
@@ -547,8 +547,8 @@ section.container.cards-section
 									&lt;audio id="playlist-audio" class="playlist-audio" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'&gt;
 									&lt;!-- mejs media player will build itself on page load and we wrap a few key elements in common-scripts.js --&gt;
 									&lt;div class="playlist-controls"&gt;
-										&lt;div id="previous-button" class="icon-folklife-leftarrow"&gt;&lt;/div&gt;
-										&lt;div id="next-button" class="icon-folklife-rightarrow"&gt;&lt;/div&gt;
+										&lt;div class="previous-button icon-folklife-leftarrow"&gt;&lt;/div&gt;
+										&lt;div class="next-button icon-folklife-rightarrow"&gt;&lt;/div&gt;
 									&lt;/div&gt;
 								&lt;/div&gt;
 							&lt;/div&gt;
@@ -569,21 +569,22 @@ section.container.cards-section
 		.row
 			//- script(src="/assets/audio/myplaylist.js" type="text/javascript")
 			script(src="/assets/audio/myplaylist-calypso.js" type="text/javascript")
-			.card.audio-card.playlist-audio-card.col-xs-6.col-sm-3.card-xs-break-2.full-border-card
-				.image
-					a(href="#")
-						img.playlist-cover(src="<?= $section->image('audio.png')->url() ?>")
-				.details
-					.details-inner
-						//- .tag New Release
-						.title-wrapper
-							a.high.title(href="#"): span.light: span.er.playlist-title Quelbe!
-							.artist#playlist-artist Stanley and the Ten Sleepless Nights
-						.audio-player
-							<audio id="playlist-audio" class="playlist-audio" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'></audio>
-							.playlist-controls
-								#previous-button.icon-folklife-leftarrow
-								#next-button.icon-folklife-rightarrow
+			.card.audio-card.playlist-audio-card.horizontal-audio-card-third.full-border-horizontal-card.col-xs-6.col-sm-4.card-xs-break-2
+				.row
+					.image.col-xs-4
+						a(href="#")
+							img.playlist-cover(src="<?= $section->image('audio.png')->url() ?>")
+					.details.col-xs-8
+						.details-inner
+							//- .tag New Release
+							.title-wrapper
+								a.high.title(href="#"): span.light: span.er.playlist-title Quelbe!
+								.artist#playlist-artist Stanley and the Ten Sleepless Nights
+							.audio-player
+								<audio id="playlist-audio" class="playlist-audio" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'></audio>
+								.playlist-controls
+									.previous-button.icon-folklife-leftarrow
+									.next-button.icon-folklife-rightarrow
 			.col-xs-12.visible-xs
 				-snippet('show-html-mobile')
 				-snippet('show-sass-mobile')
@@ -613,8 +614,8 @@ section.container.cards-section
 									&lt;audio id="playlist-audio" class="playlist-audio" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'&gt;
 									&lt;!-- mejs media player will build itself on page load and we wrap a few key elements in common-scripts.js --&gt;
 									&lt;div class="playlist-controls"&gt;
-										&lt;div id="previous-button" class="icon-folklife-leftarrow"&gt;&lt;/div&gt;
-										&lt;div id="next-button" class="icon-folklife-rightarrow"&gt;&lt;/div&gt;
+										&lt;div class="previous-button icon-folklife-leftarrow"&gt;&lt;/div&gt;
+										&lt;div class="next-button icon-folklife-rightarrow"&gt;&lt;/div&gt;
 									&lt;/div&gt;
 								&lt;/div&gt;
 							&lt;/div&gt;
@@ -721,19 +722,19 @@ section.container.cards-section
 			.col-md-8
 				pre.sass: code.
 					// audio styles are too long to list here and have their own SASS file called audio.scss
-	// Horizontal Audio Card — Playlist
+	// Horizontal Audio Card — Playlist – Thin
 	.codeblock
-		a.anchor-link#horizontal-audio-card-playlist
+		a.anchor-link#horizontal-audio-card-playlist-thin
 		.row
 			.col-sm-8
-				h3.section-subtitle Horizontal Audio Card — Playlist
+				h3.section-subtitle Horizontal Audio Card — Playlist – Thin
 			-snippet('show-html')
 			-snippet('show-sass')
 		.row.visible-xs.visible-sm
 			.card.col-sm-4
 				p Swap horizontal card with tall card for this size
 		.row
-			.card.audio-card.horizontal-audio-card.horizontal-audio-card-playlist.full-border-horizontal-card.col-sm-4.visible-md.visible-lg
+			.card.audio-card.horizontal-audio-card.horizontal-audio-card-playlist-thin.full-border-horizontal-card.col-sm-4.visible-md.visible-lg
 				.row
 					.image.col-xs-3
 						!= $section->image('audio.png')

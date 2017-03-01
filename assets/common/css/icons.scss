@@ -135,6 +135,17 @@
 			font-size: 6rem;
 		}
 	}
+	.horizontal-audio-card-third .icon-play-button:before, .horizontal-audio-card-third .icon-play-button:after, .horizontal-audio-card-third .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card-third .mejs-controls .mejs-playpause-button button:after {
+		@include respond-to(break2max) {
+			font-size: 7vw;
+		}
+		@include respond-to(break2full) {
+			font-size: 3vw;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 4rem;
+		}
+	}
 	// Album page track listing
 	// .track .mejs-controls button {
 	// 	&:before, &:after {

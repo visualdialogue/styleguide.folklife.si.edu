@@ -170,10 +170,12 @@
 					}
 					@include respond-to(break2full) {
 						font-size: 2.8vw;
+						padding-left: 0.2vw;
 					}
 					@include respond-to(fullwidth) {
 						font-size: 4rem;
-						padding-left: 0.1rem;
+						padding-top: 0.1rem;
+						padding-left: 0.2rem;
 					}
 				}
 			}
@@ -343,7 +345,7 @@ $horizontalMobilePlayHeight: 8vw;
 	.mejs-controls {
 		div {
 			// font-size:3vw;
-			@include respond-to(break2) {font-size:0.9vw;}
+			@include respond-to(break2full) {font-size:0.9vw;}
 			@include respond-to(fullwidth) {font-size:1.4rem;}
 		}
 		.mejs-playpause-button {
@@ -390,6 +392,8 @@ $horizontalMobilePlayHeight: 8vw;
 			@include respond-to(break2) {
 				position: static;
 				width: 75%;
+			}
+			@include respond-to(break2full) {
 				margin-top: 5vw;	
 			}
 			@include respond-to(break23) {margin-top: 0.9vw;}
@@ -398,7 +402,127 @@ $horizontalMobilePlayHeight: 8vw;
 		}
 	}
 }
-.horizontal-audio-card-single {
+.horizontal-audio-card-third {
+	position: relative; // contain abs border
+	// show play button on card hover (timeline exempt because z-index above)
+	&:hover .details .mejs-controls .mejs-playpause-button {
+		display: inline-block;
+	}
+	.image {
+		padding-right: 0; // snuggle with details box
+	}
+	.details {
+		padding-left: 0; // tight with image
+	}		
+	.details-inner {
+		@include padding-top(1);
+		@include padding-right(1.5);
+		padding-bottom: 0; // audio player here
+		padding-left:$small-gutter;
+		@include respond-to(break2full) {padding-left:$small-gutter;}
+		@include respond-to(fullwidth) {padding-left:1rem;}
+	}
+	.title-wrapper {
+		height:30vw;
+		@include respond-to(break23) {height:6vw;}
+		@include respond-to(break3full) {height:4vw;}
+		@include respond-to(fullwidth) {height:7rem;}
+	}
+	.title {
+		@include sm-sans;
+		font-weight: 600;	
+	}
+	.audio-player {
+		position: static;
+		position: relative; // contain tracking buttons
+		padding: 0;
+		@include margin-top(1);
+	}
+	.playlist-controls {
+		@include top(-2);
+		// font-size:2rem;
+		@include respond-to(break2full) {font-size:1.2vw;}
+		@include respond-to(fullwidth) {font-size:2rem;}
+	}
+	.mejs-controls {
+		div {
+			// font-size:3vw;
+			@include respond-to(break2full) {font-size:0.9vw;}
+			@include respond-to(fullwidth) {font-size:1.4rem;}
+		}
+	}
+	$horizontalMobilePlaylistSize: 7vw;
+	$horizontalDesktopPlaylistSize: 4;
+	.mejs-container .mejs-controls {
+		.mejs-playpause-button button[title="Pause"] {
+			text-align: center;
+			&:after {
+				line-height: 1.45;
+				@include respond-to(break2max) {
+					font-size: 5vw;
+					padding-left: 0.15vw;
+				}
+				@include respond-to(break2full) {
+					font-size: 2vw;
+					padding-left: 0.1vw;
+				}
+				@include respond-to(fullwidth) {
+					font-size: 3rem;
+					padding-top: 0;
+					padding-left: 0;
+				}
+			}
+		}
+		.mejs-time-wrapper {
+			position: absolute;
+			bottom:0;
+			width: 75%;
+			@include left(5);
+		}
+		.mejs-time-rail {
+			// top: 0.5rem;
+			@include top(0.5);
+			@include left(5.3);
+		}
+		.mejs-playpause-button {
+			@include margin-right(2);
+			@include width($horizontalDesktopPlaylistSize);
+			@include height($horizontalDesktopPlaylistSize);
+			@include respond-to(break2max) {
+				margin-right: 2vw;
+				width: $horizontalMobilePlaylistSize;
+				height: $horizontalMobilePlaylistSize;
+			}
+		}
+		.mejs-playpause-button button {
+			@include width($horizontalDesktopPlaylistSize);
+			@include height($horizontalDesktopPlaylistSize);
+			@include respond-to(break2max) {
+				width: $horizontalMobilePlaylistSize;
+				height: $horizontalMobilePlaylistSize;
+			}
+			&:before, &:after {
+				@include width($horizontalDesktopPlaylistSize);
+				@include height($horizontalDesktopPlaylistSize);
+				@include respond-to(break2max) {
+					width: $horizontalMobilePlaylistSize;
+					height: $horizontalMobilePlaylistSize;
+				}
+			}
+		}
+	}
+	.mejs-playpause-button button:before, .mejs-playpause-button button:after {
+		// font-size:8vw;
+		@include respond-to(break2full) {font-size:3vw;}
+		@include respond-to(fullwidth) {font-size:4rem;}
+	}
+	.mejs-playpause-button button[title='Pause']:after {
+		// font-size:5.5vw;
+		@include respond-to(break2full) {font-size:2.2vw;}
+		@include respond-to(fullwidth) {font-size:3rem;}
+	}
+}
+.horizontal-audio-card-single, .horizontal-audio-card.playlist-audio-card {
 	// don't hide play button
 	.details .mejs-controls .mejs-playpause-button {
 		display: inline-block;
@@ -409,89 +533,95 @@ $horizontalMobilePlayHeight: 8vw;
 
 /* Audio Playlist controls
 -------------------------------------------------- */
-.playlist-audio-card {
-	img {		
-		@include respond-to(break2) {
-			@include width(32);
-			@include height(32);	
-		}
-	}
-	.details-inner {
-		// min-height: 17.5rem;
-		@include padding-top(2);
-		@include min-height(22.5);
-	}
-}
-.playlist-audio {
-	// override mejs css
-	width: auto !important;
-	height: auto !important;	
-}
-.playlist-controls {
-	position: absolute;
-	@include right(-0.5);
-	@include respond-to(break2max) {
-		top: -0.5rem;
-		font-size: 1rem;
-	}
-	@include respond-to(break2) {
-		top: 0;
-	}
-
-	div {
-		display: inline-block;
-		margin-right: 20px;
-		cursor: pointer;
-		&:hover {
-			background-color: $fl-hover;
-		}
-	}
-}
-.horizontal-audio-card-playlist {
-	.title-wrapper {
-		height:12vw;
-		@include respond-to(break23) {height:3vw;}
-		@include respond-to(break3full) {height:3.2vw;}
-		@include respond-to(fullwidth) {height:5rem;}
-	}
-	.title {
-		@include respond-to(break2full) {
-			margin-bottom: 0;
-		}	
-	}
-	.mejs-controls {
-		.mejs-playpause-button {
-			position: absolute;
-			top: -8vw;
-			left:-18vw;
-			@include respond-to(break23) {
-				top: -4vw;
-				left:-2vw;
-			}
-			@include respond-to(break3full) {
-				top: -2.7vw;
-				left:-5.1vw;
-			}
-			@include respond-to(fullwidth) {
-				top: -4rem;
-				left:-8rem;
-			}
-		}
-		.mejs-time-rail {
-			padding-top: 0;
-			position: relative;
-			left: 0;
+	.playlist-audio-card:not(.horizontal-audio-card-third) {
+		img {		
 			@include respond-to(break2) {
-				top: 0;
+				@include width(32);
+				@include height(32);	
 			}
 		}
-		// .mejs-time-wrapper, .mejs-horizontal-volume-slider {
-		.mejs-horizontal-volume-slider {
-			@include bottom(0.5);
-		}
-		.mejs-time-wrapper {
-			display: none
+		.details-inner {
+			// min-height: 17.5rem;
+			@include padding-top(2);
+			@include min-height(22.5);
 		}
 	}
-}
+	.playlist-audio {
+		// override mejs css
+		width: auto !important;
+		height: auto !important;	
+	}
+	.playlist-controls {
+		position: absolute;
+		@include right(-0.5);
+		@include respond-to(break2max) {
+			top: -0.5rem;
+			font-size: 1rem;
+		}
+		@include respond-to(break2) {
+			top: 0;
+		}
+
+		div {
+			display: inline-block;
+			margin-right: 20px;
+			cursor: pointer;
+			&:hover {
+				background-color: $fl-hover;
+			}
+		}
+	}
+	.horizontal-audio-card-third {
+		.artist {
+			@include caption-sans;
+			text-transform: initial;
+		}
+	}
+	.horizontal-audio-card-playlist-thin {
+		.title-wrapper {
+			height:12vw;
+			@include respond-to(break23) {height:3vw;}
+			@include respond-to(break3full) {height:3.2vw;}
+			@include respond-to(fullwidth) {height:5rem;}
+		}
+		.title {
+			@include respond-to(break2full) {
+				margin-bottom: 0;
+			}	
+		}
+		.mejs-controls {
+			.mejs-playpause-button {
+				position: absolute;
+				top: -8vw;
+				left:-18vw;
+				@include respond-to(break23) {
+					top: -4vw;
+					left:-2vw;
+				}
+				@include respond-to(break3full) {
+					top: -2.7vw;
+					left:-5.1vw;
+				}
+				@include respond-to(fullwidth) {
+					top: -4rem;
+					left:-8rem;
+				}
+			}
+			.mejs-time-rail {
+				padding-top: 0;
+				position: relative;
+				left: 0;
+				@include respond-to(break2) {
+					top: 0;
+				}
+			}
+			// .mejs-time-wrapper, .mejs-horizontal-volume-slider {
+			.mejs-horizontal-volume-slider {
+				@include bottom(0.5);
+			}
+			.mejs-time-wrapper {
+				display: none
+			}
+		}
+	}
 

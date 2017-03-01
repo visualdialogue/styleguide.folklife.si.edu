@@ -6845,6 +6845,24 @@ body {
 	}
 }
 
+@media only screen and (max-width: 53.15em) {
+	.horizontal-audio-card-third .icon-play-button:before, .horizontal-audio-card-third .icon-play-button:after, .horizontal-audio-card-third .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card-third .mejs-controls .mejs-playpause-button button:after {
+		font-size: 7vw;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .icon-play-button:before, .horizontal-audio-card-third .icon-play-button:after, .horizontal-audio-card-third .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card-third .mejs-controls .mejs-playpause-button button:after {
+		font-size: 3vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .icon-play-button:before, .horizontal-audio-card-third .icon-play-button:after, .horizontal-audio-card-third .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card-third .mejs-controls .mejs-playpause-button button:after {
+		font-size: 4rem;
+	}
+}
+
 /* Image Gallery
 -------------------------------------------------- */
 .icon-gallery, .icon-picture-o {
@@ -11840,18 +11858,18 @@ video::-webkit-media-controls {
 	}
 }
 
-.magazine-article-page .sidebar .horizontal-audio-card-single {
+.magazine-article-page .sidebar .horizontal-audio-card-single, .magazine-article-page .sidebar .horizontal-audio-card.playlist-audio-card {
 	margin-top: 1.48148rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.magazine-article-page .sidebar .horizontal-audio-card-single {
+	.magazine-article-page .sidebar .horizontal-audio-card-single, .magazine-article-page .sidebar .horizontal-audio-card.playlist-audio-card {
 		margin-top: 2.56vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.magazine-article-page .sidebar .horizontal-audio-card-single {
+	.magazine-article-page .sidebar .horizontal-audio-card-single, .magazine-article-page .sidebar .horizontal-audio-card.playlist-audio-card {
 		margin-top: 4rem;
 	}
 }
@@ -15388,13 +15406,15 @@ body {
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.mejs-container .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
 		font-size: 2.8vw;
+		padding-left: 0.2vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
 	.mejs-container .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
 		font-size: 4rem;
-		padding-left: 0.1rem;
+		padding-top: 0.1rem;
+		padding-left: 0.2rem;
 	}
 }
 
@@ -15770,7 +15790,7 @@ body {
 	}
 }
 
-@media only screen and (min-width: 53.25em) {
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.horizontal-audio-card .mejs-controls div {
 		font-size: 0.9vw;
 	}
@@ -15851,6 +15871,11 @@ body {
 	.horizontal-audio-card .mejs-controls .mejs-time-wrapper {
 		position: static;
 		width: 75%;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card .mejs-controls .mejs-time-wrapper {
 		margin-top: 5vw;
 	}
 }
@@ -15873,68 +15898,453 @@ body {
 	}
 }
 
-.horizontal-audio-card-single .details .mejs-controls .mejs-playpause-button {
+.horizontal-audio-card-third {
+	position: relative;
+}
+
+.horizontal-audio-card-third:hover .details .mejs-controls .mejs-playpause-button {
+	display: inline-block;
+}
+
+.horizontal-audio-card-third .image {
+	padding-right: 0;
+}
+
+.horizontal-audio-card-third .details {
+	padding-left: 0;
+}
+
+.horizontal-audio-card-third .details-inner {
+	padding-top: 0.70235rem;
+	padding-right: 1.05352rem;
+	padding-bottom: 0;
+	padding-left: 7.5px;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .details-inner {
+		padding-top: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .details-inner {
+		padding-top: 1rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .details-inner {
+		padding-right: 0.96vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .details-inner {
+		padding-right: 1.5rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .details-inner {
+		padding-left: 7.5px;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .details-inner {
+		padding-left: 1rem;
+	}
+}
+
+.horizontal-audio-card-third .title-wrapper {
+	height: 30vw;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 61.9em) {
+	.horizontal-audio-card-third .title-wrapper {
+		height: 6vw;
+	}
+}
+
+@media only screen and (min-width: 62em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .title-wrapper {
+		height: 4vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .title-wrapper {
+		height: 7rem;
+	}
+}
+
+.horizontal-audio-card-third .title {
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.32;
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .title {
+		font-size: 1.3vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .title {
+		line-height: 1.32;
+		font-size: 1.8rem;
+	}
+}
+
+.horizontal-audio-card-third .audio-player {
+	position: static;
+	position: relative;
+	padding: 0;
+	margin-top: 0.37037rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .audio-player {
+		margin-top: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .audio-player {
+		margin-top: 1rem;
+	}
+}
+
+.horizontal-audio-card-third .playlist-controls {
+	top: -0.74074rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .playlist-controls {
+		top: -1.28vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .playlist-controls {
+		top: -2rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .playlist-controls {
+		font-size: 1.2vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .playlist-controls {
+		font-size: 2rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .mejs-controls div {
+		font-size: 0.9vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .mejs-controls div {
+		font-size: 1.4rem;
+	}
+}
+
+.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button[title="Pause"] {
+	text-align: center;
+}
+
+.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
+	line-height: 1.45;
+}
+
+@media only screen and (max-width: 53.15em) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
+		font-size: 5vw;
+		padding-left: 0.15vw;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
+		font-size: 2vw;
+		padding-left: 0.1vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
+		font-size: 3rem;
+		padding-top: 0;
+		padding-left: 0;
+	}
+}
+
+.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-time-wrapper {
+	position: absolute;
+	bottom: 0;
+	width: 75%;
+	left: 1.85185rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-time-wrapper {
+		left: 3.2vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-time-wrapper {
+		left: 5rem;
+	}
+}
+
+.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-time-rail {
+	top: 0.18519rem;
+	left: 1.96296rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-time-rail {
+		top: 0.32vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-time-rail {
+		top: 0.5rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-time-rail {
+		left: 3.392vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-time-rail {
+		left: 5.3rem;
+	}
+}
+
+.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button {
+	margin-right: 0.74074rem;
+	width: 2.80938rem;
+	height: 2.80938rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button {
+		margin-right: 1.28vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button {
+		margin-right: 2rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button {
+		width: 2.56vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button {
+		width: 4rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button {
+		height: 2.56vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button {
+		height: 4rem;
+	}
+}
+
+@media only screen and (max-width: 53.15em) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button {
+		margin-right: 2vw;
+		width: 7vw;
+		height: 7vw;
+	}
+}
+
+.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button {
+	width: 2.80938rem;
+	height: 2.80938rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button {
+		width: 2.56vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button {
+		width: 4rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button {
+		height: 2.56vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button {
+		height: 4rem;
+	}
+}
+
+@media only screen and (max-width: 53.15em) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button {
+		width: 7vw;
+		height: 7vw;
+	}
+}
+
+.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:after {
+	width: 2.80938rem;
+	height: 2.80938rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:after {
+		width: 2.56vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:after {
+		width: 4rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:after {
+		height: 2.56vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:after {
+		height: 4rem;
+	}
+}
+
+@media only screen and (max-width: 53.15em) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:after {
+		width: 7vw;
+		height: 7vw;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .mejs-playpause-button button:before, .horizontal-audio-card-third .mejs-playpause-button button:after {
+		font-size: 3vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .mejs-playpause-button button:before, .horizontal-audio-card-third .mejs-playpause-button button:after {
+		font-size: 4rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .mejs-playpause-button button[title='Pause']:after {
+		font-size: 2.2vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .mejs-playpause-button button[title='Pause']:after {
+		font-size: 3rem;
+	}
+}
+
+.horizontal-audio-card-single .details .mejs-controls .mejs-playpause-button, .horizontal-audio-card.playlist-audio-card .details .mejs-controls .mejs-playpause-button {
 	display: inline-block;
 }
 
 /* Audio Playlist controls
 -------------------------------------------------- */
 @media only screen and (min-width: 53.25em) {
-	.playlist-audio-card img {
+	.playlist-audio-card:not(.horizontal-audio-card-third) img {
 		width: 22.47507rem;
 		height: 22.47507rem;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (min-width: 53.25em) and (max-width: 1559px) {
-	.playlist-audio-card img {
+	.playlist-audio-card:not(.horizontal-audio-card-third) img {
 		width: 20.48vw;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (min-width: 1560px) {
-	.playlist-audio-card img {
+	.playlist-audio-card:not(.horizontal-audio-card-third) img {
 		width: 32rem;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (min-width: 53.25em) and (max-width: 1559px) {
-	.playlist-audio-card img {
+	.playlist-audio-card:not(.horizontal-audio-card-third) img {
 		height: 20.48vw;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (min-width: 1560px) {
-	.playlist-audio-card img {
+	.playlist-audio-card:not(.horizontal-audio-card-third) img {
 		height: 32rem;
 	}
 }
 
-.playlist-audio-card .details-inner {
+.playlist-audio-card:not(.horizontal-audio-card-third) .details-inner {
 	padding-top: 1.40469rem;
 	min-height: 15.80278rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.playlist-audio-card .details-inner {
+	.playlist-audio-card:not(.horizontal-audio-card-third) .details-inner {
 		padding-top: 1.28vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.playlist-audio-card .details-inner {
+	.playlist-audio-card:not(.horizontal-audio-card-third) .details-inner {
 		padding-top: 2rem;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.playlist-audio-card .details-inner {
+	.playlist-audio-card:not(.horizontal-audio-card-third) .details-inner {
 		min-height: 14.4vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.playlist-audio-card .details-inner {
+	.playlist-audio-card:not(.horizontal-audio-card-third) .details-inner {
 		min-height: 22.5rem;
 	}
 }
@@ -15984,90 +16394,118 @@ body {
 	background-color: #e2f0d8;
 }
 
-.horizontal-audio-card-playlist .title-wrapper {
+.horizontal-audio-card-third .artist {
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.4;
+	text-transform: uppercase;
+	font-size: 1.3rem;
+	text-transform: initial;
+}
+
+@media only screen and (min-width: 53.25em) {
+	.horizontal-audio-card-third .artist {
+		line-height: 1.3;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .artist {
+		font-size: 1vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .artist {
+		line-height: 1.3;
+		font-size: 1.6rem;
+	}
+}
+
+.horizontal-audio-card-playlist-thin .title-wrapper {
 	height: 12vw;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 61.9em) {
-	.horizontal-audio-card-playlist .title-wrapper {
+	.horizontal-audio-card-playlist-thin .title-wrapper {
 		height: 3vw;
 	}
 }
 
 @media only screen and (min-width: 62em) and (max-width: 1559px) {
-	.horizontal-audio-card-playlist .title-wrapper {
+	.horizontal-audio-card-playlist-thin .title-wrapper {
 		height: 3.2vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.horizontal-audio-card-playlist .title-wrapper {
+	.horizontal-audio-card-playlist-thin .title-wrapper {
 		height: 5rem;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.horizontal-audio-card-playlist .title {
+	.horizontal-audio-card-playlist-thin .title {
 		margin-bottom: 0;
 	}
 }
 
-.horizontal-audio-card-playlist .mejs-controls .mejs-playpause-button {
+.horizontal-audio-card-playlist-thin .mejs-controls .mejs-playpause-button {
 	position: absolute;
 	top: -8vw;
 	left: -18vw;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 61.9em) {
-	.horizontal-audio-card-playlist .mejs-controls .mejs-playpause-button {
+	.horizontal-audio-card-playlist-thin .mejs-controls .mejs-playpause-button {
 		top: -4vw;
 		left: -2vw;
 	}
 }
 
 @media only screen and (min-width: 62em) and (max-width: 1559px) {
-	.horizontal-audio-card-playlist .mejs-controls .mejs-playpause-button {
+	.horizontal-audio-card-playlist-thin .mejs-controls .mejs-playpause-button {
 		top: -2.7vw;
 		left: -5.1vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.horizontal-audio-card-playlist .mejs-controls .mejs-playpause-button {
+	.horizontal-audio-card-playlist-thin .mejs-controls .mejs-playpause-button {
 		top: -4rem;
 		left: -8rem;
 	}
 }
 
-.horizontal-audio-card-playlist .mejs-controls .mejs-time-rail {
+.horizontal-audio-card-playlist-thin .mejs-controls .mejs-time-rail {
 	padding-top: 0;
 	position: relative;
 	left: 0;
 }
 
 @media only screen and (min-width: 53.25em) {
-	.horizontal-audio-card-playlist .mejs-controls .mejs-time-rail {
+	.horizontal-audio-card-playlist-thin .mejs-controls .mejs-time-rail {
 		top: 0;
 	}
 }
 
-.horizontal-audio-card-playlist .mejs-controls .mejs-horizontal-volume-slider {
+.horizontal-audio-card-playlist-thin .mejs-controls .mejs-horizontal-volume-slider {
 	bottom: 0.18519rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.horizontal-audio-card-playlist .mejs-controls .mejs-horizontal-volume-slider {
+	.horizontal-audio-card-playlist-thin .mejs-controls .mejs-horizontal-volume-slider {
 		bottom: 0.32vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.horizontal-audio-card-playlist .mejs-controls .mejs-horizontal-volume-slider {
+	.horizontal-audio-card-playlist-thin .mejs-controls .mejs-horizontal-volume-slider {
 		bottom: 0.5rem;
 	}
 }
 
-.horizontal-audio-card-playlist .mejs-controls .mejs-time-wrapper {
+.horizontal-audio-card-playlist-thin .mejs-controls .mejs-time-wrapper {
 	display: none;
 }
 
@@ -22927,6 +23365,24 @@ body {
 	}
 }
 
+@media only screen and (max-width: 53.15em) {
+	.horizontal-audio-card-third .icon-play-button:before, .horizontal-audio-card-third .icon-play-button:after, .horizontal-audio-card-third .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card-third .mejs-controls .mejs-playpause-button button:after {
+		font-size: 7vw;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .icon-play-button:before, .horizontal-audio-card-third .icon-play-button:after, .horizontal-audio-card-third .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card-third .mejs-controls .mejs-playpause-button button:after {
+		font-size: 3vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .icon-play-button:before, .horizontal-audio-card-third .icon-play-button:after, .horizontal-audio-card-third .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card-third .mejs-controls .mejs-playpause-button button:after {
+		font-size: 4rem;
+	}
+}
+
 /* Image Gallery
 -------------------------------------------------- */
 .icon-gallery, .icon-picture-o {
@@ -27922,18 +28378,18 @@ video::-webkit-media-controls {
 	}
 }
 
-.magazine-article-page .sidebar .horizontal-audio-card-single {
+.magazine-article-page .sidebar .horizontal-audio-card-single, .magazine-article-page .sidebar .horizontal-audio-card.playlist-audio-card {
 	margin-top: 1.48148rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.magazine-article-page .sidebar .horizontal-audio-card-single {
+	.magazine-article-page .sidebar .horizontal-audio-card-single, .magazine-article-page .sidebar .horizontal-audio-card.playlist-audio-card {
 		margin-top: 2.56vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.magazine-article-page .sidebar .horizontal-audio-card-single {
+	.magazine-article-page .sidebar .horizontal-audio-card-single, .magazine-article-page .sidebar .horizontal-audio-card.playlist-audio-card {
 		margin-top: 4rem;
 	}
 }
@@ -31394,13 +31850,15 @@ body {
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.mejs-container .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
 		font-size: 2.8vw;
+		padding-left: 0.2vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
 	.mejs-container .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
 		font-size: 4rem;
-		padding-left: 0.1rem;
+		padding-top: 0.1rem;
+		padding-left: 0.2rem;
 	}
 }
 
@@ -31776,7 +32234,7 @@ body {
 	}
 }
 
-@media only screen and (min-width: 53.25em) {
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.horizontal-audio-card .mejs-controls div {
 		font-size: 0.9vw;
 	}
@@ -31857,6 +32315,11 @@ body {
 	.horizontal-audio-card .mejs-controls .mejs-time-wrapper {
 		position: static;
 		width: 75%;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card .mejs-controls .mejs-time-wrapper {
 		margin-top: 5vw;
 	}
 }
@@ -31879,68 +32342,453 @@ body {
 	}
 }
 
-.horizontal-audio-card-single .details .mejs-controls .mejs-playpause-button {
+.horizontal-audio-card-third {
+	position: relative;
+}
+
+.horizontal-audio-card-third:hover .details .mejs-controls .mejs-playpause-button {
+	display: inline-block;
+}
+
+.horizontal-audio-card-third .image {
+	padding-right: 0;
+}
+
+.horizontal-audio-card-third .details {
+	padding-left: 0;
+}
+
+.horizontal-audio-card-third .details-inner {
+	padding-top: 0.70235rem;
+	padding-right: 1.05352rem;
+	padding-bottom: 0;
+	padding-left: 7.5px;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .details-inner {
+		padding-top: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .details-inner {
+		padding-top: 1rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .details-inner {
+		padding-right: 0.96vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .details-inner {
+		padding-right: 1.5rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .details-inner {
+		padding-left: 7.5px;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .details-inner {
+		padding-left: 1rem;
+	}
+}
+
+.horizontal-audio-card-third .title-wrapper {
+	height: 30vw;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 61.9em) {
+	.horizontal-audio-card-third .title-wrapper {
+		height: 6vw;
+	}
+}
+
+@media only screen and (min-width: 62em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .title-wrapper {
+		height: 4vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .title-wrapper {
+		height: 7rem;
+	}
+}
+
+.horizontal-audio-card-third .title {
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.32;
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .title {
+		font-size: 1.3vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .title {
+		line-height: 1.32;
+		font-size: 1.8rem;
+	}
+}
+
+.horizontal-audio-card-third .audio-player {
+	position: static;
+	position: relative;
+	padding: 0;
+	margin-top: 0.37037rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .audio-player {
+		margin-top: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .audio-player {
+		margin-top: 1rem;
+	}
+}
+
+.horizontal-audio-card-third .playlist-controls {
+	top: -0.74074rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .playlist-controls {
+		top: -1.28vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .playlist-controls {
+		top: -2rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .playlist-controls {
+		font-size: 1.2vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .playlist-controls {
+		font-size: 2rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .mejs-controls div {
+		font-size: 0.9vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .mejs-controls div {
+		font-size: 1.4rem;
+	}
+}
+
+.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button[title="Pause"] {
+	text-align: center;
+}
+
+.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
+	line-height: 1.45;
+}
+
+@media only screen and (max-width: 53.15em) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
+		font-size: 5vw;
+		padding-left: 0.15vw;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
+		font-size: 2vw;
+		padding-left: 0.1vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
+		font-size: 3rem;
+		padding-top: 0;
+		padding-left: 0;
+	}
+}
+
+.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-time-wrapper {
+	position: absolute;
+	bottom: 0;
+	width: 75%;
+	left: 1.85185rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-time-wrapper {
+		left: 3.2vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-time-wrapper {
+		left: 5rem;
+	}
+}
+
+.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-time-rail {
+	top: 0.18519rem;
+	left: 1.96296rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-time-rail {
+		top: 0.32vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-time-rail {
+		top: 0.5rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-time-rail {
+		left: 3.392vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-time-rail {
+		left: 5.3rem;
+	}
+}
+
+.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button {
+	margin-right: 0.74074rem;
+	width: 2.80938rem;
+	height: 2.80938rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button {
+		margin-right: 1.28vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button {
+		margin-right: 2rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button {
+		width: 2.56vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button {
+		width: 4rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button {
+		height: 2.56vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button {
+		height: 4rem;
+	}
+}
+
+@media only screen and (max-width: 53.15em) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button {
+		margin-right: 2vw;
+		width: 7vw;
+		height: 7vw;
+	}
+}
+
+.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button {
+	width: 2.80938rem;
+	height: 2.80938rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button {
+		width: 2.56vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button {
+		width: 4rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button {
+		height: 2.56vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button {
+		height: 4rem;
+	}
+}
+
+@media only screen and (max-width: 53.15em) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button {
+		width: 7vw;
+		height: 7vw;
+	}
+}
+
+.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:after {
+	width: 2.80938rem;
+	height: 2.80938rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:after {
+		width: 2.56vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:after {
+		width: 4rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:after {
+		height: 2.56vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:after {
+		height: 4rem;
+	}
+}
+
+@media only screen and (max-width: 53.15em) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:after {
+		width: 7vw;
+		height: 7vw;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .mejs-playpause-button button:before, .horizontal-audio-card-third .mejs-playpause-button button:after {
+		font-size: 3vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .mejs-playpause-button button:before, .horizontal-audio-card-third .mejs-playpause-button button:after {
+		font-size: 4rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .mejs-playpause-button button[title='Pause']:after {
+		font-size: 2.2vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .mejs-playpause-button button[title='Pause']:after {
+		font-size: 3rem;
+	}
+}
+
+.horizontal-audio-card-single .details .mejs-controls .mejs-playpause-button, .horizontal-audio-card.playlist-audio-card .details .mejs-controls .mejs-playpause-button {
 	display: inline-block;
 }
 
 /* Audio Playlist controls
 -------------------------------------------------- */
 @media only screen and (min-width: 53.25em) {
-	.playlist-audio-card img {
+	.playlist-audio-card:not(.horizontal-audio-card-third) img {
 		width: 22.47507rem;
 		height: 22.47507rem;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (min-width: 53.25em) and (max-width: 1559px) {
-	.playlist-audio-card img {
+	.playlist-audio-card:not(.horizontal-audio-card-third) img {
 		width: 20.48vw;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (min-width: 1560px) {
-	.playlist-audio-card img {
+	.playlist-audio-card:not(.horizontal-audio-card-third) img {
 		width: 32rem;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (min-width: 53.25em) and (max-width: 1559px) {
-	.playlist-audio-card img {
+	.playlist-audio-card:not(.horizontal-audio-card-third) img {
 		height: 20.48vw;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (min-width: 1560px) {
-	.playlist-audio-card img {
+	.playlist-audio-card:not(.horizontal-audio-card-third) img {
 		height: 32rem;
 	}
 }
 
-.playlist-audio-card .details-inner {
+.playlist-audio-card:not(.horizontal-audio-card-third) .details-inner {
 	padding-top: 1.40469rem;
 	min-height: 15.80278rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.playlist-audio-card .details-inner {
+	.playlist-audio-card:not(.horizontal-audio-card-third) .details-inner {
 		padding-top: 1.28vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.playlist-audio-card .details-inner {
+	.playlist-audio-card:not(.horizontal-audio-card-third) .details-inner {
 		padding-top: 2rem;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.playlist-audio-card .details-inner {
+	.playlist-audio-card:not(.horizontal-audio-card-third) .details-inner {
 		min-height: 14.4vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.playlist-audio-card .details-inner {
+	.playlist-audio-card:not(.horizontal-audio-card-third) .details-inner {
 		min-height: 22.5rem;
 	}
 }
@@ -31990,90 +32838,118 @@ body {
 	background-color: #e2f0d8;
 }
 
-.horizontal-audio-card-playlist .title-wrapper {
+.horizontal-audio-card-third .artist {
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.4;
+	text-transform: uppercase;
+	font-size: 1.3rem;
+	text-transform: initial;
+}
+
+@media only screen and (min-width: 53.25em) {
+	.horizontal-audio-card-third .artist {
+		line-height: 1.3;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .artist {
+		font-size: 1vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .artist {
+		line-height: 1.3;
+		font-size: 1.6rem;
+	}
+}
+
+.horizontal-audio-card-playlist-thin .title-wrapper {
 	height: 12vw;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 61.9em) {
-	.horizontal-audio-card-playlist .title-wrapper {
+	.horizontal-audio-card-playlist-thin .title-wrapper {
 		height: 3vw;
 	}
 }
 
 @media only screen and (min-width: 62em) and (max-width: 1559px) {
-	.horizontal-audio-card-playlist .title-wrapper {
+	.horizontal-audio-card-playlist-thin .title-wrapper {
 		height: 3.2vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.horizontal-audio-card-playlist .title-wrapper {
+	.horizontal-audio-card-playlist-thin .title-wrapper {
 		height: 5rem;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.horizontal-audio-card-playlist .title {
+	.horizontal-audio-card-playlist-thin .title {
 		margin-bottom: 0;
 	}
 }
 
-.horizontal-audio-card-playlist .mejs-controls .mejs-playpause-button {
+.horizontal-audio-card-playlist-thin .mejs-controls .mejs-playpause-button {
 	position: absolute;
 	top: -8vw;
 	left: -18vw;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 61.9em) {
-	.horizontal-audio-card-playlist .mejs-controls .mejs-playpause-button {
+	.horizontal-audio-card-playlist-thin .mejs-controls .mejs-playpause-button {
 		top: -4vw;
 		left: -2vw;
 	}
 }
 
 @media only screen and (min-width: 62em) and (max-width: 1559px) {
-	.horizontal-audio-card-playlist .mejs-controls .mejs-playpause-button {
+	.horizontal-audio-card-playlist-thin .mejs-controls .mejs-playpause-button {
 		top: -2.7vw;
 		left: -5.1vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.horizontal-audio-card-playlist .mejs-controls .mejs-playpause-button {
+	.horizontal-audio-card-playlist-thin .mejs-controls .mejs-playpause-button {
 		top: -4rem;
 		left: -8rem;
 	}
 }
 
-.horizontal-audio-card-playlist .mejs-controls .mejs-time-rail {
+.horizontal-audio-card-playlist-thin .mejs-controls .mejs-time-rail {
 	padding-top: 0;
 	position: relative;
 	left: 0;
 }
 
 @media only screen and (min-width: 53.25em) {
-	.horizontal-audio-card-playlist .mejs-controls .mejs-time-rail {
+	.horizontal-audio-card-playlist-thin .mejs-controls .mejs-time-rail {
 		top: 0;
 	}
 }
 
-.horizontal-audio-card-playlist .mejs-controls .mejs-horizontal-volume-slider {
+.horizontal-audio-card-playlist-thin .mejs-controls .mejs-horizontal-volume-slider {
 	bottom: 0.18519rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.horizontal-audio-card-playlist .mejs-controls .mejs-horizontal-volume-slider {
+	.horizontal-audio-card-playlist-thin .mejs-controls .mejs-horizontal-volume-slider {
 		bottom: 0.32vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.horizontal-audio-card-playlist .mejs-controls .mejs-horizontal-volume-slider {
+	.horizontal-audio-card-playlist-thin .mejs-controls .mejs-horizontal-volume-slider {
 		bottom: 0.5rem;
 	}
 }
 
-.horizontal-audio-card-playlist .mejs-controls .mejs-time-wrapper {
+.horizontal-audio-card-playlist-thin .mejs-controls .mejs-time-wrapper {
 	display: none;
 }
 
