@@ -127,21 +127,26 @@ $(document).ready(function () {
 			// site.navCloseAll(); // close anything else that's open by default // too confusing for long menu
 		}
 
-		// when user scrolls past height of site toggle, make smaller
-		if (($(this).scrollTop() > gapNavHeight) && (smallerNav == false)) {  
+		// when user scrolls past height of site toggle, make smaller if not already
+		if (($(this).scrollTop() > gapNavHeight) && smallerNav == false) {  
 			site.navbar.addClass("is-smaller");
-			switchLogo('inline');
 			smallerNav = true;
+			// if menu isn't already open, swap logo
+			if(menuClosed)
+				switchLogo('inline');
 			if(!site.isMobile) {
 				$navspacer.addClass("navspacer-open"); // open right away
 			}
 		}
-		else if (($(this).scrollTop() <= gapNavHeight ) && (smallerNav == true)) {
+		// if user is still at top of window
+		else if ($(this).scrollTop() <= gapNavHeight && smallerNav == true) {
 			site.navbar.removeClass("is-smaller"); // shrink
 			smallerNav = false;
 			if(!site.isMobile)
 				$navspacer.removeClass("navspacer-open"); // gracefully close
-			switchLogo('block');
+			// if menu is not already open, switch back to block logo
+			if(menuClosed)
+				switchLogo('block');
 		}
 	});
 
@@ -151,12 +156,14 @@ $(document).ready(function () {
 	**********/
 	var $blockLogos = $('.block-logos');
 	var $oneLineLogos = $('.one-line-logos');
+	var logoIsBlock = true;
 
 	function switchLogo(direction) {
-		// toggle class '.is-transitioning' during transition, then add .hidden when done. Remove hidden when coming back.
+		// toggle class '.is-transitioning' during opacity fade in/out, then add .hidden when done. Remove hidden when coming back.
 		$blockLogos.prepareTransition().toggleClass('hidden');
 		// only show block if at top of viewport and nav isn't already open
-		if(direction == 'block' && $(window).scrollTop() <= gapNavHeight && menuClosed) {
+		// if(direction == 'block' && $(window).scrollTop() <= gapNavHeight && menuClosed) {
+		if(direction == 'block') {
 			// $('.one-line-logos').fadeOut('30');
 			// $('.block-logos').fadeIn('30');
 			console.log('going to block');
@@ -166,6 +173,7 @@ $(document).ready(function () {
 			// accessibility prevent double tabbing for 2 logos
 			$blockLogos.find('a').attr('tabindex', "0");
 			$oneLineLogos.find('a').attr('tabindex', "-1");
+			logoIsBlock = true;
 
 		} else {
 			// $('.block-logos').fadeOut('30');
@@ -175,7 +183,7 @@ $(document).ready(function () {
 			$logo.addClass('logo-is-one-line');			
 			$blockLogos.find('a').attr('tabindex', "-1");
 			$oneLineLogos.find('a').attr('tabindex', "0");
-
+			logoIsBlock = false;
 		}
 	}
 
@@ -235,9 +243,9 @@ $(document).ready(function () {
 	var menuClosed = true;
 
 	// when click share icon
-	// $menuIcon.on('click', function() {
-		// openMenu();
-	// });
+	$menuIcon.on('click', function() {
+		toggleMenu();
+	});
 
 	/*********************
 	* Accessibility
@@ -248,9 +256,21 @@ $(document).ready(function () {
 		$('#main-content').focus();
 	});
 	$menuIcon.focusin(function() {
-		openMenu();
-		$megaNav.find('a').first().focus(); // go to first nav item otherwise will go to shareIcon
+		// $(this).click();
+		// $megaNav.find('a').first().focus(); // go to first nav item otherwise will go to shareIcon
 	});
+	// when hamburger is focused, show menu, from http://stackoverflow.com/a/16145062
+	$(window).keyup(function (e) {
+		// get keycode
+	    var code = (e.keyCode ? e.keyCode : e.which);
+	    // if was tab and menu icon is focused, show menu for accessibility
+	    if (code == 9 && $menuIcon.is(":focus")) {
+	        // alert('I was tabbed!');
+			toggleMenu();
+			$megaNav.find('a').first().focus(); // go to first nav item otherwise will go to shareIcon
+	    }
+	});
+
 	$megaNav.find('a').last().focusout(function() {
 		site.navCloseAll(); // close mega nav
 		$shareIcon.focus(); // go back to nav icons
@@ -273,21 +293,26 @@ $(document).ready(function () {
 		site.navCloseAll();
 	});
 
-	function openMenu() {
+	function toggleMenu() {
 		// if not yet open
 		if(menuClosed) {
 			site.navCloseAll(); // after we've determined that menu is closed, close anything else that's open by default
 			site.navbar.addClass('is-open');
-			switchLogo('one-line');
+			// if logo not already one-line because scrolled down
+			if(logoIsBlock)
+				switchLogo('one-line');
+
 			$navbarOutside.css('position', 'fixed'); // activate navbarOutside
 			$notMenuIcon.addClass('lighter-nav-icons'); // grey out other icons
 			$megaNav.css('display', 'block'); // show social media icons
 			menuClosed = false; // flag for closing	
 			$folkwaysNav.hide(); // hide folkways nav
 		} else {
-			site.navCloseAll(); // close anything else that's open by default
-			switchLogo('block');
-			menuClosed = true;
+			console.log('menuClosed :',menuClosed);
+			site.navCloseAll(); // close anything else that's open by default, and sets menuClosed to true
+			// if user is still at top of window
+			console.log('might go to block');
+			// menuClosed = true;
 		}
 	}
 
@@ -363,6 +388,11 @@ $(document).ready(function () {
 	 		$navLists.removeClass('nav-show-mobile'); // close all other open nav lists - mobile only
 	 	else
 			$folkwaysNav.show(); // reset folkways nav, but not on mobile
+
+		if ($(window).scrollTop() <= gapNavHeight && menuClosed == false) {
+			console.log('swith to block');
+			switchLogo('block');
+		}
 	 	
 		$navbarOutside.css('position', 'static'); // remove outside clicker so can hover rest of page
 		site.navbar.removeClass('is-open');
