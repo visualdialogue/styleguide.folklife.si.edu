@@ -571,16 +571,29 @@ $(document).ready(function () {
 		// $(this).click();
 		// $megaNav.find('a').first().focus(); // go to first nav item otherwise will go to shareIcon
 	});
-	// when hamburger is focused, show menu, from http://stackoverflow.com/a/16145062
+	
+	// keyboard commands, from from http://stackoverflow.com/a/16145062 and http://keycode.info/
 	$(window).keyup(function (e) {
 		// get keycode
 	    var code = (e.keyCode ? e.keyCode : e.which);
+		// when hamburger is focused, show menu
 	    // if was tab and menu icon is focused, show menu for accessibility
 	    if (code == 9 && $menuIcon.is(":focus")) {
 	        // alert('I was tabbed!');
 			toggleMenu();
 			$megaNav.find('a').first().focus(); // go to first nav item otherwise will go to shareIcon
 	    }
+
+	    // show search on enter
+	    if (code == 13 && $searchIcon.is(":focus")) {
+			$searchIcon.click();
+	    }
+
+		// show share on enter
+		if (code == 13 && $shareIcon.is(":focus")) {
+			$shareIcon.click();
+		}
+
 	});
 
 	$megaNav.find('a').last().focusout(function() {

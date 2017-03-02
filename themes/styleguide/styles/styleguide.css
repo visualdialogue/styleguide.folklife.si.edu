@@ -6685,6 +6685,18 @@ body {
 	text-align: center;
 }
 
+/* Accessibility
+-------------------------------------------------- */
+.accessibility-pause-button {
+	color: #595959;
+}
+
+.accessibility-pause-button:focus {
+	outline: 2px auto #cccccc;
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
+}
+
 /* Navbar
 -------------------------------------------------- */
 .nav-icon {
@@ -6853,7 +6865,7 @@ body {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.horizontal-audio-card-third .icon-play-button:before, .horizontal-audio-card-third .icon-play-button:after, .horizontal-audio-card-third .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card-third .mejs-controls .mejs-playpause-button button:after {
-		font-size: 3vw;
+		font-size: 2.5vw;
 	}
 }
 
@@ -23205,6 +23217,18 @@ body {
 	text-align: center;
 }
 
+/* Accessibility
+-------------------------------------------------- */
+.accessibility-pause-button {
+	color: #595959;
+}
+
+.accessibility-pause-button:focus {
+	outline: 2px auto #cccccc;
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
+}
+
 /* Navbar
 -------------------------------------------------- */
 .nav-icon {
@@ -23373,7 +23397,7 @@ body {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.horizontal-audio-card-third .icon-play-button:before, .horizontal-audio-card-third .icon-play-button:after, .horizontal-audio-card-third .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card-third .mejs-controls .mejs-playpause-button button:after {
-		font-size: 3vw;
+		font-size: 2.5vw;
 	}
 }
 

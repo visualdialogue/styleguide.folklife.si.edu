@@ -27,6 +27,15 @@
 		}
 	}
 
+/* Accessibility
+-------------------------------------------------- */
+	.accessibility-pause-button {
+		color: $black65;
+		&:focus {
+			@include outline;
+		}
+	}
+
 /* Navbar
 -------------------------------------------------- */
 	.nav-icon {
@@ -140,7 +149,8 @@
 			font-size: 7vw;
 		}
 		@include respond-to(break2full) {
-			font-size: 3vw;
+			// font-size: 3vw;
+			font-size: 2.5vw;
 		}
 		@include respond-to(fullwidth) {
 			font-size: 4rem;
