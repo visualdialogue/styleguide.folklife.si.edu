@@ -403,7 +403,7 @@
 			font-weight: 500;
 			@include margin-bottom(0.5);
 		}
-		p {
+		p:not(.caption) {
 			@include body-serif;
 			@include padding-bottom(1.6); // 30 - not margin because then when using columns, the margin carries over!!!, from http://stackoverflow.com/a/12503808
 		}

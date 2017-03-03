@@ -44,6 +44,15 @@
 			}
 		}
 	}
+	.no-highlight {
+		a {
+			border-bottom: none;
+			box-shadow: none;
+			&:hover {
+				background: none;
+			}
+		}
+	}
 	.more-link .er {
 		// show more highlight color around arrow and text
 		@include padding(0.2);

@@ -6337,7 +6337,7 @@ body {
 	}
 }
 
-.content p, .text-card p {
+.content p:not(.caption), .text-card p:not(.caption) {
 	font-weight: 400;
 	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
 	line-height: 1.333333;
@@ -6346,25 +6346,25 @@ body {
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.content p, .text-card p {
+	.content p:not(.caption), .text-card p:not(.caption) {
 		font-size: 1.5vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.content p, .text-card p {
+	.content p:not(.caption), .text-card p:not(.caption) {
 		font-size: 2.4rem;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.content p, .text-card p {
+	.content p:not(.caption), .text-card p:not(.caption) {
 		padding-bottom: 1.024vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.content p, .text-card p {
+	.content p:not(.caption), .text-card p:not(.caption) {
 		padding-bottom: 1.6rem;
 	}
 }
@@ -7179,6 +7179,15 @@ a:hover {
 	a.high:hover .light .er, .high:hover .light .er, .video:hover .light .er {
 		position: relative;
 	}
+}
+
+.no-highlight a {
+	border-bottom: none;
+	box-shadow: none;
+}
+
+.no-highlight a:hover {
+	background: none;
 }
 
 .more-link .er {
@@ -22855,7 +22864,7 @@ body {
 	}
 }
 
-.content p, .text-card p {
+.content p:not(.caption), .text-card p:not(.caption) {
 	font-weight: 400;
 	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
 	line-height: 1.333333;
@@ -22864,25 +22873,25 @@ body {
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.content p, .text-card p {
+	.content p:not(.caption), .text-card p:not(.caption) {
 		font-size: 1.5vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.content p, .text-card p {
+	.content p:not(.caption), .text-card p:not(.caption) {
 		font-size: 2.4rem;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.content p, .text-card p {
+	.content p:not(.caption), .text-card p:not(.caption) {
 		padding-bottom: 1.024vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.content p, .text-card p {
+	.content p:not(.caption), .text-card p:not(.caption) {
 		padding-bottom: 1.6rem;
 	}
 }
@@ -23697,6 +23706,15 @@ a:hover {
 	a.high:hover .light .er, .high:hover .light .er, .video:hover .light .er {
 		position: relative;
 	}
+}
+
+.no-highlight a {
+	border-bottom: none;
+	box-shadow: none;
+}
+
+.no-highlight a:hover {
+	background: none;
 }
 
 .more-link .er {
