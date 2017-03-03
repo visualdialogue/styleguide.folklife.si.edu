@@ -6692,9 +6692,7 @@ body {
 }
 
 .accessibility-pause-button:focus {
-	outline: 2px auto #cccccc;
-	outline: 5px auto -webkit-focus-ring-color;
-	outline-offset: -2px;
+	outline: 1px auto white;
 }
 
 /* Navbar
@@ -6744,9 +6742,7 @@ body {
 }
 
 .main-nav-icon:focus {
-	outline: 2px auto #cccccc;
-	outline: 5px auto -webkit-focus-ring-color;
-	outline-offset: -2px;
+	outline: 1px auto white;
 }
 
 .social-icons {
@@ -7558,9 +7554,7 @@ a:hover {
 }
 
 .logo a:focus {
-	outline: 2px auto #cccccc;
-	outline: 5px auto -webkit-focus-ring-color;
-	outline-offset: -2px;
+	outline: 1px auto white;
 }
 
 .one-line-logos, .block-logos {
@@ -7837,9 +7831,7 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
 }
 
 .header-nav-sub-item:focus {
-	outline: 2px auto #cccccc;
-	outline: 5px auto -webkit-focus-ring-color;
-	outline-offset: -2px;
+	outline: 1px auto white;
 }
 
 .header-nav, .footer-nav {
@@ -8092,9 +8084,7 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
 /* Accessibility, from https://accessibility.oit.ncsu.edu/it-accessibility-at-nc-state/developers/accessibility-handbook/mouse-and-keyboard-events/skip-to-main-content/
 -------------------------------------------------- */
 a:focus {
-	outline: 2px auto #cccccc;
-	outline: 5px auto -webkit-focus-ring-color;
-	outline-offset: -2px;
+	outline: 1px auto white;
 }
 
 a.skip-main {
@@ -10603,9 +10593,7 @@ figcaption.minus-sign:before {
 }
 
 .dropdown:focus, .filter-button:focus {
-	outline: 2px auto #cccccc;
-	outline: 5px auto -webkit-focus-ring-color;
-	outline-offset: -2px;
+	outline: 1px auto white;
 }
 
 .first-level-dropdown {
@@ -11034,9 +11022,7 @@ figcaption.minus-sign:before {
 /* Slideshow/Gallery arrows, from Folklife homepage banner
 -------------------------------------------------*/
 .slick-arrow:focus, .slick-dots button:focus {
-	outline: 2px auto #cccccc;
-	outline: 5px auto -webkit-focus-ring-color;
-	outline-offset: -2px;
+	outline: 1px auto white;
 }
 
 .slick-dots li.slick-active button:before {
@@ -23224,9 +23210,7 @@ body {
 }
 
 .accessibility-pause-button:focus {
-	outline: 2px auto #cccccc;
-	outline: 5px auto -webkit-focus-ring-color;
-	outline-offset: -2px;
+	outline: 1px auto white;
 }
 
 /* Navbar
@@ -23276,9 +23260,7 @@ body {
 }
 
 .main-nav-icon:focus {
-	outline: 2px auto #cccccc;
-	outline: 5px auto -webkit-focus-ring-color;
-	outline-offset: -2px;
+	outline: 1px auto white;
 }
 
 .social-icons {
@@ -24090,9 +24072,7 @@ a:hover {
 }
 
 .logo a:focus {
-	outline: 2px auto #cccccc;
-	outline: 5px auto -webkit-focus-ring-color;
-	outline-offset: -2px;
+	outline: 1px auto white;
 }
 
 .one-line-logos, .block-logos {
@@ -24369,9 +24349,7 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
 }
 
 .header-nav-sub-item:focus {
-	outline: 2px auto #cccccc;
-	outline: 5px auto -webkit-focus-ring-color;
-	outline-offset: -2px;
+	outline: 1px auto white;
 }
 
 .header-nav, .footer-nav {
@@ -24624,9 +24602,7 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
 /* Accessibility, from https://accessibility.oit.ncsu.edu/it-accessibility-at-nc-state/developers/accessibility-handbook/mouse-and-keyboard-events/skip-to-main-content/
 -------------------------------------------------- */
 a:focus {
-	outline: 2px auto #cccccc;
-	outline: 5px auto -webkit-focus-ring-color;
-	outline-offset: -2px;
+	outline: 1px auto white;
 }
 
 a.skip-main {
@@ -27135,9 +27111,7 @@ figcaption.minus-sign:before {
 }
 
 .dropdown:focus, .filter-button:focus {
-	outline: 2px auto #cccccc;
-	outline: 5px auto -webkit-focus-ring-color;
-	outline-offset: -2px;
+	outline: 1px auto white;
 }
 
 .first-level-dropdown {
@@ -27566,9 +27540,7 @@ figcaption.minus-sign:before {
 /* Slideshow/Gallery arrows, from Folklife homepage banner
 -------------------------------------------------*/
 .slick-arrow:focus, .slick-dots button:focus {
-	outline: 2px auto #cccccc;
-	outline: 5px auto -webkit-focus-ring-color;
-	outline-offset: -2px;
+	outline: 1px auto white;
 }
 
 .slick-dots li.slick-active button:before {

@@ -11,9 +11,11 @@
 
   // outlines
   @mixin outline() {
-  	outline: 2px auto $black20;
-  	outline: 5px auto -webkit-focus-ring-color;
-  	outline-offset: -2px;
+  	// outline: 1px auto $black05;
+  	outline: 1px auto white;
+  	// outline: 1px auto -webkit-focus-ring-color;
+  	// outline-offset: -2px;
+  	// outline-offset: 1px;
   }
 
   // Font weights and styles
