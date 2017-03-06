@@ -461,244 +461,31 @@
 			&lt;div class="artist"&gt;Stanley and the Ten Sleepless Nights&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
-&lt;/div&gt;</code></pre></div></div></div><!-- Single Image popup--><div class="codeblock"><a id="single-image-popup" class="anchor-link"></a><div class="row"><div class="col-sm-8"><h3 class="section-subtitle">Single Image Popup</h3></div><?php snippet('show-html'); ?><?php snippet('show-sass'); ?></div><div class="row"><?php $image_gallery_page = $pages->find('cards')->children()->find('image-gallery'); ?><?php $gallery_img = $image_gallery_page->image('slide1.jpg'); ?><div class="single-image-popup col-sm-5"><!-- first slide visible with gallery icon--><div class="center-box"><div class="modal-trigger"><img src="<?= $gallery_img->url() ?>" alt="Gallery image" class="gallery-thumbnail"/></div><div class="icon-gallery"></div></div><ul class="gallery-list"><?php foreach($image_gallery_page->images()->filterBy('filename', '*=', 'slide') as $image): ?><div class="gallery-image"><div class="gallery-image-inner"><img src="<?= $image->url() ?>" alt="Gallery image"/></div></div><?php endforeach; ?></ul><ul class="gallery-list-captions"><?php foreach($image_gallery_page->images()->filterBy('filename', '*=', 'slide') as $image): ?><div class="gallery-caption"><div class="remodal-description"><?php echo $image->caption(); ?></div><div class="remodal-credit"><?php echo $image->credit(); ?></div></div><?php endforeach; ?></ul></div><div class="col-xs-12 visible-xs"><?php snippet('show-html-mobile'); ?><?php snippet('show-sass-mobile'); ?></div></div><div class="row"><div class="col-sm-12"><pre class="sass"><code>/* icon font characters (fontastic.me) from ../common/css/vd-icons.scss 
--------------------------------------------------- */
-.icon-gallery:before {
-    content: "\44";
-}
-.icon-gallery:after {
-  content: "\42";
-}
+&lt;/div&gt;</code></pre></div></div></div><!-- Single Image popup--><div class="codeblock"><a id="single-image-popup" class="anchor-link"></a><div class="row"><div class="col-sm-8"><h3 class="section-subtitle">Single Image Popup</h3></div><?php snippet('show-html'); ?><?php snippet('show-sass'); ?></div><div class="row"><?php $image_gallery_page = $pages->find('cards')->children()->find('image-gallery'); ?><?php $gallery_img = $image_gallery_page->image('slide1.jpg'); ?><div class="col-sm-5"><div class="tag">Image</div><div class="image-gallery single-image-popup"><!-- first slide visible with gallery icon--><div class="center-box"><div class="modal-trigger"><img src="<?= $section->image('single-image-popup.jpg')->url() ?>" alt="Gallery image" class="gallery-thumbnail"/></div><div class="icon-picture-o"></div></div><ul class="gallery-list"><div class="gallery-image"><div class="gallery-image-inner"><img src="<?= $section->image('single-image-popup.jpg')->url() ?>" alt="Gallery image"/></div></div></ul><ul class="gallery-list-captions"><div class="gallery-caption"><div class="remodal-description">Drawing by children of Bell Gardens Elementary, Bell Gardens, California.</div><div class="remodal-credit">Photo by Lilia Sarmiento. </div></div></ul></div><div class="caption">Drawing by children of Bell Gardens Elementary, Bell Gardens, California. <i>Photo by Lilia Sarmiento.</i></div></div><div class="col-xs-12 visible-xs"><?php snippet('show-html-mobile'); ?><?php snippet('show-sass-mobile'); ?></div><div class="col-sm-7"><pre class="sass"><code>
+/* same as Image Gallery below */</code></pre></div><div class="col-sm-7"><pre class="html"><code>&lt;div class="col-sm-5"&gt;
+    &lt;div class="tag"&gt;Image&lt;/div&gt;
+    &lt;div class="image-gallery single-image-popup"&gt;
+        &lt;!-- first slide visible with gallery icon--&gt;
+        &lt;div class="center-box"&gt;
+            &lt;div class="modal-trigger"&gt;&lt;img src="//localhost:3007/content/5-cards/single-image-popup.jpg" alt="Gallery image" class="gallery-thumbnail"&gt;&lt;/div&gt;
+            &lt;div class="icon-picture-o"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;ul class="gallery-list"&gt;
+            &lt;div class="gallery-image"&gt;
+                &lt;div class="gallery-image-inner"&gt;&lt;img src="//localhost:3007/content/5-cards/single-image-popup.jpg" alt="Gallery image"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/ul&gt;
+        &lt;ul class="gallery-list-captions"&gt;
+            &lt;div class="gallery-caption"&gt;
+                &lt;div class="remodal-description"&gt;Drawing by children of Bell Gardens Elementary, Bell Gardens, California.&lt;/div&gt;
+                &lt;div class="remodal-credit"&gt;Photo by Lilia Sarmiento. &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class="caption"&gt;Drawing by children of Bell Gardens Elementary, Bell Gardens, California. &lt;i&gt;Photo by Lilia Sarmiento.&lt;/i&gt;&lt;/div&gt;
+&lt;/div&gt;
 
-/* icon stacking/sizing from ../common/css/icons.scss 
--------------------------------------------------- */
-.icon-gallery {
-	cursor: pointer;
-	position: absolute;
-	@include left(1);
-	@include bottom(1);
-	&:before {
-		z-index: 0;
-		color: $black25;
-	}
-	&:hover:before {
-		color: $hover;
-	}
-	&:after {
-		position: absolute;
-		z-index: 1;
-		color: $black80;
-		display: block;
-		@include respond-to(break2max) {
-			font-size: 6vw;
-			top: 2vw;
-			left: 1.8vw;
-		}
-		@include respond-to(break2full) {
-			font-size: 2.6vw;
-			top: 0.7vw;
-			left: 0.6vw;
-		}
-		@include respond-to(fullwidth) {
-			font-size: 4rem;
-			top: 1rem;
-			left: 0.9rem;
-		}
-	}
-}
-
-/* popup gallery styles from ../common/css/general.scss 
--------------------------------------------------- */
-.single-image-popup {
-	.icon-play-button {
-		&:before, &:after {
-			@include respond-to(break2max) {
-				font-size: 15vw;
-			}
-			@include respond-to(break2full) {
-				font-size: 6vw;
-			}
-			@include respond-to(fullwidth) {
-				font-size: 10rem;
-			}
-		}
-	}
-}
-.gallery-list, .gallery-list-captions {
-	display: none; // initial hide
-}
-.remodal-captions {
-	display: none;
-}
-.remodal-image-gallery {
-	max-width: none !important;
-	background-color: transparent;
-	.remodal-close {
-		right: 0 !important;
-		@include respond-to(break2max) {
-			top: -4.5rem;
-		}
-	}
-	.remodal-captions {
-		display: block;
-	}
-}
-.remodal-gallery {
-	.slick-track {
-		height: initial;
-	}
-	.slick-slide {
-		height: auto;
-		max-width: 100vw;
-		@include padding-right(4);
-		@include padding-left(4);
-	}
-	.slick-slide img {
-		max-height: 70vh;
-		width: auto;
-	}
-	.gallery-image-inner {
-		position: relative; // contain gray overlay
-		&:after {
-			@include respond-to(break2) {
-				content: '';
-				display: block;
-				position: absolute;
-				top: 0;right: 0;bottom: 0;left: 0;
-				background-color: rgba(0,0,0,0.8);
-			}	
-		}
-	}
-	.slick-active .gallery-image-inner:after {
-		display: none;
-	}		
-	.slick-arrow {
-		@include respond-to(break2max) {
-			display: none !important;
-		}
-	}
-	.slick-prev {
-		@include respond-to(break2) {
-			left: 1vw;
-		}
-		@include respond-to(fullwidth) {
-			left: 5rem;
-		}
-	}
-	.slick-next {
-		@include respond-to(break2full) {
-			right: 1vw;
-		}
-		@include respond-to(fullwidth) {
-			right: 5rem;
-		}
-	}		
-}
-.remodal-captions {
-	@include margin-top(4);
-	// turn down non-active captions
-	.slick-slide:not(.slick-active) {
-		.remodal-description, .remodal-credit {
-			color: $black80;
-		}
-	}
-	.remodal-description {
-		@include padding(2);			
-		padding-bottom: 0 !important;
-		color: white;
-	}
-	.remodal-credit {
-		@include padding(2);
-		color: $black50;
-		@include caption-sans;
-	}
-}
-
-/* ...all other styles inherited from video popup */</code></pre></div><div class="col-sm-12"><pre class="html"><code>&lt;div class="image-gallery col-sm-5"&gt;
-	&lt;!--first slide visible, gallery icon--&gt;
-	&lt;div class="center-box"&gt;
-		&lt;div class="modal-trigger"&gt;&lt;img src="//localhost:3007/content/5-cards/1-image-gallery/slide1.jpg" alt="Gallery image" class="gallery-thumbnail"&gt;&lt;/div&gt;
-		&lt;div class="icon-gallery"&gt;&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;!--gallery images--&gt;
-	&lt;ul class="gallery-list"&gt;
-		&lt;div class="gallery-image"&gt;
-			&lt;div class="gallery-image-inner"&gt;
-				&lt;img src="//localhost:3007/content/5-cards/1-image-gallery/slide1.jpg" alt="Gallery image"&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-		&lt;div class="gallery-image"&gt;
-			&lt;div class="gallery-image-inner"&gt;
-				&lt;img src="//localhost:3007/content/5-cards/1-image-gallery/slide2.jpg" alt="Gallery image"&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-		&lt;div class="gallery-image"&gt;
-			&lt;div class="gallery-image-inner"&gt;
-				&lt;img src="//localhost:3007/content/5-cards/1-image-gallery/slide3.jpg" alt="Gallery image"&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-		&lt;div class="gallery-image"&gt;
-			&lt;div class="gallery-image-inner"&gt;
-				&lt;img src="//localhost:3007/content/5-cards/1-image-gallery/slide4.jpg" alt="Gallery image"&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-		&lt;div class="gallery-image"&gt;
-			&lt;div class="gallery-image-inner"&gt;
-				&lt;img src="//localhost:3007/content/5-cards/1-image-gallery/slide5.jpg" alt="Gallery image"&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-		&lt;div class="gallery-image"&gt;
-			&lt;div class="gallery-image-inner"&gt;
-				&lt;img src="//localhost:3007/content/5-cards/1-image-gallery/slide6.jpg" alt="Gallery image"&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-		&lt;div class="gallery-image"&gt;
-			&lt;div class="gallery-image-inner"&gt;
-				&lt;img src="//localhost:3007/content/5-cards/1-image-gallery/slide7.jpg" alt="Gallery image"&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-		&lt;div class="gallery-image"&gt;
-			&lt;div class="gallery-image-inner"&gt;
-				&lt;img src="//localhost:3007/content/5-cards/1-image-gallery/slide8.jpg" alt="Gallery image"&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-	&lt;/ul&gt;
-	&lt;!--gallery captions--&gt;
-	&lt;ul class="gallery-list-captions"&gt;
-		&lt;div class="gallery-caption"&gt;
-			&lt;div class="remodal-description"&gt;A shoemaker at La Maison Prodiso’s workshop uses an industrial sewing machine to hem the canvas that forms the upper part of the espadrille.&lt;/div&gt;
-			&lt;div class="remodal-credit"&gt;Photo by Josué Castilleja, Ralph Rinzler Folklife Archives&lt;/div&gt;
-		&lt;/div&gt;
-		&lt;div class="gallery-caption"&gt;
-			&lt;div class="remodal-description"&gt;La Maison Prodiso is filled with stacks of handmade espadrille shoes in bright solid colors or festive stripes.&lt;/div&gt;
-			&lt;div class="remodal-credit"&gt;Photo by Josué Castilleja, Ralph Rinzler Folklife Archives&lt;/div&gt;
-		&lt;/div&gt;
-		&lt;div class="gallery-caption"&gt;
-			&lt;div class="remodal-description"&gt;Jesus Maria Lazkano in his studio in Urdaibai.&lt;/div&gt;
-			&lt;div class="remodal-credit"&gt;Photo by Cristina Díaz-Carrera, Ralph Rinzler Folklife Archives&lt;/div&gt;
-		&lt;/div&gt;
-		&lt;div class="gallery-caption"&gt;
-			&lt;div class="remodal-description"&gt;Master potter Blanka Gomez de Segura demonstrates how to throw a traditional Basque pot.&lt;/div&gt;
-			&lt;div class="remodal-credit"&gt;Photo by Josué Castilleja, Ralph Rinzler Folklife Archives&lt;/div&gt;
-		&lt;/div&gt;
-		&lt;div class="gallery-caption"&gt;
-			&lt;div class="remodal-description"&gt;Blanka Gomez de Segura’s workshop is next to a 900-year-old kiln.&lt;/div&gt;
-			&lt;div class="remodal-credit"&gt;Photo by Mary S. Linn, Ralph Rinzler Folklife Archives&lt;/div&gt;
-		&lt;/div&gt;
-		&lt;div class="gallery-caption"&gt;
-			&lt;div class="remodal-description"&gt;Master stone carver Bernat Vidal poses with an example of his work featuring traditional Basque motifs of the sun in sandstone.&lt;/div&gt;
-			&lt;div class="remodal-credit"&gt;Photo by Agustin Sagasti&lt;/div&gt;
-		&lt;/div&gt;
-		&lt;div class="gallery-caption"&gt;
-			&lt;div class="remodal-description"&gt;Although weaving was once a large industry in her native Durango (Bizkaia), Olga Uribe Salaberria is one of the few to carry forward the tradition.&lt;/div&gt;
-			&lt;div class="remodal-credit"&gt;Photo by Eneko Uribe&lt;/div&gt;
-		&lt;/div&gt;
-		&lt;div class="gallery-caption"&gt;
-			&lt;div class="remodal-description"&gt;Olga Uribe Salaberria weaves linen cloth on one of her looms.&lt;/div&gt;
-			&lt;div class="remodal-credit"&gt;Photo by Eneko Uribe&lt;/div&gt;
-		&lt;/div&gt;
-	&lt;/ul&gt;
-&lt;/div&gt;</code></pre></div></div></div><!-- Image Gallery Card--><div class="codeblock"><a id="image-gallery" class="anchor-link"></a><div class="row"><div class="col-sm-8"><h3 class="section-subtitle">Image Gallery</h3></div><?php snippet('show-html'); ?><?php snippet('show-sass'); ?></div><div class="row"><?php $image_gallery_page = $pages->find('cards')->children()->find('image-gallery'); ?><?php $gallery_img = $image_gallery_page->image('slide1.jpg'); ?><div class="image-gallery col-sm-5"><!-- first slide visible with gallery icon--><div class="center-box"><div class="modal-trigger"><img src="<?= $gallery_img->url() ?>" alt="Gallery image" class="gallery-thumbnail"/></div><div class="icon-gallery"></div></div><ul class="gallery-list"><?php foreach($image_gallery_page->images()->filterBy('filename', '*=', 'slide') as $image): ?><div class="gallery-image"><div class="gallery-image-inner"><img src="<?= $image->url() ?>" alt="Gallery image"/></div></div><?php endforeach; ?></ul><ul class="gallery-list-captions"><?php foreach($image_gallery_page->images()->filterBy('filename', '*=', 'slide') as $image): ?><div class="gallery-caption"><div class="remodal-description"><?php echo $image->caption(); ?></div><div class="remodal-credit"><?php echo $image->credit(); ?></div></div><?php endforeach; ?></ul></div><div class="col-xs-12 visible-xs"><?php snippet('show-html-mobile'); ?><?php snippet('show-sass-mobile'); ?></div></div><div class="row"><div class="col-sm-12"><pre class="sass"><code>/* icon font characters (fontastic.me) from ../common/css/vd-icons.scss 
+</code></pre></div></div></div><!-- Image Gallery Card--><div class="codeblock"><a id="image-gallery" class="anchor-link"></a><div class="row"><div class="col-sm-8"><h3 class="section-subtitle">Image Gallery</h3></div><?php snippet('show-html'); ?><?php snippet('show-sass'); ?></div><div class="row"><?php $image_gallery_page = $pages->find('cards')->children()->find('image-gallery'); ?><?php $gallery_img = $image_gallery_page->image('slide1.jpg'); ?><div class="image-gallery col-sm-5"><!-- first slide visible with gallery icon--><div class="center-box"><div class="modal-trigger"><img src="<?= $gallery_img->url() ?>" alt="Gallery image" class="gallery-thumbnail"/></div><div class="icon-gallery"></div></div><ul class="gallery-list"><?php foreach($image_gallery_page->images()->filterBy('filename', '*=', 'slide') as $image): ?><div class="gallery-image"><div class="gallery-image-inner"><img src="<?= $image->url() ?>" alt="Gallery image"/></div></div><?php endforeach; ?></ul><ul class="gallery-list-captions"><?php foreach($image_gallery_page->images()->filterBy('filename', '*=', 'slide') as $image): ?><div class="gallery-caption"><div class="remodal-description"><?php echo $image->caption(); ?></div><div class="remodal-credit"><?php echo $image->credit(); ?></div></div><?php endforeach; ?></ul></div><div class="col-xs-12 visible-xs"><?php snippet('show-html-mobile'); ?><?php snippet('show-sass-mobile'); ?></div></div><div class="row"><div class="col-sm-12"><pre class="sass"><code>/* icon font characters (fontastic.me) from ../common/css/vd-icons.scss 
 -------------------------------------------------- */
 .icon-gallery:before {
     content: "\44";
@@ -935,4 +722,111 @@
 			&lt;div class="remodal-credit"&gt;Photo by Eneko Uribe&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/ul&gt;
-&lt;/div&gt;</code></pre></div></div></div></section>
+&lt;/div&gt;
+</code></pre></div></div></div><!-- Program section dropdown--><div class="codeblock"><a id="program-section-dropdown" class="anchor-link"></a><div class="row"><div class="col-sm-8"><h3 class="section-subtitle">Program section dropdown</h3></div><?php snippet('show-html'); ?><?php snippet('show-sass'); ?></div><div class="row"><?php $program_section = $section->find('program-section'); ?><div class="col-sm-12"><section class="ms-section <?= $program_section->title() ?>"><a id="<?= $program_section->uid() ?>" class="anchor-link"></a><div class="row clearfix"><div class="col-sm-12"><?php snippet('svg-thin-hr'); ?><a href="javascript:0" class="high"><h2 class="section-title"><span class="light"><span class="er"><?php echo $program_section->title(); ?></span></span></h2></a></div></div><div class="row"><?php $src = $program_section->image(); ?><div class="card horizontal-card col-xs-12"><div class="row"><div class="image col-sm-7"><figure><img src="<?= $src->url() ?>"/><?php if($caption = $program_section->img_caption()->kt()): ?><figcaption><?php echo $caption; ?></figcaption><?php endif; ?></figure></div><div class="details col-sm-5"><div class="details-inner"><a href="<?= $program_section->url() ?>" class="high subtitle"><span class="light"><span class="er"><?php echo htmlspecialchars($program_section->subtitle(), ENT_QUOTES, 'UTF-8'); ?></span></span></a><?php if('' != $program_section->byline()): ?><div class="byline"><?php echo $program_section->byline(); ?></div><?php endif; ?><div class="description link-underline blurb"><?php echo $program_section->blurb()->kt(); ?></div><a href="javascript:0" data-toggle="collapse" data-target="#research-and-documentation-content" aria-expanded="false" class="high more-link accordion-toggle collapsed"><div class="light"><div class="er"><div class="more-link-text">more</div><div class="more-link-arrow icon-arrow2"></div></div></div></a></div></div></div><div class="row"><div class="col-sm-7"><div class="content link-underline"><div id="research-and-documentation-content" aria-expanded="false" class="collapse panel-collapse in"><?php echo $program_section->contents()->kt(); ?></div></div></div></div></div></div></section></div><div class="col-xs-12 visible-xs"><?php snippet('show-html-mobile'); ?><?php snippet('show-sass-mobile'); ?></div></div><div class="row"><div class="col-sm-12"><pre class="sass"><code>.ms-section {
+	margin-bottom:0;
+	.card {
+		@include margin-bottom(2.5);
+	}
+	&-copy {
+		@include margin-top(-0.5);	
+	}
+	.section-title {
+		@include margin-top(1.5);
+		@include margin-bottom(1.5);
+	}
+	.subtitle {
+		@include md-serif;
+		color: #000;
+		@include margin-bottom(0.5);
+	}
+	.byline {
+		@include md-sans;
+		font-weight: 600;
+		@include margin-bottom(3.5);
+		@include margin-bottom(2.5);
+	}
+	.blurb {
+		@include md-sans;
+	}
+	.anchor-link {
+		@include top(-5);
+	}
+	.image {
+		cursor: initial;
+		@include respond-to(break2max) {
+			margin-bottom: 1rem;
+		}
+	}
+	.details-inner {
+		padding-top:0 !important;
+	}
+	.description {
+		h3 {
+			@include margin-top(4);
+			&:first-of-type {
+				margin-top:0;
+			}
+		}
+		p {
+			@include margin-bottom(1);
+		}
+	}
+	.more-link {
+		@include margin-top(1);
+	}
+}</code></pre></div><div class="col-sm-12"><pre class="html"><code>&lt;section class="ms-section Research &amp; Documentation"&gt;
+	&lt;a id="program-section" class="anchor-link"&gt;&lt;/a&gt;
+	&lt;div class="row clearfix"&gt;
+		&lt;div class="col-sm-12"&gt;
+			&lt;!-- must add preserveAspectRatio="none" to svg to get full width in safari, see http://stackoverflow.com/a/24303532--&gt;
+			&lt;div class="svg-thin-hr"&gt;&lt;!-- include svg here --&gt;&lt;/div&gt;
+			&lt;a
+				href="javascript:0" class="high"&gt;
+				&lt;h2 class="section-title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;Research &amp; Documentation&lt;/span&gt;&lt;/span&gt;&lt;/h2&gt;&lt;/a&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="row"&gt;
+		&lt;div class="card horizontal-card col-xs-12"&gt;
+			&lt;div class="row"&gt;
+				&lt;div class="image col-sm-7"&gt;
+					&lt;figure&gt;&lt;img src="//localhost:3007/content/5-cards/3-program-section/Research_Doc-home.jpg"&gt;
+						&lt;figcaption&gt;
+							&lt;p&gt;Photo courtesy of Embassy of Colombia in Washington, DC&lt;/p&gt;
+						&lt;/figcaption&gt;
+					&lt;/figure&gt;
+				&lt;/div&gt;
+				&lt;div class="details col-sm-5"&gt;
+					&lt;div class="details-inner"&gt;&lt;a href="//localhost:3007/cards/program-section" class="high subtitle"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
+						&lt;div class="description link-underline blurb"&gt;
+							&lt;p&gt;&lt;i&gt;My Armenia&lt;/i&gt; is driven by research and documentation methods developed by scholars to produce programs for the Smithsonian Folklife Festival. Working collaboratively with in-country researchers, including anthropologists,
+								folklorists, ethnomusicologists, community-based scholars, and more, our goal is to expand and enrich existing scholarship. Additionally, we will create an archival record that will become part of the Smithsonian’s
+								permanent collection—data that will inform future generations of researchers.&lt;/p&gt;
+						&lt;/div&gt;
+						&lt;a href="javascript:0" data-toggle="collapse" data-target="#research-and-documentation-content" aria-expanded="false" class="high more-link accordion-toggle collapsed"&gt;
+							&lt;div class="light"&gt;
+								&lt;div class="er"&gt;
+									&lt;div class="more-link-text"&gt;more&lt;/div&gt;
+									&lt;div class="more-link-arrow icon-arrow2"&gt;&lt;/div&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/a&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class="row"&gt;
+				&lt;div class="col-sm-7"&gt;
+					&lt;div class="description link-underline"&gt;
+						&lt;div id="research-and-documentation-content" aria-expanded="false" class="panel-collapse collapse" style="height: 320px;"&gt;
+							&lt;p&gt;Our research teams work directly with communities to identify the cultural heritage they cherish most—the places, traditions, music, dance, craft, food, and other expressions that define their community identity. We will
+								also document key knowledge and skills needed within a particular traditional practice. For a musician, this might include songs, instrumental skills, and performing styles; for a craftsperson, materials, designs, and
+								techniques.&lt;/p&gt;
+							&lt;p&gt;We will identify specific community members who are exemplars of their cultural practice, as indicated by their status and recognition within their community. All of this information is carefully documented and archived
+								for future use and will form the foundation of community-based tourism development in Armenia.&lt;/p&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/section&gt;</code></pre></div></div></div></section>

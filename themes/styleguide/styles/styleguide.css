@@ -14918,6 +14918,12 @@ body {
 	}
 }
 
+@media only screen and (min-width: 1560px) {
+	.ms-section .image {
+		margin-bottom: 2rem;
+	}
+}
+
 .ms-section .details-inner {
 	padding-top: 0 !important;
 }
@@ -29966,6 +29972,12 @@ iframe {
 @media only screen and (max-width: 53.15em) {
 	.ms-section .image {
 		margin-bottom: 1rem;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.ms-section .image {
+		margin-bottom: 2rem;
 	}
 }
 
