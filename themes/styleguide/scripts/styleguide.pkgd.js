@@ -1664,7 +1664,22 @@ $(document).ready(function () {
 * Bootstrap accordian
 * http://v4-alpha.getbootstrap.com/components/collapse/#accordion-example
 **************************/
-	$('.collapse').collapse()
+	var $collapse = $('.collapse');
+	$collapse.collapse()
+	// more link and arrow changer
+	// var $more_link = $('.accordian-toggle').find('.more-link-text');
+	$('.more-link').on('click', function() {
+		var text = $(this).find('.more-link-text');
+		if(text.html() == 'more') {
+			text.html('less');
+			// text.addClass('more-link-less');
+		} else {
+			text.html('more');
+			// text.removeClass('more-link-less');
+		}
+	})
+	
+
 
 /*********************
 * Translation Button

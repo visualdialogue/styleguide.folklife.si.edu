@@ -288,6 +288,9 @@
 			@include respond-to(break2max) {
 				margin-bottom: 1rem;
 			}
+			@include respond-to(break2full) {
+				margin-bottom: 1.2vw;
+			}
 			@include respond-to(fullwidth) {
 				margin-bottom: 2rem;
 			}
