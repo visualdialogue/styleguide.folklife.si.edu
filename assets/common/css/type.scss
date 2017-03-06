@@ -46,6 +46,19 @@
 * Acumin Pro from Typekit
 * minor second (1.125) based on 3rem when needed
 -------------------------------------------------- */
+	@mixin xxl-sans {
+		font-weight: 300;
+		font-family: $sans;
+		font-size: 2.4rem;
+		line-height: 1;
+		@include respond-to(break2full) {
+			font-size: 1.9vw;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 3.5rem;
+			font-size: 5rem;
+		}
+	}
 	@mixin xl-sans {
 		font-weight: 300;
 		font-family: $sans;

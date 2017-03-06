@@ -87,6 +87,7 @@ gulp.task('styles', function() {
 gulp.task('copy-sass', function() {
   gulp.src('assets/common/css/*.scss')
 	.pipe(plumber())
+	.pipe(gulp.dest('../../50objects/code/themes/50objects/assets/common/css'))
 	.pipe(gulp.dest('../../toby/folklife/src/Orchard.Web/Themes/Folklife/Assets/common/css'))
 	.pipe(gulp.dest('../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css'))
 	.pipe(gulp.dest('../../toby/folkways/src/Orchard.Web/Themes/Folkways/Assets/common/css'))
@@ -101,6 +102,7 @@ gulp.task('copy-sass', function() {
 gulp.task('copy-js', function() {
   gulp.src('assets/common/js/*.js')
 	.pipe(plumber())
+	.pipe(gulp.dest('../../50objects/code/themes/50objects/assets/common/js'))
 	.pipe(gulp.dest('../../toby/folklife/src/Orchard.Web/Themes/Folklife/Assets/common/js'))
 	.pipe(gulp.dest('../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/js'))
 	.pipe(gulp.dest('../../toby/folkways/src/Orchard.Web/Themes/Folkways/Assets/common/js'))
