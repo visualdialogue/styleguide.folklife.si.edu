@@ -428,13 +428,13 @@ this},r._applyDataApi=function(){var e={};t("[data-match-height], [data-mh]").ea
 	// carousels on micro site pages
 	var $msBannerSlideshow = $('#ms-banner-slideshow');
 	// if exists on page
-	if(typeof $msBannerCarousel !== 'undefined') {
-		$msBannerCarousel.on('init', function() {
+	if(typeof $msBannerSlideshow !== 'undefined') {
+		$msBannerSlideshow.on('init', function() {
 			// cache arrows for selecting
 			var $slickArrow = $('.slick-arrow');
 			// add event handler to arrows to pause slider when clicked
 			$slickArrow.on('click', function() {
-				$msBannerCarousel.slick('slickPause');
+				$msBannerSlideshow.slick('slickPause');
 				console.log('banner paused');
 				// control pause button
 				slickPaused = true;
@@ -1442,7 +1442,6 @@ $(document).ready(function () {
 	// if (site.$body.hasClass('program-page') || site.$body.hasClass('program-category-page') || site.$body.hasClass('general-page') || site.$body.hasClass('lesson-plan-page') || site.$body.hasClass('blog-article-page')) {
 	// work on all pages until run into conflict with figure tag
 		var $figcaption = $('.container').find('figcaption'); // get all figures on the page
-		// console.log('figure loaded');
 		// if click on figure, show figcaption
 		// important that pointer-events have been set to none for <figure> This allows us to listen to :after element
 		$figcaption.on('click', function() {
@@ -1452,13 +1451,30 @@ $(document).ready(function () {
 				$this.css('visibility', 'visible');
 				$this.addClass('minus-sign');// add minus sign
 				// $this.attr('data-content');// add minus sign
+				// pause micro site banner if exists
+				if($this.parents('#ms-banner-slideshow').length) {
+					// console.log('banner paused');
+					$msBannerSlideshow.slick('slickPause');
+					slickPaused = true;
+					// change icon
+					$pauseButton.removeClass('icon-pause');
+					$pauseButton.addClass('icon-play');
+				}
 			}
 			else { // else hide
 				$this.css('visibility', 'hidden');
 				$this.removeClass('minus-sign');// add minus sign
+				// play micro site banner if exists
+				if($this.parents('#ms-banner-slideshow').length) {
+					// console.log('banner paused');
+					$msBannerSlideshow.slick('slickPlay');
+					slickPaused = false;
+					// change icon
+					$pauseButton.removeClass('icon-play');
+					$pauseButton.addClass('icon-pause');
+				}
 			}
-		})
-	// }
+		});
 
 /**********
 * Match Heights
