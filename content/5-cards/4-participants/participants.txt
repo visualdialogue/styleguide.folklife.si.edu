@@ -1,0 +1,17 @@
+Title: Participants
+
+----
+
+Participants: 
+
+- date: June 29th
+  time: 4:30 PM
+  title: Kepa Junkera & Sorginak
+  description: Join us on the opening day of the Festival to see Kepa Junkera, a well-known Basque trikitixa (accordion) player. He currently tours with the Sorginak, an all-women group whose name translates as “witches.” Their music promotes the use of traditional Basque instrumentation while exploring new fusions of rhythm and sound. In 2004, Kepa won a Latin GRAMMY for Best Folk Album for his 2003 release, K.
+  img: kepa-junkera-sorginak.png
+- date: June 29th
+  time: 6:30 PM
+  title: Homayoun Sakhi and Salar Nader
+  description: These internationally recognized musicians represent the heritage and varied journeys of the Afghan exile community living in the United States. From Kabul to California, Homayoun Sakhi is admired as the outstanding Afghan rubâb player of his generation. Born in Afghanistan to one of the country’s leading musical families, Sakhi moved to Fremont in 2001. He was recorded for three of the GRAMMY-nominated Smithsonian Folkways albums in the Music of Central Asia series. 
+  He will be joined by Salar Nader, a disciple of legendary master Ustad Zakir Hussain. Born in Germany, raised in San Francisco, and now based in Los Angeles, Nader is a virtuosic, renowned tabla player.
+  img: homayoun-sakhi-and-salar-nader.png

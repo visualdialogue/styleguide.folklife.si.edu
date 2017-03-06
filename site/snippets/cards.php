@@ -829,4 +829,56 @@
 			&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
-&lt;/section&gt;</code></pre></div></div></div></section>
+&lt;/section&gt;
+
+</code></pre></div></div></div><!-- Participants--><div class="codeblock"><a id="participants" class="anchor-link"></a><div class="row"><div class="col-sm-8"><h3 class="section-subtitle">Participants</h3></div><?php snippet('show-html'); ?><?php snippet('show-sass'); ?></div><div class="row"><?php $participants = $section->find('participants'); ?><div class="col-sm-12"><section class="participants-section"><ul class="row"><?php foreach ($participants->children()->visible()->limit(6) as $card): ?><?php snippet('card-participant', array('card' => $card )); ?><?php endforeach; ?></ul></section></div><div class="col-xs-12 visible-xs"><?php snippet('show-html-mobile'); ?><?php snippet('show-sass-mobile'); ?></div></div><div class="row"><div class="col-sm-12"><pre class="sass"><code>.participants-section {
+	.title {
+		@include sm-sans;
+		text-align: center;
+	}
+	.details-inner {
+		@include padding-top(1);
+	}
+}</code></pre></div><div class="col-sm-12"><pre class="html"><code>&lt;section class="participants-section"&gt;&lt;ul class="row"&gt;
+&lt;li class="card col-xs-6 col-sm-2 card-xs-break-2 card-sm-break-6"&gt;
+  &lt;div class="image"&gt;&lt;a href="//localhost:3007/cards/participants/jose-francisco-kinku-zinkunegi-errukine-olaziregi"&gt;&lt;img src="//localhost:3007/content/5-cards/4-participants/1-jose-francisco-kinku-zinkunegi-errukine-olaziregi/jose-francisco.png" alt="Jose Francisco “Kinku” Zinkunegi, Errukine Olaziregi"&gt;&lt;/a&gt;&lt;/div&gt;
+  &lt;div class="details"&gt;
+    &lt;div class="details-inner"&gt;&lt;a href="//localhost:3007/cards/participants/jose-francisco-kinku-zinkunegi-errukine-olaziregi" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;
+            Jose Francisco “Kinku” Zinkunegi, Errukine Olaziregi&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/li&gt;
+&lt;li class="card col-xs-6 col-sm-2 card-xs-break-2 card-sm-break-6"&gt;
+  &lt;div class="image"&gt;&lt;a href="//localhost:3007/cards/participants/stanley-and-the-ten-sleepless-knights"&gt;&lt;img src="//localhost:3007/content/5-cards/4-participants/2-stanley-and-the-ten-sleepless-knights/stanley-ten-sleepless-knights.png" alt="Stanley and The Ten Sleepless Knights"&gt;&lt;/a&gt;&lt;/div&gt;
+  &lt;div class="details"&gt;
+    &lt;div class="details-inner"&gt;&lt;a href="//localhost:3007/cards/participants/stanley-and-the-ten-sleepless-knights" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;
+            Stanley and The Ten Sleepless Knights&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/li&gt;
+&lt;li class="card col-xs-6 col-sm-2 card-xs-break-2 card-sm-break-6"&gt;
+  &lt;div class="image"&gt;&lt;a href="//localhost:3007/cards/participants/grupo-nuu-yuku-de-san-miguel-cuevas"&gt;&lt;img src="//localhost:3007/content/5-cards/4-participants/3-grupo-nuu-yuku-de-san-miguel-cuevas/grupo-nuu-yuku.png" alt="Grupo Nuu Yuku de San Miguel Cuevas"&gt;&lt;/a&gt;&lt;/div&gt;
+  &lt;div class="details"&gt;
+    &lt;div class="details-inner"&gt;&lt;a href="//localhost:3007/cards/participants/grupo-nuu-yuku-de-san-miguel-cuevas" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;
+            Grupo Nuu Yuku de San Miguel Cuevas&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/li&gt;
+&lt;li class="card col-xs-6 col-sm-2 card-xs-break-2 card-sm-break-6"&gt;
+  &lt;div class="image"&gt;&lt;a href="//localhost:3007/cards/participants/helena-quintana-arrow-weed"&gt;&lt;img src="//localhost:3007/content/5-cards/4-participants/4-helena-quintana-arrow-weed/helena-quintana.png" alt="Helena Quintana Arrow-weed"&gt;&lt;/a&gt;&lt;/div&gt;
+  &lt;div class="details"&gt;
+    &lt;div class="details-inner"&gt;&lt;a href="//localhost:3007/cards/participants/helena-quintana-arrow-weed" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;
+            Helena Quintana Arrow-weed&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/li&gt;
+&lt;li class="card col-xs-6 col-sm-2 card-xs-break-2 card-sm-break-6"&gt;
+  &lt;div class="image"&gt;&lt;a href="//localhost:3007/cards/participants/kalakan"&gt;&lt;img src="//localhost:3007/content/5-cards/4-participants/5-kalakan/kalakan.png" alt="Kalakan"&gt;&lt;/a&gt;&lt;/div&gt;
+  &lt;div class="details"&gt;
+    &lt;div class="details-inner"&gt;&lt;a href="//localhost:3007/cards/participants/kalakan" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;
+            Kalakan&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/li&gt;
+&lt;li class="card col-xs-6 col-sm-2 card-xs-break-2 card-sm-break-6"&gt;
+  &lt;div class="image"&gt;&lt;a href="//localhost:3007/cards/participants/the-joaldunak"&gt;&lt;img src="//localhost:3007/content/5-cards/4-participants/6-the-joaldunak/joaldunak.png" alt="The Joaldunak"&gt;&lt;/a&gt;&lt;/div&gt;
+  &lt;div class="details"&gt;
+    &lt;div class="details-inner"&gt;&lt;a href="//localhost:3007/cards/participants/the-joaldunak" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;
+            The Joaldunak&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/li&gt;&lt;/ul&gt;&lt;/section&gt;</code></pre></div></div></div></section>
