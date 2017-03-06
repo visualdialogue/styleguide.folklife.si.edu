@@ -134,7 +134,7 @@
 				@include padding-bottom(1);
 				@include padding-left(2);
 			}
-		}
+		}	
 		.slick-arrow:before {
 			color: $black30;
 		}
@@ -159,6 +159,13 @@
 				right: 0;
 				margin-right: 0;
 			}
+		}	
+	}
+	.ms-banner-slideshow-wrapper {
+		position: relative;
+		.pause-button {
+			top: 0;
+			right: 10rem;
 		}
 	}
 	.ms-introduction {

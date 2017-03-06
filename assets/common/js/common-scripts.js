@@ -25,6 +25,9 @@
 	site.fullwidth = 1480; // break to 6 across
 	site.videoPopupBuilder; // global for use in local script files
 
+	// festival pause button references functions declared in festival.js
+	var carousel, getRandomArbitrary;
+
 	// folkways different mobile scrolling b/c of toggle bar presence
 	if (site.$body.hasClass('folkways-site'))
 		site.isFolkways = true;
@@ -33,6 +36,103 @@
 
 	// global wrap time function that wraps mejs elemeents better. Make global so later mejs elements can call
 	var wrapTime;
+
+/*********
+* accessibility pause
+*********/
+	var $pauseButton = $('#pause-button');
+	var slickPaused = false;
+	$pauseButton.on('click', function() {
+		console.log('slickPaused :', slickPaused);
+		// pause homepage slideshow
+		if(slickPaused) {
+			console.log('play slideshow');
+			$('#banner-carousel').slick('slickPlay'); // home pages
+			$('.ms-banner-slideshow').slick('slickPlay'); // festival program pages
+			slickPaused = false;
+			
+			// festival homepage - start image transforming
+			if (site.$body.hasClass('festival-site')) {
+				console.log('festival site');
+				// if have festival on state carousel
+				if(typeof $carousel !== 'undefined') {
+					var $activeImage = $carousel.find('.slick-active .banner-slide-image');
+					$activeImage.addClass('is-animated');
+					$activeImage.css('transform', 'scale(' + getRandomArbitrary(1.04, 1.08) + ') translate(-' + getRandomArbitrary(7, 25) + 'px, ' + getRandomArbitrary(7, 25) + 'px)');
+				}
+			} else {
+				console.log('not festival site');
+			}
+
+			// change icon
+			$(this).addClass('icon-pause');
+			$(this).removeClass('icon-play');
+		}
+		else {
+			console.log('pause slideshow');
+			$('#banner-carousel').slick('slickPause'); // home pages
+			$('.ms-banner-slideshow').slick('slickPause'); // festival program pages
+			slickPaused = true;
+
+			// festival homepage - stop image transforming
+			if (site.$body.hasClass('festival-site')) {
+				// if have festival on state carousel
+				if(typeof $carousel !== 'undefined') {
+					var $activeImage = $carousel.find('.slick-active .banner-slide-image');
+					$activeImage.removeClass('is-animated');
+				}
+			}
+
+			// change icon
+			$(this).removeClass('icon-pause');
+			$(this).addClass('icon-play');
+		}
+	});
+
+/**********
+* Pause banner slideshow on arrow click
+* important to declare BEFORE slick is created, so will occur on init
+**********/
+	// banner Carousels on home pages
+	var $bannerCarousel = $('#banner-carousel');
+	// if exists on page
+	if(typeof $bannerCarousel !== 'undefined') {
+		$bannerCarousel.on('init', function() {
+			// cache arrows for selecting
+			var $slickArrow = $('.slick-arrow');
+			// add event handler to arrows to pause slider when clicked
+			$slickArrow.on('click', function() {
+				$bannerCarousel.slick('slickPause');
+				console.log('banner paused');
+				// control pause button
+				slickPaused = true;
+				// change icon
+				$pauseButton.removeClass('icon-pause');
+				$pauseButton.addClass('icon-play');
+			});
+		});
+	}
+
+	// carousels on micro site pages
+	var $msBannerSlideshow = $('#ms-banner-slideshow');
+	// if exists on page
+	if(typeof $msBannerCarousel !== 'undefined') {
+		$msBannerCarousel.on('init', function() {
+			// cache arrows for selecting
+			var $slickArrow = $('.slick-arrow');
+			// add event handler to arrows to pause slider when clicked
+			$slickArrow.on('click', function() {
+				$msBannerCarousel.slick('slickPause');
+				console.log('banner paused');
+				// control pause button
+				slickPaused = true;
+				// change icon
+				$pauseButton.removeClass('icon-pause');
+				$pauseButton.addClass('icon-play');
+			});
+		});
+	}
+
 
 /**********************
  * youtube must be in GLOBAL scope
@@ -796,7 +896,7 @@ $(document).ready(function () {
 * Uses slick.js from Ken Wheeler at http://kenwheeler.github.io/slick/
 *********************/
 	// $('.ms-header-inner').slick({
-	$('.ms-banner-slideshow').slick({
+	$msBannerSlideshow.slick({
 		mobileFirst: 'true',
 		// combine with mobile
 		arrows: false,
