@@ -1366,7 +1366,6 @@ $(document).ready(function () {
 			// text.removeClass('more-link-less');
 		}
 	})
-	
 
 
 /*********************

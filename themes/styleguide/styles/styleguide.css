@@ -7187,6 +7187,17 @@ body {
 	top: -0.2rem;
 }
 
+.album-sidebar-tab[aria-expanded="true"] .icon-right-open-mini {
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
+	display: inline-block;
+	position: relative;
+	top: 0.2rem;
+}
+
 /* Slider dots
 -------------------------------------------------- */
 .slick-dots li button:before {
@@ -23893,6 +23904,17 @@ body {
 	display: inline-block;
 	position: relative;
 	top: -0.2rem;
+}
+
+.album-sidebar-tab[aria-expanded="true"] .icon-right-open-mini {
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
+	display: inline-block;
+	position: relative;
+	top: 0.2rem;
 }
 
 /* Slider dots
