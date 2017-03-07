@@ -436,7 +436,7 @@ a.details {
 			line-height: 1.33 !important; // 18/24
 			
 		}
-		&.horizontal-card, &.suggested-album {
+		&.horizontal-card, &.suggested-item {
 			.details {
 				padding-left:$small-gutter;
 				@include respond-to(break2full) {padding-left:0.8vw;}

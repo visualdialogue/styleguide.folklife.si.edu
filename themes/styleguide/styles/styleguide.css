@@ -7352,13 +7352,13 @@ a:hover {
 	}
 }
 
-.no-highlight a {
-	border-bottom: none;
-	box-shadow: none;
-}
-
 .no-highlight a:hover {
 	background: none;
+}
+
+.no-underline a {
+	border-bottom: none;
+	box-shadow: none;
 }
 
 .more-link .er {
@@ -13277,18 +13277,18 @@ body {
 	}
 }
 
-.sidebar-card.horizontal-card .details, .sidebar-card.suggested-album .details {
+.sidebar-card.horizontal-card .details, .sidebar-card.suggested-item .details {
 	padding-left: 7.5px;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.sidebar-card.horizontal-card .details, .sidebar-card.suggested-album .details {
+	.sidebar-card.horizontal-card .details, .sidebar-card.suggested-item .details {
 		padding-left: 0.8vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.sidebar-card.horizontal-card .details, .sidebar-card.suggested-album .details {
+	.sidebar-card.horizontal-card .details, .sidebar-card.suggested-item .details {
 		padding-left: 0;
 	}
 }
@@ -24071,13 +24071,13 @@ a:hover {
 	}
 }
 
-.no-highlight a {
-	border-bottom: none;
-	box-shadow: none;
-}
-
 .no-highlight a:hover {
 	background: none;
+}
+
+.no-underline a {
+	border-bottom: none;
+	box-shadow: none;
 }
 
 .more-link .er {
@@ -31337,18 +31337,18 @@ body {
 	}
 }
 
-.sidebar-card.horizontal-card .details, .sidebar-card.suggested-album .details {
+.sidebar-card.horizontal-card .details, .sidebar-card.suggested-item .details {
 	padding-left: 7.5px;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.sidebar-card.horizontal-card .details, .sidebar-card.suggested-album .details {
+	.sidebar-card.horizontal-card .details, .sidebar-card.suggested-item .details {
 		padding-left: 0.8vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.sidebar-card.horizontal-card .details, .sidebar-card.suggested-album .details {
+	.sidebar-card.horizontal-card .details, .sidebar-card.suggested-item .details {
 		padding-left: 0;
 	}
 }
@@ -35661,7 +35661,7 @@ body.magazine-page, body.magazine-article-page {
 	}
 }
 
-.album-page .main .title {
+.album-page .main h1.title {
 	font-weight: 700;
 	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
 	line-height: 1;
@@ -35671,37 +35671,37 @@ body.magazine-page, body.magazine-article-page {
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.album-page .main .title {
+	.album-page .main h1.title {
 		font-size: 3.5vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.album-page .main .title {
+	.album-page .main h1.title {
 		font-size: 6.2rem;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.album-page .main .title {
+	.album-page .main h1.title {
 		margin-top: 0vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.album-page .main .title {
+	.album-page .main h1.title {
 		margin-top: 0rem;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.album-page .main .title {
+	.album-page .main h1.title {
 		margin-bottom: 0.32vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.album-page .main .title {
+	.album-page .main h1.title {
 		margin-bottom: 0.5rem;
 	}
 }
@@ -36008,6 +36008,16 @@ body.magazine-page, body.magazine-article-page {
 	}
 }
 
+.album-page .track-buy input {
+	background-color: transparent;
+	color: white;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+}
+
 .album-page .sidebar h4 {
 	margin-top: 0.07407rem;
 }
@@ -36230,53 +36240,53 @@ body.magazine-page, body.magazine-article-page {
 	}
 }
 
-.suggested-albums {
+.suggested-items {
 	padding-bottom: 0;
 }
 
-.suggested-album {
+.suggested-item {
 	margin-bottom: 0.74074rem;
 }
 
-.suggested-album:nth-of-type(2n + 1) {
+.suggested-item:nth-of-type(2n + 1) {
 	clear: left;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.suggested-album {
+	.suggested-item {
 		margin-bottom: 1.28vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.suggested-album {
+	.suggested-item {
 		margin-bottom: 2rem;
 	}
 }
 
-.suggested-album .tag {
+.suggested-item .tag {
 	display: none;
 }
 
-.suggested-album .title {
+.suggested-item .title {
 	color: #000;
 	margin: 0;
 	margin-top: -0.18519rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.suggested-album .title {
+	.suggested-item .title {
 		margin-top: -0.32vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.suggested-album .title {
+	.suggested-item .title {
 		margin-top: -0.5rem;
 	}
 }
 
-.suggested-album .artist {
+.suggested-item .artist {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
 	line-height: 1.32;
@@ -36285,13 +36295,13 @@ body.magazine-page, body.magazine-article-page {
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.suggested-album .artist {
+	.suggested-item .artist {
 		font-size: 1.3vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.suggested-album .artist {
+	.suggested-item .artist {
 		line-height: 1.32;
 		font-size: 1.8rem;
 	}
@@ -36348,18 +36358,18 @@ body.magazine-page, body.magazine-article-page {
 	color: #fff;
 }
 
-.suggested-albums {
+.suggested-items {
 	margin-top: 0.74074rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.suggested-albums {
+	.suggested-items {
 		margin-top: 1.28vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.suggested-albums {
+	.suggested-items {
 		margin-top: 2rem;
 	}
 }
@@ -39037,6 +39047,187 @@ body.magazine-page, body.magazine-article-page {
 
 .image-gallery-remodal .slick-slide {
 	width: auto;
+}
+
+/*Folkways Suggests - Accordion toggle*/
+.related-features {
+	padding: 10px;
+}
+
+.related-features p {
+	width: 100%;
+	float: left;
+	margin: 0 0 10px 0;
+	height: 90px;
+}
+
+.related-features span {
+	display: block;
+	font-size: 12px;
+	line-height: 17px;
+	color: #000;
+	width: 100%;
+}
+
+.related-features a:hover span {
+	color: #e07007;
+}
+
+.related-features img {
+	float: left;
+	width: 80px;
+	height: 80px;
+	margin-right: 10px;
+}
+
+.panel {
+	background-color: #fff;
+	border: none;
+	border-radius: 0 !important;
+	box-shadow: none;
+	margin-bottom: 20px;
+}
+
+.panel-group .panel {
+	border-radius: 0;
+	margin-bottom: 0;
+	overflow: hidden;
+}
+
+.panel-default > .panel-heading {
+	background-color: #bac4c9;
+	border-color: #bac4c9;
+	color: #333;
+}
+
+.panel-heading {
+	border-top-left-radius: 0 !important;
+	border-top-right-radius: 0 !important;
+	padding: 3px 0 !important;
+}
+
+.panel-group .panel + .panel {
+	margin-top: 2px !important;
+}
+
+.accordion-albums {
+	background: url("/images/index/tab_albums_selected.png") no-repeat scroll 4% 50% #bac4c9;
+	width: 100%;
+	padding: 3px 0;
+	text-indent: -9999px;
+}
+
+a:hover .accordion-albums {
+	background: url("/images/index/tab_albums_selected.png") no-repeat scroll 4% 50% #526c79;
+	width: 100%;
+	padding: 3px 0;
+	text-indent: -9999px;
+}
+
+.accordion-albums .active {
+	background: url("/images/index/tab_albums.png") no-repeat scroll 4% 50% #bac4c9;
+	width: 100%;
+	padding: 3px 0;
+	text-indent: -9999px;
+}
+
+.accordion-videos {
+	background: url("/images/index/tab_videos_selected.png") no-repeat scroll 4% 50% #bac4c9;
+	width: 100%;
+	padding: 3px 0;
+	text-indent: -9999px;
+}
+
+a:hover .accordion-videos {
+	background: url("/images/index/tab_videos_selected.png") no-repeat scroll 4% 50% #526c79;
+	width: 100%;
+	padding: 3px 0;
+	text-indent: -9999px;
+}
+
+.accordion-playlists {
+	background: url("/images/index/tab_playlist_selected.png") no-repeat scroll 4% 50% #bac4c9;
+	width: 100%;
+	padding: 3px 0;
+	text-indent: -9999px;
+}
+
+a:hover .accordion-playlists {
+	background: url("/images/index/tab_playlist_selected.png") no-repeat scroll 4% 50% #526c79;
+	width: 100%;
+	padding: 3px 0;
+	text-indent: -9999px;
+}
+
+.accordion-articles {
+	background: url("/images/index/tab_articles_selected.png") no-repeat scroll 4% 50% #bac4c9;
+	width: 100%;
+	padding: 3px 0;
+	text-indent: -9999px;
+}
+
+a:hover .accordion-articles {
+	background: url("/images/index/tab_articles_selected.png") no-repeat scroll 4% 50% #526c79;
+	width: 100%;
+	padding: 3px 0;
+	text-indent: -9999px;
+}
+
+.accordion-tools-teaching {
+	background: url("/images/index/tab_tools_teaching_selected.png") no-repeat scroll 6% 50% #bac4c9;
+	width: 100%;
+	padding: 3px 0;
+	text-indent: -9999px;
+}
+
+a:hover .accordion-tools-teaching {
+	background: url("/images/index/tab_tools_teaching_selected.png") no-repeat scroll 6% 50% #526c79;
+	width: 100%;
+	padding: 3px 0;
+	text-indent: -9999px;
+}
+
+.accordion-albums, .accordion-albums .active, .accordion-videos, .accordion-playlists, .accordion-articles, .accordion-tools-teaching {
+	color: transparent;
+}
+
+.accordion-toggle:after {
+	/* symbol for "opening" panels */
+	font-family: 'Glyphicons Halflings';
+	/* essential for enabling glyphicon */
+	content: "\e114";
+	/* adjust as needed, taken from bootstrap.css */
+	float: right;
+	/* adjust as needed */
+	color: grey;
+	/* adjust as needed */
+	margin-top: -25px;
+	margin-right: 10px;
+}
+
+.accordion-toggle.collapsed:after {
+	/* symbol for "collapsed" panels */
+	content: "\e080";
+	/* adjust as needed, taken from bootstrap.css */
+}
+
+@media screen and (max-width: 767px) {
+	.accordion-albums, .accordion-albums .active, .accordion-videos, .accordion-playlists, .accordion-articles, .accordion-tools-teaching {
+		background: none repeat scroll 4% 50% #bac4c9;
+		text-transform: uppercase;
+		font: bold 0.8em verdana;
+		color: #fff;
+		padding: 8px 15px !important;
+		text-indent: 0;
+	}
+	a:hover .accordion-albums, a:hover .accordion-videos, a:hover .accordion-playlists, a:hover .accordion-articles, a:hover .accordion-tools-teaching {
+		background: none repeat scroll 4% 50% #526c79;
+		text-transform: uppercase;
+		font: bold 0.8em verdana;
+		color: #fff;
+		padding: 8px 15px !important;
+		text-indent: 0;
+	}
 }
 
 /* links

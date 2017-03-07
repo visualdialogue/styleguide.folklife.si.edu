@@ -6,9 +6,9 @@
 		<div aria-hidden="true" class="icon-right-open-mini"></div>
 	  </div>
 	</div>
-	<ul id="collapseAlbums" class="row collapse suggested-albums" role="tabpanel" aria-labelledby="headlineAlbums">
+	<ul id="collapseAlbums" class="row collapse suggested-items" role="tabpanel" aria-labelledby="headlineAlbums">
 	  <?php foreach($pages->find('explore')->children()->find('sounds')->children()->filterBy('tags', '!=', 'radio')->shuffle()->limit(6) as $album): ?>
-	  <?php snippet('card-horizontal', array('card' => $album, 'card_classes' => 'col-xs-6 col-sm-12 suggested-album sidebar-card top-border-card', 'image_col' => 'col-sm-6', 'details_col' => 'col-sm-6', 'artist' => true )); ?>
+	  <?php snippet('card-horizontal', array('card' => $album, 'card_classes' => 'col-xs-6 col-sm-12 suggested-item sidebar-card top-border-card', 'image_col' => 'col-sm-6', 'details_col' => 'col-sm-6', 'artist' => true )); ?>
 	  <?php endforeach; ?>
 	</ul>
 	<div class="button">

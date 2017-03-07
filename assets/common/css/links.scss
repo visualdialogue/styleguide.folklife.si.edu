@@ -46,11 +46,15 @@
 	}
 	.no-highlight {
 		a {
-			border-bottom: none;
-			box-shadow: none;
 			&:hover {
 				background: none;
 			}
+		}
+	}
+	.no-underline {
+		a {
+			border-bottom: none;
+			box-shadow: none;
 		}
 	}
 	.more-link .er {

@@ -4,9 +4,9 @@
 //- 		.button
 //- 			.button-inner.album-sidebar-tab ALBUMS 
 //- 				.icon-down-open-mini(aria-hidden="true")
-//- 		ul.row.suggested-albums
+//- 		ul.row.suggested-items
 //- 			-foreach($pages->find('explore')->children()->find('sounds')->children()->filterBy('tags', '!=', 'radio')->shuffle()->limit(6) as $album):
-//- 				-snippet('card-horizontal', array('card' => $album, 'card_classes' => 'col-xs-6 col-sm-12 suggested-album sidebar-card top-border-card', 'image_col' => 'col-sm-6', 'details_col' => 'col-sm-6', 'artist' => true ))
+//- 				-snippet('card-horizontal', array('card' => $album, 'card_classes' => 'col-xs-6 col-sm-12 suggested-item sidebar-card top-border-card', 'image_col' => 'col-sm-6', 'details_col' => 'col-sm-6', 'artist' => true ))
 //- 			-endforeach
 //- 		.button
 //- 			.button-inner.album-sidebar-tab VIDEOS 
