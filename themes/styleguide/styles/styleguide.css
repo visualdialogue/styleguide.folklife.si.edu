@@ -16162,13 +16162,13 @@ body {
 
 @media only screen and (min-width: 53.25em) and (max-width: 61.9em) {
 	.horizontal-audio-card-third .title-wrapper {
-		height: 6vw;
+		height: 3.8vw;
 	}
 }
 
 @media only screen and (min-width: 62em) and (max-width: 1559px) {
 	.horizontal-audio-card-third .title-wrapper {
-		height: 4vw;
+		height: 4.4vw;
 	}
 }
 
@@ -16219,12 +16219,38 @@ body {
 }
 
 .horizontal-audio-card-third .playlist-controls {
+	padding-right: 0rem;
 	top: -0.74074rem;
+	top: -2rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .playlist-controls {
+		padding-right: 0vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .playlist-controls {
+		padding-right: 0rem;
+	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.horizontal-audio-card-third .playlist-controls {
 		top: -1.28vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .playlist-controls {
+		top: -2rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .playlist-controls {
+		top: -1vw;
 	}
 }
 
@@ -16243,6 +16269,26 @@ body {
 @media only screen and (min-width: 1560px) {
 	.horizontal-audio-card-third .playlist-controls {
 		font-size: 2rem;
+	}
+}
+
+.horizontal-audio-card-third .playlist-controls div {
+	margin-right: 0;
+}
+
+.horizontal-audio-card-third .playlist-controls .previous-button {
+	margin-right: 0.37037rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .playlist-controls .previous-button {
+		margin-right: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .playlist-controls .previous-button {
+		margin-right: 1rem;
 	}
 }
 
@@ -16285,6 +16331,24 @@ body {
 		font-size: 3rem;
 		padding-top: 0;
 		padding-left: 0;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-time-rail {
+		width: 79% !important;
+	}
+}
+
+@media only screen and (min-width: 62em) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-time-rail {
+		width: 81% !important;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-time-rail {
+		width: 81% !important;
 	}
 }
 
@@ -32805,13 +32869,13 @@ body {
 
 @media only screen and (min-width: 53.25em) and (max-width: 61.9em) {
 	.horizontal-audio-card-third .title-wrapper {
-		height: 6vw;
+		height: 3.8vw;
 	}
 }
 
 @media only screen and (min-width: 62em) and (max-width: 1559px) {
 	.horizontal-audio-card-third .title-wrapper {
-		height: 4vw;
+		height: 4.4vw;
 	}
 }
 
@@ -32862,12 +32926,38 @@ body {
 }
 
 .horizontal-audio-card-third .playlist-controls {
+	padding-right: 0rem;
 	top: -0.74074rem;
+	top: -2rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .playlist-controls {
+		padding-right: 0vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .playlist-controls {
+		padding-right: 0rem;
+	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.horizontal-audio-card-third .playlist-controls {
 		top: -1.28vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .playlist-controls {
+		top: -2rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .playlist-controls {
+		top: -1vw;
 	}
 }
 
@@ -32886,6 +32976,26 @@ body {
 @media only screen and (min-width: 1560px) {
 	.horizontal-audio-card-third .playlist-controls {
 		font-size: 2rem;
+	}
+}
+
+.horizontal-audio-card-third .playlist-controls div {
+	margin-right: 0;
+}
+
+.horizontal-audio-card-third .playlist-controls .previous-button {
+	margin-right: 0.37037rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .playlist-controls .previous-button {
+		margin-right: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .playlist-controls .previous-button {
+		margin-right: 1rem;
 	}
 }
 
@@ -32928,6 +33038,24 @@ body {
 		font-size: 3rem;
 		padding-top: 0;
 		padding-left: 0;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-time-rail {
+		width: 79% !important;
+	}
+}
+
+@media only screen and (min-width: 62em) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-time-rail {
+		width: 81% !important;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-time-rail {
+		width: 81% !important;
 	}
 }
 
