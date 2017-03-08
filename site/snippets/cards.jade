@@ -576,7 +576,6 @@ section.container.cards-section
 							img.playlist-cover(src="<?= $section->image('audio.png')->url() ?>")
 					.details.col-xs-8
 						.details-inner
-							//- .tag New Release
 							.title-wrapper
 								a.high.title(href="#"): span.light: span.er.playlist-title Quelbe!
 								.artist#playlist-artist Stanley and the Ten Sleepless Nights
@@ -588,41 +587,32 @@ section.container.cards-section
 			.col-xs-12.visible-xs
 				-snippet('show-html-mobile')
 				-snippet('show-sass-mobile')
-			.col-md-9
+			.col-md-8
 				pre.html: code.
-					&lt;div class="card audio-card playlist-audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border-card"&gt;
-						&lt;div class="image"&gt;	
-							&lt;a href="#"&gt;
-								&lt;img class="playlist-cover" src="/320x320.jpg"&gt;
-							&lt;/a&gt;
-						&lt;/div&gt;
-						&lt;div class="details"&gt;
-							&lt;div class="details-inner"&gt;
-								&lt;div class="title-wrapper" &gt;
-									&lt;a class="high title" href="#"&gt;
-										&lt;span class="light"&gt;
-											&lt;span class="playlist-title" class="er"&gt;
-												Quelbe!
-											&lt;/span&gt;
-										&lt;/span&gt;
-									&lt;/a&gt;
-									&lt;div id="playlist-artist" class="artist"&gt;
-										Stanley and the Ten Sleepless Nights
-									&lt;/div&gt;
-								&lt;/div&gt;
-								&lt;div class="audio-player"&gt;
-									&lt;audio id="playlist-audio" class="playlist-audio" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'&gt;
-									&lt;!-- mejs media player will build itself on page load and we wrap a few key elements in common-scripts.js --&gt;
-									&lt;div class="playlist-controls"&gt;
-										&lt;div class="previous-button icon-folklife-leftarrow"&gt;&lt;/div&gt;
-										&lt;div class="next-button icon-folklife-rightarrow"&gt;&lt;/div&gt;
-									&lt;/div&gt;
-								&lt;/div&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
+					&lt;div class="card audio-card playlist-audio-card horizontal-audio-card-third full-border-horizontal-card col-xs-6 col-sm-4 card-xs-break-2"&gt;
+					    &lt;div class="row"&gt;
+					        &lt;div class="image col-xs-4"&gt;
+					            &lt;a href="#"&gt;&lt;img src="http://media.smithsonianfolkways.org/images/album_covers/SF700/COOK00914.jpg" class="playlist-cover"&gt;&lt;/a&gt;
+					        &lt;/div&gt;
+					        &lt;div class="details col-xs-8"&gt;
+					            &lt;div class="details-inner" style=""&gt;
+					                &lt;div class="title-wrapper"&gt;&lt;a href="#" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er playlist-title"&gt;Antiguan Girls&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
+					                    &lt;div id="playlist-artist" class="artist"&gt;Lord Melody&lt;/div&gt;
+					                &lt;/div&gt;
+					                &lt;div class="audio-player"&gt;&lt;span class="mejs-offscreen"&gt;Audio Player&lt;/span&gt;
+					                    &lt;audio id="playlist-audio" class="playlist-audio" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'&gt;&lt;/audio&gt;
+										&lt;!-- mejs media player will build itself on page load and we wrap a few key elements in common-scripts.js --&gt;
+					                    &lt;div class="playlist-controls"&gt;
+					                        &lt;div class="previous-button icon-folklife-leftarrow"&gt;&lt;/div&gt;
+					                        &lt;div class="next-button icon-folklife-rightarrow"&gt;&lt;/div&gt;
+					                    &lt;/div&gt;
+					                &lt;/div&gt;
+					            &lt;/div&gt;
+					        &lt;/div&gt;
+					    &lt;/div&gt;
 					&lt;/div&gt;
 
-			.col-md-9
+			.col-md-8
 				pre.sass: code.
 					// audio styles are too long to list here and have their own SASS file called audio.scss
 	// Horizontal Text Audio Card
