@@ -40,7 +40,7 @@ _|   \___/  _|  _| \__| ____/
  \ \   /   |   |         |    __|   _ \   __ \    __| 
   \ \ /    |   | _____|  |   (     (   |  |   | \__ \ 
    \_/    ____/        ___| \___| \___/  _|  _| ____/ 
-                                                      
+													  
 
 */
 [data-icon]:before {
@@ -16755,7 +16755,7 @@ _|   \___/  _|  _| \__| ____/
  \ \   /   |   |         |    __|   _ \   __ \    __| 
   \ \ /    |   | _____|  |   (     (   |  |   | \__ \ 
    \_/    ____/        ___| \___| \___/  _|  _| ____/ 
-                                                      
+													  
 
 */
 [data-icon]:before {
@@ -36006,6 +36006,14 @@ body.magazine-page, body.magazine-article-page {
 	.album-page .track-buy {
 		display: table-cell;
 	}
+}
+
+.album-page .track-buy .button-inner {
+	background-color: #999999;
+}
+
+.album-page .track-buy .button-inner:hover {
+	background-color: black;
 }
 
 .album-page .track-buy input {
