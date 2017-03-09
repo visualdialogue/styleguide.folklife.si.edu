@@ -264,6 +264,34 @@
 		&lt;/div&gt;
 	&lt;/div&gt;
 &lt;/div&gt;
+</code></pre></div><div class="col-md-9"><pre class="sass"><code>// audio styles are too long to list here and have their own SASS file called audio.scss</code></pre></div></div></div><!-- Tall Audio Multi-Track Card--><div class="codeblock"><div class="row"><div class="col-sm-8"><h3 class="section-subtitle">Tall Audio Multi-Track Card</h3></div><?php snippet('show-html'); ?><?php snippet('show-sass'); ?></div><div class="row"><div class="card audio-card tall-audio-multi-track-card col-xs-6 col-sm-3 card-xs-break-2 full-border-card"><div class="image"><a href="#"><?php echo $section->image('audio.png'); ?></a></div><div class="details"><div class="details-inner"><div class="tag">New Release</div><div class="title-wrapper"><a href="#" class="high title"><span class="light"><span class="er">Quelbe!</span></span></a><div class="artist">Stanley and the Ten Sleepless Nights</div></div><div class="audio-player"><div class="track-title">Cigar Win the Race</div><audio class="mejs-player" src="/assets/audio/SFW40568/SFW40568_01.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'></div><div class="audio-player"><div class="track-title">Lagoon Mouth</div><audio class="mejs-player" src="/assets/audio/SFW40568/SFW40568_02.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'></div></div></div></div><div class="col-xs-12 visible-xs"><?php snippet('show-html-mobile'); ?><?php snippet('show-sass-mobile'); ?></div><div class="col-md-9"><pre class="html"><code>&lt;div class="card audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border-card"&gt;
+	&lt;div class="image"&gt;	
+		&lt;a href="#"&gt;
+			&lt;img src="/320x320.jpg"&gt;
+		&lt;/a&gt;
+	&lt;/div&gt;
+	&lt;div class="details"&gt;
+		&lt;div class="details-inner"&gt;
+			&lt;div class="tag"&gt;New Release&lt;/div&gt;
+			&lt;div class="title-wrapper" &gt;
+				&lt;a class="high title" href="#"&gt;
+					&lt;span class="light"&gt;
+						&lt;span class="er"&gt;
+							Quelbe!
+						&lt;/span&gt;
+					&lt;/span&gt;
+				&lt;/a&gt;
+				&lt;div class="artist"&gt;
+					Stanley and the Ten Sleepless Nights
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class="audio-player"&gt;
+				&lt;audio class="mejs-player" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'&gt;
+				&lt;!-- mejs media player will build itself on page load and we wrap a few key elements in common-scripts.js --&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
 </code></pre></div><div class="col-md-9"><pre class="sass"><code>// audio styles are too long to list here and have their own SASS file called audio.scss</code></pre></div></div></div><!-- Playlist Audio Card--><div class="codeblock"><a id="playlist-audio-card" class="anchor-link"></a><div class="row"><div class="col-sm-8"><h3 class="section-subtitle">Playlist Audio Card</h3></div><?php snippet('show-html'); ?><?php snippet('show-sass'); ?></div><div class="row"><script src="/assets/audio/myplaylist-calypso.js" type="text/javascript"></script><div class="card audio-card playlist-audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border-card"><div class="image"><a href="#"><img src="<?= $section->image('audio.png')->url() ?>" class="playlist-cover"/></a></div><div class="details"><div class="details-inner"><div class="title-wrapper"><a href="#" class="high title"><span class="light"><span class="er playlist-title">Quelbe!</span></span></a><div id="playlist-artist" class="artist">Stanley and the Ten Sleepless Nights</div></div><div class="audio-player"><audio id="playlist-audio" class="playlist-audio" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'></audio><div class="playlist-controls"><div class="previous-button icon-folklife-leftarrow"></div><div class="next-button icon-folklife-rightarrow"></div></div></div></div></div></div><div class="col-xs-12 visible-xs"><?php snippet('show-html-mobile'); ?><?php snippet('show-sass-mobile'); ?></div><div class="col-md-9"><pre class="html"><code>&lt;div class="card audio-card playlist-audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border-card"&gt;
 	&lt;div class="image"&gt;	
 		&lt;a href="#"&gt;

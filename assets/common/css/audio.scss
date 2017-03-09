@@ -225,40 +225,7 @@
 					display: inline-block;
 					@include margin-right(0.5);
 				}
-			}
-			.mejs-time-rail {
-				position: absolute;
-				@include respond-to(break2max) {
-					top:2vw;
-					top:1.5vw;
-					width: 65% !important;
-					left: 12vw;
-				}
-				@include respond-to(break1) {
-					top: 1rem;
-					width: 70.25% !important;
-				}
-				@include respond-to(break2full) {
-					width: 66.25% !important;
-					left: 5.5vw;
-				}
-				@include respond-to(break3) {
-					top: 20%;
-					width: 68.5% !important; // js override
-				}
-				@include respond-to(fullwidth) {
-					top:1.5rem;
-					left: 8.4rem;
-					width: 69.75% !important; // js override
-				}
-				@include height(2);
-				.mejs-time-loaded {
-					width: initial !important;
-				}
-				span {
-					height: 3px;
-				}
-			}
+			}			
 			.mejs-time-slider {
 				width: 100% !important; // js override
 				position: absolute;
@@ -291,6 +258,40 @@
 			.mejs-volume-button {
 				display: none;
 			}
+		}
+	}
+	// outside so tall multi-track can not inherit time-rail parent classes
+	.mejs-container .mejs-controls .mejs-time-rail, .track-title {
+		position: absolute;
+		@include respond-to(break2max) {
+			top:2vw;
+			top:1.5vw;
+			width: 65% !important;
+			left: 12vw;
+		}
+		@include respond-to(break1) {
+			top: 1rem;
+			width: 70.25% !important;
+		}
+		@include respond-to(break2full) {
+			width: 66.25% !important;
+			left: 5.5vw;
+		}
+		@include respond-to(break3) {
+			top: 20%;
+			width: 68.5% !important; // js override
+		}
+		@include respond-to(fullwidth) {
+			top:1.5rem;
+			left: 8.4rem;
+			width: 69.75% !important; // js override
+		}
+		@include height(2);
+		.mejs-time-loaded {
+			width: initial !important;
+		}
+		span {
+			height: 3px;
 		}
 	}
 
@@ -661,3 +662,60 @@ $horizontalMobilePlayHeight: 8vw;
 		}
 	}
 
+
+
+/* Tall Audio Multi-Track Card
+-------------------------------------------------- */
+	.tall-audio-multi-track-card {
+		.details-inner {
+			@include padding-bottom(2);
+		}
+		.title-wrapper {
+			@include respond-to(break2max) {
+				// margin-bottom: 2vw;
+			}
+		}
+		.audio-player {
+			position: relative;
+			padding-left: 0;
+			@include padding-bottom(0.5);
+			@include respond-to(break2max) {
+				margin-top: 3vw;
+			}
+		}
+		.track-title {
+			@include caption-sans;
+			position: absolute;
+			z-index: 1;
+			// @include left(6);
+		}
+		.mejs-container .mejs-controls .mejs-time-rail {
+			@include respond-to(break2max) {
+				top:2vw;
+			}
+			@include respond-to(break1) {
+				// top: 0.9rem;
+			}
+			@include respond-to(break3) {
+				top: 33%;
+			}
+			@include respond-to(fullwidth) {
+				top:2rem;
+			}
+		}
+		.track-title {
+			overflow: hidden;
+			@include respond-to(break2max) {
+				top:0;
+			}
+			@include respond-to(break1) {
+				// top: 1.5rem;
+			}
+			@include respond-to(break3) {
+				top: 26%;
+			}
+			@include respond-to(fullwidth) {
+				top:2.2rem;
+			}
+		}
+	}

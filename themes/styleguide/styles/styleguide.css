@@ -15721,69 +15721,6 @@ body {
 	}
 }
 
-.mejs-container .mejs-controls .mejs-time-rail {
-	position: absolute;
-	height: 1.40469rem;
-}
-
-@media only screen and (max-width: 53.15em) {
-	.mejs-container .mejs-controls .mejs-time-rail {
-		top: 2vw;
-		top: 1.5vw;
-		width: 65% !important;
-		left: 12vw;
-	}
-}
-
-@media only screen and (min-width: 40em) {
-	.mejs-container .mejs-controls .mejs-time-rail {
-		top: 1rem;
-		width: 70.25% !important;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.mejs-container .mejs-controls .mejs-time-rail {
-		width: 66.25% !important;
-		left: 5.5vw;
-	}
-}
-
-@media only screen and (min-width: 62em) {
-	.mejs-container .mejs-controls .mejs-time-rail {
-		top: 20%;
-		width: 68.5% !important;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.mejs-container .mejs-controls .mejs-time-rail {
-		top: 1.5rem;
-		left: 8.4rem;
-		width: 69.75% !important;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.mejs-container .mejs-controls .mejs-time-rail {
-		height: 1.28vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.mejs-container .mejs-controls .mejs-time-rail {
-		height: 2rem;
-	}
-}
-
-.mejs-container .mejs-controls .mejs-time-rail .mejs-time-loaded {
-	width: initial !important;
-}
-
-.mejs-container .mejs-controls .mejs-time-rail span {
-	height: 3px;
-}
-
 .mejs-container .mejs-controls .mejs-time-slider {
 	width: 100% !important;
 	position: absolute;
@@ -15859,6 +15796,69 @@ body {
 
 .mejs-container .mejs-controls .mejs-volume-button {
 	display: none;
+}
+
+.mejs-container .mejs-controls .mejs-time-rail, .track-title {
+	position: absolute;
+	height: 1.40469rem;
+}
+
+@media only screen and (max-width: 53.15em) {
+	.mejs-container .mejs-controls .mejs-time-rail, .track-title {
+		top: 2vw;
+		top: 1.5vw;
+		width: 65% !important;
+		left: 12vw;
+	}
+}
+
+@media only screen and (min-width: 40em) {
+	.mejs-container .mejs-controls .mejs-time-rail, .track-title {
+		top: 1rem;
+		width: 70.25% !important;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.mejs-container .mejs-controls .mejs-time-rail, .track-title {
+		width: 66.25% !important;
+		left: 5.5vw;
+	}
+}
+
+@media only screen and (min-width: 62em) {
+	.mejs-container .mejs-controls .mejs-time-rail, .track-title {
+		top: 20%;
+		width: 68.5% !important;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.mejs-container .mejs-controls .mejs-time-rail, .track-title {
+		top: 1.5rem;
+		left: 8.4rem;
+		width: 69.75% !important;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.mejs-container .mejs-controls .mejs-time-rail, .track-title {
+		height: 1.28vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.mejs-container .mejs-controls .mejs-time-rail, .track-title {
+		height: 2rem;
+	}
+}
+
+.mejs-container .mejs-controls .mejs-time-rail .mejs-time-loaded, .track-title .mejs-time-loaded {
+	width: initial !important;
+}
+
+.mejs-container .mejs-controls .mejs-time-rail span, .track-title span {
+	height: 3px;
 }
 
 /* Tall Audio Card
@@ -16770,6 +16770,117 @@ body {
 
 .horizontal-audio-card-playlist-thin .mejs-controls .mejs-time-wrapper {
 	display: none;
+}
+
+/* Tall Audio Multi-Track Card
+-------------------------------------------------- */
+.tall-audio-multi-track-card .details-inner {
+	padding-bottom: 1.40469rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.tall-audio-multi-track-card .details-inner {
+		padding-bottom: 1.28vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.tall-audio-multi-track-card .details-inner {
+		padding-bottom: 2rem;
+	}
+}
+
+.tall-audio-multi-track-card .audio-player {
+	position: relative;
+	padding-left: 0;
+	padding-bottom: 0.35117rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.tall-audio-multi-track-card .audio-player {
+		padding-bottom: 0.32vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.tall-audio-multi-track-card .audio-player {
+		padding-bottom: 0.5rem;
+	}
+}
+
+@media only screen and (max-width: 53.15em) {
+	.tall-audio-multi-track-card .audio-player {
+		margin-top: 3vw;
+	}
+}
+
+.tall-audio-multi-track-card .track-title {
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.4;
+	text-transform: uppercase;
+	font-size: 1.3rem;
+	position: absolute;
+	z-index: 1;
+}
+
+@media only screen and (min-width: 53.25em) {
+	.tall-audio-multi-track-card .track-title {
+		line-height: 1.3;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.tall-audio-multi-track-card .track-title {
+		font-size: 1vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.tall-audio-multi-track-card .track-title {
+		line-height: 1.3;
+		font-size: 1.6rem;
+	}
+}
+
+@media only screen and (max-width: 53.15em) {
+	.tall-audio-multi-track-card .mejs-container .mejs-controls .mejs-time-rail {
+		top: 2vw;
+	}
+}
+
+@media only screen and (min-width: 62em) {
+	.tall-audio-multi-track-card .mejs-container .mejs-controls .mejs-time-rail {
+		top: 33%;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.tall-audio-multi-track-card .mejs-container .mejs-controls .mejs-time-rail {
+		top: 2rem;
+	}
+}
+
+.tall-audio-multi-track-card .track-title {
+	overflow: hidden;
+}
+
+@media only screen and (max-width: 53.15em) {
+	.tall-audio-multi-track-card .track-title {
+		top: 0;
+	}
+}
+
+@media only screen and (min-width: 62em) {
+	.tall-audio-multi-track-card .track-title {
+		top: 26%;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.tall-audio-multi-track-card .track-title {
+		top: 2.2rem;
+	}
 }
 
 /*
@@ -32428,69 +32539,6 @@ body {
 	}
 }
 
-.mejs-container .mejs-controls .mejs-time-rail {
-	position: absolute;
-	height: 1.40469rem;
-}
-
-@media only screen and (max-width: 53.15em) {
-	.mejs-container .mejs-controls .mejs-time-rail {
-		top: 2vw;
-		top: 1.5vw;
-		width: 65% !important;
-		left: 12vw;
-	}
-}
-
-@media only screen and (min-width: 40em) {
-	.mejs-container .mejs-controls .mejs-time-rail {
-		top: 1rem;
-		width: 70.25% !important;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.mejs-container .mejs-controls .mejs-time-rail {
-		width: 66.25% !important;
-		left: 5.5vw;
-	}
-}
-
-@media only screen and (min-width: 62em) {
-	.mejs-container .mejs-controls .mejs-time-rail {
-		top: 20%;
-		width: 68.5% !important;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.mejs-container .mejs-controls .mejs-time-rail {
-		top: 1.5rem;
-		left: 8.4rem;
-		width: 69.75% !important;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.mejs-container .mejs-controls .mejs-time-rail {
-		height: 1.28vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.mejs-container .mejs-controls .mejs-time-rail {
-		height: 2rem;
-	}
-}
-
-.mejs-container .mejs-controls .mejs-time-rail .mejs-time-loaded {
-	width: initial !important;
-}
-
-.mejs-container .mejs-controls .mejs-time-rail span {
-	height: 3px;
-}
-
 .mejs-container .mejs-controls .mejs-time-slider {
 	width: 100% !important;
 	position: absolute;
@@ -32566,6 +32614,69 @@ body {
 
 .mejs-container .mejs-controls .mejs-volume-button {
 	display: none;
+}
+
+.mejs-container .mejs-controls .mejs-time-rail, .track-title {
+	position: absolute;
+	height: 1.40469rem;
+}
+
+@media only screen and (max-width: 53.15em) {
+	.mejs-container .mejs-controls .mejs-time-rail, .track-title {
+		top: 2vw;
+		top: 1.5vw;
+		width: 65% !important;
+		left: 12vw;
+	}
+}
+
+@media only screen and (min-width: 40em) {
+	.mejs-container .mejs-controls .mejs-time-rail, .track-title {
+		top: 1rem;
+		width: 70.25% !important;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.mejs-container .mejs-controls .mejs-time-rail, .track-title {
+		width: 66.25% !important;
+		left: 5.5vw;
+	}
+}
+
+@media only screen and (min-width: 62em) {
+	.mejs-container .mejs-controls .mejs-time-rail, .track-title {
+		top: 20%;
+		width: 68.5% !important;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.mejs-container .mejs-controls .mejs-time-rail, .track-title {
+		top: 1.5rem;
+		left: 8.4rem;
+		width: 69.75% !important;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.mejs-container .mejs-controls .mejs-time-rail, .track-title {
+		height: 1.28vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.mejs-container .mejs-controls .mejs-time-rail, .track-title {
+		height: 2rem;
+	}
+}
+
+.mejs-container .mejs-controls .mejs-time-rail .mejs-time-loaded, .track-title .mejs-time-loaded {
+	width: initial !important;
+}
+
+.mejs-container .mejs-controls .mejs-time-rail span, .track-title span {
+	height: 3px;
 }
 
 /* Tall Audio Card
@@ -33477,6 +33588,117 @@ body {
 
 .horizontal-audio-card-playlist-thin .mejs-controls .mejs-time-wrapper {
 	display: none;
+}
+
+/* Tall Audio Multi-Track Card
+-------------------------------------------------- */
+.tall-audio-multi-track-card .details-inner {
+	padding-bottom: 1.40469rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.tall-audio-multi-track-card .details-inner {
+		padding-bottom: 1.28vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.tall-audio-multi-track-card .details-inner {
+		padding-bottom: 2rem;
+	}
+}
+
+.tall-audio-multi-track-card .audio-player {
+	position: relative;
+	padding-left: 0;
+	padding-bottom: 0.35117rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.tall-audio-multi-track-card .audio-player {
+		padding-bottom: 0.32vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.tall-audio-multi-track-card .audio-player {
+		padding-bottom: 0.5rem;
+	}
+}
+
+@media only screen and (max-width: 53.15em) {
+	.tall-audio-multi-track-card .audio-player {
+		margin-top: 3vw;
+	}
+}
+
+.tall-audio-multi-track-card .track-title {
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.4;
+	text-transform: uppercase;
+	font-size: 1.3rem;
+	position: absolute;
+	z-index: 1;
+}
+
+@media only screen and (min-width: 53.25em) {
+	.tall-audio-multi-track-card .track-title {
+		line-height: 1.3;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.tall-audio-multi-track-card .track-title {
+		font-size: 1vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.tall-audio-multi-track-card .track-title {
+		line-height: 1.3;
+		font-size: 1.6rem;
+	}
+}
+
+@media only screen and (max-width: 53.15em) {
+	.tall-audio-multi-track-card .mejs-container .mejs-controls .mejs-time-rail {
+		top: 2vw;
+	}
+}
+
+@media only screen and (min-width: 62em) {
+	.tall-audio-multi-track-card .mejs-container .mejs-controls .mejs-time-rail {
+		top: 33%;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.tall-audio-multi-track-card .mejs-container .mejs-controls .mejs-time-rail {
+		top: 2rem;
+	}
+}
+
+.tall-audio-multi-track-card .track-title {
+	overflow: hidden;
+}
+
+@media only screen and (max-width: 53.15em) {
+	.tall-audio-multi-track-card .track-title {
+		top: 0;
+	}
+}
+
+@media only screen and (min-width: 62em) {
+	.tall-audio-multi-track-card .track-title {
+		top: 26%;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.tall-audio-multi-track-card .track-title {
+		top: 2.2rem;
+	}
 }
 
 /* Folkways Magazine Homepage
