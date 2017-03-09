@@ -39588,6 +39588,18 @@ a:hover .accordion-tools-teaching {
 	}
 }
 
+/* Folkways override
+-------------------------------------------------- */
+@media only screen and (max-width: 53.15em) {
+	.navbar {
+		top: 0;
+	}
+}
+
+:not(.home-page) .title-bar, .magazine-title-bar {
+	margin-top: 0;
+}
+
 /* links
 -------------------------------------------------- */
 a {
