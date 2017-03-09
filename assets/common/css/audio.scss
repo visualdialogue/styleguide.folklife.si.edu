@@ -261,7 +261,7 @@
 		}
 	}
 	// outside so tall multi-track can not inherit time-rail parent classes
-	.mejs-container .mejs-controls .mejs-time-rail, .track-title {
+	.mejs-container .mejs-controls .mejs-time-rail, .tall-audio-multi-track-card .track-title {
 		position: absolute;
 		@include respond-to(break2max) {
 			top:2vw;
