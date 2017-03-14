@@ -878,7 +878,8 @@
 		.credit {
 			font-style: italic;
 			@include margin-top(0.7);
-			@include margin-bottom(1);
+			// @include margin-bottom(1);
+			// @include margin-bottom(0);
 		}
 		&:after {
 			display: block;
@@ -1346,4 +1347,13 @@
 			color: $black30;
 			@include caption-sans;
 		}
+	}
+
+/* Helpers
+-------------------------------------------------*/
+	.is-hidden {
+		display: none !important;
+	}
+	.is-visible {
+		display: block !important;
 	}

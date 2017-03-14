@@ -338,43 +338,6 @@
 		@include sm-sans;
 	}
 
-	// Serif
-	.lg-serif {@include lg-serif;}
-	.md-serif {@include md-serif;}
-	.sm-serif {@include sm-serif;}
-	.sm-serif-italic {@include sm-serif;font-style: italic;}
-
-	// Sans
-	.xl-sans {@include xl-sans;}
-	.xl-sans-semi {@include xl-sans;font-weight: 600;}
-	.lg-sans {@include lg-sans;}
-	.lg-sans-semi {@include lg-sans;font-weight: 600;}
-	.md-sans {@include md-sans;}
-	.md-sans-semi {@include md-sans;font-weight: 600;}
-	.sm-sans {@include sm-sans;}
-	.sm-sans-semi {@include sm-sans;font-weight: 600;}
-	.caption-sans {@include caption-sans;}
-
-	// body type
-	.body-serif {@include body-serif;}
-	.intro-serif {@include intro-serif;}
-	.body-sans {@include body-sans;}
-	.intro-sans {@include lg-sans;}
-
-	// Woodtype Extended
-	.lg-woodtype-extended {@include lg-woodtype-extended;}
-	.md-woodtype-extended {@include md-woodtype-extended;}
-	.sm-woodtype-extended {@include sm-woodtype-extended;@include margin-top(1);}
-	.nav-header {@include nav-header;}
-
-	// Magazine
-	.lg-magazine-title {@include lg-magazine-title;}
-	.md-magazine-title {@include md-magazine-title;}
-	.sm-magazine-title {@include sm-magazine-title;}
-
-	.button-title {@include button-title;}
-	.category-tag-type {@include sans-tag;}
-	.category-tag-bold-type {@include sans-tag;font-weight: 700;}
 
 /* cards
 -------------------------------------------------- */

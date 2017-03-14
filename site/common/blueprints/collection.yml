@@ -1,6 +1,7 @@
 title: Collection
 pages: 
   template: 
+    - program
     - collection
     - card
 files: true
