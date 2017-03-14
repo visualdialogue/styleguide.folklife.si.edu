@@ -20,16 +20,16 @@ _|   \___/  _|  _| \__| ____/
 */
 @font-face {
 	font-family: "slick";
-	src: url("fonts/slick.eot");
-	src: url("fonts/slick.eot?#iefix") format("embedded-opentype"), url("bower_components/slick-carousel/slick/fonts/slick.woff") format("woff"), url("bower_components/slick-carousel/slick/fonts/slick.ttf") format("truetype"), url("bower_components/slick-carousel/slick/fonts/slick.svg#slick") format("svg");
+	src: url("./fonts/slick.eot");
+	src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("bower_components/slick-carousel/slick/fonts/slick.woff") format("woff"), url("bower_components/slick-carousel/slick/fonts/slick.ttf") format("truetype"), url("bower_components/slick-carousel/slick/fonts/slick.svg#slick") format("svg");
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: "vd-icons";
-	src: url("fonts/vd-icons.eot");
-	src: url("fonts/vd-icons.eot?#iefix") format("embedded-opentype"), url("fonts/vd-icons.woff") format("woff"), url("fonts/vd-icons.ttf") format("truetype"), url("fonts/vd-icons.svg#vd-icons") format("svg");
+	src: url("./fonts/vd-icons.eot");
+	src: url("./fonts/vd-icons.eot?#iefix") format("embedded-opentype"), url("./fonts/vd-icons.woff") format("woff"), url("./fonts/vd-icons.ttf") format("truetype"), url("./fonts/vd-icons.svg#vd-icons") format("svg");
 	font-weight: normal;
 	font-style: normal;
 }
@@ -6625,6 +6625,726 @@ body {
 	}
 }
 
+.lg-serif {
+	font-weight: 700;
+	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+	line-height: 1;
+	font-size: 4.2rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.lg-serif {
+		font-size: 3.5vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.lg-serif {
+		font-size: 6.2rem;
+	}
+}
+
+.md-serif {
+	font-weight: 700;
+	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+	line-height: 1;
+	font-size: 2.7rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.md-serif {
+		font-size: 2.5vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.md-serif {
+		font-size: 4.2rem;
+	}
+}
+
+.sm-serif {
+	font-weight: 700;
+	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+	line-height: 1;
+	font-size: 2.2rem;
+	margin-bottom: 0.37037rem;
+}
+
+@media only screen and (min-width: 53.25em) {
+	.sm-serif {
+		line-height: 1.143;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.sm-serif {
+		font-size: 1.8vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.sm-serif {
+		font-size: 2.8rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.sm-serif {
+		margin-bottom: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.sm-serif {
+		margin-bottom: 1rem;
+	}
+}
+
+.sm-serif-italic {
+	font-weight: 700;
+	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+	line-height: 1;
+	font-size: 2.2rem;
+	margin-bottom: 0.37037rem;
+	font-style: italic;
+}
+
+@media only screen and (min-width: 53.25em) {
+	.sm-serif-italic {
+		line-height: 1.143;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.sm-serif-italic {
+		font-size: 1.8vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.sm-serif-italic {
+		font-size: 2.8rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.sm-serif-italic {
+		margin-bottom: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.sm-serif-italic {
+		margin-bottom: 1rem;
+	}
+}
+
+.xl-sans {
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	font-size: 2.4rem;
+	line-height: 1;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.xl-sans {
+		font-size: 1.9vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.xl-sans {
+		font-size: 3.5rem;
+	}
+}
+
+.xl-sans-semi {
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	font-size: 2.4rem;
+	line-height: 1;
+	font-weight: 600;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.xl-sans-semi {
+		font-size: 1.9vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.xl-sans-semi {
+		font-size: 3.5rem;
+	}
+}
+
+.lg-sans {
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.267;
+	font-size: 2.1rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.lg-sans {
+		font-size: 1.9vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.lg-sans {
+		font-size: 3rem;
+	}
+}
+
+.lg-sans-semi {
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.267;
+	font-size: 2.1rem;
+	font-weight: 600;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.lg-sans-semi {
+		font-size: 1.9vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.lg-sans-semi {
+		font-size: 3rem;
+	}
+}
+
+.md-sans {
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.2;
+	font-size: 1.9rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.md-sans {
+		font-size: 1.6vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.md-sans {
+		font-size: 2.5rem;
+		line-height: 1.28;
+	}
+}
+
+.md-sans-semi {
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.2;
+	font-size: 1.9rem;
+	font-weight: 600;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.md-sans-semi {
+		font-size: 1.6vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.md-sans-semi {
+		font-size: 2.5rem;
+		line-height: 1.28;
+	}
+}
+
+.sm-sans {
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.32;
+	font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.sm-sans {
+		font-size: 1.3vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.sm-sans {
+		line-height: 1.32;
+		font-size: 1.8rem;
+	}
+}
+
+.sm-sans-semi {
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.32;
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.sm-sans-semi {
+		font-size: 1.3vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.sm-sans-semi {
+		line-height: 1.32;
+		font-size: 1.8rem;
+	}
+}
+
+.caption-sans {
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.4;
+	text-transform: uppercase;
+	font-size: 1.3rem;
+}
+
+@media only screen and (min-width: 53.25em) {
+	.caption-sans {
+		line-height: 1.3;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.caption-sans {
+		font-size: 1vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.caption-sans {
+		line-height: 1.3;
+		font-size: 1.6rem;
+	}
+}
+
+.body-serif {
+	font-weight: 400;
+	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+	line-height: 1.333333;
+	font-size: 1.9rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.body-serif {
+		font-size: 1.5vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.body-serif {
+		font-size: 2.4rem;
+	}
+}
+
+.intro-serif {
+	font-weight: 500;
+	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+	line-height: 1.267;
+	font-size: 1.9rem;
+	margin-bottom: 0.37037rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.intro-serif {
+		font-size: 2.2vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.intro-serif {
+		font-size: 3rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.intro-serif {
+		margin-bottom: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.intro-serif {
+		margin-bottom: 1rem;
+	}
+}
+
+.body-sans {
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.3333;
+	font-size: 1.7rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.body-sans {
+		font-size: 1.25vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.body-sans {
+		font-size: 2.1rem;
+	}
+}
+
+.intro-sans {
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.267;
+	font-size: 2.1rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.intro-sans {
+		font-size: 1.9vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.intro-sans {
+		font-size: 3rem;
+	}
+}
+
+.lg-woodtype-extended {
+	font-family: "unit-gothic-717", Arial, sans-serif;
+	text-transform: uppercase;
+	line-height: 1;
+}
+
+@media only screen and (max-width: 53.15em) {
+	.lg-woodtype-extended {
+		font-size: 8vw;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.lg-woodtype-extended {
+		font-size: 2.9vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.lg-woodtype-extended {
+		font-size: 4rem;
+	}
+}
+
+.md-woodtype-extended {
+	font-family: "unit-gothic-717", Arial, sans-serif;
+	text-transform: uppercase;
+	line-height: 1;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.md-woodtype-extended {
+		font-size: 2.4vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.md-woodtype-extended {
+		font-size: 3.8rem;
+	}
+}
+
+.sm-woodtype-extended {
+	font-family: "unit-gothic-717", Arial, sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	margin-top: 0;
+	margin-bottom: 1.5rem;
+	line-height: 1.2;
+	margin-top: 0.37037rem;
+}
+
+@media only screen and (max-width: 53.15em) {
+	.sm-woodtype-extended {
+		font-size: 5vw;
+	}
+}
+
+@media only screen and (min-width: 53.25em) {
+	.sm-woodtype-extended {
+		margin-bottom: 0;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.sm-woodtype-extended {
+		font-size: 1.9vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.sm-woodtype-extended {
+		font-size: 3rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.sm-woodtype-extended {
+		margin-top: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.sm-woodtype-extended {
+		margin-top: 1rem;
+	}
+}
+
+.nav-header {
+	font-weight: 800;
+	text-transform: uppercase;
+	font-family: "acumin-pro-wide", Arial, sans-serif;
+	line-height: 1.2;
+	font-size: 1.7rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.nav-header {
+		line-height: 1.2;
+		font-size: 1vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.nav-header {
+		line-height: 1.4353;
+		font-size: 1.7rem;
+	}
+}
+
+.lg-magazine-title {
+	font-weight: 800;
+	font-family: "acumin-pro-wide", Arial, sans-serif;
+	line-height: 1.095237;
+	font-size: 2.6rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.lg-magazine-title {
+		font-size: 2.95vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.lg-magazine-title {
+		font-size: 4.2rem;
+	}
+}
+
+.md-magazine-title {
+	font-weight: 800;
+	font-family: "acumin-pro-wide", Arial, sans-serif;
+	line-height: 1.095237;
+	font-size: 1.8rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.md-magazine-title {
+		font-size: 2.4vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.md-magazine-title {
+		font-size: 3.7rem;
+	}
+}
+
+.sm-magazine-title {
+	font-weight: 700;
+	font-family: "acumin-pro-wide", Arial, sans-serif;
+	line-height: 1.2;
+	margin-bottom: 0.37037rem;
+	font-size: 1.8rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.sm-magazine-title {
+		margin-bottom: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.sm-magazine-title {
+		margin-bottom: 1rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.sm-magazine-title {
+		font-size: 1.9vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.sm-magazine-title {
+		font-size: 3rem;
+	}
+}
+
+.lg-magazine-issue-title {
+	font-weight: 700;
+	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+	line-height: 1;
+	font-size: 2.7rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.lg-magazine-issue-title {
+		font-size: 2.5vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.lg-magazine-issue-title {
+		font-size: 4.2rem;
+	}
+}
+
+.sm-magazine-issue-title {
+	font-weight: 700;
+	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+	line-height: 1;
+	font-size: 4rem;
+	margin-bottom: 0.37037rem;
+}
+
+@media only screen and (min-width: 53.25em) {
+	.sm-magazine-issue-title {
+		line-height: 1;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.sm-magazine-issue-title {
+		font-size: 2vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.sm-magazine-issue-title {
+		font-size: 3rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.sm-magazine-issue-title {
+		margin-bottom: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.sm-magazine-issue-title {
+		margin-bottom: 1rem;
+	}
+}
+
+.button-title {
+	font-weight: 800;
+	text-transform: uppercase;
+	font-family: "acumin-pro-wide", Arial, sans-serif;
+	margin-bottom: 0;
+	line-height: 1.2;
+	font-size: 1.4rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.button-title {
+		font-size: 1.1vw;
+		margin-bottom: 0.4vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.button-title {
+		font-size: 1.8rem;
+		margin-bottom: 0.5rem;
+	}
+}
+
+.category-tag-type {
+	font-weight: 300;
+	text-transform: uppercase;
+	font-family: "acumin-pro-wide", Arial, sans-serif;
+	color: #595959;
+	position: relative;
+	line-height: 1.1;
+	letter-spacing: 0.5px;
+	margin-bottom: 0.5rem;
+	font-size: 1.2rem;
+}
+
+@media only screen and (min-width: 53.25em) {
+	.category-tag-type {
+		line-height: 1.4;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.category-tag-type {
+		font-size: 1vw;
+		letter-spacing: 0.5px;
+		margin-bottom: 0.4vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.category-tag-type {
+		font-size: 1.6rem;
+		letter-spacing: 1px;
+		margin-bottom: 0;
+	}
+}
+
+.category-tag-bold-type {
+	font-weight: 300;
+	text-transform: uppercase;
+	font-family: "acumin-pro-wide", Arial, sans-serif;
+	color: #595959;
+	position: relative;
+	line-height: 1.1;
+	letter-spacing: 0.5px;
+	margin-bottom: 0.5rem;
+	font-size: 1.2rem;
+	font-weight: 700;
+}
+
+@media only screen and (min-width: 53.25em) {
+	.category-tag-bold-type {
+		line-height: 1.4;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.category-tag-bold-type {
+		font-size: 1vw;
+		letter-spacing: 0.5px;
+		margin-bottom: 0.4vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.category-tag-bold-type {
+		font-size: 1.6rem;
+		letter-spacing: 1px;
+		margin-bottom: 0;
+	}
+}
+
 /* Mixins
 -------------------------------------------------- */
 .vertically-align-grandparent {
@@ -10454,7 +11174,6 @@ figcaption {
 figcaption .credit {
 	font-style: italic;
 	margin-top: 0.25926rem;
-	margin-bottom: 0.37037rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
@@ -10466,18 +11185,6 @@ figcaption .credit {
 @media only screen and (min-width: 1560px) {
 	figcaption .credit {
 		margin-top: 0.7rem;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	figcaption .credit {
-		margin-bottom: 0.64vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	figcaption .credit {
-		margin-bottom: 1rem;
 	}
 }
 
@@ -11559,6 +12266,16 @@ video::-webkit-media-controls {
 		line-height: 1.3;
 		font-size: 1.6rem;
 	}
+}
+
+/* Helpers
+-------------------------------------------------*/
+.is-hidden {
+	display: none !important;
+}
+
+.is-visible {
+	display: block !important;
 }
 
 /* footer
@@ -16910,16 +17627,16 @@ _|   \___/  _|  _| \__| ____/
 */
 @font-face {
 	font-family: "slick";
-	src: url("fonts/slick.eot");
-	src: url("fonts/slick.eot?#iefix") format("embedded-opentype"), url("bower_components/slick-carousel/slick/fonts/slick.woff") format("woff"), url("bower_components/slick-carousel/slick/fonts/slick.ttf") format("truetype"), url("bower_components/slick-carousel/slick/fonts/slick.svg#slick") format("svg");
+	src: url("./fonts/slick.eot");
+	src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("bower_components/slick-carousel/slick/fonts/slick.woff") format("woff"), url("bower_components/slick-carousel/slick/fonts/slick.ttf") format("truetype"), url("bower_components/slick-carousel/slick/fonts/slick.svg#slick") format("svg");
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: "vd-icons";
-	src: url("fonts/vd-icons.eot");
-	src: url("fonts/vd-icons.eot?#iefix") format("embedded-opentype"), url("fonts/vd-icons.woff") format("woff"), url("fonts/vd-icons.ttf") format("truetype"), url("fonts/vd-icons.svg#vd-icons") format("svg");
+	src: url("./fonts/vd-icons.eot");
+	src: url("./fonts/vd-icons.eot?#iefix") format("embedded-opentype"), url("./fonts/vd-icons.woff") format("woff"), url("./fonts/vd-icons.ttf") format("truetype"), url("./fonts/vd-icons.svg#vd-icons") format("svg");
 	font-weight: normal;
 	font-style: normal;
 }
@@ -23519,6 +24236,726 @@ body {
 	}
 }
 
+.lg-serif {
+	font-weight: 700;
+	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+	line-height: 1;
+	font-size: 4.2rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.lg-serif {
+		font-size: 3.5vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.lg-serif {
+		font-size: 6.2rem;
+	}
+}
+
+.md-serif {
+	font-weight: 700;
+	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+	line-height: 1;
+	font-size: 2.7rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.md-serif {
+		font-size: 2.5vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.md-serif {
+		font-size: 4.2rem;
+	}
+}
+
+.sm-serif {
+	font-weight: 700;
+	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+	line-height: 1;
+	font-size: 2.2rem;
+	margin-bottom: 0.37037rem;
+}
+
+@media only screen and (min-width: 53.25em) {
+	.sm-serif {
+		line-height: 1.143;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.sm-serif {
+		font-size: 1.8vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.sm-serif {
+		font-size: 2.8rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.sm-serif {
+		margin-bottom: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.sm-serif {
+		margin-bottom: 1rem;
+	}
+}
+
+.sm-serif-italic {
+	font-weight: 700;
+	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+	line-height: 1;
+	font-size: 2.2rem;
+	margin-bottom: 0.37037rem;
+	font-style: italic;
+}
+
+@media only screen and (min-width: 53.25em) {
+	.sm-serif-italic {
+		line-height: 1.143;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.sm-serif-italic {
+		font-size: 1.8vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.sm-serif-italic {
+		font-size: 2.8rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.sm-serif-italic {
+		margin-bottom: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.sm-serif-italic {
+		margin-bottom: 1rem;
+	}
+}
+
+.xl-sans {
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	font-size: 2.4rem;
+	line-height: 1;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.xl-sans {
+		font-size: 1.9vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.xl-sans {
+		font-size: 3.5rem;
+	}
+}
+
+.xl-sans-semi {
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	font-size: 2.4rem;
+	line-height: 1;
+	font-weight: 600;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.xl-sans-semi {
+		font-size: 1.9vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.xl-sans-semi {
+		font-size: 3.5rem;
+	}
+}
+
+.lg-sans {
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.267;
+	font-size: 2.1rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.lg-sans {
+		font-size: 1.9vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.lg-sans {
+		font-size: 3rem;
+	}
+}
+
+.lg-sans-semi {
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.267;
+	font-size: 2.1rem;
+	font-weight: 600;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.lg-sans-semi {
+		font-size: 1.9vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.lg-sans-semi {
+		font-size: 3rem;
+	}
+}
+
+.md-sans {
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.2;
+	font-size: 1.9rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.md-sans {
+		font-size: 1.6vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.md-sans {
+		font-size: 2.5rem;
+		line-height: 1.28;
+	}
+}
+
+.md-sans-semi {
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.2;
+	font-size: 1.9rem;
+	font-weight: 600;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.md-sans-semi {
+		font-size: 1.6vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.md-sans-semi {
+		font-size: 2.5rem;
+		line-height: 1.28;
+	}
+}
+
+.sm-sans {
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.32;
+	font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.sm-sans {
+		font-size: 1.3vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.sm-sans {
+		line-height: 1.32;
+		font-size: 1.8rem;
+	}
+}
+
+.sm-sans-semi {
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.32;
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.sm-sans-semi {
+		font-size: 1.3vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.sm-sans-semi {
+		line-height: 1.32;
+		font-size: 1.8rem;
+	}
+}
+
+.caption-sans {
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.4;
+	text-transform: uppercase;
+	font-size: 1.3rem;
+}
+
+@media only screen and (min-width: 53.25em) {
+	.caption-sans {
+		line-height: 1.3;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.caption-sans {
+		font-size: 1vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.caption-sans {
+		line-height: 1.3;
+		font-size: 1.6rem;
+	}
+}
+
+.body-serif {
+	font-weight: 400;
+	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+	line-height: 1.333333;
+	font-size: 1.9rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.body-serif {
+		font-size: 1.5vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.body-serif {
+		font-size: 2.4rem;
+	}
+}
+
+.intro-serif {
+	font-weight: 500;
+	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+	line-height: 1.267;
+	font-size: 1.9rem;
+	margin-bottom: 0.37037rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.intro-serif {
+		font-size: 2.2vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.intro-serif {
+		font-size: 3rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.intro-serif {
+		margin-bottom: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.intro-serif {
+		margin-bottom: 1rem;
+	}
+}
+
+.body-sans {
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.3333;
+	font-size: 1.7rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.body-sans {
+		font-size: 1.25vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.body-sans {
+		font-size: 2.1rem;
+	}
+}
+
+.intro-sans {
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.267;
+	font-size: 2.1rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.intro-sans {
+		font-size: 1.9vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.intro-sans {
+		font-size: 3rem;
+	}
+}
+
+.lg-woodtype-extended {
+	font-family: "unit-gothic-717", Arial, sans-serif;
+	text-transform: uppercase;
+	line-height: 1;
+}
+
+@media only screen and (max-width: 53.15em) {
+	.lg-woodtype-extended {
+		font-size: 8vw;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.lg-woodtype-extended {
+		font-size: 2.9vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.lg-woodtype-extended {
+		font-size: 4rem;
+	}
+}
+
+.md-woodtype-extended {
+	font-family: "unit-gothic-717", Arial, sans-serif;
+	text-transform: uppercase;
+	line-height: 1;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.md-woodtype-extended {
+		font-size: 2.4vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.md-woodtype-extended {
+		font-size: 3.8rem;
+	}
+}
+
+.sm-woodtype-extended {
+	font-family: "unit-gothic-717", Arial, sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	margin-top: 0;
+	margin-bottom: 1.5rem;
+	line-height: 1.2;
+	margin-top: 0.37037rem;
+}
+
+@media only screen and (max-width: 53.15em) {
+	.sm-woodtype-extended {
+		font-size: 5vw;
+	}
+}
+
+@media only screen and (min-width: 53.25em) {
+	.sm-woodtype-extended {
+		margin-bottom: 0;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.sm-woodtype-extended {
+		font-size: 1.9vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.sm-woodtype-extended {
+		font-size: 3rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.sm-woodtype-extended {
+		margin-top: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.sm-woodtype-extended {
+		margin-top: 1rem;
+	}
+}
+
+.nav-header {
+	font-weight: 800;
+	text-transform: uppercase;
+	font-family: "acumin-pro-wide", Arial, sans-serif;
+	line-height: 1.2;
+	font-size: 1.7rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.nav-header {
+		line-height: 1.2;
+		font-size: 1vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.nav-header {
+		line-height: 1.4353;
+		font-size: 1.7rem;
+	}
+}
+
+.lg-magazine-title {
+	font-weight: 800;
+	font-family: "acumin-pro-wide", Arial, sans-serif;
+	line-height: 1.095237;
+	font-size: 2.6rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.lg-magazine-title {
+		font-size: 2.95vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.lg-magazine-title {
+		font-size: 4.2rem;
+	}
+}
+
+.md-magazine-title {
+	font-weight: 800;
+	font-family: "acumin-pro-wide", Arial, sans-serif;
+	line-height: 1.095237;
+	font-size: 1.8rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.md-magazine-title {
+		font-size: 2.4vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.md-magazine-title {
+		font-size: 3.7rem;
+	}
+}
+
+.sm-magazine-title {
+	font-weight: 700;
+	font-family: "acumin-pro-wide", Arial, sans-serif;
+	line-height: 1.2;
+	margin-bottom: 0.37037rem;
+	font-size: 1.8rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.sm-magazine-title {
+		margin-bottom: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.sm-magazine-title {
+		margin-bottom: 1rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.sm-magazine-title {
+		font-size: 1.9vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.sm-magazine-title {
+		font-size: 3rem;
+	}
+}
+
+.lg-magazine-issue-title {
+	font-weight: 700;
+	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+	line-height: 1;
+	font-size: 2.7rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.lg-magazine-issue-title {
+		font-size: 2.5vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.lg-magazine-issue-title {
+		font-size: 4.2rem;
+	}
+}
+
+.sm-magazine-issue-title {
+	font-weight: 700;
+	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+	line-height: 1;
+	font-size: 4rem;
+	margin-bottom: 0.37037rem;
+}
+
+@media only screen and (min-width: 53.25em) {
+	.sm-magazine-issue-title {
+		line-height: 1;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.sm-magazine-issue-title {
+		font-size: 2vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.sm-magazine-issue-title {
+		font-size: 3rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.sm-magazine-issue-title {
+		margin-bottom: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.sm-magazine-issue-title {
+		margin-bottom: 1rem;
+	}
+}
+
+.button-title {
+	font-weight: 800;
+	text-transform: uppercase;
+	font-family: "acumin-pro-wide", Arial, sans-serif;
+	margin-bottom: 0;
+	line-height: 1.2;
+	font-size: 1.4rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.button-title {
+		font-size: 1.1vw;
+		margin-bottom: 0.4vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.button-title {
+		font-size: 1.8rem;
+		margin-bottom: 0.5rem;
+	}
+}
+
+.category-tag-type {
+	font-weight: 300;
+	text-transform: uppercase;
+	font-family: "acumin-pro-wide", Arial, sans-serif;
+	color: #595959;
+	position: relative;
+	line-height: 1.1;
+	letter-spacing: 0.5px;
+	margin-bottom: 0.5rem;
+	font-size: 1.2rem;
+}
+
+@media only screen and (min-width: 53.25em) {
+	.category-tag-type {
+		line-height: 1.4;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.category-tag-type {
+		font-size: 1vw;
+		letter-spacing: 0.5px;
+		margin-bottom: 0.4vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.category-tag-type {
+		font-size: 1.6rem;
+		letter-spacing: 1px;
+		margin-bottom: 0;
+	}
+}
+
+.category-tag-bold-type {
+	font-weight: 300;
+	text-transform: uppercase;
+	font-family: "acumin-pro-wide", Arial, sans-serif;
+	color: #595959;
+	position: relative;
+	line-height: 1.1;
+	letter-spacing: 0.5px;
+	margin-bottom: 0.5rem;
+	font-size: 1.2rem;
+	font-weight: 700;
+}
+
+@media only screen and (min-width: 53.25em) {
+	.category-tag-bold-type {
+		line-height: 1.4;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.category-tag-bold-type {
+		font-size: 1vw;
+		letter-spacing: 0.5px;
+		margin-bottom: 0.4vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.category-tag-bold-type {
+		font-size: 1.6rem;
+		letter-spacing: 1px;
+		margin-bottom: 0;
+	}
+}
+
 /* Mixins
 -------------------------------------------------- */
 .vertically-align-grandparent {
@@ -27348,7 +28785,6 @@ figcaption {
 figcaption .credit {
 	font-style: italic;
 	margin-top: 0.25926rem;
-	margin-bottom: 0.37037rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
@@ -27360,18 +28796,6 @@ figcaption .credit {
 @media only screen and (min-width: 1560px) {
 	figcaption .credit {
 		margin-top: 0.7rem;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	figcaption .credit {
-		margin-bottom: 0.64vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	figcaption .credit {
-		margin-bottom: 1rem;
 	}
 }
 
@@ -28453,6 +29877,16 @@ video::-webkit-media-controls {
 		line-height: 1.3;
 		font-size: 1.6rem;
 	}
+}
+
+/* Helpers
+-------------------------------------------------*/
+.is-hidden {
+	display: none !important;
+}
+
+.is-visible {
+	display: block !important;
 }
 
 /* footer
@@ -33846,18 +35280,18 @@ body.magazine-page, body.magazine-article-page {
 .magazine-title-bar .issue-title {
 	color: #000;
 	background-color: #ffd51d;
-	padding-top: 2.10704rem;
+	padding-top: 1.40469rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.magazine-title-bar .issue-title {
-		padding-top: 1.92vw;
+		padding-top: 1.28vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
 	.magazine-title-bar .issue-title {
-		padding-top: 3rem;
+		padding-top: 2rem;
 	}
 }
 
@@ -33874,7 +35308,7 @@ body.magazine-page, body.magazine-article-page {
 	.magazine-title-bar .issue-title {
 		position: absolute;
 		top: 0;
-		right: 0;
+		right: 2rem;
 		bottom: 0;
 		z-index: 2;
 	}
@@ -33897,23 +35331,7 @@ body.magazine-page, body.magazine-article-page {
 }
 
 .magazine-title-bar .issue-title .title {
-	font-weight: 700;
-	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
-	line-height: 1;
-	font-size: 2.7rem;
 	margin-top: 0.14815rem;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.magazine-title-bar .issue-title .title {
-		font-size: 2.5vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.magazine-title-bar .issue-title .title {
-		font-size: 4.2rem;
-	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
@@ -40532,669 +41950,6 @@ code.hljs {
 	.type-details {
 		line-height: 1.32;
 		font-size: 1.8rem;
-	}
-}
-
-.lg-serif {
-	font-weight: 700;
-	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
-	line-height: 1;
-	font-size: 4.2rem;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.lg-serif {
-		font-size: 3.5vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.lg-serif {
-		font-size: 6.2rem;
-	}
-}
-
-.md-serif {
-	font-weight: 700;
-	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
-	line-height: 1;
-	font-size: 2.7rem;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.md-serif {
-		font-size: 2.5vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.md-serif {
-		font-size: 4.2rem;
-	}
-}
-
-.sm-serif {
-	font-weight: 700;
-	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
-	line-height: 1;
-	font-size: 2.2rem;
-	margin-bottom: 0.37037rem;
-}
-
-@media only screen and (min-width: 53.25em) {
-	.sm-serif {
-		line-height: 1.143;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.sm-serif {
-		font-size: 1.8vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.sm-serif {
-		font-size: 2.8rem;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.sm-serif {
-		margin-bottom: 0.64vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.sm-serif {
-		margin-bottom: 1rem;
-	}
-}
-
-.sm-serif-italic {
-	font-weight: 700;
-	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
-	line-height: 1;
-	font-size: 2.2rem;
-	margin-bottom: 0.37037rem;
-	font-style: italic;
-}
-
-@media only screen and (min-width: 53.25em) {
-	.sm-serif-italic {
-		line-height: 1.143;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.sm-serif-italic {
-		font-size: 1.8vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.sm-serif-italic {
-		font-size: 2.8rem;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.sm-serif-italic {
-		margin-bottom: 0.64vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.sm-serif-italic {
-		margin-bottom: 1rem;
-	}
-}
-
-.xl-sans {
-	font-weight: 300;
-	font-family: "acumin-pro", Arial, sans-serif;
-	font-size: 2.4rem;
-	line-height: 1;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.xl-sans {
-		font-size: 1.9vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.xl-sans {
-		font-size: 3.5rem;
-	}
-}
-
-.xl-sans-semi {
-	font-weight: 300;
-	font-family: "acumin-pro", Arial, sans-serif;
-	font-size: 2.4rem;
-	line-height: 1;
-	font-weight: 600;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.xl-sans-semi {
-		font-size: 1.9vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.xl-sans-semi {
-		font-size: 3.5rem;
-	}
-}
-
-.lg-sans {
-	font-weight: 300;
-	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.267;
-	font-size: 2.1rem;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.lg-sans {
-		font-size: 1.9vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.lg-sans {
-		font-size: 3rem;
-	}
-}
-
-.lg-sans-semi {
-	font-weight: 300;
-	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.267;
-	font-size: 2.1rem;
-	font-weight: 600;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.lg-sans-semi {
-		font-size: 1.9vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.lg-sans-semi {
-		font-size: 3rem;
-	}
-}
-
-.md-sans {
-	font-weight: 300;
-	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.2;
-	font-size: 1.9rem;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.md-sans {
-		font-size: 1.6vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.md-sans {
-		font-size: 2.5rem;
-		line-height: 1.28;
-	}
-}
-
-.md-sans-semi {
-	font-weight: 300;
-	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.2;
-	font-size: 1.9rem;
-	font-weight: 600;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.md-sans-semi {
-		font-size: 1.6vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.md-sans-semi {
-		font-size: 2.5rem;
-		line-height: 1.28;
-	}
-}
-
-.sm-sans {
-	font-weight: 300;
-	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.32;
-	font-size: 1.5rem;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.sm-sans {
-		font-size: 1.3vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.sm-sans {
-		line-height: 1.32;
-		font-size: 1.8rem;
-	}
-}
-
-.sm-sans-semi {
-	font-weight: 300;
-	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.32;
-	font-size: 1.5rem;
-	font-weight: 600;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.sm-sans-semi {
-		font-size: 1.3vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.sm-sans-semi {
-		line-height: 1.32;
-		font-size: 1.8rem;
-	}
-}
-
-.caption-sans {
-	font-weight: 300;
-	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.4;
-	text-transform: uppercase;
-	font-size: 1.3rem;
-}
-
-@media only screen and (min-width: 53.25em) {
-	.caption-sans {
-		line-height: 1.3;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.caption-sans {
-		font-size: 1vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.caption-sans {
-		line-height: 1.3;
-		font-size: 1.6rem;
-	}
-}
-
-.body-serif {
-	font-weight: 400;
-	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
-	line-height: 1.333333;
-	font-size: 1.9rem;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.body-serif {
-		font-size: 1.5vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.body-serif {
-		font-size: 2.4rem;
-	}
-}
-
-.intro-serif {
-	font-weight: 500;
-	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
-	line-height: 1.267;
-	font-size: 1.9rem;
-	margin-bottom: 0.37037rem;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.intro-serif {
-		font-size: 2.2vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.intro-serif {
-		font-size: 3rem;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.intro-serif {
-		margin-bottom: 0.64vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.intro-serif {
-		margin-bottom: 1rem;
-	}
-}
-
-.body-sans {
-	font-weight: 300;
-	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.3333;
-	font-size: 1.7rem;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.body-sans {
-		font-size: 1.25vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.body-sans {
-		font-size: 2.1rem;
-	}
-}
-
-.intro-sans {
-	font-weight: 300;
-	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.267;
-	font-size: 2.1rem;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.intro-sans {
-		font-size: 1.9vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.intro-sans {
-		font-size: 3rem;
-	}
-}
-
-.lg-woodtype-extended {
-	font-family: "unit-gothic-717", Arial, sans-serif;
-	text-transform: uppercase;
-	line-height: 1;
-}
-
-@media only screen and (max-width: 53.15em) {
-	.lg-woodtype-extended {
-		font-size: 8vw;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.lg-woodtype-extended {
-		font-size: 2.9vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.lg-woodtype-extended {
-		font-size: 4rem;
-	}
-}
-
-.md-woodtype-extended {
-	font-family: "unit-gothic-717", Arial, sans-serif;
-	text-transform: uppercase;
-	line-height: 1;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.md-woodtype-extended {
-		font-size: 2.4vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.md-woodtype-extended {
-		font-size: 3.8rem;
-	}
-}
-
-.sm-woodtype-extended {
-	font-family: "unit-gothic-717", Arial, sans-serif;
-	text-transform: uppercase;
-	letter-spacing: 0.5px;
-	margin-top: 0;
-	margin-bottom: 1.5rem;
-	line-height: 1.2;
-	margin-top: 0.37037rem;
-}
-
-@media only screen and (max-width: 53.15em) {
-	.sm-woodtype-extended {
-		font-size: 5vw;
-	}
-}
-
-@media only screen and (min-width: 53.25em) {
-	.sm-woodtype-extended {
-		margin-bottom: 0;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.sm-woodtype-extended {
-		font-size: 1.9vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.sm-woodtype-extended {
-		font-size: 3rem;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.sm-woodtype-extended {
-		margin-top: 0.64vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.sm-woodtype-extended {
-		margin-top: 1rem;
-	}
-}
-
-.nav-header {
-	font-weight: 800;
-	text-transform: uppercase;
-	font-family: "acumin-pro-wide", Arial, sans-serif;
-	line-height: 1.2;
-	font-size: 1.7rem;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.nav-header {
-		line-height: 1.2;
-		font-size: 1vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.nav-header {
-		line-height: 1.4353;
-		font-size: 1.7rem;
-	}
-}
-
-.lg-magazine-title {
-	font-weight: 800;
-	font-family: "acumin-pro-wide", Arial, sans-serif;
-	line-height: 1.095237;
-	font-size: 2.6rem;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.lg-magazine-title {
-		font-size: 2.95vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.lg-magazine-title {
-		font-size: 4.2rem;
-	}
-}
-
-.md-magazine-title {
-	font-weight: 800;
-	font-family: "acumin-pro-wide", Arial, sans-serif;
-	line-height: 1.095237;
-	font-size: 1.8rem;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.md-magazine-title {
-		font-size: 2.4vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.md-magazine-title {
-		font-size: 3.7rem;
-	}
-}
-
-.sm-magazine-title {
-	font-weight: 700;
-	font-family: "acumin-pro-wide", Arial, sans-serif;
-	line-height: 1.2;
-	margin-bottom: 0.37037rem;
-	font-size: 1.8rem;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.sm-magazine-title {
-		margin-bottom: 0.64vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.sm-magazine-title {
-		margin-bottom: 1rem;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.sm-magazine-title {
-		font-size: 1.9vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.sm-magazine-title {
-		font-size: 3rem;
-	}
-}
-
-.button-title {
-	font-weight: 800;
-	text-transform: uppercase;
-	font-family: "acumin-pro-wide", Arial, sans-serif;
-	margin-bottom: 0;
-	line-height: 1.2;
-	font-size: 1.4rem;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.button-title {
-		font-size: 1.1vw;
-		margin-bottom: 0.4vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.button-title {
-		font-size: 1.8rem;
-		margin-bottom: 0.5rem;
-	}
-}
-
-.category-tag-type {
-	font-weight: 300;
-	text-transform: uppercase;
-	font-family: "acumin-pro-wide", Arial, sans-serif;
-	color: #595959;
-	position: relative;
-	line-height: 1.1;
-	letter-spacing: 0.5px;
-	margin-bottom: 0.5rem;
-	font-size: 1.2rem;
-}
-
-@media only screen and (min-width: 53.25em) {
-	.category-tag-type {
-		line-height: 1.4;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.category-tag-type {
-		font-size: 1vw;
-		letter-spacing: 0.5px;
-		margin-bottom: 0.4vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.category-tag-type {
-		font-size: 1.6rem;
-		letter-spacing: 1px;
-		margin-bottom: 0;
-	}
-}
-
-.category-tag-bold-type {
-	font-weight: 300;
-	text-transform: uppercase;
-	font-family: "acumin-pro-wide", Arial, sans-serif;
-	color: #595959;
-	position: relative;
-	line-height: 1.1;
-	letter-spacing: 0.5px;
-	margin-bottom: 0.5rem;
-	font-size: 1.2rem;
-	font-weight: 700;
-}
-
-@media only screen and (min-width: 53.25em) {
-	.category-tag-bold-type {
-		line-height: 1.4;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.category-tag-bold-type {
-		font-size: 1vw;
-		letter-spacing: 0.5px;
-		margin-bottom: 0.4vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.category-tag-bold-type {
-		font-size: 1.6rem;
-		letter-spacing: 1px;
-		margin-bottom: 0;
 	}
 }
 

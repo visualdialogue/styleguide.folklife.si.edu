@@ -244,6 +244,26 @@
 			font-size: 3rem;
 		}
 	}
+	@mixin sm-magazine-issue-title {
+		font-weight: 700;
+		font-family: $serif;
+		line-height: 1;
+		// font-size: 2.2rem;
+		font-size: 4rem;
+		@include respond-to(break2) {
+			// line-height: 1.143;
+			line-height: 1;
+		}
+		@include respond-to(break2full) {
+			// font-size: 1.8vw;
+			font-size: 2vw;
+		}
+		@include respond-to(fullwidth) {
+			// font-size: 2.8rem;
+			font-size: 3rem;
+		}
+		@include margin-bottom(1);
+	}
 	@mixin button-title {
 		font-weight: 800;
 		text-transform: uppercase;
@@ -495,3 +515,44 @@
 			@include body-sans;
 		}
 	}
+
+	// type classes
+	// Serif
+	.lg-serif {@include lg-serif;}
+	.md-serif {@include md-serif;}
+	.sm-serif {@include sm-serif;}
+	.sm-serif-italic {@include sm-serif;font-style: italic;}
+
+	// Sans
+	.xl-sans {@include xl-sans;}
+	.xl-sans-semi {@include xl-sans;font-weight: 600;}
+	.lg-sans {@include lg-sans;}
+	.lg-sans-semi {@include lg-sans;font-weight: 600;}
+	.md-sans {@include md-sans;}
+	.md-sans-semi {@include md-sans;font-weight: 600;}
+	.sm-sans {@include sm-sans;}
+	.sm-sans-semi {@include sm-sans;font-weight: 600;}
+	.caption-sans {@include caption-sans;}
+
+	// body type
+	.body-serif {@include body-serif;}
+	.intro-serif {@include intro-serif;}
+	.body-sans {@include body-sans;}
+	.intro-sans {@include lg-sans;}
+
+	// Woodtype Extended
+	.lg-woodtype-extended {@include lg-woodtype-extended;}
+	.md-woodtype-extended {@include md-woodtype-extended;}
+	.sm-woodtype-extended {@include sm-woodtype-extended;@include margin-top(1);}
+	.nav-header {@include nav-header;}
+
+	// Magazine
+	.lg-magazine-title {@include lg-magazine-title;}
+	.md-magazine-title {@include md-magazine-title;}
+	.sm-magazine-title {@include sm-magazine-title;}
+	.lg-magazine-issue-title {@include md-serif;}
+	.sm-magazine-issue-title {@include sm-magazine-issue-title;}
+
+	.button-title {@include button-title;}
+	.category-tag-type {@include sans-tag;}
+	.category-tag-bold-type {@include sans-tag;font-weight: 700;}

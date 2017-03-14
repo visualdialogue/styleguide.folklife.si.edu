@@ -3,6 +3,8 @@
 	-$image = $card->image($card->thumbnail_img())
 -elseif($src = $card->image()):
 	-$image = $src
+-elseif($type == 'past-festival'):
+	-$image = $pages->find('past-festivals')->image('200x183.png')
 -else:
 	-$image = null
 -endif
