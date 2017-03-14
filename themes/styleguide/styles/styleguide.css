@@ -33846,18 +33846,18 @@ body.magazine-page, body.magazine-article-page {
 .magazine-title-bar .issue-title {
 	color: #000;
 	background-color: #ffd51d;
-	padding-top: 2.10704rem;
+	padding-top: 1.40469rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.magazine-title-bar .issue-title {
-		padding-top: 1.92vw;
+		padding-top: 1.28vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
 	.magazine-title-bar .issue-title {
-		padding-top: 3rem;
+		padding-top: 2rem;
 	}
 }
 
@@ -33874,7 +33874,7 @@ body.magazine-page, body.magazine-article-page {
 	.magazine-title-bar .issue-title {
 		position: absolute;
 		top: 0;
-		right: 0;
+		right: 2rem;
 		bottom: 0;
 		z-index: 2;
 	}
@@ -33897,23 +33897,7 @@ body.magazine-page, body.magazine-article-page {
 }
 
 .magazine-title-bar .issue-title .title {
-	font-weight: 700;
-	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
-	line-height: 1;
-	font-size: 2.7rem;
 	margin-top: 0.14815rem;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.magazine-title-bar .issue-title .title {
-		font-size: 2.5vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.magazine-title-bar .issue-title .title {
-		font-size: 4.2rem;
-	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
