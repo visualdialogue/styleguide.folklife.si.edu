@@ -1020,15 +1020,9 @@ $(document).ready(function () {
 
 		// get position of image to center captions after slider inits
 		$remodalGallery.on('init', function(slick) {
-			// $('.slick-arrow').attr('tabindex', '0'); // add right arrow
-			// $('.banner-slide').attr('tabindex', '-1'); // skip banner slideshow because no effect on enter
-			// console.log('gallery built');
 			var imageOffset = $('.slick-active img').offset();
-			// var doublePadding = parseInt($('.remodal-gallery .slick-slide').css('padding-left')) * 2;
-			console.log('imageOffset.left', imageOffset.left);
-			// console.log('doublePadding', doublePadding);
-			// set caption padding to align with image
-			$('.gallery-caption').css('padding-left', imageOffset.left + 12);
+			var magicOffset = 12;
+			$('.gallery-caption').css('padding-left', imageOffset.left + magicOffset);
 		});
 
 		// initiate slick gallery on images
