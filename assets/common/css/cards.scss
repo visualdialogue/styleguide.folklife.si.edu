@@ -206,6 +206,7 @@ a.details {
 	  }
 	}
 	.remodal-wrapper {
+		padding: 0;
 		@include padding-top(6);
 	}
 	.remodal-is-gallery {
@@ -214,7 +215,8 @@ a.details {
 		}
 	}
 	.remodal-overlay {
-	  background: rgba(0, 0, 0, 0.8) none repeat scroll 0% 0%; // lighter for toby
+	  // background: rgba(0, 0, 0, 0.8) none repeat scroll 0% 0%; // lighter for toby
+	  background: rgba(0, 0, 0, 0.86) none repeat scroll 0% 0%; // lighter for toby
 	  // background: rgba(0, 0, 0, 0.95) none repeat scroll 0% 0%; // darker for image gallery
 	}
 	.remodal-close {

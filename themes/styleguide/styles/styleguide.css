@@ -12208,6 +12208,7 @@ video::-webkit-media-controls {
 .remodal-captions .remodal-description {
 	padding: 1.40469rem;
 	padding-bottom: 0 !important;
+	padding-left: 0 !important;
 	color: white;
 }
 
@@ -13395,6 +13396,7 @@ body {
 }
 
 .remodal-wrapper {
+	padding: 0;
 	padding-top: 4.21408rem;
 }
 
@@ -13417,7 +13419,7 @@ body {
 }
 
 .remodal-overlay {
-	background: rgba(0, 0, 0, 0.8) none repeat scroll 0% 0%;
+	background: rgba(0, 0, 0, 0.86) none repeat scroll 0% 0%;
 }
 
 .remodal-close {
@@ -29819,6 +29821,7 @@ video::-webkit-media-controls {
 .remodal-captions .remodal-description {
 	padding: 1.40469rem;
 	padding-bottom: 0 !important;
+	padding-left: 0 !important;
 	color: white;
 }
 
@@ -32347,6 +32350,7 @@ body {
 }
 
 .remodal-wrapper {
+	padding: 0;
 	padding-top: 4.21408rem;
 }
 
@@ -32369,7 +32373,7 @@ body {
 }
 
 .remodal-overlay {
-	background: rgba(0, 0, 0, 0.8) none repeat scroll 0% 0%;
+	background: rgba(0, 0, 0, 0.86) none repeat scroll 0% 0%;
 }
 
 .remodal-close {

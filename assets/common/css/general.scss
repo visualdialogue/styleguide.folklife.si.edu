@@ -1337,6 +1337,7 @@
 		.remodal-description {
 			@include padding(2);			
 			padding-bottom: 0 !important;
+			padding-left: 0 !important;
 			color: white;
 			a:hover {
 				color: $black30;
