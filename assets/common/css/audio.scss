@@ -571,17 +571,25 @@ $horizontalMobilePlayHeight: 8vw;
 /* Audio Playlist controls
 -------------------------------------------------- */
 	.playlist-audio-card:not(.horizontal-audio-card-third) {
-		img {		
-			@include respond-to(break2) {
-				@include width(32);
-				@include height(32);	
-			}
-		}
+		// img {		
+		// 	@include respond-to(break2) {
+		// 		@include width(48);
+		// 		@include height(48);	
+		// 	}
+		// }
 		.details-inner {
 			// min-height: 17.5rem;
 			@include padding-top(2);
 			@include min-height(22.5);
 		}
+	}
+	.playlist-audio-card.col-sm-3:not(.horizontal-audio-card-third) {
+		// img {		
+		// 	@include respond-to(break2) {
+		// 		@include width(32);
+		// 		@include height(32);	
+		// 	}
+		// }
 	}
 	.playlist-audio {
 		// override mejs css

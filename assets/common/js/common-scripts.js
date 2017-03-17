@@ -707,11 +707,12 @@ $(document).ready(function () {
 		$remodal.addClass('remodal-gallery-is-open remodal-image-gallery');
 
 		// get position of image to center captions after slider inits
-		$remodalGallery.on('init', function(slick) {
-			var imageOffset = $('.slick-active img').offset();
-			var magicOffset = 12;
-			$('.gallery-caption').css('padding-left', imageOffset.left + magicOffset);
-		});
+		// DOESNT WORK WITH LARGE CAPTIONS
+		// $remodalGallery.on('init', function(slick) {
+		// 	var imageOffset = $('.slick-active img').offset();
+		// 	var magicOffset = 12;
+		// 	$('.gallery-caption').css('padding-left', imageOffset.left + magicOffset);
+		// });
 
 		// initiate slick gallery on images
 		$remodalGallery.slick({

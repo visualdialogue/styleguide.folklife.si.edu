@@ -14,7 +14,7 @@
 		}
 	}
 	/* inspired by links on medium.com */
-	.content a {
+	.content a, .remodal-description a {
 		color: $copy;
 		// underline effect
 		border-bottom: 3px solid $hover;
@@ -24,6 +24,13 @@
 		&:hover {
 			background: $hover;
 			color: $copy;
+		}
+	}
+	.remodal-description a {
+		border-bottom: 1.5px solid $hover;
+		box-shadow: inset 0 -2px 0 $hover;
+		&:hover {
+			background: transparent;
 		}
 	}
 	a.high, .high, .video {

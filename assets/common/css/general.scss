@@ -1335,18 +1335,19 @@
 			}
 		}
 		.remodal-description {
-			@include padding(2);			
-			padding-bottom: 0 !important;
-			padding-left: 0 !important;
 			color: white;
+			@include padding-left(4);
+			@include padding-right(4);
 			a:hover {
 				color: $black30;
 			}
 		}
 		.remodal-credit {
-			@include padding(2);
 			color: $black30;
 			@include caption-sans;
+			@include padding-top(2);
+			@include padding-left(4);
+			@include padding-right(4);
 		}
 	}
 

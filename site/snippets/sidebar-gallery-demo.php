@@ -91,8 +91,8 @@
 	<!--gallery captions-->
 	<ul class="gallery-list-captions">
 		<div class="gallery-caption">
-			<div class="remodal-description"><a href="http://www.folkways.si.edu/lullabies-and-childrens-songs/world/music/album/smithsonian" target="_blank">Lullabies and children's songs.</a></div>
-			<!-- <div class="remodal-credit">Photo by Josué Castilleja, Ralph Rinzler Folklife Archives</div> -->
+			<div class="remodal-description"><a href="http://www.folkways.si.edu/lullabies-and-childrens-songs/world/music/album/smithsonian" target="_blank"><a href="/explore/sounds/come-bien-eat-right">Lullabies and children's songs. </a>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+			<div class="remodal-credit">Photo by Josué Castilleja, Ralph Rinzler Folklife Archives</div>
 		</div>
 		<div class="gallery-caption">
 			<div class="remodal-description"><a href="http://www.folkways.si.edu/david-nzomo/childrens-songs-from-kenya/world/music/album/smithsonian" target="_blank">Chidren’s songs from Kenya</a></div>

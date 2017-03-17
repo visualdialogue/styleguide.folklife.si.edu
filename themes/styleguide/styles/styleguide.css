@@ -8044,7 +8044,7 @@ a:hover {
 }
 
 /* inspired by links on medium.com */
-.content a {
+.content a, .remodal-description a {
 	color: #333333;
 	border-bottom: 3px solid #fddd6b;
 	box-shadow: inset 0 -4px 0 #fddd6b;
@@ -8052,9 +8052,18 @@ a:hover {
 	transition: background 0.15s cubic-bezier(0.33, 0.66, 0.66, 1);
 }
 
-.content a:hover {
+.content a:hover, .remodal-description a:hover {
 	background: #fddd6b;
 	color: #333333;
+}
+
+.remodal-description a {
+	border-bottom: 1.5px solid #fddd6b;
+	box-shadow: inset 0 -2px 0 #fddd6b;
+}
+
+.remodal-description a:hover {
+	background: transparent;
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -12206,21 +12215,32 @@ video::-webkit-media-controls {
 }
 
 .remodal-captions .remodal-description {
-	padding: 1.40469rem;
-	padding-bottom: 0 !important;
-	padding-left: 0 !important;
 	color: white;
+	padding-left: 2.80938rem;
+	padding-right: 2.80938rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.remodal-captions .remodal-description {
-		padding: 1.28vw;
+		padding-left: 2.56vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
 	.remodal-captions .remodal-description {
-		padding: 2rem;
+		padding-left: 4rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.remodal-captions .remodal-description {
+		padding-right: 2.56vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.remodal-captions .remodal-description {
+		padding-right: 4rem;
 	}
 }
 
@@ -12229,25 +12249,15 @@ video::-webkit-media-controls {
 }
 
 .remodal-captions .remodal-credit {
-	padding: 1.40469rem;
 	color: #b3b3b3;
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
 	line-height: 1.4;
 	text-transform: uppercase;
 	font-size: 1.3rem;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.remodal-captions .remodal-credit {
-		padding: 1.28vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.remodal-captions .remodal-credit {
-		padding: 2rem;
-	}
+	padding-top: 1.40469rem;
+	padding-left: 2.80938rem;
+	padding-right: 2.80938rem;
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -12266,6 +12276,42 @@ video::-webkit-media-controls {
 	.remodal-captions .remodal-credit {
 		line-height: 1.3;
 		font-size: 1.6rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.remodal-captions .remodal-credit {
+		padding-top: 1.28vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.remodal-captions .remodal-credit {
+		padding-top: 2rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.remodal-captions .remodal-credit {
+		padding-left: 2.56vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.remodal-captions .remodal-credit {
+		padding-left: 4rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.remodal-captions .remodal-credit {
+		padding-right: 2.56vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.remodal-captions .remodal-credit {
+		padding-right: 4rem;
 	}
 }
 
@@ -17271,37 +17317,6 @@ body {
 
 /* Audio Playlist controls
 -------------------------------------------------- */
-@media only screen and (min-width: 53.25em) {
-	.playlist-audio-card:not(.horizontal-audio-card-third) img {
-		width: 22.47507rem;
-		height: 22.47507rem;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (min-width: 53.25em) and (max-width: 1559px) {
-	.playlist-audio-card:not(.horizontal-audio-card-third) img {
-		width: 20.48vw;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (min-width: 1560px) {
-	.playlist-audio-card:not(.horizontal-audio-card-third) img {
-		width: 32rem;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (min-width: 53.25em) and (max-width: 1559px) {
-	.playlist-audio-card:not(.horizontal-audio-card-third) img {
-		height: 20.48vw;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (min-width: 1560px) {
-	.playlist-audio-card:not(.horizontal-audio-card-third) img {
-		height: 32rem;
-	}
-}
-
 .playlist-audio-card:not(.horizontal-audio-card-third) .details-inner {
 	padding-top: 1.40469rem;
 	min-height: 15.80278rem;
@@ -25657,7 +25672,7 @@ a:hover {
 }
 
 /* inspired by links on medium.com */
-.content a {
+.content a, .remodal-description a {
 	color: #333333;
 	border-bottom: 3px solid #c0d5e7;
 	box-shadow: inset 0 -4px 0 #c0d5e7;
@@ -25665,9 +25680,18 @@ a:hover {
 	transition: background 0.15s cubic-bezier(0.33, 0.66, 0.66, 1);
 }
 
-.content a:hover {
+.content a:hover, .remodal-description a:hover {
 	background: #c0d5e7;
 	color: #333333;
+}
+
+.remodal-description a {
+	border-bottom: 1.5px solid #c0d5e7;
+	box-shadow: inset 0 -2px 0 #c0d5e7;
+}
+
+.remodal-description a:hover {
+	background: transparent;
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -29819,21 +29843,32 @@ video::-webkit-media-controls {
 }
 
 .remodal-captions .remodal-description {
-	padding: 1.40469rem;
-	padding-bottom: 0 !important;
-	padding-left: 0 !important;
 	color: white;
+	padding-left: 2.80938rem;
+	padding-right: 2.80938rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.remodal-captions .remodal-description {
-		padding: 1.28vw;
+		padding-left: 2.56vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
 	.remodal-captions .remodal-description {
-		padding: 2rem;
+		padding-left: 4rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.remodal-captions .remodal-description {
+		padding-right: 2.56vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.remodal-captions .remodal-description {
+		padding-right: 4rem;
 	}
 }
 
@@ -29842,25 +29877,15 @@ video::-webkit-media-controls {
 }
 
 .remodal-captions .remodal-credit {
-	padding: 1.40469rem;
 	color: #b3b3b3;
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
 	line-height: 1.4;
 	text-transform: uppercase;
 	font-size: 1.3rem;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.remodal-captions .remodal-credit {
-		padding: 1.28vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.remodal-captions .remodal-credit {
-		padding: 2rem;
-	}
+	padding-top: 1.40469rem;
+	padding-left: 2.80938rem;
+	padding-right: 2.80938rem;
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -29879,6 +29904,42 @@ video::-webkit-media-controls {
 	.remodal-captions .remodal-credit {
 		line-height: 1.3;
 		font-size: 1.6rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.remodal-captions .remodal-credit {
+		padding-top: 1.28vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.remodal-captions .remodal-credit {
+		padding-top: 2rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.remodal-captions .remodal-credit {
+		padding-left: 2.56vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.remodal-captions .remodal-credit {
+		padding-left: 4rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.remodal-captions .remodal-credit {
+		padding-right: 2.56vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.remodal-captions .remodal-credit {
+		padding-right: 4rem;
 	}
 }
 
@@ -34808,37 +34869,6 @@ body {
 
 /* Audio Playlist controls
 -------------------------------------------------- */
-@media only screen and (min-width: 53.25em) {
-	.playlist-audio-card:not(.horizontal-audio-card-third) img {
-		width: 22.47507rem;
-		height: 22.47507rem;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (min-width: 53.25em) and (max-width: 1559px) {
-	.playlist-audio-card:not(.horizontal-audio-card-third) img {
-		width: 20.48vw;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (min-width: 1560px) {
-	.playlist-audio-card:not(.horizontal-audio-card-third) img {
-		width: 32rem;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (min-width: 53.25em) and (max-width: 1559px) {
-	.playlist-audio-card:not(.horizontal-audio-card-third) img {
-		height: 20.48vw;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (min-width: 1560px) {
-	.playlist-audio-card:not(.horizontal-audio-card-third) img {
-		height: 32rem;
-	}
-}
-
 .playlist-audio-card:not(.horizontal-audio-card-third) .details-inner {
 	padding-top: 1.40469rem;
 	min-height: 15.80278rem;
