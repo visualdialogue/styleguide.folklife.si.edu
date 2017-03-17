@@ -580,6 +580,7 @@ a.details {
 			}
 		}
 	}
+
 	// horizontal audio card border	
 	.full-border-horizontal-card {
 		.details-inner {
@@ -596,6 +597,13 @@ a.details {
 			bottom:0;
 			left: 0;
 		}
+	}
+	// color override
+	.black-border .details-inner, .black-border:before {
+		border-color: black;
+	}
+	.white-border .details-inner, .white-border:before {
+		border-color: white;
 	}
 	.magazine-article-page {
 		.full-border-horizontal-card {

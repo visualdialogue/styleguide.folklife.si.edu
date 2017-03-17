@@ -14492,6 +14492,14 @@ body {
 	left: 0;
 }
 
+.black-border .details-inner, .black-border:before {
+	border-color: black;
+}
+
+.white-border .details-inner, .white-border:before {
+	border-color: white;
+}
+
 .magazine-article-page .full-border-horizontal-card:before {
 	border-color: #666666;
 }
@@ -16872,6 +16880,7 @@ body {
 }
 
 .horizontal-audio-card-third .image {
+	z-index: 2;
 	padding-right: 0;
 }
 
@@ -17087,8 +17096,8 @@ body {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
-		font-size: 2vw;
-		padding-left: 0.1vw;
+		font-size: 1.8vw;
+		padding-left: 0.05vw;
 	}
 }
 
@@ -17108,7 +17117,7 @@ body {
 
 @media only screen and (min-width: 62em) {
 	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-time-rail {
-		width: 81% !important;
+		width: 80.5% !important;
 	}
 }
 
@@ -17354,18 +17363,18 @@ body {
 
 .playlist-controls {
 	position: absolute;
-	right: -0.37037rem;
+	right: -0.25926rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.playlist-controls {
-		right: -0.64vw;
+		right: -0.448vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
 	.playlist-controls {
-		right: -1rem;
+		right: -0.7rem;
 	}
 }
 
@@ -33475,6 +33484,14 @@ body {
 	left: 0;
 }
 
+.black-border .details-inner, .black-border:before {
+	border-color: black;
+}
+
+.white-border .details-inner, .white-border:before {
+	border-color: white;
+}
+
 .magazine-article-page .full-border-horizontal-card:before {
 	border-color: #666666;
 }
@@ -34438,6 +34455,7 @@ body {
 }
 
 .horizontal-audio-card-third .image {
+	z-index: 2;
 	padding-right: 0;
 }
 
@@ -34653,8 +34671,8 @@ body {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
-		font-size: 2vw;
-		padding-left: 0.1vw;
+		font-size: 1.8vw;
+		padding-left: 0.05vw;
 	}
 }
 
@@ -34674,7 +34692,7 @@ body {
 
 @media only screen and (min-width: 62em) {
 	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-time-rail {
-		width: 81% !important;
+		width: 80.5% !important;
 	}
 }
 
@@ -34920,18 +34938,18 @@ body {
 
 .playlist-controls {
 	position: absolute;
-	right: -0.37037rem;
+	right: -0.25926rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.playlist-controls {
-		right: -0.64vw;
+		right: -0.448vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
 	.playlist-controls {
-		right: -1rem;
+		right: -0.7rem;
 	}
 }
 
@@ -36197,6 +36215,64 @@ body.magazine-page, body.magazine-article-page {
 	.magazine-article-page .magazine-article-top .title {
 		font-size: 4.6rem;
 		line-height: 1;
+	}
+}
+
+.magazine-article-page .magazine-article-top .subtitle {
+	font-weight: 700;
+	font-family: "acumin-pro-wide", Arial, sans-serif;
+	line-height: 1.2;
+	margin-bottom: 0.37037rem;
+	font-size: 1.8rem;
+	padding-right: 2.80938rem;
+	margin-top: 0.37037rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.magazine-article-page .magazine-article-top .subtitle {
+		margin-bottom: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.magazine-article-page .magazine-article-top .subtitle {
+		margin-bottom: 1rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.magazine-article-page .magazine-article-top .subtitle {
+		font-size: 1.9vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.magazine-article-page .magazine-article-top .subtitle {
+		font-size: 3rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.magazine-article-page .magazine-article-top .subtitle {
+		padding-right: 2.56vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.magazine-article-page .magazine-article-top .subtitle {
+		padding-right: 4rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.magazine-article-page .magazine-article-top .subtitle {
+		margin-top: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.magazine-article-page .magazine-article-top .subtitle {
+		margin-top: 1rem;
 	}
 }
 
