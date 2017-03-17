@@ -1057,8 +1057,10 @@ $(document).ready(function () {
 
 		console.log('this.player :', this.mejsPlayer);
 		this.cover = $audioCard.find('.playlist-cover');
+		this.coverLink = $audioCard.find('.image a');
 		this.title = $audioCard.find('.playlist-title');
 		this.artist = $audioCard.find('#playlist-artist');
+		this.trackLink = $audioCard.find('.title');
 		// this.audioElement = $('#playlist-audio');
 		// this.audioElement = $audioCard.find('.playlist-audio');
 		this.audioElement = this.player.$media;
@@ -1073,8 +1075,12 @@ $(document).ready(function () {
 		* @param track is album json data
 		**********/
 		this.updatePlayer = function(track) {
+			console.log('track', track);
 			// console.log($playlist.audioElement);
 			this.cover.attr('src', track.cover); // update album cover
+			this.coverLink.attr('href', track.url); // update album cover
+			this.trackLink.attr('href', track.url); // update album cover
+			console.log('this.coverLink', this.coverLink);
 			this.title.html(track.title); // update album title
 			this.artist.html(track.artist); // update album artist
 			this.audioElement[0].setSrc(track.mp3); // set new track to play

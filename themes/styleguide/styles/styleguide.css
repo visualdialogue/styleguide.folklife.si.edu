@@ -16507,19 +16507,19 @@ body {
 	position: absolute;
 	right: 0;
 	bottom: 0;
-	width: 2.10704rem;
+	width: 2.80938rem;
 	height: 0.84282rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.mejs-container .mejs-controls .mejs-horizontal-volume-slider {
-		width: 1.92vw;
+		width: 2.56vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
 	.mejs-container .mejs-controls .mejs-horizontal-volume-slider {
-		width: 3rem;
+		width: 4rem;
 	}
 }
 
@@ -16544,18 +16544,18 @@ body {
 
 .mejs-container .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total, .mejs-container .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
 	top: auto;
-	width: 2.10704rem;
+	width: 2.80938rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.mejs-container .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total, .mejs-container .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
-		width: 1.92vw;
+		width: 2.56vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
 	.mejs-container .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total, .mejs-container .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
-		width: 3rem;
+		width: 4rem;
 	}
 }
 
@@ -16571,8 +16571,8 @@ body {
 @media only screen and (max-width: 53.15em) {
 	.mejs-container .mejs-controls .mejs-time-rail, .tall-audio-multi-track-card .track-title {
 		top: 2vw;
-		top: 1.5vw;
-		width: 65% !important;
+		top: 1.1vw;
+		width: 86% !important;
 		left: 12vw;
 	}
 }
@@ -16580,13 +16580,14 @@ body {
 @media only screen and (min-width: 40em) {
 	.mejs-container .mejs-controls .mejs-time-rail, .tall-audio-multi-track-card .track-title {
 		top: 1rem;
-		width: 70.25% !important;
+		width: 87% !important;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.mejs-container .mejs-controls .mejs-time-rail, .tall-audio-multi-track-card .track-title {
-		width: 66.25% !important;
+		top: 0.5rem;
+		width: 76% !important;
 		left: 5.5vw;
 	}
 }
@@ -16594,7 +16595,7 @@ body {
 @media only screen and (min-width: 62em) {
 	.mejs-container .mejs-controls .mejs-time-rail, .tall-audio-multi-track-card .track-title {
 		top: 20%;
-		width: 68.5% !important;
+		width: 77.5% !important;
 	}
 }
 
@@ -16602,7 +16603,7 @@ body {
 	.mejs-container .mejs-controls .mejs-time-rail, .tall-audio-multi-track-card .track-title {
 		top: 1.5rem;
 		left: 8.4rem;
-		width: 69.75% !important;
+		width: 79% !important;
 	}
 }
 
@@ -17353,18 +17354,18 @@ body {
 
 .playlist-controls {
 	position: absolute;
-	right: -0.18519rem;
+	right: -0.37037rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.playlist-controls {
-		right: -0.32vw;
+		right: -0.64vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
 	.playlist-controls {
-		right: -0.5rem;
+		right: -1rem;
 	}
 }
 
@@ -17377,7 +17378,7 @@ body {
 
 @media only screen and (min-width: 53.25em) {
 	.playlist-controls {
-		top: 0;
+		top: -0.2rem;
 	}
 }
 
@@ -17488,6 +17489,7 @@ body {
 
 .horizontal-audio-card-playlist-thin .mejs-controls .mejs-horizontal-volume-slider {
 	bottom: 0.18519rem;
+	right: 0.55556rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
@@ -17499,6 +17501,18 @@ body {
 @media only screen and (min-width: 1560px) {
 	.horizontal-audio-card-playlist-thin .mejs-controls .mejs-horizontal-volume-slider {
 		bottom: 0.5rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-playlist-thin .mejs-controls .mejs-horizontal-volume-slider {
+		right: 0.96vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-playlist-thin .mejs-controls .mejs-horizontal-volume-slider {
+		right: 1.5rem;
 	}
 }
 
@@ -34059,19 +34073,19 @@ body {
 	position: absolute;
 	right: 0;
 	bottom: 0;
-	width: 2.10704rem;
+	width: 2.80938rem;
 	height: 0.84282rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.mejs-container .mejs-controls .mejs-horizontal-volume-slider {
-		width: 1.92vw;
+		width: 2.56vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
 	.mejs-container .mejs-controls .mejs-horizontal-volume-slider {
-		width: 3rem;
+		width: 4rem;
 	}
 }
 
@@ -34096,18 +34110,18 @@ body {
 
 .mejs-container .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total, .mejs-container .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
 	top: auto;
-	width: 2.10704rem;
+	width: 2.80938rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.mejs-container .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total, .mejs-container .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
-		width: 1.92vw;
+		width: 2.56vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
 	.mejs-container .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total, .mejs-container .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
-		width: 3rem;
+		width: 4rem;
 	}
 }
 
@@ -34123,8 +34137,8 @@ body {
 @media only screen and (max-width: 53.15em) {
 	.mejs-container .mejs-controls .mejs-time-rail, .tall-audio-multi-track-card .track-title {
 		top: 2vw;
-		top: 1.5vw;
-		width: 65% !important;
+		top: 1.1vw;
+		width: 86% !important;
 		left: 12vw;
 	}
 }
@@ -34132,13 +34146,14 @@ body {
 @media only screen and (min-width: 40em) {
 	.mejs-container .mejs-controls .mejs-time-rail, .tall-audio-multi-track-card .track-title {
 		top: 1rem;
-		width: 70.25% !important;
+		width: 87% !important;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.mejs-container .mejs-controls .mejs-time-rail, .tall-audio-multi-track-card .track-title {
-		width: 66.25% !important;
+		top: 0.5rem;
+		width: 76% !important;
 		left: 5.5vw;
 	}
 }
@@ -34146,7 +34161,7 @@ body {
 @media only screen and (min-width: 62em) {
 	.mejs-container .mejs-controls .mejs-time-rail, .tall-audio-multi-track-card .track-title {
 		top: 20%;
-		width: 68.5% !important;
+		width: 77.5% !important;
 	}
 }
 
@@ -34154,7 +34169,7 @@ body {
 	.mejs-container .mejs-controls .mejs-time-rail, .tall-audio-multi-track-card .track-title {
 		top: 1.5rem;
 		left: 8.4rem;
-		width: 69.75% !important;
+		width: 79% !important;
 	}
 }
 
@@ -34905,18 +34920,18 @@ body {
 
 .playlist-controls {
 	position: absolute;
-	right: -0.18519rem;
+	right: -0.37037rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.playlist-controls {
-		right: -0.32vw;
+		right: -0.64vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
 	.playlist-controls {
-		right: -0.5rem;
+		right: -1rem;
 	}
 }
 
@@ -34929,7 +34944,7 @@ body {
 
 @media only screen and (min-width: 53.25em) {
 	.playlist-controls {
-		top: 0;
+		top: -0.2rem;
 	}
 }
 
@@ -35040,6 +35055,7 @@ body {
 
 .horizontal-audio-card-playlist-thin .mejs-controls .mejs-horizontal-volume-slider {
 	bottom: 0.18519rem;
+	right: 0.55556rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
@@ -35051,6 +35067,18 @@ body {
 @media only screen and (min-width: 1560px) {
 	.horizontal-audio-card-playlist-thin .mejs-controls .mejs-horizontal-volume-slider {
 		bottom: 0.5rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-playlist-thin .mejs-controls .mejs-horizontal-volume-slider {
+		right: 0.96vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-playlist-thin .mejs-controls .mejs-horizontal-volume-slider {
+		right: 1.5rem;
 	}
 }
 
