@@ -75,8 +75,9 @@
 		@include margin-bottom(2.5);
 	}
 	.intro-copy {
-		@include sm-serif;
-		line-height: 1.35 !important;
+		// @include sm-serif;
+		@include intro-serif;
+		// line-height: 1.35 !important;
 		font-weight: 500;
 	}
 	.intro-section {

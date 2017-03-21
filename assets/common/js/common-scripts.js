@@ -1371,7 +1371,7 @@ $(document).ready(function () {
 	$collapse.collapse()
 	// more link and arrow changer
 	// var $more_link = $('.accordian-toggle').find('.more-link-text');
-	$('.more-link').on('click', function() {
+	$('.more-link-will-change').on('click', function() {
 		var text = $(this).find('.more-link-text');
 		if(text.html() == 'more') {
 			text.html('less');

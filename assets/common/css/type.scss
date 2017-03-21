@@ -325,7 +325,8 @@
 	@mixin intro-serif {
 		font-weight: 500;
 		font-family: $serif;
-		line-height: 1.267; // 38px
+		// line-height: 1.267; // 38px
+		line-height: 1.3333; // 40px updated 2017.03.21
 		font-size: 1.9rem;
 		@include respond-to(break2full) {
 			font-size: 2.2vw;
