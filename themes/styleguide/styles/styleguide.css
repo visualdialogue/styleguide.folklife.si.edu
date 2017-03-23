@@ -8740,7 +8740,7 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
 	}
 }
 
-.header-nav-main-item a:focus, .header-nav-sub-item a:focus {
+.header-nav-main-item a:focus, .header-nav-sub-item a:focus, .folkways-nav a:focus {
 	outline: 1px auto gray;
 }
 
@@ -27068,7 +27068,7 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
 	}
 }
 
-.header-nav-main-item a:focus, .header-nav-sub-item a:focus {
+.header-nav-main-item a:focus, .header-nav-sub-item a:focus, .folkways-nav a:focus {
 	outline: 1px auto gray;
 }
 

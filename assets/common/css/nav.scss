@@ -412,7 +412,7 @@
 		@include padding-top(3.4);
 		@include padding-bottom(2.6);
 	}
-	.header-nav-main-item, .header-nav-sub-item {
+	.header-nav-main-item, .header-nav-sub-item, .folkways-nav {
 		a:focus {
 			@include outline($black50);
 		}
