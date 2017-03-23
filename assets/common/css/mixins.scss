@@ -10,7 +10,7 @@
   }
 
   // outlines
-  @mixin outline($color: white) {
+  @mixin outline($color: $black50) {
   	// outline: 1px auto $black05;
   	// outline: 1px auto $black20;
   	outline: 1px auto $color;

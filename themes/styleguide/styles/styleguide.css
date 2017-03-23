@@ -7412,7 +7412,7 @@ body {
 }
 
 .accessibility-pause-button:focus {
-	outline: 1px auto white;
+	outline: 1px auto gray;
 }
 
 .pause-button, .mute-button {
@@ -7602,7 +7602,7 @@ body {
 }
 
 .main-nav-icon:focus {
-	outline: 1px auto white;
+	outline: 1px auto gray;
 }
 
 .social-icons {
@@ -8463,10 +8463,6 @@ a:hover {
 	display: block;
 }
 
-.logo a:focus {
-	outline: 1px auto white;
-}
-
 .one-line-logos, .block-logos {
 	-webkit-transition: opacity 0.3s ease;
 	-moz-transition: opacity 0.3s ease;
@@ -8740,10 +8736,6 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
 	}
 }
 
-.header-nav-main-item a:focus, .header-nav-sub-item a:focus, .folkways-nav a:focus {
-	outline: 1px auto gray;
-}
-
 .header-nav, .footer-nav {
 	position: relative;
 }
@@ -8994,7 +8986,7 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
 /* Accessibility, from https://accessibility.oit.ncsu.edu/it-accessibility-at-nc-state/developers/accessibility-handbook/mouse-and-keyboard-events/skip-to-main-content/
 -------------------------------------------------- */
 a:focus {
-	outline: 1px auto white;
+	outline: 1px auto gray;
 }
 
 a.skip-main {
@@ -11504,7 +11496,7 @@ figcaption.minus-sign:before {
 }
 
 .dropdown:focus, .filter-button:focus {
-	outline: 1px auto white;
+	outline: 1px auto gray;
 }
 
 .first-level-dropdown {
@@ -11933,7 +11925,7 @@ figcaption.minus-sign:before {
 /* Slideshow/Gallery arrows, from Folklife homepage banner
 -------------------------------------------------*/
 .slick-arrow:focus, .slick-dots button:focus {
-	outline: 1px auto white;
+	outline: 1px auto gray;
 }
 
 .slick-dots li.slick-active button:before {
@@ -25740,7 +25732,7 @@ body {
 }
 
 .accessibility-pause-button:focus {
-	outline: 1px auto white;
+	outline: 1px auto gray;
 }
 
 .pause-button, .mute-button {
@@ -25930,7 +25922,7 @@ body {
 }
 
 .main-nav-icon:focus {
-	outline: 1px auto white;
+	outline: 1px auto gray;
 }
 
 .social-icons {
@@ -26791,10 +26783,6 @@ a:hover {
 	display: block;
 }
 
-.logo a:focus {
-	outline: 1px auto white;
-}
-
 .one-line-logos, .block-logos {
 	-webkit-transition: opacity 0.3s ease;
 	-moz-transition: opacity 0.3s ease;
@@ -27068,10 +27056,6 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
 	}
 }
 
-.header-nav-main-item a:focus, .header-nav-sub-item a:focus, .folkways-nav a:focus {
-	outline: 1px auto gray;
-}
-
 .header-nav, .footer-nav {
 	position: relative;
 }
@@ -27322,7 +27306,7 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
 /* Accessibility, from https://accessibility.oit.ncsu.edu/it-accessibility-at-nc-state/developers/accessibility-handbook/mouse-and-keyboard-events/skip-to-main-content/
 -------------------------------------------------- */
 a:focus {
-	outline: 1px auto white;
+	outline: 1px auto gray;
 }
 
 a.skip-main {
@@ -29832,7 +29816,7 @@ figcaption.minus-sign:before {
 }
 
 .dropdown:focus, .filter-button:focus {
-	outline: 1px auto white;
+	outline: 1px auto gray;
 }
 
 .first-level-dropdown {
@@ -30261,7 +30245,7 @@ figcaption.minus-sign:before {
 /* Slideshow/Gallery arrows, from Folklife homepage banner
 -------------------------------------------------*/
 .slick-arrow:focus, .slick-dots button:focus {
-	outline: 1px auto white;
+	outline: 1px auto gray;
 }
 
 .slick-dots li.slick-active button:before {

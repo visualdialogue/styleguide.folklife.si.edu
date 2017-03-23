@@ -204,9 +204,9 @@
 		top:0;
 		a {
 			display: block;
-			&:focus {
-				@include outline;
-			}
+			// &:focus {
+			// 	@include outline;
+			// }
 		}
 	}
 	// CSS only logo transition
@@ -412,11 +412,11 @@
 		@include padding-top(3.4);
 		@include padding-bottom(2.6);
 	}
-	.header-nav-main-item, .header-nav-sub-item, .folkways-nav {
-		a:focus {
-			@include outline($black50);
-		}
-	}
+	// .header-nav-main-item, .header-nav-sub-item, .folkways-nav {
+	// 	a:focus {
+	// 		@include outline($black50);
+	// 	}
+	// }
 
 	.header-nav, .footer-nav {
 		// keep above outside click div
