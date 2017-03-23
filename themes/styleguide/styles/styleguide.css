@@ -8740,8 +8740,8 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
 	}
 }
 
-.header-nav-sub-item:focus {
-	outline: 1px auto white;
+.header-nav-main-item a:focus, .header-nav-sub-item a:focus {
+	outline: 1px auto gray;
 }
 
 .header-nav, .footer-nav {
@@ -27068,8 +27068,8 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
 	}
 }
 
-.header-nav-sub-item:focus {
-	outline: 1px auto white;
+.header-nav-main-item a:focus, .header-nav-sub-item a:focus {
+	outline: 1px auto gray;
 }
 
 .header-nav, .footer-nav {

@@ -412,9 +412,9 @@
 		@include padding-top(3.4);
 		@include padding-bottom(2.6);
 	}
-	.header-nav-sub-item {
-		&:focus {
-			@include outline;
+	.header-nav-main-item, .header-nav-sub-item {
+		a:focus {
+			@include outline($black50);
 		}
 	}
 
