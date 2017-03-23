@@ -5,7 +5,8 @@
 		font-weight: 700;
 		font-family: $serif;
 		line-height: 1;
-		font-size: 4.2rem;
+		// font-size: 4.2rem;
+		font-size: 3.8rem;
 		@include respond-to(break2full) {
 			font-size: 3.5vw;
 		}
@@ -327,9 +328,11 @@
 		font-family: $serif;
 		// line-height: 1.267; // 38px
 		line-height: 1.3333; // 40px updated 2017.03.21
-		font-size: 1.9rem;
+		// font-size: 1.9rem;
+		font-size: 2.1rem; // 2017.03.33
 		@include respond-to(break2full) {
-			font-size: 2.2vw;
+			// font-size: 2.2vw;
+			font-size: 2vw;
 		}
 		@include respond-to(fullwidth) {
 			font-size: 3rem;

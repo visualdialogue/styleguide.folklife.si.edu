@@ -26,7 +26,7 @@
 			color: $copy;
 		}
 	}
-	.remodal-description a {
+	.remodal-description a, .thin-links {
 		border-bottom: 1.5px solid $hover;
 		box-shadow: inset 0 -2px 0 $hover;
 		&:hover {

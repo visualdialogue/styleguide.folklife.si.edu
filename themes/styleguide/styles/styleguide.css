@@ -6629,7 +6629,7 @@ body {
 	font-weight: 700;
 	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
 	line-height: 1;
-	font-size: 4.2rem;
+	font-size: 3.8rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
@@ -6950,13 +6950,13 @@ body {
 	font-weight: 500;
 	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
 	line-height: 1.3333;
-	font-size: 1.9rem;
+	font-size: 2.1rem;
 	margin-bottom: 0.37037rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.intro-serif {
-		font-size: 2.2vw;
+		font-size: 2vw;
 	}
 }
 
@@ -8057,12 +8057,12 @@ a:hover {
 	color: #333333;
 }
 
-.remodal-description a {
+.remodal-description a, .thin-links {
 	border-bottom: 1.5px solid #fddd6b;
 	box-shadow: inset 0 -2px 0 #fddd6b;
 }
 
-.remodal-description a:hover {
+.remodal-description a:hover, .thin-links:hover {
 	background: transparent;
 }
 
@@ -10122,14 +10122,14 @@ a .page-title:hover {
 	font-weight: 500;
 	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
 	line-height: 1.3333;
-	font-size: 1.9rem;
+	font-size: 2.1rem;
 	margin-bottom: 0.37037rem;
 	margin-bottom: 0 !important;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.general-content .intro-content p {
-		font-size: 2.2vw;
+		font-size: 2vw;
 	}
 }
 
@@ -11296,10 +11296,11 @@ figcaption:after {
 
 @media only screen and (max-width: 53.15em) {
 	figcaption:after {
-		width: 4rem;
-		height: 4rem;
+		width: 3rem;
+		height: 3rem;
 		text-align: center;
 		padding-top: 0.5rem;
+		font-size: 2rem;
 	}
 }
 
@@ -11404,9 +11405,9 @@ figcaption.minus-sign:before {
 
 @media only screen and (max-width: 53.15em) {
 	figcaption.minus-sign:before {
-		width: 4rem;
-		height: 4rem;
-		font-size: 3rem;
+		width: 3rem;
+		height: 3rem;
+		font-size: 2rem;
 		text-align: center;
 		padding-top: 0.5rem;
 	}
@@ -11551,22 +11552,10 @@ figcaption.minus-sign:before {
 }
 
 .first-level-dropdown-title, .filter-button {
-	padding-top: 0.49164rem;
 	height: 2.59868rem;
 	height: 3rem;
 	padding-left: 0.70235rem;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.first-level-dropdown-title, .filter-button {
-		padding-top: 0.448vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.first-level-dropdown-title, .filter-button {
-		padding-top: 0.7rem;
-	}
+	padding-top: 0.5rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
@@ -11590,6 +11579,18 @@ figcaption.minus-sign:before {
 @media only screen and (min-width: 1560px) {
 	.first-level-dropdown-title, .filter-button {
 		padding-left: 1rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) {
+	.first-level-dropdown-title, .filter-button {
+		padding-top: 0.3vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.first-level-dropdown-title, .filter-button {
+		padding-top: 0.7rem;
 	}
 }
 
@@ -13894,7 +13895,7 @@ body {
 	font-weight: 700;
 	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
 	line-height: 1;
-	font-size: 4.2rem;
+	font-size: 3.8rem;
 	margin-bottom: 0.74074rem;
 }
 
@@ -14353,7 +14354,7 @@ body {
 	font-weight: 700;
 	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
 	line-height: 1;
-	font-size: 4.2rem;
+	font-size: 3.8rem;
 	margin-bottom: 0.37037rem;
 }
 
@@ -24288,7 +24289,7 @@ body {
 	font-weight: 700;
 	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
 	line-height: 1;
-	font-size: 4.2rem;
+	font-size: 3.8rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
@@ -24609,13 +24610,13 @@ body {
 	font-weight: 500;
 	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
 	line-height: 1.3333;
-	font-size: 1.9rem;
+	font-size: 2.1rem;
 	margin-bottom: 0.37037rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.intro-serif {
-		font-size: 2.2vw;
+		font-size: 2vw;
 	}
 }
 
@@ -25716,12 +25717,12 @@ a:hover {
 	color: #333333;
 }
 
-.remodal-description a {
+.remodal-description a, .thin-links {
 	border-bottom: 1.5px solid #c0d5e7;
 	box-shadow: inset 0 -2px 0 #c0d5e7;
 }
 
-.remodal-description a:hover {
+.remodal-description a:hover, .thin-links:hover {
 	background: transparent;
 }
 
@@ -27781,14 +27782,14 @@ a .page-title:hover {
 	font-weight: 500;
 	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
 	line-height: 1.3333;
-	font-size: 1.9rem;
+	font-size: 2.1rem;
 	margin-bottom: 0.37037rem;
 	margin-bottom: 0 !important;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.general-content .intro-content p {
-		font-size: 2.2vw;
+		font-size: 2vw;
 	}
 }
 
@@ -28955,10 +28956,11 @@ figcaption:after {
 
 @media only screen and (max-width: 53.15em) {
 	figcaption:after {
-		width: 4rem;
-		height: 4rem;
+		width: 3rem;
+		height: 3rem;
 		text-align: center;
 		padding-top: 0.5rem;
+		font-size: 2rem;
 	}
 }
 
@@ -29063,9 +29065,9 @@ figcaption.minus-sign:before {
 
 @media only screen and (max-width: 53.15em) {
 	figcaption.minus-sign:before {
-		width: 4rem;
-		height: 4rem;
-		font-size: 3rem;
+		width: 3rem;
+		height: 3rem;
+		font-size: 2rem;
 		text-align: center;
 		padding-top: 0.5rem;
 	}
@@ -29210,22 +29212,10 @@ figcaption.minus-sign:before {
 }
 
 .first-level-dropdown-title, .filter-button {
-	padding-top: 0.49164rem;
 	height: 2.59868rem;
 	height: 3rem;
 	padding-left: 0.70235rem;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.first-level-dropdown-title, .filter-button {
-		padding-top: 0.448vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.first-level-dropdown-title, .filter-button {
-		padding-top: 0.7rem;
-	}
+	padding-top: 0.5rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
@@ -29249,6 +29239,18 @@ figcaption.minus-sign:before {
 @media only screen and (min-width: 1560px) {
 	.first-level-dropdown-title, .filter-button {
 		padding-left: 1rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) {
+	.first-level-dropdown-title, .filter-button {
+		padding-top: 0.3vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.first-level-dropdown-title, .filter-button {
+		padding-top: 0.7rem;
 	}
 }
 
@@ -32894,7 +32896,7 @@ body {
 	font-weight: 700;
 	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
 	line-height: 1;
-	font-size: 4.2rem;
+	font-size: 3.8rem;
 	margin-bottom: 0.74074rem;
 }
 
@@ -33353,7 +33355,7 @@ body {
 	font-weight: 700;
 	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
 	line-height: 1;
-	font-size: 4.2rem;
+	font-size: 3.8rem;
 	margin-bottom: 0.37037rem;
 }
 
@@ -37592,7 +37594,7 @@ body.magazine-page, body.magazine-article-page {
 	font-weight: 700;
 	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
 	line-height: 1;
-	font-size: 4.2rem;
+	font-size: 3.8rem;
 	margin-top: 0rem;
 	margin-bottom: 0.18519rem;
 }
@@ -37685,13 +37687,13 @@ body.magazine-page, body.magazine-article-page {
 	font-weight: 500;
 	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
 	line-height: 1.3333;
-	font-size: 1.9rem;
+	font-size: 2.1rem;
 	margin-bottom: 0.37037rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.album-page .content p {
-		font-size: 2.2vw;
+		font-size: 2vw;
 	}
 }
 
@@ -39526,7 +39528,7 @@ body.magazine-page, body.magazine-article-page {
 	font-weight: 700;
 	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
 	line-height: 1;
-	font-size: 4.2rem;
+	font-size: 3.8rem;
 	padding-bottom: 1.40469rem;
 }
 
@@ -41312,7 +41314,7 @@ a:hover .accordion-tools-teaching {
 	font-weight: 700;
 	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
 	line-height: 1;
-	font-size: 4.2rem;
+	font-size: 3.8rem;
 	margin-bottom: 0.2963rem;
 }
 
@@ -41766,7 +41768,7 @@ h2.intro-title {
 	font-weight: 700;
 	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
 	line-height: 1;
-	font-size: 4.2rem;
+	font-size: 3.8rem;
 	margin-top: 0.18519rem;
 	margin-bottom: 0.92593rem;
 }
@@ -41811,14 +41813,14 @@ h2.intro-title {
 	font-weight: 500;
 	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
 	line-height: 1.3333;
-	font-size: 1.9rem;
+	font-size: 2.1rem;
 	margin-bottom: 0.37037rem;
 	font-weight: 500;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.intro-copy {
-		font-size: 2.2vw;
+		font-size: 2vw;
 	}
 }
 
