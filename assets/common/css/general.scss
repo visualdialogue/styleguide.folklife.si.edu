@@ -1361,6 +1361,168 @@
 		}
 	}
 
+
+/* Blog Page
+-------------------------------------------------- */
+	// indent sidebar section titles only on select pages (from layout)
+	.blog-page, .program-category-page {
+		.sidebar-section-title {
+			@include padding-left(1.3);
+		}
+	}
+	.blog-page, .blog-article-page {
+		.title-bar {
+			color: #fff;
+			background-color: $fw-green;
+		}
+		.tag {
+			font-weight: 400;
+			@include margin-bottom(0.5);
+		}		
+		.byline {
+			@include margin-bottom(2);
+			color: $black65;
+		}
+	}
+	.blog-page, .videos-page {
+		.articles-section {
+			.title {
+				@include md-serif;
+				@include margin-bottom(1);
+			}
+			.description {
+				@include sm-sans;
+				line-height: 1.33 !important; // 18/24
+			}
+			.more-link {
+				@include margin-top(0.5);
+				margin-left:0;
+			}
+		}
+		.feature {
+			.tag {
+				@include margin-top(0.5);
+			}
+			.title {
+				@include lg-serif;
+				@include margin-bottom(0.8);
+			}	
+			.byline {
+				@include sm-sans;
+				text-transform: none;
+				@include margin-bottom(3);
+			}
+			.description {
+				@include md-sans;
+				font-weight: 300;
+				@include margin-top(1);
+			}
+			.more-link {
+				@include margin-top(1.5);
+			}
+			// account for more link on mobile
+			@include respond-to(break2max) {
+				padding-bottom: 4rem;
+			}
+		}
+	}
+
+	.blog-sidebar {
+		&-header {
+			color: $black50;
+			line-height: 0.8; // for alignment
+			@include margin-top(3.1);
+			@include margin-bottom(1.4);
+			@include margin-bottom(0);
+			@include padding-bottom(1);
+		}
+		&-number {
+			@include md-sans;
+			position: absolute;
+			@include padding-left(0.5);
+		}
+	}
+	.numbered-sidebar-item {
+		@include padding-top(0.5);
+		@include padding-bottom(0.7);
+		@include min-height(6.4);
+		.number {
+			float: left;
+			padding: 0.5rem;
+			@include lg-sans;
+			color: $black50;
+		}
+		.title {
+			@include sm-sans;
+			font-weight: 600;
+			// use css :before (single for IE8) to add numbers to sidebar articles
+			position: relative;
+			display: block;
+			// display: inline; // ol
+			@include padding-left(1.5);
+			@include padding-top(0.2);
+		}
+	}
+	.blog-most-popular {
+
+		// custom list numbers, from http://stackoverflow.com/a/5945305
+		ol {
+			list-style-type: none;
+			// @include margin-left(1);
+		}
+
+		ol > li {
+			counter-increment: customlistcounter;
+			position: relative;
+		}
+
+		ol > li:before {
+			content: counter(customlistcounter) " ";
+			// font-weight: bold;
+			// float: left;
+			position: absolute;
+			@include left(-0.5);
+			@include top(1.5);
+			@include padding-left(1);
+			@include width(2.5);
+			@include lg-sans;
+			line-height: 0.5;
+			// font-size: 1rem;
+			// font-size:2rem;
+			@include respond-to(break2full) {font-size:1.5vw;}
+			@include respond-to(fullwidth) {font-size:2.5rem;}
+		}
+
+		ol:first-child {
+			counter-reset: customlistcounter;
+		}
+
+		.title {
+			@include padding-left(2.75);
+			// @include respond-to(break2max) {
+			// 	padding-left: 2rem;
+			// }
+			// @include padding-left(0.5);
+			@include respond-to(break2max) {
+				padding-left: 2rem;
+			}
+			// padding-left: 0;
+		}
+	}
+	.blog-article-page {
+		.related-content-title {
+			@include margin-bottom(1.5)
+		}
+	}
+	.blog-categories li, .multimedia-sections li {
+		@include sm-sans;
+		color: $black70;
+		font-weight: 600;
+		@include padding-top(0.8);
+		@include padding-bottom(0.8);
+		@include padding-left(1.3);
+	}
+
 /* Helpers
 -------------------------------------------------*/
 	.is-hidden {
