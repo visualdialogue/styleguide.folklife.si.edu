@@ -307,6 +307,7 @@
 		}
 		li:last-of-type {
 			border-bottom: none;
+			@include padding-bottom(0.7);
 		}
 		.horizontal-card .tag {
 			@include respond-to(break2max) {

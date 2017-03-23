@@ -114,9 +114,10 @@
 	}
 
 	// carousels on micro site pages
-	var $msBannerSlideshow = $('#ms-banner-slideshow');
+	var $msBannerSlideshow = $('.ms-banner-slideshow');
 	// if exists on page
 	if(typeof $msBannerSlideshow !== 'undefined') {
+		console.info('we have a banner on this page!');
 		$msBannerSlideshow.on('init', function() {
 			// cache arrows for selecting
 			var $slickArrow = $('.slick-arrow');
@@ -1155,7 +1156,7 @@ $(document).ready(function () {
 				$this.addClass('minus-sign');// add minus sign
 				// $this.attr('data-content');// add minus sign
 				// pause micro site banner if exists
-				if($this.parents('#ms-banner-slideshow').length) {
+				if($this.parents('.ms-banner-slideshow').length) {
 					// console.log('banner paused');
 					$msBannerSlideshow.slick('slickPause');
 					slickPaused = true;
@@ -1168,7 +1169,7 @@ $(document).ready(function () {
 				$this.css('visibility', 'hidden');
 				$this.removeClass('minus-sign');// add minus sign
 				// play micro site banner if exists
-				if($this.parents('#ms-banner-slideshow').length) {
+				if($this.parents('.ms-banner-slideshow').length) {
 					// console.log('banner paused');
 					$msBannerSlideshow.slick('slickPlay');
 					slickPaused = false;

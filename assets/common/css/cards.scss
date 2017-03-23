@@ -599,12 +599,13 @@ a.details {
 		}
 	}
 	// color override
-	.black-border .details-inner, .black-border:before {
-		border-color: black;
+	.black-border .details-inner, .black-border:before, .magazine-article-page .black-border.full-border-horizontal-card:before {
+		border-color: $black60;
 	}
-	.white-border .details-inner, .white-border:before {
-		border-color: white;
+	.white-border .details-inner, .white-border:before, .magazine-article-page .white-border.full-border-horizontal-card:before  {
+		border-color: $black15;
 	}
+
 	.magazine-article-page {
 		.full-border-horizontal-card {
 			&:before {
