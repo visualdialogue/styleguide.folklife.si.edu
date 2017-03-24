@@ -1007,6 +1007,11 @@
 			@include outline;
 		}
 	}
+	.first-level-dropdown, .second-level-dropdown, .third-level-dropdown {
+		a:hover {
+			color: $link;
+		}
+	}
 	.first-level-dropdown {
 		display: none; // initial hide
 		position: absolute;

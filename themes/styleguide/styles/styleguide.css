@@ -11499,6 +11499,10 @@ figcaption.minus-sign:before {
 	outline: 1px auto gray;
 }
 
+.first-level-dropdown a:hover, .second-level-dropdown a:hover, .third-level-dropdown a:hover {
+	color: #333333;
+}
+
 .first-level-dropdown {
 	display: none;
 	position: absolute;
@@ -29817,6 +29821,10 @@ figcaption.minus-sign:before {
 
 .dropdown:focus, .filter-button:focus {
 	outline: 1px auto gray;
+}
+
+.first-level-dropdown a:hover, .second-level-dropdown a:hover, .third-level-dropdown a:hover {
+	color: #333333;
 }
 
 .first-level-dropdown {
