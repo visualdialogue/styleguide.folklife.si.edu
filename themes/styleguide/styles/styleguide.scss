@@ -272,7 +272,7 @@
 		cursor: pointer;
 		background-color: $black10;
 		@include caption-sans;
-		text-transform: initial;
+		text-transform: none;
 		@include height(3.4);
 		@include padding-top(0.6);
 		@include padding-right(1);

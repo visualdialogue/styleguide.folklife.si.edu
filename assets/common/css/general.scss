@@ -855,23 +855,26 @@
 	figure {
 		position: relative; // contain figcaption
 	}
-	figcaption {
-		position: absolute;
+	.figcaption-inner {
+		visibility: hidden; // initial hide
+		background-color: rgba($black65, 0.9);
 		@include padding-top(1.5);
 		@include padding-right(1);
 		@include padding-bottom(1.5);
 		@include padding-left(2);
+	}
+	figcaption {
+		position: absolute;
+		z-index: 2; // on top of slider arrows for 50 objects on mobile
 		bottom: 0;
 		left: 0;
 		color: #fff;
-		background-color: rgba($black65, 0.9);
 		@include caption-sans;
 		// text-transform: capitalize;
-		text-transform: initial;
+		text-transform: none;
 		line-height: 1.4 !important;
 		width: 100%;
 		cursor: pointer;
-		visibility: hidden; // initial hide
 		// plus sign
 		@include respond-to(break2max) {
 			min-height: 4rem;
@@ -940,7 +943,7 @@
 	}
 	.caption {
 		@include caption-sans;
-		text-transform: initial;
+		text-transform: none;
 	}
 
 

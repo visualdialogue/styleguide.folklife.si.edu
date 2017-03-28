@@ -11091,74 +11091,78 @@ figure {
 	position: relative;
 }
 
-figcaption {
-	position: absolute;
+.figcaption-inner {
+	visibility: hidden;
+	background-color: rgba(89, 89, 89, 0.9);
 	padding-top: 1.05352rem;
 	padding-right: 0.70235rem;
 	padding-bottom: 1.05352rem;
 	padding-left: 1.40469rem;
-	bottom: 0;
-	left: 0;
-	color: #fff;
-	background-color: rgba(89, 89, 89, 0.9);
-	font-weight: 300;
-	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.4;
-	text-transform: uppercase;
-	font-size: 1.3rem;
-	text-transform: initial;
-	line-height: 1.4 !important;
-	width: 100%;
-	cursor: pointer;
-	visibility: hidden;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	figcaption {
+	.figcaption-inner {
 		padding-top: 0.96vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	figcaption {
+	.figcaption-inner {
 		padding-top: 1.5rem;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	figcaption {
+	.figcaption-inner {
 		padding-right: 0.64vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	figcaption {
+	.figcaption-inner {
 		padding-right: 1rem;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	figcaption {
+	.figcaption-inner {
 		padding-bottom: 0.96vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	figcaption {
+	.figcaption-inner {
 		padding-bottom: 1.5rem;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	figcaption {
+	.figcaption-inner {
 		padding-left: 1.28vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	figcaption {
+	.figcaption-inner {
 		padding-left: 2rem;
 	}
+}
+
+figcaption {
+	position: absolute;
+	z-index: 2;
+	bottom: 0;
+	left: 0;
+	color: #fff;
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.4;
+	text-transform: uppercase;
+	font-size: 1.3rem;
+	text-transform: none;
+	line-height: 1.4 !important;
+	width: 100%;
+	cursor: pointer;
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -11412,7 +11416,7 @@ figcaption.minus-sign:before {
 	line-height: 1.4;
 	text-transform: uppercase;
 	font-size: 1.3rem;
-	text-transform: initial;
+	text-transform: none;
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -13733,7 +13737,7 @@ a.details {
 	margin-bottom: 0.5rem;
 	font-size: 1.2rem;
 	letter-spacing: normal;
-	text-transform: initial;
+	text-transform: none;
 	margin-top: 0.18519rem;
 }
 
@@ -13959,7 +13963,7 @@ a.details {
 	margin-bottom: 0;
 	line-height: 1.2;
 	font-size: 1.4rem;
-	text-transform: initial;
+	text-transform: none;
 	color: #595959;
 	font-weight: 400;
 	display: block;
@@ -14760,7 +14764,7 @@ body {
 	line-height: 1.4;
 	text-transform: uppercase;
 	font-size: 1.3rem;
-	text-transform: initial;
+	text-transform: none;
 	line-height: 1.1 !important;
 	-webkit-hyphens: auto;
 	-ms-hyphens: auto;
@@ -18080,7 +18084,7 @@ body {
 	line-height: 1.4;
 	text-transform: uppercase;
 	font-size: 1.3rem;
-	text-transform: initial;
+	text-transform: none;
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -29415,74 +29419,78 @@ figure {
 	position: relative;
 }
 
-figcaption {
-	position: absolute;
+.figcaption-inner {
+	visibility: hidden;
+	background-color: rgba(89, 89, 89, 0.9);
 	padding-top: 1.05352rem;
 	padding-right: 0.70235rem;
 	padding-bottom: 1.05352rem;
 	padding-left: 1.40469rem;
-	bottom: 0;
-	left: 0;
-	color: #fff;
-	background-color: rgba(89, 89, 89, 0.9);
-	font-weight: 300;
-	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.4;
-	text-transform: uppercase;
-	font-size: 1.3rem;
-	text-transform: initial;
-	line-height: 1.4 !important;
-	width: 100%;
-	cursor: pointer;
-	visibility: hidden;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	figcaption {
+	.figcaption-inner {
 		padding-top: 0.96vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	figcaption {
+	.figcaption-inner {
 		padding-top: 1.5rem;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	figcaption {
+	.figcaption-inner {
 		padding-right: 0.64vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	figcaption {
+	.figcaption-inner {
 		padding-right: 1rem;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	figcaption {
+	.figcaption-inner {
 		padding-bottom: 0.96vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	figcaption {
+	.figcaption-inner {
 		padding-bottom: 1.5rem;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	figcaption {
+	.figcaption-inner {
 		padding-left: 1.28vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	figcaption {
+	.figcaption-inner {
 		padding-left: 2rem;
 	}
+}
+
+figcaption {
+	position: absolute;
+	z-index: 2;
+	bottom: 0;
+	left: 0;
+	color: #fff;
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.4;
+	text-transform: uppercase;
+	font-size: 1.3rem;
+	text-transform: none;
+	line-height: 1.4 !important;
+	width: 100%;
+	cursor: pointer;
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -29736,7 +29744,7 @@ figcaption.minus-sign:before {
 	line-height: 1.4;
 	text-transform: uppercase;
 	font-size: 1.3rem;
-	text-transform: initial;
+	text-transform: none;
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -33624,7 +33632,7 @@ a.details {
 	margin-bottom: 0;
 	line-height: 1.2;
 	font-size: 1.4rem;
-	text-transform: initial;
+	text-transform: none;
 	color: #595959;
 	font-weight: 400;
 	display: block;
@@ -34425,7 +34433,7 @@ body {
 	line-height: 1.4;
 	text-transform: uppercase;
 	font-size: 1.3rem;
-	text-transform: initial;
+	text-transform: none;
 	line-height: 1.1 !important;
 	-webkit-hyphens: auto;
 	-ms-hyphens: auto;
@@ -36328,7 +36336,7 @@ body {
 	line-height: 1.4;
 	text-transform: uppercase;
 	font-size: 1.3rem;
-	text-transform: initial;
+	text-transform: none;
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -43201,7 +43209,7 @@ code.hljs {
 	line-height: 1.4;
 	text-transform: uppercase;
 	font-size: 1.3rem;
-	text-transform: initial;
+	text-transform: none;
 	height: 2.38798rem;
 	padding-top: 0.42141rem;
 	padding-right: 0.70235rem;

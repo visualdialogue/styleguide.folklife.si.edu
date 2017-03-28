@@ -48,13 +48,15 @@
 &lt;/div&gt;
 
 
-</code></pre></div></div></div><!-- Figure with Caption--><div class="codeblock"><a id="figure-with-caption" class="anchor-link"></a><div class="row"><div class="col-sm-8"><h3 class="section-subtitle">Figure with Caption</h3></div><?php snippet('show-html'); ?><?php snippet('show-sass'); ?></div><div class="row"><?php $src = $section->image('figure-with-caption.jpg'); ?><div class="col-sm-5"><figure><img src="<?= $src->url() ?>" alt="<?= $page->title() ?>" class="ms-header-image"/><?php if($caption = $src->caption()->kt()): ?><figcaption><?php echo $caption; ?><?php if($credit = $src->credit()->kt()): ?><div class="credit"><?php echo $credit; ?></div><?php endif; ?></figcaption><?php endif; ?></figure><div class="row"><div class="col-sm-12 visible-xs"><?php snippet('show-html-mobile'); ?><?php snippet('show-sass-mobile'); ?></div></div></div><div class="col-sm-7"><pre class="sass"><code>// too many rules to list. See general.scss</code></pre></div><div class="col-sm-7"><pre class="html"><code>&lt;div class="col-sm-5"&gt;
+</code></pre></div></div></div><!-- Figure with Caption--><div class="codeblock"><a id="figure-with-caption" class="anchor-link"></a><div class="row"><div class="col-sm-8"><h3 class="section-subtitle">Figure with Caption</h3></div><?php snippet('show-html'); ?><?php snippet('show-sass'); ?></div><div class="row"><?php $src = $section->image('figure-with-caption.jpg'); ?><div class="col-sm-5"><figure><img src="<?= $src->url() ?>" alt="<?= $page->title() ?>" class="ms-header-image"/><?php if($caption = $src->caption()->kt()): ?><figcaption><div class="figcaption-inner"><?php echo $caption; ?><?php if($credit = $src->credit()->kt()): ?><div class="credit"><?php echo $credit; ?></div><?php endif; ?></div></figcaption><?php endif; ?></figure><div class="row"><div class="col-sm-12 visible-xs"><?php snippet('show-html-mobile'); ?><?php snippet('show-sass-mobile'); ?></div></div></div><div class="col-sm-7"><pre class="sass"><code>// too many rules to list. See general.scss</code></pre></div><div class="col-sm-7"><pre class="html"><code>&lt;div class="col-sm-5"&gt;
 	&lt;figure&gt;
 		&lt;img src="//127.0.0.1.xip.io:3007/content/5-cards/figure-with-caption.jpg" alt="Home" class="ms-header-image"&gt;
 		&lt;figcaption&gt;
-			&lt;p&gt;A blacksmith heats his iron in a traditional forge before demonstrating the technique for shaping the metal.&LT;/p&gt;
-			&lt;div class="credit"&gt;
-				&lt;p&gt;Photo by Anne Pedersen, Ralph Rinzler Folklife Archives&LT;/p&gt;
+			&lt;div class="figcaption-inner"&gt;
+				&lt;p&gt;A blacksmith heats his iron in a traditional forge before demonstrating the technique for shaping the metal.&LT;/p&gt;
+				&lt;div class="credit"&gt;
+					&lt;p&gt;Photo by Anne Pedersen, Ralph Rinzler Folklife Archives&LT;/p&gt;
+				&lt;/div&gt;
 			&lt;/div&gt;
 		&lt;/figcaption&gt;
 	&lt;/figure&gt;
@@ -119,7 +121,7 @@
 	}
 	.buy-now-button {
 		@include buy-button;
-		text-transform: initial;
+		text-transform: none;
 		color: $black65;
 		font-weight: 400;
 		display: block; // force new line for multiple buttons
@@ -744,7 +746,7 @@
 		&lt;/div&gt;
 	&lt;/ul&gt;
 &lt;/div&gt;
-</code></pre></div></div></div><!-- Program section dropdown--><div class="codeblock"><a id="program-section-dropdown" class="anchor-link"></a><div class="row"><div class="col-sm-8"><h3 class="section-subtitle">Program section dropdown</h3></div><?php snippet('show-html'); ?><?php snippet('show-sass'); ?></div><div class="row"><?php $program_section = $section->find('program-section'); ?><div class="col-sm-12"><section class="ms-section <?= $program_section->title() ?>"><a id="<?= $program_section->uid() ?>" class="anchor-link"></a><div class="row clearfix"><div class="col-sm-12"><?php snippet('svg-thin-hr'); ?><a href="javascript:0" class="high"><h2 class="section-title"><span class="light"><span class="er"><?php echo $program_section->title(); ?></span></span></h2></a></div></div><div class="row"><?php $src = $program_section->image(); ?><div class="card horizontal-card col-xs-12"><div class="row"><div class="image col-sm-7"><figure><img src="<?= $src->url() ?>"/><?php if($caption = $program_section->img_caption()->kt()): ?><figcaption><?php echo $caption; ?></figcaption><?php endif; ?></figure></div><div class="details col-sm-5"><div class="details-inner"><a href="<?= $program_section->url() ?>" class="high subtitle"><span class="light"><span class="er"><?php echo htmlspecialchars($program_section->subtitle(), ENT_QUOTES, 'UTF-8'); ?></span></span></a><?php if('' != $program_section->byline()): ?><div class="byline"><?php echo $program_section->byline(); ?></div><?php endif; ?><div class="description link-underline blurb"><?php echo $program_section->blurb()->kt(); ?></div><a href="javascript:0" data-toggle="collapse" data-target="#research-and-documentation-content" aria-expanded="false" class="high more-link accordion-toggle collapsed"><div class="light"><div class="er"><div class="more-link-text">more</div><div class="more-link-arrow icon-arrow2"></div></div></div></a></div></div></div><div class="row"><div class="col-sm-7"><div class="content link-underline"><div id="research-and-documentation-content" aria-expanded="false" class="collapse panel-collapse in"><?php echo $program_section->contents()->kt(); ?></div></div></div></div></div></div></section></div><div class="col-xs-12 visible-xs"><?php snippet('show-html-mobile'); ?><?php snippet('show-sass-mobile'); ?></div></div><div class="row"><div class="col-sm-12"><pre class="sass"><code>.ms-section {
+</code></pre></div></div></div><!-- Program section dropdown--><div class="codeblock"><a id="program-section-dropdown" class="anchor-link"></a><div class="row"><div class="col-sm-8"><h3 class="section-subtitle">Program section dropdown</h3></div><?php snippet('show-html'); ?><?php snippet('show-sass'); ?></div><div class="row"><?php $program_section = $section->find('program-section'); ?><div class="col-sm-12"><section class="ms-section <?= $program_section->title() ?>"><a id="<?= $program_section->uid() ?>" class="anchor-link"></a><div class="row clearfix"><div class="col-sm-12"><?php snippet('svg-thin-hr'); ?><a href="javascript:0" class="high"><h2 class="section-title"><span class="light"><span class="er"><?php echo $program_section->title(); ?></span></span></h2></a></div></div><div class="row"><?php $src = $program_section->image(); ?><div class="card horizontal-card col-xs-12"><div class="row"><div class="image col-sm-7"><figure><img src="<?= $src->url() ?>"/><?php if($caption = $program_section->img_caption()->kt()): ?><figcaption><div class="figcaption-inner"><?php echo $caption; ?></div></figcaption><?php endif; ?></figure></div><div class="details col-sm-5"><div class="details-inner"><a href="<?= $program_section->url() ?>" class="high subtitle"><span class="light"><span class="er"><?php echo htmlspecialchars($program_section->subtitle(), ENT_QUOTES, 'UTF-8'); ?></span></span></a><?php if('' != $program_section->byline()): ?><div class="byline"><?php echo $program_section->byline(); ?></div><?php endif; ?><div class="description link-underline blurb"><?php echo $program_section->blurb()->kt(); ?></div><a href="javascript:0" data-toggle="collapse" data-target="#research-and-documentation-content" aria-expanded="false" class="high more-link accordion-toggle collapsed"><div class="light"><div class="er"><div class="more-link-text">more</div><div class="more-link-arrow icon-arrow2"></div></div></div></a></div></div></div><div class="row"><div class="col-sm-7"><div class="content link-underline"><div id="research-and-documentation-content" aria-expanded="false" class="collapse panel-collapse in"><?php echo $program_section->contents()->kt(); ?></div></div></div></div></div></div></section></div><div class="col-xs-12 visible-xs"><?php snippet('show-html-mobile'); ?><?php snippet('show-sass-mobile'); ?></div></div><div class="row"><div class="col-sm-12"><pre class="sass"><code>.ms-section {
 	margin-bottom:0;
 	.card {
 		@include margin-bottom(2.5);
@@ -813,7 +815,9 @@
 				&lt;div class="image col-sm-7"&gt;
 					&lt;figure&gt;&lt;img src="//localhost:3007/content/5-cards/3-program-section/Research_Doc-home.jpg"&gt;
 						&lt;figcaption&gt;
-							&lt;p&gt;Photo courtesy of Embassy of Colombia in Washington, DC&lt;/p&gt;
+							&lt;div class="figcaption-inner"&gt;
+								&lt;p&gt;Photo courtesy of Embassy of Colombia in Washington, DC&lt;/p&gt;
+							&lt;/div&gt;
 						&lt;/figcaption&gt;
 					&lt;/figure&gt;
 				&lt;/div&gt;

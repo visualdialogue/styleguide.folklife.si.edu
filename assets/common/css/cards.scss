@@ -105,7 +105,7 @@ a.details {
 	}
 	.buy-now-button, .link-button {
 		@include button-title;
-		text-transform: initial;
+		text-transform: none;
 		color: $black65;
 		font-weight: 400;
 		display: block; // force new line for multiple buttons
@@ -459,7 +459,7 @@ a.details {
 		}
 		.description {
 			@include caption-sans;
-			text-transform: initial;
+			text-transform: none;
 			line-height: 1.1 !important;
 			// add hyphens to justify
 			-webkit-hyphens: auto;

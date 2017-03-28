@@ -117,7 +117,7 @@
 	var $msBannerSlideshow = $('.ms-banner-slideshow');
 	// if exists on page
 	if(typeof $msBannerSlideshow !== 'undefined') {
-		console.info('we have a banner on this page!');
+		// console.info('we have a banner on this page!');
 		$msBannerSlideshow.on('init', function() {
 			// cache arrows for selecting
 			var $slickArrow = $('.slick-arrow');
@@ -254,6 +254,7 @@ $(document).ready(function () {
 	/********* 
 	* Switch Logo - pure CSS
 	* @param direction dictates which logo to switch to, block or inline
+	* @depen prepareTransition plugin ensures correct display state until end of css transition
 	**********/
 	var $blockLogos = $('.block-logos');
 	var $oneLineLogos = $('.one-line-logos');
@@ -261,30 +262,37 @@ $(document).ready(function () {
 
 	function switchLogo(direction) {
 		// toggle class '.is-transitioning' during opacity fade in/out, then add .hidden when done. Remove hidden when coming back.
-		$blockLogos.prepareTransition().toggleClass('hidden');
+		// $blockLogos.prepareTransition().toggleClass('hidden');
 		// only show block if at top of viewport and nav isn't already open
 		// if(direction == 'block' && $(window).scrollTop() <= gapNavHeight && menuClosed) {
 		if(direction == 'block') {
 			// $('.one-line-logos').fadeOut('30');
 			// $('.block-logos').fadeIn('30');
-			console.log('going to block');
-			// CSS only
-			$logo.removeClass('logo-is-one-line');
-			$logo.addClass('logo-is-block');
-			// accessibility prevent double tabbing for 2 logos
-			$blockLogos.find('a').attr('tabindex', "0");
-			$oneLineLogos.find('a').attr('tabindex', "-1");
-			logoIsBlock = true;
+			if(!smallerNav && !logoIsBlock) { // go to block if not scrolled down the page and if not already block
+				// console.log('going to block');3
+				$blockLogos.prepareTransition().removeClass('hidden');
 
+				// CSS only
+				$logo.removeClass('logo-is-one-line');
+				$logo.addClass('logo-is-block');
+				// accessibility prevent double tabbing for 2 logos
+				$blockLogos.find('a').attr('tabindex', "0");
+				$oneLineLogos.find('a').attr('tabindex', "-1");
+				logoIsBlock = true;
+			}
 		} else {
 			// $('.block-logos').fadeOut('30');
 			// $('.one-line-logos').fadeIn('30');
 			// CSS only
-			$logo.removeClass('logo-is-block');
-			$logo.addClass('logo-is-one-line');			
-			$blockLogos.find('a').attr('tabindex', "-1");
-			$oneLineLogos.find('a').attr('tabindex', "0");
-			logoIsBlock = false;
+			if(smallerNav) { // go to one line only if at top of page
+				$blockLogos.prepareTransition().addClass('hidden');
+				// console.log('going one-line');
+				$logo.removeClass('logo-is-block');
+				$logo.addClass('logo-is-one-line');			
+				$blockLogos.find('a').attr('tabindex', "-1");
+				$oneLineLogos.find('a').attr('tabindex', "0");
+				logoIsBlock = false;
+			}
 		}
 	}
 
@@ -1151,8 +1159,10 @@ $(document).ready(function () {
 		$figcaption.on('click', function() {
 			// console.log('show caption');
 			$this = $(this); // cache var
-			if($this.css('visibility') == 'hidden') { // if hidden, show
-				$this.css('visibility', 'visible');
+			$thisInner = $this.find('.figcaption-inner')
+			if($thisInner.css('visibility') == 'hidden') { // if hidden, show
+				// $this.css('visibility', 'visible');
+				$thisInner.css('visibility', 'visible');
 				$this.addClass('minus-sign');// add minus sign
 				// $this.attr('data-content');// add minus sign
 				// pause micro site banner if exists
@@ -1166,7 +1176,8 @@ $(document).ready(function () {
 				}
 			}
 			else { // else hide
-				$this.css('visibility', 'hidden');
+				// $this.css('visibility', 'hidden');
+				$thisInner.css('visibility', 'hidden');
 				$this.removeClass('minus-sign');// add minus sign
 				// play micro site banner if exists
 				if($this.parents('.ms-banner-slideshow').length) {

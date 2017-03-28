@@ -3,10 +3,12 @@
 	-$image = $card->image($card->thumbnail_img())
 -elseif($src = $card->image()):
 	-$image = $src
--elseif($type == 'past-festival'):
-	-$image = $pages->find('past-festivals')->image('200x183.png')
 -else:
 	-$image = null
+-endif;
+
+-if(isset($type) && $type == 'past-festival'):
+	-$image = $pages->find('past-festivals')->image('200x183.png')
 -endif
 
 li.card(class="<? if (isset($card_classes)) echo $card_classes . ' ' ?><? if ($card->type() == 'audio') echo ' audio-card' ?><? if ($card->type() == 'video') echo ' video-card' ?>")
@@ -17,6 +19,7 @@ li.card(class="<? if (isset($card_classes)) echo $card_classes . ' ' ?><? if ($c
 				.modal-trigger
 					img(src="<?= $image->url() ?>" alt="<?= $card->title() ?>")
 				.icon-play-button
+
 	-elseif($image):
 		.image
 			-if (null != $card->url()):

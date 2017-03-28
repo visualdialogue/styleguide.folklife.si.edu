@@ -12,7 +12,8 @@ li.card.horizontal-card.col-xs-12
 				img(src="<?= $src->url() ?>")
 				//- show caption if it exists
 				-if($caption = $page->img_caption()->kt()):
-					figcaption!= $caption
+					figcaption
+						.figcaption-inner!= $caption
 				-endif
 		.details.col-sm-5
 			.details-inner

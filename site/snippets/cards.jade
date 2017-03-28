@@ -108,10 +108,11 @@ section.container.cards-section
 					//- show caption if it exists and set $caption var
 					-if($caption = $src->caption()->kt()):
 						figcaption
-							!= $caption
-							-if($credit = $src->credit()->kt()):
-								.credit!= $credit
-							-endif
+							.figcaption-inner
+								!= $caption
+								-if($credit = $src->credit()->kt()):
+									.credit!= $credit
+								-endif
 					-endif
 				.row
 					.col-sm-12.visible-xs
@@ -126,9 +127,11 @@ section.container.cards-section
 						&lt;figure&gt;
 							&lt;img src="//127.0.0.1.xip.io:3007/content/5-cards/figure-with-caption.jpg" alt="Home" class="ms-header-image"&gt;
 							&lt;figcaption&gt;
-								&lt;p&gt;A blacksmith heats his iron in a traditional forge before demonstrating the technique for shaping the metal.&LT;/p&gt;
-								&lt;div class="credit"&gt;
-									&lt;p&gt;Photo by Anne Pedersen, Ralph Rinzler Folklife Archives&LT;/p&gt;
+								&lt;div class="figcaption-inner"&gt;
+									&lt;p&gt;A blacksmith heats his iron in a traditional forge before demonstrating the technique for shaping the metal.&LT;/p&gt;
+									&lt;div class="credit"&gt;
+										&lt;p&gt;Photo by Anne Pedersen, Ralph Rinzler Folklife Archives&LT;/p&gt;
+									&lt;/div&gt;
 								&lt;/div&gt;
 							&lt;/figcaption&gt;
 						&lt;/figure&gt;
@@ -250,7 +253,7 @@ section.container.cards-section
 						}
 						.buy-now-button {
 							@include buy-button;
-							text-transform: initial;
+							text-transform: none;
 							color: $black65;
 							font-weight: 400;
 							display: block; // force new line for multiple buttons
@@ -1359,7 +1362,8 @@ section.container.cards-section
 										img(src="<?= $src->url() ?>")
 										//- show caption if it exists
 										-if($caption = $program_section->img_caption()->kt()):
-											figcaption!= $caption
+											figcaption
+												.figcaption-inner!= $caption
 										-endif
 								.details.col-sm-5
 									.details-inner
@@ -1460,7 +1464,9 @@ section.container.cards-section
 									&lt;div class="image col-sm-7"&gt;
 										&lt;figure&gt;&lt;img src="//localhost:3007/content/5-cards/3-program-section/Research_Doc-home.jpg"&gt;
 											&lt;figcaption&gt;
-												&lt;p&gt;Photo courtesy of Embassy of Colombia in Washington, DC&lt;/p&gt;
+												&lt;div class="figcaption-inner"&gt;
+													&lt;p&gt;Photo courtesy of Embassy of Colombia in Washington, DC&lt;/p&gt;
+												&lt;/div&gt;
 											&lt;/figcaption&gt;
 										&lt;/figure&gt;
 									&lt;/div&gt;

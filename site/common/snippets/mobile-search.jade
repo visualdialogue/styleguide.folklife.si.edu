@@ -1,3 +1,4 @@
 // Mobile Search
 form.search-bar.mobile-search-bar.mobile-only(action="/search")
-	input#search-input(placeholder="Search..." type="search" name="q" value="<? if(isset($query)) echo esc($query) ?>")
+	//- input#search-input(placeholder="Search..." type="search" name="q" value="<? if(isset($query)) echo esc($query) ?>")
+	input.search-input(placeholder="Search..." type="search" name="q" value="<? if(isset($query)) echo esc($query) ?>")

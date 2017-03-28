@@ -78,7 +78,6 @@
 			}
 			@include respond-to(break2full) {top:-10vw;}
 			@include respond-to(fullwidth) {top:-17rem;}
-		
 	}
 	.first-anchor-link {
 		// take above the page top so can see top of page when go to first link and not get some cut-off

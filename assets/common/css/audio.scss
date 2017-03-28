@@ -634,7 +634,7 @@ $horizontalMobilePlayHeight: 8vw;
 	.horizontal-audio-card-third {
 		.artist {
 			@include caption-sans;
-			text-transform: initial;
+			text-transform: none;
 		}
 	}
 	.horizontal-audio-card-playlist-thin {

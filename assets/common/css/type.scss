@@ -136,7 +136,7 @@
 	@mixin date-sm {
 		@include sans-tag;
 		letter-spacing: normal;
-		text-transform: initial;
+		text-transform: none;
 		@include margin-top(0.5);
 	}
 	@mixin byline {

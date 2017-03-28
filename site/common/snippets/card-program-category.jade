@@ -11,7 +11,8 @@ li.card.col-xs-12
 			img.ms-header-image(src="<?= $image->url() ?>")
 			//- show caption if it exists
 			-if($caption = $page->img_caption()):
-				figcaption!= $caption
+				figcaption
+					.figcaption-inner!= $caption
 			-endif
 	.details
 		.details-inner
