@@ -17337,6 +17337,7 @@ body {
 	padding-right: 1.05352rem;
 	padding-bottom: 0;
 	padding-left: 7.5px;
+	padding-bottom: 0 !important;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
@@ -17363,12 +17364,6 @@ body {
 	}
 }
 
-@media only screen and (max-width: 53.15em) {
-	.horizontal-audio-card .details-inner {
-		padding-bottom: 0 !important;
-	}
-}
-
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.horizontal-audio-card .details-inner {
 		padding-left: 7.5px;
@@ -17387,13 +17382,13 @@ body {
 
 @media only screen and (min-width: 53.25em) and (max-width: 61.9em) {
 	.horizontal-audio-card .title-wrapper {
-		height: 6vw;
+		height: 5.5vw;
 	}
 }
 
 @media only screen and (min-width: 62em) and (max-width: 1559px) {
 	.horizontal-audio-card .title-wrapper {
-		height: 6.8vw;
+		height: 6.7vw;
 	}
 }
 
@@ -35600,6 +35595,7 @@ body {
 	padding-right: 1.05352rem;
 	padding-bottom: 0;
 	padding-left: 7.5px;
+	padding-bottom: 0 !important;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
@@ -35626,12 +35622,6 @@ body {
 	}
 }
 
-@media only screen and (max-width: 53.15em) {
-	.horizontal-audio-card .details-inner {
-		padding-bottom: 0 !important;
-	}
-}
-
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.horizontal-audio-card .details-inner {
 		padding-left: 7.5px;
@@ -35650,13 +35640,13 @@ body {
 
 @media only screen and (min-width: 53.25em) and (max-width: 61.9em) {
 	.horizontal-audio-card .title-wrapper {
-		height: 6vw;
+		height: 5.5vw;
 	}
 }
 
 @media only screen and (min-width: 62em) and (max-width: 1559px) {
 	.horizontal-audio-card .title-wrapper {
-		height: 6.8vw;
+		height: 6.7vw;
 	}
 }
 

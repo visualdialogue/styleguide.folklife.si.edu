@@ -333,17 +333,17 @@ $horizontalMobilePlayHeight: 8vw;
 		@include padding-right(1.5);
 		padding-bottom: 0; // audio player here
 		padding-left:$small-gutter;
-		@include respond-to(break2max) {
-			padding-bottom: 0 !important; // override more specific rule for .audio-card .details-inner
-		}
+		padding-bottom: 0 !important; // override more specific rule for .audio-card .details-inner that get applied on older browsers with vw fix
 		@include respond-to(break2full) {padding-left:$small-gutter;}
 		@include respond-to(fullwidth) {padding-left:1rem;}
 	}
 	.title-wrapper {
 		// height:30vw;
 		height:26vw; // mar 28
-		@include respond-to(break23) {height:6vw;}
-		@include respond-to(break3full) {height:6.8vw;}
+		// @include respond-to(break23) {height:6vw;}
+		@include respond-to(break23) {height:5.5vw;}
+		// @include respond-to(break3full) {height:6.8vw;}
+		@include respond-to(break3full) {height:6.7vw;}
 		@include respond-to(fullwidth) {height:11.2rem;}
 	}
 	.title {
