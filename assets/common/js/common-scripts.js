@@ -284,7 +284,7 @@ $(document).ready(function () {
 			// $('.block-logos').fadeOut('30');
 			// $('.one-line-logos').fadeIn('30');
 			// CSS only
-			if(smallerNav) { // go to one line only if at top of page
+			// if(smallerNav) { // go to one line only if not at top of page
 				$blockLogos.prepareTransition().addClass('hidden');
 				// console.log('going one-line');
 				$logo.removeClass('logo-is-block');
@@ -292,7 +292,7 @@ $(document).ready(function () {
 				$blockLogos.find('a').attr('tabindex', "-1");
 				$oneLineLogos.find('a').attr('tabindex', "0");
 				logoIsBlock = false;
-			}
+			// }
 		}
 	}
 
@@ -421,6 +421,7 @@ $(document).ready(function () {
 			site.navCloseAll(); // after we've determined that menu is closed, close anything else that's open by default
 			site.navbar.addClass('is-open');
 			// if logo not already one-line because scrolled down
+			console.log('open the menu!');
 			if(logoIsBlock)
 				switchLogo('one-line');
 

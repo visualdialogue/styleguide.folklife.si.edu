@@ -337,7 +337,8 @@ $horizontalMobilePlayHeight: 8vw;
 		@include respond-to(fullwidth) {padding-left:1rem;}
 	}
 	.title-wrapper {
-		height:30vw;
+		// height:30vw;
+		height:26vw; // mar 28
 		@include respond-to(break23) {height:6vw;}
 		@include respond-to(break3full) {height:6.8vw;}
 		@include respond-to(fullwidth) {height:11.2rem;}
@@ -382,6 +383,7 @@ $horizontalMobilePlayHeight: 8vw;
 		.mejs-time-rail {
 			// @include left(0.3);
 			// top: 7.5vw;
+			width: 65% !important;
 			@include respond-to(break23) {
 				top: 2.7vw;
 				left: 0.3vw;

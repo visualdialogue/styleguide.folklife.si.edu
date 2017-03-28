@@ -3,6 +3,26 @@
 <script src="/assets/audio/myplaylist-calypso.js" type="text/javascript"></script>
 <div class="sidebar col-sm-4" id="magazine-article-sidebar-js">
 	<div class="zone zone-aside-second">
+
+		<div class="tag">Audio</div>
+		<div class="card audio-card horizontal-audio-card horizontal-audio-card-single full-border-horizontal-card">
+		    <div class="row">
+		        <div class="image col-xs-6">
+		            <a href="/anthology-indian-classical-music-tribute-to-alain-danielou/album/unesco/smithsonian"><img src="http://media.smithsonianfolkways.org/images/album_covers/SF270/UNES08270.jpg" alt=""></a>
+		        </div>
+		        <div class="details col-xs-6">
+		            <div class="details-inner" style="">
+		                <div class="title-wrapper">
+		                    <a href="/anthology-indian-classical-music-tribute-to-alain-danielou/album/unesco/smithsonian" class="high title"><span class="light"><span class="er">Sitar, Sarode and Tabla</span></span></a>
+		                </div>
+		                <div class="audio-player">
+							<audio class="mejs-player" src="http://media.smithsonianfolkways.org/audio/features/magazine/2015_summer/UNES08270_1_08_part.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+
 		<div class="visible-sm latest-issue-article">
 			<a href="/magazine-summer-fall-2016-education/smithsonian"><img src="http://www.folkways.si.edu/images/magazine/2016_summer_fall/leftcolhead-mobile.jpg" alt="Summer Fall 2016" width="100%"></a>
 		</div>

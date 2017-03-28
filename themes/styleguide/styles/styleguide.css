@@ -17376,7 +17376,7 @@ body {
 }
 
 .horizontal-audio-card .title-wrapper {
-	height: 30vw;
+	height: 26vw;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 61.9em) {
@@ -17488,6 +17488,10 @@ body {
 	.horizontal-audio-card .mejs-controls .mejs-playpause-button button[title='Pause']:after {
 		font-size: 3rem;
 	}
+}
+
+.horizontal-audio-card .mejs-controls .mejs-time-rail {
+	width: 65% !important;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 61.9em) {
@@ -35628,7 +35632,7 @@ body {
 }
 
 .horizontal-audio-card .title-wrapper {
-	height: 30vw;
+	height: 26vw;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 61.9em) {
@@ -35740,6 +35744,10 @@ body {
 	.horizontal-audio-card .mejs-controls .mejs-playpause-button button[title='Pause']:after {
 		font-size: 3rem;
 	}
+}
+
+.horizontal-audio-card .mejs-controls .mejs-time-rail {
+	width: 65% !important;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 61.9em) {
@@ -36583,12 +36591,6 @@ body.magazine-page, body.magazine-article-page {
 	background-color: #000;
 }
 
-@media only screen and (max-width: 53.15em) {
-	.folkways-magazine-logo-wrapper {
-		height: 19vw;
-	}
-}
-
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.folkways-magazine-logo-wrapper {
 		height: 7.5vw;
@@ -36681,6 +36683,13 @@ body.magazine-page, body.magazine-article-page {
 	}
 }
 
+@media only screen and (max-width: 53.15em) {
+	.magazine-title-bar .folkways-magazine-logo {
+		padding-top: 3vw;
+		padding-bottom: 1vw;
+	}
+}
+
 .magazine-title-bar .black-spacer {
 	background-color: #000;
 }
@@ -36731,9 +36740,9 @@ body.magazine-page, body.magazine-article-page {
 
 @media only screen and (max-width: 53.15em) {
 	.magazine-title-bar .issue-title {
-		height: 6.5rem;
 		padding-left: 1.5rem;
 		padding-top: 1rem;
+		padding-right: 2rem;
 		padding-bottom: 1rem;
 	}
 }
