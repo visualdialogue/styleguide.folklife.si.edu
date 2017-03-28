@@ -333,6 +333,9 @@ $horizontalMobilePlayHeight: 8vw;
 		@include padding-right(1.5);
 		padding-bottom: 0; // audio player here
 		padding-left:$small-gutter;
+		@include respond-to(break2max) {
+			padding-bottom: 0 !important; // override more specific rule for .audio-card .details-inner
+		}
 		@include respond-to(break2full) {padding-left:$small-gutter;}
 		@include respond-to(fullwidth) {padding-left:1rem;}
 	}
@@ -486,6 +489,7 @@ $horizontalMobilePlayHeight: 8vw;
 				@include respond-to(break2max) {
 					font-size: 5vw;
 					padding-left: 0.15vw;
+					line-height: 1.5;
 				}
 				@include respond-to(break2full) {
 					font-size: 1.8vw;

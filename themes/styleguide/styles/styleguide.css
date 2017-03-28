@@ -17363,6 +17363,12 @@ body {
 	}
 }
 
+@media only screen and (max-width: 53.15em) {
+	.horizontal-audio-card .details-inner {
+		padding-bottom: 0 !important;
+	}
+}
+
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.horizontal-audio-card .details-inner {
 		padding-left: 7.5px;
@@ -17772,6 +17778,7 @@ body {
 	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
 		font-size: 5vw;
 		padding-left: 0.15vw;
+		line-height: 1.5;
 	}
 }
 
@@ -35619,6 +35626,12 @@ body {
 	}
 }
 
+@media only screen and (max-width: 53.15em) {
+	.horizontal-audio-card .details-inner {
+		padding-bottom: 0 !important;
+	}
+}
+
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.horizontal-audio-card .details-inner {
 		padding-left: 7.5px;
@@ -36028,6 +36041,7 @@ body {
 	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
 		font-size: 5vw;
 		padding-left: 0.15vw;
+		line-height: 1.5;
 	}
 }
 
