@@ -24,14 +24,14 @@ meta(name="twitter:site" content="@smithsonianfolk")
 	meta(property="og:image" content="<?= $page->children()->sortBy('date')->flip()->first()->image()->url() ?>")
 	meta(property="og:image:width" content="350")
 	meta(property="og:image:height" content="233")
-	meta(property="og:description" content="<?= $page->children()->sortBy('date')->flip()->first()->copy() ?>")
+	meta(property="og:description" content="<?= excerpt($page->children()->sortBy('date')->flip()->first()->copy(), 20, 'words') ?>")
 
 -elseif($page->intendedTemplate() == 'blog-article'):
 	meta(property="og:type" content="article")
 	meta(property="og:image" content="<?= $page->image()->url() ?>")
 	meta(property="og:image:width" content="350")
 	meta(property="og:image:height" content="233")
-	meta(property="og:description" content="<?= $page->copy() ?>")
+	meta(property="og:description" content="<?= excerpt($page->copy(), 20, 'words') ?>")
 
 -elseif($page->intendedTemplate() == 'past-festivals'):
 	meta(property="og:type" content="website")
@@ -102,7 +102,7 @@ meta(name="twitter:site" content="@smithsonianfolk")
 -elseif(null != $page->children()->find('hero')):
 	meta(property="og:type" content="website")
 	meta(property="og:image" content="<?= $page->children()->find('hero')->image()->url() ?>")
-	meta(property="og:description" content="<?= $page->children()->find('hero')->copy() ?>")
+	meta(property="og:description" content="<?= excerpt($page->children()->find('hero')->copy(), 20, 'words') ?>")
 
 //- everything else
 -else:
