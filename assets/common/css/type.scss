@@ -250,7 +250,8 @@
 		font-family: $serif;
 		line-height: 1;
 		// font-size: 2.2rem;
-		font-size: 4rem;
+		// font-size: 4rem;
+		font-size: 3rem;
 		@include respond-to(break2) {
 			// line-height: 1.143;
 			line-height: 1;

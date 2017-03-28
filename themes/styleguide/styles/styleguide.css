@@ -7219,7 +7219,7 @@ body {
 	font-weight: 700;
 	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
 	line-height: 1;
-	font-size: 4rem;
+	font-size: 3rem;
 	margin-bottom: 0.37037rem;
 }
 
@@ -25547,7 +25547,7 @@ body {
 	font-weight: 700;
 	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
 	line-height: 1;
-	font-size: 4rem;
+	font-size: 3rem;
 	margin-bottom: 0.37037rem;
 }
 
@@ -33406,7 +33406,7 @@ a.details {
 	margin-bottom: 0.5rem;
 	font-size: 1.2rem;
 	letter-spacing: normal;
-	text-transform: initial;
+	text-transform: none;
 	margin-top: 0.18519rem;
 }
 
