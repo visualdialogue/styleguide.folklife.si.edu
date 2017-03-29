@@ -221,7 +221,7 @@
 		font-size: 1.8rem;
 		margin-bottom: 0.5rem;
 	}
-}</code></pre></div></div></div><div class="typeface codeblock"><div class="row type-title-wrapper"><hr/><div class="col-sm-10 type-title category-tag-type">Category Tag</div><?php snippet('show-sass'); ?></div><div class="row"><div class="col-sm-5"><div class="type-details">Typeface: Acumin Pro Wide<br/>Weight: 300<br/>Maximum Font Size: 1.6rem<br/>Usage: Category Tag, Date</div></div><div class="col-md-7"><?php snippet('show-sass-mobile'); ?><pre class="sass"><code>@mixin sans-tag {
+}</code></pre></div></div></div><div class="typeface codeblock"><a id="category-tag" class="anchor-link"></a><div class="row type-title-wrapper"><hr/><div class="col-sm-10 type-title category-tag-type">Category Tag</div><?php snippet('show-sass'); ?></div><div class="row"><div class="col-sm-5"><div class="type-details">Typeface: Acumin Pro Wide<br/>Weight: 300<br/>Maximum Font Size: 1.6rem<br/>Usage: Category Tag, Date</div></div><div class="col-md-7"><?php snippet('show-sass-mobile'); ?><pre class="sass"><code>@mixin sans-tag {
 	font-weight: 300;
 	text-transform: uppercase;
 	font-family: $sansWide;
@@ -244,7 +244,7 @@
 		letter-spacing: 1px;
 		margin-bottom: 0;
 	}
-}</code></pre></div></div></div><div class="typeface codeblock"><div class="row type-title-wrapper"><hr/><div class="col-sm-10 type-title category-tag-bold-type">Category Tag Bold</div><?php snippet('show-sass'); ?></div><div class="row"><div class="col-sm-5"><div class="type-details">Typeface: Acumin Pro Wide<br/>Weight: 700<br/>Maximum Font Size: 1.6rem<br/>Usage: Festival Micro Site Section Header</div></div><div class="col-md-7"><?php snippet('show-sass-mobile'); ?><pre class="sass"><code>@mixin sans-tag {
+}</code></pre></div></div></div><div class="typeface codeblock"><a id="category-tag-bold" class="anchor-link"></a><div class="row type-title-wrapper"><hr/><div class="col-sm-10 type-title category-tag-bold-type">Category Tag Bold</div><?php snippet('show-sass'); ?></div><div class="row"><div class="col-sm-5"><div class="type-details">Typeface: Acumin Pro Wide<br/>Weight: 700<br/>Maximum Font Size: 1.6rem<br/>Usage: Festival Micro Site Section Header</div></div><div class="col-md-7"><?php snippet('show-sass-mobile'); ?><pre class="sass"><code>@mixin sans-tag {
 	font-weight: 700;
 	text-transform: uppercase;
 	font-family: $sansWide;
