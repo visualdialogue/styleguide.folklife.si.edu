@@ -156,7 +156,7 @@
 		line-height: 1.12; // 18/20
 		font-size: 1.8rem;
 	}
-}</code></pre></div></div></div><div class="typeface codeblock"><div class="row type-title-wrapper"><hr/><div class="col-sm-10 caption-sans type-title">Sans Caption</div><?php snippet('show-sass'); ?></div><div class="row"><div class="col-sm-5"><div class="type-details">Typeface: Acumin Pro<br/>Weight: Light<br/>Maximum Font Size: 1.6rem</div></div><div class="col-sm-7"><?php snippet('show-sass-mobile'); ?><pre class="sass"><code>@mixin caption-sans {
+}</code></pre></div></div></div><div class="typeface codeblock"><a id="sans-tag" class="anchor-link"></a><div class="row type-title-wrapper"><hr/><div class="col-sm-10 caption-sans type-title">Sans Caption</div><?php snippet('show-sass'); ?></div><div class="row"><div class="col-sm-5"><div class="type-details">Typeface: Acumin Pro<br/>Weight: Light<br/>Maximum Font Size: 1.6rem</div></div><div class="col-sm-7"><?php snippet('show-sass-mobile'); ?><pre class="sass"><code>@mixin caption-sans {
 	font-weight: 300;
 	font-family: $sans;
 	line-height: 1.4;
