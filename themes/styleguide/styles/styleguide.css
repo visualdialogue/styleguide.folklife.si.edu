@@ -12997,6 +12997,29 @@ video::-webkit-media-controls {
 	}
 }
 
+/* Paging, as seen in Past Festivals
+-------------------------------------------------- */
+[data-page] {
+	display: none;
+}
+
+[data-page="1"] {
+	display: block;
+}
+
+.pagination-numbers {
+	text-align: center;
+}
+
+.pagination-numbers a {
+	display: inline-block;
+	padding: 0.5rem;
+}
+
+.pagination-numbers a.is-active {
+	background-color: #fddd6b;
+}
+
 /* Helpers
 -------------------------------------------------*/
 .is-hidden {
@@ -31331,6 +31354,29 @@ video::-webkit-media-controls {
 	}
 }
 
+/* Paging, as seen in Past Festivals
+-------------------------------------------------- */
+[data-page] {
+	display: none;
+}
+
+[data-page="1"] {
+	display: block;
+}
+
+.pagination-numbers {
+	text-align: center;
+}
+
+.pagination-numbers a {
+	display: inline-block;
+	padding: 0.5rem;
+}
+
+.pagination-numbers a.is-active {
+	background-color: #c0d5e7;
+}
+
 /* Helpers
 -------------------------------------------------*/
 .is-hidden {
@@ -41755,7 +41801,7 @@ body.magazine-page, body.magazine-article-page {
 -------------------------------------------------- */
 .lesson-plan-page .title-bar {
 	color: #fff;
-	background-color: #b44b41;
+	background-color: #628a61;
 }
 
 .lesson-plan-page .lesson-plan-top {
@@ -42519,7 +42565,13 @@ a:hover .accordion-tools-teaching {
 /* Blog Page
 -------------------------------------------------- */
 .blog-page .title-bar, .blog-article-page .title-bar {
-	background-color: #628a61;
+	background-color: #ca772c;
+}
+
+/* Folkways General content banner
+-------------------------------------------------- */
+.general-page .title-bar {
+	background-color: #31586a;
 }
 
 /* Folkways override

@@ -1531,6 +1531,27 @@
 		@include padding-left(1.3);
 	}
 
+/* Paging, as seen in Past Festivals
+-------------------------------------------------- */
+	// target any element with this data-* selector, from http://stackoverflow.com/a/18754151
+	[data-page] {
+		display: none;
+	}
+	[data-page="1"] {
+		display: block;
+	}
+	// pagination
+	.pagination-numbers {
+		text-align: center;
+		a {
+			display: inline-block;
+			padding: 0.5rem;
+			&.is-active {
+				background-color: $hover;
+			}
+		}
+	}
+	
 /* Helpers
 -------------------------------------------------*/
 	.is-hidden {

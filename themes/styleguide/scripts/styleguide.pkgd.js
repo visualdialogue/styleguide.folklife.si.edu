@@ -1733,6 +1733,135 @@ $(document).ready(function () {
             elt.attr('class', 'is-active')
     });
 
+/*****
+* Paging
+* as seen in Past Festivals
+*****/
+	var currentPages = [];
+	currentPages['alpha'] = 1;
+	currentPages['year'] = 1;
+	var $viewPrev = $('#view-prev'); // select for hiding/showing
+	var $viewNext = $('#view-next'); // select for hiding/showing
+	var $pagination = $('#pagination-numbers'); // all numbers
+	var $paginationNumber = $('.pagination-number'); // all numbers
+
+	function changePage(currentFestivalFilter, newPage, $paginationNumber) {
+		var $filter = $('#' + currentFestivalFilter + '-filter'); // get current filter
+		var $pages = $filter.find('.page'); // cache current pages
+		var totalPages = $pages.length;
+		$pages.removeClass('is-visible').addClass('is-hidden'); // hide all pages
+		// console.log('totalPages', totalPages);
+		// console.log('newPage', newPage);
+		$filter.find('.page[data-page="' + newPage + '"]').removeClass('is-hidden').addClass('is-visible'); // show next page
+		// prev button
+		if(newPage > 1)
+			$viewPrev.show();
+		else
+			$viewPrev.hide();
+
+		// next button
+		if(newPage < totalPages)
+			$viewNext.show();
+		else
+			$viewNext.hide();
+
+		// update pagination numbers, using passed $paginationNumber which may be new if switched
+		$paginationNumber.removeClass('is-active'); // remove active state
+		// add active state
+		// $paginationNumber.find('[data-page="' + newPage ).addClass('is-active');
+		// console.log('[data-page="' + newPage + '"]');
+		$paginationNumber.filter('[data-page="' + newPage + '"]').addClass('is-active'); // show next page
+
+	}
+
+	function activatePagination($paginationNumber) {
+		// pagination numbers
+		$paginationNumber.on('click', function() {
+			var newPage = parseInt($(this).data('page'));
+			console.log('switch to page', newPage);
+			changePage(currentFestivalFilter, newPage, $paginationNumber);
+			currentPages[currentFestivalFilter] = newPage; // update current page
+		});		
+	}
+
+	// pagination update
+	function updatePagination(currentFestivalFilter) {
+		$paginationNumber = $('.pagination-number'); // reset after clone
+		// see how many numbers it should be
+		var num_festivals = $('#' + currentFestivalFilter + '-filter').find('.festival').length;
+		// console.log('num_festivals', num_festivals);
+		var num_pages = Math.ceil(num_festivals / 24);
+		// console.log('num_pages', num_pages);
+		// copy one example of page number
+		var $examplePagination = $paginationNumber.first().clone();
+		// prep for copying
+		$examplePagination.removeClass('is-active');
+		// clear pagination
+		$pagination.empty();
+		// console.log($examplePagination);
+
+		// past example x amount of times, from http://stackoverflow.com/a/12835644
+		for(var i = 0; i < num_pages; i++) {
+			var $newPagination = $examplePagination.clone();
+			$newPagination.html(i + 1); // set html
+			$newPagination.attr('data-page', i + 1); // set control
+			$newPagination.appendTo($pagination); // created
+		}
+		// update after clone
+		$paginationNumber = $('.pagination-number');
+		// add is-active to first new child
+		$paginationNumber.first().addClass('is-active');
+		// reset listeners
+		activatePagination($paginationNumber);
+	};
+
+	// previous button
+	$viewPrev.on('click', function() {
+		var newPage = currentPages[currentFestivalFilter] - 1; // set new var and decrease page #
+		changePage(currentFestivalFilter, newPage, $paginationNumber);
+		currentPages[currentFestivalFilter] = newPage; // update current page
+	});
+
+	// next button
+	$viewNext.on('click', function() {
+		var newPage = currentPages[currentFestivalFilter] + 1; // set new var and decrease page #
+		changePage(currentFestivalFilter, newPage, $paginationNumber);
+		currentPages[currentFestivalFilter] = newPage; // update current page
+	});
+
+	// init
+	activatePagination($paginationNumber);
+
+/*********************
+* Past Festivals sort
+* Included globally because shares some variables
+*********************/
+	var $pastFestivalButtons = $('.filter-button');
+	var currentFestivalFilter = 'alpha';
+
+	// Show alphabetical
+	$('#sort-by-alphabetical-button').on('click', function() {
+		$pastFestivalButtons.removeClass('is-selected');
+		$(this).addClass('is-selected');
+		$('#sort-by-year').hide();
+		$('#sort-by-alphabetical').show();
+		currentPages[currentFestivalFilter] = 1; // reset page number
+		currentFestivalFilter = 'alpha'; // for pagination
+		changePage(currentFestivalFilter, 1, $paginationNumber);
+		updatePagination(currentFestivalFilter);
+	});
+
+	// Show by year
+	$('#sort-by-year-button').on('click', function() {
+		$pastFestivalButtons.removeClass('is-selected');
+		$(this).addClass('is-selected');
+		$('#sort-by-alphabetical').hide();
+		$('#sort-by-year').show();
+		currentPages[currentFestivalFilter] = 1; // reset page number
+		currentFestivalFilter = 'year'; // for pagination
+		changePage(currentFestivalFilter, 1, $paginationNumber);
+		updatePagination(currentFestivalFilter);
+	});
 
 }); // end document model ready
 /*
