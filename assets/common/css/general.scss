@@ -1128,12 +1128,28 @@
 			@include respond-to(break2full) {font-size:1.15vw;}
 			@include respond-to(fullwidth) {font-size:1.8rem;}
 		}
+		// without select
+		// .filter-button {
+		// 	background-color: $black20;
+		// 	@include border;
+		// 	text-align: center;
+		// 	cursor: pointer;
+		// 	padding-left:0;
+		// }
+		// with select
 		.filter-button {
 			background-color: $black20;
 			@include border;
 			text-align: center;
 			cursor: pointer;
 			padding-left:0;
+		}
+		.filter-dropdown {
+			background-color: transparent;
+		}
+		.filter-label {
+			@include sans-tag;
+			// font-weight: 700;
 		}
 	}
 
