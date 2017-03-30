@@ -18,135 +18,99 @@
 			li.dropdown.filter-dropdown.col-sm-2
 				label(for="genre" class="filter-label") Genre
 				select#ddl(name="genre" runat="server" onchange="javascript:document.location.href = this.value;")
-					option(value="") World (1,600)
-					option(value="") American Folk (900)
-					option(value="") Latin (410)
-					option(value="") Children's (340)
-					option(value="") Blues (220)
+					option(value="") World
+					option(value="") American Folk
+					option(value="") Latin
+					option(value="") Children's
+					option(value="") Blues
 			li.dropdown.filter-dropdown.col-sm-2
 				label(for="artist" class="filter-label") Artist
 				select#ddl(name="artist" runat="server" onchange="javascript:document.location.href = this.value;")
-					option(value="") Various Artists (1,200)
-					option(value="") Pete Seeger (800)
-					option(value="") Ella Jenkins (420)
-					option(value="") The New Lost City Ramblers (270)
-					option(value="") Woody Guthrie (230)
+					option(value="") Various Artists
+					option(value="") Pete Seeger
+					option(value="") Ella Jenkins
+					option(value="") The New Lost City Ramblers
+					option(value="") Woody Guthrie
 			li.dropdown.filter-dropdown.col-sm-2
 				label(for="country" class="filter-label") Country
 				select#ddl(name="country" runat="server" onchange="javascript:document.location.href = this.value;")
-					option(value="") United States (16,000)
-					option(value="") United Kingdom (1,100)
-					option(value="") Canada (990)
-					option(value="") USSR (former) (720)
-					option(value="") Russia (650)
+					option(value="") United States
+					option(value="") United Kingdom
+					option(value="") Canada
+					option(value="") USSR
+					option(value="") Russia
 			li.dropdown.filter-dropdown.col-sm-2
 				label(for="culture" class="filter-label") Culture
 				select#ddl(name="culture" runat="server" onchange="javascript:document.location.href = this.value;")
-					option(value="") Anglo-American (4,800)
-					option(value="") African American (2,600)
-					option(value="") Jewish (410)
-					option(value="") African Caribbean (350)
-					option(value="") Scottish (260)
+					option(value="") Anglo-American
+					option(value="") African American
+					option(value="") Jewish
+					option(value="") African Caribbean
+					option(value="") Scottish
 			li.dropdown.filter-dropdown.col-sm-2
 				label(for="instruments" class="filter-label") Instruments
-					select#ddl(name="instruments" runat="server" onchange="javascript:document.location.href = this.value;")
-						option(value="") Guitar (6,700)
-						option(value="") Vocals (5,900)
-						option(value="") Banjo (2,500)
-						option(value="") Fiddle (1,600)
-						option(value="") Piano (1,500)
-
-				//-                                     <option>Language</option>
-
-				//- option(value="") English (8,700)
-				//- option(value="") French (600)
-				//- option(value="") Spanish (490)
-				//- option(value="") Yiddish (190)
-				//- option(value="") Hebrew (modern) (120)
-
-				//-                             </select>
-				//-                         </li>
-				//-                         <li class="") 
-				//-                             <select id="") 
-
-
-				//-                                     <option>Decade</option>
-
-				//- option(value="") 1960s (6,000)
-				//- option(value="") 1950s (5,700)
-				//- option(value="") 1970s (4,500)
-				//- option(value="") 1990s (4,100)
-				//- option(value="") 1980s (3,200)
-
-				//-                             </select>
-				//-                         </li>
-				//-                         <li class="") 
-				//-                             <select id="") 
-
-
-				//-                                     <option>Label</option>
-
-				//- option(value="") Folkways Records (1,800)
-				//- option(value="") Smithsonian Folkways Recordings (430)
-				//- option(value="") Monitor Records (210)
-				//- option(value="") Arhoolie Records (150)
-				//- option(value="") Cook Records (110)
-
-				//-                             </select>
-				//-                         </li>
-				//-                         <li class="") 
-				//-                             <select id="") 
-
-
-				//-                                     <option>Format</option>
-
-				//- option(value="") Digital Download (3,000)
-				//- option(value="") Custom CD (2,500)
-				//- option(value="") Custom Cassette (2,200)
-				//- option(value="") CD (520)
-				//- option(value="") LP (54)
-
-				//-                             </select>
-				//-                         </li>
-				//-                         <li class="") 
-				//-                             <select id="") 
-
-
-				//-                                     <option>GradeLevel</option>
-
-				//- option(value="") 3-5 (23)
-				//- option(value="") 9-12 (17)
-				//- option(value="") 3-5|6-8 (16)
-				//- option(value="") 6-8|9-12 (14)
-				//- option(value="") 6-8 (13)
-
-				//-                             </select>
-				//-                         </li>
-				//-                         <li class="") 
-				//-                             <select id="") 
-
-
-				//-                                     <option>SubRegion</option>
-
-				//- option(value="") Northern America (2,200)
-				//- option(value="") Caribbean (250)
-				//- option(value="") Northern Europe (250)
-				//- option(value="") Southern America (220)
-				//- option(value="") Central America (180)
-
-				//-                             </select>
-				//-                         </li>
-				//-                         <li class="") 
-				//-                             <select id="") 
-
+				select#ddl(name="instruments" runat="server" onchange="javascript:document.location.href = this.value;")
+					option(value="") Guitar
+					option(value="") Vocals
+					option(value="") Banjo
+					option(value="") Fiddle
+					option(value="") Piano
+			li.dropdown.filter-dropdown.col-sm-2
+				label(for="language" class="filter-label") Language
+				select#ddl(name="language" runat="server" onchange="javascript:document.location.href = this.value;")
+					option(value="") English
+					option(value="") French
+					option(value="") Spanish
+					option(value="") Yiddish
+					option(value="") Hebrew
+			li.dropdown.filter-dropdown.col-sm-2
+				label(for="decade" class="filter-label") Decade
+				select#ddl(name="decade" runat="server" onchange="javascript:document.location.href = this.value;")
+					option(value="") 1960s
+					option(value="") 1950s
+					option(value="") 1970s
+					option(value="") 1990s
+					option(value="") 1980s
+			li.dropdown.filter-dropdown.col-sm-2
+				label(for="label" class="filter-label") Label
+				select#ddl(name="label" runat="server" onchange="javascript:document.location.href = this.value;")
+					option(value="") Folkways Records
+					option(value="") Smithsonian Folkways Recordings
+					option(value="") Monitor Records
+					option(value="") Arhoolie Records
+					option(value="") Cook Records
+			li.dropdown.filter-dropdown.col-sm-2
+				label(for="format" class="filter-label") Format
+				select#ddl(name="format" runat="server" onchange="javascript:document.location.href = this.value;")
+					option(value="") Digital Download
+					option(value="") Custom CD
+					option(value="") Custom Cassette
+					option(value="") CD
+					option(value="") LP
+			li.dropdown.filter-dropdown.col-sm-2
+				label(for="grade-level" class="filter-label") Grade Level
+				select#ddl(name="grade-level" runat="server" onchange="javascript:document.location.href = this.value;")
+					option(value="") 3-5
+					option(value="") 9-12
+					option(value="") 3-5|6-8
+					option(value="") 6-8|9-12
+					option(value="") 6-8
+			li.dropdown.filter-dropdown.col-sm-2
+				label(for="sub-region" class="filter-label") Sub Region
+				select#ddl(name="sub-region" runat="server" onchange="javascript:document.location.href = this.value;")
+					option(value="") Northern America
+					option(value="") Caribbean
+					option(value="") Northern Europe
+					option(value="") Southern America
+					option(value="") Central America
 
 				//-                                     <option>Region</option>
 
-				//- option(value="") The Americas (2,700)
-				//- option(value="") Europe (640)
-				//- option(value="") Asia (410)
-				//- option(value="") Africa (290)
-				//- option(value="") Oceania (43)
+				//- option(value="") The Americas
+				//- option(value="") Europe
+				//- option(value="") Asia
+				//- option(value="") Africa
+				//- option(value="") Oceania
 
 				//-                             </select>
 				//-                         </li>
@@ -214,46 +178,46 @@
 				.dropdown
 					.first-level-dropdown-title Artist
 					ul.first-level-dropdown
-						li: a(href="http://google.com") Ella Jenkins (500)
-						li: a(href="http://google.com") Lead Belly (403)
-						li: a(href="http://google.com") Lightnin' Hopkins (229)
-						li: a(href="http://google.com") Various Artists (175)
-						li: a(href="http://google.com") Mary Lou Williams (137)
-						li: a(href="http://google.com") John Jackson (134)
-						li: a(href="http://google.com") Big Joe Williams (107)
-						li: a(href="http://google.com") Mance Lipscomb (94)
-						li: a(href="http://google.com") Brownie McGhee (79)
-						li: a(href="http://google.com") Snooks Eaglin (75)
-						li: a(href="http://google.com") Bilal Abdurahman (73)
-						li: a(href="http://google.com") Sonny Terry (70)
-						li: a(href="http://google.com") Memphis Slim (68)
-						li: a(href="http://google.com") Robert Pete Williams (60)
-						li: a(href="http://google.com") Big Mama Thornton (56)
-						li: a(href="http://google.com") Elizabeth Cotten (55)
-						li: a(href="http://google.com") Fred McDowell (54)
-						li: a(href="http://google.com") Little Brother Montgomery (54)
-						li: a(href="http://google.com") Pete Seeger (52)
-						li: a(href="http://google.com") K.C. Douglas (49)
-						li: a(href="http://google.com") Lizzie Miles (47)
-						li: a(href="http://google.com") James P. Johnson (45)
-						li: a(href="http://google.com") Moving Star Hall Singers (45)
-						li: a(href="http://google.com") Child Development Group of Mississippi (42)
-						li: a(href="http://google.com") Grupo de Capoeira Angola Pelourinho (41)
-						li: a(href="http://google.com") Bernice Johnson Reagon (39)
-						li: a(href="http://google.com") Big Bill Broonzy (38)
-						li: a(href="http://google.com") Francis Clay (38)
-						li: a(href="http://google.com") J.C. Burris (38)
-						li: a(href="http://google.com") Horace Sprott (37)
-						li: a(href="http://google.com") Josh White (37)
-						li: a(href="http://google.com") Sam "Lightning" Hopkins (37)
-						li: a(href="http://google.com") Earl Hooker (33)
-						li: a(href="http://google.com") Paul Robeson (33)
-						li: a(href="http://google.com") Reverend Gary Davis (33)
-						li: a(href="http://google.com") Arbee Stidham (32)
-						li: a(href="http://google.com") Langston Hughes (32)
-						li: a(href="http://google.com") Lonnie Johnson (32)
-						li: a(href="http://google.com") Michel LaRue (32)
-						li: a(href="http://google.com") Jesse Fuller (30)
+						li: a(href="http://google.com") Ella Jenkins
+						li: a(href="http://google.com") Lead Belly
+						li: a(href="http://google.com") Lightnin' Hopkins
+						li: a(href="http://google.com") Various Artists
+						li: a(href="http://google.com") Mary Lou Williams
+						li: a(href="http://google.com") John Jackson
+						li: a(href="http://google.com") Big Joe Williams
+						li: a(href="http://google.com") Mance Lipscomb
+						li: a(href="http://google.com") Brownie McGhee
+						li: a(href="http://google.com") Snooks Eaglin
+						li: a(href="http://google.com") Bilal Abdurahman
+						li: a(href="http://google.com") Sonny Terry
+						li: a(href="http://google.com") Memphis Slim
+						li: a(href="http://google.com") Robert Pete Williams
+						li: a(href="http://google.com") Big Mama Thornton
+						li: a(href="http://google.com") Elizabeth Cotten
+						li: a(href="http://google.com") Fred McDowell
+						li: a(href="http://google.com") Little Brother Montgomery
+						li: a(href="http://google.com") Pete Seeger
+						li: a(href="http://google.com") K.C. Douglas
+						li: a(href="http://google.com") Lizzie Miles
+						li: a(href="http://google.com") James P. Johnson
+						li: a(href="http://google.com") Moving Star Hall Singers
+						li: a(href="http://google.com") Child Development Group of Mississippi
+						li: a(href="http://google.com") Grupo de Capoeira Angola Pelourinho
+						li: a(href="http://google.com") Bernice Johnson Reagon
+						li: a(href="http://google.com") Big Bill Broonzy
+						li: a(href="http://google.com") Francis Clay
+						li: a(href="http://google.com") J.C. Burris
+						li: a(href="http://google.com") Horace Sprott
+						li: a(href="http://google.com") Josh White
+						li: a(href="http://google.com") Sam "Lightning" Hopkins
+						li: a(href="http://google.com") Earl Hooker
+						li: a(href="http://google.com") Paul Robeson
+						li: a(href="http://google.com") Reverend Gary Davis
+						li: a(href="http://google.com") Arbee Stidham
+						li: a(href="http://google.com") Langston Hughes
+						li: a(href="http://google.com") Lonnie Johnson
+						li: a(href="http://google.com") Michel LaRue
+						li: a(href="http://google.com") Jesse Fuller
 
 			li.col-sm-2
 				.dropdown
@@ -284,7 +248,7 @@
 										li Cameroon
 										li Central African Republic
 										li Chad
-										li Congo (Democratic Republic)
+										li Congo
 										li Equatorial Guinea
 										li Gabon
 								li 
@@ -453,7 +417,7 @@
 										li Russia
 										li Slovakia
 										li Ukraine
-										li USSR (former)
+										li USSR
 								li 
 									.third-level-dropdown-title Northern Europe
 									ul.third-level-dropdown
@@ -483,7 +447,7 @@
 										li Portugal
 										li Slovenia
 										li Spain
-										li Yugoslavia (former)
+										li Yugoslavia
 								li 
 									.third-level-dropdown-title Western Europe
 									ul.third-level-dropdown
@@ -511,19 +475,19 @@
 				.dropdown
 					.first-level-dropdown-title Label/Archive
 					ul.first-level-dropdown
-						li Folkways Records (257)
-						li Smithsonian Folkways Recordings (121)
-						li Arhoolie Records (66)
-						li Blue Ridge Institute (5)
-						li Paredon Records (5)
-						li Cook Records (4)
-						li Monitor Records (3)
-						li Fast Folk Musical Magazine (2)
-						li Mickey Hart Collection (2)
-						li A.R.C.E. (1)
-						li Collector Records (1)
-						li Smithsonian Folkways Special Series (1)
-						li UNESCO (1)
+						li Folkways Records
+						li Smithsonian Folkways Recordings
+						li Arhoolie Records
+						li Blue Ridge Institute
+						li Paredon Records
+						li Cook Records
+						li Monitor Records
+						li Fast Folk Musical Magazine
+						li Mickey Hart Collection
+						li A.R.C.E.
+						li Collector Records
+						li Smithsonian Folkways Special Series
+						li UNESCO
 			li.col-sm-2.hidden-xs
 				//- need .filter-more-button for js
 				.filter-button.filter-more-button More
@@ -533,179 +497,179 @@
 				.dropdown 
 					.first-level-dropdown-title Culture Group
 					ul.first-level-dropdown
-						li African American (4,070)
-						li Anglo-American (149)
-						li European American (46)
-						li African Brazilian (42)
-						li Cajun (37)
-						li Hispanic (33)
-						li Gullah (30)
-						li American (26)
-						li Maroon (20)
-						li Pikilio (20)
-						li African (18)
-						li Creole (14)
-						li African Caribbean (11)
-						li Jewish (10)
-						li Yoruba (7)
-						li Zulu (7)
-						li Wolof (6)
-						li Bantu (5)
-						li Irish (5)
-						li Kpelle (5)
-						li Scottish (5)
-						li Baule (4)
-						li Lucumi (4)
-						li Muslim (4)
-						li Pende (4)
-						li Tutsi (4)
-						li Apache (3)
-						li Bahamian (3)
-						li Basa (3)
-						li Czech-American (3)
-						li Ewe (3)
-						li Igbo (3)
-						li Japanese-American (3)
-						li Luhya (3)
-						li Mahafaly (3)
-						li Mbala (3)
-						li Mexican-American (3)
-						li Puerto Rican (3)
-						li Shona (3)
-						li Swazi (3)
+						li African American
+						li Anglo-American
+						li European American
+						li African Brazilian
+						li Cajun
+						li Hispanic
+						li Gullah
+						li American
+						li Maroon
+						li Pikilio
+						li African
+						li Creole
+						li African Caribbean
+						li Jewish
+						li Yoruba
+						li Zulu
+						li Wolof
+						li Bantu
+						li Irish
+						li Kpelle
+						li Scottish
+						li Baule
+						li Lucumi
+						li Muslim
+						li Pende
+						li Tutsi
+						li Apache
+						li Bahamian
+						li Basa
+						li Czech-American
+						li Ewe
+						li Igbo
+						li Japanese-American
+						li Luhya
+						li Mahafaly
+						li Mbala
+						li Mexican-American
+						li Puerto Rican
+						li Shona
+						li Swazi
 			li.col-sm-2
 				.dropdown
 					.first-level-dropdown-title Language
 					ul.first-level-dropdown
-						li English (2,325)
-						li Spanish (46)
-						li Portuguese (45)
-						li French (16)
-						li Yiddish (9)
-						li Russian (5)
-						li Afrikaans (4)
-						li Arabic (4)
-						li Shona (4)
-						li Wolof (4)
-						li Chinese (3)
-						li German (3)
-						li Haitian French Creole (3)
-						li Hebrew (modern) (3)
-						li Italian (3)
-						li Luhya (3)
-						li Swahili (3)
-						li Zulu (3)
-						li Cree (2)
-						li French Creole (2)
-						li Ga (2)
-						li Indonesian (2)
-						li Korean (2)
-						li Tai (2)
-						li Yoruba (2)
-						li Albanian (1)
-						li Bantu (1)
-						li Gaelic-Scots (1)
-						li Georgian (1)
-						li Greek (1)
-						li Hebrew (1)
-						li Hindi (1)
-						li Inuktitut, Eastern Canadian (1)
-						li Inuktitut, Western Canadian (1)
-						li Inupiatun, North Alaskan (1)
-						li Lingala (1)
-						li Michif (1)
-						li Nootka (1)
-						li Pashto (1)
-						li Persian (1)
+						li English
+						li Spanish
+						li Portuguese
+						li French
+						li Yiddish
+						li Russian
+						li Afrikaans
+						li Arabic
+						li Shona
+						li Wolof
+						li Chinese
+						li German
+						li Haitian French Creole
+						li Hebrew
+						li Italian
+						li Luhya
+						li Swahili
+						li Zulu
+						li Cree
+						li French Creole
+						li Ga
+						li Indonesian
+						li Korean
+						li Tai
+						li Yoruba
+						li Albanian
+						li Bantu
+						li Gaelic-Scots
+						li Georgian
+						li Greek
+						li Hebrew
+						li Hindi
+						li Inuktitut, Eastern Canadian
+						li Inuktitut, Western Canadian
+						li Inupiatun, North Alaskan
+						li Lingala
+						li Michif
+						li Nootka
+						li Pashto
+						li Persian
 			li.col-sm-2
 				.dropdown
 					.first-level-dropdown-title Instrument
 					ul.first-level-dropdown
-						li Guitar (2,525)
-						li Vocals (2,423)
-						li Piano (1,249)
-						li Harmonica (582)
-						li Bass (546)
-						li Drum (528)
-						li Drums (333)
-						li Trumpet (322)
-						li Banjo (304)
-						li Trombone (263)
-						li Clarinet (237)
-						li Saxophone (197)
-						li Fiddle (120)
-						li Mandolin (80)
-						li Kazoo (79)
-						li Organ (75)
-						li Violin (62)
-						li Accordion (59)
-						li Tuba (59)
-						li Saxophone, tenor (56)
-						li Cornet (52)
-						li Viola (49)
-						li Washboard (49)
-						li Washboard band music (46)
-						li Tambourine (Drum) (43)
-						li Agogo (42)
-						li Organ (Musical instrument) (42)
-						li Pandeiro (Drum) (42)
-						li Atabaque (41)
-						li Gunga (40)
-						li Medio (40)
-						li Reco-reco (Musical instrument) (40)
-						li Maraca (38)
-						li Vocals, group (37)
-						li Drum kit (35)
-						li Bones (34)
-						li Flute (34)
-						li Ukulele (31)
-						li Bass guitar (30)
-						li Cowbells (27)
+						li Guitar
+						li Vocals
+						li Piano
+						li Harmonica
+						li Bass
+						li Drum
+						li Drums
+						li Trumpet
+						li Banjo
+						li Trombone
+						li Clarinet
+						li Saxophone
+						li Fiddle
+						li Mandolin
+						li Kazoo
+						li Organ
+						li Violin
+						li Accordion
+						li Tuba
+						li Saxophone, tenor
+						li Cornet
+						li Viola
+						li Washboard
+						li Washboard band music
+						li Tambourine
+						li Agogo
+						li Organ
+						li Pandeiro
+						li Atabaque
+						li Gunga
+						li Medio
+						li Reco-reco
+						li Maraca
+						li Vocals, group
+						li Drum kit
+						li Bones
+						li Flute
+						li Ukulele
+						li Bass guitar
+						li Cowbells
 			li.col-sm-2
 				.dropdown
 					.first-level-dropdown-title Format
 					ul.first-level-dropdown
-						li Digital Download (378)
-						li Custom CD (295)
-						li Custom Cassette (271)
-						li CD (154)
-						li LP (26)
-						li 7-inch (3)
-						li Box Set (2)
-						li DVD (1)
+						li Digital Download
+						li Custom CD
+						li Custom Cassette
+						li CD
+						li LP
+						li 7-inch
+						li Box Set
+						li DVD
 			li.col-sm-2
 				.dropdown
 					.first-level-dropdown-title Decade
 					ul.first-level-dropdown
-						li 1990s (2,263)
-						li 1960s (958)
-						li 1950s (897)
-						li 1970s (813)
-						li 1980s (617)
-						li 2000s (578)
-						li 2010s (263)
+						li 1990s
+						li 1960s
+						li 1950s
+						li 1970s
+						li 1980s
+						li 2000s
+						li 2010s
 			li.col-sm-2
 				.dropdown
 					.first-level-dropdown-title Grade Level
 					ul.first-level-dropdown
-						li K-2 (5)
-						li 6-8 (4)
-						li 9-12 (4)
-						li 3-5|6-8 (3)
-						li 6-8|9-12 (3)
-						li 3-5|6-8|9-12 (2)
-						li K-2|3-5|6-8|9-12 (2)
-						li 1-2 (1)
-						li 3-5 (1)
-						li 3-5|5-6 (1)
-						li 3-5|9-12 (1)
-						li 3-6 (1)
-						li 3-8 (1)
-						li 4-5|6-8|9-12 (1)
-						li 4-8 (1)
-						li 5-6|7-8 (1)
-						li 5-6|7-12 (1)
-						li 7-12 (1)
+						li K-2
+						li 6-8
+						li 9-12
+						li 3-5|6-8
+						li 6-8|9-12
+						li 3-5|6-8|9-12
+						li K-2|3-5|6-8|9-12
+						li 1-2
+						li 3-5
+						li 3-5|5-6
+						li 3-5|9-12
+						li 3-6
+						li 3-8
+						li 4-5|6-8|9-12
+						li 4-8
+						li 5-6|7-8
+						li 5-6|7-12
+						li 7-12
 		ul.row.dropdown-wrapper.visible-xs
 			li.col-sm-2
 				//- need .filter-more-button for js
