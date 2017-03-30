@@ -17,7 +17,7 @@
 		ul.row.dropdown-wrapper
 			li.dropdown.filter-dropdown.col-sm-2
 				label(for="genre" class="filter-label") Genre
-				select#ddl(name="genre" runat="server" onchange="javascript:document.location.href = this.value;")
+				select#ddl(name="genre" class="filter-select" runat="server" onchange="javascript:document.location.href = this.value;")
 					option(value="") World
 					option(value="") American Folk
 					option(value="") Latin
@@ -25,7 +25,7 @@
 					option(value="") Blues
 			li.dropdown.filter-dropdown.col-sm-2
 				label(for="artist" class="filter-label") Artist
-				select#ddl(name="artist" runat="server" onchange="javascript:document.location.href = this.value;")
+				select#ddl(name="artist" class="filter-select" runat="server" onchange="javascript:document.location.href = this.value;")
 					option(value="") Various Artists
 					option(value="") Pete Seeger
 					option(value="") Ella Jenkins
@@ -33,7 +33,7 @@
 					option(value="") Woody Guthrie
 			li.dropdown.filter-dropdown.col-sm-2
 				label(for="country" class="filter-label") Country
-				select#ddl(name="country" runat="server" onchange="javascript:document.location.href = this.value;")
+				select#ddl(name="country" class="filter-select" runat="server" onchange="javascript:document.location.href = this.value;")
 					option(value="") United States
 					option(value="") United Kingdom
 					option(value="") Canada
@@ -41,7 +41,7 @@
 					option(value="") Russia
 			li.dropdown.filter-dropdown.col-sm-2
 				label(for="culture" class="filter-label") Culture
-				select#ddl(name="culture" runat="server" onchange="javascript:document.location.href = this.value;")
+				select#ddl(name="culture" class="filter-select" runat="server" onchange="javascript:document.location.href = this.value;")
 					option(value="") Anglo-American
 					option(value="") African American
 					option(value="") Jewish
@@ -49,7 +49,7 @@
 					option(value="") Scottish
 			li.dropdown.filter-dropdown.col-sm-2
 				label(for="instruments" class="filter-label") Instruments
-				select#ddl(name="instruments" runat="server" onchange="javascript:document.location.href = this.value;")
+				select#ddl(name="instruments" class="filter-select" runat="server" onchange="javascript:document.location.href = this.value;")
 					option(value="") Guitar
 					option(value="") Vocals
 					option(value="") Banjo
@@ -57,7 +57,7 @@
 					option(value="") Piano
 			li.dropdown.filter-dropdown.col-sm-2
 				label(for="language" class="filter-label") Language
-				select#ddl(name="language" runat="server" onchange="javascript:document.location.href = this.value;")
+				select#ddl(name="language" class="filter-select" runat="server" onchange="javascript:document.location.href = this.value;")
 					option(value="") English
 					option(value="") French
 					option(value="") Spanish
@@ -65,7 +65,7 @@
 					option(value="") Hebrew
 			li.dropdown.filter-dropdown.col-sm-2
 				label(for="decade" class="filter-label") Decade
-				select#ddl(name="decade" runat="server" onchange="javascript:document.location.href = this.value;")
+				select#ddl(name="decade" class="filter-select" runat="server" onchange="javascript:document.location.href = this.value;")
 					option(value="") 1960s
 					option(value="") 1950s
 					option(value="") 1970s
@@ -73,7 +73,7 @@
 					option(value="") 1980s
 			li.dropdown.filter-dropdown.col-sm-2
 				label(for="label" class="filter-label") Label
-				select#ddl(name="label" runat="server" onchange="javascript:document.location.href = this.value;")
+				select#ddl(name="label" class="filter-select" runat="server" onchange="javascript:document.location.href = this.value;")
 					option(value="") Folkways Records
 					option(value="") Smithsonian Folkways Recordings
 					option(value="") Monitor Records
@@ -81,7 +81,7 @@
 					option(value="") Cook Records
 			li.dropdown.filter-dropdown.col-sm-2
 				label(for="format" class="filter-label") Format
-				select#ddl(name="format" runat="server" onchange="javascript:document.location.href = this.value;")
+				select#ddl(name="format" class="filter-select" runat="server" onchange="javascript:document.location.href = this.value;")
 					option(value="") Digital Download
 					option(value="") Custom CD
 					option(value="") Custom Cassette
@@ -89,7 +89,7 @@
 					option(value="") LP
 			li.dropdown.filter-dropdown.col-sm-2
 				label(for="grade-level" class="filter-label") Grade Level
-				select#ddl(name="grade-level" runat="server" onchange="javascript:document.location.href = this.value;")
+				select#ddl(name="grade-level" class="filter-select" runat="server" onchange="javascript:document.location.href = this.value;")
 					option(value="") 3-5
 					option(value="") 9-12
 					option(value="") 3-5|6-8
@@ -97,7 +97,7 @@
 					option(value="") 6-8
 			li.dropdown.filter-dropdown.col-sm-2
 				label(for="sub-region" class="filter-label") Sub Region
-				select#ddl(name="sub-region" runat="server" onchange="javascript:document.location.href = this.value;")
+				select#ddl(name="sub-region" class="filter-select" runat="server" onchange="javascript:document.location.href = this.value;")
 					option(value="") Northern America
 					option(value="") Caribbean
 					option(value="") Northern Europe

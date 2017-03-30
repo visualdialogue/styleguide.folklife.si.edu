@@ -1161,6 +1161,24 @@
 			@include sans-tag;
 			// font-weight: 700;
 		}
+		.filter-select {
+			@include sm-sans;
+			font-weight: 600 !important;
+
+			// 16px font exception
+			line-height: 1.4;
+			font-size: 1.3rem;
+			@include respond-to(break2) {
+				line-height: 1.3;
+			}
+			@include respond-to(break2full) {
+				font-size: 1vw;
+			}
+			@include respond-to(fullwidth) {
+				line-height: 1.3;
+				font-size: 1.6rem;
+			}
+		}
 	}
 
 /* Slideshow/Gallery arrows, from Folklife homepage banner

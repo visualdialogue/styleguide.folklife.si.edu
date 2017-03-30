@@ -32,6 +32,7 @@ _|   \___/  _|  _| \__| ____/
 // fallbacks
 $sansFallback: Arial, sans-serif; 
 $seriffallback: Georgia, Cambria, "Times New Roman", Times, serif;
+$woodtypeFallback: "Arial Black", "Arial Bold", Gadget, sans-serif;
 
 // Serif
 $serif: "freight-text-pro", $seriffallback;
@@ -41,5 +42,5 @@ $sans: 'acumin-pro', $sansFallback; // typekit
 $sansWide: 'acumin-pro-wide', $sansFallback; // typekit
 
 // Woodtype Extended
-$woodtypeExtended: "unit-gothic-717", $sansFallback; // widest HTW
-$woodtypeNarrow: "unit-gothic-718", $sansFallback; // widest HTW
+$woodtypeExtended: "unit-gothic-717", $woodtypeFallback; // widest HTW
+$woodtypeNarrow: "unit-gothic-718", $woodtypeFallback; // widest HTW

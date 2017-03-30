@@ -7017,7 +7017,7 @@ body {
 }
 
 .lg-woodtype-extended {
-	font-family: "unit-gothic-717", Arial, sans-serif;
+	font-family: "unit-gothic-717", "Arial Black", "Arial Bold", Gadget, sans-serif;
 	text-transform: uppercase;
 	line-height: 1;
 }
@@ -7041,7 +7041,7 @@ body {
 }
 
 .md-woodtype-extended {
-	font-family: "unit-gothic-717", Arial, sans-serif;
+	font-family: "unit-gothic-717", "Arial Black", "Arial Bold", Gadget, sans-serif;
 	text-transform: uppercase;
 	line-height: 1;
 }
@@ -7059,7 +7059,7 @@ body {
 }
 
 .sm-woodtype-extended {
-	font-family: "unit-gothic-717", Arial, sans-serif;
+	font-family: "unit-gothic-717", "Arial Black", "Arial Bold", Gadget, sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 0.5px;
 	margin-top: 0;
@@ -8936,7 +8936,7 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
 	font-family: "acumin-pro-wide", Arial, sans-serif;
 	line-height: 1.2;
 	font-size: 1.7rem;
-	font-family: "unit-gothic-718", Arial, sans-serif;
+	font-family: "unit-gothic-718", "Arial Black", "Arial Bold", Gadget, sans-serif;
 	color: #595959;
 	margin-top: 0.92593rem;
 }
@@ -9410,7 +9410,7 @@ ul {
 }
 
 .section-title {
-	font-family: "unit-gothic-717", Arial, sans-serif;
+	font-family: "unit-gothic-717", "Arial Black", "Arial Bold", Gadget, sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 0.5px;
 	margin-top: 0;
@@ -9797,7 +9797,7 @@ hr {
 
 .page-title {
 	color: #fff;
-	font-family: "unit-gothic-717", Arial, sans-serif;
+	font-family: "unit-gothic-717", "Arial Black", "Arial Bold", Gadget, sans-serif;
 	text-transform: uppercase;
 	line-height: 1;
 	margin-top: 0.48148rem;
@@ -10350,7 +10350,7 @@ a .page-title:hover {
 
 .become-a-member .image {
 	position: relative;
-	font-family: "unit-gothic-717", Arial, sans-serif;
+	font-family: "unit-gothic-717", "Arial Black", "Arial Bold", Gadget, sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 0.5px;
 	margin-top: 0;
@@ -10726,7 +10726,7 @@ a .page-title:hover {
 
 .support-button {
 	background-color: #666666;
-	font-family: "unit-gothic-717", Arial, sans-serif;
+	font-family: "unit-gothic-717", "Arial Black", "Arial Bold", Gadget, sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 0.5px;
 	margin-top: 0;
@@ -11777,7 +11777,7 @@ figcaption.minus-sign:before {
 }
 
 .search-page .search-query-title, .past-festivals-page .search-query-title {
-	font-family: "unit-gothic-717", Arial, sans-serif;
+	font-family: "unit-gothic-717", "Arial Black", "Arial Bold", Gadget, sans-serif;
 	text-transform: uppercase;
 	line-height: 1;
 	text-transform: capitalize;
@@ -11975,6 +11975,48 @@ figcaption.minus-sign:before {
 		font-size: 1.6rem;
 		letter-spacing: 1px;
 		margin-bottom: 0;
+	}
+}
+
+.search-page .filter-select, .past-festivals-page .filter-select {
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.32;
+	font-size: 1.5rem;
+	font-weight: 600 !important;
+	line-height: 1.4;
+	font-size: 1.3rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.search-page .filter-select, .past-festivals-page .filter-select {
+		font-size: 1.3vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.search-page .filter-select, .past-festivals-page .filter-select {
+		line-height: 1.32;
+		font-size: 1.8rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) {
+	.search-page .filter-select, .past-festivals-page .filter-select {
+		line-height: 1.3;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.search-page .filter-select, .past-festivals-page .filter-select {
+		font-size: 1vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.search-page .filter-select, .past-festivals-page .filter-select {
+		line-height: 1.3;
+		font-size: 1.6rem;
 	}
 }
 
@@ -15743,7 +15785,7 @@ body {
 }
 
 .ms-header .program-year {
-	font-family: "unit-gothic-717", Arial, sans-serif;
+	font-family: "unit-gothic-717", "Arial Black", "Arial Bold", Gadget, sans-serif;
 	text-transform: uppercase;
 	line-height: 1;
 	color: #cccccc;
@@ -25422,7 +25464,7 @@ body {
 }
 
 .lg-woodtype-extended {
-	font-family: "unit-gothic-717", Arial, sans-serif;
+	font-family: "unit-gothic-717", "Arial Black", "Arial Bold", Gadget, sans-serif;
 	text-transform: uppercase;
 	line-height: 1;
 }
@@ -25446,7 +25488,7 @@ body {
 }
 
 .md-woodtype-extended {
-	font-family: "unit-gothic-717", Arial, sans-serif;
+	font-family: "unit-gothic-717", "Arial Black", "Arial Bold", Gadget, sans-serif;
 	text-transform: uppercase;
 	line-height: 1;
 }
@@ -25464,7 +25506,7 @@ body {
 }
 
 .sm-woodtype-extended {
-	font-family: "unit-gothic-717", Arial, sans-serif;
+	font-family: "unit-gothic-717", "Arial Black", "Arial Bold", Gadget, sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 0.5px;
 	margin-top: 0;
@@ -27341,7 +27383,7 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
 	font-family: "acumin-pro-wide", Arial, sans-serif;
 	line-height: 1.2;
 	font-size: 1.7rem;
-	font-family: "unit-gothic-718", Arial, sans-serif;
+	font-family: "unit-gothic-718", "Arial Black", "Arial Bold", Gadget, sans-serif;
 	color: #595959;
 	margin-top: 0.92593rem;
 }
@@ -27815,7 +27857,7 @@ ul {
 }
 
 .section-title {
-	font-family: "unit-gothic-717", Arial, sans-serif;
+	font-family: "unit-gothic-717", "Arial Black", "Arial Bold", Gadget, sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 0.5px;
 	margin-top: 0;
@@ -28202,7 +28244,7 @@ hr {
 
 .page-title {
 	color: #fff;
-	font-family: "unit-gothic-717", Arial, sans-serif;
+	font-family: "unit-gothic-717", "Arial Black", "Arial Bold", Gadget, sans-serif;
 	text-transform: uppercase;
 	line-height: 1;
 	margin-top: 0.48148rem;
@@ -28755,7 +28797,7 @@ a .page-title:hover {
 
 .become-a-member .image {
 	position: relative;
-	font-family: "unit-gothic-717", Arial, sans-serif;
+	font-family: "unit-gothic-717", "Arial Black", "Arial Bold", Gadget, sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 0.5px;
 	margin-top: 0;
@@ -29131,7 +29173,7 @@ a .page-title:hover {
 
 .support-button {
 	background-color: #666666;
-	font-family: "unit-gothic-717", Arial, sans-serif;
+	font-family: "unit-gothic-717", "Arial Black", "Arial Bold", Gadget, sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 0.5px;
 	margin-top: 0;
@@ -30182,7 +30224,7 @@ figcaption.minus-sign:before {
 }
 
 .search-page .search-query-title, .past-festivals-page .search-query-title {
-	font-family: "unit-gothic-717", Arial, sans-serif;
+	font-family: "unit-gothic-717", "Arial Black", "Arial Bold", Gadget, sans-serif;
 	text-transform: uppercase;
 	line-height: 1;
 	text-transform: capitalize;
@@ -30380,6 +30422,48 @@ figcaption.minus-sign:before {
 		font-size: 1.6rem;
 		letter-spacing: 1px;
 		margin-bottom: 0;
+	}
+}
+
+.search-page .filter-select, .past-festivals-page .filter-select {
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.32;
+	font-size: 1.5rem;
+	font-weight: 600 !important;
+	line-height: 1.4;
+	font-size: 1.3rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.search-page .filter-select, .past-festivals-page .filter-select {
+		font-size: 1.3vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.search-page .filter-select, .past-festivals-page .filter-select {
+		line-height: 1.32;
+		font-size: 1.8rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) {
+	.search-page .filter-select, .past-festivals-page .filter-select {
+		line-height: 1.3;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.search-page .filter-select, .past-festivals-page .filter-select {
+		font-size: 1vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.search-page .filter-select, .past-festivals-page .filter-select {
+		line-height: 1.3;
+		font-size: 1.6rem;
 	}
 }
 
@@ -32514,7 +32598,7 @@ iframe {
 }
 
 .ms-header .program-year {
-	font-family: "unit-gothic-717", Arial, sans-serif;
+	font-family: "unit-gothic-717", "Arial Black", "Arial Bold", Gadget, sans-serif;
 	text-transform: uppercase;
 	line-height: 1;
 	color: #cccccc;
@@ -38056,13 +38140,13 @@ body.magazine-page, body.magazine-article-page {
 }
 
 .folkways-nav {
-	font-family: "unit-gothic-717", Arial, sans-serif;
+	font-family: "unit-gothic-717", "Arial Black", "Arial Bold", Gadget, sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 0.5px;
 	margin-top: 0;
 	margin-bottom: 1.5rem;
 	line-height: 1.2;
-	font-family: "unit-gothic-718", Arial, sans-serif;
+	font-family: "unit-gothic-718", "Arial Black", "Arial Bold", Gadget, sans-serif;
 	padding-left: 0;
 	margin-bottom: 0 !important;
 	position: relative;
