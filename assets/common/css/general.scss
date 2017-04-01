@@ -1113,6 +1113,12 @@
 			position: relative;
 			z-index: 10;
 		}
+		.filter-more-button {
+			// push down for real search
+			@include respond-to(break2) {
+				margin-top: 3.5rem;
+			}
+		}
 		.filter-more-band {
 			display: none; // initial hide
 			@include respond-to(break2) {

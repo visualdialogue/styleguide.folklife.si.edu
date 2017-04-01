@@ -11859,6 +11859,12 @@ figcaption.minus-sign:before {
 	}
 }
 
+@media only screen and (min-width: 53.25em) {
+	.search-page .filter-more-button, .past-festivals-page .filter-more-button {
+		margin-top: 3.5rem;
+	}
+}
+
 .search-page .filter-more-band, .past-festivals-page .filter-more-band {
 	display: none;
 }
@@ -30303,6 +30309,12 @@ figcaption.minus-sign:before {
 @media only screen and (min-width: 1560px) {
 	.search-page .highlight-bar, .past-festivals-page .highlight-bar {
 		margin-bottom: 4rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) {
+	.search-page .filter-more-button, .past-festivals-page .filter-more-button {
+		margin-top: 3.5rem;
 	}
 }
 
