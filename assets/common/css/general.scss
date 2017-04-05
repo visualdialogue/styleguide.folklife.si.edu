@@ -35,6 +35,9 @@
 
 /* Bootstrap overrides
 -------------------------------------------------*/
+	.collapse {
+		clear: right;
+	}
 	.navbar-header {
 		float: none;
 	}
@@ -341,7 +344,7 @@
 		@include padding-bottom(0.8);
 		@include border(bottom);
 	}
-	.sidebar h4, .sidebar -item-title {
+	.sidebar h4, .sidebar-item-title {
 		@include caption-sans;
 		@include padding-top(0.8);
 		color: $black50;
@@ -350,6 +353,11 @@
 	.sidebar-item, #related-content-mag li {
 		@include border(bottom);
 		@include padding-bottom(1);
+	}
+	// folkways teaching page fix before initial launch
+	li.sidebar-item a {
+		@include sm-sans;
+		line-height: 1.33 !important; // layout
 	}
 	.last-sidebar-item {
 		display: block; // in case it's liner notes <a>
@@ -525,7 +533,7 @@
 			@include sm-sans;
 			line-height: 1.3 !important;
 			font-weight: 600;
-			@include margin-top(1);	
+			@include margin-top(1);
 		}
 		p {
 			@include margin-bottom(1.5);
@@ -996,7 +1004,7 @@
 				-webkit-transform: rotate(-90deg);
 				-moz-transform: rotate(-90deg);
 				transform: rotate(-90deg);
-			}	
+			}
 		}
 	}
 	.dropdown {
@@ -1035,7 +1043,7 @@
 			position: absolute;
 			top:0;
 			right: -100%;
-			width: 100%;	
+			width: 100%;
 		}
 	}
 	.third-level-dropdown {
@@ -1084,7 +1092,7 @@
 			-webkit-transform: rotate(-90deg);
 			-moz-transform: rotate(-90deg);
 			transform: rotate(-90deg);
-		}	
+		}
 	}
 
 /* Search, Festival Past Festival Programs
@@ -1366,13 +1374,13 @@
 					position: absolute;
 					top: 0;right: 0;bottom: 0;left: 0;
 					background-color: rgba(0,0,0,0.8);
-				}	
+				}
 			}
 		}
 		.slick-active .gallery-image-inner:after {
 			display: none;
-		}		
-		.slick-arrow {			
+		}
+		.slick-arrow {
 			@include respond-to(break2max) {
 				display: none !important;
 			}
@@ -1392,7 +1400,7 @@
 			@include respond-to(fullwidth) {
 				right: 5rem;
 			}
-		}		
+		}
 	}
 	.remodal-captions {
 		@include margin-top(4);
@@ -1436,7 +1444,7 @@
 		.tag {
 			font-weight: 400;
 			@include margin-bottom(0.5);
-		}		
+		}
 		.byline {
 			@include margin-bottom(2);
 			color: $black65;
@@ -1464,7 +1472,7 @@
 			.title {
 				@include lg-serif;
 				@include margin-bottom(0.8);
-			}	
+			}
 			.byline {
 				@include sm-sans;
 				text-transform: none;
@@ -1601,7 +1609,7 @@
 			}
 		}
 	}
-	
+
 /* Helpers
 -------------------------------------------------*/
 	.is-hidden {

@@ -1,5 +1,5 @@
 
-/* 
+/*
 * Font Awesome by Dave Gandy - http://fontawesome.io
 * Entypo pictograms by Daniel Bruce — www.entypo.com
 */
@@ -127,7 +127,7 @@
 		@include respond-to(fullwidth) {
 			padding: 14px;
 			font-size: 2.5rem;
-		}		
+		}
 	}
 	.main-nav-icon {
 		@include respond-to(break2max) {
@@ -185,7 +185,7 @@
 	}
 	.icon-play-button {
 		position: relative; // contain absolute pseudo icons
-		cursor: pointer;		
+		cursor: pointer;
 		&:before {
 			position: absolute;
 			top:0;
@@ -204,7 +204,7 @@
 			color: $black80;
   			display: block;
 		}
-	}	
+	}
 	.icon-gallery:before, .icon-gallery:after, .icon-picture-o:before, .icon-picture-o:after, .icon-play-button:before, .icon-play-button:after, .mejs-controls .mejs-playpause-button button:before, .mejs-controls .mejs-playpause-button button:after {
 		@include respond-to(break2max) {
 			font-size: 10vw;
@@ -372,7 +372,7 @@
 		font-family: 'vd-icons';
 		content: $hollowCircle;
 		opacity: 1;
-		width: 14px; 
+		width: 14px;
 		height: 14px;
 		display: block;
 		@include respond-to(break2max) {
@@ -386,7 +386,7 @@
 			font-size:1.7rem;
 		}
 	}
-	.slick-dots li button:hover:before {
+	.slick-dots li button:hover:before, .slick-dots li.slick-active button:before {
 		@include respond-to(break2) {
 			content: $filledInCircle;
 		}
@@ -432,12 +432,12 @@
 			}
 			@include respond-to(break2full) {
 				font-size: 4vw;
-				padding-right: 0.2vw; 
+				padding-right: 0.2vw;
 				line-height: 0.8;
 			}
 			@include respond-to(fullwidth) {
 				font-size: 5.2rem;
-				padding-right: 2px; 
+				padding-right: 2px;
 				line-height: 1;
 			}
 		}

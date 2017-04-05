@@ -1192,9 +1192,10 @@ $(document).ready(function () {
 
 /********************
 * Smooth Scrolling
+* add .smooth-scroll to an anchor tag to get this
 * from https://www.abeautifulsite.net/smoothly-scroll-to-an-element-without-a-jquery-plugin-2
 ********************/
-	$('a[href^="#"]').on('click', function(event) {
+	$('a.smooth-scroll[href^="#"]').on('click', function(event) {
 	    var target = $(this.getAttribute('href'));
 	    if( target.length ) {
 	        event.preventDefault();
@@ -1692,11 +1693,12 @@ $(document).ready(function () {
 * Bootstrap accordian
 * http://v4-alpha.getbootstrap.com/components/collapse/#accordion-example
 **************************/
-	var $collapse = $('.collapse');
-	$collapse.collapse()
-	// more link and arrow changer
+	// var $collapse = $('.collapse');
+	// $collapse.collapse();
+	// more link and arrow changer	
 	// var $more_link = $('.accordian-toggle').find('.more-link-text');
-	$('.more-link-will-change').on('click', function() {
+	// $('.more-link-will-change').on('click', function() {
+	$('.content .more-link').on('click', function() {
 		var text = $(this).find('.more-link-text');
 		if(text.html() == 'more') {
 			text.html('less');

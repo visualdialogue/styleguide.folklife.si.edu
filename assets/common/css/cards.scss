@@ -313,7 +313,7 @@ a.details {
 		}
 	.full-feature-card, .details, .ms-section__copy {
 		.more-link {
-			position: static;
+			// position: static;
 			@include margin-top(2);
 			@include margin-bottom(2);
 			@include margin-left(2);

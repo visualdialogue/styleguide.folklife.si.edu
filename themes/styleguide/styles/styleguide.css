@@ -11,10 +11,9 @@
 /*
 
 
-  __|              |         
- |     _ \   __ \   __|   __| 
- __|  (   |  |   |  |   \__ \ 
-_|   \___/  _|  _| \__| ____/
+  __|              |
+ |     _ \   __ \   __|   __|
+ __|  (   |  |   |  |   \__ _|   \___/  _|  _| \__| ____/
 
 
 */
@@ -30,6 +29,14 @@ _|   \___/  _|  _| \__| ____/
 	font-family: "vd-icons";
 	src: url("./fonts/vd-icons.eot");
 	src: url("./fonts/vd-icons.eot?#iefix") format("embedded-opentype"), url("./fonts/vd-icons.woff") format("woff"), url("./fonts/vd-icons.ttf") format("truetype"), url("./fonts/vd-icons.svg#vd-icons") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "galano";
+	src: url("./galano/galanogrotesquedemo-bold-webfont.eot");
+	src: url("./galano/galanogrotesquedemo-bold-webfont.eot?#iefix") format("embedded-opentype"), url("./galano/galanogrotesquedemo-bold-webfont.woff") format("woff"), url("./galano/galanogrotesquedemo-bold-webfont.woff2") format("woff2"), url("./galano/galanogrotesquedemo-bold-webfont.ttf") format("truetype"), url("./galano/galanogrotesquedemo-bold-webfont.svg#galano") format("svg");
 	font-weight: normal;
 	font-style: normal;
 }
@@ -6314,7 +6321,7 @@ body {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.content h5, .text-card h5 {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -6398,7 +6405,7 @@ body {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.content .title, .text-card .title {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -6579,6 +6586,14 @@ body {
 	.content ol ol li, .text-card ol ol li {
 		padding-left: 0;
 	}
+}
+
+.content .more-link {
+	position: static;
+	float: right;
+	display: inline-block;
+	border-bottom: none;
+	box-shadow: none;
 }
 
 .content-footer {
@@ -6782,7 +6797,7 @@ body {
 .lg-sans {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.267;
+	line-height: 1.127;
 	font-size: 2.1rem;
 }
 
@@ -6801,7 +6816,7 @@ body {
 .lg-sans-semi {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.267;
+	line-height: 1.127;
 	font-size: 2.1rem;
 	font-weight: 600;
 }
@@ -6868,7 +6883,7 @@ body {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.sm-sans {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -6889,7 +6904,7 @@ body {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.sm-sans-semi {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -7000,7 +7015,7 @@ body {
 .intro-sans {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.267;
+	line-height: 1.127;
 	font-size: 2.1rem;
 }
 
@@ -7379,7 +7394,7 @@ body {
 
 /* Clear left for correct alignment of cards in rows
  -------------------------------------------------- */
-/* 
+/*
 * Font Awesome by Dave Gandy - http://fontawesome.io
 * Entypo pictograms by Daniel Bruce — www.entypo.com
 */
@@ -7831,7 +7846,7 @@ body {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.more-link-text {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -7949,19 +7964,19 @@ body {
 }
 
 @media only screen and (min-width: 53.25em) {
-	.slick-dots li button:hover:before {
+	.slick-dots li button:hover:before, .slick-dots li.slick-active button:before {
 		content: "a";
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.slick-dots li button:hover:before {
+	.slick-dots li button:hover:before, .slick-dots li.slick-active button:before {
 		font-size: 0.8vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.slick-dots li button:hover:before {
+	.slick-dots li button:hover:before, .slick-dots li.slick-active button:before {
 		font-size: 1.5rem;
 		padding-left: 1px;
 	}
@@ -9019,6 +9034,10 @@ a.skip-main:focus, a.skip-main:active {
 
 /* Bootstrap overrides
 -------------------------------------------------*/
+.collapse {
+	clear: right;
+}
+
 .navbar-header {
 	float: none;
 }
@@ -9539,7 +9558,7 @@ ul {
 .sidebar h3, .sidebar-section-title, #related-content-mag:before {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.267;
+	line-height: 1.127;
 	font-size: 2.1rem;
 	color: gray;
 	margin-top: 0;
@@ -9584,7 +9603,7 @@ ul {
 	}
 }
 
-.sidebar h4, .sidebar -item-title {
+.sidebar h4, .sidebar-item-title {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
 	line-height: 1.4;
@@ -9596,32 +9615,32 @@ ul {
 }
 
 @media only screen and (min-width: 53.25em) {
-	.sidebar h4, .sidebar -item-title {
+	.sidebar h4, .sidebar-item-title {
 		line-height: 1.3;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.sidebar h4, .sidebar -item-title {
+	.sidebar h4, .sidebar-item-title {
 		font-size: 1vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.sidebar h4, .sidebar -item-title {
+	.sidebar h4, .sidebar-item-title {
 		line-height: 1.3;
 		font-size: 1.6rem;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.sidebar h4, .sidebar -item-title {
+	.sidebar h4, .sidebar-item-title {
 		padding-top: 0.512vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.sidebar h4, .sidebar -item-title {
+	.sidebar h4, .sidebar-item-title {
 		padding-top: 0.8rem;
 	}
 }
@@ -9640,6 +9659,27 @@ ul {
 @media only screen and (min-width: 1560px) {
 	.sidebar-item, #related-content-mag li {
 		padding-bottom: 1rem;
+	}
+}
+
+li.sidebar-item a {
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.32;
+	font-size: 1.5rem;
+	line-height: 1.33 !important;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	li.sidebar-item a {
+		font-size: 1.2vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	li.sidebar-item a {
+		line-height: 1.32;
+		font-size: 1.8rem;
 	}
 }
 
@@ -9992,7 +10032,7 @@ a .page-title:hover {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.sidebar-audio .track {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -10172,7 +10212,7 @@ a .page-title:hover {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.sidebar-pull-quote .copy {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -10411,7 +10451,7 @@ a .page-title:hover {
 .become-a-member .copy {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.267;
+	line-height: 1.127;
 	font-size: 2.1rem;
 	text-align: center;
 }
@@ -10512,7 +10552,7 @@ a .page-title:hover {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.button .price {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -11451,7 +11491,7 @@ figcaption.minus-sign:before {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.dropdown-wrapper {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -11996,7 +12036,7 @@ figcaption.minus-sign:before {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.search-page .filter-select, .past-festivals-page .filter-select {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -12525,7 +12565,7 @@ video::-webkit-media-controls {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.blog-page .articles-section .description, .videos-page .articles-section .description {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -12612,7 +12652,7 @@ video::-webkit-media-controls {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.blog-page .feature .byline, .videos-page .feature .byline {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -12829,7 +12869,7 @@ video::-webkit-media-controls {
 	padding: 0.5rem;
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.267;
+	line-height: 1.127;
 	font-size: 2.1rem;
 	color: gray;
 }
@@ -12860,7 +12900,7 @@ video::-webkit-media-controls {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.numbered-sidebar-item .title {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -12913,7 +12953,7 @@ video::-webkit-media-controls {
 	width: 1.75586rem;
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.267;
+	line-height: 1.127;
 	font-size: 2.1rem;
 	line-height: 0.5;
 }
@@ -13046,7 +13086,7 @@ video::-webkit-media-controls {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.blog-categories li, .multimedia-sections li {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -13515,7 +13555,7 @@ video::-webkit-media-controls {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.article-page figcaption {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -13903,7 +13943,7 @@ a.details {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.byline {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -13981,7 +14021,7 @@ a.details {
 	margin-top: -0.2963rem;
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.267;
+	line-height: 1.127;
 	font-size: 2.1rem;
 }
 
@@ -14020,7 +14060,7 @@ a.details {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.publication-card .author {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -14457,7 +14497,6 @@ body {
 }
 
 .full-feature-card .more-link, .details .more-link, .ms-section__copy .more-link {
-	position: static;
 	margin-top: 0.74074rem;
 	margin-bottom: 0.74074rem;
 	margin-left: 0.74074rem;
@@ -14748,7 +14787,7 @@ body {
 .full-feature-card .description {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.267;
+	line-height: 1.127;
 	font-size: 2.1rem;
 }
 
@@ -14795,7 +14834,7 @@ body {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.sidebar-card .details {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -14959,7 +14998,7 @@ body {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.album-card .title, .vinyl-card .title, .books-card .title {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -14991,7 +15030,7 @@ body {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.album-card .artist, .vinyl-card .artist, .books-card .artist {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -15048,7 +15087,7 @@ body {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.merchandise-card .title {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -15082,7 +15121,7 @@ body {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.merchandise-card .price {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -15196,7 +15235,7 @@ body {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.general-content-card .date {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -15420,7 +15459,7 @@ body {
 .program-category-main .description p {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.267;
+	line-height: 1.127;
 	font-size: 2.1rem;
 }
 
@@ -15480,7 +15519,7 @@ body {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.program-category-main figcaption {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -15995,7 +16034,7 @@ body {
 .ms-introduction-blurb {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.267;
+	line-height: 1.127;
 	font-size: 2.1rem;
 	margin-bottom: 0.74074rem;
 }
@@ -16643,7 +16682,7 @@ body {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.participants-section .blurb {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -16785,7 +16824,7 @@ body {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.audio-card .subtitle, .audio-card .artist {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -16916,7 +16955,7 @@ body {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.audio-time {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -17527,7 +17566,7 @@ body {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.horizontal-audio-card .title {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -17764,7 +17803,7 @@ body {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.horizontal-audio-card-third .title {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -18455,15 +18494,14 @@ body {
 	URL:    http://visualdialogue.com
 	Created: Fall 2016
 */
-/* Imports	
+/* Imports
 -------------------------------------------------- */
 /*
 
 
-  __|              |         
- |     _ \   __ \   __|   __| 
- __|  (   |  |   |  |   \__ \ 
-_|   \___/  _|  _| \__| ____/
+  __|              |
+ |     _ \   __ \   __|   __|
+ __|  (   |  |   |  |   \__ _|   \___/  _|  _| \__| ____/
 
 
 */
@@ -18479,6 +18517,14 @@ _|   \___/  _|  _| \__| ____/
 	font-family: "vd-icons";
 	src: url("./fonts/vd-icons.eot");
 	src: url("./fonts/vd-icons.eot?#iefix") format("embedded-opentype"), url("./fonts/vd-icons.woff") format("woff"), url("./fonts/vd-icons.ttf") format("truetype"), url("./fonts/vd-icons.svg#vd-icons") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "galano";
+	src: url("./galano/galanogrotesquedemo-bold-webfont.eot");
+	src: url("./galano/galanogrotesquedemo-bold-webfont.eot?#iefix") format("embedded-opentype"), url("./galano/galanogrotesquedemo-bold-webfont.woff") format("woff"), url("./galano/galanogrotesquedemo-bold-webfont.woff2") format("woff2"), url("./galano/galanogrotesquedemo-bold-webfont.ttf") format("truetype"), url("./galano/galanogrotesquedemo-bold-webfont.svg#galano") format("svg");
 	font-weight: normal;
 	font-style: normal;
 }
@@ -24767,7 +24813,7 @@ body {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.content h5, .text-card h5 {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -24851,7 +24897,7 @@ body {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.content .title, .text-card .title {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -25032,6 +25078,14 @@ body {
 	.content ol ol li, .text-card ol ol li {
 		padding-left: 0;
 	}
+}
+
+.content .more-link {
+	position: static;
+	float: right;
+	display: inline-block;
+	border-bottom: none;
+	box-shadow: none;
 }
 
 .content-footer {
@@ -25235,7 +25289,7 @@ body {
 .lg-sans {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.267;
+	line-height: 1.127;
 	font-size: 2.1rem;
 }
 
@@ -25254,7 +25308,7 @@ body {
 .lg-sans-semi {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.267;
+	line-height: 1.127;
 	font-size: 2.1rem;
 	font-weight: 600;
 }
@@ -25321,7 +25375,7 @@ body {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.sm-sans {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -25342,7 +25396,7 @@ body {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.sm-sans-semi {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -25453,7 +25507,7 @@ body {
 .intro-sans {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.267;
+	line-height: 1.127;
 	font-size: 2.1rem;
 }
 
@@ -25832,7 +25886,7 @@ body {
 
 /* Clear left for correct alignment of cards in rows
  -------------------------------------------------- */
-/* 
+/*
 * Font Awesome by Dave Gandy - http://fontawesome.io
 * Entypo pictograms by Daniel Bruce — www.entypo.com
 */
@@ -26284,7 +26338,7 @@ body {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.more-link-text {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -26402,19 +26456,19 @@ body {
 }
 
 @media only screen and (min-width: 53.25em) {
-	.slick-dots li button:hover:before {
+	.slick-dots li button:hover:before, .slick-dots li.slick-active button:before {
 		content: "a";
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.slick-dots li button:hover:before {
+	.slick-dots li button:hover:before, .slick-dots li.slick-active button:before {
 		font-size: 0.8vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.slick-dots li button:hover:before {
+	.slick-dots li button:hover:before, .slick-dots li.slick-active button:before {
 		font-size: 1.5rem;
 		padding-left: 1px;
 	}
@@ -27472,6 +27526,10 @@ a.skip-main:focus, a.skip-main:active {
 
 /* Bootstrap overrides
 -------------------------------------------------*/
+.collapse {
+	clear: right;
+}
+
 .navbar-header {
 	float: none;
 }
@@ -27992,7 +28050,7 @@ ul {
 .sidebar h3, .sidebar-section-title, #related-content-mag:before {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.267;
+	line-height: 1.127;
 	font-size: 2.1rem;
 	color: gray;
 	margin-top: 0;
@@ -28037,7 +28095,7 @@ ul {
 	}
 }
 
-.sidebar h4, .sidebar -item-title {
+.sidebar h4, .sidebar-item-title {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
 	line-height: 1.4;
@@ -28049,32 +28107,32 @@ ul {
 }
 
 @media only screen and (min-width: 53.25em) {
-	.sidebar h4, .sidebar -item-title {
+	.sidebar h4, .sidebar-item-title {
 		line-height: 1.3;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.sidebar h4, .sidebar -item-title {
+	.sidebar h4, .sidebar-item-title {
 		font-size: 1vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.sidebar h4, .sidebar -item-title {
+	.sidebar h4, .sidebar-item-title {
 		line-height: 1.3;
 		font-size: 1.6rem;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.sidebar h4, .sidebar -item-title {
+	.sidebar h4, .sidebar-item-title {
 		padding-top: 0.512vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.sidebar h4, .sidebar -item-title {
+	.sidebar h4, .sidebar-item-title {
 		padding-top: 0.8rem;
 	}
 }
@@ -28093,6 +28151,27 @@ ul {
 @media only screen and (min-width: 1560px) {
 	.sidebar-item, #related-content-mag li {
 		padding-bottom: 1rem;
+	}
+}
+
+li.sidebar-item a {
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.32;
+	font-size: 1.5rem;
+	line-height: 1.33 !important;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	li.sidebar-item a {
+		font-size: 1.2vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	li.sidebar-item a {
+		line-height: 1.32;
+		font-size: 1.8rem;
 	}
 }
 
@@ -28445,7 +28524,7 @@ a .page-title:hover {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.sidebar-audio .track {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -28625,7 +28704,7 @@ a .page-title:hover {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.sidebar-pull-quote .copy {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -28864,7 +28943,7 @@ a .page-title:hover {
 .become-a-member .copy {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.267;
+	line-height: 1.127;
 	font-size: 2.1rem;
 	text-align: center;
 }
@@ -28965,7 +29044,7 @@ a .page-title:hover {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.button .price {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -29904,7 +29983,7 @@ figcaption.minus-sign:before {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.dropdown-wrapper {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -30449,7 +30528,7 @@ figcaption.minus-sign:before {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.search-page .filter-select, .past-festivals-page .filter-select {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -30978,7 +31057,7 @@ video::-webkit-media-controls {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.blog-page .articles-section .description, .videos-page .articles-section .description {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -31065,7 +31144,7 @@ video::-webkit-media-controls {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.blog-page .feature .byline, .videos-page .feature .byline {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -31282,7 +31361,7 @@ video::-webkit-media-controls {
 	padding: 0.5rem;
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.267;
+	line-height: 1.127;
 	font-size: 2.1rem;
 	color: gray;
 }
@@ -31313,7 +31392,7 @@ video::-webkit-media-controls {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.numbered-sidebar-item .title {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -31366,7 +31445,7 @@ video::-webkit-media-controls {
 	width: 1.75586rem;
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.267;
+	line-height: 1.127;
 	font-size: 2.1rem;
 	line-height: 0.5;
 }
@@ -31499,7 +31578,7 @@ video::-webkit-media-controls {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.blog-categories li, .multimedia-sections li {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -31968,7 +32047,7 @@ video::-webkit-media-controls {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.article-page figcaption {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -32239,7 +32318,7 @@ iframe {
 .program-category-main .description p {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.267;
+	line-height: 1.127;
 	font-size: 2.1rem;
 }
 
@@ -32299,7 +32378,7 @@ iframe {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.program-category-main figcaption {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -32814,7 +32893,7 @@ iframe {
 .ms-introduction-blurb {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.267;
+	line-height: 1.127;
 	font-size: 2.1rem;
 	margin-bottom: 0.74074rem;
 }
@@ -33462,7 +33541,7 @@ iframe {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.participants-section .blurb {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -33697,7 +33776,7 @@ a.details {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.byline {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -33775,7 +33854,7 @@ a.details {
 	margin-top: -0.2963rem;
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.267;
+	line-height: 1.127;
 	font-size: 2.1rem;
 }
 
@@ -33814,7 +33893,7 @@ a.details {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.publication-card .author {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -34251,7 +34330,6 @@ body {
 }
 
 .full-feature-card .more-link, .details .more-link, .ms-section__copy .more-link {
-	position: static;
 	margin-top: 0.74074rem;
 	margin-bottom: 0.74074rem;
 	margin-left: 0.74074rem;
@@ -34542,7 +34620,7 @@ body {
 .full-feature-card .description {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.267;
+	line-height: 1.127;
 	font-size: 2.1rem;
 }
 
@@ -34589,7 +34667,7 @@ body {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.sidebar-card .details {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -34753,7 +34831,7 @@ body {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.album-card .title, .vinyl-card .title, .books-card .title {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -34785,7 +34863,7 @@ body {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.album-card .artist, .vinyl-card .artist, .books-card .artist {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -34842,7 +34920,7 @@ body {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.merchandise-card .title {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -34876,7 +34954,7 @@ body {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.merchandise-card .price {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -34990,7 +35068,7 @@ body {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.general-content-card .date {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -35162,7 +35240,7 @@ body {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.audio-card .subtitle, .audio-card .artist {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -35293,7 +35371,7 @@ body {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.audio-time {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -35904,7 +35982,7 @@ body {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.horizontal-audio-card .title {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -36141,7 +36219,7 @@ body {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.horizontal-audio-card-third .title {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -37545,7 +37623,7 @@ body.magazine-page, body.magazine-article-page {
 	color: #fff;
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.267;
+	line-height: 1.127;
 	font-size: 2.1rem;
 	font-weight: 700;
 }
@@ -37571,7 +37649,7 @@ body.magazine-page, body.magazine-article-page {
 .back-issues-section .view-all-issues .first-level-dropdown-title {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.267;
+	line-height: 1.127;
 	font-size: 2.1rem;
 	font-weight: 700;
 	color: #fff;
@@ -37646,7 +37724,7 @@ body.magazine-page, body.magazine-article-page {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.back-issues-section .view-all-issues li {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -37711,7 +37789,7 @@ body.magazine-page, body.magazine-article-page {
 .back-issues-select .current {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.267;
+	line-height: 1.127;
 	font-size: 2.1rem;
 	font-weight: 700;
 	line-height: 1.4 !important;
@@ -38048,7 +38126,7 @@ body.magazine-page, body.magazine-article-page {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.magazine-article-page .content .references p {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -38890,7 +38968,7 @@ body.magazine-page, body.magazine-article-page {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.track-number {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -39438,7 +39516,7 @@ body.magazine-page, body.magazine-article-page {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.album-page .track-artist {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -39478,7 +39556,7 @@ body.magazine-page, body.magazine-article-page {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.album-page .track-length {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -39507,7 +39585,7 @@ body.magazine-page, body.magazine-article-page {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.album-page .track-buy {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -39589,7 +39667,7 @@ body.magazine-page, body.magazine-article-page {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.album-page .review-copy {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -39702,7 +39780,7 @@ body.magazine-page, body.magazine-article-page {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.album-info .copy, .lesson-info .copy {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -39820,7 +39898,7 @@ body.magazine-page, body.magazine-article-page {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.suggested-item .artist {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -39861,7 +39939,7 @@ body.magazine-page, body.magazine-article-page {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.album-sidebar-tab, .liner-notes {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -40336,7 +40414,7 @@ body.magazine-page, body.magazine-article-page {
 .videos-section .title {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.267;
+	line-height: 1.127;
 	font-size: 2.1rem;
 }
 
@@ -40536,7 +40614,7 @@ body.magazine-page, body.magazine-article-page {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.archived-item .artist, .folkways-radio .artist {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -40591,7 +40669,7 @@ body.magazine-page, body.magazine-article-page {
 -------------------------------------------------- */
 .explore-page .title-bar {
 	color: #fff;
-	background-color: #9e93ae;
+	background-color: #9e93ae !important;
 }
 
 .explore-banner-section {
@@ -40684,7 +40762,7 @@ body.magazine-page, body.magazine-article-page {
 .explore-banner-section .description {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.267;
+	line-height: 1.127;
 	font-size: 2.1rem;
 }
 
@@ -40919,7 +40997,7 @@ body.magazine-page, body.magazine-article-page {
 -------------------------------------------------- */
 .shop-page .title-bar {
 	color: #fff;
-	background-color: #b44b41;
+	background-color: #b44b41 !important;
 }
 
 .shop-page .first-section {
@@ -41185,7 +41263,7 @@ body.magazine-page, body.magazine-article-page {
 .shop-hero .blurb {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.267;
+	line-height: 1.127;
 	font-size: 2.1rem;
 }
 
@@ -41243,7 +41321,7 @@ body.magazine-page, body.magazine-article-page {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.author {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -41437,7 +41515,7 @@ body.magazine-page, body.magazine-article-page {
 .learn-page .first-section .blurb {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.267;
+	line-height: 1.127;
 	font-size: 2.1rem;
 }
 
@@ -41455,7 +41533,7 @@ body.magazine-page, body.magazine-article-page {
 
 .learn-page .title-bar {
 	color: #fff;
-	background-color: #628a61;
+	background-color: #628a61 !important;
 }
 
 .lesson-plans-section .card, .interactives-section .card {
@@ -41736,7 +41814,7 @@ body.magazine-page, body.magazine-article-page {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.workshops-section .blurb {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -41836,7 +41914,7 @@ body.magazine-page, body.magazine-article-page {
 .subscribe-section .subtitle {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.267;
+	line-height: 1.127;
 	font-size: 2.1rem;
 	margin-bottom: 2.03704rem;
 }
@@ -42042,6 +42120,7 @@ body.magazine-page, body.magazine-article-page {
 	font-size: 2.4rem;
 	line-height: 1;
 	line-height: 1.3 !important;
+	margin-bottom: 0.74074rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
@@ -42053,6 +42132,18 @@ body.magazine-page, body.magazine-article-page {
 @media only screen and (min-width: 1560px) {
 	.lesson-plan-page .lesson-plan-top .author {
 		font-size: 3.5rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.lesson-plan-page .lesson-plan-top .author {
+		margin-bottom: 1.28vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.lesson-plan-page .lesson-plan-top .author {
+		margin-bottom: 2rem;
 	}
 }
 
@@ -42117,11 +42208,36 @@ body.magazine-page, body.magazine-article-page {
 	}
 }
 
+.lesson-plan-page .catnum {
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.2;
+	font-size: 1.9rem;
+	font-weight: 600;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.lesson-plan-page .catnum {
+		font-size: 1.6vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.lesson-plan-page .catnum {
+		font-size: 2.5rem;
+		line-height: 1.28;
+	}
+}
+
+.content ol ul li {
+	list-style-type: none;
+}
+
 /* Membership page
 -------------------------------------------------- */
 .membership-page .title-bar {
 	color: #fff;
-	background-color: #c9c1ae;
+	background-color: #c9c1ae !important;
 }
 
 .membership-page .intro-section {
@@ -42188,7 +42304,7 @@ body.magazine-page, body.magazine-article-page {
 .membership-steps {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.267;
+	line-height: 1.127;
 	font-size: 2.1rem;
 }
 
@@ -42540,7 +42656,7 @@ body.magazine-page, body.magazine-article-page {
 .cover-art-set .title {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
-	line-height: 1.267;
+	line-height: 1.127;
 	font-size: 2.1rem;
 	margin-bottom: 1.25926rem;
 }
@@ -42715,26 +42831,6 @@ a:hover .accordion-tools-teaching {
 	color: transparent;
 }
 
-.accordion-toggle:after {
-	/* symbol for "opening" panels */
-	font-family: 'Glyphicons Halflings';
-	/* essential for enabling glyphicon */
-	content: "\e114";
-	/* adjust as needed, taken from bootstrap.css */
-	float: right;
-	/* adjust as needed */
-	color: grey;
-	/* adjust as needed */
-	margin-top: -25px;
-	margin-right: 10px;
-}
-
-.accordion-toggle.collapsed:after {
-	/* symbol for "collapsed" panels */
-	content: "\e080";
-	/* adjust as needed, taken from bootstrap.css */
-}
-
 @media screen and (max-width: 767px) {
 	.accordion-albums, .accordion-albums .active, .accordion-videos, .accordion-playlists, .accordion-articles, .accordion-tools-teaching {
 		background: none repeat scroll 4% 50% #bac4c9;
@@ -42754,16 +42850,297 @@ a:hover .accordion-tools-teaching {
 	}
 }
 
+/* Folkways General content banner
+-------------------------------------------------- */
+.general-page .title-bar {
+	background-color: #31586a;
+}
+
 /* Blog Page
 -------------------------------------------------- */
 .blog-page .title-bar, .blog-article-page .title-bar {
 	background-color: #ca772c;
 }
 
-/* Folkways General content banner
--------------------------------------------------- */
-.general-page .title-bar {
-	background-color: #31586a;
+.blog-page .pagination-section {
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.32;
+	font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.blog-page .pagination-section {
+		font-size: 1.3vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.blog-page .pagination-section {
+		line-height: 1.32;
+		font-size: 1.8rem;
+	}
+}
+
+@media only screen and (max-width: 53.15em) {
+	.blog-page .pagination-section {
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+	}
+}
+
+.blog-page .pagination-section li:first-of-type {
+	padding-right: 0;
+}
+
+.blog-page .pagination-section li:last-of-type {
+	padding-left: 0;
+}
+
+.blog-page .pagination-section .light {
+	display: inline-block;
+	padding-top: 0.70235rem;
+	padding-right: 1.40469rem;
+	padding-bottom: 0.70235rem;
+	padding-left: 1.40469rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.blog-page .pagination-section .light {
+		padding-top: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.blog-page .pagination-section .light {
+		padding-top: 1rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.blog-page .pagination-section .light {
+		padding-right: 1.28vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.blog-page .pagination-section .light {
+		padding-right: 2rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.blog-page .pagination-section .light {
+		padding-bottom: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.blog-page .pagination-section .light {
+		padding-bottom: 1rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.blog-page .pagination-section .light {
+		padding-left: 1.28vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.blog-page .pagination-section .light {
+		padding-left: 2rem;
+	}
+}
+
+.blog-page .pagination-section .view-direction {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+}
+
+.blog-page .pagination-section .view-previous:after, .blog-page .pagination-section .view-next:before {
+	color: #595959;
+	content: '\62';
+	display: block;
+	position: absolute;
+	font-family: "vd-icons" !important;
+	border: none;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	transform: rotate(90deg);
+	height: auto;
+	top: 0.2963rem;
+	margin-top: 0rem;
+	-webkit-transform-origin: 0 !important;
+	-moz-transform-origin: 0 !important;
+	transform-origin: 0 !important;
+	line-height: 0.3;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.blog-page .pagination-section .view-previous:after, .blog-page .pagination-section .view-next:before {
+		top: 0.512vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.blog-page .pagination-section .view-previous:after, .blog-page .pagination-section .view-next:before {
+		top: 0.8rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.blog-page .pagination-section .view-previous:after, .blog-page .pagination-section .view-next:before {
+		margin-top: 0vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.blog-page .pagination-section .view-previous:after, .blog-page .pagination-section .view-next:before {
+		margin-top: 0rem;
+	}
+}
+
+@media only screen and (max-width: 53.15em) {
+	.blog-page .pagination-section .view-previous:after, .blog-page .pagination-section .view-next:before {
+		font-size: 2rem;
+		top: 0rem;
+		right: 0.5rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.blog-page .pagination-section .view-previous:after, .blog-page .pagination-section .view-next:before {
+		transform-origin: 0.9vw;
+		font-size: 1.5vw;
+		top: 0.4vw;
+		right: 0.6vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.blog-page .pagination-section .view-previous:after, .blog-page .pagination-section .view-next:before {
+		transform-origin: 15px 15px;
+		font-size: 2.5rem;
+		top: 0.5rem;
+		right: 1rem;
+	}
+}
+
+@media only screen and (max-width: 53.15em) {
+	.blog-page .pagination-section .view-previous:after, .blog-page .pagination-section .view-next:before {
+		font-size: 2rem;
+		top: 0.9rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.blog-page .pagination-section .view-previous:after, .blog-page .pagination-section .view-next:before {
+		font-size: 3vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.blog-page .pagination-section .view-previous:after, .blog-page .pagination-section .view-next:before {
+		top: 0.4rem;
+		font-size: 5rem;
+	}
+}
+
+.blog-page .pagination-section .view-previous {
+	text-align: right;
+}
+
+@media only screen and (max-width: 53.15em) {
+	.blog-page .pagination-section .view-previous {
+		padding-right: 1.5rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.blog-page .pagination-section .view-previous {
+		padding-right: 3vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.blog-page .pagination-section .view-previous {
+		padding-right: 5rem;
+	}
+}
+
+.blog-page .pagination-section .view-previous:after {
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+@media only screen and (max-width: 53.15em) {
+	.blog-page .pagination-section .view-previous:after {
+		right: -3.3rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) {
+	.blog-page .pagination-section .view-previous:after {
+		padding-right: 0;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.blog-page .pagination-section .view-previous:after {
+		right: -4vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.blog-page .pagination-section .view-previous:after {
+		padding-right: 0rem;
+		right: -6.8rem;
+	}
+}
+
+@media only screen and (max-width: 53.15em) {
+	.blog-page .pagination-section .view-next {
+		padding-left: 1.5rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.blog-page .pagination-section .view-next {
+		padding-left: 3vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.blog-page .pagination-section .view-next {
+		padding-left: 4.5rem;
+	}
+}
+
+.blog-page .pagination-section .view-next:before {
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	transform: rotate(0deg);
+}
+
+@media only screen and (max-width: 53.15em) {
+	.blog-page .pagination-section .view-next:before {
+		left: -1rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.blog-page .pagination-section .view-next:before {
+		left: -1.216vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.blog-page .pagination-section .view-next:before {
+		left: -1.9rem;
+	}
 }
 
 /* Folkways override
@@ -42991,7 +43368,7 @@ h3.sidebar-section-title {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.grid-item-inner .copy {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -43042,7 +43419,7 @@ h3.sidebar-section-title {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.color {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 
@@ -43695,7 +44072,7 @@ code.hljs {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.type-details {
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 	}
 }
 

@@ -1351,7 +1351,7 @@ section.container.cards-section
 							-snippet('svg-thin-hr')
 							a.high(href="javascript:0")
 								h2.section-title: span.light: span.er!= $program_section->title()
-					.row
+					.row.content
 						//- -snippet('card-program-category-listing', array('card' => $program_section, 'excerpt' => '50', 'blurb' => true, 'type' => 'program', 'caption' => true ))
 						-$src = $program_section->image();
 
@@ -1374,6 +1374,7 @@ section.container.cards-section
 										
 										.description.link-underline.blurb!= $program_section->blurb()->kt()
 
+										//- a.high.more-link.accordion-toggle.collapsed(href="#research-and-documentation-content" data-toggle="collapse" aria-expanded="false")
 										a.high.more-link.accordion-toggle.collapsed(href="javascript:0" data-toggle="collapse" data-target="#research-and-documentation-content" aria-expanded="false")
 											.light
 												.er
@@ -1383,7 +1384,7 @@ section.container.cards-section
 							.row
 								.col-sm-7
 									.content.link-underline
-										.collapse.panel-collapse.in#research-and-documentation-content(aria-expanded="false")!= $program_section->contents()->kt()
+										.collapse.panel-collapse#research-and-documentation-content(aria-expanded="false")!= $program_section->contents()->kt()
 
 
 			.col-xs-12.visible-xs

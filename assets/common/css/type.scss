@@ -76,7 +76,7 @@
 	@mixin lg-sans {
 		font-weight: 300;
 		font-family: $sans;
-		line-height: 1.267; // taller per discussion on 1.4 at shop // 38px
+		line-height: 1.127; 
 		font-size: 2.1rem;
 		@include respond-to(break2full) {
 	  		font-size: 1.9vw;
@@ -104,12 +104,26 @@
 		line-height: 1.32; // album sidebar 2017.02.17
 		font-size: 1.5rem;
 		@include respond-to(break2full) {
-			font-size: 1.3vw;
+			font-size: 1.2vw;
 		}
 		@include respond-to(fullwidth) {
 			// line-height: 1.38; // album sidebar 2017.02.17
 			line-height: 1.32; // album sidebar 2017.02.17
 			font-size: 1.8rem;
+		}
+	}
+	@mixin sm-sans-gallano {
+		font-weight: 300;
+		font-family: $galano;
+		line-height: 1.32; // album sidebar 2017.02.17
+		font-size: 1.6rem;
+		@include respond-to(break2full) {
+			font-size: 1.3vw;
+		}
+		@include respond-to(fullwidth) {
+			// line-height: 1.38; // album sidebar 2017.02.17
+			line-height: 1.32; // album sidebar 2017.02.17
+			font-size: 2rem;
 		}
 	}
 	@mixin caption-sans {
@@ -509,6 +523,13 @@
 				}
 			}
 		}
+	}
+	.content .more-link {
+		position: static;
+		float: right;
+		display: inline-block;
+		border-bottom: none;
+		box-shadow: none;
 	}
 	.content-footer {
 		position: relative;
