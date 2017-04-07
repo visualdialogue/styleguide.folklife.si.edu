@@ -6,7 +6,10 @@
 		background-color: $black80;
 		color: $black20;
 
+		// stay above back-to-top button
+		position: relative;
 		z-index: 1;
+		
 		@include respond-to(break2max) { padding-top:2rem; }
 
 		&-logo {

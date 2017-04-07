@@ -128,6 +128,33 @@
 			padding: 14px;
 			font-size: 2.5rem;
 		}
+
+		// accessibility
+		&:focus {
+			@include outline;
+		}
+	}
+	.svg-nav-icon {
+		color: $black65;
+		// $svgIconFull: 33px;
+		$svgIconFull: 26px;
+		vertical-align: middle;
+
+		width:$svgIconFull;
+		height: $svgIconFull;
+		@include respond-to(break2) {
+			width:$svgIconFull;
+			height: $svgIconFull;
+		}
+		@include respond-to(fullwidth) {
+			width:$svgIconFull;
+			height: $svgIconFull;
+			// padding: 10px;
+		}
+		fill: black;
+		// SVG icons, from fontastic directions
+	    display: inline-block;
+	    fill: currentColor;
 	}
 	.main-nav-icon {
 		@include respond-to(break2max) {

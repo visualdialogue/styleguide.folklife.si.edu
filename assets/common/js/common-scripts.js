@@ -38,11 +38,35 @@
 	var wrapTime;
 
 /*********
+ * svg4everybody
+ * makes svgs work in ie, from https://github.com/jonathantneal/svg4everybody
+*********/
+	svg4everybody();
+
+/*********
 * accessibility pause
 *********/
 	var $pauseButton = $('#pause-button');
 	var slickPaused = false;
+	
+	// pause on click
 	$pauseButton.on('click', function() {
+		pauseIt($(this));
+	})
+
+
+	// pause on enter, from http://stackoverflow.com/a/979686
+	$pauseButton.on('keypress', function(e) {
+		if(e.which == 13) {
+			pauseIt($(this));
+		}
+	})
+
+
+	/*****
+	 * pause slider
+	 *****/
+	function pauseIt($this) {
 		console.log('slickPaused :', slickPaused);
 		// pause homepage slideshow
 		if(slickPaused) {
@@ -65,8 +89,8 @@
 			}
 
 			// change icon
-			$(this).addClass('icon-pause');
-			$(this).removeClass('icon-play');
+			$this.addClass('icon-pause');
+			$this.removeClass('icon-play');
 		}
 		else {
 			console.log('pause slideshow');
@@ -84,10 +108,10 @@
 			}
 
 			// change icon
-			$(this).removeClass('icon-pause');
-			$(this).addClass('icon-play');
+			$this.removeClass('icon-pause');
+			$this.addClass('icon-play');
 		}
-	});
+	}
 
 /**********
 * Pause banner slideshow on arrow click

@@ -1176,6 +1176,10 @@
 			// font-weight: 700;
 		}
 		.filter-select {
+			select::-ms-expand {
+			    display: none;
+			}
+			
 			@include sm-sans;
 			font-weight: 600 !important;
 
@@ -1607,6 +1611,77 @@
 			&.is-active {
 				background-color: $hover;
 			}
+		}
+	}
+
+/* Back to top button
+-------------------------------------------------*/
+	$halfScreen: 50vw;
+	$halfPage: 720px;
+	$gttOffset: 6rem; // as circle image
+	
+	.back-to-top {
+		text-align: center;
+		cursor: pointer;
+		@include padding(0.5);
+		// circle background, from http://stackoverflow.com/a/17545875
+		background: $black20; 		   
+		opacity: 0; // initial hide
+		// transition to fade in/out
+		-webkit-transition: opacity 0.3s ease;
+		-moz-transition: opacity 0.3s ease;
+		-ms-transition: opacity 0.3s ease;
+		-o-transition: opacity 0.3s ease;
+		transition: opacity 0.3s ease;
+
+		position: fixed;
+		@include bottom(2);
+		
+		right: 0.2rem;
+		z-index: 0; // go below footer
+
+		// circle background
+		$top-mobile-diameter: 40px;
+		width: $top-mobile-diameter;
+		height: $top-mobile-diameter;
+		-moz-border-radius: $top-mobile-diameter / 2; 
+		-webkit-border-radius: $top-mobile-diameter / 2; 
+		border-radius: $top-mobile-diameter / 2;
+		@include respond-to(break2max) {
+			z-index: 2; // go above footer
+			bottom: 3rem; // just high enough to work on iphone
+		}
+		@include respond-to(break2full) {
+			right: 2rem;
+		}
+		@include respond-to(fullwidth) {
+			// right: calc(#{$halfScreen} - #{$halfPage} - #{$gttOffset}); // for 50/50 image
+			right: calc(#{$halfScreen} - #{$halfPage} - #{$gttOffset}); // for "go to top" as text
+			// circle background
+			$top-desktop-diameter: 60px;
+			width: $top-desktop-diameter;
+			height: $top-desktop-diameter;
+			-moz-border-radius: $top-desktop-diameter / 2; 
+			-webkit-border-radius: $top-desktop-diameter / 2; 
+			border-radius: $top-desktop-diameter / 2;
+		}
+		&:hover {
+			background-color: black;
+		}
+		&.is-visible {
+			opacity: 1;
+		}
+		a {
+			// vertically align
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+
+			// same as sidebar h4
+			@include caption-sans;
+			color: white;
+			display: block;
+			line-height: 1;
 		}
 	}
 

@@ -115,13 +115,14 @@
 	@mixin sm-sans-gallano {
 		font-weight: 300;
 		font-family: $galano;
-		line-height: 1.32; // album sidebar 2017.02.17
+		// line-height: 1.32;
+		line-height: 1.43;
 		font-size: 1.6rem;
 		@include respond-to(break2full) {
-			font-size: 1.3vw;
+			font-size: 1.2vw;
 		}
 		@include respond-to(fullwidth) {
-			// line-height: 1.38; // album sidebar 2017.02.17
+			// line-height: 1.32; // album sidebar 2017.02.17
 			line-height: 1.32; // album sidebar 2017.02.17
 			font-size: 2rem;
 		}
