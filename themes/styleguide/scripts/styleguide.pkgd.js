@@ -2122,15 +2122,15 @@ $(document).ready(function () {
 		$filter.find('.page[data-page="' + newPage + '"]').removeClass('is-hidden').addClass('is-visible'); // show next page
 		// prev button
 		if(newPage > 1)
-			$viewPrev.show();
+			$viewPrev.removeClass('invisible');
 		else
-			$viewPrev.hide();
+			$viewPrev.addClass('invisible');
 
 		// next button
 		if(newPage < totalPages)
-			$viewNext.show();
+			$viewNext.removeClass('invisible');
 		else
-			$viewNext.hide();
+			$viewNext.addClass('invisible');
 
 		// update pagination numbers, using passed $paginationNumber which may be new if switched
 		$paginationNumber.removeClass('is-active'); // remove active state

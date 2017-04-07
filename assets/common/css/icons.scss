@@ -134,6 +134,8 @@
 			@include outline;
 		}
 	}
+	// followed tutorial from https://24ways.org/2014/an-overview-of-svg-sprite-creation-techniques/
+	// and for IE, used https://github.com/jonathantneal/svg4everybody
 	.svg-nav-icon {
 		color: $black65;
 		// $svgIconFull: 33px;
