@@ -139,24 +139,49 @@
 	.svg-nav-icon {
 		color: $black65;
 		// $svgIconFull: 33px;
+		$svgIconMobile: 40px;
+		$svgIconTablet: 22px;
 		$svgIconFull: 26px;
 		vertical-align: middle;
 
-		width:$svgIconFull;
-		height: $svgIconFull;
+		width:$svgIconMobile;
+		height: $svgIconMobile;
 		@include respond-to(break2) {
-			width:$svgIconFull;
-			height: $svgIconFull;
+			width:$svgIconTablet;
+			height: $svgIconTablet;
 		}
 		@include respond-to(fullwidth) {
 			width:$svgIconFull;
 			height: $svgIconFull;
-			// padding: 10px;
 		}
 		fill: black;
 		// SVG icons, from fontastic directions
 	    display: inline-block;
 	    fill: currentColor;
+	}
+	.svg-nav-icon[title="pause"], .svg-nav-icon[title="play"] {
+		fill: $black65;
+		// fill: $black80;
+		$svgIconMobilePause: 40px;
+		$svgIconTabletPause: 26px;
+		$svgIconFullPause: 30px;
+		width:$svgIconMobilePause;
+		height: $svgIconMobilePause;
+		@include respond-to(break2) {
+			width:$svgIconTabletPause;
+			height: $svgIconTabletPause;
+		}
+		@include respond-to(fullwidth) {
+			width:$svgIconFullPause;
+			height: $svgIconFullPause;
+		}
+	}
+	.icon-pause:before, .icon-play:before {
+		content: ''; // clear out old icons
+	}
+	// hide other button when toggling
+	.icon-pause .svg-nav-icon[title="play"], .icon-play .svg-nav-icon[title="pause"] {
+		display: none;
 	}
 	.main-nav-icon {
 		@include respond-to(break2max) {

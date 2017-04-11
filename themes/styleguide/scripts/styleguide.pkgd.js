@@ -707,6 +707,12 @@ this},r._applyDataApi=function(){var e={};t("[data-match-height], [data-mh]").ea
 		pauseIt($(this));
 	})
 
+	// pause on slide change
+	$('.slick-dots li').on('click', function() {
+		console.log('pause this!');
+		pauseIt($(this));
+	});
+
 
 	// pause on enter, from http://stackoverflow.com/a/979686
 	$pauseButton.on('keypress', function(e) {
@@ -1252,7 +1258,10 @@ $(document).ready(function () {
 
 		// on playing a video in the gallery...
 		// $('.video').on('click', function() {
-		$(video).on('click', function() {
+		// bind multiple events, from http://stackoverflow.com/a/2534107
+		$(video).on('click keypress', function() {
+
+			// if enter key, from http://stackoverflow.com/a/2534107
 
 			console.log('play vimeo video');
 
@@ -1599,7 +1608,9 @@ $(document).ready(function () {
 		arrows: false,
 		autoplaySpeed: 4000,
 		autoplay: true, // pause for testing
-		pauseOnHover: false,
+		pauseOnHover: false,		
+		prevArrow: '<svg title="previous" class="svg-slick-prev"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-folklife-leftarrow"></use></svg>',
+		nextArrow: '<svg title="next" class="svg-slick-next"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-folklife-rightarrow"></use></svg>',
 		responsive: [
 			{
 				breakpoint: 852,
@@ -1608,7 +1619,7 @@ $(document).ready(function () {
 					arrows: true,
 					appendDots: '.dots',
 					dots: true,
-					autoplaySpeed: 5000,
+					autoplaySpeed: 5000
 				}
 			},
 			{
@@ -1618,7 +1629,7 @@ $(document).ready(function () {
 					centerPadding: 'calc((100vw - 1400px) / 2)',
 					arrows: true,
 					dots: true,
-					appendDots: '.dots',
+					appendDots: '.dots'					
 				}
 			}
 		]
@@ -2229,6 +2240,26 @@ $(document).ready(function () {
 		changePage(currentFestivalFilter, 1, $paginationNumber);
 		updatePagination(currentFestivalFilter);
 	});
+
+/***************************
+* festival program side menu highlighting
+* looks for an element with an id of "sidebar-nav-js", which should only show on the program child page
+***************************/
+	// if sidebar-highlighting-js exists, from http://stackoverflow.com/a/3374777
+	if (document.getElementById('sidebar-nav-js')) {
+		var pageURL = document.URL; // get current url, can't set it with this
+		var $sidebarNav = $('#sidebar-nav-js .ms-sidebar-nav'); // sidebar for looping
+
+		// loop through all sidebar nav elements
+		$sidebarNav.find('li a').each(function() {
+			if(this.href == pageURL) {
+				console.log('got it');
+				console.log(this.href);
+				// add active class to parent
+				$(this).parents('li').addClass('active');
+			}
+		});
+	}
 
 }); // end document model ready
 /*

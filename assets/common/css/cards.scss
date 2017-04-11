@@ -137,11 +137,13 @@ a.details {
 	// only show video if video card. card-video class dynamically from server, eg festival blog post listing with video on on.festival homepage
 	.video {
 		display: none;
+		&:focus {
+			@include outline();
+		}
 	}
 	#youtube-iframe {
 		width: 100%;
 		height: 100%;
-
 	}
 	.video-card:not(.horizontal-card) {
 		.video {
@@ -163,6 +165,11 @@ a.details {
 			position: absolute;
 			top: 50%;
 			left: 50%;
+
+			// &:focus {
+			// 	display: none;
+			// 	// color: #e2f0d8;
+			// }
 			
 			// horizontally center
 			-webkit-transform: translateX(-50%) translateY(-50%);
@@ -493,6 +500,9 @@ a.details {
 		}
 		@include clear-2;
 		@include respond-to(break2) {@include clear-6;}
+	}
+	.vinyl-card {
+		@include respond-to(break2) {@include clear-4;}
 	}
 
 

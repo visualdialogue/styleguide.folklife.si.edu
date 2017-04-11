@@ -29,8 +29,15 @@
 
 			-if(isset($folkways)):
 			.folkways-icons
-				a.folkways-icon-link(href="/account" target="_blank"): .icon-user.folkways-icon.nav-icon(aria-hidden="true")
-				a.folkways-icon-link(href="/cart" target="_blank"): .icon-basket.folkways-icon.nav-icon(aria-hidden="true")
+				//- a.folkways-icon-link(href="/account" target="_blank"): .icon-user.folkways-icon.nav-icon(aria-hidden="true")
+				a.folkways-icon-link(href="/account" target="_blank")
+					//- .icon-user.folkways-icon.nav-icon(aria-hidden="true")
+					svg.folkways-icon.nav-icon(title="user"): use(xlink:href="/assets/icons/icons.svg#icon-user")
+
+				//- a.folkways-icon-link(href="/cart" target="_blank"): .icon-basket.folkways-icon.nav-icon(aria-hidden="true")
+				a.folkways-icon-link(href="/cart" target="_blank")
+					//- .icon-basket.folkways-icon.nav-icon(aria-hidden="true")
+					svg.folkways-icon.nav-icon(title="basket"): use(xlink:href="/assets/icons/icons.svg#icon-basket")
 			-endif
 
 		//- .hidden-xs.site-toggle-text

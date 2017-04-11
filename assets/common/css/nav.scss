@@ -323,10 +323,12 @@
 	.nav-icons {
 		// right: 0;
 		text-align:right;
+		margin-top: 0.2rem;
 		@include respond-to(break2) {
 			position: static;
 			float: right;
 			margin-top: 0.8rem;
+			margin-top: 1rem;
 			margin-right: -1.2vw;
 
 		}
