@@ -1657,8 +1657,8 @@ $(document).ready(function () {
 
 	var buttonControl = function($playButton) {
 		// console.log('buttonControl', $playButton);
-		$playButton.click(function() {
-			// console.log('audio clicked');
+		$playButton.on('click keypress', function() {
+			console.log('audio clicked');
 			var $track = $(this).closest('.track');
 			var $trackNumber = $track.find('.track-number'); // get closest so don't show all
 			// check if this button is playing or not
