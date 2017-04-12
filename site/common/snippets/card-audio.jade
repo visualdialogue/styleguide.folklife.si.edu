@@ -19,4 +19,7 @@ li.card.audio-card.col-xs-6.col-sm-3.card-xs-break-2.full-border-card
 					-endif
 					.artist!= $card->artist()->kt()
 				.audio-player
-					<audio class="mejs-player" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'>
+					.track-title Test Title Here
+					//- <audio class="mejs-player" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'>
+					<audio class="mejs-player-svg" src="/assets/audio/Music2same.mp3"></audio>
+				//- script debugger

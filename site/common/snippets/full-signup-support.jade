@@ -8,7 +8,12 @@
 				.newsletter-signup-copy
 					.icon-mail
 					= $site->newsletter_text()
-				form(action="/").newsletter-signup-form.newsletter
+				.newsletter-signup-button-wrapper
+					.newsletter-signup-button.button
+						.button-inner
+							a(href="http://google.com" target="_blank") Click to Join
+					//- img(src="/assets/images/click-to-join3.png")
+				//- form(action="/").newsletter-signup-form.newsletter
 						input.newsletter-input(type="email" placeholder="Enter your email")
 		section.col-sm-6.support-section
 			.support.clearfix

@@ -18,7 +18,10 @@ li.card(class="<? if (isset($card_classes)) echo $card_classes . ' ' ?><? if ($c
 			.center-box
 				.modal-trigger
 					img(src="<?= $image->url() ?>" alt="<?= $card->title() ?>")
-				.icon-play-button
+				//- .icon-play-button
+				.svg-play-button
+					svg(title="play button circle" class="svg-play-button-circle"): use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-circle")
+					svg(title="play button arrow" class="svg-play-button-play"): use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-play")
 
 	-elseif($image):
 		.image
@@ -84,5 +87,6 @@ li.card(class="<? if (isset($card_classes)) echo $card_classes . ' ' ?><? if ($c
 
 			-if ($card->type() == 'audio'):
 				.audio-player
-					<audio class="mejs-player" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'>
+					//- <audio class="mejs-player" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'>
+					//- <audio class="mejs" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'>
 			-endif

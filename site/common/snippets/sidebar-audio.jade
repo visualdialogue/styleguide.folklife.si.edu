@@ -22,7 +22,11 @@
 					td.track-number-play-button
 						.track-number!= $n
 						//- .icon-play-button.video-icon-play-button.icon-stack.track-play-button
-						.icon-play-button.sidebar-icon-play-button.track-play-button
+						//- .icon-play-button.sidebar-icon-play-button.track-play-button
+						.sidebar-icon-play-button.track-play-button.svg-play-button
+							svg(title="play button circle" class="svg-play-button-circle"): use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-circle")
+							svg(title="play button arrow" class="svg-play-button-play"): use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-play")
+
 					td.track-title!= $track->title()
 					td.track-action More Info
 			-endforeach

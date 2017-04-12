@@ -7400,8 +7400,7 @@ body {
 */
 /* Icons
 -------------------------------------------------- */
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
+[class^="icon-"]:before, [class*=" icon-"]:before {
 	vertical-align: middle;
 }
 
@@ -7740,6 +7739,10 @@ body {
 	position: relative;
 }
 
+.center-box:hover .svg-play-button-circle {
+	fill: #fddd6b;
+}
+
 .icon-play-button {
 	position: relative;
 	cursor: pointer;
@@ -7764,6 +7767,148 @@ body {
 	content: "\62";
 	color: #333333;
 	display: block;
+}
+
+.svg-play-button {
+	text-align: center;
+}
+
+.svg-play-button:hover .svg-play-button-circle {
+	fill: #fddd6b;
+}
+
+.svg-play-button-circle, .svg-play-button-play, .svg-play-button-pause {
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	display: inline-block;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.svg-play-button-play, .svg-play-button-pause {
+	fill: #333333;
+}
+
+.svg-play-button-circle {
+	fill: #cccccc;
+	width: 10vw;
+	height: 10vw;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.svg-play-button-circle {
+		width: 3.8vw;
+		height: 3.8vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.svg-play-button-circle {
+		width: 60px;
+		height: 60px;
+	}
+}
+
+.svg-play-button-play {
+	width: 10vw;
+	height: 10vw;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.svg-play-button-play {
+		width: 3.4vw;
+		height: 3.4vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.svg-play-button-play {
+		width: 50px;
+		height: 50px;
+	}
+}
+
+.svg-play-button-pause {
+	width: 10vw;
+	height: 10vw;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.svg-play-button-pause {
+		width: 2.5vw;
+		height: 2.5vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.svg-play-button-pause {
+		width: 40px;
+		height: 40px;
+	}
+}
+
+.track .svg-play-button-circle {
+	fill: #b3b3b3;
+	width: 2rem;
+	height: 2rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.track .svg-play-button-circle {
+		width: 1.8vw;
+		height: 1.8vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.track .svg-play-button-circle {
+		width: 3rem;
+		height: 3rem;
+	}
+}
+
+.track .svg-play-button-play {
+	width: 2rem;
+	height: 2rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.track .svg-play-button-play {
+		width: 1.6vw;
+		height: 1.6vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.track .svg-play-button-play {
+		width: 2.5rem;
+		height: 2.5rem;
+	}
+}
+
+.track .svg-play-button-pause {
+	width: 1.4rem;
+	height: 1.4rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.track .svg-play-button-pause {
+		width: 1.3vw;
+		height: 1.3vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.track .svg-play-button-pause {
+		width: 2rem;
+		height: 2rem;
+	}
+}
+
+.sidebar .svg-play-button-circle {
+	fill: #cccccc;
 }
 
 @media only screen and (max-width: 53.15em) {
@@ -7989,8 +8134,18 @@ body {
 	top: 0.2rem;
 }
 
-/* Slider dots
+/* Slider dots - Folklife homepage?
 -------------------------------------------------- */
+.svg-pager-icon {
+	width: 13.5px;
+	height: 13.5px;
+}
+
+.svg-pager-icon-circle-o {
+	width: 16px;
+	height: 16px;
+}
+
 .slick-dots li button:before {
 	font-family: 'vd-icons';
 	content: "p";
@@ -9058,7 +9213,7 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
 	*/
 /* Accessibility, from https://accessibility.oit.ncsu.edu/it-accessibility-at-nc-state/developers/accessibility-handbook/mouse-and-keyboard-events/skip-to-main-content/
 -------------------------------------------------- */
-a:focus, .button-inner:focus {
+a:focus, .button-inner:focus, .js-keyboard-toggle:focus {
 	outline: 1px auto gray;
 }
 
@@ -10822,7 +10977,7 @@ a .page-title:hover {
 	}
 }
 
-.support-button {
+.support-button, .newsletter-signup-button {
 	background-color: #666666;
 	font-family: "unit-gothic-717", "Arial Black", "Arial Bold", Gadget, sans-serif;
 	text-transform: uppercase;
@@ -10837,38 +10992,38 @@ a .page-title:hover {
 }
 
 @media only screen and (max-width: 53.15em) {
-	.support-button {
+	.support-button, .newsletter-signup-button {
 		font-size: 5vw;
 	}
 }
 
 @media only screen and (min-width: 53.25em) {
-	.support-button {
+	.support-button, .newsletter-signup-button {
 		margin-bottom: 0;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.support-button {
+	.support-button, .newsletter-signup-button {
 		font-size: 1.9vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.support-button {
+	.support-button, .newsletter-signup-button {
 		font-size: 3rem;
 	}
 }
 
 @media only screen and (max-width: 53.15em) {
-	.support-button {
+	.support-button, .newsletter-signup-button {
 		padding: 3vw;
 		height: auto;
 	}
 }
 
 @media only screen and (min-width: 53.25em) {
-	.support-button {
+	.support-button, .newsletter-signup-button {
 		padding: 0;
 		position: relative;
 		-webkit-transform-style: preserve-3d;
@@ -10879,6 +11034,33 @@ a .page-title:hover {
 		display: table-cell;
 		width: 100%;
 		height: 100%;
+	}
+}
+
+.support-button:hover, .newsletter-signup-button:hover {
+	background-color: black;
+}
+
+.support-button:hover .button-inner, .newsletter-signup-button:hover .button-inner {
+	background-color: black;
+}
+
+.support-button a, .newsletter-signup-button a {
+	color: white;
+}
+
+@media only screen and (min-width: 53.25em) {
+	.support-button .button-inner, .newsletter-signup-button .button-inner {
+		position: absolute;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+}
+
+@media only screen and (min-width: 53.25em) {
+	.support-button {
 		width: 53.55%;
 		position: absolute;
 		top: 0;
@@ -10887,21 +11069,27 @@ a .page-title:hover {
 	}
 }
 
-.support-button:hover {
-	background-color: black;
+.newsletter-signup-button-wrapper {
+	display: table;
+	width: 100%;
 }
 
-.support-button:hover .button-inner {
-	background-color: black;
+.newsletter-signup-button .button-inner {
+	position: relative;
+	transform: none;
+	width: 100%;
+	padding: 0.5rem;
 }
 
-@media only screen and (min-width: 53.25em) {
-	.support-button .button-inner {
-		position: absolute;
-		top: 50%;
-		-webkit-transform: translateY(-50%);
-		-ms-transform: translateY(-50%);
-		transform: translateY(-50%);
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.newsletter-signup-button .button-inner {
+		padding: 1.5vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.newsletter-signup-button .button-inner {
+		padding: 1.85rem;
 	}
 }
 
@@ -12169,6 +12357,18 @@ figcaption.minus-sign:before {
 	fill: white;
 }
 
+@media only screen and (min-width: 53.25em) {
+	.svg-slick-prev {
+		margin-left: -4rem;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.svg-slick-prev {
+		margin-left: -4rem;
+	}
+}
+
 @media only screen and (max-width: 53.15em) {
 	.svg-slick-next {
 		right: 3.4vw;
@@ -12177,14 +12377,14 @@ figcaption.minus-sign:before {
 
 @media only screen and (min-width: 53.25em) {
 	.svg-slick-next {
-		right: 8rem;
+		right: 4rem;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
 	.svg-slick-next {
 		right: calc((100vw - 1415px) / 2);
-		margin-right: 1rem;
+		margin-right: -3rem;
 	}
 }
 
@@ -13207,6 +13407,324 @@ video::-webkit-media-controls {
 
 [data-page="1"] {
 	display: block;
+}
+
+.past-festival-pagination-wrapper .pagination {
+	text-align: center;
+	margin-bottom: 1.48148rem;
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.32;
+	font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination {
+		margin-bottom: 2.56vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination {
+		margin-bottom: 4rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination {
+		font-size: 1.2vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination {
+		line-height: 1.32;
+		font-size: 1.8rem;
+	}
+}
+
+@media only screen and (max-width: 53.15em) {
+	.past-festival-pagination-wrapper .pagination {
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+	}
+}
+
+.past-festival-pagination-wrapper .pagination li:first-of-type {
+	padding-right: 0;
+}
+
+.past-festival-pagination-wrapper .pagination li:last-of-type {
+	padding-left: 0;
+}
+
+.past-festival-pagination-wrapper .pagination .light {
+	display: inline-block;
+	padding-top: 0.70235rem;
+	padding-right: 1.40469rem;
+	padding-bottom: 0.70235rem;
+	padding-left: 1.40469rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .light {
+		padding-top: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .light {
+		padding-top: 1rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .light {
+		padding-right: 1.28vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .light {
+		padding-right: 2rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .light {
+		padding-bottom: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .light {
+		padding-bottom: 1rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .light {
+		padding-left: 1.28vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .light {
+		padding-left: 2rem;
+	}
+}
+
+.past-festival-pagination-wrapper .pagination .view-direction {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+}
+
+.past-festival-pagination-wrapper .pagination .view-previous, .past-festival-pagination-wrapper .pagination .view-next {
+	width: 9.1305rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .view-previous, .past-festival-pagination-wrapper .pagination .view-next {
+		width: 8.32vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .view-previous, .past-festival-pagination-wrapper .pagination .view-next {
+		width: 13rem;
+	}
+}
+
+.past-festival-pagination-wrapper .pagination .view-previous:after, .past-festival-pagination-wrapper .pagination .view-next:before {
+	color: #595959;
+	content: '\62';
+	display: block;
+	position: absolute;
+	font-family: "vd-icons" !important;
+	border: none;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	transform: rotate(90deg);
+	height: auto;
+	top: 0.2963rem;
+	margin-top: 0rem;
+	-webkit-transform-origin: 0 !important;
+	-moz-transform-origin: 0 !important;
+	transform-origin: 0 !important;
+	line-height: 0.3;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .view-previous:after, .past-festival-pagination-wrapper .pagination .view-next:before {
+		top: 0.512vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .view-previous:after, .past-festival-pagination-wrapper .pagination .view-next:before {
+		top: 0.8rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .view-previous:after, .past-festival-pagination-wrapper .pagination .view-next:before {
+		margin-top: 0vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .view-previous:after, .past-festival-pagination-wrapper .pagination .view-next:before {
+		margin-top: 0rem;
+	}
+}
+
+@media only screen and (max-width: 53.15em) {
+	.past-festival-pagination-wrapper .pagination .view-previous:after, .past-festival-pagination-wrapper .pagination .view-next:before {
+		font-size: 2rem;
+		top: 0rem;
+		right: 0.5rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .view-previous:after, .past-festival-pagination-wrapper .pagination .view-next:before {
+		transform-origin: 0.9vw;
+		font-size: 1.5vw;
+		top: 0.4vw;
+		right: 0.6vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .view-previous:after, .past-festival-pagination-wrapper .pagination .view-next:before {
+		transform-origin: 15px 15px;
+		font-size: 2.5rem;
+		top: 0.5rem;
+		right: 1rem;
+	}
+}
+
+@media only screen and (max-width: 53.15em) {
+	.past-festival-pagination-wrapper .pagination .view-previous:after, .past-festival-pagination-wrapper .pagination .view-next:before {
+		font-size: 2rem;
+		top: 0.9rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .view-previous:after, .past-festival-pagination-wrapper .pagination .view-next:before {
+		font-size: 3vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .view-previous:after, .past-festival-pagination-wrapper .pagination .view-next:before {
+		top: 0.4rem;
+		font-size: 5rem;
+	}
+}
+
+.past-festival-pagination-wrapper .pagination .view-previous:after {
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	transform: rotate(180deg);
+	right: -3.7037rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .view-previous:after {
+		right: -6.4vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .view-previous:after {
+		right: -10rem;
+	}
+}
+
+@media only screen and (max-width: 53.15em) {
+	.past-festival-pagination-wrapper .pagination .view-previous:after {
+		right: -4.444rem;
+	}
+}
+
+.past-festival-pagination-wrapper .pagination .view-next {
+	position: relative;
+	left: -0.48148rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .view-next {
+		left: -0.832vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .view-next {
+		left: -1.3rem;
+	}
+}
+
+.past-festival-pagination-wrapper .pagination .view-next:before {
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	transform: rotate(0deg);
+	right: auto !important;
+	left: -1.25926rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .view-next:before {
+		left: -2.176vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .view-next:before {
+		left: -3.4rem;
+	}
+}
+
+.past-festival-pagination-wrapper .pagination-numbers {
+	text-align: center;
+	display: inline-block;
+	margin-left: 2.59259rem;
+	margin-right: 2.59259rem;
+}
+
+.past-festival-pagination-wrapper .pagination-numbers a {
+	display: inline-block;
+	padding: 0.5rem;
+}
+
+.past-festival-pagination-wrapper .pagination-numbers a.is-active {
+	background-color: #fddd6b;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination-numbers {
+		margin-left: 4.48vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination-numbers {
+		margin-left: 7rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination-numbers {
+		margin-right: 4.48vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination-numbers {
+		margin-right: 7rem;
+	}
 }
 
 .pagination-numbers {
@@ -16983,6 +17501,12 @@ body {
 	padding-bottom: 0;
 }
 
+@media only screen and (max-width: 53.15em) {
+	.audio-card .title-wrapper {
+		margin-bottom: 1rem;
+	}
+}
+
 .audio-card .title {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
@@ -17065,6 +17589,7 @@ body {
 .audio-player-details, .audio-progress-bar, .audio-time, .volume {
 	display: inline-block;
 	vertical-align: bottom;
+	vertical-align: top;
 }
 
 .audio-player {
@@ -17242,51 +17767,12 @@ body {
 .mejs-container .mejs-controls .mejs-playpause-button {
 	position: relative;
 	display: inline-block;
-	vertical-align: bottom;
-	margin-right: 0.74074rem;
-	width: 4.21408rem;
-	height: 4.21408rem;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.mejs-container .mejs-controls .mejs-playpause-button {
-		margin-right: 1.28vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.mejs-container .mejs-controls .mejs-playpause-button {
-		margin-right: 2rem;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.mejs-container .mejs-controls .mejs-playpause-button {
-		width: 3.84vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.mejs-container .mejs-controls .mejs-playpause-button {
-		width: 6rem;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.mejs-container .mejs-controls .mejs-playpause-button {
-		height: 3.84vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.mejs-container .mejs-controls .mejs-playpause-button {
-		height: 6rem;
-	}
+	vertical-align: top;
+	width: 30%;
 }
 
 @media only screen and (max-width: 53.15em) {
 	.mejs-container .mejs-controls .mejs-playpause-button {
-		margin-right: 2vw;
 		width: 10vw;
 		height: 10vw;
 	}
@@ -17300,6 +17786,7 @@ body {
 	z-index: 10;
 	width: 4.21408rem;
 	height: 4.21408rem;
+	width: 100%;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
@@ -17330,96 +17817,6 @@ body {
 	.mejs-container .mejs-controls .mejs-playpause-button button {
 		width: 10vw;
 		height: 10vw;
-	}
-}
-
-.mejs-container .mejs-controls .mejs-playpause-button button:before, .mejs-container .mejs-controls .mejs-playpause-button button:after {
-	display: block;
-	left: 0;
-	text-align: center;
-	line-height: 1;
-	width: 4.21408rem;
-	height: 4.21408rem;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.mejs-container .mejs-controls .mejs-playpause-button button:before, .mejs-container .mejs-controls .mejs-playpause-button button:after {
-		width: 3.84vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.mejs-container .mejs-controls .mejs-playpause-button button:before, .mejs-container .mejs-controls .mejs-playpause-button button:after {
-		width: 6rem;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.mejs-container .mejs-controls .mejs-playpause-button button:before, .mejs-container .mejs-controls .mejs-playpause-button button:after {
-		height: 3.84vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.mejs-container .mejs-controls .mejs-playpause-button button:before, .mejs-container .mejs-controls .mejs-playpause-button button:after {
-		height: 6rem;
-	}
-}
-
-@media only screen and (max-width: 53.15em) {
-	.mejs-container .mejs-controls .mejs-playpause-button button:before, .mejs-container .mejs-controls .mejs-playpause-button button:after {
-		width: 100%;
-		width: 10vw;
-		height: 10vw;
-	}
-}
-
-.mejs-container .mejs-controls .mejs-playpause-button button:before {
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	content: "\61";
-	color: #cccccc;
-}
-
-.mejs-container .mejs-controls .mejs-playpause-button button:hover:before {
-	color: #fddd6b;
-}
-
-.mejs-container .mejs-controls .mejs-playpause-button button:after {
-	content: "\62";
-	position: relative;
-}
-
-.mejs-container .mejs-controls .mejs-playpause-button button[title="Pause"] {
-	text-align: center;
-}
-
-.mejs-container .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
-	content: "\6b";
-	line-height: 1.45;
-	text-align: center;
-}
-
-@media only screen and (max-width: 53.15em) {
-	.mejs-container .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
-		font-size: 7vw;
-		padding-left: 0.3vw;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.mejs-container .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
-		font-size: 2.8vw;
-		padding-left: 0.2vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.mejs-container .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
-		font-size: 4rem;
-		padding-top: 0.1rem;
-		padding-left: 0.2rem;
 	}
 }
 
@@ -17604,13 +18001,90 @@ body {
 	display: none;
 }
 
-.mejs-container .mejs-controls .mejs-time-rail, .tall-audio-multi-track-card .track-title {
-	position: absolute;
+.col-sm-4 .mejs-container .mejs-controls .mejs-playpause-button {
+	width: 20%;
+}
+
+.col-sm-4 .mejs-container .mejs-controls .non-button-controls {
+	width: 80%;
+}
+
+.mejs-container .mejs-controls .mejs-time-rail, .audio-card .track-title {
+	width: 100% !important;
 	height: 1.40469rem;
 }
 
 @media only screen and (max-width: 53.15em) {
-	.mejs-container .mejs-controls .mejs-time-rail, .tall-audio-multi-track-card .track-title {
+	.mejs-container .mejs-controls .mejs-time-rail, .audio-card .track-title {
+		padding-top: 0;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.mejs-container .mejs-controls .mejs-time-rail, .audio-card .track-title {
+		height: 1.28vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.mejs-container .mejs-controls .mejs-time-rail, .audio-card .track-title {
+		height: 2rem;
+	}
+}
+
+.mejs-container .mejs-controls .mejs-time-rail .mejs-time-loaded, .audio-card .track-title .mejs-time-loaded {
+	width: initial !important;
+}
+
+.mejs-container .mejs-controls .mejs-time-rail span, .audio-card .track-title span {
+	height: 3px;
+}
+
+.audio-card .track-title {
+	position: absolute;
+	z-index: 2;
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.4;
+	text-transform: uppercase;
+	font-size: 1.3rem;
+	margin-left: 0.55556rem;
+}
+
+@media only screen and (min-width: 53.25em) {
+	.audio-card .track-title {
+		line-height: 1.3;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.audio-card .track-title {
+		font-size: 1vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.audio-card .track-title {
+		line-height: 1.3;
+		font-size: 1.6rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.audio-card .track-title {
+		margin-left: 0.96vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.audio-card .track-title {
+		margin-left: 1.5rem;
+	}
+}
+
+@media only screen and (max-width: 53.15em) {
+	.audio-card .track-title {
+		display: none;
 		top: 2vw;
 		top: 1.1vw;
 		width: 86% !important;
@@ -17619,14 +18093,14 @@ body {
 }
 
 @media only screen and (min-width: 40em) {
-	.mejs-container .mejs-controls .mejs-time-rail, .tall-audio-multi-track-card .track-title {
+	.audio-card .track-title {
 		top: 1rem;
 		width: 87% !important;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.mejs-container .mejs-controls .mejs-time-rail, .tall-audio-multi-track-card .track-title {
+	.audio-card .track-title {
 		top: 0.5rem;
 		width: 76% !important;
 		left: 5.5vw;
@@ -17634,14 +18108,14 @@ body {
 }
 
 @media only screen and (min-width: 62em) {
-	.mejs-container .mejs-controls .mejs-time-rail, .tall-audio-multi-track-card .track-title {
+	.audio-card .track-title {
 		top: 20%;
 		width: 77.5% !important;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.mejs-container .mejs-controls .mejs-time-rail, .tall-audio-multi-track-card .track-title {
+	.audio-card .track-title {
 		top: 1.5rem;
 		left: 8.4rem;
 		width: 79% !important;
@@ -17649,23 +18123,47 @@ body {
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.mejs-container .mejs-controls .mejs-time-rail, .tall-audio-multi-track-card .track-title {
-		height: 1.28vw;
+	.mejs-container .mejs-controls .mejs-time-rail {
+		padding-top: 0.6vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.mejs-container .mejs-controls .mejs-time-rail, .tall-audio-multi-track-card .track-title {
-		height: 2rem;
+	.mejs-container .mejs-controls .mejs-time-rail {
+		padding-top: 1rem;
 	}
 }
 
-.mejs-container .mejs-controls .mejs-time-rail .mejs-time-loaded, .tall-audio-multi-track-card .track-title .mejs-time-loaded {
-	width: initial !important;
+.mejs-container .mejs-controls .mejs-horizontal-volume-slider {
+	margin-top: 0.37037rem;
 }
 
-.mejs-container .mejs-controls .mejs-time-rail span, .tall-audio-multi-track-card .track-title span {
-	height: 3px;
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.mejs-container .mejs-controls .mejs-horizontal-volume-slider {
+		margin-top: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.mejs-container .mejs-controls .mejs-horizontal-volume-slider {
+		margin-top: 1rem;
+	}
+}
+
+.mejs-container .mejs-controls .non-button-controls {
+	display: inline-block;
+	vertical-align: bottom;
+	width: 70%;
+}
+
+@media only screen and (min-width: 1560px) {
+	.mejs-container .mejs-controls .non-button-controls {
+		margin-top: 1rem;
+	}
+}
+
+.mejs-pause .svg-play-button-play, .mejs-play .svg-play-button-pause {
+	display: none;
 }
 
 /* Tall Audio Card
@@ -17814,40 +18312,16 @@ body {
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.horizontal-audio-card .mejs-controls .mejs-playpause-button, .horizontal-audio-card .mejs-controls .mejs-playpause-button button, .horizontal-audio-card .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card .mejs-controls .mejs-playpause-button button:after {
+	.horizontal-audio-card .mejs-controls .mejs-playpause-button, .horizontal-audio-card .mejs-controls .mejs-playpause-button button, .horizontal-audio-card .mejs-controls .mejs-playpause-button button svg {
 		width: 2.88vw;
 		height: 2.88vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.horizontal-audio-card .mejs-controls .mejs-playpause-button, .horizontal-audio-card .mejs-controls .mejs-playpause-button button, .horizontal-audio-card .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card .mejs-controls .mejs-playpause-button button:after {
+	.horizontal-audio-card .mejs-controls .mejs-playpause-button, .horizontal-audio-card .mejs-controls .mejs-playpause-button button, .horizontal-audio-card .mejs-controls .mejs-playpause-button button svg {
 		width: 4.5rem;
 		height: 4.5rem;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.horizontal-audio-card .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card .mejs-controls .mejs-playpause-button button:after {
-		font-size: 3vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.horizontal-audio-card .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card .mejs-controls .mejs-playpause-button button:after {
-		font-size: 4rem;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.horizontal-audio-card .mejs-controls .mejs-playpause-button button[title='Pause']:after {
-		font-size: 2.2vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.horizontal-audio-card .mejs-controls .mejs-playpause-button button[title='Pause']:after {
-		font-size: 3rem;
 	}
 }
 
@@ -18121,37 +18595,6 @@ body {
 	}
 }
 
-.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button[title="Pause"] {
-	text-align: center;
-}
-
-.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
-	line-height: 1.45;
-}
-
-@media only screen and (max-width: 53.15em) {
-	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
-		font-size: 5vw;
-		padding-left: 0.15vw;
-		line-height: 1.5;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
-		font-size: 1.8vw;
-		padding-left: 0.05vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
-		font-size: 3rem;
-		padding-top: 0;
-		padding-left: 0;
-	}
-}
-
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-time-rail {
 		width: 79% !important;
@@ -18299,42 +18742,6 @@ body {
 
 @media only screen and (max-width: 53.15em) {
 	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button {
-		width: 7vw;
-		height: 7vw;
-	}
-}
-
-.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:after {
-	width: 2.80938rem;
-	height: 2.80938rem;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:after {
-		width: 2.56vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:after {
-		width: 4rem;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:after {
-		height: 2.56vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:after {
-		height: 4rem;
-	}
-}
-
-@media only screen and (max-width: 53.15em) {
-	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:after {
 		width: 7vw;
 		height: 7vw;
 	}
@@ -18657,7 +19064,7 @@ body {
 
 @media only screen and (min-width: 1560px) {
 	.tall-audio-multi-track-card .mejs-container .mejs-controls .mejs-time-rail {
-		top: 2rem;
+		top: 0;
 	}
 }
 
@@ -26094,8 +26501,7 @@ body {
 */
 /* Icons
 -------------------------------------------------- */
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
+[class^="icon-"]:before, [class*=" icon-"]:before {
 	vertical-align: middle;
 }
 
@@ -26434,6 +26840,10 @@ body {
 	position: relative;
 }
 
+.center-box:hover .svg-play-button-circle {
+	fill: #c0d5e7;
+}
+
 .icon-play-button {
 	position: relative;
 	cursor: pointer;
@@ -26458,6 +26868,148 @@ body {
 	content: "\62";
 	color: #333333;
 	display: block;
+}
+
+.svg-play-button {
+	text-align: center;
+}
+
+.svg-play-button:hover .svg-play-button-circle {
+	fill: #c0d5e7;
+}
+
+.svg-play-button-circle, .svg-play-button-play, .svg-play-button-pause {
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	display: inline-block;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.svg-play-button-play, .svg-play-button-pause {
+	fill: #333333;
+}
+
+.svg-play-button-circle {
+	fill: #cccccc;
+	width: 10vw;
+	height: 10vw;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.svg-play-button-circle {
+		width: 3.8vw;
+		height: 3.8vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.svg-play-button-circle {
+		width: 60px;
+		height: 60px;
+	}
+}
+
+.svg-play-button-play {
+	width: 10vw;
+	height: 10vw;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.svg-play-button-play {
+		width: 3.4vw;
+		height: 3.4vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.svg-play-button-play {
+		width: 50px;
+		height: 50px;
+	}
+}
+
+.svg-play-button-pause {
+	width: 10vw;
+	height: 10vw;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.svg-play-button-pause {
+		width: 2.5vw;
+		height: 2.5vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.svg-play-button-pause {
+		width: 40px;
+		height: 40px;
+	}
+}
+
+.track .svg-play-button-circle {
+	fill: #b3b3b3;
+	width: 2rem;
+	height: 2rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.track .svg-play-button-circle {
+		width: 1.8vw;
+		height: 1.8vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.track .svg-play-button-circle {
+		width: 3rem;
+		height: 3rem;
+	}
+}
+
+.track .svg-play-button-play {
+	width: 2rem;
+	height: 2rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.track .svg-play-button-play {
+		width: 1.6vw;
+		height: 1.6vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.track .svg-play-button-play {
+		width: 2.5rem;
+		height: 2.5rem;
+	}
+}
+
+.track .svg-play-button-pause {
+	width: 1.4rem;
+	height: 1.4rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.track .svg-play-button-pause {
+		width: 1.3vw;
+		height: 1.3vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.track .svg-play-button-pause {
+		width: 2rem;
+		height: 2rem;
+	}
+}
+
+.sidebar .svg-play-button-circle {
+	fill: #cccccc;
 }
 
 @media only screen and (max-width: 53.15em) {
@@ -26683,8 +27235,18 @@ body {
 	top: 0.2rem;
 }
 
-/* Slider dots
+/* Slider dots - Folklife homepage?
 -------------------------------------------------- */
+.svg-pager-icon {
+	width: 13.5px;
+	height: 13.5px;
+}
+
+.svg-pager-icon-circle-o {
+	width: 16px;
+	height: 16px;
+}
+
 .slick-dots li button:before {
 	font-family: 'vd-icons';
 	content: "p";
@@ -27752,7 +28314,7 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
 	*/
 /* Accessibility, from https://accessibility.oit.ncsu.edu/it-accessibility-at-nc-state/developers/accessibility-handbook/mouse-and-keyboard-events/skip-to-main-content/
 -------------------------------------------------- */
-a:focus, .button-inner:focus {
+a:focus, .button-inner:focus, .js-keyboard-toggle:focus {
 	outline: 1px auto gray;
 }
 
@@ -29516,7 +30078,7 @@ a .page-title:hover {
 	}
 }
 
-.support-button {
+.support-button, .newsletter-signup-button {
 	background-color: #666666;
 	font-family: "unit-gothic-717", "Arial Black", "Arial Bold", Gadget, sans-serif;
 	text-transform: uppercase;
@@ -29531,38 +30093,38 @@ a .page-title:hover {
 }
 
 @media only screen and (max-width: 53.15em) {
-	.support-button {
+	.support-button, .newsletter-signup-button {
 		font-size: 5vw;
 	}
 }
 
 @media only screen and (min-width: 53.25em) {
-	.support-button {
+	.support-button, .newsletter-signup-button {
 		margin-bottom: 0;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.support-button {
+	.support-button, .newsletter-signup-button {
 		font-size: 1.9vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.support-button {
+	.support-button, .newsletter-signup-button {
 		font-size: 3rem;
 	}
 }
 
 @media only screen and (max-width: 53.15em) {
-	.support-button {
+	.support-button, .newsletter-signup-button {
 		padding: 3vw;
 		height: auto;
 	}
 }
 
 @media only screen and (min-width: 53.25em) {
-	.support-button {
+	.support-button, .newsletter-signup-button {
 		padding: 0;
 		position: relative;
 		-webkit-transform-style: preserve-3d;
@@ -29573,6 +30135,33 @@ a .page-title:hover {
 		display: table-cell;
 		width: 100%;
 		height: 100%;
+	}
+}
+
+.support-button:hover, .newsletter-signup-button:hover {
+	background-color: black;
+}
+
+.support-button:hover .button-inner, .newsletter-signup-button:hover .button-inner {
+	background-color: black;
+}
+
+.support-button a, .newsletter-signup-button a {
+	color: white;
+}
+
+@media only screen and (min-width: 53.25em) {
+	.support-button .button-inner, .newsletter-signup-button .button-inner {
+		position: absolute;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+}
+
+@media only screen and (min-width: 53.25em) {
+	.support-button {
 		width: 53.55%;
 		position: absolute;
 		top: 0;
@@ -29581,21 +30170,27 @@ a .page-title:hover {
 	}
 }
 
-.support-button:hover {
-	background-color: black;
+.newsletter-signup-button-wrapper {
+	display: table;
+	width: 100%;
 }
 
-.support-button:hover .button-inner {
-	background-color: black;
+.newsletter-signup-button .button-inner {
+	position: relative;
+	transform: none;
+	width: 100%;
+	padding: 0.5rem;
 }
 
-@media only screen and (min-width: 53.25em) {
-	.support-button .button-inner {
-		position: absolute;
-		top: 50%;
-		-webkit-transform: translateY(-50%);
-		-ms-transform: translateY(-50%);
-		transform: translateY(-50%);
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.newsletter-signup-button .button-inner {
+		padding: 1.5vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.newsletter-signup-button .button-inner {
+		padding: 1.85rem;
 	}
 }
 
@@ -30863,6 +31458,18 @@ figcaption.minus-sign:before {
 	fill: white;
 }
 
+@media only screen and (min-width: 53.25em) {
+	.svg-slick-prev {
+		margin-left: -4rem;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.svg-slick-prev {
+		margin-left: -4rem;
+	}
+}
+
 @media only screen and (max-width: 53.15em) {
 	.svg-slick-next {
 		right: 3.4vw;
@@ -30871,14 +31478,14 @@ figcaption.minus-sign:before {
 
 @media only screen and (min-width: 53.25em) {
 	.svg-slick-next {
-		right: 8rem;
+		right: 4rem;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
 	.svg-slick-next {
 		right: calc((100vw - 1415px) / 2);
-		margin-right: 1rem;
+		margin-right: -3rem;
 	}
 }
 
@@ -31901,6 +32508,324 @@ video::-webkit-media-controls {
 
 [data-page="1"] {
 	display: block;
+}
+
+.past-festival-pagination-wrapper .pagination {
+	text-align: center;
+	margin-bottom: 1.48148rem;
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.32;
+	font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination {
+		margin-bottom: 2.56vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination {
+		margin-bottom: 4rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination {
+		font-size: 1.2vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination {
+		line-height: 1.32;
+		font-size: 1.8rem;
+	}
+}
+
+@media only screen and (max-width: 53.15em) {
+	.past-festival-pagination-wrapper .pagination {
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+	}
+}
+
+.past-festival-pagination-wrapper .pagination li:first-of-type {
+	padding-right: 0;
+}
+
+.past-festival-pagination-wrapper .pagination li:last-of-type {
+	padding-left: 0;
+}
+
+.past-festival-pagination-wrapper .pagination .light {
+	display: inline-block;
+	padding-top: 0.70235rem;
+	padding-right: 1.40469rem;
+	padding-bottom: 0.70235rem;
+	padding-left: 1.40469rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .light {
+		padding-top: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .light {
+		padding-top: 1rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .light {
+		padding-right: 1.28vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .light {
+		padding-right: 2rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .light {
+		padding-bottom: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .light {
+		padding-bottom: 1rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .light {
+		padding-left: 1.28vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .light {
+		padding-left: 2rem;
+	}
+}
+
+.past-festival-pagination-wrapper .pagination .view-direction {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+}
+
+.past-festival-pagination-wrapper .pagination .view-previous, .past-festival-pagination-wrapper .pagination .view-next {
+	width: 9.1305rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .view-previous, .past-festival-pagination-wrapper .pagination .view-next {
+		width: 8.32vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .view-previous, .past-festival-pagination-wrapper .pagination .view-next {
+		width: 13rem;
+	}
+}
+
+.past-festival-pagination-wrapper .pagination .view-previous:after, .past-festival-pagination-wrapper .pagination .view-next:before {
+	color: #595959;
+	content: '\62';
+	display: block;
+	position: absolute;
+	font-family: "vd-icons" !important;
+	border: none;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	transform: rotate(90deg);
+	height: auto;
+	top: 0.2963rem;
+	margin-top: 0rem;
+	-webkit-transform-origin: 0 !important;
+	-moz-transform-origin: 0 !important;
+	transform-origin: 0 !important;
+	line-height: 0.3;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .view-previous:after, .past-festival-pagination-wrapper .pagination .view-next:before {
+		top: 0.512vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .view-previous:after, .past-festival-pagination-wrapper .pagination .view-next:before {
+		top: 0.8rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .view-previous:after, .past-festival-pagination-wrapper .pagination .view-next:before {
+		margin-top: 0vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .view-previous:after, .past-festival-pagination-wrapper .pagination .view-next:before {
+		margin-top: 0rem;
+	}
+}
+
+@media only screen and (max-width: 53.15em) {
+	.past-festival-pagination-wrapper .pagination .view-previous:after, .past-festival-pagination-wrapper .pagination .view-next:before {
+		font-size: 2rem;
+		top: 0rem;
+		right: 0.5rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .view-previous:after, .past-festival-pagination-wrapper .pagination .view-next:before {
+		transform-origin: 0.9vw;
+		font-size: 1.5vw;
+		top: 0.4vw;
+		right: 0.6vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .view-previous:after, .past-festival-pagination-wrapper .pagination .view-next:before {
+		transform-origin: 15px 15px;
+		font-size: 2.5rem;
+		top: 0.5rem;
+		right: 1rem;
+	}
+}
+
+@media only screen and (max-width: 53.15em) {
+	.past-festival-pagination-wrapper .pagination .view-previous:after, .past-festival-pagination-wrapper .pagination .view-next:before {
+		font-size: 2rem;
+		top: 0.9rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .view-previous:after, .past-festival-pagination-wrapper .pagination .view-next:before {
+		font-size: 3vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .view-previous:after, .past-festival-pagination-wrapper .pagination .view-next:before {
+		top: 0.4rem;
+		font-size: 5rem;
+	}
+}
+
+.past-festival-pagination-wrapper .pagination .view-previous:after {
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	transform: rotate(180deg);
+	right: -3.7037rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .view-previous:after {
+		right: -6.4vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .view-previous:after {
+		right: -10rem;
+	}
+}
+
+@media only screen and (max-width: 53.15em) {
+	.past-festival-pagination-wrapper .pagination .view-previous:after {
+		right: -4.444rem;
+	}
+}
+
+.past-festival-pagination-wrapper .pagination .view-next {
+	position: relative;
+	left: -0.48148rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .view-next {
+		left: -0.832vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .view-next {
+		left: -1.3rem;
+	}
+}
+
+.past-festival-pagination-wrapper .pagination .view-next:before {
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	transform: rotate(0deg);
+	right: auto !important;
+	left: -1.25926rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .view-next:before {
+		left: -2.176vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .view-next:before {
+		left: -3.4rem;
+	}
+}
+
+.past-festival-pagination-wrapper .pagination-numbers {
+	text-align: center;
+	display: inline-block;
+	margin-left: 2.59259rem;
+	margin-right: 2.59259rem;
+}
+
+.past-festival-pagination-wrapper .pagination-numbers a {
+	display: inline-block;
+	padding: 0.5rem;
+}
+
+.past-festival-pagination-wrapper .pagination-numbers a.is-active {
+	background-color: #c0d5e7;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination-numbers {
+		margin-left: 4.48vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination-numbers {
+		margin-left: 7rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination-numbers {
+		margin-right: 4.48vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination-numbers {
+		margin-right: 7rem;
+	}
 }
 
 .pagination-numbers {
@@ -35601,6 +36526,12 @@ body {
 	padding-bottom: 0;
 }
 
+@media only screen and (max-width: 53.15em) {
+	.audio-card .title-wrapper {
+		margin-bottom: 1rem;
+	}
+}
+
 .audio-card .title {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
@@ -35683,6 +36614,7 @@ body {
 .audio-player-details, .audio-progress-bar, .audio-time, .volume {
 	display: inline-block;
 	vertical-align: bottom;
+	vertical-align: top;
 }
 
 .audio-player {
@@ -35860,51 +36792,12 @@ body {
 .mejs-container .mejs-controls .mejs-playpause-button {
 	position: relative;
 	display: inline-block;
-	vertical-align: bottom;
-	margin-right: 0.74074rem;
-	width: 4.21408rem;
-	height: 4.21408rem;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.mejs-container .mejs-controls .mejs-playpause-button {
-		margin-right: 1.28vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.mejs-container .mejs-controls .mejs-playpause-button {
-		margin-right: 2rem;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.mejs-container .mejs-controls .mejs-playpause-button {
-		width: 3.84vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.mejs-container .mejs-controls .mejs-playpause-button {
-		width: 6rem;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.mejs-container .mejs-controls .mejs-playpause-button {
-		height: 3.84vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.mejs-container .mejs-controls .mejs-playpause-button {
-		height: 6rem;
-	}
+	vertical-align: top;
+	width: 30%;
 }
 
 @media only screen and (max-width: 53.15em) {
 	.mejs-container .mejs-controls .mejs-playpause-button {
-		margin-right: 2vw;
 		width: 10vw;
 		height: 10vw;
 	}
@@ -35918,6 +36811,7 @@ body {
 	z-index: 10;
 	width: 4.21408rem;
 	height: 4.21408rem;
+	width: 100%;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
@@ -35948,96 +36842,6 @@ body {
 	.mejs-container .mejs-controls .mejs-playpause-button button {
 		width: 10vw;
 		height: 10vw;
-	}
-}
-
-.mejs-container .mejs-controls .mejs-playpause-button button:before, .mejs-container .mejs-controls .mejs-playpause-button button:after {
-	display: block;
-	left: 0;
-	text-align: center;
-	line-height: 1;
-	width: 4.21408rem;
-	height: 4.21408rem;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.mejs-container .mejs-controls .mejs-playpause-button button:before, .mejs-container .mejs-controls .mejs-playpause-button button:after {
-		width: 3.84vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.mejs-container .mejs-controls .mejs-playpause-button button:before, .mejs-container .mejs-controls .mejs-playpause-button button:after {
-		width: 6rem;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.mejs-container .mejs-controls .mejs-playpause-button button:before, .mejs-container .mejs-controls .mejs-playpause-button button:after {
-		height: 3.84vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.mejs-container .mejs-controls .mejs-playpause-button button:before, .mejs-container .mejs-controls .mejs-playpause-button button:after {
-		height: 6rem;
-	}
-}
-
-@media only screen and (max-width: 53.15em) {
-	.mejs-container .mejs-controls .mejs-playpause-button button:before, .mejs-container .mejs-controls .mejs-playpause-button button:after {
-		width: 100%;
-		width: 10vw;
-		height: 10vw;
-	}
-}
-
-.mejs-container .mejs-controls .mejs-playpause-button button:before {
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	content: "\61";
-	color: #cccccc;
-}
-
-.mejs-container .mejs-controls .mejs-playpause-button button:hover:before {
-	color: #c0d5e7;
-}
-
-.mejs-container .mejs-controls .mejs-playpause-button button:after {
-	content: "\62";
-	position: relative;
-}
-
-.mejs-container .mejs-controls .mejs-playpause-button button[title="Pause"] {
-	text-align: center;
-}
-
-.mejs-container .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
-	content: "\6b";
-	line-height: 1.45;
-	text-align: center;
-}
-
-@media only screen and (max-width: 53.15em) {
-	.mejs-container .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
-		font-size: 7vw;
-		padding-left: 0.3vw;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.mejs-container .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
-		font-size: 2.8vw;
-		padding-left: 0.2vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.mejs-container .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
-		font-size: 4rem;
-		padding-top: 0.1rem;
-		padding-left: 0.2rem;
 	}
 }
 
@@ -36222,13 +37026,90 @@ body {
 	display: none;
 }
 
-.mejs-container .mejs-controls .mejs-time-rail, .tall-audio-multi-track-card .track-title {
-	position: absolute;
+.col-sm-4 .mejs-container .mejs-controls .mejs-playpause-button {
+	width: 20%;
+}
+
+.col-sm-4 .mejs-container .mejs-controls .non-button-controls {
+	width: 80%;
+}
+
+.mejs-container .mejs-controls .mejs-time-rail, .audio-card .track-title {
+	width: 100% !important;
 	height: 1.40469rem;
 }
 
 @media only screen and (max-width: 53.15em) {
-	.mejs-container .mejs-controls .mejs-time-rail, .tall-audio-multi-track-card .track-title {
+	.mejs-container .mejs-controls .mejs-time-rail, .audio-card .track-title {
+		padding-top: 0;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.mejs-container .mejs-controls .mejs-time-rail, .audio-card .track-title {
+		height: 1.28vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.mejs-container .mejs-controls .mejs-time-rail, .audio-card .track-title {
+		height: 2rem;
+	}
+}
+
+.mejs-container .mejs-controls .mejs-time-rail .mejs-time-loaded, .audio-card .track-title .mejs-time-loaded {
+	width: initial !important;
+}
+
+.mejs-container .mejs-controls .mejs-time-rail span, .audio-card .track-title span {
+	height: 3px;
+}
+
+.audio-card .track-title {
+	position: absolute;
+	z-index: 2;
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.4;
+	text-transform: uppercase;
+	font-size: 1.3rem;
+	margin-left: 0.55556rem;
+}
+
+@media only screen and (min-width: 53.25em) {
+	.audio-card .track-title {
+		line-height: 1.3;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.audio-card .track-title {
+		font-size: 1vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.audio-card .track-title {
+		line-height: 1.3;
+		font-size: 1.6rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.audio-card .track-title {
+		margin-left: 0.96vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.audio-card .track-title {
+		margin-left: 1.5rem;
+	}
+}
+
+@media only screen and (max-width: 53.15em) {
+	.audio-card .track-title {
+		display: none;
 		top: 2vw;
 		top: 1.1vw;
 		width: 86% !important;
@@ -36237,14 +37118,14 @@ body {
 }
 
 @media only screen and (min-width: 40em) {
-	.mejs-container .mejs-controls .mejs-time-rail, .tall-audio-multi-track-card .track-title {
+	.audio-card .track-title {
 		top: 1rem;
 		width: 87% !important;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.mejs-container .mejs-controls .mejs-time-rail, .tall-audio-multi-track-card .track-title {
+	.audio-card .track-title {
 		top: 0.5rem;
 		width: 76% !important;
 		left: 5.5vw;
@@ -36252,14 +37133,14 @@ body {
 }
 
 @media only screen and (min-width: 62em) {
-	.mejs-container .mejs-controls .mejs-time-rail, .tall-audio-multi-track-card .track-title {
+	.audio-card .track-title {
 		top: 20%;
 		width: 77.5% !important;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.mejs-container .mejs-controls .mejs-time-rail, .tall-audio-multi-track-card .track-title {
+	.audio-card .track-title {
 		top: 1.5rem;
 		left: 8.4rem;
 		width: 79% !important;
@@ -36267,23 +37148,47 @@ body {
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.mejs-container .mejs-controls .mejs-time-rail, .tall-audio-multi-track-card .track-title {
-		height: 1.28vw;
+	.mejs-container .mejs-controls .mejs-time-rail {
+		padding-top: 0.6vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.mejs-container .mejs-controls .mejs-time-rail, .tall-audio-multi-track-card .track-title {
-		height: 2rem;
+	.mejs-container .mejs-controls .mejs-time-rail {
+		padding-top: 1rem;
 	}
 }
 
-.mejs-container .mejs-controls .mejs-time-rail .mejs-time-loaded, .tall-audio-multi-track-card .track-title .mejs-time-loaded {
-	width: initial !important;
+.mejs-container .mejs-controls .mejs-horizontal-volume-slider {
+	margin-top: 0.37037rem;
 }
 
-.mejs-container .mejs-controls .mejs-time-rail span, .tall-audio-multi-track-card .track-title span {
-	height: 3px;
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.mejs-container .mejs-controls .mejs-horizontal-volume-slider {
+		margin-top: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.mejs-container .mejs-controls .mejs-horizontal-volume-slider {
+		margin-top: 1rem;
+	}
+}
+
+.mejs-container .mejs-controls .non-button-controls {
+	display: inline-block;
+	vertical-align: bottom;
+	width: 70%;
+}
+
+@media only screen and (min-width: 1560px) {
+	.mejs-container .mejs-controls .non-button-controls {
+		margin-top: 1rem;
+	}
+}
+
+.mejs-pause .svg-play-button-play, .mejs-play .svg-play-button-pause {
+	display: none;
 }
 
 /* Tall Audio Card
@@ -36432,40 +37337,16 @@ body {
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.horizontal-audio-card .mejs-controls .mejs-playpause-button, .horizontal-audio-card .mejs-controls .mejs-playpause-button button, .horizontal-audio-card .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card .mejs-controls .mejs-playpause-button button:after {
+	.horizontal-audio-card .mejs-controls .mejs-playpause-button, .horizontal-audio-card .mejs-controls .mejs-playpause-button button, .horizontal-audio-card .mejs-controls .mejs-playpause-button button svg {
 		width: 2.88vw;
 		height: 2.88vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.horizontal-audio-card .mejs-controls .mejs-playpause-button, .horizontal-audio-card .mejs-controls .mejs-playpause-button button, .horizontal-audio-card .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card .mejs-controls .mejs-playpause-button button:after {
+	.horizontal-audio-card .mejs-controls .mejs-playpause-button, .horizontal-audio-card .mejs-controls .mejs-playpause-button button, .horizontal-audio-card .mejs-controls .mejs-playpause-button button svg {
 		width: 4.5rem;
 		height: 4.5rem;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.horizontal-audio-card .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card .mejs-controls .mejs-playpause-button button:after {
-		font-size: 3vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.horizontal-audio-card .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card .mejs-controls .mejs-playpause-button button:after {
-		font-size: 4rem;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.horizontal-audio-card .mejs-controls .mejs-playpause-button button[title='Pause']:after {
-		font-size: 2.2vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.horizontal-audio-card .mejs-controls .mejs-playpause-button button[title='Pause']:after {
-		font-size: 3rem;
 	}
 }
 
@@ -36739,37 +37620,6 @@ body {
 	}
 }
 
-.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button[title="Pause"] {
-	text-align: center;
-}
-
-.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
-	line-height: 1.45;
-}
-
-@media only screen and (max-width: 53.15em) {
-	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
-		font-size: 5vw;
-		padding-left: 0.15vw;
-		line-height: 1.5;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
-		font-size: 1.8vw;
-		padding-left: 0.05vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
-		font-size: 3rem;
-		padding-top: 0;
-		padding-left: 0;
-	}
-}
-
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-time-rail {
 		width: 79% !important;
@@ -36917,42 +37767,6 @@ body {
 
 @media only screen and (max-width: 53.15em) {
 	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button {
-		width: 7vw;
-		height: 7vw;
-	}
-}
-
-.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:after {
-	width: 2.80938rem;
-	height: 2.80938rem;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:after {
-		width: 2.56vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:after {
-		width: 4rem;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:after {
-		height: 2.56vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:after {
-		height: 4rem;
-	}
-}
-
-@media only screen and (max-width: 53.15em) {
-	.horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card-third .mejs-container .mejs-controls .mejs-playpause-button button:after {
 		width: 7vw;
 		height: 7vw;
 	}
@@ -37275,7 +38089,7 @@ body {
 
 @media only screen and (min-width: 1560px) {
 	.tall-audio-multi-track-card .mejs-container .mejs-controls .mejs-time-rail {
-		top: 2rem;
+		top: 0;
 	}
 }
 
@@ -38722,6 +39536,10 @@ body.magazine-page, body.magazine-article-page {
 	margin-right: 2rem;
 }
 
+.folkways-icon.nav-icon:hover, .folkways-icon-link.is-active svg {
+	fill: #fddd6b;
+}
+
 .folkways-icon.nav-icon {
 	float: none;
 	color: #cccccc;
@@ -38733,10 +39551,6 @@ body.magazine-page, body.magazine-article-page {
 	width: 32px;
 	height: 32px;
 	fill: #cccccc;
-}
-
-.folkways-icon.nav-icon:hover, .folkways-icon.nav-icon.is-active {
-	fill: #fff;
 }
 
 @media only screen and (max-width: 53.15em) {
@@ -39453,101 +40267,8 @@ body.magazine-page, body.magazine-article-page {
 	}
 }
 
-.track .mejs-container .mejs-controls .mejs-playpause-button:before, .track .mejs-container .mejs-controls .mejs-playpause-button:after, .track .mejs-container .mejs-controls .mejs-playpause-button button:before, .track .mejs-container .mejs-controls .mejs-playpause-button button:after {
-	line-height: 1;
-	width: 2.10704rem;
-	height: 2.10704rem;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.track .mejs-container .mejs-controls .mejs-playpause-button:before, .track .mejs-container .mejs-controls .mejs-playpause-button:after, .track .mejs-container .mejs-controls .mejs-playpause-button button:before, .track .mejs-container .mejs-controls .mejs-playpause-button button:after {
-		width: 1.92vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.track .mejs-container .mejs-controls .mejs-playpause-button:before, .track .mejs-container .mejs-controls .mejs-playpause-button:after, .track .mejs-container .mejs-controls .mejs-playpause-button button:before, .track .mejs-container .mejs-controls .mejs-playpause-button button:after {
-		width: 3rem;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.track .mejs-container .mejs-controls .mejs-playpause-button:before, .track .mejs-container .mejs-controls .mejs-playpause-button:after, .track .mejs-container .mejs-controls .mejs-playpause-button button:before, .track .mejs-container .mejs-controls .mejs-playpause-button button:after {
-		height: 1.92vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.track .mejs-container .mejs-controls .mejs-playpause-button:before, .track .mejs-container .mejs-controls .mejs-playpause-button:after, .track .mejs-container .mejs-controls .mejs-playpause-button button:before, .track .mejs-container .mejs-controls .mejs-playpause-button button:after {
-		height: 3rem;
-	}
-}
-
-@media only screen and (max-width: 53.15em) {
-	.track .mejs-container .mejs-controls .mejs-playpause-button:before, .track .mejs-container .mejs-controls .mejs-playpause-button:after, .track .mejs-container .mejs-controls .mejs-playpause-button button:before, .track .mejs-container .mejs-controls .mejs-playpause-button button:after {
-		width: 100%;
-		width: 2rem;
-		height: 2rem;
-	}
-}
-
 .track .mejs-controls .mejs-playpause-button button[title="Pause"] {
 	text-align: center;
-}
-
-.track .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
-	content: "\6b";
-	line-height: 1.45;
-	text-align: center;
-}
-
-@media only screen and (max-width: 53.15em) {
-	.track .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
-		font-size: 6vw;
-		padding-left: 0.3vw;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.track .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
-		font-size: 1.5vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.track .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
-		font-size: 1rem;
-		padding-left: 0.1rem;
-	}
-}
-
-@media only screen and (max-width: 53.15em) {
-	.track-listing .track .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
-		font-size: 1.5rem;
-		padding-left: 0;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 61.9em) {
-	.track-listing .track .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
-		padding-top: 0.1vw;
-		font-size: 1vw;
-	}
-}
-
-@media only screen and (min-width: 62em) and (max-width: 1559px) {
-	.track-listing .track .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
-		padding-top: 0;
-		font-size: 1.2vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.track-listing .track .mejs-controls .mejs-playpause-button button[title="Pause"]:after {
-		padding-top: 0.1rem;
-		padding-left: 0;
-		font-size: 2rem;
-	}
 }
 
 .track .track-play-button, .track .mejs-controls .mejs-playpause-button {
@@ -39556,39 +40277,6 @@ body.magazine-page, body.magazine-article-page {
 
 .track .mejs-controls .mejs-playpause-button.mejs-pause {
 	display: block;
-}
-
-.track .track-play-button, .track .mejs-controls .mejs-playpause-button button {
-	margin-top: 0.11111rem;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.track .track-play-button, .track .mejs-controls .mejs-playpause-button button {
-		margin-top: 0.192vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.track .track-play-button, .track .mejs-controls .mejs-playpause-button button {
-		margin-top: 0.3rem;
-	}
-}
-
-.track .track-play-button:before, .track .track-play-button:after, .track .mejs-controls .mejs-playpause-button button:before, .track .mejs-controls .mejs-playpause-button button:after {
-	display: block;
-	font-size: 2rem;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.track .track-play-button:before, .track .track-play-button:after, .track .mejs-controls .mejs-playpause-button button:before, .track .mejs-controls .mejs-playpause-button button:after {
-		font-size: 1.8vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.track .track-play-button:before, .track .track-play-button:after, .track .mejs-controls .mejs-playpause-button button:before, .track .mejs-controls .mejs-playpause-button button:after {
-		font-size: 3rem;
-	}
 }
 
 .table-hover > tbody > tr:hover .track-number {
@@ -39866,7 +40554,7 @@ body.magazine-page, body.magazine-article-page {
 	white-space: initial !important;
 	padding-top: 0.49164rem;
 	padding-bottom: 1.8261rem;
-	width: 75%;
+	width: 60%;
 	display: inline-block;
 }
 
@@ -40004,7 +40692,7 @@ body.magazine-page, body.magazine-article-page {
 }
 
 .album-page .track-buy {
-	width: 15%;
+	width: 35%;
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
 	line-height: 1.32;
@@ -40029,6 +40717,7 @@ body.magazine-page, body.magazine-article-page {
 @media only screen and (min-width: 53.25em) {
 	.album-page .track-buy {
 		display: table-cell;
+		width: 15%;
 	}
 }
 

@@ -16,7 +16,7 @@
 		                    <a href="/anthology-indian-classical-music-tribute-to-alain-danielou/album/unesco/smithsonian" class="high title"><span class="light"><span class="er">Sitar, Sarode and Tabla</span></span></a>
 		                </div>
 		                <div class="audio-player">
-							<audio class="mejs-player" src="http://media.smithsonianfolkways.org/audio/features/magazine/2015_summer/UNES08270_1_08_part.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'>
+							<audio class="mejs-player-svg" src="http://media.smithsonianfolkways.org/audio/features/magazine/2015_summer/UNES08270_1_08_part.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'>
 		                </div>
 		            </div>
 		        </div>
@@ -101,7 +101,7 @@
 						</div>
 					</div>
 					<div class="audio-player">
-						<audio class="mejs-player" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'>
+						<audio class="mejs-player-svg" src="/assets/audio/Music2same.mp3">
 						<!-- mejs media player will build itself on page load and we wrap a few key elements in common-scripts.js -->
 					</div>
 				</div>

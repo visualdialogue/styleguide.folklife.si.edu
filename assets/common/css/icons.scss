@@ -1,4 +1,3 @@
-
 /*
 * Font Awesome by Dave Gandy - http://fontawesome.io
 * Entypo pictograms by Daniel Bruce — www.entypo.com
@@ -7,492 +6,643 @@
 
 /* Icons
 -------------------------------------------------- */
-	[class^="icon-"]:before,
-	[class*=" icon-"]:before {
-		vertical-align: middle;
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+	vertical-align: middle;
+}
+.icon-stack {
+	// from font-awesome stacking, http://www.w3schools.com/icons/tryit.asp?filename=tryicons_awesome_intro_stack
+	position: relative;
+	display: inline-block;
+	width: 2em;
+	// height: 2em;
+	line-height: 2em;
+	vertical-align: middle;
+	div {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		text-align: center;
 	}
-	.icon-stack {
-		// from font-awesome stacking, http://www.w3schools.com/icons/tryit.asp?filename=tryicons_awesome_intro_stack
-		position: relative;
-		display: inline-block;
-		width: 2em;
-		// height: 2em;
-		line-height: 2em;
-		vertical-align: middle;
-		div {
-			position: absolute;
-			left: 0;
-			width: 100%;
-			text-align: center;
-		}
-	}
+}
 
 /* Accessibility
 -------------------------------------------------- */
-	.accessibility-pause-button {
-		color: $black65;
-		&:focus {
-			@include outline;
-		}
+
+.accessibility-pause-button {
+	color: $black65;
+	&:focus {
+		@include outline;
 	}
-	.pause-button, .mute-button {
-		display: none;
-		// top: $mobile-home-navbarHeight;
+}
+.pause-button, .mute-button {
+	display: none;
+	// top: $mobile-home-navbarHeight;
+	@include respond-to(break2) {
+		display: block;
+		font-size: 4rem;
+		color: $fs-orange;
+		position: absolute;
+		top: calc(#{$tablet-home-headerHeight});
+		z-index: 5;
+		@include width(6);
+		@include height(6);
+		cursor: pointer;
+	}
+	@include respond-to(fullwidth) {
+		top: calc(#{$desktop-home-headerHeight});
+	}
+	&:before {
+		position: relative;
+		@include left(0.1);
+		// @include bottom(-0.2);
 		@include respond-to(break2) {
-			display: block;
-			font-size: 4rem;
-			color: $fs-orange;
-			position:absolute;
-			top: calc(#{$tablet-home-headerHeight});
-			z-index:5;
-			@include width(6);
-			@include height(6);
-			cursor:pointer;
+			bottom: 0.2rem;
+		}
+		@include respond-to(break3full) {
+			bottom: 0.2vw;
 		}
 		@include respond-to(fullwidth) {
-			top: calc(#{$desktop-home-headerHeight});
-		}
-	  	&:before {
-			position: relative;
-			@include left(0.1);
-			// @include bottom(-0.2);
-			@include respond-to(break2) {
-				bottom:0.2rem;
-			}
-			@include respond-to(break3full) {
-				bottom:0.2vw;
-			}
-			@include respond-to(fullwidth) {
-				bottom:-0.2rem;
-			}
-	  	}
-	}
-	.pause-button {
-		color: $black80;
-		@include respond-to(break2) {
-			text-align: center;
-			font-size: 3.5rem;
-			right: 7rem;
-		}
-		@include respond-to(break3) {
-			right: 6.4rem;
-		}
-		@include respond-to(break2full) {
-			margin-top: 1.1vw;
-		}
-		@include respond-to(fullwidth) {
-			margin-top: 2rem;
-			margin-top: 1.5rem;
-			// right: calc(((100vw - 1400px) / 2) + 5rem); // screen width, minus width of center area, divided by 2 because just one side
-			right: calc((100vw - 1400px) / 2 - 0.4rem); // screen width, minus width of center area, divided by 2 because just one side
+			bottom: -0.2rem;
 		}
 	}
-	.mute-button {
-		@include respond-to(break2) {
-			text-align: right;
-			right: 14rem;
-		}
-		@include respond-to(break2full) {
-			margin-top: 0.8vw;
-		}
-		@include respond-to(fullwidth) {
-			// right: calc((100vw - 1400px) / 2); // screen width, minus width of center area, divided by 2 because just one side
-			right: calc(((100vw - 1400px) / 2) + 5.8rem); // screen width, minus width of center area, divided by 2 because just one side
-			margin-top: 1.6rem;
-		}
+}
+.pause-button {
+	color: $black80;
+	@include respond-to(break2) {
+		text-align: center;
+		font-size: 3.5rem;
+		right: 7rem;
 	}
-	.icon-volume-off {
-		&:before {
-			top: 0;
-			left: -5px;
-		}
+	@include respond-to(break3) {
+		right: 6.4rem;
 	}
+	@include respond-to(break2full) {
+		margin-top: 1.1vw;
+	}
+	@include respond-to(fullwidth) {
+		margin-top: 2rem;
+		margin-top: 1.5rem;
+		// right: calc(((100vw - 1400px) / 2) + 5rem); // screen width, minus width of center area, divided by 2 because just one side
+		right: calc((100vw - 1400px) / 2 - 0.4rem); // screen width, minus width of center area, divided by 2 because just one side
+	}
+}
+.mute-button {
+	@include respond-to(break2) {
+		text-align: right;
+		right: 14rem;
+	}
+	@include respond-to(break2full) {
+		margin-top: 0.8vw;
+	}
+	@include respond-to(fullwidth) {
+		// right: calc((100vw - 1400px) / 2); // screen width, minus width of center area, divided by 2 because just one side
+		right: calc(((100vw - 1400px) / 2) + 5.8rem); // screen width, minus width of center area, divided by 2 because just one side
+		margin-top: 1.6rem;
+	}
+}
+.icon-volume-off {
+	&:before {
+		top: 0;
+		left: -5px;
+	}
+}
 
 /* Navbar
 -------------------------------------------------- */
-	.nav-icon {
-		color: $black65; // new
-		line-height: 0.9; // for center alignment
-		margin: 0;
-		@include respond-to(break2max) {
-			font-size: 2.3rem;
-		}
-		@include respond-to(break2) {
-			line-height: 0.7; // for center alignment
-		}
-		@include respond-to(break2full) {
-			font-size: 2.3rem; // new, not responsive
-			padding: 1.2vw;
-		}
-		@include respond-to(fullwidth) {
-			padding: 14px;
-			font-size: 2.5rem;
-		}
 
-		// accessibility
-		&:focus {
-			@include outline;
-		}
+.nav-icon {
+	color: $black65; // new
+	line-height: 0.9; // for center alignment
+	margin: 0;
+	@include respond-to(break2max) {
+		font-size: 2.3rem;
 	}
-	// followed tutorial from https://24ways.org/2014/an-overview-of-svg-sprite-creation-techniques/
-	// and for IE, used https://github.com/jonathantneal/svg4everybody
-	.svg-nav-icon {
-		color: $black65;
-		// $svgIconFull: 33px;
-		$svgIconMobile: 40px;
-		$svgIconTablet: 22px;
-		$svgIconFull: 26px;
-		vertical-align: middle;
-
-		width:$svgIconMobile;
-		height: $svgIconMobile;
+	@include respond-to(break2) {
+		line-height: 0.7; // for center alignment
+	}
+	@include respond-to(break2full) {
+		font-size: 2.3rem; // new, not responsive
+		padding: 1.2vw;
+	}
+	@include respond-to(fullwidth) {
+		padding: 14px;
+		font-size: 2.5rem;
+	}
+	// accessibility
+	&:focus {
+		@include outline;
+	}
+}
+// followed tutorial from https://24ways.org/2014/an-overview-of-svg-sprite-creation-techniques/
+// and for IE, used https://github.com/jonathantneal/svg4everybody
+.svg-nav-icon {
+	color: $black65;
+	// $svgIconFull: 33px;
+	$svgIconMobile: 40px;
+	$svgIconTablet: 22px;
+	$svgIconFull: 26px;
+	vertical-align: middle;
+	width: $svgIconMobile;
+	height: $svgIconMobile;
+	@include respond-to(break2) {
+		width: $svgIconTablet;
+		height: $svgIconTablet;
+	}
+	@include respond-to(fullwidth) {
+		width: $svgIconFull;
+		height: $svgIconFull;
+	}
+	fill: black;
+	// SVG icons, from fontastic directions
+	display: inline-block;
+	fill: currentColor;
+}
+.svg-nav-icon[title="pause"], .svg-nav-icon[title="play"] {
+	fill: $black65;
+	// fill: $black80;
+	$svgIconMobilePause: 40px;
+	$svgIconTabletPause: 26px;
+	$svgIconFullPause: 30px;
+	width: $svgIconMobilePause;
+	height: $svgIconMobilePause;
+	@include respond-to(break2) {
+		width: $svgIconTabletPause;
+		height: $svgIconTabletPause;
+	}
+	@include respond-to(fullwidth) {
+		width: $svgIconFullPause;
+		height: $svgIconFullPause;
+	}
+}
+.icon-pause:before, .icon-play:before {
+	content: ''; // clear out old icons
+}
+// hide other button when toggling
+.icon-pause .svg-nav-icon[title="play"], .icon-play .svg-nav-icon[title="pause"] {
+	display: none;
+}
+.main-nav-icon {
+	@include respond-to(break2max) {
+		padding: 1rem; // 12.16 to match with new hamburger nav
+	}
+	&:hover {
 		@include respond-to(break2) {
-			width:$svgIconTablet;
-			height: $svgIconTablet;
-		}
-		@include respond-to(fullwidth) {
-			width:$svgIconFull;
-			height: $svgIconFull;
-		}
-		fill: black;
-		// SVG icons, from fontastic directions
-	    display: inline-block;
-	    fill: currentColor;
-	}
-	.svg-nav-icon[title="pause"], .svg-nav-icon[title="play"] {
-		fill: $black65;
-		// fill: $black80;
-		$svgIconMobilePause: 40px;
-		$svgIconTabletPause: 26px;
-		$svgIconFullPause: 30px;
-		width:$svgIconMobilePause;
-		height: $svgIconMobilePause;
-		@include respond-to(break2) {
-			width:$svgIconTabletPause;
-			height: $svgIconTabletPause;
-		}
-		@include respond-to(fullwidth) {
-			width:$svgIconFullPause;
-			height: $svgIconFullPause;
-		}
-	}
-	.icon-pause:before, .icon-play:before {
-		content: ''; // clear out old icons
-	}
-	// hide other button when toggling
-	.icon-pause .svg-nav-icon[title="play"], .icon-play .svg-nav-icon[title="pause"] {
-		display: none;
-	}
-	.main-nav-icon {
-		@include respond-to(break2max) {
-			padding: 1rem; // 12.16 to match with new hamburger nav
-		}
-		&:hover {
-			@include respond-to(break2) {
 			color: $black30;
-			}
-		}
-		&:focus {
-			@include outline;
 		}
 	}
-	.social-icons {
-		display: none; // initial hide
-		text-align: right;
-		padding: 0;
-		// place above outside click
-		position: relative;
-		z-index: 10;
-		@include respond-to(break2max) {
-			display: none;
-			background-color: #fff;
-			background-color: $black10;
-			width: 100%;
-			left: 0;
-		}
+	&:focus {
+		@include outline;
 	}
-	.desktop-social-icons {
-		@include respond-to(break2max) {
-			display: none !important; // override js hiding and showing
-		}
-		display: none; // initial hide
+}
+.social-icons {
+	display: none; // initial hide
+	text-align: right;
+	padding: 0;
+	// place above outside click
+	position: relative;
+	z-index: 10;
+	@include respond-to(break2max) {
+		display: none;
+		background-color: #fff;
+		background-color: $black10;
+		width: 100%;
+		left: 0;
 	}
-	.social-icon-link {
-		vertical-align: middle;
+}
+.desktop-social-icons {
+	@include respond-to(break2max) {
+		display: none !important; // override js hiding and showing
 	}
-	.social-icon-link:hover, .social-icon-link:focus {
+	display: none; // initial hide
+}
+.social-icon-link {
+	vertical-align: middle;
+}
+.social-icon-link:hover, .social-icon-link:focus {
+	text-decoration: none;
+}
+.social-icon {
+	color: $black65;
+	@include padding(1);
+	&:hover {
+		color: $black30;
 		text-decoration: none;
 	}
-	.social-icon {
-		color:$black65;
-		@include padding(1);
-		&:hover {
-			color: $black30;
-			text-decoration: none;
-		}
-	}
+}
 
 /* Play button
 -------------------------------------------------- */
-	.center-box {
+
+.center-box {
+	position: relative;
+	&:hover {
+		// .svg-play-button-play {fill: $hover;}
+		// .svg-play-button-play {fill: $black50;}
+		.svg-play-button-circle {fill: $hover;}
+	}
+}
+.icon-play-button {
+	position: relative; // contain absolute pseudo icons
+	cursor: pointer;
+	&:before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 0;
+		content: "\61";
+		color: $black25;
+	}
+	&:hover:before {
+		color: $hover;
+	}
+	&:after {
 		position: relative;
+		z-index: 1;
+		content: "\62";
+		color: $black80;
+		display: block;
 	}
-	.icon-play-button {
-		position: relative; // contain absolute pseudo icons
-		cursor: pointer;
-		&:before {
-			position: absolute;
-			top:0;
-			left:0;
-			z-index: 0;
-  			content: "\61";
-			color: $black25;
-		}
-		&:hover:before {
-			color: $hover;
-		}
-		&:after {
-			position: relative;
-			z-index: 1;
-  			content: "\62";
-			color: $black80;
-  			display: block;
+}
+.svg-play-button {
+	text-align: center;
+	&:hover {
+		.svg-play-button-circle {
+			fill: $hover;
 		}
 	}
-	.icon-gallery:before, .icon-gallery:after, .icon-picture-o:before, .icon-picture-o:after, .icon-play-button:before, .icon-play-button:after, .mejs-controls .mejs-playpause-button button:before, .mejs-controls .mejs-playpause-button button:after {
-		@include respond-to(break2max) {
-			font-size: 10vw;
-		}
+}
+.svg-play-button-circle, .svg-play-button-play, .svg-play-button-pause {
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	display: inline-block;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+.svg-play-button-play, .svg-play-button-pause {
+	fill: $black80;
+}
+
+// Anything not in a track
+.svg-play-button-circle {
+	// fill: $black30;
+	fill: $black20;
+	// fill: red;
+	// sizing
+	$mobile: 10vw;
+	$tablet: 3.8vw;
+	$full: 60px;
+	width: $mobile;
+	height: $mobile;
+	@include respond-to(break2full) {
+		width: $tablet;
+		height: $tablet;
+	}
+	@include respond-to(fullwidth) {
+		width: $full;
+		height: $full;
+	}
+}
+.svg-play-button-play {
+	// sizing
+	$mobile: 10vw;
+	$tablet: 3.4vw;
+	$full: 50px;
+	width: $mobile;
+	height: $mobile;
+	@include respond-to(break2full) {
+		width: $tablet;
+		height: $tablet;
+	}
+	@include respond-to(fullwidth) {
+		width: $full;
+		height: $full;
+	}
+}
+.svg-play-button-pause {
+	// sizing
+	$mobile: 10vw;
+	$tablet: 2.5vw;
+	$full: 40px;
+	width: $mobile;
+	height: $mobile;
+	@include respond-to(break2full) {
+		width: $tablet;
+		height: $tablet;
+	}
+	@include respond-to(fullwidth) {
+		width: $full;
+		height: $full;
+	}
+}
+// Track listing play button
+.track {
+	.svg-play-button-circle {
+		fill: $black30;
+		// sizing
+		$mobile: 2rem;
+		$tablet: 1.8vw;
+		$full: 3rem;
+		width: $mobile;
+		height: $mobile;
 		@include respond-to(break2full) {
-			font-size: 4vw;
+			width: $tablet;
+			height: $tablet;
 		}
 		@include respond-to(fullwidth) {
-			font-size: 6rem;
+			width: $full;
+			height: $full;
 		}
 	}
-	.horizontal-audio-card-third .icon-play-button:before, .horizontal-audio-card-third .icon-play-button:after, .horizontal-audio-card-third .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card-third .mejs-controls .mejs-playpause-button button:after {
-		@include respond-to(break2max) {
-			font-size: 7vw;
-		}
+	.svg-play-button-play {
+		// sizing
+		$mobile: 2rem;
+		$tablet: 1.6vw;
+		$full: 2.5rem;
+		width: $mobile;
+		height: $mobile;
 		@include respond-to(break2full) {
-			// font-size: 3vw;
-			font-size: 2.5vw;
+			width: $tablet;
+			height: $tablet;
 		}
 		@include respond-to(fullwidth) {
-			font-size: 4rem;
+			width: $full;
+			height: $full;
 		}
 	}
-	// Album page track listing
-	// .track .mejs-controls button {
-	// 	&:before, &:after {
-	// 		@include respond-to(break2max) {
-	// 			font-size: 5vw;
-	// 		}
-	// 		@include respond-to(break2full) {
-	// 			font-size: 3vw;
-	// 		}
-	// 		@include respond-to(fullwidth) {
-	// 			font-size: 3rem;
-	// 		}
-	// 	}
-	// }
+	.svg-play-button-pause {
+		// sizing
+		$mobile: 1.4rem;
+		$tablet: 1.3vw;
+		$full: 2rem;
+		width: $mobile;
+		height: $mobile;
+		@include respond-to(break2full) {
+			width: $tablet;
+			height: $tablet;
+		}
+		@include respond-to(fullwidth) {
+			width: $full;
+			height: $full;
+		}
+	}
+}
+// Magazine article sidebar play buttons on gray bg to start
+.sidebar {
+	.svg-play-button-circle {
+		fill: $black20;
+	}
+}
+.icon-gallery:before, .icon-gallery:after, .icon-picture-o:before, .icon-picture-o:after, .icon-play-button:before, .icon-play-button:after, .mejs-controls .mejs-playpause-button button:before, .mejs-controls .mejs-playpause-button button:after {
+	@include respond-to(break2max) {
+		font-size: 10vw;
+	}
+	@include respond-to(break2full) {
+		font-size: 4vw;
+	}
+	@include respond-to(fullwidth) {
+		font-size: 6rem;
+	}
+}
+.horizontal-audio-card-third .icon-play-button:before, .horizontal-audio-card-third .icon-play-button:after, .horizontal-audio-card-third .mejs-controls .mejs-playpause-button button:before, .horizontal-audio-card-third .mejs-controls .mejs-playpause-button button:after {
+	@include respond-to(break2max) {
+		font-size: 7vw;
+	}
+	@include respond-to(break2full) {
+		// font-size: 3vw;
+		font-size: 2.5vw;
+	}
+	@include respond-to(fullwidth) {
+		font-size: 4rem;
+	}
+}
+// Album page track listing
+// .track .mejs-controls button {
+// 	&:before, &:after {
+// 		@include respond-to(break2max) {
+// 			font-size: 5vw;
+// 		}
+// 		@include respond-to(break2full) {
+// 			font-size: 3vw;
+// 		}
+// 		@include respond-to(fullwidth) {
+// 			font-size: 3rem;
+// 		}
+// 	}
+// }
 
 /* Image Gallery
 -------------------------------------------------- */
-	.icon-gallery, .icon-picture-o {
-		cursor: pointer;
+
+.icon-gallery, .icon-picture-o {
+	cursor: pointer;
+	position: absolute;
+	@include left(1);
+	@include bottom(1);
+	&:before {
+		z-index: 0;
+		color: $black25;
+	}
+	&:hover:before {
+		color: $hover;
+	}
+	&:after {
 		position: absolute;
-		@include left(1);
-		@include bottom(1);
-		&:before {
-			z-index: 0;
-			color: $black25;
+		z-index: 1;
+		color: $black80;
+		display: block;
+		@include respond-to(break2max) {
+			font-size: 6vw;
+			top: 2vw;
+			left: 1.8vw;
 		}
-		&:hover:before {
-			color: $hover;
+		@include respond-to(break2full) {
+			font-size: 2.6vw;
+			top: 0.7vw;
+			left: 0.6vw;
 		}
-		&:after {
-			position: absolute;
-			z-index: 1;
-			color: $black80;
-			display: block;
-			@include respond-to(break2max) {
-				font-size: 6vw;
-				top: 2vw;
-				left: 1.8vw;
-			}
-			@include respond-to(break2full) {
-				font-size: 2.6vw;
-				top: 0.7vw;
-				left: 0.6vw;
-			}
-			@include respond-to(fullwidth) {
-				font-size: 4rem;
-				top: 1rem;
-				left: 0.9rem;
-			}
+		@include respond-to(fullwidth) {
+			font-size: 4rem;
+			top: 1rem;
+			left: 0.9rem;
 		}
 	}
+}
 
 /* More Link
 -------------------------------------------------- */
-	.more-link-wrapper {
-		position: relative;
+
+.more-link-wrapper {
+	position: relative;
+}
+.more-link {
+	color: $black60;
+	position: absolute;
+	top: 0;
+	right: 0;
+	cursor: pointer;
+	line-height: 1;
+}
+.more-link-text {
+	@include sm-sans;
+	display: inline-block;
+	vertical-align: top;
+	line-height: 1.1; // match section header for alignment
+	@include respond-to(break2) {
+		line-height: 1.2; // match section header for alignment
 	}
-	.more-link {
-		color: $black60;
-		position: absolute;
-		top: 0;
-		right: 0;
-		cursor: pointer;
-		line-height: 1;
+}
+.more-link-arrow {
+	display: inline-block;
+	vertical-align: top;
+	width: auto;
+	height: auto;
+	line-height: 0.9; // for vert alignment with more text
+	line-height: 0.2; // for vert alignment with more text
+	@include respond-to(break2) {
+		line-height: 1; // for vert alignment with more text
 	}
-	.more-link-text {
-		@include sm-sans;
-		display: inline-block;
-		vertical-align: top;
-		line-height: 1.1; // match section header for alignment
-			@include respond-to(break2) {
-				line-height: 1.2; // match section header for alignment
-			}
+	@include respond-to(fullwidth) {
+		line-height: 0.75; // for vert alignment with more text
 	}
-	.more-link-arrow {
-		display: inline-block;
-		vertical-align: top;
-		width: auto;
-		height: auto;
-		line-height: 0.9; // for vert alignment with more text
-		line-height: 0.2; // for vert alignment with more text
-		@include respond-to(break2) {
-			line-height: 1; // for vert alignment with more text
+	&:before {
+		font-size: 2rem;
+		@include respond-to(break2full) {
+			font-size: 1.4vw;
+			line-height: 1.3;
 		}
 		@include respond-to(fullwidth) {
-			line-height: 0.75; // for vert alignment with more text
-		}
-		&:before {
 			font-size: 2rem;
-			@include respond-to(break2full) {
-				font-size: 1.4vw;
-				line-height: 1.3;
-			}
-			@include respond-to(fullwidth) {
-				font-size: 2rem;
-				line-height: 1.3;
-			}
+			line-height: 1.3;
 		}
 	}
-	// change arrow on open
-	.more-link[aria-expanded="false"] .more-link-arrow:before {
-		-webkit-transform: rotate(90deg);
-		-moz-transform: rotate(90deg);
-		-ms-transform: rotate(90deg);
-		-o-transform: rotate(90deg);
-		transform: rotate(90deg);
-		display: inline-block;
-	}
-	.more-link[aria-expanded="true"] .more-link-arrow:before {
-		// filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=0.5);
-		-webkit-transform: rotate(270deg);
-		-moz-transform: rotate(270deg);
-		-ms-transform: rotate(270deg);
-		-o-transform: rotate(270deg);
-		transform: rotate(270deg);
-		display: inline-block;
-		position: relative;
-		top: -0.2rem;
-	}
+}
+// change arrow on open
+.more-link[aria-expanded="false"] .more-link-arrow:before {
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
+	display: inline-block;
+}
+.more-link[aria-expanded="true"] .more-link-arrow:before {
+	// filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=0.5);
+	-webkit-transform: rotate(270deg);
+	-moz-transform: rotate(270deg);
+	-ms-transform: rotate(270deg);
+	-o-transform: rotate(270deg);
+	transform: rotate(270deg);
+	display: inline-block;
+	position: relative;
+	top: -0.2rem;
+}
+// Folkways Suggests Icons
+// change arrow on open
+.album-sidebar-tab[aria-expanded="true"] .icon-right-open-mini {
+	// filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=0.5);
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
+	display: inline-block;
+	position: relative;
+	top: 0.2rem;
+}
 
-	// Folkways Suggests Icons
-	// change arrow on open
-	.album-sidebar-tab[aria-expanded="true"] .icon-right-open-mini {
-		// filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=0.5);
-		-webkit-transform: rotate(90deg);
-		-moz-transform: rotate(90deg);
-		-ms-transform: rotate(90deg);
-		-o-transform: rotate(90deg);
-		transform: rotate(90deg);
-		display: inline-block;
-		position: relative;
-		top: 0.2rem;
-	}
-
-/* Slider dots
+/* Slider dots - Folklife homepage?
 -------------------------------------------------- */
-	$filledInCircle: "\61";
-	$hollowCircle: "\70";
-	$mobileSize: 1rem;
 
-	.slick-dots li button:before {
-		font-family: 'vd-icons';
-		content: $hollowCircle;
-		opacity: 1;
-		width: 14px;
-		height: 14px;
-		display: block;
-		@include respond-to(break2max) {
-			font-size:1.5rem;
-			font-size:$mobileSize;
-		}
-		@include respond-to(break2full) {
-			font-size:1vw;
-		}
-		@include respond-to(fullwidth) {
-			font-size:1.7rem;
-		}
-	}
-	.slick-dots li button:hover:before, .slick-dots li.slick-active button:before {
-		@include respond-to(break2) {
-			content: $filledInCircle;
-		}
-		@include respond-to(break2full) {
-			font-size:0.8vw;
-		}
-		@include respond-to(fullwidth) {
-			font-size:1.5rem;
-			padding-left:1px;
-		}
-	}
-
-	// nth slide, nth dot is active because default slick dot activation doesn't work with multiple dot instances
-	// mobile only
+$mobile: 40px;
+$tablet: 22px;
+$full: 13.5px;
+$ofull: 16px;
+.svg-pager-icon {
+	width: $full;
+	height: $full;
+}
+.svg-pager-icon-circle-o {
+	width: $ofull;
+	height: $ofull;
+}
+// OLD ICONS
+$filledInCircle: "\61";
+$hollowCircle: "\70";
+$mobileSize: 1rem;
+.slick-dots li button:before {
+	font-family: 'vd-icons';
+	content: $hollowCircle;
+	opacity: 1;
+	width: 14px;
+	height: 14px;
+	display: block;
 	@include respond-to(break2max) {
-		li[aria-hidden="false"] button:before {
-			content: "\61";
-			font-size:1.3rem;
-			font-size:1rem;
-			padding-left:0;
-		}
+		font-size: 1.5rem;
+		font-size: $mobileSize;
 	}
+	@include respond-to(break2full) {
+		font-size: 1vw;
+	}
+	@include respond-to(fullwidth) {
+		font-size: 1.7rem;
+	}
+}
+.slick-dots li button:hover:before, .slick-dots li.slick-active button:before {
+	@include respond-to(break2) {
+		content: $filledInCircle;
+	}
+	@include respond-to(break2full) {
+		font-size: 0.8vw;
+	}
+	@include respond-to(fullwidth) {
+		font-size: 1.5rem;
+		padding-left: 1px;
+	}
+}
+// nth slide, nth dot is active because default slick dot activation doesn't work with multiple dot instances
+// mobile only
+@include respond-to(break2max) {
+	li[aria-hidden="false"] button:before {
+		content: "\61";
+		font-size: 1.3rem;
+		font-size: 1rem;
+		padding-left: 0;
+	}
+}
 
 /* Footer
 -------------------------------------------------- */
-	.newsletter-signup {
-		.icon-mail {
-			color: $black40;
-			float: right;
-			@include respond-to(break2max) {
-				margin-left: 3vw;
-			}
-			@include respond-to(break2full) {
-				margin-left: 1.9vw;
-			}
-			@include respond-to(fullwidth) {
-				margin-left: 2rem;
-			}
+
+.newsletter-signup {
+	.icon-mail {
+		color: $black40;
+		float: right;
+		@include respond-to(break2max) {
+			margin-left: 3vw;
 		}
-		.icon-mail:before {
-			@include respond-to(break2max) {
-				font-size: 2rem;
-			}
-			@include respond-to(break2full) {
-				font-size: 4vw;
-				padding-right: 0.2vw;
-				line-height: 0.8;
-			}
-			@include respond-to(fullwidth) {
-				font-size: 5.2rem;
-				padding-right: 2px;
-				line-height: 1;
-			}
+		@include respond-to(break2full) {
+			margin-left: 1.9vw;
+		}
+		@include respond-to(fullwidth) {
+			margin-left: 2rem;
 		}
 	}
+	.icon-mail:before {
+		@include respond-to(break2max) {
+			font-size: 2rem;
+		}
+		@include respond-to(break2full) {
+			font-size: 4vw;
+			padding-right: 0.2vw;
+			line-height: 0.8;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 5.2rem;
+			padding-right: 2px;
+			line-height: 1;
+		}
+	}
+}

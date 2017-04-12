@@ -18,7 +18,8 @@ gulp.task('plugins', function() {
 			'./assets/common/js/plugins/slick-carousel/slick/slick.min.js',
 			'./assets/common/js/plugins/remodal/dist/remodal.min.js',
 			'./assets/common/js/plugins/vimeo-player-js/dist/player.min.js',
-			'./assets/common/js/plugins/mediaelement/build/mediaelement-and-player.min.js',
+			// './assets/common/js/plugins/mediaelement/build/mediaelement-and-player.min.js',
+			'./assets/common/js/plugins/mediaelement/build/mediaelement-and-player.js',
 			'./assets/common/js/plugins/matchHeight/dist/jquery.matchHeight-min.js',
 			'./assets/common/js/plugins/viewport-units-buggyfill/viewport-units-buggyfill.min.js', // for customizing dropdowns (eg. folkways magazine)
 			'./assets/common/js/plugins/preparetransition.min.js', // for customizing dropdowns (eg. folkways magazine)

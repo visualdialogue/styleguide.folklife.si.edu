@@ -1,9 +1,8 @@
 /* Accessibility, from https://accessibility.oit.ncsu.edu/it-accessibility-at-nc-state/developers/accessibility-handbook/mouse-and-keyboard-events/skip-to-main-content/
 -------------------------------------------------- */
-	a:focus, .button-inner:focus {
+	a:focus, .button-inner:focus, .js-keyboard-toggle:focus {
 		@include outline;
 	}
-
 	a.skip-main {
 		left:-999px;
 		position:absolute;
@@ -706,7 +705,7 @@
 			height: 15rem;
 		}
 	}
-	.support-button {
+	.support-button, .newsletter-signup-button {
 		background-color: $black60;
 		@include sm-woodtype-extended;
 		margin-bottom:0;
@@ -721,11 +720,7 @@
 		@include respond-to(break2) {
 			padding: 0;
 			@include vertically-align-parent;
-			width: 53.55%; // 100 - 46.45%
-			position: absolute;
-			top: 0;
-			right: 0;
-			bottom: 0;
+
 		}
 		&:hover {
 			background-color: black;
@@ -733,16 +728,42 @@
 				background-color: black;
 			}
 		}
+		a {
+			color: white;
+		}
 		.button-inner {
 			@include respond-to(break2) {
 				@include vertically-align;
 			}
 		}
 	}
+	.support-button {
+		@include respond-to(break2) {
+			width: 53.55%; // 100 - 46.45%
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+		}
+	}
+	.newsletter-signup-button-wrapper {
+		display: table;
+		width: 100%;
+	}
+	.newsletter-signup-button {
+		.button-inner {
+			position: relative; // contain button
+			transform: none;
+			width: 100%;
+			padding:0.5rem;
+			@include respond-to(break2full) {padding:1.5vw;}
+			@include respond-to(fullwidth) {padding:1.85rem;}
+		}
+	}
 	.button-inner {
 		@include respond-to(break2) {
 			line-height: 1.1;
-		}
+		}		
 	}
 
 /* Newsletter Signup
@@ -1244,20 +1265,25 @@
 			fill: white;
 		}
 	}
+	.svg-slick-prev {
+		@include respond-to(break2) {margin-left:-4rem;}
+		@include respond-to(fullwidth) {margin-left:-4rem;}
+	}
 	.svg-slick-next {
 		@include respond-to(break2max) {
 			right: 3.4vw;
 		}
 		@include respond-to(break2) {
 			// right: calc((100vw - 1415px) / 2); // screen width, minus width of center area, divided by 2 because just one side
-			right: 8rem;
+			right: 4rem;
 		}
 		@include respond-to(fullwidth) {
 			// right: calc((100vw - 1400px) / 2); // screen width, minus width of center area, divided by 2 because just one side
 			right: calc((100vw - 1415px) / 2); // screen width, minus width of center area, divided by 2 because just one side
 			// margin-right: -5.5rem;
 			// margin-right: -4.8rem;
-			margin-right: 1rem;
+			// margin-right: 1rem;
+			margin-right: -3rem;
 		}
 	}
 	.ms-banner-slideshow .svg-slick-next {
@@ -1659,154 +1685,156 @@
 
 
 	//  pagination, luke's solution, not working on toby's
-	// .pagination {
-	// 	text-align: center;
-	// 	@include margin-bottom(4);
+	.past-festival-pagination-wrapper {
+		.pagination {
+			text-align: center;
+			@include margin-bottom(4);
 
-	//     @include sm-sans;
+		    @include sm-sans;
 
-	//     @include respond-to(break2max) {
-	//         padding-top: 1rem;
-	//         padding-bottom: 1rem;
-	//     }
-	//     li:first-of-type {
-	//         padding-right: 0;
-	//     }
-	//     li:last-of-type {
-	//         padding-left: 0;
-	//     }
-	//     .light {
-	//         display: inline-block;
-	//         @include padding-top(1);
-	//         @include padding-right(2);
-	//         @include padding-bottom(1);
-	//         @include padding-left(2);
-	//     }
-	//     .view-direction {
-	//         cursor: pointer;
-	//         display: inline-block;
-	//         position: relative; // contain arrow
-	//     }
-	//     .view-previous, .view-next {
-	//     	@include width(13);
-	//     }
-	//     .view-previous:after, .view-next:before {
-	//     	// display: block; // for ie
-	//     	// position: absolute; // ie fix
-	//         color: $black65;
-	//         @include dropdown-arrow;
-	//         // for alignment
-	//         -webkit-transform-origin: 0 !important;
-	//         -moz-transform-origin: 0 !important;
-	//         transform-origin: 0 !important;
-	//         line-height: 0.3;
+		    @include respond-to(break2max) {
+		        padding-top: 1rem;
+		        padding-bottom: 1rem;
+		    }
+		    li:first-of-type {
+		        padding-right: 0;
+		    }
+		    li:last-of-type {
+		        padding-left: 0;
+		    }
+		    .light {
+		        display: inline-block;
+		        @include padding-top(1);
+		        @include padding-right(2);
+		        @include padding-bottom(1);
+		        @include padding-left(2);
+		    }
+		    .view-direction {
+		        cursor: pointer;
+		        display: inline-block;
+		        position: relative; // contain arrow
+		    }
+		    .view-previous, .view-next {
+		    	@include width(13);
+		    }
+		    .view-previous:after, .view-next:before {
+		    	// display: block; // for ie
+		    	// position: absolute; // ie fix
+		        color: $black65;
+		        @include dropdown-arrow;
+		        // for alignment
+		        -webkit-transform-origin: 0 !important;
+		        -moz-transform-origin: 0 !important;
+		        transform-origin: 0 !important;
+		        line-height: 0.3;
 
-	//         @include respond-to(break2max) {
-	//             font-size: 2rem;
-	//             top: 0.9rem;
-	//         }
+		        @include respond-to(break2max) {
+		            font-size: 2rem;
+		            top: 0.9rem;
+		        }
 
-	//         @include respond-to(break2full) {
-	//             font-size: 3vw;
-	//         }
+		        @include respond-to(break2full) {
+		            font-size: 3vw;
+		        }
 
-	//         @include respond-to(fullwidth) {
-	//             top: 0.4rem;
-	//             font-size: 5rem;
-	//         }
-	//     }
-	//     .view-previous {
-	//         // text-align: right;
+		        @include respond-to(fullwidth) {
+		            top: 0.4rem;
+		            font-size: 5rem;
+		        }
+		    }
+		    .view-previous {
+		        // text-align: right;
 
-	//         // @include respond-to(break2max) {
-	//         //     padding-right: 1.5rem;
-	//         // }
+		        // @include respond-to(break2max) {
+		        //     padding-right: 1.5rem;
+		        // }
 
-	//         // @include respond-to(break2full) {
-	//         //     padding-right: 3vw;
-	//         // }
+		        // @include respond-to(break2full) {
+		        //     padding-right: 3vw;
+		        // }
 
-	//         // @include respond-to(fullwidth) {
-	//         //     padding-right: 5rem;
-	//         // }
+		        // @include respond-to(fullwidth) {
+		        //     padding-right: 5rem;
+		        // }
 
-	//         &:after {
-	//             -webkit-transform: rotate(180deg);
-	//             -moz-transform: rotate(180deg);
-	//             transform: rotate(180deg);
-	//             // left: auto;
-	//             @include right(-10); // more b/c rotated
+		        &:after {
+		            -webkit-transform: rotate(180deg);
+		            -moz-transform: rotate(180deg);
+		            transform: rotate(180deg);
+		            // left: auto;
+		            @include right(-10); // more b/c rotated
 
-	//             @include respond-to(break2max) {
-	//                 right: -4.444rem;
-	//             }
+		            @include respond-to(break2max) {
+		                right: -4.444rem;
+		            }
 
-	//             // @include respond-to(break2) {
-	//             //     padding-right: 0;
-	//             // }
+		            // @include respond-to(break2) {
+		            //     padding-right: 0;
+		            // }
 
-	//             // @include respond-to(break2full) {
-	//             //     right: -4vw;
-	//             // }
+		            // @include respond-to(break2full) {
+		            //     right: -4vw;
+		            // }
 
-	//             // @include respond-to(fullwidth) {
-	//             //     padding-right: 0rem;
-	//             //     right: -6.8rem;
-	//             // }
-	//         }
-	//     }
-	//     .view-next {
-	//         // @include respond-to(break2max) {
-	//         //     padding-left: 1.5rem;
-	//         // }
+		            // @include respond-to(fullwidth) {
+		            //     padding-right: 0rem;
+		            //     right: -6.8rem;
+		            // }
+		        }
+		    }
+		    .view-next {
+		        // @include respond-to(break2max) {
+		        //     padding-left: 1.5rem;
+		        // }
 
-	//         // @include respond-to(break2full) {
-	//         //     padding-left: 3vw;
-	//         // }
+		        // @include respond-to(break2full) {
+		        //     padding-left: 3vw;
+		        // }
 
-	//         // @include respond-to(fullwidth) {
+		        // @include respond-to(fullwidth) {
 
-	//         // }
-	//         // @include margin-left(-2); // for balance
-	//         position: relative;
-	//         @include left(-1.3); // balance with longer "view previous" text
+		        // }
+		        // @include margin-left(-2); // for balance
+		        position: relative;
+		        @include left(-1.3); // balance with longer "view previous" text
 
-	//         &:before {
-	//             -webkit-transform: rotate(0deg);
-	//             -moz-transform: rotate(0deg);
-	//             transform: rotate(0deg);
-	//             right: auto !important; // for vw helper override
-	//             @include left(-3.4);
+		        &:before {
+		            -webkit-transform: rotate(0deg);
+		            -moz-transform: rotate(0deg);
+		            transform: rotate(0deg);
+		            right: auto !important; // for vw helper override
+		            @include left(-3.4);
 
-	//             // @include respond-to(break2max) {
-	//             //     left: -1rem;
-	//             // }
+		            // @include respond-to(break2max) {
+		            //     left: -1rem;
+		            // }
 
-	//             // @include respond-to(break2full) {
-	//             //     left: -1.216vw;
-	//             // }
+		            // @include respond-to(break2full) {
+		            //     left: -1.216vw;
+		            // }
 
-	//             // @include respond-to(fullwidth) {
-	//             //     // left: -1.9rem;
-	//             //     right: auto;
-	//             //     left: 0;
-	//             // }
-	//         }
-	//     }
-	// }
-	// .pagination-numbers {
-	// 	text-align: center;
-	// 	display: inline-block; // for centering
-	// 	a {
-	// 		display: inline-block;
-	// 		padding: 0.5rem;
-	// 		&.is-active {
-	// 			background-color: $hover;
-	// 		}
-	// 	}
-	// 	@include margin-left(7);
-	// 	@include margin-right(7);
-	// }
+		            // @include respond-to(fullwidth) {
+		            //     // left: -1.9rem;
+		            //     right: auto;
+		            //     left: 0;
+		            // }
+		        }
+		    }
+		}
+		.pagination-numbers {
+			text-align: center;
+			display: inline-block; // for centering
+			a {
+				display: inline-block;
+				padding: 0.5rem;
+				&.is-active {
+					background-color: $hover;
+				}
+			}
+			@include margin-left(7);
+			@include margin-right(7);
+		}
+	}
 
 	.pagination-numbers {
 		text-align: center;

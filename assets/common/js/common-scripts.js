@@ -44,6 +44,13 @@
 	svg4everybody();
 
 /*********
+* accessibility related content
+*********/
+$('.js-keyboard-toggle').on('keypress', function() {
+	$(this).siblings('.collapse').toggleClass('in');
+});
+
+/*********
 * accessibility pause
 *********/
 	var $pauseButton = $('#pause-button');
@@ -956,8 +963,8 @@ $(document).ready(function () {
 		autoplaySpeed: 4000,
 		autoplay: true, // pause for testing
 		pauseOnHover: false,		
-		prevArrow: '<svg title="previous" class="svg-slick-prev"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-folklife-leftarrow"></use></svg>',
-		nextArrow: '<svg title="next" class="svg-slick-next"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-folklife-rightarrow"></use></svg>',
+		prevArrow: '<svg title="previous" class="svg-slick-prev"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Images/icons/icons.svg#icon-folklife-leftarrow"></use></svg>',
+		nextArrow: '<svg title="next" class="svg-slick-next"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Images/icons/icons.svg#icon-folklife-rightarrow"></use></svg>',
 		responsive: [
 			{
 				breakpoint: 852,
@@ -992,6 +999,23 @@ $(document).ready(function () {
 		// wrap current time and duration time in new div for correct positioning
 		$currentTime.add($durationTime).wrapAll('<div class="mejs-time-wrapper">');
 	}
+
+	wrapNonControls = function(mediaElement) {		
+		// add svg to button
+		var $playButton = $(mediaElement.player.controls[0]).find('button');
+		$playButton.addClass('svg-play-button').append('<svg title="play button circle" class="svg-play-button-circle"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Images/icons/icons.svg#icon-circle"></use></svg><svg title="play button arrow" class="svg-play-button-play"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Images/icons/icons.svg#icon-play"></use></svg><svg title="play button arrow" class="svg-play-button-pause"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Images/icons/icons.svg#icon-pause"></use></svg>');
+
+		// move timerail up, with http://api.jquery.com/insertBefore/
+		var $timeRail = $(mediaElement.player.controls[0]).find('.mejs-time-rail');
+		var $currentTime = $(mediaElement.player.controls[0]).find('.mejs-currenttime-container');
+		
+		// move time rail up for better positioning
+		$timeRail.insertBefore($currentTime);
+
+		// wrap all non-button elements, from http://stackoverflow.com/a/25324520
+		var $nonButtonControls = $(mediaElement.player.controls[0]).children().not('.mejs-playpause-button');
+		$nonButtonControls.wrapAll('<div class="non-button-controls /">');
+	}
 	
 	// find currenttime containers and wrap them with closest duration container
 	$('.mejs-currenttime-container').each(function() {
@@ -1003,7 +1027,7 @@ $(document).ready(function () {
 	var showPause = true;
 
 	var buttonControl = function($playButton) {
-		// console.log('buttonControl', $playButton);
+		console.log('$playButton', $playButton);
 		$playButton.on('click keypress', function() {
 			console.log('audio clicked');
 			var $track = $(this).closest('.track');
@@ -1015,6 +1039,10 @@ $(document).ready(function () {
 				$trackNumber.removeClass('hidden');
 		})
 	}
+
+	$('.track-audio').on('keypress', function() {
+		console.log('play it');
+	});
 
 	// manually init so can hear when pausing
 	$('.track-audio').mediaelementplayer({
@@ -1029,6 +1057,10 @@ $(document).ready(function () {
 			// pass playpause button to get listener
 			buttonControl($(mediaElement.player.controls[0].firstChild));
 
+			// wrap all non-controls and make icon to svg
+			wrapNonControls(mediaElement);
+
+
 			// Bring Track number back when audio paused
 			mediaElement.addEventListener('pause', function (e) {
 				var $trackAudio = $(e.target);
@@ -1039,6 +1071,24 @@ $(document).ready(function () {
 		}
 	});
 
+	/*****
+	* Standard Audio Card
+	* manually call so can listen for success and make custom html
+	*****/
+	$('.mejs-player-svg').mediaelementplayer({
+		pluginPath: "/path/to/shims/",
+		startVolume: 0.5, 
+		setDimensions: false,
+		success: function(mediaElement, originalNode) {
+			// do things after player loaded
+			console.info('player loaded');
+			console.log('mediaElement', mediaElement);
+			console.log('originalNode', originalNode);
+			console.log('mediaElement.player.controls', mediaElement.player.controls);
+			// wrap all non-controls
+			wrapNonControls(mediaElement);
+		}
+	});
 
 
 /*********
@@ -1562,7 +1612,8 @@ $(document).ready(function () {
 * Included globally because shares some variables
 *********************/
 	var $pastFestivalButtons = $('.filter-button');
-	var currentFestivalFilter = 'alpha';
+	// var currentFestivalFilter = 'alpha';
+	var currentFestivalFilter = 'year';
 
 	// Show alphabetical
 	$('#sort-by-alphabetical-button').on('click', function() {
