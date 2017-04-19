@@ -7,7 +7,8 @@
 			@include margin-bottom(2);
 		}
 		.title {
-			@include md-serif;
+			// @include md-serif;
+			@include sm-serif-title;
 		}
 		.subtitle {
 			display: none;
@@ -323,3 +324,31 @@
 			line-height: 1.33 !important;
 		}
 	}
+
+/* Event styling
+-------------------------------------------------*/
+.special-events-section, .events-section {
+	.details-inner {
+		@include padding-top(2);
+	}
+	.tag {
+		font-weight: 400;
+		@include margin-bottom(0.5);
+	}
+	.title {
+		@include md-sans;
+		font-weight: 500;
+		@include margin-bottom(1);
+	}
+	.description {
+		@include body-sans;
+	}
+	b {
+		font-weight: 600;
+	}
+	@include respond-to(break2max) {
+		.details-inner {
+			padding-left: 0;
+		}
+	}
+}

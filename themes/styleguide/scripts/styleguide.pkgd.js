@@ -8097,6 +8097,10 @@ $(document).ready(function () {
 
 		// get initial slide
 		var initialSlide = $(this).data('slide-index');
+		var initialSlide = $(this).parents('.cover-art-set').data('popup');
+
+		console.log('$(this)', $(this));
+		console.log('initialSlide', initialSlide);
 
 		// build gallery
 		// get images for gallery by going up to grandparent, then finding all classed images, then copying them for use in remodal
@@ -8122,6 +8126,8 @@ $(document).ready(function () {
 			centerPadding: '40px',
 			slidesToShow: 1,
 			infinite: false,
+			prevArrow: '<svg title="previous" class="svg-slick-prev"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Images/icons/icons.svg#icon-folklife-leftarrow"></use></svg>',
+			nextArrow: '<svg title="next" class="svg-slick-next"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Images/icons/icons.svg#icon-folklife-rightarrow"></use></svg>',
 			responsive: [
 				{
 					breakpoint: site.break2,

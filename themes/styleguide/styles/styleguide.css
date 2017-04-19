@@ -7782,6 +7782,80 @@ body {
 	}
 }
 
+.svg-social-icon {
+	padding: 0.70235rem;
+	position: relative;
+	top: -2px;
+	vertical-align: middle;
+	width: 36px;
+	height: 36px;
+	display: inline-block;
+	fill: currentColor;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.svg-social-icon {
+		padding: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.svg-social-icon {
+		padding: 1rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.svg-social-icon {
+		width: 3vw;
+		height: 3vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.svg-social-icon {
+		width: 45px;
+		height: 45px;
+	}
+}
+
+.svg-social-icon-footer {
+	padding: 0.35117rem;
+	position: relative;
+	top: -2px;
+	vertical-align: middle;
+	width: 45px;
+	height: 45px;
+	display: inline-block;
+	fill: currentColor;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.svg-social-icon-footer {
+		padding: 0.32vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.svg-social-icon-footer {
+		padding: 0.5rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.svg-social-icon-footer {
+		width: 2.5vw;
+		height: 2.5vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.svg-social-icon-footer {
+		width: 40px;
+		height: 40px;
+	}
+}
+
 .icon-pause:before, .icon-play:before {
 	content: '';
 }
@@ -7860,8 +7934,16 @@ body {
 }
 
 .social-icon:hover {
-	color: #b3b3b3;
+	color: black30;
 	text-decoration: none;
+}
+
+.svg-social-icon, .svg-social-icon-footer {
+	fill: #595959;
+}
+
+.svg-social-icon:hover, .svg-social-icon-footer:hover {
+	fill: #b3b3b3;
 }
 
 /* Play button
@@ -8286,6 +8368,31 @@ body {
 
 /* Slider dots - Folklife homepage?
 -------------------------------------------------- */
+.mobile-dots .svg-pager-icon {
+	fill: #333333;
+}
+
+.mobile-dots li:hover, .mobile-dots .slick-active {
+	position: relative;
+	top: 0.2rem;
+}
+
+@media only screen and (min-width: 53.25em) {
+	.mobile-dots li:hover, .mobile-dots .slick-active {
+		top: 10vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.mobile-dots li:hover, .mobile-dots .slick-active {
+		top: 0.2rem;
+	}
+}
+
+.dots li:hover, .dots .slick-active {
+	position: relative;
+}
+
 .svg-pager-icon {
 	width: 13.5px;
 	height: 13.5px;
@@ -8298,9 +8405,9 @@ body {
 	top: 0.3rem;
 }
 
-@media only screen and (min-width: 53.25em) {
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.svg-pager-icon-circle {
-		top: 0.1rem;
+		top: 0.3vw;
 	}
 }
 
@@ -11008,7 +11115,7 @@ a .page-title:hover {
 .newsletter-signup-copy, .support-copy {
 	padding-top: 0.70235rem;
 	padding-bottom: 1.40469rem;
-	padding-right: 1.40469rem;
+	padding-right: 0.70235rem;
 	padding-left: 1.40469rem;
 }
 
@@ -11038,13 +11145,13 @@ a .page-title:hover {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.newsletter-signup-copy, .support-copy {
-		padding-right: 1.28vw;
+		padding-right: 0.64vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
 	.newsletter-signup-copy, .support-copy {
-		padding-right: 2rem;
+		padding-right: 1rem;
 	}
 }
 
@@ -14377,8 +14484,6 @@ video::-webkit-media-controls {
 	}
 }
 
-/* Signup
--------------------------------------------------*/
 /* Helpers
 -------------------------------------------------*/
 .is-hidden {
@@ -14681,6 +14786,26 @@ video::-webkit-media-controls {
 .social-media-icon a:hover {
 	color: #cccccc;
 	text-decoration: none;
+}
+
+.social-media .footer-list {
+	margin-left: -0.33333rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.social-media .footer-list {
+		margin-left: -0.576vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.social-media .footer-list {
+		margin-left: -0.9rem;
+	}
+}
+
+.social-media li {
+	display: inline-block;
 }
 
 @media only screen and (max-width: 53.15em) {
@@ -16668,18 +16793,37 @@ body {
 	font-weight: 700;
 	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
 	line-height: 1;
-	font-size: 2.7rem;
+	font-size: 2rem;
+	margin-bottom: 0.37037rem;
+}
+
+@media only screen and (min-width: 53.25em) {
+	.program-category-main .title {
+		line-height: 1.143;
+	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.program-category-main .title {
-		font-size: 2.5vw;
+		font-size: 1.8vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
 	.program-category-main .title {
-		font-size: 4.2rem;
+		font-size: 2.8rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.program-category-main .title {
+		margin-bottom: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.program-category-main .title {
+		margin-bottom: 1rem;
 	}
 }
 
@@ -17957,6 +18101,104 @@ body {
 	.participants-section .blurb {
 		line-height: 1.32;
 		font-size: 1.8rem;
+	}
+}
+
+/* Event styling
+-------------------------------------------------*/
+.special-events-section .details-inner, .events-section .details-inner {
+	padding-top: 1.40469rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.special-events-section .details-inner, .events-section .details-inner {
+		padding-top: 1.28vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.special-events-section .details-inner, .events-section .details-inner {
+		padding-top: 2rem;
+	}
+}
+
+.special-events-section .tag, .events-section .tag {
+	font-weight: 400;
+	margin-bottom: 0.18519rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.special-events-section .tag, .events-section .tag {
+		margin-bottom: 0.32vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.special-events-section .tag, .events-section .tag {
+		margin-bottom: 0.5rem;
+	}
+}
+
+.special-events-section .title, .events-section .title {
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.2;
+	font-size: 1.9rem;
+	font-weight: 500;
+	margin-bottom: 0.37037rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.special-events-section .title, .events-section .title {
+		font-size: 1.6vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.special-events-section .title, .events-section .title {
+		font-size: 2.5rem;
+		line-height: 1.28;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.special-events-section .title, .events-section .title {
+		margin-bottom: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.special-events-section .title, .events-section .title {
+		margin-bottom: 1rem;
+	}
+}
+
+.special-events-section .description, .events-section .description {
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.3333;
+	font-size: 1.7rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.special-events-section .description, .events-section .description {
+		font-size: 1.25vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.special-events-section .description, .events-section .description {
+		font-size: 2.1rem;
+	}
+}
+
+.special-events-section b, .events-section b {
+	font-weight: 600;
+}
+
+@media only screen and (max-width: 53.15em) {
+	.special-events-section .details-inner, .events-section .details-inner {
+		padding-left: 0;
 	}
 }
 
@@ -27430,6 +27672,80 @@ body {
 	}
 }
 
+.svg-social-icon {
+	padding: 0.70235rem;
+	position: relative;
+	top: -2px;
+	vertical-align: middle;
+	width: 36px;
+	height: 36px;
+	display: inline-block;
+	fill: currentColor;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.svg-social-icon {
+		padding: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.svg-social-icon {
+		padding: 1rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.svg-social-icon {
+		width: 3vw;
+		height: 3vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.svg-social-icon {
+		width: 45px;
+		height: 45px;
+	}
+}
+
+.svg-social-icon-footer {
+	padding: 0.35117rem;
+	position: relative;
+	top: -2px;
+	vertical-align: middle;
+	width: 45px;
+	height: 45px;
+	display: inline-block;
+	fill: currentColor;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.svg-social-icon-footer {
+		padding: 0.32vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.svg-social-icon-footer {
+		padding: 0.5rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.svg-social-icon-footer {
+		width: 2.5vw;
+		height: 2.5vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.svg-social-icon-footer {
+		width: 40px;
+		height: 40px;
+	}
+}
+
 .icon-pause:before, .icon-play:before {
 	content: '';
 }
@@ -27508,8 +27824,16 @@ body {
 }
 
 .social-icon:hover {
-	color: #b3b3b3;
+	color: black30;
 	text-decoration: none;
+}
+
+.svg-social-icon, .svg-social-icon-footer {
+	fill: #595959;
+}
+
+.svg-social-icon:hover, .svg-social-icon-footer:hover {
+	fill: #b3b3b3;
 }
 
 /* Play button
@@ -27934,6 +28258,31 @@ body {
 
 /* Slider dots - Folklife homepage?
 -------------------------------------------------- */
+.mobile-dots .svg-pager-icon {
+	fill: #333333;
+}
+
+.mobile-dots li:hover, .mobile-dots .slick-active {
+	position: relative;
+	top: 0.2rem;
+}
+
+@media only screen and (min-width: 53.25em) {
+	.mobile-dots li:hover, .mobile-dots .slick-active {
+		top: 10vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.mobile-dots li:hover, .mobile-dots .slick-active {
+		top: 0.2rem;
+	}
+}
+
+.dots li:hover, .dots .slick-active {
+	position: relative;
+}
+
 .svg-pager-icon {
 	width: 13.5px;
 	height: 13.5px;
@@ -27946,9 +28295,9 @@ body {
 	top: 0.3rem;
 }
 
-@media only screen and (min-width: 53.25em) {
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.svg-pager-icon-circle {
-		top: 0.1rem;
+		top: 0.3vw;
 	}
 }
 
@@ -30656,7 +31005,7 @@ a .page-title:hover {
 .newsletter-signup-copy, .support-copy {
 	padding-top: 0.70235rem;
 	padding-bottom: 1.40469rem;
-	padding-right: 1.40469rem;
+	padding-right: 0.70235rem;
 	padding-left: 1.40469rem;
 }
 
@@ -30686,13 +31035,13 @@ a .page-title:hover {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.newsletter-signup-copy, .support-copy {
-		padding-right: 1.28vw;
+		padding-right: 0.64vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
 	.newsletter-signup-copy, .support-copy {
-		padding-right: 2rem;
+		padding-right: 1rem;
 	}
 }
 
@@ -34025,8 +34374,6 @@ video::-webkit-media-controls {
 	}
 }
 
-/* Signup
--------------------------------------------------*/
 /* Helpers
 -------------------------------------------------*/
 .is-hidden {
@@ -34329,6 +34676,26 @@ video::-webkit-media-controls {
 .social-media-icon a:hover {
 	color: #cccccc;
 	text-decoration: none;
+}
+
+.social-media .footer-list {
+	margin-left: -0.33333rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.social-media .footer-list {
+		margin-left: -0.576vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.social-media .footer-list {
+		margin-left: -0.9rem;
+	}
+}
+
+.social-media li {
+	display: inline-block;
 }
 
 @media only screen and (max-width: 53.15em) {
@@ -34646,18 +35013,37 @@ iframe {
 	font-weight: 700;
 	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
 	line-height: 1;
-	font-size: 2.7rem;
+	font-size: 2rem;
+	margin-bottom: 0.37037rem;
+}
+
+@media only screen and (min-width: 53.25em) {
+	.program-category-main .title {
+		line-height: 1.143;
+	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.program-category-main .title {
-		font-size: 2.5vw;
+		font-size: 1.8vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
 	.program-category-main .title {
-		font-size: 4.2rem;
+		font-size: 2.8rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.program-category-main .title {
+		margin-bottom: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.program-category-main .title {
+		margin-bottom: 1rem;
 	}
 }
 
@@ -35935,6 +36321,104 @@ iframe {
 	.participants-section .blurb {
 		line-height: 1.32;
 		font-size: 1.8rem;
+	}
+}
+
+/* Event styling
+-------------------------------------------------*/
+.special-events-section .details-inner, .events-section .details-inner {
+	padding-top: 1.40469rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.special-events-section .details-inner, .events-section .details-inner {
+		padding-top: 1.28vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.special-events-section .details-inner, .events-section .details-inner {
+		padding-top: 2rem;
+	}
+}
+
+.special-events-section .tag, .events-section .tag {
+	font-weight: 400;
+	margin-bottom: 0.18519rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.special-events-section .tag, .events-section .tag {
+		margin-bottom: 0.32vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.special-events-section .tag, .events-section .tag {
+		margin-bottom: 0.5rem;
+	}
+}
+
+.special-events-section .title, .events-section .title {
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.2;
+	font-size: 1.9rem;
+	font-weight: 500;
+	margin-bottom: 0.37037rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.special-events-section .title, .events-section .title {
+		font-size: 1.6vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.special-events-section .title, .events-section .title {
+		font-size: 2.5rem;
+		line-height: 1.28;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.special-events-section .title, .events-section .title {
+		margin-bottom: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.special-events-section .title, .events-section .title {
+		margin-bottom: 1rem;
+	}
+}
+
+.special-events-section .description, .events-section .description {
+	font-weight: 300;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.3333;
+	font-size: 1.7rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.special-events-section .description, .events-section .description {
+		font-size: 1.25vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.special-events-section .description, .events-section .description {
+		font-size: 2.1rem;
+	}
+}
+
+.special-events-section b, .events-section b {
+	font-weight: 600;
+}
+
+@media only screen and (max-width: 53.15em) {
+	.special-events-section .details-inner, .events-section .details-inner {
+		padding-left: 0;
 	}
 }
 
@@ -43906,6 +44390,11 @@ body.magazine-page, body.magazine-article-page {
 	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
 	line-height: 1;
 	font-size: 2.7rem;
+	font-weight: 700;
+	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+	line-height: 1;
+	font-size: 2rem;
+	margin-bottom: 0.37037rem;
 	margin-bottom: 0.18519rem;
 }
 
@@ -43921,6 +44410,36 @@ body.magazine-page, body.magazine-article-page {
 	}
 }
 
+@media only screen and (min-width: 53.25em) {
+	.lesson-plans-section .title, .interactives-section .title {
+		line-height: 1.143;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.lesson-plans-section .title, .interactives-section .title {
+		font-size: 1.8vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.lesson-plans-section .title, .interactives-section .title {
+		font-size: 2.8rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.lesson-plans-section .title, .interactives-section .title {
+		margin-bottom: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.lesson-plans-section .title, .interactives-section .title {
+		margin-bottom: 1rem;
+	}
+}
+
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.lesson-plans-section .title, .interactives-section .title {
 		margin-bottom: 0.32vw;
@@ -43933,18 +44452,17 @@ body.magazine-page, body.magazine-article-page {
 	}
 }
 
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.lesson-plans-section .title, .interactives-section .title {
-		font-size: 2.6vw;
-	}
-}
-
 .lesson-plans-section .subtitle, .interactives-section .subtitle {
 	font-weight: 700;
 	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
 	line-height: 1;
 	font-size: 2rem;
 	margin-bottom: 0.37037rem;
+	font-weight: 600;
+	font-family: "acumin-pro", Arial, sans-serif;
+	line-height: 1.32;
+	font-size: 1.5rem;
+	font-weight: 300;
 }
 
 @media only screen and (min-width: 53.25em) {
@@ -43974,6 +44492,19 @@ body.magazine-page, body.magazine-article-page {
 @media only screen and (min-width: 1560px) {
 	.lesson-plans-section .subtitle, .interactives-section .subtitle {
 		margin-bottom: 1rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.lesson-plans-section .subtitle, .interactives-section .subtitle {
+		font-size: 1.2vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.lesson-plans-section .subtitle, .interactives-section .subtitle {
+		line-height: 1.32;
+		font-size: 1.8rem;
 	}
 }
 

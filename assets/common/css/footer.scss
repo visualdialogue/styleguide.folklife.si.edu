@@ -109,6 +109,12 @@
 			}
 		}
 	}
+	.social-media .footer-list {
+		@include margin-left(-0.9);
+	}
+	.social-media li {
+		display: inline-block;
+	}
 	.copyright-wrapper {
 		@include respond-to(break2max) {margin-top: 2vw;}
 	}

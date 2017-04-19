@@ -222,6 +222,58 @@
 	display: inline-block;
 	fill: currentColor;
 }
+.svg-social-icon {
+	@include padding(1);
+	position: relative;
+	// @include right(0.8);
+	// @include top(-0.2);
+	top: -2px;
+	$svgSocialIconMobile: 36px;
+	$svgSocialIconTablet: 3vw;
+	$svgSocialIconFull: 45px;
+	vertical-align: middle;
+	width: $svgSocialIconMobile;
+	height: $svgSocialIconMobile;
+	@include respond-to(break2full) {
+		// top: -0.1vw;
+		width: $svgSocialIconTablet;
+		height: $svgSocialIconTablet;
+	}
+	@include respond-to(fullwidth) {
+		// top: -0.2rem;
+		width: $svgSocialIconFull;
+		height: $svgSocialIconFull;
+	}
+	// SVG icons, from fontastic directions
+	display: inline-block;
+	fill: currentColor;
+}
+.svg-social-icon-footer {
+	@include padding(0.5);
+	position: relative;
+	// @include right(0.8);
+	// @include top(-0.2);
+	top: -2px;
+	$svgSocialIconMobile: 45px;
+	$svgSocialIconTablet: 2.5vw;
+	$svgSocialIconFull: 40px;
+	vertical-align: middle;
+	width: $svgSocialIconMobile;
+	height: $svgSocialIconMobile;
+	@include respond-to(break2full) {
+		// top: -0.1vw;
+		width: $svgSocialIconTablet;
+		height: $svgSocialIconTablet;
+	}
+	@include respond-to(fullwidth) {
+		// top: -0.2rem;
+		width: $svgSocialIconFull;
+		height: $svgSocialIconFull;
+	}
+	// SVG icons, from fontastic directions
+	display: inline-block;
+	fill: currentColor;
+}
 .icon-pause:before, .icon-play:before {
 	content: ''; // clear out old icons
 }
@@ -273,8 +325,14 @@
 	color: $black65;
 	@include padding(1);
 	&:hover {
-		color: $black30;
+		color: black30;
 		text-decoration: none;
+	}
+}
+.svg-social-icon, .svg-social-icon-footer {
+	fill: $black65;
+	&:hover {
+		fill: $black30;
 	}
 }
 
@@ -620,6 +678,25 @@ $mobile: 40px;
 $tablet: 22px;
 $full: 13.5px;
 $ofull: 16px;
+.mobile-dots {
+	.svg-pager-icon {
+		fill: $black80;
+	}
+	li:hover, .slick-active {
+		position: relative;
+		top:0.2rem;
+		@include respond-to(break2) {top:10vw;}
+		@include respond-to(fullwidth) {top:0.2rem;}
+
+	}
+}
+.dots {
+	li:hover, .slick-active {
+		position: relative;
+		// @include respond-to(break2full) {top:1vw;}
+		// top: 0rem;
+	}	
+}
 .svg-pager-icon {
 	width: $full;
 	height: $full;
@@ -630,7 +707,8 @@ $ofull: 16px;
 	top: 0.3rem;
 	left: 0.1rem;
 	top:0.3rem;
-	@include respond-to(break2) {top:0.1rem;}
+	// @include respond-to(break2) {top:0.1rem;}
+	@include respond-to(break2full) {top:0.3vw;}
 	@include respond-to(fullwidth) {top:0.3rem;}
 }
 .svg-pager-icon-circle-o {

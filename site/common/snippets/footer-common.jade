@@ -35,28 +35,61 @@ ul.footer-row.footer-row-2.row
 	li.footer-main-item.col-sm-2.social-media
 		.footer-sub-item.social-media-title Connect with us
 		ul.footer-list
-			// Folklife or Festival
+			// Folklife
 			-if (c::get('isFolklife')):
-			li.social-media-icon: a.icon-facebook(href="https://www.facebook.com/smithsonianfolklifefestival" target="_blank")
-			li.social-media-icon: a.icon-twitter(href="https://twitter.com/smithsonianfolk" target="_blank")
-			li.social-media-icon: a.icon-tumblr(href="http://smithsonianfolklife.tumblr.com/" target="_blank")
-			li.social-media-icon: a.icon-flickr(href="https://www.flickr.com/groups/2016folklifefestival" target="_blank")
-			li.social-media-icon: a.icon-instagrem(href="https://www.instagram.com/smithsonianfolklife/" target="_blank")
+			li
+				a(href="https://www.facebook.com/smithsonianfolklifefestival" target="_blank")
+					svg.svg-social-icon-footer: use(xlink:href="/Images/icons/icons.svg#icon-facebook")
+			li
+				a(href="https://twitter.com/smithsonianfolk" target="_blank")
+					svg.svg-social-icon-footer: use(xlink:href="/Images/icons/icons.svg#icon-twitter")
+			li
+				a(href="http://smithsonianfolklife.tumblr.com/" target="_blank")
+					svg.svg-social-icon-footer: use(xlink:href="/Images/icons/icons.svg#icon-tumblr")
+			li
+				a(href="https://www.flickr.com/groups/2016folklifefestival" target="_blank")
+					svg.svg-social-icon-footer: use(xlink:href="/Images/icons/icons.svg#icon-flickr")
+			li
+				a(href="https://www.instagram.com/smithsonianfolklife/" target="_blank")
+					svg.svg-social-icon-footer: use(xlink:href="/Images/icons/icons.svg#icon-instagrem")
+
 			// Festival
 			-elseif (c::get('isFestival')):
-			li.social-media-icon: a.icon-facebook(href="https://www.facebook.com/smithsonianfolklifefestival" target="_blank")
-			li.social-media-icon: a.icon-twitter(href="https://twitter.com/smithsonianfolk" target="_blank")
-			li.social-media-icon: a.icon-flickr(href="https://www.flickr.com/groups/2016folklifefestival" target="_blank")
-			li.social-media-icon: a.icon-youtube(href="https://www.youtube.com/user/SmithsonianFolklife" target="_blank")
-			li.social-media-icon: a.icon-instagrem(href="https://www.instagram.com/smithsonianfolklife/" target="_blank")
+			li
+				a(href="https://www.facebook.com/smithsonianfolklifefestival" target="_blank")
+					svg.svg-social-icon-footer: use(xlink:href="/Images/icons/icons.svg#icon-facebook")
+			li
+				a(href="https://twitter.com/smithsonianfolk" target="_blank")
+					svg.svg-social-icon-footer: use(xlink:href="/Images/icons/icons.svg#icon-twitter")
+			li
+				a(href="https://www.flickr.com/groups/2016folklifefestival" target="_blank")
+					svg.svg-social-icon-footer: use(xlink:href="/Images/icons/icons.svg#icon-flickr")
+			li
+				a(href="https://www.youtube.com/user/SmithsonianFolklife" target="_blank")
+					svg.svg-social-icon-footer: use(xlink:href="/Images/icons/icons.svg#icon-youtube")
+			li
+				a(href="https://www.instagram.com/smithsonianfolklife/" target="_blank")
+					svg.svg-social-icon-footer: use(xlink:href="/Images/icons/icons.svg#icon-instagrem")
 			// Folkways
 			-else:
-			li.social-media-icon: a.icon-facebook(href="http://www.facebook.com/smithsonianfolkwaysrecordings" target="_blank")
-			li.social-media-icon: a.icon-twitter(href="https://twitter.com/folkways" target="_blank")
-			li.social-media-icon: a.icon-youtube(href="https://www.youtube.com/user/SmithsonianFolkways" target="_blank")
-			li.social-media-icon: a.icon-pinterest(href="https://www.pinterest.com/smithsofolkways/" target="_blank")
-			li.social-media-icon: a.icon-instagrem(href="https://www.instagram.com/smithsonianfolkways/" target="_blank")
-			li.social-media-icon: a.icon-soundcloud(href="https://soundcloud.com/smithsonian-folkways" target="_blank")
+			li
+				a(href="http://www.facebook.com/smithsonianfolkwaysrecordings" target="_blank")
+					svg.svg-social-icon-footer: use(xlink:href="/Images/icons/icons.svg#icon-facebook")
+			li
+				a(href="https://twitter.com/folkways" target="_blank")
+					svg.svg-social-icon-footer: use(xlink:href="/Images/icons/icons.svg#icon-twitter")
+			li
+				a(href="https://www.youtube.com/user/SmithsonianFolkways" target="_blank")
+					svg.svg-social-icon-footer: use(xlink:href="/Images/icons/icons.svg#icon-youtube")
+			li
+				a(href="https://www.pinterest.com/smithsofolkways/" target="_blank")
+					svg.svg-social-icon-footer: use(xlink:href="/Images/icons/icons.svg#icon-pinterest")
+			li
+				a(href="https://www.instagram.com/smithsonianfolklife/" target="_blank")
+					svg.svg-social-icon-footer: use(xlink:href="/Images/icons/icons.svg#icon-instagrem")
+			li
+				a(href="https://soundcloud.com/smithsonian-folkways" target="_blank")
+					svg.svg-social-icon-footer: use(xlink:href="/Images/icons/icons.svg#icon-soundcloud")
 
 			-endif;
 ul.footer-row.footer-row-3.row

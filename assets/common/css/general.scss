@@ -654,7 +654,7 @@
 	.newsletter-signup-copy, .support-copy {
 		@include padding-top(1);
 		@include padding-bottom(2);
-		@include padding-right(2);
+		@include padding-right(1);
 		@include padding-left(2);
 	}
 	// Folkways
@@ -2111,9 +2111,6 @@
 			line-height: 1;
 		}
 	}
-
-/* Signup
--------------------------------------------------*/
 
 
 /* Helpers
