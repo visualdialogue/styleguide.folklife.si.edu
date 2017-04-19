@@ -8,7 +8,8 @@
 
 		// stay above back-to-top button
 		position: relative;
-		z-index: 1;
+		// z-index: 1;
+		z-index: 4; // above back to top button
 		
 		@include respond-to(break2max) { padding-top:2rem; }
 

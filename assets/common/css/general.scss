@@ -270,7 +270,7 @@
 	}
 	section {
 		position: relative; // contain more link
-		@include margin-bottom(2);
+		// @include margin-bottom(2); // added 2rem to bottom of all cards
 	}
 	p {
 		margin: 0;
@@ -305,7 +305,7 @@
 		color: $black70;
 		@include margin-bottom(6); // keep from footer
 		@include respond-to(break2max) {
-			padding: 0 1.5rem;
+			padding: 0 $small-gutter;
 		}
 		li:last-of-type {
 			border-bottom: none;
@@ -355,7 +355,7 @@
 	}
 	// folkways teaching page fix before initial launch
 	li.sidebar-item a {
-		@include sm-sans;
+		@include sm-sans-title-light;
 		line-height: 1.33 !important; // layout
 	}
 	.last-sidebar-item {
@@ -479,7 +479,7 @@
 			background-color: $black10; // bootstrap override
 		}
 		.track {
-			@include sm-sans;
+			@include sm-sans-title-light;
 		}
 		.track-title {
 			font-weight: 600;
@@ -529,9 +529,8 @@
 	}
 	.sidebar-pull-quote {
 		.copy {
-			@include sm-sans;
+			@include sm-sans-title;
 			line-height: 1.3 !important;
-			font-weight: 600;
 			@include margin-top(1);
 		}
 		p {
@@ -547,7 +546,7 @@
 			@include margin-top(2);
 		}
 		.title {
-			@include sm-serif;
+			@include sm-serif-title;
 			@include margin-top(2);
 			color: black;
 		}
@@ -634,7 +633,7 @@
 		}
 		.price {
 			color: #fff;
-			@include sm-sans;
+			@include sm-sans-title-light;
 			@include margin-left(0);
 		}
 	}
@@ -657,6 +656,26 @@
 		@include padding-bottom(2);
 		@include padding-right(2);
 		@include padding-left(2);
+	}
+	// Folkways
+	.click-to-join-folkways {
+		// @include lg-sans;
+		// background-color: $black20;
+		// font-weight: 500;
+		// cursor: pointer;
+		display: block;
+
+		@include respond-to(break2max) {
+			font-size: 4vw;
+		}
+		@include respond-to(break2full) {
+			line-height: 2.4;
+		}
+
+		&:hover {
+			background-color: $black60;
+			color: $black30;
+		}
 	}
 
 /* Support Us
@@ -779,7 +798,6 @@
 	}
 	.newsletter-signup-copy {
 		background-color: $black10;
-		// @include sm-sans;
 		@include respond-to(break2full) {
 			font-size: 1.2vw;
 		}
@@ -800,6 +818,7 @@
 		@include email-newsletter;
 		@include respond-to(break2max) {
 			height: 5rem;
+			line-height: 1.9;
 		}
 		@include respond-to(break2) {
 			min-height: initial;
@@ -807,9 +826,11 @@
 		}
 		@include respond-to(break2full) {
 			height: 4.8vw;
+			// height: 5vw;
 		}
 		@include respond-to(fullwidth) {
-			height: 6.9rem;
+			// height: 6.9rem;
+			height: 8rem;
 			padding-bottom: 2rem;
 		}
 
@@ -876,6 +897,15 @@
 		@include respond-to(break2max) {
 			height: 5rem;
 		}
+	}
+	.short-newsletter-signup-form-wrapper {
+		// @include md-sans;
+		background-color: $black20;
+		a {
+			color: $black60;
+		}
+		// font-weight: 500;
+		// cursor: pointer;
 	}
 
 /* Plus icons for figures with figcaptions and General Captions
@@ -1010,9 +1040,16 @@
 		}
 	}
 	.dropdown-wrapper {
-		@include sm-sans;
-		font-weight: 600;
+		@include sm-sans-title;
 		color: $black60;
+		// new svg icon, 2017.04.17
+		svg {
+			fill: $black60;
+			-webkit-transform: rotate(90deg);
+			-moz-transform: rotate(90deg);
+			-ms-transform: rotate(90deg);
+			transform: rotate(90deg);
+		}
 	}
 	.dropdown:hover, .first-level-dropdown li:hover {
 		background-color: $black20;
@@ -1024,6 +1061,18 @@
 			.first-level-dropdown-title:after {
 				-webkit-transform: rotate(-90deg);
 				-moz-transform: rotate(-90deg);
+				transform: rotate(-90deg);
+			}
+
+			// new svg icon, 2017.04.17
+			.svg-filter-icon {
+				@include top(0.7);
+				@include right(0.6);
+			}
+			svg {
+				-webkit-transform: rotate(-90deg);
+				-moz-transform: rotate(-90deg);
+				-ms-transform: rotate(-90deg);
 				transform: rotate(-90deg);
 			}
 		}
@@ -1114,6 +1163,8 @@
 			-moz-transform: rotate(-90deg);
 			transform: rotate(-90deg);
 		}
+		
+
 	}
 
 /* Search, Festival Past Festival Programs
@@ -1201,7 +1252,7 @@
 			    display: none;
 			}
 			
-			@include sm-sans;
+			@include sm-sans-title;
 			font-weight: 600 !important;
 
 			// 16px font exception
@@ -1262,7 +1313,7 @@
 		}
 
 		&:hover {
-			fill: white;
+			fill: $black20;
 		}
 	}
 	.svg-slick-prev {
@@ -1287,7 +1338,24 @@
 		}
 	}
 	.ms-banner-slideshow .svg-slick-next {
-		right: 1rem;
+		// right: 1rem;
+		@include respond-to(break2) {
+			right: -4rem;
+		}
+		@include respond-to(fullwidth) {
+			// margin-right: -5rem;
+			right: -1rem;
+		}
+	}
+	// 50 objects right arrow in grid
+	.more-content .svg-slick-next {
+		right: 0rem;
+		@include respond-to(break2full) {
+			right: -4rem;
+		}
+		@include respond-to(fullwidth) {
+			right: -1rem;
+		}		
 	}
 	.pause-button {
 		z-index: 10;
@@ -1541,7 +1609,7 @@
 				@include margin-bottom(1);
 			}
 			.description {
-				@include sm-sans;
+				@include sm-sans-title-light;
 				line-height: 1.33 !important; // 18/24
 			}
 			.more-link {
@@ -1558,7 +1626,7 @@
 				@include margin-bottom(0.8);
 			}
 			.byline {
-				@include sm-sans;
+				@include sm-sans-title-light;
 				text-transform: none;
 				@include margin-bottom(3);
 			}
@@ -1603,8 +1671,7 @@
 			color: $black50;
 		}
 		.title {
-			@include sm-sans;
-			font-weight: 600;
+			@include sm-sans-title;
 			// use css :before (single for IE8) to add numbers to sidebar articles
 			position: relative;
 			display: block;
@@ -1665,9 +1732,8 @@
 		}
 	}
 	.blog-categories li, .multimedia-sections li {
-		@include sm-sans;
+		@include sm-sans-title;
 		color: $black70;
-		font-weight: 600;
 		@include padding-top(0.8);
 		@include padding-bottom(0.8);
 		@include padding-left(1.3);
@@ -1690,7 +1756,7 @@
 			text-align: center;
 			@include margin-bottom(4);
 
-		    @include sm-sans;
+		    @include sm-sans-title-light;
 
 		    @include respond-to(break2max) {
 		        padding-top: 1rem;
@@ -1822,15 +1888,15 @@
 		    }
 		}
 		.pagination-numbers {
-			text-align: center;
-			display: inline-block; // for centering
-			a {
-				display: inline-block;
-				padding: 0.5rem;
-				&.is-active {
-					background-color: $hover;
-				}
-			}
+			// text-align: center;
+			// display: inline-block; // for centering
+			// a {
+			// 	display: inline-block;
+			// 	padding: 0.5rem;
+			// 	&.is-active {
+			// 		background-color: $hover;
+			// 	}
+			// }
 			@include margin-left(7);
 			@include margin-right(7);
 		}
@@ -1847,11 +1913,138 @@
 		}
 	}
 
+	// GENERAL PAGINATION
+	
+	.pagination-section {
+	    @include sm-sans-title-light;
+
+	    @include respond-to(break2max) {
+	        padding-top: 1rem;
+	        padding-bottom: 1rem;
+	    }
+
+	    li:first-of-type {
+	        padding-right: 0;
+	    }
+
+	    li:last-of-type {
+	        padding-left: 0;
+	    }
+
+	    .light {
+	        display: inline-block;
+	        @include padding-top(1);
+	        @include padding-right(2);
+	        @include padding-bottom(1);
+	        @include padding-left(2);
+	    }
+
+	    .view-direction {
+	        cursor: pointer;
+	        display: inline-block;
+	        position: relative; // contain arrow
+	    }
+
+	    .view-previous:after, .view-next:before {
+	        color: $black65;
+	        @include dropdown-arrow;
+	        // for alignment
+	        -webkit-transform-origin: 0 !important;
+	        -moz-transform-origin: 0 !important;
+	        transform-origin: 0 !important;
+	        line-height: 0.3;
+
+	        @include respond-to(break2max) {
+	            font-size: 2rem;
+	            top: 0.9rem;
+	        }
+
+	        @include respond-to(break2full) {
+	            font-size: 3vw;
+	        }
+
+	        @include respond-to(fullwidth) {
+	            top: 0.4rem;
+	            font-size: 5rem;
+	        }
+	    }
+
+	    .view-previous {
+	        text-align: right;
+
+	        @include respond-to(break2max) {
+	            padding-right: 1.5rem;
+	        }
+
+	        @include respond-to(break2full) {
+	            padding-right: 3vw;
+	        }
+
+	        @include respond-to(fullwidth) {
+	            padding-right: 5rem;
+	        }
+
+	        &:after {
+	            -webkit-transform: rotate(180deg);
+	            -moz-transform: rotate(180deg);
+	            transform: rotate(180deg);
+
+	            @include respond-to(break2max) {
+	                right: -3.3rem;
+	            }
+
+	            @include respond-to(break2) {
+	                padding-right: 0;
+	            }
+
+	            @include respond-to(break2full) {
+	                right: -4vw;
+	            }
+
+	            @include respond-to(fullwidth) {
+	                padding-right: 0rem;
+	                right: -6.8rem;
+	            }
+	        }
+	    }
+
+	    .view-next {
+	        @include respond-to(break2max) {
+	            padding-left: 1.5rem;
+	        }
+
+	        @include respond-to(break2full) {
+	            padding-left: 3vw;
+	        }
+
+	        @include respond-to(fullwidth) {
+	            padding-left: 4.5rem;
+	        }
+
+	        &:before {
+	            -webkit-transform: rotate(0deg);
+	            -moz-transform: rotate(0deg);
+	            transform: rotate(0deg);
+
+	            @include respond-to(break2max) {
+	                left: -1rem;
+	            }
+
+	            @include respond-to(break2full) {
+	                left: -1.216vw;
+	            }
+
+	            @include respond-to(fullwidth) {
+	                left: -1.9rem;
+	            }
+	        }
+	    }
+	}
+
 /* Back to top button
 -------------------------------------------------*/
-	$halfScreen: 50vw;
-	$halfPage: 720px;
-	$gttOffset: 6rem; // as circle image
+ // $gttOffset: 6rem; // as circle image
+ $gttOffset: 8rem; // as circle image
 	
 	.back-to-top {
 		text-align: center;
@@ -1871,7 +2064,8 @@
 		@include bottom(2);
 		
 		right: 0.2rem;
-		z-index: 0; // go below footer
+		// z-index: 0; // go below footer
+		z-index: 3; // go above footer
 
 		// circle background
 		$top-mobile-diameter: 40px;
@@ -1918,7 +2112,7 @@
 		}
 	}
 
-/* Microsite page banners
+/* Signup
 -------------------------------------------------*/
 
 

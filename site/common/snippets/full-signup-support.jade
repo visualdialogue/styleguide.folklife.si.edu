@@ -6,12 +6,14 @@
 		section.col-sm-6.newsletter-signup-section
 			.newsletter-signup.clearfix
 				.newsletter-signup-copy
-					.icon-mail
+					//- .icon-mail
+					.icon-mail-svg
+						svg(title="play button circle" class="svg-play-button-circle"): use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Images/icons/icons.svg#icon-mail")
 					= $site->newsletter_text()
 				.newsletter-signup-button-wrapper
 					.newsletter-signup-button.button
 						.button-inner
-							a(href="http://google.com" target="_blank") Click to Join
+							a(href="http://google.com") Click to Join
 					//- img(src="/assets/images/click-to-join3.png")
 				//- form(action="/").newsletter-signup-form.newsletter
 						input.newsletter-input(type="email" placeholder="Enter your email")

@@ -8312,7 +8312,7 @@ $(document).ready(function () {
 		startVolume: 0.5, 
 		setDimensions: false,
 		features: ["playpause"], // don't show time on track listing
-		pluginPath: "/path/to/shims/", 
+		// pluginPath: "/path/to/shims/", 
 		success: function(mediaElement, originalNode) {
 			// $originalNode = $(originalNode); // jquery cache
 			// console.log('mediaElement', mediaElement);
@@ -8339,15 +8339,15 @@ $(document).ready(function () {
 	* manually call so can listen for success and make custom html
 	*****/
 	$('.mejs-player-svg').mediaelementplayer({
-		pluginPath: "/path/to/shims/",
+		// pluginPath: "/path/to/shims/",
 		startVolume: 0.5, 
 		setDimensions: false,
 		success: function(mediaElement, originalNode) {
 			// do things after player loaded
-			console.info('player loaded');
-			console.log('mediaElement', mediaElement);
-			console.log('originalNode', originalNode);
-			console.log('mediaElement.player.controls', mediaElement.player.controls);
+			// console.info('player loaded');
+			// console.log('mediaElement', mediaElement);
+			// console.log('originalNode', originalNode);
+			// console.log('mediaElement.player.controls', mediaElement.player.controls);
 			// wrap all non-controls
 			wrapNonControls(mediaElement);
 		}
@@ -8371,19 +8371,20 @@ $(document).ready(function () {
 	$('.playlist-audio').mediaelementplayer({
 		pluginPath: "/path/to/shims/", 
 		success: function(mediaElement, originalNode) {
-			console.log('mejs audio created');
-			console.log('mediaElement.player', mediaElement.player);
-			console.log('originalNode', originalNode);
+			// console.log('mejs audio created');
+			// console.log('mediaElement.player', mediaElement.player);
+			// console.log('originalNode', originalNode);
+			wrapNonControls(mediaElement);
 
 			// better mejs html
-			var currentTimeContainer = $(originalNode).find('.mejs-currenttime-container');
+			// var currentTimeContainer = $(originalNode).find('.mejs-currenttime-container');
 
-			console.log('currentTimeContainer :', mediaElement.player.currenttime[0].parentNode);
+			// console.log('currentTimeContainer :', mediaElement.player.currenttime[0].parentNode);
 			// console.log(currentTimeContainer);
-			wrapTime($(mediaElement.player.currenttime[0].parentNode));
+			// wrapTime($(mediaElement.player.currenttime[0].parentNode));
 
 			var playerID = mediaElement.player.id;
-			console.log('playerID :', playerID);
+			// console.log('playerID :', playerID);
 
 			// initialize player because elements now exist
 			playlist[playerID] = new Playlist(playerID); 
@@ -8686,7 +8687,7 @@ $(document).ready(function () {
 	});
 
 /***************************
-* Social Sharing
+* Social Sharing, common
 **************************/
 	// Set correct href for social sharing, for Orchard CMS
 	var pageURL = window.location.href;
@@ -8695,16 +8696,6 @@ $(document).ready(function () {
 		var newHref = oldHref.replace('#PageURL', pageURL); // replace #PageURL with real one
 		$(this).attr('href', newHref);// set url to newHref
 	});
-
-	// get facebook sdk
-	window.fbAsyncInit = function() {
-		FB.init({
-			appId      : '405718899770730',
-			xfbml      : true,
-			version    : 'v2.8'
-		});
-		FB.AppEvents.logPageView();
-	};
 
 	(function(d, s, id){
 		var js, fjs = d.getElementsByTagName(s)[0];

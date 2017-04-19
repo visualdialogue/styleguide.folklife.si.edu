@@ -1,6 +1,11 @@
 .card {
 	// for consistency with rows of cards and next sections
-	@include margin-bottom(4);
+	// @include margin-bottom(4);
+	@include margin-bottom(6); // 2017.04.18
+	.more-link {
+		position: static;
+		display: inline-block;
+	}
 }
 .border {
 	border-top: 1px solid $black30;
@@ -92,7 +97,7 @@ a.details {
 			@include lg-sans;
 		}
 		.author {
-			@include sm-sans;
+			@include sm-sans-title-light;
 			@include margin-top(1);
 			@include margin-bottom(3);
 		}
@@ -116,7 +121,7 @@ a.details {
 -------------------------------------------------- */
 	.card-program {
 		.title {
-			@include sm-serif;
+			@include sm-serif-title;
 			display: block; // for better height management;
 			@include respond-to(break2max) {
 				margin-bottom:0;
@@ -419,7 +424,9 @@ a.details {
 			}
 		}
 		.description {
-			@include lg-sans;
+			// @include lg-sans;
+			@include intro-sans;
+			@include margin-bottom(2); // padding above more link
 		}
 	}
 
@@ -431,7 +438,7 @@ a.details {
 			padding-bottom:0;
 		}
 		.details {
-			@include sm-sans;
+			@include sm-sans-title-light;
 			@include respond-to(fullwidth) {
 				padding-left:0;
 			}
@@ -491,12 +498,11 @@ a.details {
 			display: none; // hide copy on cards
 		}
 		.title {
-			@include sm-sans;
-			font-weight: 700;
+			@include sm-sans-title;
 			@include margin-bottom(0.5);
 		}
 		.artist {
-			@include sm-sans;
+			@include sm-sans-title-light;
 		}
 		@include clear-2;
 		@include respond-to(break2) {@include clear-6;}
@@ -520,14 +526,13 @@ a.details {
 			}
 		}
 		.title {
-			@include sm-sans;
+			@include sm-sans-title;
 			color: #fff;
-			font-weight: bold;
 			text-align: center;
 			@include margin-bottom(0.5);
 		}
 		.price {
-			@include sm-sans;
+			@include sm-sans-title-light;
 			color: $black70;
 			text-align: center;
 		}
@@ -561,8 +566,7 @@ a.details {
 			@include margin-top(-1);
 		}
 		.date {
-			@include sm-sans;
-			font-weight: 300;
+			@include sm-sans-title-light;
 			@include margin-bottom(2);
 		}
 	}

@@ -20,7 +20,7 @@
 			@include margin-bottom(0.7);
 		}
 		.subtitle, .artist {
-			@include sm-sans;
+			@include sm-sans-title-light;
 		}
 		.details-inner {
 			position: relative; // hold player
@@ -77,7 +77,7 @@
 		}
 	}
 	.audio-time {
-		@include sm-sans;
+		@include sm-sans-title-light;
 		@include respond-to(break2max) {
 			font-size: 4vw;
 		}
@@ -360,8 +360,7 @@ $horizontalMobilePlayHeight: 8vw;
 		@include respond-to(fullwidth) {height:11.2rem;}
 	}
 	.title {
-		@include sm-sans;
-		font-weight: 600;	
+		@include sm-sans-title;
 	}
 	.audio-player {
 		position: static;
@@ -460,8 +459,7 @@ $horizontalMobilePlayHeight: 8vw;
 		@include respond-to(fullwidth) {height:7rem;}
 	}
 	.title {
-		@include sm-sans;
-		font-weight: 600;	
+		@include sm-sans-title;
 	}
 	.audio-player {
 		position: static;

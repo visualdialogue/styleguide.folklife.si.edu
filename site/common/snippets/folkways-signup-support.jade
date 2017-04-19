@@ -7,9 +7,12 @@
 	.short-newsletter-signup
 		.newsletter-signup.clearfix
 			.newsletter-signup-copy
-				.icon-mail
+				.icon-mail-svg
+					svg(title="play button circle" class="svg-play-button-circle"): use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Images/icons/icons.svg#icon-mail")
+
 				= $site->newsletter_text()
 			
 	.short-newsletter-signup.short-newsletter-signup-form-wrapper
-		form(action="/").newsletter-signup-form.newsletter
+		a.click-to-join-folkways.newsletter-input(href="http://google.com") Click to Join
+		//- form(action="/").newsletter-signup-form.newsletter
 			input.newsletter-input(type="email" placeholder="Enter your email")

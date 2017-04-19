@@ -75,7 +75,7 @@
 		@include margin-bottom(2.5);
 	}
 	.intro-copy {
-		// @include sm-serif;
+		// @include sm-serif-title;
 		@include intro-serif;
 		// line-height: 1.35 !important;
 		font-weight: 500;
@@ -116,7 +116,7 @@
 			}
 
 			.copy {
-				@include sm-sans;
+				@include sm-sans-title-light;
 				color: #fff;
 				text-align: center;
 				// vertically align
@@ -146,7 +146,7 @@
 /* colors
 -------------------------------------------------- */
 	.color {
-		@include sm-sans;
+		@include sm-sans-title-light;
 		margin-bottom: 0 !important;
 		pre {
 			display: block; // hide other code chunks
@@ -259,7 +259,7 @@
 	}
 
 	.section-subtitle {
-		@include sm-serif;
+		@include sm-serif-title;
 		@include padding-top(2);
 		@include margin-top(3);
 		@include margin-bottom(2);
@@ -336,7 +336,7 @@
 		@include margin-top(2);
 	}
 	.type-details {
-		@include sm-sans;
+		@include sm-sans-title-light;
 	}
 
 
@@ -369,7 +369,7 @@
 	}
 	.video-card {
 		.title {
-			@include sm-serif;
+			@include sm-serif-title;
 			font-weight: 600;
 		}
 	}

@@ -32,7 +32,7 @@
 		}
 		figcaption {
 			color: #fff;
-			@include sm-sans;
+			@include sm-sans-title-light;
 			@include margin-top(2);
 		}
 		.details-inner {
@@ -56,7 +56,7 @@
 	.content-subsection {
 		@include margin-top(2);
 		.title {
-			@include sm-serif;
+			@include sm-serif-title;
 			font-weight: 600;
 		}
 	}
@@ -174,12 +174,12 @@
 			@include margin-bottom(2.6);
 		}
 		&-blurb {
-			@include lg-sans;
+			@include intro-sans;
 			@include margin-bottom(2);
 		}
 		&-credits p {
 			@include caption-sans;
-			text-transform: capitalize;
+			text-transform: none; // update 2017.04.18 Sandy
 			color: $black50;
 			@include margin-top(3.5);
 		}
@@ -315,11 +315,11 @@
 	}
 	.participants-section {
 		h3 {
-			@include sm-serif;
+			@include sm-serif-title;
 			@include margin-top(0.5);
 		}
 		.blurb {
-			@include sm-sans;
+			@include sm-sans-title-light;
 			line-height: 1.33 !important;
 		}
 	}

@@ -1,4 +1,4 @@
-<!-- Typography--><section class="container typography-section"><div class="row"><main class="content col-sm-7"><h2 class="section-title">Typography</h2><a id="typography" class="anchor-link"></a><div class="intro-copy link-underline"><p>Fonts are stored as SASS <em>mixins</em> so they can be used anywhere in the .scss files without fear of cascading styles overriding them (unlike @extend). You can easily implement the mixin by targeting a specific .title or other class as seen in the following lines:</p><pre class="sass"><code>.archives-page {
+<!-- Typography--><section class="container typography-section"><div class="row"><main class="content col-sm-7"><h2 class="section-title">Typography</h2><a id="typography" class="anchor-link"></a><div class="intro-copy link-underline"><p><s>Fonts are stored as SASS <em>mixins</em> so they can be used anywhere in the .scss files without fear of cascading styles overriding them (unlike @extend). You can easily implement the mixin by targeting a specific .title or other class as seen in the following lines.</s></p><p><b>Update:</b> Fonts are still applied with mixins in the css, but new helper classes are being added to allow specific typeface settings to be applied to the html via font utility classes. E.g. .sm-sans-title will add the small sans title type treatment to any html element (as long as its specific enough).</p><pre class="sass"><code>.archives-page {
 	.title {
 		@include sans-lg;
 	}
@@ -26,7 +26,7 @@
 		font-size: 4.2rem;
 	}
 }
-</code></pre></div></div></div><div class="typeface codeblock"><div class="row type-title-wrapper"><hr/><div class="col-sm-10 sm-serif type-title">Small Serif Title</div><?php snippet('show-sass'); ?></div><div class="row"><div class="col-sm-5"><div class="type-details">Typeface: Freight Text<br/>Weight: Bold<br/>Maximum Font Size: 2.8rem</div></div><div class="col-sm-7"><?php snippet('show-sass-mobile'); ?><pre class="sass"><code>@mixin sm-serif {
+</code></pre></div></div></div><div class="typeface codeblock"><div class="row type-title-wrapper"><hr/><div class="col-sm-10 sm-serif-title type-title">Small Serif Title</div><?php snippet('show-sass'); ?></div><div class="row"><div class="col-sm-5"><div class="type-details">Typeface: Freight Text<br/>Weight: Bold<br/>Maximum Font Size: 2.8rem</div></div><div class="col-sm-7"><?php snippet('show-sass-mobile'); ?><pre class="sass"><code>@mixin sm-serif-title {
 	font-weight: 700;
 	font-family: $serif;
 	line-height: 1;
@@ -42,22 +42,15 @@
 	}
 	@include margin-bottom(1);
 }
-</code></pre></div></div></div><div class="typeface codeblock"><div class="row type-title-wrapper"><hr/><div class="col-sm-10 sm-serif-italic type-title"><Small>Small Serif Title Italic</Small></div><?php snippet('show-sass'); ?></div><div class="row"><div class="col-sm-5"><div class="type-details">Typeface: Freight Text<br/>Weight: Bold Italic<br/>Maximum Font Size: 2.8rem</div></div><div class="col-sm-7"><?php snippet('show-sass-mobile'); ?><pre class="sass"><code>@mixin sm-serif {
-	font-weight: 700;
-	text-style: italic;
-	font-family: $serif;
-	line-height: 1;
-	font-size: 2.2rem;
-	@include respond-to(break2) {
-		line-height: 1.143;
-	}
-	@include respond-to(break2full) {
-		font-size: 1.8vw;
-	}
-	@include respond-to(fullwidth) {
-		font-size: 2.8rem;
-	}
-	@include margin-bottom(1);
+
+// utility class for html
+.sm-serif-title {
+	@include sm-serif-title;
+}
+</code></pre></div></div></div><div class="typeface codeblock"><div class="row type-title-wrapper"><hr/><div class="col-sm-10 sm-serif-italic type-title"><Small>Small Serif Title Italic</Small></div><?php snippet('show-sass'); ?></div><div class="row"><div class="col-sm-5"><div class="type-details">Typeface: Freight Text<br/>Weight: Bold Italic<br/>Maximum Font Size: 2.8rem</div></div><div class="col-sm-7"><?php snippet('show-sass-mobile'); ?><pre class="sass"><code>// utility class for html
+.sm-serif-title-italic {
+	@include sm-serif-title;
+	font-style: italic;
 }</code></pre></div></div></div></div><!-- Sans--><div class="sub-section"><div class="typeface codeblock"><a id="sans" class="anchor-link"></a><div class="row type-title-wrapper"><hr/><div class="col-sm-10 xl-sans-semi type-title">Extra Large Sans Title</div><?php snippet('show-sass'); ?></div><div class="row"><div class="col-sm-5"><div class="type-details">Typeface: Acumin Pro<br/>Weight: Semibold<br/>Maximum Font Size: 3.5rem<br/>Usage: Folkways: Album page artist, track title. Lesson plan title. Membership subtitle.</div></div><div class="col-sm-7"><?php snippet('show-sass-mobile'); ?><pre class="sass"><code>@mixin xl-sans {
 	font-weight: 600;
 	font-family: $sans;
@@ -132,7 +125,7 @@
   		line-height: 1.28; // 25/32
 	}
 }
-</code></pre></div></div></div><div class="typeface codeblock"><div class="row type-title-wrapper"><hr/><div class="col-sm-10 sm-sans-semi type-title">Small Sans Title</div><?php snippet('show-sass'); ?></div><div class="row"><div class="col-sm-5"><div class="type-details">Typeface: Acumin Pro<br/>Weight: Semibold<br/>Maximum Font Size: 1.8rem<br/>Usage: Past Festivals listings (Medium weight), Folkways album info sidebar</div></div><div class="col-sm-7"><?php snippet('show-sass-mobile'); ?><pre class="sass"><code>@mixin sm-sans {
+</code></pre></div></div></div><div class="typeface codeblock"><div class="row type-title-wrapper"><hr/><div class="col-sm-10 sm-sans-title type-title">Small Sans Title</div><?php snippet('show-sass'); ?></div><div class="row"><div class="col-sm-5"><div class="type-details">Typeface: Acumin Pro<br/>Weight: Semibold<br/>Maximum Font Size: 1.8rem<br/>Usage: Past Festivals listings (Medium weight), Folkways album info sidebar</div></div><div class="col-sm-7"><?php snippet('show-sass-mobile'); ?><pre class="sass"><code>@mixin sm-sans-title {
 	font-weight: 300;
 	font-family: $sans;
 	line-height: 1.32; // album sidebar 2017.02.17
@@ -144,18 +137,17 @@
 		line-height: 1.32; // album sidebar 2017.02.17
 		font-size: 1.8rem;
 	}
-}</code></pre></div></div></div><div class="typeface codeblock"><div class="row type-title-wrapper"><hr/><div class="col-sm-10 sm-sans type-title">Small Sans Title Light</div><?php snippet('show-sass'); ?></div><div class="row"><div class="col-sm-5"><div class="type-details">Typeface: Acumin Pro<br/>Weight: Light<br/>Maximum Font Size: 1.8rem</div></div><div class="col-sm-7"><?php snippet('show-sass-mobile'); ?><pre class="sass"><code>@mixin sm-sans {
+}
+
+.sm-sans-title {
+	@include sm-sans-title;
+}</code></pre></div></div></div><div class="typeface codeblock"><div class="row type-title-wrapper"><hr/><div class="col-sm-10 sm-sans-title-light type-title">Small Sans Title Light</div><?php snippet('show-sass'); ?></div><div class="row"><div class="col-sm-5"><div class="type-details">Typeface: Acumin Pro<br/>Weight: Light<br/>Maximum Font Size: 1.8rem</div></div><div class="col-sm-7"><?php snippet('show-sass-mobile'); ?><pre class="sass"><code>@mixin sm-sans-title-light {
+	@include sm-sans-title;
 	font-weight: 300;
-	font-family: $sans;
-	line-height: 1.2;
-	font-size: 1.5rem;
-	@include respond-to(break2full) {
-		font-size: 1.2vw;
-	}
-	@include respond-to(fullwidth) {
-		line-height: 1.12; // 18/20
-		font-size: 1.8rem;
-	}
+}
+
+.sm-sans-title-light {
+	@include sm-sans-title-light;
 }</code></pre></div></div></div><div class="typeface codeblock"><a id="sans-caption" class="anchor-link"></a><div class="row type-title-wrapper"><hr/><div class="col-sm-10 caption-sans type-title">Sans Caption</div><?php snippet('show-sass'); ?></div><div class="row"><div class="col-sm-5"><div class="type-details">Typeface: Acumin Pro<br/>Weight: Light<br/>Maximum Font Size: 1.6rem</div></div><div class="col-sm-7"><?php snippet('show-sass-mobile'); ?><pre class="sass"><code>@mixin caption-sans {
 	font-weight: 300;
 	font-family: $sans;

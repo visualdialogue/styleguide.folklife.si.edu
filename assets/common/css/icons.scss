@@ -175,6 +175,53 @@
 		height: $svgIconFullPause;
 	}
 }
+.svg-filter-icon {
+	position: absolute;
+	@include right(0.8);
+	@include top(0.4);
+	$svgFilterIconMobile: 40px;
+	$svgFilterIconTablet: 22px;
+	$svgFilterIconFull: 28px;
+	vertical-align: middle;
+	width: $svgFilterIconMobile;
+	height: $svgFilterIconMobile;
+	@include respond-to(break2) {
+		width: $svgFilterIconTablet;
+		height: $svgFilterIconTablet;
+	}
+	@include respond-to(fullwidth) {
+		width: $svgFilterIconFull;
+		height: $svgFilterIconFull;
+	}
+	// SVG icons, from fontastic directions
+	display: inline-block;
+	fill: currentColor;
+}
+.svg-arrow2-icon {
+	position: relative;
+	// @include right(0.8);
+	// @include top(-0.2);
+	top: -2px;
+	$svgFilterIconMobile: 15px;
+	$svgFilterIconTablet: 1.4vw;
+	$svgFilterIconFull: 20px;
+	vertical-align: middle;
+	width: $svgFilterIconMobile;
+	height: $svgFilterIconMobile;
+	@include respond-to(break2full) {
+		top: -0.1vw;
+		width: $svgFilterIconTablet;
+		height: $svgFilterIconTablet;
+	}
+	@include respond-to(fullwidth) {
+		top: -0.2rem;
+		width: $svgFilterIconFull;
+		height: $svgFilterIconFull;
+	}
+	// SVG icons, from fontastic directions
+	display: inline-block;
+	fill: currentColor;
+}
 .icon-pause:before, .icon-play:before {
 	content: ''; // clear out old icons
 }
@@ -294,8 +341,10 @@
 	$mobile: 10vw;
 	$tablet: 3.8vw;
 	$full: 60px;
-	width: $mobile;
-	height: $mobile;
+	@include respond-to(break2max) {
+		width: $mobile;
+		height: $mobile;
+	}
 	@include respond-to(break2full) {
 		width: $tablet;
 		height: $tablet;
@@ -309,9 +358,12 @@
 	// sizing
 	$mobile: 10vw;
 	$tablet: 3.4vw;
-	$full: 50px;
-	width: $mobile;
-	height: $mobile;
+	$full: 50px;	
+	// have to contain the vw or plugin will keep at fullwidth
+	@include respond-to(break2max) {
+		width: $mobile;
+		height: $mobile;
+	}
 	@include respond-to(break2full) {
 		width: $tablet;
 		height: $tablet;
@@ -326,8 +378,10 @@
 	$mobile: 10vw;
 	$tablet: 2.5vw;
 	$full: 40px;
-	width: $mobile;
-	height: $mobile;
+	@include respond-to(break2max) {
+		width: $mobile;
+		height: $mobile;
+	}
 	@include respond-to(break2full) {
 		width: $tablet;
 		height: $tablet;
@@ -345,8 +399,10 @@
 		$mobile: 2rem;
 		$tablet: 1.8vw;
 		$full: 3rem;
-		width: $mobile;
-		height: $mobile;
+		@include respond-to(break2max) {
+			width: $mobile;
+			height: $mobile;
+		}
 		@include respond-to(break2full) {
 			width: $tablet;
 			height: $tablet;
@@ -361,8 +417,10 @@
 		$mobile: 2rem;
 		$tablet: 1.6vw;
 		$full: 2.5rem;
-		width: $mobile;
-		height: $mobile;
+		@include respond-to(break2max) {
+			width: $mobile;
+			height: $mobile;
+		}
 		@include respond-to(break2full) {
 			width: $tablet;
 			height: $tablet;
@@ -377,8 +435,10 @@
 		$mobile: 1.4rem;
 		$tablet: 1.3vw;
 		$full: 2rem;
-		width: $mobile;
-		height: $mobile;
+		@include respond-to(break2max) {
+			width: $mobile;
+			height: $mobile;
+		}
 		@include respond-to(break2full) {
 			width: $tablet;
 			height: $tablet;
@@ -486,7 +546,7 @@
 	line-height: 1;
 }
 .more-link-text {
-	@include sm-sans;
+	@include sm-sans-title-light;
 	display: inline-block;
 	vertical-align: top;
 	line-height: 1.1; // match section header for alignment
@@ -564,62 +624,91 @@ $ofull: 16px;
 	width: $full;
 	height: $full;
 }
+.svg-pager-icon-circle {
+	// align with circle-o
+	position: relative;
+	top: 0.3rem;
+	left: 0.1rem;
+	top:0.3rem;
+	@include respond-to(break2) {top:0.1rem;}
+	@include respond-to(fullwidth) {top:0.3rem;}
+}
 .svg-pager-icon-circle-o {
 	width: $ofull;
 	height: $ofull;
 }
-// OLD ICONS
-$filledInCircle: "\61";
-$hollowCircle: "\70";
-$mobileSize: 1rem;
-.slick-dots li button:before {
-	font-family: 'vd-icons';
-	content: $hollowCircle;
-	opacity: 1;
-	width: 14px;
-	height: 14px;
+.slick-dots li:hover {
+	.svg-pager-icon-circle {
+		display: block;
+	}
+	.svg-pager-icon-circle-o {
+		display: none;
+	}
+}
+.svg-pager-icon-circle {
+	display: none; // default for active is hidden
+}
+.slick-active > .svg-pager-icon-circle { // only reference .slick-active on dots, not entire slide like in folklife homepage
 	display: block;
-	@include respond-to(break2max) {
-		font-size: 1.5rem;
-		font-size: $mobileSize;
-	}
-	@include respond-to(break2full) {
-		font-size: 1vw;
-	}
-	@include respond-to(fullwidth) {
-		font-size: 1.7rem;
-	}
 }
-.slick-dots li button:hover:before, .slick-dots li.slick-active button:before {
-	@include respond-to(break2) {
-		content: $filledInCircle;
-	}
-	@include respond-to(break2full) {
-		font-size: 0.8vw;
-	}
-	@include respond-to(fullwidth) {
-		font-size: 1.5rem;
-		padding-left: 1px;
-	}
+.slick-active > .svg-pager-icon-circle-o {
+	display: none; // hide active open icon
 }
+// OLD ICONS
+// $filledInCircle: "\61";
+// $hollowCircle: "\70";
+// $mobileSize: 1rem;
+// .slick-dots li button:before {
+// 	font-family: 'vd-icons';
+// 	content: $hollowCircle;
+// 	opacity: 1;
+// 	width: 14px;
+// 	height: 14px;
+// 	display: block;
+// 	@include respond-to(break2max) {
+// 		font-size: 1.5rem;
+// 		font-size: $mobileSize;
+// 	}
+// 	@include respond-to(break2full) {
+// 		font-size: 1vw;
+// 	}
+// 	@include respond-to(fullwidth) {
+// 		font-size: 1.7rem;
+// 	}
+// }
+// .slick-dots li button:hover:before, .slick-dots li.slick-active button:before {
+// 	@include respond-to(break2) {
+// 		content: $filledInCircle;
+// 	}
+// 	@include respond-to(break2full) {
+// 		font-size: 0.8vw;
+// 	}
+// 	@include respond-to(fullwidth) {
+// 		font-size: 1.5rem;
+// 		padding-left: 1px;
+// 	}
+// }
 // nth slide, nth dot is active because default slick dot activation doesn't work with multiple dot instances
 // mobile only
-@include respond-to(break2max) {
-	li[aria-hidden="false"] button:before {
-		content: "\61";
-		font-size: 1.3rem;
-		font-size: 1rem;
-		padding-left: 0;
-	}
-}
+// @include respond-to(break2max) {
+// 	li[aria-hidden="false"] button:before {
+// 		content: "\61";
+// 		font-size: 1.3rem;
+// 		font-size: 1rem;
+// 		padding-left: 0;
+// 	}
+// }
 
 /* Footer
 -------------------------------------------------- */
 
 .newsletter-signup {
-	.icon-mail {
+	.icon-mail, .icon-mail-svg {
 		color: $black40;
+		// color: $black60;
 		float: right;
+	}
+	.icon-mail {
 		@include respond-to(break2max) {
 			margin-left: 3vw;
 		}
@@ -628,6 +717,8 @@ $mobileSize: 1rem;
 		}
 		@include respond-to(fullwidth) {
 			margin-left: 2rem;
+			margin-right: 3rem;
+			margin: 3rem 0 3rem 2rem;
 		}
 	}
 	.icon-mail:before {
@@ -644,5 +735,16 @@ $mobileSize: 1rem;
 			padding-right: 2px;
 			line-height: 1;
 		}
+	}
+}
+.icon-mail-svg {
+	// position: relative; // contain abs
+	// margin: 0;
+	svg {
+		fill: $black40;
+		position: static;
+		-webkit-transform: none;
+		-ms-transform: none;
+		transform: none;
 	}
 }

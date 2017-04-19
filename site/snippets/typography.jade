@@ -5,7 +5,8 @@ section.container.typography-section
 			h2.section-title Typography
 			a.anchor-link#typography
 			.intro-copy.link-underline
-				p Fonts are stored as SASS <em>mixins</em> so they can be used anywhere in the .scss files without fear of cascading styles overriding them (unlike @extend). You can easily implement the mixin by targeting a specific .title or other class as seen in the following lines:
+				p <s>Fonts are stored as SASS <em>mixins</em> so they can be used anywhere in the .scss files without fear of cascading styles overriding them (unlike @extend). You can easily implement the mixin by targeting a specific .title or other class as seen in the following lines.</s>
+				p <b>Update:</b> Fonts are still applied with mixins in the css, but new helper classes are being added to allow specific typeface settings to be applied to the html via font utility classes. E.g. .sm-sans-title will add the small sans title type treatment to any html element (as long as its specific enough).
 				pre.sass: code.
 					.archives-page {
 						.title {
@@ -95,7 +96,7 @@ section.container.typography-section
 		.typeface.codeblock
 			.row.type-title-wrapper
 				hr
-				.col-sm-10.sm-serif.type-title Small Serif Title
+				.col-sm-10.sm-serif-title.type-title Small Serif Title
 				-snippet('show-sass')
 			.row
 				.col-sm-5
@@ -108,7 +109,7 @@ section.container.typography-section
 				.col-sm-7
 					-snippet('show-sass-mobile')
 					pre.sass: code.
-						@mixin sm-serif {
+						@mixin sm-serif-title {
 							font-weight: 700;
 							font-family: $serif;
 							line-height: 1;
@@ -123,6 +124,11 @@ section.container.typography-section
 						  		font-size: 2.8rem;
 							}
 							@include margin-bottom(1);
+						}
+
+						// utility class for html
+						.sm-serif-title {
+							@include sm-serif-title;
 						}
 
 		.typeface.codeblock
@@ -140,23 +146,11 @@ section.container.typography-section
 						|Maximum Font Size: 2.8rem
 				.col-sm-7
 					-snippet('show-sass-mobile')
-					pre.sass: code.
-						@mixin sm-serif {
-							font-weight: 700;
-							text-style: italic;
-							font-family: $serif;
-							line-height: 1;
-							font-size: 2.2rem;
-							@include respond-to(break2) {
-								line-height: 1.143;
-							}
-							@include respond-to(break2full) {
-								font-size: 1.8vw;
-							}
-							@include respond-to(fullwidth) {
-								font-size: 2.8rem;
-							}
-							@include margin-bottom(1);
+					pre.sass: code.			
+						// utility class for html
+						.sm-serif-title-italic {
+							@include sm-serif-title;
+							font-style: italic;
 						}
 	// Sans
 	.sub-section
@@ -344,7 +338,7 @@ section.container.typography-section
 		.typeface.codeblock
 			.row.type-title-wrapper
 				hr
-				.col-sm-10.sm-sans-semi.type-title Small Sans Title
+				.col-sm-10.sm-sans-title.type-title Small Sans Title
 				-snippet('show-sass')
 			.row
 				.col-sm-5
@@ -359,7 +353,7 @@ section.container.typography-section
 				.col-sm-7
 					-snippet('show-sass-mobile')
 					pre.sass: code.
-						@mixin sm-sans {
+						@mixin sm-sans-title {
 							font-weight: 300;
 							font-family: $sans;
 							line-height: 1.32; // album sidebar 2017.02.17
@@ -372,10 +366,14 @@ section.container.typography-section
 								font-size: 1.8rem;
 							}
 						}
+
+						.sm-sans-title {
+							@include sm-sans-title;
+						}
 		.typeface.codeblock
 			.row.type-title-wrapper
 				hr
-				.col-sm-10.sm-sans.type-title Small Sans Title Light
+				.col-sm-10.sm-sans-title-light.type-title Small Sans Title Light
 				-snippet('show-sass')
 			.row
 				.col-sm-5
@@ -388,18 +386,13 @@ section.container.typography-section
 				.col-sm-7
 					-snippet('show-sass-mobile')
 					pre.sass: code.
-						@mixin sm-sans {
+						@mixin sm-sans-title-light {
+							@include sm-sans-title;
 							font-weight: 300;
-							font-family: $sans;
-							line-height: 1.2;
-							font-size: 1.5rem;
-							@include respond-to(break2full) {
-								font-size: 1.2vw;
-							}
-							@include respond-to(fullwidth) {
-								line-height: 1.12; // 18/20
-								font-size: 1.8rem;
-							}
+						}
+
+						.sm-sans-title-light {
+							@include sm-sans-title-light;
 						}
 		.typeface.codeblock
 			a.anchor-link#sans-caption

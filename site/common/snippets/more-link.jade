@@ -5,7 +5,9 @@ a.high.more-link(class="<? if(isset($class)) echo $class ?>" href="<? if(isset($
 			-if(isset($text)):
 				.more-link-text!= $text
 			- else:
-				.more-link-text more
+				.more-link-text more&nbsp;
 			-endif
-			.more-link-arrow.icon-arrow2
+			//- .more-link-arrow.icon-arrow2
+			//- .more-link-arrow(aria-hidden="true" title="More" tabindex="0")
+			svg.svg-arrow2-icon(title="More Link" tabindex="0"): use(xlink:href="/Images/icons/icons.svg#icon-arrow2")
 
