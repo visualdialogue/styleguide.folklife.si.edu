@@ -17,7 +17,10 @@ li.card.col-sm-3.top-border-card.blog-card(class="<? if ($card->type() == 'video
 				.center-box
 					.modal-trigger
 						img(src="<?= $image->url() ?>" alt="<?= $card->title() ?>")
-					.icon-play-button
+					.svg-play-button
+						svg(title="play button circle" class="svg-play-button-circle"): use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Images/icons/icons.svg#icon-circle")
+						svg(title="play button arrow" class="svg-play-button-play"): use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Images/icons/icons.svg#icon-play")
+
 		-else:
 			.image
 				a(href="<?= $card->url() ?>")

@@ -505,12 +505,12 @@
 		}
 		@include padding-top(3.5);
 		@include padding-bottom(3);
-		.first-level-dropdown.tall-dropdown {
-			overflow-y: scroll;
-			@include respond-to(break2max) {max-height:calc(100vh - #{$mobile-home-headerHeight} - 22rem);}
-			@include respond-to(break2full) {max-height:calc(100vh - #{$tablet-home-headerHeight} - 18vh);}
-			@include respond-to(fullwidth) {max-height:calc(100vh - #{$desktop-home-headerHeight} - 17rem);}
-		}
+	}
+	.first-level-dropdown.tall-dropdown {
+		overflow-y: scroll;
+		@include respond-to(break2max) {max-height:calc(100vh - #{$mobile-home-headerHeight} - 22rem);}
+		@include respond-to(break2full) {max-height:calc(100vh - #{$tablet-home-headerHeight} - 18vh);}
+		@include respond-to(fullwidth) {max-height:calc(100vh - #{$desktop-home-headerHeight} - 17rem);}
 	}
 	
 	.browsenav-title {

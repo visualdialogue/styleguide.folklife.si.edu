@@ -295,7 +295,6 @@ a.details {
 		}
 	}
 
-
 /* #background
 * the following rules apply a background color to the :after element
 * if color was applied to the card itself, it would show through the padding on the edges
@@ -413,7 +412,7 @@ a.details {
 			}
 		}
 		.title {
-			@include lg-serif;
+			@include lg-serif-title;
 			@include margin-bottom(2);
 		}
 		.details-inner {
@@ -486,11 +485,9 @@ a.details {
 		}
 	}
 
-
 /* Albums & Vinyl
 -------------------------------------------------- */
 	.album-card, .vinyl-card, .books-card {
-		
 		.details-inner {
 			@include padding-top(1);
 		}
@@ -538,7 +535,6 @@ a.details {
 		}
 	}
 
-
 /* Inverse cards (titles above images)
 -------------------------------------------------- */
 	.blog-card, .inverse-card {
@@ -551,7 +547,6 @@ a.details {
 /* Blog Card - general rules
 -------------------------------------------------- */
 	.general-content-card {
-		margin-bottom: 0 !important;
 		h1 {
 			margin-top:0; // default override
 		}
@@ -559,8 +554,12 @@ a.details {
 			@include margin-bottom(1);
 		}
 		.title {
-			@include lg-serif;
+			@include lg-serif-title;
 			@include margin-bottom(1);
+		}
+		.subtitle {
+			@include sm-serif-title;
+			font-weight: 500;
 		}
 		.no-image-title {
 			@include margin-top(-1);

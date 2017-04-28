@@ -1,610 +1,716 @@
 /* Serif
  * Freight Text Pro from Typekit
 -------------------------------------------------- */
-	@mixin lg-serif {
-		font-weight: 700;
-		font-family: $serif;
-		line-height: 1;
-		// font-size: 4.2rem;
-		font-size: 3.8rem;
-		@include respond-to(break2full) {
-			font-size: 3.5vw;
-		}
-		@include respond-to(fullwidth) {
-			font-size: 6.2rem;
-		}
+
+@mixin lg-serif-title {
+	font-weight: 700;
+	font-family: $serif;
+	line-height: 1;
+	// font-size: 4.2rem;
+	font-size: 3.8rem;
+	@include respond-to(break2full) {
+		font-size: 3.5vw;
 	}
-	@mixin md-serif {
-		font-weight: 700;
-		font-family: $serif;
-		line-height: 1;
-		font-size: 2.7rem;
-		@include respond-to(break2full) {
-			font-size: 2.5vw;
-		}
-		@include respond-to(fullwidth) {
-			font-size: 4.2rem;
-		}
+	@include respond-to(fullwidth) {
+		font-size: 6.2rem;
 	}
-	@mixin sm-serif-title {
-		font-weight: 700;
-		font-family: $serif;
-		line-height: 1;
-		// font-size: 2.2rem;
-		font-size: 2rem; // 2017.04.18 smaller for mobile archives/collections titles
-		@include respond-to(break2) {
-			line-height: 1.143;
-		}
-		@include respond-to(break2full) {
-			font-size: 1.8vw;
-		}
-		@include respond-to(fullwidth) {
-			font-size: 2.8rem;
-		}
-		@include margin-bottom(1);
+}
+@mixin md-serif-title {
+	font-weight: 700;
+	font-family: $serif;
+	line-height: 1;
+	font-size: 2.7rem;
+	@include respond-to(break2full) {
+		font-size: 2.5vw;
 	}
-	.sm-serif-title {
-		@include sm-serif-title;
+	@include respond-to(fullwidth) {
+		font-size: 4.2rem;
 	}
+}
+@mixin sm-serif-title {
+	font-weight: 700;
+	font-family: $serif;
+	line-height: 1;
+	// font-size: 2.2rem;
+	font-size: 2rem; // 2017.04.18 smaller for mobile archives/collections titles
+	@include respond-to(break2) {
+		line-height: 1.143;
+	}
+	@include respond-to(break2full) {
+		font-size: 1.8vw;
+	}
+	@include respond-to(fullwidth) {
+		font-size: 2.8rem;
+	}
+	@include margin-bottom(1);
+}
+.sm-serif-title {
+	@include sm-serif-title;
+}
 
 /* Sans serif
 * Acumin Pro from Typekit
 * minor second (1.125) based on 3rem when needed
 -------------------------------------------------- */
-	@mixin xxl-sans {
-		font-weight: 300;
-		font-family: $sans;
-		font-size: 2.4rem;
-		line-height: 1;
-		@include respond-to(break2full) {
-			font-size: 1.9vw;
-			font-size: 3.9vw;
-		}
-		@include respond-to(fullwidth) {
-			font-size: 3.5rem;
-			font-size: 5rem;
-		}
+
+@mixin xxl-sans {
+	font-weight: 300;
+	font-family: $sans;
+	font-size: 2.4rem;
+	line-height: 1;
+	@include respond-to(break2full) {
+		font-size: 1.9vw;
+		font-size: 3.9vw;
 	}
-	@mixin xl-sans {
-		font-weight: 300;
-		font-family: $sans;
-		font-size: 2.4rem;
-		line-height: 1;
-		@include respond-to(break2full) {
-			font-size: 1.9vw;
-		}
-		@include respond-to(fullwidth) {
-			font-size: 3.5rem;
-		}
+	@include respond-to(fullwidth) {
+		font-size: 3.5rem;
+		font-size: 5rem;
 	}
-	@mixin lg-sans {
-		font-weight: 300;
-		font-family: $sans;
-		line-height: 1.127; 
-		font-size: 2.1rem;
-		@include respond-to(break2full) {
-	  		font-size: 1.9vw;
-		}
-		@include respond-to(fullwidth) {
-	  		font-size: 3rem;
-		}
+}
+@mixin xl-sans {
+	font-weight: 300;
+	font-family: $sans;
+	font-size: 2.4rem;
+	line-height: 1;
+	@include respond-to(break2full) {
+		font-size: 1.9vw;
 	}
-	@mixin md-sans {
-		font-weight: 300;
-		font-family: $sans;
-		line-height: 1.2;
-	  	font-size: 1.9rem;
-		@include respond-to(break2full) {
-	  		font-size: 1.6vw;
-		}
-		@include respond-to(fullwidth) {
-	  		font-size: 2.5rem;
-	  		line-height: 1.28; // 25/32
-		}
+	@include respond-to(fullwidth) {
+		font-size: 3.5rem;
 	}
-	@mixin sm-sans-title {
-		// font-weight: 300;
-		font-weight: 600;
-		font-family: $sans;
-		line-height: 1.32; // album sidebar 2017.02.17
-		font-size: 1.5rem;
-		@include respond-to(break2full) {
-			font-size: 1.2vw;
-		}
-		@include respond-to(fullwidth) {
-			// line-height: 1.38; // album sidebar 2017.02.17
-			line-height: 1.32; // album sidebar 2017.02.17
-			font-size: 1.8rem;
-		}
+}
+@mixin lg-sans {
+	font-weight: 300;
+	font-family: $sans;
+	line-height: 1.127;
+	font-size: 2.1rem;
+	@include respond-to(break2full) {
+		font-size: 1.9vw;
 	}
-	.sm-sans-title {
-		@include sm-sans-title;
-	}
-	@mixin sm-sans-title-light {
-		@include sm-sans-title;
-		font-weight: 300;
-	}
-	.sm-sans-title-light {
-		@include sm-sans-title-light;
-	}
-	@mixin sm-sans-title-gallano {
-		font-weight: 300;
-		font-family: $galano;
-		// line-height: 1.32;
-		line-height: 1.43;
-		font-size: 1.6rem;
-		@include respond-to(break2full) {
-			font-size: 1.2vw;
-		}
-		@include respond-to(fullwidth) {
-			// line-height: 1.32; // album sidebar 2017.02.17
-			line-height: 1.32; // album sidebar 2017.02.17
-			font-size: 2rem;
-		}
-	}
-	.sm-sans-title-gallano {
-		@include sm-sans-title-gallano;
-	}
-	@mixin caption-sans {
-		font-weight: 300;
-		font-family: $sans;
-		line-height: 1.4;
-		text-transform: uppercase;
-		font-size: 1.3rem;
-		@include respond-to(break2) {
-			line-height: 1.3;
-		}
-		@include respond-to(break2full) {
-			font-size: 1vw;
-		}
-		@include respond-to(fullwidth) {
-			line-height: 1.3;
-			font-size: 1.6rem;
-		}
-	}
-	@mixin date {
-		@include sans-tag;
-		font-weight: 700;
-	}
-	@mixin date-sm {
-		@include sans-tag;
-		letter-spacing: normal;
-		text-transform: none;
-		@include margin-top(0.5);
-	}
-	@mixin byline {
-		@include sm-sans-title-light;
-	}
-	// search bar
-	@mixin search-title {
-	  font-weight: 500;
-	  font-family: $sans;
-	  line-height: 1.7;
-	  font-size: 2.5rem;
-	}
-	@mixin email-newsletter {
-		font-family: $sans;
-		@include respond-to(break2max) {
-			font-size: 7vw;
-		}
-		@include respond-to(break2full) {
-			font-size: 2.2vw;
-		}
-		@include respond-to(fullwidth) {
-			font-size: 3.5rem;
-			padding-top: 1.5rem;
-		}
-	}
-	@mixin link-font {
-		font-weight: 400;
-		font-family: $sans;
-		line-height: 2;
-		font-size: 1.7rem;
-		@include respond-to(break2full) {
-			font-size: 1.1vw;
-			line-height: 1.45;
-		}
-		@include respond-to(fullwidth) {
-			font-size: 1.6rem;
-			line-height: 1.8; // 16 px
-		}
-	}
-	@mixin link-font-sm {
-		font-family: $sans;
-		line-height: 1.7;
-		font-size: 1.6rem;
-		@include respond-to(break2full) {
-			font-size: 1.1vw;
-			line-height: 1.8;
-		}
-		@include respond-to(fullwidth) {
-			font-size: 1.6rem;
-			line-height: 1.5;
-		}
-	}
-	// Plus icon
-	@mixin sans-plus-icon {
-		font-family: $sans;
+	@include respond-to(fullwidth) {
 		font-size: 3rem;
-		@include respond-to(break2) {
-			line-height: 1.2;
-		}
-		@include respond-to(break2full) {
-			font-size: 2.5vw;
-		}
-		@include respond-to(fullwidth) {
-			font-size: 4rem;
-		}
 	}
+}
+@mixin md-sans {
+	font-weight: 300;
+	font-family: $sans;
+	line-height: 1.2;
+	font-size: 1.9rem;
+	@include respond-to(break2full) {
+		font-size: 1.6vw;
+	}
+	@include respond-to(fullwidth) {
+		font-size: 2.5rem;
+		line-height: 1.28; // 25/32
+	}
+}
+@mixin sm-sans-title {
+	// font-weight: 300;
+	font-weight: 600;
+	font-family: $sans;
+	line-height: 1.32; // album sidebar 2017.02.17
+	font-size: 1.5rem;
+	@include respond-to(break2full) {
+		font-size: 1.2vw;
+	}
+	@include respond-to(fullwidth) {
+		// line-height: 1.38; // album sidebar 2017.02.17
+		line-height: 1.32; // album sidebar 2017.02.17
+		font-size: 1.8rem;
+	}
+}
+.sm-sans-title {
+	@include sm-sans-title;
+}
+@mixin sm-sans-title-light {
+	@include sm-sans-title;
+	font-weight: 300;
+}
+.sm-sans-title-light {
+	@include sm-sans-title-light;
+}
+@mixin caption-sans {
+	font-weight: 300;
+	font-family: $sans;
+	line-height: 1.4;
+	text-transform: uppercase;
+	font-size: 1.3rem;
+	@include respond-to(break2) {
+		line-height: 1.3;
+	}
+	@include respond-to(break2full) {
+		font-size: 1vw;
+	}
+	@include respond-to(fullwidth) {
+		line-height: 1.3;
+		font-size: 1.6rem;
+	}
+}
+@mixin date {
+	@include sans-tag;
+	font-weight: 700;
+}
+@mixin date-sm {
+	@include sans-tag;
+	letter-spacing: normal;
+	text-transform: none;
+	@include margin-top(0.5);
+}
+@mixin byline {
+	@include sm-sans-title-light;
+}
+// search bar
+@mixin search-title {
+	font-weight: 500;
+	font-family: $sans;
+	line-height: 1.7;
+	font-size: 2.5rem;
+}
+@mixin email-newsletter {
+	font-family: $sans;
+	@include respond-to(break2max) {
+		font-size: 7vw;
+	}
+	@include respond-to(break2full) {
+		font-size: 2.2vw;
+	}
+	@include respond-to(fullwidth) {
+		font-size: 3.5rem;
+		padding-top: 1.5rem;
+	}
+}
+@mixin link-font {
+	font-weight: 400;
+	font-family: $sans;
+	line-height: 2;
+	font-size: 1.7rem;
+	@include respond-to(break2full) {
+		font-size: 1.1vw;
+		line-height: 1.45;
+	}
+	@include respond-to(fullwidth) {
+		font-size: 1.6rem;
+		line-height: 1.8; // 16 px
+	}
+}
+@mixin link-font-sm {
+	font-family: $sans;
+	line-height: 1.7;
+	font-size: 1.6rem;
+	@include respond-to(break2full) {
+		font-size: 1.1vw;
+		line-height: 1.8;
+	}
+	@include respond-to(fullwidth) {
+		font-size: 1.6rem;
+		line-height: 1.5;
+	}
+}
+// Plus icon
+@mixin sans-plus-icon {
+	font-family: $sans;
+	font-size: 3rem;
+	@include respond-to(break2) {
+		line-height: 1.2;
+	}
+	@include respond-to(break2full) {
+		font-size: 2.5vw;
+	}
+	@include respond-to(fullwidth) {
+		font-size: 4rem;
+	}
+}
+
+/* Gallano
+* from MyFonts
+-------------------------------------------------- */
+
+@mixin xl-sans-title-gallano-bold {
+	font-family: $galanoBold;
+	line-height: 1;
+	font-size: 2.6rem;
+	@include respond-to(break2full) {
+		font-size: 2.2vw;
+	}
+	@include respond-to(fullwidth) {
+		font-size: 4.5rem;
+	}
+}
+// 50 objects intro title
+.xl-sans-title-gallano-bold {
+	@include xl-sans-title-gallano-bold;
+}
+@mixin xl-sans-title-gallano-medium {
+	@include xl-sans-title-gallano-bold;
+	font-family: $galanoMedium;
+}
+// 50 objects intro date
+.xl-sans-title-gallano-medium {
+	@include xl-sans-title-gallano-medium;
+}
+@mixin sm-sans-title-gallano {
+	font-family: $galanoBold;
+	line-height: 1.43;
+	font-size: 1.6rem;
+	@include respond-to(break2full) {
+		font-size: 1.2vw;
+	}
+	@include respond-to(fullwidth) {
+		line-height: 1.238; // 2017.03.22 // 21/26
+		font-size: 2.1rem;
+	}
+}
+.sm-sans-title-gallano {
+	@include sm-sans-title-gallano;
+}
+@mixin sm-sans-gallano {
+	font-weight: 300;
+	font-family: $galanoMedium;
+	line-height: 1.43;
+	font-size: 1.6rem;
+	@include respond-to(break2full) {
+		font-size: 1.2vw;
+	}
+	@include respond-to(fullwidth) {
+		line-height: 1.3; // 2017.03.22 // 20/26
+		font-size: 2rem;
+	}
+}
+.sm-sans-gallano {
+	@include sm-sans-gallano;
+}
 
 /* Sans serif - wide
 * Acumin Pro Wide from Typekit
 * We use the 1.125 modular scale based on 4.2rem
 -------------------------------------------------- */
-	@mixin lg-magazine-title {
-		font-weight: 800;
-		font-family: $sansWide;
-		line-height: 1.095237;
-		font-size: 2.6rem;
-		@include respond-to(break2full) {
-			font-size: 2.95vw;
-		}
-		@include respond-to(fullwidth) {
-			font-size: 4.2rem;
-		}
+
+@mixin lg-magazine-title {
+	font-weight: 800;
+	font-family: $sansWide;
+	line-height: 1.095237;
+	font-size: 2.6rem;
+	@include respond-to(break2full) {
+		font-size: 2.95vw;
 	}
-	@mixin md-magazine-title {
-		font-weight: 800;
-		font-family: $sansWide;
-		line-height: 1.095237;
-		font-size: 1.8rem;
-		@include respond-to(break2full) {
-			font-size: 2.4vw;
-		}
-		@include respond-to(fullwidth) {
-			font-size: 3.7rem;
-		}
+	@include respond-to(fullwidth) {
+		font-size: 4.2rem;
 	}
-	@mixin sm-magazine-title {
-		font-weight: 700; // one weight down for pc rendering at smaller sizes
-		font-family: $sansWide;
-		line-height: 1.2;
-		@include margin-bottom(1);
-		font-size: 1.8rem;
-		@include respond-to(break2full) {
-			font-size: 1.9vw;
-		}
-		@include respond-to(fullwidth) {
-			font-size: 3rem;
-		}
+}
+@mixin md-magazine-title {
+	font-weight: 800;
+	font-family: $sansWide;
+	line-height: 1.095237;
+	font-size: 1.8rem;
+	@include respond-to(break2full) {
+		font-size: 2.4vw;
 	}
-	@mixin sm-magazine-issue-title {
-		font-weight: 700;
-		font-family: $serif;
-		line-height: 1;
-		// font-size: 2.2rem;
-		// font-size: 4rem;
+	@include respond-to(fullwidth) {
+		font-size: 3.7rem;
+	}
+}
+@mixin sm-magazine-title {
+	font-weight: 700; // one weight down for pc rendering at smaller sizes
+	font-family: $sansWide;
+	line-height: 1.2;
+	@include margin-bottom(1);
+	font-size: 1.8rem;
+	@include respond-to(break2full) {
+		font-size: 1.9vw;
+	}
+	@include respond-to(fullwidth) {
 		font-size: 3rem;
-		@include respond-to(break2) {
-			// line-height: 1.143;
-			line-height: 1;
-		}
-		@include respond-to(break2full) {
-			// font-size: 1.8vw;
-			font-size: 2vw;
-		}
-		@include respond-to(fullwidth) {
-			// font-size: 2.8rem;
-			font-size: 3rem;
-		}
-		@include margin-bottom(1);
 	}
-	@mixin button-title {
-		font-weight: 800;
-		text-transform: uppercase;
-		font-family: $sansWide;
-		margin-bottom: 0;
-		line-height: 1.2;
-		font-size: 1.4rem;
-		@include respond-to(break2full) {
-			font-size: 1.1vw;
-			margin-bottom: 0.4vw;
-		}
-		@include respond-to(fullwidth) {
-			font-size: 1.8rem;
-			margin-bottom: 0.5rem;
-		}
+}
+@mixin sm-magazine-issue-title {
+	font-weight: 700;
+	font-family: $serif;
+	line-height: 1;
+	// font-size: 2.2rem;
+	// font-size: 4rem;
+	font-size: 3rem;
+	@include respond-to(break2) {
+		// line-height: 1.143;
+		line-height: 1;
 	}
-	@mixin sans-tag {
-		font-weight: 300;
-		text-transform: uppercase;
-		font-family: $sansWide;
-		color: $black65;
-		position: relative; // keep from being hidden under highlighted title
-		line-height: 1.1;
-		letter-spacing: 0.5px;
+	@include respond-to(break2full) {
+		// font-size: 1.8vw;
+		font-size: 2vw;
+	}
+	@include respond-to(fullwidth) {
+		// font-size: 2.8rem;
+		font-size: 3rem;
+	}
+	@include margin-bottom(1);
+}
+@mixin button-title {
+	font-weight: 800;
+	text-transform: uppercase;
+	font-family: $sansWide;
+	margin-bottom: 0;
+	line-height: 1.2;
+	font-size: 1.4rem;
+	@include respond-to(break2full) {
+		font-size: 1.1vw;
+		margin-bottom: 0.4vw;
+	}
+	@include respond-to(fullwidth) {
+		font-size: 1.8rem;
 		margin-bottom: 0.5rem;
-		font-size: 1.2rem;
-		@include respond-to(break2) {
-			line-height: 1.4;
-		}
-		@include respond-to(break2full) {
-			font-size: 1vw;
-			letter-spacing: 0.5px;
-			margin-bottom: 0.4vw;
-		}
-		@include respond-to(fullwidth) {
-			font-size: 1.6rem;
-			letter-spacing: 1px;
-			margin-bottom: 0;
-		}
 	}
-	@mixin nav-header {
-		font-weight: 800;
-		text-transform: uppercase;
-		font-family: $sansWide;
+}
+@mixin sans-tag {
+	font-weight: 300;
+	text-transform: uppercase;
+	font-family: $sansWide;
+	color: $black65;
+	position: relative; // keep from being hidden under highlighted title
+	line-height: 1.1;
+	letter-spacing: 0.5px;
+	margin-bottom: 0.5rem;
+	font-size: 1.2rem;
+	@include respond-to(break2) {
+		line-height: 1.4;
+	}
+	@include respond-to(break2full) {
+		font-size: 1vw;
+		letter-spacing: 0.5px;
+		margin-bottom: 0.4vw;
+	}
+	@include respond-to(fullwidth) {
+		font-size: 1.6rem;
+		letter-spacing: 1px;
+		margin-bottom: 0;
+	}
+}
+@mixin nav-header {
+	font-weight: 800;
+	text-transform: uppercase;
+	font-family: $sansWide;
+	line-height: 1.2;
+	font-size: 1.7rem;
+	@include respond-to(break2full) {
 		line-height: 1.2;
-		font-size: 1.7rem;
-		@include respond-to(break2full) {
-			line-height: 1.2;
-			font-size: 1vw;
-		}
-		@include respond-to(fullwidth) {
-			line-height: 1.4353;
-			font-size: 1.7rem;
-		}
+		font-size: 1vw;
 	}
+	@include respond-to(fullwidth) {
+		line-height: 1.4353;
+		font-size: 1.7rem;
+	}
+}
 
 /* Body type
 -------------------------------------------------- */
-	@mixin intro-serif {
-		font-weight: 500;
-		font-family: $serif;
-		// line-height: 1.267; // 38px
-		line-height: 1.3333; // 40px updated 2017.03.21
-		// font-size: 1.9rem;
-		font-size: 2.1rem; // 2017.03.33
-		@include respond-to(break2full) {
-			// font-size: 2.2vw;
-			font-size: 2vw;
-		}
-		@include respond-to(fullwidth) {
-			font-size: 3rem;
-		}
-		@include margin-bottom(1);
+
+@mixin intro-serif {
+	font-weight: 500;
+	font-family: $serif;
+	// line-height: 1.267; // 38px
+	line-height: 1.3333; // 40px updated 2017.03.21
+	// font-size: 1.9rem;
+	font-size: 2.1rem; // 2017.03.33
+	@include respond-to(break2full) {
+		// font-size: 2.2vw;
+		font-size: 2vw;
 	}
-	@mixin body-serif {
-		font-weight: 400;
-		font-family: $serif;
-		line-height: 1.333333; // 24/32
-		font-size: 1.9rem;
-		@include respond-to(break2full) {
-			font-size: 1.5vw;
-		}
-		@include respond-to(fullwidth) {
-			font-size: 2.4rem;
-		}
+	@include respond-to(fullwidth) {
+		font-size: 3rem;
 	}
-	@mixin intro-sans {
-		font-weight: 300;
-		font-family: $sans;
-		// line-height: 1.127; 
-		// line-height: 1.3333;
-		line-height: 1.167; // 2017.04.18 archives feature intro 30/35
+	@include margin-bottom(1);
+}
+@mixin body-serif {
+	font-weight: 400;
+	font-family: $serif;
+	line-height: 1.333333; // 24/32
+	font-size: 1.9rem;
+	@include respond-to(break2full) {
+		font-size: 1.5vw;
+	}
+	@include respond-to(fullwidth) {
+		font-size: 2.4rem;
+	}
+}
+@mixin intro-sans {
+	font-weight: 300;
+	font-family: $sans;
+	// line-height: 1.127; 
+	// line-height: 1.3333;
+	line-height: 1.167; // 2017.04.18 archives feature intro 30/35
+	font-size: 2.1rem;
+	@include respond-to(break2full) {
+		font-size: 1.9vw;
+	}
+	@include respond-to(fullwidth) {
+		font-size: 3rem;
+	}
+}
+@mixin body-sans {
+	font-weight: 300;
+	font-family: $sans;
+	line-height: 1.3333; // fw magazine article 21/28
+	font-size: 1.7rem;
+	@include respond-to(break2full) {
+		font-size: 1.25vw;
+	}
+	@include respond-to(fullwidth) {
 		font-size: 2.1rem;
-		@include respond-to(break2full) {
-	  		font-size: 1.9vw;
-		}
-		@include respond-to(fullwidth) {
-	  		font-size: 3rem;
-		}
 	}
-	@mixin body-sans {
-		font-weight: 300;
-		font-family: $sans;
-		line-height: 1.3333; // fw magazine article 21/28
-		font-size: 1.7rem;
-		@include respond-to(break2full) {
-			font-size: 1.25vw;
-		}
-		@include respond-to(fullwidth) {
-			font-size: 2.1rem;
-		}
-	}
-	
+}
+
 /* Slab
 * Unit Gothic 717 and 718 from Typekit
 -------------------------------------------------- */
-	@mixin lg-woodtype-extended {
-		font-family: $woodtypeExtended;
-		text-transform: uppercase;
-		line-height: 1;
-		@include respond-to(break2max) { // contain for buggyfill
-			font-size: 8vw;
-		}
-		@include respond-to(break2full) {
-			font-size: 2.9vw;
-		}
-		@include respond-to(fullwidth) {
-			font-size: 4rem; // folkways explore title bar
-		}
+
+@mixin lg-woodtype-extended {
+	font-family: $woodtypeExtended;
+	text-transform: uppercase;
+	line-height: 1;
+	@include respond-to(break2max) {
+		// contain for buggyfill
+		font-size: 8vw;
 	}
-	@mixin md-woodtype-extended {
-		font-family: $woodtypeExtended;
-		text-transform: uppercase;
-		line-height: 1;
-		@include respond-to(break2full) {
-			font-size: 2.4vw;
-		}
-		@include respond-to(fullwidth) {
-			font-size: 3.8rem;
-		}
+	@include respond-to(break2full) {
+		font-size: 2.9vw;
 	}
-	@mixin sm-woodtype-extended {
-		font-family: $woodtypeExtended;
-		text-transform: uppercase;
-		letter-spacing: 0.5px;
-		margin-top: 0; // bootstrap reset
-		margin-bottom: 1.5rem; // section title
-		line-height: 1.2; // section title
-		@include respond-to(break2max) { // contain for buggyfill
-			font-size: 5vw;
-		}
-		@include respond-to(break2) {
-			margin-bottom: 0;
-		}
-		@include respond-to(break2full) {
-			font-size: 1.9vw;
-		}
-		@include respond-to(fullwidth) {
-			font-size: 3rem;
-		}
+	@include respond-to(fullwidth) {
+		font-size: 4rem; // folkways explore title bar
 	}
+}
+@mixin md-woodtype-extended {
+	font-family: $woodtypeExtended;
+	text-transform: uppercase;
+	line-height: 1;
+	@include respond-to(break2full) {
+		font-size: 2.4vw;
+	}
+	@include respond-to(fullwidth) {
+		font-size: 3.8rem;
+	}
+}
+@mixin sm-woodtype-extended {
+	font-family: $woodtypeExtended;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	margin-top: 0; // bootstrap reset
+	margin-bottom: 1.5rem; // section title
+	line-height: 1.2; // section title
+	@include respond-to(break2max) {
+		// contain for buggyfill
+		font-size: 5vw;
+	}
+	@include respond-to(break2) {
+		margin-bottom: 0;
+	}
+	@include respond-to(break2full) {
+		font-size: 1.9vw;
+	}
+	@include respond-to(fullwidth) {
+		font-size: 3rem;
+	}
+}
 
 /* CSS type helper classes
 -------------------------------------------------- */
-	body {
-		font-family: $serif;
-		line-height: 1.333333; // 24/32
+
+body {
+	font-family: $serif;
+	line-height: 1.333333; // 24/32
+}
+.content, .text-card {
+	position: relative; // hold abs images that live inside ol or ul
+	h2 {
+		font-weight: 600;
+		@include margin-bottom(1); // lesson plans page
 	}
-	.content, .text-card {
-		position: relative; // hold abs images that live inside ol or ul
-		h2 {
-			font-weight: 600;
-			@include margin-bottom(1); // lesson plans page
+	h3 {
+		@include md-serif-title;
+		@include margin-bottom(1.3);
+	}
+	h4 {
+		@include sm-serif-title;
+		@include margin-bottom(2);
+	}
+	h5 {
+		@include sm-sans-title;
+		@include margin-bottom(0.5);
+	}
+	p:not(.caption) {
+		@include body-serif;
+		@include padding-bottom(1.6); // 30 - not margin because then when using columns, the margin carries over!!!, from http://stackoverflow.com/a/12503808
+	}
+	// common to ul and ol
+	li {
+		// list-style-position: outside;
+		@include margin-bottom(0.8); // archives detail page
+	}
+	.card {
+		@include margin-bottom(2);
+	}
+	.title {
+		@include sm-sans-title;
+		@include margin-bottom(0.3);
+		width: initial;
+		width: auto;
+	}
+	ul {
+		@include padding-bottom(2); // not margin because then when using columns, the margin carries over!!!, from http://stackoverflow.com/a/12503808
+		@include padding-left(2);
+		@include respond-to(break2max) {
+			padding-left: 1rem;
 		}
-		h3 {
-			@include md-serif;
-			@include margin-bottom(1.3);
-		}
-		h4 {
-			@include sm-serif-title;
-			@include margin-bottom(2);
-		}
-		h5 {
-			@include sm-sans-title;
-			@include margin-bottom(0.5);
-		}
-		p:not(.caption) {
-			@include body-serif;
-			@include padding-bottom(1.6); // 30 - not margin because then when using columns, the margin carries over!!!, from http://stackoverflow.com/a/12503808
-		}
-		// common to ul and ol
-		li {
-			// list-style-position: outside;
-			@include margin-bottom(0.8); // archives detail page
-		}
-		.title {
-			@include sm-sans-title;
-			@include margin-bottom(0.3);
-			width: initial;
-			width: auto;
-		}
-		ul {
-			@include padding-bottom(2); // not margin because then when using columns, the margin carries over!!!, from http://stackoverflow.com/a/12503808
-			@include padding-left(2);
-			@include respond-to(break2max) {
-				padding-left: 1rem;
-			}
-			@include margin-bottom(1);
-			li:not(.card) {
-				// inset
+		@include margin-bottom(1);
+		li:not(.card) {
+			// inset
+			position: relative;
+			// bullets
+			&:before {
+				content: '\61';
+				font-family: 'vd-icons';
+				display: inline-block;
 				position: relative;
-				// bullets
-				&:before {
-					content: '\61';
-					font-family: 'vd-icons';
-					display: inline-block;
-					position: relative;
-					bottom: 2px;
-					@include padding-right(1);
-					@include margin-left(-1.7);
-					font-size:0.5rem;
-					@include respond-to(break2full) {
-						font-size:0.32vw;
-					}
-					@include respond-to(fullwidth) {
-						font-size:0.5rem; // smaller bullet
-						bottom: 0.5rem;
-					}
+				bottom: 2px;
+				@include padding-right(1);
+				@include margin-left(-1.7);
+				font-size: 0.5rem;
+				@include respond-to(break2full) {
+					font-size: 0.32vw;
 				}
+				@include respond-to(fullwidth) {
+					font-size: 0.5rem; // smaller bullet
+					bottom: 0.5rem;
+				}
+			}
+		}
+	}
+	ol {
+		// needs more padding than ul for numbers
+		li {
+			list-style-type: decimal;
+			@include padding-left(1.5);
+			@include margin-left(2.5);
+			@include respond-to(break2max) {
+				padding-left: 0rem;
+				margin-left: 2.5rem;
 			}
 		}
 		ol {
-			// needs more padding than ul for numbers
 			li {
-				list-style-type: decimal;
-				@include padding-left(1.5);
-				@include margin-left(2.5);
+				list-style-type: upper-alpha;
+				@include padding-left(1);
 				@include respond-to(break2max) {
-					padding-left: 0rem;
-					margin-left: 2.5rem;
-				}
-			}
-			ol {
-				li {
-					list-style-type: upper-alpha;
-					@include padding-left(1);
-					@include respond-to(break2max) {
-						padding-left: 0;
-					}
+					padding-left: 0;
 				}
 			}
 		}
 	}
-	.content .more-link {
-		position: static;
-		float: right;
-		display: inline-block;
-		border-bottom: none;
-		box-shadow: none;
+}
+.content .more-link {
+	position: static;
+	float: right;
+	display: inline-block;
+	border-bottom: none;
+	box-shadow: none;
+}
+.content-footer {
+	position: relative;
+	h2 {
+		@include md-sans;
+		font-weight: 600;
 	}
-	.content-footer {
-		position: relative;
-		h2 {
-			@include md-sans;
-			font-weight: 600;
-		}
-		p, ul {
-			@include body-sans;
-		}
+	p, ul {
+		@include body-sans;
 	}
-
-	// type classes
-	// Serif
-	.lg-serif {@include lg-serif;}
-	.md-serif {@include md-serif;}
-	.sm-serif-title {@include sm-serif-title;}
-	.sm-serif-title-italic {@include sm-serif-title;font-style: italic;}
-
-	// Sans
-	.xl-sans {@include xl-sans;}
-	.xl-sans-semi {@include xl-sans;font-weight: 600;}
-	.lg-sans {@include lg-sans;}
-	.lg-sans-semi {@include lg-sans;font-weight: 600;}
-	.md-sans {@include md-sans;}
-	.md-sans-semi {@include md-sans;font-weight: 600;}
-	.caption-sans {@include caption-sans;}
-
-	// body type
-	.body-serif {@include body-serif;}
-	.intro-serif {@include intro-serif;}
-	.body-sans {@include body-sans;}
-	.intro-sans {@include lg-sans;}
-
-	// Woodtype Extended
-	.lg-woodtype-extended {@include lg-woodtype-extended;}
-	.md-woodtype-extended {@include md-woodtype-extended;}
-	.sm-woodtype-extended {@include sm-woodtype-extended;@include margin-top(1);}
-	.nav-header {@include nav-header;}
-
-	// Magazine
-	.lg-magazine-title {@include lg-magazine-title;}
-	.md-magazine-title {@include md-magazine-title;}
-	.sm-magazine-title {@include sm-magazine-title;}
-	.lg-magazine-issue-title {@include md-serif;}
-	.sm-magazine-issue-title {@include sm-magazine-issue-title;}
-
-	.button-title {@include button-title;}
-	.category-tag-type {@include sans-tag;}
-	.category-tag-bold-type {@include sans-tag;font-weight: 700;}
+}
+// type classes
+// Serif
+.lg-serif-title {
+	@include lg-serif-title;
+}
+.md-serif-title {
+	@include md-serif-title;
+}
+.sm-serif-title {
+	@include sm-serif-title;
+}
+.sm-serif-title-italic {
+	@include sm-serif-title;
+	font-style: italic;
+}
+// Sans
+.xl-sans {
+	@include xl-sans;
+}
+.xl-sans-semi {
+	@include xl-sans;
+	font-weight: 600;
+}
+.lg-sans {
+	@include lg-sans;
+}
+.lg-sans-semi {
+	@include lg-sans;
+	font-weight: 600;
+}
+.md-sans {
+	@include md-sans;
+}
+.md-sans-semi {
+	@include md-sans;
+	font-weight: 600;
+}
+.caption-sans {
+	@include caption-sans;
+}
+// body type
+.body-serif {
+	@include body-serif;
+}
+.intro-serif {
+	@include intro-serif;
+}
+.body-sans {
+	@include body-sans;
+}
+.intro-sans {
+	@include lg-sans;
+}
+// Woodtype Extended
+.lg-woodtype-extended {
+	@include lg-woodtype-extended;
+}
+.md-woodtype-extended {
+	@include md-woodtype-extended;
+}
+.sm-woodtype-extended {
+	@include sm-woodtype-extended;
+	@include margin-top(1);
+}
+.nav-header {
+	@include nav-header;
+}
+// Magazine
+.lg-magazine-title {
+	@include lg-magazine-title;
+}
+.md-magazine-title {
+	@include md-magazine-title;
+}
+.sm-magazine-title {
+	@include sm-magazine-title;
+}
+.lg-magazine-issue-title {
+	@include md-serif-title;
+}
+.sm-magazine-issue-title {
+	@include sm-magazine-issue-title;
+}
+.button-title {
+	@include button-title;
+}
+.category-tag-type {
+	@include sans-tag;
+}
+.category-tag-bold-type {
+	@include sans-tag;
+	font-weight: 700;
+}

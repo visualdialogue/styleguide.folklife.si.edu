@@ -70,7 +70,7 @@
 /* intro
 -------------------------------------------------- */
 	h2.intro-title { // for specificity override
-		@include lg-serif;
+		@include lg-serif-title;
 		@include margin-top(0.5);
 		@include margin-bottom(2.5);
 	}
@@ -417,7 +417,7 @@
 -------------------------------------------------- */
 	.video-section {
 		.title {
-			@include md-serif;
+			@include md-serif-title;
 		}
 		.subtitle {
 			@include md-sans;

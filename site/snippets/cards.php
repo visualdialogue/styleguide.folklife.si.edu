@@ -718,7 +718,7 @@
 		@include margin-bottom(1.5);
 	}
 	.subtitle {
-		@include md-serif;
+		@include md-serif-title;
 		color: #000;
 		@include margin-bottom(0.5);
 	}

@@ -26,9 +26,12 @@
 			color: $copy;
 		}
 	}
-	.remodal-description a, figcaption a, .thin-links {
-		border-bottom: 1.5px solid $hover;
-		box-shadow: inset 0 -2px 0 $hover;
+	.remodal-description a, figcaption a, .thin-links, .thin-links-wrapper a {
+		border-bottom: 1px solid $hover;
+		// border-bottom: 1px solid $hover; // update 2017.04.26 
+		// update 2017.04.26
+		// @include padding-bottom(0.2);
+		// box-shadow: inset 0 -2px 0 $hover;
 		color: $black30;
 		&:hover {
 			background: transparent;

@@ -62,10 +62,11 @@ $('.js-keyboard-toggle').on('keypress', function() {
 	})
 
 	// pause on slide change
-	$('.slick-dots li').on('click', function() {
-		console.log('pause this!');
-		pauseIt($(this));
-	});
+	// won't work b/c not on init
+	// $('.slick-dots li').on('click', function() {
+	// 	console.log('pause this!');
+	// 	pauseIt($(this));
+	// });
 
 
 	// pause on enter, from http://stackoverflow.com/a/979686
@@ -135,10 +136,14 @@ $('.js-keyboard-toggle').on('keypress', function() {
 	// if exists on page
 	if(typeof $bannerCarousel !== 'undefined') {
 		$bannerCarousel.on('init', function() {
+			console.log('banner init');
 			// cache arrows for selecting
 			var $slickArrow = $('.slick-arrow');
+			var $slickDots = $('.slick-dots li'); // 50 objects and folklife
+			var $slickTabs = $('.banner-nav .textbox-inner');// folkways
 			// add event handler to arrows to pause slider when clicked
-			$slickArrow.on('click', function() {
+			$slickArrow.add($slickDots).add($slickTabs).on('click', function() {
+				console.log('just clicked to pause');
 				$bannerCarousel.slick('slickPause');
 				console.log('banner paused');
 				// control pause button

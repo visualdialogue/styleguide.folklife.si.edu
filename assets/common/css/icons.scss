@@ -6,7 +6,11 @@
 
 /* Icons
 -------------------------------------------------- */
-
+svg {
+	// allow event bubbling when click on svg icon, from http://stackoverflow.com/a/26963621
+	// will not work in edge without this
+	pointer-events: none;
+}
 [class^="icon-"]:before, [class*=" icon-"]:before {
 	vertical-align: middle;
 }
@@ -433,7 +437,7 @@
 }
 .svg-play-button-pause {
 	// sizing
-	$mobile: 10vw;
+	$mobile: 7vw;
 	$tablet: 2.5vw;
 	$full: 40px;
 	@include respond-to(break2max) {
@@ -708,7 +712,7 @@ $ofull: 16px;
 	left: 0.1rem;
 	top:0.3rem;
 	// @include respond-to(break2) {top:0.1rem;}
-	@include respond-to(break2full) {top:0.3vw;}
+	@include respond-to(break2full) {top:0.25vw;}
 	@include respond-to(fullwidth) {top:0.3rem;}
 }
 .svg-pager-icon-circle-o {
@@ -716,12 +720,14 @@ $ofull: 16px;
 	height: $ofull;
 }
 .slick-dots li:hover {
-	.svg-pager-icon-circle {
-		display: block;
-	}
-	.svg-pager-icon-circle-o {
-		display: none;
-	}
+	@include respond-to(break2) {
+		.svg-pager-icon-circle {
+			display: block;
+		}
+		.svg-pager-icon-circle-o {
+			display: none;
+		}
+	}	
 }
 .svg-pager-icon-circle {
 	display: none; // default for active is hidden

@@ -1,1367 +1,1420 @@
 /* Accessibility, from https://accessibility.oit.ncsu.edu/it-accessibility-at-nc-state/developers/accessibility-handbook/mouse-and-keyboard-events/skip-to-main-content/
 -------------------------------------------------- */
-	a:focus, .button-inner:focus, .js-keyboard-toggle:focus {
-		@include outline;
-	}
-	a.skip-main {
-		left:-999px;
-		position:absolute;
-		position:fixed;
-		top:auto;
-		width:1px;
-		height:1px;
-		overflow:hidden;
-		z-index:-999;
-	}
-	a.skip-main:focus, a.skip-main:active {
-		position: fixed;
-		// position: static;
-		color: $copy;
-		background-color:#fff;
-		left: auto;
-		// top: auto;
-		top: 10vh;
-		width: 30%;
-		height: auto;
-		overflow:auto;
-		margin: 10px 35%;
-		padding:5px;
-		border:4px solid $hover;
-		text-align:center;
-		font-size:1.2em;
-		z-index:999;
-	}
+
+a:focus, .button-inner:focus, .js-keyboard-toggle:focus {
+	@include outline;
+}
+a.skip-main {
+	left: -999px;
+	position: absolute;
+	position: fixed;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	z-index: -999;
+}
+a.skip-main:focus, a.skip-main:active {
+	position: fixed;
+	// position: static;
+	color: $copy;
+	background-color: #fff;
+	left: auto;
+	// top: auto;
+	top: 10vh;
+	width: 30%;
+	height: auto;
+	overflow: auto;
+	margin: 10px 35%;
+	padding: 5px;
+	border: 4px solid $hover;
+	text-align: center;
+	font-size: 1.2em;
+	z-index: 999;
+}
 
 /* Bootstrap overrides
 -------------------------------------------------*/
-	.collapse {
-		clear: right;
-	}
-	.navbar-header {
-		float: none;
-	}
-	.container {
-		width: 100%;
-		max-width: $pageWidth;
-		padding: 0 15px;
-		@include respond-to(break2) {
-			padding: 0 80px;
-		}
-	}
-	.highlight-container {
-		width: 100%;
-		max-width: $pageWidth;
-		padding: 0;
-		@include respond-to(break2) {
-			// keep inner bg color smaller
-			padding: 0 40px;
-		}
-		.highlight-inner {
-			background-color: $black30;
-			// go below card colors
-			position: relative;
-			z-index: 0;
-			@include padding(4);
-			@include respond-to(break2max) {
-				padding: 1.5rem;
-			}
-		}
-		.section-title {
-			@include margin-bottom(3.4);
-		}
-	}
-	.last-container {
-		section {
-			margin-bottom: 2.5rem;
-		}
-	}
-	// folklife - talk story
-	.col-xs-half-image {
-		@include respond-to(break2max) {
-			float: left;
-			width: 54%;
-		}
-	}
-	.col-xs-half-details {
-		@include respond-to(break2max) {
-			float: left;
-			width: 46%;
-		}
-	}
-	.col-sm-half-image {
-		@include respond-to(break2) {
-			float: left;
-			width: 54%;
-		}
-	}
-	.col-sm-half-details {
-		@include respond-to(break2) {
-			float: left;
-			width: 46%;
-		}
-	}
-	// folklife homepage bottom collections
-	.col-half {
-		width: 50%;
-		float: left;
-		&:nth-of-type(2n + 1) {
-			padding-right:$small-gutter;
-			@include respond-to(break2full) {padding-right:$medium-gutter;}
-			@include respond-to(fullwidth) {padding-right:$full-gutter;}
-		}
-		&:nth-of-type(2n) {
-			padding-left:$small-gutter;
-			@include respond-to(break2full) {padding-left:$medium-gutter;}
-			@include respond-to(fullwidth) {padding-left:$full-gutter;}
-		}
-		// break every 2 cards so cards don't get hung
-		&:nth-of-type(2n + 1) {
-			clear:left;
-		}
-	}
 
-	// folklife teach
-	.col-xs-thirds {
-		width: 33.33333%;
-		float: left;
-		&:nth-of-type(3n + 1) {
-			padding-right:$small-gutter;
-			@include respond-to(break2full) {padding-right:$medium-gutter;}
-			@include respond-to(fullwidth) {padding-right:$full-gutter;}
-		}
-		&:nth-of-type(3n + 2) {
-			padding-left:$small-gutter;
-			padding-right:$small-gutter;
-			@include respond-to(break2full) {
-				padding-left:$medium-gutter;
-				padding-right:$medium-gutter;
-			}
-			@include respond-to(fullwidth) {
-				padding-left:$full-gutter;
-				padding-right:$full-gutter;
-			}
-		}
-		&:nth-of-type(3n + 3) {
-			padding-left:$small-gutter;
-			@include respond-to(break2full) {padding-left:$medium-gutter;}
-			@include respond-to(fullwidth) {padding-left:$full-gutter;}
-		}
-		// break every 3 cards so cards don't get hung
-		&:nth-of-type(3n + 1) {
-			clear:left;
+.collapse {
+	clear: right;
+}
+.navbar-header {
+	float: none;
+}
+.container {
+	width: 100%;
+	max-width: $pageWidth;
+	padding: 0 15px;
+	@include respond-to(break2) {
+		padding: 0 80px;
+	}
+}
+.highlight-container {
+	width: 100%;
+	max-width: $pageWidth;
+	padding: 0;
+	@include respond-to(break2) {
+		// keep inner bg color smaller
+		padding: 0 40px;
+	}
+	.highlight-inner {
+		background-color: $black30;
+		// go below card colors
+		position: relative;
+		z-index: 0;
+		@include padding(4);
+		@include respond-to(break2max) {
+			padding: 1.5rem;
 		}
 	}
-	.col-sm-thirds {
-		@include respond-to(break2) {
-			width: 33.33333%;
-			float: left;
-		}
+	.section-title {
+		@include margin-bottom(3.4);
+	}
+}
+.last-container {
+	section {
+		margin-bottom: 2.5rem;
+	}
+}
+// folklife - talk story
+.col-xs-half-image {
+	@include respond-to(break2max) {
+		float: left;
+		width: 54%;
+	}
+}
+.col-xs-half-details {
+	@include respond-to(break2max) {
+		float: left;
+		width: 46%;
+	}
+}
+.col-sm-half-image {
+	@include respond-to(break2) {
+		float: left;
+		width: 54%;
+	}
+}
+.col-sm-half-details {
+	@include respond-to(break2) {
+		float: left;
+		width: 46%;
+	}
+}
+// folklife homepage bottom collections
+.col-half {
+	width: 50%;
+	float: left;
+	&:nth-of-type(2n + 1) {
+		padding-right: $small-gutter;
 		@include respond-to(break2full) {
-			&:nth-of-type(3n + 1) {
-				padding-right:$medium-gutter;
-			}
-			&:nth-of-type(3n + 2) {
-				padding-left:$medium-gutter;
-				padding-right:$medium-gutter;
-			}
-			&:nth-of-type(3n + 3) {
-				padding-left:$medium-gutter;
-			}
-			// break every 3 cards so cards don't get hung
-			&:nth-of-type(3n + 1) {
-				clear:left;
-			}
+			padding-right: $medium-gutter;
 		}
 		@include respond-to(fullwidth) {
-			&:nth-of-type(3n + 1) {
-				padding-right:$full-gutter;
-			}
-			&:nth-of-type(3n + 2) {
-				padding-left:$full-gutter;
-				padding-right:$full-gutter;
-			}
-			&:nth-of-type(3n + 3) {
-				padding-left:$full-gutter;
-			}
-			// break every 3 cards so cards don't get hung
-			&:nth-of-type(3n + 1) {
-				clear:left;
-			}
+			padding-right: $full-gutter;
 		}
 	}
-
-/* Grid System
--------------------------------------------------- */
-	// bootstrap gutter override!!!
-	.row {
-		margin-left: -$small-gutter;
-		margin-right: -$small-gutter;
-		@include respond-to(break2) {
-			margin-left: -$medium-gutter;
-			margin-right: -$medium-gutter;
+	&:nth-of-type(2n) {
+		padding-left: $small-gutter;
+		@include respond-to(break2full) {
+			padding-left: $medium-gutter;
 		}
 		@include respond-to(fullwidth) {
-			margin-left: -20px;
-			margin-right: -20px;
-			margin-bottom:0;
+			padding-left: $full-gutter;
 		}
 	}
-	// bootstrap override default padding. Make it more responsive. Be specific enough to apply to our card system with 2 selectors
-	// 3 selectors to win specificity war
-	[class*="col-"] {
+	// break every 2 cards so cards don't get hung
+	&:nth-of-type(2n + 1) {
+		clear: left;
+	}
+}
+// folklife teach
+.col-xs-thirds {
+	width: 33.33333%;
+	float: left;
+	&:nth-of-type(3n + 1) {
+		padding-right: $small-gutter;
+		@include respond-to(break2full) {
+			padding-right: $medium-gutter;
+		}
+		@include respond-to(fullwidth) {
+			padding-right: $full-gutter;
+		}
+	}
+	&:nth-of-type(3n + 2) {
 		padding-left: $small-gutter;
 		padding-right: $small-gutter;
-		@include respond-to(break2) {
+		@include respond-to(break2full) {
 			padding-left: $medium-gutter;
 			padding-right: $medium-gutter;
 		}
 		@include respond-to(fullwidth) {
-			padding-left: 20px;
-			padding-right: 20px;
+			padding-left: $full-gutter;
+			padding-right: $full-gutter;
 		}
 	}
+	&:nth-of-type(3n + 3) {
+		padding-left: $small-gutter;
+		@include respond-to(break2full) {
+			padding-left: $medium-gutter;
+		}
+		@include respond-to(fullwidth) {
+			padding-left: $full-gutter;
+		}
+	}
+	// break every 3 cards so cards don't get hung
+	&:nth-of-type(3n + 1) {
+		clear: left;
+	}
+}
+.col-sm-thirds {
+	@include respond-to(break2) {
+		width: 33.33333%;
+		float: left;
+	}
+	@include respond-to(break2full) {
+		&:nth-of-type(3n + 1) {
+			padding-right: $medium-gutter;
+		}
+		&:nth-of-type(3n + 2) {
+			padding-left: $medium-gutter;
+			padding-right: $medium-gutter;
+		}
+		&:nth-of-type(3n + 3) {
+			padding-left: $medium-gutter;
+		}
+		// break every 3 cards so cards don't get hung
+		&:nth-of-type(3n + 1) {
+			clear: left;
+		}
+	}
+	@include respond-to(fullwidth) {
+		&:nth-of-type(3n + 1) {
+			padding-right: $full-gutter;
+		}
+		&:nth-of-type(3n + 2) {
+			padding-left: $full-gutter;
+			padding-right: $full-gutter;
+		}
+		&:nth-of-type(3n + 3) {
+			padding-left: $full-gutter;
+		}
+		// break every 3 cards so cards don't get hung
+		&:nth-of-type(3n + 1) {
+			clear: left;
+		}
+	}
+}
+
+/* Grid System
+-------------------------------------------------- */
+
+// bootstrap gutter override!!!
+.row {
+	margin-left: -$small-gutter;
+	margin-right: -$small-gutter;
+	@include respond-to(break2) {
+		margin-left: -$medium-gutter;
+		margin-right: -$medium-gutter;
+	}
+	@include respond-to(fullwidth) {
+		margin-left: -20px;
+		margin-right: -20px;
+		margin-bottom: 0;
+	}
+}
+// bootstrap override default padding. Make it more responsive. Be specific enough to apply to our card system with 2 selectors
+// 3 selectors to win specificity war
+[class*="col-"] {
+	padding-left: $small-gutter;
+	padding-right: $small-gutter;
+	@include respond-to(break2) {
+		padding-left: $medium-gutter;
+		padding-right: $medium-gutter;
+	}
+	@include respond-to(fullwidth) {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
 
 /* half sections
 -------------------------------------------------- */
-	$half-padding-mobile-section: 4rem;
-	$half-padding-tablet-section: 2.7%;
-	$half-padding-desktop-section: 4rem;
 
-	.half-section:nth-of-type(1) {
-		// padding-right: $half-padding-mobile-section;
-		@include respond-to(break2) {
-			padding-right: $half-padding-tablet-section;
-		}
-		@include respond-to(fullwidth) {
-			padding-right: $half-padding-desktop-section;
-		}
+$half-padding-mobile-section: 4rem;
+$half-padding-tablet-section: 2.7%;
+$half-padding-desktop-section: 4rem;
+.half-section:nth-of-type(1) {
+	// padding-right: $half-padding-mobile-section;
+	@include respond-to(break2) {
+		padding-right: $half-padding-tablet-section;
 	}
-	.half-section:nth-of-type(2) {
-		// padding-left: $half-padding-mobile-section;
-		@include respond-to(break2) {
-			padding-left: $half-padding-tablet-section;
-		}
-		@include respond-to(fullwidth) {
-			padding-left: $half-padding-desktop-section;
-		}
+	@include respond-to(fullwidth) {
+		padding-right: $half-padding-desktop-section;
 	}
-	.vertical-rule {
-		display: none;
-		@include respond-to(break2) {
-			display: block;
-			position: absolute;
-			top: -1rem;
-			right: -4.5px;
-			height: 100%;
-			width: 9px;
+}
+.half-section:nth-of-type(2) {
+	// padding-left: $half-padding-mobile-section;
+	@include respond-to(break2) {
+		padding-left: $half-padding-tablet-section;
+	}
+	@include respond-to(fullwidth) {
+		padding-left: $half-padding-desktop-section;
+	}
+}
+.vertical-rule {
+	display: none;
+	@include respond-to(break2) {
+		display: block;
+		position: absolute;
+		// top: -1rem;
+		top: -0.5rem;
+		right: -4.5px;
+		height: 100%;
+		width: 9px;
 		// right border as image from http://stackoverflow.com/a/7948532
-			background-image: url(../assets/images/hr/vertical-rule.png);
-			background-position: right;
-			background-repeat: no-repeat;
-			background-size: 9px 100%;
-		}
+		background-image: url(../assets/images/hr/vertical-rule.png);
+		background-position: right;
+		background-repeat: no-repeat;
+		background-size: 9px 100%;
 	}
+}
 
 /* General / Sections
 -------------------------------------------------- */
-	body {
-		@include body-serif;
-		overflow-y: scroll; // force vertical scroll bar so image galleries don't jump page
-	}
-	section {
-		position: relative; // contain more link
-		// @include margin-bottom(2); // added 2rem to bottom of all cards
-	}
-	p {
-		margin: 0;
-	}
-	ul {
-		margin: 0;
-	}
-	.first-section {
-		.section-title {
-			@include margin-top(-0.8);
-		}
-	}
+
+body {
+	@include body-serif;
+	overflow-y: scroll; // force vertical scroll bar so image galleries don't jump page
+}
+section {
+	position: relative; // contain more link
+	// @include margin-bottom(2); // added 2rem to bottom of all cards
+}
+p {
+	margin: 0;
+}
+ul {
+	margin: 0;
+}
+.first-section {
 	.section-title {
-		@include sm-woodtype-extended;
-		color: $black65;
-		margin-bottom: 1.5rem;
+		@include margin-top(-0.8);
+	}
+}
+.section-title {
+	@include sm-woodtype-extended;
+	color: $black65;
+	margin-bottom: 1.5rem;
+	@include respond-to(break2full) {
+		margin-bottom: 2.6vw;
+	}
+	@include respond-to(fullwidth) {
+		margin-bottom: 3.3rem; // 40px
+	}
+}
+.main {
+	.section-title {
+		margin-bottom: 2.2rem;
 		@include respond-to(break2full) {
-			margin-bottom: 2.6vw;
+			margin-bottom: 1.3vw;
 		}
 		@include respond-to(fullwidth) {
-			margin-bottom: 3.3rem; // 40px
-		}
+			margin-bottom: 2.2rem;
+		} // 30 px
 	}
-	.main {
-		.section-title {
-			margin-bottom:2.2rem;
-			@include respond-to(break2full) {margin-bottom:1.3vw;}
-			@include respond-to(fullwidth) {margin-bottom:2.2rem;} // 30 px
-		}
+}
+.sidebar {
+	color: $black70;
+	@include margin-bottom(6); // keep from footer
+	@include respond-to(break2max) {
+		padding: 0 $small-gutter;
 	}
-	.sidebar {
-		color: $black70;
-		@include margin-bottom(6); // keep from footer
+	li:last-of-type {
+		border-bottom: none;
+		@include padding-bottom(0.7);
+	}
+	.horizontal-card .tag {
 		@include respond-to(break2max) {
-			padding: 0 $small-gutter;
-		}
-		li:last-of-type {
-			border-bottom: none;
-			@include padding-bottom(0.7);
-		}
-		.horizontal-card .tag {
-			@include respond-to(break2max) {
-				margin-top:1rem;
-			}
-		}
-		.top-border-card:before {
-			@include respond-to(break2max) {
-				border: none;
-			}
-		}
-		.sidebar-highlight {
-			&.active, &:hover {
-				background-color: $black10;
-			}
-			// text stays same
-			a:hover {
-				color: $black80;
-			}
-			// grandchild bold
-			li.active {
-				font-weight: 600;
-			}
+			margin-top: 1rem;
 		}
 	}
-	.sidebar h3, .sidebar-section-title, #related-content-mag:before {
-		@include lg-sans;
-		color: $black50;
+	.top-border-card:before {
+		@include respond-to(break2max) {
+			border: none;
+		}
+	}
+	.sidebar-highlight {
+		&.active, &:hover {
+			background-color: $black10;
+		}
+		// text stays same
+		a:hover {
+			color: $black80;
+		}
+		// grandchild bold
+		li.active {
+			font-weight: 600;
+		}
+	}
+}
+.sidebar h3, .sidebar-section-title, #related-content-mag:before {
+	@include lg-sans;
+	color: $black50;
+	margin-top: 0;
+	@include margin-bottom(0); // override default h3
+	@include padding-bottom(0.8);
+	@include border(bottom);
+}
+.sidebar h4, .sidebar-item-title {
+	@include caption-sans;
+	@include padding-top(0.8);
+	color: $black50;
+	margin: 0;
+}
+.sidebar-item, #related-content-mag li {
+	@include border(bottom);
+	@include padding-bottom(1);
+}
+// folkways teaching page fix before initial launch
+li.sidebar-item a {
+	@include sm-sans-title-light;
+	display: inline-block; // to get correct line height??
+	// line-height: 1.33 !important; // layout
+}
+.last-sidebar-item {
+	display: block; // in case it's liner notes <a>
+	@include margin-bottom(3.2);
+}
+.sidebar-section {
+	@include margin-bottom(2.4);
+	@include respond-to(break2max) {
+		margin-bottom: 3rem;
+	}
+}
+hr {
+	margin: 0; // bootstrap reset
+	border: none;
+}
+.hr {
+	// from http://stackoverflow.com/a/24499695
+	display: block;
+	border: 0px;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+.thick-hr {
+	height: 11px;
+	background-image: url(../assets/images/hr/horizontal-rule.png);
+	background-size: 100% 100%; // scrunch for mobile
+	@include respond-to(break2) {
 		margin-top: 0;
-		@include margin-bottom(0); // override default h3
-		@include padding-bottom(0.8);
-		@include border(bottom);
 	}
-	.sidebar h4, .sidebar-item-title {
-		@include caption-sans;
-		@include padding-top(0.8);
-		color: $black50;
-		margin: 0;
+	@include margin-bottom(5.2);
+}
+.half-hr {
+	@include respond-to(break2max) {
+		margin-bottom: 2.5vw;
 	}
-	.sidebar-item, #related-content-mag li {
-		@include border(bottom);
-		@include padding-bottom(1);
+	@include respond-to(break2full) {
+		margin-bottom: 1.3vw;
 	}
-	// folkways teaching page fix before initial launch
-	li.sidebar-item a {
-		@include sm-sans-title-light;
-		line-height: 1.33 !important; // layout
+	@include respond-to(fullwidth) {
+		margin-bottom: 2rem;
 	}
-	.last-sidebar-item {
-		display: block; // in case it's liner notes <a>
-		@include margin-bottom(3.2);
+}
+.svg-thin-hr {
+	// make inline with js, from http://stackoverflow.com/questions/24933430/img-src-svg-changing-the-fill-color
+	font-size: 1px; // make smaller
+	height: 5px; // for older ie
+	path {
+		fill: $black50; // default
 	}
-	.sidebar-section {
-		@include margin-bottom(2.4);
-		@include respond-to(break2max) {
-			margin-bottom: 3rem;
-		}
+	@include respond-to(break2max) {
+		margin-top: 1vw;
+		margin-bottom: 3vw;
 	}
-	hr {
-		margin: 0; // bootstrap reset
-		border: none;
+	@include respond-to(break2full) {
+		margin-top: 0.5vw;
+		margin-bottom: 2.4vw;
 	}
-	.hr {
-		// from http://stackoverflow.com/a/24499695
-		display:block;
-		border:0px;
-		background-size: 100% 100%;
-		background-repeat: no-repeat;
+	@include respond-to(fullwidth) {
+		margin-top: 0.8rem;
+		margin-bottom: 3.75rem;
 	}
-	.thick-hr {
-		height:11px;
-		background-image:url(../assets/images/hr/horizontal-rule.png);
-		background-size: 100% 100%; // scrunch for mobile
-		@include respond-to(break2) {
-			margin-top:0;
-		}
-		@include margin-bottom(5.2);
+}
+.mobile-only-hr {
+	margin-bottom: 1rem;
+}
+// sub pages
+.title-bar {
+	// bootstrap reset
+	padding: 0;
+	margin: 0;
+	border: none;
+	background-color: $black65; // default
+	&-hr {
+		margin-top: -1.6rem;
 	}
-	.half-hr {
-		@include respond-to(break2max) {
-			margin-bottom:2.5vw;
-		}
-		@include respond-to(break2full) {margin-bottom:1.3vw;}
-		@include respond-to(fullwidth) {margin-bottom:2rem;}
+	@include margin-bottom(4);
+}
+.page-title {
+	color: #fff;
+	@include lg-woodtype-extended;
+	@include margin-top(1.3);
+	@include margin-bottom(1.3);
+}
+a .page-title {
+	color: #fff; // override a color
+	&:hover {
+		// custom hover, getting variable from top of main scss file, e.g. festival.scss
+		color: $hover;
 	}
-	.svg-thin-hr {
-		// make inline with js, from http://stackoverflow.com/questions/24933430/img-src-svg-changing-the-fill-color
-		font-size: 1px; // make smaller
-		height: 5px; // for older ie
-		path {
-			fill: $black50; // default
-		}
-		@include respond-to(break2max) {
-			margin-top: 1vw;
-			margin-bottom: 3vw;
-		}
-		@include respond-to(break2full) {
-			margin-top:0.5vw;
-			margin-bottom: 2.4vw;
-		}
-		@include respond-to(fullwidth) {
-			margin-top:0.8rem;
-			margin-bottom:3.75rem;
-		}
+}
+.subcollection {
+	@include padding-bottom(1.5); // not margin b/c margin carries over on column breaks
+	display: inline-block; // prevent column overhang
+	ul, ol {
+		// counter default list indendation
+		padding-left: 0;
 	}
-	.mobile-only-hr {
-		margin-bottom: 1rem;
-	}
-	// sub pages
-	.title-bar {
-		// bootstrap reset
-		padding: 0;
-		margin: 0;
-		border: none;
-		background-color: $black65; // default
-		&-hr {
-			margin-top: -1.6rem;
-		}
-		@include margin-bottom(4);
-	}
-	.page-title {
-		color: #fff;
-		@include lg-woodtype-extended;
-		@include margin-top(1.3);
-		@include margin-bottom(1.3);
-	}
-	a .page-title {
-		color: #fff; // override a color
-		&:hover {
-			// custom hover, getting variable from top of main scss file, e.g. festival.scss
-			color: $hover;
-		}
-	}
-	.subcollection {
-		@include padding-bottom(1.5); // not margin b/c margin carries over on column breaks
-		display: inline-block; // prevent column overhang
-		ul, ol {
-			// counter default list indendation
-			padding-left: 0;
-		}
-	}
+}
 
 /* Folkways Magazine Article and Lesson Plans Sidebar
 -------------------------------------------------- */
-	.sidebar-audio {
-		@include margin-bottom(4);
-		.sidebar-title {
-			@include xl-sans;
-			font-weight: 600;
-			@include margin-bottom(3.7);
-			line-height: 1 !important; // mq override
-		}
-		.sidebar-card {
-			@include margin-bottom(4);
-			.title {
-				@include margin-top(0);
-				line-height: 1.3;
-				@include margin-bottom(0.2);
-			}
-			.details-inner {
-				@include respond-to(break2) {
-					padding-top:0; // horizontal card
-				}
-			}
-		}
-		.table-hover > tbody > tr:hover {
-			background-color: $black10; // bootstrap override
-		}
-		.track {
-			@include sm-sans-title-light;
-		}
-		.track-title {
-			font-weight: 600;
-		}
-		.track-action {
-			@include caption-sans;
-			text-transform: none;
-		}
-	}
 
-	// Sidebar Video
-	.sidebar-video, .sidebar-album {
-		.details-inner {
-			@include padding-top(2);
-		}
+.sidebar-audio {
+	@include margin-bottom(4);
+	.sidebar-title {
+		@include xl-sans;
+		font-weight: 600;
+		@include margin-bottom(3.7);
+		line-height: 1 !important; // mq override
+	}
+	.sidebar-card {
+		@include margin-bottom(4);
 		.title {
-			@include xl-sans;
-			font-weight: 600;
+			@include margin-top(0);
+			line-height: 1.3;
+			@include margin-bottom(0.2);
+		}
+		.details-inner {
+			@include respond-to(break2) {
+				padding-top: 0; // horizontal card
+			}
 		}
 	}
+	.table-hover > tbody > tr:hover {
+		background-color: $black10; // bootstrap override
+	}
+	.track {
+		@include sm-sans-title-light;
+	}
+	.track-title {
+		font-weight: 600;
+	}
+	.track-action {
+		@include caption-sans;
+		text-transform: none;
+	}
+}
+// Sidebar Video
+.sidebar-video, .sidebar-album {
+	.details-inner {
+		@include padding-top(2);
+	}
+	.title {
+		@include xl-sans;
+		font-weight: 600;
+	}
+}
 
 /* Collection page (Folklife Archives page)
 -------------------------------------------------- */
-	.collection-page {
-		.general-content-card {
-			@include margin-bottom(0.8);
-		}
-		.details-inner {
-			@include padding-top(0.8);
-		}
+
+.collection-page {
+	.general-content-card {
+		@include margin-bottom(0.8);
 	}
+	.details-inner {
+		@include padding-top(0.8);
+	}
+}
 
 /* General Content page
 -------------------------------------------------- */
-	.general-content {
-		.intro-content {
-			margin-bottom:0;
-			p {
-				@include intro-serif;
-				margin-bottom: 0 !important;
-			}
-		}
-	}
-	// Mission page
-	.sidebar-image {
-		@include margin-bottom(4);
-	}
-	.sidebar-pull-quote {
-		.copy {
-			@include sm-sans-title;
-			line-height: 1.3 !important;
-			@include margin-top(1);
-		}
-		p {
-			@include margin-bottom(1.5);
-		}
 
-	}
-	.sidebar-pagination {
-		.sidebar-section-title a {
-			color: inherit; // keep sidebar title although a link
-		}
-		.image {
-			@include margin-top(2);
-		}
-		.title {
-			@include sm-serif-title;
-			@include margin-top(2);
-			color: black;
+.general-content {
+	.intro-content {
+		margin-bottom: 0;
+		p {
+			@include intro-serif;
+			margin-bottom: 0 !important;
 		}
 	}
+}
+// Mission page
+.sidebar-image {
+	@include margin-bottom(4);
+}
+.sidebar-pull-quote {
+	.copy {
+		@include sm-sans-title;
+		line-height: 1.3 !important;
+		@include margin-top(1);
+	}
+	p {
+		@include margin-bottom(1.5);
+	}
+}
+.sidebar-pagination {
+	.sidebar-section-title a {
+		color: inherit; // keep sidebar title although a link
+	}
+	.image {
+		@include margin-top(2);
+	}
+	.title {
+		@include sm-serif-title;
+		@include margin-top(2);
+		color: black;
+	}
+}
 
 /* Become a Member
 -------------------------------------------------- */
-	// as seen on folkways homepage for becoming a member and support
-	.highlight-bar {
-		background-color: $black20;
-		@include padding-top(4);
-		@include padding-bottom(4);
-		@include margin-bottom(7.2); // 80px
+
+// as seen on folkways homepage for becoming a member and support
+.highlight-bar {
+	background-color: $black20;
+	@include padding-top(4);
+	@include padding-bottom(4);
+	@include margin-bottom(7.2); // 80px
+}
+.become-a-member {
+	position: relative; // so absolute .copy can be correct width
+	@include respond-to(break2max) {
+		position: static !important;
+		margin-bottom: 5vw;
 	}
-	.become-a-member {
-		position: relative; // so absolute .copy can be correct width
+	&-inner {
+		position: relative;
+		background-color: #fff;
+	}
+	.image, .copy {
+		float: left;
+	}
+	.image {
+		position: relative; // contain vert child
+		@include sm-woodtype-extended;
+		@include margin-bottom(0);
+		color: #fff;
+		text-align: center;
+		width: 50%;
+		@include respond-to(break2) {
+			width: 53%;
+		}
+	}
+	&-image-text {
+		width: 100%;
+	}
+	.copy {
+		@include lg-sans;
+		text-align: center;
 		@include respond-to(break2max) {
-			position: static !important;
-			margin-bottom:5vw;
+			width: 50%;
+			font-size: 4vw;
 		}
 		&-inner {
-			position: relative;
-			background-color: #fff;
-		}
-		.image, .copy {
-			float: left;
-		}
-		.image {
-			position: relative; // contain vert child
-			@include sm-woodtype-extended;
-			@include margin-bottom(0);
-			color: #fff;
-			text-align: center;
-			width: 50%;
-			@include respond-to(break2) {
-				width: 53%;
-			}
-		}
-		&-image-text {
-			width: 100%;
-		}
-		.copy {
-			@include lg-sans;
-			text-align: center;
 			@include respond-to(break2max) {
 				width: 50%;
-				font-size: 4vw;
+				padding: 1.5rem 0;
 			}
-			&-inner {
-				@include respond-to(break2max) {
-					width: 50%;
-					padding: 1.5rem 0;
-				}
-				// make up for line-height
-				@include respond-to(break2) {
-					width: 47%;
-				}
-				@include respond-to(break2full) {
-					margin-top:-0.1vw;
-					font-size: 1.9vw;
-				}
-				@include respond-to(fullwidth) {
-					margin-top:-0.6rem;
-				}
+			// make up for line-height
+			@include respond-to(break2) {
+				width: 47%;
+			}
+			@include respond-to(break2full) {
+				margin-top: -0.1vw;
+				font-size: 1.9vw;
+			}
+			@include respond-to(fullwidth) {
+				margin-top: -0.6rem;
 			}
 		}
 	}
+}
 
 /* Buttons
 -------------------------------------------------*/
-	.button {
-		cursor: pointer;
-		// clear: left;
-		.title {
-			@include button-title;
-			color: #fff;
-			font-weight: 700;
-			margin:0 !important;
-			width: auto;
-			display: inline-block; // override default .title display:block;
-			@include respond-to(fullwidth) {
-				padding-right: 0.5rem;
-			}
-		}
-		.price {
-			color: #fff;
-			@include sm-sans-title-light;
-			@include margin-left(0);
+
+.button {
+	cursor: pointer;
+	// clear: left;
+	.title {
+		@include button-title;
+		color: #fff;
+		font-weight: 700;
+		margin: 0 !important;
+		width: auto;
+		display: inline-block; // override default .title display:block;
+		@include respond-to(fullwidth) {
+			padding-right: 0.5rem;
 		}
 	}
-	.button-inner {
-		background-color: $black60;
-		position: static;
-		@include padding-top(0.6);
-		@include padding-right(1);
-		@include padding-bottom(0.8);
-		@include padding-left(1);
-		&:hover {
-			background-color: black;
-		}
+	.price {
+		color: #fff;
+		@include sm-sans-title-light;
+		@include margin-left(0);
 	}
+}
+.button-inner {
+	background-color: $black60;
+	position: static;
+	@include padding-top(0.6);
+	@include padding-right(1);
+	@include padding-bottom(0.8);
+	@include padding-left(1);
+	&:hover {
+		background-color: black;
+	}
+}
 
 /* Support and Signup
 -------------------------------------------------- */
-	.newsletter-signup-copy, .support-copy {
-		@include padding-top(1);
-		@include padding-bottom(2);
-		@include padding-right(1);
-		@include padding-left(2);
-	}
-	// Folkways
-	.click-to-join-folkways {
-		// @include lg-sans;
-		// background-color: $black20;
-		// font-weight: 500;
-		// cursor: pointer;
-		display: block;
 
-		@include respond-to(break2max) {
-			font-size: 4vw;
-		}
-		@include respond-to(break2full) {
-			line-height: 2.4;
-		}
-
-		&:hover {
-			background-color: $black60;
-			color: $black30;
-		}
+.newsletter-signup-copy, .support-copy {
+	@include padding-top(1);
+	@include padding-bottom(2);
+	@include padding-right(1);
+	@include padding-left(2);
+}
+// Folkways
+.click-to-join-folkways {
+	// @include lg-sans;
+	// background-color: $black20;
+	// font-weight: 500;
+	// cursor: pointer;
+	display: block;
+	@include respond-to(break2max) {
+		font-size: 4vw;
 	}
+	@include respond-to(break2full) {
+		line-height: 2.4;
+	}
+	&:hover {
+		background-color: $black60;
+		color: $black30;
+	}
+}
 
 /* Support Us
 -------------------------------------------------- */
-	.above-support-hr {
-		@include respond-to(break2) {
-			@include margin-bottom(3);
-		}
+
+.above-support-hr {
+	width: 100%;
+	@include respond-to(break2) {
+		@include margin-bottom(3);
 	}
-	.support-folkways {
-		.support {
-			border: none;
-		}
-		.support-copy {
-			@include respond-to(break2max) {
-				padding-top: 1.8vw;
-			}
-			@include respond-to(fullwidth) {
-				height: 15.6rem;
-			}
-		}
-	}
+}
+.support-folkways {
 	.support {
-		background-color: #fff;
-		@include border(all, 2px, $black40);
-		position: relative; // contain support button
-	}
-	.support-copy, .support-button {
-		@include respond-to(break2) {
-			float: left;
-			width: 50%;
-			display: inline-block;
-			vertical-align: top;
-		}
+		border: none;
 	}
 	.support-copy {
-		@include respond-to(break2) {
-			width: 46.45%; // 314px / 676px
-			line-height: 1.2;
-		}
-		@include respond-to(break2full) { // don't override common css above for full width
-			padding-top: 1.1vw;
-			height: 9.8vw;
+		@include respond-to(break2max) {
+			padding-top: 1.8vw;
 		}
 		@include respond-to(fullwidth) {
-			height: 15rem;
+			height: 15.6rem;
 		}
 	}
-	.support-button, .newsletter-signup-button {
-		background-color: $black60;
-		@include sm-woodtype-extended;
-		margin-bottom:0;
-		color: #fff;
-		text-align: center;
-		clear:none;
-		@include respond-to(break2max) {
-			padding: 3vw;
-			// height: 19vw; // responsive for text
-			height: auto;
-		}
-		@include respond-to(break2) {
-			padding: 0;
-			@include vertically-align-parent;
-
-		}
-		&:hover {
+}
+.support {
+	background-color: #fff;
+	@include border(all, 2px, $black40);
+	position: relative; // contain support button
+}
+.support-copy, .support-button {
+	@include respond-to(break2) {
+		float: left;
+		width: 50%;
+		display: inline-block;
+		vertical-align: top;
+	}
+}
+.support-copy {
+	@include respond-to(break2) {
+		width: 46.45%; // 314px / 676px
+		line-height: 1.2;
+	}
+	@include respond-to(break2full) {
+		// don't override common css above for full width
+		padding-top: 1.1vw;
+		height: 9.8vw;
+	}
+	@include respond-to(fullwidth) {
+		height: 15rem;
+	}
+}
+.support-button, .newsletter-signup-button {
+	background-color: $black60;
+	@include sm-woodtype-extended;
+	margin-bottom: 0;
+	color: #fff;
+	text-align: center;
+	clear: none;
+	@include respond-to(break2max) {
+		padding: 3vw;
+		// height: 19vw; // responsive for text
+		height: auto;
+	}
+	@include respond-to(break2) {
+		padding: 0;
+		@include vertically-align-parent;
+	}
+	&:hover {
+		background-color: black;
+		.button-inner {
 			background-color: black;
-			.button-inner {
-				background-color: black;
-			}
-		}
-		a {
-			color: white;
-		}
-		.button-inner {
-			@include respond-to(break2) {
-				@include vertically-align;
-			}
 		}
 	}
-	.support-button {
-		@include respond-to(break2) {
-			width: 53.55%; // 100 - 46.45%
-			position: absolute;
-			top: 0;
-			right: 0;
-			bottom: 0;
-		}
-	}
-	.newsletter-signup-button-wrapper {
-		display: table;
-		width: 100%;
-	}
-	.newsletter-signup-button {
-		.button-inner {
-			position: relative; // contain button
-			transform: none;
-			width: 100%;
-			padding:0.5rem;
-			@include respond-to(break2full) {padding:1.5vw;}
-			@include respond-to(fullwidth) {padding:1.85rem;}
-		}
+	a {
+		color: white;
 	}
 	.button-inner {
 		@include respond-to(break2) {
-			line-height: 1.1;
-		}		
+			@include vertically-align;
+		}
 	}
+}
+.support-button {
+	@include respond-to(break2) {
+		width: 53.55%; // 100 - 46.45%
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+	}
+}
+.newsletter-signup-button-wrapper {
+	display: table;
+	width: 100%;
+}
+.newsletter-signup-button {
+	.button-inner {
+		position: relative; // contain button
+		transform: none;
+		width: 100%;
+		padding: 0.5rem;
+		@include respond-to(break2full) {
+			padding: 1.5vw;
+		}
+		@include respond-to(fullwidth) {
+			padding: 1.85rem;
+		}
+	}
+}
+.button-inner {
+	@include respond-to(break2) {
+		line-height: 1.1;
+	}
+}
 
 /* Newsletter Signup
 -------------------------------------------------- */
-	.newsletter-signup-section, .support-section, .support-folkways {
-		@include body-sans;
+
+.newsletter-signup-section, .support-section, .support-folkways {
+	@include body-sans;
+}
+.newsletter-signup-section, .support-section {
+	margin-bottom: 2rem;
+	@include respond-to(break2) {
+		margin-bottom: 4rem;
 	}
-	.newsletter-signup-section, .support-section {
-		margin-bottom: 2rem;
+}
+.newsletter-signup-copy {
+	background-color: $black10;
+	@include respond-to(break2full) {
+		font-size: 1.2vw;
+	}
+}
+.magazine-page, .magazine-article-page {
+	.newsletter-signup-copy {
+		background-color: #fff;
+	}
+}
+.newsletter-signup-form {
+	width: 100%;
+}
+.newsletter-input {
+	background-color: $black20;
+	width: 100%;
+	@include padding-right(2);
+	@include padding-left(2);
+	@include email-newsletter;
+	@include respond-to(break2max) {
+		height: 5rem;
+		line-height: 1.9;
+	}
+	@include respond-to(break2) {
+		min-height: initial;
+		min-height: auto;
+	}
+	@include respond-to(break2full) {
+		height: 4.8vw;
+		// height: 5vw;
+	}
+	@include respond-to(fullwidth) {
+		// height: 6.9rem;
+		height: 8rem;
+		padding-bottom: 2rem;
+	}
+	// placeholder text color, from http://stackoverflow.com/a/2610741
+	&::-webkit-input-placeholder {
+		/* WebKit, Blink, Edge */
+		color: $black60;
+	}
+	&:-moz-placeholder {
+		/* Mozilla Firefox 4 to 18 */
+		color: $black60;
+		opacity: 1;
+	}
+	&::-moz-placeholder {
+		/* Mozilla Firefox 19+ */
+		color: $black60;
+		opacity: 1;
+	}
+	&:-ms-input-placeholder {
+		/* Internet Explorer 10-11 */
+		color: $black60;
+	}
+}
+// Short version 12.18
+.newsletter-signup-wrapper {
+	@include margin-bottom(4);
+}
+.short-newsletter-signup {
+	float: left;
+	width: 100%;
+	@include respond-to(break2) {
+		width: 50%;
+	}
+	@include respond-to(break2full) {
+		height: 5vw;
+	}
+	@include respond-to(fullwidth) {
+		height: 8rem;
+	}
+	form, input {
+		@include respond-to(break2max) {
+			// height: 5rem;
+		}
+		// @include height(7);
+	}
+	input {
+		font-weight: 500;
+	}
+	.newsletter-signup, .newsletter-signup-copy, form, input {
 		@include respond-to(break2) {
-			margin-bottom: 4rem;
+			height: 100%;
 		}
 	}
 	.newsletter-signup-copy {
-		background-color: $black10;
-		@include respond-to(break2full) {
-			font-size: 1.2vw;
-		}
-	}
-	.magazine-page, .magazine-article-page {
-		.newsletter-signup-copy {
-			background-color: #fff;
-		}
-	}
-	.newsletter-signup-form {
-		width: 100%;
-	}
-	.newsletter-input {
-		background-color: $black20;
-		width: 100%;
-		@include padding-right(2);
-		@include padding-left(2);
-		@include email-newsletter;
-		@include respond-to(break2max) {
-			height: 5rem;
-			line-height: 1.9;
-		}
+		@include body-sans;
+		@include padding-top(1.5);
+		@include padding-bottom(2);
 		@include respond-to(break2) {
-			min-height: initial;
-			min-height: auto;
-		}
-		@include respond-to(break2full) {
-			height: 4.8vw;
-			// height: 5vw;
+			@include padding-bottom(1);
 		}
 		@include respond-to(fullwidth) {
-			// height: 6.9rem;
-			height: 8rem;
-			padding-bottom: 2rem;
-		}
-
-		// placeholder text color, from http://stackoverflow.com/a/2610741
-		&::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-		    color:    $black60;
-		}
-		&:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-		   color:    $black60;
-		   opacity:  1;
-		}
-		&::-moz-placeholder { /* Mozilla Firefox 19+ */
-		   color:    $black60;
-		   opacity:  1;
-		}
-		&:-ms-input-placeholder { /* Internet Explorer 10-11 */
-		   color:    $black60;
+			font-size: 2rem;
 		}
 	}
-
-	// Short version 12.18
-	.newsletter-signup-wrapper {
-		@include margin-bottom(4);
+}
+.short-newsletter-signup-form-wrapper, .newsletter-input {
+	@include respond-to(break2max) {
+		height: 5rem;
 	}
-	.short-newsletter-signup {
-		float:left;
-		width: 100%;
-		@include respond-to(break2) {
-			width: 50%;
-		}
-		@include respond-to(break2full) {
-			height: 5vw;
-		}
-		@include respond-to(fullwidth) {
-			height: 8rem;
-		}
-		form, input {
-			@include respond-to(break2max) {
-				// height: 5rem;
-			}
-			// @include height(7);
-		}
-		input {
-			font-weight: 500;
-		}
-		.newsletter-signup, .newsletter-signup-copy, form, input {
-			@include respond-to(break2) {
-				height: 100%;
-			}
-		}
-		.newsletter-signup-copy {
-			@include body-sans;
-			@include padding-top(1.5);
-			@include padding-bottom(2);
-			@include respond-to(break2) {
-				@include padding-bottom(1);
-			}
-			@include respond-to(fullwidth) {
-				font-size: 2rem;
-			}
-		}
+}
+.short-newsletter-signup-form-wrapper {
+	// @include md-sans;
+	background-color: $black20;
+	a {
+		color: $black60;
 	}
-	.short-newsletter-signup-form-wrapper, .newsletter-input {
-		@include respond-to(break2max) {
-			height: 5rem;
-		}
-	}
-	.short-newsletter-signup-form-wrapper {
-		// @include md-sans;
-		background-color: $black20;
-		a {
-			color: $black60;
-		}
-		// font-weight: 500;
-		// cursor: pointer;
-	}
+	// font-weight: 500;
+	// cursor: pointer;
+}
 
 /* Plus icons for figures with figcaptions and General Captions
 -------------------------------------------------- */
-	// Images with captions
-	figure {
-		position: relative; // contain figcaption
-	}
-	.figcaption-inner {
-		visibility: hidden; // initial hide
-		background-color: rgba($black65, 0.9);
-		@include padding-top(1.5);
-		@include padding-right(1);
-		@include padding-bottom(1.5);
-		@include padding-left(2);
-	}
-	figcaption {
-		position: absolute;
-		z-index: 2; // on top of slider arrows for 50 objects on mobile
-		bottom: 0;
-		left: 0;
-		color: #fff;
-		@include caption-sans;
-		// text-transform: capitalize;
-		text-transform: none;
-		line-height: 1.4 !important;
-		width: 100%;
-		cursor: pointer;
-		// plus sign
-		@include respond-to(break2max) {
-			min-height: 4rem;
-		}
-		.credit {
-			font-style: italic;
-			@include margin-top(0.7);
-			// @include margin-bottom(1);
-			// @include margin-bottom(0);
-		}
-		&:after {
-			display: block;
-			content: "+";
-			position: absolute;
-			bottom: 0;
-			right: 0;
-			background-color: $black50;
-			color: #fff;
-			@include padding-right(0.5);
-			@include padding-bottom(0.8);
-			@include padding-left(0.5);
-			@include margin-top(-5);
-			@include sans-plus-icon;
-			line-height: 0.8 !important;
-			visibility: visible; // initial show, from http://stackoverflow.com/a/4912823/4504073
-			@include respond-to(break2max) {
-				// width: 4rem;
-				width: 3rem;
-				// height: 4rem;
-				height: 3rem;
-				text-align: center;
-				padding-top: 0.5rem;
-				font-size: 2rem;
-			}
-		}
-		// minus sign. Need to use other pseudo element b/c chrome not updating content from :after
-		&.minus-sign:after {
-			display: none;
-		}
-		&.minus-sign:before {
-			content: "–";
-			position: absolute;
-			bottom: 0;
-			right: 0;
-			@include right(0.5);
-			color: #fff;
-			// @include padding-top(0);
-			@include padding-right(0.2);
-			@include padding-bottom(0.8);
-			@include padding-left(0.5);
-			@include margin-top(-5);
-			@include sans-plus-icon;
-			line-height: 0.8 !important;
-			visibility: visible; // initial show, counteracts parent visiblity hidden. From http://stackoverflow.com/a/4912823/4504073
-			@include respond-to(break2max) {
-				// width: 4rem;
-				width: 3rem;
-				// height: 4rem;
-				height: 3rem;
-				// font-size: 3rem;
-				font-size: 2rem;
-				text-align: center;
-				padding-top: 0.5rem;
-			}
-		}
-	}
-	.caption {
-		@include caption-sans;
-		text-transform: none;
-	}
 
+// Images with captions
+figure {
+	position: relative; // contain figcaption
+}
+.figcaption-inner {
+	visibility: hidden; // initial hide
+	background-color: rgba($black65, 0.9);
+	@include padding-top(1.5);
+	@include padding-right(1);
+	@include padding-bottom(1.5);
+	@include padding-left(2);
+}
+figcaption {
+	position: absolute;
+	z-index: 2; // on top of slider arrows for 50 objects on mobile
+	bottom: 0;
+	left: 0;
+	color: #fff;
+	@include caption-sans;
+	// text-transform: capitalize;
+	text-transform: none;
+	line-height: 1.4 !important;
+	width: 100%;
+	cursor: pointer;
+	// plus sign
+	@include respond-to(break2max) {
+		min-height: 4rem;
+	}
+	.credit {
+		font-style: italic;
+		@include margin-top(0.7);
+		// @include margin-bottom(1);
+		// @include margin-bottom(0);
+	}
+	&:after {
+		display: block;
+		content: "+";
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		background-color: $black50;
+		color: #fff;
+		@include padding-right(0.5);
+		@include padding-bottom(0.8);
+		@include padding-left(0.5);
+		@include margin-top(-5);
+		@include sans-plus-icon;
+		line-height: 0.8 !important;
+		visibility: visible; // initial show, from http://stackoverflow.com/a/4912823/4504073
+		@include respond-to(break2max) {
+			// width: 4rem;
+			width: 3rem;
+			// height: 4rem;
+			height: 3rem;
+			text-align: center;
+			padding-top: 0.5rem;
+			font-size: 2rem;
+		}
+	}
+	// minus sign. Need to use other pseudo element b/c chrome not updating content from :after
+	&.minus-sign:after {
+		display: none;
+	}
+	&.minus-sign:before {
+		content: "–";
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		@include right(0.5);
+		color: #fff;
+		// @include padding-top(0);
+		@include padding-right(0.2);
+		@include padding-bottom(0.8);
+		@include padding-left(0.5);
+		@include margin-top(-5);
+		@include sans-plus-icon;
+		line-height: 0.8 !important;
+		visibility: visible; // initial show, counteracts parent visiblity hidden. From http://stackoverflow.com/a/4912823/4504073
+		@include respond-to(break2max) {
+			// width: 4rem;
+			width: 3rem;
+			// height: 4rem;
+			height: 3rem;
+			// font-size: 3rem;
+			font-size: 2rem;
+			text-align: center;
+			padding-top: 0.5rem;
+		}
+	}
+}
+.caption {
+	@include caption-sans;
+	text-transform: none;
+}
 
 /* Dropdown Select, multi level select, from http://stackoverflow.com/a/9101168
 -------------------------------------------------- */
-	@mixin dropdown-arrow {
-		content: '\62';
-		display: block;
-		position: absolute;
-		font-family: "vd-icons" !important;
-		border: none; // remove default arrow
+
+@mixin dropdown-arrow {
+	content: '\62';
+	display: block;
+	position: absolute;
+	font-family: "vd-icons" !important;
+	border: none; // remove default arrow
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	transform: rotate(90deg);
+	// override nice-select defaults
+	height: auto;
+	@include top(0.8);
+	@include margin-top(0);
+	@include respond-to(break2max) {
+		font-size: 2rem;
+		top: 0rem;
+		right: 0.5rem;
+	}
+	@include respond-to(break2full) {
+		transform-origin: 0.9vw;
+		font-size: 1.5vw;
+		top: 0.4vw;
+		right: 0.6vw;
+	}
+	@include respond-to(fullwidth) {
+		transform-origin: 15px 15px;
+		font-size: 2.5rem;
+		top: 0.5rem;
+		right: 1rem;
+	}
+}
+.dropdown-wrapper {
+	@include sm-sans-title;
+	color: $black60;
+	// new svg icon, 2017.04.17
+	svg {
+		fill: $black60;
 		-webkit-transform: rotate(90deg);
 		-moz-transform: rotate(90deg);
+		-ms-transform: rotate(90deg);
 		transform: rotate(90deg);
-		// override nice-select defaults
-		height: auto;
-		@include top(0.8);
-		@include margin-top(0);
-		@include respond-to(break2max) {
-			font-size: 2rem;
-			top: 0rem;
-			right:0.5rem;
-		}
-		@include respond-to(break2full) {
-			transform-origin: 0.9vw;
-			font-size: 1.5vw;
-			top: 0.4vw;
-			right:0.6vw;
-		}
-		@include respond-to(fullwidth) {
-			transform-origin: 15px 15px;
-			font-size: 2.5rem;
-			top: 0.5rem;
-			right: 1rem;
-		}
 	}
-	.dropdown-wrapper {
-		@include sm-sans-title;
-		color: $black60;
-		// new svg icon, 2017.04.17
-		svg {
-			fill: $black60;
-			-webkit-transform: rotate(90deg);
-			-moz-transform: rotate(90deg);
-			-ms-transform: rotate(90deg);
-			transform: rotate(90deg);
+}
+.dropdown:hover, .first-level-dropdown li:hover {
+	background-color: $black20;
+	@include respond-to(break2) {
+		// show next menu on hover
+		& > ul {
+			display: block;
 		}
-	}
-	.dropdown:hover, .first-level-dropdown li:hover {
-		background-color: $black20;
-		@include respond-to(break2) {
-			// show next menu on hover
-			& > ul {
-				display: block;
-			}
-			.first-level-dropdown-title:after {
-				-webkit-transform: rotate(-90deg);
-				-moz-transform: rotate(-90deg);
-				transform: rotate(-90deg);
-			}
-
-			// new svg icon, 2017.04.17
-			.svg-filter-icon {
-				@include top(0.7);
-				@include right(0.6);
-			}
-			svg {
-				-webkit-transform: rotate(-90deg);
-				-moz-transform: rotate(-90deg);
-				-ms-transform: rotate(-90deg);
-				transform: rotate(-90deg);
-			}
-		}
-	}
-	.dropdown {
-		background-color: #fff;
-		position: relative;
-		cursor: pointer;
-	}
-	.dropdown, .filter-button {
-		@include margin-top(1.5); // 19px
-		&:focus {
-			@include outline;
-		}
-	}
-	.first-level-dropdown, .second-level-dropdown, .third-level-dropdown {
-		a:hover {
-			color: $link;
-		}
-	}
-	.first-level-dropdown {
-		display: none; // initial hide
-		position: absolute;
-		z-index: 2;
-		width: 100%;
-		background-color: #fff;
-		font-weight: 400;
-		line-height: 1.7;
-		li {
-			position: relative; // contain arrow
-			@include padding-left(1);
-		}
-	}
-	.second-level-dropdown, .third-level-dropdown {
-		display: none;
-		background-color: #fff;
-		@include respond-to(break2) {
-			position: absolute;
-			top:0;
-			right: -100%;
-			width: 100%;
-		}
-	}
-	.third-level-dropdown {
-		li:after {
-			display:none;
-		}
-	}
-	.first-level-dropdown-title, .filter-button {
-		// @include padding-top(0.7);
-		@include height(3.7); // 35px
-		height: 3rem; // mobile override
-		@include padding-left(1);
-		padding-top:0.5rem;
-		@include respond-to(break2) {padding-top:0.3vw;}
-		@include respond-to(fullwidth) {padding-top:0.7rem;}
-	}
-	.first-level-dropdown-title {
-		&:after {
-			@include dropdown-arrow;
-		}
-	}
-	.second-level-dropdown-title, .third-level-dropdown-title {
-		&:after {
-			@include dropdown-arrow;
-			-webkit-transform: rotate(0deg);
-			-moz-transform: rotate(0deg);
-			transform: rotate(0deg);
-			color: $black40;
-			font-size: 2rem;
-			top:-0.5rem;
-			right:1rem;
-			@include respond-to(break2full) {
-				font-size: 1.3vw;
-				top: 0vw;
-				right:0.6vw;
-			}
-			@include respond-to(fullwidth) {
-				font-size: 2rem;
-				top: -0.3rem;
-				right: 1rem;
-			}
-		}
-	}
-	.dropdown-title-is-open {
-		&:after {
+		.first-level-dropdown-title:after {
 			-webkit-transform: rotate(-90deg);
 			-moz-transform: rotate(-90deg);
 			transform: rotate(-90deg);
 		}
-		
-
+		// new svg icon, 2017.04.17
+		.svg-filter-icon {
+			@include top(0.7);
+			@include right(0.6);
+		}
+		svg {
+			-webkit-transform: rotate(-90deg);
+			-moz-transform: rotate(-90deg);
+			-ms-transform: rotate(-90deg);
+			transform: rotate(-90deg);
+		}
 	}
+}
+.dropdown {
+	background-color: #fff;
+	position: relative;
+	cursor: pointer;
+}
+.dropdown, .filter-button {
+	@include margin-top(1.5); // 19px
+	&:focus {
+		@include outline;
+	}
+}
+.first-level-dropdown, .second-level-dropdown, .third-level-dropdown {
+	a:hover {
+		color: $link;
+	}
+}
+.first-level-dropdown {
+	display: none; // initial hide
+	position: absolute;
+	z-index: 5; // above footer
+	width: 100%;
+	background-color: #fff;
+	font-weight: 400;
+	line-height: 1.7;
+	line-height: 1.2;
+	li {
+		position: relative; // contain arrow
+		@include padding-left(1);
+		@include padding-bottom(0.9);
+	}
+}
+.second-level-dropdown, .third-level-dropdown {
+	display: none;
+	background-color: #fff;
+	@include respond-to(break2) {
+		position: absolute;
+		top: 0;
+		right: -100%;
+		width: 100%;
+	}
+}
+.third-level-dropdown {
+	li:after {
+		display: none;
+	}
+}
+.first-level-dropdown-title, .filter-button {
+	// @include padding-top(0.7);
+	@include height(3.7); // 35px
+	height: 3rem; // mobile override
+	@include padding-left(1);
+	padding-top: 0.5rem;
+	@include respond-to(break2) {
+		padding-top: 0.3vw;
+	}
+	@include respond-to(fullwidth) {
+		padding-top: 0.7rem;
+	}
+}
+.first-level-dropdown-title {
+	&:after {
+		@include dropdown-arrow;
+	}
+}
+.second-level-dropdown-title, .third-level-dropdown-title {
+	&:after {
+		@include dropdown-arrow;
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		transform: rotate(0deg);
+		color: $black40;
+		font-size: 2rem;
+		top: -0.5rem;
+		right: 1rem;
+		@include respond-to(break2full) {
+			font-size: 1.3vw;
+			top: 0vw;
+			right: 0.6vw;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 2rem;
+			top: -0.3rem;
+			right: 1rem;
+		}
+	}
+}
+.dropdown-title-is-open {
+	&:after {
+		-webkit-transform: rotate(-90deg);
+		-moz-transform: rotate(-90deg);
+		transform: rotate(-90deg);
+	}
+}
 
 /* Search, Festival Past Festival Programs
 -------------------------------------------------*/
-	// Search only
-	.search-page, .past-festivals-page {
-		.svg-thin-hr {
-			padding:0;
-			margin-top:0;
-			@include margin-bottom(0.5);
-			path {
-				fill: $black30;
-			}
-		}
-		.search-query-title {
-			@include lg-woodtype-extended;
-			text-transform: capitalize;
-			@include margin-bottom(2.4);
-		}
-		.highlight-bar {
-			background-color: $black10;
-			@include padding-top(1.6); // 20px with line height
-			@include padding-bottom(4);
-			@include margin-bottom(4);
-			// for click outside
-			position: relative;
-			z-index: 10;
-		}
-		.filter-more-button {
-			// push down for real search
-			@include respond-to(break2) {
-				margin-top: 3.5rem;
-			}
-		}
-		.filter-more-band {
-			display: none; // initial hide
-			@include respond-to(break2) {
-				@include padding-top(2);
-			}
-		}
-		.filter-by-title {
-			@include nav-header;
-			color: $black60;
-			@include respond-to(break2max) {
-				font-size:5vw;
-			}
-			@include respond-to(break2full) {font-size:1.15vw;}
-			@include respond-to(fullwidth) {font-size:1.8rem;}
-		}
-		// without select
-		// .filter-button {
-		// 	background-color: $black20;
-		// 	@include border;
-		// 	text-align: center;
-		// 	cursor: pointer;
-		// 	padding-left:0;
-		// }
-		// with select
-		.filter-button {
-			background-color: $black20;
-			@include border;
-			text-align: center;
-			cursor: pointer;
-			padding-left:0;
-		}
-		.filter-dropdown {
-			background-color: transparent;
-			// no rounded corners, from http://stackoverflow.com/a/5780261
-			select {
-			  -webkit-appearance: none;
-			  -webkit-border-radius: 0px;
-			  padding: 2px 6px;
-			  width: 100%;
-			  background-image: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>");
-			  background-position: 100% 50%;
-			  background-repeat: no-repeat;
-			}
-		}
-		.filter-label {
-			@include sans-tag;
-			// font-weight: 700;
-		}
-		.filter-select {
-			select::-ms-expand {
-			    display: none;
-			}
-			
-			@include sm-sans-title;
-			font-weight: 600 !important;
 
-			// 16px font exception
-			line-height: 1.4;
-			font-size: 1.3rem;
-			@include respond-to(break2) {
-				line-height: 1.3;
-			}
-			@include respond-to(break2full) {
-				font-size: 1vw;
-			}
-			@include respond-to(fullwidth) {
-				line-height: 1.3;
-				font-size: 1.6rem;
-			}
+// Search only
+.search-page, .past-festivals-page {
+	.svg-thin-hr {
+		padding: 0;
+		margin-top: 0;
+		@include margin-bottom(0.5);
+		path {
+			fill: $black30;
 		}
 	}
+	.search-query-title {
+		@include lg-woodtype-extended;
+		text-transform: capitalize;
+		@include margin-bottom(2.4);
+	}
+	.highlight-bar {
+		background-color: $black10;
+		@include padding-top(1.6); // 20px with line height
+		@include padding-bottom(4);
+		@include margin-bottom(4);
+		// for click outside
+		position: relative;
+		z-index: 10;
+	}
+	.filter-more-button {
+		// push down for real search
+		@include respond-to(break2) {
+			margin-top: 3.5rem;
+		}
+	}
+	.filter-more-band {
+		display: none; // initial hide
+		@include respond-to(break2) {
+			@include padding-top(2);
+		}
+	}
+	.filter-by-title {
+		@include nav-header;
+		color: $black60;
+		@include respond-to(break2max) {
+			font-size: 5vw;
+		}
+		@include respond-to(break2full) {
+			font-size: 1.15vw;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 1.8rem;
+		}
+	}
+	// without select
+	// .filter-button {
+	// 	background-color: $black20;
+	// 	@include border;
+	// 	text-align: center;
+	// 	cursor: pointer;
+	// 	padding-left:0;
+	// }
+	// with select
+	.filter-button {
+		background-color: $black20;
+		@include border;
+		text-align: center;
+		cursor: pointer;
+		padding-left: 0;
+	}
+	.filter-dropdown {
+		background-color: transparent;
+		// no rounded corners, from http://stackoverflow.com/a/5780261
+		select {
+			-webkit-appearance: none;
+			-webkit-border-radius: 0px;
+			padding: 2px 6px;
+			width: 100%;
+			background-image: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>");
+			background-position: 100% 50%;
+			background-repeat: no-repeat;
+		}
+	}
+	.filter-label {
+		@include sans-tag;
+		// font-weight: 700;
+	}
+	.filter-select {
+		select::-ms-expand {
+			display: none;
+		}
+		@include sm-sans-title;
+		font-weight: 600 !important;
+		// 16px font exception
+		line-height: 1.4;
+		font-size: 1.3rem;
+		@include respond-to(break2) {
+			line-height: 1.3;
+		}
+		@include respond-to(break2full) {
+			font-size: 1vw;
+		}
+		@include respond-to(fullwidth) {
+			line-height: 1.3;
+			font-size: 1.6rem;
+		}
+	}
+}
 
 /* Slideshow/Gallery arrows, from Folklife homepage banner
 -------------------------------------------------*/
-	$arrowSizeBreak2: 6rem;
-	$arrowSizeFullwidth: 8rem;
 
-	// accessible arrows
-	.slick-arrow, .slick-dots button {
-		&:focus {
-			@include outline;
-		}
+$arrowSizeBreak2: 6rem;
+$arrowSizeFullwidth: 8rem;
+.slick-arrow, .svg-slick-prev, .svg-slick-next {
+	pointer-events: auto; // reset to initial after getting none for other buttons, e.g. banner pause
+}
+// accessible arrows
+.slick-arrow, .slick-dots button {
+	&:focus {
+		@include outline;
 	}
-
-	// slick default overrride
-	.slick-dots li.slick-active button:before {opacity: 1;}
-	.svg-slick-prev, .svg-slick-next {
-		fill: $black40;
-		// fill: red;
-		position: absolute;
-		z-index: 1;
-		top: 50%;
-		// cursor
-		cursor: pointer;
-		// left: 0;
-		-webkit-transform: translateY(-49%);
-		-ms-transform: translateY(-49%);
-		transform: translateY(-49%);
-		// sizing
-		$svgIconMobileArrow: 40px;
-		$svgIconTabletArrow: 6rem;
-		$svgIconFullArrow: 6rem;
-		width:$svgIconMobileArrow;
-		height: $svgIconMobileArrow;
-		@include respond-to(break2) {
-			width:$svgIconTabletArrow;
-			height: $svgIconTabletArrow;
-		}
-		@include respond-to(fullwidth) {
-			width:$svgIconFullArrow;
-			height: $svgIconFullArrow;
-		}
-
-		&:hover {
-			fill: $black20;
-		}
+}
+// slick default overrride
+.slick-dots li.slick-active button:before {
+	opacity: 1;
+}
+.svg-slick-prev, .svg-slick-next {
+	fill: $black40;
+	// fill: red;
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	// cursor
+	cursor: pointer;
+	// left: 0;
+	-webkit-transform: translateY(-49%);
+	-ms-transform: translateY(-49%);
+	transform: translateY(-49%);
+	// sizing
+	$svgIconMobileArrow: 40px;
+	$svgIconTabletArrow: 6rem;
+	$svgIconFullArrow: 6rem;
+	width: $svgIconMobileArrow;
+	height: $svgIconMobileArrow;
+	@include respond-to(break2) {
+		width: $svgIconTabletArrow;
+		height: $svgIconTabletArrow;
 	}
-	.svg-slick-prev {
-		@include respond-to(break2) {margin-left:-4rem;}
-		@include respond-to(fullwidth) {margin-left:-4rem;}
+	@include respond-to(fullwidth) {
+		width: $svgIconFullArrow;
+		height: $svgIconFullArrow;
 	}
-	.svg-slick-next {
-		@include respond-to(break2max) {
-			right: 3.4vw;
-		}
-		@include respond-to(break2) {
-			// right: calc((100vw - 1415px) / 2); // screen width, minus width of center area, divided by 2 because just one side
-			right: 4rem;
-		}
-		@include respond-to(fullwidth) {
-			// right: calc((100vw - 1400px) / 2); // screen width, minus width of center area, divided by 2 because just one side
-			right: calc((100vw - 1415px) / 2); // screen width, minus width of center area, divided by 2 because just one side
-			// margin-right: -5.5rem;
-			// margin-right: -4.8rem;
-			// margin-right: 1rem;
-			margin-right: -3rem;
-		}
+	&:hover {
+		fill: $black20;
 	}
-	.ms-banner-slideshow .svg-slick-next {
-		// right: 1rem;
-		@include respond-to(break2) {
-			right: -4rem;
-		}
-		@include respond-to(fullwidth) {
-			// margin-right: -5rem;
-			right: -1rem;
-		}
+}
+.svg-slick-prev {
+	@include respond-to(break2) {
+		margin-left: -4rem;
 	}
-	// 50 objects right arrow in grid
-	.more-content .svg-slick-next {
-		right: 0rem;
-		@include respond-to(break2full) {
-			right: -4rem;
-		}
-		@include respond-to(fullwidth) {
-			right: -1rem;
-		}		
+	@include respond-to(fullwidth) {
+		margin-left: -4rem;
 	}
-	.pause-button {
-		z-index: 10;
+}
+.svg-slick-next {
+	@include respond-to(break2max) {
+		right: 3.4vw;
 	}
-
-	.slick-prev:before, .slick-next {
+	@include respond-to(break2) {
+		// right: calc((100vw - 1415px) / 2); // screen width, minus width of center area, divided by 2 because just one side
+		right: 4rem;
+	}
+	@include respond-to(fullwidth) {
+		// right: calc((100vw - 1400px) / 2); // screen width, minus width of center area, divided by 2 because just one side
+		right: calc((100vw - 1415px) / 2); // screen width, minus width of center area, divided by 2 because just one side
+		// margin-right: -5.5rem;
+		// margin-right: -4.8rem;
+		// margin-right: 1rem;
+		margin-right: -3rem;
+	}
+}
+.ms-banner-slideshow .svg-slick-next {
+	// right: 1rem;
+	@include respond-to(break2) {
+		right: -4rem;
+	}
+	@include respond-to(fullwidth) {
+		// margin-right: -5rem;
+		right: -1rem;
+	}
+}
+// 50 objects right arrow in grid
+.more-content .svg-slick-next {
+	right: 0rem;
+	@include respond-to(break2full) {
+		right: -4rem;
+	}
+	@include respond-to(fullwidth) {
+		right: -1rem;
+	}
+}
+.pause-button {
+	z-index: 10;
+}
+.slick-prev:before, .slick-next {
 	// .slick-prev:before, .slick-next:before {
 	// 	font-family: 'vd-icons';
 	// 	-webkit-transform: translateY(-49%);
@@ -1374,760 +1427,722 @@
 	//     line-height: 0.6; // so will align more centered vertically
 	//     font-size:$arrowSizeBreak2;
 	//     @include respond-to(fullwidth) {font-size:$arrowSizeFullwidth;}
+}
+.slick-prev:hover::before, .slick-next:hover::before {
+	color: #fff;
+}
+// .slick-prev:before {content: "\65";}
+// .slick-prev:before {content: "\6e";}
+// .slick-next:before {content: "\66";}
+// .slick-next:before {content: "\79";}
+.slick-prev, .slick-next {
+	z-index: 1;
+	width: $arrowSizeBreak2;
+	height: $arrowSizeBreak2;
+	@include respond-to(fullwidth) {
+		width: $arrowSizeFullwidth;
+		height: $arrowSizeFullwidth;
 	}
-	.slick-prev:hover::before, .slick-next:hover::before {
-		color: #fff;
+}
+.slick-prev {
+	@include respond-to(break2max) {
+		left: 3.4vw;
 	}
-	// .slick-prev:before {content: "\65";}
-	// .slick-prev:before {content: "\6e";}
-	// .slick-next:before {content: "\66";}
-	// .slick-next:before {content: "\79";}
-	.slick-prev, .slick-next {
-		z-index: 1;
-		width: $arrowSizeBreak2;
-		height: $arrowSizeBreak2;
-		@include respond-to(fullwidth) {
-			width: $arrowSizeFullwidth;
-			height: $arrowSizeFullwidth;
-		}
+	@include respond-to(break2) {
+		left: 40px;
 	}
-	.slick-prev {
-  		@include respond-to(break2max) {
-			left: 3.4vw;
-  		}
-  		@include respond-to(break2) {
-			left: 40px;
-  		}
-  		@include respond-to(fullwidth) {
-  			left: auto;
-  			margin-left: -5.4rem;
-		}
+	@include respond-to(fullwidth) {
+		left: auto;
+		margin-left: -5.4rem;
 	}
-	.slick-next {
-		// @include respond-to(break2max) {
-		// 	right: 3.4vw;
-		// }
-		// @include respond-to(break2) {
-		// 	// right: calc((100vw - 1415px) / 2); // screen width, minus width of center area, divided by 2 because just one side
-		// 	right: 40px;
-		// }
-		// @include respond-to(fullwidth) {
-		// 	// right: calc((100vw - 1400px) / 2); // screen width, minus width of center area, divided by 2 because just one side
-		// 	right: calc((100vw - 1415px) / 2); // screen width, minus width of center area, divided by 2 because just one side
-		// 	// margin-right: -5.5rem;
-		// 	margin-right: -4.8rem;
-		// }
-	}
+}
+.slick-next {
+	// @include respond-to(break2max) {
+	// 	right: 3.4vw;
+	// }
+	// @include respond-to(break2) {
+	// 	// right: calc((100vw - 1415px) / 2); // screen width, minus width of center area, divided by 2 because just one side
+	// 	right: 40px;
+	// }
+	// @include respond-to(fullwidth) {
+	// 	// right: calc((100vw - 1400px) / 2); // screen width, minus width of center area, divided by 2 because just one side
+	// 	right: calc((100vw - 1415px) / 2); // screen width, minus width of center area, divided by 2 because just one side
+	// 	// margin-right: -5.5rem;
+	// 	margin-right: -4.8rem;
+	// }
+}
 
 /* Hide Ios Play button
 -------------------------------------------------*/
-	// .home-video iframe {width:100%;height:100%;position: absolute;top:0;right:0;bottom:0;left:0;}
-	// hide iOS play button from http://stackoverflow.com/questions/8911247/hide-iphone-html5-video-play-button
-	video::-webkit-media-controls {
-	  display:none !important;
-	}
-	// Apple play button changed again
-	// from http://stackoverflow.com/a/37553385
-	/* This used to work for parent element of button divs */
-	/* But it is not enough now, below dont hide play button parent div */
-	*::-webkit-media-controls-panel {
-	  display: none!important;
-	  -webkit-appearance: none;
-	}
-	/* Old shadow dom for play button */
-	*::--webkit-media-controls-play-button {
-	  display: none!important;
-	  -webkit-appearance: none;
-	}
-	/* New shadow dom for play button */
-	*::-webkit-media-controls-start-playback-button {
-	  display: none!important;
-	  -webkit-appearance: none;
-	}
+
+// .home-video iframe {width:100%;height:100%;position: absolute;top:0;right:0;bottom:0;left:0;}
+// hide iOS play button from http://stackoverflow.com/questions/8911247/hide-iphone-html5-video-play-button
+video::-webkit-media-controls {
+	display: none !important;
+}
+// Apple play button changed again
+// from http://stackoverflow.com/a/37553385
+
+/* This used to work for parent element of button divs */
+
+
+/* But it is not enough now, below dont hide play button parent div */
+
+*::-webkit-media-controls-panel {
+	display: none!important;
+	-webkit-appearance: none;
+}
+
+/* Old shadow dom for play button */
+
+*::--webkit-media-controls-play-button {
+	display: none!important;
+	-webkit-appearance: none;
+}
+
+/* New shadow dom for play button */
+
+*::-webkit-media-controls-start-playback-button {
+	display: none!important;
+	-webkit-appearance: none;
+}
 
 /* Cover art popup
 -------------------------------------------------*/
-	// hide video divs
-	// .remodal-image ~ .remodal-iframe, .remodal-image ~ .remodal-copy {
-		// display:none;
-	// }
-	.cover-art-popup {
-		display: none; // initial hide
-	}
 
+// hide video divs
+// .remodal-image ~ .remodal-iframe, .remodal-image ~ .remodal-copy {
+// display:none;
+// }
+.cover-art-popup {
+	display: none; // initial hide
+}
 
 /* Single Image popup
 -------------------------------------------------*/
-	.single-image-caption {
-		 .slick-track {
-			transform: none !important; // otherwise only 1 caption will be pushed to left
-		}
+
+.single-image-caption {
+	.slick-track {
+		transform: none !important; // otherwise only 1 caption will be pushed to left
 	}
+}
 
 /* Image gallery
 -------------------------------------------------*/
-	.image-gallery {
-		.icon-play-button {
-			&:before, &:after {
-				@include respond-to(break2max) {
-					font-size: 15vw;
-				}
-				@include respond-to(break2full) {
-					font-size: 6vw;
-				}
-				@include respond-to(fullwidth) {
-					font-size: 10rem;
-				}
+
+.image-gallery {
+	.icon-play-button {
+		&:before, &:after {
+			@include respond-to(break2max) {
+				font-size: 15vw;
+			}
+			@include respond-to(break2full) {
+				font-size: 6vw;
+			}
+			@include respond-to(fullwidth) {
+				font-size: 10rem;
 			}
 		}
 	}
-	.gallery-list, .gallery-list-captions {
-		display: none; // initial hide
+}
+.gallery-list, .gallery-list-captions {
+	display: none; // initial hide
+}
+.remodal-captions {
+	display: none;
+}
+.remodal-captions a {
+	color: white;
+}
+.remodal-image-gallery {
+	max-width: none !important;
+	background-color: transparent;
+	.remodal-close {
+		right: 0 !important;
+		@include respond-to(break2max) {
+			top: -4.5rem;
+		}
 	}
 	.remodal-captions {
+		display: block;
+	}
+}
+.remodal-gallery {
+	.slick-track {
+		height: initial;
+	}
+	.slick-slide {
+		height: auto;
+		max-width: 100vw;
+		@include padding-right(4);
+		@include padding-left(4);
+	}
+	.slick-slide img {
+		max-height: 70vh;
+		width: auto;
+	}
+	.gallery-image-inner {
+		position: relative; // contain gray overlay
+		&:after {
+			@include respond-to(break2) {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background-color: rgba(0, 0, 0, 0.8);
+			}
+		}
+	}
+	.slick-active .gallery-image-inner:after {
 		display: none;
 	}
-	.remodal-captions  a {
+	.slick-arrow {
+		@include respond-to(break2max) {
+			display: none !important;
+		}
+	}
+	.slick-prev {
+		@include respond-to(break2) {
+			left: 1vw;
+		}
+		@include respond-to(fullwidth) {
+			left: 5rem;
+		}
+	}
+	.slick-next {
+		@include respond-to(break2full) {
+			right: 1vw;
+		}
+		@include respond-to(fullwidth) {
+			right: 5rem;
+		}
+	}
+}
+.remodal-captions {
+	@include margin-top(4);
+	// turn down non-active captions
+	.slick-slide:not(.slick-active) {
+		.remodal-description, .remodal-credit {
+			color: $black80;
+		}
+	}
+	.remodal-description {
 		color: white;
-	}
-	.remodal-image-gallery {
-		max-width: none !important;
-		background-color: transparent;
-		.remodal-close {
-			right: 0 !important;
-			@include respond-to(break2max) {
-				top: -4.5rem;
-			}
-		}
-		.remodal-captions {
-			display: block;
-		}
-	}
-	.remodal-gallery {
-		.slick-track {
-			height: initial;
-		}
-		.slick-slide {
-			height: auto;
-			max-width: 100vw;
-			@include padding-right(4);
-			@include padding-left(4);
-		}
-		.slick-slide img {
-			max-height: 70vh;
-			width: auto;
-		}
-		.gallery-image-inner {
-			position: relative; // contain gray overlay
-			&:after {
-				@include respond-to(break2) {
-					content: '';
-					display: block;
-					position: absolute;
-					top: 0;right: 0;bottom: 0;left: 0;
-					background-color: rgba(0,0,0,0.8);
-				}
-			}
-		}
-		.slick-active .gallery-image-inner:after {
-			display: none;
-		}
-		.slick-arrow {
-			@include respond-to(break2max) {
-				display: none !important;
-			}
-		}
-		.slick-prev {
-			@include respond-to(break2) {
-				left: 1vw;
-			}
-			@include respond-to(fullwidth) {
-				left: 5rem;
-			}
-		}
-		.slick-next {
-			@include respond-to(break2full) {
-				right: 1vw;
-			}
-			@include respond-to(fullwidth) {
-				right: 5rem;
-			}
-		}
-	}
-	.remodal-captions {
-		@include margin-top(4);
-		// turn down non-active captions
-		.slick-slide:not(.slick-active) {
-			.remodal-description, .remodal-credit {
-				color: $black80;
-			}
-		}
-		.remodal-description {
-			color: white;
-			@include padding-left(4);
-			@include padding-right(4);
-			a:hover {
-				color: $black30;
-			}
-		}
-		.remodal-credit {
+		@include padding-left(4);
+		@include padding-right(4);
+		a:hover {
 			color: $black30;
-			@include caption-sans;
-			@include padding-top(2);
-			@include padding-left(4);
-			@include padding-right(4);
 		}
 	}
-
+	.remodal-credit {
+		color: $black30;
+		@include caption-sans;
+		@include padding-top(2);
+		@include padding-left(4);
+		@include padding-right(4);
+	}
+}
 
 /* Blog Page
 -------------------------------------------------- */
-	// indent sidebar section titles only on select pages (from layout)
-	.blog-page, .program-category-page {
-		.sidebar-section-title {
-			@include padding-left(1.3);
-		}
-	}
-	.blog-page, .blog-article-page {
-		.title-bar {
-			color: #fff;
-			background-color: $fw-green;
-		}
-		.tag {
-			font-weight: 400;
-			@include margin-bottom(0.5);
-		}
-		.byline {
-			@include margin-bottom(2);
-			color: $black65;
-		}
-	}
-	.blog-page, .videos-page {
-		.articles-section {
-			.title {
-				@include md-serif;
-				@include margin-bottom(1);
-			}
-			.description {
-				@include sm-sans-title-light;
-				line-height: 1.33 !important; // 18/24
-			}
-			.more-link {
-				@include margin-top(0.5);
-				margin-left:0;
-			}
-		}
-		.feature {
-			.tag {
-				@include margin-top(0.5);
-			}
-			.title {
-				@include lg-serif;
-				@include margin-bottom(0.8);
-			}
-			.byline {
-				@include sm-sans-title-light;
-				text-transform: none;
-				@include margin-bottom(3);
-			}
-			.description {
-				@include md-sans;
-				font-weight: 300;
-				@include margin-top(1);
-			}
-			.more-link {
-				@include margin-top(1.5);
-			}
-			// account for more link on mobile
-			@include respond-to(break2max) {
-				padding-bottom: 4rem;
-			}
-		}
-	}
 
-	.blog-sidebar {
-		&-header {
-			color: $black50;
-			line-height: 0.8; // for alignment
-			@include margin-top(3.1);
-			@include margin-bottom(1.4);
-			@include margin-bottom(0);
-			@include padding-bottom(1);
-		}
-		&-number {
-			@include md-sans;
-			position: absolute;
-			@include padding-left(0.5);
-		}
-	}
-	.numbered-sidebar-item {
-		@include padding-top(0.5);
-		@include padding-bottom(0.7);
-		@include min-height(6.4);
-		.number {
-			float: left;
-			padding: 0.5rem;
-			@include lg-sans;
-			color: $black50;
-		}
-		.title {
-			@include sm-sans-title;
-			// use css :before (single for IE8) to add numbers to sidebar articles
-			position: relative;
-			display: block;
-			// display: inline; // ol
-			@include padding-left(1.5);
-			@include padding-top(0.2);
-		}
-	}
-	.blog-most-popular {
-
-		// custom list numbers, from http://stackoverflow.com/a/5945305
-		ol {
-			list-style-type: none;
-			// @include margin-left(1);
-		}
-
-		ol > li {
-			counter-increment: customlistcounter;
-			position: relative;
-		}
-
-		ol > li:before {
-			content: counter(customlistcounter) " ";
-			// font-weight: bold;
-			// float: left;
-			position: absolute;
-			@include left(-0.5);
-			@include top(1.5);
-			@include padding-left(1);
-			@include width(2.5);
-			@include lg-sans;
-			line-height: 0.5;
-			// font-size: 1rem;
-			// font-size:2rem;
-			@include respond-to(break2full) {font-size:1.5vw;}
-			@include respond-to(fullwidth) {font-size:2.5rem;}
-		}
-
-		ol:first-child {
-			counter-reset: customlistcounter;
-		}
-
-		.title {
-			@include padding-left(2.75);
-			// @include respond-to(break2max) {
-			// 	padding-left: 2rem;
-			// }
-			// @include padding-left(0.5);
-			@include respond-to(break2max) {
-				padding-left: 2rem;
-			}
-			// padding-left: 0;
-		}
-	}
-	.blog-article-page {
-		.related-content-title {
-			@include margin-bottom(1.5)
-		}
-	}
-	.blog-categories li, .multimedia-sections li {
-		@include sm-sans-title;
-		color: $black70;
-		@include padding-top(0.8);
-		@include padding-bottom(0.8);
+// indent sidebar section titles only on select pages (from layout)
+.blog-page, .program-category-page {
+	.sidebar-section-title {
 		@include padding-left(1.3);
 	}
+}
+.blog-page, .blog-article-page {
+	.title-bar {
+		color: #fff;
+		background-color: $fw-green;
+	}
+	.tag {
+		font-weight: 400;
+		@include margin-bottom(0.5);
+	}
+	.byline {
+		@include margin-bottom(2);
+		color: $black65;
+	}
+}
+.blog-page, .videos-page {
+	.articles-section {
+		.title {
+			@include md-serif-title;
+			@include margin-bottom(1);
+		}
+		.description {
+			@include sm-sans-title-light;
+			line-height: 1.33 !important; // 18/24
+		}
+		.more-link {
+			@include margin-top(0.5);
+			margin-left: 0;
+		}
+	}
+	.feature {
+		.tag {
+			@include margin-top(0.5);
+		}
+		.title {
+			@include lg-serif-title;
+			@include margin-bottom(0.8);
+		}
+		.byline {
+			@include sm-sans-title-light;
+			text-transform: none;
+			@include margin-bottom(3);
+		}
+		.description {
+			@include md-sans;
+			font-weight: 300;
+			@include margin-top(1);
+		}
+		.more-link {
+			@include margin-top(1.5);
+		}
+		// account for more link on mobile
+		@include respond-to(break2max) {
+			padding-bottom: 4rem;
+		}
+	}
+}
+.blog-sidebar {
+	&-header {
+		color: $black50;
+		line-height: 0.8; // for alignment
+		@include margin-top(3.1);
+		@include margin-bottom(1.4);
+		@include margin-bottom(0);
+		@include padding-bottom(1);
+	}
+	&-number {
+		@include md-sans;
+		position: absolute;
+		@include padding-left(0.5);
+	}
+}
+.numbered-sidebar-item {
+	@include padding-top(0.5);
+	@include padding-bottom(0.7);
+	@include min-height(6.4);
+	.number {
+		float: left;
+		padding: 0.5rem;
+		@include lg-sans;
+		color: $black50;
+	}
+	.title {
+		@include sm-sans-title;
+		// use css :before (single for IE8) to add numbers to sidebar articles
+		position: relative;
+		display: block;
+		// display: inline; // ol
+		@include padding-left(1.5);
+		@include padding-top(0.2);
+	}
+}
+.blog-most-popular {
+	// custom list numbers, from http://stackoverflow.com/a/5945305
+	ol {
+		list-style-type: none;
+		// @include margin-left(1);
+	}
+	ol > li {
+		counter-increment: customlistcounter;
+		position: relative;
+	}
+	ol > li:before {
+		content: counter(customlistcounter) " ";
+		// font-weight: bold;
+		// float: left;
+		position: absolute;
+		@include left(-0.5);
+		@include top(1.5);
+		@include padding-left(1);
+		@include width(2.5);
+		@include lg-sans;
+		line-height: 0.5;
+		// font-size: 1rem;
+		// font-size:2rem;
+		@include respond-to(break2full) {
+			font-size: 1.5vw;
+		}
+		@include respond-to(fullwidth) {
+			font-size: 2.5rem;
+		}
+	}
+	ol:first-child {
+		counter-reset: customlistcounter;
+	}
+	.title {
+		@include padding-left(2.75);
+		// @include respond-to(break2max) {
+		// 	padding-left: 2rem;
+		// }
+		// @include padding-left(0.5);
+		@include respond-to(break2max) {
+			padding-left: 2rem;
+		}
+		// padding-left: 0;
+	}
+}
+.blog-article-page {
+	.related-content-title {
+		@include margin-bottom(1.5)
+	}
+}
+.blog-categories li, .multimedia-sections li {
+	@include sm-sans-title;
+	color: $black70;
+	@include padding-top(0.8);
+	@include padding-bottom(0.8);
+	@include padding-left(1.3);
+}
 
 /* Paging, as seen in Past Festivals
 -------------------------------------------------- */
-	// target any element with this data-* selector, from http://stackoverflow.com/a/18754151
-	[data-page] {
-		display: none;
-	}
-	[data-page="1"] {
-		display: block;
-	}
 
-
-	//  pagination, luke's solution, not working on toby's
-	.past-festival-pagination-wrapper {
-		.pagination {
-			text-align: center;
-			@include margin-bottom(4);
-
-		    @include sm-sans-title-light;
-
-		    @include respond-to(break2max) {
-		        padding-top: 1rem;
-		        padding-bottom: 1rem;
-		    }
-		    li:first-of-type {
-		        padding-right: 0;
-		    }
-		    li:last-of-type {
-		        padding-left: 0;
-		    }
-		    .light {
-		        display: inline-block;
-		        @include padding-top(1);
-		        @include padding-right(2);
-		        @include padding-bottom(1);
-		        @include padding-left(2);
-		    }
-		    .view-direction {
-		        cursor: pointer;
-		        display: inline-block;
-		        position: relative; // contain arrow
-		    }
-		    .view-previous, .view-next {
-		    	@include width(13);
-		    }
-		    .view-previous:after, .view-next:before {
-		    	// display: block; // for ie
-		    	// position: absolute; // ie fix
-		        color: $black65;
-		        @include dropdown-arrow;
-		        // for alignment
-		        -webkit-transform-origin: 0 !important;
-		        -moz-transform-origin: 0 !important;
-		        transform-origin: 0 !important;
-		        line-height: 0.3;
-
-		        @include respond-to(break2max) {
-		            font-size: 2rem;
-		            top: 0.9rem;
-		        }
-
-		        @include respond-to(break2full) {
-		            font-size: 3vw;
-		        }
-
-		        @include respond-to(fullwidth) {
-		            top: 0.4rem;
-		            font-size: 5rem;
-		        }
-		    }
-		    .view-previous {
-		        // text-align: right;
-
-		        // @include respond-to(break2max) {
-		        //     padding-right: 1.5rem;
-		        // }
-
-		        // @include respond-to(break2full) {
-		        //     padding-right: 3vw;
-		        // }
-
-		        // @include respond-to(fullwidth) {
-		        //     padding-right: 5rem;
-		        // }
-
-		        &:after {
-		            -webkit-transform: rotate(180deg);
-		            -moz-transform: rotate(180deg);
-		            transform: rotate(180deg);
-		            // left: auto;
-		            @include right(-10); // more b/c rotated
-
-		            @include respond-to(break2max) {
-		                right: -4.444rem;
-		            }
-
-		            // @include respond-to(break2) {
-		            //     padding-right: 0;
-		            // }
-
-		            // @include respond-to(break2full) {
-		            //     right: -4vw;
-		            // }
-
-		            // @include respond-to(fullwidth) {
-		            //     padding-right: 0rem;
-		            //     right: -6.8rem;
-		            // }
-		        }
-		    }
-		    .view-next {
-		        // @include respond-to(break2max) {
-		        //     padding-left: 1.5rem;
-		        // }
-
-		        // @include respond-to(break2full) {
-		        //     padding-left: 3vw;
-		        // }
-
-		        // @include respond-to(fullwidth) {
-
-		        // }
-		        // @include margin-left(-2); // for balance
-		        position: relative;
-		        @include left(-1.3); // balance with longer "view previous" text
-
-		        &:before {
-		            -webkit-transform: rotate(0deg);
-		            -moz-transform: rotate(0deg);
-		            transform: rotate(0deg);
-		            right: auto !important; // for vw helper override
-		            @include left(-3.4);
-
-		            // @include respond-to(break2max) {
-		            //     left: -1rem;
-		            // }
-
-		            // @include respond-to(break2full) {
-		            //     left: -1.216vw;
-		            // }
-
-		            // @include respond-to(fullwidth) {
-		            //     // left: -1.9rem;
-		            //     right: auto;
-		            //     left: 0;
-		            // }
-		        }
-		    }
-		}
-		.pagination-numbers {
-			// text-align: center;
-			// display: inline-block; // for centering
-			// a {
-			// 	display: inline-block;
-			// 	padding: 0.5rem;
-			// 	&.is-active {
-			// 		background-color: $hover;
-			// 	}
-			// }
-			@include margin-left(7);
-			@include margin-right(7);
-		}
-	}
-
-	.pagination-numbers {
+// target any element with this data-* selector, from http://stackoverflow.com/a/18754151
+[data-page] {
+	display: none;
+}
+[data-page="1"] {
+	display: block;
+}
+//  pagination, luke's solution, not working on toby's
+.past-festival-pagination-wrapper {
+	.pagination {
 		text-align: center;
-		a {
+		@include margin-bottom(4);
+		@include sm-sans-title-light;
+		@include respond-to(break2max) {
+			padding-top: 1rem;
+			padding-bottom: 1rem;
+		}
+		li:first-of-type {
+			padding-right: 0;
+		}
+		li:last-of-type {
+			padding-left: 0;
+		}
+		.light {
 			display: inline-block;
-			padding: 0.5rem;
-			&.is-active {
-				background-color: $hover;
+			@include padding-top(1);
+			@include padding-right(2);
+			@include padding-bottom(1);
+			@include padding-left(2);
+		}
+		.view-direction {
+			cursor: pointer;
+			display: inline-block;
+			position: relative; // contain arrow
+		}
+		.view-previous, .view-next {
+			@include width(13);
+		}
+		.view-previous:after, .view-next:before {
+			// display: block; // for ie
+			// position: absolute; // ie fix
+			color: $black65;
+			@include dropdown-arrow;
+			// for alignment
+			-webkit-transform-origin: 0 !important;
+			-moz-transform-origin: 0 !important;
+			transform-origin: 0 !important;
+			line-height: 0.3;
+			@include respond-to(break2max) {
+				font-size: 2rem;
+				top: 0.9rem;
+			}
+			@include respond-to(break2full) {
+				font-size: 3vw;
+			}
+			@include respond-to(fullwidth) {
+				top: 0.4rem;
+				font-size: 5rem;
+			}
+		}
+		.view-previous {
+			// text-align: right;
+			// @include respond-to(break2max) {
+			//     padding-right: 1.5rem;
+			// }
+			// @include respond-to(break2full) {
+			//     padding-right: 3vw;
+			// }
+			// @include respond-to(fullwidth) {
+			//     padding-right: 5rem;
+			// }
+			&:after {
+				-webkit-transform: rotate(180deg);
+				-moz-transform: rotate(180deg);
+				transform: rotate(180deg);
+				// left: auto;
+				@include right(-10); // more b/c rotated
+				@include respond-to(break2max) {
+					right: -4.444rem;
+				}
+				// @include respond-to(break2) {
+				//     padding-right: 0;
+				// }
+				// @include respond-to(break2full) {
+				//     right: -4vw;
+				// }
+				// @include respond-to(fullwidth) {
+				//     padding-right: 0rem;
+				//     right: -6.8rem;
+				// }
+			}
+		}
+		.view-next {
+			// @include respond-to(break2max) {
+			//     padding-left: 1.5rem;
+			// }
+			// @include respond-to(break2full) {
+			//     padding-left: 3vw;
+			// }
+			// @include respond-to(fullwidth) {
+			// }
+			// @include margin-left(-2); // for balance
+			position: relative;
+			@include left(-1.3); // balance with longer "view previous" text
+			&:before {
+				-webkit-transform: rotate(0deg);
+				-moz-transform: rotate(0deg);
+				transform: rotate(0deg);
+				right: auto !important; // for vw helper override
+				@include left(-3.4);
+				// @include respond-to(break2max) {
+				//     left: -1rem;
+				// }
+				// @include respond-to(break2full) {
+				//     left: -1.216vw;
+				// }
+				// @include respond-to(fullwidth) {
+				//     // left: -1.9rem;
+				//     right: auto;
+				//     left: 0;
+				// }
 			}
 		}
 	}
-
-	// GENERAL PAGINATION
-	
-	.pagination-section {
-	    @include sm-sans-title-light;
-
-	    @include respond-to(break2max) {
-	        padding-top: 1rem;
-	        padding-bottom: 1rem;
-	    }
-
-	    li:first-of-type {
-	        padding-right: 0;
-	    }
-
-	    li:last-of-type {
-	        padding-left: 0;
-	    }
-
-	    .light {
-	        display: inline-block;
-	        @include padding-top(1);
-	        @include padding-right(2);
-	        @include padding-bottom(1);
-	        @include padding-left(2);
-	    }
-
-	    .view-direction {
-	        cursor: pointer;
-	        display: inline-block;
-	        position: relative; // contain arrow
-	    }
-
-	    .view-previous:after, .view-next:before {
-	        color: $black65;
-	        @include dropdown-arrow;
-	        // for alignment
-	        -webkit-transform-origin: 0 !important;
-	        -moz-transform-origin: 0 !important;
-	        transform-origin: 0 !important;
-	        line-height: 0.3;
-
-	        @include respond-to(break2max) {
-	            font-size: 2rem;
-	            top: 0.9rem;
-	        }
-
-	        @include respond-to(break2full) {
-	            font-size: 3vw;
-	        }
-
-	        @include respond-to(fullwidth) {
-	            top: 0.4rem;
-	            font-size: 5rem;
-	        }
-	    }
-
-	    .view-previous {
-	        text-align: right;
-
-	        @include respond-to(break2max) {
-	            padding-right: 1.5rem;
-	        }
-
-	        @include respond-to(break2full) {
-	            padding-right: 3vw;
-	        }
-
-	        @include respond-to(fullwidth) {
-	            padding-right: 5rem;
-	        }
-
-	        &:after {
-	            -webkit-transform: rotate(180deg);
-	            -moz-transform: rotate(180deg);
-	            transform: rotate(180deg);
-
-	            @include respond-to(break2max) {
-	                right: -3.3rem;
-	            }
-
-	            @include respond-to(break2) {
-	                padding-right: 0;
-	            }
-
-	            @include respond-to(break2full) {
-	                right: -4vw;
-	            }
-
-	            @include respond-to(fullwidth) {
-	                padding-right: 0rem;
-	                right: -6.8rem;
-	            }
-	        }
-	    }
-
-	    .view-next {
-	        @include respond-to(break2max) {
-	            padding-left: 1.5rem;
-	        }
-
-	        @include respond-to(break2full) {
-	            padding-left: 3vw;
-	        }
-
-	        @include respond-to(fullwidth) {
-	            padding-left: 4.5rem;
-	        }
-
-	        &:before {
-	            -webkit-transform: rotate(0deg);
-	            -moz-transform: rotate(0deg);
-	            transform: rotate(0deg);
-
-	            @include respond-to(break2max) {
-	                left: -1rem;
-	            }
-
-	            @include respond-to(break2full) {
-	                left: -1.216vw;
-	            }
-
-	            @include respond-to(fullwidth) {
-	                left: -1.9rem;
-	            }
-	        }
-	    }
+	.pagination-numbers {
+		// text-align: center;
+		// display: inline-block; // for centering
+		// a {
+		// 	display: inline-block;
+		// 	padding: 0.5rem;
+		// 	&.is-active {
+		// 		background-color: $hover;
+		// 	}
+		// }
+		@include margin-left(7);
+		@include margin-right(7);
 	}
+}
+.pagination-numbers {
+	text-align: center;
+	a {
+		display: inline-block;
+		padding: 0.5rem;
+		&.is-active {
+			background-color: $hover;
+		}
+	}
+}
+// GENERAL PAGINATION
+.pagination-section {
+	@include sm-sans-title-light;
+	@include respond-to(break2max) {
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+	}
+	li:first-of-type {
+		padding-right: 0;
+	}
+	li:last-of-type {
+		padding-left: 0;
+	}
+	.light {
+		display: inline-block;
+		@include padding-top(1);
+		@include padding-right(2);
+		@include padding-bottom(1);
+		@include padding-left(2);
+	}
+	.view-direction {
+		cursor: pointer;
+		display: inline-block;
+		position: relative; // contain arrow
+	}
+	.view-previous:after, .view-next:before {
+		color: $black65;
+		@include dropdown-arrow;
+		// for alignment
+		-webkit-transform-origin: 0 !important;
+		-moz-transform-origin: 0 !important;
+		transform-origin: 0 !important;
+		line-height: 0.3;
+		@include respond-to(break2max) {
+			font-size: 2rem;
+			top: 0.9rem;
+		}
+		@include respond-to(break2full) {
+			font-size: 3vw;
+		}
+		@include respond-to(fullwidth) {
+			top: 0.4rem;
+			font-size: 5rem;
+		}
+	}
+	.view-previous {
+		text-align: right;
+		@include respond-to(break2max) {
+			padding-right: 1.5rem;
+		}
+		@include respond-to(break2full) {
+			padding-right: 3vw;
+		}
+		@include respond-to(fullwidth) {
+			padding-right: 5rem;
+		}
+		&:after {
+			-webkit-transform: rotate(180deg);
+			-moz-transform: rotate(180deg);
+			transform: rotate(180deg);
+			@include respond-to(break2max) {
+				right: -3.3rem;
+			}
+			@include respond-to(break2) {
+				padding-right: 0;
+			}
+			@include respond-to(break2full) {
+				right: -4vw;
+			}
+			@include respond-to(fullwidth) {
+				padding-right: 0rem;
+				right: -6.8rem;
+			}
+		}
+	}
+	.view-next {
+		@include respond-to(break2max) {
+			padding-left: 1.5rem;
+		}
+		@include respond-to(break2full) {
+			padding-left: 3vw;
+		}
+		@include respond-to(fullwidth) {
+			padding-left: 4.5rem;
+		}
+		&:before {
+			-webkit-transform: rotate(0deg);
+			-moz-transform: rotate(0deg);
+			transform: rotate(0deg);
+			@include respond-to(break2max) {
+				left: -1rem;
+			}
+			@include respond-to(break2full) {
+				left: -1.216vw;
+			}
+			@include respond-to(fullwidth) {
+				left: -1.9rem;
+			}
+		}
+	}
+}
 
 /* Back to top button
 -------------------------------------------------*/
- // $gttOffset: 6rem; // as circle image
- $gttOffset: 8rem; // as circle image
-	
-	.back-to-top {
-		text-align: center;
-		cursor: pointer;
+
+// $gttOffset: 6rem; // as circle image
+$gttOffset: 8rem; // as circle image
+.back-to-top {
+	text-align: center;
+	opacity: 0; // initial hide
+	// transition to fade in/out
+	-webkit-transition: opacity 0.3s ease;
+	-moz-transition: opacity 0.3s ease;
+	-ms-transition: opacity 0.3s ease;
+	-o-transition: opacity 0.3s ease;
+	transition: opacity 0.3s ease;
+	position: fixed;
+	@include bottom(2);
+	right: 0.2rem;
+	// z-index: 0; // go below footer
+	z-index: 3; // go above footer
+	@include respond-to(break2max) {
+		z-index: 2; // go above footer
+		bottom: 3rem; // just high enough to work on iphone
+	}
+	@include respond-to(break2full) {
+		right: 2rem;
+	}
+	@include respond-to(fullwidth) {
+		// right: calc(#{$halfScreen} - #{$halfPage} - #{$gttOffset}); // for 50/50 image
+		right: calc(#{$halfScreen} - #{$halfPage} - #{$gttOffset}); // for "go to top" as text
+	}
+	&.is-visible {
+		opacity: 1;
+	}
+	a {
 		@include padding(0.5);
-		// circle background, from http://stackoverflow.com/a/17545875
-		background: $black20; 		   
-		opacity: 0; // initial hide
-		// transition to fade in/out
-		-webkit-transition: opacity 0.3s ease;
-		-moz-transition: opacity 0.3s ease;
-		-ms-transition: opacity 0.3s ease;
-		-o-transition: opacity 0.3s ease;
-		transition: opacity 0.3s ease;
-
-		position: fixed;
-		@include bottom(2);
-		
-		right: 0.2rem;
-		// z-index: 0; // go below footer
-		z-index: 3; // go above footer
-
+		display: block;
+		color: $black70;
+		background: $black10;
+		// same as sidebar h4
+		@include caption-sans;
+		line-height: 1;
 		// circle background
 		$top-mobile-diameter: 40px;
 		width: $top-mobile-diameter;
 		height: $top-mobile-diameter;
-		-moz-border-radius: $top-mobile-diameter / 2; 
-		-webkit-border-radius: $top-mobile-diameter / 2; 
+		-moz-border-radius: $top-mobile-diameter / 2;
+		-webkit-border-radius: $top-mobile-diameter / 2;
 		border-radius: $top-mobile-diameter / 2;
-		@include respond-to(break2max) {
-			z-index: 2; // go above footer
-			bottom: 3rem; // just high enough to work on iphone
-		}
-		@include respond-to(break2full) {
-			right: 2rem;
-		}
 		@include respond-to(fullwidth) {
-			// right: calc(#{$halfScreen} - #{$halfPage} - #{$gttOffset}); // for 50/50 image
-			right: calc(#{$halfScreen} - #{$halfPage} - #{$gttOffset}); // for "go to top" as text
 			// circle background
 			$top-desktop-diameter: 60px;
 			width: $top-desktop-diameter;
 			height: $top-desktop-diameter;
-			-moz-border-radius: $top-desktop-diameter / 2; 
-			-webkit-border-radius: $top-desktop-diameter / 2; 
+			-moz-border-radius: $top-desktop-diameter / 2;
+			-webkit-border-radius: $top-desktop-diameter / 2;
 			border-radius: $top-desktop-diameter / 2;
 		}
 		&:hover {
 			background-color: black;
-		}
-		&.is-visible {
-			opacity: 1;
-		}
-		a {
-			// vertically align
-			position: relative;
-			top: 50%;
-			transform: translateY(-50%);
-
-			// same as sidebar h4
-			@include caption-sans;
 			color: white;
-			display: block;
-			line-height: 1;
 		}
 	}
-
+}
+.centered {
+	// vertically align
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
 
 /* Helpers
 -------------------------------------------------*/
-	.is-hidden {
-		display: none !important;
-	}
-	.is-visible {
-		display: block !important;
-	}
-	.invisible {
-		visibility: hidden; // for pagination numbers that need to keep centered balance
-	}
-	// hide text from Jeffrey Zeldman, http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
-	.hide-text {
-		text-indent: 100%;
-		white-space: nowrap;
-		overflow: hidden;
-		height: 0;
-	}
+
+.is-hidden {
+	display: none !important;
+}
+.is-visible {
+	display: block !important;
+}
+.invisible {
+	visibility: hidden; // for pagination numbers that need to keep centered balance
+}
+// hide text from Jeffrey Zeldman, http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
+.hide-text {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	height: 0;
+}

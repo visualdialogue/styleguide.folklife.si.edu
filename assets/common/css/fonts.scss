@@ -28,15 +28,17 @@ _|   \___/  _|  _| \__| ____/
 	font-style: normal;
 }
 
+// free download
 @font-face {
-	font-family: "galano";
+	font-family: "galano-bold";
 	src:url("./galano/galanogrotesquedemo-bold-webfont.eot");
 	src:url("./galano/galanogrotesquedemo-bold-webfont.eot?#iefix") format("embedded-opentype"),
 		url("./galano/galanogrotesquedemo-bold-webfont.woff") format("woff"),
 		url("./galano/galanogrotesquedemo-bold-webfont.woff2") format("woff2"),
 		url("./galano/galanogrotesquedemo-bold-webfont.ttf") format("truetype"),
 		url("./galano/galanogrotesquedemo-bold-webfont.svg#galano") format("svg");
-	font-weight: normal;
+	// font-weight: normal;
+	font-weight: bold;
 	font-style: normal;
 }
 
@@ -58,5 +60,5 @@ $woodtypeExtended: "unit-gothic-717", $woodtypeFallback; // widest HTW
 $woodtypeNarrow: "unit-gothic-718", $woodtypeFallback; // widest HTW
 
 // Galano
-$galano: 'galano', $sans;
-$md-galano: GalanoGrotesque-Medium, $sans;
+$galanoBold: 'galano-bold', $sans;
+$galanoMedium: GalanoGrotesque-Medium, $sans;

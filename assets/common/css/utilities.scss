@@ -1,0 +1,12 @@
+
+/* Utilities
+-------------------------------------------------- */
+
+// Margins
+.top-ten, .top-twenty, .top-forty {
+    @include margin-top(4);
+}
+.top-40 { @include margin-top(4); }
+.bottom-20 { @include margin-bottom(2); }
+.bottom-30 { @include margin-bottom(3); }
+.bottom-40 { @include margin-bottom(4); }
