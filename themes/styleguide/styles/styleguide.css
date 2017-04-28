@@ -18654,8 +18654,8 @@ body {
 	line-height: 1 !important;
 	letter-spacing: initial !important;
 	float: none;
-	width: initial;
-	height: initial;
+	width: auto;
+	height: auto;
 	margin-bottom: 0 !important;
 }
 
@@ -18968,7 +18968,7 @@ body {
 }
 
 .mejs-container .mejs-controls .mejs-time-rail .mejs-time-loaded, .audio-card .track-title .mejs-time-loaded {
-	width: initial !important;
+	width: auto !important;
 }
 
 .mejs-container .mejs-controls .mejs-time-rail span, .audio-card .track-title span {
@@ -38685,8 +38685,8 @@ body {
 	line-height: 1 !important;
 	letter-spacing: initial !important;
 	float: none;
-	width: initial;
-	height: initial;
+	width: auto;
+	height: auto;
 	margin-bottom: 0 !important;
 }
 
@@ -38999,7 +38999,7 @@ body {
 }
 
 .mejs-container .mejs-controls .mejs-time-rail .mejs-time-loaded, .audio-card .track-title .mejs-time-loaded {
-	width: initial !important;
+	width: auto !important;
 }
 
 .mejs-container .mejs-controls .mejs-time-rail span, .audio-card .track-title span {

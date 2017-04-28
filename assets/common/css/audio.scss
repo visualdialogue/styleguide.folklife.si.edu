@@ -104,8 +104,10 @@
 				line-height: 1 !important; // type override for all media queries
 				letter-spacing: initial !important;
 				float: none;
-				width: initial;
-				height: initial;
+				// width: initial; // no ie
+				width: auto;
+				// height: initial; // no ie
+				height: auto;
 				margin-bottom: 0 !important;
 				@include respond-to(break2max) {
 					font-size: 3vw;
@@ -264,7 +266,8 @@
 		}
 		@include height(2);
 		.mejs-time-loaded {
-			width: initial !important;
+			// width: initial !important; // no ie
+			width: auto !important;
 		}
 		span {
 			height: 3px;
