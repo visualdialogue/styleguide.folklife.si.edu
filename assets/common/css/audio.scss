@@ -8,6 +8,12 @@
 		}
 		.image {
 			padding-bottom:0; // prevent making gap in outline
+			a {
+				display: block;
+				// keep above z-indexed :before element border
+				position: relative;
+				z-index: 2 
+			}
 		}
 		.title-wrapper {
 			@include respond-to(break2max) {
@@ -266,7 +272,7 @@
 		}
 		@include height(2);
 		.mejs-time-loaded {
-			// width: initial !important; // no ie
+			// width: initial !important;
 			width: auto !important;
 		}
 		span {
@@ -372,8 +378,9 @@ $horizontalMobilePlayHeight: 8vw;
 	}
 	.title-wrapper {
 		// height:30vw;
-		height:26vw; // mar 28
+		// height:26vw; // mar 28
 		// @include respond-to(break23) {height:6vw;}
+		@include respond-to(break2max) {height:26vw;}
 		@include respond-to(break23) {height:5.5vw;}
 		// @include respond-to(break3full) {height:6.8vw;}
 		@include respond-to(break3full) {height:6.7vw;}
@@ -618,16 +625,17 @@ $horizontalMobilePlayHeight: 8vw;
 .horizontal-audio-card-single {
 
 	.details, .details-inner {
-		height:22rem;
+		// height:22rem;
+		height:21.8rem; // 2017-05-01
 		@include respond-to(break23) {height:13vw;}
-		@include respond-to(break3) {height:13vw;}
-		@include respond-to(fullwidth) {height:22rem;}
+		@include respond-to(break3full) {height:13vw;}
+		@include respond-to(fullwidth) {height:21.8rem;}
 	}
 	.audio-player {
 		position: absolute;
 		bottom: 0;
 		@include padding(1);
-		// @include padding-bottom(1);
+		@include padding-bottom(1.4);
 		// @include padding-right(1);
 	}
 	// overrides

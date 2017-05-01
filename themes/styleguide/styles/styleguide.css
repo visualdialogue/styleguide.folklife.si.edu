@@ -18422,6 +18422,12 @@ body {
 	padding-bottom: 0;
 }
 
+.audio-card .image a {
+	display: block;
+	position: relative;
+	z-index: 2;
+}
+
 @media only screen and (max-width: 53.15em) {
 	.audio-card .title-wrapper {
 		margin-bottom: 1rem;
@@ -19169,8 +19175,10 @@ body {
 	}
 }
 
-.horizontal-audio-card .title-wrapper {
-	height: 26vw;
+@media only screen and (max-width: 53.15em) {
+	.horizontal-audio-card .title-wrapper {
+		height: 26vw;
+	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 61.9em) {
@@ -19709,7 +19717,7 @@ body {
 }
 
 .horizontal-audio-card-single .details, .horizontal-audio-card-single .details-inner {
-	height: 22rem;
+	height: 21.8rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 61.9em) {
@@ -19718,7 +19726,7 @@ body {
 	}
 }
 
-@media only screen and (min-width: 62em) {
+@media only screen and (min-width: 62em) and (max-width: 1559px) {
 	.horizontal-audio-card-single .details, .horizontal-audio-card-single .details-inner {
 		height: 13vw;
 	}
@@ -19726,7 +19734,7 @@ body {
 
 @media only screen and (min-width: 1560px) {
 	.horizontal-audio-card-single .details, .horizontal-audio-card-single .details-inner {
-		height: 22rem;
+		height: 21.8rem;
 	}
 }
 
@@ -19734,6 +19742,7 @@ body {
 	position: absolute;
 	bottom: 0;
 	padding: 0.70235rem;
+	padding-bottom: 0.98328rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
@@ -19745,6 +19754,18 @@ body {
 @media only screen and (min-width: 1560px) {
 	.horizontal-audio-card-single .audio-player {
 		padding: 1rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-single .audio-player {
+		padding-bottom: 0.896vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-single .audio-player {
+		padding-bottom: 1.4rem;
 	}
 }
 
@@ -38453,6 +38474,12 @@ body {
 	padding-bottom: 0;
 }
 
+.audio-card .image a {
+	display: block;
+	position: relative;
+	z-index: 2;
+}
+
 @media only screen and (max-width: 53.15em) {
 	.audio-card .title-wrapper {
 		margin-bottom: 1rem;
@@ -39200,8 +39227,10 @@ body {
 	}
 }
 
-.horizontal-audio-card .title-wrapper {
-	height: 26vw;
+@media only screen and (max-width: 53.15em) {
+	.horizontal-audio-card .title-wrapper {
+		height: 26vw;
+	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 61.9em) {
@@ -39740,7 +39769,7 @@ body {
 }
 
 .horizontal-audio-card-single .details, .horizontal-audio-card-single .details-inner {
-	height: 22rem;
+	height: 21.8rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 61.9em) {
@@ -39749,7 +39778,7 @@ body {
 	}
 }
 
-@media only screen and (min-width: 62em) {
+@media only screen and (min-width: 62em) and (max-width: 1559px) {
 	.horizontal-audio-card-single .details, .horizontal-audio-card-single .details-inner {
 		height: 13vw;
 	}
@@ -39757,7 +39786,7 @@ body {
 
 @media only screen and (min-width: 1560px) {
 	.horizontal-audio-card-single .details, .horizontal-audio-card-single .details-inner {
-		height: 22rem;
+		height: 21.8rem;
 	}
 }
 
@@ -39765,6 +39794,7 @@ body {
 	position: absolute;
 	bottom: 0;
 	padding: 0.70235rem;
+	padding-bottom: 0.98328rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
@@ -39776,6 +39806,18 @@ body {
 @media only screen and (min-width: 1560px) {
 	.horizontal-audio-card-single .audio-player {
 		padding: 1rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.horizontal-audio-card-single .audio-player {
+		padding-bottom: 0.896vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.horizontal-audio-card-single .audio-player {
+		padding-bottom: 1.4rem;
 	}
 }
 
