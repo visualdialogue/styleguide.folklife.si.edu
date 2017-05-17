@@ -10,3 +10,19 @@
 .bottom-20 { @include margin-bottom(2); }
 .bottom-30 { @include margin-bottom(3); }
 .bottom-40 { @include margin-bottom(4); }
+
+
+// Folkways page
+.show-browse-page {
+	.browsenav {
+		display: block !important;
+		@include respond-to(break2full) {
+			padding-top: 0.3vw;
+			padding-bottom: 1.2vw;
+		}
+		@include respond-to(fullwidth) {
+			padding-top: 0.2rem;
+			padding-bottom: 1.7rem;
+		}
+	}
+}

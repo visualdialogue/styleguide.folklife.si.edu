@@ -15,6 +15,9 @@
     @if $media == break1max {
       @media only screen and (min-width: $break1) and (max-width: $break2 - 0.1em){ @content; }
     }
+    @if $media == mobileonly {
+      @media only screen and (max-width: $break2 - 0.1em){ @content; }
+    }
     @else if $media == break2 {
       @media only screen and (min-width: $break2) { @content; }
     }

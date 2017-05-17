@@ -11,6 +11,9 @@ svg {
 	// will not work in edge without this
 	pointer-events: none;
 }
+a svg {
+	pointer-events: auto;
+}
 [class^="icon-"]:before, [class*=" icon-"]:before {
 	vertical-align: middle;
 }
@@ -183,6 +186,7 @@ svg {
 	position: absolute;
 	@include right(0.8);
 	@include top(0.4);
+	top: 0.5rem;
 	$svgFilterIconMobile: 40px;
 	$svgFilterIconTablet: 22px;
 	$svgFilterIconFull: 28px;
@@ -200,6 +204,24 @@ svg {
 	// SVG icons, from fontastic directions
 	display: inline-block;
 	fill: currentColor;
+}
+.dropdown {
+	.svg-filter-icon {
+		$svgFilterIconMobile: 25px;
+		$svgFilterIconTablet: 22px;
+		$svgFilterIconFull: 28px;
+		vertical-align: middle;
+		width: $svgFilterIconMobile;
+		height: $svgFilterIconMobile;
+		@include respond-to(break2) {
+			width: $svgFilterIconTablet;
+			height: $svgFilterIconTablet;
+		}
+		@include respond-to(fullwidth) {
+			width: $svgFilterIconFull;
+			height: $svgFilterIconFull;
+		}
+	}
 }
 .svg-arrow2-icon {
 	position: relative;

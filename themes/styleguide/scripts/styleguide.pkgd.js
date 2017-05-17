@@ -7798,7 +7798,7 @@ $(document).ready(function () {
 			$searchBar.add($browsenav).show(); // show social media icons
 			searchClosed = false; // flag for closing	
 			$folkwaysNav.hide(); // hide folkways nav
-			$searchInput.focus();// focus in field
+			$searchInput.focus();// focus in field that exists in desktop
 		} else {
 			site.navCloseAll(); // close anything else that's open by default
 			searchClosed = true; // flag for closing	
@@ -8043,6 +8043,8 @@ $(document).ready(function () {
 			asNavFor: '.remodal-captions',
 			adaptiveHeight: true,
 			centerPadding: '0',
+			prevArrow: '<svg title="previous" class="svg-slick-prev"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Images/icons/icons.svg#icon-folklife-leftarrow"></use></svg>',
+			nextArrow: '<svg title="next" class="svg-slick-next"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Images/icons/icons.svg#icon-folklife-rightarrow"></use></svg>',
 			responsive: [
 				{
 					breakpoint: site.break2,

@@ -282,6 +282,7 @@
 	}
 	.one-line-logos, .block-logos {
 		position: absolute;
+		z-index: 2; // above nav bar
 	}
 	.logo-wrapper {
 		margin-top:0;
@@ -362,8 +363,14 @@
 	}
 	.social-icon-link {
 		display: inline-block;
+		cursor: pointer;
 		@include respond-to(break2max) {
 			padding: 10px;
+		}
+		&:hover {
+			svg {
+				fill: $black30;
+			}
 		}
 	}
 
@@ -505,6 +512,12 @@
 		}
 		@include padding-top(3.5);
 		@include padding-bottom(3);
+
+		// mobile
+		select {
+			width: 100%;
+			@include margin-bottom(4.5);
+		}
 	}
 	.first-level-dropdown.tall-dropdown {
 		overflow-y: scroll;

@@ -1082,6 +1082,8 @@ figcaption {
 }
 .dropdown-wrapper {
 	@include sm-sans-title;
+	// font size for phone slightly larger
+	font-size: 1.8rem;
 	color: $black60;
 	// new svg icon, 2017.04.17
 	svg {
@@ -1093,8 +1095,8 @@ figcaption {
 	}
 }
 .dropdown:hover, .first-level-dropdown li:hover {
-	background-color: $black20;
 	@include respond-to(break2) {
+		background-color: $black20;
 		// show next menu on hover
 		& > ul {
 			display: block;
@@ -1105,11 +1107,19 @@ figcaption {
 			transform: rotate(-90deg);
 		}
 		// new svg icon, 2017.04.17
-		.svg-filter-icon {
-			@include top(0.7);
-			@include right(0.6);
+		.first-level-dropdown-title {
+			.svg-filter-icon {
+				@include top(0.7);
+				@include right(0.6);
+			}	
 		}
-		svg {
+		.second-level-dropdown-title {
+			.svg-filter-icon {
+				@include top(0.4);
+				@include right(0.6);
+			}	
+		}
+		svg:not(.no-rotate) {
 			-webkit-transform: rotate(-90deg);
 			-moz-transform: rotate(-90deg);
 			-ms-transform: rotate(-90deg);
@@ -1124,6 +1134,7 @@ figcaption {
 }
 .dropdown, .filter-button {
 	@include margin-top(1.5); // 19px
+	margin-top: 1.5rem; // mobile only
 	&:focus {
 		@include outline;
 	}
@@ -1143,9 +1154,16 @@ figcaption {
 	line-height: 1.7;
 	line-height: 1.2;
 	li {
-		position: relative; // contain arrow
-		@include padding-left(1);
-		@include padding-bottom(0.9);
+		position: relative; // contain arrow		
+		padding-top: 0.5rem; // mobile override
+		padding-left: 2.5rem;
+		padding-bottom: 0.5rem;
+		@include respond-to(break2) {
+			@include padding-left(1);
+			@include padding-top(0.7);
+			@include padding-right(0.5);
+			@include padding-bottom(0.7);
+		}
 	}
 }
 .second-level-dropdown, .third-level-dropdown {
@@ -1158,6 +1176,15 @@ figcaption {
 		width: 100%;
 	}
 }
+.second-level-dropdown {
+	@include respond-to(mobileonly) {
+		li {
+			padding-top: 1.5rem; // mobile override
+			padding-left: 2.5rem; // mobile override
+			padding-bottom: 0;
+		}
+	}
+}
 .third-level-dropdown {
 	li:after {
 		display: none;
@@ -1166,7 +1193,7 @@ figcaption {
 .first-level-dropdown-title, .filter-button {
 	// @include padding-top(0.7);
 	@include height(3.7); // 35px
-	height: 3rem; // mobile override
+	height: 3.5rem; // mobile override
 	@include padding-left(1);
 	padding-top: 0.5rem;
 	@include respond-to(break2) {
@@ -1176,17 +1203,29 @@ figcaption {
 		padding-top: 0.7rem;
 	}
 }
-.first-level-dropdown-title {
+.magazine-page .first-level-dropdown-title {
 	&:after {
-		@include dropdown-arrow;
+		// @include dropdown-arrow;
 	}
 }
-.second-level-dropdown-title, .third-level-dropdown-title {
+.dropdown .second-level-dropdown-title, .dropdown .third-level-dropdown-title {
+	svg {
+		fill: $black40;
+		-webkit-transform: rotate(0deg) !important;
+		-moz-transform: rotate(0deg) !important;
+		transform: rotate(0deg) !important;
+	}
+}
+.dropdown .third-level-dropdown-title {
+	width: 85%;
+}
+
+.second-level-dropdown-title-old, .third-level-dropdown-title-old {
 	&:after {
 		@include dropdown-arrow;
-		-webkit-transform: rotate(0deg);
-		-moz-transform: rotate(0deg);
-		transform: rotate(0deg);
+		-webkit-transform: rotate(180deg);
+		-moz-transform: rotate(180deg);
+		transform: rotate(180deg);
 		color: $black40;
 		font-size: 2rem;
 		top: -0.5rem;
@@ -1618,6 +1657,25 @@ video::-webkit-media-controls {
 		}
 		@include respond-to(fullwidth) {
 			right: 5rem;
+		}
+	}
+	// SVG arrows
+	.svg-slick-prev {
+		@include respond-to(break2) {
+			left: 4vw;
+		}
+		@include respond-to(fullwidth) {
+			// left: 5rem;
+			left: 4rem;
+		}
+	}
+	.svg-slick-next {
+		@include respond-to(break2full) {
+			right: 1vw;
+		}
+		@include respond-to(fullwidth) {
+			// right: 5rem;
+			right: 3rem;
 		}
 	}
 }
@@ -2123,8 +2181,56 @@ $gttOffset: 8rem; // as circle image
 .centered {
 	// vertically align
 	position: relative;
+	line-height: 1.7;
 	top: 50%;
 	transform: translateY(-50%);
+}
+
+/* Credits, from 50 objects
+-------------------------------------------------- */
+
+.js-more-credits {
+    display: none; // initial hide
+}
+
+.credits, .back-to-top a {
+    // background-color: darken($banner-gray, 10%);
+    background-color: $banner-gray;
+    background-color: $black10;
+}
+
+.credits {
+    @include margin-top(6); // in intro area
+    @include padding-top(4);
+    // @include margin-bottom(2.9);
+    @include respond-to(break2max) {
+        padding: 0; // .sidebar override
+        margin-top: 1rem;
+    }
+}
+
+.credits .sidebar {
+    @include respond-to(break2max) {
+        padding: 0; // override usual
+    }
+
+    & > div {
+        @include respond-to(break2max) {
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+.credits-title {
+    @include lg-serif-title;
+    margin-top: 0;
+    @include margin-top(-1);
+    @include margin-bottom(3);
+    color: white;
+}
+
+.footer-credits .credits {
+    @include padding-top(4); // replace top padding lost in top credits in mobile
 }
 
 /* Helpers

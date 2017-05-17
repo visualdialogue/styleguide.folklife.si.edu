@@ -26,6 +26,21 @@
 	$black08: hsl(0, 0, 92);
 	$black05: hsl(0, 0, 95);
 
+	// utilities
+	.black-80 {color: $black80;}
+	.black-70 {color: $black70;}
+	.black-65 {color: $black65;}
+	.black-60 {color: $black60;}
+	.black-50 {color: $black50;}
+	.black-40 {color: $black40;}
+	.black-30 {color: $black30;}
+	.black-25 {color: $black25;}
+	.black-20 {color: $black20;}
+	.black-15 {color: $black15;}
+	.black-10 {color: $black10;}
+	.black-08 {color: $black08;}
+	.black-05 {color: $black05;}
+
 /* Folklife
 -------------------------------------------------- */
 	$fl-light-blue: #adbedd;
@@ -79,6 +94,7 @@
 	// from bootstrap
 	$body: #333333; 
 	$copy: $body; 
+	$banner-gray: #EBE6E6; // from 50 Objects credits
 
 /* Color Application
 -------------------------------------------------- */

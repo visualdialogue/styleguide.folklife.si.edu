@@ -63,8 +63,9 @@ a.details {
 
 		@include respond-to(break2) {
 			left: 2.8%;
+			// width: 22.86%; // 320 px at fullwidth
 			width: 22.86%; // 320 px at fullwidth
-			min-height: 40%;
+			// min-height: 40%;
 		}
 		@include respond-to(fullwidth) {
 			left: 4rem;
@@ -632,6 +633,16 @@ a.details {
 	.card-xs-break-2 {
 		&:nth-of-type(2n + 1) {
 			@include respond-to(break2max) {
+				clear:left;
+			}
+		}
+	}
+	.card-sm-break-3 {
+		@include respond-to(break2) {
+			// &:nth-of-type(2n + 1) {
+			// 	clear:none;
+			// }
+			&:nth-of-type(3n + 1) {
 				clear:left;
 			}
 		}

@@ -152,6 +152,9 @@ gulp.task('serve', ['jade', 'styles', 'js'], function() {
 		notify: false,
 		ghostMode: false,
 		minify: true,
+		ui: {
+		    port: 3008
+		}
 	});
 
 	// gulp.watch('site/**/*.jade',['jade-watch']);
