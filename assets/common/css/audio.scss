@@ -360,7 +360,6 @@
     }
     .audio-card {
         .svg-play-button-circle, .svg-play-button-play {}
-
     }
     .mejs-container .mejs-controls .mejs-time-rail {
         // padding-top:;
@@ -573,8 +572,7 @@
             padding: 0;
             @include margin-top(1);
         }
-        .playlist-controls {
-        }
+        .playlist-controls {}
         .playlist-controls {
             float: right;
             @include padding-right(0);
@@ -805,59 +803,70 @@
         //  }
         // }
     }
-    .playlist-audio {
-        // override mejs css
-        width: auto !important;
-        height: auto !important;
-    }
-    .playlist-number {
-        float: right !important;
-    }
-    .playlist-controls {
-        position: absolute;
-        // @include right(-0.5);
-        @include right(-0.7); // .col-sm-4
-        // @include right(-2); // .col-sm-4
-        @include respond-to(break2max) {
-            // margin-bottom: 1rem;
-            top: -2.5rem;
-            // top: -4vw;
-            font-size: 1rem;
+    .mejs-container {
+        // for specificity
+        &.playlist-audio {
+            // override mejs css
+            width: auto !important;
+            height: auto !important;
         }
-        @include respond-to(break2) {
-            // top: 0;
-            top: -0.2rem;
+        .mejs-controls {
+            .playlist-number {
+                float: right;
+                @include md-sans;
+                // font-weight: normal;
+            }
         }
-        @include respond-to(fullwidth) {
+        .playlist-controls {
+            position: absolute;
+            // @include right(-0.5);
+            @include right(-0.7); // .col-sm-4
+            // @include right(-2); // .col-sm-4
             float: right !important;
-        }
-        div {
-            display: inline-block;
-            margin-right: 2vw;
-            cursor: pointer;
+            @include respond-to(break2max) {
+                // margin-bottom: 1rem;
+                top: -2.5rem;
+                top: 0;
+                // top: -4vw;
+                font-size: 1rem;
+            }
             @include respond-to(break2) {
-                margin-right: 20px;
+                // top: 0;
+                top: -0.2rem;
             }
-            &:hover {
-                background-color: $fl-hover;
+            div {
+                display: inline-block;
+                margin-right: 2vw;
+                cursor: pointer;
+                @include respond-to(break2) {
+                    margin-right: 20px;
+                }
+                &:hover {
+                    background-color: $fl-hover;
+                }
             }
-        }
-        .previous-button, .next-button {
-            // margin-right: 20px;
-            display: inline-block !important;
-            float: right !important;
-        }
-        .svg-slick-prev, .svg-slick-next {
-            position: static; // reset from absolute
-            transform: none;
-        }
-        .previous-button, .next-button, .previous-button svg, .next-button svg {
-            // fill: $black80;
-            width: 30px;
-            height: 30px;
-            @include respond-to(break1) {
-                width: 35px;
-                height: 35px;
+            .previous-button, .next-button {
+                // margin-right: 20px;
+                display: inline-block !important;
+                float: right !important;
+                margin-right: 0;
+            }
+            .svg-slick-prev, .svg-slick-next {
+                position: static; // reset from absolute
+                transform: none;
+            }
+            .previous-button, .next-button, .previous-button svg, .next-button svg {
+                // fill: $black80;
+                width: 30px;
+                height: 30px;
+                @include respond-to(break2full) {
+                    width: 2vw;
+                    height: 2vw;
+                }
+                @include respond-to(fullwidth) {
+                    width: 32px;
+                    height: 32px;
+                }
             }
         }
     }

@@ -581,14 +581,15 @@ section.container.cards-section
                             .artist#playlist-artist Stanley and the Ten Sleepless Nights
                         .audio-player
                             <audio id="playlist-audio" class="playlist-audio" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'></audio>
-                            .playlist-number 1
-                            .playlist-controls.clearfix                                
-                                .next-button
-                                    svg.svg-slick-next.slick-arrow(title="previous")
-                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Images/icons/icons.svg#icon-folklife-rightarrow"></use>
-                                .previous-button
-                                    svg.svg-slick-prev.slick-arrow(title="previous")
-                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Images/icons/icons.svg#icon-folklife-leftarrow"></use>
+                            .playlist-row-1.clearfix
+                                .playlist-controls.clearfix                                
+                                    .next-button
+                                        svg.svg-slick-next.slick-arrow(title="previous")
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Images/icons/icons.svg#icon-folklife-rightarrow"></use>
+                                    .previous-button
+                                        svg.svg-slick-prev.slick-arrow(title="previous")
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Images/icons/icons.svg#icon-folklife-leftarrow"></use>
+                                .playlist-number 1
             .col-xs-12.visible-xs
                 -snippet('show-html-mobile')
                 -snippet('show-sass-mobile')
