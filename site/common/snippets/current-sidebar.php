@@ -84,7 +84,7 @@
 		</div>
 
 		<!-- sidebar audio player test -->
-		<div class="card audio-card full-border-card">
+		<div class="card audio-card full-border-card no-image-audio-card">
 			<div class="details">
 				<div class="details-inner">
 					<div class="tag">New Release</div>

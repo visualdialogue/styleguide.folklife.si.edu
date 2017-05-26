@@ -85,7 +85,7 @@ meta(name="twitter:site" content="@smithsonianfolk")
 -elseif($page->intendedTemplate() == 'magazine-article'):
 	meta(property="og:type" content="article")
 	meta(property="og:image" content="<?= $page->image()->url() ?>")
-	meta(property="og:description" content="<?= $page->contents() ?>")
+	meta(property="og:description" content="<?= excerpt($page->contents()->kt(), 20, 'words') ?>")
 
 //- general content page
 -elseif($page->intendedTemplate() == 'general-content'):

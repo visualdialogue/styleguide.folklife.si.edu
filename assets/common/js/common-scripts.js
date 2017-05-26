@@ -44,6 +44,13 @@
 	svg4everybody();
 
 /*********
+ * search box placeholder fix for ie
+ * from https://github.com/mathiasbynens/jquery-placeholder
+*********/
+$('#search-input').placeholder();
+
+
+/*********
 * accessibility related content
 *********/
 $('.js-keyboard-toggle').on('keypress', function() {
@@ -1026,8 +1033,24 @@ $(document).ready(function () {
 		$timeRail.insertBefore($currentTime);
 
 		// wrap all non-button elements, from http://stackoverflow.com/a/25324520
-		var $nonButtonControls = $(mediaElement.player.controls[0]).children().not('.mejs-playpause-button');
-		$nonButtonControls.wrapAll('<div class="non-button-controls /">');
+        // var $nonButtonControls = $(mediaElement.player.controls[0]).children().not('.mejs-playpause-button');
+        // console.log('$(mediaElement.player)', $(mediaElement.player));
+		var $nonButtonControls = $(mediaElement.player.controls[0]).children().not('.mejs-playpause-button'); // add playlist number and controls
+		// var $nonButtonControls = $(mediaElement.player.controls[0]).children().not('.mejs-playpause-button').add($(mediaElement.player.controls[0]).parents('.audio-player').find('.track-title'));
+		$nonButtonControls.wrapAll('<div class="non-button-controls clearfix" />');
+
+		// add track title to non-button-controls because can't do this earlier or completely messses up player
+		var $trackTitle = $(mediaElement.player.controls[0]).parents('.audio-player').find('.track-title');
+		// console.log('$trackTitle', $trackTitle);
+		var $nonButtonControlElement = $(mediaElement.player.controls[0]).find('.non-button-controls'); // get new controls div
+        var $mejsContainer = $(mediaElement.player.container[0]); // get media container for later searching
+        var $playlistNumber = $mejsContainer.siblings('.playlist-number');
+        var $playlistControls = $mejsContainer.siblings('.playlist-controls');
+
+        // add the follwing in reverse order for correct order in parent div
+        $nonButtonControlElement.prepend($playlistNumber); // add track title at top
+        $nonButtonControlElement.prepend($playlistControls); // add track title at top
+        $nonButtonControlElement.prepend($trackTitle); // add track title at top
 	}
 	
 	// find currenttime containers and wrap them with closest duration container
@@ -1053,9 +1076,9 @@ $(document).ready(function () {
 		})
 	}
 
-	$('.track-audio').on('keypress', function() {
-		console.log('play it');
-	});
+	// $('.track-audio').on('keypress', function() {
+	// 	console.log('play it');
+	// });
 
 	// manually init so can hear when pausing
 	$('.track-audio').mediaelementplayer({
@@ -1065,7 +1088,7 @@ $(document).ready(function () {
 		// pluginPath: "/path/to/shims/", 
 		success: function(mediaElement, originalNode) {
 			// $originalNode = $(originalNode); // jquery cache
-			// console.log('mediaElement', mediaElement);
+			console.log('mediaElement', mediaElement);
 
 			// pass playpause button to get listener
 			buttonControl($(mediaElement.player.controls[0].firstChild));

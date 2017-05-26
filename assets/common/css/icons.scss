@@ -422,7 +422,8 @@ a svg {
 	fill: $black20;
 	// fill: red;
 	// sizing
-	$mobile: 10vw;
+	// $mobile: 10vw;
+	$mobile: 12vw;
 	$tablet: 3.8vw;
 	$full: 60px;
 	@include respond-to(break2max) {
@@ -441,6 +442,7 @@ a svg {
 .svg-play-button-play {
 	// sizing
 	$mobile: 10vw;
+	// $mobile: 11vw;
 	$tablet: 3.4vw;
 	$full: 50px;	
 	// have to contain the vw or plugin will keep at fullwidth
@@ -480,7 +482,8 @@ a svg {
 	.svg-play-button-circle {
 		fill: $black30;
 		// sizing
-		$mobile: 2rem;
+        // $mobile: 2rem;
+		$mobile: 3rem; // update 2017.05.22 larger on mobile
 		$tablet: 1.8vw;
 		$full: 3rem;
 		@include respond-to(break2max) {
@@ -498,7 +501,8 @@ a svg {
 	}
 	.svg-play-button-play {
 		// sizing
-		$mobile: 2rem;
+        // $mobile: 2rem;
+		$mobile: 3rem;
 		$tablet: 1.6vw;
 		$full: 2.5rem;
 		@include respond-to(break2max) {
@@ -516,7 +520,8 @@ a svg {
 	}
 	.svg-play-button-pause {
 		// sizing
-		$mobile: 1.4rem;
+        // $mobile: 1.4rem;
+		$mobile: 2rem;
 		$tablet: 1.3vw;
 		$full: 2rem;
 		@include respond-to(break2max) {

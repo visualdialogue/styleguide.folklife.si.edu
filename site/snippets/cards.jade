@@ -1,1593 +1,1599 @@
 // Cards
 section.container.cards-section
-	.row
-		main.content.col-sm-7
-			h2.section-title Cards
-			a.anchor-link#cards
-			.intro-copy.content.link-underline
-				p Cards are the smallest component pieces on the site besides UI elements. They usually consist of an image, a tag or date, a title, and the first few words of the copy. Some cards contain audio players or video buttons. Some cards lie horizontally. Here you'll find code to study and copy.
-	
-	// Full Feature Card
-	.codeblock
-		.row
-			.col-sm-8
-				h3.section-subtitle Full Feature Card
-			-snippet('show-html')
-			-snippet('show-sass')
+    .row
+        main.content.col-sm-7
+            h2.section-title Cards
+            a.anchor-link#cards
+            .intro-copy.content.link-underline
+                p Cards are the smallest component pieces on the site besides UI elements. They usually consist of an image, a tag or date, a title, and the first few words of the copy. Some cards contain audio players or video buttons. Some cards lie horizontally. Here you'll find code to study and copy.
+    
+    // Full Feature Card
+    .codeblock
+        .row
+            .col-sm-8
+                h3.section-subtitle Full Feature Card
+            -snippet('show-html')
+            -snippet('show-sass')
 
-		.row
-			.card.col-xs-12.full-feature-card
-				.row
-					.image.col-md-6.col-lg-7
-						a(href="#")
-							!=$section->image('ralphRinzler.jpg')
-					.details.col-md-6.col-lg-5
-						.details-inner
-							a.high(href="#").title: span.light: span.er Ralph Rinzler Folklife Archives and Collections
-							
-							.description.link-underline
-								p The Center for Folklife and Cultural Heritage is home to the Ralph Rinzler Folklife Archives and Collections, a public resource named for the founding director of the Smithsonian Folklife Festival.
-							a.high.more-link: .light: .er
-								.more-link-text more
-								.more-link-arrow.icon-arrow2
-				.row
-					.col-sm-12.visible-xs
-						-snippet('show-html-mobile')
-						-snippet('show-sass-mobile')
+        .row
+            .card.col-xs-12.full-feature-card
+                .row
+                    .image.col-md-6.col-lg-7
+                        a(href="#")
+                            !=$section->image('ralphRinzler.jpg')
+                    .details.col-md-6.col-lg-5
+                        .details-inner
+                            a.high(href="#").title: span.light: span.er Ralph Rinzler Folklife Archives and Collections
+                            
+                            .description.link-underline
+                                p The Center for Folklife and Cultural Heritage is home to the Ralph Rinzler Folklife Archives and Collections, a public resource named for the founding director of the Smithsonian Folklife Festival.
+                            a.high.more-link: .light: .er
+                                .more-link-text more
+                                .more-link-arrow.icon-arrow2
+                .row
+                    .col-sm-12.visible-xs
+                        -snippet('show-html-mobile')
+                        -snippet('show-sass-mobile')
 
-		.row
-			.col-sm-12
-				pre.sass: code.
-					.full-feature-card {
-						@include margin-bottom(0);
-						.tag {
-							display: none;
-						}
-						.image {
-							@include respond-to(break2max) {
-								padding-bottom: 2.5vw;
-							}
-						}
-						.title {
-							@include lg-serif;
-							@include margin-bottom(2);
-						}
-						.details-inner {
-							@include padding-top(0);
-							@include padding-right(2);
-							@include respond-to(break2max) {
-								padding-left:0; // for full width detail copy
-							}
-						}
-						.description {
-							@include lg-sans;
-						}
-					}
-			.col-sm-12
-				pre.html: code.
-					&lt;div class="row"&gt;
-						&lt;div class="card col-xs-12 full-feature-card"&gt;
-							&lt;div class="row"&gt;
-								&lt;div class="image col-md-6 col-lg-7"&gt;
-									&lt;a href="#"&gt;&lt;img src="ralphRinzler.jpg" alt="Ralph Rinzler Folklife Archives and Collections"&gt;&lt;/a&gt;
-								&lt;/div&gt;
-								&lt;div class="details col-md-6 col-lg-5"&gt;
-									&lt;div class="details-inner"&gt;
-										&lt;a href="#" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;Ralph Rinzler Folklife Archives and Collections&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
-										&lt;div class="description link-underline"&gt;
-											&lt;p&gt;The Center for Folklife and Cultural Heritage is home to the Ralph Rinzler Folklife Archives and Collections, a public resource named for the founding director of the Smithsonian Folklife Festival.&lt;/p&gt;
-										&lt;/div&gt;
-										&lt;a href="#" class="high more-link "&gt;
-											&lt;div class="light"&gt;
-												&lt;div class="er"&gt;
-													&lt;div class="more-link-text"&gt;more&lt;/div&gt;&lt;div class="more-link-arrow icon-arrow2"&gt;&lt;/div&gt;
-												&lt;/div&gt;
-											&lt;/div&gt;
-										&lt;/a&gt;                      
-									&lt;/div&gt;
-								&lt;/div&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;  
-					&lt;/div&gt;
-
-
-
-	// Figure with Caption
-	.codeblock
-		a.anchor-link#figure-with-caption
-		.row
-			.col-sm-8
-				h3.section-subtitle Figure with Caption
-			-snippet('show-html')
-			-snippet('show-sass')
-		.row
-			-$src = $section->image('figure-with-caption.jpg')
-			.col-sm-5
-				figure
-					img.ms-header-image(src="<?= $src->url() ?>" alt="<?= $page->title() ?>")
-					//- show caption if it exists and set $caption var
-					-if($caption = $src->caption()->kt()):
-						figcaption
-							.figcaption-inner
-								!= $caption
-								-if($credit = $src->credit()->kt()):
-									.credit!= $credit
-								-endif
-					-endif
-				.row
-					.col-sm-12.visible-xs
-						-snippet('show-html-mobile')
-						-snippet('show-sass-mobile')
-			.col-sm-7
-				pre.sass: code.
-					// too many rules to list. See general.scss
-			.col-sm-7
-				pre.html: code.
-					&lt;div class="col-sm-5"&gt;
-						&lt;figure&gt;
-							&lt;img src="//127.0.0.1.xip.io:3007/content/5-cards/figure-with-caption.jpg" alt="Home" class="ms-header-image"&gt;
-							&lt;figcaption&gt;
-								&lt;div class="figcaption-inner"&gt;
-									&lt;p&gt;A blacksmith heats his iron in a traditional forge before demonstrating the technique for shaping the metal.&LT;/p&gt;
-									&lt;div class="credit"&gt;
-										&lt;p&gt;Photo by Anne Pedersen, Ralph Rinzler Folklife Archives&LT;/p&gt;
-									&lt;/div&gt;
-								&lt;/div&gt;
-							&lt;/figcaption&gt;
-						&lt;/figure&gt;
-					&lt;/div&gt;
-			
-	// Horizontal Card
-	.codeblock
-		.row
-			.col-sm-8
-				h3.section-subtitle Horizontal Card
-			-snippet('show-html')
-			-snippet('show-sass')
-		.row
-			.card.horizontal-card.folkways-magazine-card.col-xs-12.col-sm-6.top-border-card
-				.row
-					.image.col-xs-6
-						a(href="#")
-							!=$section->image('horizontal.png')
-					.details.col-xs-6
-						.details-inner
-							.tag Recording Spotlight
-							a.high(href="#").title: span.light: span.er Rasta Sounds
-							
-							.description.link-underline
-								p The global African Diaspora has often searched through music for a “post-racist utopia.”
-
-				.row
-					.col-sm-12.visible-xs
-						-snippet('show-html-mobile')
-						-snippet('show-sass-mobile')
-			.col-sm-6
-				pre.sass: code.
-					.folkways-magazine-card {
-						.tag {
-							// mobile only
-							@include respond-to(break2max) {
-								padding-top: 1.5rem;
-							}
-						}
-						.title {
-							@include lg-magazine-title;
-							// mobile-only
-							@include respond-to(break2max) {
-								// smaller for longer titles
-								@include sm-magazine-title;
-							}
-						}
-					}
-			.col-sm-6
-				pre.html: code.
-					&lt;li class="card horizontal-card folkways-magazine-card col-xs-6 top-border"&gt;
-						&lt;div class="row"&gt;
-							&lt;div class="image col-sm-6"&gt;
-								&lt;a href="#"&gt;
-									&lt;img src="horizontal.png"&gt;
-								&lt;/a&gt;
-							&lt;/div&gt;
-							&lt;div class="details col-sm-6"&gt;
-								&lt;div class="details-inner"&gt;
-									&lt;div class="tag"&gt; Recording Spotlight&lt;/div&gt;
-									&lt;a class="high title" href="#"&gt; 
-										&lt;span class="light"&gt;
-											&lt;span class="er"&gt;
-												Rasta Sounds
-											&lt;/span&gt;
-										&lt;/span&gt;
-									&lt;/a&gt;
-									&lt;div class="description link-underline"&gt;
-										&lt;p&gt;The global African Diaspora has often searched through music for a “post-racist utopia.”&lt;p&gt;
-									&lt;/div&gt;
-								&lt;/div&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-					&lt;/li&gt;
-	// Publication Card
-	.codeblock
-		.row
-			.col-sm-8
-				h3.section-subtitle Publication Card
-			-snippet('show-html')
-			-snippet('show-sass')
-		.row
-			.card.col-sm-6.publication-card.top-border-card
-				.row
-					.image.col-xs-4
-						a(href="#")
-							!=$section->image('curatorial-conversations.jpg')
-					.details.col-xs-8
-						.details-inner
-							a.high(href="#").title: span.light: span.er Curatorial Conversations: Cultural Representation and the Smithsonian Folklife Festival
-							.author Edited by Olivia Cadaval, Sojin Kim, and Diana Baird N’Diaye
-							a.high.buy-now-button(href="#"): span.light: span.er Order from University Press of Mississippi&nbsp;&#x2192
-				.row
-					.col-sm-12.visible-xs
-						-snippet('show-html-mobile')
-						-snippet('show-sass-mobile')
-		.row
-			.col-sm-12
-				pre.sass: code.
-					.publication-card {
-						@include margin-bottom(4); // add back to horizontal cards section
-						.card:nth-of-type(2n + 1) {
-							clear:left; // keep cards 1, 3, 5, 7, etc cleared left so don't hang on previous card
-						}
-						.title {
-							@include margin-top(-0.8);
-							@include lg-sans;
-						}
-						.author {
-							@include sm-sans;
-							@include margin-top(1);
-							@include margin-bottom(3);
-						}
-						.details-inner {
-							@include padding-top(2);
-						}
-						.more-link {
-							display: none;
-						}
-						.buy-now-button {
-							@include buy-button;
-							text-transform: none;
-							color: $black65;
-							font-weight: 400;
-							display: block; // force new line for multiple buttons
-						}
-					}
-			.col-sm-12
-				pre.html: code.
-					&lt;div class="row"&gt;
-						&lt;div class="card col-xs-12 full-feature-card"&gt;
-							&lt;div class="row"&gt;
-								&lt;div class="image col-md-6 col-lg-7"&gt;
-									&lt;a href="#"&gt;&lt;img src="ralphRinzler.jpg" alt="Ralph Rinzler Folklife Archives and Collections"&gt;&lt;/a&gt;
-								&lt;/div&gt;
-								&lt;div class="details col-md-6 col-lg-5"&gt;
-									&lt;div class="details-inner"&gt;
-										&lt;a href="#" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;Ralph Rinzler Folklife Archives and Collections&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
-										&lt;div class="description link-underline"&gt;
-											&lt;p&gt;The Center for Folklife and Cultural Heritage is home to the Ralph Rinzler Folklife Archives and Collections, a public resource named for the founding director of the Smithsonian Folklife Festival.&lt;/p&gt;
-										&lt;/div&gt;
-										&lt;a href="#" class="high more-link "&gt;
-											&lt;div class="light"&gt;
-												&lt;div class="er"&gt;
-													&lt;div class="more-link-text"&gt;more&lt;/div&gt;&lt;div class="more-link-arrow icon-arrow2"&gt;&lt;/div&gt;
-												&lt;/div&gt;
-											&lt;/div&gt;
-										&lt;/a&gt;                      
-									&lt;/div&gt;
-								&lt;/div&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;  
-					&lt;/div&gt;
-	
-	// Video Card - YouTube
-	.codeblock
-		.row
-			.col-sm-8
-				h3.section-subtitle Video Card &mdash; YouTube
-			-snippet('show-html')
-			-snippet('show-sass')
-
-		.row
-			li.card.video-card.col-sm-4
-				.row
-					.video.col-sm-12(data-id='9U1WBi2kTNY' data-type="youtube" data-title='Bristoff Family Circus' data-description='Lorem ipsum... <a>more</a>')
-						.center-box
-							.modal-trigger
-								!=$section->image('video.png')
-							.icon-play-button
-					.details.col-sm-12
-						.details-inner
-							.tag Festival 2017
-							a.high(href="#").title: span.light: span.er Circus Arts 2017
-							.description.link-underline
-								p See the culture and history of circus arts across the U.S.
-				.row
-					.col-sm-12.visible-xs
-						-snippet('show-html-mobile')
-						-snippet('show-sass-mobile')
-			.col-md-8
-				pre.sass: code.
-					// As video cards can have different looks, we set the title font based on the section via the CSS
-					.folkways-learn-section {
-						.title {
-							@include serif-sm;
-							font-weight: 600;
-						}
-					}
-			.col-md-8
-				pre.html: code.
-					&lt;li class="card video-card col-sm-4"&gt;
-						&lt;div class="row"&gt;
-							&lt;div class="video col-xs-12" data-id="204687018" data-title="Festival 101" data-description="Lorem ipsum... &lt;a&gt;more&lt;/a&gt;"&gt;
-								&lt;div class="center-box"&gt;
-									&lt;div class="modal-trigger"&gt;
-										&lt;img src="video.png"&gt;
-									&lt;/div&gt;
-									&lt;div class="icon-play-button"&gt;&lt;/div&gt;
-							&lt;div class="details col-xs-12"&gt;
-								&lt;div class="details-inner"&gt;
-									&lt;div class="tag"&gt;Festival 2017&lt;/div&gt;
-									&lt;a class="high title" href="#"&gt;
-										&lt;span class="light"&gt;
-											&lt;span class="er"&gt;
-												Circus Arts 2017
-											&lt;/span&gt;
-										&lt;/span&gt;
-									&lt;/a&gt;
-									&lt;div class="description link-underline"&gt;
-										&lt;p&gt;See the culture and history of circus arts across the U.S.&lt;/p&gt;
-									&lt;/div&gt;
-								&lt;/div&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-					&lt;/li&gt;
-
-					// The pop-up uses the remodal.js plugin (http://vodkabears.github.io/remodal)
-					// The following code should be in the footer and is used by all video pop-ups on the page
-					&lt;button class="remodal-close visually-hidden" data-remodal-action="close"&gt;
-					&lt;div data-remodal-id="modal"&gt;
-						&lt;div class="remodal-iframe" id="remodal-iframe"&gt;
-						&lt;div class="remodal-copy"&gt;
-							&lt;h3 class="remodal-title"&gt;
-							&lt;div class="remodal-description"&gt;
-								&lt;p&gt;&lt;/p&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-					&lt;/div&gt;
-
-	// Video Card - Vimeo
-	.codeblock
-		.row
-			.col-sm-8
-				h3.section-subtitle Video Card &mdash; Vimeo
-			-snippet('show-html')
-			-snippet('show-sass')
-
-		.row
-			li.card.video-card.col-sm-4
-				.row
-					.video.col-sm-12(data-id='204687018' data-type="vimeo" data-title='Festival 101' data-description='Lorem ipsum... <a>more</a>')
-						.center-box
-							.modal-trigger
-								!=$section->image('video.png')
-							.icon-play-button
-					.details.col-sm-12
-						.details-inner
-							.tag Festival 2017
-							a.high(href="#").title: span.light: span.er Circus Arts 2017
-							.description.link-underline
-								p See the culture and history of circus arts across the U.S.
-				.row
-					.col-sm-12.visible-xs
-						-snippet('show-html-mobile')
-						-snippet('show-sass-mobile')
-			.col-md-8
-				pre.sass: code.
-					// As video cards can have different looks, we set the title font based on the section via the CSS
-					.folkways-learn-section {
-						.title {
-							@include serif-sm;
-							font-weight: 600;
-						}
-					}
-			.col-md-8
-				pre.html: code.
-					&lt;li class="card video-card col-sm-4"&gt;
-						&lt;div class="row"&gt;
-							&lt;div class="video col-xs-12" data-id="204687018" data-title="Festival 101" data-description="Lorem ipsum... &lt;a&gt;more&lt;/a&gt;"&gt;
-								&lt;div class="center-box"&gt;
-									&lt;div class="modal-trigger"&gt;
-										&lt;img src="video.png"&gt;
-									&lt;/div&gt;
-									&lt;div class="icon-play-button"&gt;&lt;/div&gt;
-							&lt;div class="details col-xs-12"&gt;
-								&lt;div class="details-inner"&gt;
-									&lt;div class="tag"&gt;Festival 2017&lt;/div&gt;
-									&lt;a class="high title" href="#"&gt;
-										&lt;span class="light"&gt;
-											&lt;span class="er"&gt;
-												Circus Arts 2017
-											&lt;/span&gt;
-										&lt;/span&gt;
-									&lt;/a&gt;
-									&lt;div class="description link-underline"&gt;
-										&lt;p&gt;See the culture and history of circus arts across the U.S.&lt;/p&gt;
-									&lt;/div&gt;
-								&lt;/div&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-					&lt;/li&gt;
-
-					// The pop-up uses the remodal.js plugin (http://vodkabears.github.io/remodal)
-					// The following code should be in the footer and is used by all video pop-ups on the page
-					&lt;button class="remodal-close visually-hidden" data-remodal-action="close"&gt;
-					&lt;div data-remodal-id="modal"&gt;
-						&lt;div class="remodal-iframe" id="remodal-iframe"&gt;
-						&lt;div class="remodal-copy"&gt;
-							&lt;h3 class="remodal-title"&gt;
-							&lt;div class="remodal-description"&gt;
-								&lt;p&gt;&lt;/p&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-					&lt;/div&gt;
-
-	// Tall Audio Card
-	.codeblock
-		.row
-			.col-sm-8
-				h3.section-subtitle Tall Audio Card
-			-snippet('show-html')
-			-snippet('show-sass')
-		.row
-			.card.audio-card.col-xs-6.col-sm-4.card-xs-break-2.full-border-card
-				.image
-					a(href="#")
-						!= $section->image('audio.png')
-				.details
-					.details-inner
-						.tag New Release
-						.title-wrapper
-							a.high.title(href="#"): span.light: span.er Quelbe!
-							.artist Stanley and the Ten Sleepless Nights
-						.audio-player
-							<audio class="mejs-player-svg" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'>
-			.col-xs-12.visible-xs
-				-snippet('show-html-mobile')
-				-snippet('show-sass-mobile')
-			.col-md-8
-				pre.html: code.
-					&lt;div class="card audio-card col-xs-12 col-sm-4 card-xs-break-2 full-border-card"&gt;
-						&lt;div class="image"&gt;	
-							&lt;a href="#"&gt;
-								&lt;img src="/320x320.jpg"&gt;
-							&lt;/a&gt;
-						&lt;/div&gt;
-						&lt;div class="details"&gt;
-							&lt;div class="details-inner"&gt;
-								&lt;div class="tag"&gt;New Release&lt;/div&gt;
-								&lt;div class="title-wrapper" &gt;
-									&lt;a class="high title" href="#"&gt;
-										&lt;span class="light"&gt;
-											&lt;span class="er"&gt;
-												Quelbe!
-											&lt;/span&gt;
-										&lt;/span&gt;
-									&lt;/a&gt;
-									&lt;div class="artist"&gt;
-										Stanley and the Ten Sleepless Nights
-									&lt;/div&gt;
-								&lt;/div&gt;
-								&lt;div class="audio-player"&gt;
-									&lt;audio class="mejs-player-svg" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'&gt;
-									&lt;!-- mejs media player will build itself on page load and we wrap a few key elements in common-scripts.js --&gt;
-								&lt;/div&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-					&lt;/div&gt;
-
-			.col-md-8
-				pre.sass: code.
-					// audio styles are too long to list here and have their own SASS file called audio.scss
-	// Tall Audio Multi-Track Card
-	.codeblock
-		a.anchor-link#tall-audio-multi-track-card
-		.row
-			.col-sm-8
-				h3.section-subtitle Tall Audio Multi-Track Card
-			-snippet('show-html')
-			-snippet('show-sass')
-		.row
-			.card.audio-card.tall-audio-multi-track-card.col-xs-12.col-sm-4.card-xs-break-2.full-border-card
-				.image
-					a(href="#")
-						!= $section->image('audio.png')
-				.details
-					.details-inner
-						.tag New Release
-						.title-wrapper
-							a.high.title(href="#"): span.light: span.er Quelbe!
-							.artist Stanley and the Ten Sleepless Nights
-						.audio-player
-							.track-title Cigar Win the Race
-							<audio class="mejs-player-svg" src="/assets/audio/SFW40568/SFW40568_01.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'>
-						.audio-player
-							.track-title Lagoon Mouth
-							<audio class="mejs-player-svg" src="/assets/audio/SFW40568/SFW40568_02.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'>
-			.col-xs-12.visible-xs
-				-snippet('show-html-mobile')
-				-snippet('show-sass-mobile')
-			.col-md-8
-				pre.html: code.
-					&lt;div class="card audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border-card"&gt;
-						&lt;div class="image"&gt;	
-							&lt;a href="#"&gt;
-								&lt;img src="/320x320.jpg"&gt;
-							&lt;/a&gt;
-						&lt;/div&gt;
-						&lt;div class="details"&gt;
-							&lt;div class="details-inner"&gt;
-								&lt;div class="tag"&gt;New Release&lt;/div&gt;
-								&lt;div class="title-wrapper" &gt;
-									&lt;a class="high title" href="#"&gt;
-										&lt;span class="light"&gt;
-											&lt;span class="er"&gt;
-												Quelbe!
-											&lt;/span&gt;
-										&lt;/span&gt;
-									&lt;/a&gt;
-									&lt;div class="artist"&gt;
-										Stanley and the Ten Sleepless Nights
-									&lt;/div&gt;
-								&lt;/div&gt;
-								&lt;div class="audio-player"&gt;
-									&lt;audio class="mejs-player-svg" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'&gt;
-									&lt;!-- mejs media player will build itself on page load and we wrap a few key elements in common-scripts.js --&gt;
-								&lt;/div&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-					&lt;/div&gt;
-
-			.col-md-8
-				pre.sass: code.
-					// audio styles are too long to list here and have their own SASS file called audio.scss
-	// Playlist Audio Card
-	.codeblock
-		a.anchor-link#playlist-audio-card
-		.row
-			.col-sm-8
-				h3.section-subtitle Playlist Audio Card
-			-snippet('show-html')
-			-snippet('show-sass')
-		.row
-			//- script(src="/assets/audio/myplaylist.js" type="text/javascript")
-			script(src="/assets/audio/myplaylist-calypso.js" type="text/javascript")
-			.card.audio-card.playlist-audio-card.col-xs-12.col-sm-4.card-xs-break-2.full-border-card
-				.image
-					a(href="#")
-						img.playlist-cover(src="<?= $section->image('audio.png')->url() ?>")
-				.details
-					.details-inner
-						//- .tag New Release
-						.title-wrapper
-							a.high.title(href="#"): span.light: span.er.playlist-title Quelbe!
-							.artist#playlist-artist Stanley and the Ten Sleepless Nights
-						.audio-player
-							<audio id="playlist-audio" class="playlist-audio" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'></audio>
-							.playlist-controls
-								.previous-button.icon-folklife-leftarrow
-								.next-button.icon-folklife-rightarrow
-			.col-xs-12.visible-xs
-				-snippet('show-html-mobile')
-				-snippet('show-sass-mobile')
-			.col-md-8
-				pre.html: code.
-					&lt;script src="/assets/audio/myplaylist-calypso.js" type="text/javascript"&gt;&lt;/script&gt;
-					&lt;div class="card audio-card playlist-audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border-card"&gt;
-						&lt;div class="image"&gt;	
-							&lt;a href="#"&gt;
-								&lt;img class="playlist-cover" src="/320x320.jpg"&gt;
-							&lt;/a&gt;
-						&lt;/div&gt;
-						&lt;div class="details"&gt;
-							&lt;div class="details-inner"&gt;
-								&lt;div class="title-wrapper" &gt;
-									&lt;a class="high title" href="#"&gt;
-										&lt;span class="light"&gt;
-											&lt;span class="playlist-title" class="er"&gt;
-												Quelbe!
-											&lt;/span&gt;
-										&lt;/span&gt;
-									&lt;/a&gt;
-									&lt;div id="playlist-artist" class="artist"&gt;
-										Stanley and the Ten Sleepless Nights
-									&lt;/div&gt;
-								&lt;/div&gt;
-								&lt;div class="audio-player"&gt;
-									&lt;audio id="playlist-audio" class="playlist-audio" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'&gt;&lt;/audio&gt;
-									&lt;!-- mejs media player will build itself on page load and we wrap a few key elements in common-scripts.js --&gt;
-									&lt;div class="playlist-controls"&gt;
-										&lt;div class="previous-button icon-folklife-leftarrow"&gt;&lt;/div&gt;
-										&lt;div class="next-button icon-folklife-rightarrow"&gt;&lt;/div&gt;
-									&lt;/div&gt;
-								&lt;/div&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-					&lt;/div&gt;
-
-			.col-md-8
-				pre.sass: code.
-					// audio styles are too long to list here and have their own SASS file called audio.scss
-	// Horizontal Playlist
-	//- .codeblock
-		a.anchor-link#horizontal-playlist
-		.row
-			.col-sm-8
-				h3.section-subtitle Horizontal Playlist
-			-snippet('show-html')
-			-snippet('show-sass')
-		.row
-			//- script(src="/assets/audio/myplaylist.js" type="text/javascript")
-			script(src="/assets/audio/myplaylist-calypso.js" type="text/javascript")
-			.card.audio-card.playlist-audio-card.horizontal-audio-card-third.full-border-horizontal-card.col-xs-6.col-sm-4.card-xs-break-2
-				.row
-					.image.col-xs-4
-						a(href="#")
-							img.playlist-cover(src="<?= $section->image('audio.png')->url() ?>")
-					.details.col-xs-8
-						.details-inner
-							.title-wrapper
-								a.high.title(href="#"): span.light: span.er.playlist-title Quelbe!
-								.artist#playlist-artist Stanley and the Ten Sleepless Nights
-							.audio-player
-								<audio id="playlist-audio" class="playlist-audio" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'></audio>
-								.playlist-controls
-									.previous-button.icon-folklife-leftarrow
-									.next-button.icon-folklife-rightarrow
-			.col-xs-12.visible-xs
-				-snippet('show-html-mobile')
-				-snippet('show-sass-mobile')
-			.col-md-8
-				pre.html: code.
-					&lt;script src="/assets/audio/myplaylist-calypso.js" type="text/javascript"&gt;&lt;/script&gt;
-					&lt;div class="card audio-card playlist-audio-card horizontal-audio-card-third full-border-horizontal-card col-xs-6 col-sm-4 card-xs-break-2"&gt;
-					    &lt;div class="row"&gt;
-					        &lt;div class="image col-xs-4"&gt;
-					            &lt;a href="#"&gt;&lt;img src="http://media.smithsonianfolkways.org/images/album_covers/SF700/COOK00914.jpg" class="playlist-cover"&gt;&lt;/a&gt;
-					        &lt;/div&gt;
-					        &lt;div class="details col-xs-8"&gt;
-					            &lt;div class="details-inner" style=""&gt;
-					                &lt;div class="title-wrapper"&gt;&lt;a href="#" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er playlist-title"&gt;Antiguan Girls&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
-					                    &lt;div id="playlist-artist" class="artist"&gt;Lord Melody&lt;/div&gt;
-					                &lt;/div&gt;
-					                &lt;div class="audio-player"&gt;&lt;span class="mejs-offscreen"&gt;Audio Player&lt;/span&gt;
-					                    &lt;audio id="playlist-audio" class="playlist-audio" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'&gt;&lt;/audio&gt;
-										&lt;!-- mejs media player will build itself on page load and we wrap a few key elements in common-scripts.js --&gt;
-					                    &lt;div class="playlist-controls"&gt;
-					                        &lt;div class="previous-button icon-folklife-leftarrow"&gt;&lt;/div&gt;
-					                        &lt;div class="next-button icon-folklife-rightarrow"&gt;&lt;/div&gt;
-					                    &lt;/div&gt;
-					                &lt;/div&gt;
-					            &lt;/div&gt;
-					        &lt;/div&gt;
-					    &lt;/div&gt;
-					&lt;/div&gt;
-
-			.col-md-8
-				pre.sass: code.
-					// audio styles are too long to list here and have their own SASS file called audio.scss
-	// Horizontal Text Audio Card
-	.codeblock
-		.row
-			.col-sm-8
-				h3.section-subtitle Horizontal Text Audio Card
-			-snippet('show-html')
-			-snippet('show-sass')
-		.row
-			.card.audio-card.col-xs-12.col-sm-4.card-xs-break-2.full-border-card
-				.details
-					.details-inner
-						.tag New Release
-						.title-wrapper
-							a.high.title(href="#"): span.light: span.er Quelbe!
-							.artist Stanley and the Ten Sleepless Nights
-						.audio-player
-							<audio class="mejs-player-svg" src="/assets/audio/Music2same.mp3"></audio>
-			.col-xs-12.visible-xs
-				-snippet('show-html-mobile')
-				-snippet('show-sass-mobile')
-			.col-md-8
-				pre.html: code.
-					&lt;div class="card audio-card col-xs-12 col-sm-4 full-border-card"&gt;
-						&lt;div class="details"&gt;
-							&lt;div class="details-inner"&gt;
-								&lt;div class="tag"&gt;New Release&lt;/div&gt;
-								&lt;div class="title-wrapper" &gt;
-									&lt;a class="high title" href="#"&gt;
-										&lt;span class="light"&gt;
-											&lt;span class="er"&gt;
-												Quelbe!
-											&lt;/span&gt;
-										&lt;/span&gt;
-									&lt;/a&gt;
-									&lt;div class="artist"&gt;
-										Stanley and the Ten Sleepless Nights
-									&lt;/div&gt;
-								&lt;/div&gt;
-								&lt;div class="audio-player"&gt;
-									&lt;audio class="mejs-player-svg" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'&gt;
-									&lt;!-- mejs media player will build itself on page load and we wrap a few key elements in common-scripts.js --&gt;
-								&lt;/div&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-					&lt;/div&gt;
-
-			.col-md-8
-				pre.sass: code.
-					// audio styles are too long to list here and have their own SASS file called audio.scss
-
-	// Horizontal Audio Card — Single
-	.codeblock
-		a.anchor-link#horizontal-audio-card-single
-		.row
-			.col-sm-8
-				h3.section-subtitle Horizontal Audio Card — Single
-			-snippet('show-html')
-			-snippet('show-sass')
-		.row
-			.card.audio-card.horizontal-audio-card.horizontal-audio-card-single.full-border-horizontal-card.col-sm-4.visible-md.visible-lg
-				.row
-					.image.col-xs-6
-						!= $section->image('audio.png')
-					.details.col-xs-6
-						.details-inner
-							.title-wrapper
-								a.high.title(href="#"): span.light: span.er Quelbe!
-								.artist Stanley and the Ten Sleepless Nights
-							.audio-player
-								<audio class="mejs-player-svg" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'>
-			.col-xs-12.visible-xs
-				-snippet('show-html-mobile')
-				-snippet('show-sass-mobile')
-			.col-md-8
-				pre.html: code.
-					&lt;div class="card audio-card horizontal-audio-card horizontal-card-single full-border-horizontal-card col-sm-4"&gt;
-						&lt;div class="row"&gt;
-							&lt;div class="image col-xs-6"&gt;
-								&lt;a href="#"&gt;&lt;img src="/210x210.jpg" alt=""&gt;&lt;/a&gt;
-							&lt;/div&gt;
-							&lt;div class="details col-xs-6"&gt;
-								&lt;div class="details-inner" style=""&gt;
-									&lt;div class="title-wrapper"&gt;
-										&lt;a href="#" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;Quelbe!&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
-										&lt;div class="artist"&gt;Stanley and the Ten Sleepless Nights&lt;/div&gt;
-									&lt;/div&gt;
-									&lt;div class="audio-player"&gt;
-										&lt;audio class="mejs-player-svg" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'&gt;
-										&lt;!-- mejs media player will build itself on page load and we wrap a few key elements in common-scripts.js --&gt;
-									&lt;/div&gt;
-								&lt;/div&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-					&lt;/div&gt;
-
-			.col-md-8
-				pre.sass: code.
-					// audio styles are too long to list here and have their own SASS file called audio.scss
-
-	// Horizontal Audio Card — Playlist – Thin
-	//- .codeblock
-		a.anchor-link#horizontal-audio-card-playlist-thin
-		.row
-			.col-sm-8
-				h3.section-subtitle Horizontal Audio Card — Playlist – Thin
-			-snippet('show-html')
-			-snippet('show-sass')
-		.row.visible-xs.visible-sm
-			.card.col-sm-4
-				p Swap horizontal card with tall card for this size
-		.row
-			.card.audio-card.horizontal-audio-card.horizontal-audio-card-playlist-thin.full-border-horizontal-card.col-sm-4.visible-md.visible-lg.black-border
-				.row
-					.image.col-xs-3
-						!= $section->image('audio.png')
-					.details.col-xs-9
-						.details-inner
-							.title-wrapper
-								a.high.title(href="#"): span.light: span.er Quelbe!
-								.artist Stanley and the Ten Sleepless Nights
-							.audio-player
-								<audio class="mejs-player-svg" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'>
-			.col-xs-12.visible-xs
-				-snippet('show-html-mobile')
-				-snippet('show-sass-mobile')
-			.col-md-8
-				pre.html: code.
-					&lt;div class="card audio-card horizontal-audio-card horizontal-audio-card-playlist full-border-horizontal-card col-sm-4 visible-md visible-lg black-border"&gt;
-						&lt;div class="row"&gt;
-							&lt;div class="image col-xs-3"&gt;
-								&lt;a href="#"&gt;&lt;img src="/210x210.jpg" alt=""&gt;&lt;/a&gt;
-							&lt;/div&gt;
-							&lt;div class="details col-xs-9"&gt;
-								&lt;div class="details-inner" style=""&gt;
-									&lt;div class="title-wrapper"&gt;
-										&lt;a href="#" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;Quelbe!&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
-										&lt;div class="artist"&gt;Stanley and the Ten Sleepless Nights&lt;/div&gt;
-									&lt;/div&gt;
-									&lt;div class="audio-player"&gt;
-										&lt;audio class="mejs-player-svg" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'&gt;
-										&lt;!-- mejs media player will build itself on page load and we wrap a few key elements in common-scripts.js --&gt;
-									&lt;/div&gt;
-								&lt;/div&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-					&lt;/div&gt;
-
-			.col-md-8
-				pre.sass: code.
-					// audio styles are too long to list here and have their own SASS file called audio.scss
-					// the only difference here is the .horizontal-audio-card-playlist class overrides certain styles of the .horizontal-audio-card class
-	// Track listing
-	.codeblock
-		a.anchor-link#track-listing
-		.row
-			.col-sm-8
-				h3.section-subtitle Track Listing
-			-snippet('show-html')
-			-snippet('show-sass')
-		.row
-			//- needs to be on album page for this to work
-			.album-page.col-sm-7
-				main.main
-					//- bootstrap class to make table go vertical on mobile
-					.table-responsive 
-						table.table.table-hover.track-listing 
-
-							//- set track listing start number
-							-$track = $section->children()->find('cigar-win-the-race')
-							tr#track.track
-								td.track-number-play-button
-									//- .track-number!= '100'
-									//- .icon-play-button.track-play-button
-									//- <audio class="mejs-player-svg" src="/assets/audio/SFW40568/<?= $track->track_1() ?>" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'>
-									<audio class="track-audio" src="/assets/audio/SFW40568/<?= $track->track_1() ?>"></audio>
-									.track-number!= '100'
-								td.track-title!= $track->title()
-								td.track-artist!= $page->artist()
-								td.track-length!= $track->length()
-								td.track-buy BUY
-			.col-xs-12.visible-xs
-				-snippet('show-html-mobile')
-				-snippet('show-sass-mobile')
-		.row
-			.col-md-8
-				pre.html: code.
-					&lt;div class="album-page"&gt;
-					    &lt;main class="main col-sm-7"&gt;
-					        &lt;div class="table-responsive"&gt;
-					            &lt;table class="table table-hover track-listing"&gt;
-					                &lt;tbody&gt;
-					                    &lt;tr class="track"&gt;
-					                        &lt;td class="track-number-play-button"&gt;
-					                            &lt;div class="track-number"&gt;100&lt;/div&gt;
-					                            &lt;audio class="mejs-player-svg" src="/assets/audio/SFW40568/&lt;?= $track-&gt;track_1() ?&gt;" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'&gt;&lt;/audio&gt;
-					                        &lt;/td&gt;
-					                        &lt;td class="track-title"&gt;Cigar Win the Race&lt;/td&gt;
-					                        &lt;td class="track-artist"&gt;&lt;/td&gt;
-					                        &lt;td class="track-length"&gt;5:42&lt;/td&gt;
-					                        &lt;td class="track-buy"&gt;BUY&lt;/td&gt;
-					                    &lt;/tr&gt;
-					                &lt;/tbody&gt;
-					            &lt;/table&gt;
-					        &lt;/div&gt;
-					    &lt;/main&gt;
-					&lt;/div&gt;
-
-			.col-md-8
-				pre.sass: code.
-					// audio styles are too long to list here and have their own SASS file called audio.scss
-					// the border color is changed if this player exists on a page with a body class of .magazine-article-page
-	// Vinyl Card
-	.codeblock
-		.row
-			.col-sm-8
-				h3.section-subtitle Vinyl Card
-			-snippet('show-html')
-			-snippet('show-sass')
-		.row
-			.card.vinyl-card.col-xs-6.col-sm-3
-				.image
-					a(href="#")
-						!=$section->image('fannie-lou-hamer.png')
-				.details
-					.details-inner
-						a.high(href="#").title: span.light: span.er Songs My Mother Taught Me
-						.artist Fannie Lou Hamer
-			.col-xs-12.visible-xs
-				-snippet('show-html-mobile')
-				-snippet('show-sass-mobile')
-			.col-sm-9
-				pre.sass: code.
-					.album-card, .vinyl-card, .books-card {
-						.details-inner {
-							padding:0;
-							@include padding-top(1.7);
-						}
-						.title {
-							@include sm-sans;
-							font-weight: 700;
-							@include margin-bottom(0.5);
-						}
-						.artist {
-							@include sm-sans;
-						}
-						@include clear-2; // display cards side-by-side on mobile, clearing every 2nd + 1 cards to the left
-						@include respond-to(break2) {@include clear-6;} // display 6 across, clearing every 6th + 1 cards
-					}
-			.col-sm-9
-				pre.html: code.
-					&lt;li class="card vinyl-card col-xs-6 col-sm-3"&gt;
-						&lt;div class="image"&gt;
-							&lt;a href="#"&gt;&lt;img src="fannie-lou-hamer.png" alt="Songs My Mother Taught Me"&gt;&lt;/a&gt;
-						&lt;/div&gt;
-						&lt;div class="details"&gt;
-							&lt;div class="details-inner"&gt;
-								&lt;a href="#" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;Songs My Mother Taught Me&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
-								&lt;div class="artist"&gt;
-									&lt;p&gt;Fannie Lou Hamer&lt;/p&gt;
-								&lt;/div&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-					&lt;/li&gt;
-	// Album Card
-	.codeblock
-		.row
-			.col-sm-8
-				h3.section-subtitle Album Card
-			-snippet('show-html')
-			-snippet('show-sass')
-		.row
-			.card.album-card.col-xs-6.col-sm-2
-				.image
-					a(href="#")
-						!=$section->image('SFW40568.jpeg')
-				.details
-					.details-inner
-						a.high(href="#").title: span.light: span.er Quelbe! Music of the U.S. Virgin Islands
-						.artist Stanley and the Ten Sleepless Nights
-			.col-xs-12.visible-xs
-				-snippet('show-html-mobile')
-				-snippet('show-sass-mobile')
-			.col-sm-10
-				pre.sass: code.
-					.album-card, .vinyl-card, .books-card {
-						.details-inner {
-							padding:0;
-							@include padding-top(1.7);
-						}
-						.title {
-							@include sm-sans;
-							font-weight: 700;
-							@include margin-bottom(0.5);
-						}
-						.artist {
-							@include sm-sans;
-						}
-						@include clear-2; // display cards side-by-side on mobile, clearing every 2nd + 1 cards to the left
-						@include respond-to(break2) {@include clear-6;} // display 6 across, clearing every 6th + 1 cards
-					}
-			.col-sm-10
-				pre.html: code.
-					&lt;div class="card album-card col-xs-2 col-sm-2"&gt;
-						&lt;div class="image"&gt;
-							&lt;a href="#"&gt;&lt;img src="SFW40568.jpeg" alt=""&gt;&lt;/a&gt;
-						&lt;/div&gt;
-						&lt;div class="details"&gt;
-							&lt;div class="details-inner"&gt;
-								&lt;a href="#" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;Quelbe! Music of the U.S. Virgin Islands&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
-								&lt;div class="artist"&gt;Stanley and the Ten Sleepless Nights&lt;/div&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-					&lt;/div&gt;
-	// Single Image popup
-	.codeblock
-		a.anchor-link#single-image-popup
-		.row
-			.col-sm-8
-				h3.section-subtitle Single Image Popup
-			-snippet('show-html')
-			-snippet('show-sass')
-		.row
-			//- -$gallery_img = $page->find('image-gallery')->title()
-			-$image_gallery_page = $pages->find('cards')->children()->find('image-gallery')
-			-$gallery_img = $image_gallery_page->image('slide1.jpg')
-			.col-sm-5
-				.tag Image
-				.image-gallery.single-image-popup
-					// first slide visible with gallery icon
-					.center-box
-						.modal-trigger
-							img.gallery-thumbnail(src="<?= $section->image('single-image-popup.jpg')->url() ?>" alt="Gallery image")
-						.icon-picture-o
-					ul.gallery-list
-						.gallery-image
-							.gallery-image-inner
-								img(src="<?= $section->image('single-image-popup.jpg')->url() ?>" alt="Gallery image")
-					ul.gallery-list-captions
-						.gallery-caption
-							.remodal-description Drawing by children of Bell Gardens Elementary, Bell Gardens, California.
-							.remodal-credit Photo by Lilia Sarmiento. 
-				.caption Drawing by children of Bell Gardens Elementary, Bell Gardens, California. <i>Photo by Lilia Sarmiento.</i>
-
-			.col-xs-12.visible-xs
-				-snippet('show-html-mobile')
-				-snippet('show-sass-mobile')
-			.col-sm-7
-				pre.sass: code.
-					
-					/* same as Image Gallery below */
-			.col-sm-7
-				pre.html: code.
-					&lt;div class="col-sm-5"&gt;
-					    &lt;div class="tag"&gt;Image&lt;/div&gt;
-					    &lt;div class="image-gallery single-image-popup"&gt;
-					        &lt;!-- first slide visible with gallery icon--&gt;
-					        &lt;div class="center-box"&gt;
-					            &lt;div class="modal-trigger"&gt;&lt;img src="//localhost:3007/content/5-cards/single-image-popup.jpg" alt="Gallery image" class="gallery-thumbnail"&gt;&lt;/div&gt;
-					            &lt;div class="icon-picture-o"&gt;&lt;/div&gt;
-					        &lt;/div&gt;
-					        &lt;ul class="gallery-list"&gt;
-					            &lt;div class="gallery-image"&gt;
-					                &lt;div class="gallery-image-inner"&gt;&lt;img src="//localhost:3007/content/5-cards/single-image-popup.jpg" alt="Gallery image"&gt;&lt;/div&gt;
-					            &lt;/div&gt;
-					        &lt;/ul&gt;
-					        &lt;ul class="gallery-list-captions"&gt;
-					            &lt;div class="gallery-caption"&gt;
-					                &lt;div class="remodal-description"&gt;Drawing by children of Bell Gardens Elementary, Bell Gardens, California.&lt;/div&gt;
-					                &lt;div class="remodal-credit"&gt;Photo by Lilia Sarmiento. &lt;/div&gt;
-					            &lt;/div&gt;
-					        &lt;/ul&gt;
-					    &lt;/div&gt;
-					    &lt;div class="caption"&gt;Drawing by children of Bell Gardens Elementary, Bell Gardens, California. &lt;i&gt;Photo by Lilia Sarmiento.&lt;/i&gt;&lt;/div&gt;
-					&lt;/div&gt;
+        .row
+            .col-sm-12
+                pre.sass: code.
+                    .full-feature-card {
+                        @include margin-bottom(0);
+                        .tag {
+                            display: none;
+                        }
+                        .image {
+                            @include respond-to(break2max) {
+                                padding-bottom: 2.5vw;
+                            }
+                        }
+                        .title {
+                            @include lg-serif;
+                            @include margin-bottom(2);
+                        }
+                        .details-inner {
+                            @include padding-top(0);
+                            @include padding-right(2);
+                            @include respond-to(break2max) {
+                                padding-left:0; // for full width detail copy
+                            }
+                        }
+                        .description {
+                            @include lg-sans;
+                        }
+                    }
+            .col-sm-12
+                pre.html: code.
+                    &lt;div class="row"&gt;
+                        &lt;div class="card col-xs-12 full-feature-card"&gt;
+                            &lt;div class="row"&gt;
+                                &lt;div class="image col-md-6 col-lg-7"&gt;
+                                    &lt;a href="#"&gt;&lt;img src="ralphRinzler.jpg" alt="Ralph Rinzler Folklife Archives and Collections"&gt;&lt;/a&gt;
+                                &lt;/div&gt;
+                                &lt;div class="details col-md-6 col-lg-5"&gt;
+                                    &lt;div class="details-inner"&gt;
+                                        &lt;a href="#" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;Ralph Rinzler Folklife Archives and Collections&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
+                                        &lt;div class="description link-underline"&gt;
+                                            &lt;p&gt;The Center for Folklife and Cultural Heritage is home to the Ralph Rinzler Folklife Archives and Collections, a public resource named for the founding director of the Smithsonian Folklife Festival.&lt;/p&gt;
+                                        &lt;/div&gt;
+                                        &lt;a href="#" class="high more-link "&gt;
+                                            &lt;div class="light"&gt;
+                                                &lt;div class="er"&gt;
+                                                    &lt;div class="more-link-text"&gt;more&lt;/div&gt;&lt;div class="more-link-arrow icon-arrow2"&gt;&lt;/div&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/a&gt;                      
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;  
+                    &lt;/div&gt;
 
 
-	// Image Gallery Card
-	.codeblock
-		a.anchor-link#image-gallery
-		.row
-			.col-sm-8
-				h3.section-subtitle Image Gallery
-			-snippet('show-html')
-			-snippet('show-sass')
-		.row
-			//- -$gallery_img = $page->find('image-gallery')->title()
-			-$image_gallery_page = $pages->find('cards')->children()->find('image-gallery')
-			-$gallery_img = $image_gallery_page->image('slide1.jpg')
-			.image-gallery.col-sm-5
-				// first slide visible with gallery icon
-				.center-box
-					.modal-trigger
-						img.gallery-thumbnail(src="<?= $gallery_img->url() ?>" alt="Gallery image")
-					.icon-gallery
-				ul.gallery-list
-					-foreach($image_gallery_page->images()->filterBy('filename', '*=', 'slide') as $image):
-						.gallery-image
-							.gallery-image-inner
-								img(src="<?= $image->url() ?>" alt="Gallery image")
-					-endforeach
-				ul.gallery-list-captions
-					-foreach($image_gallery_page->images()->filterBy('filename', '*=', 'slide') as $image):
-						.gallery-caption
-							.remodal-description!= $image->caption()
-							.remodal-credit!= $image->credit()
-					-endforeach
-			.col-xs-12.visible-xs
-				-snippet('show-html-mobile')
-				-snippet('show-sass-mobile')
-		.row
-			.col-sm-12
-				pre.sass: code.
-					/* icon font characters (fontastic.me) from ../common/css/vd-icons.scss 
-					-------------------------------------------------- */
-					.icon-gallery:before {
-					    content: "\44";
-					}
-					.icon-gallery:after {
-					  content: "\42";
-					}
 
-					/* icon stacking/sizing from ../common/css/icons.scss 
-					-------------------------------------------------- */
-					.icon-gallery {
-						cursor: pointer;
-						position: absolute;
-						@include left(1);
-						@include bottom(1);
-						&:before {
-							z-index: 0;
-							color: $black25;
-						}
-						&:hover:before {
-							color: $hover;
-						}
-						&:after {
-							position: absolute;
-							z-index: 1;
-							color: $black80;
-							display: block;
-							@include respond-to(break2max) {
-								font-size: 6vw;
-								top: 2vw;
-								left: 1.8vw;
-							}
-							@include respond-to(break2full) {
-								font-size: 2.6vw;
-								top: 0.7vw;
-								left: 0.6vw;
-							}
-							@include respond-to(fullwidth) {
-								font-size: 4rem;
-								top: 1rem;
-								left: 0.9rem;
-							}
-						}
-					}
+    // Figure with Caption
+    .codeblock
+        a.anchor-link#figure-with-caption
+        .row
+            .col-sm-8
+                h3.section-subtitle Figure with Caption
+            -snippet('show-html')
+            -snippet('show-sass')
+        .row
+            -$src = $section->image('figure-with-caption.jpg')
+            .col-sm-5
+                figure
+                    img.ms-header-image(src="<?= $src->url() ?>" alt="<?= $page->title() ?>")
+                    //- show caption if it exists and set $caption var
+                    -if($caption = $src->caption()->kt()):
+                        figcaption
+                            .figcaption-inner
+                                != $caption
+                                -if($credit = $src->credit()->kt()):
+                                    .credit!= $credit
+                                -endif
+                    -endif
+                .row
+                    .col-sm-12.visible-xs
+                        -snippet('show-html-mobile')
+                        -snippet('show-sass-mobile')
+            .col-sm-7
+                pre.sass: code.
+                    // too many rules to list. See general.scss
+            .col-sm-7
+                pre.html: code.
+                    &lt;div class="col-sm-5"&gt;
+                        &lt;figure&gt;
+                            &lt;img src="//127.0.0.1.xip.io:3007/content/5-cards/figure-with-caption.jpg" alt="Home" class="ms-header-image"&gt;
+                            &lt;figcaption&gt;
+                                &lt;div class="figcaption-inner"&gt;
+                                    &lt;p&gt;A blacksmith heats his iron in a traditional forge before demonstrating the technique for shaping the metal.&LT;/p&gt;
+                                    &lt;div class="credit"&gt;
+                                        &lt;p&gt;Photo by Anne Pedersen, Ralph Rinzler Folklife Archives&LT;/p&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/figcaption&gt;
+                        &lt;/figure&gt;
+                    &lt;/div&gt;
+            
+    // Horizontal Card
+    .codeblock
+        .row
+            .col-sm-8
+                h3.section-subtitle Horizontal Card
+            -snippet('show-html')
+            -snippet('show-sass')
+        .row
+            .card.horizontal-card.folkways-magazine-card.col-xs-12.col-sm-6.top-border-card
+                .row
+                    .image.col-xs-6
+                        a(href="#")
+                            !=$section->image('horizontal.png')
+                    .details.col-xs-6
+                        .details-inner
+                            .tag Recording Spotlight
+                            a.high(href="#").title: span.light: span.er Rasta Sounds
+                            
+                            .description.link-underline
+                                p The global African Diaspora has often searched through music for a “post-racist utopia.”
 
-					/* popup gallery styles from ../common/css/general.scss 
-					-------------------------------------------------- */
-					.image-gallery {
-						.icon-play-button {
-							&:before, &:after {
-								@include respond-to(break2max) {
-									font-size: 15vw;
-								}
-								@include respond-to(break2full) {
-									font-size: 6vw;
-								}
-								@include respond-to(fullwidth) {
-									font-size: 10rem;
-								}
-							}
-						}
-					}
-					.gallery-list, .gallery-list-captions {
-						display: none; // initial hide
-					}
-					.remodal-captions {
-						display: none;
-					}
-					.remodal-image-gallery {
-						max-width: none !important;
-						background-color: transparent;
-						.remodal-close {
-							right: 0 !important;
-							@include respond-to(break2max) {
-								top: -4.5rem;
-							}
-						}
-						.remodal-captions {
-							display: block;
-						}
-					}
-					.remodal-gallery {
-						.slick-track {
-							height: initial;
-						}
-						.slick-slide {
-							height: auto;
-							max-width: 100vw;
-							@include padding-right(4);
-							@include padding-left(4);
-						}
-						.slick-slide img {
-							max-height: 70vh;
-							width: auto;
-						}
-						.gallery-image-inner {
-							position: relative; // contain gray overlay
-							&:after {
-								@include respond-to(break2) {
-									content: '';
-									display: block;
-									position: absolute;
-									top: 0;right: 0;bottom: 0;left: 0;
-									background-color: rgba(0,0,0,0.8);
-								}	
-							}
-						}
-						.slick-active .gallery-image-inner:after {
-							display: none;
-						}		
-						.slick-arrow {
-							@include respond-to(break2max) {
-								display: none !important;
-							}
-						}
-						.slick-prev {
-							@include respond-to(break2) {
-								left: 1vw;
-							}
-							@include respond-to(fullwidth) {
-								left: 5rem;
-							}
-						}
-						.slick-next {
-							@include respond-to(break2full) {
-								right: 1vw;
-							}
-							@include respond-to(fullwidth) {
-								right: 5rem;
-							}
-						}		
-					}
-					.remodal-captions {
-						@include margin-top(4);
-						// turn down non-active captions
-						.slick-slide:not(.slick-active) {
-							.remodal-description, .remodal-credit {
-								color: $black80;
-							}
-						}
-						.remodal-description {
-							@include padding(2);			
-							padding-bottom: 0 !important;
-							color: white;
-						}
-						.remodal-credit {
-							@include padding(2);
-							color: $black50;
-							@include caption-sans;
-						}
-					}
+                .row
+                    .col-sm-12.visible-xs
+                        -snippet('show-html-mobile')
+                        -snippet('show-sass-mobile')
+            .col-sm-6
+                pre.sass: code.
+                    .folkways-magazine-card {
+                        .tag {
+                            // mobile only
+                            @include respond-to(break2max) {
+                                padding-top: 1.5rem;
+                            }
+                        }
+                        .title {
+                            @include lg-magazine-title;
+                            // mobile-only
+                            @include respond-to(break2max) {
+                                // smaller for longer titles
+                                @include sm-magazine-title;
+                            }
+                        }
+                    }
+            .col-sm-6
+                pre.html: code.
+                    &lt;li class="card horizontal-card folkways-magazine-card col-xs-6 top-border"&gt;
+                        &lt;div class="row"&gt;
+                            &lt;div class="image col-sm-6"&gt;
+                                &lt;a href="#"&gt;
+                                    &lt;img src="horizontal.png"&gt;
+                                &lt;/a&gt;
+                            &lt;/div&gt;
+                            &lt;div class="details col-sm-6"&gt;
+                                &lt;div class="details-inner"&gt;
+                                    &lt;div class="tag"&gt; Recording Spotlight&lt;/div&gt;
+                                    &lt;a class="high title" href="#"&gt; 
+                                        &lt;span class="light"&gt;
+                                            &lt;span class="er"&gt;
+                                                Rasta Sounds
+                                            &lt;/span&gt;
+                                        &lt;/span&gt;
+                                    &lt;/a&gt;
+                                    &lt;div class="description link-underline"&gt;
+                                        &lt;p&gt;The global African Diaspora has often searched through music for a “post-racist utopia.”&lt;p&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/li&gt;
+    // Publication Card
+    .codeblock
+        .row
+            .col-sm-8
+                h3.section-subtitle Publication Card
+            -snippet('show-html')
+            -snippet('show-sass')
+        .row
+            .card.col-sm-6.publication-card.top-border-card
+                .row
+                    .image.col-xs-4
+                        a(href="#")
+                            !=$section->image('curatorial-conversations.jpg')
+                    .details.col-xs-8
+                        .details-inner
+                            a.high(href="#").title: span.light: span.er Curatorial Conversations: Cultural Representation and the Smithsonian Folklife Festival
+                            .author Edited by Olivia Cadaval, Sojin Kim, and Diana Baird N’Diaye
+                            a.high.buy-now-button(href="#"): span.light: span.er Order from University Press of Mississippi&nbsp;&#x2192
+                .row
+                    .col-sm-12.visible-xs
+                        -snippet('show-html-mobile')
+                        -snippet('show-sass-mobile')
+        .row
+            .col-sm-12
+                pre.sass: code.
+                    .publication-card {
+                        @include margin-bottom(4); // add back to horizontal cards section
+                        .card:nth-of-type(2n + 1) {
+                            clear:left; // keep cards 1, 3, 5, 7, etc cleared left so don't hang on previous card
+                        }
+                        .title {
+                            @include margin-top(-0.8);
+                            @include lg-sans;
+                        }
+                        .author {
+                            @include sm-sans;
+                            @include margin-top(1);
+                            @include margin-bottom(3);
+                        }
+                        .details-inner {
+                            @include padding-top(2);
+                        }
+                        .more-link {
+                            display: none;
+                        }
+                        .buy-now-button {
+                            @include buy-button;
+                            text-transform: none;
+                            color: $black65;
+                            font-weight: 400;
+                            display: block; // force new line for multiple buttons
+                        }
+                    }
+            .col-sm-12
+                pre.html: code.
+                    &lt;div class="row"&gt;
+                        &lt;div class="card col-xs-12 full-feature-card"&gt;
+                            &lt;div class="row"&gt;
+                                &lt;div class="image col-md-6 col-lg-7"&gt;
+                                    &lt;a href="#"&gt;&lt;img src="ralphRinzler.jpg" alt="Ralph Rinzler Folklife Archives and Collections"&gt;&lt;/a&gt;
+                                &lt;/div&gt;
+                                &lt;div class="details col-md-6 col-lg-5"&gt;
+                                    &lt;div class="details-inner"&gt;
+                                        &lt;a href="#" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;Ralph Rinzler Folklife Archives and Collections&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
+                                        &lt;div class="description link-underline"&gt;
+                                            &lt;p&gt;The Center for Folklife and Cultural Heritage is home to the Ralph Rinzler Folklife Archives and Collections, a public resource named for the founding director of the Smithsonian Folklife Festival.&lt;/p&gt;
+                                        &lt;/div&gt;
+                                        &lt;a href="#" class="high more-link "&gt;
+                                            &lt;div class="light"&gt;
+                                                &lt;div class="er"&gt;
+                                                    &lt;div class="more-link-text"&gt;more&lt;/div&gt;&lt;div class="more-link-arrow icon-arrow2"&gt;&lt;/div&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/a&gt;                      
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;  
+                    &lt;/div&gt;
+    
+    // Video Card - YouTube
+    .codeblock
+        .row
+            .col-sm-8
+                h3.section-subtitle Video Card &mdash; YouTube
+            -snippet('show-html')
+            -snippet('show-sass')
 
-					/* ...all other styles inherited from video popup */
-			.col-sm-12
-				pre.html: code.
-					&lt;div class="image-gallery col-sm-5"&gt;
-						&lt;!--first slide visible, gallery icon--&gt;
-						&lt;div class="center-box"&gt;
-							&lt;div class="modal-trigger"&gt;&lt;img src="//localhost:3007/content/5-cards/1-image-gallery/slide1.jpg" alt="Gallery image" class="gallery-thumbnail"&gt;&lt;/div&gt;
-							&lt;div class="icon-gallery"&gt;&lt;/div&gt;
-						&lt;/div&gt;
-						&lt;!--gallery images--&gt;
-						&lt;ul class="gallery-list"&gt;
-							&lt;div class="gallery-image"&gt;
-								&lt;div class="gallery-image-inner"&gt;
-									&lt;img src="//localhost:3007/content/5-cards/1-image-gallery/slide1.jpg" alt="Gallery image"&gt;
-								&lt;/div&gt;
-							&lt;/div&gt;
-							&lt;div class="gallery-image"&gt;
-								&lt;div class="gallery-image-inner"&gt;
-									&lt;img src="//localhost:3007/content/5-cards/1-image-gallery/slide2.jpg" alt="Gallery image"&gt;
-								&lt;/div&gt;
-							&lt;/div&gt;
-							&lt;div class="gallery-image"&gt;
-								&lt;div class="gallery-image-inner"&gt;
-									&lt;img src="//localhost:3007/content/5-cards/1-image-gallery/slide3.jpg" alt="Gallery image"&gt;
-								&lt;/div&gt;
-							&lt;/div&gt;
-							&lt;div class="gallery-image"&gt;
-								&lt;div class="gallery-image-inner"&gt;
-									&lt;img src="//localhost:3007/content/5-cards/1-image-gallery/slide4.jpg" alt="Gallery image"&gt;
-								&lt;/div&gt;
-							&lt;/div&gt;
-							&lt;div class="gallery-image"&gt;
-								&lt;div class="gallery-image-inner"&gt;
-									&lt;img src="//localhost:3007/content/5-cards/1-image-gallery/slide5.jpg" alt="Gallery image"&gt;
-								&lt;/div&gt;
-							&lt;/div&gt;
-							&lt;div class="gallery-image"&gt;
-								&lt;div class="gallery-image-inner"&gt;
-									&lt;img src="//localhost:3007/content/5-cards/1-image-gallery/slide6.jpg" alt="Gallery image"&gt;
-								&lt;/div&gt;
-							&lt;/div&gt;
-							&lt;div class="gallery-image"&gt;
-								&lt;div class="gallery-image-inner"&gt;
-									&lt;img src="//localhost:3007/content/5-cards/1-image-gallery/slide7.jpg" alt="Gallery image"&gt;
-								&lt;/div&gt;
-							&lt;/div&gt;
-							&lt;div class="gallery-image"&gt;
-								&lt;div class="gallery-image-inner"&gt;
-									&lt;img src="//localhost:3007/content/5-cards/1-image-gallery/slide8.jpg" alt="Gallery image"&gt;
-								&lt;/div&gt;
-							&lt;/div&gt;
-						&lt;/ul&gt;
-						&lt;!--gallery captions--&gt;
-						&lt;ul class="gallery-list-captions"&gt;
-							&lt;div class="gallery-caption"&gt;
-								&lt;div class="remodal-description"&gt;A shoemaker at La Maison Prodiso’s workshop uses an industrial sewing machine to hem the canvas that forms the upper part of the espadrille.&lt;/div&gt;
-								&lt;div class="remodal-credit"&gt;Photo by Josué Castilleja, Ralph Rinzler Folklife Archives&lt;/div&gt;
-							&lt;/div&gt;
-							&lt;div class="gallery-caption"&gt;
-								&lt;div class="remodal-description"&gt;La Maison Prodiso is filled with stacks of handmade espadrille shoes in bright solid colors or festive stripes.&lt;/div&gt;
-								&lt;div class="remodal-credit"&gt;Photo by Josué Castilleja, Ralph Rinzler Folklife Archives&lt;/div&gt;
-							&lt;/div&gt;
-							&lt;div class="gallery-caption"&gt;
-								&lt;div class="remodal-description"&gt;Jesus Maria Lazkano in his studio in Urdaibai.&lt;/div&gt;
-								&lt;div class="remodal-credit"&gt;Photo by Cristina Díaz-Carrera, Ralph Rinzler Folklife Archives&lt;/div&gt;
-							&lt;/div&gt;
-							&lt;div class="gallery-caption"&gt;
-								&lt;div class="remodal-description"&gt;Master potter Blanka Gomez de Segura demonstrates how to throw a traditional Basque pot.&lt;/div&gt;
-								&lt;div class="remodal-credit"&gt;Photo by Josué Castilleja, Ralph Rinzler Folklife Archives&lt;/div&gt;
-							&lt;/div&gt;
-							&lt;div class="gallery-caption"&gt;
-								&lt;div class="remodal-description"&gt;Blanka Gomez de Segura’s workshop is next to a 900-year-old kiln.&lt;/div&gt;
-								&lt;div class="remodal-credit"&gt;Photo by Mary S. Linn, Ralph Rinzler Folklife Archives&lt;/div&gt;
-							&lt;/div&gt;
-							&lt;div class="gallery-caption"&gt;
-								&lt;div class="remodal-description"&gt;Master stone carver Bernat Vidal poses with an example of his work featuring traditional Basque motifs of the sun in sandstone.&lt;/div&gt;
-								&lt;div class="remodal-credit"&gt;Photo by Agustin Sagasti&lt;/div&gt;
-							&lt;/div&gt;
-							&lt;div class="gallery-caption"&gt;
-								&lt;div class="remodal-description"&gt;Although weaving was once a large industry in her native Durango (Bizkaia), Olga Uribe Salaberria is one of the few to carry forward the tradition.&lt;/div&gt;
-								&lt;div class="remodal-credit"&gt;Photo by Eneko Uribe&lt;/div&gt;
-							&lt;/div&gt;
-							&lt;div class="gallery-caption"&gt;
-								&lt;div class="remodal-description"&gt;Olga Uribe Salaberria weaves linen cloth on one of her looms.&lt;/div&gt;
-								&lt;div class="remodal-credit"&gt;Photo by Eneko Uribe&lt;/div&gt;
-							&lt;/div&gt;
-						&lt;/ul&gt;
-					&lt;/div&gt;
+        .row
+            li.card.video-card.col-sm-4
+                .row
+                    .video.col-sm-12(data-id='9U1WBi2kTNY' data-type="youtube" data-title='Bristoff Family Circus' data-description='Lorem ipsum... <a>more</a>')
+                        .center-box
+                            .modal-trigger
+                                !=$section->image('video.png')
+                            .icon-play-button
+                    .details.col-sm-12
+                        .details-inner
+                            .tag Festival 2017
+                            a.high(href="#").title: span.light: span.er Circus Arts 2017
+                            .description.link-underline
+                                p See the culture and history of circus arts across the U.S.
+                .row
+                    .col-sm-12.visible-xs
+                        -snippet('show-html-mobile')
+                        -snippet('show-sass-mobile')
+            .col-md-8
+                pre.sass: code.
+                    // As video cards can have different looks, we set the title font based on the section via the CSS
+                    .folkways-learn-section {
+                        .title {
+                            @include serif-sm;
+                            font-weight: 600;
+                        }
+                    }
+            .col-md-8
+                pre.html: code.
+                    &lt;li class="card video-card col-sm-4"&gt;
+                        &lt;div class="row"&gt;
+                            &lt;div class="video col-xs-12" data-id="204687018" data-title="Festival 101" data-description="Lorem ipsum... &lt;a&gt;more&lt;/a&gt;"&gt;
+                                &lt;div class="center-box"&gt;
+                                    &lt;div class="modal-trigger"&gt;
+                                        &lt;img src="video.png"&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="icon-play-button"&gt;&lt;/div&gt;
+                            &lt;div class="details col-xs-12"&gt;
+                                &lt;div class="details-inner"&gt;
+                                    &lt;div class="tag"&gt;Festival 2017&lt;/div&gt;
+                                    &lt;a class="high title" href="#"&gt;
+                                        &lt;span class="light"&gt;
+                                            &lt;span class="er"&gt;
+                                                Circus Arts 2017
+                                            &lt;/span&gt;
+                                        &lt;/span&gt;
+                                    &lt;/a&gt;
+                                    &lt;div class="description link-underline"&gt;
+                                        &lt;p&gt;See the culture and history of circus arts across the U.S.&lt;/p&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/li&gt;
 
-	// Program section dropdown
-	.codeblock
-		a.anchor-link#program-section-dropdown
-		.row
-			.col-sm-8
-				h3.section-subtitle Program section dropdown
-			-snippet('show-html')
-			-snippet('show-sass')
-		.row
-			-$program_section = $section->find('program-section')
+                    // The pop-up uses the remodal.js plugin (http://vodkabears.github.io/remodal)
+                    // The following code should be in the footer and is used by all video pop-ups on the page
+                    &lt;button class="remodal-close visually-hidden" data-remodal-action="close"&gt;
+                    &lt;div data-remodal-id="modal"&gt;
+                        &lt;div class="remodal-iframe" id="remodal-iframe"&gt;
+                        &lt;div class="remodal-copy"&gt;
+                            &lt;h3 class="remodal-title"&gt;
+                            &lt;div class="remodal-description"&gt;
+                                &lt;p&gt;&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
 
-			.col-sm-12
-				section.ms-section(class="<?= $program_section->title() ?>")
-					a.anchor-link(id="<?= $program_section->uid() ?>")
-					.row.clearfix
-						.col-sm-12
-							-snippet('svg-thin-hr')
-							a.high(href="javascript:0")
-								h2.section-title: span.light: span.er!= $program_section->title()
-					.row.content
-						//- -snippet('card-program-category-listing', array('card' => $program_section, 'excerpt' => '50', 'blurb' => true, 'type' => 'program', 'caption' => true ))
-						-$src = $program_section->image();
+    // Video Card - Vimeo
+    .codeblock
+        .row
+            .col-sm-8
+                h3.section-subtitle Video Card &mdash; Vimeo
+            -snippet('show-html')
+            -snippet('show-sass')
 
-						.card.horizontal-card.col-xs-12
-							.row
-								.image.col-sm-7
-									figure
-										img(src="<?= $src->url() ?>")
-										//- show caption if it exists
-										-if($caption = $program_section->img_caption()->kt()):
-											figcaption
-												.figcaption-inner!= $caption
-										-endif
-								.details.col-sm-5
-									.details-inner
-										a.high(href="<?= $program_section->url() ?>").subtitle: span.light: span.er= $program_section->subtitle()
-										-if('' != $program_section->byline()):
-											.byline!= $program_section->byline()
-										-endif
-										
-										.description.link-underline.blurb!= $program_section->blurb()->kt()
+        .row
+            li.card.video-card.col-sm-4
+                .row
+                    .video.col-sm-12(data-id='204687018' data-type="vimeo" data-title='Festival 101' data-description='Lorem ipsum... <a>more</a>')
+                        .center-box
+                            .modal-trigger
+                                !=$section->image('video.png')
+                            .icon-play-button
+                    .details.col-sm-12
+                        .details-inner
+                            .tag Festival 2017
+                            a.high(href="#").title: span.light: span.er Circus Arts 2017
+                            .description.link-underline
+                                p See the culture and history of circus arts across the U.S.
+                .row
+                    .col-sm-12.visible-xs
+                        -snippet('show-html-mobile')
+                        -snippet('show-sass-mobile')
+            .col-md-8
+                pre.sass: code.
+                    // As video cards can have different looks, we set the title font based on the section via the CSS
+                    .folkways-learn-section {
+                        .title {
+                            @include serif-sm;
+                            font-weight: 600;
+                        }
+                    }
+            .col-md-8
+                pre.html: code.
+                    &lt;li class="card video-card col-sm-4"&gt;
+                        &lt;div class="row"&gt;
+                            &lt;div class="video col-xs-12" data-id="204687018" data-title="Festival 101" data-description="Lorem ipsum... &lt;a&gt;more&lt;/a&gt;"&gt;
+                                &lt;div class="center-box"&gt;
+                                    &lt;div class="modal-trigger"&gt;
+                                        &lt;img src="video.png"&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="icon-play-button"&gt;&lt;/div&gt;
+                            &lt;div class="details col-xs-12"&gt;
+                                &lt;div class="details-inner"&gt;
+                                    &lt;div class="tag"&gt;Festival 2017&lt;/div&gt;
+                                    &lt;a class="high title" href="#"&gt;
+                                        &lt;span class="light"&gt;
+                                            &lt;span class="er"&gt;
+                                                Circus Arts 2017
+                                            &lt;/span&gt;
+                                        &lt;/span&gt;
+                                    &lt;/a&gt;
+                                    &lt;div class="description link-underline"&gt;
+                                        &lt;p&gt;See the culture and history of circus arts across the U.S.&lt;/p&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/li&gt;
 
-										//- a.high.more-link.accordion-toggle.collapsed(href="#research-and-documentation-content" data-toggle="collapse" aria-expanded="false")
-										a.high.more-link.accordion-toggle.collapsed(href="javascript:0" data-toggle="collapse" data-target="#research-and-documentation-content" aria-expanded="false")
-											.light
-												.er
-													.more-link-text more
-													.more-link-arrow.icon-arrow2
+                    // The pop-up uses the remodal.js plugin (http://vodkabears.github.io/remodal)
+                    // The following code should be in the footer and is used by all video pop-ups on the page
+                    &lt;button class="remodal-close visually-hidden" data-remodal-action="close"&gt;
+                    &lt;div data-remodal-id="modal"&gt;
+                        &lt;div class="remodal-iframe" id="remodal-iframe"&gt;
+                        &lt;div class="remodal-copy"&gt;
+                            &lt;h3 class="remodal-title"&gt;
+                            &lt;div class="remodal-description"&gt;
+                                &lt;p&gt;&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
 
-							.row
-								.col-sm-7
-									.content.link-underline
-										.collapse.panel-collapse#research-and-documentation-content(aria-expanded="false")!= $program_section->contents()->kt()
+    // Tall Audio Card
+    .codeblock
+        .row
+            .col-sm-8
+                h3.section-subtitle Tall Audio Card
+            -snippet('show-html')
+            -snippet('show-sass')
+        .row
+            .card.audio-card.col-xs-6.col-sm-4.card-xs-break-2.full-border-card
+                .image
+                    a(href="#")
+                        != $section->image('audio.png')
+                .details
+                    .details-inner
+                        .tag New Release
+                        .title-wrapper
+                            a.high.title(href="#"): span.light: span.er Quelbe!
+                            .artist Stanley and the Ten Sleepless Nights
+                        .audio-player
+                            <audio class="mejs-player-svg" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'>
+            .col-xs-12.visible-xs
+                -snippet('show-html-mobile')
+                -snippet('show-sass-mobile')
+            .col-md-8
+                pre.html: code.
+                    &lt;div class="card audio-card col-xs-12 col-sm-4 card-xs-break-2 full-border-card"&gt;
+                        &lt;div class="image"&gt;   
+                            &lt;a href="#"&gt;
+                                &lt;img src="/320x320.jpg"&gt;
+                            &lt;/a&gt;
+                        &lt;/div&gt;
+                        &lt;div class="details"&gt;
+                            &lt;div class="details-inner"&gt;
+                                &lt;div class="tag"&gt;New Release&lt;/div&gt;
+                                &lt;div class="title-wrapper" &gt;
+                                    &lt;a class="high title" href="#"&gt;
+                                        &lt;span class="light"&gt;
+                                            &lt;span class="er"&gt;
+                                                Quelbe!
+                                            &lt;/span&gt;
+                                        &lt;/span&gt;
+                                    &lt;/a&gt;
+                                    &lt;div class="artist"&gt;
+                                        Stanley and the Ten Sleepless Nights
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;div class="audio-player"&gt;
+                                    &lt;audio class="mejs-player-svg" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'&gt;
+                                    &lt;!-- mejs media player will build itself on page load and we wrap a few key elements in common-scripts.js --&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+            .col-md-8
+                pre.sass: code.
+                    // audio styles are too long to list here and have their own SASS file called audio.scss
+    // Tall Audio Multi-Track Card
+    .codeblock
+        a.anchor-link#tall-audio-multi-track-card
+        .row
+            .col-sm-8
+                h3.section-subtitle Tall Audio Multi-Track Card
+            -snippet('show-html')
+            -snippet('show-sass')
+        .row
+            .card.audio-card.tall-audio-multi-track-card.col-xs-12.col-sm-4.card-xs-break-2.full-border-card
+                .image
+                    a(href="#")
+                        != $section->image('audio.png')
+                .details
+                    .details-inner
+                        .tag New Release
+                        .title-wrapper
+                            a.high.title(href="#"): span.light: span.er Quelbe!
+                            .artist Stanley and the Ten Sleepless Nights
+                        .audio-player
+                            .track-title Cigar Win the Race
+                            <audio class="mejs-player-svg" src="/assets/audio/SFW40568/SFW40568_01.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'>
+                        .audio-player
+                            .track-title Lagoon Mouth
+                            <audio class="mejs-player-svg" src="/assets/audio/SFW40568/SFW40568_02.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'>
+            .col-xs-12.visible-xs
+                -snippet('show-html-mobile')
+                -snippet('show-sass-mobile')
+            .col-md-8
+                pre.html: code.
+                    &lt;div class="card audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border-card"&gt;
+                        &lt;div class="image"&gt;   
+                            &lt;a href="#"&gt;
+                                &lt;img src="/320x320.jpg"&gt;
+                            &lt;/a&gt;
+                        &lt;/div&gt;
+                        &lt;div class="details"&gt;
+                            &lt;div class="details-inner"&gt;
+                                &lt;div class="tag"&gt;New Release&lt;/div&gt;
+                                &lt;div class="title-wrapper" &gt;
+                                    &lt;a class="high title" href="#"&gt;
+                                        &lt;span class="light"&gt;
+                                            &lt;span class="er"&gt;
+                                                Quelbe!
+                                            &lt;/span&gt;
+                                        &lt;/span&gt;
+                                    &lt;/a&gt;
+                                    &lt;div class="artist"&gt;
+                                        Stanley and the Ten Sleepless Nights
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;div class="audio-player"&gt;
+                                    &lt;audio class="mejs-player-svg" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'&gt;
+                                    &lt;!-- mejs media player will build itself on page load and we wrap a few key elements in common-scripts.js --&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+            .col-md-8
+                pre.sass: code.
+                    // audio styles are too long to list here and have their own SASS file called audio.scss
+    // Playlist Audio Card
+    .codeblock
+        a.anchor-link#playlist-audio-card
+        .row
+            .col-sm-8
+                h3.section-subtitle Playlist Audio Card
+            -snippet('show-html')
+            -snippet('show-sass')
+        .row
+            //- script(src="/assets/audio/myplaylist.js" type="text/javascript")
+            script(src="/assets/audio/myplaylist-calypso.js" type="text/javascript")
+            //- .card.audio-card.playlist-audio-card.col-xs-12.col-sm-4.card-xs-break-2.full-border-card
+            .card.audio-card.playlist-audio-card.col-sm-4.card-xs-break-2.full-border-card
+                .image
+                    a(href="#")
+                        img.playlist-cover(src="<?= $section->image('audio.png')->url() ?>")
+                .details
+                    .details-inner
+                        //- .tag New Release
+                        .title-wrapper
+                            a.high.title(href="#"): span.light: span.er.playlist-title Quelbe!
+                            .artist#playlist-artist Stanley and the Ten Sleepless Nights
+                        .audio-player
+                            <audio id="playlist-audio" class="playlist-audio" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'></audio>
+                            .playlist-number 1
+                            .playlist-controls.clearfix                                
+                                .next-button
+                                    svg.svg-slick-next.slick-arrow(title="previous")
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Images/icons/icons.svg#icon-folklife-rightarrow"></use>
+                                .previous-button
+                                    svg.svg-slick-prev.slick-arrow(title="previous")
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Images/icons/icons.svg#icon-folklife-leftarrow"></use>
+            .col-xs-12.visible-xs
+                -snippet('show-html-mobile')
+                -snippet('show-sass-mobile')
+            .col-md-8
+                pre.html: code.
+                    &lt;script src="/assets/audio/myplaylist-calypso.js" type="text/javascript"&gt;&lt;/script&gt;
+                    &lt;div class="card audio-card playlist-audio-card col-xs-6 col-sm-3 card-xs-break-2 full-border-card"&gt;
+                        &lt;div class="image"&gt;   
+                            &lt;a href="#"&gt;
+                                &lt;img class="playlist-cover" src="/320x320.jpg"&gt;
+                            &lt;/a&gt;
+                        &lt;/div&gt;
+                        &lt;div class="details"&gt;
+                            &lt;div class="details-inner"&gt;
+                                &lt;div class="title-wrapper" &gt;
+                                    &lt;a class="high title" href="#"&gt;
+                                        &lt;span class="light"&gt;
+                                            &lt;span class="playlist-title" class="er"&gt;
+                                                Quelbe!
+                                            &lt;/span&gt;
+                                        &lt;/span&gt;
+                                    &lt;/a&gt;
+                                    &lt;div id="playlist-artist" class="artist"&gt;
+                                        Stanley and the Ten Sleepless Nights
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;div class="audio-player"&gt;
+                                    &lt;audio id="playlist-audio" class="playlist-audio" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'&gt;&lt;/audio&gt;
+                                    &lt;!-- mejs media player will build itself on page load and we wrap a few key elements in common-scripts.js --&gt;
+                                    &lt;div class="playlist-controls"&gt;
+                                        &lt;div class="previous-button icon-folklife-leftarrow"&gt;&lt;/div&gt;
+                                        &lt;div class="next-button icon-folklife-rightarrow"&gt;&lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+            .col-md-8
+                pre.sass: code.
+                    // audio styles are too long to list here and have their own SASS file called audio.scss
+    // Horizontal Playlist
+    //- .codeblock
+        a.anchor-link#horizontal-playlist
+        .row
+            .col-sm-8
+                h3.section-subtitle Horizontal Playlist
+            -snippet('show-html')
+            -snippet('show-sass')
+        .row
+            //- script(src="/assets/audio/myplaylist.js" type="text/javascript")
+            script(src="/assets/audio/myplaylist-calypso.js" type="text/javascript")
+            .card.audio-card.playlist-audio-card.horizontal-audio-card-third.full-border-horizontal-card.col-xs-6.col-sm-4.card-xs-break-2
+                .row
+                    .image.col-xs-4
+                        a(href="#")
+                            img.playlist-cover(src="<?= $section->image('audio.png')->url() ?>")
+                    .details.col-xs-8
+                        .details-inner
+                            .title-wrapper
+                                a.high.title(href="#"): span.light: span.er.playlist-title Quelbe!
+                                .artist#playlist-artist Stanley and the Ten Sleepless Nights
+                            .audio-player
+                                <audio id="playlist-audio" class="playlist-audio" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'></audio>
+                                .playlist-controls
+                                    .previous-button.icon-folklife-leftarrow
+                                    .next-button.icon-folklife-rightarrow
+            .col-xs-12.visible-xs
+                -snippet('show-html-mobile')
+                -snippet('show-sass-mobile')
+            .col-md-8
+                pre.html: code.
+                    &lt;script src="/assets/audio/myplaylist-calypso.js" type="text/javascript"&gt;&lt;/script&gt;
+                    &lt;div class="card audio-card playlist-audio-card horizontal-audio-card-third full-border-horizontal-card col-xs-6 col-sm-4 card-xs-break-2"&gt;
+                        &lt;div class="row"&gt;
+                            &lt;div class="image col-xs-4"&gt;
+                                &lt;a href="#"&gt;&lt;img src="http://media.smithsonianfolkways.org/images/album_covers/SF700/COOK00914.jpg" class="playlist-cover"&gt;&lt;/a&gt;
+                            &lt;/div&gt;
+                            &lt;div class="details col-xs-8"&gt;
+                                &lt;div class="details-inner" style=""&gt;
+                                    &lt;div class="title-wrapper"&gt;&lt;a href="#" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er playlist-title"&gt;Antiguan Girls&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
+                                        &lt;div id="playlist-artist" class="artist"&gt;Lord Melody&lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="audio-player"&gt;&lt;span class="mejs-offscreen"&gt;Audio Player&lt;/span&gt;
+                                        &lt;audio id="playlist-audio" class="playlist-audio" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'&gt;&lt;/audio&gt;
+                                        &lt;!-- mejs media player will build itself on page load and we wrap a few key elements in common-scripts.js --&gt;
+                                        &lt;div class="playlist-controls"&gt;
+                                            &lt;div class="previous-button icon-folklife-leftarrow"&gt;&lt;/div&gt;
+                                            &lt;div class="next-button icon-folklife-rightarrow"&gt;&lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+            .col-md-8
+                pre.sass: code.
+                    // audio styles are too long to list here and have their own SASS file called audio.scss
+    // Horizontal Text Audio Card
+    .codeblock
+        .row
+            .col-sm-8
+                h3.section-subtitle Horizontal Text Audio Card
+            -snippet('show-html')
+            -snippet('show-sass')
+        .row
+            .card.audio-card.col-xs-12.col-sm-4.card-xs-break-2.full-border-card
+                .details
+                    .details-inner
+                        .tag New Release
+                        .title-wrapper
+                            a.high.title(href="#"): span.light: span.er Quelbe!
+                            .artist Stanley and the Ten Sleepless Nights
+                        .audio-player
+                            <audio class="mejs-player-svg" src="/assets/audio/Music2same.mp3"></audio>
+            .col-xs-12.visible-xs
+                -snippet('show-html-mobile')
+                -snippet('show-sass-mobile')
+            .col-md-8
+                pre.html: code.
+                    &lt;div class="card audio-card col-xs-12 col-sm-4 full-border-card"&gt;
+                        &lt;div class="details"&gt;
+                            &lt;div class="details-inner"&gt;
+                                &lt;div class="tag"&gt;New Release&lt;/div&gt;
+                                &lt;div class="title-wrapper" &gt;
+                                    &lt;a class="high title" href="#"&gt;
+                                        &lt;span class="light"&gt;
+                                            &lt;span class="er"&gt;
+                                                Quelbe!
+                                            &lt;/span&gt;
+                                        &lt;/span&gt;
+                                    &lt;/a&gt;
+                                    &lt;div class="artist"&gt;
+                                        Stanley and the Ten Sleepless Nights
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;div class="audio-player"&gt;
+                                    &lt;audio class="mejs-player-svg" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'&gt;
+                                    &lt;!-- mejs media player will build itself on page load and we wrap a few key elements in common-scripts.js --&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+            .col-md-8
+                pre.sass: code.
+                    // audio styles are too long to list here and have their own SASS file called audio.scss
+
+    // Horizontal Audio Card — Single
+    .codeblock
+        a.anchor-link#horizontal-audio-card-single
+        .row
+            .col-sm-8
+                h3.section-subtitle Horizontal Audio Card — Single
+            -snippet('show-html')
+            -snippet('show-sass')
+        .row
+            .card.audio-card.horizontal-audio-card.horizontal-audio-card-single.full-border-horizontal-card.col-sm-4.visible-md.visible-lg
+                .row
+                    .image.col-xs-6
+                        != $section->image('audio.png')
+                    .details.col-xs-6
+                        .details-inner
+                            .title-wrapper
+                                a.high.title(href="#"): span.light: span.er Quelbe!
+                                .artist Stanley and the Ten Sleepless Nights
+                            .audio-player
+                                <audio class="mejs-player-svg" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'>
+            .col-xs-12.visible-xs
+                -snippet('show-html-mobile')
+                -snippet('show-sass-mobile')
+            .col-md-8
+                pre.html: code.
+                    &lt;div class="card audio-card horizontal-audio-card horizontal-card-single full-border-horizontal-card col-sm-4"&gt;
+                        &lt;div class="row"&gt;
+                            &lt;div class="image col-xs-6"&gt;
+                                &lt;a href="#"&gt;&lt;img src="/210x210.jpg" alt=""&gt;&lt;/a&gt;
+                            &lt;/div&gt;
+                            &lt;div class="details col-xs-6"&gt;
+                                &lt;div class="details-inner" style=""&gt;
+                                    &lt;div class="title-wrapper"&gt;
+                                        &lt;a href="#" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;Quelbe!&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
+                                        &lt;div class="artist"&gt;Stanley and the Ten Sleepless Nights&lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="audio-player"&gt;
+                                        &lt;audio class="mejs-player-svg" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'&gt;
+                                        &lt;!-- mejs media player will build itself on page load and we wrap a few key elements in common-scripts.js --&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+            .col-md-8
+                pre.sass: code.
+                    // audio styles are too long to list here and have their own SASS file called audio.scss
+
+    // Horizontal Audio Card — Playlist – Thin
+    //- .codeblock
+        a.anchor-link#horizontal-audio-card-playlist-thin
+        .row
+            .col-sm-8
+                h3.section-subtitle Horizontal Audio Card — Playlist – Thin
+            -snippet('show-html')
+            -snippet('show-sass')
+        .row.visible-xs.visible-sm
+            .card.col-sm-4
+                p Swap horizontal card with tall card for this size
+        .row
+            .card.audio-card.horizontal-audio-card.horizontal-audio-card-playlist-thin.full-border-horizontal-card.col-sm-4.visible-md.visible-lg.black-border
+                .row
+                    .image.col-xs-3
+                        != $section->image('audio.png')
+                    .details.col-xs-9
+                        .details-inner
+                            .title-wrapper
+                                a.high.title(href="#"): span.light: span.er Quelbe!
+                                .artist Stanley and the Ten Sleepless Nights
+                            .audio-player
+                                <audio class="mejs-player-svg" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'>
+            .col-xs-12.visible-xs
+                -snippet('show-html-mobile')
+                -snippet('show-sass-mobile')
+            .col-md-8
+                pre.html: code.
+                    &lt;div class="card audio-card horizontal-audio-card horizontal-audio-card-playlist full-border-horizontal-card col-sm-4 visible-md visible-lg black-border"&gt;
+                        &lt;div class="row"&gt;
+                            &lt;div class="image col-xs-3"&gt;
+                                &lt;a href="#"&gt;&lt;img src="/210x210.jpg" alt=""&gt;&lt;/a&gt;
+                            &lt;/div&gt;
+                            &lt;div class="details col-xs-9"&gt;
+                                &lt;div class="details-inner" style=""&gt;
+                                    &lt;div class="title-wrapper"&gt;
+                                        &lt;a href="#" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;Quelbe!&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
+                                        &lt;div class="artist"&gt;Stanley and the Ten Sleepless Nights&lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="audio-player"&gt;
+                                        &lt;audio class="mejs-player-svg" src="/assets/audio/Music2same.mp3" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'&gt;
+                                        &lt;!-- mejs media player will build itself on page load and we wrap a few key elements in common-scripts.js --&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+            .col-md-8
+                pre.sass: code.
+                    // audio styles are too long to list here and have their own SASS file called audio.scss
+                    // the only difference here is the .horizontal-audio-card-playlist class overrides certain styles of the .horizontal-audio-card class
+    // Track listing
+    .codeblock
+        a.anchor-link#track-listing
+        .row
+            .col-sm-8
+                h3.section-subtitle Track Listing
+            -snippet('show-html')
+            -snippet('show-sass')
+        .row
+            //- needs to be on album page for this to work
+            .album-page.col-sm-7
+                main.main
+                    //- bootstrap class to make table go vertical on mobile
+                    .table-responsive 
+                        table.table.table-hover.track-listing 
+
+                            //- set track listing start number
+                            -$track = $section->children()->find('cigar-win-the-race')
+                            tr#track.track
+                                td.track-number-play-button
+                                    //- .track-number!= '100'
+                                    //- .icon-play-button.track-play-button
+                                    //- <audio class="mejs-player-svg" src="/assets/audio/SFW40568/<?= $track->track_1() ?>" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'>
+                                    <audio class="track-audio" src="/assets/audio/SFW40568/<?= $track->track_1() ?>"></audio>
+                                    .track-number!= '100'
+                                td.track-title!= $track->title()
+                                td.track-artist!= $page->artist()
+                                td.track-length!= $track->length()
+                                td.track-buy BUY
+            .col-xs-12.visible-xs
+                -snippet('show-html-mobile')
+                -snippet('show-sass-mobile')
+        .row
+            .col-md-8
+                pre.html: code.
+                    &lt;div class="album-page"&gt;
+                        &lt;main class="main col-sm-7"&gt;
+                            &lt;div class="table-responsive"&gt;
+                                &lt;table class="table table-hover track-listing"&gt;
+                                    &lt;tbody&gt;
+                                        &lt;tr class="track"&gt;
+                                            &lt;td class="track-number-play-button"&gt;
+                                                &lt;div class="track-number"&gt;100&lt;/div&gt;
+                                                &lt;audio class="mejs-player-svg" src="/assets/audio/SFW40568/&lt;?= $track-&gt;track_1() ?&gt;" data-mejsoptions='{"startVolume": 0.5, "setDimensions": false}'&gt;&lt;/audio&gt;
+                                            &lt;/td&gt;
+                                            &lt;td class="track-title"&gt;Cigar Win the Race&lt;/td&gt;
+                                            &lt;td class="track-artist"&gt;&lt;/td&gt;
+                                            &lt;td class="track-length"&gt;5:42&lt;/td&gt;
+                                            &lt;td class="track-buy"&gt;BUY&lt;/td&gt;
+                                        &lt;/tr&gt;
+                                    &lt;/tbody&gt;
+                                &lt;/table&gt;
+                            &lt;/div&gt;
+                        &lt;/main&gt;
+                    &lt;/div&gt;
+
+            .col-md-8
+                pre.sass: code.
+                    // audio styles are too long to list here and have their own SASS file called audio.scss
+                    // the border color is changed if this player exists on a page with a body class of .magazine-article-page
+    // Vinyl Card
+    .codeblock
+        .row
+            .col-sm-8
+                h3.section-subtitle Vinyl Card
+            -snippet('show-html')
+            -snippet('show-sass')
+        .row
+            .card.vinyl-card.col-xs-6.col-sm-3
+                .image
+                    a(href="#")
+                        !=$section->image('fannie-lou-hamer.png')
+                .details
+                    .details-inner
+                        a.high(href="#").title: span.light: span.er Songs My Mother Taught Me
+                        .artist Fannie Lou Hamer
+            .col-xs-12.visible-xs
+                -snippet('show-html-mobile')
+                -snippet('show-sass-mobile')
+            .col-sm-9
+                pre.sass: code.
+                    .album-card, .vinyl-card, .books-card {
+                        .details-inner {
+                            padding:0;
+                            @include padding-top(1.7);
+                        }
+                        .title {
+                            @include sm-sans;
+                            font-weight: 700;
+                            @include margin-bottom(0.5);
+                        }
+                        .artist {
+                            @include sm-sans;
+                        }
+                        @include clear-2; // display cards side-by-side on mobile, clearing every 2nd + 1 cards to the left
+                        @include respond-to(break2) {@include clear-6;} // display 6 across, clearing every 6th + 1 cards
+                    }
+            .col-sm-9
+                pre.html: code.
+                    &lt;li class="card vinyl-card col-xs-6 col-sm-3"&gt;
+                        &lt;div class="image"&gt;
+                            &lt;a href="#"&gt;&lt;img src="fannie-lou-hamer.png" alt="Songs My Mother Taught Me"&gt;&lt;/a&gt;
+                        &lt;/div&gt;
+                        &lt;div class="details"&gt;
+                            &lt;div class="details-inner"&gt;
+                                &lt;a href="#" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;Songs My Mother Taught Me&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
+                                &lt;div class="artist"&gt;
+                                    &lt;p&gt;Fannie Lou Hamer&lt;/p&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/li&gt;
+    // Album Card
+    .codeblock
+        .row
+            .col-sm-8
+                h3.section-subtitle Album Card
+            -snippet('show-html')
+            -snippet('show-sass')
+        .row
+            .card.album-card.col-xs-6.col-sm-2
+                .image
+                    a(href="#")
+                        !=$section->image('SFW40568.jpeg')
+                .details
+                    .details-inner
+                        a.high(href="#").title: span.light: span.er Quelbe! Music of the U.S. Virgin Islands
+                        .artist Stanley and the Ten Sleepless Nights
+            .col-xs-12.visible-xs
+                -snippet('show-html-mobile')
+                -snippet('show-sass-mobile')
+            .col-sm-10
+                pre.sass: code.
+                    .album-card, .vinyl-card, .books-card {
+                        .details-inner {
+                            padding:0;
+                            @include padding-top(1.7);
+                        }
+                        .title {
+                            @include sm-sans;
+                            font-weight: 700;
+                            @include margin-bottom(0.5);
+                        }
+                        .artist {
+                            @include sm-sans;
+                        }
+                        @include clear-2; // display cards side-by-side on mobile, clearing every 2nd + 1 cards to the left
+                        @include respond-to(break2) {@include clear-6;} // display 6 across, clearing every 6th + 1 cards
+                    }
+            .col-sm-10
+                pre.html: code.
+                    &lt;div class="card album-card col-xs-2 col-sm-2"&gt;
+                        &lt;div class="image"&gt;
+                            &lt;a href="#"&gt;&lt;img src="SFW40568.jpeg" alt=""&gt;&lt;/a&gt;
+                        &lt;/div&gt;
+                        &lt;div class="details"&gt;
+                            &lt;div class="details-inner"&gt;
+                                &lt;a href="#" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;Quelbe! Music of the U.S. Virgin Islands&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
+                                &lt;div class="artist"&gt;Stanley and the Ten Sleepless Nights&lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+    // Single Image popup
+    .codeblock
+        a.anchor-link#single-image-popup
+        .row
+            .col-sm-8
+                h3.section-subtitle Single Image Popup
+            -snippet('show-html')
+            -snippet('show-sass')
+        .row
+            //- -$gallery_img = $page->find('image-gallery')->title()
+            -$image_gallery_page = $pages->find('cards')->children()->find('image-gallery')
+            -$gallery_img = $image_gallery_page->image('slide1.jpg')
+            .col-sm-5
+                .tag Image
+                .image-gallery.single-image-popup
+                    // first slide visible with gallery icon
+                    .center-box
+                        .modal-trigger
+                            img.gallery-thumbnail(src="<?= $section->image('single-image-popup.jpg')->url() ?>" alt="Gallery image")
+                        .icon-picture-o
+                    ul.gallery-list
+                        .gallery-image
+                            .gallery-image-inner
+                                img(src="<?= $section->image('single-image-popup.jpg')->url() ?>" alt="Gallery image")
+                    ul.gallery-list-captions
+                        .gallery-caption
+                            .remodal-description Drawing by children of Bell Gardens Elementary, Bell Gardens, California.
+                            .remodal-credit Photo by Lilia Sarmiento. 
+                .caption Drawing by children of Bell Gardens Elementary, Bell Gardens, California. <i>Photo by Lilia Sarmiento.</i>
+
+            .col-xs-12.visible-xs
+                -snippet('show-html-mobile')
+                -snippet('show-sass-mobile')
+            .col-sm-7
+                pre.sass: code.
+                    
+                    /* same as Image Gallery below */
+            .col-sm-7
+                pre.html: code.
+                    &lt;div class="col-sm-5"&gt;
+                        &lt;div class="tag"&gt;Image&lt;/div&gt;
+                        &lt;div class="image-gallery single-image-popup"&gt;
+                            &lt;!-- first slide visible with gallery icon--&gt;
+                            &lt;div class="center-box"&gt;
+                                &lt;div class="modal-trigger"&gt;&lt;img src="//localhost:3007/content/5-cards/single-image-popup.jpg" alt="Gallery image" class="gallery-thumbnail"&gt;&lt;/div&gt;
+                                &lt;div class="icon-picture-o"&gt;&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;ul class="gallery-list"&gt;
+                                &lt;div class="gallery-image"&gt;
+                                    &lt;div class="gallery-image-inner"&gt;&lt;img src="//localhost:3007/content/5-cards/single-image-popup.jpg" alt="Gallery image"&gt;&lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/ul&gt;
+                            &lt;ul class="gallery-list-captions"&gt;
+                                &lt;div class="gallery-caption"&gt;
+                                    &lt;div class="remodal-description"&gt;Drawing by children of Bell Gardens Elementary, Bell Gardens, California.&lt;/div&gt;
+                                    &lt;div class="remodal-credit"&gt;Photo by Lilia Sarmiento. &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/ul&gt;
+                        &lt;/div&gt;
+                        &lt;div class="caption"&gt;Drawing by children of Bell Gardens Elementary, Bell Gardens, California. &lt;i&gt;Photo by Lilia Sarmiento.&lt;/i&gt;&lt;/div&gt;
+                    &lt;/div&gt;
 
 
-			.col-xs-12.visible-xs
-				-snippet('show-html-mobile')
-				-snippet('show-sass-mobile')
-		.row
-			.col-sm-12
-				pre.sass: code.
-					.ms-section {
-						margin-bottom:0;
-						.card {
-							@include margin-bottom(2.5);
-						}
-						&-copy {
-							@include margin-top(-0.5);	
-						}
-						.section-title {
-							@include margin-top(1.5);
-							@include margin-bottom(1.5);
-						}
-						.subtitle {
-							@include md-serif-title;
-							color: #000;
-							@include margin-bottom(0.5);
-						}
-						.byline {
-							@include md-sans;
-							font-weight: 600;
-							@include margin-bottom(3.5);
-							@include margin-bottom(2.5);
-						}
-						.blurb {
-							@include md-sans;
-						}
-						.anchor-link {
-							@include top(-5);
-						}
-						.image {
-							cursor: initial;
-							@include respond-to(break2max) {
-								margin-bottom: 1rem;
-							}
-						}
-						.details-inner {
-							padding-top:0 !important;
-						}
-						.description {
-							h3 {
-								@include margin-top(4);
-								&:first-of-type {
-									margin-top:0;
-								}
-							}
-							p {
-								@include margin-bottom(1);
-							}
-						}
-						.more-link {
-							@include margin-top(1);
-						}
-					}
-			.col-sm-12
-				pre.html: code.
-					&lt;section class="ms-section Research &amp; Documentation"&gt;
-						&lt;a id="program-section" class="anchor-link"&gt;&lt;/a&gt;
-						&lt;div class="row clearfix"&gt;
-							&lt;div class="col-sm-12"&gt;
-								&lt;!-- must add preserveAspectRatio="none" to svg to get full width in safari, see http://stackoverflow.com/a/24303532--&gt;
-								&lt;div class="svg-thin-hr"&gt;&lt;!-- include svg here --&gt;&lt;/div&gt;
-								&lt;a
-									href="javascript:0" class="high"&gt;
-									&lt;h2 class="section-title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;Research &amp; Documentation&lt;/span&gt;&lt;/span&gt;&lt;/h2&gt;&lt;/a&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-						&lt;div class="row"&gt;
-							&lt;div class="card horizontal-card col-xs-12"&gt;
-								&lt;div class="row"&gt;
-									&lt;div class="image col-sm-7"&gt;
-										&lt;figure&gt;&lt;img src="//localhost:3007/content/5-cards/3-program-section/Research_Doc-home.jpg"&gt;
-											&lt;figcaption&gt;
-												&lt;div class="figcaption-inner"&gt;
-													&lt;p&gt;Photo courtesy of Embassy of Colombia in Washington, DC&lt;/p&gt;
-												&lt;/div&gt;
-											&lt;/figcaption&gt;
-										&lt;/figure&gt;
-									&lt;/div&gt;
-									&lt;div class="details col-sm-5"&gt;
-										&lt;div class="details-inner"&gt;&lt;a href="//localhost:3007/cards/program-section" class="high subtitle"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
-											&lt;div class="description link-underline blurb"&gt;
-												&lt;p&gt;&lt;i&gt;My Armenia&lt;/i&gt; is driven by research and documentation methods developed by scholars to produce programs for the Smithsonian Folklife Festival. Working collaboratively with in-country researchers, including anthropologists,
-													folklorists, ethnomusicologists, community-based scholars, and more, our goal is to expand and enrich existing scholarship. Additionally, we will create an archival record that will become part of the Smithsonian’s
-													permanent collection—data that will inform future generations of researchers.&lt;/p&gt;
-											&lt;/div&gt;
-											&lt;a href="javascript:0" data-toggle="collapse" data-target="#research-and-documentation-content" aria-expanded="false" class="high more-link accordion-toggle collapsed"&gt;
-												&lt;div class="light"&gt;
-													&lt;div class="er"&gt;
-														&lt;div class="more-link-text"&gt;more&lt;/div&gt;
-														&lt;div class="more-link-arrow icon-arrow2"&gt;&lt;/div&gt;
-													&lt;/div&gt;
-												&lt;/div&gt;
-											&lt;/a&gt;
-										&lt;/div&gt;
-									&lt;/div&gt;
-								&lt;/div&gt;
-								&lt;div class="row"&gt;
-									&lt;div class="col-sm-7"&gt;
-										&lt;div class="description link-underline"&gt;
-											&lt;div id="research-and-documentation-content" aria-expanded="false" class="panel-collapse collapse" style="height: 320px;"&gt;
-												&lt;p&gt;Our research teams work directly with communities to identify the cultural heritage they cherish most—the places, traditions, music, dance, craft, food, and other expressions that define their community identity. We will
-													also document key knowledge and skills needed within a particular traditional practice. For a musician, this might include songs, instrumental skills, and performing styles; for a craftsperson, materials, designs, and
-													techniques.&lt;/p&gt;
-												&lt;p&gt;We will identify specific community members who are exemplars of their cultural practice, as indicated by their status and recognition within their community. All of this information is carefully documented and archived
-													for future use and will form the foundation of community-based tourism development in Armenia.&lt;/p&gt;
-											&lt;/div&gt;
-										&lt;/div&gt;
-									&lt;/div&gt;
-								&lt;/div&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-					&lt;/section&gt;
+    // Image Gallery Card
+    .codeblock
+        a.anchor-link#image-gallery
+        .row
+            .col-sm-8
+                h3.section-subtitle Image Gallery
+            -snippet('show-html')
+            -snippet('show-sass')
+        .row
+            //- -$gallery_img = $page->find('image-gallery')->title()
+            -$image_gallery_page = $pages->find('cards')->children()->find('image-gallery')
+            -$gallery_img = $image_gallery_page->image('slide1.jpg')
+            .image-gallery.col-sm-5
+                // first slide visible with gallery icon
+                .center-box
+                    .modal-trigger
+                        img.gallery-thumbnail(src="<?= $gallery_img->url() ?>" alt="Gallery image")
+                    .icon-gallery
+                ul.gallery-list
+                    -foreach($image_gallery_page->images()->filterBy('filename', '*=', 'slide') as $image):
+                        .gallery-image
+                            .gallery-image-inner
+                                img(src="<?= $image->url() ?>" alt="Gallery image")
+                    -endforeach
+                ul.gallery-list-captions
+                    -foreach($image_gallery_page->images()->filterBy('filename', '*=', 'slide') as $image):
+                        .gallery-caption
+                            .remodal-description!= $image->caption()
+                            .remodal-credit!= $image->credit()
+                    -endforeach
+            .col-xs-12.visible-xs
+                -snippet('show-html-mobile')
+                -snippet('show-sass-mobile')
+        .row
+            .col-sm-12
+                pre.sass: code.
+                    /* icon font characters (fontastic.me) from ../common/css/vd-icons.scss 
+                    -------------------------------------------------- */
+                    .icon-gallery:before {
+                        content: "\44";
+                    }
+                    .icon-gallery:after {
+                      content: "\42";
+                    }
+
+                    /* icon stacking/sizing from ../common/css/icons.scss 
+                    -------------------------------------------------- */
+                    .icon-gallery {
+                        cursor: pointer;
+                        position: absolute;
+                        @include left(1);
+                        @include bottom(1);
+                        &:before {
+                            z-index: 0;
+                            color: $black25;
+                        }
+                        &:hover:before {
+                            color: $hover;
+                        }
+                        &:after {
+                            position: absolute;
+                            z-index: 1;
+                            color: $black80;
+                            display: block;
+                            @include respond-to(break2max) {
+                                font-size: 6vw;
+                                top: 2vw;
+                                left: 1.8vw;
+                            }
+                            @include respond-to(break2full) {
+                                font-size: 2.6vw;
+                                top: 0.7vw;
+                                left: 0.6vw;
+                            }
+                            @include respond-to(fullwidth) {
+                                font-size: 4rem;
+                                top: 1rem;
+                                left: 0.9rem;
+                            }
+                        }
+                    }
+
+                    /* popup gallery styles from ../common/css/general.scss 
+                    -------------------------------------------------- */
+                    .image-gallery {
+                        .icon-play-button {
+                            &:before, &:after {
+                                @include respond-to(break2max) {
+                                    font-size: 15vw;
+                                }
+                                @include respond-to(break2full) {
+                                    font-size: 6vw;
+                                }
+                                @include respond-to(fullwidth) {
+                                    font-size: 10rem;
+                                }
+                            }
+                        }
+                    }
+                    .gallery-list, .gallery-list-captions {
+                        display: none; // initial hide
+                    }
+                    .remodal-captions {
+                        display: none;
+                    }
+                    .remodal-image-gallery {
+                        max-width: none !important;
+                        background-color: transparent;
+                        .remodal-close {
+                            right: 0 !important;
+                            @include respond-to(break2max) {
+                                top: -4.5rem;
+                            }
+                        }
+                        .remodal-captions {
+                            display: block;
+                        }
+                    }
+                    .remodal-gallery {
+                        .slick-track {
+                            height: initial;
+                        }
+                        .slick-slide {
+                            height: auto;
+                            max-width: 100vw;
+                            @include padding-right(4);
+                            @include padding-left(4);
+                        }
+                        .slick-slide img {
+                            max-height: 70vh;
+                            width: auto;
+                        }
+                        .gallery-image-inner {
+                            position: relative; // contain gray overlay
+                            &:after {
+                                @include respond-to(break2) {
+                                    content: '';
+                                    display: block;
+                                    position: absolute;
+                                    top: 0;right: 0;bottom: 0;left: 0;
+                                    background-color: rgba(0,0,0,0.8);
+                                }   
+                            }
+                        }
+                        .slick-active .gallery-image-inner:after {
+                            display: none;
+                        }       
+                        .slick-arrow {
+                            @include respond-to(break2max) {
+                                display: none !important;
+                            }
+                        }
+                        .slick-prev {
+                            @include respond-to(break2) {
+                                left: 1vw;
+                            }
+                            @include respond-to(fullwidth) {
+                                left: 5rem;
+                            }
+                        }
+                        .slick-next {
+                            @include respond-to(break2full) {
+                                right: 1vw;
+                            }
+                            @include respond-to(fullwidth) {
+                                right: 5rem;
+                            }
+                        }       
+                    }
+                    .remodal-captions {
+                        @include margin-top(4);
+                        // turn down non-active captions
+                        .slick-slide:not(.slick-active) {
+                            .remodal-description, .remodal-credit {
+                                color: $black80;
+                            }
+                        }
+                        .remodal-description {
+                            @include padding(2);            
+                            padding-bottom: 0 !important;
+                            color: white;
+                        }
+                        .remodal-credit {
+                            @include padding(2);
+                            color: $black50;
+                            @include caption-sans;
+                        }
+                    }
+
+                    /* ...all other styles inherited from video popup */
+            .col-sm-12
+                pre.html: code.
+                    &lt;div class="image-gallery col-sm-5"&gt;
+                        &lt;!--first slide visible, gallery icon--&gt;
+                        &lt;div class="center-box"&gt;
+                            &lt;div class="modal-trigger"&gt;&lt;img src="//localhost:3007/content/5-cards/1-image-gallery/slide1.jpg" alt="Gallery image" class="gallery-thumbnail"&gt;&lt;/div&gt;
+                            &lt;div class="icon-gallery"&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!--gallery images--&gt;
+                        &lt;ul class="gallery-list"&gt;
+                            &lt;div class="gallery-image"&gt;
+                                &lt;div class="gallery-image-inner"&gt;
+                                    &lt;img src="//localhost:3007/content/5-cards/1-image-gallery/slide1.jpg" alt="Gallery image"&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="gallery-image"&gt;
+                                &lt;div class="gallery-image-inner"&gt;
+                                    &lt;img src="//localhost:3007/content/5-cards/1-image-gallery/slide2.jpg" alt="Gallery image"&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="gallery-image"&gt;
+                                &lt;div class="gallery-image-inner"&gt;
+                                    &lt;img src="//localhost:3007/content/5-cards/1-image-gallery/slide3.jpg" alt="Gallery image"&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="gallery-image"&gt;
+                                &lt;div class="gallery-image-inner"&gt;
+                                    &lt;img src="//localhost:3007/content/5-cards/1-image-gallery/slide4.jpg" alt="Gallery image"&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="gallery-image"&gt;
+                                &lt;div class="gallery-image-inner"&gt;
+                                    &lt;img src="//localhost:3007/content/5-cards/1-image-gallery/slide5.jpg" alt="Gallery image"&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="gallery-image"&gt;
+                                &lt;div class="gallery-image-inner"&gt;
+                                    &lt;img src="//localhost:3007/content/5-cards/1-image-gallery/slide6.jpg" alt="Gallery image"&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="gallery-image"&gt;
+                                &lt;div class="gallery-image-inner"&gt;
+                                    &lt;img src="//localhost:3007/content/5-cards/1-image-gallery/slide7.jpg" alt="Gallery image"&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="gallery-image"&gt;
+                                &lt;div class="gallery-image-inner"&gt;
+                                    &lt;img src="//localhost:3007/content/5-cards/1-image-gallery/slide8.jpg" alt="Gallery image"&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/ul&gt;
+                        &lt;!--gallery captions--&gt;
+                        &lt;ul class="gallery-list-captions"&gt;
+                            &lt;div class="gallery-caption"&gt;
+                                &lt;div class="remodal-description"&gt;A shoemaker at La Maison Prodiso’s workshop uses an industrial sewing machine to hem the canvas that forms the upper part of the espadrille.&lt;/div&gt;
+                                &lt;div class="remodal-credit"&gt;Photo by Josué Castilleja, Ralph Rinzler Folklife Archives&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="gallery-caption"&gt;
+                                &lt;div class="remodal-description"&gt;La Maison Prodiso is filled with stacks of handmade espadrille shoes in bright solid colors or festive stripes.&lt;/div&gt;
+                                &lt;div class="remodal-credit"&gt;Photo by Josué Castilleja, Ralph Rinzler Folklife Archives&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="gallery-caption"&gt;
+                                &lt;div class="remodal-description"&gt;Jesus Maria Lazkano in his studio in Urdaibai.&lt;/div&gt;
+                                &lt;div class="remodal-credit"&gt;Photo by Cristina Díaz-Carrera, Ralph Rinzler Folklife Archives&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="gallery-caption"&gt;
+                                &lt;div class="remodal-description"&gt;Master potter Blanka Gomez de Segura demonstrates how to throw a traditional Basque pot.&lt;/div&gt;
+                                &lt;div class="remodal-credit"&gt;Photo by Josué Castilleja, Ralph Rinzler Folklife Archives&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="gallery-caption"&gt;
+                                &lt;div class="remodal-description"&gt;Blanka Gomez de Segura’s workshop is next to a 900-year-old kiln.&lt;/div&gt;
+                                &lt;div class="remodal-credit"&gt;Photo by Mary S. Linn, Ralph Rinzler Folklife Archives&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="gallery-caption"&gt;
+                                &lt;div class="remodal-description"&gt;Master stone carver Bernat Vidal poses with an example of his work featuring traditional Basque motifs of the sun in sandstone.&lt;/div&gt;
+                                &lt;div class="remodal-credit"&gt;Photo by Agustin Sagasti&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="gallery-caption"&gt;
+                                &lt;div class="remodal-description"&gt;Although weaving was once a large industry in her native Durango (Bizkaia), Olga Uribe Salaberria is one of the few to carry forward the tradition.&lt;/div&gt;
+                                &lt;div class="remodal-credit"&gt;Photo by Eneko Uribe&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="gallery-caption"&gt;
+                                &lt;div class="remodal-description"&gt;Olga Uribe Salaberria weaves linen cloth on one of her looms.&lt;/div&gt;
+                                &lt;div class="remodal-credit"&gt;Photo by Eneko Uribe&lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+
+    // Program section dropdown
+    .codeblock
+        a.anchor-link#program-section-dropdown
+        .row
+            .col-sm-8
+                h3.section-subtitle Program section dropdown
+            -snippet('show-html')
+            -snippet('show-sass')
+        .row
+            -$program_section = $section->find('program-section')
+
+            .col-sm-12
+                section.ms-section(class="<?= $program_section->title() ?>")
+                    a.anchor-link(id="<?= $program_section->uid() ?>")
+                    .row.clearfix
+                        .col-sm-12
+                            -snippet('svg-thin-hr')
+                            a.high(href="javascript:0")
+                                h2.section-title: span.light: span.er!= $program_section->title()
+                    .row.content
+                        //- -snippet('card-program-category-listing', array('card' => $program_section, 'excerpt' => '50', 'blurb' => true, 'type' => 'program', 'caption' => true ))
+                        -$src = $program_section->image();
+
+                        .card.horizontal-card.col-xs-12
+                            .row
+                                .image.col-sm-7
+                                    figure
+                                        img(src="<?= $src->url() ?>")
+                                        //- show caption if it exists
+                                        -if($caption = $program_section->img_caption()->kt()):
+                                            figcaption
+                                                .figcaption-inner!= $caption
+                                        -endif
+                                .details.col-sm-5
+                                    .details-inner
+                                        a.high(href="<?= $program_section->url() ?>").subtitle: span.light: span.er= $program_section->subtitle()
+                                        -if('' != $program_section->byline()):
+                                            .byline!= $program_section->byline()
+                                        -endif
+                                        
+                                        .description.link-underline.blurb!= $program_section->blurb()->kt()
+
+                                        //- a.high.more-link.accordion-toggle.collapsed(href="#research-and-documentation-content" data-toggle="collapse" aria-expanded="false")
+                                        a.high.more-link.accordion-toggle.collapsed(href="javascript:0" data-toggle="collapse" data-target="#research-and-documentation-content" aria-expanded="false")
+                                            .light
+                                                .er
+                                                    .more-link-text more
+                                                    .more-link-arrow.icon-arrow2
+
+                            .row
+                                .col-sm-7
+                                    .content.link-underline
+                                        .collapse.panel-collapse#research-and-documentation-content(aria-expanded="false")!= $program_section->contents()->kt()
 
 
-	// Participants
-	.codeblock
-		a.anchor-link#participants
-		.row
-			.col-sm-8
-				h3.section-subtitle Participants
-			-snippet('show-html')
-			-snippet('show-sass')
-		.row
-			-$participants = $section->find('participants')
-			.col-sm-12
-				section.participants-section
-					ul.row
-						-foreach ($participants->children()->visible()->limit(6) as $card):
-							-snippet('card-participant', array('card' => $card ))
-						-endforeach
+            .col-xs-12.visible-xs
+                -snippet('show-html-mobile')
+                -snippet('show-sass-mobile')
+        .row
+            .col-sm-12
+                pre.sass: code.
+                    .ms-section {
+                        margin-bottom:0;
+                        .card {
+                            @include margin-bottom(2.5);
+                        }
+                        &-copy {
+                            @include margin-top(-0.5);  
+                        }
+                        .section-title {
+                            @include margin-top(1.5);
+                            @include margin-bottom(1.5);
+                        }
+                        .subtitle {
+                            @include md-serif-title;
+                            color: #000;
+                            @include margin-bottom(0.5);
+                        }
+                        .byline {
+                            @include md-sans;
+                            font-weight: 600;
+                            @include margin-bottom(3.5);
+                            @include margin-bottom(2.5);
+                        }
+                        .blurb {
+                            @include md-sans;
+                        }
+                        .anchor-link {
+                            @include top(-5);
+                        }
+                        .image {
+                            cursor: initial;
+                            @include respond-to(break2max) {
+                                margin-bottom: 1rem;
+                            }
+                        }
+                        .details-inner {
+                            padding-top:0 !important;
+                        }
+                        .description {
+                            h3 {
+                                @include margin-top(4);
+                                &:first-of-type {
+                                    margin-top:0;
+                                }
+                            }
+                            p {
+                                @include margin-bottom(1);
+                            }
+                        }
+                        .more-link {
+                            @include margin-top(1);
+                        }
+                    }
+            .col-sm-12
+                pre.html: code.
+                    &lt;section class="ms-section Research &amp; Documentation"&gt;
+                        &lt;a id="program-section" class="anchor-link"&gt;&lt;/a&gt;
+                        &lt;div class="row clearfix"&gt;
+                            &lt;div class="col-sm-12"&gt;
+                                &lt;!-- must add preserveAspectRatio="none" to svg to get full width in safari, see http://stackoverflow.com/a/24303532--&gt;
+                                &lt;div class="svg-thin-hr"&gt;&lt;!-- include svg here --&gt;&lt;/div&gt;
+                                &lt;a
+                                    href="javascript:0" class="high"&gt;
+                                    &lt;h2 class="section-title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;Research &amp; Documentation&lt;/span&gt;&lt;/span&gt;&lt;/h2&gt;&lt;/a&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="row"&gt;
+                            &lt;div class="card horizontal-card col-xs-12"&gt;
+                                &lt;div class="row"&gt;
+                                    &lt;div class="image col-sm-7"&gt;
+                                        &lt;figure&gt;&lt;img src="//localhost:3007/content/5-cards/3-program-section/Research_Doc-home.jpg"&gt;
+                                            &lt;figcaption&gt;
+                                                &lt;div class="figcaption-inner"&gt;
+                                                    &lt;p&gt;Photo courtesy of Embassy of Colombia in Washington, DC&lt;/p&gt;
+                                                &lt;/div&gt;
+                                            &lt;/figcaption&gt;
+                                        &lt;/figure&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="details col-sm-5"&gt;
+                                        &lt;div class="details-inner"&gt;&lt;a href="//localhost:3007/cards/program-section" class="high subtitle"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
+                                            &lt;div class="description link-underline blurb"&gt;
+                                                &lt;p&gt;&lt;i&gt;My Armenia&lt;/i&gt; is driven by research and documentation methods developed by scholars to produce programs for the Smithsonian Folklife Festival. Working collaboratively with in-country researchers, including anthropologists,
+                                                    folklorists, ethnomusicologists, community-based scholars, and more, our goal is to expand and enrich existing scholarship. Additionally, we will create an archival record that will become part of the Smithsonian’s
+                                                    permanent collection—data that will inform future generations of researchers.&lt;/p&gt;
+                                            &lt;/div&gt;
+                                            &lt;a href="javascript:0" data-toggle="collapse" data-target="#research-and-documentation-content" aria-expanded="false" class="high more-link accordion-toggle collapsed"&gt;
+                                                &lt;div class="light"&gt;
+                                                    &lt;div class="er"&gt;
+                                                        &lt;div class="more-link-text"&gt;more&lt;/div&gt;
+                                                        &lt;div class="more-link-arrow icon-arrow2"&gt;&lt;/div&gt;
+                                                    &lt;/div&gt;
+                                                &lt;/div&gt;
+                                            &lt;/a&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;div class="row"&gt;
+                                    &lt;div class="col-sm-7"&gt;
+                                        &lt;div class="description link-underline"&gt;
+                                            &lt;div id="research-and-documentation-content" aria-expanded="false" class="panel-collapse collapse" style="height: 320px;"&gt;
+                                                &lt;p&gt;Our research teams work directly with communities to identify the cultural heritage they cherish most—the places, traditions, music, dance, craft, food, and other expressions that define their community identity. We will
+                                                    also document key knowledge and skills needed within a particular traditional practice. For a musician, this might include songs, instrumental skills, and performing styles; for a craftsperson, materials, designs, and
+                                                    techniques.&lt;/p&gt;
+                                                &lt;p&gt;We will identify specific community members who are exemplars of their cultural practice, as indicated by their status and recognition within their community. All of this information is carefully documented and archived
+                                                    for future use and will form the foundation of community-based tourism development in Armenia.&lt;/p&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/section&gt;
 
-			.col-xs-12.visible-xs
-				-snippet('show-html-mobile')
-				-snippet('show-sass-mobile')
-		.row
-			.col-sm-12
-				pre.sass: code.
-					.participants-section {
-						.title {
-							@include sm-sans;
-							text-align: center;
-						}
-						.details-inner {
-							@include padding-top(1);
-						}
-					}
-			.col-sm-12
-				pre.html: code.
-					&lt;section class="participants-section"&gt;&lt;ul class="row"&gt;
-					&lt;li class="card col-xs-6 col-sm-2 card-xs-break-2 card-sm-break-6"&gt;
-					  &lt;div class="image"&gt;&lt;a href="//localhost:3007/cards/participants/jose-francisco-kinku-zinkunegi-errukine-olaziregi"&gt;&lt;img src="//localhost:3007/content/5-cards/4-participants/1-jose-francisco-kinku-zinkunegi-errukine-olaziregi/jose-francisco.png" alt="Jose Francisco “Kinku” Zinkunegi, Errukine Olaziregi"&gt;&lt;/a&gt;&lt;/div&gt;
-					  &lt;div class="details"&gt;
-					    &lt;div class="details-inner"&gt;&lt;a href="//localhost:3007/cards/participants/jose-francisco-kinku-zinkunegi-errukine-olaziregi" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;
-					            Jose Francisco “Kinku” Zinkunegi, Errukine Olaziregi&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-					  &lt;/div&gt;
-					&lt;/li&gt;
-					&lt;li class="card col-xs-6 col-sm-2 card-xs-break-2 card-sm-break-6"&gt;
-					  &lt;div class="image"&gt;&lt;a href="//localhost:3007/cards/participants/stanley-and-the-ten-sleepless-knights"&gt;&lt;img src="//localhost:3007/content/5-cards/4-participants/2-stanley-and-the-ten-sleepless-knights/stanley-ten-sleepless-knights.png" alt="Stanley and The Ten Sleepless Knights"&gt;&lt;/a&gt;&lt;/div&gt;
-					  &lt;div class="details"&gt;
-					    &lt;div class="details-inner"&gt;&lt;a href="//localhost:3007/cards/participants/stanley-and-the-ten-sleepless-knights" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;
-					            Stanley and The Ten Sleepless Knights&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-					  &lt;/div&gt;
-					&lt;/li&gt;
-					&lt;li class="card col-xs-6 col-sm-2 card-xs-break-2 card-sm-break-6"&gt;
-					  &lt;div class="image"&gt;&lt;a href="//localhost:3007/cards/participants/grupo-nuu-yuku-de-san-miguel-cuevas"&gt;&lt;img src="//localhost:3007/content/5-cards/4-participants/3-grupo-nuu-yuku-de-san-miguel-cuevas/grupo-nuu-yuku.png" alt="Grupo Nuu Yuku de San Miguel Cuevas"&gt;&lt;/a&gt;&lt;/div&gt;
-					  &lt;div class="details"&gt;
-					    &lt;div class="details-inner"&gt;&lt;a href="//localhost:3007/cards/participants/grupo-nuu-yuku-de-san-miguel-cuevas" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;
-					            Grupo Nuu Yuku de San Miguel Cuevas&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-					  &lt;/div&gt;
-					&lt;/li&gt;
-					&lt;li class="card col-xs-6 col-sm-2 card-xs-break-2 card-sm-break-6"&gt;
-					  &lt;div class="image"&gt;&lt;a href="//localhost:3007/cards/participants/helena-quintana-arrow-weed"&gt;&lt;img src="//localhost:3007/content/5-cards/4-participants/4-helena-quintana-arrow-weed/helena-quintana.png" alt="Helena Quintana Arrow-weed"&gt;&lt;/a&gt;&lt;/div&gt;
-					  &lt;div class="details"&gt;
-					    &lt;div class="details-inner"&gt;&lt;a href="//localhost:3007/cards/participants/helena-quintana-arrow-weed" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;
-					            Helena Quintana Arrow-weed&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-					  &lt;/div&gt;
-					&lt;/li&gt;
-					&lt;li class="card col-xs-6 col-sm-2 card-xs-break-2 card-sm-break-6"&gt;
-					  &lt;div class="image"&gt;&lt;a href="//localhost:3007/cards/participants/kalakan"&gt;&lt;img src="//localhost:3007/content/5-cards/4-participants/5-kalakan/kalakan.png" alt="Kalakan"&gt;&lt;/a&gt;&lt;/div&gt;
-					  &lt;div class="details"&gt;
-					    &lt;div class="details-inner"&gt;&lt;a href="//localhost:3007/cards/participants/kalakan" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;
-					            Kalakan&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-					  &lt;/div&gt;
-					&lt;/li&gt;
-					&lt;li class="card col-xs-6 col-sm-2 card-xs-break-2 card-sm-break-6"&gt;
-					  &lt;div class="image"&gt;&lt;a href="//localhost:3007/cards/participants/the-joaldunak"&gt;&lt;img src="//localhost:3007/content/5-cards/4-participants/6-the-joaldunak/joaldunak.png" alt="The Joaldunak"&gt;&lt;/a&gt;&lt;/div&gt;
-					  &lt;div class="details"&gt;
-					    &lt;div class="details-inner"&gt;&lt;a href="//localhost:3007/cards/participants/the-joaldunak" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;
-					            The Joaldunak&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
-					  &lt;/div&gt;
-					&lt;/li&gt;&lt;/ul&gt;&lt;/section&gt;
+
+    // Participants
+    .codeblock
+        a.anchor-link#participants
+        .row
+            .col-sm-8
+                h3.section-subtitle Participants
+            -snippet('show-html')
+            -snippet('show-sass')
+        .row
+            -$participants = $section->find('participants')
+            .col-sm-12
+                section.participants-section
+                    ul.row
+                        -foreach ($participants->children()->visible()->limit(6) as $card):
+                            -snippet('card-participant', array('card' => $card ))
+                        -endforeach
+
+            .col-xs-12.visible-xs
+                -snippet('show-html-mobile')
+                -snippet('show-sass-mobile')
+        .row
+            .col-sm-12
+                pre.sass: code.
+                    .participants-section {
+                        .title {
+                            @include sm-sans;
+                            text-align: center;
+                        }
+                        .details-inner {
+                            @include padding-top(1);
+                        }
+                    }
+            .col-sm-12
+                pre.html: code.
+                    &lt;section class="participants-section"&gt;&lt;ul class="row"&gt;
+                    &lt;li class="card col-xs-6 col-sm-2 card-xs-break-2 card-sm-break-6"&gt;
+                      &lt;div class="image"&gt;&lt;a href="//localhost:3007/cards/participants/jose-francisco-kinku-zinkunegi-errukine-olaziregi"&gt;&lt;img src="//localhost:3007/content/5-cards/4-participants/1-jose-francisco-kinku-zinkunegi-errukine-olaziregi/jose-francisco.png" alt="Jose Francisco “Kinku” Zinkunegi, Errukine Olaziregi"&gt;&lt;/a&gt;&lt;/div&gt;
+                      &lt;div class="details"&gt;
+                        &lt;div class="details-inner"&gt;&lt;a href="//localhost:3007/cards/participants/jose-francisco-kinku-zinkunegi-errukine-olaziregi" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;
+                                Jose Francisco “Kinku” Zinkunegi, Errukine Olaziregi&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/li&gt;
+                    &lt;li class="card col-xs-6 col-sm-2 card-xs-break-2 card-sm-break-6"&gt;
+                      &lt;div class="image"&gt;&lt;a href="//localhost:3007/cards/participants/stanley-and-the-ten-sleepless-knights"&gt;&lt;img src="//localhost:3007/content/5-cards/4-participants/2-stanley-and-the-ten-sleepless-knights/stanley-ten-sleepless-knights.png" alt="Stanley and The Ten Sleepless Knights"&gt;&lt;/a&gt;&lt;/div&gt;
+                      &lt;div class="details"&gt;
+                        &lt;div class="details-inner"&gt;&lt;a href="//localhost:3007/cards/participants/stanley-and-the-ten-sleepless-knights" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;
+                                Stanley and The Ten Sleepless Knights&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/li&gt;
+                    &lt;li class="card col-xs-6 col-sm-2 card-xs-break-2 card-sm-break-6"&gt;
+                      &lt;div class="image"&gt;&lt;a href="//localhost:3007/cards/participants/grupo-nuu-yuku-de-san-miguel-cuevas"&gt;&lt;img src="//localhost:3007/content/5-cards/4-participants/3-grupo-nuu-yuku-de-san-miguel-cuevas/grupo-nuu-yuku.png" alt="Grupo Nuu Yuku de San Miguel Cuevas"&gt;&lt;/a&gt;&lt;/div&gt;
+                      &lt;div class="details"&gt;
+                        &lt;div class="details-inner"&gt;&lt;a href="//localhost:3007/cards/participants/grupo-nuu-yuku-de-san-miguel-cuevas" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;
+                                Grupo Nuu Yuku de San Miguel Cuevas&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/li&gt;
+                    &lt;li class="card col-xs-6 col-sm-2 card-xs-break-2 card-sm-break-6"&gt;
+                      &lt;div class="image"&gt;&lt;a href="//localhost:3007/cards/participants/helena-quintana-arrow-weed"&gt;&lt;img src="//localhost:3007/content/5-cards/4-participants/4-helena-quintana-arrow-weed/helena-quintana.png" alt="Helena Quintana Arrow-weed"&gt;&lt;/a&gt;&lt;/div&gt;
+                      &lt;div class="details"&gt;
+                        &lt;div class="details-inner"&gt;&lt;a href="//localhost:3007/cards/participants/helena-quintana-arrow-weed" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;
+                                Helena Quintana Arrow-weed&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/li&gt;
+                    &lt;li class="card col-xs-6 col-sm-2 card-xs-break-2 card-sm-break-6"&gt;
+                      &lt;div class="image"&gt;&lt;a href="//localhost:3007/cards/participants/kalakan"&gt;&lt;img src="//localhost:3007/content/5-cards/4-participants/5-kalakan/kalakan.png" alt="Kalakan"&gt;&lt;/a&gt;&lt;/div&gt;
+                      &lt;div class="details"&gt;
+                        &lt;div class="details-inner"&gt;&lt;a href="//localhost:3007/cards/participants/kalakan" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;
+                                Kalakan&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/li&gt;
+                    &lt;li class="card col-xs-6 col-sm-2 card-xs-break-2 card-sm-break-6"&gt;
+                      &lt;div class="image"&gt;&lt;a href="//localhost:3007/cards/participants/the-joaldunak"&gt;&lt;img src="//localhost:3007/content/5-cards/4-participants/6-the-joaldunak/joaldunak.png" alt="The Joaldunak"&gt;&lt;/a&gt;&lt;/div&gt;
+                      &lt;div class="details"&gt;
+                        &lt;div class="details-inner"&gt;&lt;a href="//localhost:3007/cards/participants/the-joaldunak" class="high title"&gt;&lt;span class="light"&gt;&lt;span class="er"&gt;
+                                The Joaldunak&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/li&gt;&lt;/ul&gt;&lt;/section&gt;
 
 
-	
+    

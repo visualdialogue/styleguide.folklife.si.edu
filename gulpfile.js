@@ -25,7 +25,8 @@ gulp.task('plugins', function() {
 			'./assets/common/js/plugins/preparetransition.min.js', // for customizing dropdowns (eg. folkways magazine)
 			'./assets/common/js/plugins/mep-feature-playlist-master/mep-feature-playlist.min.js', // for customizing dropdowns (eg. folkways magazine)
 			'./assets/common/js/plugins/bootstrap/js/collapse.js', // bootstrap collapse
-			'./assets/common/js/plugins/bootstrap/js/modal.js', // bootstrap collapse
+            './assets/common/js/plugins/bootstrap/js/modal.js', // bootstrap collapse
+			'./assets/common/js/plugins/jquery-placeholder/jquery.placeholder.min.js', // bootstrap collapse
 			'./assets/common/js/bower_components/svg4everybody/dist/svg4everybody.min.js' // make svg icons work in ie as pngs
 		])
 		.pipe(concat('common-plugins.js'))
