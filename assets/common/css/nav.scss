@@ -365,7 +365,8 @@
 		display: inline-block;
 		cursor: pointer;
 		@include respond-to(break2max) {
-			padding: 10px;
+            // padding: 10px;
+			padding: 10px 1vw;
 		}
 		&:hover {
 			svg {

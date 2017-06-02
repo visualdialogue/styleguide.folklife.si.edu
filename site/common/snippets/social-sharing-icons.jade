@@ -4,9 +4,8 @@
 		svg.svg-social-icon: use(xlink:href="/Images/icons/icons.svg#icon-facebook")
 	//- a.social-icon-link(href="https://twitter.com/share?url=#PageURL&via=smithsonianfolk&text=<?= $page->title() ?>" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=225,width=500');return false;")
 		.icon-twitter.social-icon.nav-icon(aria-hidden="true")
-	a.social-icon-link(href="https://twitter.com/share?url=#PageURL&via=smithsonianfolk&text=<?= $page->title() ?>" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=225,width=500');return false;")
+	a.social-icon-link(href="https://twitter.com/share?url=#PageURL&via=smithsonianfolk&text=#PageTitle" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=225,width=500');return false;")
 		svg.svg-social-icon: use(xlink:href="/Images/icons/icons.svg#icon-twitter")
-
 	a.social-icon-link(href="https://plus.google.com/share?url=#PageURL" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;")
 		svg.svg-social-icon: use(xlink:href="/Images/icons/icons.svg#icon-gplus")
 		//- .icon-gplus.social-icon.nav-icon(aria-hidden="true")

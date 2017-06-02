@@ -9366,7 +9366,7 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
 
 @media only screen and (max-width: 53.15em) {
 	.social-icon-link {
-		padding: 10px;
+		padding: 10px 1vw;
 	}
 }
 
@@ -29942,7 +29942,7 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
 
 @media only screen and (max-width: 53.15em) {
 	.social-icon-link {
-		padding: 10px;
+		padding: 10px 1vw;
 	}
 }
 

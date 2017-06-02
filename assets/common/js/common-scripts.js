@@ -1457,9 +1457,14 @@ $(document).ready(function() {
      **************************/
     // Set correct href for social sharing, for Orchard CMS
     var pageURL = window.location.href;
+    var pageTitle = document.title;
+    // console.log('pageURL', pageURL);
     $('.social-icons a').each(function() {
         var oldHref = $(this).attr('href'); // get old href
         var newHref = oldHref.replace('#PageURL', pageURL); // replace #PageURL with real one
+        newHref = newHref.replace('#PageTitle', pageTitle); // replace #PageTitle with real one
+        newHref = encodeURI(newHref); // from https://stackoverflow.com/a/332897/4504073
+        console.log('newHref', newHref);
         $(this).attr('href', newHref); // set url to newHref
     });
 
@@ -1471,6 +1476,9 @@ $(document).ready(function() {
         js = d.createElement(s);
         js.id = id;
         js.src = "//connect.facebook.net/en_US/sdk.js";
+        // js.src = "//connect.facebook.net/en_US/all.js";
+        // needed specific version for 50objects for some reason, from https://stackoverflow.com/a/32363747/4504073
+        // js.src = "//connect.facebook.net/en_US/sdk.js?version=v2.0";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 
@@ -1484,6 +1492,39 @@ $(document).ready(function() {
             }, function(response) {});
         })
     }
+
+    // 50 objects sharing
+    $('.object-facebook').click(function() {
+        // console.log('$(this)', $(this));
+        var $this = $(this);
+        var dataURL = $(this).data('url');
+        console.log('dataURL', dataURL);
+
+        // like other CFCH sites
+        FB.ui({
+            method: 'share',
+            display: 'popup',
+            href: dataURL,
+            // redirect_uri: 'http://festival.si.edu/50objects#transatlantic-salmon'
+        }, function(response) {});
+
+        // unique inside this page
+        // FB.api(
+        //     "/me/objects/website",
+        //     "POST",
+        //     {
+        //        "object": "{\"fb:app_id\":\"1645643478796675\",\"og:type\":\"article\",\"og:url\":\"http://festival.si.edu/transatlantic-salmon\",\"og:title\":\"Transatlantic Salmon\",\"og:image\":\"https:\\\/\\\/s-static.ak.fbcdn.net\\\/images\\\/devsite\\\/attachment_blank.png\"}"
+        //     },
+        //     function(response) {}
+        // );
+
+        // another try
+        // FB.ui({
+        //   method: 'send',
+        //   link: 'http://festival.si.edu/50objects/transatlantic-salmon',
+        // });
+
+    })
 
     /***************************
      * Bootstrap accordian
