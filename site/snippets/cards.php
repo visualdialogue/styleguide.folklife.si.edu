@@ -331,7 +331,7 @@
                             &lt;/svg&gt;
                         &lt;/div&gt;
                     &lt;/div&gt;
-                    &lt;div class="playlist-number"&gt;2&lt;/div&gt;&lt;/div&gt;
+                    &lt;div class="playlist-number"&gt;1&lt;/div&gt;&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
