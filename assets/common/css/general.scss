@@ -2235,6 +2235,13 @@ $gttOffset: 8rem; // as circle image
     @include padding-top(4); // replace top padding lost in top credits in mobile
 }
 
+// svg interferes with pinterest button
+.object-pinterest {
+    svg {
+        pointer-events: none;
+    }
+}
+
 /* Helpers
 -------------------------------------------------*/
 

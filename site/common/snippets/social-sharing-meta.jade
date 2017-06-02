@@ -3,114 +3,120 @@ meta(property="og:site_name" content="<?= $og_site_name ?>")
 meta(property="fb:app_id" content="1451828684827581")
 meta(property="og:url" content="<?= $page->url() ?>")
 -if($page->intendedTemplate() == 'home'):
-	meta(property="og:title" content="<?= $og_site_name ?>")
+    meta(property="og:title" content="<?= $og_site_name ?>")
 -else:
-	meta(property="og:title" content="<?= $page->title() ?>")
+    meta(property="og:title" content="<?= $page->title() ?>")
 -endif
 
 meta(name="twitter:card" content="summary")
 meta(name="twitter:site" content="@smithsonianfolk")
 
 -if($page->intendedTemplate() == 'home'):
-	meta(property="og:type" content="website")
-	meta(property="og:description" content="<?= $og_description ?>")
-	meta(property="og:image" content="<?= $home_image ?>")
-	-foreach($page->images() as $image):
-		meta(property="og:image" content="<?= $image->url() ?>")
-	-endforeach
+    meta(property="og:type" content="website")
+    meta(property="og:description" content="<?= $og_description ?>")
+    meta(property="og:image" content="<?= $home_image ?>")
+    -foreach($page->images() as $image):
+        meta(property="og:image" content="<?= $image->url() ?>")
+    -endforeach
 
 -elseif($page->intendedTemplate() == 'blog'):
-	meta(property="og:type" content="website")
-	meta(property="og:image" content="<?= $page->children()->sortBy('date')->flip()->first()->image()->url() ?>")
-	meta(property="og:image:width" content="350")
-	meta(property="og:image:height" content="233")
-	meta(property="og:description" content="<?= excerpt($page->children()->sortBy('date')->flip()->first()->copy(), 20, 'words') ?>")
+    meta(property="og:type" content="website")
+    meta(property="og:image" content="<?= $page->children()->sortBy('date')->flip()->first()->image()->url() ?>")
+    meta(property="og:image:width" content="350")
+    meta(property="og:image:height" content="233")
+    meta(property="og:description" content="<?= excerpt($page->children()->sortBy('date')->flip()->first()->copy(), 20, 'words') ?>")
 
 -elseif($page->intendedTemplate() == 'blog-article'):
-	meta(property="og:type" content="article")
-	meta(property="og:image" content="<?= $page->image()->url() ?>")
-	meta(property="og:image:width" content="350")
-	meta(property="og:image:height" content="233")
-	meta(property="og:description" content="<?= excerpt($page->copy(), 20, 'words') ?>")
+    meta(property="og:type" content="article")
+    meta(property="og:image" content="<?= $page->image()->url() ?>")
+    meta(property="og:image:width" content="350")
+    meta(property="og:image:height" content="233")
+    meta(property="og:description" content="<?= excerpt($page->copy(), 20, 'words') ?>")
 
 -elseif($page->intendedTemplate() == 'past-festivals'):
-	meta(property="og:type" content="website")
-	meta(property="og:image" content="<?= $page->children()->first()->children()->first()->image()->url() ?>")
-	meta(property="og:image:width" content="373")
-	meta(property="og:image:height" content="341")
-	meta(property="og:description" content="<?= $page->title() ?>")
+    meta(property="og:type" content="website")
+    meta(property="og:image" content="<?= $page->children()->first()->children()->first()->image()->url() ?>")
+    meta(property="og:image:width" content="373")
+    meta(property="og:image:height" content="341")
+    meta(property="og:description" content="<?= $page->title() ?>")
 
 -elseif($page->intendedTemplate() == 'program'):
-	meta(property="og:type" content="website")
-	meta(property="og:image" content="<?= $page->image()->url() ?>")
-	meta(property="og:image:width" content="324")
-	meta(property="og:image:height" content="105")
-	meta(property="og:description" content="<?= $page->blurb() ?>")
+    meta(property="og:type" content="website")
+    meta(property="og:image" content="<?= $page->image()->url() ?>")
+    meta(property="og:image:width" content="324")
+    meta(property="og:image:height" content="105")
+    meta(property="og:description" content="<?= $page->blurb() ?>")
 
 -elseif($page->intendedTemplate() == 'program-category'):
-	meta(property="og:type" content="website")
-	meta(property="og:image" content="<?= $page->image()->url() ?>")
-	meta(property="og:image:width" content="700")
-	meta(property="og:image:height" content="467")
-	meta(property="og:description" content="<?= $page->blurb() ?>")
+    meta(property="og:type" content="website")
+    meta(property="og:image" content="<?= $page->image()->url() ?>")
+    meta(property="og:image:width" content="700")
+    meta(property="og:image:height" content="467")
+    meta(property="og:description" content="<?= $page->blurb() ?>")
 
 -elseif($page->intendedTemplate() == 'explore'):
-	meta(property="og:type" content="website")
-	meta(property="og:image" content="<?= $pages->find('explore')->children()->find('magazine')->children()->first()->image()->url() ?>")
-	meta(property="og:description" content="Explore the resources of Smithsonian Folkways")
+    meta(property="og:type" content="website")
+    meta(property="og:image" content="<?= $pages->find('explore')->children()->find('magazine')->children()->first()->image()->url() ?>")
+    meta(property="og:description" content="Explore the resources of Smithsonian Folkways")
 
 -elseif($page->intendedTemplate() == 'learn'):
-	meta(property="og:type" content="website")
-	
-	-if(c::get('isFestival')):
-		meta(property="og:image" content="<?= $pages->find('programs')->children()->first()->image()->url() ?>")
-		meta(property="og:description" content="<?= $pages->find('programs')->children()->first()->blurb() ?>")
-	-else:
-		meta(property="og:image" content="<?= $page->children()->first()->children()->first()->image()->url() ?>")
-		meta(property="og:description" content="Learn what Smithsonian Folkways has to offer educators and students")
-	-endif
+    meta(property="og:type" content="website")
+    
+    -if(c::get('isFestival')):
+        meta(property="og:image" content="<?= $pages->find('programs')->children()->first()->image()->url() ?>")
+        meta(property="og:description" content="<?= $pages->find('programs')->children()->first()->blurb() ?>")
+    -else:
+        meta(property="og:image" content="<?= $page->children()->first()->children()->first()->image()->url() ?>")
+        meta(property="og:description" content="Learn what Smithsonian Folkways has to offer educators and students")
+    -endif
 
 -elseif($page->intendedTemplate() == 'shop'):
-	meta(property="og:type" content="website")
-	meta(property="og:image" content="<?= $pages->find('explore')->children()->find('sounds')->first()->image()->url() ?>")
-	meta(property="og:description" content="Shop for classic and new Folkways sounds")
+    meta(property="og:type" content="website")
+    meta(property="og:image" content="<?= $pages->find('explore')->children()->find('sounds')->first()->image()->url() ?>")
+    meta(property="og:description" content="Shop for classic and new Folkways sounds")
 
 -elseif($page->intendedTemplate() == 'album'):
-	meta(property="og:type" content="product")
-	meta(property="og:image" content="<?= $page->image($page->img())->url() ?>")
-	meta(property="og:image:width" content="250")
-	meta(property="og:image:height" content="250")
-	meta(property="og:description" content="<?= $page->copy() ?>")
+    meta(property="og:type" content="product")
+    meta(property="og:image" content="<?= $page->image($page->img())->url() ?>")
+    meta(property="og:image:width" content="250")
+    meta(property="og:image:height" content="250")
+    meta(property="og:description" content="<?= $page->copy() ?>")
 
 -elseif($page->intendedTemplate() == 'magazine-article'):
-	meta(property="og:type" content="article")
-	meta(property="og:image" content="<?= $page->image()->url() ?>")
-	meta(property="og:description" content="<?= excerpt($page->contents()->kt(), 20, 'words') ?>")
+    meta(property="og:type" content="article")
+    meta(property="og:image" content="<?= $page->image()->url() ?>")
+    meta(property="og:description" content="<?= excerpt($page->contents()->kt(), 20, 'words') ?>")
+
+//- 50 objects object
+-elseif($page->intendedTemplate() == 'object'):
+    meta(property="og:type" content="article")
+    meta(property="og:image" content="<?= $page->image()->url() ?>")
+    meta(property="og:description" content="<?= excerpt($page->contents()->kt(), 20, 'words') ?>")
 
 //- general content page
 -elseif($page->intendedTemplate() == 'general-content'):
-	meta(property="og:type" content="website")
-	meta(property="og:image" content="<?= $page->image()->url() ?>")
-	-if('' != $page->intro()):
-		meta(property="pagetype" content="monitor")
-		meta(property="og:description" content="<?= $page->intro() ?>")
-	-else:
-		meta(property="og:description" content="<?= $page->copy() ?>")
-	-endif
+    meta(property="og:type" content="website")
+    meta(property="og:image" content="<?= $page->image()->url() ?>")
+    -if('' != $page->intro()):
+        meta(property="pagetype" content="monitor")
+        meta(property="og:description" content="<?= $page->intro() ?>")
+    -else:
+        meta(property="og:description" content="<?= $page->copy() ?>")
+    -endif
 
 //- folklife education and archives
 -elseif(null != $page->children()->find('hero')):
-	meta(property="og:type" content="website")
-	meta(property="og:image" content="<?= $page->children()->find('hero')->image()->url() ?>")
-	meta(property="og:description" content="<?= excerpt($page->children()->find('hero')->copy(), 20, 'words') ?>")
+    meta(property="og:type" content="website")
+    meta(property="og:image" content="<?= $page->children()->find('hero')->image()->url() ?>")
+    meta(property="og:description" content="<?= excerpt($page->children()->find('hero')->copy(), 20, 'words') ?>")
 
 //- everything else
 -else:
-	meta(property="og:type" content="website")
-	-if(null != $page->image()):
-		meta(property="og:image" content="<?= $page->image()->url() ?>")
-	-else:
-		meta(property="og:image" content="<?= $home_image ?>")
-	-endif
-	meta(property="og:description" content="<?= $page->title() ?>")
+    meta(property="og:type" content="website")
+    -if(null != $page->image()):
+        meta(property="og:image" content="<?= $page->image()->url() ?>")
+    -else:
+        meta(property="og:image" content="<?= $home_image ?>")
+    -endif
+    meta(property="og:description" content="<?= $page->title() ?>")
 -endif

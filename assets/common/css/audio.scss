@@ -813,7 +813,13 @@
         .mejs-controls {
             .playlist-number {
                 float: right;
-                @include md-sans;
+                @include sm-sans-title;
+                color: $black30;
+                font-weight: 300;
+                line-height: 1.8 !important;
+                @include respond-to(break2) {
+                    line-height: 1.4 !important;
+                }
                 // font-weight: normal;
             }
         }
