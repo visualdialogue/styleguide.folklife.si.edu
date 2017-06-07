@@ -1,82 +1,110 @@
 // Components
 section.container.cards-section
-	.row
-		main.content.col-sm-7
-			h2.section-title Components
-			a.anchor-link#components
-			.intro-copy.content.link-underline
-				p Components are the smallest building blocks of the website.
-			//- h3.section-subtitle Naming Scheme
-				p The <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/" target="_blank">Block-Element-Modifier (BEM)</a> methodology was substituted with <a href="http://oxygencss.com/" target="_blank">Oxygen</a> because it meshes well with Bootstrap naming conventions (single dash) and is more readable. The drawback with the Oxygen method is you lose clarity of parent-child and modifer relationships without the double dash syntax.
-			//- h3.section-subtitle Helper Classes
-				//- p Helper classes can improve consistency and maintainability across the sites. Here are a few common rules / patterns we've used:
-			pre.sass: code.
-				// Typesetting with parent and child class. 
-				// Targets the commonly used .title class in almost every card.
-				.archives-page {
-					.title {@include sans-lg}
-				}
-			pre.sass: code.
-				&lt;!-- Use the .content class on a page with body copy. This applies correct heading and paragraphy styles. --&gt;
-				&lt;div class="main content"&gt;
-					... content goes here ...
-				&lt;/div&gt;
+    .row
+        main.content.col-sm-7
+            h2.section-title Components
+            a.anchor-link#components
+            .intro-copy.content.link-underline
+                p Components are the smallest building blocks of the website.
+            //- h3.section-subtitle Naming Scheme
+                p The <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/" target="_blank">Block-Element-Modifier (BEM)</a> methodology was substituted with <a href="http://oxygencss.com/" target="_blank">Oxygen</a> because it meshes well with Bootstrap naming conventions (single dash) and is more readable. The drawback with the Oxygen method is you lose clarity of parent-child and modifer relationships without the double dash syntax.
+            //- h3.section-subtitle Helper Classes
+                //- p Helper classes can improve consistency and maintainability across the sites. Here are a few common rules / patterns we've used:
+            pre.sass: code.
+                // Typesetting with parent and child class. 
+                // Targets the commonly used .title class in almost every card.
+                .archives-page {
+                    .title {@include sans-lg}
+                }
+            pre.sass: code.
+                &lt;!-- Use the .content class on a page with body copy. This applies correct heading and paragraphy styles. --&gt;
+                &lt;div class="main content"&gt;
+                    ... content goes here ...
+                &lt;/div&gt;
 
-	// Buttons
-	.codeblock
-		.row
-			.col-sm-8
-				h3.section-subtitle Buttons
-			-snippet('show-html')
-			-snippet('show-sass')
-		.row
-			.sidebar.col-sm-4
-				.row
-					.button.buy-button.col-sm-7
-						.button-inner
-							span.title Buy CD
-							span.price $14.98
-			.col-xs-12.visible-xs
-				-snippet('show-html-mobile')
-				-snippet('show-sass-mobile')
-			.col-sm-8
-				pre.sass: code.
-					.button {
-						cursor: pointer;
-						clear: left;		
-						.title {
-							@include button;
-							color: #fff;
-							font-weight: 700;
-							margin:0 !important;
-							width: auto;
-						}
-						.price {
-							color: #fff;
-							@include sm-sans;
-							@include margin-left(0);
-						}
-					}
-					.button-inner {
-						background-color: $black60;
-						position: static;
-						@include padding-top(0.6);
-						@include padding-right(1);
-						@include padding-bottom(0.8);
-						@include padding-left(1);
-						&:hover {
-							background-color: black;
-						}
-					}
-			.col-sm-8
-				pre.html: code.
-					&lt;!-- These are usually in the sidebar. The bootstrap col-* class would need to change if they aren’t. --&gt;
-					&lt;div class="sidebar col-sm-4"&gt;
-						&lt;div class="row"&gt;
-							&lt;div class="button buy-button col-sm-7"&gt;
-								&lt;div class="button-inner"&gt;
-									&lt;span class="title"&gt;Buy CD&lt;/span&gt;&lt;span class="price"&gt;$14.98&lt;/span&gt;
-								&lt;/div&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-					&lt;/div&gt;
+    // Buttons
+    .codeblock
+        .row
+            .col-sm-8
+                h3.section-subtitle Buttons
+            -snippet('show-html')
+            -snippet('show-sass')
+        .row
+            .sidebar.col-sm-4
+                .row
+                    .button.buy-button.col-sm-7
+                        .button-inner
+                            span.title Buy CD
+                            span.price $14.98
+            .col-xs-12.visible-xs
+                -snippet('show-html-mobile')
+                -snippet('show-sass-mobile')
+            .col-sm-8
+                pre.sass: code.
+                    .button {
+                        cursor: pointer;
+                        clear: left;        
+                        .title {
+                            @include button;
+                            color: #fff;
+                            font-weight: 700;
+                            margin:0 !important;
+                            width: auto;
+                        }
+                        .price {
+                            color: #fff;
+                            @include sm-sans;
+                            @include margin-left(0);
+                        }
+                    }
+                    .button-inner {
+                        background-color: $black60;
+                        position: static;
+                        @include padding-top(0.6);
+                        @include padding-right(1);
+                        @include padding-bottom(0.8);
+                        @include padding-left(1);
+                        &:hover {
+                            background-color: black;
+                        }
+                    }
+            .col-sm-8
+                pre.html: code.
+                    &lt;!-- These are usually in the sidebar. The bootstrap col-* class would need to change if they aren’t. --&gt;
+                    &lt;div class="sidebar col-sm-4"&gt;
+                        &lt;div class="row"&gt;
+                            &lt;div class="button buy-button col-sm-7"&gt;
+                                &lt;div class="button-inner"&gt;
+                                    &lt;span class="title"&gt;Buy CD&lt;/span&gt;&lt;span class="price"&gt;$14.98&lt;/span&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+
+
+    // Schedule Key
+    .codeblock#schedule-key
+        .row
+            .col-sm-8
+                h3.section-subtitle Schedule Key
+            -snippet('show-html')
+        .row
+            .col-sm-4.highlight-source
+                ul.schedule-colors
+                    li.clearfix
+                        .schedule-color-square
+                        |Basque
+                    li.clearfix
+                        .schedule-color-square.fw-brown-bg
+                        |On the Move
+                    li.clearfix
+                        .schedule-color-square.fl-light-blue-bg
+                        |Sounds of California
+                    li.clearfix
+                        .schedule-color-square.fw-light-green-bg
+                        |Special Event
+            .col-xs-12.visible-xs
+                -snippet('show-html-mobile')
+            .col-sm-8
+                pre.html: code.highlight-destination.

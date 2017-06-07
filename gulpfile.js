@@ -1,15 +1,15 @@
 'use strict';
-var browserSync = require('browser-sync').create(),
-	gulp = require('gulp'),
-	sass = require('gulp-sass'),
-	concat = require('gulp-concat'),
-	rename = require('gulp-rename'),
-	uglify = require('gulp-uglify'),
-	plumber = require('gulp-plumber'),
-	jade = require('gulp-jade'),
-	jadephp = require('gulp-jade-php'),
-	changed = require('gulp-changed'),
-	reload = browserSync.reload; // Save a reference to the `reload` method
+var browserSync = require('browser-sync').create();
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var concat = require('gulp-concat');
+var rename = require('gulp-rename');
+var uglify = require('gulp-uglify');
+var plumber = require('gulp-plumber');
+var jade = require('gulp-jade');
+var jadephp = require('gulp-jade-php');
+var changed = require('gulp-changed');
+var reload = browserSync.reload; // Save a reference to the `reload` method
 
 // uglify and concat all js library dependancies
 gulp.task('plugins', function() {
@@ -31,17 +31,22 @@ gulp.task('plugins', function() {
 		])
 		.pipe(concat('common-plugins.js'))
 		.pipe(gulp.dest('./assets/common/js'))
-		.pipe(gulp.dest('../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/js'))
+		.pipe(gulp.dest('../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/js'));
 });
 
 // html
 gulp.task('jade', function() {
 	gulp.src('./site/**/*.jade')
-		.pipe(changed('./site', { extension: '.php' }))
+		.pipe(changed('./site', { extension: '.php' }))        
 		.pipe(plumber())
-		.pipe(jadephp())
+		.pipe(jadephp({
+          pretty: true,
+          locals: {
+            // title: 'OMG THIS IS THE TITLE'
+          }
+         }))
 		.pipe(gulp.dest('./site'))
-		.pipe(browserSync.stream())
+		.pipe(browserSync.stream());
 });
 
 // common html
@@ -51,7 +56,7 @@ gulp.task('jade-common', function() {
 		.pipe(changed('./site/common', { extension: '.php' }))
 		.pipe(plumber())
 		.pipe(jadephp({
-			pretty: true,
+			pretty: '\t',
 		}))
 		.pipe(gulp.dest('./site/snippets'));
 });
@@ -59,9 +64,9 @@ gulp.task('jade-common', function() {
 // copy for keeping blueprint files similar
 gulp.task('copy', function() {
 	gulp.src('../../styleguide.folklife.si.edu/code/site/common/blueprints/*.yml')
-		.pipe(gulp.dest('./site/blueprints/'))
+		.pipe(gulp.dest('./site/blueprints/'));
 	gulp.src('../../styleguide.folklife.si.edu/code/site/common/controllers/*.php')
-		.pipe(gulp.dest('./site/controllers/'))
+		.pipe(gulp.dest('./site/controllers/'));
 	gulp.src('../../styleguide.folklife.si.edu/code/site/common/**/*.php')
 		.pipe(gulp.dest('./site'));
 });
@@ -94,8 +99,8 @@ gulp.task('copy-sass', function() {
 		.pipe(gulp.dest('../../50objects/code/themes/50objects/assets/common/css'))
 		.pipe(gulp.dest('../../toby/folklife/src/Orchard.Web/Themes/Folklife/Assets/common/css'))
 		.pipe(gulp.dest('../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css'))
-		.pipe(gulp.dest('../../toby/folkways/src/Orchard.Web/Themes/Folkways/Assets/common/css'))
-})
+		.pipe(gulp.dest('../../toby/folkways/src/Orchard.Web/Themes/Folkways/Assets/common/css'));
+});
 
 /**********
  * copy common js in styleguide to all of toby's common js folders in folklife, festival, folkways
@@ -109,8 +114,8 @@ gulp.task('copy-js', function() {
 		.pipe(gulp.dest('../../50objects/code/themes/50objects/assets/common/js'))
 		.pipe(gulp.dest('../../toby/folklife/src/Orchard.Web/Themes/Folklife/Assets/common/js'))
 		.pipe(gulp.dest('../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/js'))
-		.pipe(gulp.dest('../../toby/folkways/src/Orchard.Web/Themes/Folkways/Assets/common/js'))
-})
+		.pipe(gulp.dest('../../toby/folkways/src/Orchard.Web/Themes/Folkways/Assets/common/js'));
+});
 
 // less for bootstrap
 var less = require('gulp-less');
@@ -133,7 +138,7 @@ gulp.task('js', function() {
 		])
 		.pipe(concat('styleguide.pkgd.js'))
 		.pipe(gulp.dest('themes/styleguide/scripts/'))
-		.pipe(browserSync.stream())
+		.pipe(browserSync.stream());
 		// gulp.watch('/js/scripts.js',['scripts']);
 });
 // create a task that ensures the `templates` and `js` tasks are completed before
@@ -144,11 +149,10 @@ gulp.task('js', function() {
 
 // Static Server + watching scss/html files
 gulp.task('serve', ['jade', 'styles', 'js'], function() {
-
 	browserSync.init({
 		proxy: "styleguide.folklife.loc:3000",
 		port: 3007,
-		xip: true,
+		// xip: true,
 		open: false,
 		notify: false,
 		ghostMode: false,

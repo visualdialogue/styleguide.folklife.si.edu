@@ -79,6 +79,10 @@
 		@include intro-serif;
 		// line-height: 1.35 !important;
 		font-weight: 500;
+		li:before {
+			// no bullets
+			content: '' !important;
+		}
 	}
 	.intro-section {
 		@include margin-bottom(4);
@@ -244,7 +248,8 @@
 	}
 	// highlight.js code block
 	code.hljs {
-		@include padding(3);
+        // @include padding(3);
+		// @include padding(1);
 		@include respond-to(break2max) {
 			font-size:1.2rem;
 		}

@@ -47,5 +47,31 @@ $(document).ready(function () {
 ***************************/
  	// start highlighter on page load
 	// hljs.configure({tabReplace: ' '});
+
+    // for each codeblock...
+    $('.codeblock').each(function(index, element) {
+        // get source html
+        var highlightSourceHTML = $(element).find('.highlight-source').html();
+        if(typeof highlightSourceHTML !== 'undefined') {
+            console.log('highlightSourceHTML', highlightSourceHTML);
+            // html encode so highlightjs can read
+            highlightSourceHTML = htmlEscape(highlightSourceHTML);
+            // set as destination for highlightjs to read
+            $('.highlight-destination').html(highlightSourceHTML);    
+        }
+    });
+    // copy html to code block
+
+    // then highlight all
 	hljs.initHighlightingOnLoad();
+
+    // encoding, from https://stackoverflow.com/a/7124052
+    function htmlEscape(str) {
+        return str
+            .replace(/&/g, '&amp;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
+    }
 });

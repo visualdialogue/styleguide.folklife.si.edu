@@ -1,4 +1,4 @@
-<!-- Helper Classes--><section class="container cards-section"><div class="row"><main class="content col-sm-7"><h2 class="section-title">Helper Classes</h2><a id="components" class="anchor-link"></a><div class="intro-copy content link-underline"><p>Helper classes allow us to quickly change behavior via the html.</p><ul><li>.caption-below</li></ul></div><pre class="sass"><code>// Typesetting with parent and child class. 
+<!-- Helper Classes--><section class="container cards-section"><div class="row"><main class="content col-sm-7"><h2 class="section-title">Helpers</h2><a id="components" class="anchor-link"></a><div class="intro-copy content link-underline"><p>Helper classes allow us to quickly change behavior via the html.</p><ul><li> <h4>.caption-below</h4><p> </p></li></ul></div><pre class="sass"><code>// Typesetting with parent and child class. 
 // Targets the commonly used .title class in almost every card.
 .archives-page {
 	.title {@include sans-lg}

@@ -44,14 +44,41 @@
 /* Folklife
 -------------------------------------------------- */
 	$fl-light-blue: #adbedd;
+    .fl-light-blue {color: $fl-light-blue;}
+    .fl-light-blue-bg {background-color: $fl-light-blue;}
+
 	$fl-blue: #418abd;
+    .fl-blue {color: $fl-blue;}
+    .fl-blue-bg {background-color: $fl-blue;}
+
 	$fl-purple: #a34d8f;
+    .fl-purple {color: $fl-purple;}
+    .fl-purple-bg {background-color: $fl-purple;}
+
 	$fl-light-green: #e2f0d8;
+    .fl-light-green {color: $fl-light-green;}
+    .fl-light-green-bg {background-color: $fl-light-green;}
+
 	$fl-green: #31b3a0;
+    .fl-green {color: $fl-green;}
+    .fl-green-bg {background-color: $fl-green;}
+
 	$fl-teal: #277b89;
+    .fl-teal {color: $fl-teal;}
+    .fl-teal-bg {background-color: $fl-teal;}
+
 	$fl-yellow: #fdefc3;
+    .fl-yellow {color: $fl-yellow;}
+    .fl-yellow-bg {background-color: $fl-yellow;}
+
 	$fl-orange: #ce6e52;
+    .fl-orange {color: $fl-orange;}
+    .fl-orange-bg {background-color: $fl-orange;}
+
 	$fl-red: #b44435;
+    .fl-red {color: $fl-red;}
+    .fl-red-bg {background-color: $fl-red;}
+
 
 	// application
 	$fl-hover: $fl-light-green;
@@ -59,15 +86,45 @@
 /* Folkways
 -------------------------------------------------- */
 	$fw-light-blue: #c0d5e7;
+    .fw-light-blue { color: $fw-light-blue; }
+    .fw-light-blue-bg { background-color: $fw-light-blue; }
+
 	$fw-blue: #acd1d4;
+    .fw-blue { color: $fw-blue; }
+    .fw-blue-bg { background-color: $fw-blue; }
+
 	$fw-dark-blue: #31586a;
+    .fw-dark-blue { color: $fw-dark-blue; }
+    .fw-dark-blue-bg { background-color: $fw-dark-blue; }
+
 	$fw-purple: #9e93ae;
+    .fw-purple { color: $fw-purple; }
+    .fw-purple-bg { background-color: $fw-purple; }
+
 	$fw-light-green: #bedcaf;
+    .fw-light-green { color: $fw-light-green; }
+    .fw-light-green-bg { background-color: $fw-light-green; }
+
 	$fw-green: #628a61;
+    .fw-green { color: $fw-green; }
+    .fw-green-bg { background-color: $fw-green; }
+
 	$fw-cream: #fef3db;
+    .fw-cream { color: $fw-cream; }
+    .fw-cream-bg { background-color: $fw-cream; }
+
 	$fw-brown: #c9c1ae;
+    .fw-brown { color: $fw-brown; }
+    .fw-brown-bg { background-color: $fw-brown; }
+
 	$fw-orange: #ca772c;
+    .fw-orange { color: $fw-orange; }
+    .fw-orange-bg { background-color: $fw-orange; }
+
 	$fw-red: #b44b41;
+    .fw-red { color: $fw-red; }
+    .fw-red-bg { background-color: $fw-red; }
+
 
 	$fw-magazine: #ffd51d;
 
@@ -77,14 +134,41 @@
 /* Festival
 -------------------------------------------------- */
 	$fs-light-blue: #71b6d9;
+    .fs-light-blue { color: $fs-light-blue; }
+    .fs-light-blue-bg { background-color: $fs-light-blue; }
+
 	$fs-blue: #4967a3;
+    .fs-blue { color: $fs-blue; }
+    .fs-blue-bg { background-color: $fs-blue; }
+
 	$fs-purple: #6f498d;
+    .fs-purple { color: $fs-purple; }
+    .fs-purple-bg { background-color: $fs-purple; }
+
 	$fs-green: #00a765;
+    .fs-green { color: $fs-green; }
+    .fs-green-bg { background-color: $fs-green; }
+
 	$fs-teal: #409fa1;
+    .fs-teal { color: $fs-teal; }
+    .fs-teal-bg { background-color: $fs-teal; }
+
 	$fs-yellow: #fddd6b;
+    .fs-yellow { color: $fs-yellow; }
+    .fs-yellow-bg { background-color: $fs-yellow; }
+
 	$fs-tan: #cfbb8a;
+    .fs-tan { color: $fs-tan; }
+    .fs-tan-bg { background-color: $fs-tan; }
+
 	$fs-orange: #e5a058;
+    .fs-orange { color: $fs-orange; }
+    .fs-orange-bg { background-color: $fs-orange; }
+
 	$fs-red: #ce3c45;
+    .fs-red { color: $fs-red; }
+    .fs-red-bg { background-color: $fs-red; }
+
 
 	// application
 	$fs-hover: $fs-yellow;

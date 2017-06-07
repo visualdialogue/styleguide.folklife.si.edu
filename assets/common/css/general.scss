@@ -2242,6 +2242,21 @@ $gttOffset: 8rem; // as circle image
     }
 }
 
+/* Festival Schedule
+-------------------------------------------------*/
+.schedule-colors {
+    li {
+        @include margin-bottom(2);
+    }
+}
+.schedule-color-square {
+    float: left;
+    @include width(4); // 4rem at desktop width
+    @include height(4); // 4rem at desktop height
+    @include border();
+    @include margin-right(1.5);
+}
+
 /* Helpers
 -------------------------------------------------*/
 

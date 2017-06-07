@@ -6221,10 +6221,234 @@ html {
 
 /* Folklife
 -------------------------------------------------- */
+.fl-light-blue {
+	color: #adbedd;
+}
+
+.fl-light-blue-bg {
+	background-color: #adbedd;
+}
+
+.fl-blue {
+	color: #418abd;
+}
+
+.fl-blue-bg {
+	background-color: #418abd;
+}
+
+.fl-purple {
+	color: #a34d8f;
+}
+
+.fl-purple-bg {
+	background-color: #a34d8f;
+}
+
+.fl-light-green {
+	color: #e2f0d8;
+}
+
+.fl-light-green-bg {
+	background-color: #e2f0d8;
+}
+
+.fl-green {
+	color: #31b3a0;
+}
+
+.fl-green-bg {
+	background-color: #31b3a0;
+}
+
+.fl-teal {
+	color: #277b89;
+}
+
+.fl-teal-bg {
+	background-color: #277b89;
+}
+
+.fl-yellow {
+	color: #fdefc3;
+}
+
+.fl-yellow-bg {
+	background-color: #fdefc3;
+}
+
+.fl-orange {
+	color: #ce6e52;
+}
+
+.fl-orange-bg {
+	background-color: #ce6e52;
+}
+
+.fl-red {
+	color: #b44435;
+}
+
+.fl-red-bg {
+	background-color: #b44435;
+}
+
 /* Folkways
 -------------------------------------------------- */
+.fw-light-blue {
+	color: #c0d5e7;
+}
+
+.fw-light-blue-bg {
+	background-color: #c0d5e7;
+}
+
+.fw-blue {
+	color: #acd1d4;
+}
+
+.fw-blue-bg {
+	background-color: #acd1d4;
+}
+
+.fw-dark-blue {
+	color: #31586a;
+}
+
+.fw-dark-blue-bg {
+	background-color: #31586a;
+}
+
+.fw-purple {
+	color: #9e93ae;
+}
+
+.fw-purple-bg {
+	background-color: #9e93ae;
+}
+
+.fw-light-green {
+	color: #bedcaf;
+}
+
+.fw-light-green-bg {
+	background-color: #bedcaf;
+}
+
+.fw-green {
+	color: #628a61;
+}
+
+.fw-green-bg {
+	background-color: #628a61;
+}
+
+.fw-cream {
+	color: #fef3db;
+}
+
+.fw-cream-bg {
+	background-color: #fef3db;
+}
+
+.fw-brown {
+	color: #c9c1ae;
+}
+
+.fw-brown-bg {
+	background-color: #c9c1ae;
+}
+
+.fw-orange {
+	color: #ca772c;
+}
+
+.fw-orange-bg {
+	background-color: #ca772c;
+}
+
+.fw-red {
+	color: #b44b41;
+}
+
+.fw-red-bg {
+	background-color: #b44b41;
+}
+
 /* Festival
 -------------------------------------------------- */
+.fs-light-blue {
+	color: #71b6d9;
+}
+
+.fs-light-blue-bg {
+	background-color: #71b6d9;
+}
+
+.fs-blue {
+	color: #4967a3;
+}
+
+.fs-blue-bg {
+	background-color: #4967a3;
+}
+
+.fs-purple {
+	color: #6f498d;
+}
+
+.fs-purple-bg {
+	background-color: #6f498d;
+}
+
+.fs-green {
+	color: #00a765;
+}
+
+.fs-green-bg {
+	background-color: #00a765;
+}
+
+.fs-teal {
+	color: #409fa1;
+}
+
+.fs-teal-bg {
+	background-color: #409fa1;
+}
+
+.fs-yellow {
+	color: #fddd6b;
+}
+
+.fs-yellow-bg {
+	background-color: #fddd6b;
+}
+
+.fs-tan {
+	color: #cfbb8a;
+}
+
+.fs-tan-bg {
+	background-color: #cfbb8a;
+}
+
+.fs-orange {
+	color: #e5a058;
+}
+
+.fs-orange-bg {
+	background-color: #e5a058;
+}
+
+.fs-red {
+	color: #ce3c45;
+}
+
+.fs-red-bg {
+	background-color: #ce3c45;
+}
+
 /* General
 -------------------------------------------------- */
 /* Color Application
@@ -14950,6 +15174,68 @@ video::-webkit-media-controls {
 
 .object-pinterest svg {
 	pointer-events: none;
+}
+
+/* Festival Schedule
+-------------------------------------------------*/
+.schedule-colors li {
+	margin-bottom: 0.74074rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.schedule-colors li {
+		margin-bottom: 1.28vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.schedule-colors li {
+		margin-bottom: 2rem;
+	}
+}
+
+.schedule-color-square {
+	float: left;
+	width: 2.80938rem;
+	height: 2.80938rem;
+	border: 1px solid #999999;
+	margin-right: 0.55556rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.schedule-color-square {
+		width: 2.56vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.schedule-color-square {
+		width: 4rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.schedule-color-square {
+		height: 2.56vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.schedule-color-square {
+		height: 4rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.schedule-color-square {
+		margin-right: 0.96vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.schedule-color-square {
+		margin-right: 1.5rem;
+	}
 }
 
 /* Helpers
@@ -26810,10 +27096,234 @@ html {
 
 /* Folklife
 -------------------------------------------------- */
+.fl-light-blue {
+	color: #adbedd;
+}
+
+.fl-light-blue-bg {
+	background-color: #adbedd;
+}
+
+.fl-blue {
+	color: #418abd;
+}
+
+.fl-blue-bg {
+	background-color: #418abd;
+}
+
+.fl-purple {
+	color: #a34d8f;
+}
+
+.fl-purple-bg {
+	background-color: #a34d8f;
+}
+
+.fl-light-green {
+	color: #e2f0d8;
+}
+
+.fl-light-green-bg {
+	background-color: #e2f0d8;
+}
+
+.fl-green {
+	color: #31b3a0;
+}
+
+.fl-green-bg {
+	background-color: #31b3a0;
+}
+
+.fl-teal {
+	color: #277b89;
+}
+
+.fl-teal-bg {
+	background-color: #277b89;
+}
+
+.fl-yellow {
+	color: #fdefc3;
+}
+
+.fl-yellow-bg {
+	background-color: #fdefc3;
+}
+
+.fl-orange {
+	color: #ce6e52;
+}
+
+.fl-orange-bg {
+	background-color: #ce6e52;
+}
+
+.fl-red {
+	color: #b44435;
+}
+
+.fl-red-bg {
+	background-color: #b44435;
+}
+
 /* Folkways
 -------------------------------------------------- */
+.fw-light-blue {
+	color: #c0d5e7;
+}
+
+.fw-light-blue-bg {
+	background-color: #c0d5e7;
+}
+
+.fw-blue {
+	color: #acd1d4;
+}
+
+.fw-blue-bg {
+	background-color: #acd1d4;
+}
+
+.fw-dark-blue {
+	color: #31586a;
+}
+
+.fw-dark-blue-bg {
+	background-color: #31586a;
+}
+
+.fw-purple {
+	color: #9e93ae;
+}
+
+.fw-purple-bg {
+	background-color: #9e93ae;
+}
+
+.fw-light-green {
+	color: #bedcaf;
+}
+
+.fw-light-green-bg {
+	background-color: #bedcaf;
+}
+
+.fw-green {
+	color: #628a61;
+}
+
+.fw-green-bg {
+	background-color: #628a61;
+}
+
+.fw-cream {
+	color: #fef3db;
+}
+
+.fw-cream-bg {
+	background-color: #fef3db;
+}
+
+.fw-brown {
+	color: #c9c1ae;
+}
+
+.fw-brown-bg {
+	background-color: #c9c1ae;
+}
+
+.fw-orange {
+	color: #ca772c;
+}
+
+.fw-orange-bg {
+	background-color: #ca772c;
+}
+
+.fw-red {
+	color: #b44b41;
+}
+
+.fw-red-bg {
+	background-color: #b44b41;
+}
+
 /* Festival
 -------------------------------------------------- */
+.fs-light-blue {
+	color: #71b6d9;
+}
+
+.fs-light-blue-bg {
+	background-color: #71b6d9;
+}
+
+.fs-blue {
+	color: #4967a3;
+}
+
+.fs-blue-bg {
+	background-color: #4967a3;
+}
+
+.fs-purple {
+	color: #6f498d;
+}
+
+.fs-purple-bg {
+	background-color: #6f498d;
+}
+
+.fs-green {
+	color: #00a765;
+}
+
+.fs-green-bg {
+	background-color: #00a765;
+}
+
+.fs-teal {
+	color: #409fa1;
+}
+
+.fs-teal-bg {
+	background-color: #409fa1;
+}
+
+.fs-yellow {
+	color: #fddd6b;
+}
+
+.fs-yellow-bg {
+	background-color: #fddd6b;
+}
+
+.fs-tan {
+	color: #cfbb8a;
+}
+
+.fs-tan-bg {
+	background-color: #cfbb8a;
+}
+
+.fs-orange {
+	color: #e5a058;
+}
+
+.fs-orange-bg {
+	background-color: #e5a058;
+}
+
+.fs-red {
+	color: #ce3c45;
+}
+
+.fs-red-bg {
+	background-color: #ce3c45;
+}
+
 /* General
 -------------------------------------------------- */
 /* Color Application
@@ -35539,6 +36049,68 @@ video::-webkit-media-controls {
 
 .object-pinterest svg {
 	pointer-events: none;
+}
+
+/* Festival Schedule
+-------------------------------------------------*/
+.schedule-colors li {
+	margin-bottom: 0.74074rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.schedule-colors li {
+		margin-bottom: 1.28vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.schedule-colors li {
+		margin-bottom: 2rem;
+	}
+}
+
+.schedule-color-square {
+	float: left;
+	width: 2.80938rem;
+	height: 2.80938rem;
+	border: 1px solid #999999;
+	margin-right: 0.55556rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.schedule-color-square {
+		width: 2.56vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.schedule-color-square {
+		width: 4rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.schedule-color-square {
+		height: 2.56vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.schedule-color-square {
+		height: 4rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.schedule-color-square {
+		margin-right: 0.96vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.schedule-color-square {
+		margin-right: 1.5rem;
+	}
 }
 
 /* Helpers
@@ -47730,6 +48302,10 @@ h2.intro-title {
 	}
 }
 
+.intro-copy li:before {
+	content: '' !important;
+}
+
 .intro-section {
 	margin-bottom: 1.48148rem;
 }
@@ -48150,22 +48726,6 @@ pre {
 @media only screen and (min-width: 1560px) {
 	pre {
 		margin-bottom: 8rem;
-	}
-}
-
-code.hljs {
-	padding: 2.10704rem;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	code.hljs {
-		padding: 1.92vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	code.hljs {
-		padding: 3rem;
 	}
 }
 
