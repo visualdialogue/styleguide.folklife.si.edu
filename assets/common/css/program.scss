@@ -90,36 +90,6 @@
 			text-transform: uppercase;
 			@include margin-top(0.7);
 		}
-		.program-year-outer {
-			position: relative;
-			// padding-right:80px;
-			// @include respond-to(break2) {padding-right:15px;}
-			// @include respond-to(fullwidth) {padding-right:80px;}
-		}
-		.program-year-inner {
-			// position: relative; // anchor year
-			// position this instead of text box so text can grow as vw and not change location
-			position: absolute;
-			right: 0;
-			top: -1.7rem;
-			// top: calc(-1rem - 13vw);
-			@include respond-to(break2) {
-				top: -2.5rem;
-				// right: 8rem;
-			}
-			@include respond-to(fullwidth) {
-				top: -3.5rem;
-				// right: 8rem;
-			}
-		}
-		.program-year {
-			@include lg-woodtype-extended;
-			color: $black20;
-			position: absolute;
-			bottom: 0; // anchor to bottom so can grow up instead of down
-			right: 0;
-			// padding-bottom: 1vw;
-		}
         .page-tag {
             @include sans-tag;
             font-weight: 700;

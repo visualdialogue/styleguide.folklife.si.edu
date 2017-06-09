@@ -7286,6 +7286,7 @@ site.screenHeight = $(window).height();
 site.$body = $('body');
 site.break1 = 640; // first media query break
 site.break2 = 852; // break to 6 across
+site.breakAfterIpad = 1100; // break to 6 across
 site.fullwidth = 1480; // break to 6 across
 site.videoPopupBuilder; // global for use in local script files
 

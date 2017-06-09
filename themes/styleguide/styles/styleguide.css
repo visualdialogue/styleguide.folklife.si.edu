@@ -18000,56 +18000,6 @@ body {
 	}
 }
 
-.ms-header .program-year-outer {
-	position: relative;
-}
-
-.ms-header .program-year-inner {
-	position: absolute;
-	right: 0;
-	top: -1.7rem;
-}
-
-@media only screen and (min-width: 53.25em) {
-	.ms-header .program-year-inner {
-		top: -2.5rem;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.ms-header .program-year-inner {
-		top: -3.5rem;
-	}
-}
-
-.ms-header .program-year {
-	font-family: "unit-gothic-717", "Arial Black", "Arial Bold", Gadget, sans-serif;
-	text-transform: uppercase;
-	line-height: 1;
-	color: #cccccc;
-	position: absolute;
-	bottom: 0;
-	right: 0;
-}
-
-@media only screen and (max-width: 53.15em) {
-	.ms-header .program-year {
-		font-size: 8vw;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.ms-header .program-year {
-		font-size: 2.9vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.ms-header .program-year {
-		font-size: 4rem;
-	}
-}
-
 .ms-header .page-tag {
 	font-weight: 300;
 	text-transform: uppercase;
@@ -37161,56 +37111,6 @@ iframe {
 @media only screen and (min-width: 1560px) {
 	.ms-header .page-subtitle {
 		margin-top: 0.7rem;
-	}
-}
-
-.ms-header .program-year-outer {
-	position: relative;
-}
-
-.ms-header .program-year-inner {
-	position: absolute;
-	right: 0;
-	top: -1.7rem;
-}
-
-@media only screen and (min-width: 53.25em) {
-	.ms-header .program-year-inner {
-		top: -2.5rem;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.ms-header .program-year-inner {
-		top: -3.5rem;
-	}
-}
-
-.ms-header .program-year {
-	font-family: "unit-gothic-717", "Arial Black", "Arial Bold", Gadget, sans-serif;
-	text-transform: uppercase;
-	line-height: 1;
-	color: #cccccc;
-	position: absolute;
-	bottom: 0;
-	right: 0;
-}
-
-@media only screen and (max-width: 53.15em) {
-	.ms-header .program-year {
-		font-size: 8vw;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.ms-header .program-year {
-		font-size: 2.9vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.ms-header .program-year {
-		font-size: 4rem;
 	}
 }
 
