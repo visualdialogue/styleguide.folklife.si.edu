@@ -7290,6 +7290,36 @@ body {
 	}
 }
 
+.show-internal-browse-page .browsenav-title {
+	text-align: left;
+	font-size: 2.3rem;
+	padding-bottom: 0.70235rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.show-internal-browse-page .browsenav-title {
+		padding-bottom: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.show-internal-browse-page .browsenav-title {
+		padding-bottom: 1rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.show-internal-browse-page .browsenav-title {
+		font-size: 1.5vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.show-internal-browse-page .browsenav-title {
+		font-size: 2.4rem;
+	}
+}
+
 .xl-sans {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
@@ -12902,6 +12932,94 @@ figcaption.minus-sign:before {
 	transform: rotate(-90deg);
 }
 
+.internal-browsenav {
+	background-color: #e6e6e6;
+	height: 11.23753rem;
+	margin-top: 1.48148rem;
+	margin-bottom: 2.96296rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.internal-browsenav {
+		height: 10.24vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.internal-browsenav {
+		height: 16rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.internal-browsenav {
+		margin-top: 2.56vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.internal-browsenav {
+		margin-top: 4rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.internal-browsenav {
+		margin-bottom: 5.12vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.internal-browsenav {
+		margin-bottom: 8rem;
+	}
+}
+
+.dropdown-bar.is-stuck {
+	background-color: #e6e6e6;
+	width: 100%;
+	padding-top: 0.35117rem;
+	padding-bottom: 1.40469rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.dropdown-bar.is-stuck {
+		padding-top: 0.32vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.dropdown-bar.is-stuck {
+		padding-top: 0.5rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.dropdown-bar.is-stuck {
+		padding-bottom: 1.28vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.dropdown-bar.is-stuck {
+		padding-bottom: 2rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) {
+	.dropdown-bar.is-stuck {
+		position: fixed !important;
+		top: 7rem;
+		z-index: 10;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.dropdown-bar.is-stuck {
+		top: 8rem;
+	}
+}
+
 /* Search, Festival Past Festival Programs
 -------------------------------------------------*/
 .search-page .svg-thin-hr, .past-festivals-page .svg-thin-hr {
@@ -14377,58 +14495,6 @@ video::-webkit-media-controls {
 
 .past-festival-pagination-wrapper .pagination .light {
 	display: inline-block;
-	padding-top: 0.70235rem;
-	padding-right: 1.40469rem;
-	padding-bottom: 0.70235rem;
-	padding-left: 1.40469rem;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.past-festival-pagination-wrapper .pagination .light {
-		padding-top: 0.64vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.past-festival-pagination-wrapper .pagination .light {
-		padding-top: 1rem;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.past-festival-pagination-wrapper .pagination .light {
-		padding-right: 1.28vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.past-festival-pagination-wrapper .pagination .light {
-		padding-right: 2rem;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.past-festival-pagination-wrapper .pagination .light {
-		padding-bottom: 0.64vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.past-festival-pagination-wrapper .pagination .light {
-		padding-bottom: 1rem;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.past-festival-pagination-wrapper .pagination .light {
-		padding-left: 1.28vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.past-festival-pagination-wrapper .pagination .light {
-		padding-left: 2rem;
-	}
 }
 
 .past-festival-pagination-wrapper .pagination .view-direction {
@@ -14438,19 +14504,7 @@ video::-webkit-media-controls {
 }
 
 .past-festival-pagination-wrapper .pagination .view-previous, .past-festival-pagination-wrapper .pagination .view-next {
-	width: 9.1305rem;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.past-festival-pagination-wrapper .pagination .view-previous, .past-festival-pagination-wrapper .pagination .view-next {
-		width: 8.32vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.past-festival-pagination-wrapper .pagination .view-previous, .past-festival-pagination-wrapper .pagination .view-next {
-		width: 13rem;
-	}
+	text-align: left;
 }
 
 .past-festival-pagination-wrapper .pagination .view-previous:after, .past-festival-pagination-wrapper .pagination .view-next:before {
@@ -14542,34 +14596,173 @@ video::-webkit-media-controls {
 	}
 }
 
+.past-festival-pagination-wrapper .pagination .view-previous-wrapper .light {
+	padding-top: 0.70235rem;
+	padding-right: 1.40469rem;
+	padding-bottom: 0.70235rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .view-previous-wrapper .light {
+		padding-top: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .view-previous-wrapper .light {
+		padding-top: 1rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .view-previous-wrapper .light {
+		padding-right: 1.28vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .view-previous-wrapper .light {
+		padding-right: 2rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .view-previous-wrapper .light {
+		padding-bottom: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .view-previous-wrapper .light {
+		padding-bottom: 1rem;
+	}
+}
+
+.past-festival-pagination-wrapper .pagination .view-previous {
+	width: 2rem;
+	padding-left: 0.70235rem;
+	width: 9.83284rem;
+	width: 10rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .view-previous {
+		padding-left: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .view-previous {
+		padding-left: 1rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) {
+	.past-festival-pagination-wrapper .pagination .view-previous {
+		width: 9vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .view-previous {
+		width: 14rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .view-previous {
+		width: 8.96vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .view-previous {
+		width: 14rem;
+	}
+}
+
 .past-festival-pagination-wrapper .pagination .view-previous:after {
 	-webkit-transform: rotate(180deg);
 	-moz-transform: rotate(180deg);
 	transform: rotate(180deg);
-	right: -3.7037rem;
+	right: -2.96296rem;
+	right: -4rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.past-festival-pagination-wrapper .pagination .view-previous:after {
-		right: -6.4vw;
+		right: -5.12vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
 	.past-festival-pagination-wrapper .pagination .view-previous:after {
-		right: -10rem;
+		right: -8rem;
 	}
 }
 
-@media only screen and (max-width: 53.15em) {
-	.past-festival-pagination-wrapper .pagination .view-previous:after {
-		right: -4.444rem;
+.past-festival-pagination-wrapper .pagination .view-next-wrapper .light {
+	padding-top: 0.70235rem;
+	padding-right: 0rem;
+	padding-bottom: 0.70235rem;
+	padding-left: 1.40469rem;
+	padding-left: 0rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .view-next-wrapper .light {
+		padding-top: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .view-next-wrapper .light {
+		padding-top: 1rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .view-next-wrapper .light {
+		padding-right: 0vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .view-next-wrapper .light {
+		padding-right: 0rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .view-next-wrapper .light {
+		padding-bottom: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .view-next-wrapper .light {
+		padding-bottom: 1rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .view-next-wrapper .light {
+		padding-left: 1.28vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .view-next-wrapper .light {
+		padding-left: 2rem;
 	}
 }
 
 .past-festival-pagination-wrapper .pagination .view-next {
 	position: relative;
 	left: -0.48148rem;
+	padding-left: 2.45821rem;
+	width: 7.7258rem;
+	width: 9rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
@@ -14584,29 +14777,69 @@ video::-webkit-media-controls {
 	}
 }
 
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .view-next {
+		padding-left: 2.24vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .view-next {
+		padding-left: 3.5rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .view-next {
+		width: 7.04vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .view-next {
+		width: 11rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) {
+	.past-festival-pagination-wrapper .pagination .view-next {
+		width: 9vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .view-next {
+		width: 11rem;
+	}
+}
+
 .past-festival-pagination-wrapper .pagination .view-next:before {
 	-webkit-transform: rotate(0deg);
 	-moz-transform: rotate(0deg);
 	transform: rotate(0deg);
 	right: auto !important;
-	left: -1.25926rem;
+	left: -0.62963rem;
+	left: 0;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.past-festival-pagination-wrapper .pagination .view-next:before {
-		left: -2.176vw;
+		left: -1.088vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
 	.past-festival-pagination-wrapper .pagination .view-next:before {
-		left: -3.4rem;
+		left: -1.7rem;
 	}
 }
 
 .past-festival-pagination-wrapper .pagination-numbers {
+	display: inline-block;
 	margin-left: 2.59259rem;
 	margin-right: 2.59259rem;
+	margin-left: 0;
+	margin-right: 0;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
@@ -15755,8 +15988,7 @@ video::-webkit-media-controls {
 	}
 }
 
-.magazine-article-page .sidebar
-iframe {
+.magazine-article-page .sidebar iframe {
 	width: 100%;
 }
 
@@ -28115,6 +28347,36 @@ body {
 	}
 }
 
+.show-internal-browse-page .browsenav-title {
+	text-align: left;
+	font-size: 2.3rem;
+	padding-bottom: 0.70235rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.show-internal-browse-page .browsenav-title {
+		padding-bottom: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.show-internal-browse-page .browsenav-title {
+		padding-bottom: 1rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.show-internal-browse-page .browsenav-title {
+		font-size: 1.5vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.show-internal-browse-page .browsenav-title {
+		font-size: 2.4rem;
+	}
+}
+
 .xl-sans {
 	font-weight: 300;
 	font-family: "acumin-pro", Arial, sans-serif;
@@ -33727,6 +33989,94 @@ figcaption.minus-sign:before {
 	transform: rotate(-90deg);
 }
 
+.internal-browsenav {
+	background-color: #e6e6e6;
+	height: 11.23753rem;
+	margin-top: 1.48148rem;
+	margin-bottom: 2.96296rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.internal-browsenav {
+		height: 10.24vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.internal-browsenav {
+		height: 16rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.internal-browsenav {
+		margin-top: 2.56vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.internal-browsenav {
+		margin-top: 4rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.internal-browsenav {
+		margin-bottom: 5.12vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.internal-browsenav {
+		margin-bottom: 8rem;
+	}
+}
+
+.dropdown-bar.is-stuck {
+	background-color: #e6e6e6;
+	width: 100%;
+	padding-top: 0.35117rem;
+	padding-bottom: 1.40469rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.dropdown-bar.is-stuck {
+		padding-top: 0.32vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.dropdown-bar.is-stuck {
+		padding-top: 0.5rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.dropdown-bar.is-stuck {
+		padding-bottom: 1.28vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.dropdown-bar.is-stuck {
+		padding-bottom: 2rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) {
+	.dropdown-bar.is-stuck {
+		position: fixed !important;
+		top: 7rem;
+		z-index: 10;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.dropdown-bar.is-stuck {
+		top: 8rem;
+	}
+}
+
 /* Search, Festival Past Festival Programs
 -------------------------------------------------*/
 .search-page .svg-thin-hr, .past-festivals-page .svg-thin-hr {
@@ -35202,58 +35552,6 @@ video::-webkit-media-controls {
 
 .past-festival-pagination-wrapper .pagination .light {
 	display: inline-block;
-	padding-top: 0.70235rem;
-	padding-right: 1.40469rem;
-	padding-bottom: 0.70235rem;
-	padding-left: 1.40469rem;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.past-festival-pagination-wrapper .pagination .light {
-		padding-top: 0.64vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.past-festival-pagination-wrapper .pagination .light {
-		padding-top: 1rem;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.past-festival-pagination-wrapper .pagination .light {
-		padding-right: 1.28vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.past-festival-pagination-wrapper .pagination .light {
-		padding-right: 2rem;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.past-festival-pagination-wrapper .pagination .light {
-		padding-bottom: 0.64vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.past-festival-pagination-wrapper .pagination .light {
-		padding-bottom: 1rem;
-	}
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.past-festival-pagination-wrapper .pagination .light {
-		padding-left: 1.28vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.past-festival-pagination-wrapper .pagination .light {
-		padding-left: 2rem;
-	}
 }
 
 .past-festival-pagination-wrapper .pagination .view-direction {
@@ -35263,19 +35561,7 @@ video::-webkit-media-controls {
 }
 
 .past-festival-pagination-wrapper .pagination .view-previous, .past-festival-pagination-wrapper .pagination .view-next {
-	width: 9.1305rem;
-}
-
-@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.past-festival-pagination-wrapper .pagination .view-previous, .past-festival-pagination-wrapper .pagination .view-next {
-		width: 8.32vw;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.past-festival-pagination-wrapper .pagination .view-previous, .past-festival-pagination-wrapper .pagination .view-next {
-		width: 13rem;
-	}
+	text-align: left;
 }
 
 .past-festival-pagination-wrapper .pagination .view-previous:after, .past-festival-pagination-wrapper .pagination .view-next:before {
@@ -35367,34 +35653,173 @@ video::-webkit-media-controls {
 	}
 }
 
+.past-festival-pagination-wrapper .pagination .view-previous-wrapper .light {
+	padding-top: 0.70235rem;
+	padding-right: 1.40469rem;
+	padding-bottom: 0.70235rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .view-previous-wrapper .light {
+		padding-top: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .view-previous-wrapper .light {
+		padding-top: 1rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .view-previous-wrapper .light {
+		padding-right: 1.28vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .view-previous-wrapper .light {
+		padding-right: 2rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .view-previous-wrapper .light {
+		padding-bottom: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .view-previous-wrapper .light {
+		padding-bottom: 1rem;
+	}
+}
+
+.past-festival-pagination-wrapper .pagination .view-previous {
+	width: 2rem;
+	padding-left: 0.70235rem;
+	width: 9.83284rem;
+	width: 10rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .view-previous {
+		padding-left: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .view-previous {
+		padding-left: 1rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) {
+	.past-festival-pagination-wrapper .pagination .view-previous {
+		width: 9vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .view-previous {
+		width: 14rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .view-previous {
+		width: 8.96vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .view-previous {
+		width: 14rem;
+	}
+}
+
 .past-festival-pagination-wrapper .pagination .view-previous:after {
 	-webkit-transform: rotate(180deg);
 	-moz-transform: rotate(180deg);
 	transform: rotate(180deg);
-	right: -3.7037rem;
+	right: -2.96296rem;
+	right: -4rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.past-festival-pagination-wrapper .pagination .view-previous:after {
-		right: -6.4vw;
+		right: -5.12vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
 	.past-festival-pagination-wrapper .pagination .view-previous:after {
-		right: -10rem;
+		right: -8rem;
 	}
 }
 
-@media only screen and (max-width: 53.15em) {
-	.past-festival-pagination-wrapper .pagination .view-previous:after {
-		right: -4.444rem;
+.past-festival-pagination-wrapper .pagination .view-next-wrapper .light {
+	padding-top: 0.70235rem;
+	padding-right: 0rem;
+	padding-bottom: 0.70235rem;
+	padding-left: 1.40469rem;
+	padding-left: 0rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .view-next-wrapper .light {
+		padding-top: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .view-next-wrapper .light {
+		padding-top: 1rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .view-next-wrapper .light {
+		padding-right: 0vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .view-next-wrapper .light {
+		padding-right: 0rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .view-next-wrapper .light {
+		padding-bottom: 0.64vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .view-next-wrapper .light {
+		padding-bottom: 1rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .view-next-wrapper .light {
+		padding-left: 1.28vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .view-next-wrapper .light {
+		padding-left: 2rem;
 	}
 }
 
 .past-festival-pagination-wrapper .pagination .view-next {
 	position: relative;
 	left: -0.48148rem;
+	padding-left: 2.45821rem;
+	width: 7.7258rem;
+	width: 9rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
@@ -35409,29 +35834,69 @@ video::-webkit-media-controls {
 	}
 }
 
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .view-next {
+		padding-left: 2.24vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .view-next {
+		padding-left: 3.5rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.past-festival-pagination-wrapper .pagination .view-next {
+		width: 7.04vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .view-next {
+		width: 11rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) {
+	.past-festival-pagination-wrapper .pagination .view-next {
+		width: 9vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.past-festival-pagination-wrapper .pagination .view-next {
+		width: 11rem;
+	}
+}
+
 .past-festival-pagination-wrapper .pagination .view-next:before {
 	-webkit-transform: rotate(0deg);
 	-moz-transform: rotate(0deg);
 	transform: rotate(0deg);
 	right: auto !important;
-	left: -1.25926rem;
+	left: -0.62963rem;
+	left: 0;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.past-festival-pagination-wrapper .pagination .view-next:before {
-		left: -2.176vw;
+		left: -1.088vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
 	.past-festival-pagination-wrapper .pagination .view-next:before {
-		left: -3.4rem;
+		left: -1.7rem;
 	}
 }
 
 .past-festival-pagination-wrapper .pagination-numbers {
+	display: inline-block;
 	margin-left: 2.59259rem;
 	margin-right: 2.59259rem;
+	margin-left: 0;
+	margin-right: 0;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
@@ -36580,8 +37045,7 @@ video::-webkit-media-controls {
 	}
 }
 
-.magazine-article-page .sidebar
-iframe {
+.magazine-article-page .sidebar iframe {
 	width: 100%;
 }
 
@@ -41663,6 +42127,43 @@ body {
 	}
 }
 
+.show-internal-browse-page .browsenav {
+	display: none !important;
+	width: 100%;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 0rem;
+	padding-bottom: 1.75586rem;
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.show-internal-browse-page .browsenav {
+		padding-top: 0vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.show-internal-browse-page .browsenav {
+		padding-top: 0rem;
+	}
+}
+
+@media only screen and (min-width: 53.25em) and (max-width: 1559px) {
+	.show-internal-browse-page .browsenav {
+		padding-bottom: 1.6vw;
+	}
+}
+
+@media only screen and (min-width: 1560px) {
+	.show-internal-browse-page .browsenav {
+		padding-bottom: 2.5rem;
+	}
+}
+
+.show-internal-browse-page .browsenav-title {
+	text-align: left;
+}
+
 /* Folkways Magazine Homepage
 -------------------------------------------------- */
 body.magazine-page, body.magazine-article-page {
@@ -44455,18 +44956,18 @@ body.magazine-page, body.magazine-article-page {
 	}
 }
 
-.album-page .buy-button:first-of-type() {
+.album-page .buy-button:first-of-type {
 	margin-top: 1.48148rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.album-page .buy-button:first-of-type() {
+	.album-page .buy-button:first-of-type {
 		margin-top: 2.56vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.album-page .buy-button:first-of-type() {
+	.album-page .buy-button:first-of-type {
 		margin-top: 4rem;
 	}
 }

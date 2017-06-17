@@ -1157,6 +1157,7 @@ $(document).ready(function() {
             playlist[playerID].title.html(myPlaylist[0].title); // update album title
             playlist[playerID].artist.html(myPlaylist[0].artist); // update album artist
             playlist[playerID].audioElement[0].setSrc(myPlaylist[0].mp3); // set new track to play
+            playlist[playerID].trackTotal.html(myPlaylist.length);// set total track numbers
 
             // Event Listeners
             mediaElement.addEventListener('ended', function(e) {
@@ -1178,13 +1179,19 @@ $(document).ready(function() {
         this.mejsPlayer = mejs.players[playerID];
         this.player = this.mejsPlayer;
 
-        console.log('this.player :', this.mejsPlayer);
+        // console.log('this.player :', this.mejsPlayer);
         this.cover = $audioCard.find('.playlist-cover');
         this.coverLink = $audioCard.find('.image a');
         this.title = $audioCard.find('.playlist-title');
         this.artist = $audioCard.find('#playlist-artist');
         this.trackLink = $audioCard.find('.title');
         this.trackNumber = $audioCard.find('.playlist-number');
+        this.trackTotal = $audioCard.find('.playlist-total');
+
+        // get total number of tracks in playlist
+        // this.trackTotalNumber = $audioCard.find('.playlist-total').html();
+        this.trackTotalNumber = myPlaylist.length;
+        console.log('this.trackTotalNumber', this.trackTotalNumber);
         // this.audioElement = $('#playlist-audio');
         // this.audioElement = $audioCard.find('.playlist-audio');
         this.audioElement = this.player.$media;
@@ -1200,7 +1207,7 @@ $(document).ready(function() {
          **********/
         this.updatePlayer = function(track) {
             console.log('track', track);
-            this.trackNumber.html(track.seqno.slice(0, -1)); // update current track number, removing . from last char of seqno
+            this.trackNumber.html(track.seqno.slice(0, -1) + '/' + this.trackTotalNumber); // update current track number, removing . from last char of seqno
             // console.log($playlist.audioElement);
             this.cover.attr('src', track.cover); // update album cover
             this.coverLink.attr('href', track.url); // update album cover
@@ -1461,12 +1468,15 @@ $(document).ready(function() {
     var pageTitle = document.title;
     // console.log('pageURL', pageURL);
     $('.social-icons a').each(function() {
-        var oldHref = $(this).attr('href'); // get old href
-        var newHref = oldHref.replace('#PageURL', pageURL); // replace #PageURL with real one
-        newHref = newHref.replace('#PageTitle', pageTitle); // replace #PageTitle with real one
-        newHref = encodeURI(newHref); // from https://stackoverflow.com/a/332897/4504073
-        console.log('newHref', newHref);
-        $(this).attr('href', newHref); // set url to newHref
+        // if not pinterest button which has no href
+        if(!$(this).hasClass('object-pinterest')) {
+            var oldHref = $(this).attr('href'); // get old href
+            var newHref = oldHref.replace('#PageURL', pageURL); // replace #PageURL with real one
+            newHref = newHref.replace('#PageTitle', pageTitle); // replace #PageTitle with real one
+            newHref = encodeURI(newHref); // from https://stackoverflow.com/a/332897/4504073
+            console.log('newHref', newHref);
+            $(this).attr('href', newHref); // set url to newHref
+        }        
     });
 
     (function(d, s, id) {
@@ -1628,9 +1638,10 @@ $(document).ready(function() {
     function updatePagination(currentFestivalFilter) {
         $paginationNumber = $('.pagination-number'); // reset after clone
         // see how many numbers it should be
-        var num_festivals = $('#' + currentFestivalFilter + '-filter').find('.festival').length;
+        // var num_festivals = $('#' + currentFestivalFilter + '-filter').find('.festival').length;
+        var num_pages = $('#' + currentFestivalFilter + '-filter').find('.page').length;
         // console.log('num_festivals', num_festivals);
-        var num_pages = Math.ceil(num_festivals / 24);
+        // var num_pages = Math.ceil(num_festivals / 24);
         // console.log('num_pages', num_pages);
         // copy one example of page number
         var $examplePagination = $paginationNumber.first().clone();

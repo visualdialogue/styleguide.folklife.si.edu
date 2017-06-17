@@ -1250,6 +1250,31 @@ figcaption {
     }
 }
 
+// Internal browse dropdown
+.internal-browsenav {
+    background-color: $black10; // 12.16
+    @include height(16);
+    @include margin-top(4);
+    @include margin-bottom(8);
+}
+.dropdown-bar {
+    // stuck on Folkways
+    &.is-stuck {
+        background-color: $black10; // 12.16
+        width: 100%;
+        @include padding-top(0.5);
+        @include padding-bottom(2);
+        @include respond-to(break2) {
+            position: fixed !important;
+            top: $tablet-home-navbarHeight;
+            z-index: 10;
+        }
+        @include respond-to(fullwidth) {
+            top: $desktop-navbarHeight;
+        }
+    }
+}
+
 /* Search, Festival Past Festival Programs
 -------------------------------------------------*/
 
@@ -1892,10 +1917,6 @@ video::-webkit-media-controls {
         }
         .light {
             display: inline-block;
-            @include padding-top(1);
-            @include padding-right(2);
-            @include padding-bottom(1);
-            @include padding-left(2);
         }
         .view-direction {
             cursor: pointer;
@@ -1903,7 +1924,9 @@ video::-webkit-media-controls {
             position: relative; // contain arrow
         }
         .view-previous, .view-next {
-            @include width(13);
+            // @include width(13);
+            text-align: left;
+
         }
         .view-previous:after, .view-next:before {
             // display: block; // for ie
@@ -1927,7 +1950,28 @@ video::-webkit-media-controls {
                 font-size: 5rem;
             }
         }
+        .view-previous-wrapper {
+            .light {
+                @include padding-top(1);
+                @include padding-right(2);
+                @include padding-bottom(1);
+                // @include padding-left(1);
+                // // mobile only
+                // padding-left: 1rem;
+                // padding-right: 2rem;
+            }
+        }
         .view-previous {
+            width: 2rem;
+            @include padding-left(1);
+            @include respond-to(break2) {
+                width:9vw;
+            }
+            @include respond-to(fullwidth) {
+                width:14rem;
+            }
+            @include width(14);
+            width: 10rem;
             // text-align: right;
             // @include respond-to(break2max) {
             //     padding-right: 1.5rem;
@@ -1943,9 +1987,9 @@ video::-webkit-media-controls {
                 -moz-transform: rotate(180deg);
                 transform: rotate(180deg);
                 // left: auto;
-                @include right(-10); // more b/c rotated
+                // @include right(-10); // more b/c rotated
                 @include respond-to(break2max) {
-                    right: -4.444rem;
+                    // right: -4.444rem;
                 }
                 // @include respond-to(break2) {
                 //     padding-right: 0;
@@ -1953,30 +1997,47 @@ video::-webkit-media-controls {
                 // @include respond-to(break2full) {
                 //     right: -4vw;
                 // }
-                // @include respond-to(fullwidth) {
-                //     padding-right: 0rem;
-                //     right: -6.8rem;
-                // }
+                @include respond-to(fullwidth) {
+                    // padding-right: 0rem;
+                    // right: -8rem;
+                }
+                @include right(-8);
+                right: -4rem;
+            }
+        }
+        .view-next-wrapper {
+            .light {
+                @include padding-top(1);
+                @include padding-right(0);
+                @include padding-bottom(1);
+                @include padding-left(2);
+                // // mobile only
+                padding-left: 0rem;
+                // padding-right: 2rem;
             }
         }
         .view-next {
-            // @include respond-to(break2max) {
-            //     padding-left: 1.5rem;
-            // }
-            // @include respond-to(break2full) {
-            //     padding-left: 3vw;
-            // }
-            // @include respond-to(fullwidth) {
-            // }
             // @include margin-left(-2); // for balance
             position: relative;
             @include left(-1.3); // balance with longer "view previous" text
+            @include padding-left(3.5);
+            @include width(11);
+            width: 9rem;
+            @include respond-to(break2) {
+                width:9vw;
+            }
+            @include respond-to(fullwidth) {
+                width:11rem;
+            }
+
             &:before {
                 -webkit-transform: rotate(0deg);
                 -moz-transform: rotate(0deg);
                 transform: rotate(0deg);
                 right: auto !important; // for vw helper override
-                @include left(-3.4);
+                // @include left(-3.4);
+                @include left(-1.7);
+                left: 0; // mobile
                 // @include respond-to(break2max) {
                 //     left: -1rem;
                 // }
@@ -1984,16 +2045,14 @@ video::-webkit-media-controls {
                 //     left: -1.216vw;
                 // }
                 // @include respond-to(fullwidth) {
-                //     // left: -1.9rem;
-                //     right: auto;
-                //     left: 0;
+                    // left: -1.7rem;
                 // }
             }
         }
     }
     .pagination-numbers {
         // text-align: center;
-        // display: inline-block; // for centering
+        display: inline-block; // for centering
         // a {
         //  display: inline-block;
         //  padding: 0.5rem;
@@ -2003,6 +2062,9 @@ video::-webkit-media-controls {
         // }
         @include margin-left(7);
         @include margin-right(7);
+        // mobile only
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 .pagination-numbers {

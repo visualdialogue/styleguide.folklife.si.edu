@@ -664,6 +664,19 @@ body {
 		@include body-sans;
 	}
 }
+
+// here for 50 objects and folkways shop pages
+%internal-browsenav-title {
+    text-align: left;
+    font-size: 2.3rem;
+    @include padding-bottom(1);
+    @include respond-to(break2full) {
+        font-size: 1.5vw;
+    }
+    @include respond-to(fullwidth) {
+        font-size: 2.4rem;
+    }
+}
 // type classes
 // Serif
 

@@ -5,7 +5,7 @@
     <div class="row">
       <div class="col-sm-6 become-a-member">
         <div class="become-a-member-inner clearfix">
-          <div class="image"><img id="member-image" src="/themes/folkways/assets/images/become-a-member.jpg" alt="Become a Member"/>
+          <div class="image"><img id="member-image" src="/Themes/Folkways/Assets/images/become-a-member.jpg" alt="Become a Member"/>
             <div class="vertically-align become-a-member-image-text">Become a member</div>
           </div>
           <div class="copy">
