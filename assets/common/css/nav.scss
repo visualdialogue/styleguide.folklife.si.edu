@@ -388,6 +388,7 @@
 		}
 		@include respond-to(break2full) {
 			margin-top: 1vw;
+            margin-bottom: 3vw; // fix gap
 		}
 		@include respond-to(fullwidth) {
 			margin-top: 2.4rem;

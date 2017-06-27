@@ -29,25 +29,27 @@
 
 // Folkways pages with internal browse bars--hide top browsenav, show internal ones
 .show-internal-browse-page {
-    .browsenav-title {
-        @extend %internal-browsenav-title;
-    }
-    .browsenav {
-        display: none !important;
-        width: 100%;
-        margin-top: 0; // reset for catching
-        margin-bottom: 0; // reset
-        @include padding-top(0);
-        @include padding-bottom(2.5);
-    }
-    // .internal-browsenav, .internal-browsenav-title-wrapper {
-    //     display: block !important;
-    // }
-    // .internal-browsenav {
-    //     position: absolute; // so jump to fixed isn't hard
-    // }
-    .browsenav-title {
-        text-align: left;
+    .internal-browsenav {
+        .browsenav-title {
+            @extend %internal-browsenav-title;
+        }
+        .browsenav {
+            // display: none !important;
+            width: 100%;
+            margin-top: 0; // reset for catching
+            margin-bottom: 0; // reset
+            @include padding-top(0);
+            @include padding-bottom(2.5);
+        }
+        // .internal-browsenav, .internal-browsenav-title-wrapper {
+        //     display: block !important;
+        // }
+        // .internal-browsenav {
+        //     position: absolute; // so jump to fixed isn't hard
+        // }
+        .browsenav-title {
+            text-align: left;
+        }
     }
 }
 

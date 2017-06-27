@@ -19,24 +19,24 @@
 */
 @font-face {
 	font-family: "slick";
-	src: url("./fonts/slick.eot");
-	src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("bower_components/slick-carousel/slick/fonts/slick.woff") format("woff"), url("bower_components/slick-carousel/slick/fonts/slick.ttf") format("truetype"), url("bower_components/slick-carousel/slick/fonts/slick.svg#slick") format("svg");
+	src: url("fonts/slick.eot");
+	src: url("fonts/slick.eot?#iefix") format("embedded-opentype"), url("bower_components/slick-carousel/slick/fonts/slick.woff") format("woff"), url("bower_components/slick-carousel/slick/fonts/slick.ttf") format("truetype"), url("bower_components/slick-carousel/slick/fonts/slick.svg#slick") format("svg");
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: "vd-icons";
-	src: url("./fonts/vd-icons.eot");
-	src: url("./fonts/vd-icons.eot?#iefix") format("embedded-opentype"), url("./fonts/vd-icons.woff") format("woff"), url("./fonts/vd-icons.ttf") format("truetype"), url("./fonts/vd-icons.svg#vd-icons") format("svg");
+	src: url("fonts/vd-icons.eot");
+	src: url("fonts/vd-icons.eot?#iefix") format("embedded-opentype"), url("fonts/vd-icons.woff") format("woff"), url("fonts/vd-icons.ttf") format("truetype"), url("fonts/vd-icons.svg#vd-icons") format("svg");
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: "galano-bold";
-	src: url("./galano/galanogrotesquedemo-bold-webfont.eot");
-	src: url("./galano/galanogrotesquedemo-bold-webfont.eot?#iefix") format("embedded-opentype"), url("./galano/galanogrotesquedemo-bold-webfont.woff") format("woff"), url("./galano/galanogrotesquedemo-bold-webfont.woff2") format("woff2"), url("./galano/galanogrotesquedemo-bold-webfont.ttf") format("truetype"), url("./galano/galanogrotesquedemo-bold-webfont.svg#galano") format("svg");
+	src: url("galano/galanogrotesquedemo-bold-webfont.eot");
+	src: url("galano/galanogrotesquedemo-bold-webfont.eot?#iefix") format("embedded-opentype"), url("galano/galanogrotesquedemo-bold-webfont.woff") format("woff"), url("galano/galanogrotesquedemo-bold-webfont.woff2") format("woff2"), url("galano/galanogrotesquedemo-bold-webfont.ttf") format("truetype"), url("galano/galanogrotesquedemo-bold-webfont.svg#galano") format("svg");
 	font-weight: bold;
 	font-style: normal;
 }
@@ -7290,32 +7290,32 @@ body {
 	}
 }
 
-.show-internal-browse-page .browsenav-title {
+.show-internal-browse-page .internal-browsenav .browsenav-title {
 	text-align: left;
 	font-size: 2.3rem;
 	padding-bottom: 0.70235rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.show-internal-browse-page .browsenav-title {
+	.show-internal-browse-page .internal-browsenav .browsenav-title {
 		padding-bottom: 0.64vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.show-internal-browse-page .browsenav-title {
+	.show-internal-browse-page .internal-browsenav .browsenav-title {
 		padding-bottom: 1rem;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.show-internal-browse-page .browsenav-title {
+	.show-internal-browse-page .internal-browsenav .browsenav-title {
 		font-size: 1.5vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.show-internal-browse-page .browsenav-title {
+	.show-internal-browse-page .internal-browsenav .browsenav-title {
 		font-size: 2.4rem;
 	}
 }
@@ -9649,6 +9649,7 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.search-bar {
 		margin-top: 1vw;
+		margin-bottom: 3vw;
 	}
 }
 
@@ -13010,7 +13011,7 @@ figcaption.minus-sign:before {
 	.dropdown-bar.is-stuck {
 		position: fixed !important;
 		top: 7rem;
-		z-index: 10;
+		z-index: 11;
 	}
 }
 
@@ -21072,24 +21073,24 @@ body {
 */
 @font-face {
 	font-family: "slick";
-	src: url("./fonts/slick.eot");
-	src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("bower_components/slick-carousel/slick/fonts/slick.woff") format("woff"), url("bower_components/slick-carousel/slick/fonts/slick.ttf") format("truetype"), url("bower_components/slick-carousel/slick/fonts/slick.svg#slick") format("svg");
+	src: url("fonts/slick.eot");
+	src: url("fonts/slick.eot?#iefix") format("embedded-opentype"), url("bower_components/slick-carousel/slick/fonts/slick.woff") format("woff"), url("bower_components/slick-carousel/slick/fonts/slick.ttf") format("truetype"), url("bower_components/slick-carousel/slick/fonts/slick.svg#slick") format("svg");
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: "vd-icons";
-	src: url("./fonts/vd-icons.eot");
-	src: url("./fonts/vd-icons.eot?#iefix") format("embedded-opentype"), url("./fonts/vd-icons.woff") format("woff"), url("./fonts/vd-icons.ttf") format("truetype"), url("./fonts/vd-icons.svg#vd-icons") format("svg");
+	src: url("fonts/vd-icons.eot");
+	src: url("fonts/vd-icons.eot?#iefix") format("embedded-opentype"), url("fonts/vd-icons.woff") format("woff"), url("fonts/vd-icons.ttf") format("truetype"), url("fonts/vd-icons.svg#vd-icons") format("svg");
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: "galano-bold";
-	src: url("./galano/galanogrotesquedemo-bold-webfont.eot");
-	src: url("./galano/galanogrotesquedemo-bold-webfont.eot?#iefix") format("embedded-opentype"), url("./galano/galanogrotesquedemo-bold-webfont.woff") format("woff"), url("./galano/galanogrotesquedemo-bold-webfont.woff2") format("woff2"), url("./galano/galanogrotesquedemo-bold-webfont.ttf") format("truetype"), url("./galano/galanogrotesquedemo-bold-webfont.svg#galano") format("svg");
+	src: url("galano/galanogrotesquedemo-bold-webfont.eot");
+	src: url("galano/galanogrotesquedemo-bold-webfont.eot?#iefix") format("embedded-opentype"), url("galano/galanogrotesquedemo-bold-webfont.woff") format("woff"), url("galano/galanogrotesquedemo-bold-webfont.woff2") format("woff2"), url("galano/galanogrotesquedemo-bold-webfont.ttf") format("truetype"), url("galano/galanogrotesquedemo-bold-webfont.svg#galano") format("svg");
 	font-weight: bold;
 	font-style: normal;
 }
@@ -28347,32 +28348,32 @@ body {
 	}
 }
 
-.show-internal-browse-page .browsenav-title {
+.show-internal-browse-page .internal-browsenav .browsenav-title {
 	text-align: left;
 	font-size: 2.3rem;
 	padding-bottom: 0.70235rem;
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.show-internal-browse-page .browsenav-title {
+	.show-internal-browse-page .internal-browsenav .browsenav-title {
 		padding-bottom: 0.64vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.show-internal-browse-page .browsenav-title {
+	.show-internal-browse-page .internal-browsenav .browsenav-title {
 		padding-bottom: 1rem;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.show-internal-browse-page .browsenav-title {
+	.show-internal-browse-page .internal-browsenav .browsenav-title {
 		font-size: 1.5vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.show-internal-browse-page .browsenav-title {
+	.show-internal-browse-page .internal-browsenav .browsenav-title {
 		font-size: 2.4rem;
 	}
 }
@@ -30706,6 +30707,7 @@ body:not(.home-page) .is-smaller, body:not(.home-page) .has-one-line-logo {
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.search-bar {
 		margin-top: 1vw;
+		margin-bottom: 3vw;
 	}
 }
 
@@ -34067,7 +34069,7 @@ figcaption.minus-sign:before {
 	.dropdown-bar.is-stuck {
 		position: fixed !important;
 		top: 7rem;
-		z-index: 10;
+		z-index: 11;
 	}
 }
 
@@ -42127,8 +42129,7 @@ body {
 	}
 }
 
-.show-internal-browse-page .browsenav {
-	display: none !important;
+.show-internal-browse-page .internal-browsenav .browsenav {
 	width: 100%;
 	margin-top: 0;
 	margin-bottom: 0;
@@ -42137,30 +42138,30 @@ body {
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.show-internal-browse-page .browsenav {
+	.show-internal-browse-page .internal-browsenav .browsenav {
 		padding-top: 0vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.show-internal-browse-page .browsenav {
+	.show-internal-browse-page .internal-browsenav .browsenav {
 		padding-top: 0rem;
 	}
 }
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
-	.show-internal-browse-page .browsenav {
+	.show-internal-browse-page .internal-browsenav .browsenav {
 		padding-bottom: 1.6vw;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
-	.show-internal-browse-page .browsenav {
+	.show-internal-browse-page .internal-browsenav .browsenav {
 		padding-bottom: 2.5rem;
 	}
 }
 
-.show-internal-browse-page .browsenav-title {
+.show-internal-browse-page .internal-browsenav .browsenav-title {
 	text-align: left;
 }
 
