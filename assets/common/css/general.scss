@@ -1447,21 +1447,24 @@ $arrowSizeFullwidth: 8rem;
 .ms-banner-slideshow .svg-slick-next {
     // right: 1rem;
     @include respond-to(break2) {
-        right: -4rem;
+        // right: -4rem;
+        right: 0; // 2017.07.05 b/c slightly off
     }
     @include respond-to(fullwidth) {
         // margin-right: -5rem;
         right: -1rem;
+        right: 0; // 2017.07.05 b/c slightly off
     }
 }
 // 50 objects right arrow in grid
 .more-content .svg-slick-next {
     right: 0rem;
     @include respond-to(break2full) {
-        right: -4rem;
+        // right: -4rem;
+        right: 0; // 2017.07.05 b/c slightly off
     }
     @include respond-to(fullwidth) {
-        right: -1rem;
+        // right: -1rem; // 2017.07.05 b/c slightly off
     }
 }
 .pause-button {

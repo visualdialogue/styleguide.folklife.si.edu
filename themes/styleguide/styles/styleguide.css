@@ -13471,13 +13471,14 @@ figcaption.minus-sign:before {
 
 @media only screen and (min-width: 53.25em) {
 	.ms-banner-slideshow .svg-slick-next {
-		right: -4rem;
+		right: 0;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
 	.ms-banner-slideshow .svg-slick-next {
 		right: -1rem;
+		right: 0;
 	}
 }
 
@@ -13487,13 +13488,7 @@ figcaption.minus-sign:before {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.more-content .svg-slick-next {
-		right: -4rem;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.more-content .svg-slick-next {
-		right: -1rem;
+		right: 0;
 	}
 }
 
@@ -34627,13 +34622,14 @@ figcaption.minus-sign:before {
 
 @media only screen and (min-width: 53.25em) {
 	.ms-banner-slideshow .svg-slick-next {
-		right: -4rem;
+		right: 0;
 	}
 }
 
 @media only screen and (min-width: 1560px) {
 	.ms-banner-slideshow .svg-slick-next {
 		right: -1rem;
+		right: 0;
 	}
 }
 
@@ -34643,13 +34639,7 @@ figcaption.minus-sign:before {
 
 @media only screen and (min-width: 53.25em) and (max-width: 1559px) {
 	.more-content .svg-slick-next {
-		right: -4rem;
-	}
-}
-
-@media only screen and (min-width: 1560px) {
-	.more-content .svg-slick-next {
-		right: -1rem;
+		right: 0;
 	}
 }
 
