@@ -26,6 +26,7 @@ gulp.task('plugins', function() {
 			'./assets/common/js/plugins/mep-feature-playlist-master/mep-feature-playlist.min.js', // for customizing dropdowns (eg. folkways magazine)
 			'./assets/common/js/plugins/bootstrap/js/collapse.js', // bootstrap collapse
             './assets/common/js/plugins/bootstrap/js/modal.js', // bootstrap collapse
+            './assets/common/js/plugins/bootstrap/js/alert.js', // bootstrap collapse
 			'./assets/common/js/plugins/jquery-placeholder/jquery.placeholder.min.js', // bootstrap collapse
 			'./assets/common/js/bower_components/svg4everybody/dist/svg4everybody.min.js' // make svg icons work in ie as pngs
 		])
@@ -121,7 +122,7 @@ gulp.task('copy-js', function() {
 var less = require('gulp-less');
 var path = require('path');
 
-gulp.task('less', function() {
+gulp.task('bootstrap', function() {
 	return gulp.src('assets/common/js/plugins/bootstrap/less/bootstrap.less')
 		.pipe(less())
 		.pipe(rename('bootstrap.scss'))
@@ -165,7 +166,7 @@ gulp.task('serve', ['jade', 'styles', 'js'], function() {
 	// gulp.watch('site/**/*.jade',['jade-watch']);
 	gulp.watch('site/**/*.jade', ['jade']);
 	// gulp.watch('site/common/*.jade',['jade-common']);
-	gulp.watch('bower_components/bootstrap/less/*.less', ['less']);
+	gulp.watch('bower_components/bootstrap/less/*.less', ['bootstrap']);
 	gulp.watch('site/common/blueprints/*.yml', ['copy']);
 	gulp.watch('site/common/**/*.php', ['copy']);
 	gulp.watch([

@@ -1684,6 +1684,7 @@ video::-webkit-media-controls {
         }
     }
     .svg-slick-next {
+        right: 0;
         @include respond-to(break2full) {
             right: 1vw;
         }
