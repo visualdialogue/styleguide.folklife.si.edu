@@ -1167,6 +1167,10 @@ $(document).ready(function() {
         }
     });
 
+    // set myPlaylist to new playlist
+    // update length and total tracks #
+    // update player with 1st song on that track
+
 
     /**********
      * Playlist constructor function
