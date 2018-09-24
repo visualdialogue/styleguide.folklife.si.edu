@@ -12,7 +12,7 @@ var changed = require('gulp-changed');
 var reload = browserSync.reload; // Save a reference to the `reload` method
 
 // uglify and concat all js library dependancies
-gulp.task('plugins', function() {
+gulp.task('plugins', function(done) {
 	return gulp.src([
 			'./assets/common/js/plugins/common-plugins-title.js', // simply for showing title that proves these files compiled successfully
 			'./assets/common/js/plugins/slick-carousel/slick/slick.min.js',
@@ -33,10 +33,11 @@ gulp.task('plugins', function() {
 		.pipe(concat('common-plugins.js'))
 		.pipe(gulp.dest('./assets/common/js'))
 		.pipe(gulp.dest('../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/js'));
+    done();
 });
 
 // html
-gulp.task('jade', function() {
+gulp.task('jade', function(done) {
 	gulp.src('./site/**/*.jade')
 		.pipe(changed('./site', { extension: '.php' }))        
 		.pipe(plumber())
@@ -48,10 +49,11 @@ gulp.task('jade', function() {
          }))
 		.pipe(gulp.dest('./site'))
 		.pipe(browserSync.stream());
+    done();
 });
 
 // common html
-gulp.task('jade-common', function() {
+gulp.task('jade-common', function(done) {
 	gulp.src('./site/common/*.jade')
 		// gulp.src('./site/**/*.jade')
 		.pipe(changed('./site/common', { extension: '.php' }))
@@ -60,22 +62,24 @@ gulp.task('jade-common', function() {
 			pretty: '\t',
 		}))
 		.pipe(gulp.dest('./site/snippets'));
+    done();
 });
 
 // copy for keeping blueprint files similar
-gulp.task('copy', function() {
+gulp.task('copy', function(done) {
 	gulp.src('../../styleguide.folklife.si.edu/code/site/common/blueprints/*.yml')
 		.pipe(gulp.dest('./site/blueprints/'));
 	gulp.src('../../styleguide.folklife.si.edu/code/site/common/controllers/*.php')
 		.pipe(gulp.dest('./site/controllers/'));
 	gulp.src('../../styleguide.folklife.si.edu/code/site/common/**/*.php')
 		.pipe(gulp.dest('./site'));
+    done();
 });
 
 /**********
  * compile styleguide sass
  **********/
-gulp.task('styles', function() {
+gulp.task('styles', function(done) {
 	gulp.src('themes/styleguide/styles/styleguide.scss')
 		.pipe(plumber())
 		.pipe(sass({
@@ -86,6 +90,7 @@ gulp.task('styles', function() {
 		}))
 		.pipe(gulp.dest('themes/styleguide/styles/'))
 		.pipe(browserSync.stream());
+    done();
 });
 
 /**********
@@ -94,13 +99,14 @@ gulp.task('styles', function() {
  * but copies to all of toby's 3 common sass folders so he can stay up to date and compile in each visual studio project separately
  * he will combine to single area after launch
  **********/
-gulp.task('copy-sass', function() {
+gulp.task('copy-sass', function(done) {
 	gulp.src('assets/common/css/*.scss')
 		.pipe(plumber())
 		.pipe(gulp.dest('../../50objects/code/themes/50objects/assets/common/css'))
 		.pipe(gulp.dest('../../toby/folklife/src/Orchard.Web/Themes/Folklife/Assets/common/css'))
 		.pipe(gulp.dest('../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css'))
 		.pipe(gulp.dest('../../toby/folkways/src/Orchard.Web/Themes/Folkways/Assets/common/css'));
+    done();
 });
 
 /**********
@@ -109,28 +115,30 @@ gulp.task('copy-sass', function() {
  * but copies to all of toby's 3 common js folders so he can stay up to date
  * he will combine to single area after launch
  **********/
-gulp.task('copy-js', function() {
+gulp.task('copy-js', function(done) {
 	gulp.src('assets/common/js/*.js')
 		.pipe(plumber())
 		.pipe(gulp.dest('../../50objects/code/themes/50objects/assets/common/js'))
 		.pipe(gulp.dest('../../toby/folklife/src/Orchard.Web/Themes/Folklife/Assets/common/js'))
 		.pipe(gulp.dest('../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/js'))
 		.pipe(gulp.dest('../../toby/folkways/src/Orchard.Web/Themes/Folkways/Assets/common/js'));
+    done();
 });
 
 // less for bootstrap
 var less = require('gulp-less');
 var path = require('path');
 
-gulp.task('bootstrap', function() {
+gulp.task('bootstrap', function(done) {
 	return gulp.src('assets/common/js/plugins/bootstrap/less/bootstrap.less')
 		.pipe(less())
 		.pipe(rename('bootstrap.scss'))
 		.pipe(gulp.dest('assets/common/css/'));
+    done();
 });
 
 // custom js
-gulp.task('js', function() {
+gulp.task('js', function(done) {
 	// return gulp.src('/bdc/js/scripts.js')
 	return gulp.src([
 			'../../styleguide.folklife.si.edu/code/assets/common/js/common-plugins.js',
@@ -141,6 +149,7 @@ gulp.task('js', function() {
 		.pipe(gulp.dest('themes/styleguide/scripts/'))
 		.pipe(browserSync.stream());
 		// gulp.watch('/js/scripts.js',['scripts']);
+    done();
 });
 // create a task that ensures the `templates` and `js` tasks are completed before
 
@@ -149,7 +158,7 @@ gulp.task('js', function() {
 // gulp.task('js-watch', ['js'], browserSync.reload);
 
 // Static Server + watching scss/html files
-gulp.task('serve', ['jade', 'styles', 'js'], function() {
+gulp.task('serve', gulp.series(['jade', 'styles', 'js'], function() {
 	browserSync.init({
 		proxy: "styleguide.folklife.loc:3000",
 		port: 3007,
@@ -164,24 +173,23 @@ gulp.task('serve', ['jade', 'styles', 'js'], function() {
 	});
 
 	// gulp.watch('site/**/*.jade',['jade-watch']);
-	gulp.watch('site/**/*.jade', ['jade']);
+	// gulp.watch('site/**/*.jade', ['jade']);
+    gulp.watch('site/**/*.jade', gulp.series('jade'));
 	// gulp.watch('site/common/*.jade',['jade-common']);
-	gulp.watch('bower_components/bootstrap/less/*.less', ['bootstrap']);
-	gulp.watch('site/common/blueprints/*.yml', ['copy']);
-	gulp.watch('site/common/**/*.php', ['copy']);
+	gulp.watch('bower_components/bootstrap/less/*.less', gulp.series(['bootstrap']));
+	gulp.watch('site/common/blueprints/*.yml', gulp.series(['copy']));
+	gulp.watch('site/common/**/*.php', gulp.series(['copy']));
 	gulp.watch([
 		'assets/common/css/*.scss',
 		'../../toby/folkways/src/Orchard.Web/Themes/Folkways/Styles/folkways.scss'
-	], ['styles', 'copy-sass']);
-	gulp.watch('themes/styleguide/styles/*.scss', ['styles']);
+	], gulp.series(['styles', 'copy-sass']));
+	gulp.watch('themes/styleguide/styles/*.scss', gulp.series(['styles']));
 	// gulp.watch('../../toby/festival/src/Orchard.Web/Themes/Festival/Assets/common/css/*.scss',['styles']);
-	gulp.watch('assets/common/js/*.js', ['js', 'copy-js']); // copy common plugins and scripts to toby's 3 repos until he has centralized common elements
+	gulp.watch('assets/common/js/*.js', gulp.series(['js', 'copy-js'])); // copy common plugins and scripts to toby's 3 repos until he has centralized common elements
 	gulp.watch([ // JS
 		'themes/styleguide/scripts/*.js',
 		'/assets/common/js/*.js',
-	], ['js']);
+	], gulp.series(['js']));
+}));
 
-});
-
-// gulp.task('default', ['usedCSS', 'critical', 'imagemin']);
-gulp.task('default', ['serve']);
+gulp.task('default', gulp.series(['serve']));
