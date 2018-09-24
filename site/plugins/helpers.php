@@ -1,4 +1,4 @@
-<? class LJH {
+<?php class LJH {
 
 	/***********
 	* Converts rgb to hex for quick styleguide creation
