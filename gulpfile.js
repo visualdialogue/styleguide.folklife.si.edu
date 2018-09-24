@@ -73,7 +73,7 @@ gulp.task('copy', function(done) {
 		.pipe(gulp.dest('./site/controllers/'));
 	gulp.src('../../styleguide.folklife.si.edu/code/site/common/**/*.php')
 		.pipe(gulp.dest('./site'));
-    done();
+        done();
 });
 
 /**********
@@ -88,7 +88,8 @@ gulp.task('styles', function(done) {
 			indentType: 'tab',
 			indentWidth: '1'
 		}))
-		.pipe(gulp.dest('themes/styleguide/styles/'))
+        .pipe(gulp.dest('themes/styleguide/styles/'))
+		.pipe(gulp.dest('../../../visualdialogue.com/code/assets/folkways-styleguide/'))
 		.pipe(browserSync.stream());
     done();
 });
@@ -146,7 +147,8 @@ gulp.task('js', function(done) {
 			'themes/styleguide/scripts/styleguide.js'
 		])
 		.pipe(concat('styleguide.pkgd.js'))
-		.pipe(gulp.dest('themes/styleguide/scripts/'))
+        .pipe(gulp.dest('themes/styleguide/scripts/'))
+        .pipe(gulp.dest('../../../visualdialogue.com/code/assets/folkways-styleguide/'))
 		.pipe(browserSync.stream());
 		// gulp.watch('/js/scripts.js',['scripts']);
     done();
