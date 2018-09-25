@@ -8530,111 +8530,11 @@ $(document).ready(function() {
         }
     });
 
-
-    /**********
-     * Playlist constructor function
-     * inspired by http://stackoverflow.com/a/15174529
-     * var myPlayList is array with playlist data, loaded from script tag in html
-     **********/
-    function Playlist(playerID) {
-        // get local audio card in case others on page
-        var $audioCard = $('#' + playerID).closest('.audio-card');
-        // this.mejsPlayer = mejs.players[this.playerID];
-        this.mejsPlayer = mejs.players[playerID];
-        this.player = this.mejsPlayer;
-
-        // console.log('this.player :', this.mejsPlayer);
-        this.cover = $audioCard.find('.playlist-cover');
-        this.coverLink = $audioCard.find('.image a');
-        this.title = $audioCard.find('.playlist-title');
-        this.artist = $audioCard.find('#playlist-artist');
-        this.trackLink = $audioCard.find('.title');
-        this.trackNumber = $audioCard.find('.playlist-number');
-        this.trackTotal = $audioCard.find('.playlist-total');
-
-        // get total number of tracks in playlist
-        // this.trackTotalNumber = $audioCard.find('.playlist-total').html();
-        this.trackTotalNumber = myPlaylist.length;
-        console.log('this.trackTotalNumber', this.trackTotalNumber);
-        // this.audioElement = $('#playlist-audio');
-        // this.audioElement = $audioCard.find('.playlist-audio');
-        this.audioElement = this.player.$media;
-
-        console.log('this.audioElement :', this.audioElement);
-        // this.audioElement = this.player.node;
-        this.currentTrack = 0;
-        this.length = Object.keys(myPlaylist).length;
-
-        /**********
-         * Update playlist player
-         * @param track is album json data
-         **********/
-        this.updatePlayer = function(track) {
-            console.log('track', track);
-            this.trackNumber.html(track.seqno.slice(0, -1) + '/' + this.trackTotalNumber); // update current track number, removing . from last char of seqno
-            // console.log($playlist.audioElement);
-            this.cover.attr('src', track.cover); // update album cover
-            this.coverLink.attr('href', track.url); // update album cover
-            this.trackLink.attr('href', track.url); // update album cover
-            console.log('this.coverLink', this.coverLink);
-            this.title.html(track.title); // update album title
-            this.artist.html(track.artist); // update album artist
-            this.audioElement[0].setSrc(track.mp3); // set new track to play
-            this.player.play(); // play track
-        }
-
-        /**********
-         * Play previous track
-         **********/
-        this.playPrevTrack = function($player) {
-            // if current track is 0, change to last track
-            if (playlist[playerID].currentTrack == 0)
-                playlist[playerID].currentTrack = playlist[playerID].length - 1;
-            // else play track - 1 
-            else
-                playlist[playerID].currentTrack--;
-
-            // update player with image, src, play, etc.
-            playlist[playerID].updatePlayer(myPlaylist[this.currentTrack]);
-        }
-
-        /**********
-         * Play next track
-         **********/
-        this.playNextTrack = function($player) {
-            if (this.currentTrack == this.length - 1)
-                this.currentTrack = 0;
-            else
-                this.currentTrack++;
-
-            // console.log('$player :', $player);
-            // show currentTrack as playlist number
-
-
-            // update player with image, src, play, etc.
-            // playlist.updatePlayer(myPlaylist[this.currentTrack]);
-            playlist[playerID].updatePlayer(myPlaylist[this.currentTrack]);
-        }
-    }
-
-    /**********
-     * Track Skipping Buttons
-     **********/
-    // Previous Track
-    $('.previous-button').click(function() {
-        $audio = $(this).parents('.playlist-audio');
-        currentPlayerID = $audio.attr('id');
-        playlist[currentPlayerID].playPrevTrack();
-    })
-
-    // Next Track
-    $('.next-button').click(function() {
-        // get closest audio player
-        // $audio = $(this).parent().siblings('.playlist-audio');
-        $audio = $(this).parents('.playlist-audio');
-        currentPlayerID = $audio.attr('id');
-        playlist[currentPlayerID].playNextTrack();
-    })
+    // set myPlaylist to new playlist
+    // get playlist id from some js var
+    // update length and total tracks #
+    // update player with 1st song on that track
+    
 
     /*********************
      * Show figcaption
@@ -9100,6 +9000,111 @@ $(document).ready(function() {
     }
 
 }); // end document model ready
+
+/**********
+ * Playlist constructor function
+ * inspired by http://stackoverflow.com/a/15174529
+ * var myPlayList is array with playlist data, loaded from script tag in html
+ **********/
+function Playlist(playerID) {
+    // get local audio card in case others on page
+    var $audioCard = $('#' + playerID).closest('.audio-card');
+    // this.mejsPlayer = mejs.players[this.playerID];
+    this.mejsPlayer = mejs.players[playerID];
+    this.player = this.mejsPlayer;
+
+    // console.log('this.player :', this.mejsPlayer);
+    this.cover = $audioCard.find('.playlist-cover');
+    this.coverLink = $audioCard.find('.image a');
+    this.title = $audioCard.find('.playlist-title');
+    this.artist = $audioCard.find('#playlist-artist');
+    this.trackLink = $audioCard.find('.title');
+    this.trackNumber = $audioCard.find('.playlist-number');
+    this.trackTotal = $audioCard.find('.playlist-total');
+
+    // get total number of tracks in playlist
+    // this.trackTotalNumber = $audioCard.find('.playlist-total').html();
+    this.trackTotalNumber = myPlaylist.length;
+    console.log('this.trackTotalNumber', this.trackTotalNumber);
+    // this.audioElement = $('#playlist-audio');
+    // this.audioElement = $audioCard.find('.playlist-audio');
+    this.audioElement = this.player.$media;
+
+    console.log('this.audioElement :', this.audioElement);
+    // this.audioElement = this.player.node;
+    this.currentTrack = 0;
+    this.length = Object.keys(myPlaylist).length;
+
+    /**********
+     * Update playlist player
+     * @param track is album json data
+     **********/
+    this.updatePlayer = function(track) {
+        console.log('track', track);
+        this.trackNumber.html(track.seqno.slice(0, -1) + '/' + this.trackTotalNumber); // update current track number, removing . from last char of seqno
+        // console.log($playlist.audioElement);
+        this.cover.attr('src', track.cover); // update album cover
+        this.coverLink.attr('href', track.url); // update album cover
+        this.trackLink.attr('href', track.url); // update album cover
+        console.log('this.coverLink', this.coverLink);
+        this.title.html(track.title); // update album title
+        this.artist.html(track.artist); // update album artist
+        this.audioElement[0].setSrc(track.mp3); // set new track to play
+        this.player.play(); // play track
+    }
+
+    /**********
+     * Play previous track
+     **********/
+    this.playPrevTrack = function($player) {
+        // if current track is 0, change to last track
+        if (playlist[playerID].currentTrack == 0)
+            playlist[playerID].currentTrack = playlist[playerID].length - 1;
+        // else play track - 1 
+        else
+            playlist[playerID].currentTrack--;
+
+        // update player with image, src, play, etc.
+        playlist[playerID].updatePlayer(myPlaylist[this.currentTrack]);
+    }
+
+    /**********
+     * Play next track
+     **********/
+    this.playNextTrack = function($player) {
+        if (this.currentTrack == this.length - 1)
+            this.currentTrack = 0;
+        else
+            this.currentTrack++;
+
+        // console.log('$player :', $player);
+        // show currentTrack as playlist number
+
+
+        // update player with image, src, play, etc.
+        // playlist.updatePlayer(myPlaylist[this.currentTrack]);
+        playlist[playerID].updatePlayer(myPlaylist[this.currentTrack]);
+    }
+}
+
+/**********
+ * Track Skipping Buttons
+ **********/
+// Previous Track
+$('.previous-button').click(function() {
+    $audio = $(this).parents('.playlist-audio');
+    currentPlayerID = $audio.attr('id');
+    playlist[currentPlayerID].playPrevTrack();
+})
+
+// Next Track
+$('.next-button').click(function() {
+    // get closest audio player
+    // $audio = $(this).parent().siblings('.playlist-audio');
+    $audio = $(this).parents('.playlist-audio');
+    currentPlayerID = $audio.attr('id');
+    playlist[currentPlayerID].playNextTrack();
+})
 
 /*
 
