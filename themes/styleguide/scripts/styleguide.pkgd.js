@@ -8487,7 +8487,7 @@ $(document).ready(function() {
      * https://github.com/duozersk/mep-feature-playlist
      *********/
 
-    var playlist = []; // global playlist var so can access everywhere
+    // site.playlist = []; // global playlist var so can access everywhere
     // console.log(myPlaylist[0]);
 
     // initialize player so can get id for vars
@@ -8534,6 +8534,7 @@ $(document).ready(function() {
     // get playlist id from some js var
     // update length and total tracks #
     // update player with 1st song on that track
+    Playlist('mep_0').updatePlayer(3);
     
 
     /*********************
@@ -9007,6 +9008,7 @@ $(document).ready(function() {
  * var myPlayList is array with playlist data, loaded from script tag in html
  **********/
 function Playlist(playerID) {
+    console.log('playerID', playerID);
     // get local audio card in case others on page
     var $audioCard = $('#' + playerID).closest('.audio-card');
     // this.mejsPlayer = mejs.players[this.playerID];

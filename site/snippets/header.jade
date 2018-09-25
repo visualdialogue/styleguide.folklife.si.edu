@@ -17,6 +17,11 @@ head
 	// highlightjs.org for code syntax highlighting
 	<link href="/themes/styleguide/styles/highlight/styles/atom-one-dark.css" type="text/css" rel="stylesheet">
 	<script src="/themes/styleguide/scripts/highlight.pack.js"></script>
+    //- global vars
+    <script>
+        var site = {}; // global
+        site.playlist = []; // global playlist var so can access everywhere
+    </script>
 
 	//- out for firefox and safri, debug later
 	<link href="/themes/styleguide/styles/styleguide.css?v=<?= time() ?>" type="text/css" rel="stylesheet">
